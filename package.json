@@ -36,7 +36,7 @@
   "devDependencies": {
     "@cdktf/provider-project": "^0.0.25",
     "dot-prop": "^5.2.0",
-    "projen": "^0.3.34",
+    "projen": "^0.3.35",
     "standard-version": "^8.0.1",
     "typescript": "^3.9.5",
     "@typescript-eslint/eslint-plugin": "^2.31.0",
@@ -76,7 +76,7 @@
     "node": ">= 10.17.0"
   },
   "license": "MPL-2.0",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "types": "lib/index.d.ts",
   "jest": {
     "clearMocks": true,
