@@ -4760,10 +4760,10 @@ progress@^2.0.0:
   resolved "https://registry.yarnpkg.com/progress/-/progress-2.0.3.tgz#7e8cf8d8f5b8f239c1bc68beb4eb78567d572ef8"
   integrity sha512-7PiHtLll5LdnKIMw100I+8xJXR5gW2QwWYkT6iJva0bXitZKa/XMrSbdmg3r2Xnaidz9Qumd0VPaMrZlF9V9sA==
 
-projen@^0.3.36:
-  version "0.3.36"
-  resolved "https://registry.yarnpkg.com/projen/-/projen-0.3.36.tgz#7a4cc51bfc303566c26aa96183ba72277cd2a81d"
-  integrity sha512-YgpFYFtEXoWObWPGKu8TRuvQCFjWSovm313a/sBZdsMdlWzCinJmENhUqlI3qdLpSuO+VVtSdPDfS8IgfW5g4w==
+projen@^0.3.37:
+  version "0.3.37"
+  resolved "https://registry.yarnpkg.com/projen/-/projen-0.3.37.tgz#553b308e9c8bf0bc3f743c445f83249571421598"
+  integrity sha512-saYS5hEKPEjIXucmHsPA6OMzkrfDi9U5IpaPwv0xWc5RZq4HUiXX/7Q45f6J10I526BUi+obeBUWKHRgn2a7PQ==
   dependencies:
     decamelize "^4.0.0"
     fs-extra "^9.0.1"
