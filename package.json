@@ -34,9 +34,9 @@
     "organization": true
   },
   "devDependencies": {
-    "@cdktf/provider-project": "^0.0.25",
+    "@cdktf/provider-project": "^0.0.29",
     "dot-prop": "^5.2.0",
-    "projen": "^0.3.35",
+    "projen": "^0.3.36",
     "standard-version": "^8.0.1",
     "typescript": "^3.9.5",
     "@typescript-eslint/eslint-plugin": "^2.31.0",
@@ -55,12 +55,12 @@
     "jsii-pacmak": "^1.9.0",
     "jsii-release": "^0.1.6",
     "jsii-docgen": "^1.3.2",
-    "cdktf": "^0.0.14",
+    "cdktf": "^0.0.15",
     "constructs": "3.0.4",
-    "cdktf-cli": "^0.0.14"
+    "cdktf-cli": "^0.0.15"
   },
   "peerDependencies": {
-    "cdktf": "^0.0.14",
+    "cdktf": "^0.0.15",
     "constructs": "^3.0.4"
   },
   "dependencies": {},
@@ -76,7 +76,7 @@
     "node": ">= 10.17.0"
   },
   "license": "MPL-2.0",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "types": "lib/index.d.ts",
   "jest": {
     "clearMocks": true,
@@ -103,8 +103,8 @@
     "outdir": "dist",
     "targets": {
       "python": {
-        "distName": "cdktf-cdktf-provider-aws",
-        "module": "cdktf_cdktf_provider_aws"
+        "distName": "cdktf-cdktf-provider-azurerm",
+        "module": "cdktf_cdktf_provider_azurerm"
       }
     },
     "tsc": {

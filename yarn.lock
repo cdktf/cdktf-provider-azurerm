@@ -263,10 +263,10 @@
   resolved "https://registry.yarnpkg.com/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
-"@cdktf/provider-project@^0.0.25":
-  version "0.0.25"
-  resolved "https://registry.yarnpkg.com/@cdktf/provider-project/-/provider-project-0.0.25.tgz#8c2d207af50e1f4f453fa5dab9decc7990e272f5"
-  integrity sha512-ZGzLT58qzzPrIfs+9dUF+e1h72wo64+v8Bw00Tgcs2FaXHztbGX6P7J98rAlHihjWcVBk7RSibbwQQhB+poFXg==
+"@cdktf/provider-project@^0.0.29":
+  version "0.0.29"
+  resolved "https://registry.yarnpkg.com/@cdktf/provider-project/-/provider-project-0.0.29.tgz#dd36c9cf5098223681ea3d7a112561a8209c398c"
+  integrity sha512-LQu86w236+dK8eCBN9UpWbTHNOXDos1pi7p8tv9TQiwLi0CSqqrQkkoQs5YWbBYzkV9VDCc5FG/kz900kJ3qeg==
 
 "@cnakazawa/watch@^1.0.3":
   version "1.0.4"
@@ -1153,14 +1153,14 @@ caseless@~0.12.0:
   resolved "https://registry.yarnpkg.com/caseless/-/caseless-0.12.0.tgz#1b681c21ff84033c826543090689420d187151dc"
   integrity sha1-G2gcIf+EAzyCZUMJBolCDRhxUdw=
 
-cdktf-cli@^0.0.14:
-  version "0.0.14"
-  resolved "https://registry.yarnpkg.com/cdktf-cli/-/cdktf-cli-0.0.14.tgz#961ce2402de8fc0782eafcad0cb1191defc44b32"
-  integrity sha512-yiwrf/1LV8zThkdYKvEhFGTFNyV035tiDJ8fBFq9ZgHBa0L0A0nFxx3zgImdv9NLDvD4eWLUsaf+ry6QzwYoow==
+cdktf-cli@^0.0.15:
+  version "0.0.15"
+  resolved "https://registry.yarnpkg.com/cdktf-cli/-/cdktf-cli-0.0.15.tgz#02c220c47aa7c54f85ffc361744656eaf6f56c01"
+  integrity sha512-+uArB3sd+2TggtOcWbEK5iXG14oSbb5i6Hc+xJXWV51zzp8K/ZX7DChR0WSyDmxnQEJCqs7tEJmNze+KQP9KIA==
   dependencies:
     "@types/node" "^14.0.26"
     "@types/readline-sync" "^1.4.3"
-    cdktf "0.0.14"
+    cdktf "0.0.15"
     chalk "^4.1.0"
     codemaker "^0.22.0"
     constructs "^3.0.0"
@@ -1179,10 +1179,10 @@ cdktf-cli@^0.0.14:
     sscaff "^1.2.0"
     yargs "^15.1.0"
 
-cdktf@0.0.14, cdktf@^0.0.14:
-  version "0.0.14"
-  resolved "https://registry.yarnpkg.com/cdktf/-/cdktf-0.0.14.tgz#088fa5ca8d9e939d6e603c32ab0ef527984479e3"
-  integrity sha512-EzX6GPhMnVp9fhgGAlBFxXO25AsMaxosiPWiIXuki546SlGHI0+449isduOAXiW1DqP+awL3Ap9roGM1cELxGg==
+cdktf@0.0.15, cdktf@^0.0.15:
+  version "0.0.15"
+  resolved "https://registry.yarnpkg.com/cdktf/-/cdktf-0.0.15.tgz#ed72cb617b96f0248c12d3c518af12dbe54ca9f9"
+  integrity sha512-yOWq0Wp4Jw6ujyueu1yc7o0vFSwsar/1g6E5qrpgRTFbtysrW/4FeD6ZY6jJv1pVsbJZpczJqdWSy1mDNH3/Mg==
   dependencies:
     json-stable-stringify "^1.0.1"
 
@@ -4760,10 +4760,10 @@ progress@^2.0.0:
   resolved "https://registry.yarnpkg.com/progress/-/progress-2.0.3.tgz#7e8cf8d8f5b8f239c1bc68beb4eb78567d572ef8"
   integrity sha512-7PiHtLll5LdnKIMw100I+8xJXR5gW2QwWYkT6iJva0bXitZKa/XMrSbdmg3r2Xnaidz9Qumd0VPaMrZlF9V9sA==
 
-projen@^0.3.35:
-  version "0.3.35"
-  resolved "https://registry.yarnpkg.com/projen/-/projen-0.3.35.tgz#f6a9ac4744000443c5ddeecb291a09ae59384ef8"
-  integrity sha512-Aj8RIRSR8PeTw55zl5+q7pUgMPg4j6ujOHM/56DTTCfci1jKgKiK6muved+uXQMZwe2sG60NrnBrVeo/AHkRng==
+projen@^0.3.36:
+  version "0.3.36"
+  resolved "https://registry.yarnpkg.com/projen/-/projen-0.3.36.tgz#7a4cc51bfc303566c26aa96183ba72277cd2a81d"
+  integrity sha512-YgpFYFtEXoWObWPGKu8TRuvQCFjWSovm313a/sBZdsMdlWzCinJmENhUqlI3qdLpSuO+VVtSdPDfS8IgfW5g4w==
   dependencies:
     decamelize "^4.0.0"
     fs-extra "^9.0.1"
