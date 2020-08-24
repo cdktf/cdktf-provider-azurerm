@@ -104,7 +104,7 @@ export class DataAzurermSubscription extends TerraformDataSource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       subscription_id: this._subscriptionId,
       timeouts: this._timeouts,

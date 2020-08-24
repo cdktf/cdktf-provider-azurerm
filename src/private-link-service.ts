@@ -178,7 +178,7 @@ export class PrivateLinkService extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       auto_approval_subscription_ids: this._autoApprovalSubscriptionIds,
       enable_proxy_protocol: this._enableProxyProtocol,

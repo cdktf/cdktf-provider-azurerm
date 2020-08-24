@@ -99,7 +99,7 @@ export class NetworkInterfaceApplicationGatewayBackendAddressPoolAssociation ext
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       backend_address_pool_id: this._backendAddressPoolId,
       ip_configuration_name: this._ipConfigurationName,

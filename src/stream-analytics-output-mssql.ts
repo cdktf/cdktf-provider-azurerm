@@ -154,7 +154,7 @@ export class StreamAnalyticsOutputMssql extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       database: this._database,
       name: this._name,

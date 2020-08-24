@@ -140,7 +140,7 @@ export class DataAzurermPublicIps extends TerraformDataSource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       allocation_type: this._allocationType,
       attached: this._attached,

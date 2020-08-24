@@ -121,7 +121,7 @@ export class BotChannelMsTeams extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       bot_name: this._botName,
       calling_web_hook: this._callingWebHook,

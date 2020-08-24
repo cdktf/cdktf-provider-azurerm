@@ -88,7 +88,7 @@ export class AdvancedThreatProtection extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       enabled: this._enabled,
       target_resource_id: this._targetResourceId,

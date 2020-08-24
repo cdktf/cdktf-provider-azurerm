@@ -138,7 +138,7 @@ export class DataAzurermNatGateway extends TerraformDataSource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       name: this._name,
       public_ip_address_ids: this._publicIpAddressIds,

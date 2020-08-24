@@ -225,7 +225,7 @@ export class LbRule extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       backend_address_pool_id: this._backendAddressPoolId,
       backend_port: this._backendPort,

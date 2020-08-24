@@ -121,7 +121,7 @@ export class Dashboard extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       dashboard_properties: this._dashboardProperties,
       location: this._location,

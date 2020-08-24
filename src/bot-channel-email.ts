@@ -121,7 +121,7 @@ export class BotChannelEmail extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       bot_name: this._botName,
       email_address: this._emailAddress,

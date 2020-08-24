@@ -88,7 +88,7 @@ export class NetworkInterfaceSecurityGroupAssociation extends TerraformResource 
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       network_interface_id: this._networkInterfaceId,
       network_security_group_id: this._networkSecurityGroupId,

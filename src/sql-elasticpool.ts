@@ -181,7 +181,7 @@ export class SqlElasticpool extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       db_dtu_max: this._dbDtuMax,
       db_dtu_min: this._dbDtuMin,

@@ -187,7 +187,7 @@ export class MonitorDiagnosticSetting extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       eventhub_authorization_rule_id: this._eventhubAuthorizationRuleId,
       eventhub_name: this._eventhubName,

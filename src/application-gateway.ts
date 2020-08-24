@@ -571,7 +571,7 @@ export class ApplicationGateway extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       enable_http2: this._enableHttp2,
       location: this._location,

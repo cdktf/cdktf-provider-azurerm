@@ -171,7 +171,7 @@ export class SharedImageVersion extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       exclude_from_latest: this._excludeFromLatest,
       gallery_name: this._galleryName,

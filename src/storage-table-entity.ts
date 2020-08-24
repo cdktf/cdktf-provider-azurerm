@@ -121,7 +121,7 @@ export class StorageTableEntity extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       entity: this._entity,
       partition_key: this._partitionKey,

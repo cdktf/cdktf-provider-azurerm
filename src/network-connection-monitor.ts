@@ -176,7 +176,7 @@ export class NetworkConnectionMonitor extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       auto_start: this._autoStart,
       interval_in_seconds: this._intervalInSeconds,

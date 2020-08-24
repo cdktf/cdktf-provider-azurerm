@@ -264,7 +264,7 @@ export class NetworkSecurityRule extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       access: this._access,
       description: this._description,

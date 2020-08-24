@@ -99,7 +99,7 @@ export class StorageQueue extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       metadata: this._metadata,
       name: this._name,

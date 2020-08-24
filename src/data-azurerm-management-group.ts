@@ -89,7 +89,7 @@ export class DataAzurermManagementGroup extends TerraformDataSource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       group_id: this._groupId,
       timeouts: this._timeouts,

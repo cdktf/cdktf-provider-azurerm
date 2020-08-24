@@ -84,7 +84,7 @@ export class DataAzurermMonitorDiagnosticCategories extends TerraformDataSource 
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       resource_id: this._resourceId,
       timeouts: this._timeouts,

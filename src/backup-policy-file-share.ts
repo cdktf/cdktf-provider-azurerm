@@ -141,7 +141,7 @@ export class BackupPolicyFileShare extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       name: this._name,
       recovery_vault_name: this._recoveryVaultName,

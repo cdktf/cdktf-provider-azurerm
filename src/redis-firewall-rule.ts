@@ -121,7 +121,7 @@ export class RedisFirewallRule extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       end_ip: this._endIp,
       name: this._name,

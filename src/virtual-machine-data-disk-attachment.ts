@@ -132,7 +132,7 @@ export class VirtualMachineDataDiskAttachment extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       caching: this._caching,
       create_option: this._createOption,

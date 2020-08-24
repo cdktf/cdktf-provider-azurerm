@@ -88,7 +88,7 @@ export class SecurityCenterWorkspace extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       scope: this._scope,
       workspace_id: this._workspaceId,

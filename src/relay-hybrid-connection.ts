@@ -121,7 +121,7 @@ export class RelayHybridConnection extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       name: this._name,
       relay_namespace_name: this._relayNamespaceName,

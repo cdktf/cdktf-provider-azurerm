@@ -477,7 +477,7 @@ export class StorageAccount extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       access_tier: this._accessTier,
       account_kind: this._accountKind,

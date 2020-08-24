@@ -237,7 +237,7 @@ export class HdinsightStormCluster extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       cluster_version: this._clusterVersion,
       location: this._location,

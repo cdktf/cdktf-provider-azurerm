@@ -190,7 +190,7 @@ export class KeyVaultKey extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       curve: this._curve,
       expiration_date: this._expirationDate,

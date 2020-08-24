@@ -303,7 +303,7 @@ export class Iothub extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       event_hub_partition_count: this._eventHubPartitionCount,
       event_hub_retention_in_days: this._eventHubRetentionInDays,

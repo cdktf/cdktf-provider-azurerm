@@ -142,7 +142,7 @@ export class AppServiceEnvironment extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       front_end_scale_factor: this._frontEndScaleFactor,
       internal_load_balancing_mode: this._internalLoadBalancingMode,

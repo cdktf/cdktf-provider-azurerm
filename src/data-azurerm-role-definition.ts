@@ -139,7 +139,7 @@ export class DataAzurermRoleDefinition extends TerraformDataSource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       name: this._name,
       role_definition_id: this._roleDefinitionId,

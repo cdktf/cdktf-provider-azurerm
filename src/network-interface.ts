@@ -200,7 +200,7 @@ export class NetworkInterface extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       dns_servers: this._dnsServers,
       enable_accelerated_networking: this._enableAcceleratedNetworking,

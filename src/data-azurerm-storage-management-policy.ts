@@ -150,7 +150,7 @@ export class DataAzurermStorageManagementPolicy extends TerraformDataSource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       storage_account_id: this._storageAccountId,
       timeouts: this._timeouts,

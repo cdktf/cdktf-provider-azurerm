@@ -143,7 +143,7 @@ export class BotChannelSlack extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       bot_name: this._botName,
       client_id: this._clientId,

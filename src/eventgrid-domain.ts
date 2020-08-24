@@ -173,7 +173,7 @@ export class EventgridDomain extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       input_schema: this._inputSchema,
       location: this._location,

@@ -358,7 +358,7 @@ export class FunctionApp extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       app_service_plan_id: this._appServicePlanId,
       app_settings: this._appSettings,

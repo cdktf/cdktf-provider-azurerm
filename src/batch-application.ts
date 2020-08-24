@@ -132,7 +132,7 @@ export class BatchApplication extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       account_name: this._accountName,
       allow_updates: this._allowUpdates,

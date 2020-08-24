@@ -287,7 +287,7 @@ export class DataAzurermBatchPool extends TerraformDataSource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       account_name: this._accountName,
       name: this._name,

@@ -138,7 +138,7 @@ export class LogAnalyticsSolution extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       location: this._location,
       resource_group_name: this._resourceGroupName,

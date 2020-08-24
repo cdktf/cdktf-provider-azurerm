@@ -121,7 +121,7 @@ export class ApiManagementIdentityProviderAad extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       allowed_tenants: this._allowedTenants,
       api_management_name: this._apiManagementName,

@@ -170,7 +170,7 @@ export class DataLakeStore extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       encryption_state: this._encryptionState,
       encryption_type: this._encryptionType,

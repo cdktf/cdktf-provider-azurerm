@@ -110,7 +110,7 @@ export class StorageAccountCustomerManagedKey extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       key_name: this._keyName,
       key_vault_id: this._keyVaultId,

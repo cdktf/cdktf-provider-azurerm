@@ -178,7 +178,7 @@ export class AppServiceCertificate extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       key_vault_secret_id: this._keyVaultSecretId,
       location: this._location,

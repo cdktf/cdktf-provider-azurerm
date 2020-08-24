@@ -155,7 +155,7 @@ export class DatabricksWorkspace extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       location: this._location,
       managed_resource_group_name: this._managedResourceGroupName,

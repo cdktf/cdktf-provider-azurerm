@@ -198,7 +198,7 @@ export class DataFactoryLinkedServiceDataLakeStorageGen2 extends TerraformResour
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       additional_properties: this._additionalProperties,
       annotations: this._annotations,

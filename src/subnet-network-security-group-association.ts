@@ -88,7 +88,7 @@ export class SubnetNetworkSecurityGroupAssociation extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       network_security_group_id: this._networkSecurityGroupId,
       subnet_id: this._subnetId,

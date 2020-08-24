@@ -193,7 +193,7 @@ export class DataFactoryDatasetSqlServerTable extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       additional_properties: this._additionalProperties,
       annotations: this._annotations,

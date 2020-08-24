@@ -121,7 +121,7 @@ export class SiteRecoveryReplicationPolicy extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       application_consistent_snapshot_frequency_in_minutes: this._applicationConsistentSnapshotFrequencyInMinutes,
       name: this._name,

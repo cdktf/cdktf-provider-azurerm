@@ -280,7 +280,7 @@ export class CosmosdbAccount extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       enable_automatic_failover: this._enableAutomaticFailover,
       enable_multiple_write_locations: this._enableMultipleWriteLocations,

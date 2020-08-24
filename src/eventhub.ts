@@ -153,7 +153,7 @@ export class Eventhub extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       message_retention: this._messageRetention,
       name: this._name,

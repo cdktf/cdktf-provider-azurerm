@@ -165,7 +165,7 @@ export class VirtualNetwork extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       address_space: this._addressSpace,
       dns_servers: this._dnsServers,

@@ -176,7 +176,7 @@ export class ContainerRegistryWebhook extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       actions: this._actions,
       custom_headers: this._customHeaders,

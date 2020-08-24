@@ -169,7 +169,7 @@ export class DataAzurermStorageAccountSas extends TerraformDataSource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       connection_string: this._connectionString,
       expiry: this._expiry,

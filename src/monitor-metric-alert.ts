@@ -218,7 +218,7 @@ export class MonitorMetricAlert extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       auto_mitigate: this._autoMitigate,
       description: this._description,

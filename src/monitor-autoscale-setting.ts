@@ -220,7 +220,7 @@ export class MonitorAutoscaleSetting extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       enabled: this._enabled,
       location: this._location,

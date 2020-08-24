@@ -83,7 +83,7 @@ export class DataAzurermClientConfig extends TerraformDataSource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       timeouts: this._timeouts,
     };

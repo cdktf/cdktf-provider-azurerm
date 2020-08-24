@@ -188,7 +188,7 @@ export class MssqlElasticpool extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       location: this._location,
       max_size_bytes: this._maxSizeBytes,

@@ -182,7 +182,7 @@ export class Image extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       hyper_v_generation: this._hyperVGeneration,
       location: this._location,

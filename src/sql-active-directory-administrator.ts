@@ -121,7 +121,7 @@ export class SqlActiveDirectoryAdministrator extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       login: this._login,
       object_id: this._objectId,

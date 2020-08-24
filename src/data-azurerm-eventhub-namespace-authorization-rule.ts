@@ -131,7 +131,7 @@ export class DataAzurermEventhubNamespaceAuthorizationRule extends TerraformData
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       name: this._name,
       namespace_name: this._namespaceName,

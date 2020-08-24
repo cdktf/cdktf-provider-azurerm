@@ -174,7 +174,7 @@ export class IothubDpsSharedAccessPolicy extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       enrollment_read: this._enrollmentRead,
       enrollment_write: this._enrollmentWrite,

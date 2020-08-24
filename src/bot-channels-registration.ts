@@ -187,7 +187,7 @@ export class BotChannelsRegistration extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       developer_app_insights_api_key: this._developerAppInsightsApiKey,
       developer_app_insights_application_id: this._developerAppInsightsApplicationId,

@@ -193,7 +193,7 @@ export class ContainerRegistry extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       admin_enabled: this._adminEnabled,
       georeplication_locations: this._georeplicationLocations,

@@ -110,7 +110,7 @@ export class SecurityCenterContact extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       alert_notifications: this._alertNotifications,
       alerts_to_admins: this._alertsToAdmins,

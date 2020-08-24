@@ -198,7 +198,7 @@ export class AppServicePlan extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       app_service_environment_id: this._appServiceEnvironmentId,
       is_xenon: this._isXenon,

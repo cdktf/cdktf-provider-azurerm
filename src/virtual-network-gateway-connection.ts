@@ -264,7 +264,7 @@ export class VirtualNetworkGatewayConnection extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       authorization_key: this._authorizationKey,
       connection_protocol: this._connectionProtocol,

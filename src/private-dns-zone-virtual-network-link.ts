@@ -132,7 +132,7 @@ export class PrivateDnsZoneVirtualNetworkLink extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       name: this._name,
       private_dns_zone_name: this._privateDnsZoneName,

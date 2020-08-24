@@ -154,7 +154,7 @@ export class VirtualNetworkPeering extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       allow_forwarded_traffic: this._allowForwardedTraffic,
       allow_gateway_transit: this._allowGatewayTransit,

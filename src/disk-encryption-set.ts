@@ -136,7 +136,7 @@ export class DiskEncryptionSet extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       key_vault_key_id: this._keyVaultKeyId,
       location: this._location,

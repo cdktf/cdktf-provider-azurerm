@@ -99,7 +99,7 @@ export class NetworkInterfaceNatRuleAssociation extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       ip_configuration_name: this._ipConfigurationName,
       nat_rule_id: this._natRuleId,

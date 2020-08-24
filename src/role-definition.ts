@@ -139,7 +139,7 @@ export class RoleDefinition extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       assignable_scopes: this._assignableScopes,
       description: this._description,

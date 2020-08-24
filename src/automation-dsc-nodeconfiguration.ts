@@ -115,7 +115,7 @@ export class AutomationDscNodeconfiguration extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       automation_account_name: this._automationAccountName,
       content_embedded: this._contentEmbedded,

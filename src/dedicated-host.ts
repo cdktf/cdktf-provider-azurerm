@@ -154,7 +154,7 @@ export class DedicatedHost extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       auto_replace_on_failure: this._autoReplaceOnFailure,
       dedicated_host_group_id: this._dedicatedHostGroupId,

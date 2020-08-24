@@ -236,7 +236,7 @@ export class TrafficManagerEndpoint extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       endpoint_location: this._endpointLocation,
       endpoint_status: this._endpointStatus,

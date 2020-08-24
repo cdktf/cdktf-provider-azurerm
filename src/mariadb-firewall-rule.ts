@@ -121,7 +121,7 @@ export class MariadbFirewallRule extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       end_ip_address: this._endIpAddress,
       name: this._name,

@@ -154,7 +154,7 @@ export class KeyVaultAccessPolicyA extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       application_id: this._applicationId,
       certificate_permissions: this._certificatePermissions,

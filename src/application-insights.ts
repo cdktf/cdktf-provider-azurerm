@@ -175,7 +175,7 @@ export class ApplicationInsights extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       application_type: this._applicationType,
       daily_data_cap_in_gb: this._dailyDataCapInGb,

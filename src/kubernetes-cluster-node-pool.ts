@@ -220,7 +220,7 @@ export class KubernetesClusterNodePool extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       availability_zones: this._availabilityZones,
       enable_auto_scaling: this._enableAutoScaling,

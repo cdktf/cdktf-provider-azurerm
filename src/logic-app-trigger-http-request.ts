@@ -121,7 +121,7 @@ export class LogicAppTriggerHttpRequest extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       logic_app_id: this._logicAppId,
       method: this._method,

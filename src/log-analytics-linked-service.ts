@@ -126,7 +126,7 @@ export class LogAnalyticsLinkedService extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       linked_service_name: this._linkedServiceName,
       resource_group_name: this._resourceGroupName,

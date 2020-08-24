@@ -151,7 +151,7 @@ export class DataAzurermSharedImageVersion extends TerraformDataSource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       gallery_name: this._galleryName,
       image_name: this._imageName,

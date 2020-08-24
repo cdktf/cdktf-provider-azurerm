@@ -176,7 +176,7 @@ export class KustoEventhubDataConnection extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       cluster_name: this._clusterName,
       consumer_group: this._consumerGroup,

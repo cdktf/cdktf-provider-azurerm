@@ -121,7 +121,7 @@ export class MysqlDatabase extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       charset: this._charset,
       collation: this._collation,

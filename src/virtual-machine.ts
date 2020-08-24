@@ -430,7 +430,7 @@ export class VirtualMachine extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       availability_set_id: this._availabilitySetId,
       delete_data_disks_on_termination: this._deleteDataDisksOnTermination,

@@ -169,7 +169,7 @@ export class LbOutboundRule extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       allocated_outbound_ports: this._allocatedOutboundPorts,
       backend_address_pool_id: this._backendAddressPoolId,

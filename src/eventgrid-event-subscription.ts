@@ -242,7 +242,7 @@ export class EventgridEventSubscription extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       event_delivery_schema: this._eventDeliverySchema,
       included_event_types: this._includedEventTypes,

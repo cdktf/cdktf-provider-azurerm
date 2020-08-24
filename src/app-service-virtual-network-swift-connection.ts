@@ -88,7 +88,7 @@ export class AppServiceVirtualNetworkSwiftConnection extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       app_service_id: this._appServiceId,
       subnet_id: this._subnetId,

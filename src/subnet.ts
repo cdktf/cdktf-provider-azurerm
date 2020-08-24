@@ -164,7 +164,7 @@ export class Subnet extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       address_prefix: this._addressPrefix,
       enforce_private_link_endpoint_network_policies: this._enforcePrivateLinkEndpointNetworkPolicies,

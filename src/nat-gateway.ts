@@ -170,7 +170,7 @@ export class NatGateway extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       idle_timeout_in_minutes: this._idleTimeoutInMinutes,
       location: this._location,

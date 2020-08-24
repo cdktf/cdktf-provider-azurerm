@@ -116,7 +116,7 @@ export class DataAzurermServicebusNamespaceAuthorizationRule extends TerraformDa
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       name: this._name,
       namespace_name: this._namespaceName,

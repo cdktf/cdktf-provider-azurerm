@@ -209,7 +209,7 @@ export class DataAzurermStorageAccountBlobContainerSas extends TerraformDataSour
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       cache_control: this._cacheControl,
       connection_string: this._connectionString,

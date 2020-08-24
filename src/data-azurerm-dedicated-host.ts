@@ -107,7 +107,7 @@ export class DataAzurermDedicatedHost extends TerraformDataSource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       dedicated_host_group_name: this._dedicatedHostGroupName,
       name: this._name,

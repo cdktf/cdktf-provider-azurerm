@@ -132,7 +132,7 @@ export class AutomationVariableDatetime extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       automation_account_name: this._automationAccountName,
       description: this._description,

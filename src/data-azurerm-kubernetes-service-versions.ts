@@ -106,7 +106,7 @@ export class DataAzurermKubernetesServiceVersions extends TerraformDataSource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       include_preview: this._includePreview,
       location: this._location,

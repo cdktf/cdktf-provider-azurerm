@@ -137,7 +137,7 @@ export class MonitorLogProfile extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       categories: this._categories,
       locations: this._locations,

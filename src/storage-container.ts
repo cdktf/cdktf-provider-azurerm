@@ -120,7 +120,7 @@ export class StorageContainer extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       container_access_type: this._containerAccessType,
       metadata: this._metadata,

@@ -99,7 +99,7 @@ export class BackupContainerStorageAccount extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       recovery_vault_name: this._recoveryVaultName,
       resource_group_name: this._resourceGroupName,

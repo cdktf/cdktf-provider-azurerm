@@ -143,7 +143,7 @@ export class CosmosdbMongoCollection extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       account_name: this._accountName,
       database_name: this._databaseName,

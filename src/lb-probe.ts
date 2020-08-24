@@ -159,7 +159,7 @@ export class LbProbe extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       interval_in_seconds: this._intervalInSeconds,
       loadbalancer_id: this._loadbalancerId,

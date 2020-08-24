@@ -166,7 +166,7 @@ export class NetworkWatcherFlowLog extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       enabled: this._enabled,
       network_security_group_id: this._networkSecurityGroupId,

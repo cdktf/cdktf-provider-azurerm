@@ -203,7 +203,7 @@ export class StorageBlob extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       access_tier: this._accessTier,
       content_type: this._contentType,

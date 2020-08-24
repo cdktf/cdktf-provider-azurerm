@@ -269,7 +269,7 @@ export class ManagedDisk extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       create_option: this._createOption,
       disk_encryption_set_id: this._diskEncryptionSetId,

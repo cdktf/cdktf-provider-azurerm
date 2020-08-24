@@ -109,7 +109,7 @@ export class ExpressRouteCircuitAuthorization extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       express_route_circuit_name: this._expressRouteCircuitName,
       name: this._name,

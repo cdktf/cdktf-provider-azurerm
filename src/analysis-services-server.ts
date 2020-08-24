@@ -187,7 +187,7 @@ export class AnalysisServicesServer extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       admin_users: this._adminUsers,
       backup_blob_container_uri: this._backupBlobContainerUri,

@@ -198,7 +198,7 @@ export class EventhubNamespace extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       auto_inflate_enabled: this._autoInflateEnabled,
       capacity: this._capacity,

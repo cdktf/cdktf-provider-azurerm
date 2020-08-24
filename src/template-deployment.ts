@@ -138,7 +138,7 @@ export class TemplateDeployment extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       deployment_mode: this._deploymentMode,
       name: this._name,

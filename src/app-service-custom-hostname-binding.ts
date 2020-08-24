@@ -126,7 +126,7 @@ export class AppServiceCustomHostnameBinding extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       app_service_name: this._appServiceName,
       hostname: this._hostname,

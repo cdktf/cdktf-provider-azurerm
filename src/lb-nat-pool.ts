@@ -159,7 +159,7 @@ export class LbNatPool extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       backend_port: this._backendPort,
       frontend_ip_configuration_name: this._frontendIpConfigurationName,

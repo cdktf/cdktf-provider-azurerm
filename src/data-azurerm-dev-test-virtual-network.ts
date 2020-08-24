@@ -156,7 +156,7 @@ export class DataAzurermDevTestVirtualNetwork extends TerraformDataSource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       lab_name: this._labName,
       name: this._name,

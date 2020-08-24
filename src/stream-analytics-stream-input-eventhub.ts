@@ -171,7 +171,7 @@ export class StreamAnalyticsStreamInputEventhub extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       eventhub_consumer_group_name: this._eventhubConsumerGroupName,
       eventhub_name: this._eventhubName,

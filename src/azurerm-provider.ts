@@ -269,7 +269,7 @@ export class AzurermProvider extends TerraformProvider {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       auxiliary_tenant_ids: this._auxiliaryTenantIds,
       client_certificate_password: this._clientCertificatePassword,

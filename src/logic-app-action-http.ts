@@ -132,7 +132,7 @@ export class LogicAppActionHttp extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       body: this._body,
       headers: this._headers,

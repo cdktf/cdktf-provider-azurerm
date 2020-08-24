@@ -260,7 +260,7 @@ export class CdnEndpoint extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       content_types_to_compress: this._contentTypesToCompress,
       is_compression_enabled: this._isCompressionEnabled,

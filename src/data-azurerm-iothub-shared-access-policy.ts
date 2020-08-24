@@ -116,7 +116,7 @@ export class DataAzurermIothubSharedAccessPolicy extends TerraformDataSource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       iothub_name: this._iothubName,
       name: this._name,

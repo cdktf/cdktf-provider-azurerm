@@ -143,7 +143,7 @@ export class RouteTable extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       disable_bgp_route_propagation: this._disableBgpRoutePropagation,
       location: this._location,

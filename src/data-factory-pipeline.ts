@@ -143,7 +143,7 @@ export class DataFactoryPipeline extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       annotations: this._annotations,
       data_factory_name: this._dataFactoryName,

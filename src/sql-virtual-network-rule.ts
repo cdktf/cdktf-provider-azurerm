@@ -121,7 +121,7 @@ export class SqlVirtualNetworkRule extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       ignore_missing_vnet_service_endpoint: this._ignoreMissingVnetServiceEndpoint,
       name: this._name,

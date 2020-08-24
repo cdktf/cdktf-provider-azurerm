@@ -88,7 +88,7 @@ export class NetworkInterfaceApplicationSecurityGroupAssociation extends Terrafo
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       application_security_group_id: this._applicationSecurityGroupId,
       network_interface_id: this._networkInterfaceId,

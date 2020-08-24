@@ -176,7 +176,7 @@ export class ApiManagementProduct extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       api_management_name: this._apiManagementName,
       approval_required: this._approvalRequired,

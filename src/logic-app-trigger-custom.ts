@@ -99,7 +99,7 @@ export class LogicAppTriggerCustom extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       body: this._body,
       logic_app_id: this._logicAppId,

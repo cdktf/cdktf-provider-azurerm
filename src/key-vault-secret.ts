@@ -148,7 +148,7 @@ export class KeyVaultSecret extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       content_type: this._contentType,
       expiration_date: this._expirationDate,

@@ -163,7 +163,7 @@ export class SqlServer extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       administrator_login: this._administratorLogin,
       administrator_login_password: this._administratorLoginPassword,

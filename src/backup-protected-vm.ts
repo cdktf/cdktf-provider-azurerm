@@ -121,7 +121,7 @@ export class BackupProtectedVm extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       backup_policy_id: this._backupPolicyId,
       recovery_vault_name: this._recoveryVaultName,

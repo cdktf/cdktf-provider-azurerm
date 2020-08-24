@@ -205,7 +205,7 @@ export class SiteRecoveryReplicatedVm extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       managed_disk: this._managedDisk,
       name: this._name,

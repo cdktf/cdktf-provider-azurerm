@@ -615,7 +615,7 @@ export class WindowsVirtualMachineScaleSet extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       admin_password: this._adminPassword,
       admin_username: this._adminUsername,

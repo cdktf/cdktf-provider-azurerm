@@ -165,7 +165,7 @@ export class IothubEndpointStorageContainer extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       batch_frequency_in_seconds: this._batchFrequencyInSeconds,
       connection_string: this._connectionString,

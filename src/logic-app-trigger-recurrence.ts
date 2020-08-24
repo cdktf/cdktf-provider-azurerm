@@ -121,7 +121,7 @@ export class LogicAppTriggerRecurrence extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       frequency: this._frequency,
       interval: this._interval,

@@ -307,7 +307,7 @@ export class ContainerGroup extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       dns_name_label: this._dnsNameLabel,
       ip_address_type: this._ipAddressType,

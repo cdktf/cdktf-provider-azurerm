@@ -279,7 +279,7 @@ export class Frontdoor extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       enforce_backend_pools_certificate_name_check: this._enforceBackendPoolsCertificateNameCheck,
       friendly_name: this._friendlyName,

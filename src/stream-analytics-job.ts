@@ -203,7 +203,7 @@ export class StreamAnalyticsJob extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       compatibility_level: this._compatibilityLevel,
       data_locale: this._dataLocale,

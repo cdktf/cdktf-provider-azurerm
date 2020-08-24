@@ -131,7 +131,7 @@ export class DataAzurermApiManagementProduct extends TerraformDataSource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       api_management_name: this._apiManagementName,
       product_id: this._productId,

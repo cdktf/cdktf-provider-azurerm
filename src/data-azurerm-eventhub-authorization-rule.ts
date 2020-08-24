@@ -165,7 +165,7 @@ export class DataAzurermEventhubAuthorizationRule extends TerraformDataSource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       eventhub_name: this._eventhubName,
       listen: this._listen,

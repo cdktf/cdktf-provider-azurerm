@@ -137,7 +137,7 @@ export class KustoDatabase extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       cluster_name: this._clusterName,
       hot_cache_period: this._hotCachePeriod,

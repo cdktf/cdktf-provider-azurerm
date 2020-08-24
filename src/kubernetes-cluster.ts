@@ -457,7 +457,7 @@ export class KubernetesCluster extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       api_server_authorized_ip_ranges: this._apiServerAuthorizedIpRanges,
       dns_prefix: this._dnsPrefix,

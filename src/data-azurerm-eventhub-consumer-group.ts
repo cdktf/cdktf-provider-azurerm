@@ -117,7 +117,7 @@ export class DataAzurermEventhubConsumerGroup extends TerraformDataSource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       eventhub_name: this._eventhubName,
       name: this._name,

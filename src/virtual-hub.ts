@@ -148,7 +148,7 @@ export class VirtualHub extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       address_prefix: this._addressPrefix,
       location: this._location,

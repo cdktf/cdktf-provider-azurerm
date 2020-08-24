@@ -163,7 +163,7 @@ export class KustoDatabasePrincipal extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       client_id: this._clientId,
       cluster_name: this._clusterName,

@@ -179,7 +179,7 @@ export class HealthcareService extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       access_policy_object_ids: this._accessPolicyObjectIds,
       cosmosdb_throughput: this._cosmosdbThroughput,

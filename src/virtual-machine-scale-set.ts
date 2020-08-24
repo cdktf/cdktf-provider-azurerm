@@ -517,7 +517,7 @@ export class VirtualMachineScaleSet extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       automatic_os_upgrade: this._automaticOsUpgrade,
       eviction_policy: this._evictionPolicy,

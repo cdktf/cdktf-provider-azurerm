@@ -88,7 +88,7 @@ export class SubnetNatGatewayAssociation extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       nat_gateway_id: this._natGatewayId,
       subnet_id: this._subnetId,

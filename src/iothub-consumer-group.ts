@@ -110,7 +110,7 @@ export class IothubConsumerGroup extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       eventhub_endpoint_name: this._eventhubEndpointName,
       iothub_name: this._iothubName,

@@ -99,7 +99,7 @@ export class AppServiceSourceControlToken extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       token: this._token,
       token_secret: this._tokenSecret,

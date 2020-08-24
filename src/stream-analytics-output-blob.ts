@@ -183,7 +183,7 @@ export class StreamAnalyticsOutputBlob extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       date_format: this._dateFormat,
       name: this._name,

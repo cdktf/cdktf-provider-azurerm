@@ -165,7 +165,7 @@ export class MssqlServerSecurityAlertPolicy extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       disabled_alerts: this._disabledAlerts,
       email_account_admins: this._emailAccountAdmins,

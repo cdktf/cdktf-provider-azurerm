@@ -214,7 +214,7 @@ export class ApplicationInsightsWebTest extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       application_insights_id: this._applicationInsightsId,
       configuration: this._configuration,

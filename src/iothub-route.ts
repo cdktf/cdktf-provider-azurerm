@@ -143,7 +143,7 @@ export class IothubRouteA extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       condition: this._condition,
       enabled: this._enabled,

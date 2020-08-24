@@ -192,7 +192,7 @@ export class Snapshot extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       create_option: this._createOption,
       disk_size_gb: this._diskSizeGb,

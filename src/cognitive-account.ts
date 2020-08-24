@@ -147,7 +147,7 @@ export class CognitiveAccount extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       kind: this._kind,
       location: this._location,

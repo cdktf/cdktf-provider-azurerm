@@ -209,7 +209,7 @@ export class ServicebusTopic extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       auto_delete_on_idle: this._autoDeleteOnIdle,
       default_message_ttl: this._defaultMessageTtl,

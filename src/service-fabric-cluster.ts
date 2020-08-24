@@ -339,7 +339,7 @@ export class ServiceFabricCluster extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       add_on_features: this._addOnFeatures,
       cluster_code_version: this._clusterCodeVersion,

@@ -140,7 +140,7 @@ export class DataAzurermResources extends TerraformDataSource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       name: this._name,
       required_tags: this._requiredTags,

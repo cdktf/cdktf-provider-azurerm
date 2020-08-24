@@ -115,7 +115,7 @@ export class StorageManagementPolicy extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       storage_account_id: this._storageAccountId,
       rule: this._rule,

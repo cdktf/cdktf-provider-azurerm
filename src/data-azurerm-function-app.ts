@@ -172,7 +172,7 @@ export class DataAzurermFunctionApp extends TerraformDataSource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       name: this._name,
       resource_group_name: this._resourceGroupName,

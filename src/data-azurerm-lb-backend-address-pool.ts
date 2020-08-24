@@ -98,7 +98,7 @@ export class DataAzurermLbBackendAddressPool extends TerraformDataSource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       loadbalancer_id: this._loadbalancerId,
       name: this._name,

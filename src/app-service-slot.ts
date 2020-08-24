@@ -377,7 +377,7 @@ export class AppServiceSlot extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       app_service_name: this._appServiceName,
       app_service_plan_id: this._appServicePlanId,

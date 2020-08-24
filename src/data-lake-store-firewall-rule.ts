@@ -121,7 +121,7 @@ export class DataLakeStoreFirewallRule extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       account_name: this._accountName,
       end_ip_address: this._endIpAddress,

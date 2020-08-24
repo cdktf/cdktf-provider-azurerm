@@ -153,7 +153,7 @@ export class NotificationHubAuthorizationRule extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       listen: this._listen,
       manage: this._manage,

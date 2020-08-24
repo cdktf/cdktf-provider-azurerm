@@ -154,7 +154,7 @@ export class VirtualWan extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       allow_branch_to_branch_traffic: this._allowBranchToBranchTraffic,
       allow_vnet_to_vnet_traffic: this._allowVnetToVnetTraffic,

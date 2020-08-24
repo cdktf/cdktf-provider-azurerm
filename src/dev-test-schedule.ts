@@ -217,7 +217,7 @@ export class DevTestSchedule extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       lab_name: this._labName,
       location: this._location,

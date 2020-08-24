@@ -177,7 +177,7 @@ export class SqlFailoverGroup extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       databases: this._databases,
       name: this._name,

@@ -208,7 +208,7 @@ export class PublicIp extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       allocation_method: this._allocationMethod,
       domain_name_label: this._domainNameLabel,

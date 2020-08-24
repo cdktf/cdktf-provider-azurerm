@@ -110,7 +110,7 @@ export class IothubDpsCertificate extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       certificate_content: this._certificateContent,
       iot_dps_name: this._iotDpsName,

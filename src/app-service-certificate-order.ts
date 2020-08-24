@@ -244,7 +244,7 @@ export class AppServiceCertificateOrder extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       auto_renew: this._autoRenew,
       csr: this._csr,

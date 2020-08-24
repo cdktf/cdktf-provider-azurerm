@@ -163,7 +163,7 @@ export class IothubSharedAccessPolicyA extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       device_connect: this._deviceConnect,
       iothub_name: this._iothubName,

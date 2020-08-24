@@ -196,7 +196,7 @@ export class KeyVaultCertificate extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       key_vault_id: this._keyVaultId,
       name: this._name,

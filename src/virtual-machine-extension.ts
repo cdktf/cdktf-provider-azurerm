@@ -165,7 +165,7 @@ export class VirtualMachineExtension extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       auto_upgrade_minor_version: this._autoUpgradeMinorVersion,
       name: this._name,

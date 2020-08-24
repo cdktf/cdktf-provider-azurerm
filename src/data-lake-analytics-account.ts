@@ -132,7 +132,7 @@ export class DataLakeAnalyticsAccount extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       default_store_account_name: this._defaultStoreAccountName,
       location: this._location,

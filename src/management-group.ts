@@ -110,7 +110,7 @@ export class ManagementGroup extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       display_name: this._displayName,
       group_id: this._groupId,

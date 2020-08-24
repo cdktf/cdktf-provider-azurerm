@@ -220,7 +220,7 @@ export class ServicebusQueue extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       auto_delete_on_idle: this._autoDeleteOnIdle,
       dead_lettering_on_message_expiration: this._deadLetteringOnMessageExpiration,

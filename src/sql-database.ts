@@ -311,7 +311,7 @@ export class SqlDatabase extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       collation: this._collation,
       create_mode: this._createMode,

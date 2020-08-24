@@ -186,7 +186,7 @@ export class LbNatRule extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       backend_port: this._backendPort,
       enable_floating_ip: this._enableFloatingIp,

@@ -121,7 +121,7 @@ export class EventhubConsumerGroup extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       eventhub_name: this._eventhubName,
       name: this._name,

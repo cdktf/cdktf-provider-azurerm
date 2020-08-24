@@ -252,7 +252,7 @@ export class VirtualNetworkGateway extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       active_active: this._activeActive,
       default_local_network_gateway_id: this._defaultLocalNetworkGatewayId,

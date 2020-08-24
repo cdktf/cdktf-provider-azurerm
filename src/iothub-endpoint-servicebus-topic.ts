@@ -110,7 +110,7 @@ export class IothubEndpointServicebusTopic extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       connection_string: this._connectionString,
       iothub_name: this._iothubName,

@@ -128,7 +128,7 @@ export class DataAzurermSubscriptions extends TerraformDataSource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       display_name_contains: this._displayNameContains,
       display_name_prefix: this._displayNamePrefix,

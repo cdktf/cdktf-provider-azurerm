@@ -121,7 +121,7 @@ export class DataAzurermApiManagementUser extends TerraformDataSource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       api_management_name: this._apiManagementName,
       resource_group_name: this._resourceGroupName,

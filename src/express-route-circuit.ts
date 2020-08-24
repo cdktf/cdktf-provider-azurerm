@@ -180,7 +180,7 @@ export class ExpressRouteCircuit extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       allow_classic_operations: this._allowClassicOperations,
       bandwidth_in_mbps: this._bandwidthInMbps,

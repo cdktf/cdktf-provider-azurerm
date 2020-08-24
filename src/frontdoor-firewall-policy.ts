@@ -244,7 +244,7 @@ export class FrontdoorFirewallPolicy extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       custom_block_response_body: this._customBlockResponseBody,
       custom_block_response_status_code: this._customBlockResponseStatusCode,

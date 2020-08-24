@@ -178,7 +178,7 @@ export class NetworkPacketCapture extends TerraformResource {
   // SYNTHESIS
   // =========
 
-  public synthesizeAttributes(): { [name: string]: any } {
+  protected synthesizeAttributes(): { [name: string]: any } {
     return {
       maximum_bytes_per_packet: this._maximumBytesPerPacket,
       maximum_bytes_per_session: this._maximumBytesPerSession,
