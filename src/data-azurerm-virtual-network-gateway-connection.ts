@@ -17,42 +17,42 @@ export interface DataAzurermVirtualNetworkGatewayConnectionConfig extends Terraf
 }
 export class DataAzurermVirtualNetworkGatewayConnectionIpsecPolicy extends ComplexComputedList {
 
-  // dh_group - computed: true, optional: false, required: true
+  // dh_group - computed: true, optional: false, required: false
   public get dhGroup() {
     return this.getStringAttribute('dh_group');
   }
 
-  // ike_encryption - computed: true, optional: false, required: true
+  // ike_encryption - computed: true, optional: false, required: false
   public get ikeEncryption() {
     return this.getStringAttribute('ike_encryption');
   }
 
-  // ike_integrity - computed: true, optional: false, required: true
+  // ike_integrity - computed: true, optional: false, required: false
   public get ikeIntegrity() {
     return this.getStringAttribute('ike_integrity');
   }
 
-  // ipsec_encryption - computed: true, optional: false, required: true
+  // ipsec_encryption - computed: true, optional: false, required: false
   public get ipsecEncryption() {
     return this.getStringAttribute('ipsec_encryption');
   }
 
-  // ipsec_integrity - computed: true, optional: false, required: true
+  // ipsec_integrity - computed: true, optional: false, required: false
   public get ipsecIntegrity() {
     return this.getStringAttribute('ipsec_integrity');
   }
 
-  // pfs_group - computed: true, optional: false, required: true
+  // pfs_group - computed: true, optional: false, required: false
   public get pfsGroup() {
     return this.getStringAttribute('pfs_group');
   }
 
-  // sa_datasize - computed: true, optional: false, required: true
+  // sa_datasize - computed: true, optional: false, required: false
   public get saDatasize() {
     return this.getNumberAttribute('sa_datasize');
   }
 
-  // sa_lifetime - computed: true, optional: false, required: true
+  // sa_lifetime - computed: true, optional: false, required: false
   public get saLifetime() {
     return this.getNumberAttribute('sa_lifetime');
   }
@@ -89,61 +89,57 @@ export class DataAzurermVirtualNetworkGatewayConnection extends TerraformDataSou
   // ATTRIBUTES
   // ==========
 
-  // authorization_key - computed: true, optional: false, required: true
+  // authorization_key - computed: true, optional: false, required: false
   public get authorizationKey() {
     return this.getStringAttribute('authorization_key');
   }
 
-  // connection_protocol - computed: true, optional: false, required: true
+  // connection_protocol - computed: true, optional: false, required: false
   public get connectionProtocol() {
     return this.getStringAttribute('connection_protocol');
   }
 
-  // egress_bytes_transferred - computed: true, optional: false, required: true
+  // egress_bytes_transferred - computed: true, optional: false, required: false
   public get egressBytesTransferred() {
     return this.getNumberAttribute('egress_bytes_transferred');
   }
 
-  // enable_bgp - computed: true, optional: false, required: true
+  // enable_bgp - computed: true, optional: false, required: false
   public get enableBgp() {
     return this.getBooleanAttribute('enable_bgp');
   }
 
-  // express_route_circuit_id - computed: true, optional: false, required: true
+  // express_route_circuit_id - computed: true, optional: false, required: false
   public get expressRouteCircuitId() {
     return this.getStringAttribute('express_route_circuit_id');
   }
 
-  // express_route_gateway_bypass - computed: true, optional: false, required: true
+  // express_route_gateway_bypass - computed: true, optional: false, required: false
   public get expressRouteGatewayBypass() {
     return this.getBooleanAttribute('express_route_gateway_bypass');
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
-  // ingress_bytes_transferred - computed: true, optional: false, required: true
+  // ingress_bytes_transferred - computed: true, optional: false, required: false
   public get ingressBytesTransferred() {
     return this.getNumberAttribute('ingress_bytes_transferred');
   }
 
-  // ipsec_policy - computed: true, optional: false, required: true
+  // ipsec_policy - computed: true, optional: false, required: false
   public ipsecPolicy(index: string) {
     return new DataAzurermVirtualNetworkGatewayConnectionIpsecPolicy(this, 'ipsec_policy', index);
   }
 
-  // local_network_gateway_id - computed: true, optional: false, required: true
+  // local_network_gateway_id - computed: true, optional: false, required: false
   public get localNetworkGatewayId() {
     return this.getStringAttribute('local_network_gateway_id');
   }
 
-  // location - computed: true, optional: false, required: true
+  // location - computed: true, optional: false, required: false
   public get location() {
     return this.getStringAttribute('location');
   }
@@ -151,13 +147,17 @@ export class DataAzurermVirtualNetworkGatewayConnection extends TerraformDataSou
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
+  }
 
-  // peer_virtual_network_gateway_id - computed: true, optional: false, required: true
+  // peer_virtual_network_gateway_id - computed: true, optional: false, required: false
   public get peerVirtualNetworkGatewayId() {
     return this.getStringAttribute('peer_virtual_network_gateway_id');
   }
@@ -165,43 +165,47 @@ export class DataAzurermVirtualNetworkGatewayConnection extends TerraformDataSou
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
-    return this._resourceGroupName;
+    return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
+  }
 
-  // resource_guid - computed: true, optional: false, required: true
+  // resource_guid - computed: true, optional: false, required: false
   public get resourceGuid() {
     return this.getStringAttribute('resource_guid');
   }
 
-  // routing_weight - computed: true, optional: false, required: true
+  // routing_weight - computed: true, optional: false, required: false
   public get routingWeight() {
     return this.getNumberAttribute('routing_weight');
   }
 
-  // shared_key - computed: true, optional: false, required: true
+  // shared_key - computed: true, optional: false, required: false
   public get sharedKey() {
     return this.getStringAttribute('shared_key');
   }
 
-  // tags - computed: true, optional: false, required: true
+  // tags - computed: true, optional: false, required: false
   public tags(key: string): string {
     return new StringMap(this, 'tags').lookup(key);
   }
 
-  // type - computed: true, optional: false, required: true
+  // type - computed: true, optional: false, required: false
   public get type() {
     return this.getStringAttribute('type');
   }
 
-  // use_policy_based_traffic_selectors - computed: true, optional: false, required: true
+  // use_policy_based_traffic_selectors - computed: true, optional: false, required: false
   public get usePolicyBasedTrafficSelectors() {
     return this.getBooleanAttribute('use_policy_based_traffic_selectors');
   }
 
-  // virtual_network_gateway_id - computed: true, optional: false, required: true
+  // virtual_network_gateway_id - computed: true, optional: false, required: false
   public get virtualNetworkGatewayId() {
     return this.getStringAttribute('virtual_network_gateway_id');
   }
@@ -209,10 +213,17 @@ export class DataAzurermVirtualNetworkGatewayConnection extends TerraformDataSou
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: DataAzurermVirtualNetworkGatewayConnectionTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: DataAzurermVirtualNetworkGatewayConnectionTimeouts | undefined) {
+  public set timeouts(value: DataAzurermVirtualNetworkGatewayConnectionTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

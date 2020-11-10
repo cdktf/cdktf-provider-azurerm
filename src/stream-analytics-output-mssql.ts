@@ -63,91 +63,126 @@ export class StreamAnalyticsOutputMssql extends TerraformResource {
   // database - computed: false, optional: false, required: true
   private _database: string;
   public get database() {
-    return this._database;
+    return this.getStringAttribute('database');
   }
   public set database(value: string) {
     this._database = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get databaseInput() {
+    return this._database
+  }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // password - computed: false, optional: false, required: true
   private _password: string;
   public get password() {
-    return this._password;
+    return this.getStringAttribute('password');
   }
   public set password(value: string) {
     this._password = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get passwordInput() {
+    return this._password
   }
 
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
-    return this._resourceGroupName;
+    return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
   }
 
   // server - computed: false, optional: false, required: true
   private _server: string;
   public get server() {
-    return this._server;
+    return this.getStringAttribute('server');
   }
   public set server(value: string) {
     this._server = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get serverInput() {
+    return this._server
   }
 
   // stream_analytics_job_name - computed: false, optional: false, required: true
   private _streamAnalyticsJobName: string;
   public get streamAnalyticsJobName() {
-    return this._streamAnalyticsJobName;
+    return this.getStringAttribute('stream_analytics_job_name');
   }
   public set streamAnalyticsJobName(value: string) {
     this._streamAnalyticsJobName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get streamAnalyticsJobNameInput() {
+    return this._streamAnalyticsJobName
   }
 
   // table - computed: false, optional: false, required: true
   private _table: string;
   public get table() {
-    return this._table;
+    return this.getStringAttribute('table');
   }
   public set table(value: string) {
     this._table = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tableInput() {
+    return this._table
   }
 
   // user - computed: false, optional: false, required: true
   private _user: string;
   public get user() {
-    return this._user;
+    return this.getStringAttribute('user');
   }
   public set user(value: string) {
     this._user = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get userInput() {
+    return this._user
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: StreamAnalyticsOutputMssqlTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: StreamAnalyticsOutputMssqlTimeouts | undefined) {
+  public set timeouts(value: StreamAnalyticsOutputMssqlTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

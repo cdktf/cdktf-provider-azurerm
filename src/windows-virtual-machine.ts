@@ -171,153 +171,239 @@ export class WindowsVirtualMachine extends TerraformResource {
   // admin_password - computed: false, optional: false, required: true
   private _adminPassword: string;
   public get adminPassword() {
-    return this._adminPassword;
+    return this.getStringAttribute('admin_password');
   }
   public set adminPassword(value: string) {
     this._adminPassword = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get adminPasswordInput() {
+    return this._adminPassword
   }
 
   // admin_username - computed: false, optional: false, required: true
   private _adminUsername: string;
   public get adminUsername() {
-    return this._adminUsername;
+    return this.getStringAttribute('admin_username');
   }
   public set adminUsername(value: string) {
     this._adminUsername = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get adminUsernameInput() {
+    return this._adminUsername
   }
 
   // allow_extension_operations - computed: false, optional: true, required: false
   private _allowExtensionOperations?: boolean;
   public get allowExtensionOperations() {
-    return this._allowExtensionOperations;
+    return this.getBooleanAttribute('allow_extension_operations');
   }
-  public set allowExtensionOperations(value: boolean | undefined) {
+  public set allowExtensionOperations(value: boolean ) {
     this._allowExtensionOperations = value;
+  }
+  public resetAllowExtensionOperations() {
+    this._allowExtensionOperations = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get allowExtensionOperationsInput() {
+    return this._allowExtensionOperations
   }
 
   // availability_set_id - computed: false, optional: true, required: false
   private _availabilitySetId?: string;
   public get availabilitySetId() {
-    return this._availabilitySetId;
+    return this.getStringAttribute('availability_set_id');
   }
-  public set availabilitySetId(value: string | undefined) {
+  public set availabilitySetId(value: string ) {
     this._availabilitySetId = value;
+  }
+  public resetAvailabilitySetId() {
+    this._availabilitySetId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get availabilitySetIdInput() {
+    return this._availabilitySetId
   }
 
   // computer_name - computed: true, optional: true, required: false
   private _computerName?: string;
   public get computerName() {
-    return this._computerName ?? this.getStringAttribute('computer_name');
+    return this.getStringAttribute('computer_name');
   }
-  public set computerName(value: string | undefined) {
+  public set computerName(value: string) {
     this._computerName = value;
+  }
+  public resetComputerName() {
+    this._computerName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get computerNameInput() {
+    return this._computerName
   }
 
   // custom_data - computed: false, optional: true, required: false
   private _customData?: string;
   public get customData() {
-    return this._customData;
+    return this.getStringAttribute('custom_data');
   }
-  public set customData(value: string | undefined) {
+  public set customData(value: string ) {
     this._customData = value;
+  }
+  public resetCustomData() {
+    this._customData = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get customDataInput() {
+    return this._customData
   }
 
   // dedicated_host_id - computed: false, optional: true, required: false
   private _dedicatedHostId?: string;
   public get dedicatedHostId() {
-    return this._dedicatedHostId;
+    return this.getStringAttribute('dedicated_host_id');
   }
-  public set dedicatedHostId(value: string | undefined) {
+  public set dedicatedHostId(value: string ) {
     this._dedicatedHostId = value;
+  }
+  public resetDedicatedHostId() {
+    this._dedicatedHostId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dedicatedHostIdInput() {
+    return this._dedicatedHostId
   }
 
   // enable_automatic_updates - computed: false, optional: true, required: false
   private _enableAutomaticUpdates?: boolean;
   public get enableAutomaticUpdates() {
-    return this._enableAutomaticUpdates;
+    return this.getBooleanAttribute('enable_automatic_updates');
   }
-  public set enableAutomaticUpdates(value: boolean | undefined) {
+  public set enableAutomaticUpdates(value: boolean ) {
     this._enableAutomaticUpdates = value;
+  }
+  public resetEnableAutomaticUpdates() {
+    this._enableAutomaticUpdates = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enableAutomaticUpdatesInput() {
+    return this._enableAutomaticUpdates
   }
 
   // eviction_policy - computed: false, optional: true, required: false
   private _evictionPolicy?: string;
   public get evictionPolicy() {
-    return this._evictionPolicy;
+    return this.getStringAttribute('eviction_policy');
   }
-  public set evictionPolicy(value: string | undefined) {
+  public set evictionPolicy(value: string ) {
     this._evictionPolicy = value;
+  }
+  public resetEvictionPolicy() {
+    this._evictionPolicy = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get evictionPolicyInput() {
+    return this._evictionPolicy
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // license_type - computed: false, optional: true, required: false
   private _licenseType?: string;
   public get licenseType() {
-    return this._licenseType;
+    return this.getStringAttribute('license_type');
   }
-  public set licenseType(value: string | undefined) {
+  public set licenseType(value: string ) {
     this._licenseType = value;
+  }
+  public resetLicenseType() {
+    this._licenseType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get licenseTypeInput() {
+    return this._licenseType
   }
 
   // location - computed: false, optional: false, required: true
   private _location: string;
   public get location() {
-    return this._location;
+    return this.getStringAttribute('location');
   }
   public set location(value: string) {
     this._location = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get locationInput() {
+    return this._location
   }
 
   // max_bid_price - computed: false, optional: true, required: false
   private _maxBidPrice?: number;
   public get maxBidPrice() {
-    return this._maxBidPrice;
+    return this.getNumberAttribute('max_bid_price');
   }
-  public set maxBidPrice(value: number | undefined) {
+  public set maxBidPrice(value: number ) {
     this._maxBidPrice = value;
+  }
+  public resetMaxBidPrice() {
+    this._maxBidPrice = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get maxBidPriceInput() {
+    return this._maxBidPrice
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // network_interface_ids - computed: false, optional: false, required: true
   private _networkInterfaceIds: string[];
   public get networkInterfaceIds() {
-    return this._networkInterfaceIds;
+    return this.getListAttribute('network_interface_ids');
   }
   public set networkInterfaceIds(value: string[]) {
     this._networkInterfaceIds = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get networkInterfaceIdsInput() {
+    return this._networkInterfaceIds
   }
 
   // priority - computed: false, optional: true, required: false
   private _priority?: string;
   public get priority() {
-    return this._priority;
+    return this.getStringAttribute('priority');
   }
-  public set priority(value: string | undefined) {
+  public set priority(value: string ) {
     this._priority = value;
   }
+  public resetPriority() {
+    this._priority = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get priorityInput() {
+    return this._priority
+  }
 
-  // private_ip_address - computed: true, optional: false, required: true
+  // private_ip_address - computed: true, optional: false, required: false
   public get privateIpAddress() {
     return this.getStringAttribute('private_ip_address');
   }
 
-  // private_ip_addresses - computed: true, optional: false, required: true
+  // private_ip_addresses - computed: true, optional: false, required: false
   public get privateIpAddresses() {
     return this.getListAttribute('private_ip_addresses');
   }
@@ -325,27 +411,41 @@ export class WindowsVirtualMachine extends TerraformResource {
   // provision_vm_agent - computed: false, optional: true, required: false
   private _provisionVmAgent?: boolean;
   public get provisionVmAgent() {
-    return this._provisionVmAgent;
+    return this.getBooleanAttribute('provision_vm_agent');
   }
-  public set provisionVmAgent(value: boolean | undefined) {
+  public set provisionVmAgent(value: boolean ) {
     this._provisionVmAgent = value;
+  }
+  public resetProvisionVmAgent() {
+    this._provisionVmAgent = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get provisionVmAgentInput() {
+    return this._provisionVmAgent
   }
 
   // proximity_placement_group_id - computed: false, optional: true, required: false
   private _proximityPlacementGroupId?: string;
   public get proximityPlacementGroupId() {
-    return this._proximityPlacementGroupId;
+    return this.getStringAttribute('proximity_placement_group_id');
   }
-  public set proximityPlacementGroupId(value: string | undefined) {
+  public set proximityPlacementGroupId(value: string ) {
     this._proximityPlacementGroupId = value;
   }
+  public resetProximityPlacementGroupId() {
+    this._proximityPlacementGroupId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get proximityPlacementGroupIdInput() {
+    return this._proximityPlacementGroupId
+  }
 
-  // public_ip_address - computed: true, optional: false, required: true
+  // public_ip_address - computed: true, optional: false, required: false
   public get publicIpAddress() {
     return this.getStringAttribute('public_ip_address');
   }
 
-  // public_ip_addresses - computed: true, optional: false, required: true
+  // public_ip_addresses - computed: true, optional: false, required: false
   public get publicIpAddresses() {
     return this.getListAttribute('public_ip_addresses');
   }
@@ -353,49 +453,78 @@ export class WindowsVirtualMachine extends TerraformResource {
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
-    return this._resourceGroupName;
+    return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
   }
 
   // size - computed: false, optional: false, required: true
   private _size: string;
   public get size() {
-    return this._size;
+    return this.getStringAttribute('size');
   }
   public set size(value: string) {
     this._size = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sizeInput() {
+    return this._size
   }
 
   // source_image_id - computed: false, optional: true, required: false
   private _sourceImageId?: string;
   public get sourceImageId() {
-    return this._sourceImageId;
+    return this.getStringAttribute('source_image_id');
   }
-  public set sourceImageId(value: string | undefined) {
+  public set sourceImageId(value: string ) {
     this._sourceImageId = value;
+  }
+  public resetSourceImageId() {
+    this._sourceImageId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sourceImageIdInput() {
+    return this._sourceImageId
   }
 
   // tags - computed: false, optional: true, required: false
   private _tags?: { [key: string]: string };
   public get tags() {
-    return this._tags;
+    return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | undefined) {
+  public set tags(value: { [key: string]: string } ) {
     this._tags = value;
+  }
+  public resetTags() {
+    this._tags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsInput() {
+    return this._tags
   }
 
   // timezone - computed: false, optional: true, required: false
   private _timezone?: string;
   public get timezone() {
-    return this._timezone;
+    return this.getStringAttribute('timezone');
   }
-  public set timezone(value: string | undefined) {
+  public set timezone(value: string ) {
     this._timezone = value;
   }
+  public resetTimezone() {
+    this._timezone = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timezoneInput() {
+    return this._timezone
+  }
 
-  // virtual_machine_id - computed: true, optional: false, required: true
+  // virtual_machine_id - computed: true, optional: false, required: false
   public get virtualMachineId() {
     return this.getStringAttribute('virtual_machine_id');
   }
@@ -403,100 +532,174 @@ export class WindowsVirtualMachine extends TerraformResource {
   // zone - computed: false, optional: true, required: false
   private _zone?: string;
   public get zone() {
-    return this._zone;
+    return this.getStringAttribute('zone');
   }
-  public set zone(value: string | undefined) {
+  public set zone(value: string ) {
     this._zone = value;
+  }
+  public resetZone() {
+    this._zone = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get zoneInput() {
+    return this._zone
   }
 
   // additional_capabilities - computed: false, optional: true, required: false
   private _additionalCapabilities?: WindowsVirtualMachineAdditionalCapabilities[];
   public get additionalCapabilities() {
-    return this._additionalCapabilities;
+    return this.interpolationForAttribute('additional_capabilities') as any;
   }
-  public set additionalCapabilities(value: WindowsVirtualMachineAdditionalCapabilities[] | undefined) {
+  public set additionalCapabilities(value: WindowsVirtualMachineAdditionalCapabilities[] ) {
     this._additionalCapabilities = value;
+  }
+  public resetAdditionalCapabilities() {
+    this._additionalCapabilities = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get additionalCapabilitiesInput() {
+    return this._additionalCapabilities
   }
 
   // additional_unattend_content - computed: false, optional: true, required: false
   private _additionalUnattendContent?: WindowsVirtualMachineAdditionalUnattendContent[];
   public get additionalUnattendContent() {
-    return this._additionalUnattendContent;
+    return this.interpolationForAttribute('additional_unattend_content') as any;
   }
-  public set additionalUnattendContent(value: WindowsVirtualMachineAdditionalUnattendContent[] | undefined) {
+  public set additionalUnattendContent(value: WindowsVirtualMachineAdditionalUnattendContent[] ) {
     this._additionalUnattendContent = value;
+  }
+  public resetAdditionalUnattendContent() {
+    this._additionalUnattendContent = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get additionalUnattendContentInput() {
+    return this._additionalUnattendContent
   }
 
   // boot_diagnostics - computed: false, optional: true, required: false
   private _bootDiagnostics?: WindowsVirtualMachineBootDiagnostics[];
   public get bootDiagnostics() {
-    return this._bootDiagnostics;
+    return this.interpolationForAttribute('boot_diagnostics') as any;
   }
-  public set bootDiagnostics(value: WindowsVirtualMachineBootDiagnostics[] | undefined) {
+  public set bootDiagnostics(value: WindowsVirtualMachineBootDiagnostics[] ) {
     this._bootDiagnostics = value;
+  }
+  public resetBootDiagnostics() {
+    this._bootDiagnostics = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get bootDiagnosticsInput() {
+    return this._bootDiagnostics
   }
 
   // identity - computed: false, optional: true, required: false
   private _identity?: WindowsVirtualMachineIdentity[];
   public get identity() {
-    return this._identity;
+    return this.interpolationForAttribute('identity') as any;
   }
-  public set identity(value: WindowsVirtualMachineIdentity[] | undefined) {
+  public set identity(value: WindowsVirtualMachineIdentity[] ) {
     this._identity = value;
+  }
+  public resetIdentity() {
+    this._identity = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get identityInput() {
+    return this._identity
   }
 
   // os_disk - computed: false, optional: false, required: true
   private _osDisk: WindowsVirtualMachineOsDisk[];
   public get osDisk() {
-    return this._osDisk;
+    return this.interpolationForAttribute('os_disk') as any;
   }
   public set osDisk(value: WindowsVirtualMachineOsDisk[]) {
     this._osDisk = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get osDiskInput() {
+    return this._osDisk
   }
 
   // plan - computed: false, optional: true, required: false
   private _plan?: WindowsVirtualMachinePlan[];
   public get plan() {
-    return this._plan;
+    return this.interpolationForAttribute('plan') as any;
   }
-  public set plan(value: WindowsVirtualMachinePlan[] | undefined) {
+  public set plan(value: WindowsVirtualMachinePlan[] ) {
     this._plan = value;
+  }
+  public resetPlan() {
+    this._plan = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get planInput() {
+    return this._plan
   }
 
   // secret - computed: false, optional: true, required: false
   private _secret?: WindowsVirtualMachineSecret[];
   public get secret() {
-    return this._secret;
+    return this.interpolationForAttribute('secret') as any;
   }
-  public set secret(value: WindowsVirtualMachineSecret[] | undefined) {
+  public set secret(value: WindowsVirtualMachineSecret[] ) {
     this._secret = value;
+  }
+  public resetSecret() {
+    this._secret = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get secretInput() {
+    return this._secret
   }
 
   // source_image_reference - computed: false, optional: true, required: false
   private _sourceImageReference?: WindowsVirtualMachineSourceImageReference[];
   public get sourceImageReference() {
-    return this._sourceImageReference;
+    return this.interpolationForAttribute('source_image_reference') as any;
   }
-  public set sourceImageReference(value: WindowsVirtualMachineSourceImageReference[] | undefined) {
+  public set sourceImageReference(value: WindowsVirtualMachineSourceImageReference[] ) {
     this._sourceImageReference = value;
+  }
+  public resetSourceImageReference() {
+    this._sourceImageReference = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sourceImageReferenceInput() {
+    return this._sourceImageReference
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: WindowsVirtualMachineTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: WindowsVirtualMachineTimeouts | undefined) {
+  public set timeouts(value: WindowsVirtualMachineTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // winrm_listener - computed: false, optional: true, required: false
   private _winrmListener?: WindowsVirtualMachineWinrmListener[];
   public get winrmListener() {
-    return this._winrmListener;
+    return this.interpolationForAttribute('winrm_listener') as any;
   }
-  public set winrmListener(value: WindowsVirtualMachineWinrmListener[] | undefined) {
+  public set winrmListener(value: WindowsVirtualMachineWinrmListener[] ) {
     this._winrmListener = value;
+  }
+  public resetWinrmListener() {
+    this._winrmListener = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get winrmListenerInput() {
+    return this._winrmListener
   }
 
   // =========

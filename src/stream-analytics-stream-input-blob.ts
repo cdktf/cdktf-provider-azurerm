@@ -73,109 +73,152 @@ export class StreamAnalyticsStreamInputBlob extends TerraformResource {
   // date_format - computed: false, optional: false, required: true
   private _dateFormat: string;
   public get dateFormat() {
-    return this._dateFormat;
+    return this.getStringAttribute('date_format');
   }
   public set dateFormat(value: string) {
     this._dateFormat = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get dateFormatInput() {
+    return this._dateFormat
+  }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // path_pattern - computed: false, optional: false, required: true
   private _pathPattern: string;
   public get pathPattern() {
-    return this._pathPattern;
+    return this.getStringAttribute('path_pattern');
   }
   public set pathPattern(value: string) {
     this._pathPattern = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get pathPatternInput() {
+    return this._pathPattern
   }
 
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
-    return this._resourceGroupName;
+    return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
   }
 
   // storage_account_key - computed: false, optional: false, required: true
   private _storageAccountKey: string;
   public get storageAccountKey() {
-    return this._storageAccountKey;
+    return this.getStringAttribute('storage_account_key');
   }
   public set storageAccountKey(value: string) {
     this._storageAccountKey = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get storageAccountKeyInput() {
+    return this._storageAccountKey
   }
 
   // storage_account_name - computed: false, optional: false, required: true
   private _storageAccountName: string;
   public get storageAccountName() {
-    return this._storageAccountName;
+    return this.getStringAttribute('storage_account_name');
   }
   public set storageAccountName(value: string) {
     this._storageAccountName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get storageAccountNameInput() {
+    return this._storageAccountName
   }
 
   // storage_container_name - computed: false, optional: false, required: true
   private _storageContainerName: string;
   public get storageContainerName() {
-    return this._storageContainerName;
+    return this.getStringAttribute('storage_container_name');
   }
   public set storageContainerName(value: string) {
     this._storageContainerName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get storageContainerNameInput() {
+    return this._storageContainerName
   }
 
   // stream_analytics_job_name - computed: false, optional: false, required: true
   private _streamAnalyticsJobName: string;
   public get streamAnalyticsJobName() {
-    return this._streamAnalyticsJobName;
+    return this.getStringAttribute('stream_analytics_job_name');
   }
   public set streamAnalyticsJobName(value: string) {
     this._streamAnalyticsJobName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get streamAnalyticsJobNameInput() {
+    return this._streamAnalyticsJobName
   }
 
   // time_format - computed: false, optional: false, required: true
   private _timeFormat: string;
   public get timeFormat() {
-    return this._timeFormat;
+    return this.getStringAttribute('time_format');
   }
   public set timeFormat(value: string) {
     this._timeFormat = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeFormatInput() {
+    return this._timeFormat
   }
 
   // serialization - computed: false, optional: false, required: true
   private _serialization: StreamAnalyticsStreamInputBlobSerialization[];
   public get serialization() {
-    return this._serialization;
+    return this.interpolationForAttribute('serialization') as any;
   }
   public set serialization(value: StreamAnalyticsStreamInputBlobSerialization[]) {
     this._serialization = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get serializationInput() {
+    return this._serialization
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: StreamAnalyticsStreamInputBlobTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: StreamAnalyticsStreamInputBlobTimeouts | undefined) {
+  public set timeouts(value: StreamAnalyticsStreamInputBlobTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

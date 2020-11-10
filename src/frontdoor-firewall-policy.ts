@@ -125,45 +125,62 @@ export class FrontdoorFirewallPolicy extends TerraformResource {
   // custom_block_response_body - computed: false, optional: true, required: false
   private _customBlockResponseBody?: string;
   public get customBlockResponseBody() {
-    return this._customBlockResponseBody;
+    return this.getStringAttribute('custom_block_response_body');
   }
-  public set customBlockResponseBody(value: string | undefined) {
+  public set customBlockResponseBody(value: string ) {
     this._customBlockResponseBody = value;
+  }
+  public resetCustomBlockResponseBody() {
+    this._customBlockResponseBody = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get customBlockResponseBodyInput() {
+    return this._customBlockResponseBody
   }
 
   // custom_block_response_status_code - computed: false, optional: true, required: false
   private _customBlockResponseStatusCode?: number;
   public get customBlockResponseStatusCode() {
-    return this._customBlockResponseStatusCode;
+    return this.getNumberAttribute('custom_block_response_status_code');
   }
-  public set customBlockResponseStatusCode(value: number | undefined) {
+  public set customBlockResponseStatusCode(value: number ) {
     this._customBlockResponseStatusCode = value;
+  }
+  public resetCustomBlockResponseStatusCode() {
+    this._customBlockResponseStatusCode = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get customBlockResponseStatusCodeInput() {
+    return this._customBlockResponseStatusCode
   }
 
   // enabled - computed: false, optional: true, required: false
   private _enabled?: boolean;
   public get enabled() {
-    return this._enabled;
+    return this.getBooleanAttribute('enabled');
   }
-  public set enabled(value: boolean | undefined) {
+  public set enabled(value: boolean ) {
     this._enabled = value;
   }
+  public resetEnabled() {
+    this._enabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enabledInput() {
+    return this._enabled
+  }
 
-  // frontend_endpoint_ids - computed: true, optional: false, required: true
+  // frontend_endpoint_ids - computed: true, optional: false, required: false
   public get frontendEndpointIds() {
     return this.getListAttribute('frontend_endpoint_ids');
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
-  // location - computed: true, optional: false, required: true
+  // location - computed: true, optional: false, required: false
   public get location() {
     return this.getStringAttribute('location');
   }
@@ -171,73 +188,123 @@ export class FrontdoorFirewallPolicy extends TerraformResource {
   // mode - computed: false, optional: true, required: false
   private _mode?: string;
   public get mode() {
-    return this._mode;
+    return this.getStringAttribute('mode');
   }
-  public set mode(value: string | undefined) {
+  public set mode(value: string ) {
     this._mode = value;
+  }
+  public resetMode() {
+    this._mode = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get modeInput() {
+    return this._mode
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // redirect_url - computed: false, optional: true, required: false
   private _redirectUrl?: string;
   public get redirectUrl() {
-    return this._redirectUrl;
+    return this.getStringAttribute('redirect_url');
   }
-  public set redirectUrl(value: string | undefined) {
+  public set redirectUrl(value: string ) {
     this._redirectUrl = value;
+  }
+  public resetRedirectUrl() {
+    this._redirectUrl = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get redirectUrlInput() {
+    return this._redirectUrl
   }
 
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
-    return this._resourceGroupName;
+    return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
   }
 
   // tags - computed: false, optional: true, required: false
   private _tags?: { [key: string]: string };
   public get tags() {
-    return this._tags;
+    return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | undefined) {
+  public set tags(value: { [key: string]: string } ) {
     this._tags = value;
+  }
+  public resetTags() {
+    this._tags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsInput() {
+    return this._tags
   }
 
   // custom_rule - computed: false, optional: true, required: false
   private _customRule?: FrontdoorFirewallPolicyCustomRule[];
   public get customRule() {
-    return this._customRule;
+    return this.interpolationForAttribute('custom_rule') as any;
   }
-  public set customRule(value: FrontdoorFirewallPolicyCustomRule[] | undefined) {
+  public set customRule(value: FrontdoorFirewallPolicyCustomRule[] ) {
     this._customRule = value;
+  }
+  public resetCustomRule() {
+    this._customRule = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get customRuleInput() {
+    return this._customRule
   }
 
   // managed_rule - computed: false, optional: true, required: false
   private _managedRule?: FrontdoorFirewallPolicyManagedRule[];
   public get managedRule() {
-    return this._managedRule;
+    return this.interpolationForAttribute('managed_rule') as any;
   }
-  public set managedRule(value: FrontdoorFirewallPolicyManagedRule[] | undefined) {
+  public set managedRule(value: FrontdoorFirewallPolicyManagedRule[] ) {
     this._managedRule = value;
+  }
+  public resetManagedRule() {
+    this._managedRule = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get managedRuleInput() {
+    return this._managedRule
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: FrontdoorFirewallPolicyTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: FrontdoorFirewallPolicyTimeouts | undefined) {
+  public set timeouts(value: FrontdoorFirewallPolicyTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

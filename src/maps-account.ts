@@ -53,24 +53,24 @@ export class MapsAccount extends TerraformResource {
   // ==========
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
+  }
 
-  // primary_access_key - computed: true, optional: false, required: true
+  // primary_access_key - computed: true, optional: false, required: false
   public get primaryAccessKey() {
     return this.getStringAttribute('primary_access_key');
   }
@@ -78,13 +78,17 @@ export class MapsAccount extends TerraformResource {
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
-    return this._resourceGroupName;
+    return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
+  }
 
-  // secondary_access_key - computed: true, optional: false, required: true
+  // secondary_access_key - computed: true, optional: false, required: false
   public get secondaryAccessKey() {
     return this.getStringAttribute('secondary_access_key');
   }
@@ -92,22 +96,33 @@ export class MapsAccount extends TerraformResource {
   // sku_name - computed: false, optional: false, required: true
   private _skuName: string;
   public get skuName() {
-    return this._skuName;
+    return this.getStringAttribute('sku_name');
   }
   public set skuName(value: string) {
     this._skuName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get skuNameInput() {
+    return this._skuName
   }
 
   // tags - computed: false, optional: true, required: false
   private _tags?: { [key: string]: string };
   public get tags() {
-    return this._tags;
+    return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | undefined) {
+  public set tags(value: { [key: string]: string } ) {
     this._tags = value;
   }
+  public resetTags() {
+    this._tags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsInput() {
+    return this._tags
+  }
 
-  // x_ms_client_id - computed: true, optional: false, required: true
+  // x_ms_client_id - computed: true, optional: false, required: false
   public get xMsClientId() {
     return this.getStringAttribute('x_ms_client_id');
   }
@@ -115,10 +130,17 @@ export class MapsAccount extends TerraformResource {
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: MapsAccountTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: MapsAccountTimeouts | undefined) {
+  public set timeouts(value: MapsAccountTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

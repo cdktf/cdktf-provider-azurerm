@@ -144,7 +144,7 @@ export class Frontdoor extends TerraformResource {
   // ATTRIBUTES
   // ==========
 
-  // cname - computed: true, optional: false, required: true
+  // cname - computed: true, optional: false, required: false
   public get cname() {
     return this.getStringAttribute('cname');
   }
@@ -152,127 +152,187 @@ export class Frontdoor extends TerraformResource {
   // enforce_backend_pools_certificate_name_check - computed: false, optional: false, required: true
   private _enforceBackendPoolsCertificateNameCheck: boolean;
   public get enforceBackendPoolsCertificateNameCheck() {
-    return this._enforceBackendPoolsCertificateNameCheck;
+    return this.getBooleanAttribute('enforce_backend_pools_certificate_name_check');
   }
   public set enforceBackendPoolsCertificateNameCheck(value: boolean) {
     this._enforceBackendPoolsCertificateNameCheck = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enforceBackendPoolsCertificateNameCheckInput() {
+    return this._enforceBackendPoolsCertificateNameCheck
   }
 
   // friendly_name - computed: false, optional: true, required: false
   private _friendlyName?: string;
   public get friendlyName() {
-    return this._friendlyName;
+    return this.getStringAttribute('friendly_name');
   }
-  public set friendlyName(value: string | undefined) {
+  public set friendlyName(value: string ) {
     this._friendlyName = value;
+  }
+  public resetFriendlyName() {
+    this._friendlyName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get friendlyNameInput() {
+    return this._friendlyName
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // load_balancer_enabled - computed: false, optional: true, required: false
   private _loadBalancerEnabled?: boolean;
   public get loadBalancerEnabled() {
-    return this._loadBalancerEnabled;
+    return this.getBooleanAttribute('load_balancer_enabled');
   }
-  public set loadBalancerEnabled(value: boolean | undefined) {
+  public set loadBalancerEnabled(value: boolean ) {
     this._loadBalancerEnabled = value;
+  }
+  public resetLoadBalancerEnabled() {
+    this._loadBalancerEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get loadBalancerEnabledInput() {
+    return this._loadBalancerEnabled
   }
 
   // location - computed: false, optional: false, required: true
   private _location: string;
   public get location() {
-    return this._location;
+    return this.getStringAttribute('location');
   }
   public set location(value: string) {
     this._location = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get locationInput() {
+    return this._location
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
-    return this._resourceGroupName;
+    return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
   }
 
   // tags - computed: false, optional: true, required: false
   private _tags?: { [key: string]: string };
   public get tags() {
-    return this._tags;
+    return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | undefined) {
+  public set tags(value: { [key: string]: string } ) {
     this._tags = value;
+  }
+  public resetTags() {
+    this._tags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsInput() {
+    return this._tags
   }
 
   // backend_pool - computed: false, optional: false, required: true
   private _backendPool: FrontdoorBackendPool[];
   public get backendPool() {
-    return this._backendPool;
+    return this.interpolationForAttribute('backend_pool') as any;
   }
   public set backendPool(value: FrontdoorBackendPool[]) {
     this._backendPool = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get backendPoolInput() {
+    return this._backendPool
   }
 
   // backend_pool_health_probe - computed: false, optional: false, required: true
   private _backendPoolHealthProbe: FrontdoorBackendPoolHealthProbe[];
   public get backendPoolHealthProbe() {
-    return this._backendPoolHealthProbe;
+    return this.interpolationForAttribute('backend_pool_health_probe') as any;
   }
   public set backendPoolHealthProbe(value: FrontdoorBackendPoolHealthProbe[]) {
     this._backendPoolHealthProbe = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get backendPoolHealthProbeInput() {
+    return this._backendPoolHealthProbe
   }
 
   // backend_pool_load_balancing - computed: false, optional: false, required: true
   private _backendPoolLoadBalancing: FrontdoorBackendPoolLoadBalancing[];
   public get backendPoolLoadBalancing() {
-    return this._backendPoolLoadBalancing;
+    return this.interpolationForAttribute('backend_pool_load_balancing') as any;
   }
   public set backendPoolLoadBalancing(value: FrontdoorBackendPoolLoadBalancing[]) {
     this._backendPoolLoadBalancing = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get backendPoolLoadBalancingInput() {
+    return this._backendPoolLoadBalancing
   }
 
   // frontend_endpoint - computed: false, optional: false, required: true
   private _frontendEndpoint: FrontdoorFrontendEndpoint[];
   public get frontendEndpoint() {
-    return this._frontendEndpoint;
+    return this.interpolationForAttribute('frontend_endpoint') as any;
   }
   public set frontendEndpoint(value: FrontdoorFrontendEndpoint[]) {
     this._frontendEndpoint = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get frontendEndpointInput() {
+    return this._frontendEndpoint
   }
 
   // routing_rule - computed: false, optional: false, required: true
   private _routingRule: FrontdoorRoutingRule[];
   public get routingRule() {
-    return this._routingRule;
+    return this.interpolationForAttribute('routing_rule') as any;
   }
   public set routingRule(value: FrontdoorRoutingRule[]) {
     this._routingRule = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get routingRuleInput() {
+    return this._routingRule
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: FrontdoorTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: FrontdoorTimeouts | undefined) {
+  public set timeouts(value: FrontdoorTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

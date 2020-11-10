@@ -57,64 +57,90 @@ export class IothubFallbackRouteA extends TerraformResource {
   // condition - computed: false, optional: true, required: false
   private _condition?: string;
   public get condition() {
-    return this._condition;
+    return this.getStringAttribute('condition');
   }
-  public set condition(value: string | undefined) {
+  public set condition(value: string ) {
     this._condition = value;
+  }
+  public resetCondition() {
+    this._condition = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get conditionInput() {
+    return this._condition
   }
 
   // enabled - computed: false, optional: false, required: true
   private _enabled: boolean;
   public get enabled() {
-    return this._enabled;
+    return this.getBooleanAttribute('enabled');
   }
   public set enabled(value: boolean) {
     this._enabled = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enabledInput() {
+    return this._enabled
   }
 
   // endpoint_names - computed: false, optional: false, required: true
   private _endpointNames: string[];
   public get endpointNames() {
-    return this._endpointNames;
+    return this.getListAttribute('endpoint_names');
   }
   public set endpointNames(value: string[]) {
     this._endpointNames = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get endpointNamesInput() {
+    return this._endpointNames
+  }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // iothub_name - computed: false, optional: false, required: true
   private _iothubName: string;
   public get iothubName() {
-    return this._iothubName;
+    return this.getStringAttribute('iothub_name');
   }
   public set iothubName(value: string) {
     this._iothubName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get iothubNameInput() {
+    return this._iothubName
   }
 
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
-    return this._resourceGroupName;
+    return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: IothubFallbackRouteTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: IothubFallbackRouteTimeouts | undefined) {
+  public set timeouts(value: IothubFallbackRouteTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

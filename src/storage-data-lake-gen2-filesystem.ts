@@ -51,48 +51,66 @@ export class StorageDataLakeGen2Filesystem extends TerraformResource {
   // ==========
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // properties - computed: false, optional: true, required: false
   private _properties?: { [key: string]: string };
   public get properties() {
-    return this._properties;
+    return this.interpolationForAttribute('properties') as any;
   }
-  public set properties(value: { [key: string]: string } | undefined) {
+  public set properties(value: { [key: string]: string } ) {
     this._properties = value;
+  }
+  public resetProperties() {
+    this._properties = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get propertiesInput() {
+    return this._properties
   }
 
   // storage_account_id - computed: false, optional: false, required: true
   private _storageAccountId: string;
   public get storageAccountId() {
-    return this._storageAccountId;
+    return this.getStringAttribute('storage_account_id');
   }
   public set storageAccountId(value: string) {
     this._storageAccountId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get storageAccountIdInput() {
+    return this._storageAccountId
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: StorageDataLakeGen2FilesystemTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: StorageDataLakeGen2FilesystemTimeouts | undefined) {
+  public set timeouts(value: StorageDataLakeGen2FilesystemTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

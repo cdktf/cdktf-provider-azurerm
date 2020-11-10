@@ -17,27 +17,27 @@ export interface DataAzurermPrivateLinkServiceConfig extends TerraformMetaArgume
 }
 export class DataAzurermPrivateLinkServiceNatIpConfiguration extends ComplexComputedList {
 
-  // name - computed: true, optional: false, required: true
+  // name - computed: true, optional: false, required: false
   public get name() {
     return this.getStringAttribute('name');
   }
 
-  // primary - computed: true, optional: false, required: true
+  // primary - computed: true, optional: false, required: false
   public get primary() {
     return this.getBooleanAttribute('primary');
   }
 
-  // private_ip_address - computed: true, optional: false, required: true
+  // private_ip_address - computed: true, optional: false, required: false
   public get privateIpAddress() {
     return this.getStringAttribute('private_ip_address');
   }
 
-  // private_ip_address_version - computed: true, optional: false, required: true
+  // private_ip_address_version - computed: true, optional: false, required: false
   public get privateIpAddressVersion() {
     return this.getStringAttribute('private_ip_address_version');
   }
 
-  // subnet_id - computed: true, optional: false, required: true
+  // subnet_id - computed: true, optional: false, required: false
   public get subnetId() {
     return this.getStringAttribute('subnet_id');
   }
@@ -74,36 +74,32 @@ export class DataAzurermPrivateLinkService extends TerraformDataSource {
   // ATTRIBUTES
   // ==========
 
-  // alias - computed: true, optional: false, required: true
+  // alias - computed: true, optional: false, required: false
   public get alias() {
     return this.getStringAttribute('alias');
   }
 
-  // auto_approval_subscription_ids - computed: true, optional: false, required: true
+  // auto_approval_subscription_ids - computed: true, optional: false, required: false
   public get autoApprovalSubscriptionIds() {
     return this.getListAttribute('auto_approval_subscription_ids');
   }
 
-  // enable_proxy_protocol - computed: true, optional: false, required: true
+  // enable_proxy_protocol - computed: true, optional: false, required: false
   public get enableProxyProtocol() {
     return this.getBooleanAttribute('enable_proxy_protocol');
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
-  // load_balancer_frontend_ip_configuration_ids - computed: true, optional: false, required: true
+  // load_balancer_frontend_ip_configuration_ids - computed: true, optional: false, required: false
   public get loadBalancerFrontendIpConfigurationIds() {
     return this.getListAttribute('load_balancer_frontend_ip_configuration_ids');
   }
 
-  // location - computed: true, optional: false, required: true
+  // location - computed: true, optional: false, required: false
   public get location() {
     return this.getStringAttribute('location');
   }
@@ -111,13 +107,17 @@ export class DataAzurermPrivateLinkService extends TerraformDataSource {
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
+  }
 
-  // nat_ip_configuration - computed: true, optional: false, required: true
+  // nat_ip_configuration - computed: true, optional: false, required: false
   public natIpConfiguration(index: string) {
     return new DataAzurermPrivateLinkServiceNatIpConfiguration(this, 'nat_ip_configuration', index);
   }
@@ -125,18 +125,22 @@ export class DataAzurermPrivateLinkService extends TerraformDataSource {
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
-    return this._resourceGroupName;
+    return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
+  }
 
-  // tags - computed: true, optional: false, required: true
+  // tags - computed: true, optional: false, required: false
   public tags(key: string): string {
     return new StringMap(this, 'tags').lookup(key);
   }
 
-  // visibility_subscription_ids - computed: true, optional: false, required: true
+  // visibility_subscription_ids - computed: true, optional: false, required: false
   public get visibilitySubscriptionIds() {
     return this.getListAttribute('visibility_subscription_ids');
   }
@@ -144,10 +148,17 @@ export class DataAzurermPrivateLinkService extends TerraformDataSource {
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: DataAzurermPrivateLinkServiceTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: DataAzurermPrivateLinkServiceTimeouts | undefined) {
+  public set timeouts(value: DataAzurermPrivateLinkServiceTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

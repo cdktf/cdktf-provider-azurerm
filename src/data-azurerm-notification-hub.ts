@@ -17,34 +17,34 @@ export interface DataAzurermNotificationHubConfig extends TerraformMetaArguments
 }
 export class DataAzurermNotificationHubApnsCredential extends ComplexComputedList {
 
-  // application_mode - computed: true, optional: false, required: true
+  // application_mode - computed: true, optional: false, required: false
   public get applicationMode() {
     return this.getStringAttribute('application_mode');
   }
 
-  // bundle_id - computed: true, optional: false, required: true
+  // bundle_id - computed: true, optional: false, required: false
   public get bundleId() {
     return this.getStringAttribute('bundle_id');
   }
 
-  // key_id - computed: true, optional: false, required: true
+  // key_id - computed: true, optional: false, required: false
   public get keyId() {
     return this.getStringAttribute('key_id');
   }
 
-  // team_id - computed: true, optional: false, required: true
+  // team_id - computed: true, optional: false, required: false
   public get teamId() {
     return this.getStringAttribute('team_id');
   }
 
-  // token - computed: true, optional: false, required: true
+  // token - computed: true, optional: false, required: false
   public get token() {
     return this.getStringAttribute('token');
   }
 }
 export class DataAzurermNotificationHubGcmCredential extends ComplexComputedList {
 
-  // api_key - computed: true, optional: false, required: true
+  // api_key - computed: true, optional: false, required: false
   public get apiKey() {
     return this.getStringAttribute('api_key');
   }
@@ -82,26 +82,22 @@ export class DataAzurermNotificationHub extends TerraformDataSource {
   // ATTRIBUTES
   // ==========
 
-  // apns_credential - computed: true, optional: false, required: true
+  // apns_credential - computed: true, optional: false, required: false
   public apnsCredential(index: string) {
     return new DataAzurermNotificationHubApnsCredential(this, 'apns_credential', index);
   }
 
-  // gcm_credential - computed: true, optional: false, required: true
+  // gcm_credential - computed: true, optional: false, required: false
   public gcmCredential(index: string) {
     return new DataAzurermNotificationHubGcmCredential(this, 'gcm_credential', index);
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
-  // location - computed: true, optional: false, required: true
+  // location - computed: true, optional: false, required: false
   public get location() {
     return this.getStringAttribute('location');
   }
@@ -109,37 +105,56 @@ export class DataAzurermNotificationHub extends TerraformDataSource {
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // namespace_name - computed: false, optional: false, required: true
   private _namespaceName: string;
   public get namespaceName() {
-    return this._namespaceName;
+    return this.getStringAttribute('namespace_name');
   }
   public set namespaceName(value: string) {
     this._namespaceName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get namespaceNameInput() {
+    return this._namespaceName
   }
 
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
-    return this._resourceGroupName;
+    return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: DataAzurermNotificationHubTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: DataAzurermNotificationHubTimeouts | undefined) {
+  public set timeouts(value: DataAzurermNotificationHubTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

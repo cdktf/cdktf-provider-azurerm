@@ -57,64 +57,87 @@ export class RedisFirewallRule extends TerraformResource {
   // end_ip - computed: false, optional: false, required: true
   private _endIp: string;
   public get endIp() {
-    return this._endIp;
+    return this.getStringAttribute('end_ip');
   }
   public set endIp(value: string) {
     this._endIp = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get endIpInput() {
+    return this._endIp
+  }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // redis_cache_name - computed: false, optional: false, required: true
   private _redisCacheName: string;
   public get redisCacheName() {
-    return this._redisCacheName;
+    return this.getStringAttribute('redis_cache_name');
   }
   public set redisCacheName(value: string) {
     this._redisCacheName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get redisCacheNameInput() {
+    return this._redisCacheName
   }
 
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
-    return this._resourceGroupName;
+    return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
   }
 
   // start_ip - computed: false, optional: false, required: true
   private _startIp: string;
   public get startIp() {
-    return this._startIp;
+    return this.getStringAttribute('start_ip');
   }
   public set startIp(value: string) {
     this._startIp = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get startIpInput() {
+    return this._startIp
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: RedisFirewallRuleTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: RedisFirewallRuleTimeouts | undefined) {
+  public set timeouts(value: RedisFirewallRuleTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

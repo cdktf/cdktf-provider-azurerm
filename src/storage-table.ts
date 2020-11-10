@@ -62,48 +62,66 @@ export class StorageTable extends TerraformResource {
   // ==========
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // storage_account_name - computed: false, optional: false, required: true
   private _storageAccountName: string;
   public get storageAccountName() {
-    return this._storageAccountName;
+    return this.getStringAttribute('storage_account_name');
   }
   public set storageAccountName(value: string) {
     this._storageAccountName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get storageAccountNameInput() {
+    return this._storageAccountName
   }
 
   // acl - computed: false, optional: true, required: false
   private _acl?: StorageTableAcl[];
   public get acl() {
-    return this._acl;
+    return this.interpolationForAttribute('acl') as any;
   }
-  public set acl(value: StorageTableAcl[] | undefined) {
+  public set acl(value: StorageTableAcl[] ) {
     this._acl = value;
+  }
+  public resetAcl() {
+    this._acl = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get aclInput() {
+    return this._acl
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: StorageTableTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: StorageTableTimeouts | undefined) {
+  public set timeouts(value: StorageTableTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

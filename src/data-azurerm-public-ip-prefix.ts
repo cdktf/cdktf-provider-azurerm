@@ -49,20 +49,16 @@ export class DataAzurermPublicIpPrefix extends TerraformDataSource {
   // ==========
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
-  // ip_prefix - computed: true, optional: false, required: true
+  // ip_prefix - computed: true, optional: false, required: false
   public get ipPrefix() {
     return this.getStringAttribute('ip_prefix');
   }
 
-  // location - computed: true, optional: false, required: true
+  // location - computed: true, optional: false, required: false
   public get location() {
     return this.getStringAttribute('location');
   }
@@ -70,13 +66,17 @@ export class DataAzurermPublicIpPrefix extends TerraformDataSource {
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
+  }
 
-  // prefix_length - computed: true, optional: false, required: true
+  // prefix_length - computed: true, optional: false, required: false
   public get prefixLength() {
     return this.getNumberAttribute('prefix_length');
   }
@@ -84,18 +84,22 @@ export class DataAzurermPublicIpPrefix extends TerraformDataSource {
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
-    return this._resourceGroupName;
+    return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
+  }
 
-  // sku - computed: true, optional: false, required: true
+  // sku - computed: true, optional: false, required: false
   public get sku() {
     return this.getStringAttribute('sku');
   }
 
-  // tags - computed: true, optional: false, required: true
+  // tags - computed: true, optional: false, required: false
   public tags(key: string): string {
     return new StringMap(this, 'tags').lookup(key);
   }
@@ -103,19 +107,33 @@ export class DataAzurermPublicIpPrefix extends TerraformDataSource {
   // zones - computed: true, optional: true, required: false
   private _zones?: string[];
   public get zones() {
-    return this._zones ?? this.getListAttribute('zones');
+    return this.getListAttribute('zones');
   }
-  public set zones(value: string[] | undefined) {
+  public set zones(value: string[]) {
     this._zones = value;
+  }
+  public resetZones() {
+    this._zones = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get zonesInput() {
+    return this._zones
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: DataAzurermPublicIpPrefixTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: DataAzurermPublicIpPrefixTimeouts | undefined) {
+  public set timeouts(value: DataAzurermPublicIpPrefixTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

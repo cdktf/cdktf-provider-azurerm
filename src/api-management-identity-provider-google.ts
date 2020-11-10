@@ -55,55 +55,74 @@ export class ApiManagementIdentityProviderGoogle extends TerraformResource {
   // api_management_name - computed: false, optional: false, required: true
   private _apiManagementName: string;
   public get apiManagementName() {
-    return this._apiManagementName;
+    return this.getStringAttribute('api_management_name');
   }
   public set apiManagementName(value: string) {
     this._apiManagementName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get apiManagementNameInput() {
+    return this._apiManagementName
   }
 
   // client_id - computed: false, optional: false, required: true
   private _clientId: string;
   public get clientId() {
-    return this._clientId;
+    return this.getStringAttribute('client_id');
   }
   public set clientId(value: string) {
     this._clientId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get clientIdInput() {
+    return this._clientId
   }
 
   // client_secret - computed: false, optional: false, required: true
   private _clientSecret: string;
   public get clientSecret() {
-    return this._clientSecret;
+    return this.getStringAttribute('client_secret');
   }
   public set clientSecret(value: string) {
     this._clientSecret = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get clientSecretInput() {
+    return this._clientSecret
+  }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
-    return this._resourceGroupName;
+    return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: ApiManagementIdentityProviderGoogleTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: ApiManagementIdentityProviderGoogleTimeouts | undefined) {
+  public set timeouts(value: ApiManagementIdentityProviderGoogleTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

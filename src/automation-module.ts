@@ -65,55 +65,74 @@ export class AutomationModule extends TerraformResource {
   // automation_account_name - computed: false, optional: false, required: true
   private _automationAccountName: string;
   public get automationAccountName() {
-    return this._automationAccountName;
+    return this.getStringAttribute('automation_account_name');
   }
   public set automationAccountName(value: string) {
     this._automationAccountName = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get automationAccountNameInput() {
+    return this._automationAccountName
+  }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
-    return this._resourceGroupName;
+    return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
   }
 
   // module_link - computed: false, optional: false, required: true
   private _moduleLink: AutomationModuleModuleLink[];
   public get moduleLink() {
-    return this._moduleLink;
+    return this.interpolationForAttribute('module_link') as any;
   }
   public set moduleLink(value: AutomationModuleModuleLink[]) {
     this._moduleLink = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get moduleLinkInput() {
+    return this._moduleLink
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: AutomationModuleTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: AutomationModuleTimeouts | undefined) {
+  public set timeouts(value: AutomationModuleTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

@@ -57,64 +57,90 @@ export class LogicAppTriggerRecurrence extends TerraformResource {
   // frequency - computed: false, optional: false, required: true
   private _frequency: string;
   public get frequency() {
-    return this._frequency;
+    return this.getStringAttribute('frequency');
   }
   public set frequency(value: string) {
     this._frequency = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get frequencyInput() {
+    return this._frequency
+  }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // interval - computed: false, optional: false, required: true
   private _interval: number;
   public get interval() {
-    return this._interval;
+    return this.getNumberAttribute('interval');
   }
   public set interval(value: number) {
     this._interval = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get intervalInput() {
+    return this._interval
   }
 
   // logic_app_id - computed: false, optional: false, required: true
   private _logicAppId: string;
   public get logicAppId() {
-    return this._logicAppId;
+    return this.getStringAttribute('logic_app_id');
   }
   public set logicAppId(value: string) {
     this._logicAppId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get logicAppIdInput() {
+    return this._logicAppId
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // start_time - computed: false, optional: true, required: false
   private _startTime?: string;
   public get startTime() {
-    return this._startTime;
+    return this.getStringAttribute('start_time');
   }
-  public set startTime(value: string | undefined) {
+  public set startTime(value: string ) {
     this._startTime = value;
+  }
+  public resetStartTime() {
+    this._startTime = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get startTimeInput() {
+    return this._startTime
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: LogicAppTriggerRecurrenceTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: LogicAppTriggerRecurrenceTimeouts | undefined) {
+  public set timeouts(value: LogicAppTriggerRecurrenceTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

@@ -66,51 +66,69 @@ export class StorageShare extends TerraformResource {
   // ==========
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // metadata - computed: false, optional: true, required: false
   private _metadata?: { [key: string]: string };
   public get metadata() {
-    return this._metadata;
+    return this.interpolationForAttribute('metadata') as any;
   }
-  public set metadata(value: { [key: string]: string } | undefined) {
+  public set metadata(value: { [key: string]: string } ) {
     this._metadata = value;
+  }
+  public resetMetadata() {
+    this._metadata = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get metadataInput() {
+    return this._metadata
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // quota - computed: false, optional: true, required: false
   private _quota?: number;
   public get quota() {
-    return this._quota;
+    return this.getNumberAttribute('quota');
   }
-  public set quota(value: number | undefined) {
+  public set quota(value: number ) {
     this._quota = value;
+  }
+  public resetQuota() {
+    this._quota = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get quotaInput() {
+    return this._quota
   }
 
   // storage_account_name - computed: false, optional: false, required: true
   private _storageAccountName: string;
   public get storageAccountName() {
-    return this._storageAccountName;
+    return this.getStringAttribute('storage_account_name');
   }
   public set storageAccountName(value: string) {
     this._storageAccountName = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get storageAccountNameInput() {
+    return this._storageAccountName
+  }
 
-  // url - computed: true, optional: false, required: true
+  // url - computed: true, optional: false, required: false
   public get url() {
     return this.getStringAttribute('url');
   }
@@ -118,19 +136,33 @@ export class StorageShare extends TerraformResource {
   // acl - computed: false, optional: true, required: false
   private _acl?: StorageShareAcl[];
   public get acl() {
-    return this._acl;
+    return this.interpolationForAttribute('acl') as any;
   }
-  public set acl(value: StorageShareAcl[] | undefined) {
+  public set acl(value: StorageShareAcl[] ) {
     this._acl = value;
+  }
+  public resetAcl() {
+    this._acl = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get aclInput() {
+    return this._acl
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: StorageShareTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: StorageShareTimeouts | undefined) {
+  public set timeouts(value: StorageShareTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

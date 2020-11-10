@@ -50,22 +50,22 @@ export class DataAzurermNetappPool extends TerraformDataSource {
   // account_name - computed: false, optional: false, required: true
   private _accountName: string;
   public get accountName() {
-    return this._accountName;
+    return this.getStringAttribute('account_name');
   }
   public set accountName(value: string) {
     this._accountName = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get accountNameInput() {
+    return this._accountName
+  }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
-  // location - computed: true, optional: false, required: true
+  // location - computed: true, optional: false, required: false
   public get location() {
     return this.getStringAttribute('location');
   }
@@ -73,27 +73,35 @@ export class DataAzurermNetappPool extends TerraformDataSource {
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
-    return this._resourceGroupName;
+    return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
+  }
 
-  // service_level - computed: true, optional: false, required: true
+  // service_level - computed: true, optional: false, required: false
   public get serviceLevel() {
     return this.getStringAttribute('service_level');
   }
 
-  // size_in_tb - computed: true, optional: false, required: true
+  // size_in_tb - computed: true, optional: false, required: false
   public get sizeInTb() {
     return this.getNumberAttribute('size_in_tb');
   }
@@ -101,10 +109,17 @@ export class DataAzurermNetappPool extends TerraformDataSource {
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: DataAzurermNetappPoolTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: DataAzurermNetappPoolTimeouts | undefined) {
+  public set timeouts(value: DataAzurermNetappPoolTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

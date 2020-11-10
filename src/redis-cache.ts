@@ -98,77 +98,103 @@ export class RedisCache extends TerraformResource {
   // capacity - computed: false, optional: false, required: true
   private _capacity: number;
   public get capacity() {
-    return this._capacity;
+    return this.getNumberAttribute('capacity');
   }
   public set capacity(value: number) {
     this._capacity = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get capacityInput() {
+    return this._capacity
   }
 
   // enable_non_ssl_port - computed: false, optional: true, required: false
   private _enableNonSslPort?: boolean;
   public get enableNonSslPort() {
-    return this._enableNonSslPort;
+    return this.getBooleanAttribute('enable_non_ssl_port');
   }
-  public set enableNonSslPort(value: boolean | undefined) {
+  public set enableNonSslPort(value: boolean ) {
     this._enableNonSslPort = value;
+  }
+  public resetEnableNonSslPort() {
+    this._enableNonSslPort = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enableNonSslPortInput() {
+    return this._enableNonSslPort
   }
 
   // family - computed: false, optional: false, required: true
   private _family: string;
   public get family() {
-    return this._family;
+    return this.getStringAttribute('family');
   }
   public set family(value: string) {
     this._family = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get familyInput() {
+    return this._family
+  }
 
-  // hostname - computed: true, optional: false, required: true
+  // hostname - computed: true, optional: false, required: false
   public get hostname() {
     return this.getStringAttribute('hostname');
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // location - computed: false, optional: false, required: true
   private _location: string;
   public get location() {
-    return this._location;
+    return this.getStringAttribute('location');
   }
   public set location(value: string) {
     this._location = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get locationInput() {
+    return this._location
   }
 
   // minimum_tls_version - computed: false, optional: true, required: false
   private _minimumTlsVersion?: string;
   public get minimumTlsVersion() {
-    return this._minimumTlsVersion;
+    return this.getStringAttribute('minimum_tls_version');
   }
-  public set minimumTlsVersion(value: string | undefined) {
+  public set minimumTlsVersion(value: string ) {
     this._minimumTlsVersion = value;
+  }
+  public resetMinimumTlsVersion() {
+    this._minimumTlsVersion = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get minimumTlsVersionInput() {
+    return this._minimumTlsVersion
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
+  }
 
-  // port - computed: true, optional: false, required: true
+  // port - computed: true, optional: false, required: false
   public get port() {
     return this.getNumberAttribute('port');
   }
 
-  // primary_access_key - computed: true, optional: false, required: true
+  // primary_access_key - computed: true, optional: false, required: false
   public get primaryAccessKey() {
     return this.getStringAttribute('primary_access_key');
   }
@@ -176,22 +202,33 @@ export class RedisCache extends TerraformResource {
   // private_static_ip_address - computed: true, optional: true, required: false
   private _privateStaticIpAddress?: string;
   public get privateStaticIpAddress() {
-    return this._privateStaticIpAddress ?? this.getStringAttribute('private_static_ip_address');
+    return this.getStringAttribute('private_static_ip_address');
   }
-  public set privateStaticIpAddress(value: string | undefined) {
+  public set privateStaticIpAddress(value: string) {
     this._privateStaticIpAddress = value;
+  }
+  public resetPrivateStaticIpAddress() {
+    this._privateStaticIpAddress = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get privateStaticIpAddressInput() {
+    return this._privateStaticIpAddress
   }
 
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
-    return this._resourceGroupName;
+    return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
+  }
 
-  // secondary_access_key - computed: true, optional: false, required: true
+  // secondary_access_key - computed: true, optional: false, required: false
   public get secondaryAccessKey() {
     return this.getStringAttribute('secondary_access_key');
   }
@@ -199,22 +236,33 @@ export class RedisCache extends TerraformResource {
   // shard_count - computed: false, optional: true, required: false
   private _shardCount?: number;
   public get shardCount() {
-    return this._shardCount;
+    return this.getNumberAttribute('shard_count');
   }
-  public set shardCount(value: number | undefined) {
+  public set shardCount(value: number ) {
     this._shardCount = value;
+  }
+  public resetShardCount() {
+    this._shardCount = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get shardCountInput() {
+    return this._shardCount
   }
 
   // sku_name - computed: false, optional: false, required: true
   private _skuName: string;
   public get skuName() {
-    return this._skuName;
+    return this.getStringAttribute('sku_name');
   }
   public set skuName(value: string) {
     this._skuName = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get skuNameInput() {
+    return this._skuName
+  }
 
-  // ssl_port - computed: true, optional: false, required: true
+  // ssl_port - computed: true, optional: false, required: false
   public get sslPort() {
     return this.getNumberAttribute('ssl_port');
   }
@@ -222,55 +270,97 @@ export class RedisCache extends TerraformResource {
   // subnet_id - computed: false, optional: true, required: false
   private _subnetId?: string;
   public get subnetId() {
-    return this._subnetId;
+    return this.getStringAttribute('subnet_id');
   }
-  public set subnetId(value: string | undefined) {
+  public set subnetId(value: string ) {
     this._subnetId = value;
+  }
+  public resetSubnetId() {
+    this._subnetId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get subnetIdInput() {
+    return this._subnetId
   }
 
   // tags - computed: false, optional: true, required: false
   private _tags?: { [key: string]: string };
   public get tags() {
-    return this._tags;
+    return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | undefined) {
+  public set tags(value: { [key: string]: string } ) {
     this._tags = value;
+  }
+  public resetTags() {
+    this._tags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsInput() {
+    return this._tags
   }
 
   // zones - computed: false, optional: true, required: false
   private _zones?: string[];
   public get zones() {
-    return this._zones;
+    return this.getListAttribute('zones');
   }
-  public set zones(value: string[] | undefined) {
+  public set zones(value: string[] ) {
     this._zones = value;
+  }
+  public resetZones() {
+    this._zones = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get zonesInput() {
+    return this._zones
   }
 
   // patch_schedule - computed: false, optional: true, required: false
   private _patchSchedule?: RedisCachePatchSchedule[];
   public get patchSchedule() {
-    return this._patchSchedule;
+    return this.interpolationForAttribute('patch_schedule') as any;
   }
-  public set patchSchedule(value: RedisCachePatchSchedule[] | undefined) {
+  public set patchSchedule(value: RedisCachePatchSchedule[] ) {
     this._patchSchedule = value;
+  }
+  public resetPatchSchedule() {
+    this._patchSchedule = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get patchScheduleInput() {
+    return this._patchSchedule
   }
 
   // redis_configuration - computed: false, optional: true, required: false
   private _redisConfiguration?: RedisCacheRedisConfiguration[];
   public get redisConfiguration() {
-    return this._redisConfiguration;
+    return this.interpolationForAttribute('redis_configuration') as any;
   }
-  public set redisConfiguration(value: RedisCacheRedisConfiguration[] | undefined) {
+  public set redisConfiguration(value: RedisCacheRedisConfiguration[] ) {
     this._redisConfiguration = value;
+  }
+  public resetRedisConfiguration() {
+    this._redisConfiguration = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get redisConfigurationInput() {
+    return this._redisConfiguration
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: RedisCacheTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: RedisCacheTimeouts | undefined) {
+  public set timeouts(value: RedisCacheTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

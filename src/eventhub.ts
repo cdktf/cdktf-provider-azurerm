@@ -73,51 +73,63 @@ export class Eventhub extends TerraformResource {
   // ==========
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // message_retention - computed: false, optional: false, required: true
   private _messageRetention: number;
   public get messageRetention() {
-    return this._messageRetention;
+    return this.getNumberAttribute('message_retention');
   }
   public set messageRetention(value: number) {
     this._messageRetention = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get messageRetentionInput() {
+    return this._messageRetention
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // namespace_name - computed: false, optional: false, required: true
   private _namespaceName: string;
   public get namespaceName() {
-    return this._namespaceName;
+    return this.getStringAttribute('namespace_name');
   }
   public set namespaceName(value: string) {
     this._namespaceName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get namespaceNameInput() {
+    return this._namespaceName
   }
 
   // partition_count - computed: false, optional: false, required: true
   private _partitionCount: number;
   public get partitionCount() {
-    return this._partitionCount;
+    return this.getNumberAttribute('partition_count');
   }
   public set partitionCount(value: number) {
     this._partitionCount = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get partitionCountInput() {
+    return this._partitionCount
+  }
 
-  // partition_ids - computed: true, optional: false, required: true
+  // partition_ids - computed: true, optional: false, required: false
   public get partitionIds() {
     return this.getListAttribute('partition_ids');
   }
@@ -125,28 +137,46 @@ export class Eventhub extends TerraformResource {
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
-    return this._resourceGroupName;
+    return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
   }
 
   // capture_description - computed: false, optional: true, required: false
   private _captureDescription?: EventhubCaptureDescription[];
   public get captureDescription() {
-    return this._captureDescription;
+    return this.interpolationForAttribute('capture_description') as any;
   }
-  public set captureDescription(value: EventhubCaptureDescription[] | undefined) {
+  public set captureDescription(value: EventhubCaptureDescription[] ) {
     this._captureDescription = value;
+  }
+  public resetCaptureDescription() {
+    this._captureDescription = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get captureDescriptionInput() {
+    return this._captureDescription
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: EventhubTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: EventhubTimeouts | undefined) {
+  public set timeouts(value: EventhubTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

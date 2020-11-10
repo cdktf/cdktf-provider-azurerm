@@ -63,48 +63,59 @@ export class BatchAccount extends TerraformResource {
   // ATTRIBUTES
   // ==========
 
-  // account_endpoint - computed: true, optional: false, required: true
+  // account_endpoint - computed: true, optional: false, required: false
   public get accountEndpoint() {
     return this.getStringAttribute('account_endpoint');
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // location - computed: false, optional: false, required: true
   private _location: string;
   public get location() {
-    return this._location;
+    return this.getStringAttribute('location');
   }
   public set location(value: string) {
     this._location = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get locationInput() {
+    return this._location
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // pool_allocation_mode - computed: false, optional: true, required: false
   private _poolAllocationMode?: string;
   public get poolAllocationMode() {
-    return this._poolAllocationMode;
+    return this.getStringAttribute('pool_allocation_mode');
   }
-  public set poolAllocationMode(value: string | undefined) {
+  public set poolAllocationMode(value: string ) {
     this._poolAllocationMode = value;
   }
+  public resetPoolAllocationMode() {
+    this._poolAllocationMode = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get poolAllocationModeInput() {
+    return this._poolAllocationMode
+  }
 
-  // primary_access_key - computed: true, optional: false, required: true
+  // primary_access_key - computed: true, optional: false, required: false
   public get primaryAccessKey() {
     return this.getStringAttribute('primary_access_key');
   }
@@ -112,13 +123,17 @@ export class BatchAccount extends TerraformResource {
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
-    return this._resourceGroupName;
+    return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
+  }
 
-  // secondary_access_key - computed: true, optional: false, required: true
+  // secondary_access_key - computed: true, optional: false, required: false
   public get secondaryAccessKey() {
     return this.getStringAttribute('secondary_access_key');
   }
@@ -126,37 +141,65 @@ export class BatchAccount extends TerraformResource {
   // storage_account_id - computed: true, optional: true, required: false
   private _storageAccountId?: string;
   public get storageAccountId() {
-    return this._storageAccountId ?? this.getStringAttribute('storage_account_id');
+    return this.getStringAttribute('storage_account_id');
   }
-  public set storageAccountId(value: string | undefined) {
+  public set storageAccountId(value: string) {
     this._storageAccountId = value;
+  }
+  public resetStorageAccountId() {
+    this._storageAccountId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get storageAccountIdInput() {
+    return this._storageAccountId
   }
 
   // tags - computed: false, optional: true, required: false
   private _tags?: { [key: string]: string };
   public get tags() {
-    return this._tags;
+    return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | undefined) {
+  public set tags(value: { [key: string]: string } ) {
     this._tags = value;
+  }
+  public resetTags() {
+    this._tags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsInput() {
+    return this._tags
   }
 
   // key_vault_reference - computed: false, optional: true, required: false
   private _keyVaultReference?: BatchAccountKeyVaultReference[];
   public get keyVaultReference() {
-    return this._keyVaultReference;
+    return this.interpolationForAttribute('key_vault_reference') as any;
   }
-  public set keyVaultReference(value: BatchAccountKeyVaultReference[] | undefined) {
+  public set keyVaultReference(value: BatchAccountKeyVaultReference[] ) {
     this._keyVaultReference = value;
+  }
+  public resetKeyVaultReference() {
+    this._keyVaultReference = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keyVaultReferenceInput() {
+    return this._keyVaultReference
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: BatchAccountTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: BatchAccountTimeouts | undefined) {
+  public set timeouts(value: BatchAccountTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

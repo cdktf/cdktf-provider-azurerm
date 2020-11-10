@@ -59,73 +59,103 @@ export class Route extends TerraformResource {
   // address_prefix - computed: false, optional: false, required: true
   private _addressPrefix: string;
   public get addressPrefix() {
-    return this._addressPrefix;
+    return this.getStringAttribute('address_prefix');
   }
   public set addressPrefix(value: string) {
     this._addressPrefix = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get addressPrefixInput() {
+    return this._addressPrefix
+  }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // next_hop_in_ip_address - computed: false, optional: true, required: false
   private _nextHopInIpAddress?: string;
   public get nextHopInIpAddress() {
-    return this._nextHopInIpAddress;
+    return this.getStringAttribute('next_hop_in_ip_address');
   }
-  public set nextHopInIpAddress(value: string | undefined) {
+  public set nextHopInIpAddress(value: string ) {
     this._nextHopInIpAddress = value;
+  }
+  public resetNextHopInIpAddress() {
+    this._nextHopInIpAddress = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nextHopInIpAddressInput() {
+    return this._nextHopInIpAddress
   }
 
   // next_hop_type - computed: false, optional: false, required: true
   private _nextHopType: string;
   public get nextHopType() {
-    return this._nextHopType;
+    return this.getStringAttribute('next_hop_type');
   }
   public set nextHopType(value: string) {
     this._nextHopType = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nextHopTypeInput() {
+    return this._nextHopType
   }
 
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
-    return this._resourceGroupName;
+    return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
   }
 
   // route_table_name - computed: false, optional: false, required: true
   private _routeTableName: string;
   public get routeTableName() {
-    return this._routeTableName;
+    return this.getStringAttribute('route_table_name');
   }
   public set routeTableName(value: string) {
     this._routeTableName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get routeTableNameInput() {
+    return this._routeTableName
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: RouteTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: RouteTimeouts | undefined) {
+  public set timeouts(value: RouteTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

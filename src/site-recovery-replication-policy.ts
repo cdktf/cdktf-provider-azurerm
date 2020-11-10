@@ -57,64 +57,87 @@ export class SiteRecoveryReplicationPolicy extends TerraformResource {
   // application_consistent_snapshot_frequency_in_minutes - computed: false, optional: false, required: true
   private _applicationConsistentSnapshotFrequencyInMinutes: number;
   public get applicationConsistentSnapshotFrequencyInMinutes() {
-    return this._applicationConsistentSnapshotFrequencyInMinutes;
+    return this.getNumberAttribute('application_consistent_snapshot_frequency_in_minutes');
   }
   public set applicationConsistentSnapshotFrequencyInMinutes(value: number) {
     this._applicationConsistentSnapshotFrequencyInMinutes = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get applicationConsistentSnapshotFrequencyInMinutesInput() {
+    return this._applicationConsistentSnapshotFrequencyInMinutes
+  }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // recovery_point_retention_in_minutes - computed: false, optional: false, required: true
   private _recoveryPointRetentionInMinutes: number;
   public get recoveryPointRetentionInMinutes() {
-    return this._recoveryPointRetentionInMinutes;
+    return this.getNumberAttribute('recovery_point_retention_in_minutes');
   }
   public set recoveryPointRetentionInMinutes(value: number) {
     this._recoveryPointRetentionInMinutes = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get recoveryPointRetentionInMinutesInput() {
+    return this._recoveryPointRetentionInMinutes
   }
 
   // recovery_vault_name - computed: false, optional: false, required: true
   private _recoveryVaultName: string;
   public get recoveryVaultName() {
-    return this._recoveryVaultName;
+    return this.getStringAttribute('recovery_vault_name');
   }
   public set recoveryVaultName(value: string) {
     this._recoveryVaultName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get recoveryVaultNameInput() {
+    return this._recoveryVaultName
   }
 
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
-    return this._resourceGroupName;
+    return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: SiteRecoveryReplicationPolicyTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: SiteRecoveryReplicationPolicyTimeouts | undefined) {
+  public set timeouts(value: SiteRecoveryReplicationPolicyTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

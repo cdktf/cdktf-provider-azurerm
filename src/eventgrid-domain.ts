@@ -73,48 +73,59 @@ export class EventgridDomain extends TerraformResource {
   // ATTRIBUTES
   // ==========
 
-  // endpoint - computed: true, optional: false, required: true
+  // endpoint - computed: true, optional: false, required: false
   public get endpoint() {
     return this.getStringAttribute('endpoint');
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // input_schema - computed: false, optional: true, required: false
   private _inputSchema?: string;
   public get inputSchema() {
-    return this._inputSchema;
+    return this.getStringAttribute('input_schema');
   }
-  public set inputSchema(value: string | undefined) {
+  public set inputSchema(value: string ) {
     this._inputSchema = value;
+  }
+  public resetInputSchema() {
+    this._inputSchema = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get inputSchemaInput() {
+    return this._inputSchema
   }
 
   // location - computed: false, optional: false, required: true
   private _location: string;
   public get location() {
-    return this._location;
+    return this.getStringAttribute('location');
   }
   public set location(value: string) {
     this._location = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get locationInput() {
+    return this._location
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
+  }
 
-  // primary_access_key - computed: true, optional: false, required: true
+  // primary_access_key - computed: true, optional: false, required: false
   public get primaryAccessKey() {
     return this.getStringAttribute('primary_access_key');
   }
@@ -122,13 +133,17 @@ export class EventgridDomain extends TerraformResource {
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
-    return this._resourceGroupName;
+    return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
+  }
 
-  // secondary_access_key - computed: true, optional: false, required: true
+  // secondary_access_key - computed: true, optional: false, required: false
   public get secondaryAccessKey() {
     return this.getStringAttribute('secondary_access_key');
   }
@@ -136,37 +151,65 @@ export class EventgridDomain extends TerraformResource {
   // tags - computed: false, optional: true, required: false
   private _tags?: { [key: string]: string };
   public get tags() {
-    return this._tags;
+    return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | undefined) {
+  public set tags(value: { [key: string]: string } ) {
     this._tags = value;
+  }
+  public resetTags() {
+    this._tags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsInput() {
+    return this._tags
   }
 
   // input_mapping_default_values - computed: false, optional: true, required: false
   private _inputMappingDefaultValues?: EventgridDomainInputMappingDefaultValues[];
   public get inputMappingDefaultValues() {
-    return this._inputMappingDefaultValues;
+    return this.interpolationForAttribute('input_mapping_default_values') as any;
   }
-  public set inputMappingDefaultValues(value: EventgridDomainInputMappingDefaultValues[] | undefined) {
+  public set inputMappingDefaultValues(value: EventgridDomainInputMappingDefaultValues[] ) {
     this._inputMappingDefaultValues = value;
+  }
+  public resetInputMappingDefaultValues() {
+    this._inputMappingDefaultValues = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get inputMappingDefaultValuesInput() {
+    return this._inputMappingDefaultValues
   }
 
   // input_mapping_fields - computed: false, optional: true, required: false
   private _inputMappingFields?: EventgridDomainInputMappingFields[];
   public get inputMappingFields() {
-    return this._inputMappingFields;
+    return this.interpolationForAttribute('input_mapping_fields') as any;
   }
-  public set inputMappingFields(value: EventgridDomainInputMappingFields[] | undefined) {
+  public set inputMappingFields(value: EventgridDomainInputMappingFields[] ) {
     this._inputMappingFields = value;
+  }
+  public resetInputMappingFields() {
+    this._inputMappingFields = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get inputMappingFieldsInput() {
+    return this._inputMappingFields
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: EventgridDomainTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: EventgridDomainTimeouts | undefined) {
+  public set timeouts(value: EventgridDomainTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

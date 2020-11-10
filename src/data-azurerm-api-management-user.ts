@@ -50,37 +50,37 @@ export class DataAzurermApiManagementUser extends TerraformDataSource {
   // api_management_name - computed: false, optional: false, required: true
   private _apiManagementName: string;
   public get apiManagementName() {
-    return this._apiManagementName;
+    return this.getStringAttribute('api_management_name');
   }
   public set apiManagementName(value: string) {
     this._apiManagementName = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get apiManagementNameInput() {
+    return this._apiManagementName
+  }
 
-  // email - computed: true, optional: false, required: true
+  // email - computed: true, optional: false, required: false
   public get email() {
     return this.getStringAttribute('email');
   }
 
-  // first_name - computed: true, optional: false, required: true
+  // first_name - computed: true, optional: false, required: false
   public get firstName() {
     return this.getStringAttribute('first_name');
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
-  // last_name - computed: true, optional: false, required: true
+  // last_name - computed: true, optional: false, required: false
   public get lastName() {
     return this.getStringAttribute('last_name');
   }
 
-  // note - computed: true, optional: false, required: true
+  // note - computed: true, optional: false, required: false
   public get note() {
     return this.getStringAttribute('note');
   }
@@ -88,13 +88,17 @@ export class DataAzurermApiManagementUser extends TerraformDataSource {
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
-    return this._resourceGroupName;
+    return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
+  }
 
-  // state - computed: true, optional: false, required: true
+  // state - computed: true, optional: false, required: false
   public get state() {
     return this.getStringAttribute('state');
   }
@@ -102,19 +106,30 @@ export class DataAzurermApiManagementUser extends TerraformDataSource {
   // user_id - computed: false, optional: false, required: true
   private _userId: string;
   public get userId() {
-    return this._userId;
+    return this.getStringAttribute('user_id');
   }
   public set userId(value: string) {
     this._userId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get userIdInput() {
+    return this._userId
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: DataAzurermApiManagementUserTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: DataAzurermApiManagementUserTimeouts | undefined) {
+  public set timeouts(value: DataAzurermApiManagementUserTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

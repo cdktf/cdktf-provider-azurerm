@@ -82,100 +82,148 @@ export class CosmosdbGremlinGraph extends TerraformResource {
   // account_name - computed: false, optional: false, required: true
   private _accountName: string;
   public get accountName() {
-    return this._accountName;
+    return this.getStringAttribute('account_name');
   }
   public set accountName(value: string) {
     this._accountName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get accountNameInput() {
+    return this._accountName
   }
 
   // database_name - computed: false, optional: false, required: true
   private _databaseName: string;
   public get databaseName() {
-    return this._databaseName;
+    return this.getStringAttribute('database_name');
   }
   public set databaseName(value: string) {
     this._databaseName = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get databaseNameInput() {
+    return this._databaseName
+  }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // partition_key_path - computed: false, optional: true, required: false
   private _partitionKeyPath?: string;
   public get partitionKeyPath() {
-    return this._partitionKeyPath;
+    return this.getStringAttribute('partition_key_path');
   }
-  public set partitionKeyPath(value: string | undefined) {
+  public set partitionKeyPath(value: string ) {
     this._partitionKeyPath = value;
+  }
+  public resetPartitionKeyPath() {
+    this._partitionKeyPath = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get partitionKeyPathInput() {
+    return this._partitionKeyPath
   }
 
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
-    return this._resourceGroupName;
+    return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
   }
 
   // throughput - computed: true, optional: true, required: false
   private _throughput?: number;
   public get throughput() {
-    return this._throughput ?? this.getNumberAttribute('throughput');
+    return this.getNumberAttribute('throughput');
   }
-  public set throughput(value: number | undefined) {
+  public set throughput(value: number) {
     this._throughput = value;
+  }
+  public resetThroughput() {
+    this._throughput = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get throughputInput() {
+    return this._throughput
   }
 
   // conflict_resolution_policy - computed: false, optional: false, required: true
   private _conflictResolutionPolicy: CosmosdbGremlinGraphConflictResolutionPolicy[];
   public get conflictResolutionPolicy() {
-    return this._conflictResolutionPolicy;
+    return this.interpolationForAttribute('conflict_resolution_policy') as any;
   }
   public set conflictResolutionPolicy(value: CosmosdbGremlinGraphConflictResolutionPolicy[]) {
     this._conflictResolutionPolicy = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get conflictResolutionPolicyInput() {
+    return this._conflictResolutionPolicy
   }
 
   // index_policy - computed: false, optional: false, required: true
   private _indexPolicy: CosmosdbGremlinGraphIndexPolicy[];
   public get indexPolicy() {
-    return this._indexPolicy;
+    return this.interpolationForAttribute('index_policy') as any;
   }
   public set indexPolicy(value: CosmosdbGremlinGraphIndexPolicy[]) {
     this._indexPolicy = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get indexPolicyInput() {
+    return this._indexPolicy
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: CosmosdbGremlinGraphTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: CosmosdbGremlinGraphTimeouts | undefined) {
+  public set timeouts(value: CosmosdbGremlinGraphTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // unique_key - computed: false, optional: true, required: false
   private _uniqueKey?: CosmosdbGremlinGraphUniqueKey[];
   public get uniqueKey() {
-    return this._uniqueKey;
+    return this.interpolationForAttribute('unique_key') as any;
   }
-  public set uniqueKey(value: CosmosdbGremlinGraphUniqueKey[] | undefined) {
+  public set uniqueKey(value: CosmosdbGremlinGraphUniqueKey[] ) {
     this._uniqueKey = value;
+  }
+  public resetUniqueKey() {
+    this._uniqueKey = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get uniqueKeyInput() {
+    return this._uniqueKey
   }
 
   // =========

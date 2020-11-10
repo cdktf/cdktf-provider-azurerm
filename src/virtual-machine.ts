@@ -195,235 +195,388 @@ export class VirtualMachine extends TerraformResource {
   // availability_set_id - computed: true, optional: true, required: false
   private _availabilitySetId?: string;
   public get availabilitySetId() {
-    return this._availabilitySetId ?? this.getStringAttribute('availability_set_id');
+    return this.getStringAttribute('availability_set_id');
   }
-  public set availabilitySetId(value: string | undefined) {
+  public set availabilitySetId(value: string) {
     this._availabilitySetId = value;
+  }
+  public resetAvailabilitySetId() {
+    this._availabilitySetId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get availabilitySetIdInput() {
+    return this._availabilitySetId
   }
 
   // delete_data_disks_on_termination - computed: false, optional: true, required: false
   private _deleteDataDisksOnTermination?: boolean;
   public get deleteDataDisksOnTermination() {
-    return this._deleteDataDisksOnTermination;
+    return this.getBooleanAttribute('delete_data_disks_on_termination');
   }
-  public set deleteDataDisksOnTermination(value: boolean | undefined) {
+  public set deleteDataDisksOnTermination(value: boolean ) {
     this._deleteDataDisksOnTermination = value;
+  }
+  public resetDeleteDataDisksOnTermination() {
+    this._deleteDataDisksOnTermination = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteDataDisksOnTerminationInput() {
+    return this._deleteDataDisksOnTermination
   }
 
   // delete_os_disk_on_termination - computed: false, optional: true, required: false
   private _deleteOsDiskOnTermination?: boolean;
   public get deleteOsDiskOnTermination() {
-    return this._deleteOsDiskOnTermination;
+    return this.getBooleanAttribute('delete_os_disk_on_termination');
   }
-  public set deleteOsDiskOnTermination(value: boolean | undefined) {
+  public set deleteOsDiskOnTermination(value: boolean ) {
     this._deleteOsDiskOnTermination = value;
+  }
+  public resetDeleteOsDiskOnTermination() {
+    this._deleteOsDiskOnTermination = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteOsDiskOnTerminationInput() {
+    return this._deleteOsDiskOnTermination
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // license_type - computed: true, optional: true, required: false
   private _licenseType?: string;
   public get licenseType() {
-    return this._licenseType ?? this.getStringAttribute('license_type');
+    return this.getStringAttribute('license_type');
   }
-  public set licenseType(value: string | undefined) {
+  public set licenseType(value: string) {
     this._licenseType = value;
+  }
+  public resetLicenseType() {
+    this._licenseType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get licenseTypeInput() {
+    return this._licenseType
   }
 
   // location - computed: false, optional: false, required: true
   private _location: string;
   public get location() {
-    return this._location;
+    return this.getStringAttribute('location');
   }
   public set location(value: string) {
     this._location = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get locationInput() {
+    return this._location
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // network_interface_ids - computed: false, optional: false, required: true
   private _networkInterfaceIds: string[];
   public get networkInterfaceIds() {
-    return this._networkInterfaceIds;
+    return this.getListAttribute('network_interface_ids');
   }
   public set networkInterfaceIds(value: string[]) {
     this._networkInterfaceIds = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get networkInterfaceIdsInput() {
+    return this._networkInterfaceIds
   }
 
   // primary_network_interface_id - computed: false, optional: true, required: false
   private _primaryNetworkInterfaceId?: string;
   public get primaryNetworkInterfaceId() {
-    return this._primaryNetworkInterfaceId;
+    return this.getStringAttribute('primary_network_interface_id');
   }
-  public set primaryNetworkInterfaceId(value: string | undefined) {
+  public set primaryNetworkInterfaceId(value: string ) {
     this._primaryNetworkInterfaceId = value;
+  }
+  public resetPrimaryNetworkInterfaceId() {
+    this._primaryNetworkInterfaceId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get primaryNetworkInterfaceIdInput() {
+    return this._primaryNetworkInterfaceId
   }
 
   // proximity_placement_group_id - computed: false, optional: true, required: false
   private _proximityPlacementGroupId?: string;
   public get proximityPlacementGroupId() {
-    return this._proximityPlacementGroupId;
+    return this.getStringAttribute('proximity_placement_group_id');
   }
-  public set proximityPlacementGroupId(value: string | undefined) {
+  public set proximityPlacementGroupId(value: string ) {
     this._proximityPlacementGroupId = value;
+  }
+  public resetProximityPlacementGroupId() {
+    this._proximityPlacementGroupId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get proximityPlacementGroupIdInput() {
+    return this._proximityPlacementGroupId
   }
 
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
-    return this._resourceGroupName;
+    return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
   }
 
   // tags - computed: false, optional: true, required: false
   private _tags?: { [key: string]: string };
   public get tags() {
-    return this._tags;
+    return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | undefined) {
+  public set tags(value: { [key: string]: string } ) {
     this._tags = value;
+  }
+  public resetTags() {
+    this._tags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsInput() {
+    return this._tags
   }
 
   // vm_size - computed: false, optional: false, required: true
   private _vmSize: string;
   public get vmSize() {
-    return this._vmSize;
+    return this.getStringAttribute('vm_size');
   }
   public set vmSize(value: string) {
     this._vmSize = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get vmSizeInput() {
+    return this._vmSize
   }
 
   // zones - computed: false, optional: true, required: false
   private _zones?: string[];
   public get zones() {
-    return this._zones;
+    return this.getListAttribute('zones');
   }
-  public set zones(value: string[] | undefined) {
+  public set zones(value: string[] ) {
     this._zones = value;
+  }
+  public resetZones() {
+    this._zones = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get zonesInput() {
+    return this._zones
   }
 
   // additional_capabilities - computed: false, optional: true, required: false
   private _additionalCapabilities?: VirtualMachineAdditionalCapabilities[];
   public get additionalCapabilities() {
-    return this._additionalCapabilities;
+    return this.interpolationForAttribute('additional_capabilities') as any;
   }
-  public set additionalCapabilities(value: VirtualMachineAdditionalCapabilities[] | undefined) {
+  public set additionalCapabilities(value: VirtualMachineAdditionalCapabilities[] ) {
     this._additionalCapabilities = value;
+  }
+  public resetAdditionalCapabilities() {
+    this._additionalCapabilities = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get additionalCapabilitiesInput() {
+    return this._additionalCapabilities
   }
 
   // boot_diagnostics - computed: false, optional: true, required: false
   private _bootDiagnostics?: VirtualMachineBootDiagnostics[];
   public get bootDiagnostics() {
-    return this._bootDiagnostics;
+    return this.interpolationForAttribute('boot_diagnostics') as any;
   }
-  public set bootDiagnostics(value: VirtualMachineBootDiagnostics[] | undefined) {
+  public set bootDiagnostics(value: VirtualMachineBootDiagnostics[] ) {
     this._bootDiagnostics = value;
+  }
+  public resetBootDiagnostics() {
+    this._bootDiagnostics = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get bootDiagnosticsInput() {
+    return this._bootDiagnostics
   }
 
   // identity - computed: false, optional: true, required: false
   private _identity?: VirtualMachineIdentity[];
   public get identity() {
-    return this._identity;
+    return this.interpolationForAttribute('identity') as any;
   }
-  public set identity(value: VirtualMachineIdentity[] | undefined) {
+  public set identity(value: VirtualMachineIdentity[] ) {
     this._identity = value;
+  }
+  public resetIdentity() {
+    this._identity = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get identityInput() {
+    return this._identity
   }
 
   // os_profile - computed: false, optional: true, required: false
   private _osProfile?: VirtualMachineOsProfile[];
   public get osProfile() {
-    return this._osProfile;
+    return this.interpolationForAttribute('os_profile') as any;
   }
-  public set osProfile(value: VirtualMachineOsProfile[] | undefined) {
+  public set osProfile(value: VirtualMachineOsProfile[] ) {
     this._osProfile = value;
+  }
+  public resetOsProfile() {
+    this._osProfile = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get osProfileInput() {
+    return this._osProfile
   }
 
   // os_profile_linux_config - computed: false, optional: true, required: false
   private _osProfileLinuxConfig?: VirtualMachineOsProfileLinuxConfig[];
   public get osProfileLinuxConfig() {
-    return this._osProfileLinuxConfig;
+    return this.interpolationForAttribute('os_profile_linux_config') as any;
   }
-  public set osProfileLinuxConfig(value: VirtualMachineOsProfileLinuxConfig[] | undefined) {
+  public set osProfileLinuxConfig(value: VirtualMachineOsProfileLinuxConfig[] ) {
     this._osProfileLinuxConfig = value;
+  }
+  public resetOsProfileLinuxConfig() {
+    this._osProfileLinuxConfig = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get osProfileLinuxConfigInput() {
+    return this._osProfileLinuxConfig
   }
 
   // os_profile_secrets - computed: false, optional: true, required: false
   private _osProfileSecrets?: VirtualMachineOsProfileSecrets[];
   public get osProfileSecrets() {
-    return this._osProfileSecrets;
+    return this.interpolationForAttribute('os_profile_secrets') as any;
   }
-  public set osProfileSecrets(value: VirtualMachineOsProfileSecrets[] | undefined) {
+  public set osProfileSecrets(value: VirtualMachineOsProfileSecrets[] ) {
     this._osProfileSecrets = value;
+  }
+  public resetOsProfileSecrets() {
+    this._osProfileSecrets = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get osProfileSecretsInput() {
+    return this._osProfileSecrets
   }
 
   // os_profile_windows_config - computed: false, optional: true, required: false
   private _osProfileWindowsConfig?: VirtualMachineOsProfileWindowsConfig[];
   public get osProfileWindowsConfig() {
-    return this._osProfileWindowsConfig;
+    return this.interpolationForAttribute('os_profile_windows_config') as any;
   }
-  public set osProfileWindowsConfig(value: VirtualMachineOsProfileWindowsConfig[] | undefined) {
+  public set osProfileWindowsConfig(value: VirtualMachineOsProfileWindowsConfig[] ) {
     this._osProfileWindowsConfig = value;
+  }
+  public resetOsProfileWindowsConfig() {
+    this._osProfileWindowsConfig = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get osProfileWindowsConfigInput() {
+    return this._osProfileWindowsConfig
   }
 
   // plan - computed: false, optional: true, required: false
   private _plan?: VirtualMachinePlan[];
   public get plan() {
-    return this._plan;
+    return this.interpolationForAttribute('plan') as any;
   }
-  public set plan(value: VirtualMachinePlan[] | undefined) {
+  public set plan(value: VirtualMachinePlan[] ) {
     this._plan = value;
+  }
+  public resetPlan() {
+    this._plan = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get planInput() {
+    return this._plan
   }
 
   // storage_data_disk - computed: false, optional: true, required: false
   private _storageDataDisk?: VirtualMachineStorageDataDisk[];
   public get storageDataDisk() {
-    return this._storageDataDisk;
+    return this.interpolationForAttribute('storage_data_disk') as any;
   }
-  public set storageDataDisk(value: VirtualMachineStorageDataDisk[] | undefined) {
+  public set storageDataDisk(value: VirtualMachineStorageDataDisk[] ) {
     this._storageDataDisk = value;
+  }
+  public resetStorageDataDisk() {
+    this._storageDataDisk = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get storageDataDiskInput() {
+    return this._storageDataDisk
   }
 
   // storage_image_reference - computed: false, optional: true, required: false
   private _storageImageReference?: VirtualMachineStorageImageReference[];
   public get storageImageReference() {
-    return this._storageImageReference;
+    return this.interpolationForAttribute('storage_image_reference') as any;
   }
-  public set storageImageReference(value: VirtualMachineStorageImageReference[] | undefined) {
+  public set storageImageReference(value: VirtualMachineStorageImageReference[] ) {
     this._storageImageReference = value;
+  }
+  public resetStorageImageReference() {
+    this._storageImageReference = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get storageImageReferenceInput() {
+    return this._storageImageReference
   }
 
   // storage_os_disk - computed: false, optional: false, required: true
   private _storageOsDisk: VirtualMachineStorageOsDisk[];
   public get storageOsDisk() {
-    return this._storageOsDisk;
+    return this.interpolationForAttribute('storage_os_disk') as any;
   }
   public set storageOsDisk(value: VirtualMachineStorageOsDisk[]) {
     this._storageOsDisk = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get storageOsDiskInput() {
+    return this._storageOsDisk
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: VirtualMachineTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: VirtualMachineTimeouts | undefined) {
+  public set timeouts(value: VirtualMachineTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

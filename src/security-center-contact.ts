@@ -55,55 +55,77 @@ export class SecurityCenterContact extends TerraformResource {
   // alert_notifications - computed: false, optional: false, required: true
   private _alertNotifications: boolean;
   public get alertNotifications() {
-    return this._alertNotifications;
+    return this.getBooleanAttribute('alert_notifications');
   }
   public set alertNotifications(value: boolean) {
     this._alertNotifications = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get alertNotificationsInput() {
+    return this._alertNotifications
   }
 
   // alerts_to_admins - computed: false, optional: false, required: true
   private _alertsToAdmins: boolean;
   public get alertsToAdmins() {
-    return this._alertsToAdmins;
+    return this.getBooleanAttribute('alerts_to_admins');
   }
   public set alertsToAdmins(value: boolean) {
     this._alertsToAdmins = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get alertsToAdminsInput() {
+    return this._alertsToAdmins
   }
 
   // email - computed: false, optional: false, required: true
   private _email: string;
   public get email() {
-    return this._email;
+    return this.getStringAttribute('email');
   }
   public set email(value: string) {
     this._email = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get emailInput() {
+    return this._email
+  }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // phone - computed: false, optional: true, required: false
   private _phone?: string;
   public get phone() {
-    return this._phone;
+    return this.getStringAttribute('phone');
   }
-  public set phone(value: string | undefined) {
+  public set phone(value: string ) {
     this._phone = value;
+  }
+  public resetPhone() {
+    this._phone = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get phoneInput() {
+    return this._phone
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: SecurityCenterContactTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: SecurityCenterContactTimeouts | undefined) {
+  public set timeouts(value: SecurityCenterContactTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

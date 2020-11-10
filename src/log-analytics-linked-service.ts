@@ -55,24 +55,27 @@ export class LogAnalyticsLinkedService extends TerraformResource {
   // ==========
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // linked_service_name - computed: false, optional: true, required: false
   private _linkedServiceName?: string;
   public get linkedServiceName() {
-    return this._linkedServiceName;
+    return this.getStringAttribute('linked_service_name');
   }
-  public set linkedServiceName(value: string | undefined) {
+  public set linkedServiceName(value: string ) {
     this._linkedServiceName = value;
   }
+  public resetLinkedServiceName() {
+    this._linkedServiceName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get linkedServiceNameInput() {
+    return this._linkedServiceName
+  }
 
-  // name - computed: true, optional: false, required: true
+  // name - computed: true, optional: false, required: false
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -80,46 +83,72 @@ export class LogAnalyticsLinkedService extends TerraformResource {
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
-    return this._resourceGroupName;
+    return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
   }
 
   // resource_id - computed: false, optional: false, required: true
   private _resourceId: string;
   public get resourceId() {
-    return this._resourceId;
+    return this.getStringAttribute('resource_id');
   }
   public set resourceId(value: string) {
     this._resourceId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resourceIdInput() {
+    return this._resourceId
   }
 
   // tags - computed: false, optional: true, required: false
   private _tags?: { [key: string]: string };
   public get tags() {
-    return this._tags;
+    return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | undefined) {
+  public set tags(value: { [key: string]: string } ) {
     this._tags = value;
+  }
+  public resetTags() {
+    this._tags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsInput() {
+    return this._tags
   }
 
   // workspace_name - computed: false, optional: false, required: true
   private _workspaceName: string;
   public get workspaceName() {
-    return this._workspaceName;
+    return this.getStringAttribute('workspace_name');
   }
   public set workspaceName(value: string) {
     this._workspaceName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get workspaceNameInput() {
+    return this._workspaceName
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: LogAnalyticsLinkedServiceTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: LogAnalyticsLinkedServiceTimeouts | undefined) {
+  public set timeouts(value: LogAnalyticsLinkedServiceTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

@@ -63,91 +63,135 @@ export class DedicatedHost extends TerraformResource {
   // auto_replace_on_failure - computed: false, optional: true, required: false
   private _autoReplaceOnFailure?: boolean;
   public get autoReplaceOnFailure() {
-    return this._autoReplaceOnFailure;
+    return this.getBooleanAttribute('auto_replace_on_failure');
   }
-  public set autoReplaceOnFailure(value: boolean | undefined) {
+  public set autoReplaceOnFailure(value: boolean ) {
     this._autoReplaceOnFailure = value;
+  }
+  public resetAutoReplaceOnFailure() {
+    this._autoReplaceOnFailure = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get autoReplaceOnFailureInput() {
+    return this._autoReplaceOnFailure
   }
 
   // dedicated_host_group_id - computed: false, optional: false, required: true
   private _dedicatedHostGroupId: string;
   public get dedicatedHostGroupId() {
-    return this._dedicatedHostGroupId;
+    return this.getStringAttribute('dedicated_host_group_id');
   }
   public set dedicatedHostGroupId(value: string) {
     this._dedicatedHostGroupId = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get dedicatedHostGroupIdInput() {
+    return this._dedicatedHostGroupId
+  }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // license_type - computed: false, optional: true, required: false
   private _licenseType?: string;
   public get licenseType() {
-    return this._licenseType;
+    return this.getStringAttribute('license_type');
   }
-  public set licenseType(value: string | undefined) {
+  public set licenseType(value: string ) {
     this._licenseType = value;
+  }
+  public resetLicenseType() {
+    this._licenseType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get licenseTypeInput() {
+    return this._licenseType
   }
 
   // location - computed: false, optional: false, required: true
   private _location: string;
   public get location() {
-    return this._location;
+    return this.getStringAttribute('location');
   }
   public set location(value: string) {
     this._location = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get locationInput() {
+    return this._location
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // platform_fault_domain - computed: false, optional: false, required: true
   private _platformFaultDomain: number;
   public get platformFaultDomain() {
-    return this._platformFaultDomain;
+    return this.getNumberAttribute('platform_fault_domain');
   }
   public set platformFaultDomain(value: number) {
     this._platformFaultDomain = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get platformFaultDomainInput() {
+    return this._platformFaultDomain
   }
 
   // sku_name - computed: false, optional: false, required: true
   private _skuName: string;
   public get skuName() {
-    return this._skuName;
+    return this.getStringAttribute('sku_name');
   }
   public set skuName(value: string) {
     this._skuName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get skuNameInput() {
+    return this._skuName
   }
 
   // tags - computed: false, optional: true, required: false
   private _tags?: { [key: string]: string };
   public get tags() {
-    return this._tags;
+    return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | undefined) {
+  public set tags(value: { [key: string]: string } ) {
     this._tags = value;
+  }
+  public resetTags() {
+    this._tags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsInput() {
+    return this._tags
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: DedicatedHostTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: DedicatedHostTimeouts | undefined) {
+  public set timeouts(value: DedicatedHostTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

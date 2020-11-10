@@ -46,36 +46,32 @@ export class DataAzurermContainerRegistry extends TerraformDataSource {
   // ATTRIBUTES
   // ==========
 
-  // admin_enabled - computed: true, optional: false, required: true
+  // admin_enabled - computed: true, optional: false, required: false
   public get adminEnabled() {
     return this.getBooleanAttribute('admin_enabled');
   }
 
-  // admin_password - computed: true, optional: false, required: true
+  // admin_password - computed: true, optional: false, required: false
   public get adminPassword() {
     return this.getStringAttribute('admin_password');
   }
 
-  // admin_username - computed: true, optional: false, required: true
+  // admin_username - computed: true, optional: false, required: false
   public get adminUsername() {
     return this.getStringAttribute('admin_username');
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
-  // location - computed: true, optional: false, required: true
+  // location - computed: true, optional: false, required: false
   public get location() {
     return this.getStringAttribute('location');
   }
 
-  // login_server - computed: true, optional: false, required: true
+  // login_server - computed: true, optional: false, required: false
   public get loginServer() {
     return this.getStringAttribute('login_server');
   }
@@ -83,32 +79,40 @@ export class DataAzurermContainerRegistry extends TerraformDataSource {
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
-    return this._resourceGroupName;
+    return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
+  }
 
-  // sku - computed: true, optional: false, required: true
+  // sku - computed: true, optional: false, required: false
   public get sku() {
     return this.getStringAttribute('sku');
   }
 
-  // storage_account_id - computed: true, optional: false, required: true
+  // storage_account_id - computed: true, optional: false, required: false
   public get storageAccountId() {
     return this.getStringAttribute('storage_account_id');
   }
 
-  // tags - computed: true, optional: false, required: true
+  // tags - computed: true, optional: false, required: false
   public tags(key: string): string {
     return new StringMap(this, 'tags').lookup(key);
   }
@@ -116,10 +120,17 @@ export class DataAzurermContainerRegistry extends TerraformDataSource {
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: DataAzurermContainerRegistryTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: DataAzurermContainerRegistryTimeouts | undefined) {
+  public set timeouts(value: DataAzurermContainerRegistryTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

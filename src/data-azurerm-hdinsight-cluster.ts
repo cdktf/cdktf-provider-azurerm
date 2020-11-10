@@ -17,17 +17,17 @@ export interface DataAzurermHdinsightClusterConfig extends TerraformMetaArgument
 }
 export class DataAzurermHdinsightClusterGateway extends ComplexComputedList {
 
-  // enabled - computed: true, optional: false, required: true
+  // enabled - computed: true, optional: false, required: false
   public get enabled() {
     return this.getBooleanAttribute('enabled');
   }
 
-  // password - computed: true, optional: false, required: true
+  // password - computed: true, optional: false, required: false
   public get password() {
     return this.getStringAttribute('password');
   }
 
-  // username - computed: true, optional: false, required: true
+  // username - computed: true, optional: false, required: false
   public get username() {
     return this.getStringAttribute('username');
   }
@@ -64,46 +64,42 @@ export class DataAzurermHdinsightCluster extends TerraformDataSource {
   // ATTRIBUTES
   // ==========
 
-  // cluster_version - computed: true, optional: false, required: true
+  // cluster_version - computed: true, optional: false, required: false
   public get clusterVersion() {
     return this.getStringAttribute('cluster_version');
   }
 
-  // component_versions - computed: true, optional: false, required: true
+  // component_versions - computed: true, optional: false, required: false
   public componentVersions(key: string): string {
     return new StringMap(this, 'component_versions').lookup(key);
   }
 
-  // edge_ssh_endpoint - computed: true, optional: false, required: true
+  // edge_ssh_endpoint - computed: true, optional: false, required: false
   public get edgeSshEndpoint() {
     return this.getStringAttribute('edge_ssh_endpoint');
   }
 
-  // gateway - computed: true, optional: false, required: true
+  // gateway - computed: true, optional: false, required: false
   public gateway(index: string) {
     return new DataAzurermHdinsightClusterGateway(this, 'gateway', index);
   }
 
-  // https_endpoint - computed: true, optional: false, required: true
+  // https_endpoint - computed: true, optional: false, required: false
   public get httpsEndpoint() {
     return this.getStringAttribute('https_endpoint');
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
-  // kind - computed: true, optional: false, required: true
+  // kind - computed: true, optional: false, required: false
   public get kind() {
     return this.getStringAttribute('kind');
   }
 
-  // location - computed: true, optional: false, required: true
+  // location - computed: true, optional: false, required: false
   public get location() {
     return this.getStringAttribute('location');
   }
@@ -111,32 +107,40 @@ export class DataAzurermHdinsightCluster extends TerraformDataSource {
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
-    return this._resourceGroupName;
+    return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
+  }
 
-  // ssh_endpoint - computed: true, optional: false, required: true
+  // ssh_endpoint - computed: true, optional: false, required: false
   public get sshEndpoint() {
     return this.getStringAttribute('ssh_endpoint');
   }
 
-  // tags - computed: true, optional: false, required: true
+  // tags - computed: true, optional: false, required: false
   public tags(key: string): string {
     return new StringMap(this, 'tags').lookup(key);
   }
 
-  // tier - computed: true, optional: false, required: true
+  // tier - computed: true, optional: false, required: false
   public get tier() {
     return this.getStringAttribute('tier');
   }
@@ -144,10 +148,17 @@ export class DataAzurermHdinsightCluster extends TerraformDataSource {
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: DataAzurermHdinsightClusterTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: DataAzurermHdinsightClusterTimeouts | undefined) {
+  public set timeouts(value: DataAzurermHdinsightClusterTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

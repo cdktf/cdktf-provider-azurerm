@@ -55,66 +55,92 @@ export class PostgresqlVirtualNetworkRule extends TerraformResource {
   // ==========
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // ignore_missing_vnet_service_endpoint - computed: false, optional: true, required: false
   private _ignoreMissingVnetServiceEndpoint?: boolean;
   public get ignoreMissingVnetServiceEndpoint() {
-    return this._ignoreMissingVnetServiceEndpoint;
+    return this.getBooleanAttribute('ignore_missing_vnet_service_endpoint');
   }
-  public set ignoreMissingVnetServiceEndpoint(value: boolean | undefined) {
+  public set ignoreMissingVnetServiceEndpoint(value: boolean ) {
     this._ignoreMissingVnetServiceEndpoint = value;
+  }
+  public resetIgnoreMissingVnetServiceEndpoint() {
+    this._ignoreMissingVnetServiceEndpoint = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ignoreMissingVnetServiceEndpointInput() {
+    return this._ignoreMissingVnetServiceEndpoint
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
-    return this._resourceGroupName;
+    return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
   }
 
   // server_name - computed: false, optional: false, required: true
   private _serverName: string;
   public get serverName() {
-    return this._serverName;
+    return this.getStringAttribute('server_name');
   }
   public set serverName(value: string) {
     this._serverName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get serverNameInput() {
+    return this._serverName
   }
 
   // subnet_id - computed: false, optional: false, required: true
   private _subnetId: string;
   public get subnetId() {
-    return this._subnetId;
+    return this.getStringAttribute('subnet_id');
   }
   public set subnetId(value: string) {
     this._subnetId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get subnetIdInput() {
+    return this._subnetId
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: PostgresqlVirtualNetworkRuleTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: PostgresqlVirtualNetworkRuleTimeouts | undefined) {
+  public set timeouts(value: PostgresqlVirtualNetworkRuleTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

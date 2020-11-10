@@ -61,45 +61,56 @@ export class IothubSharedAccessPolicyA extends TerraformResource {
   // device_connect - computed: false, optional: true, required: false
   private _deviceConnect?: boolean;
   public get deviceConnect() {
-    return this._deviceConnect;
+    return this.getBooleanAttribute('device_connect');
   }
-  public set deviceConnect(value: boolean | undefined) {
+  public set deviceConnect(value: boolean ) {
     this._deviceConnect = value;
+  }
+  public resetDeviceConnect() {
+    this._deviceConnect = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deviceConnectInput() {
+    return this._deviceConnect
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // iothub_name - computed: false, optional: false, required: true
   private _iothubName: string;
   public get iothubName() {
-    return this._iothubName;
+    return this.getStringAttribute('iothub_name');
   }
   public set iothubName(value: string) {
     this._iothubName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get iothubNameInput() {
+    return this._iothubName
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
+  }
 
-  // primary_connection_string - computed: true, optional: false, required: true
+  // primary_connection_string - computed: true, optional: false, required: false
   public get primaryConnectionString() {
     return this.getStringAttribute('primary_connection_string');
   }
 
-  // primary_key - computed: true, optional: false, required: true
+  // primary_key - computed: true, optional: false, required: false
   public get primaryKey() {
     return this.getStringAttribute('primary_key');
   }
@@ -107,36 +118,54 @@ export class IothubSharedAccessPolicyA extends TerraformResource {
   // registry_read - computed: false, optional: true, required: false
   private _registryRead?: boolean;
   public get registryRead() {
-    return this._registryRead;
+    return this.getBooleanAttribute('registry_read');
   }
-  public set registryRead(value: boolean | undefined) {
+  public set registryRead(value: boolean ) {
     this._registryRead = value;
+  }
+  public resetRegistryRead() {
+    this._registryRead = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get registryReadInput() {
+    return this._registryRead
   }
 
   // registry_write - computed: false, optional: true, required: false
   private _registryWrite?: boolean;
   public get registryWrite() {
-    return this._registryWrite;
+    return this.getBooleanAttribute('registry_write');
   }
-  public set registryWrite(value: boolean | undefined) {
+  public set registryWrite(value: boolean ) {
     this._registryWrite = value;
+  }
+  public resetRegistryWrite() {
+    this._registryWrite = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get registryWriteInput() {
+    return this._registryWrite
   }
 
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
-    return this._resourceGroupName;
+    return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
+  }
 
-  // secondary_connection_string - computed: true, optional: false, required: true
+  // secondary_connection_string - computed: true, optional: false, required: false
   public get secondaryConnectionString() {
     return this.getStringAttribute('secondary_connection_string');
   }
 
-  // secondary_key - computed: true, optional: false, required: true
+  // secondary_key - computed: true, optional: false, required: false
   public get secondaryKey() {
     return this.getStringAttribute('secondary_key');
   }
@@ -144,19 +173,33 @@ export class IothubSharedAccessPolicyA extends TerraformResource {
   // service_connect - computed: false, optional: true, required: false
   private _serviceConnect?: boolean;
   public get serviceConnect() {
-    return this._serviceConnect;
+    return this.getBooleanAttribute('service_connect');
   }
-  public set serviceConnect(value: boolean | undefined) {
+  public set serviceConnect(value: boolean ) {
     this._serviceConnect = value;
+  }
+  public resetServiceConnect() {
+    this._serviceConnect = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get serviceConnectInput() {
+    return this._serviceConnect
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: IothubSharedAccessPolicyTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: IothubSharedAccessPolicyTimeouts | undefined) {
+  public set timeouts(value: IothubSharedAccessPolicyTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

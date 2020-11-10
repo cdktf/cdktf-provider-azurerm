@@ -57,75 +57,108 @@ export class PrivateDnsZoneVirtualNetworkLink extends TerraformResource {
   // ==========
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // private_dns_zone_name - computed: false, optional: false, required: true
   private _privateDnsZoneName: string;
   public get privateDnsZoneName() {
-    return this._privateDnsZoneName;
+    return this.getStringAttribute('private_dns_zone_name');
   }
   public set privateDnsZoneName(value: string) {
     this._privateDnsZoneName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get privateDnsZoneNameInput() {
+    return this._privateDnsZoneName
   }
 
   // registration_enabled - computed: false, optional: true, required: false
   private _registrationEnabled?: boolean;
   public get registrationEnabled() {
-    return this._registrationEnabled;
+    return this.getBooleanAttribute('registration_enabled');
   }
-  public set registrationEnabled(value: boolean | undefined) {
+  public set registrationEnabled(value: boolean ) {
     this._registrationEnabled = value;
+  }
+  public resetRegistrationEnabled() {
+    this._registrationEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get registrationEnabledInput() {
+    return this._registrationEnabled
   }
 
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
-    return this._resourceGroupName;
+    return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
   }
 
   // tags - computed: false, optional: true, required: false
   private _tags?: { [key: string]: string };
   public get tags() {
-    return this._tags;
+    return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | undefined) {
+  public set tags(value: { [key: string]: string } ) {
     this._tags = value;
+  }
+  public resetTags() {
+    this._tags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsInput() {
+    return this._tags
   }
 
   // virtual_network_id - computed: false, optional: false, required: true
   private _virtualNetworkId: string;
   public get virtualNetworkId() {
-    return this._virtualNetworkId;
+    return this.getStringAttribute('virtual_network_id');
   }
   public set virtualNetworkId(value: string) {
     this._virtualNetworkId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get virtualNetworkIdInput() {
+    return this._virtualNetworkId
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: PrivateDnsZoneVirtualNetworkLinkTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: PrivateDnsZoneVirtualNetworkLinkTimeouts | undefined) {
+  public set timeouts(value: PrivateDnsZoneVirtualNetworkLinkTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

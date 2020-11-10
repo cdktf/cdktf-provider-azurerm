@@ -47,41 +47,37 @@ export class DataAzurermAppServiceCertificate extends TerraformDataSource {
   // ATTRIBUTES
   // ==========
 
-  // expiration_date - computed: true, optional: false, required: true
+  // expiration_date - computed: true, optional: false, required: false
   public get expirationDate() {
     return this.getStringAttribute('expiration_date');
   }
 
-  // friendly_name - computed: true, optional: false, required: true
+  // friendly_name - computed: true, optional: false, required: false
   public get friendlyName() {
     return this.getStringAttribute('friendly_name');
   }
 
-  // host_names - computed: true, optional: false, required: true
+  // host_names - computed: true, optional: false, required: false
   public get hostNames() {
     return this.getListAttribute('host_names');
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
-  // issue_date - computed: true, optional: false, required: true
+  // issue_date - computed: true, optional: false, required: false
   public get issueDate() {
     return this.getStringAttribute('issue_date');
   }
 
-  // issuer - computed: true, optional: false, required: true
+  // issuer - computed: true, optional: false, required: false
   public get issuer() {
     return this.getStringAttribute('issuer');
   }
 
-  // location - computed: true, optional: false, required: true
+  // location - computed: true, optional: false, required: false
   public get location() {
     return this.getStringAttribute('location');
   }
@@ -89,22 +85,30 @@ export class DataAzurermAppServiceCertificate extends TerraformDataSource {
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
-    return this._resourceGroupName;
+    return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
+  }
 
-  // subject_name - computed: true, optional: false, required: true
+  // subject_name - computed: true, optional: false, required: false
   public get subjectName() {
     return this.getStringAttribute('subject_name');
   }
@@ -112,13 +116,20 @@ export class DataAzurermAppServiceCertificate extends TerraformDataSource {
   // tags - computed: false, optional: true, required: false
   private _tags?: { [key: string]: string };
   public get tags() {
-    return this._tags;
+    return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | undefined) {
+  public set tags(value: { [key: string]: string } ) {
     this._tags = value;
   }
+  public resetTags() {
+    this._tags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsInput() {
+    return this._tags
+  }
 
-  // thumbprint - computed: true, optional: false, required: true
+  // thumbprint - computed: true, optional: false, required: false
   public get thumbprint() {
     return this.getStringAttribute('thumbprint');
   }
@@ -126,10 +137,17 @@ export class DataAzurermAppServiceCertificate extends TerraformDataSource {
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: DataAzurermAppServiceCertificateTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: DataAzurermAppServiceCertificateTimeouts | undefined) {
+  public set timeouts(value: DataAzurermAppServiceCertificateTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

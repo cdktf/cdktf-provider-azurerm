@@ -153,186 +153,291 @@ export class ServiceFabricCluster extends TerraformResource {
   // add_on_features - computed: false, optional: true, required: false
   private _addOnFeatures?: string[];
   public get addOnFeatures() {
-    return this._addOnFeatures;
+    return this.getListAttribute('add_on_features');
   }
-  public set addOnFeatures(value: string[] | undefined) {
+  public set addOnFeatures(value: string[] ) {
     this._addOnFeatures = value;
+  }
+  public resetAddOnFeatures() {
+    this._addOnFeatures = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get addOnFeaturesInput() {
+    return this._addOnFeatures
   }
 
   // cluster_code_version - computed: true, optional: true, required: false
   private _clusterCodeVersion?: string;
   public get clusterCodeVersion() {
-    return this._clusterCodeVersion ?? this.getStringAttribute('cluster_code_version');
+    return this.getStringAttribute('cluster_code_version');
   }
-  public set clusterCodeVersion(value: string | undefined) {
+  public set clusterCodeVersion(value: string) {
     this._clusterCodeVersion = value;
   }
+  public resetClusterCodeVersion() {
+    this._clusterCodeVersion = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get clusterCodeVersionInput() {
+    return this._clusterCodeVersion
+  }
 
-  // cluster_endpoint - computed: true, optional: false, required: true
+  // cluster_endpoint - computed: true, optional: false, required: false
   public get clusterEndpoint() {
     return this.getStringAttribute('cluster_endpoint');
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // location - computed: false, optional: false, required: true
   private _location: string;
   public get location() {
-    return this._location;
+    return this.getStringAttribute('location');
   }
   public set location(value: string) {
     this._location = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get locationInput() {
+    return this._location
   }
 
   // management_endpoint - computed: false, optional: false, required: true
   private _managementEndpoint: string;
   public get managementEndpoint() {
-    return this._managementEndpoint;
+    return this.getStringAttribute('management_endpoint');
   }
   public set managementEndpoint(value: string) {
     this._managementEndpoint = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get managementEndpointInput() {
+    return this._managementEndpoint
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // reliability_level - computed: false, optional: false, required: true
   private _reliabilityLevel: string;
   public get reliabilityLevel() {
-    return this._reliabilityLevel;
+    return this.getStringAttribute('reliability_level');
   }
   public set reliabilityLevel(value: string) {
     this._reliabilityLevel = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get reliabilityLevelInput() {
+    return this._reliabilityLevel
   }
 
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
-    return this._resourceGroupName;
+    return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
   }
 
   // tags - computed: false, optional: true, required: false
   private _tags?: { [key: string]: string };
   public get tags() {
-    return this._tags;
+    return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | undefined) {
+  public set tags(value: { [key: string]: string } ) {
     this._tags = value;
+  }
+  public resetTags() {
+    this._tags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsInput() {
+    return this._tags
   }
 
   // upgrade_mode - computed: false, optional: false, required: true
   private _upgradeMode: string;
   public get upgradeMode() {
-    return this._upgradeMode;
+    return this.getStringAttribute('upgrade_mode');
   }
   public set upgradeMode(value: string) {
     this._upgradeMode = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get upgradeModeInput() {
+    return this._upgradeMode
   }
 
   // vm_image - computed: false, optional: false, required: true
   private _vmImage: string;
   public get vmImage() {
-    return this._vmImage;
+    return this.getStringAttribute('vm_image');
   }
   public set vmImage(value: string) {
     this._vmImage = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get vmImageInput() {
+    return this._vmImage
   }
 
   // azure_active_directory - computed: false, optional: true, required: false
   private _azureActiveDirectory?: ServiceFabricClusterAzureActiveDirectory[];
   public get azureActiveDirectory() {
-    return this._azureActiveDirectory;
+    return this.interpolationForAttribute('azure_active_directory') as any;
   }
-  public set azureActiveDirectory(value: ServiceFabricClusterAzureActiveDirectory[] | undefined) {
+  public set azureActiveDirectory(value: ServiceFabricClusterAzureActiveDirectory[] ) {
     this._azureActiveDirectory = value;
+  }
+  public resetAzureActiveDirectory() {
+    this._azureActiveDirectory = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get azureActiveDirectoryInput() {
+    return this._azureActiveDirectory
   }
 
   // certificate - computed: false, optional: true, required: false
   private _certificate?: ServiceFabricClusterCertificate[];
   public get certificate() {
-    return this._certificate;
+    return this.interpolationForAttribute('certificate') as any;
   }
-  public set certificate(value: ServiceFabricClusterCertificate[] | undefined) {
+  public set certificate(value: ServiceFabricClusterCertificate[] ) {
     this._certificate = value;
+  }
+  public resetCertificate() {
+    this._certificate = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get certificateInput() {
+    return this._certificate
   }
 
   // certificate_common_names - computed: false, optional: true, required: false
   private _certificateCommonNames?: ServiceFabricClusterCertificateCommonNames[];
   public get certificateCommonNames() {
-    return this._certificateCommonNames;
+    return this.interpolationForAttribute('certificate_common_names') as any;
   }
-  public set certificateCommonNames(value: ServiceFabricClusterCertificateCommonNames[] | undefined) {
+  public set certificateCommonNames(value: ServiceFabricClusterCertificateCommonNames[] ) {
     this._certificateCommonNames = value;
+  }
+  public resetCertificateCommonNames() {
+    this._certificateCommonNames = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get certificateCommonNamesInput() {
+    return this._certificateCommonNames
   }
 
   // client_certificate_thumbprint - computed: false, optional: true, required: false
   private _clientCertificateThumbprint?: ServiceFabricClusterClientCertificateThumbprint[];
   public get clientCertificateThumbprint() {
-    return this._clientCertificateThumbprint;
+    return this.interpolationForAttribute('client_certificate_thumbprint') as any;
   }
-  public set clientCertificateThumbprint(value: ServiceFabricClusterClientCertificateThumbprint[] | undefined) {
+  public set clientCertificateThumbprint(value: ServiceFabricClusterClientCertificateThumbprint[] ) {
     this._clientCertificateThumbprint = value;
+  }
+  public resetClientCertificateThumbprint() {
+    this._clientCertificateThumbprint = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get clientCertificateThumbprintInput() {
+    return this._clientCertificateThumbprint
   }
 
   // diagnostics_config - computed: false, optional: true, required: false
   private _diagnosticsConfig?: ServiceFabricClusterDiagnosticsConfig[];
   public get diagnosticsConfig() {
-    return this._diagnosticsConfig;
+    return this.interpolationForAttribute('diagnostics_config') as any;
   }
-  public set diagnosticsConfig(value: ServiceFabricClusterDiagnosticsConfig[] | undefined) {
+  public set diagnosticsConfig(value: ServiceFabricClusterDiagnosticsConfig[] ) {
     this._diagnosticsConfig = value;
+  }
+  public resetDiagnosticsConfig() {
+    this._diagnosticsConfig = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get diagnosticsConfigInput() {
+    return this._diagnosticsConfig
   }
 
   // fabric_settings - computed: false, optional: true, required: false
   private _fabricSettings?: ServiceFabricClusterFabricSettings[];
   public get fabricSettings() {
-    return this._fabricSettings;
+    return this.interpolationForAttribute('fabric_settings') as any;
   }
-  public set fabricSettings(value: ServiceFabricClusterFabricSettings[] | undefined) {
+  public set fabricSettings(value: ServiceFabricClusterFabricSettings[] ) {
     this._fabricSettings = value;
+  }
+  public resetFabricSettings() {
+    this._fabricSettings = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get fabricSettingsInput() {
+    return this._fabricSettings
   }
 
   // node_type - computed: false, optional: false, required: true
   private _nodeType: ServiceFabricClusterNodeType[];
   public get nodeType() {
-    return this._nodeType;
+    return this.interpolationForAttribute('node_type') as any;
   }
   public set nodeType(value: ServiceFabricClusterNodeType[]) {
     this._nodeType = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nodeTypeInput() {
+    return this._nodeType
   }
 
   // reverse_proxy_certificate - computed: false, optional: true, required: false
   private _reverseProxyCertificate?: ServiceFabricClusterReverseProxyCertificate[];
   public get reverseProxyCertificate() {
-    return this._reverseProxyCertificate;
+    return this.interpolationForAttribute('reverse_proxy_certificate') as any;
   }
-  public set reverseProxyCertificate(value: ServiceFabricClusterReverseProxyCertificate[] | undefined) {
+  public set reverseProxyCertificate(value: ServiceFabricClusterReverseProxyCertificate[] ) {
     this._reverseProxyCertificate = value;
+  }
+  public resetReverseProxyCertificate() {
+    this._reverseProxyCertificate = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get reverseProxyCertificateInput() {
+    return this._reverseProxyCertificate
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: ServiceFabricClusterTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: ServiceFabricClusterTimeouts | undefined) {
+  public set timeouts(value: ServiceFabricClusterTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

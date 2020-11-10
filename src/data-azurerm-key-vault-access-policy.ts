@@ -43,21 +43,17 @@ export class DataAzurermKeyVaultAccessPolicyA extends TerraformDataSource {
   // ATTRIBUTES
   // ==========
 
-  // certificate_permissions - computed: true, optional: false, required: true
+  // certificate_permissions - computed: true, optional: false, required: false
   public get certificatePermissions() {
     return this.getListAttribute('certificate_permissions');
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
-  // key_permissions - computed: true, optional: false, required: true
+  // key_permissions - computed: true, optional: false, required: false
   public get keyPermissions() {
     return this.getListAttribute('key_permissions');
   }
@@ -65,13 +61,17 @@ export class DataAzurermKeyVaultAccessPolicyA extends TerraformDataSource {
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
+  }
 
-  // secret_permissions - computed: true, optional: false, required: true
+  // secret_permissions - computed: true, optional: false, required: false
   public get secretPermissions() {
     return this.getListAttribute('secret_permissions');
   }
@@ -79,10 +79,17 @@ export class DataAzurermKeyVaultAccessPolicyA extends TerraformDataSource {
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: DataAzurermKeyVaultAccessPolicyTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: DataAzurermKeyVaultAccessPolicyTimeouts | undefined) {
+  public set timeouts(value: DataAzurermKeyVaultAccessPolicyTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

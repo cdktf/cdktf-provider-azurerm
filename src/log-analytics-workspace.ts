@@ -57,38 +57,42 @@ export class LogAnalyticsWorkspace extends TerraformResource {
   // ==========
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // location - computed: false, optional: false, required: true
   private _location: string;
   public get location() {
-    return this._location;
+    return this.getStringAttribute('location');
   }
   public set location(value: string) {
     this._location = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get locationInput() {
+    return this._location
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
+  }
 
-  // portal_url - computed: true, optional: false, required: true
+  // portal_url - computed: true, optional: false, required: false
   public get portalUrl() {
     return this.getStringAttribute('portal_url');
   }
 
-  // primary_shared_key - computed: true, optional: false, required: true
+  // primary_shared_key - computed: true, optional: false, required: false
   public get primarySharedKey() {
     return this.getStringAttribute('primary_shared_key');
   }
@@ -96,22 +100,33 @@ export class LogAnalyticsWorkspace extends TerraformResource {
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
-    return this._resourceGroupName;
+    return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
   }
 
   // retention_in_days - computed: true, optional: true, required: false
   private _retentionInDays?: number;
   public get retentionInDays() {
-    return this._retentionInDays ?? this.getNumberAttribute('retention_in_days');
+    return this.getNumberAttribute('retention_in_days');
   }
-  public set retentionInDays(value: number | undefined) {
+  public set retentionInDays(value: number) {
     this._retentionInDays = value;
   }
+  public resetRetentionInDays() {
+    this._retentionInDays = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get retentionInDaysInput() {
+    return this._retentionInDays
+  }
 
-  // secondary_shared_key - computed: true, optional: false, required: true
+  // secondary_shared_key - computed: true, optional: false, required: false
   public get secondarySharedKey() {
     return this.getStringAttribute('secondary_shared_key');
   }
@@ -119,22 +134,33 @@ export class LogAnalyticsWorkspace extends TerraformResource {
   // sku - computed: false, optional: false, required: true
   private _sku: string;
   public get sku() {
-    return this._sku;
+    return this.getStringAttribute('sku');
   }
   public set sku(value: string) {
     this._sku = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get skuInput() {
+    return this._sku
   }
 
   // tags - computed: false, optional: true, required: false
   private _tags?: { [key: string]: string };
   public get tags() {
-    return this._tags;
+    return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | undefined) {
+  public set tags(value: { [key: string]: string } ) {
     this._tags = value;
   }
+  public resetTags() {
+    this._tags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsInput() {
+    return this._tags
+  }
 
-  // workspace_id - computed: true, optional: false, required: true
+  // workspace_id - computed: true, optional: false, required: false
   public get workspaceId() {
     return this.getStringAttribute('workspace_id');
   }
@@ -142,10 +168,17 @@ export class LogAnalyticsWorkspace extends TerraformResource {
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: LogAnalyticsWorkspaceTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: LogAnalyticsWorkspaceTimeouts | undefined) {
+  public set timeouts(value: LogAnalyticsWorkspaceTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

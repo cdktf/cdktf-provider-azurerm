@@ -72,21 +72,17 @@ export class SignalrService extends TerraformResource {
   // ATTRIBUTES
   // ==========
 
-  // hostname - computed: true, optional: false, required: true
+  // hostname - computed: true, optional: false, required: false
   public get hostname() {
     return this.getStringAttribute('hostname');
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
-  // ip_address - computed: true, optional: false, required: true
+  // ip_address - computed: true, optional: false, required: false
   public get ipAddress() {
     return this.getStringAttribute('ip_address');
   }
@@ -94,32 +90,40 @@ export class SignalrService extends TerraformResource {
   // location - computed: false, optional: false, required: true
   private _location: string;
   public get location() {
-    return this._location;
+    return this.getStringAttribute('location');
   }
   public set location(value: string) {
     this._location = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get locationInput() {
+    return this._location
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
+  }
 
-  // primary_access_key - computed: true, optional: false, required: true
+  // primary_access_key - computed: true, optional: false, required: false
   public get primaryAccessKey() {
     return this.getStringAttribute('primary_access_key');
   }
 
-  // primary_connection_string - computed: true, optional: false, required: true
+  // primary_connection_string - computed: true, optional: false, required: false
   public get primaryConnectionString() {
     return this.getStringAttribute('primary_connection_string');
   }
 
-  // public_port - computed: true, optional: false, required: true
+  // public_port - computed: true, optional: false, required: false
   public get publicPort() {
     return this.getNumberAttribute('public_port');
   }
@@ -127,23 +131,27 @@ export class SignalrService extends TerraformResource {
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
-    return this._resourceGroupName;
+    return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
+  }
 
-  // secondary_access_key - computed: true, optional: false, required: true
+  // secondary_access_key - computed: true, optional: false, required: false
   public get secondaryAccessKey() {
     return this.getStringAttribute('secondary_access_key');
   }
 
-  // secondary_connection_string - computed: true, optional: false, required: true
+  // secondary_connection_string - computed: true, optional: false, required: false
   public get secondaryConnectionString() {
     return this.getStringAttribute('secondary_connection_string');
   }
 
-  // server_port - computed: true, optional: false, required: true
+  // server_port - computed: true, optional: false, required: false
   public get serverPort() {
     return this.getNumberAttribute('server_port');
   }
@@ -151,46 +159,78 @@ export class SignalrService extends TerraformResource {
   // tags - computed: false, optional: true, required: false
   private _tags?: { [key: string]: string };
   public get tags() {
-    return this._tags;
+    return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | undefined) {
+  public set tags(value: { [key: string]: string } ) {
     this._tags = value;
+  }
+  public resetTags() {
+    this._tags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsInput() {
+    return this._tags
   }
 
   // cors - computed: false, optional: true, required: false
   private _cors?: SignalrServiceCors[];
   public get cors() {
-    return this._cors;
+    return this.interpolationForAttribute('cors') as any;
   }
-  public set cors(value: SignalrServiceCors[] | undefined) {
+  public set cors(value: SignalrServiceCors[] ) {
     this._cors = value;
+  }
+  public resetCors() {
+    this._cors = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get corsInput() {
+    return this._cors
   }
 
   // features - computed: false, optional: true, required: false
   private _features?: SignalrServiceFeatures[];
   public get features() {
-    return this._features;
+    return this.interpolationForAttribute('features') as any;
   }
-  public set features(value: SignalrServiceFeatures[] | undefined) {
+  public set features(value: SignalrServiceFeatures[] ) {
     this._features = value;
+  }
+  public resetFeatures() {
+    this._features = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get featuresInput() {
+    return this._features
   }
 
   // sku - computed: false, optional: false, required: true
   private _sku: SignalrServiceSku[];
   public get sku() {
-    return this._sku;
+    return this.interpolationForAttribute('sku') as any;
   }
   public set sku(value: SignalrServiceSku[]) {
     this._sku = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get skuInput() {
+    return this._sku
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: SignalrServiceTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: SignalrServiceTimeouts | undefined) {
+  public set timeouts(value: SignalrServiceTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

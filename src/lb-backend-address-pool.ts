@@ -50,21 +50,17 @@ export class LbBackendAddressPool extends TerraformResource {
   // ATTRIBUTES
   // ==========
 
-  // backend_ip_configurations - computed: true, optional: false, required: true
+  // backend_ip_configurations - computed: true, optional: false, required: false
   public get backendIpConfigurations() {
     return this.getListAttribute('backend_ip_configurations');
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
-  // load_balancing_rules - computed: true, optional: false, required: true
+  // load_balancing_rules - computed: true, optional: false, required: false
   public get loadBalancingRules() {
     return this.getListAttribute('load_balancing_rules');
   }
@@ -72,37 +68,56 @@ export class LbBackendAddressPool extends TerraformResource {
   // loadbalancer_id - computed: false, optional: false, required: true
   private _loadbalancerId: string;
   public get loadbalancerId() {
-    return this._loadbalancerId;
+    return this.getStringAttribute('loadbalancer_id');
   }
   public set loadbalancerId(value: string) {
     this._loadbalancerId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get loadbalancerIdInput() {
+    return this._loadbalancerId
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
-    return this._resourceGroupName;
+    return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: LbBackendAddressPoolTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: LbBackendAddressPoolTimeouts | undefined) {
+  public set timeouts(value: LbBackendAddressPoolTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

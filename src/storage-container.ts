@@ -55,65 +55,90 @@ export class StorageContainer extends TerraformResource {
   // container_access_type - computed: false, optional: true, required: false
   private _containerAccessType?: string;
   public get containerAccessType() {
-    return this._containerAccessType;
+    return this.getStringAttribute('container_access_type');
   }
-  public set containerAccessType(value: string | undefined) {
+  public set containerAccessType(value: string ) {
     this._containerAccessType = value;
   }
+  public resetContainerAccessType() {
+    this._containerAccessType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get containerAccessTypeInput() {
+    return this._containerAccessType
+  }
 
-  // has_immutability_policy - computed: true, optional: false, required: true
+  // has_immutability_policy - computed: true, optional: false, required: false
   public get hasImmutabilityPolicy() {
     return this.getBooleanAttribute('has_immutability_policy');
   }
 
-  // has_legal_hold - computed: true, optional: false, required: true
+  // has_legal_hold - computed: true, optional: false, required: false
   public get hasLegalHold() {
     return this.getBooleanAttribute('has_legal_hold');
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // metadata - computed: true, optional: true, required: false
   private _metadata?: { [key: string]: string }
-  public get metadata(): { [key: string]: string } | undefined {
-    return this._metadata; // Getting the computed value is not yet implemented
+  public get metadata(): { [key: string]: string } {
+    return this.interpolationForAttribute('metadata') as any; // Getting the computed value is not yet implemented
   }
-  public set metadata(value: { [key: string]: string } | undefined) {
+  public set metadata(value: { [key: string]: string }) {
     this._metadata = value;
+  }
+  public resetMetadata() {
+    this._metadata = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get metadataInput() {
+    return this._metadata
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // storage_account_name - computed: false, optional: false, required: true
   private _storageAccountName: string;
   public get storageAccountName() {
-    return this._storageAccountName;
+    return this.getStringAttribute('storage_account_name');
   }
   public set storageAccountName(value: string) {
     this._storageAccountName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get storageAccountNameInput() {
+    return this._storageAccountName
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: StorageContainerTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: StorageContainerTimeouts | undefined) {
+  public set timeouts(value: StorageContainerTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

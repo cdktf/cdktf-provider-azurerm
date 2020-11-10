@@ -17,17 +17,17 @@ export interface DataAzurermAppServicePlanConfig extends TerraformMetaArguments 
 }
 export class DataAzurermAppServicePlanSku extends ComplexComputedList {
 
-  // capacity - computed: true, optional: false, required: true
+  // capacity - computed: true, optional: false, required: false
   public get capacity() {
     return this.getNumberAttribute('capacity');
   }
 
-  // size - computed: true, optional: false, required: true
+  // size - computed: true, optional: false, required: false
   public get size() {
     return this.getStringAttribute('size');
   }
 
-  // tier - computed: true, optional: false, required: true
+  // tier - computed: true, optional: false, required: false
   public get tier() {
     return this.getStringAttribute('tier');
   }
@@ -64,41 +64,37 @@ export class DataAzurermAppServicePlan extends TerraformDataSource {
   // ATTRIBUTES
   // ==========
 
-  // app_service_environment_id - computed: true, optional: false, required: true
+  // app_service_environment_id - computed: true, optional: false, required: false
   public get appServiceEnvironmentId() {
     return this.getStringAttribute('app_service_environment_id');
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
-  // is_xenon - computed: true, optional: false, required: true
+  // is_xenon - computed: true, optional: false, required: false
   public get isXenon() {
     return this.getBooleanAttribute('is_xenon');
   }
 
-  // kind - computed: true, optional: false, required: true
+  // kind - computed: true, optional: false, required: false
   public get kind() {
     return this.getStringAttribute('kind');
   }
 
-  // location - computed: true, optional: false, required: true
+  // location - computed: true, optional: false, required: false
   public get location() {
     return this.getStringAttribute('location');
   }
 
-  // maximum_elastic_worker_count - computed: true, optional: false, required: true
+  // maximum_elastic_worker_count - computed: true, optional: false, required: false
   public get maximumElasticWorkerCount() {
     return this.getNumberAttribute('maximum_elastic_worker_count');
   }
 
-  // maximum_number_of_workers - computed: true, optional: false, required: true
+  // maximum_number_of_workers - computed: true, optional: false, required: false
   public get maximumNumberOfWorkers() {
     return this.getNumberAttribute('maximum_number_of_workers');
   }
@@ -106,18 +102,22 @@ export class DataAzurermAppServicePlan extends TerraformDataSource {
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
+  }
 
-  // per_site_scaling - computed: true, optional: false, required: true
+  // per_site_scaling - computed: true, optional: false, required: false
   public get perSiteScaling() {
     return this.getBooleanAttribute('per_site_scaling');
   }
 
-  // reserved - computed: true, optional: false, required: true
+  // reserved - computed: true, optional: false, required: false
   public get reserved() {
     return this.getBooleanAttribute('reserved');
   }
@@ -125,18 +125,22 @@ export class DataAzurermAppServicePlan extends TerraformDataSource {
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
-    return this._resourceGroupName;
+    return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
+  }
 
-  // sku - computed: true, optional: false, required: true
+  // sku - computed: true, optional: false, required: false
   public sku(index: string) {
     return new DataAzurermAppServicePlanSku(this, 'sku', index);
   }
 
-  // tags - computed: true, optional: false, required: true
+  // tags - computed: true, optional: false, required: false
   public tags(key: string): string {
     return new StringMap(this, 'tags').lookup(key);
   }
@@ -144,10 +148,17 @@ export class DataAzurermAppServicePlan extends TerraformDataSource {
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: DataAzurermAppServicePlanTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: DataAzurermAppServicePlanTimeouts | undefined) {
+  public set timeouts(value: DataAzurermAppServicePlanTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

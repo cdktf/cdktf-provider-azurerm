@@ -71,58 +71,89 @@ export class StreamAnalyticsJob extends TerraformResource {
   // compatibility_level - computed: true, optional: true, required: false
   private _compatibilityLevel?: string;
   public get compatibilityLevel() {
-    return this._compatibilityLevel ?? this.getStringAttribute('compatibility_level');
+    return this.getStringAttribute('compatibility_level');
   }
-  public set compatibilityLevel(value: string | undefined) {
+  public set compatibilityLevel(value: string) {
     this._compatibilityLevel = value;
+  }
+  public resetCompatibilityLevel() {
+    this._compatibilityLevel = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get compatibilityLevelInput() {
+    return this._compatibilityLevel
   }
 
   // data_locale - computed: true, optional: true, required: false
   private _dataLocale?: string;
   public get dataLocale() {
-    return this._dataLocale ?? this.getStringAttribute('data_locale');
+    return this.getStringAttribute('data_locale');
   }
-  public set dataLocale(value: string | undefined) {
+  public set dataLocale(value: string) {
     this._dataLocale = value;
+  }
+  public resetDataLocale() {
+    this._dataLocale = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dataLocaleInput() {
+    return this._dataLocale
   }
 
   // events_late_arrival_max_delay_in_seconds - computed: false, optional: true, required: false
   private _eventsLateArrivalMaxDelayInSeconds?: number;
   public get eventsLateArrivalMaxDelayInSeconds() {
-    return this._eventsLateArrivalMaxDelayInSeconds;
+    return this.getNumberAttribute('events_late_arrival_max_delay_in_seconds');
   }
-  public set eventsLateArrivalMaxDelayInSeconds(value: number | undefined) {
+  public set eventsLateArrivalMaxDelayInSeconds(value: number ) {
     this._eventsLateArrivalMaxDelayInSeconds = value;
+  }
+  public resetEventsLateArrivalMaxDelayInSeconds() {
+    this._eventsLateArrivalMaxDelayInSeconds = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get eventsLateArrivalMaxDelayInSecondsInput() {
+    return this._eventsLateArrivalMaxDelayInSeconds
   }
 
   // events_out_of_order_max_delay_in_seconds - computed: false, optional: true, required: false
   private _eventsOutOfOrderMaxDelayInSeconds?: number;
   public get eventsOutOfOrderMaxDelayInSeconds() {
-    return this._eventsOutOfOrderMaxDelayInSeconds;
+    return this.getNumberAttribute('events_out_of_order_max_delay_in_seconds');
   }
-  public set eventsOutOfOrderMaxDelayInSeconds(value: number | undefined) {
+  public set eventsOutOfOrderMaxDelayInSeconds(value: number ) {
     this._eventsOutOfOrderMaxDelayInSeconds = value;
+  }
+  public resetEventsOutOfOrderMaxDelayInSeconds() {
+    this._eventsOutOfOrderMaxDelayInSeconds = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get eventsOutOfOrderMaxDelayInSecondsInput() {
+    return this._eventsOutOfOrderMaxDelayInSeconds
   }
 
   // events_out_of_order_policy - computed: false, optional: true, required: false
   private _eventsOutOfOrderPolicy?: string;
   public get eventsOutOfOrderPolicy() {
-    return this._eventsOutOfOrderPolicy;
+    return this.getStringAttribute('events_out_of_order_policy');
   }
-  public set eventsOutOfOrderPolicy(value: string | undefined) {
+  public set eventsOutOfOrderPolicy(value: string ) {
     this._eventsOutOfOrderPolicy = value;
+  }
+  public resetEventsOutOfOrderPolicy() {
+    this._eventsOutOfOrderPolicy = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get eventsOutOfOrderPolicyInput() {
+    return this._eventsOutOfOrderPolicy
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
-  // job_id - computed: true, optional: false, required: true
+  // job_id - computed: true, optional: false, required: false
   public get jobId() {
     return this.getStringAttribute('job_id');
   }
@@ -130,73 +161,114 @@ export class StreamAnalyticsJob extends TerraformResource {
   // location - computed: false, optional: false, required: true
   private _location: string;
   public get location() {
-    return this._location;
+    return this.getStringAttribute('location');
   }
   public set location(value: string) {
     this._location = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get locationInput() {
+    return this._location
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // output_error_policy - computed: false, optional: true, required: false
   private _outputErrorPolicy?: string;
   public get outputErrorPolicy() {
-    return this._outputErrorPolicy;
+    return this.getStringAttribute('output_error_policy');
   }
-  public set outputErrorPolicy(value: string | undefined) {
+  public set outputErrorPolicy(value: string ) {
     this._outputErrorPolicy = value;
+  }
+  public resetOutputErrorPolicy() {
+    this._outputErrorPolicy = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get outputErrorPolicyInput() {
+    return this._outputErrorPolicy
   }
 
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
-    return this._resourceGroupName;
+    return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
   }
 
   // streaming_units - computed: false, optional: false, required: true
   private _streamingUnits: number;
   public get streamingUnits() {
-    return this._streamingUnits;
+    return this.getNumberAttribute('streaming_units');
   }
   public set streamingUnits(value: number) {
     this._streamingUnits = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get streamingUnitsInput() {
+    return this._streamingUnits
   }
 
   // tags - computed: false, optional: true, required: false
   private _tags?: { [key: string]: string };
   public get tags() {
-    return this._tags;
+    return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | undefined) {
+  public set tags(value: { [key: string]: string } ) {
     this._tags = value;
+  }
+  public resetTags() {
+    this._tags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsInput() {
+    return this._tags
   }
 
   // transformation_query - computed: false, optional: false, required: true
   private _transformationQuery: string;
   public get transformationQuery() {
-    return this._transformationQuery;
+    return this.getStringAttribute('transformation_query');
   }
   public set transformationQuery(value: string) {
     this._transformationQuery = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get transformationQueryInput() {
+    return this._transformationQuery
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: StreamAnalyticsJobTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: StreamAnalyticsJobTimeouts | undefined) {
+  public set timeouts(value: StreamAnalyticsJobTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

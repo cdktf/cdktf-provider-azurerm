@@ -53,57 +53,76 @@ export class StorageAccountCustomerManagedKey extends TerraformResource {
   // ==========
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // key_name - computed: false, optional: false, required: true
   private _keyName: string;
   public get keyName() {
-    return this._keyName;
+    return this.getStringAttribute('key_name');
   }
   public set keyName(value: string) {
     this._keyName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keyNameInput() {
+    return this._keyName
   }
 
   // key_vault_id - computed: false, optional: false, required: true
   private _keyVaultId: string;
   public get keyVaultId() {
-    return this._keyVaultId;
+    return this.getStringAttribute('key_vault_id');
   }
   public set keyVaultId(value: string) {
     this._keyVaultId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keyVaultIdInput() {
+    return this._keyVaultId
   }
 
   // key_version - computed: false, optional: false, required: true
   private _keyVersion: string;
   public get keyVersion() {
-    return this._keyVersion;
+    return this.getStringAttribute('key_version');
   }
   public set keyVersion(value: string) {
     this._keyVersion = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keyVersionInput() {
+    return this._keyVersion
   }
 
   // storage_account_id - computed: false, optional: false, required: true
   private _storageAccountId: string;
   public get storageAccountId() {
-    return this._storageAccountId;
+    return this.getStringAttribute('storage_account_id');
   }
   public set storageAccountId(value: string) {
     this._storageAccountId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get storageAccountIdInput() {
+    return this._storageAccountId
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: StorageAccountCustomerManagedKeyTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: StorageAccountCustomerManagedKeyTimeouts | undefined) {
+  public set timeouts(value: StorageAccountCustomerManagedKeyTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

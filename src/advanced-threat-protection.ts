@@ -51,37 +51,48 @@ export class AdvancedThreatProtection extends TerraformResource {
   // enabled - computed: false, optional: false, required: true
   private _enabled: boolean;
   public get enabled() {
-    return this._enabled;
+    return this.getBooleanAttribute('enabled');
   }
   public set enabled(value: boolean) {
     this._enabled = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get enabledInput() {
+    return this._enabled
+  }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // target_resource_id - computed: false, optional: false, required: true
   private _targetResourceId: string;
   public get targetResourceId() {
-    return this._targetResourceId;
+    return this.getStringAttribute('target_resource_id');
   }
   public set targetResourceId(value: string) {
     this._targetResourceId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get targetResourceIdInput() {
+    return this._targetResourceId
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: AdvancedThreatProtectionTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: AdvancedThreatProtectionTimeouts | undefined) {
+  public set timeouts(value: AdvancedThreatProtectionTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

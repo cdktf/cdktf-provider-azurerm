@@ -75,118 +75,180 @@ export class SharedImage extends TerraformResource {
   // description - computed: false, optional: true, required: false
   private _description?: string;
   public get description() {
-    return this._description;
+    return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string ) {
     this._description = value;
+  }
+  public resetDescription() {
+    this._description = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get descriptionInput() {
+    return this._description
   }
 
   // eula - computed: false, optional: true, required: false
   private _eula?: string;
   public get eula() {
-    return this._eula;
+    return this.getStringAttribute('eula');
   }
-  public set eula(value: string | undefined) {
+  public set eula(value: string ) {
     this._eula = value;
+  }
+  public resetEula() {
+    this._eula = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get eulaInput() {
+    return this._eula
   }
 
   // gallery_name - computed: false, optional: false, required: true
   private _galleryName: string;
   public get galleryName() {
-    return this._galleryName;
+    return this.getStringAttribute('gallery_name');
   }
   public set galleryName(value: string) {
     this._galleryName = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get galleryNameInput() {
+    return this._galleryName
+  }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // location - computed: false, optional: false, required: true
   private _location: string;
   public get location() {
-    return this._location;
+    return this.getStringAttribute('location');
   }
   public set location(value: string) {
     this._location = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get locationInput() {
+    return this._location
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // os_type - computed: false, optional: false, required: true
   private _osType: string;
   public get osType() {
-    return this._osType;
+    return this.getStringAttribute('os_type');
   }
   public set osType(value: string) {
     this._osType = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get osTypeInput() {
+    return this._osType
   }
 
   // privacy_statement_uri - computed: false, optional: true, required: false
   private _privacyStatementUri?: string;
   public get privacyStatementUri() {
-    return this._privacyStatementUri;
+    return this.getStringAttribute('privacy_statement_uri');
   }
-  public set privacyStatementUri(value: string | undefined) {
+  public set privacyStatementUri(value: string ) {
     this._privacyStatementUri = value;
+  }
+  public resetPrivacyStatementUri() {
+    this._privacyStatementUri = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get privacyStatementUriInput() {
+    return this._privacyStatementUri
   }
 
   // release_note_uri - computed: false, optional: true, required: false
   private _releaseNoteUri?: string;
   public get releaseNoteUri() {
-    return this._releaseNoteUri;
+    return this.getStringAttribute('release_note_uri');
   }
-  public set releaseNoteUri(value: string | undefined) {
+  public set releaseNoteUri(value: string ) {
     this._releaseNoteUri = value;
+  }
+  public resetReleaseNoteUri() {
+    this._releaseNoteUri = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get releaseNoteUriInput() {
+    return this._releaseNoteUri
   }
 
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
-    return this._resourceGroupName;
+    return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
   }
 
   // tags - computed: false, optional: true, required: false
   private _tags?: { [key: string]: string };
   public get tags() {
-    return this._tags;
+    return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | undefined) {
+  public set tags(value: { [key: string]: string } ) {
     this._tags = value;
+  }
+  public resetTags() {
+    this._tags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsInput() {
+    return this._tags
   }
 
   // identifier - computed: false, optional: false, required: true
   private _identifier: SharedImageIdentifier[];
   public get identifier() {
-    return this._identifier;
+    return this.interpolationForAttribute('identifier') as any;
   }
   public set identifier(value: SharedImageIdentifier[]) {
     this._identifier = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get identifierInput() {
+    return this._identifier
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: SharedImageTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: SharedImageTimeouts | undefined) {
+  public set timeouts(value: SharedImageTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

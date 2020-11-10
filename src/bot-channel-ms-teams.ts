@@ -57,64 +57,93 @@ export class BotChannelMsTeams extends TerraformResource {
   // bot_name - computed: false, optional: false, required: true
   private _botName: string;
   public get botName() {
-    return this._botName;
+    return this.getStringAttribute('bot_name');
   }
   public set botName(value: string) {
     this._botName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get botNameInput() {
+    return this._botName
   }
 
   // calling_web_hook - computed: false, optional: true, required: false
   private _callingWebHook?: string;
   public get callingWebHook() {
-    return this._callingWebHook;
+    return this.getStringAttribute('calling_web_hook');
   }
-  public set callingWebHook(value: string | undefined) {
+  public set callingWebHook(value: string ) {
     this._callingWebHook = value;
+  }
+  public resetCallingWebHook() {
+    this._callingWebHook = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get callingWebHookInput() {
+    return this._callingWebHook
   }
 
   // enable_calling - computed: false, optional: true, required: false
   private _enableCalling?: boolean;
   public get enableCalling() {
-    return this._enableCalling;
+    return this.getBooleanAttribute('enable_calling');
   }
-  public set enableCalling(value: boolean | undefined) {
+  public set enableCalling(value: boolean ) {
     this._enableCalling = value;
+  }
+  public resetEnableCalling() {
+    this._enableCalling = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enableCallingInput() {
+    return this._enableCalling
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // location - computed: false, optional: false, required: true
   private _location: string;
   public get location() {
-    return this._location;
+    return this.getStringAttribute('location');
   }
   public set location(value: string) {
     this._location = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get locationInput() {
+    return this._location
   }
 
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
-    return this._resourceGroupName;
+    return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: BotChannelMsTeamsTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: BotChannelMsTeamsTimeouts | undefined) {
+  public set timeouts(value: BotChannelMsTeamsTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

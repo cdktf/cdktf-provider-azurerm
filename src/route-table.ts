@@ -65,58 +65,80 @@ export class RouteTable extends TerraformResource {
   // disable_bgp_route_propagation - computed: false, optional: true, required: false
   private _disableBgpRoutePropagation?: boolean;
   public get disableBgpRoutePropagation() {
-    return this._disableBgpRoutePropagation;
+    return this.getBooleanAttribute('disable_bgp_route_propagation');
   }
-  public set disableBgpRoutePropagation(value: boolean | undefined) {
+  public set disableBgpRoutePropagation(value: boolean ) {
     this._disableBgpRoutePropagation = value;
+  }
+  public resetDisableBgpRoutePropagation() {
+    this._disableBgpRoutePropagation = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get disableBgpRoutePropagationInput() {
+    return this._disableBgpRoutePropagation
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // location - computed: false, optional: false, required: true
   private _location: string;
   public get location() {
-    return this._location;
+    return this.getStringAttribute('location');
   }
   public set location(value: string) {
     this._location = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get locationInput() {
+    return this._location
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
-    return this._resourceGroupName;
+    return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
+  }
 
   // route - computed: true, optional: true, required: false
   private _route?: RouteTableRoute[]
-  public get route(): RouteTableRoute[] | undefined {
-    return this._route; // Getting the computed value is not yet implemented
+  public get route(): RouteTableRoute[] {
+    return this.interpolationForAttribute('route') as any; // Getting the computed value is not yet implemented
   }
-  public set route(value: RouteTableRoute[] | undefined) {
+  public set route(value: RouteTableRoute[]) {
     this._route = value;
   }
+  public resetRoute() {
+    this._route = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get routeInput() {
+    return this._route
+  }
 
-  // subnets - computed: true, optional: false, required: true
+  // subnets - computed: true, optional: false, required: false
   public get subnets() {
     return this.getListAttribute('subnets');
   }
@@ -124,19 +146,33 @@ export class RouteTable extends TerraformResource {
   // tags - computed: false, optional: true, required: false
   private _tags?: { [key: string]: string };
   public get tags() {
-    return this._tags;
+    return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | undefined) {
+  public set tags(value: { [key: string]: string } ) {
     this._tags = value;
+  }
+  public resetTags() {
+    this._tags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsInput() {
+    return this._tags
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: RouteTableTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: RouteTableTimeouts | undefined) {
+  public set timeouts(value: RouteTableTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

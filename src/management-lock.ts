@@ -53,57 +53,79 @@ export class ManagementLock extends TerraformResource {
   // ==========
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // lock_level - computed: false, optional: false, required: true
   private _lockLevel: string;
   public get lockLevel() {
-    return this._lockLevel;
+    return this.getStringAttribute('lock_level');
   }
   public set lockLevel(value: string) {
     this._lockLevel = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get lockLevelInput() {
+    return this._lockLevel
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // notes - computed: false, optional: true, required: false
   private _notes?: string;
   public get notes() {
-    return this._notes;
+    return this.getStringAttribute('notes');
   }
-  public set notes(value: string | undefined) {
+  public set notes(value: string ) {
     this._notes = value;
+  }
+  public resetNotes() {
+    this._notes = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get notesInput() {
+    return this._notes
   }
 
   // scope - computed: false, optional: false, required: true
   private _scope: string;
   public get scope() {
-    return this._scope;
+    return this.getStringAttribute('scope');
   }
   public set scope(value: string) {
     this._scope = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get scopeInput() {
+    return this._scope
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: ManagementLockTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: ManagementLockTimeouts | undefined) {
+  public set timeouts(value: ManagementLockTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

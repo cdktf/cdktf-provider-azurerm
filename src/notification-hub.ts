@@ -69,75 +69,108 @@ export class NotificationHub extends TerraformResource {
   // ==========
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // location - computed: false, optional: false, required: true
   private _location: string;
   public get location() {
-    return this._location;
+    return this.getStringAttribute('location');
   }
   public set location(value: string) {
     this._location = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get locationInput() {
+    return this._location
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // namespace_name - computed: false, optional: false, required: true
   private _namespaceName: string;
   public get namespaceName() {
-    return this._namespaceName;
+    return this.getStringAttribute('namespace_name');
   }
   public set namespaceName(value: string) {
     this._namespaceName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get namespaceNameInput() {
+    return this._namespaceName
   }
 
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
-    return this._resourceGroupName;
+    return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
   }
 
   // apns_credential - computed: false, optional: true, required: false
   private _apnsCredential?: NotificationHubApnsCredential[];
   public get apnsCredential() {
-    return this._apnsCredential;
+    return this.interpolationForAttribute('apns_credential') as any;
   }
-  public set apnsCredential(value: NotificationHubApnsCredential[] | undefined) {
+  public set apnsCredential(value: NotificationHubApnsCredential[] ) {
     this._apnsCredential = value;
+  }
+  public resetApnsCredential() {
+    this._apnsCredential = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get apnsCredentialInput() {
+    return this._apnsCredential
   }
 
   // gcm_credential - computed: false, optional: true, required: false
   private _gcmCredential?: NotificationHubGcmCredential[];
   public get gcmCredential() {
-    return this._gcmCredential;
+    return this.interpolationForAttribute('gcm_credential') as any;
   }
-  public set gcmCredential(value: NotificationHubGcmCredential[] | undefined) {
+  public set gcmCredential(value: NotificationHubGcmCredential[] ) {
     this._gcmCredential = value;
+  }
+  public resetGcmCredential() {
+    this._gcmCredential = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get gcmCredentialInput() {
+    return this._gcmCredential
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: NotificationHubTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: NotificationHubTimeouts | undefined) {
+  public set timeouts(value: NotificationHubTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

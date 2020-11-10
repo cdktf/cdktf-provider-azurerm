@@ -75,58 +75,86 @@ export class AppServicePlan extends TerraformResource {
   // app_service_environment_id - computed: false, optional: true, required: false
   private _appServiceEnvironmentId?: string;
   public get appServiceEnvironmentId() {
-    return this._appServiceEnvironmentId;
+    return this.getStringAttribute('app_service_environment_id');
   }
-  public set appServiceEnvironmentId(value: string | undefined) {
+  public set appServiceEnvironmentId(value: string ) {
     this._appServiceEnvironmentId = value;
+  }
+  public resetAppServiceEnvironmentId() {
+    this._appServiceEnvironmentId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get appServiceEnvironmentIdInput() {
+    return this._appServiceEnvironmentId
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // is_xenon - computed: false, optional: true, required: false
   private _isXenon?: boolean;
   public get isXenon() {
-    return this._isXenon;
+    return this.getBooleanAttribute('is_xenon');
   }
-  public set isXenon(value: boolean | undefined) {
+  public set isXenon(value: boolean ) {
     this._isXenon = value;
+  }
+  public resetIsXenon() {
+    this._isXenon = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get isXenonInput() {
+    return this._isXenon
   }
 
   // kind - computed: false, optional: true, required: false
   private _kind?: string;
   public get kind() {
-    return this._kind;
+    return this.getStringAttribute('kind');
   }
-  public set kind(value: string | undefined) {
+  public set kind(value: string ) {
     this._kind = value;
+  }
+  public resetKind() {
+    this._kind = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get kindInput() {
+    return this._kind
   }
 
   // location - computed: false, optional: false, required: true
   private _location: string;
   public get location() {
-    return this._location;
+    return this.getStringAttribute('location');
   }
   public set location(value: string) {
     this._location = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get locationInput() {
+    return this._location
   }
 
   // maximum_elastic_worker_count - computed: true, optional: true, required: false
   private _maximumElasticWorkerCount?: number;
   public get maximumElasticWorkerCount() {
-    return this._maximumElasticWorkerCount ?? this.getNumberAttribute('maximum_elastic_worker_count');
+    return this.getNumberAttribute('maximum_elastic_worker_count');
   }
-  public set maximumElasticWorkerCount(value: number | undefined) {
+  public set maximumElasticWorkerCount(value: number) {
     this._maximumElasticWorkerCount = value;
   }
+  public resetMaximumElasticWorkerCount() {
+    this._maximumElasticWorkerCount = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get maximumElasticWorkerCountInput() {
+    return this._maximumElasticWorkerCount
+  }
 
-  // maximum_number_of_workers - computed: true, optional: false, required: true
+  // maximum_number_of_workers - computed: true, optional: false, required: false
   public get maximumNumberOfWorkers() {
     return this.getNumberAttribute('maximum_number_of_workers');
   }
@@ -134,64 +162,104 @@ export class AppServicePlan extends TerraformResource {
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // per_site_scaling - computed: false, optional: true, required: false
   private _perSiteScaling?: boolean;
   public get perSiteScaling() {
-    return this._perSiteScaling;
+    return this.getBooleanAttribute('per_site_scaling');
   }
-  public set perSiteScaling(value: boolean | undefined) {
+  public set perSiteScaling(value: boolean ) {
     this._perSiteScaling = value;
+  }
+  public resetPerSiteScaling() {
+    this._perSiteScaling = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get perSiteScalingInput() {
+    return this._perSiteScaling
   }
 
   // reserved - computed: false, optional: true, required: false
   private _reserved?: boolean;
   public get reserved() {
-    return this._reserved;
+    return this.getBooleanAttribute('reserved');
   }
-  public set reserved(value: boolean | undefined) {
+  public set reserved(value: boolean ) {
     this._reserved = value;
+  }
+  public resetReserved() {
+    this._reserved = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get reservedInput() {
+    return this._reserved
   }
 
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
-    return this._resourceGroupName;
+    return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
   }
 
   // tags - computed: false, optional: true, required: false
   private _tags?: { [key: string]: string };
   public get tags() {
-    return this._tags;
+    return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | undefined) {
+  public set tags(value: { [key: string]: string } ) {
     this._tags = value;
+  }
+  public resetTags() {
+    this._tags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsInput() {
+    return this._tags
   }
 
   // sku - computed: false, optional: false, required: true
   private _sku: AppServicePlanSku[];
   public get sku() {
-    return this._sku;
+    return this.interpolationForAttribute('sku') as any;
   }
   public set sku(value: AppServicePlanSku[]) {
     this._sku = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get skuInput() {
+    return this._sku
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: AppServicePlanTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: AppServicePlanTimeouts | undefined) {
+  public set timeouts(value: AppServicePlanTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

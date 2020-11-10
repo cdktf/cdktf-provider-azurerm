@@ -70,82 +70,125 @@ export class ApiManagementLogger extends TerraformResource {
   // api_management_name - computed: false, optional: false, required: true
   private _apiManagementName: string;
   public get apiManagementName() {
-    return this._apiManagementName;
+    return this.getStringAttribute('api_management_name');
   }
   public set apiManagementName(value: string) {
     this._apiManagementName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get apiManagementNameInput() {
+    return this._apiManagementName
   }
 
   // buffered - computed: false, optional: true, required: false
   private _buffered?: boolean;
   public get buffered() {
-    return this._buffered;
+    return this.getBooleanAttribute('buffered');
   }
-  public set buffered(value: boolean | undefined) {
+  public set buffered(value: boolean ) {
     this._buffered = value;
+  }
+  public resetBuffered() {
+    this._buffered = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get bufferedInput() {
+    return this._buffered
   }
 
   // description - computed: false, optional: true, required: false
   private _description?: string;
   public get description() {
-    return this._description;
+    return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string ) {
     this._description = value;
+  }
+  public resetDescription() {
+    this._description = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get descriptionInput() {
+    return this._description
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
-    return this._resourceGroupName;
+    return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
   }
 
   // application_insights - computed: false, optional: true, required: false
   private _applicationInsights?: ApiManagementLoggerApplicationInsights[];
   public get applicationInsights() {
-    return this._applicationInsights;
+    return this.interpolationForAttribute('application_insights') as any;
   }
-  public set applicationInsights(value: ApiManagementLoggerApplicationInsights[] | undefined) {
+  public set applicationInsights(value: ApiManagementLoggerApplicationInsights[] ) {
     this._applicationInsights = value;
+  }
+  public resetApplicationInsights() {
+    this._applicationInsights = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get applicationInsightsInput() {
+    return this._applicationInsights
   }
 
   // eventhub - computed: false, optional: true, required: false
   private _eventhub?: ApiManagementLoggerEventhub[];
   public get eventhub() {
-    return this._eventhub;
+    return this.interpolationForAttribute('eventhub') as any;
   }
-  public set eventhub(value: ApiManagementLoggerEventhub[] | undefined) {
+  public set eventhub(value: ApiManagementLoggerEventhub[] ) {
     this._eventhub = value;
+  }
+  public resetEventhub() {
+    this._eventhub = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get eventhubInput() {
+    return this._eventhub
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: ApiManagementLoggerTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: ApiManagementLoggerTimeouts | undefined) {
+  public set timeouts(value: ApiManagementLoggerTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

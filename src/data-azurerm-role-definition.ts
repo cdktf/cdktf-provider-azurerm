@@ -17,22 +17,22 @@ export interface DataAzurermRoleDefinitionConfig extends TerraformMetaArguments 
 }
 export class DataAzurermRoleDefinitionPermissions extends ComplexComputedList {
 
-  // actions - computed: true, optional: false, required: true
+  // actions - computed: true, optional: false, required: false
   public get actions() {
     return this.getListAttribute('actions');
   }
 
-  // data_actions - computed: true, optional: false, required: true
+  // data_actions - computed: true, optional: false, required: false
   public get dataActions() {
     return this.getListAttribute('data_actions');
   }
 
-  // not_actions - computed: true, optional: false, required: true
+  // not_actions - computed: true, optional: false, required: false
   public get notActions() {
     return this.getListAttribute('not_actions');
   }
 
-  // not_data_actions - computed: true, optional: false, required: true
+  // not_data_actions - computed: true, optional: false, required: false
   public get notDataActions() {
     return this.getListAttribute('not_data_actions');
   }
@@ -70,35 +70,38 @@ export class DataAzurermRoleDefinition extends TerraformDataSource {
   // ATTRIBUTES
   // ==========
 
-  // assignable_scopes - computed: true, optional: false, required: true
+  // assignable_scopes - computed: true, optional: false, required: false
   public get assignableScopes() {
     return this.getListAttribute('assignable_scopes');
   }
 
-  // description - computed: true, optional: false, required: true
+  // description - computed: true, optional: false, required: false
   public get description() {
     return this.getStringAttribute('description');
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // name - computed: true, optional: true, required: false
   private _name?: string;
   public get name() {
-    return this._name ?? this.getStringAttribute('name');
+    return this.getStringAttribute('name');
   }
-  public set name(value: string | undefined) {
+  public set name(value: string) {
     this._name = value;
   }
+  public resetName() {
+    this._name = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
+  }
 
-  // permissions - computed: true, optional: false, required: true
+  // permissions - computed: true, optional: false, required: false
   public permissions(index: string) {
     return new DataAzurermRoleDefinitionPermissions(this, 'permissions', index);
   }
@@ -106,22 +109,36 @@ export class DataAzurermRoleDefinition extends TerraformDataSource {
   // role_definition_id - computed: true, optional: true, required: false
   private _roleDefinitionId?: string;
   public get roleDefinitionId() {
-    return this._roleDefinitionId ?? this.getStringAttribute('role_definition_id');
+    return this.getStringAttribute('role_definition_id');
   }
-  public set roleDefinitionId(value: string | undefined) {
+  public set roleDefinitionId(value: string) {
     this._roleDefinitionId = value;
+  }
+  public resetRoleDefinitionId() {
+    this._roleDefinitionId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get roleDefinitionIdInput() {
+    return this._roleDefinitionId
   }
 
   // scope - computed: false, optional: true, required: false
   private _scope?: string;
   public get scope() {
-    return this._scope;
+    return this.getStringAttribute('scope');
   }
-  public set scope(value: string | undefined) {
+  public set scope(value: string ) {
     this._scope = value;
   }
+  public resetScope() {
+    this._scope = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get scopeInput() {
+    return this._scope
+  }
 
-  // type - computed: true, optional: false, required: true
+  // type - computed: true, optional: false, required: false
   public get type() {
     return this.getStringAttribute('type');
   }
@@ -129,10 +146,17 @@ export class DataAzurermRoleDefinition extends TerraformDataSource {
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: DataAzurermRoleDefinitionTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: DataAzurermRoleDefinitionTimeouts | undefined) {
+  public set timeouts(value: DataAzurermRoleDefinitionTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

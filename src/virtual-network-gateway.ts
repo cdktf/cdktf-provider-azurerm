@@ -107,145 +107,228 @@ export class VirtualNetworkGateway extends TerraformResource {
   // active_active - computed: true, optional: true, required: false
   private _activeActive?: boolean;
   public get activeActive() {
-    return this._activeActive ?? this.getBooleanAttribute('active_active');
+    return this.getBooleanAttribute('active_active');
   }
-  public set activeActive(value: boolean | undefined) {
+  public set activeActive(value: boolean) {
     this._activeActive = value;
+  }
+  public resetActiveActive() {
+    this._activeActive = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get activeActiveInput() {
+    return this._activeActive
   }
 
   // default_local_network_gateway_id - computed: false, optional: true, required: false
   private _defaultLocalNetworkGatewayId?: string;
   public get defaultLocalNetworkGatewayId() {
-    return this._defaultLocalNetworkGatewayId;
+    return this.getStringAttribute('default_local_network_gateway_id');
   }
-  public set defaultLocalNetworkGatewayId(value: string | undefined) {
+  public set defaultLocalNetworkGatewayId(value: string ) {
     this._defaultLocalNetworkGatewayId = value;
+  }
+  public resetDefaultLocalNetworkGatewayId() {
+    this._defaultLocalNetworkGatewayId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get defaultLocalNetworkGatewayIdInput() {
+    return this._defaultLocalNetworkGatewayId
   }
 
   // enable_bgp - computed: true, optional: true, required: false
   private _enableBgp?: boolean;
   public get enableBgp() {
-    return this._enableBgp ?? this.getBooleanAttribute('enable_bgp');
+    return this.getBooleanAttribute('enable_bgp');
   }
-  public set enableBgp(value: boolean | undefined) {
+  public set enableBgp(value: boolean) {
     this._enableBgp = value;
+  }
+  public resetEnableBgp() {
+    this._enableBgp = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enableBgpInput() {
+    return this._enableBgp
   }
 
   // generation - computed: true, optional: true, required: false
   private _generation?: string;
   public get generation() {
-    return this._generation ?? this.getStringAttribute('generation');
+    return this.getStringAttribute('generation');
   }
-  public set generation(value: string | undefined) {
+  public set generation(value: string) {
     this._generation = value;
+  }
+  public resetGeneration() {
+    this._generation = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get generationInput() {
+    return this._generation
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // location - computed: false, optional: false, required: true
   private _location: string;
   public get location() {
-    return this._location;
+    return this.getStringAttribute('location');
   }
   public set location(value: string) {
     this._location = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get locationInput() {
+    return this._location
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
-    return this._resourceGroupName;
+    return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
   }
 
   // sku - computed: false, optional: false, required: true
   private _sku: string;
   public get sku() {
-    return this._sku;
+    return this.getStringAttribute('sku');
   }
   public set sku(value: string) {
     this._sku = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get skuInput() {
+    return this._sku
   }
 
   // tags - computed: false, optional: true, required: false
   private _tags?: { [key: string]: string };
   public get tags() {
-    return this._tags;
+    return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | undefined) {
+  public set tags(value: { [key: string]: string } ) {
     this._tags = value;
+  }
+  public resetTags() {
+    this._tags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsInput() {
+    return this._tags
   }
 
   // type - computed: false, optional: false, required: true
   private _type: string;
   public get type() {
-    return this._type;
+    return this.getStringAttribute('type');
   }
   public set type(value: string) {
     this._type = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get typeInput() {
+    return this._type
   }
 
   // vpn_type - computed: false, optional: true, required: false
   private _vpnType?: string;
   public get vpnType() {
-    return this._vpnType;
+    return this.getStringAttribute('vpn_type');
   }
-  public set vpnType(value: string | undefined) {
+  public set vpnType(value: string ) {
     this._vpnType = value;
+  }
+  public resetVpnType() {
+    this._vpnType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get vpnTypeInput() {
+    return this._vpnType
   }
 
   // bgp_settings - computed: false, optional: true, required: false
   private _bgpSettings?: VirtualNetworkGatewayBgpSettings[];
   public get bgpSettings() {
-    return this._bgpSettings;
+    return this.interpolationForAttribute('bgp_settings') as any;
   }
-  public set bgpSettings(value: VirtualNetworkGatewayBgpSettings[] | undefined) {
+  public set bgpSettings(value: VirtualNetworkGatewayBgpSettings[] ) {
     this._bgpSettings = value;
+  }
+  public resetBgpSettings() {
+    this._bgpSettings = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get bgpSettingsInput() {
+    return this._bgpSettings
   }
 
   // ip_configuration - computed: false, optional: false, required: true
   private _ipConfiguration: VirtualNetworkGatewayIpConfiguration[];
   public get ipConfiguration() {
-    return this._ipConfiguration;
+    return this.interpolationForAttribute('ip_configuration') as any;
   }
   public set ipConfiguration(value: VirtualNetworkGatewayIpConfiguration[]) {
     this._ipConfiguration = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ipConfigurationInput() {
+    return this._ipConfiguration
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: VirtualNetworkGatewayTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: VirtualNetworkGatewayTimeouts | undefined) {
+  public set timeouts(value: VirtualNetworkGatewayTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // vpn_client_configuration - computed: false, optional: true, required: false
   private _vpnClientConfiguration?: VirtualNetworkGatewayVpnClientConfiguration[];
   public get vpnClientConfiguration() {
-    return this._vpnClientConfiguration;
+    return this.interpolationForAttribute('vpn_client_configuration') as any;
   }
-  public set vpnClientConfiguration(value: VirtualNetworkGatewayVpnClientConfiguration[] | undefined) {
+  public set vpnClientConfiguration(value: VirtualNetworkGatewayVpnClientConfiguration[] ) {
     this._vpnClientConfiguration = value;
+  }
+  public resetVpnClientConfiguration() {
+    this._vpnClientConfiguration = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get vpnClientConfigurationInput() {
+    return this._vpnClientConfiguration
   }
 
   // =========

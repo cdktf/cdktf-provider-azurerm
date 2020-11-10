@@ -76,127 +76,202 @@ export class AutomationSchedule extends TerraformResource {
   // automation_account_name - computed: false, optional: false, required: true
   private _automationAccountName: string;
   public get automationAccountName() {
-    return this._automationAccountName;
+    return this.getStringAttribute('automation_account_name');
   }
   public set automationAccountName(value: string) {
     this._automationAccountName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get automationAccountNameInput() {
+    return this._automationAccountName
   }
 
   // description - computed: false, optional: true, required: false
   private _description?: string;
   public get description() {
-    return this._description;
+    return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string ) {
     this._description = value;
+  }
+  public resetDescription() {
+    this._description = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get descriptionInput() {
+    return this._description
   }
 
   // expiry_time - computed: true, optional: true, required: false
   private _expiryTime?: string;
   public get expiryTime() {
-    return this._expiryTime ?? this.getStringAttribute('expiry_time');
+    return this.getStringAttribute('expiry_time');
   }
-  public set expiryTime(value: string | undefined) {
+  public set expiryTime(value: string) {
     this._expiryTime = value;
+  }
+  public resetExpiryTime() {
+    this._expiryTime = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get expiryTimeInput() {
+    return this._expiryTime
   }
 
   // frequency - computed: false, optional: false, required: true
   private _frequency: string;
   public get frequency() {
-    return this._frequency;
+    return this.getStringAttribute('frequency');
   }
   public set frequency(value: string) {
     this._frequency = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get frequencyInput() {
+    return this._frequency
+  }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // interval - computed: true, optional: true, required: false
   private _interval?: number;
   public get interval() {
-    return this._interval ?? this.getNumberAttribute('interval');
+    return this.getNumberAttribute('interval');
   }
-  public set interval(value: number | undefined) {
+  public set interval(value: number) {
     this._interval = value;
+  }
+  public resetInterval() {
+    this._interval = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get intervalInput() {
+    return this._interval
   }
 
   // month_days - computed: false, optional: true, required: false
   private _monthDays?: number[];
   public get monthDays() {
-    return this._monthDays;
+    return this.interpolationForAttribute('month_days') as any;
   }
-  public set monthDays(value: number[] | undefined) {
+  public set monthDays(value: number[] ) {
     this._monthDays = value;
+  }
+  public resetMonthDays() {
+    this._monthDays = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get monthDaysInput() {
+    return this._monthDays
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
-    return this._resourceGroupName;
+    return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
   }
 
   // start_time - computed: true, optional: true, required: false
   private _startTime?: string;
   public get startTime() {
-    return this._startTime ?? this.getStringAttribute('start_time');
+    return this.getStringAttribute('start_time');
   }
-  public set startTime(value: string | undefined) {
+  public set startTime(value: string) {
     this._startTime = value;
+  }
+  public resetStartTime() {
+    this._startTime = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get startTimeInput() {
+    return this._startTime
   }
 
   // timezone - computed: false, optional: true, required: false
   private _timezone?: string;
   public get timezone() {
-    return this._timezone;
+    return this.getStringAttribute('timezone');
   }
-  public set timezone(value: string | undefined) {
+  public set timezone(value: string ) {
     this._timezone = value;
+  }
+  public resetTimezone() {
+    this._timezone = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timezoneInput() {
+    return this._timezone
   }
 
   // week_days - computed: false, optional: true, required: false
   private _weekDays?: string[];
   public get weekDays() {
-    return this._weekDays;
+    return this.getListAttribute('week_days');
   }
-  public set weekDays(value: string[] | undefined) {
+  public set weekDays(value: string[] ) {
     this._weekDays = value;
+  }
+  public resetWeekDays() {
+    this._weekDays = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get weekDaysInput() {
+    return this._weekDays
   }
 
   // monthly_occurrence - computed: false, optional: true, required: false
   private _monthlyOccurrence?: AutomationScheduleMonthlyOccurrence[];
   public get monthlyOccurrence() {
-    return this._monthlyOccurrence;
+    return this.interpolationForAttribute('monthly_occurrence') as any;
   }
-  public set monthlyOccurrence(value: AutomationScheduleMonthlyOccurrence[] | undefined) {
+  public set monthlyOccurrence(value: AutomationScheduleMonthlyOccurrence[] ) {
     this._monthlyOccurrence = value;
+  }
+  public resetMonthlyOccurrence() {
+    this._monthlyOccurrence = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get monthlyOccurrenceInput() {
+    return this._monthlyOccurrence
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: AutomationScheduleTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: AutomationScheduleTimeouts | undefined) {
+  public set timeouts(value: AutomationScheduleTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

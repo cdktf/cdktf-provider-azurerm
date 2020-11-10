@@ -44,20 +44,16 @@ export class DataAzurermMonitorDiagnosticCategories extends TerraformDataSource 
   // ==========
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
-  // logs - computed: true, optional: false, required: true
+  // logs - computed: true, optional: false, required: false
   public get logs() {
     return this.getListAttribute('logs');
   }
 
-  // metrics - computed: true, optional: false, required: true
+  // metrics - computed: true, optional: false, required: false
   public get metrics() {
     return this.getListAttribute('metrics');
   }
@@ -65,19 +61,30 @@ export class DataAzurermMonitorDiagnosticCategories extends TerraformDataSource 
   // resource_id - computed: false, optional: false, required: true
   private _resourceId: string;
   public get resourceId() {
-    return this._resourceId;
+    return this.getStringAttribute('resource_id');
   }
   public set resourceId(value: string) {
     this._resourceId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resourceIdInput() {
+    return this._resourceId
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: DataAzurermMonitorDiagnosticCategoriesTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: DataAzurermMonitorDiagnosticCategoriesTimeouts | undefined) {
+  public set timeouts(value: DataAzurermMonitorDiagnosticCategoriesTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

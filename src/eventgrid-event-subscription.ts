@@ -106,136 +106,224 @@ export class EventgridEventSubscription extends TerraformResource {
   // event_delivery_schema - computed: false, optional: true, required: false
   private _eventDeliverySchema?: string;
   public get eventDeliverySchema() {
-    return this._eventDeliverySchema;
+    return this.getStringAttribute('event_delivery_schema');
   }
-  public set eventDeliverySchema(value: string | undefined) {
+  public set eventDeliverySchema(value: string ) {
     this._eventDeliverySchema = value;
+  }
+  public resetEventDeliverySchema() {
+    this._eventDeliverySchema = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get eventDeliverySchemaInput() {
+    return this._eventDeliverySchema
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // included_event_types - computed: true, optional: true, required: false
   private _includedEventTypes?: string[];
   public get includedEventTypes() {
-    return this._includedEventTypes ?? this.getListAttribute('included_event_types');
+    return this.getListAttribute('included_event_types');
   }
-  public set includedEventTypes(value: string[] | undefined) {
+  public set includedEventTypes(value: string[]) {
     this._includedEventTypes = value;
+  }
+  public resetIncludedEventTypes() {
+    this._includedEventTypes = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get includedEventTypesInput() {
+    return this._includedEventTypes
   }
 
   // labels - computed: false, optional: true, required: false
   private _labels?: string[];
   public get labels() {
-    return this._labels;
+    return this.getListAttribute('labels');
   }
-  public set labels(value: string[] | undefined) {
+  public set labels(value: string[] ) {
     this._labels = value;
+  }
+  public resetLabels() {
+    this._labels = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get labelsInput() {
+    return this._labels
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // scope - computed: false, optional: false, required: true
   private _scope: string;
   public get scope() {
-    return this._scope;
+    return this.getStringAttribute('scope');
   }
   public set scope(value: string) {
     this._scope = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get scopeInput() {
+    return this._scope
   }
 
   // topic_name - computed: true, optional: true, required: false
   private _topicName?: string;
   public get topicName() {
-    return this._topicName ?? this.getStringAttribute('topic_name');
+    return this.getStringAttribute('topic_name');
   }
-  public set topicName(value: string | undefined) {
+  public set topicName(value: string) {
     this._topicName = value;
+  }
+  public resetTopicName() {
+    this._topicName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get topicNameInput() {
+    return this._topicName
   }
 
   // eventhub_endpoint - computed: false, optional: true, required: false
   private _eventhubEndpoint?: EventgridEventSubscriptionEventhubEndpoint[];
   public get eventhubEndpoint() {
-    return this._eventhubEndpoint;
+    return this.interpolationForAttribute('eventhub_endpoint') as any;
   }
-  public set eventhubEndpoint(value: EventgridEventSubscriptionEventhubEndpoint[] | undefined) {
+  public set eventhubEndpoint(value: EventgridEventSubscriptionEventhubEndpoint[] ) {
     this._eventhubEndpoint = value;
+  }
+  public resetEventhubEndpoint() {
+    this._eventhubEndpoint = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get eventhubEndpointInput() {
+    return this._eventhubEndpoint
   }
 
   // hybrid_connection_endpoint - computed: false, optional: true, required: false
   private _hybridConnectionEndpoint?: EventgridEventSubscriptionHybridConnectionEndpoint[];
   public get hybridConnectionEndpoint() {
-    return this._hybridConnectionEndpoint;
+    return this.interpolationForAttribute('hybrid_connection_endpoint') as any;
   }
-  public set hybridConnectionEndpoint(value: EventgridEventSubscriptionHybridConnectionEndpoint[] | undefined) {
+  public set hybridConnectionEndpoint(value: EventgridEventSubscriptionHybridConnectionEndpoint[] ) {
     this._hybridConnectionEndpoint = value;
+  }
+  public resetHybridConnectionEndpoint() {
+    this._hybridConnectionEndpoint = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get hybridConnectionEndpointInput() {
+    return this._hybridConnectionEndpoint
   }
 
   // retry_policy - computed: false, optional: true, required: false
   private _retryPolicy?: EventgridEventSubscriptionRetryPolicy[];
   public get retryPolicy() {
-    return this._retryPolicy;
+    return this.interpolationForAttribute('retry_policy') as any;
   }
-  public set retryPolicy(value: EventgridEventSubscriptionRetryPolicy[] | undefined) {
+  public set retryPolicy(value: EventgridEventSubscriptionRetryPolicy[] ) {
     this._retryPolicy = value;
+  }
+  public resetRetryPolicy() {
+    this._retryPolicy = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get retryPolicyInput() {
+    return this._retryPolicy
   }
 
   // storage_blob_dead_letter_destination - computed: false, optional: true, required: false
   private _storageBlobDeadLetterDestination?: EventgridEventSubscriptionStorageBlobDeadLetterDestination[];
   public get storageBlobDeadLetterDestination() {
-    return this._storageBlobDeadLetterDestination;
+    return this.interpolationForAttribute('storage_blob_dead_letter_destination') as any;
   }
-  public set storageBlobDeadLetterDestination(value: EventgridEventSubscriptionStorageBlobDeadLetterDestination[] | undefined) {
+  public set storageBlobDeadLetterDestination(value: EventgridEventSubscriptionStorageBlobDeadLetterDestination[] ) {
     this._storageBlobDeadLetterDestination = value;
+  }
+  public resetStorageBlobDeadLetterDestination() {
+    this._storageBlobDeadLetterDestination = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get storageBlobDeadLetterDestinationInput() {
+    return this._storageBlobDeadLetterDestination
   }
 
   // storage_queue_endpoint - computed: false, optional: true, required: false
   private _storageQueueEndpoint?: EventgridEventSubscriptionStorageQueueEndpoint[];
   public get storageQueueEndpoint() {
-    return this._storageQueueEndpoint;
+    return this.interpolationForAttribute('storage_queue_endpoint') as any;
   }
-  public set storageQueueEndpoint(value: EventgridEventSubscriptionStorageQueueEndpoint[] | undefined) {
+  public set storageQueueEndpoint(value: EventgridEventSubscriptionStorageQueueEndpoint[] ) {
     this._storageQueueEndpoint = value;
+  }
+  public resetStorageQueueEndpoint() {
+    this._storageQueueEndpoint = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get storageQueueEndpointInput() {
+    return this._storageQueueEndpoint
   }
 
   // subject_filter - computed: false, optional: true, required: false
   private _subjectFilter?: EventgridEventSubscriptionSubjectFilter[];
   public get subjectFilter() {
-    return this._subjectFilter;
+    return this.interpolationForAttribute('subject_filter') as any;
   }
-  public set subjectFilter(value: EventgridEventSubscriptionSubjectFilter[] | undefined) {
+  public set subjectFilter(value: EventgridEventSubscriptionSubjectFilter[] ) {
     this._subjectFilter = value;
+  }
+  public resetSubjectFilter() {
+    this._subjectFilter = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get subjectFilterInput() {
+    return this._subjectFilter
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: EventgridEventSubscriptionTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: EventgridEventSubscriptionTimeouts | undefined) {
+  public set timeouts(value: EventgridEventSubscriptionTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // webhook_endpoint - computed: false, optional: true, required: false
   private _webhookEndpoint?: EventgridEventSubscriptionWebhookEndpoint[];
   public get webhookEndpoint() {
-    return this._webhookEndpoint;
+    return this.interpolationForAttribute('webhook_endpoint') as any;
   }
-  public set webhookEndpoint(value: EventgridEventSubscriptionWebhookEndpoint[] | undefined) {
+  public set webhookEndpoint(value: EventgridEventSubscriptionWebhookEndpoint[] ) {
     this._webhookEndpoint = value;
+  }
+  public resetWebhookEndpoint() {
+    this._webhookEndpoint = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get webhookEndpointInput() {
+    return this._webhookEndpoint
   }
 
   // =========

@@ -48,24 +48,27 @@ export class DataAzurermKubernetesServiceVersions extends TerraformDataSource {
   // ==========
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // include_preview - computed: false, optional: true, required: false
   private _includePreview?: boolean;
   public get includePreview() {
-    return this._includePreview;
+    return this.getBooleanAttribute('include_preview');
   }
-  public set includePreview(value: boolean | undefined) {
+  public set includePreview(value: boolean ) {
     this._includePreview = value;
   }
+  public resetIncludePreview() {
+    this._includePreview = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get includePreviewInput() {
+    return this._includePreview
+  }
 
-  // latest_version - computed: true, optional: false, required: true
+  // latest_version - computed: true, optional: false, required: false
   public get latestVersion() {
     return this.getStringAttribute('latest_version');
   }
@@ -73,22 +76,33 @@ export class DataAzurermKubernetesServiceVersions extends TerraformDataSource {
   // location - computed: false, optional: false, required: true
   private _location: string;
   public get location() {
-    return this._location;
+    return this.getStringAttribute('location');
   }
   public set location(value: string) {
     this._location = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get locationInput() {
+    return this._location
   }
 
   // version_prefix - computed: false, optional: true, required: false
   private _versionPrefix?: string;
   public get versionPrefix() {
-    return this._versionPrefix;
+    return this.getStringAttribute('version_prefix');
   }
-  public set versionPrefix(value: string | undefined) {
+  public set versionPrefix(value: string ) {
     this._versionPrefix = value;
   }
+  public resetVersionPrefix() {
+    this._versionPrefix = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get versionPrefixInput() {
+    return this._versionPrefix
+  }
 
-  // versions - computed: true, optional: false, required: true
+  // versions - computed: true, optional: false, required: false
   public get versions() {
     return this.getListAttribute('versions');
   }
@@ -96,10 +110,17 @@ export class DataAzurermKubernetesServiceVersions extends TerraformDataSource {
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: DataAzurermKubernetesServiceVersionsTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: DataAzurermKubernetesServiceVersionsTimeouts | undefined) {
+  public set timeouts(value: DataAzurermKubernetesServiceVersionsTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

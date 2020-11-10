@@ -59,73 +59,109 @@ export class StorageAccountNetworkRulesA extends TerraformResource {
   // bypass - computed: true, optional: true, required: false
   private _bypass?: string[];
   public get bypass() {
-    return this._bypass ?? this.getListAttribute('bypass');
+    return this.getListAttribute('bypass');
   }
-  public set bypass(value: string[] | undefined) {
+  public set bypass(value: string[]) {
     this._bypass = value;
+  }
+  public resetBypass() {
+    this._bypass = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get bypassInput() {
+    return this._bypass
   }
 
   // default_action - computed: false, optional: false, required: true
   private _defaultAction: string;
   public get defaultAction() {
-    return this._defaultAction;
+    return this.getStringAttribute('default_action');
   }
   public set defaultAction(value: string) {
     this._defaultAction = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get defaultActionInput() {
+    return this._defaultAction
+  }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // ip_rules - computed: true, optional: true, required: false
   private _ipRules?: string[];
   public get ipRules() {
-    return this._ipRules ?? this.getListAttribute('ip_rules');
+    return this.getListAttribute('ip_rules');
   }
-  public set ipRules(value: string[] | undefined) {
+  public set ipRules(value: string[]) {
     this._ipRules = value;
+  }
+  public resetIpRules() {
+    this._ipRules = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ipRulesInput() {
+    return this._ipRules
   }
 
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
-    return this._resourceGroupName;
+    return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
   }
 
   // storage_account_name - computed: false, optional: false, required: true
   private _storageAccountName: string;
   public get storageAccountName() {
-    return this._storageAccountName;
+    return this.getStringAttribute('storage_account_name');
   }
   public set storageAccountName(value: string) {
     this._storageAccountName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get storageAccountNameInput() {
+    return this._storageAccountName
   }
 
   // virtual_network_subnet_ids - computed: true, optional: true, required: false
   private _virtualNetworkSubnetIds?: string[];
   public get virtualNetworkSubnetIds() {
-    return this._virtualNetworkSubnetIds ?? this.getListAttribute('virtual_network_subnet_ids');
+    return this.getListAttribute('virtual_network_subnet_ids');
   }
-  public set virtualNetworkSubnetIds(value: string[] | undefined) {
+  public set virtualNetworkSubnetIds(value: string[]) {
     this._virtualNetworkSubnetIds = value;
+  }
+  public resetVirtualNetworkSubnetIds() {
+    this._virtualNetworkSubnetIds = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get virtualNetworkSubnetIdsInput() {
+    return this._virtualNetworkSubnetIds
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: StorageAccountNetworkRulesTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: StorageAccountNetworkRulesTimeouts | undefined) {
+  public set timeouts(value: StorageAccountNetworkRulesTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

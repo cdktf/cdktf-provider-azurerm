@@ -67,38 +67,42 @@ export class Lb extends TerraformResource {
   // ==========
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // location - computed: false, optional: false, required: true
   private _location: string;
   public get location() {
-    return this._location;
+    return this.getStringAttribute('location');
   }
   public set location(value: string) {
     this._location = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get locationInput() {
+    return this._location
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
+  }
 
-  // private_ip_address - computed: true, optional: false, required: true
+  // private_ip_address - computed: true, optional: false, required: false
   public get privateIpAddress() {
     return this.getStringAttribute('private_ip_address');
   }
 
-  // private_ip_addresses - computed: true, optional: false, required: true
+  // private_ip_addresses - computed: true, optional: false, required: false
   public get privateIpAddresses() {
     return this.getListAttribute('private_ip_addresses');
   }
@@ -106,46 +110,78 @@ export class Lb extends TerraformResource {
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
-    return this._resourceGroupName;
+    return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
   }
 
   // sku - computed: false, optional: true, required: false
   private _sku?: string;
   public get sku() {
-    return this._sku;
+    return this.getStringAttribute('sku');
   }
-  public set sku(value: string | undefined) {
+  public set sku(value: string ) {
     this._sku = value;
+  }
+  public resetSku() {
+    this._sku = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get skuInput() {
+    return this._sku
   }
 
   // tags - computed: false, optional: true, required: false
   private _tags?: { [key: string]: string };
   public get tags() {
-    return this._tags;
+    return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | undefined) {
+  public set tags(value: { [key: string]: string } ) {
     this._tags = value;
+  }
+  public resetTags() {
+    this._tags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsInput() {
+    return this._tags
   }
 
   // frontend_ip_configuration - computed: false, optional: true, required: false
   private _frontendIpConfiguration?: LbFrontendIpConfiguration[];
   public get frontendIpConfiguration() {
-    return this._frontendIpConfiguration;
+    return this.interpolationForAttribute('frontend_ip_configuration') as any;
   }
-  public set frontendIpConfiguration(value: LbFrontendIpConfiguration[] | undefined) {
+  public set frontendIpConfiguration(value: LbFrontendIpConfiguration[] ) {
     this._frontendIpConfiguration = value;
+  }
+  public resetFrontendIpConfiguration() {
+    this._frontendIpConfiguration = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get frontendIpConfigurationInput() {
+    return this._frontendIpConfiguration
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: LbTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: LbTimeouts | undefined) {
+  public set timeouts(value: LbTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

@@ -57,64 +57,90 @@ export class EventhubNamespaceDisasterRecoveryConfig extends TerraformResource {
   // alternate_name - computed: false, optional: true, required: false
   private _alternateName?: string;
   public get alternateName() {
-    return this._alternateName;
+    return this.getStringAttribute('alternate_name');
   }
-  public set alternateName(value: string | undefined) {
+  public set alternateName(value: string ) {
     this._alternateName = value;
+  }
+  public resetAlternateName() {
+    this._alternateName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get alternateNameInput() {
+    return this._alternateName
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // namespace_name - computed: false, optional: false, required: true
   private _namespaceName: string;
   public get namespaceName() {
-    return this._namespaceName;
+    return this.getStringAttribute('namespace_name');
   }
   public set namespaceName(value: string) {
     this._namespaceName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get namespaceNameInput() {
+    return this._namespaceName
   }
 
   // partner_namespace_id - computed: false, optional: false, required: true
   private _partnerNamespaceId: string;
   public get partnerNamespaceId() {
-    return this._partnerNamespaceId;
+    return this.getStringAttribute('partner_namespace_id');
   }
   public set partnerNamespaceId(value: string) {
     this._partnerNamespaceId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get partnerNamespaceIdInput() {
+    return this._partnerNamespaceId
   }
 
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
-    return this._resourceGroupName;
+    return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: EventhubNamespaceDisasterRecoveryConfigTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: EventhubNamespaceDisasterRecoveryConfigTimeouts | undefined) {
+  public set timeouts(value: EventhubNamespaceDisasterRecoveryConfigTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

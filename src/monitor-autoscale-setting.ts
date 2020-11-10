@@ -129,91 +129,135 @@ export class MonitorAutoscaleSetting extends TerraformResource {
   // enabled - computed: false, optional: true, required: false
   private _enabled?: boolean;
   public get enabled() {
-    return this._enabled;
+    return this.getBooleanAttribute('enabled');
   }
-  public set enabled(value: boolean | undefined) {
+  public set enabled(value: boolean ) {
     this._enabled = value;
+  }
+  public resetEnabled() {
+    this._enabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enabledInput() {
+    return this._enabled
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // location - computed: false, optional: false, required: true
   private _location: string;
   public get location() {
-    return this._location;
+    return this.getStringAttribute('location');
   }
   public set location(value: string) {
     this._location = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get locationInput() {
+    return this._location
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
-    return this._resourceGroupName;
+    return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
   }
 
   // tags - computed: false, optional: true, required: false
   private _tags?: { [key: string]: string };
   public get tags() {
-    return this._tags;
+    return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | undefined) {
+  public set tags(value: { [key: string]: string } ) {
     this._tags = value;
+  }
+  public resetTags() {
+    this._tags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsInput() {
+    return this._tags
   }
 
   // target_resource_id - computed: false, optional: false, required: true
   private _targetResourceId: string;
   public get targetResourceId() {
-    return this._targetResourceId;
+    return this.getStringAttribute('target_resource_id');
   }
   public set targetResourceId(value: string) {
     this._targetResourceId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get targetResourceIdInput() {
+    return this._targetResourceId
   }
 
   // notification - computed: false, optional: true, required: false
   private _notification?: MonitorAutoscaleSettingNotification[];
   public get notification() {
-    return this._notification;
+    return this.interpolationForAttribute('notification') as any;
   }
-  public set notification(value: MonitorAutoscaleSettingNotification[] | undefined) {
+  public set notification(value: MonitorAutoscaleSettingNotification[] ) {
     this._notification = value;
+  }
+  public resetNotification() {
+    this._notification = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get notificationInput() {
+    return this._notification
   }
 
   // profile - computed: false, optional: false, required: true
   private _profile: MonitorAutoscaleSettingProfile[];
   public get profile() {
-    return this._profile;
+    return this.interpolationForAttribute('profile') as any;
   }
   public set profile(value: MonitorAutoscaleSettingProfile[]) {
     this._profile = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get profileInput() {
+    return this._profile
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: MonitorAutoscaleSettingTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: MonitorAutoscaleSettingTimeouts | undefined) {
+  public set timeouts(value: MonitorAutoscaleSettingTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

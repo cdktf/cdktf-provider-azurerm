@@ -57,58 +57,80 @@ export class AppServiceCustomHostnameBinding extends TerraformResource {
   // app_service_name - computed: false, optional: false, required: true
   private _appServiceName: string;
   public get appServiceName() {
-    return this._appServiceName;
+    return this.getStringAttribute('app_service_name');
   }
   public set appServiceName(value: string) {
     this._appServiceName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get appServiceNameInput() {
+    return this._appServiceName
   }
 
   // hostname - computed: false, optional: false, required: true
   private _hostname: string;
   public get hostname() {
-    return this._hostname;
+    return this.getStringAttribute('hostname');
   }
   public set hostname(value: string) {
     this._hostname = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get hostnameInput() {
+    return this._hostname
+  }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
-    return this._resourceGroupName;
+    return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
   }
 
   // ssl_state - computed: false, optional: true, required: false
   private _sslState?: string;
   public get sslState() {
-    return this._sslState;
+    return this.getStringAttribute('ssl_state');
   }
-  public set sslState(value: string | undefined) {
+  public set sslState(value: string ) {
     this._sslState = value;
+  }
+  public resetSslState() {
+    this._sslState = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sslStateInput() {
+    return this._sslState
   }
 
   // thumbprint - computed: false, optional: true, required: false
   private _thumbprint?: string;
   public get thumbprint() {
-    return this._thumbprint;
+    return this.getStringAttribute('thumbprint');
   }
-  public set thumbprint(value: string | undefined) {
+  public set thumbprint(value: string ) {
     this._thumbprint = value;
   }
+  public resetThumbprint() {
+    this._thumbprint = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get thumbprintInput() {
+    return this._thumbprint
+  }
 
-  // virtual_ip - computed: true, optional: false, required: true
+  // virtual_ip - computed: true, optional: false, required: false
   public get virtualIp() {
     return this.getStringAttribute('virtual_ip');
   }
@@ -116,10 +138,17 @@ export class AppServiceCustomHostnameBinding extends TerraformResource {
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: AppServiceCustomHostnameBindingTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: AppServiceCustomHostnameBindingTimeouts | undefined) {
+  public set timeouts(value: AppServiceCustomHostnameBindingTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

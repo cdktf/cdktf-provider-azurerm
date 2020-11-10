@@ -47,15 +47,11 @@ export class DataAzurermDedicatedHostGroup extends TerraformDataSource {
   // ==========
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
-  // location - computed: true, optional: false, required: true
+  // location - computed: true, optional: false, required: false
   public get location() {
     return this.getStringAttribute('location');
   }
@@ -63,13 +59,17 @@ export class DataAzurermDedicatedHostGroup extends TerraformDataSource {
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
+  }
 
-  // platform_fault_domain_count - computed: true, optional: false, required: true
+  // platform_fault_domain_count - computed: true, optional: false, required: false
   public get platformFaultDomainCount() {
     return this.getNumberAttribute('platform_fault_domain_count');
   }
@@ -77,18 +77,22 @@ export class DataAzurermDedicatedHostGroup extends TerraformDataSource {
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
-    return this._resourceGroupName;
+    return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
+  }
 
-  // tags - computed: true, optional: false, required: true
+  // tags - computed: true, optional: false, required: false
   public tags(key: string): string {
     return new StringMap(this, 'tags').lookup(key);
   }
 
-  // zones - computed: true, optional: false, required: true
+  // zones - computed: true, optional: false, required: false
   public get zones() {
     return this.getListAttribute('zones');
   }
@@ -96,10 +100,17 @@ export class DataAzurermDedicatedHostGroup extends TerraformDataSource {
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: DataAzurermDedicatedHostGroupTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: DataAzurermDedicatedHostGroupTimeouts | undefined) {
+  public set timeouts(value: DataAzurermDedicatedHostGroupTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

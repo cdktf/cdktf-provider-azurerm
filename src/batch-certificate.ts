@@ -61,40 +61,48 @@ export class BatchCertificate extends TerraformResource {
   // account_name - computed: false, optional: false, required: true
   private _accountName: string;
   public get accountName() {
-    return this._accountName;
+    return this.getStringAttribute('account_name');
   }
   public set accountName(value: string) {
     this._accountName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get accountNameInput() {
+    return this._accountName
   }
 
   // certificate - computed: false, optional: false, required: true
   private _certificate: string;
   public get certificate() {
-    return this._certificate;
+    return this.getStringAttribute('certificate');
   }
   public set certificate(value: string) {
     this._certificate = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get certificateInput() {
+    return this._certificate
   }
 
   // format - computed: false, optional: false, required: true
   private _format: string;
   public get format() {
-    return this._format;
+    return this.getStringAttribute('format');
   }
   public set format(value: string) {
     this._format = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get formatInput() {
+    return this._format
+  }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
-  // name - computed: true, optional: false, required: true
+  // name - computed: true, optional: false, required: false
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -102,13 +110,20 @@ export class BatchCertificate extends TerraformResource {
   // password - computed: false, optional: true, required: false
   private _password?: string;
   public get password() {
-    return this._password;
+    return this.getStringAttribute('password');
   }
-  public set password(value: string | undefined) {
+  public set password(value: string ) {
     this._password = value;
   }
+  public resetPassword() {
+    this._password = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get passwordInput() {
+    return this._password
+  }
 
-  // public_data - computed: true, optional: false, required: true
+  // public_data - computed: true, optional: false, required: false
   public get publicData() {
     return this.getStringAttribute('public_data');
   }
@@ -116,37 +131,56 @@ export class BatchCertificate extends TerraformResource {
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
-    return this._resourceGroupName;
+    return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
   }
 
   // thumbprint - computed: false, optional: false, required: true
   private _thumbprint: string;
   public get thumbprint() {
-    return this._thumbprint;
+    return this.getStringAttribute('thumbprint');
   }
   public set thumbprint(value: string) {
     this._thumbprint = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get thumbprintInput() {
+    return this._thumbprint
   }
 
   // thumbprint_algorithm - computed: false, optional: false, required: true
   private _thumbprintAlgorithm: string;
   public get thumbprintAlgorithm() {
-    return this._thumbprintAlgorithm;
+    return this.getStringAttribute('thumbprint_algorithm');
   }
   public set thumbprintAlgorithm(value: string) {
     this._thumbprintAlgorithm = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get thumbprintAlgorithmInput() {
+    return this._thumbprintAlgorithm
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: BatchCertificateTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: BatchCertificateTimeouts | undefined) {
+  public set timeouts(value: BatchCertificateTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

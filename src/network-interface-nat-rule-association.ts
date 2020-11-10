@@ -51,48 +51,63 @@ export class NetworkInterfaceNatRuleAssociation extends TerraformResource {
   // ==========
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // ip_configuration_name - computed: false, optional: false, required: true
   private _ipConfigurationName: string;
   public get ipConfigurationName() {
-    return this._ipConfigurationName;
+    return this.getStringAttribute('ip_configuration_name');
   }
   public set ipConfigurationName(value: string) {
     this._ipConfigurationName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ipConfigurationNameInput() {
+    return this._ipConfigurationName
   }
 
   // nat_rule_id - computed: false, optional: false, required: true
   private _natRuleId: string;
   public get natRuleId() {
-    return this._natRuleId;
+    return this.getStringAttribute('nat_rule_id');
   }
   public set natRuleId(value: string) {
     this._natRuleId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get natRuleIdInput() {
+    return this._natRuleId
   }
 
   // network_interface_id - computed: false, optional: false, required: true
   private _networkInterfaceId: string;
   public get networkInterfaceId() {
-    return this._networkInterfaceId;
+    return this.getStringAttribute('network_interface_id');
   }
   public set networkInterfaceId(value: string) {
     this._networkInterfaceId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get networkInterfaceIdInput() {
+    return this._networkInterfaceId
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: NetworkInterfaceNatRuleAssociationTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: NetworkInterfaceNatRuleAssociationTimeouts | undefined) {
+  public set timeouts(value: NetworkInterfaceNatRuleAssociationTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

@@ -63,91 +63,138 @@ export class VirtualNetworkPeering extends TerraformResource {
   // allow_forwarded_traffic - computed: true, optional: true, required: false
   private _allowForwardedTraffic?: boolean;
   public get allowForwardedTraffic() {
-    return this._allowForwardedTraffic ?? this.getBooleanAttribute('allow_forwarded_traffic');
+    return this.getBooleanAttribute('allow_forwarded_traffic');
   }
-  public set allowForwardedTraffic(value: boolean | undefined) {
+  public set allowForwardedTraffic(value: boolean) {
     this._allowForwardedTraffic = value;
+  }
+  public resetAllowForwardedTraffic() {
+    this._allowForwardedTraffic = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get allowForwardedTrafficInput() {
+    return this._allowForwardedTraffic
   }
 
   // allow_gateway_transit - computed: true, optional: true, required: false
   private _allowGatewayTransit?: boolean;
   public get allowGatewayTransit() {
-    return this._allowGatewayTransit ?? this.getBooleanAttribute('allow_gateway_transit');
+    return this.getBooleanAttribute('allow_gateway_transit');
   }
-  public set allowGatewayTransit(value: boolean | undefined) {
+  public set allowGatewayTransit(value: boolean) {
     this._allowGatewayTransit = value;
+  }
+  public resetAllowGatewayTransit() {
+    this._allowGatewayTransit = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get allowGatewayTransitInput() {
+    return this._allowGatewayTransit
   }
 
   // allow_virtual_network_access - computed: false, optional: true, required: false
   private _allowVirtualNetworkAccess?: boolean;
   public get allowVirtualNetworkAccess() {
-    return this._allowVirtualNetworkAccess;
+    return this.getBooleanAttribute('allow_virtual_network_access');
   }
-  public set allowVirtualNetworkAccess(value: boolean | undefined) {
+  public set allowVirtualNetworkAccess(value: boolean ) {
     this._allowVirtualNetworkAccess = value;
+  }
+  public resetAllowVirtualNetworkAccess() {
+    this._allowVirtualNetworkAccess = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get allowVirtualNetworkAccessInput() {
+    return this._allowVirtualNetworkAccess
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // remote_virtual_network_id - computed: false, optional: false, required: true
   private _remoteVirtualNetworkId: string;
   public get remoteVirtualNetworkId() {
-    return this._remoteVirtualNetworkId;
+    return this.getStringAttribute('remote_virtual_network_id');
   }
   public set remoteVirtualNetworkId(value: string) {
     this._remoteVirtualNetworkId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get remoteVirtualNetworkIdInput() {
+    return this._remoteVirtualNetworkId
   }
 
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
-    return this._resourceGroupName;
+    return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
   }
 
   // use_remote_gateways - computed: true, optional: true, required: false
   private _useRemoteGateways?: boolean;
   public get useRemoteGateways() {
-    return this._useRemoteGateways ?? this.getBooleanAttribute('use_remote_gateways');
+    return this.getBooleanAttribute('use_remote_gateways');
   }
-  public set useRemoteGateways(value: boolean | undefined) {
+  public set useRemoteGateways(value: boolean) {
     this._useRemoteGateways = value;
+  }
+  public resetUseRemoteGateways() {
+    this._useRemoteGateways = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get useRemoteGatewaysInput() {
+    return this._useRemoteGateways
   }
 
   // virtual_network_name - computed: false, optional: false, required: true
   private _virtualNetworkName: string;
   public get virtualNetworkName() {
-    return this._virtualNetworkName;
+    return this.getStringAttribute('virtual_network_name');
   }
   public set virtualNetworkName(value: string) {
     this._virtualNetworkName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get virtualNetworkNameInput() {
+    return this._virtualNetworkName
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: VirtualNetworkPeeringTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: VirtualNetworkPeeringTimeouts | undefined) {
+  public set timeouts(value: VirtualNetworkPeeringTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

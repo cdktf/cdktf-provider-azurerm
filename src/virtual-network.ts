@@ -74,91 +74,138 @@ export class VirtualNetwork extends TerraformResource {
   // address_space - computed: false, optional: false, required: true
   private _addressSpace: string[];
   public get addressSpace() {
-    return this._addressSpace;
+    return this.getListAttribute('address_space');
   }
   public set addressSpace(value: string[]) {
     this._addressSpace = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get addressSpaceInput() {
+    return this._addressSpace
   }
 
   // dns_servers - computed: false, optional: true, required: false
   private _dnsServers?: string[];
   public get dnsServers() {
-    return this._dnsServers;
+    return this.getListAttribute('dns_servers');
   }
-  public set dnsServers(value: string[] | undefined) {
+  public set dnsServers(value: string[] ) {
     this._dnsServers = value;
+  }
+  public resetDnsServers() {
+    this._dnsServers = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dnsServersInput() {
+    return this._dnsServers
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // location - computed: false, optional: false, required: true
   private _location: string;
   public get location() {
-    return this._location;
+    return this.getStringAttribute('location');
   }
   public set location(value: string) {
     this._location = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get locationInput() {
+    return this._location
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
-    return this._resourceGroupName;
+    return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
   }
 
   // tags - computed: false, optional: true, required: false
   private _tags?: { [key: string]: string };
   public get tags() {
-    return this._tags;
+    return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | undefined) {
+  public set tags(value: { [key: string]: string } ) {
     this._tags = value;
+  }
+  public resetTags() {
+    this._tags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsInput() {
+    return this._tags
   }
 
   // ddos_protection_plan - computed: false, optional: true, required: false
   private _ddosProtectionPlan?: VirtualNetworkDdosProtectionPlan[];
   public get ddosProtectionPlan() {
-    return this._ddosProtectionPlan;
+    return this.interpolationForAttribute('ddos_protection_plan') as any;
   }
-  public set ddosProtectionPlan(value: VirtualNetworkDdosProtectionPlan[] | undefined) {
+  public set ddosProtectionPlan(value: VirtualNetworkDdosProtectionPlan[] ) {
     this._ddosProtectionPlan = value;
+  }
+  public resetDdosProtectionPlan() {
+    this._ddosProtectionPlan = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ddosProtectionPlanInput() {
+    return this._ddosProtectionPlan
   }
 
   // subnet - computed: false, optional: true, required: false
   private _subnet?: VirtualNetworkSubnet[];
   public get subnet() {
-    return this._subnet;
+    return this.interpolationForAttribute('subnet') as any;
   }
-  public set subnet(value: VirtualNetworkSubnet[] | undefined) {
+  public set subnet(value: VirtualNetworkSubnet[] ) {
     this._subnet = value;
+  }
+  public resetSubnet() {
+    this._subnet = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get subnetInput() {
+    return this._subnet
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: VirtualNetworkTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: VirtualNetworkTimeouts | undefined) {
+  public set timeouts(value: VirtualNetworkTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

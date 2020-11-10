@@ -63,91 +63,129 @@ export class ApiManagementOpenidConnectProvider extends TerraformResource {
   // api_management_name - computed: false, optional: false, required: true
   private _apiManagementName: string;
   public get apiManagementName() {
-    return this._apiManagementName;
+    return this.getStringAttribute('api_management_name');
   }
   public set apiManagementName(value: string) {
     this._apiManagementName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get apiManagementNameInput() {
+    return this._apiManagementName
   }
 
   // client_id - computed: false, optional: false, required: true
   private _clientId: string;
   public get clientId() {
-    return this._clientId;
+    return this.getStringAttribute('client_id');
   }
   public set clientId(value: string) {
     this._clientId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get clientIdInput() {
+    return this._clientId
   }
 
   // client_secret - computed: false, optional: false, required: true
   private _clientSecret: string;
   public get clientSecret() {
-    return this._clientSecret;
+    return this.getStringAttribute('client_secret');
   }
   public set clientSecret(value: string) {
     this._clientSecret = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get clientSecretInput() {
+    return this._clientSecret
   }
 
   // description - computed: false, optional: true, required: false
   private _description?: string;
   public get description() {
-    return this._description;
+    return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string ) {
     this._description = value;
+  }
+  public resetDescription() {
+    this._description = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get descriptionInput() {
+    return this._description
   }
 
   // display_name - computed: false, optional: false, required: true
   private _displayName: string;
   public get displayName() {
-    return this._displayName;
+    return this.getStringAttribute('display_name');
   }
   public set displayName(value: string) {
     this._displayName = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get displayNameInput() {
+    return this._displayName
+  }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // metadata_endpoint - computed: false, optional: false, required: true
   private _metadataEndpoint: string;
   public get metadataEndpoint() {
-    return this._metadataEndpoint;
+    return this.getStringAttribute('metadata_endpoint');
   }
   public set metadataEndpoint(value: string) {
     this._metadataEndpoint = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get metadataEndpointInput() {
+    return this._metadataEndpoint
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
-    return this._resourceGroupName;
+    return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: ApiManagementOpenidConnectProviderTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: ApiManagementOpenidConnectProviderTimeouts | undefined) {
+  public set timeouts(value: ApiManagementOpenidConnectProviderTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

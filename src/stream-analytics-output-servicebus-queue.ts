@@ -68,93 +68,128 @@ export class StreamAnalyticsOutputServicebusQueue extends TerraformResource {
   // ==========
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // queue_name - computed: false, optional: false, required: true
   private _queueName: string;
   public get queueName() {
-    return this._queueName;
+    return this.getStringAttribute('queue_name');
   }
   public set queueName(value: string) {
     this._queueName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get queueNameInput() {
+    return this._queueName
   }
 
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
-    return this._resourceGroupName;
+    return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
   }
 
   // servicebus_namespace - computed: false, optional: false, required: true
   private _servicebusNamespace: string;
   public get servicebusNamespace() {
-    return this._servicebusNamespace;
+    return this.getStringAttribute('servicebus_namespace');
   }
   public set servicebusNamespace(value: string) {
     this._servicebusNamespace = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get servicebusNamespaceInput() {
+    return this._servicebusNamespace
   }
 
   // shared_access_policy_key - computed: false, optional: false, required: true
   private _sharedAccessPolicyKey: string;
   public get sharedAccessPolicyKey() {
-    return this._sharedAccessPolicyKey;
+    return this.getStringAttribute('shared_access_policy_key');
   }
   public set sharedAccessPolicyKey(value: string) {
     this._sharedAccessPolicyKey = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sharedAccessPolicyKeyInput() {
+    return this._sharedAccessPolicyKey
   }
 
   // shared_access_policy_name - computed: false, optional: false, required: true
   private _sharedAccessPolicyName: string;
   public get sharedAccessPolicyName() {
-    return this._sharedAccessPolicyName;
+    return this.getStringAttribute('shared_access_policy_name');
   }
   public set sharedAccessPolicyName(value: string) {
     this._sharedAccessPolicyName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sharedAccessPolicyNameInput() {
+    return this._sharedAccessPolicyName
   }
 
   // stream_analytics_job_name - computed: false, optional: false, required: true
   private _streamAnalyticsJobName: string;
   public get streamAnalyticsJobName() {
-    return this._streamAnalyticsJobName;
+    return this.getStringAttribute('stream_analytics_job_name');
   }
   public set streamAnalyticsJobName(value: string) {
     this._streamAnalyticsJobName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get streamAnalyticsJobNameInput() {
+    return this._streamAnalyticsJobName
   }
 
   // serialization - computed: false, optional: false, required: true
   private _serialization: StreamAnalyticsOutputServicebusQueueSerialization[];
   public get serialization() {
-    return this._serialization;
+    return this.interpolationForAttribute('serialization') as any;
   }
   public set serialization(value: StreamAnalyticsOutputServicebusQueueSerialization[]) {
     this._serialization = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get serializationInput() {
+    return this._serialization
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: StreamAnalyticsOutputServicebusQueueTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: StreamAnalyticsOutputServicebusQueueTimeouts | undefined) {
+  public set timeouts(value: StreamAnalyticsOutputServicebusQueueTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

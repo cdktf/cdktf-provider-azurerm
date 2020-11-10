@@ -91,127 +91,202 @@ export class MonitorMetricAlert extends TerraformResource {
   // auto_mitigate - computed: false, optional: true, required: false
   private _autoMitigate?: boolean;
   public get autoMitigate() {
-    return this._autoMitigate;
+    return this.getBooleanAttribute('auto_mitigate');
   }
-  public set autoMitigate(value: boolean | undefined) {
+  public set autoMitigate(value: boolean ) {
     this._autoMitigate = value;
+  }
+  public resetAutoMitigate() {
+    this._autoMitigate = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get autoMitigateInput() {
+    return this._autoMitigate
   }
 
   // description - computed: false, optional: true, required: false
   private _description?: string;
   public get description() {
-    return this._description;
+    return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string ) {
     this._description = value;
+  }
+  public resetDescription() {
+    this._description = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get descriptionInput() {
+    return this._description
   }
 
   // enabled - computed: false, optional: true, required: false
   private _enabled?: boolean;
   public get enabled() {
-    return this._enabled;
+    return this.getBooleanAttribute('enabled');
   }
-  public set enabled(value: boolean | undefined) {
+  public set enabled(value: boolean ) {
     this._enabled = value;
+  }
+  public resetEnabled() {
+    this._enabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enabledInput() {
+    return this._enabled
   }
 
   // frequency - computed: false, optional: true, required: false
   private _frequency?: string;
   public get frequency() {
-    return this._frequency;
+    return this.getStringAttribute('frequency');
   }
-  public set frequency(value: string | undefined) {
+  public set frequency(value: string ) {
     this._frequency = value;
+  }
+  public resetFrequency() {
+    this._frequency = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get frequencyInput() {
+    return this._frequency
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
-    return this._resourceGroupName;
+    return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
   }
 
   // scopes - computed: false, optional: false, required: true
   private _scopes: string[];
   public get scopes() {
-    return this._scopes;
+    return this.getListAttribute('scopes');
   }
   public set scopes(value: string[]) {
     this._scopes = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get scopesInput() {
+    return this._scopes
   }
 
   // severity - computed: false, optional: true, required: false
   private _severity?: number;
   public get severity() {
-    return this._severity;
+    return this.getNumberAttribute('severity');
   }
-  public set severity(value: number | undefined) {
+  public set severity(value: number ) {
     this._severity = value;
+  }
+  public resetSeverity() {
+    this._severity = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get severityInput() {
+    return this._severity
   }
 
   // tags - computed: false, optional: true, required: false
   private _tags?: { [key: string]: string };
   public get tags() {
-    return this._tags;
+    return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | undefined) {
+  public set tags(value: { [key: string]: string } ) {
     this._tags = value;
+  }
+  public resetTags() {
+    this._tags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsInput() {
+    return this._tags
   }
 
   // window_size - computed: false, optional: true, required: false
   private _windowSize?: string;
   public get windowSize() {
-    return this._windowSize;
+    return this.getStringAttribute('window_size');
   }
-  public set windowSize(value: string | undefined) {
+  public set windowSize(value: string ) {
     this._windowSize = value;
+  }
+  public resetWindowSize() {
+    this._windowSize = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get windowSizeInput() {
+    return this._windowSize
   }
 
   // action - computed: false, optional: true, required: false
   private _action?: MonitorMetricAlertAction[];
   public get action() {
-    return this._action;
+    return this.interpolationForAttribute('action') as any;
   }
-  public set action(value: MonitorMetricAlertAction[] | undefined) {
+  public set action(value: MonitorMetricAlertAction[] ) {
     this._action = value;
+  }
+  public resetAction() {
+    this._action = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get actionInput() {
+    return this._action
   }
 
   // criteria - computed: false, optional: false, required: true
   private _criteria: MonitorMetricAlertCriteria[];
   public get criteria() {
-    return this._criteria;
+    return this.interpolationForAttribute('criteria') as any;
   }
   public set criteria(value: MonitorMetricAlertCriteria[]) {
     this._criteria = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get criteriaInput() {
+    return this._criteria
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: MonitorMetricAlertTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: MonitorMetricAlertTimeouts | undefined) {
+  public set timeouts(value: MonitorMetricAlertTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

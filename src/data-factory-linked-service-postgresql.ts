@@ -65,100 +65,154 @@ export class DataFactoryLinkedServicePostgresql extends TerraformResource {
   // additional_properties - computed: false, optional: true, required: false
   private _additionalProperties?: { [key: string]: string };
   public get additionalProperties() {
-    return this._additionalProperties;
+    return this.interpolationForAttribute('additional_properties') as any;
   }
-  public set additionalProperties(value: { [key: string]: string } | undefined) {
+  public set additionalProperties(value: { [key: string]: string } ) {
     this._additionalProperties = value;
+  }
+  public resetAdditionalProperties() {
+    this._additionalProperties = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get additionalPropertiesInput() {
+    return this._additionalProperties
   }
 
   // annotations - computed: false, optional: true, required: false
   private _annotations?: string[];
   public get annotations() {
-    return this._annotations;
+    return this.getListAttribute('annotations');
   }
-  public set annotations(value: string[] | undefined) {
+  public set annotations(value: string[] ) {
     this._annotations = value;
+  }
+  public resetAnnotations() {
+    this._annotations = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get annotationsInput() {
+    return this._annotations
   }
 
   // connection_string - computed: false, optional: false, required: true
   private _connectionString: string;
   public get connectionString() {
-    return this._connectionString;
+    return this.getStringAttribute('connection_string');
   }
   public set connectionString(value: string) {
     this._connectionString = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get connectionStringInput() {
+    return this._connectionString
   }
 
   // data_factory_name - computed: false, optional: false, required: true
   private _dataFactoryName: string;
   public get dataFactoryName() {
-    return this._dataFactoryName;
+    return this.getStringAttribute('data_factory_name');
   }
   public set dataFactoryName(value: string) {
     this._dataFactoryName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dataFactoryNameInput() {
+    return this._dataFactoryName
   }
 
   // description - computed: false, optional: true, required: false
   private _description?: string;
   public get description() {
-    return this._description;
+    return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string ) {
     this._description = value;
+  }
+  public resetDescription() {
+    this._description = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get descriptionInput() {
+    return this._description
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // integration_runtime_name - computed: false, optional: true, required: false
   private _integrationRuntimeName?: string;
   public get integrationRuntimeName() {
-    return this._integrationRuntimeName;
+    return this.getStringAttribute('integration_runtime_name');
   }
-  public set integrationRuntimeName(value: string | undefined) {
+  public set integrationRuntimeName(value: string ) {
     this._integrationRuntimeName = value;
+  }
+  public resetIntegrationRuntimeName() {
+    this._integrationRuntimeName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get integrationRuntimeNameInput() {
+    return this._integrationRuntimeName
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // parameters - computed: false, optional: true, required: false
   private _parameters?: { [key: string]: string };
   public get parameters() {
-    return this._parameters;
+    return this.interpolationForAttribute('parameters') as any;
   }
-  public set parameters(value: { [key: string]: string } | undefined) {
+  public set parameters(value: { [key: string]: string } ) {
     this._parameters = value;
+  }
+  public resetParameters() {
+    this._parameters = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get parametersInput() {
+    return this._parameters
   }
 
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
-    return this._resourceGroupName;
+    return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: DataFactoryLinkedServicePostgresqlTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: DataFactoryLinkedServicePostgresqlTimeouts | undefined) {
+  public set timeouts(value: DataFactoryLinkedServicePostgresqlTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

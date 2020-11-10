@@ -40,64 +40,64 @@ export interface KubernetesClusterConfig extends TerraformMetaArguments {
 }
 export class KubernetesClusterKubeAdminConfig extends ComplexComputedList {
 
-  // client_certificate - computed: true, optional: false, required: true
+  // client_certificate - computed: true, optional: false, required: false
   public get clientCertificate() {
     return this.getStringAttribute('client_certificate');
   }
 
-  // client_key - computed: true, optional: false, required: true
+  // client_key - computed: true, optional: false, required: false
   public get clientKey() {
     return this.getStringAttribute('client_key');
   }
 
-  // cluster_ca_certificate - computed: true, optional: false, required: true
+  // cluster_ca_certificate - computed: true, optional: false, required: false
   public get clusterCaCertificate() {
     return this.getStringAttribute('cluster_ca_certificate');
   }
 
-  // host - computed: true, optional: false, required: true
+  // host - computed: true, optional: false, required: false
   public get host() {
     return this.getStringAttribute('host');
   }
 
-  // password - computed: true, optional: false, required: true
+  // password - computed: true, optional: false, required: false
   public get password() {
     return this.getStringAttribute('password');
   }
 
-  // username - computed: true, optional: false, required: true
+  // username - computed: true, optional: false, required: false
   public get username() {
     return this.getStringAttribute('username');
   }
 }
 export class KubernetesClusterKubeConfig extends ComplexComputedList {
 
-  // client_certificate - computed: true, optional: false, required: true
+  // client_certificate - computed: true, optional: false, required: false
   public get clientCertificate() {
     return this.getStringAttribute('client_certificate');
   }
 
-  // client_key - computed: true, optional: false, required: true
+  // client_key - computed: true, optional: false, required: false
   public get clientKey() {
     return this.getStringAttribute('client_key');
   }
 
-  // cluster_ca_certificate - computed: true, optional: false, required: true
+  // cluster_ca_certificate - computed: true, optional: false, required: false
   public get clusterCaCertificate() {
     return this.getStringAttribute('cluster_ca_certificate');
   }
 
-  // host - computed: true, optional: false, required: true
+  // host - computed: true, optional: false, required: false
   public get host() {
     return this.getStringAttribute('host');
   }
 
-  // password - computed: true, optional: false, required: true
+  // password - computed: true, optional: false, required: false
   public get password() {
     return this.getStringAttribute('password');
   }
 
-  // username - computed: true, optional: false, required: true
+  // username - computed: true, optional: false, required: false
   public get username() {
     return this.getStringAttribute('username');
   }
@@ -246,60 +246,74 @@ export class KubernetesCluster extends TerraformResource {
   // api_server_authorized_ip_ranges - computed: false, optional: true, required: false
   private _apiServerAuthorizedIpRanges?: string[];
   public get apiServerAuthorizedIpRanges() {
-    return this._apiServerAuthorizedIpRanges;
+    return this.getListAttribute('api_server_authorized_ip_ranges');
   }
-  public set apiServerAuthorizedIpRanges(value: string[] | undefined) {
+  public set apiServerAuthorizedIpRanges(value: string[] ) {
     this._apiServerAuthorizedIpRanges = value;
+  }
+  public resetApiServerAuthorizedIpRanges() {
+    this._apiServerAuthorizedIpRanges = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get apiServerAuthorizedIpRangesInput() {
+    return this._apiServerAuthorizedIpRanges
   }
 
   // dns_prefix - computed: false, optional: false, required: true
   private _dnsPrefix: string;
   public get dnsPrefix() {
-    return this._dnsPrefix;
+    return this.getStringAttribute('dns_prefix');
   }
   public set dnsPrefix(value: string) {
     this._dnsPrefix = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dnsPrefixInput() {
+    return this._dnsPrefix
   }
 
   // enable_pod_security_policy - computed: false, optional: true, required: false
   private _enablePodSecurityPolicy?: boolean;
   public get enablePodSecurityPolicy() {
-    return this._enablePodSecurityPolicy;
+    return this.getBooleanAttribute('enable_pod_security_policy');
   }
-  public set enablePodSecurityPolicy(value: boolean | undefined) {
+  public set enablePodSecurityPolicy(value: boolean ) {
     this._enablePodSecurityPolicy = value;
   }
+  public resetEnablePodSecurityPolicy() {
+    this._enablePodSecurityPolicy = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enablePodSecurityPolicyInput() {
+    return this._enablePodSecurityPolicy
+  }
 
-  // fqdn - computed: true, optional: false, required: true
+  // fqdn - computed: true, optional: false, required: false
   public get fqdn() {
     return this.getStringAttribute('fqdn');
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
-  // kube_admin_config - computed: true, optional: false, required: true
+  // kube_admin_config - computed: true, optional: false, required: false
   public kubeAdminConfig(index: string) {
     return new KubernetesClusterKubeAdminConfig(this, 'kube_admin_config', index);
   }
 
-  // kube_admin_config_raw - computed: true, optional: false, required: true
+  // kube_admin_config_raw - computed: true, optional: false, required: false
   public get kubeAdminConfigRaw() {
     return this.getStringAttribute('kube_admin_config_raw');
   }
 
-  // kube_config - computed: true, optional: false, required: true
+  // kube_config - computed: true, optional: false, required: false
   public kubeConfig(index: string) {
     return new KubernetesClusterKubeConfig(this, 'kube_config', index);
   }
 
-  // kube_config_raw - computed: true, optional: false, required: true
+  // kube_config_raw - computed: true, optional: false, required: false
   public get kubeConfigRaw() {
     return this.getStringAttribute('kube_config_raw');
   }
@@ -307,40 +321,62 @@ export class KubernetesCluster extends TerraformResource {
   // kubernetes_version - computed: true, optional: true, required: false
   private _kubernetesVersion?: string;
   public get kubernetesVersion() {
-    return this._kubernetesVersion ?? this.getStringAttribute('kubernetes_version');
+    return this.getStringAttribute('kubernetes_version');
   }
-  public set kubernetesVersion(value: string | undefined) {
+  public set kubernetesVersion(value: string) {
     this._kubernetesVersion = value;
+  }
+  public resetKubernetesVersion() {
+    this._kubernetesVersion = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get kubernetesVersionInput() {
+    return this._kubernetesVersion
   }
 
   // location - computed: false, optional: false, required: true
   private _location: string;
   public get location() {
-    return this._location;
+    return this.getStringAttribute('location');
   }
   public set location(value: string) {
     this._location = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get locationInput() {
+    return this._location
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // node_resource_group - computed: true, optional: true, required: false
   private _nodeResourceGroup?: string;
   public get nodeResourceGroup() {
-    return this._nodeResourceGroup ?? this.getStringAttribute('node_resource_group');
+    return this.getStringAttribute('node_resource_group');
   }
-  public set nodeResourceGroup(value: string | undefined) {
+  public set nodeResourceGroup(value: string) {
     this._nodeResourceGroup = value;
   }
+  public resetNodeResourceGroup() {
+    this._nodeResourceGroup = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nodeResourceGroupInput() {
+    return this._nodeResourceGroup
+  }
 
-  // private_fqdn - computed: true, optional: false, required: true
+  // private_fqdn - computed: true, optional: false, required: false
   public get privateFqdn() {
     return this.getStringAttribute('private_fqdn');
   }
@@ -348,109 +384,184 @@ export class KubernetesCluster extends TerraformResource {
   // private_link_enabled - computed: false, optional: true, required: false
   private _privateLinkEnabled?: boolean;
   public get privateLinkEnabled() {
-    return this._privateLinkEnabled;
+    return this.getBooleanAttribute('private_link_enabled');
   }
-  public set privateLinkEnabled(value: boolean | undefined) {
+  public set privateLinkEnabled(value: boolean ) {
     this._privateLinkEnabled = value;
+  }
+  public resetPrivateLinkEnabled() {
+    this._privateLinkEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get privateLinkEnabledInput() {
+    return this._privateLinkEnabled
   }
 
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
-    return this._resourceGroupName;
+    return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
   }
 
   // tags - computed: false, optional: true, required: false
   private _tags?: { [key: string]: string };
   public get tags() {
-    return this._tags;
+    return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | undefined) {
+  public set tags(value: { [key: string]: string } ) {
     this._tags = value;
+  }
+  public resetTags() {
+    this._tags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsInput() {
+    return this._tags
   }
 
   // addon_profile - computed: false, optional: true, required: false
   private _addonProfile?: KubernetesClusterAddonProfile[];
   public get addonProfile() {
-    return this._addonProfile;
+    return this.interpolationForAttribute('addon_profile') as any;
   }
-  public set addonProfile(value: KubernetesClusterAddonProfile[] | undefined) {
+  public set addonProfile(value: KubernetesClusterAddonProfile[] ) {
     this._addonProfile = value;
+  }
+  public resetAddonProfile() {
+    this._addonProfile = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get addonProfileInput() {
+    return this._addonProfile
   }
 
   // default_node_pool - computed: false, optional: false, required: true
   private _defaultNodePool: KubernetesClusterDefaultNodePool[];
   public get defaultNodePool() {
-    return this._defaultNodePool;
+    return this.interpolationForAttribute('default_node_pool') as any;
   }
   public set defaultNodePool(value: KubernetesClusterDefaultNodePool[]) {
     this._defaultNodePool = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get defaultNodePoolInput() {
+    return this._defaultNodePool
   }
 
   // identity - computed: false, optional: true, required: false
   private _identity?: KubernetesClusterIdentity[];
   public get identity() {
-    return this._identity;
+    return this.interpolationForAttribute('identity') as any;
   }
-  public set identity(value: KubernetesClusterIdentity[] | undefined) {
+  public set identity(value: KubernetesClusterIdentity[] ) {
     this._identity = value;
+  }
+  public resetIdentity() {
+    this._identity = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get identityInput() {
+    return this._identity
   }
 
   // linux_profile - computed: false, optional: true, required: false
   private _linuxProfile?: KubernetesClusterLinuxProfile[];
   public get linuxProfile() {
-    return this._linuxProfile;
+    return this.interpolationForAttribute('linux_profile') as any;
   }
-  public set linuxProfile(value: KubernetesClusterLinuxProfile[] | undefined) {
+  public set linuxProfile(value: KubernetesClusterLinuxProfile[] ) {
     this._linuxProfile = value;
+  }
+  public resetLinuxProfile() {
+    this._linuxProfile = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get linuxProfileInput() {
+    return this._linuxProfile
   }
 
   // network_profile - computed: false, optional: true, required: false
   private _networkProfile?: KubernetesClusterNetworkProfile[];
   public get networkProfile() {
-    return this._networkProfile;
+    return this.interpolationForAttribute('network_profile') as any;
   }
-  public set networkProfile(value: KubernetesClusterNetworkProfile[] | undefined) {
+  public set networkProfile(value: KubernetesClusterNetworkProfile[] ) {
     this._networkProfile = value;
+  }
+  public resetNetworkProfile() {
+    this._networkProfile = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get networkProfileInput() {
+    return this._networkProfile
   }
 
   // role_based_access_control - computed: false, optional: true, required: false
   private _roleBasedAccessControl?: KubernetesClusterRoleBasedAccessControl[];
   public get roleBasedAccessControl() {
-    return this._roleBasedAccessControl;
+    return this.interpolationForAttribute('role_based_access_control') as any;
   }
-  public set roleBasedAccessControl(value: KubernetesClusterRoleBasedAccessControl[] | undefined) {
+  public set roleBasedAccessControl(value: KubernetesClusterRoleBasedAccessControl[] ) {
     this._roleBasedAccessControl = value;
+  }
+  public resetRoleBasedAccessControl() {
+    this._roleBasedAccessControl = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get roleBasedAccessControlInput() {
+    return this._roleBasedAccessControl
   }
 
   // service_principal - computed: false, optional: false, required: true
   private _servicePrincipal: KubernetesClusterServicePrincipal[];
   public get servicePrincipal() {
-    return this._servicePrincipal;
+    return this.interpolationForAttribute('service_principal') as any;
   }
   public set servicePrincipal(value: KubernetesClusterServicePrincipal[]) {
     this._servicePrincipal = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get servicePrincipalInput() {
+    return this._servicePrincipal
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: KubernetesClusterTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: KubernetesClusterTimeouts | undefined) {
+  public set timeouts(value: KubernetesClusterTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // windows_profile - computed: false, optional: true, required: false
   private _windowsProfile?: KubernetesClusterWindowsProfile[];
   public get windowsProfile() {
-    return this._windowsProfile;
+    return this.interpolationForAttribute('windows_profile') as any;
   }
-  public set windowsProfile(value: KubernetesClusterWindowsProfile[] | undefined) {
+  public set windowsProfile(value: KubernetesClusterWindowsProfile[] ) {
     this._windowsProfile = value;
+  }
+  public resetWindowsProfile() {
+    this._windowsProfile = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get windowsProfileInput() {
+    return this._windowsProfile
   }
 
   // =========

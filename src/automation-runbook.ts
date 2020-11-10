@@ -80,118 +80,174 @@ export class AutomationRunbook extends TerraformResource {
   // automation_account_name - computed: false, optional: false, required: true
   private _automationAccountName: string;
   public get automationAccountName() {
-    return this._automationAccountName;
+    return this.getStringAttribute('automation_account_name');
   }
   public set automationAccountName(value: string) {
     this._automationAccountName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get automationAccountNameInput() {
+    return this._automationAccountName
   }
 
   // content - computed: true, optional: true, required: false
   private _content?: string;
   public get content() {
-    return this._content ?? this.getStringAttribute('content');
+    return this.getStringAttribute('content');
   }
-  public set content(value: string | undefined) {
+  public set content(value: string) {
     this._content = value;
+  }
+  public resetContent() {
+    this._content = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get contentInput() {
+    return this._content
   }
 
   // description - computed: false, optional: true, required: false
   private _description?: string;
   public get description() {
-    return this._description;
+    return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string ) {
     this._description = value;
+  }
+  public resetDescription() {
+    this._description = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get descriptionInput() {
+    return this._description
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // location - computed: false, optional: false, required: true
   private _location: string;
   public get location() {
-    return this._location;
+    return this.getStringAttribute('location');
   }
   public set location(value: string) {
     this._location = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get locationInput() {
+    return this._location
   }
 
   // log_progress - computed: false, optional: false, required: true
   private _logProgress: boolean;
   public get logProgress() {
-    return this._logProgress;
+    return this.getBooleanAttribute('log_progress');
   }
   public set logProgress(value: boolean) {
     this._logProgress = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get logProgressInput() {
+    return this._logProgress
   }
 
   // log_verbose - computed: false, optional: false, required: true
   private _logVerbose: boolean;
   public get logVerbose() {
-    return this._logVerbose;
+    return this.getBooleanAttribute('log_verbose');
   }
   public set logVerbose(value: boolean) {
     this._logVerbose = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get logVerboseInput() {
+    return this._logVerbose
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
-    return this._resourceGroupName;
+    return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
   }
 
   // runbook_type - computed: false, optional: false, required: true
   private _runbookType: string;
   public get runbookType() {
-    return this._runbookType;
+    return this.getStringAttribute('runbook_type');
   }
   public set runbookType(value: string) {
     this._runbookType = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get runbookTypeInput() {
+    return this._runbookType
   }
 
   // tags - computed: false, optional: true, required: false
   private _tags?: { [key: string]: string };
   public get tags() {
-    return this._tags;
+    return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | undefined) {
+  public set tags(value: { [key: string]: string } ) {
     this._tags = value;
+  }
+  public resetTags() {
+    this._tags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsInput() {
+    return this._tags
   }
 
   // publish_content_link - computed: false, optional: false, required: true
   private _publishContentLink: AutomationRunbookPublishContentLink[];
   public get publishContentLink() {
-    return this._publishContentLink;
+    return this.interpolationForAttribute('publish_content_link') as any;
   }
   public set publishContentLink(value: AutomationRunbookPublishContentLink[]) {
     this._publishContentLink = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get publishContentLinkInput() {
+    return this._publishContentLink
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: AutomationRunbookTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: AutomationRunbookTimeouts | undefined) {
+  public set timeouts(value: AutomationRunbookTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

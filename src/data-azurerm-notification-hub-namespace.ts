@@ -16,7 +16,7 @@ export interface DataAzurermNotificationHubNamespaceConfig extends TerraformMeta
 }
 export class DataAzurermNotificationHubNamespaceSku extends ComplexComputedList {
 
-  // name - computed: true, optional: false, required: true
+  // name - computed: true, optional: false, required: false
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -53,21 +53,17 @@ export class DataAzurermNotificationHubNamespace extends TerraformDataSource {
   // ATTRIBUTES
   // ==========
 
-  // enabled - computed: true, optional: false, required: true
+  // enabled - computed: true, optional: false, required: false
   public get enabled() {
     return this.getBooleanAttribute('enabled');
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
-  // location - computed: true, optional: false, required: true
+  // location - computed: true, optional: false, required: false
   public get location() {
     return this.getStringAttribute('location');
   }
@@ -75,13 +71,17 @@ export class DataAzurermNotificationHubNamespace extends TerraformDataSource {
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
+  }
 
-  // namespace_type - computed: true, optional: false, required: true
+  // namespace_type - computed: true, optional: false, required: false
   public get namespaceType() {
     return this.getStringAttribute('namespace_type');
   }
@@ -89,18 +89,22 @@ export class DataAzurermNotificationHubNamespace extends TerraformDataSource {
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
-    return this._resourceGroupName;
+    return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
+  }
 
-  // servicebus_endpoint - computed: true, optional: false, required: true
+  // servicebus_endpoint - computed: true, optional: false, required: false
   public get servicebusEndpoint() {
     return this.getStringAttribute('servicebus_endpoint');
   }
 
-  // sku - computed: true, optional: false, required: true
+  // sku - computed: true, optional: false, required: false
   public sku(index: string) {
     return new DataAzurermNotificationHubNamespaceSku(this, 'sku', index);
   }
@@ -108,10 +112,17 @@ export class DataAzurermNotificationHubNamespace extends TerraformDataSource {
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: DataAzurermNotificationHubNamespaceTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: DataAzurermNotificationHubNamespaceTimeouts | undefined) {
+  public set timeouts(value: DataAzurermNotificationHubNamespaceTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

@@ -106,27 +106,41 @@ export class SqlDatabase extends TerraformResource {
   // collation - computed: true, optional: true, required: false
   private _collation?: string;
   public get collation() {
-    return this._collation ?? this.getStringAttribute('collation');
+    return this.getStringAttribute('collation');
   }
-  public set collation(value: string | undefined) {
+  public set collation(value: string) {
     this._collation = value;
+  }
+  public resetCollation() {
+    this._collation = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get collationInput() {
+    return this._collation
   }
 
   // create_mode - computed: false, optional: true, required: false
   private _createMode?: string;
   public get createMode() {
-    return this._createMode;
+    return this.getStringAttribute('create_mode');
   }
-  public set createMode(value: string | undefined) {
+  public set createMode(value: string ) {
     this._createMode = value;
   }
+  public resetCreateMode() {
+    this._createMode = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createModeInput() {
+    return this._createMode
+  }
 
-  // creation_date - computed: true, optional: false, required: true
+  // creation_date - computed: true, optional: false, required: false
   public get creationDate() {
     return this.getStringAttribute('creation_date');
   }
 
-  // default_secondary_location - computed: true, optional: false, required: true
+  // default_secondary_location - computed: true, optional: false, required: false
   public get defaultSecondaryLocation() {
     return this.getStringAttribute('default_secondary_location');
   }
@@ -134,177 +148,287 @@ export class SqlDatabase extends TerraformResource {
   // edition - computed: true, optional: true, required: false
   private _edition?: string;
   public get edition() {
-    return this._edition ?? this.getStringAttribute('edition');
+    return this.getStringAttribute('edition');
   }
-  public set edition(value: string | undefined) {
+  public set edition(value: string) {
     this._edition = value;
+  }
+  public resetEdition() {
+    this._edition = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get editionInput() {
+    return this._edition
   }
 
   // elastic_pool_name - computed: true, optional: true, required: false
   private _elasticPoolName?: string;
   public get elasticPoolName() {
-    return this._elasticPoolName ?? this.getStringAttribute('elastic_pool_name');
+    return this.getStringAttribute('elastic_pool_name');
   }
-  public set elasticPoolName(value: string | undefined) {
+  public set elasticPoolName(value: string) {
     this._elasticPoolName = value;
   }
+  public resetElasticPoolName() {
+    this._elasticPoolName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get elasticPoolNameInput() {
+    return this._elasticPoolName
+  }
 
-  // encryption - computed: true, optional: false, required: true
+  // encryption - computed: true, optional: false, required: false
   public get encryption() {
     return this.getStringAttribute('encryption');
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // location - computed: false, optional: false, required: true
   private _location: string;
   public get location() {
-    return this._location;
+    return this.getStringAttribute('location');
   }
   public set location(value: string) {
     this._location = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get locationInput() {
+    return this._location
   }
 
   // max_size_bytes - computed: true, optional: true, required: false
   private _maxSizeBytes?: string;
   public get maxSizeBytes() {
-    return this._maxSizeBytes ?? this.getStringAttribute('max_size_bytes');
+    return this.getStringAttribute('max_size_bytes');
   }
-  public set maxSizeBytes(value: string | undefined) {
+  public set maxSizeBytes(value: string) {
     this._maxSizeBytes = value;
+  }
+  public resetMaxSizeBytes() {
+    this._maxSizeBytes = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get maxSizeBytesInput() {
+    return this._maxSizeBytes
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // read_scale - computed: false, optional: true, required: false
   private _readScale?: boolean;
   public get readScale() {
-    return this._readScale;
+    return this.getBooleanAttribute('read_scale');
   }
-  public set readScale(value: boolean | undefined) {
+  public set readScale(value: boolean ) {
     this._readScale = value;
+  }
+  public resetReadScale() {
+    this._readScale = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readScaleInput() {
+    return this._readScale
   }
 
   // requested_service_objective_id - computed: true, optional: true, required: false
   private _requestedServiceObjectiveId?: string;
   public get requestedServiceObjectiveId() {
-    return this._requestedServiceObjectiveId ?? this.getStringAttribute('requested_service_objective_id');
+    return this.getStringAttribute('requested_service_objective_id');
   }
-  public set requestedServiceObjectiveId(value: string | undefined) {
+  public set requestedServiceObjectiveId(value: string) {
     this._requestedServiceObjectiveId = value;
+  }
+  public resetRequestedServiceObjectiveId() {
+    this._requestedServiceObjectiveId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get requestedServiceObjectiveIdInput() {
+    return this._requestedServiceObjectiveId
   }
 
   // requested_service_objective_name - computed: true, optional: true, required: false
   private _requestedServiceObjectiveName?: string;
   public get requestedServiceObjectiveName() {
-    return this._requestedServiceObjectiveName ?? this.getStringAttribute('requested_service_objective_name');
+    return this.getStringAttribute('requested_service_objective_name');
   }
-  public set requestedServiceObjectiveName(value: string | undefined) {
+  public set requestedServiceObjectiveName(value: string) {
     this._requestedServiceObjectiveName = value;
+  }
+  public resetRequestedServiceObjectiveName() {
+    this._requestedServiceObjectiveName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get requestedServiceObjectiveNameInput() {
+    return this._requestedServiceObjectiveName
   }
 
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
-    return this._resourceGroupName;
+    return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
   }
 
   // restore_point_in_time - computed: true, optional: true, required: false
   private _restorePointInTime?: string;
   public get restorePointInTime() {
-    return this._restorePointInTime ?? this.getStringAttribute('restore_point_in_time');
+    return this.getStringAttribute('restore_point_in_time');
   }
-  public set restorePointInTime(value: string | undefined) {
+  public set restorePointInTime(value: string) {
     this._restorePointInTime = value;
+  }
+  public resetRestorePointInTime() {
+    this._restorePointInTime = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get restorePointInTimeInput() {
+    return this._restorePointInTime
   }
 
   // server_name - computed: false, optional: false, required: true
   private _serverName: string;
   public get serverName() {
-    return this._serverName;
+    return this.getStringAttribute('server_name');
   }
   public set serverName(value: string) {
     this._serverName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get serverNameInput() {
+    return this._serverName
   }
 
   // source_database_deletion_date - computed: true, optional: true, required: false
   private _sourceDatabaseDeletionDate?: string;
   public get sourceDatabaseDeletionDate() {
-    return this._sourceDatabaseDeletionDate ?? this.getStringAttribute('source_database_deletion_date');
+    return this.getStringAttribute('source_database_deletion_date');
   }
-  public set sourceDatabaseDeletionDate(value: string | undefined) {
+  public set sourceDatabaseDeletionDate(value: string) {
     this._sourceDatabaseDeletionDate = value;
+  }
+  public resetSourceDatabaseDeletionDate() {
+    this._sourceDatabaseDeletionDate = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sourceDatabaseDeletionDateInput() {
+    return this._sourceDatabaseDeletionDate
   }
 
   // source_database_id - computed: true, optional: true, required: false
   private _sourceDatabaseId?: string;
   public get sourceDatabaseId() {
-    return this._sourceDatabaseId ?? this.getStringAttribute('source_database_id');
+    return this.getStringAttribute('source_database_id');
   }
-  public set sourceDatabaseId(value: string | undefined) {
+  public set sourceDatabaseId(value: string) {
     this._sourceDatabaseId = value;
+  }
+  public resetSourceDatabaseId() {
+    this._sourceDatabaseId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sourceDatabaseIdInput() {
+    return this._sourceDatabaseId
   }
 
   // tags - computed: false, optional: true, required: false
   private _tags?: { [key: string]: string };
   public get tags() {
-    return this._tags;
+    return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | undefined) {
+  public set tags(value: { [key: string]: string } ) {
     this._tags = value;
+  }
+  public resetTags() {
+    this._tags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsInput() {
+    return this._tags
   }
 
   // zone_redundant - computed: false, optional: true, required: false
   private _zoneRedundant?: boolean;
   public get zoneRedundant() {
-    return this._zoneRedundant;
+    return this.getBooleanAttribute('zone_redundant');
   }
-  public set zoneRedundant(value: boolean | undefined) {
+  public set zoneRedundant(value: boolean ) {
     this._zoneRedundant = value;
+  }
+  public resetZoneRedundant() {
+    this._zoneRedundant = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get zoneRedundantInput() {
+    return this._zoneRedundant
   }
 
   // import - computed: false, optional: true, required: false
   private _import?: SqlDatabaseImport[];
   public get import() {
-    return this._import;
+    return this.interpolationForAttribute('import') as any;
   }
-  public set import(value: SqlDatabaseImport[] | undefined) {
+  public set import(value: SqlDatabaseImport[] ) {
     this._import = value;
+  }
+  public resetImport() {
+    this._import = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get importInput() {
+    return this._import
   }
 
   // threat_detection_policy - computed: false, optional: true, required: false
   private _threatDetectionPolicy?: SqlDatabaseThreatDetectionPolicy[];
   public get threatDetectionPolicy() {
-    return this._threatDetectionPolicy;
+    return this.interpolationForAttribute('threat_detection_policy') as any;
   }
-  public set threatDetectionPolicy(value: SqlDatabaseThreatDetectionPolicy[] | undefined) {
+  public set threatDetectionPolicy(value: SqlDatabaseThreatDetectionPolicy[] ) {
     this._threatDetectionPolicy = value;
+  }
+  public resetThreatDetectionPolicy() {
+    this._threatDetectionPolicy = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get threatDetectionPolicyInput() {
+    return this._threatDetectionPolicy
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: SqlDatabaseTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: SqlDatabaseTimeouts | undefined) {
+  public set timeouts(value: SqlDatabaseTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

@@ -57,56 +57,74 @@ export class EventhubNamespaceAuthorizationRule extends TerraformResource {
   // ==========
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // listen - computed: false, optional: true, required: false
   private _listen?: boolean;
   public get listen() {
-    return this._listen;
+    return this.getBooleanAttribute('listen');
   }
-  public set listen(value: boolean | undefined) {
+  public set listen(value: boolean ) {
     this._listen = value;
+  }
+  public resetListen() {
+    this._listen = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get listenInput() {
+    return this._listen
   }
 
   // manage - computed: false, optional: true, required: false
   private _manage?: boolean;
   public get manage() {
-    return this._manage;
+    return this.getBooleanAttribute('manage');
   }
-  public set manage(value: boolean | undefined) {
+  public set manage(value: boolean ) {
     this._manage = value;
+  }
+  public resetManage() {
+    this._manage = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get manageInput() {
+    return this._manage
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // namespace_name - computed: false, optional: false, required: true
   private _namespaceName: string;
   public get namespaceName() {
-    return this._namespaceName;
+    return this.getStringAttribute('namespace_name');
   }
   public set namespaceName(value: string) {
     this._namespaceName = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get namespaceNameInput() {
+    return this._namespaceName
+  }
 
-  // primary_connection_string - computed: true, optional: false, required: true
+  // primary_connection_string - computed: true, optional: false, required: false
   public get primaryConnectionString() {
     return this.getStringAttribute('primary_connection_string');
   }
 
-  // primary_key - computed: true, optional: false, required: true
+  // primary_key - computed: true, optional: false, required: false
   public get primaryKey() {
     return this.getStringAttribute('primary_key');
   }
@@ -114,18 +132,22 @@ export class EventhubNamespaceAuthorizationRule extends TerraformResource {
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
-    return this._resourceGroupName;
+    return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
+  }
 
-  // secondary_connection_string - computed: true, optional: false, required: true
+  // secondary_connection_string - computed: true, optional: false, required: false
   public get secondaryConnectionString() {
     return this.getStringAttribute('secondary_connection_string');
   }
 
-  // secondary_key - computed: true, optional: false, required: true
+  // secondary_key - computed: true, optional: false, required: false
   public get secondaryKey() {
     return this.getStringAttribute('secondary_key');
   }
@@ -133,19 +155,33 @@ export class EventhubNamespaceAuthorizationRule extends TerraformResource {
   // send - computed: false, optional: true, required: false
   private _send?: boolean;
   public get send() {
-    return this._send;
+    return this.getBooleanAttribute('send');
   }
-  public set send(value: boolean | undefined) {
+  public set send(value: boolean ) {
     this._send = value;
+  }
+  public resetSend() {
+    this._send = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sendInput() {
+    return this._send
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: EventhubNamespaceAuthorizationRuleTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: EventhubNamespaceAuthorizationRuleTimeouts | undefined) {
+  public set timeouts(value: EventhubNamespaceAuthorizationRuleTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

@@ -55,66 +55,89 @@ export class SqlActiveDirectoryAdministrator extends TerraformResource {
   // ==========
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // login - computed: false, optional: false, required: true
   private _login: string;
   public get login() {
-    return this._login;
+    return this.getStringAttribute('login');
   }
   public set login(value: string) {
     this._login = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get loginInput() {
+    return this._login
   }
 
   // object_id - computed: false, optional: false, required: true
   private _objectId: string;
   public get objectId() {
-    return this._objectId;
+    return this.getStringAttribute('object_id');
   }
   public set objectId(value: string) {
     this._objectId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get objectIdInput() {
+    return this._objectId
   }
 
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
-    return this._resourceGroupName;
+    return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
   }
 
   // server_name - computed: false, optional: false, required: true
   private _serverName: string;
   public get serverName() {
-    return this._serverName;
+    return this.getStringAttribute('server_name');
   }
   public set serverName(value: string) {
     this._serverName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get serverNameInput() {
+    return this._serverName
   }
 
   // tenant_id - computed: false, optional: false, required: true
   private _tenantId: string;
   public get tenantId() {
-    return this._tenantId;
+    return this.getStringAttribute('tenant_id');
   }
   public set tenantId(value: string) {
     this._tenantId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tenantIdInput() {
+    return this._tenantId
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: SqlActiveDirectoryAdministratorTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: SqlActiveDirectoryAdministratorTimeouts | undefined) {
+  public set timeouts(value: SqlActiveDirectoryAdministratorTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

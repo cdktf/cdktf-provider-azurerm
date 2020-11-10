@@ -50,50 +50,58 @@ export class DataAzurermAutomationVariableInt extends TerraformDataSource {
   // automation_account_name - computed: false, optional: false, required: true
   private _automationAccountName: string;
   public get automationAccountName() {
-    return this._automationAccountName;
+    return this.getStringAttribute('automation_account_name');
   }
   public set automationAccountName(value: string) {
     this._automationAccountName = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get automationAccountNameInput() {
+    return this._automationAccountName
+  }
 
-  // description - computed: true, optional: false, required: true
+  // description - computed: true, optional: false, required: false
   public get description() {
     return this.getStringAttribute('description');
   }
 
-  // encrypted - computed: true, optional: false, required: true
+  // encrypted - computed: true, optional: false, required: false
   public get encrypted() {
     return this.getBooleanAttribute('encrypted');
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
-    return this._resourceGroupName;
+    return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
+  }
 
-  // value - computed: true, optional: false, required: true
+  // value - computed: true, optional: false, required: false
   public get value() {
     return this.getNumberAttribute('value');
   }
@@ -101,10 +109,17 @@ export class DataAzurermAutomationVariableInt extends TerraformDataSource {
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: DataAzurermAutomationVariableIntTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: DataAzurermAutomationVariableIntTimeouts | undefined) {
+  public set timeouts(value: DataAzurermAutomationVariableIntTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

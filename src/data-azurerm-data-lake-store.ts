@@ -46,36 +46,32 @@ export class DataAzurermDataLakeStore extends TerraformDataSource {
   // ATTRIBUTES
   // ==========
 
-  // encryption_state - computed: true, optional: false, required: true
+  // encryption_state - computed: true, optional: false, required: false
   public get encryptionState() {
     return this.getStringAttribute('encryption_state');
   }
 
-  // encryption_type - computed: true, optional: false, required: true
+  // encryption_type - computed: true, optional: false, required: false
   public get encryptionType() {
     return this.getStringAttribute('encryption_type');
   }
 
-  // firewall_allow_azure_ips - computed: true, optional: false, required: true
+  // firewall_allow_azure_ips - computed: true, optional: false, required: false
   public get firewallAllowAzureIps() {
     return this.getStringAttribute('firewall_allow_azure_ips');
   }
 
-  // firewall_state - computed: true, optional: false, required: true
+  // firewall_state - computed: true, optional: false, required: false
   public get firewallState() {
     return this.getStringAttribute('firewall_state');
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
-  // location - computed: true, optional: false, required: true
+  // location - computed: true, optional: false, required: false
   public get location() {
     return this.getStringAttribute('location');
   }
@@ -83,27 +79,35 @@ export class DataAzurermDataLakeStore extends TerraformDataSource {
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
-    return this._resourceGroupName;
+    return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
+  }
 
-  // tags - computed: true, optional: false, required: true
+  // tags - computed: true, optional: false, required: false
   public tags(key: string): string {
     return new StringMap(this, 'tags').lookup(key);
   }
 
-  // tier - computed: true, optional: false, required: true
+  // tier - computed: true, optional: false, required: false
   public get tier() {
     return this.getStringAttribute('tier');
   }
@@ -111,10 +115,17 @@ export class DataAzurermDataLakeStore extends TerraformDataSource {
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: DataAzurermDataLakeStoreTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: DataAzurermDataLakeStoreTimeouts | undefined) {
+  public set timeouts(value: DataAzurermDataLakeStoreTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

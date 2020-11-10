@@ -59,73 +59,100 @@ export class ApiManagementApiSchema extends TerraformResource {
   // api_management_name - computed: false, optional: false, required: true
   private _apiManagementName: string;
   public get apiManagementName() {
-    return this._apiManagementName;
+    return this.getStringAttribute('api_management_name');
   }
   public set apiManagementName(value: string) {
     this._apiManagementName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get apiManagementNameInput() {
+    return this._apiManagementName
   }
 
   // api_name - computed: false, optional: false, required: true
   private _apiName: string;
   public get apiName() {
-    return this._apiName;
+    return this.getStringAttribute('api_name');
   }
   public set apiName(value: string) {
     this._apiName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get apiNameInput() {
+    return this._apiName
   }
 
   // content_type - computed: false, optional: false, required: true
   private _contentType: string;
   public get contentType() {
-    return this._contentType;
+    return this.getStringAttribute('content_type');
   }
   public set contentType(value: string) {
     this._contentType = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get contentTypeInput() {
+    return this._contentType
+  }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
-    return this._resourceGroupName;
+    return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
   }
 
   // schema_id - computed: false, optional: false, required: true
   private _schemaId: string;
   public get schemaId() {
-    return this._schemaId;
+    return this.getStringAttribute('schema_id');
   }
   public set schemaId(value: string) {
     this._schemaId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get schemaIdInput() {
+    return this._schemaId
   }
 
   // value - computed: false, optional: false, required: true
   private _value: string;
   public get value() {
-    return this._value;
+    return this.getStringAttribute('value');
   }
   public set value(value: string) {
     this._value = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get valueInput() {
+    return this._value
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: ApiManagementApiSchemaTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: ApiManagementApiSchemaTimeouts | undefined) {
+  public set timeouts(value: ApiManagementApiSchemaTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

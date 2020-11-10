@@ -67,109 +67,164 @@ export class ApiManagementProduct extends TerraformResource {
   // api_management_name - computed: false, optional: false, required: true
   private _apiManagementName: string;
   public get apiManagementName() {
-    return this._apiManagementName;
+    return this.getStringAttribute('api_management_name');
   }
   public set apiManagementName(value: string) {
     this._apiManagementName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get apiManagementNameInput() {
+    return this._apiManagementName
   }
 
   // approval_required - computed: false, optional: true, required: false
   private _approvalRequired?: boolean;
   public get approvalRequired() {
-    return this._approvalRequired;
+    return this.getBooleanAttribute('approval_required');
   }
-  public set approvalRequired(value: boolean | undefined) {
+  public set approvalRequired(value: boolean ) {
     this._approvalRequired = value;
+  }
+  public resetApprovalRequired() {
+    this._approvalRequired = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get approvalRequiredInput() {
+    return this._approvalRequired
   }
 
   // description - computed: false, optional: true, required: false
   private _description?: string;
   public get description() {
-    return this._description;
+    return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string ) {
     this._description = value;
+  }
+  public resetDescription() {
+    this._description = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get descriptionInput() {
+    return this._description
   }
 
   // display_name - computed: false, optional: false, required: true
   private _displayName: string;
   public get displayName() {
-    return this._displayName;
+    return this.getStringAttribute('display_name');
   }
   public set displayName(value: string) {
     this._displayName = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get displayNameInput() {
+    return this._displayName
+  }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // product_id - computed: false, optional: false, required: true
   private _productId: string;
   public get productId() {
-    return this._productId;
+    return this.getStringAttribute('product_id');
   }
   public set productId(value: string) {
     this._productId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get productIdInput() {
+    return this._productId
   }
 
   // published - computed: false, optional: false, required: true
   private _published: boolean;
   public get published() {
-    return this._published;
+    return this.getBooleanAttribute('published');
   }
   public set published(value: boolean) {
     this._published = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get publishedInput() {
+    return this._published
   }
 
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
-    return this._resourceGroupName;
+    return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
   }
 
   // subscription_required - computed: false, optional: false, required: true
   private _subscriptionRequired: boolean;
   public get subscriptionRequired() {
-    return this._subscriptionRequired;
+    return this.getBooleanAttribute('subscription_required');
   }
   public set subscriptionRequired(value: boolean) {
     this._subscriptionRequired = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get subscriptionRequiredInput() {
+    return this._subscriptionRequired
   }
 
   // subscriptions_limit - computed: false, optional: true, required: false
   private _subscriptionsLimit?: number;
   public get subscriptionsLimit() {
-    return this._subscriptionsLimit;
+    return this.getNumberAttribute('subscriptions_limit');
   }
-  public set subscriptionsLimit(value: number | undefined) {
+  public set subscriptionsLimit(value: number ) {
     this._subscriptionsLimit = value;
+  }
+  public resetSubscriptionsLimit() {
+    this._subscriptionsLimit = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get subscriptionsLimitInput() {
+    return this._subscriptionsLimit
   }
 
   // terms - computed: false, optional: true, required: false
   private _terms?: string;
   public get terms() {
-    return this._terms;
+    return this.getStringAttribute('terms');
   }
-  public set terms(value: string | undefined) {
+  public set terms(value: string ) {
     this._terms = value;
+  }
+  public resetTerms() {
+    this._terms = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get termsInput() {
+    return this._terms
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: ApiManagementProductTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: ApiManagementProductTimeouts | undefined) {
+  public set timeouts(value: ApiManagementProductTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

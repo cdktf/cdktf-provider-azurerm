@@ -153,118 +153,177 @@ export class ApiManagementApiOperation extends TerraformResource {
   // api_management_name - computed: false, optional: false, required: true
   private _apiManagementName: string;
   public get apiManagementName() {
-    return this._apiManagementName;
+    return this.getStringAttribute('api_management_name');
   }
   public set apiManagementName(value: string) {
     this._apiManagementName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get apiManagementNameInput() {
+    return this._apiManagementName
   }
 
   // api_name - computed: false, optional: false, required: true
   private _apiName: string;
   public get apiName() {
-    return this._apiName;
+    return this.getStringAttribute('api_name');
   }
   public set apiName(value: string) {
     this._apiName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get apiNameInput() {
+    return this._apiName
   }
 
   // description - computed: false, optional: true, required: false
   private _description?: string;
   public get description() {
-    return this._description;
+    return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string ) {
     this._description = value;
+  }
+  public resetDescription() {
+    this._description = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get descriptionInput() {
+    return this._description
   }
 
   // display_name - computed: false, optional: false, required: true
   private _displayName: string;
   public get displayName() {
-    return this._displayName;
+    return this.getStringAttribute('display_name');
   }
   public set displayName(value: string) {
     this._displayName = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get displayNameInput() {
+    return this._displayName
+  }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // method - computed: false, optional: false, required: true
   private _method: string;
   public get method() {
-    return this._method;
+    return this.getStringAttribute('method');
   }
   public set method(value: string) {
     this._method = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get methodInput() {
+    return this._method
   }
 
   // operation_id - computed: false, optional: false, required: true
   private _operationId: string;
   public get operationId() {
-    return this._operationId;
+    return this.getStringAttribute('operation_id');
   }
   public set operationId(value: string) {
     this._operationId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get operationIdInput() {
+    return this._operationId
   }
 
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
-    return this._resourceGroupName;
+    return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
   }
 
   // url_template - computed: false, optional: false, required: true
   private _urlTemplate: string;
   public get urlTemplate() {
-    return this._urlTemplate;
+    return this.getStringAttribute('url_template');
   }
   public set urlTemplate(value: string) {
     this._urlTemplate = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get urlTemplateInput() {
+    return this._urlTemplate
   }
 
   // request - computed: false, optional: true, required: false
   private _request?: ApiManagementApiOperationRequest[];
   public get request() {
-    return this._request;
+    return this.interpolationForAttribute('request') as any;
   }
-  public set request(value: ApiManagementApiOperationRequest[] | undefined) {
+  public set request(value: ApiManagementApiOperationRequest[] ) {
     this._request = value;
+  }
+  public resetRequest() {
+    this._request = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get requestInput() {
+    return this._request
   }
 
   // response - computed: false, optional: true, required: false
   private _response?: ApiManagementApiOperationResponse[];
   public get response() {
-    return this._response;
+    return this.interpolationForAttribute('response') as any;
   }
-  public set response(value: ApiManagementApiOperationResponse[] | undefined) {
+  public set response(value: ApiManagementApiOperationResponse[] ) {
     this._response = value;
+  }
+  public resetResponse() {
+    this._response = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get responseInput() {
+    return this._response
   }
 
   // template_parameter - computed: false, optional: true, required: false
   private _templateParameter?: ApiManagementApiOperationTemplateParameter[];
   public get templateParameter() {
-    return this._templateParameter;
+    return this.interpolationForAttribute('template_parameter') as any;
   }
-  public set templateParameter(value: ApiManagementApiOperationTemplateParameter[] | undefined) {
+  public set templateParameter(value: ApiManagementApiOperationTemplateParameter[] ) {
     this._templateParameter = value;
+  }
+  public resetTemplateParameter() {
+    this._templateParameter = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get templateParameterInput() {
+    return this._templateParameter
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: ApiManagementApiOperationTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: ApiManagementApiOperationTimeouts | undefined) {
+  public set timeouts(value: ApiManagementApiOperationTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

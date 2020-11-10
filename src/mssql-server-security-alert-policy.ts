@@ -65,100 +65,157 @@ export class MssqlServerSecurityAlertPolicy extends TerraformResource {
   // disabled_alerts - computed: false, optional: true, required: false
   private _disabledAlerts?: string[];
   public get disabledAlerts() {
-    return this._disabledAlerts;
+    return this.getListAttribute('disabled_alerts');
   }
-  public set disabledAlerts(value: string[] | undefined) {
+  public set disabledAlerts(value: string[] ) {
     this._disabledAlerts = value;
+  }
+  public resetDisabledAlerts() {
+    this._disabledAlerts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get disabledAlertsInput() {
+    return this._disabledAlerts
   }
 
   // email_account_admins - computed: false, optional: true, required: false
   private _emailAccountAdmins?: boolean;
   public get emailAccountAdmins() {
-    return this._emailAccountAdmins;
+    return this.getBooleanAttribute('email_account_admins');
   }
-  public set emailAccountAdmins(value: boolean | undefined) {
+  public set emailAccountAdmins(value: boolean ) {
     this._emailAccountAdmins = value;
+  }
+  public resetEmailAccountAdmins() {
+    this._emailAccountAdmins = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get emailAccountAdminsInput() {
+    return this._emailAccountAdmins
   }
 
   // email_addresses - computed: false, optional: true, required: false
   private _emailAddresses?: string[];
   public get emailAddresses() {
-    return this._emailAddresses;
+    return this.getListAttribute('email_addresses');
   }
-  public set emailAddresses(value: string[] | undefined) {
+  public set emailAddresses(value: string[] ) {
     this._emailAddresses = value;
+  }
+  public resetEmailAddresses() {
+    this._emailAddresses = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get emailAddressesInput() {
+    return this._emailAddresses
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
-    return this._resourceGroupName;
+    return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
   }
 
   // retention_days - computed: false, optional: true, required: false
   private _retentionDays?: number;
   public get retentionDays() {
-    return this._retentionDays;
+    return this.getNumberAttribute('retention_days');
   }
-  public set retentionDays(value: number | undefined) {
+  public set retentionDays(value: number ) {
     this._retentionDays = value;
+  }
+  public resetRetentionDays() {
+    this._retentionDays = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get retentionDaysInput() {
+    return this._retentionDays
   }
 
   // server_name - computed: false, optional: false, required: true
   private _serverName: string;
   public get serverName() {
-    return this._serverName;
+    return this.getStringAttribute('server_name');
   }
   public set serverName(value: string) {
     this._serverName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get serverNameInput() {
+    return this._serverName
   }
 
   // state - computed: false, optional: false, required: true
   private _state: string;
   public get state() {
-    return this._state;
+    return this.getStringAttribute('state');
   }
   public set state(value: string) {
     this._state = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get stateInput() {
+    return this._state
   }
 
   // storage_account_access_key - computed: false, optional: true, required: false
   private _storageAccountAccessKey?: string;
   public get storageAccountAccessKey() {
-    return this._storageAccountAccessKey;
+    return this.getStringAttribute('storage_account_access_key');
   }
-  public set storageAccountAccessKey(value: string | undefined) {
+  public set storageAccountAccessKey(value: string ) {
     this._storageAccountAccessKey = value;
+  }
+  public resetStorageAccountAccessKey() {
+    this._storageAccountAccessKey = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get storageAccountAccessKeyInput() {
+    return this._storageAccountAccessKey
   }
 
   // storage_endpoint - computed: false, optional: true, required: false
   private _storageEndpoint?: string;
   public get storageEndpoint() {
-    return this._storageEndpoint;
+    return this.getStringAttribute('storage_endpoint');
   }
-  public set storageEndpoint(value: string | undefined) {
+  public set storageEndpoint(value: string ) {
     this._storageEndpoint = value;
+  }
+  public resetStorageEndpoint() {
+    this._storageEndpoint = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get storageEndpointInput() {
+    return this._storageEndpoint
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: MssqlServerSecurityAlertPolicyTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: MssqlServerSecurityAlertPolicyTimeouts | undefined) {
+  public set timeouts(value: MssqlServerSecurityAlertPolicyTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

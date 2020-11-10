@@ -41,31 +41,27 @@ export class DataAzurermClientConfig extends TerraformDataSource {
   // ATTRIBUTES
   // ==========
 
-  // client_id - computed: true, optional: false, required: true
+  // client_id - computed: true, optional: false, required: false
   public get clientId() {
     return this.getStringAttribute('client_id');
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
-  // object_id - computed: true, optional: false, required: true
+  // object_id - computed: true, optional: false, required: false
   public get objectId() {
     return this.getStringAttribute('object_id');
   }
 
-  // subscription_id - computed: true, optional: false, required: true
+  // subscription_id - computed: true, optional: false, required: false
   public get subscriptionId() {
     return this.getStringAttribute('subscription_id');
   }
 
-  // tenant_id - computed: true, optional: false, required: true
+  // tenant_id - computed: true, optional: false, required: false
   public get tenantId() {
     return this.getStringAttribute('tenant_id');
   }
@@ -73,10 +69,17 @@ export class DataAzurermClientConfig extends TerraformDataSource {
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: DataAzurermClientConfigTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: DataAzurermClientConfigTimeouts | undefined) {
+  public set timeouts(value: DataAzurermClientConfigTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

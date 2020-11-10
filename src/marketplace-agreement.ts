@@ -51,15 +51,11 @@ export class MarketplaceAgreement extends TerraformResource {
   // ==========
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
-  // license_text_link - computed: true, optional: false, required: true
+  // license_text_link - computed: true, optional: false, required: false
   public get licenseTextLink() {
     return this.getStringAttribute('license_text_link');
   }
@@ -67,22 +63,30 @@ export class MarketplaceAgreement extends TerraformResource {
   // offer - computed: false, optional: false, required: true
   private _offer: string;
   public get offer() {
-    return this._offer;
+    return this.getStringAttribute('offer');
   }
   public set offer(value: string) {
     this._offer = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get offerInput() {
+    return this._offer
   }
 
   // plan - computed: false, optional: false, required: true
   private _plan: string;
   public get plan() {
-    return this._plan;
+    return this.getStringAttribute('plan');
   }
   public set plan(value: string) {
     this._plan = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get planInput() {
+    return this._plan
+  }
 
-  // privacy_policy_link - computed: true, optional: false, required: true
+  // privacy_policy_link - computed: true, optional: false, required: false
   public get privacyPolicyLink() {
     return this.getStringAttribute('privacy_policy_link');
   }
@@ -90,19 +94,30 @@ export class MarketplaceAgreement extends TerraformResource {
   // publisher - computed: false, optional: false, required: true
   private _publisher: string;
   public get publisher() {
-    return this._publisher;
+    return this.getStringAttribute('publisher');
   }
   public set publisher(value: string) {
     this._publisher = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get publisherInput() {
+    return this._publisher
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: MarketplaceAgreementTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: MarketplaceAgreementTimeouts | undefined) {
+  public set timeouts(value: MarketplaceAgreementTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

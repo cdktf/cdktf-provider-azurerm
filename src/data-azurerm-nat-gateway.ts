@@ -51,20 +51,16 @@ export class DataAzurermNatGateway extends TerraformDataSource {
   // ==========
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
-  // idle_timeout_in_minutes - computed: true, optional: false, required: true
+  // idle_timeout_in_minutes - computed: true, optional: false, required: false
   public get idleTimeoutInMinutes() {
     return this.getNumberAttribute('idle_timeout_in_minutes');
   }
 
-  // location - computed: true, optional: false, required: true
+  // location - computed: true, optional: false, required: false
   public get location() {
     return this.getStringAttribute('location');
   }
@@ -72,55 +68,77 @@ export class DataAzurermNatGateway extends TerraformDataSource {
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // public_ip_address_ids - computed: true, optional: true, required: false
   private _publicIpAddressIds?: string[];
   public get publicIpAddressIds() {
-    return this._publicIpAddressIds ?? this.getListAttribute('public_ip_address_ids');
+    return this.getListAttribute('public_ip_address_ids');
   }
-  public set publicIpAddressIds(value: string[] | undefined) {
+  public set publicIpAddressIds(value: string[]) {
     this._publicIpAddressIds = value;
+  }
+  public resetPublicIpAddressIds() {
+    this._publicIpAddressIds = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get publicIpAddressIdsInput() {
+    return this._publicIpAddressIds
   }
 
   // public_ip_prefix_ids - computed: true, optional: true, required: false
   private _publicIpPrefixIds?: string[];
   public get publicIpPrefixIds() {
-    return this._publicIpPrefixIds ?? this.getListAttribute('public_ip_prefix_ids');
+    return this.getListAttribute('public_ip_prefix_ids');
   }
-  public set publicIpPrefixIds(value: string[] | undefined) {
+  public set publicIpPrefixIds(value: string[]) {
     this._publicIpPrefixIds = value;
+  }
+  public resetPublicIpPrefixIds() {
+    this._publicIpPrefixIds = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get publicIpPrefixIdsInput() {
+    return this._publicIpPrefixIds
   }
 
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
-    return this._resourceGroupName;
+    return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
+  }
 
-  // resource_guid - computed: true, optional: false, required: true
+  // resource_guid - computed: true, optional: false, required: false
   public get resourceGuid() {
     return this.getStringAttribute('resource_guid');
   }
 
-  // sku_name - computed: true, optional: false, required: true
+  // sku_name - computed: true, optional: false, required: false
   public get skuName() {
     return this.getStringAttribute('sku_name');
   }
 
-  // tags - computed: true, optional: false, required: true
+  // tags - computed: true, optional: false, required: false
   public tags(key: string): string {
     return new StringMap(this, 'tags').lookup(key);
   }
 
-  // zones - computed: true, optional: false, required: true
+  // zones - computed: true, optional: false, required: false
   public get zones() {
     return this.getListAttribute('zones');
   }
@@ -128,10 +146,17 @@ export class DataAzurermNatGateway extends TerraformDataSource {
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: DataAzurermNatGatewayTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: DataAzurermNatGatewayTimeouts | undefined) {
+  public set timeouts(value: DataAzurermNatGatewayTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

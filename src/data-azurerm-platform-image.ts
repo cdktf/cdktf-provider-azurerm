@@ -50,51 +50,63 @@ export class DataAzurermPlatformImage extends TerraformDataSource {
   // ==========
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // location - computed: false, optional: false, required: true
   private _location: string;
   public get location() {
-    return this._location;
+    return this.getStringAttribute('location');
   }
   public set location(value: string) {
     this._location = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get locationInput() {
+    return this._location
   }
 
   // offer - computed: false, optional: false, required: true
   private _offer: string;
   public get offer() {
-    return this._offer;
+    return this.getStringAttribute('offer');
   }
   public set offer(value: string) {
     this._offer = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get offerInput() {
+    return this._offer
   }
 
   // publisher - computed: false, optional: false, required: true
   private _publisher: string;
   public get publisher() {
-    return this._publisher;
+    return this.getStringAttribute('publisher');
   }
   public set publisher(value: string) {
     this._publisher = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get publisherInput() {
+    return this._publisher
   }
 
   // sku - computed: false, optional: false, required: true
   private _sku: string;
   public get sku() {
-    return this._sku;
+    return this.getStringAttribute('sku');
   }
   public set sku(value: string) {
     this._sku = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get skuInput() {
+    return this._sku
+  }
 
-  // version - computed: true, optional: false, required: true
+  // version - computed: true, optional: false, required: false
   public get version() {
     return this.getStringAttribute('version');
   }
@@ -102,10 +114,17 @@ export class DataAzurermPlatformImage extends TerraformDataSource {
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: DataAzurermPlatformImageTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: DataAzurermPlatformImageTimeouts | undefined) {
+  public set timeouts(value: DataAzurermPlatformImageTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

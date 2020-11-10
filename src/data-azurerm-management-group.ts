@@ -43,7 +43,7 @@ export class DataAzurermManagementGroup extends TerraformDataSource {
   // ATTRIBUTES
   // ==========
 
-  // display_name - computed: true, optional: false, required: true
+  // display_name - computed: true, optional: false, required: false
   public get displayName() {
     return this.getStringAttribute('display_name');
   }
@@ -51,27 +51,27 @@ export class DataAzurermManagementGroup extends TerraformDataSource {
   // group_id - computed: false, optional: false, required: true
   private _groupId: string;
   public get groupId() {
-    return this._groupId;
+    return this.getStringAttribute('group_id');
   }
   public set groupId(value: string) {
     this._groupId = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get groupIdInput() {
+    return this._groupId
+  }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
-  // parent_management_group_id - computed: true, optional: false, required: true
+  // parent_management_group_id - computed: true, optional: false, required: false
   public get parentManagementGroupId() {
     return this.getStringAttribute('parent_management_group_id');
   }
 
-  // subscription_ids - computed: true, optional: false, required: true
+  // subscription_ids - computed: true, optional: false, required: false
   public get subscriptionIds() {
     return this.getListAttribute('subscription_ids');
   }
@@ -79,10 +79,17 @@ export class DataAzurermManagementGroup extends TerraformDataSource {
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: DataAzurermManagementGroupTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: DataAzurermManagementGroupTimeouts | undefined) {
+  public set timeouts(value: DataAzurermManagementGroupTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

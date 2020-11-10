@@ -61,76 +61,112 @@ export class KeyVaultSecret extends TerraformResource {
   // content_type - computed: false, optional: true, required: false
   private _contentType?: string;
   public get contentType() {
-    return this._contentType;
+    return this.getStringAttribute('content_type');
   }
-  public set contentType(value: string | undefined) {
+  public set contentType(value: string ) {
     this._contentType = value;
+  }
+  public resetContentType() {
+    this._contentType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get contentTypeInput() {
+    return this._contentType
   }
 
   // expiration_date - computed: false, optional: true, required: false
   private _expirationDate?: string;
   public get expirationDate() {
-    return this._expirationDate;
+    return this.getStringAttribute('expiration_date');
   }
-  public set expirationDate(value: string | undefined) {
+  public set expirationDate(value: string ) {
     this._expirationDate = value;
+  }
+  public resetExpirationDate() {
+    this._expirationDate = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get expirationDateInput() {
+    return this._expirationDate
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // key_vault_id - computed: false, optional: false, required: true
   private _keyVaultId: string;
   public get keyVaultId() {
-    return this._keyVaultId;
+    return this.getStringAttribute('key_vault_id');
   }
   public set keyVaultId(value: string) {
     this._keyVaultId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keyVaultIdInput() {
+    return this._keyVaultId
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // not_before_date - computed: false, optional: true, required: false
   private _notBeforeDate?: string;
   public get notBeforeDate() {
-    return this._notBeforeDate;
+    return this.getStringAttribute('not_before_date');
   }
-  public set notBeforeDate(value: string | undefined) {
+  public set notBeforeDate(value: string ) {
     this._notBeforeDate = value;
+  }
+  public resetNotBeforeDate() {
+    this._notBeforeDate = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get notBeforeDateInput() {
+    return this._notBeforeDate
   }
 
   // tags - computed: false, optional: true, required: false
   private _tags?: { [key: string]: string };
   public get tags() {
-    return this._tags;
+    return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | undefined) {
+  public set tags(value: { [key: string]: string } ) {
     this._tags = value;
+  }
+  public resetTags() {
+    this._tags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsInput() {
+    return this._tags
   }
 
   // value - computed: false, optional: false, required: true
   private _value: string;
   public get value() {
-    return this._value;
+    return this.getStringAttribute('value');
   }
   public set value(value: string) {
     this._value = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get valueInput() {
+    return this._value
+  }
 
-  // version - computed: true, optional: false, required: true
+  // version - computed: true, optional: false, required: false
   public get version() {
     return this.getStringAttribute('version');
   }
@@ -138,10 +174,17 @@ export class KeyVaultSecret extends TerraformResource {
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: KeyVaultSecretTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: KeyVaultSecretTimeouts | undefined) {
+  public set timeouts(value: KeyVaultSecretTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

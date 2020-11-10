@@ -16,22 +16,22 @@ export interface DataAzurermPrivateEndpointConnectionConfig extends TerraformMet
 }
 export class DataAzurermPrivateEndpointConnectionPrivateServiceConnection extends ComplexComputedList {
 
-  // name - computed: true, optional: false, required: true
+  // name - computed: true, optional: false, required: false
   public get name() {
     return this.getStringAttribute('name');
   }
 
-  // private_ip_address - computed: true, optional: false, required: true
+  // private_ip_address - computed: true, optional: false, required: false
   public get privateIpAddress() {
     return this.getStringAttribute('private_ip_address');
   }
 
-  // request_response - computed: true, optional: false, required: true
+  // request_response - computed: true, optional: false, required: false
   public get requestResponse() {
     return this.getStringAttribute('request_response');
   }
 
-  // status - computed: true, optional: false, required: true
+  // status - computed: true, optional: false, required: false
   public get status() {
     return this.getStringAttribute('status');
   }
@@ -69,15 +69,11 @@ export class DataAzurermPrivateEndpointConnection extends TerraformDataSource {
   // ==========
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
-  // location - computed: true, optional: false, required: true
+  // location - computed: true, optional: false, required: false
   public get location() {
     return this.getStringAttribute('location');
   }
@@ -85,13 +81,17 @@ export class DataAzurermPrivateEndpointConnection extends TerraformDataSource {
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
+  }
 
-  // private_service_connection - computed: true, optional: false, required: true
+  // private_service_connection - computed: true, optional: false, required: false
   public privateServiceConnection(index: string) {
     return new DataAzurermPrivateEndpointConnectionPrivateServiceConnection(this, 'private_service_connection', index);
   }
@@ -99,19 +99,30 @@ export class DataAzurermPrivateEndpointConnection extends TerraformDataSource {
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
-    return this._resourceGroupName;
+    return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: DataAzurermPrivateEndpointConnectionTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: DataAzurermPrivateEndpointConnectionTimeouts | undefined) {
+  public set timeouts(value: DataAzurermPrivateEndpointConnectionTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

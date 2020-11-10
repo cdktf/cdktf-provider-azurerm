@@ -43,36 +43,32 @@ export class DataAzurermSubscription extends TerraformDataSource {
   // ATTRIBUTES
   // ==========
 
-  // display_name - computed: true, optional: false, required: true
+  // display_name - computed: true, optional: false, required: false
   public get displayName() {
     return this.getStringAttribute('display_name');
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
-  // location_placement_id - computed: true, optional: false, required: true
+  // location_placement_id - computed: true, optional: false, required: false
   public get locationPlacementId() {
     return this.getStringAttribute('location_placement_id');
   }
 
-  // quota_id - computed: true, optional: false, required: true
+  // quota_id - computed: true, optional: false, required: false
   public get quotaId() {
     return this.getStringAttribute('quota_id');
   }
 
-  // spending_limit - computed: true, optional: false, required: true
+  // spending_limit - computed: true, optional: false, required: false
   public get spendingLimit() {
     return this.getStringAttribute('spending_limit');
   }
 
-  // state - computed: true, optional: false, required: true
+  // state - computed: true, optional: false, required: false
   public get state() {
     return this.getStringAttribute('state');
   }
@@ -80,13 +76,20 @@ export class DataAzurermSubscription extends TerraformDataSource {
   // subscription_id - computed: true, optional: true, required: false
   private _subscriptionId?: string;
   public get subscriptionId() {
-    return this._subscriptionId ?? this.getStringAttribute('subscription_id');
+    return this.getStringAttribute('subscription_id');
   }
-  public set subscriptionId(value: string | undefined) {
+  public set subscriptionId(value: string) {
     this._subscriptionId = value;
   }
+  public resetSubscriptionId() {
+    this._subscriptionId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get subscriptionIdInput() {
+    return this._subscriptionId
+  }
 
-  // tenant_id - computed: true, optional: false, required: true
+  // tenant_id - computed: true, optional: false, required: false
   public get tenantId() {
     return this.getStringAttribute('tenant_id');
   }
@@ -94,10 +97,17 @@ export class DataAzurermSubscription extends TerraformDataSource {
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: DataAzurermSubscriptionTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: DataAzurermSubscriptionTimeouts | undefined) {
+  public set timeouts(value: DataAzurermSubscriptionTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

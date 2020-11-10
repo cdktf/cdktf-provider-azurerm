@@ -67,109 +67,164 @@ export class ContainerRegistryWebhook extends TerraformResource {
   // actions - computed: false, optional: false, required: true
   private _actions: string[];
   public get actions() {
-    return this._actions;
+    return this.getListAttribute('actions');
   }
   public set actions(value: string[]) {
     this._actions = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get actionsInput() {
+    return this._actions
   }
 
   // custom_headers - computed: false, optional: true, required: false
   private _customHeaders?: { [key: string]: string };
   public get customHeaders() {
-    return this._customHeaders;
+    return this.interpolationForAttribute('custom_headers') as any;
   }
-  public set customHeaders(value: { [key: string]: string } | undefined) {
+  public set customHeaders(value: { [key: string]: string } ) {
     this._customHeaders = value;
+  }
+  public resetCustomHeaders() {
+    this._customHeaders = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get customHeadersInput() {
+    return this._customHeaders
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // location - computed: false, optional: false, required: true
   private _location: string;
   public get location() {
-    return this._location;
+    return this.getStringAttribute('location');
   }
   public set location(value: string) {
     this._location = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get locationInput() {
+    return this._location
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // registry_name - computed: false, optional: false, required: true
   private _registryName: string;
   public get registryName() {
-    return this._registryName;
+    return this.getStringAttribute('registry_name');
   }
   public set registryName(value: string) {
     this._registryName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get registryNameInput() {
+    return this._registryName
   }
 
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
-    return this._resourceGroupName;
+    return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
   }
 
   // scope - computed: false, optional: true, required: false
   private _scope?: string;
   public get scope() {
-    return this._scope;
+    return this.getStringAttribute('scope');
   }
-  public set scope(value: string | undefined) {
+  public set scope(value: string ) {
     this._scope = value;
+  }
+  public resetScope() {
+    this._scope = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get scopeInput() {
+    return this._scope
   }
 
   // service_uri - computed: false, optional: false, required: true
   private _serviceUri: string;
   public get serviceUri() {
-    return this._serviceUri;
+    return this.getStringAttribute('service_uri');
   }
   public set serviceUri(value: string) {
     this._serviceUri = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get serviceUriInput() {
+    return this._serviceUri
   }
 
   // status - computed: false, optional: true, required: false
   private _status?: string;
   public get status() {
-    return this._status;
+    return this.getStringAttribute('status');
   }
-  public set status(value: string | undefined) {
+  public set status(value: string ) {
     this._status = value;
+  }
+  public resetStatus() {
+    this._status = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get statusInput() {
+    return this._status
   }
 
   // tags - computed: false, optional: true, required: false
   private _tags?: { [key: string]: string };
   public get tags() {
-    return this._tags;
+    return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | undefined) {
+  public set tags(value: { [key: string]: string } ) {
     this._tags = value;
+  }
+  public resetTags() {
+    this._tags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsInput() {
+    return this._tags
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: ContainerRegistryWebhookTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: ContainerRegistryWebhookTimeouts | undefined) {
+  public set timeouts(value: ContainerRegistryWebhookTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

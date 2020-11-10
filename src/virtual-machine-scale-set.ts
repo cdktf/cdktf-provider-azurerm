@@ -246,271 +246,446 @@ export class VirtualMachineScaleSet extends TerraformResource {
   // automatic_os_upgrade - computed: false, optional: true, required: false
   private _automaticOsUpgrade?: boolean;
   public get automaticOsUpgrade() {
-    return this._automaticOsUpgrade;
+    return this.getBooleanAttribute('automatic_os_upgrade');
   }
-  public set automaticOsUpgrade(value: boolean | undefined) {
+  public set automaticOsUpgrade(value: boolean ) {
     this._automaticOsUpgrade = value;
+  }
+  public resetAutomaticOsUpgrade() {
+    this._automaticOsUpgrade = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get automaticOsUpgradeInput() {
+    return this._automaticOsUpgrade
   }
 
   // eviction_policy - computed: false, optional: true, required: false
   private _evictionPolicy?: string;
   public get evictionPolicy() {
-    return this._evictionPolicy;
+    return this.getStringAttribute('eviction_policy');
   }
-  public set evictionPolicy(value: string | undefined) {
+  public set evictionPolicy(value: string ) {
     this._evictionPolicy = value;
+  }
+  public resetEvictionPolicy() {
+    this._evictionPolicy = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get evictionPolicyInput() {
+    return this._evictionPolicy
   }
 
   // health_probe_id - computed: false, optional: true, required: false
   private _healthProbeId?: string;
   public get healthProbeId() {
-    return this._healthProbeId;
+    return this.getStringAttribute('health_probe_id');
   }
-  public set healthProbeId(value: string | undefined) {
+  public set healthProbeId(value: string ) {
     this._healthProbeId = value;
+  }
+  public resetHealthProbeId() {
+    this._healthProbeId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get healthProbeIdInput() {
+    return this._healthProbeId
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // license_type - computed: true, optional: true, required: false
   private _licenseType?: string;
   public get licenseType() {
-    return this._licenseType ?? this.getStringAttribute('license_type');
+    return this.getStringAttribute('license_type');
   }
-  public set licenseType(value: string | undefined) {
+  public set licenseType(value: string) {
     this._licenseType = value;
+  }
+  public resetLicenseType() {
+    this._licenseType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get licenseTypeInput() {
+    return this._licenseType
   }
 
   // location - computed: false, optional: false, required: true
   private _location: string;
   public get location() {
-    return this._location;
+    return this.getStringAttribute('location');
   }
   public set location(value: string) {
     this._location = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get locationInput() {
+    return this._location
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // overprovision - computed: false, optional: true, required: false
   private _overprovision?: boolean;
   public get overprovision() {
-    return this._overprovision;
+    return this.getBooleanAttribute('overprovision');
   }
-  public set overprovision(value: boolean | undefined) {
+  public set overprovision(value: boolean ) {
     this._overprovision = value;
+  }
+  public resetOverprovision() {
+    this._overprovision = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get overprovisionInput() {
+    return this._overprovision
   }
 
   // priority - computed: false, optional: true, required: false
   private _priority?: string;
   public get priority() {
-    return this._priority;
+    return this.getStringAttribute('priority');
   }
-  public set priority(value: string | undefined) {
+  public set priority(value: string ) {
     this._priority = value;
+  }
+  public resetPriority() {
+    this._priority = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get priorityInput() {
+    return this._priority
   }
 
   // proximity_placement_group_id - computed: false, optional: true, required: false
   private _proximityPlacementGroupId?: string;
   public get proximityPlacementGroupId() {
-    return this._proximityPlacementGroupId;
+    return this.getStringAttribute('proximity_placement_group_id');
   }
-  public set proximityPlacementGroupId(value: string | undefined) {
+  public set proximityPlacementGroupId(value: string ) {
     this._proximityPlacementGroupId = value;
+  }
+  public resetProximityPlacementGroupId() {
+    this._proximityPlacementGroupId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get proximityPlacementGroupIdInput() {
+    return this._proximityPlacementGroupId
   }
 
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
-    return this._resourceGroupName;
+    return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
   }
 
   // single_placement_group - computed: false, optional: true, required: false
   private _singlePlacementGroup?: boolean;
   public get singlePlacementGroup() {
-    return this._singlePlacementGroup;
+    return this.getBooleanAttribute('single_placement_group');
   }
-  public set singlePlacementGroup(value: boolean | undefined) {
+  public set singlePlacementGroup(value: boolean ) {
     this._singlePlacementGroup = value;
+  }
+  public resetSinglePlacementGroup() {
+    this._singlePlacementGroup = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get singlePlacementGroupInput() {
+    return this._singlePlacementGroup
   }
 
   // tags - computed: false, optional: true, required: false
   private _tags?: { [key: string]: string };
   public get tags() {
-    return this._tags;
+    return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | undefined) {
+  public set tags(value: { [key: string]: string } ) {
     this._tags = value;
+  }
+  public resetTags() {
+    this._tags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsInput() {
+    return this._tags
   }
 
   // upgrade_policy_mode - computed: false, optional: false, required: true
   private _upgradePolicyMode: string;
   public get upgradePolicyMode() {
-    return this._upgradePolicyMode;
+    return this.getStringAttribute('upgrade_policy_mode');
   }
   public set upgradePolicyMode(value: string) {
     this._upgradePolicyMode = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get upgradePolicyModeInput() {
+    return this._upgradePolicyMode
   }
 
   // zones - computed: false, optional: true, required: false
   private _zones?: string[];
   public get zones() {
-    return this._zones;
+    return this.getListAttribute('zones');
   }
-  public set zones(value: string[] | undefined) {
+  public set zones(value: string[] ) {
     this._zones = value;
+  }
+  public resetZones() {
+    this._zones = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get zonesInput() {
+    return this._zones
   }
 
   // boot_diagnostics - computed: false, optional: true, required: false
   private _bootDiagnostics?: VirtualMachineScaleSetBootDiagnostics[];
   public get bootDiagnostics() {
-    return this._bootDiagnostics;
+    return this.interpolationForAttribute('boot_diagnostics') as any;
   }
-  public set bootDiagnostics(value: VirtualMachineScaleSetBootDiagnostics[] | undefined) {
+  public set bootDiagnostics(value: VirtualMachineScaleSetBootDiagnostics[] ) {
     this._bootDiagnostics = value;
+  }
+  public resetBootDiagnostics() {
+    this._bootDiagnostics = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get bootDiagnosticsInput() {
+    return this._bootDiagnostics
   }
 
   // extension - computed: false, optional: true, required: false
   private _extension?: VirtualMachineScaleSetExtension[];
   public get extension() {
-    return this._extension;
+    return this.interpolationForAttribute('extension') as any;
   }
-  public set extension(value: VirtualMachineScaleSetExtension[] | undefined) {
+  public set extension(value: VirtualMachineScaleSetExtension[] ) {
     this._extension = value;
+  }
+  public resetExtension() {
+    this._extension = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get extensionInput() {
+    return this._extension
   }
 
   // identity - computed: false, optional: true, required: false
   private _identity?: VirtualMachineScaleSetIdentity[];
   public get identity() {
-    return this._identity;
+    return this.interpolationForAttribute('identity') as any;
   }
-  public set identity(value: VirtualMachineScaleSetIdentity[] | undefined) {
+  public set identity(value: VirtualMachineScaleSetIdentity[] ) {
     this._identity = value;
+  }
+  public resetIdentity() {
+    this._identity = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get identityInput() {
+    return this._identity
   }
 
   // network_profile - computed: false, optional: false, required: true
   private _networkProfile: VirtualMachineScaleSetNetworkProfile[];
   public get networkProfile() {
-    return this._networkProfile;
+    return this.interpolationForAttribute('network_profile') as any;
   }
   public set networkProfile(value: VirtualMachineScaleSetNetworkProfile[]) {
     this._networkProfile = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get networkProfileInput() {
+    return this._networkProfile
   }
 
   // os_profile - computed: false, optional: false, required: true
   private _osProfile: VirtualMachineScaleSetOsProfile[];
   public get osProfile() {
-    return this._osProfile;
+    return this.interpolationForAttribute('os_profile') as any;
   }
   public set osProfile(value: VirtualMachineScaleSetOsProfile[]) {
     this._osProfile = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get osProfileInput() {
+    return this._osProfile
   }
 
   // os_profile_linux_config - computed: false, optional: true, required: false
   private _osProfileLinuxConfig?: VirtualMachineScaleSetOsProfileLinuxConfig[];
   public get osProfileLinuxConfig() {
-    return this._osProfileLinuxConfig;
+    return this.interpolationForAttribute('os_profile_linux_config') as any;
   }
-  public set osProfileLinuxConfig(value: VirtualMachineScaleSetOsProfileLinuxConfig[] | undefined) {
+  public set osProfileLinuxConfig(value: VirtualMachineScaleSetOsProfileLinuxConfig[] ) {
     this._osProfileLinuxConfig = value;
+  }
+  public resetOsProfileLinuxConfig() {
+    this._osProfileLinuxConfig = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get osProfileLinuxConfigInput() {
+    return this._osProfileLinuxConfig
   }
 
   // os_profile_secrets - computed: false, optional: true, required: false
   private _osProfileSecrets?: VirtualMachineScaleSetOsProfileSecrets[];
   public get osProfileSecrets() {
-    return this._osProfileSecrets;
+    return this.interpolationForAttribute('os_profile_secrets') as any;
   }
-  public set osProfileSecrets(value: VirtualMachineScaleSetOsProfileSecrets[] | undefined) {
+  public set osProfileSecrets(value: VirtualMachineScaleSetOsProfileSecrets[] ) {
     this._osProfileSecrets = value;
+  }
+  public resetOsProfileSecrets() {
+    this._osProfileSecrets = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get osProfileSecretsInput() {
+    return this._osProfileSecrets
   }
 
   // os_profile_windows_config - computed: false, optional: true, required: false
   private _osProfileWindowsConfig?: VirtualMachineScaleSetOsProfileWindowsConfig[];
   public get osProfileWindowsConfig() {
-    return this._osProfileWindowsConfig;
+    return this.interpolationForAttribute('os_profile_windows_config') as any;
   }
-  public set osProfileWindowsConfig(value: VirtualMachineScaleSetOsProfileWindowsConfig[] | undefined) {
+  public set osProfileWindowsConfig(value: VirtualMachineScaleSetOsProfileWindowsConfig[] ) {
     this._osProfileWindowsConfig = value;
+  }
+  public resetOsProfileWindowsConfig() {
+    this._osProfileWindowsConfig = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get osProfileWindowsConfigInput() {
+    return this._osProfileWindowsConfig
   }
 
   // plan - computed: false, optional: true, required: false
   private _plan?: VirtualMachineScaleSetPlan[];
   public get plan() {
-    return this._plan;
+    return this.interpolationForAttribute('plan') as any;
   }
-  public set plan(value: VirtualMachineScaleSetPlan[] | undefined) {
+  public set plan(value: VirtualMachineScaleSetPlan[] ) {
     this._plan = value;
+  }
+  public resetPlan() {
+    this._plan = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get planInput() {
+    return this._plan
   }
 
   // rolling_upgrade_policy - computed: false, optional: true, required: false
   private _rollingUpgradePolicy?: VirtualMachineScaleSetRollingUpgradePolicy[];
   public get rollingUpgradePolicy() {
-    return this._rollingUpgradePolicy;
+    return this.interpolationForAttribute('rolling_upgrade_policy') as any;
   }
-  public set rollingUpgradePolicy(value: VirtualMachineScaleSetRollingUpgradePolicy[] | undefined) {
+  public set rollingUpgradePolicy(value: VirtualMachineScaleSetRollingUpgradePolicy[] ) {
     this._rollingUpgradePolicy = value;
+  }
+  public resetRollingUpgradePolicy() {
+    this._rollingUpgradePolicy = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get rollingUpgradePolicyInput() {
+    return this._rollingUpgradePolicy
   }
 
   // sku - computed: false, optional: false, required: true
   private _sku: VirtualMachineScaleSetSku[];
   public get sku() {
-    return this._sku;
+    return this.interpolationForAttribute('sku') as any;
   }
   public set sku(value: VirtualMachineScaleSetSku[]) {
     this._sku = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get skuInput() {
+    return this._sku
   }
 
   // storage_profile_data_disk - computed: false, optional: true, required: false
   private _storageProfileDataDisk?: VirtualMachineScaleSetStorageProfileDataDisk[];
   public get storageProfileDataDisk() {
-    return this._storageProfileDataDisk;
+    return this.interpolationForAttribute('storage_profile_data_disk') as any;
   }
-  public set storageProfileDataDisk(value: VirtualMachineScaleSetStorageProfileDataDisk[] | undefined) {
+  public set storageProfileDataDisk(value: VirtualMachineScaleSetStorageProfileDataDisk[] ) {
     this._storageProfileDataDisk = value;
+  }
+  public resetStorageProfileDataDisk() {
+    this._storageProfileDataDisk = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get storageProfileDataDiskInput() {
+    return this._storageProfileDataDisk
   }
 
   // storage_profile_image_reference - computed: false, optional: true, required: false
   private _storageProfileImageReference?: VirtualMachineScaleSetStorageProfileImageReference[];
   public get storageProfileImageReference() {
-    return this._storageProfileImageReference;
+    return this.interpolationForAttribute('storage_profile_image_reference') as any;
   }
-  public set storageProfileImageReference(value: VirtualMachineScaleSetStorageProfileImageReference[] | undefined) {
+  public set storageProfileImageReference(value: VirtualMachineScaleSetStorageProfileImageReference[] ) {
     this._storageProfileImageReference = value;
+  }
+  public resetStorageProfileImageReference() {
+    this._storageProfileImageReference = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get storageProfileImageReferenceInput() {
+    return this._storageProfileImageReference
   }
 
   // storage_profile_os_disk - computed: false, optional: false, required: true
   private _storageProfileOsDisk: VirtualMachineScaleSetStorageProfileOsDisk[];
   public get storageProfileOsDisk() {
-    return this._storageProfileOsDisk;
+    return this.interpolationForAttribute('storage_profile_os_disk') as any;
   }
   public set storageProfileOsDisk(value: VirtualMachineScaleSetStorageProfileOsDisk[]) {
     this._storageProfileOsDisk = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get storageProfileOsDiskInput() {
+    return this._storageProfileOsDisk
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: VirtualMachineScaleSetTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: VirtualMachineScaleSetTimeouts | undefined) {
+  public set timeouts(value: VirtualMachineScaleSetTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

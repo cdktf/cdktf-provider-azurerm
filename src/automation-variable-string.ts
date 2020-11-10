@@ -59,73 +59,109 @@ export class AutomationVariableString extends TerraformResource {
   // automation_account_name - computed: false, optional: false, required: true
   private _automationAccountName: string;
   public get automationAccountName() {
-    return this._automationAccountName;
+    return this.getStringAttribute('automation_account_name');
   }
   public set automationAccountName(value: string) {
     this._automationAccountName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get automationAccountNameInput() {
+    return this._automationAccountName
   }
 
   // description - computed: false, optional: true, required: false
   private _description?: string;
   public get description() {
-    return this._description;
+    return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string ) {
     this._description = value;
+  }
+  public resetDescription() {
+    this._description = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get descriptionInput() {
+    return this._description
   }
 
   // encrypted - computed: false, optional: true, required: false
   private _encrypted?: boolean;
   public get encrypted() {
-    return this._encrypted;
+    return this.getBooleanAttribute('encrypted');
   }
-  public set encrypted(value: boolean | undefined) {
+  public set encrypted(value: boolean ) {
     this._encrypted = value;
+  }
+  public resetEncrypted() {
+    this._encrypted = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get encryptedInput() {
+    return this._encrypted
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
-    return this._resourceGroupName;
+    return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
   }
 
   // value - computed: false, optional: true, required: false
   private _value?: string;
   public get value() {
-    return this._value;
+    return this.getStringAttribute('value');
   }
-  public set value(value: string | undefined) {
+  public set value(value: string ) {
     this._value = value;
+  }
+  public resetValue() {
+    this._value = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get valueInput() {
+    return this._value
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: AutomationVariableStringTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: AutomationVariableStringTimeouts | undefined) {
+  public set timeouts(value: AutomationVariableStringTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

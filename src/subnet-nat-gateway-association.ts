@@ -49,39 +49,50 @@ export class SubnetNatGatewayAssociation extends TerraformResource {
   // ==========
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // nat_gateway_id - computed: false, optional: false, required: true
   private _natGatewayId: string;
   public get natGatewayId() {
-    return this._natGatewayId;
+    return this.getStringAttribute('nat_gateway_id');
   }
   public set natGatewayId(value: string) {
     this._natGatewayId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get natGatewayIdInput() {
+    return this._natGatewayId
   }
 
   // subnet_id - computed: false, optional: false, required: true
   private _subnetId: string;
   public get subnetId() {
-    return this._subnetId;
+    return this.getStringAttribute('subnet_id');
   }
   public set subnetId(value: string) {
     this._subnetId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get subnetIdInput() {
+    return this._subnetId
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: SubnetNatGatewayAssociationTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: SubnetNatGatewayAssociationTimeouts | undefined) {
+  public set timeouts(value: SubnetNatGatewayAssociationTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

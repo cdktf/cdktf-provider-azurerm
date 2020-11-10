@@ -17,95 +17,95 @@ export interface DataAzurermVirtualNetworkGatewayConfig extends TerraformMetaArg
 }
 export class DataAzurermVirtualNetworkGatewayBgpSettings extends ComplexComputedList {
 
-  // asn - computed: true, optional: false, required: true
+  // asn - computed: true, optional: false, required: false
   public get asn() {
     return this.getNumberAttribute('asn');
   }
 
-  // peer_weight - computed: true, optional: false, required: true
+  // peer_weight - computed: true, optional: false, required: false
   public get peerWeight() {
     return this.getNumberAttribute('peer_weight');
   }
 
-  // peering_address - computed: true, optional: false, required: true
+  // peering_address - computed: true, optional: false, required: false
   public get peeringAddress() {
     return this.getStringAttribute('peering_address');
   }
 }
 export class DataAzurermVirtualNetworkGatewayIpConfiguration extends ComplexComputedList {
 
-  // name - computed: true, optional: false, required: true
+  // name - computed: true, optional: false, required: false
   public get name() {
     return this.getStringAttribute('name');
   }
 
-  // private_ip_address_allocation - computed: true, optional: false, required: true
+  // private_ip_address_allocation - computed: true, optional: false, required: false
   public get privateIpAddressAllocation() {
     return this.getStringAttribute('private_ip_address_allocation');
   }
 
-  // public_ip_address_id - computed: true, optional: false, required: true
+  // public_ip_address_id - computed: true, optional: false, required: false
   public get publicIpAddressId() {
     return this.getStringAttribute('public_ip_address_id');
   }
 
-  // subnet_id - computed: true, optional: false, required: true
+  // subnet_id - computed: true, optional: false, required: false
   public get subnetId() {
     return this.getStringAttribute('subnet_id');
   }
 }
 export class DataAzurermVirtualNetworkGatewayVpnClientConfigurationRevokedCertificate extends ComplexComputedList {
 
-  // name - computed: true, optional: false, required: true
+  // name - computed: true, optional: false, required: false
   public get name() {
     return this.getStringAttribute('name');
   }
 
-  // thumbprint - computed: true, optional: false, required: true
+  // thumbprint - computed: true, optional: false, required: false
   public get thumbprint() {
     return this.getStringAttribute('thumbprint');
   }
 }
 export class DataAzurermVirtualNetworkGatewayVpnClientConfigurationRootCertificate extends ComplexComputedList {
 
-  // name - computed: true, optional: false, required: true
+  // name - computed: true, optional: false, required: false
   public get name() {
     return this.getStringAttribute('name');
   }
 
-  // public_cert_data - computed: true, optional: false, required: true
+  // public_cert_data - computed: true, optional: false, required: false
   public get publicCertData() {
     return this.getStringAttribute('public_cert_data');
   }
 }
 export class DataAzurermVirtualNetworkGatewayVpnClientConfiguration extends ComplexComputedList {
 
-  // address_space - computed: true, optional: false, required: true
+  // address_space - computed: true, optional: false, required: false
   public get addressSpace() {
     return this.getListAttribute('address_space');
   }
 
-  // radius_server_address - computed: true, optional: false, required: true
+  // radius_server_address - computed: true, optional: false, required: false
   public get radiusServerAddress() {
     return this.getStringAttribute('radius_server_address');
   }
 
-  // radius_server_secret - computed: true, optional: false, required: true
+  // radius_server_secret - computed: true, optional: false, required: false
   public get radiusServerSecret() {
     return this.getStringAttribute('radius_server_secret');
   }
 
-  // revoked_certificate - computed: true, optional: false, required: true
+  // revoked_certificate - computed: true, optional: false, required: false
   public get revokedCertificate() {
-    return 'not implemented' as any;
+    return this.interpolationForAttribute('revoked_certificate') as any;
   }
 
-  // root_certificate - computed: true, optional: false, required: true
+  // root_certificate - computed: true, optional: false, required: false
   public get rootCertificate() {
-    return 'not implemented' as any;
+    return this.interpolationForAttribute('root_certificate') as any;
   }
 
-  // vpn_client_protocols - computed: true, optional: false, required: true
+  // vpn_client_protocols - computed: true, optional: false, required: false
   public get vpnClientProtocols() {
     return this.getListAttribute('vpn_client_protocols');
   }
@@ -142,46 +142,42 @@ export class DataAzurermVirtualNetworkGateway extends TerraformDataSource {
   // ATTRIBUTES
   // ==========
 
-  // active_active - computed: true, optional: false, required: true
+  // active_active - computed: true, optional: false, required: false
   public get activeActive() {
     return this.getBooleanAttribute('active_active');
   }
 
-  // bgp_settings - computed: true, optional: false, required: true
+  // bgp_settings - computed: true, optional: false, required: false
   public bgpSettings(index: string) {
     return new DataAzurermVirtualNetworkGatewayBgpSettings(this, 'bgp_settings', index);
   }
 
-  // default_local_network_gateway_id - computed: true, optional: false, required: true
+  // default_local_network_gateway_id - computed: true, optional: false, required: false
   public get defaultLocalNetworkGatewayId() {
     return this.getStringAttribute('default_local_network_gateway_id');
   }
 
-  // enable_bgp - computed: true, optional: false, required: true
+  // enable_bgp - computed: true, optional: false, required: false
   public get enableBgp() {
     return this.getBooleanAttribute('enable_bgp');
   }
 
-  // generation - computed: true, optional: false, required: true
+  // generation - computed: true, optional: false, required: false
   public get generation() {
     return this.getStringAttribute('generation');
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
-  // ip_configuration - computed: true, optional: false, required: true
+  // ip_configuration - computed: true, optional: false, required: false
   public ipConfiguration(index: string) {
     return new DataAzurermVirtualNetworkGatewayIpConfiguration(this, 'ip_configuration', index);
   }
 
-  // location - computed: true, optional: false, required: true
+  // location - computed: true, optional: false, required: false
   public get location() {
     return this.getStringAttribute('location');
   }
@@ -189,42 +185,50 @@ export class DataAzurermVirtualNetworkGateway extends TerraformDataSource {
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
-    return this._resourceGroupName;
+    return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
+  }
 
-  // sku - computed: true, optional: false, required: true
+  // sku - computed: true, optional: false, required: false
   public get sku() {
     return this.getStringAttribute('sku');
   }
 
-  // tags - computed: true, optional: false, required: true
+  // tags - computed: true, optional: false, required: false
   public tags(key: string): string {
     return new StringMap(this, 'tags').lookup(key);
   }
 
-  // type - computed: true, optional: false, required: true
+  // type - computed: true, optional: false, required: false
   public get type() {
     return this.getStringAttribute('type');
   }
 
-  // vpn_client_configuration - computed: true, optional: false, required: true
+  // vpn_client_configuration - computed: true, optional: false, required: false
   public vpnClientConfiguration(index: string) {
     return new DataAzurermVirtualNetworkGatewayVpnClientConfiguration(this, 'vpn_client_configuration', index);
   }
 
-  // vpn_type - computed: true, optional: false, required: true
+  // vpn_type - computed: true, optional: false, required: false
   public get vpnType() {
     return this.getStringAttribute('vpn_type');
   }
@@ -232,10 +236,17 @@ export class DataAzurermVirtualNetworkGateway extends TerraformDataSource {
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: DataAzurermVirtualNetworkGatewayTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: DataAzurermVirtualNetworkGatewayTimeouts | undefined) {
+  public set timeouts(value: DataAzurermVirtualNetworkGatewayTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

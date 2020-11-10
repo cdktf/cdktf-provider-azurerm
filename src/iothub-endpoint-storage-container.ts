@@ -65,100 +65,151 @@ export class IothubEndpointStorageContainer extends TerraformResource {
   // batch_frequency_in_seconds - computed: false, optional: true, required: false
   private _batchFrequencyInSeconds?: number;
   public get batchFrequencyInSeconds() {
-    return this._batchFrequencyInSeconds;
+    return this.getNumberAttribute('batch_frequency_in_seconds');
   }
-  public set batchFrequencyInSeconds(value: number | undefined) {
+  public set batchFrequencyInSeconds(value: number ) {
     this._batchFrequencyInSeconds = value;
+  }
+  public resetBatchFrequencyInSeconds() {
+    this._batchFrequencyInSeconds = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get batchFrequencyInSecondsInput() {
+    return this._batchFrequencyInSeconds
   }
 
   // connection_string - computed: false, optional: false, required: true
   private _connectionString: string;
   public get connectionString() {
-    return this._connectionString;
+    return this.getStringAttribute('connection_string');
   }
   public set connectionString(value: string) {
     this._connectionString = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get connectionStringInput() {
+    return this._connectionString
   }
 
   // container_name - computed: false, optional: false, required: true
   private _containerName: string;
   public get containerName() {
-    return this._containerName;
+    return this.getStringAttribute('container_name');
   }
   public set containerName(value: string) {
     this._containerName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get containerNameInput() {
+    return this._containerName
   }
 
   // encoding - computed: false, optional: true, required: false
   private _encoding?: string;
   public get encoding() {
-    return this._encoding;
+    return this.getStringAttribute('encoding');
   }
-  public set encoding(value: string | undefined) {
+  public set encoding(value: string ) {
     this._encoding = value;
+  }
+  public resetEncoding() {
+    this._encoding = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get encodingInput() {
+    return this._encoding
   }
 
   // file_name_format - computed: false, optional: true, required: false
   private _fileNameFormat?: string;
   public get fileNameFormat() {
-    return this._fileNameFormat;
+    return this.getStringAttribute('file_name_format');
   }
-  public set fileNameFormat(value: string | undefined) {
+  public set fileNameFormat(value: string ) {
     this._fileNameFormat = value;
+  }
+  public resetFileNameFormat() {
+    this._fileNameFormat = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get fileNameFormatInput() {
+    return this._fileNameFormat
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // iothub_name - computed: false, optional: false, required: true
   private _iothubName: string;
   public get iothubName() {
-    return this._iothubName;
+    return this.getStringAttribute('iothub_name');
   }
   public set iothubName(value: string) {
     this._iothubName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get iothubNameInput() {
+    return this._iothubName
   }
 
   // max_chunk_size_in_bytes - computed: false, optional: true, required: false
   private _maxChunkSizeInBytes?: number;
   public get maxChunkSizeInBytes() {
-    return this._maxChunkSizeInBytes;
+    return this.getNumberAttribute('max_chunk_size_in_bytes');
   }
-  public set maxChunkSizeInBytes(value: number | undefined) {
+  public set maxChunkSizeInBytes(value: number ) {
     this._maxChunkSizeInBytes = value;
+  }
+  public resetMaxChunkSizeInBytes() {
+    this._maxChunkSizeInBytes = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get maxChunkSizeInBytesInput() {
+    return this._maxChunkSizeInBytes
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
-    return this._resourceGroupName;
+    return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: IothubEndpointStorageContainerTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: IothubEndpointStorageContainerTimeouts | undefined) {
+  public set timeouts(value: IothubEndpointStorageContainerTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

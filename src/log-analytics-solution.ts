@@ -63,75 +63,102 @@ export class LogAnalyticsSolution extends TerraformResource {
   // ==========
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // location - computed: false, optional: false, required: true
   private _location: string;
   public get location() {
-    return this._location;
+    return this.getStringAttribute('location');
   }
   public set location(value: string) {
     this._location = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get locationInput() {
+    return this._location
   }
 
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
-    return this._resourceGroupName;
+    return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
   }
 
   // solution_name - computed: false, optional: false, required: true
   private _solutionName: string;
   public get solutionName() {
-    return this._solutionName;
+    return this.getStringAttribute('solution_name');
   }
   public set solutionName(value: string) {
     this._solutionName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get solutionNameInput() {
+    return this._solutionName
   }
 
   // workspace_name - computed: false, optional: false, required: true
   private _workspaceName: string;
   public get workspaceName() {
-    return this._workspaceName;
+    return this.getStringAttribute('workspace_name');
   }
   public set workspaceName(value: string) {
     this._workspaceName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get workspaceNameInput() {
+    return this._workspaceName
   }
 
   // workspace_resource_id - computed: false, optional: false, required: true
   private _workspaceResourceId: string;
   public get workspaceResourceId() {
-    return this._workspaceResourceId;
+    return this.getStringAttribute('workspace_resource_id');
   }
   public set workspaceResourceId(value: string) {
     this._workspaceResourceId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get workspaceResourceIdInput() {
+    return this._workspaceResourceId
   }
 
   // plan - computed: false, optional: false, required: true
   private _plan: LogAnalyticsSolutionPlan[];
   public get plan() {
-    return this._plan;
+    return this.interpolationForAttribute('plan') as any;
   }
   public set plan(value: LogAnalyticsSolutionPlan[]) {
     this._plan = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get planInput() {
+    return this._plan
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: LogAnalyticsSolutionTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: LogAnalyticsSolutionTimeouts | undefined) {
+  public set timeouts(value: LogAnalyticsSolutionTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

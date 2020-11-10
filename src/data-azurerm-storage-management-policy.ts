@@ -15,70 +15,70 @@ export interface DataAzurermStorageManagementPolicyConfig extends TerraformMetaA
 }
 export class DataAzurermStorageManagementPolicyRuleActionsBaseBlob extends ComplexComputedList {
 
-  // delete_after_days_since_modification_greater_than - computed: true, optional: false, required: true
+  // delete_after_days_since_modification_greater_than - computed: true, optional: false, required: false
   public get deleteAfterDaysSinceModificationGreaterThan() {
     return this.getNumberAttribute('delete_after_days_since_modification_greater_than');
   }
 
-  // tier_to_archive_after_days_since_modification_greater_than - computed: true, optional: false, required: true
+  // tier_to_archive_after_days_since_modification_greater_than - computed: true, optional: false, required: false
   public get tierToArchiveAfterDaysSinceModificationGreaterThan() {
     return this.getNumberAttribute('tier_to_archive_after_days_since_modification_greater_than');
   }
 
-  // tier_to_cool_after_days_since_modification_greater_than - computed: true, optional: false, required: true
+  // tier_to_cool_after_days_since_modification_greater_than - computed: true, optional: false, required: false
   public get tierToCoolAfterDaysSinceModificationGreaterThan() {
     return this.getNumberAttribute('tier_to_cool_after_days_since_modification_greater_than');
   }
 }
 export class DataAzurermStorageManagementPolicyRuleActionsSnapshot extends ComplexComputedList {
 
-  // delete_after_days_since_creation_greater_than - computed: true, optional: false, required: true
+  // delete_after_days_since_creation_greater_than - computed: true, optional: false, required: false
   public get deleteAfterDaysSinceCreationGreaterThan() {
     return this.getNumberAttribute('delete_after_days_since_creation_greater_than');
   }
 }
 export class DataAzurermStorageManagementPolicyRuleActions extends ComplexComputedList {
 
-  // base_blob - computed: true, optional: false, required: true
+  // base_blob - computed: true, optional: false, required: false
   public get baseBlob() {
-    return 'not implemented' as any;
+    return this.interpolationForAttribute('base_blob') as any;
   }
 
-  // snapshot - computed: true, optional: false, required: true
+  // snapshot - computed: true, optional: false, required: false
   public get snapshot() {
-    return 'not implemented' as any;
+    return this.interpolationForAttribute('snapshot') as any;
   }
 }
 export class DataAzurermStorageManagementPolicyRuleFilters extends ComplexComputedList {
 
-  // blob_types - computed: true, optional: false, required: true
+  // blob_types - computed: true, optional: false, required: false
   public get blobTypes() {
     return this.getListAttribute('blob_types');
   }
 
-  // prefix_match - computed: true, optional: false, required: true
+  // prefix_match - computed: true, optional: false, required: false
   public get prefixMatch() {
     return this.getListAttribute('prefix_match');
   }
 }
 export class DataAzurermStorageManagementPolicyRule extends ComplexComputedList {
 
-  // actions - computed: true, optional: false, required: true
+  // actions - computed: true, optional: false, required: false
   public get actions() {
-    return 'not implemented' as any;
+    return this.interpolationForAttribute('actions') as any;
   }
 
-  // enabled - computed: true, optional: false, required: true
+  // enabled - computed: true, optional: false, required: false
   public get enabled() {
     return this.getBooleanAttribute('enabled');
   }
 
-  // filters - computed: true, optional: false, required: true
+  // filters - computed: true, optional: false, required: false
   public get filters() {
-    return 'not implemented' as any;
+    return this.interpolationForAttribute('filters') as any;
   }
 
-  // name - computed: true, optional: false, required: true
+  // name - computed: true, optional: false, required: false
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -115,15 +115,11 @@ export class DataAzurermStorageManagementPolicy extends TerraformDataSource {
   // ==========
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
-  // rule - computed: true, optional: false, required: true
+  // rule - computed: true, optional: false, required: false
   public rule(index: string) {
     return new DataAzurermStorageManagementPolicyRule(this, 'rule', index);
   }
@@ -131,19 +127,30 @@ export class DataAzurermStorageManagementPolicy extends TerraformDataSource {
   // storage_account_id - computed: false, optional: false, required: true
   private _storageAccountId: string;
   public get storageAccountId() {
-    return this._storageAccountId;
+    return this.getStringAttribute('storage_account_id');
   }
   public set storageAccountId(value: string) {
     this._storageAccountId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get storageAccountIdInput() {
+    return this._storageAccountId
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: DataAzurermStorageManagementPolicyTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: DataAzurermStorageManagementPolicyTimeouts | undefined) {
+  public set timeouts(value: DataAzurermStorageManagementPolicyTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

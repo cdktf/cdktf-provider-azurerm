@@ -82,40 +82,51 @@ export class DataAzurermStorageAccountSas extends TerraformDataSource {
   // connection_string - computed: false, optional: false, required: true
   private _connectionString: string;
   public get connectionString() {
-    return this._connectionString;
+    return this.getStringAttribute('connection_string');
   }
   public set connectionString(value: string) {
     this._connectionString = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get connectionStringInput() {
+    return this._connectionString
   }
 
   // expiry - computed: false, optional: false, required: true
   private _expiry: string;
   public get expiry() {
-    return this._expiry;
+    return this.getStringAttribute('expiry');
   }
   public set expiry(value: string) {
     this._expiry = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get expiryInput() {
+    return this._expiry
   }
 
   // https_only - computed: false, optional: true, required: false
   private _httpsOnly?: boolean;
   public get httpsOnly() {
-    return this._httpsOnly;
+    return this.getBooleanAttribute('https_only');
   }
-  public set httpsOnly(value: boolean | undefined) {
+  public set httpsOnly(value: boolean ) {
     this._httpsOnly = value;
+  }
+  public resetHttpsOnly() {
+    this._httpsOnly = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get httpsOnlyInput() {
+    return this._httpsOnly
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
-  // sas - computed: true, optional: false, required: true
+  // sas - computed: true, optional: false, required: false
   public get sas() {
     return this.getStringAttribute('sas');
   }
@@ -123,46 +134,69 @@ export class DataAzurermStorageAccountSas extends TerraformDataSource {
   // start - computed: false, optional: false, required: true
   private _start: string;
   public get start() {
-    return this._start;
+    return this.getStringAttribute('start');
   }
   public set start(value: string) {
     this._start = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get startInput() {
+    return this._start
   }
 
   // permissions - computed: false, optional: false, required: true
   private _permissions: DataAzurermStorageAccountSasPermissions[];
   public get permissions() {
-    return this._permissions;
+    return this.interpolationForAttribute('permissions') as any;
   }
   public set permissions(value: DataAzurermStorageAccountSasPermissions[]) {
     this._permissions = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get permissionsInput() {
+    return this._permissions
   }
 
   // resource_types - computed: false, optional: false, required: true
   private _resourceTypes: DataAzurermStorageAccountSasResourceTypes[];
   public get resourceTypes() {
-    return this._resourceTypes;
+    return this.interpolationForAttribute('resource_types') as any;
   }
   public set resourceTypes(value: DataAzurermStorageAccountSasResourceTypes[]) {
     this._resourceTypes = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resourceTypesInput() {
+    return this._resourceTypes
   }
 
   // services - computed: false, optional: false, required: true
   private _services: DataAzurermStorageAccountSasServices[];
   public get services() {
-    return this._services;
+    return this.interpolationForAttribute('services') as any;
   }
   public set services(value: DataAzurermStorageAccountSasServices[]) {
     this._services = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get servicesInput() {
+    return this._services
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: DataAzurermStorageAccountSasTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: DataAzurermStorageAccountSasTimeouts | undefined) {
+  public set timeouts(value: DataAzurermStorageAccountSasTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

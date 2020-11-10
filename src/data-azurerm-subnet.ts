@@ -47,40 +47,40 @@ export class DataAzurermSubnet extends TerraformDataSource {
   // ATTRIBUTES
   // ==========
 
-  // address_prefix - computed: true, optional: false, required: true
+  // address_prefix - computed: true, optional: false, required: false
   public get addressPrefix() {
     return this.getStringAttribute('address_prefix');
   }
 
-  // enforce_private_link_endpoint_network_policies - computed: true, optional: false, required: true
+  // enforce_private_link_endpoint_network_policies - computed: true, optional: false, required: false
   public get enforcePrivateLinkEndpointNetworkPolicies() {
     return this.getBooleanAttribute('enforce_private_link_endpoint_network_policies');
   }
 
-  // enforce_private_link_service_network_policies - computed: true, optional: false, required: true
+  // enforce_private_link_service_network_policies - computed: true, optional: false, required: false
   public get enforcePrivateLinkServiceNetworkPolicies() {
     return this.getBooleanAttribute('enforce_private_link_service_network_policies');
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
+  }
 
-  // network_security_group_id - computed: true, optional: false, required: true
+  // network_security_group_id - computed: true, optional: false, required: false
   public get networkSecurityGroupId() {
     return this.getStringAttribute('network_security_group_id');
   }
@@ -88,18 +88,22 @@ export class DataAzurermSubnet extends TerraformDataSource {
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
-    return this._resourceGroupName;
+    return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
+  }
 
-  // route_table_id - computed: true, optional: false, required: true
+  // route_table_id - computed: true, optional: false, required: false
   public get routeTableId() {
     return this.getStringAttribute('route_table_id');
   }
 
-  // service_endpoints - computed: true, optional: false, required: true
+  // service_endpoints - computed: true, optional: false, required: false
   public get serviceEndpoints() {
     return this.getListAttribute('service_endpoints');
   }
@@ -107,19 +111,30 @@ export class DataAzurermSubnet extends TerraformDataSource {
   // virtual_network_name - computed: false, optional: false, required: true
   private _virtualNetworkName: string;
   public get virtualNetworkName() {
-    return this._virtualNetworkName;
+    return this.getStringAttribute('virtual_network_name');
   }
   public set virtualNetworkName(value: string) {
     this._virtualNetworkName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get virtualNetworkNameInput() {
+    return this._virtualNetworkName
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: DataAzurermSubnetTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: DataAzurermSubnetTimeouts | undefined) {
+  public set timeouts(value: DataAzurermSubnetTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

@@ -109,39 +109,43 @@ export class KeyVaultCertificate extends TerraformResource {
   // ATTRIBUTES
   // ==========
 
-  // certificate_data - computed: true, optional: false, required: true
+  // certificate_data - computed: true, optional: false, required: false
   public get certificateData() {
     return this.getStringAttribute('certificate_data');
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // key_vault_id - computed: false, optional: false, required: true
   private _keyVaultId: string;
   public get keyVaultId() {
-    return this._keyVaultId;
+    return this.getStringAttribute('key_vault_id');
   }
   public set keyVaultId(value: string) {
     this._keyVaultId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keyVaultIdInput() {
+    return this._keyVaultId
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
+  }
 
-  // secret_id - computed: true, optional: false, required: true
+  // secret_id - computed: true, optional: false, required: false
   public get secretId() {
     return this.getStringAttribute('secret_id');
   }
@@ -149,18 +153,25 @@ export class KeyVaultCertificate extends TerraformResource {
   // tags - computed: false, optional: true, required: false
   private _tags?: { [key: string]: string };
   public get tags() {
-    return this._tags;
+    return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | undefined) {
+  public set tags(value: { [key: string]: string } ) {
     this._tags = value;
   }
+  public resetTags() {
+    this._tags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsInput() {
+    return this._tags
+  }
 
-  // thumbprint - computed: true, optional: false, required: true
+  // thumbprint - computed: true, optional: false, required: false
   public get thumbprint() {
     return this.getStringAttribute('thumbprint');
   }
 
-  // version - computed: true, optional: false, required: true
+  // version - computed: true, optional: false, required: false
   public get version() {
     return this.getStringAttribute('version');
   }
@@ -168,28 +179,46 @@ export class KeyVaultCertificate extends TerraformResource {
   // certificate - computed: false, optional: true, required: false
   private _certificate?: KeyVaultCertificateCertificate[];
   public get certificate() {
-    return this._certificate;
+    return this.interpolationForAttribute('certificate') as any;
   }
-  public set certificate(value: KeyVaultCertificateCertificate[] | undefined) {
+  public set certificate(value: KeyVaultCertificateCertificate[] ) {
     this._certificate = value;
+  }
+  public resetCertificate() {
+    this._certificate = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get certificateInput() {
+    return this._certificate
   }
 
   // certificate_policy - computed: false, optional: false, required: true
   private _certificatePolicy: KeyVaultCertificateCertificatePolicy[];
   public get certificatePolicy() {
-    return this._certificatePolicy;
+    return this.interpolationForAttribute('certificate_policy') as any;
   }
   public set certificatePolicy(value: KeyVaultCertificateCertificatePolicy[]) {
     this._certificatePolicy = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get certificatePolicyInput() {
+    return this._certificatePolicy
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: KeyVaultCertificateTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: KeyVaultCertificateTimeouts | undefined) {
+  public set timeouts(value: KeyVaultCertificateTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

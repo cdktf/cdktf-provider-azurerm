@@ -17,114 +17,114 @@ export interface DataAzurermApiManagementConfig extends TerraformMetaArguments {
 }
 export class DataAzurermApiManagementAdditionalLocation extends ComplexComputedList {
 
-  // gateway_regional_url - computed: true, optional: false, required: true
+  // gateway_regional_url - computed: true, optional: false, required: false
   public get gatewayRegionalUrl() {
     return this.getStringAttribute('gateway_regional_url');
   }
 
-  // location - computed: true, optional: false, required: true
+  // location - computed: true, optional: false, required: false
   public get location() {
     return this.getStringAttribute('location');
   }
 
-  // public_ip_addresses - computed: true, optional: false, required: true
+  // public_ip_addresses - computed: true, optional: false, required: false
   public get publicIpAddresses() {
     return this.getListAttribute('public_ip_addresses');
   }
 }
 export class DataAzurermApiManagementHostnameConfigurationManagement extends ComplexComputedList {
 
-  // host_name - computed: true, optional: false, required: true
+  // host_name - computed: true, optional: false, required: false
   public get hostName() {
     return this.getStringAttribute('host_name');
   }
 
-  // key_vault_id - computed: true, optional: false, required: true
+  // key_vault_id - computed: true, optional: false, required: false
   public get keyVaultId() {
     return this.getStringAttribute('key_vault_id');
   }
 
-  // negotiate_client_certificate - computed: true, optional: false, required: true
+  // negotiate_client_certificate - computed: true, optional: false, required: false
   public get negotiateClientCertificate() {
     return this.getBooleanAttribute('negotiate_client_certificate');
   }
 }
 export class DataAzurermApiManagementHostnameConfigurationPortal extends ComplexComputedList {
 
-  // host_name - computed: true, optional: false, required: true
+  // host_name - computed: true, optional: false, required: false
   public get hostName() {
     return this.getStringAttribute('host_name');
   }
 
-  // key_vault_id - computed: true, optional: false, required: true
+  // key_vault_id - computed: true, optional: false, required: false
   public get keyVaultId() {
     return this.getStringAttribute('key_vault_id');
   }
 
-  // negotiate_client_certificate - computed: true, optional: false, required: true
+  // negotiate_client_certificate - computed: true, optional: false, required: false
   public get negotiateClientCertificate() {
     return this.getBooleanAttribute('negotiate_client_certificate');
   }
 }
 export class DataAzurermApiManagementHostnameConfigurationProxy extends ComplexComputedList {
 
-  // default_ssl_binding - computed: true, optional: false, required: true
+  // default_ssl_binding - computed: true, optional: false, required: false
   public get defaultSslBinding() {
     return this.getBooleanAttribute('default_ssl_binding');
   }
 
-  // host_name - computed: true, optional: false, required: true
+  // host_name - computed: true, optional: false, required: false
   public get hostName() {
     return this.getStringAttribute('host_name');
   }
 
-  // key_vault_id - computed: true, optional: false, required: true
+  // key_vault_id - computed: true, optional: false, required: false
   public get keyVaultId() {
     return this.getStringAttribute('key_vault_id');
   }
 
-  // negotiate_client_certificate - computed: true, optional: false, required: true
+  // negotiate_client_certificate - computed: true, optional: false, required: false
   public get negotiateClientCertificate() {
     return this.getBooleanAttribute('negotiate_client_certificate');
   }
 }
 export class DataAzurermApiManagementHostnameConfigurationScm extends ComplexComputedList {
 
-  // host_name - computed: true, optional: false, required: true
+  // host_name - computed: true, optional: false, required: false
   public get hostName() {
     return this.getStringAttribute('host_name');
   }
 
-  // key_vault_id - computed: true, optional: false, required: true
+  // key_vault_id - computed: true, optional: false, required: false
   public get keyVaultId() {
     return this.getStringAttribute('key_vault_id');
   }
 
-  // negotiate_client_certificate - computed: true, optional: false, required: true
+  // negotiate_client_certificate - computed: true, optional: false, required: false
   public get negotiateClientCertificate() {
     return this.getBooleanAttribute('negotiate_client_certificate');
   }
 }
 export class DataAzurermApiManagementHostnameConfiguration extends ComplexComputedList {
 
-  // management - computed: true, optional: false, required: true
+  // management - computed: true, optional: false, required: false
   public get management() {
-    return 'not implemented' as any;
+    return this.interpolationForAttribute('management') as any;
   }
 
-  // portal - computed: true, optional: false, required: true
+  // portal - computed: true, optional: false, required: false
   public get portal() {
-    return 'not implemented' as any;
+    return this.interpolationForAttribute('portal') as any;
   }
 
-  // proxy - computed: true, optional: false, required: true
+  // proxy - computed: true, optional: false, required: false
   public get proxy() {
-    return 'not implemented' as any;
+    return this.interpolationForAttribute('proxy') as any;
   }
 
-  // scm - computed: true, optional: false, required: true
+  // scm - computed: true, optional: false, required: false
   public get scm() {
-    return 'not implemented' as any;
+    return this.interpolationForAttribute('scm') as any;
   }
 }
 export interface DataAzurermApiManagementTimeouts {
@@ -159,41 +159,37 @@ export class DataAzurermApiManagement extends TerraformDataSource {
   // ATTRIBUTES
   // ==========
 
-  // additional_location - computed: true, optional: false, required: true
+  // additional_location - computed: true, optional: false, required: false
   public additionalLocation(index: string) {
     return new DataAzurermApiManagementAdditionalLocation(this, 'additional_location', index);
   }
 
-  // gateway_regional_url - computed: true, optional: false, required: true
+  // gateway_regional_url - computed: true, optional: false, required: false
   public get gatewayRegionalUrl() {
     return this.getStringAttribute('gateway_regional_url');
   }
 
-  // gateway_url - computed: true, optional: false, required: true
+  // gateway_url - computed: true, optional: false, required: false
   public get gatewayUrl() {
     return this.getStringAttribute('gateway_url');
   }
 
-  // hostname_configuration - computed: true, optional: false, required: true
+  // hostname_configuration - computed: true, optional: false, required: false
   public hostnameConfiguration(index: string) {
     return new DataAzurermApiManagementHostnameConfiguration(this, 'hostname_configuration', index);
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
-  // location - computed: true, optional: false, required: true
+  // location - computed: true, optional: false, required: false
   public get location() {
     return this.getStringAttribute('location');
   }
 
-  // management_api_url - computed: true, optional: false, required: true
+  // management_api_url - computed: true, optional: false, required: false
   public get managementApiUrl() {
     return this.getStringAttribute('management_api_url');
   }
@@ -201,33 +197,37 @@ export class DataAzurermApiManagement extends TerraformDataSource {
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
+  }
 
-  // notification_sender_email - computed: true, optional: false, required: true
+  // notification_sender_email - computed: true, optional: false, required: false
   public get notificationSenderEmail() {
     return this.getStringAttribute('notification_sender_email');
   }
 
-  // portal_url - computed: true, optional: false, required: true
+  // portal_url - computed: true, optional: false, required: false
   public get portalUrl() {
     return this.getStringAttribute('portal_url');
   }
 
-  // public_ip_addresses - computed: true, optional: false, required: true
+  // public_ip_addresses - computed: true, optional: false, required: false
   public get publicIpAddresses() {
     return this.getListAttribute('public_ip_addresses');
   }
 
-  // publisher_email - computed: true, optional: false, required: true
+  // publisher_email - computed: true, optional: false, required: false
   public get publisherEmail() {
     return this.getStringAttribute('publisher_email');
   }
 
-  // publisher_name - computed: true, optional: false, required: true
+  // publisher_name - computed: true, optional: false, required: false
   public get publisherName() {
     return this.getStringAttribute('publisher_name');
   }
@@ -235,23 +235,27 @@ export class DataAzurermApiManagement extends TerraformDataSource {
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
-    return this._resourceGroupName;
+    return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
+  }
 
-  // scm_url - computed: true, optional: false, required: true
+  // scm_url - computed: true, optional: false, required: false
   public get scmUrl() {
     return this.getStringAttribute('scm_url');
   }
 
-  // sku_name - computed: true, optional: false, required: true
+  // sku_name - computed: true, optional: false, required: false
   public get skuName() {
     return this.getStringAttribute('sku_name');
   }
 
-  // tags - computed: true, optional: false, required: true
+  // tags - computed: true, optional: false, required: false
   public tags(key: string): string {
     return new StringMap(this, 'tags').lookup(key);
   }
@@ -259,10 +263,17 @@ export class DataAzurermApiManagement extends TerraformDataSource {
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: DataAzurermApiManagementTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: DataAzurermApiManagementTimeouts | undefined) {
+  public set timeouts(value: DataAzurermApiManagementTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

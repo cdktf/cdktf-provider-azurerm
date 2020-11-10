@@ -55,55 +55,74 @@ export class IothubDpsCertificate extends TerraformResource {
   // certificate_content - computed: false, optional: false, required: true
   private _certificateContent: string;
   public get certificateContent() {
-    return this._certificateContent;
+    return this.getStringAttribute('certificate_content');
   }
   public set certificateContent(value: string) {
     this._certificateContent = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get certificateContentInput() {
+    return this._certificateContent
+  }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // iot_dps_name - computed: false, optional: false, required: true
   private _iotDpsName: string;
   public get iotDpsName() {
-    return this._iotDpsName;
+    return this.getStringAttribute('iot_dps_name');
   }
   public set iotDpsName(value: string) {
     this._iotDpsName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get iotDpsNameInput() {
+    return this._iotDpsName
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
-    return this._resourceGroupName;
+    return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: IothubDpsCertificateTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: IothubDpsCertificateTimeouts | undefined) {
+  public set timeouts(value: IothubDpsCertificateTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

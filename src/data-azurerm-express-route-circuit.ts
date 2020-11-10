@@ -16,66 +16,66 @@ export interface DataAzurermExpressRouteCircuitConfig extends TerraformMetaArgum
 }
 export class DataAzurermExpressRouteCircuitPeerings extends ComplexComputedList {
 
-  // azure_asn - computed: true, optional: false, required: true
+  // azure_asn - computed: true, optional: false, required: false
   public get azureAsn() {
     return this.getNumberAttribute('azure_asn');
   }
 
-  // peer_asn - computed: true, optional: false, required: true
+  // peer_asn - computed: true, optional: false, required: false
   public get peerAsn() {
     return this.getNumberAttribute('peer_asn');
   }
 
-  // peering_type - computed: true, optional: false, required: true
+  // peering_type - computed: true, optional: false, required: false
   public get peeringType() {
     return this.getStringAttribute('peering_type');
   }
 
-  // primary_peer_address_prefix - computed: true, optional: false, required: true
+  // primary_peer_address_prefix - computed: true, optional: false, required: false
   public get primaryPeerAddressPrefix() {
     return this.getStringAttribute('primary_peer_address_prefix');
   }
 
-  // secondary_peer_address_prefix - computed: true, optional: false, required: true
+  // secondary_peer_address_prefix - computed: true, optional: false, required: false
   public get secondaryPeerAddressPrefix() {
     return this.getStringAttribute('secondary_peer_address_prefix');
   }
 
-  // shared_key - computed: true, optional: false, required: true
+  // shared_key - computed: true, optional: false, required: false
   public get sharedKey() {
     return this.getStringAttribute('shared_key');
   }
 
-  // vlan_id - computed: true, optional: false, required: true
+  // vlan_id - computed: true, optional: false, required: false
   public get vlanId() {
     return this.getNumberAttribute('vlan_id');
   }
 }
 export class DataAzurermExpressRouteCircuitServiceProviderProperties extends ComplexComputedList {
 
-  // bandwidth_in_mbps - computed: true, optional: false, required: true
+  // bandwidth_in_mbps - computed: true, optional: false, required: false
   public get bandwidthInMbps() {
     return this.getNumberAttribute('bandwidth_in_mbps');
   }
 
-  // peering_location - computed: true, optional: false, required: true
+  // peering_location - computed: true, optional: false, required: false
   public get peeringLocation() {
     return this.getStringAttribute('peering_location');
   }
 
-  // service_provider_name - computed: true, optional: false, required: true
+  // service_provider_name - computed: true, optional: false, required: false
   public get serviceProviderName() {
     return this.getStringAttribute('service_provider_name');
   }
 }
 export class DataAzurermExpressRouteCircuitSku extends ComplexComputedList {
 
-  // family - computed: true, optional: false, required: true
+  // family - computed: true, optional: false, required: false
   public get family() {
     return this.getStringAttribute('family');
   }
 
-  // tier - computed: true, optional: false, required: true
+  // tier - computed: true, optional: false, required: false
   public get tier() {
     return this.getStringAttribute('tier');
   }
@@ -113,15 +113,11 @@ export class DataAzurermExpressRouteCircuit extends TerraformDataSource {
   // ==========
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
-  // location - computed: true, optional: false, required: true
+  // location - computed: true, optional: false, required: false
   public get location() {
     return this.getStringAttribute('location');
   }
@@ -129,13 +125,17 @@ export class DataAzurermExpressRouteCircuit extends TerraformDataSource {
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
+  }
 
-  // peerings - computed: true, optional: false, required: true
+  // peerings - computed: true, optional: false, required: false
   public peerings(index: string) {
     return new DataAzurermExpressRouteCircuitPeerings(this, 'peerings', index);
   }
@@ -143,28 +143,32 @@ export class DataAzurermExpressRouteCircuit extends TerraformDataSource {
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
-    return this._resourceGroupName;
+    return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
+  }
 
-  // service_key - computed: true, optional: false, required: true
+  // service_key - computed: true, optional: false, required: false
   public get serviceKey() {
     return this.getStringAttribute('service_key');
   }
 
-  // service_provider_properties - computed: true, optional: false, required: true
+  // service_provider_properties - computed: true, optional: false, required: false
   public serviceProviderProperties(index: string) {
     return new DataAzurermExpressRouteCircuitServiceProviderProperties(this, 'service_provider_properties', index);
   }
 
-  // service_provider_provisioning_state - computed: true, optional: false, required: true
+  // service_provider_provisioning_state - computed: true, optional: false, required: false
   public get serviceProviderProvisioningState() {
     return this.getStringAttribute('service_provider_provisioning_state');
   }
 
-  // sku - computed: true, optional: false, required: true
+  // sku - computed: true, optional: false, required: false
   public sku(index: string) {
     return new DataAzurermExpressRouteCircuitSku(this, 'sku', index);
   }
@@ -172,10 +176,17 @@ export class DataAzurermExpressRouteCircuit extends TerraformDataSource {
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: DataAzurermExpressRouteCircuitTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: DataAzurermExpressRouteCircuitTimeouts | undefined) {
+  public set timeouts(value: DataAzurermExpressRouteCircuitTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

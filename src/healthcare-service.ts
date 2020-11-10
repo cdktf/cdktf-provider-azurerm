@@ -79,100 +79,154 @@ export class HealthcareService extends TerraformResource {
   // access_policy_object_ids - computed: false, optional: false, required: true
   private _accessPolicyObjectIds: string[];
   public get accessPolicyObjectIds() {
-    return this._accessPolicyObjectIds;
+    return this.getListAttribute('access_policy_object_ids');
   }
   public set accessPolicyObjectIds(value: string[]) {
     this._accessPolicyObjectIds = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get accessPolicyObjectIdsInput() {
+    return this._accessPolicyObjectIds
   }
 
   // cosmosdb_throughput - computed: false, optional: true, required: false
   private _cosmosdbThroughput?: number;
   public get cosmosdbThroughput() {
-    return this._cosmosdbThroughput;
+    return this.getNumberAttribute('cosmosdb_throughput');
   }
-  public set cosmosdbThroughput(value: number | undefined) {
+  public set cosmosdbThroughput(value: number ) {
     this._cosmosdbThroughput = value;
+  }
+  public resetCosmosdbThroughput() {
+    this._cosmosdbThroughput = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get cosmosdbThroughputInput() {
+    return this._cosmosdbThroughput
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // kind - computed: false, optional: true, required: false
   private _kind?: string;
   public get kind() {
-    return this._kind;
+    return this.getStringAttribute('kind');
   }
-  public set kind(value: string | undefined) {
+  public set kind(value: string ) {
     this._kind = value;
+  }
+  public resetKind() {
+    this._kind = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get kindInput() {
+    return this._kind
   }
 
   // location - computed: false, optional: false, required: true
   private _location: string;
   public get location() {
-    return this._location;
+    return this.getStringAttribute('location');
   }
   public set location(value: string) {
     this._location = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get locationInput() {
+    return this._location
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
-    return this._resourceGroupName;
+    return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
   }
 
   // tags - computed: false, optional: true, required: false
   private _tags?: { [key: string]: string };
   public get tags() {
-    return this._tags;
+    return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | undefined) {
+  public set tags(value: { [key: string]: string } ) {
     this._tags = value;
+  }
+  public resetTags() {
+    this._tags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsInput() {
+    return this._tags
   }
 
   // authentication_configuration - computed: false, optional: true, required: false
   private _authenticationConfiguration?: HealthcareServiceAuthenticationConfiguration[];
   public get authenticationConfiguration() {
-    return this._authenticationConfiguration;
+    return this.interpolationForAttribute('authentication_configuration') as any;
   }
-  public set authenticationConfiguration(value: HealthcareServiceAuthenticationConfiguration[] | undefined) {
+  public set authenticationConfiguration(value: HealthcareServiceAuthenticationConfiguration[] ) {
     this._authenticationConfiguration = value;
+  }
+  public resetAuthenticationConfiguration() {
+    this._authenticationConfiguration = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get authenticationConfigurationInput() {
+    return this._authenticationConfiguration
   }
 
   // cors_configuration - computed: false, optional: true, required: false
   private _corsConfiguration?: HealthcareServiceCorsConfiguration[];
   public get corsConfiguration() {
-    return this._corsConfiguration;
+    return this.interpolationForAttribute('cors_configuration') as any;
   }
-  public set corsConfiguration(value: HealthcareServiceCorsConfiguration[] | undefined) {
+  public set corsConfiguration(value: HealthcareServiceCorsConfiguration[] ) {
     this._corsConfiguration = value;
+  }
+  public resetCorsConfiguration() {
+    this._corsConfiguration = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get corsConfigurationInput() {
+    return this._corsConfiguration
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: HealthcareServiceTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: HealthcareServiceTimeouts | undefined) {
+  public set timeouts(value: HealthcareServiceTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

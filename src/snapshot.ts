@@ -83,109 +83,170 @@ export class Snapshot extends TerraformResource {
   // create_option - computed: false, optional: false, required: true
   private _createOption: string;
   public get createOption() {
-    return this._createOption;
+    return this.getStringAttribute('create_option');
   }
   public set createOption(value: string) {
     this._createOption = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createOptionInput() {
+    return this._createOption
   }
 
   // disk_size_gb - computed: true, optional: true, required: false
   private _diskSizeGb?: number;
   public get diskSizeGb() {
-    return this._diskSizeGb ?? this.getNumberAttribute('disk_size_gb');
+    return this.getNumberAttribute('disk_size_gb');
   }
-  public set diskSizeGb(value: number | undefined) {
+  public set diskSizeGb(value: number) {
     this._diskSizeGb = value;
+  }
+  public resetDiskSizeGb() {
+    this._diskSizeGb = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get diskSizeGbInput() {
+    return this._diskSizeGb
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // location - computed: false, optional: false, required: true
   private _location: string;
   public get location() {
-    return this._location;
+    return this.getStringAttribute('location');
   }
   public set location(value: string) {
     this._location = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get locationInput() {
+    return this._location
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
-    return this._resourceGroupName;
+    return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
   }
 
   // source_resource_id - computed: false, optional: true, required: false
   private _sourceResourceId?: string;
   public get sourceResourceId() {
-    return this._sourceResourceId;
+    return this.getStringAttribute('source_resource_id');
   }
-  public set sourceResourceId(value: string | undefined) {
+  public set sourceResourceId(value: string ) {
     this._sourceResourceId = value;
+  }
+  public resetSourceResourceId() {
+    this._sourceResourceId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sourceResourceIdInput() {
+    return this._sourceResourceId
   }
 
   // source_uri - computed: false, optional: true, required: false
   private _sourceUri?: string;
   public get sourceUri() {
-    return this._sourceUri;
+    return this.getStringAttribute('source_uri');
   }
-  public set sourceUri(value: string | undefined) {
+  public set sourceUri(value: string ) {
     this._sourceUri = value;
+  }
+  public resetSourceUri() {
+    this._sourceUri = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sourceUriInput() {
+    return this._sourceUri
   }
 
   // storage_account_id - computed: false, optional: true, required: false
   private _storageAccountId?: string;
   public get storageAccountId() {
-    return this._storageAccountId;
+    return this.getStringAttribute('storage_account_id');
   }
-  public set storageAccountId(value: string | undefined) {
+  public set storageAccountId(value: string ) {
     this._storageAccountId = value;
+  }
+  public resetStorageAccountId() {
+    this._storageAccountId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get storageAccountIdInput() {
+    return this._storageAccountId
   }
 
   // tags - computed: false, optional: true, required: false
   private _tags?: { [key: string]: string };
   public get tags() {
-    return this._tags;
+    return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | undefined) {
+  public set tags(value: { [key: string]: string } ) {
     this._tags = value;
+  }
+  public resetTags() {
+    this._tags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsInput() {
+    return this._tags
   }
 
   // encryption_settings - computed: false, optional: true, required: false
   private _encryptionSettings?: SnapshotEncryptionSettings[];
   public get encryptionSettings() {
-    return this._encryptionSettings;
+    return this.interpolationForAttribute('encryption_settings') as any;
   }
-  public set encryptionSettings(value: SnapshotEncryptionSettings[] | undefined) {
+  public set encryptionSettings(value: SnapshotEncryptionSettings[] ) {
     this._encryptionSettings = value;
+  }
+  public resetEncryptionSettings() {
+    this._encryptionSettings = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get encryptionSettingsInput() {
+    return this._encryptionSettings
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: SnapshotTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: SnapshotTimeouts | undefined) {
+  public set timeouts(value: SnapshotTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

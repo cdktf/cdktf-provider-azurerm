@@ -71,121 +71,189 @@ export class StorageBlob extends TerraformResource {
   // access_tier - computed: true, optional: true, required: false
   private _accessTier?: string;
   public get accessTier() {
-    return this._accessTier ?? this.getStringAttribute('access_tier');
+    return this.getStringAttribute('access_tier');
   }
-  public set accessTier(value: string | undefined) {
+  public set accessTier(value: string) {
     this._accessTier = value;
+  }
+  public resetAccessTier() {
+    this._accessTier = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get accessTierInput() {
+    return this._accessTier
   }
 
   // content_type - computed: false, optional: true, required: false
   private _contentType?: string;
   public get contentType() {
-    return this._contentType;
+    return this.getStringAttribute('content_type');
   }
-  public set contentType(value: string | undefined) {
+  public set contentType(value: string ) {
     this._contentType = value;
+  }
+  public resetContentType() {
+    this._contentType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get contentTypeInput() {
+    return this._contentType
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // metadata - computed: true, optional: true, required: false
   private _metadata?: { [key: string]: string }
-  public get metadata(): { [key: string]: string } | undefined {
-    return this._metadata; // Getting the computed value is not yet implemented
+  public get metadata(): { [key: string]: string } {
+    return this.interpolationForAttribute('metadata') as any; // Getting the computed value is not yet implemented
   }
-  public set metadata(value: { [key: string]: string } | undefined) {
+  public set metadata(value: { [key: string]: string }) {
     this._metadata = value;
+  }
+  public resetMetadata() {
+    this._metadata = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get metadataInput() {
+    return this._metadata
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // parallelism - computed: false, optional: true, required: false
   private _parallelism?: number;
   public get parallelism() {
-    return this._parallelism;
+    return this.getNumberAttribute('parallelism');
   }
-  public set parallelism(value: number | undefined) {
+  public set parallelism(value: number ) {
     this._parallelism = value;
+  }
+  public resetParallelism() {
+    this._parallelism = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get parallelismInput() {
+    return this._parallelism
   }
 
   // size - computed: false, optional: true, required: false
   private _size?: number;
   public get size() {
-    return this._size;
+    return this.getNumberAttribute('size');
   }
-  public set size(value: number | undefined) {
+  public set size(value: number ) {
     this._size = value;
+  }
+  public resetSize() {
+    this._size = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sizeInput() {
+    return this._size
   }
 
   // source - computed: false, optional: true, required: false
   private _source?: string;
   public get source() {
-    return this._source;
+    return this.getStringAttribute('source');
   }
-  public set source(value: string | undefined) {
+  public set source(value: string ) {
     this._source = value;
+  }
+  public resetSource() {
+    this._source = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sourceInput() {
+    return this._source
   }
 
   // source_content - computed: false, optional: true, required: false
   private _sourceContent?: string;
   public get sourceContent() {
-    return this._sourceContent;
+    return this.getStringAttribute('source_content');
   }
-  public set sourceContent(value: string | undefined) {
+  public set sourceContent(value: string ) {
     this._sourceContent = value;
+  }
+  public resetSourceContent() {
+    this._sourceContent = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sourceContentInput() {
+    return this._sourceContent
   }
 
   // source_uri - computed: false, optional: true, required: false
   private _sourceUri?: string;
   public get sourceUri() {
-    return this._sourceUri;
+    return this.getStringAttribute('source_uri');
   }
-  public set sourceUri(value: string | undefined) {
+  public set sourceUri(value: string ) {
     this._sourceUri = value;
+  }
+  public resetSourceUri() {
+    this._sourceUri = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sourceUriInput() {
+    return this._sourceUri
   }
 
   // storage_account_name - computed: false, optional: false, required: true
   private _storageAccountName: string;
   public get storageAccountName() {
-    return this._storageAccountName;
+    return this.getStringAttribute('storage_account_name');
   }
   public set storageAccountName(value: string) {
     this._storageAccountName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get storageAccountNameInput() {
+    return this._storageAccountName
   }
 
   // storage_container_name - computed: false, optional: false, required: true
   private _storageContainerName: string;
   public get storageContainerName() {
-    return this._storageContainerName;
+    return this.getStringAttribute('storage_container_name');
   }
   public set storageContainerName(value: string) {
     this._storageContainerName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get storageContainerNameInput() {
+    return this._storageContainerName
   }
 
   // type - computed: false, optional: false, required: true
   private _type: string;
   public get type() {
-    return this._type;
+    return this.getStringAttribute('type');
   }
   public set type(value: string) {
     this._type = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get typeInput() {
+    return this._type
+  }
 
-  // url - computed: true, optional: false, required: true
+  // url - computed: true, optional: false, required: false
   public get url() {
     return this.getStringAttribute('url');
   }
@@ -193,10 +261,17 @@ export class StorageBlob extends TerraformResource {
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: StorageBlobTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: StorageBlobTimeouts | undefined) {
+  public set timeouts(value: StorageBlobTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

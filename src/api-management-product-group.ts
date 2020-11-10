@@ -55,55 +55,74 @@ export class ApiManagementProductGroup extends TerraformResource {
   // api_management_name - computed: false, optional: false, required: true
   private _apiManagementName: string;
   public get apiManagementName() {
-    return this._apiManagementName;
+    return this.getStringAttribute('api_management_name');
   }
   public set apiManagementName(value: string) {
     this._apiManagementName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get apiManagementNameInput() {
+    return this._apiManagementName
   }
 
   // group_name - computed: false, optional: false, required: true
   private _groupName: string;
   public get groupName() {
-    return this._groupName;
+    return this.getStringAttribute('group_name');
   }
   public set groupName(value: string) {
     this._groupName = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get groupNameInput() {
+    return this._groupName
+  }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // product_id - computed: false, optional: false, required: true
   private _productId: string;
   public get productId() {
-    return this._productId;
+    return this.getStringAttribute('product_id');
   }
   public set productId(value: string) {
     this._productId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get productIdInput() {
+    return this._productId
   }
 
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
-    return this._resourceGroupName;
+    return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: ApiManagementProductGroupTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: ApiManagementProductGroupTimeouts | undefined) {
+  public set timeouts(value: ApiManagementProductGroupTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

@@ -67,82 +67,119 @@ export class LocalNetworkGateway extends TerraformResource {
   // address_space - computed: false, optional: false, required: true
   private _addressSpace: string[];
   public get addressSpace() {
-    return this._addressSpace;
+    return this.getListAttribute('address_space');
   }
   public set addressSpace(value: string[]) {
     this._addressSpace = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get addressSpaceInput() {
+    return this._addressSpace
   }
 
   // gateway_address - computed: false, optional: false, required: true
   private _gatewayAddress: string;
   public get gatewayAddress() {
-    return this._gatewayAddress;
+    return this.getStringAttribute('gateway_address');
   }
   public set gatewayAddress(value: string) {
     this._gatewayAddress = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get gatewayAddressInput() {
+    return this._gatewayAddress
+  }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // location - computed: false, optional: false, required: true
   private _location: string;
   public get location() {
-    return this._location;
+    return this.getStringAttribute('location');
   }
   public set location(value: string) {
     this._location = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get locationInput() {
+    return this._location
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
-    return this._resourceGroupName;
+    return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
   }
 
   // tags - computed: false, optional: true, required: false
   private _tags?: { [key: string]: string };
   public get tags() {
-    return this._tags;
+    return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | undefined) {
+  public set tags(value: { [key: string]: string } ) {
     this._tags = value;
+  }
+  public resetTags() {
+    this._tags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsInput() {
+    return this._tags
   }
 
   // bgp_settings - computed: false, optional: true, required: false
   private _bgpSettings?: LocalNetworkGatewayBgpSettings[];
   public get bgpSettings() {
-    return this._bgpSettings;
+    return this.interpolationForAttribute('bgp_settings') as any;
   }
-  public set bgpSettings(value: LocalNetworkGatewayBgpSettings[] | undefined) {
+  public set bgpSettings(value: LocalNetworkGatewayBgpSettings[] ) {
     this._bgpSettings = value;
+  }
+  public resetBgpSettings() {
+    this._bgpSettings = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get bgpSettingsInput() {
+    return this._bgpSettings
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: LocalNetworkGatewayTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: LocalNetworkGatewayTimeouts | undefined) {
+  public set timeouts(value: LocalNetworkGatewayTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

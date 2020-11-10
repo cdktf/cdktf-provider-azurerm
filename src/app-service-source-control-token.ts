@@ -51,48 +51,66 @@ export class AppServiceSourceControlToken extends TerraformResource {
   // ==========
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // token - computed: false, optional: false, required: true
   private _token: string;
   public get token() {
-    return this._token;
+    return this.getStringAttribute('token');
   }
   public set token(value: string) {
     this._token = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tokenInput() {
+    return this._token
   }
 
   // token_secret - computed: false, optional: true, required: false
   private _tokenSecret?: string;
   public get tokenSecret() {
-    return this._tokenSecret;
+    return this.getStringAttribute('token_secret');
   }
-  public set tokenSecret(value: string | undefined) {
+  public set tokenSecret(value: string ) {
     this._tokenSecret = value;
+  }
+  public resetTokenSecret() {
+    this._tokenSecret = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tokenSecretInput() {
+    return this._tokenSecret
   }
 
   // type - computed: false, optional: false, required: true
   private _type: string;
   public get type() {
-    return this._type;
+    return this.getStringAttribute('type');
   }
   public set type(value: string) {
     this._type = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get typeInput() {
+    return this._type
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: AppServiceSourceControlTokenTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: AppServiceSourceControlTokenTimeouts | undefined) {
+  public set timeouts(value: AppServiceSourceControlTokenTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

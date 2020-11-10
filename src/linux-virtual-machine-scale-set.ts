@@ -228,202 +228,327 @@ export class LinuxVirtualMachineScaleSet extends TerraformResource {
   // admin_password - computed: false, optional: true, required: false
   private _adminPassword?: string;
   public get adminPassword() {
-    return this._adminPassword;
+    return this.getStringAttribute('admin_password');
   }
-  public set adminPassword(value: string | undefined) {
+  public set adminPassword(value: string ) {
     this._adminPassword = value;
+  }
+  public resetAdminPassword() {
+    this._adminPassword = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get adminPasswordInput() {
+    return this._adminPassword
   }
 
   // admin_username - computed: false, optional: false, required: true
   private _adminUsername: string;
   public get adminUsername() {
-    return this._adminUsername;
+    return this.getStringAttribute('admin_username');
   }
   public set adminUsername(value: string) {
     this._adminUsername = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get adminUsernameInput() {
+    return this._adminUsername
   }
 
   // computer_name_prefix - computed: true, optional: true, required: false
   private _computerNamePrefix?: string;
   public get computerNamePrefix() {
-    return this._computerNamePrefix ?? this.getStringAttribute('computer_name_prefix');
+    return this.getStringAttribute('computer_name_prefix');
   }
-  public set computerNamePrefix(value: string | undefined) {
+  public set computerNamePrefix(value: string) {
     this._computerNamePrefix = value;
+  }
+  public resetComputerNamePrefix() {
+    this._computerNamePrefix = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get computerNamePrefixInput() {
+    return this._computerNamePrefix
   }
 
   // custom_data - computed: false, optional: true, required: false
   private _customData?: string;
   public get customData() {
-    return this._customData;
+    return this.getStringAttribute('custom_data');
   }
-  public set customData(value: string | undefined) {
+  public set customData(value: string ) {
     this._customData = value;
+  }
+  public resetCustomData() {
+    this._customData = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get customDataInput() {
+    return this._customData
   }
 
   // disable_password_authentication - computed: false, optional: true, required: false
   private _disablePasswordAuthentication?: boolean;
   public get disablePasswordAuthentication() {
-    return this._disablePasswordAuthentication;
+    return this.getBooleanAttribute('disable_password_authentication');
   }
-  public set disablePasswordAuthentication(value: boolean | undefined) {
+  public set disablePasswordAuthentication(value: boolean ) {
     this._disablePasswordAuthentication = value;
+  }
+  public resetDisablePasswordAuthentication() {
+    this._disablePasswordAuthentication = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get disablePasswordAuthenticationInput() {
+    return this._disablePasswordAuthentication
   }
 
   // do_not_run_extensions_on_overprovisioned_machines - computed: false, optional: true, required: false
   private _doNotRunExtensionsOnOverprovisionedMachines?: boolean;
   public get doNotRunExtensionsOnOverprovisionedMachines() {
-    return this._doNotRunExtensionsOnOverprovisionedMachines;
+    return this.getBooleanAttribute('do_not_run_extensions_on_overprovisioned_machines');
   }
-  public set doNotRunExtensionsOnOverprovisionedMachines(value: boolean | undefined) {
+  public set doNotRunExtensionsOnOverprovisionedMachines(value: boolean ) {
     this._doNotRunExtensionsOnOverprovisionedMachines = value;
+  }
+  public resetDoNotRunExtensionsOnOverprovisionedMachines() {
+    this._doNotRunExtensionsOnOverprovisionedMachines = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get doNotRunExtensionsOnOverprovisionedMachinesInput() {
+    return this._doNotRunExtensionsOnOverprovisionedMachines
   }
 
   // eviction_policy - computed: false, optional: true, required: false
   private _evictionPolicy?: string;
   public get evictionPolicy() {
-    return this._evictionPolicy;
+    return this.getStringAttribute('eviction_policy');
   }
-  public set evictionPolicy(value: string | undefined) {
+  public set evictionPolicy(value: string ) {
     this._evictionPolicy = value;
+  }
+  public resetEvictionPolicy() {
+    this._evictionPolicy = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get evictionPolicyInput() {
+    return this._evictionPolicy
   }
 
   // health_probe_id - computed: false, optional: true, required: false
   private _healthProbeId?: string;
   public get healthProbeId() {
-    return this._healthProbeId;
+    return this.getStringAttribute('health_probe_id');
   }
-  public set healthProbeId(value: string | undefined) {
+  public set healthProbeId(value: string ) {
     this._healthProbeId = value;
+  }
+  public resetHealthProbeId() {
+    this._healthProbeId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get healthProbeIdInput() {
+    return this._healthProbeId
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // instances - computed: false, optional: false, required: true
   private _instances: number;
   public get instances() {
-    return this._instances;
+    return this.getNumberAttribute('instances');
   }
   public set instances(value: number) {
     this._instances = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get instancesInput() {
+    return this._instances
   }
 
   // location - computed: false, optional: false, required: true
   private _location: string;
   public get location() {
-    return this._location;
+    return this.getStringAttribute('location');
   }
   public set location(value: string) {
     this._location = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get locationInput() {
+    return this._location
   }
 
   // max_bid_price - computed: false, optional: true, required: false
   private _maxBidPrice?: number;
   public get maxBidPrice() {
-    return this._maxBidPrice;
+    return this.getNumberAttribute('max_bid_price');
   }
-  public set maxBidPrice(value: number | undefined) {
+  public set maxBidPrice(value: number ) {
     this._maxBidPrice = value;
+  }
+  public resetMaxBidPrice() {
+    this._maxBidPrice = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get maxBidPriceInput() {
+    return this._maxBidPrice
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // overprovision - computed: false, optional: true, required: false
   private _overprovision?: boolean;
   public get overprovision() {
-    return this._overprovision;
+    return this.getBooleanAttribute('overprovision');
   }
-  public set overprovision(value: boolean | undefined) {
+  public set overprovision(value: boolean ) {
     this._overprovision = value;
+  }
+  public resetOverprovision() {
+    this._overprovision = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get overprovisionInput() {
+    return this._overprovision
   }
 
   // priority - computed: false, optional: true, required: false
   private _priority?: string;
   public get priority() {
-    return this._priority;
+    return this.getStringAttribute('priority');
   }
-  public set priority(value: string | undefined) {
+  public set priority(value: string ) {
     this._priority = value;
+  }
+  public resetPriority() {
+    this._priority = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get priorityInput() {
+    return this._priority
   }
 
   // provision_vm_agent - computed: false, optional: true, required: false
   private _provisionVmAgent?: boolean;
   public get provisionVmAgent() {
-    return this._provisionVmAgent;
+    return this.getBooleanAttribute('provision_vm_agent');
   }
-  public set provisionVmAgent(value: boolean | undefined) {
+  public set provisionVmAgent(value: boolean ) {
     this._provisionVmAgent = value;
+  }
+  public resetProvisionVmAgent() {
+    this._provisionVmAgent = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get provisionVmAgentInput() {
+    return this._provisionVmAgent
   }
 
   // proximity_placement_group_id - computed: false, optional: true, required: false
   private _proximityPlacementGroupId?: string;
   public get proximityPlacementGroupId() {
-    return this._proximityPlacementGroupId;
+    return this.getStringAttribute('proximity_placement_group_id');
   }
-  public set proximityPlacementGroupId(value: string | undefined) {
+  public set proximityPlacementGroupId(value: string ) {
     this._proximityPlacementGroupId = value;
+  }
+  public resetProximityPlacementGroupId() {
+    this._proximityPlacementGroupId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get proximityPlacementGroupIdInput() {
+    return this._proximityPlacementGroupId
   }
 
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
-    return this._resourceGroupName;
+    return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
   }
 
   // single_placement_group - computed: false, optional: true, required: false
   private _singlePlacementGroup?: boolean;
   public get singlePlacementGroup() {
-    return this._singlePlacementGroup;
+    return this.getBooleanAttribute('single_placement_group');
   }
-  public set singlePlacementGroup(value: boolean | undefined) {
+  public set singlePlacementGroup(value: boolean ) {
     this._singlePlacementGroup = value;
+  }
+  public resetSinglePlacementGroup() {
+    this._singlePlacementGroup = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get singlePlacementGroupInput() {
+    return this._singlePlacementGroup
   }
 
   // sku - computed: false, optional: false, required: true
   private _sku: string;
   public get sku() {
-    return this._sku;
+    return this.getStringAttribute('sku');
   }
   public set sku(value: string) {
     this._sku = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get skuInput() {
+    return this._sku
   }
 
   // source_image_id - computed: false, optional: true, required: false
   private _sourceImageId?: string;
   public get sourceImageId() {
-    return this._sourceImageId;
+    return this.getStringAttribute('source_image_id');
   }
-  public set sourceImageId(value: string | undefined) {
+  public set sourceImageId(value: string ) {
     this._sourceImageId = value;
+  }
+  public resetSourceImageId() {
+    this._sourceImageId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sourceImageIdInput() {
+    return this._sourceImageId
   }
 
   // tags - computed: false, optional: true, required: false
   private _tags?: { [key: string]: string };
   public get tags() {
-    return this._tags;
+    return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | undefined) {
+  public set tags(value: { [key: string]: string } ) {
     this._tags = value;
   }
+  public resetTags() {
+    this._tags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsInput() {
+    return this._tags
+  }
 
-  // unique_id - computed: true, optional: false, required: true
+  // unique_id - computed: true, optional: false, required: false
   public get uniqueId() {
     return this.getStringAttribute('unique_id');
   }
@@ -431,145 +556,251 @@ export class LinuxVirtualMachineScaleSet extends TerraformResource {
   // upgrade_mode - computed: false, optional: true, required: false
   private _upgradeMode?: string;
   public get upgradeMode() {
-    return this._upgradeMode;
+    return this.getStringAttribute('upgrade_mode');
   }
-  public set upgradeMode(value: string | undefined) {
+  public set upgradeMode(value: string ) {
     this._upgradeMode = value;
+  }
+  public resetUpgradeMode() {
+    this._upgradeMode = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get upgradeModeInput() {
+    return this._upgradeMode
   }
 
   // zone_balance - computed: false, optional: true, required: false
   private _zoneBalance?: boolean;
   public get zoneBalance() {
-    return this._zoneBalance;
+    return this.getBooleanAttribute('zone_balance');
   }
-  public set zoneBalance(value: boolean | undefined) {
+  public set zoneBalance(value: boolean ) {
     this._zoneBalance = value;
+  }
+  public resetZoneBalance() {
+    this._zoneBalance = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get zoneBalanceInput() {
+    return this._zoneBalance
   }
 
   // zones - computed: false, optional: true, required: false
   private _zones?: string[];
   public get zones() {
-    return this._zones;
+    return this.getListAttribute('zones');
   }
-  public set zones(value: string[] | undefined) {
+  public set zones(value: string[] ) {
     this._zones = value;
+  }
+  public resetZones() {
+    this._zones = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get zonesInput() {
+    return this._zones
   }
 
   // additional_capabilities - computed: false, optional: true, required: false
   private _additionalCapabilities?: LinuxVirtualMachineScaleSetAdditionalCapabilities[];
   public get additionalCapabilities() {
-    return this._additionalCapabilities;
+    return this.interpolationForAttribute('additional_capabilities') as any;
   }
-  public set additionalCapabilities(value: LinuxVirtualMachineScaleSetAdditionalCapabilities[] | undefined) {
+  public set additionalCapabilities(value: LinuxVirtualMachineScaleSetAdditionalCapabilities[] ) {
     this._additionalCapabilities = value;
+  }
+  public resetAdditionalCapabilities() {
+    this._additionalCapabilities = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get additionalCapabilitiesInput() {
+    return this._additionalCapabilities
   }
 
   // admin_ssh_key - computed: false, optional: true, required: false
   private _adminSshKey?: LinuxVirtualMachineScaleSetAdminSshKey[];
   public get adminSshKey() {
-    return this._adminSshKey;
+    return this.interpolationForAttribute('admin_ssh_key') as any;
   }
-  public set adminSshKey(value: LinuxVirtualMachineScaleSetAdminSshKey[] | undefined) {
+  public set adminSshKey(value: LinuxVirtualMachineScaleSetAdminSshKey[] ) {
     this._adminSshKey = value;
+  }
+  public resetAdminSshKey() {
+    this._adminSshKey = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get adminSshKeyInput() {
+    return this._adminSshKey
   }
 
   // automatic_os_upgrade_policy - computed: false, optional: true, required: false
   private _automaticOsUpgradePolicy?: LinuxVirtualMachineScaleSetAutomaticOsUpgradePolicy[];
   public get automaticOsUpgradePolicy() {
-    return this._automaticOsUpgradePolicy;
+    return this.interpolationForAttribute('automatic_os_upgrade_policy') as any;
   }
-  public set automaticOsUpgradePolicy(value: LinuxVirtualMachineScaleSetAutomaticOsUpgradePolicy[] | undefined) {
+  public set automaticOsUpgradePolicy(value: LinuxVirtualMachineScaleSetAutomaticOsUpgradePolicy[] ) {
     this._automaticOsUpgradePolicy = value;
+  }
+  public resetAutomaticOsUpgradePolicy() {
+    this._automaticOsUpgradePolicy = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get automaticOsUpgradePolicyInput() {
+    return this._automaticOsUpgradePolicy
   }
 
   // boot_diagnostics - computed: false, optional: true, required: false
   private _bootDiagnostics?: LinuxVirtualMachineScaleSetBootDiagnostics[];
   public get bootDiagnostics() {
-    return this._bootDiagnostics;
+    return this.interpolationForAttribute('boot_diagnostics') as any;
   }
-  public set bootDiagnostics(value: LinuxVirtualMachineScaleSetBootDiagnostics[] | undefined) {
+  public set bootDiagnostics(value: LinuxVirtualMachineScaleSetBootDiagnostics[] ) {
     this._bootDiagnostics = value;
+  }
+  public resetBootDiagnostics() {
+    this._bootDiagnostics = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get bootDiagnosticsInput() {
+    return this._bootDiagnostics
   }
 
   // data_disk - computed: false, optional: true, required: false
   private _dataDisk?: LinuxVirtualMachineScaleSetDataDisk[];
   public get dataDisk() {
-    return this._dataDisk;
+    return this.interpolationForAttribute('data_disk') as any;
   }
-  public set dataDisk(value: LinuxVirtualMachineScaleSetDataDisk[] | undefined) {
+  public set dataDisk(value: LinuxVirtualMachineScaleSetDataDisk[] ) {
     this._dataDisk = value;
+  }
+  public resetDataDisk() {
+    this._dataDisk = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dataDiskInput() {
+    return this._dataDisk
   }
 
   // identity - computed: false, optional: true, required: false
   private _identity?: LinuxVirtualMachineScaleSetIdentity[];
   public get identity() {
-    return this._identity;
+    return this.interpolationForAttribute('identity') as any;
   }
-  public set identity(value: LinuxVirtualMachineScaleSetIdentity[] | undefined) {
+  public set identity(value: LinuxVirtualMachineScaleSetIdentity[] ) {
     this._identity = value;
+  }
+  public resetIdentity() {
+    this._identity = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get identityInput() {
+    return this._identity
   }
 
   // network_interface - computed: false, optional: false, required: true
   private _networkInterface: LinuxVirtualMachineScaleSetNetworkInterface[];
   public get networkInterface() {
-    return this._networkInterface;
+    return this.interpolationForAttribute('network_interface') as any;
   }
   public set networkInterface(value: LinuxVirtualMachineScaleSetNetworkInterface[]) {
     this._networkInterface = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get networkInterfaceInput() {
+    return this._networkInterface
   }
 
   // os_disk - computed: false, optional: false, required: true
   private _osDisk: LinuxVirtualMachineScaleSetOsDisk[];
   public get osDisk() {
-    return this._osDisk;
+    return this.interpolationForAttribute('os_disk') as any;
   }
   public set osDisk(value: LinuxVirtualMachineScaleSetOsDisk[]) {
     this._osDisk = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get osDiskInput() {
+    return this._osDisk
   }
 
   // plan - computed: false, optional: true, required: false
   private _plan?: LinuxVirtualMachineScaleSetPlan[];
   public get plan() {
-    return this._plan;
+    return this.interpolationForAttribute('plan') as any;
   }
-  public set plan(value: LinuxVirtualMachineScaleSetPlan[] | undefined) {
+  public set plan(value: LinuxVirtualMachineScaleSetPlan[] ) {
     this._plan = value;
+  }
+  public resetPlan() {
+    this._plan = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get planInput() {
+    return this._plan
   }
 
   // rolling_upgrade_policy - computed: false, optional: true, required: false
   private _rollingUpgradePolicy?: LinuxVirtualMachineScaleSetRollingUpgradePolicy[];
   public get rollingUpgradePolicy() {
-    return this._rollingUpgradePolicy;
+    return this.interpolationForAttribute('rolling_upgrade_policy') as any;
   }
-  public set rollingUpgradePolicy(value: LinuxVirtualMachineScaleSetRollingUpgradePolicy[] | undefined) {
+  public set rollingUpgradePolicy(value: LinuxVirtualMachineScaleSetRollingUpgradePolicy[] ) {
     this._rollingUpgradePolicy = value;
+  }
+  public resetRollingUpgradePolicy() {
+    this._rollingUpgradePolicy = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get rollingUpgradePolicyInput() {
+    return this._rollingUpgradePolicy
   }
 
   // secret - computed: false, optional: true, required: false
   private _secret?: LinuxVirtualMachineScaleSetSecret[];
   public get secret() {
-    return this._secret;
+    return this.interpolationForAttribute('secret') as any;
   }
-  public set secret(value: LinuxVirtualMachineScaleSetSecret[] | undefined) {
+  public set secret(value: LinuxVirtualMachineScaleSetSecret[] ) {
     this._secret = value;
+  }
+  public resetSecret() {
+    this._secret = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get secretInput() {
+    return this._secret
   }
 
   // source_image_reference - computed: false, optional: true, required: false
   private _sourceImageReference?: LinuxVirtualMachineScaleSetSourceImageReference[];
   public get sourceImageReference() {
-    return this._sourceImageReference;
+    return this.interpolationForAttribute('source_image_reference') as any;
   }
-  public set sourceImageReference(value: LinuxVirtualMachineScaleSetSourceImageReference[] | undefined) {
+  public set sourceImageReference(value: LinuxVirtualMachineScaleSetSourceImageReference[] ) {
     this._sourceImageReference = value;
+  }
+  public resetSourceImageReference() {
+    this._sourceImageReference = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sourceImageReferenceInput() {
+    return this._sourceImageReference
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: LinuxVirtualMachineScaleSetTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: LinuxVirtualMachineScaleSetTimeouts | undefined) {
+  public set timeouts(value: LinuxVirtualMachineScaleSetTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

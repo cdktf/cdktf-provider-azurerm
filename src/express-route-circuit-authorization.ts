@@ -50,12 +50,12 @@ export class ExpressRouteCircuitAuthorization extends TerraformResource {
   // ATTRIBUTES
   // ==========
 
-  // authorization_key - computed: true, optional: false, required: true
+  // authorization_key - computed: true, optional: false, required: false
   public get authorizationKey() {
     return this.getStringAttribute('authorization_key');
   }
 
-  // authorization_use_status - computed: true, optional: false, required: true
+  // authorization_use_status - computed: true, optional: false, required: false
   public get authorizationUseStatus() {
     return this.getStringAttribute('authorization_use_status');
   }
@@ -63,46 +63,61 @@ export class ExpressRouteCircuitAuthorization extends TerraformResource {
   // express_route_circuit_name - computed: false, optional: false, required: true
   private _expressRouteCircuitName: string;
   public get expressRouteCircuitName() {
-    return this._expressRouteCircuitName;
+    return this.getStringAttribute('express_route_circuit_name');
   }
   public set expressRouteCircuitName(value: string) {
     this._expressRouteCircuitName = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get expressRouteCircuitNameInput() {
+    return this._expressRouteCircuitName
+  }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
-    return this._resourceGroupName;
+    return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: ExpressRouteCircuitAuthorizationTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: ExpressRouteCircuitAuthorizationTimeouts | undefined) {
+  public set timeouts(value: ExpressRouteCircuitAuthorizationTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

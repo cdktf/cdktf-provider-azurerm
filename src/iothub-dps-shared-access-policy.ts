@@ -63,54 +63,72 @@ export class IothubDpsSharedAccessPolicy extends TerraformResource {
   // enrollment_read - computed: false, optional: true, required: false
   private _enrollmentRead?: boolean;
   public get enrollmentRead() {
-    return this._enrollmentRead;
+    return this.getBooleanAttribute('enrollment_read');
   }
-  public set enrollmentRead(value: boolean | undefined) {
+  public set enrollmentRead(value: boolean ) {
     this._enrollmentRead = value;
+  }
+  public resetEnrollmentRead() {
+    this._enrollmentRead = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enrollmentReadInput() {
+    return this._enrollmentRead
   }
 
   // enrollment_write - computed: false, optional: true, required: false
   private _enrollmentWrite?: boolean;
   public get enrollmentWrite() {
-    return this._enrollmentWrite;
+    return this.getBooleanAttribute('enrollment_write');
   }
-  public set enrollmentWrite(value: boolean | undefined) {
+  public set enrollmentWrite(value: boolean ) {
     this._enrollmentWrite = value;
+  }
+  public resetEnrollmentWrite() {
+    this._enrollmentWrite = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enrollmentWriteInput() {
+    return this._enrollmentWrite
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // iothub_dps_name - computed: false, optional: false, required: true
   private _iothubDpsName: string;
   public get iothubDpsName() {
-    return this._iothubDpsName;
+    return this.getStringAttribute('iothub_dps_name');
   }
   public set iothubDpsName(value: string) {
     this._iothubDpsName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get iothubDpsNameInput() {
+    return this._iothubDpsName
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
+  }
 
-  // primary_connection_string - computed: true, optional: false, required: true
+  // primary_connection_string - computed: true, optional: false, required: false
   public get primaryConnectionString() {
     return this.getStringAttribute('primary_connection_string');
   }
 
-  // primary_key - computed: true, optional: false, required: true
+  // primary_key - computed: true, optional: false, required: false
   public get primaryKey() {
     return this.getStringAttribute('primary_key');
   }
@@ -118,36 +136,54 @@ export class IothubDpsSharedAccessPolicy extends TerraformResource {
   // registration_read - computed: false, optional: true, required: false
   private _registrationRead?: boolean;
   public get registrationRead() {
-    return this._registrationRead;
+    return this.getBooleanAttribute('registration_read');
   }
-  public set registrationRead(value: boolean | undefined) {
+  public set registrationRead(value: boolean ) {
     this._registrationRead = value;
+  }
+  public resetRegistrationRead() {
+    this._registrationRead = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get registrationReadInput() {
+    return this._registrationRead
   }
 
   // registration_write - computed: false, optional: true, required: false
   private _registrationWrite?: boolean;
   public get registrationWrite() {
-    return this._registrationWrite;
+    return this.getBooleanAttribute('registration_write');
   }
-  public set registrationWrite(value: boolean | undefined) {
+  public set registrationWrite(value: boolean ) {
     this._registrationWrite = value;
+  }
+  public resetRegistrationWrite() {
+    this._registrationWrite = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get registrationWriteInput() {
+    return this._registrationWrite
   }
 
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
-    return this._resourceGroupName;
+    return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
+  }
 
-  // secondary_connection_string - computed: true, optional: false, required: true
+  // secondary_connection_string - computed: true, optional: false, required: false
   public get secondaryConnectionString() {
     return this.getStringAttribute('secondary_connection_string');
   }
 
-  // secondary_key - computed: true, optional: false, required: true
+  // secondary_key - computed: true, optional: false, required: false
   public get secondaryKey() {
     return this.getStringAttribute('secondary_key');
   }
@@ -155,19 +191,33 @@ export class IothubDpsSharedAccessPolicy extends TerraformResource {
   // service_config - computed: false, optional: true, required: false
   private _serviceConfig?: boolean;
   public get serviceConfig() {
-    return this._serviceConfig;
+    return this.getBooleanAttribute('service_config');
   }
-  public set serviceConfig(value: boolean | undefined) {
+  public set serviceConfig(value: boolean ) {
     this._serviceConfig = value;
+  }
+  public resetServiceConfig() {
+    this._serviceConfig = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get serviceConfigInput() {
+    return this._serviceConfig
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: IothubDpsSharedAccessPolicyTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: IothubDpsSharedAccessPolicyTimeouts | undefined) {
+  public set timeouts(value: IothubDpsSharedAccessPolicyTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

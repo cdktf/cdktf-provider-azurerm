@@ -57,64 +57,87 @@ export class BotChannelEmail extends TerraformResource {
   // bot_name - computed: false, optional: false, required: true
   private _botName: string;
   public get botName() {
-    return this._botName;
+    return this.getStringAttribute('bot_name');
   }
   public set botName(value: string) {
     this._botName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get botNameInput() {
+    return this._botName
   }
 
   // email_address - computed: false, optional: false, required: true
   private _emailAddress: string;
   public get emailAddress() {
-    return this._emailAddress;
+    return this.getStringAttribute('email_address');
   }
   public set emailAddress(value: string) {
     this._emailAddress = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get emailAddressInput() {
+    return this._emailAddress
   }
 
   // email_password - computed: false, optional: false, required: true
   private _emailPassword: string;
   public get emailPassword() {
-    return this._emailPassword;
+    return this.getStringAttribute('email_password');
   }
   public set emailPassword(value: string) {
     this._emailPassword = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get emailPasswordInput() {
+    return this._emailPassword
+  }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // location - computed: false, optional: false, required: true
   private _location: string;
   public get location() {
-    return this._location;
+    return this.getStringAttribute('location');
   }
   public set location(value: string) {
     this._location = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get locationInput() {
+    return this._location
   }
 
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
-    return this._resourceGroupName;
+    return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: BotChannelEmailTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: BotChannelEmailTimeouts | undefined) {
+  public set timeouts(value: BotChannelEmailTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

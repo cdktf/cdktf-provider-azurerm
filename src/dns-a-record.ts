@@ -58,90 +58,130 @@ export class DnsARecord extends TerraformResource {
   // ATTRIBUTES
   // ==========
 
-  // fqdn - computed: true, optional: false, required: true
+  // fqdn - computed: true, optional: false, required: false
   public get fqdn() {
     return this.getStringAttribute('fqdn');
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // records - computed: false, optional: true, required: false
   private _records?: string[];
   public get records() {
-    return this._records;
+    return this.getListAttribute('records');
   }
-  public set records(value: string[] | undefined) {
+  public set records(value: string[] ) {
     this._records = value;
+  }
+  public resetRecords() {
+    this._records = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get recordsInput() {
+    return this._records
   }
 
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
-    return this._resourceGroupName;
+    return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
   }
 
   // tags - computed: false, optional: true, required: false
   private _tags?: { [key: string]: string };
   public get tags() {
-    return this._tags;
+    return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | undefined) {
+  public set tags(value: { [key: string]: string } ) {
     this._tags = value;
+  }
+  public resetTags() {
+    this._tags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsInput() {
+    return this._tags
   }
 
   // target_resource_id - computed: false, optional: true, required: false
   private _targetResourceId?: string;
   public get targetResourceId() {
-    return this._targetResourceId;
+    return this.getStringAttribute('target_resource_id');
   }
-  public set targetResourceId(value: string | undefined) {
+  public set targetResourceId(value: string ) {
     this._targetResourceId = value;
+  }
+  public resetTargetResourceId() {
+    this._targetResourceId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get targetResourceIdInput() {
+    return this._targetResourceId
   }
 
   // ttl - computed: false, optional: false, required: true
   private _ttl: number;
   public get ttl() {
-    return this._ttl;
+    return this.getNumberAttribute('ttl');
   }
   public set ttl(value: number) {
     this._ttl = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ttlInput() {
+    return this._ttl
   }
 
   // zone_name - computed: false, optional: false, required: true
   private _zoneName: string;
   public get zoneName() {
-    return this._zoneName;
+    return this.getStringAttribute('zone_name');
   }
   public set zoneName(value: string) {
     this._zoneName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get zoneNameInput() {
+    return this._zoneName
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: DnsARecordTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: DnsARecordTimeouts | undefined) {
+  public set timeouts(value: DnsARecordTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

@@ -111,120 +111,188 @@ export class VpnServerConfiguration extends TerraformResource {
   // ==========
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // location - computed: false, optional: false, required: true
   private _location: string;
   public get location() {
-    return this._location;
+    return this.getStringAttribute('location');
   }
   public set location(value: string) {
     this._location = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get locationInput() {
+    return this._location
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
-    return this._resourceGroupName;
+    return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
   }
 
   // tags - computed: false, optional: true, required: false
   private _tags?: { [key: string]: string };
   public get tags() {
-    return this._tags;
+    return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | undefined) {
+  public set tags(value: { [key: string]: string } ) {
     this._tags = value;
+  }
+  public resetTags() {
+    this._tags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsInput() {
+    return this._tags
   }
 
   // vpn_authentication_types - computed: false, optional: false, required: true
   private _vpnAuthenticationTypes: string[];
   public get vpnAuthenticationTypes() {
-    return this._vpnAuthenticationTypes;
+    return this.getListAttribute('vpn_authentication_types');
   }
   public set vpnAuthenticationTypes(value: string[]) {
     this._vpnAuthenticationTypes = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get vpnAuthenticationTypesInput() {
+    return this._vpnAuthenticationTypes
   }
 
   // vpn_protocols - computed: true, optional: true, required: false
   private _vpnProtocols?: string[];
   public get vpnProtocols() {
-    return this._vpnProtocols ?? this.getListAttribute('vpn_protocols');
+    return this.getListAttribute('vpn_protocols');
   }
-  public set vpnProtocols(value: string[] | undefined) {
+  public set vpnProtocols(value: string[]) {
     this._vpnProtocols = value;
+  }
+  public resetVpnProtocols() {
+    this._vpnProtocols = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get vpnProtocolsInput() {
+    return this._vpnProtocols
   }
 
   // azure_active_directory_authentication - computed: false, optional: true, required: false
   private _azureActiveDirectoryAuthentication?: VpnServerConfigurationAzureActiveDirectoryAuthentication[];
   public get azureActiveDirectoryAuthentication() {
-    return this._azureActiveDirectoryAuthentication;
+    return this.interpolationForAttribute('azure_active_directory_authentication') as any;
   }
-  public set azureActiveDirectoryAuthentication(value: VpnServerConfigurationAzureActiveDirectoryAuthentication[] | undefined) {
+  public set azureActiveDirectoryAuthentication(value: VpnServerConfigurationAzureActiveDirectoryAuthentication[] ) {
     this._azureActiveDirectoryAuthentication = value;
+  }
+  public resetAzureActiveDirectoryAuthentication() {
+    this._azureActiveDirectoryAuthentication = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get azureActiveDirectoryAuthenticationInput() {
+    return this._azureActiveDirectoryAuthentication
   }
 
   // client_revoked_certificate - computed: false, optional: true, required: false
   private _clientRevokedCertificate?: VpnServerConfigurationClientRevokedCertificate[];
   public get clientRevokedCertificate() {
-    return this._clientRevokedCertificate;
+    return this.interpolationForAttribute('client_revoked_certificate') as any;
   }
-  public set clientRevokedCertificate(value: VpnServerConfigurationClientRevokedCertificate[] | undefined) {
+  public set clientRevokedCertificate(value: VpnServerConfigurationClientRevokedCertificate[] ) {
     this._clientRevokedCertificate = value;
+  }
+  public resetClientRevokedCertificate() {
+    this._clientRevokedCertificate = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get clientRevokedCertificateInput() {
+    return this._clientRevokedCertificate
   }
 
   // client_root_certificate - computed: false, optional: true, required: false
   private _clientRootCertificate?: VpnServerConfigurationClientRootCertificate[];
   public get clientRootCertificate() {
-    return this._clientRootCertificate;
+    return this.interpolationForAttribute('client_root_certificate') as any;
   }
-  public set clientRootCertificate(value: VpnServerConfigurationClientRootCertificate[] | undefined) {
+  public set clientRootCertificate(value: VpnServerConfigurationClientRootCertificate[] ) {
     this._clientRootCertificate = value;
+  }
+  public resetClientRootCertificate() {
+    this._clientRootCertificate = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get clientRootCertificateInput() {
+    return this._clientRootCertificate
   }
 
   // ipsec_policy - computed: false, optional: true, required: false
   private _ipsecPolicy?: VpnServerConfigurationIpsecPolicy[];
   public get ipsecPolicy() {
-    return this._ipsecPolicy;
+    return this.interpolationForAttribute('ipsec_policy') as any;
   }
-  public set ipsecPolicy(value: VpnServerConfigurationIpsecPolicy[] | undefined) {
+  public set ipsecPolicy(value: VpnServerConfigurationIpsecPolicy[] ) {
     this._ipsecPolicy = value;
+  }
+  public resetIpsecPolicy() {
+    this._ipsecPolicy = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ipsecPolicyInput() {
+    return this._ipsecPolicy
   }
 
   // radius_server - computed: false, optional: true, required: false
   private _radiusServer?: VpnServerConfigurationRadiusServer[];
   public get radiusServer() {
-    return this._radiusServer;
+    return this.interpolationForAttribute('radius_server') as any;
   }
-  public set radiusServer(value: VpnServerConfigurationRadiusServer[] | undefined) {
+  public set radiusServer(value: VpnServerConfigurationRadiusServer[] ) {
     this._radiusServer = value;
+  }
+  public resetRadiusServer() {
+    this._radiusServer = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get radiusServerInput() {
+    return this._radiusServer
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: VpnServerConfigurationTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: VpnServerConfigurationTimeouts | undefined) {
+  public set timeouts(value: VpnServerConfigurationTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

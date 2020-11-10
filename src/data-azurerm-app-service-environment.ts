@@ -46,30 +46,30 @@ export class DataAzurermAppServiceEnvironment extends TerraformDataSource {
   // ATTRIBUTES
   // ==========
 
-  // front_end_scale_factor - computed: true, optional: false, required: true
+  // front_end_scale_factor - computed: true, optional: false, required: false
   public get frontEndScaleFactor() {
     return this.getNumberAttribute('front_end_scale_factor');
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
+  }
 
-  // pricing_tier - computed: true, optional: false, required: true
+  // pricing_tier - computed: true, optional: false, required: false
   public get pricingTier() {
     return this.getStringAttribute('pricing_tier');
   }
@@ -77,13 +77,17 @@ export class DataAzurermAppServiceEnvironment extends TerraformDataSource {
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
-    return this._resourceGroupName;
+    return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
+  }
 
-  // tags - computed: true, optional: false, required: true
+  // tags - computed: true, optional: false, required: false
   public tags(key: string): string {
     return new StringMap(this, 'tags').lookup(key);
   }
@@ -91,10 +95,17 @@ export class DataAzurermAppServiceEnvironment extends TerraformDataSource {
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: DataAzurermAppServiceEnvironmentTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: DataAzurermAppServiceEnvironmentTimeouts | undefined) {
+  public set timeouts(value: DataAzurermAppServiceEnvironmentTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

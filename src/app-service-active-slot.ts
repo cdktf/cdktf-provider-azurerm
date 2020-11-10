@@ -53,46 +53,61 @@ export class AppServiceActiveSlot extends TerraformResource {
   // app_service_name - computed: false, optional: false, required: true
   private _appServiceName: string;
   public get appServiceName() {
-    return this._appServiceName;
+    return this.getStringAttribute('app_service_name');
   }
   public set appServiceName(value: string) {
     this._appServiceName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get appServiceNameInput() {
+    return this._appServiceName
   }
 
   // app_service_slot_name - computed: false, optional: false, required: true
   private _appServiceSlotName: string;
   public get appServiceSlotName() {
-    return this._appServiceSlotName;
+    return this.getStringAttribute('app_service_slot_name');
   }
   public set appServiceSlotName(value: string) {
     this._appServiceSlotName = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get appServiceSlotNameInput() {
+    return this._appServiceSlotName
+  }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
-    return this._resourceGroupName;
+    return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: AppServiceActiveSlotTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: AppServiceActiveSlotTimeouts | undefined) {
+  public set timeouts(value: AppServiceActiveSlotTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

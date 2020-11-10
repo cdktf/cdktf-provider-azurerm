@@ -19,17 +19,17 @@ export interface DataAzurermSharedImageVersionConfig extends TerraformMetaArgume
 }
 export class DataAzurermSharedImageVersionTargetRegion extends ComplexComputedList {
 
-  // name - computed: true, optional: false, required: true
+  // name - computed: true, optional: false, required: false
   public get name() {
     return this.getStringAttribute('name');
   }
 
-  // regional_replica_count - computed: true, optional: false, required: true
+  // regional_replica_count - computed: true, optional: false, required: false
   public get regionalReplicaCount() {
     return this.getNumberAttribute('regional_replica_count');
   }
 
-  // storage_account_type - computed: true, optional: false, required: true
+  // storage_account_type - computed: true, optional: false, required: false
   public get storageAccountType() {
     return this.getStringAttribute('storage_account_type');
   }
@@ -68,7 +68,7 @@ export class DataAzurermSharedImageVersion extends TerraformDataSource {
   // ATTRIBUTES
   // ==========
 
-  // exclude_from_latest - computed: true, optional: false, required: true
+  // exclude_from_latest - computed: true, optional: false, required: false
   public get excludeFromLatest() {
     return this.getBooleanAttribute('exclude_from_latest');
   }
@@ -76,36 +76,40 @@ export class DataAzurermSharedImageVersion extends TerraformDataSource {
   // gallery_name - computed: false, optional: false, required: true
   private _galleryName: string;
   public get galleryName() {
-    return this._galleryName;
+    return this.getStringAttribute('gallery_name');
   }
   public set galleryName(value: string) {
     this._galleryName = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get galleryNameInput() {
+    return this._galleryName
+  }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // image_name - computed: false, optional: false, required: true
   private _imageName: string;
   public get imageName() {
-    return this._imageName;
+    return this.getStringAttribute('image_name');
   }
   public set imageName(value: string) {
     this._imageName = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get imageNameInput() {
+    return this._imageName
+  }
 
-  // location - computed: true, optional: false, required: true
+  // location - computed: true, optional: false, required: false
   public get location() {
     return this.getStringAttribute('location');
   }
 
-  // managed_image_id - computed: true, optional: false, required: true
+  // managed_image_id - computed: true, optional: false, required: false
   public get managedImageId() {
     return this.getStringAttribute('managed_image_id');
   }
@@ -113,27 +117,35 @@ export class DataAzurermSharedImageVersion extends TerraformDataSource {
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
-    return this._resourceGroupName;
+    return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
+  }
 
-  // tags - computed: true, optional: false, required: true
+  // tags - computed: true, optional: false, required: false
   public tags(key: string): string {
     return new StringMap(this, 'tags').lookup(key);
   }
 
-  // target_region - computed: true, optional: false, required: true
+  // target_region - computed: true, optional: false, required: false
   public targetRegion(index: string) {
     return new DataAzurermSharedImageVersionTargetRegion(this, 'target_region', index);
   }
@@ -141,10 +153,17 @@ export class DataAzurermSharedImageVersion extends TerraformDataSource {
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: DataAzurermSharedImageVersionTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: DataAzurermSharedImageVersionTimeouts | undefined) {
+  public set timeouts(value: DataAzurermSharedImageVersionTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

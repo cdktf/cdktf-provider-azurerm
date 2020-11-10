@@ -65,100 +65,151 @@ export class ApiManagementSubscription extends TerraformResource {
   // api_management_name - computed: false, optional: false, required: true
   private _apiManagementName: string;
   public get apiManagementName() {
-    return this._apiManagementName;
+    return this.getStringAttribute('api_management_name');
   }
   public set apiManagementName(value: string) {
     this._apiManagementName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get apiManagementNameInput() {
+    return this._apiManagementName
   }
 
   // display_name - computed: false, optional: false, required: true
   private _displayName: string;
   public get displayName() {
-    return this._displayName;
+    return this.getStringAttribute('display_name');
   }
   public set displayName(value: string) {
     this._displayName = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get displayNameInput() {
+    return this._displayName
+  }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // primary_key - computed: true, optional: true, required: false
   private _primaryKey?: string;
   public get primaryKey() {
-    return this._primaryKey ?? this.getStringAttribute('primary_key');
+    return this.getStringAttribute('primary_key');
   }
-  public set primaryKey(value: string | undefined) {
+  public set primaryKey(value: string) {
     this._primaryKey = value;
+  }
+  public resetPrimaryKey() {
+    this._primaryKey = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get primaryKeyInput() {
+    return this._primaryKey
   }
 
   // product_id - computed: false, optional: false, required: true
   private _productId: string;
   public get productId() {
-    return this._productId;
+    return this.getStringAttribute('product_id');
   }
   public set productId(value: string) {
     this._productId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get productIdInput() {
+    return this._productId
   }
 
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
-    return this._resourceGroupName;
+    return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
   }
 
   // secondary_key - computed: true, optional: true, required: false
   private _secondaryKey?: string;
   public get secondaryKey() {
-    return this._secondaryKey ?? this.getStringAttribute('secondary_key');
+    return this.getStringAttribute('secondary_key');
   }
-  public set secondaryKey(value: string | undefined) {
+  public set secondaryKey(value: string) {
     this._secondaryKey = value;
+  }
+  public resetSecondaryKey() {
+    this._secondaryKey = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get secondaryKeyInput() {
+    return this._secondaryKey
   }
 
   // state - computed: false, optional: true, required: false
   private _state?: string;
   public get state() {
-    return this._state;
+    return this.getStringAttribute('state');
   }
-  public set state(value: string | undefined) {
+  public set state(value: string ) {
     this._state = value;
+  }
+  public resetState() {
+    this._state = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get stateInput() {
+    return this._state
   }
 
   // subscription_id - computed: true, optional: true, required: false
   private _subscriptionId?: string;
   public get subscriptionId() {
-    return this._subscriptionId ?? this.getStringAttribute('subscription_id');
+    return this.getStringAttribute('subscription_id');
   }
-  public set subscriptionId(value: string | undefined) {
+  public set subscriptionId(value: string) {
     this._subscriptionId = value;
+  }
+  public resetSubscriptionId() {
+    this._subscriptionId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get subscriptionIdInput() {
+    return this._subscriptionId
   }
 
   // user_id - computed: false, optional: false, required: true
   private _userId: string;
   public get userId() {
-    return this._userId;
+    return this.getStringAttribute('user_id');
   }
   public set userId(value: string) {
     this._userId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get userIdInput() {
+    return this._userId
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: ApiManagementSubscriptionTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: ApiManagementSubscriptionTimeouts | undefined) {
+  public set timeouts(value: ApiManagementSubscriptionTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

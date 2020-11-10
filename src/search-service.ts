@@ -21,12 +21,12 @@ export interface SearchServiceConfig extends TerraformMetaArguments {
 }
 export class SearchServiceQueryKeys extends ComplexComputedList {
 
-  // key - computed: true, optional: false, required: true
+  // key - computed: true, optional: false, required: false
   public get key() {
     return this.getStringAttribute('key');
   }
 
-  // name - computed: true, optional: false, required: true
+  // name - computed: true, optional: false, required: false
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -72,47 +72,58 @@ export class SearchService extends TerraformResource {
   // ==========
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // location - computed: false, optional: false, required: true
   private _location: string;
   public get location() {
-    return this._location;
+    return this.getStringAttribute('location');
   }
   public set location(value: string) {
     this._location = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get locationInput() {
+    return this._location
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // partition_count - computed: true, optional: true, required: false
   private _partitionCount?: number;
   public get partitionCount() {
-    return this._partitionCount ?? this.getNumberAttribute('partition_count');
+    return this.getNumberAttribute('partition_count');
   }
-  public set partitionCount(value: number | undefined) {
+  public set partitionCount(value: number) {
     this._partitionCount = value;
   }
+  public resetPartitionCount() {
+    this._partitionCount = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get partitionCountInput() {
+    return this._partitionCount
+  }
 
-  // primary_key - computed: true, optional: false, required: true
+  // primary_key - computed: true, optional: false, required: false
   public get primaryKey() {
     return this.getStringAttribute('primary_key');
   }
 
-  // query_keys - computed: true, optional: false, required: true
+  // query_keys - computed: true, optional: false, required: false
   public queryKeys(index: string) {
     return new SearchServiceQueryKeys(this, 'query_keys', index);
   }
@@ -120,22 +131,33 @@ export class SearchService extends TerraformResource {
   // replica_count - computed: true, optional: true, required: false
   private _replicaCount?: number;
   public get replicaCount() {
-    return this._replicaCount ?? this.getNumberAttribute('replica_count');
+    return this.getNumberAttribute('replica_count');
   }
-  public set replicaCount(value: number | undefined) {
+  public set replicaCount(value: number) {
     this._replicaCount = value;
+  }
+  public resetReplicaCount() {
+    this._replicaCount = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get replicaCountInput() {
+    return this._replicaCount
   }
 
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
-    return this._resourceGroupName;
+    return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
+  }
 
-  // secondary_key - computed: true, optional: false, required: true
+  // secondary_key - computed: true, optional: false, required: false
   public get secondaryKey() {
     return this.getStringAttribute('secondary_key');
   }
@@ -143,28 +165,46 @@ export class SearchService extends TerraformResource {
   // sku - computed: false, optional: false, required: true
   private _sku: string;
   public get sku() {
-    return this._sku;
+    return this.getStringAttribute('sku');
   }
   public set sku(value: string) {
     this._sku = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get skuInput() {
+    return this._sku
   }
 
   // tags - computed: false, optional: true, required: false
   private _tags?: { [key: string]: string };
   public get tags() {
-    return this._tags;
+    return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | undefined) {
+  public set tags(value: { [key: string]: string } ) {
     this._tags = value;
+  }
+  public resetTags() {
+    this._tags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsInput() {
+    return this._tags
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: SearchServiceTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: SearchServiceTimeouts | undefined) {
+  public set timeouts(value: SearchServiceTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

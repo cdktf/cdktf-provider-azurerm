@@ -73,112 +73,164 @@ export class ApplicationInsightsWebTest extends TerraformResource {
   // application_insights_id - computed: false, optional: false, required: true
   private _applicationInsightsId: string;
   public get applicationInsightsId() {
-    return this._applicationInsightsId;
+    return this.getStringAttribute('application_insights_id');
   }
   public set applicationInsightsId(value: string) {
     this._applicationInsightsId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get applicationInsightsIdInput() {
+    return this._applicationInsightsId
   }
 
   // configuration - computed: false, optional: false, required: true
   private _configuration: string;
   public get configuration() {
-    return this._configuration;
+    return this.getStringAttribute('configuration');
   }
   public set configuration(value: string) {
     this._configuration = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get configurationInput() {
+    return this._configuration
   }
 
   // description - computed: false, optional: true, required: false
   private _description?: string;
   public get description() {
-    return this._description;
+    return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string ) {
     this._description = value;
+  }
+  public resetDescription() {
+    this._description = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get descriptionInput() {
+    return this._description
   }
 
   // enabled - computed: false, optional: true, required: false
   private _enabled?: boolean;
   public get enabled() {
-    return this._enabled;
+    return this.getBooleanAttribute('enabled');
   }
-  public set enabled(value: boolean | undefined) {
+  public set enabled(value: boolean ) {
     this._enabled = value;
+  }
+  public resetEnabled() {
+    this._enabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enabledInput() {
+    return this._enabled
   }
 
   // frequency - computed: false, optional: true, required: false
   private _frequency?: number;
   public get frequency() {
-    return this._frequency;
+    return this.getNumberAttribute('frequency');
   }
-  public set frequency(value: number | undefined) {
+  public set frequency(value: number ) {
     this._frequency = value;
+  }
+  public resetFrequency() {
+    this._frequency = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get frequencyInput() {
+    return this._frequency
   }
 
   // geo_locations - computed: false, optional: false, required: true
   private _geoLocations: string[];
   public get geoLocations() {
-    return this._geoLocations;
+    return this.getListAttribute('geo_locations');
   }
   public set geoLocations(value: string[]) {
     this._geoLocations = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get geoLocationsInput() {
+    return this._geoLocations
+  }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // kind - computed: false, optional: false, required: true
   private _kind: string;
   public get kind() {
-    return this._kind;
+    return this.getStringAttribute('kind');
   }
   public set kind(value: string) {
     this._kind = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get kindInput() {
+    return this._kind
   }
 
   // location - computed: false, optional: false, required: true
   private _location: string;
   public get location() {
-    return this._location;
+    return this.getStringAttribute('location');
   }
   public set location(value: string) {
     this._location = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get locationInput() {
+    return this._location
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
-    return this._resourceGroupName;
+    return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
   }
 
   // retry_enabled - computed: false, optional: true, required: false
   private _retryEnabled?: boolean;
   public get retryEnabled() {
-    return this._retryEnabled;
+    return this.getBooleanAttribute('retry_enabled');
   }
-  public set retryEnabled(value: boolean | undefined) {
+  public set retryEnabled(value: boolean ) {
     this._retryEnabled = value;
   }
+  public resetRetryEnabled() {
+    this._retryEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get retryEnabledInput() {
+    return this._retryEnabled
+  }
 
-  // synthetic_monitor_id - computed: true, optional: false, required: true
+  // synthetic_monitor_id - computed: true, optional: false, required: false
   public get syntheticMonitorId() {
     return this.getStringAttribute('synthetic_monitor_id');
   }
@@ -186,28 +238,49 @@ export class ApplicationInsightsWebTest extends TerraformResource {
   // tags - computed: false, optional: true, required: false
   private _tags?: { [key: string]: string };
   public get tags() {
-    return this._tags;
+    return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | undefined) {
+  public set tags(value: { [key: string]: string } ) {
     this._tags = value;
+  }
+  public resetTags() {
+    this._tags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsInput() {
+    return this._tags
   }
 
   // timeout - computed: false, optional: true, required: false
   private _timeout?: number;
   public get timeout() {
-    return this._timeout;
+    return this.getNumberAttribute('timeout');
   }
-  public set timeout(value: number | undefined) {
+  public set timeout(value: number ) {
     this._timeout = value;
+  }
+  public resetTimeout() {
+    this._timeout = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutInput() {
+    return this._timeout
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: ApplicationInsightsWebTestTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: ApplicationInsightsWebTestTimeouts | undefined) {
+  public set timeouts(value: ApplicationInsightsWebTestTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

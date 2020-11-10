@@ -24,85 +24,85 @@ export interface DataAzurermBatchPoolConfig extends TerraformMetaArguments {
 }
 export class DataAzurermBatchPoolAutoScale extends ComplexComputedList {
 
-  // evaluation_interval - computed: true, optional: false, required: true
+  // evaluation_interval - computed: true, optional: false, required: false
   public get evaluationInterval() {
     return this.getStringAttribute('evaluation_interval');
   }
 
-  // formula - computed: true, optional: false, required: true
+  // formula - computed: true, optional: false, required: false
   public get formula() {
     return this.getStringAttribute('formula');
   }
 }
 export class DataAzurermBatchPoolContainerConfigurationContainerRegistries extends ComplexComputedList {
 
-  // password - computed: true, optional: false, required: true
+  // password - computed: true, optional: false, required: false
   public get password() {
     return this.getStringAttribute('password');
   }
 
-  // registry_server - computed: true, optional: false, required: true
+  // registry_server - computed: true, optional: false, required: false
   public get registryServer() {
     return this.getStringAttribute('registry_server');
   }
 
-  // user_name - computed: true, optional: false, required: true
+  // user_name - computed: true, optional: false, required: false
   public get userName() {
     return this.getStringAttribute('user_name');
   }
 }
 export class DataAzurermBatchPoolContainerConfiguration extends ComplexComputedList {
 
-  // container_registries - computed: true, optional: false, required: true
+  // container_registries - computed: true, optional: false, required: false
   public get containerRegistries() {
-    return 'not implemented' as any;
+    return this.interpolationForAttribute('container_registries') as any;
   }
 
-  // type - computed: true, optional: false, required: true
+  // type - computed: true, optional: false, required: false
   public get type() {
     return this.getStringAttribute('type');
   }
 }
 export class DataAzurermBatchPoolFixedScale extends ComplexComputedList {
 
-  // resize_timeout - computed: true, optional: false, required: true
+  // resize_timeout - computed: true, optional: false, required: false
   public get resizeTimeout() {
     return this.getStringAttribute('resize_timeout');
   }
 
-  // target_dedicated_nodes - computed: true, optional: false, required: true
+  // target_dedicated_nodes - computed: true, optional: false, required: false
   public get targetDedicatedNodes() {
     return this.getNumberAttribute('target_dedicated_nodes');
   }
 
-  // target_low_priority_nodes - computed: true, optional: false, required: true
+  // target_low_priority_nodes - computed: true, optional: false, required: false
   public get targetLowPriorityNodes() {
     return this.getNumberAttribute('target_low_priority_nodes');
   }
 }
 export class DataAzurermBatchPoolStorageImageReference extends ComplexComputedList {
 
-  // id - computed: true, optional: false, required: true
+  // id - computed: true, optional: false, required: false
   public get id() {
     return this.getStringAttribute('id');
   }
 
-  // offer - computed: true, optional: false, required: true
+  // offer - computed: true, optional: false, required: false
   public get offer() {
     return this.getStringAttribute('offer');
   }
 
-  // publisher - computed: true, optional: false, required: true
+  // publisher - computed: true, optional: false, required: false
   public get publisher() {
     return this.getStringAttribute('publisher');
   }
 
-  // sku - computed: true, optional: false, required: true
+  // sku - computed: true, optional: false, required: false
   public get sku() {
     return this.getStringAttribute('sku');
   }
 
-  // version - computed: true, optional: false, required: true
+  // version - computed: true, optional: false, required: false
   public get version() {
     return this.getStringAttribute('version');
   }
@@ -169,47 +169,47 @@ export class DataAzurermBatchPool extends TerraformDataSource {
   // account_name - computed: false, optional: false, required: true
   private _accountName: string;
   public get accountName() {
-    return this._accountName;
+    return this.getStringAttribute('account_name');
   }
   public set accountName(value: string) {
     this._accountName = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get accountNameInput() {
+    return this._accountName
+  }
 
-  // auto_scale - computed: true, optional: false, required: true
+  // auto_scale - computed: true, optional: false, required: false
   public autoScale(index: string) {
     return new DataAzurermBatchPoolAutoScale(this, 'auto_scale', index);
   }
 
-  // container_configuration - computed: true, optional: false, required: true
+  // container_configuration - computed: true, optional: false, required: false
   public containerConfiguration(index: string) {
     return new DataAzurermBatchPoolContainerConfiguration(this, 'container_configuration', index);
   }
 
-  // display_name - computed: true, optional: false, required: true
+  // display_name - computed: true, optional: false, required: false
   public get displayName() {
     return this.getStringAttribute('display_name');
   }
 
-  // fixed_scale - computed: true, optional: false, required: true
+  // fixed_scale - computed: true, optional: false, required: false
   public fixedScale(index: string) {
     return new DataAzurermBatchPoolFixedScale(this, 'fixed_scale', index);
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
-  // max_tasks_per_node - computed: true, optional: false, required: true
+  // max_tasks_per_node - computed: true, optional: false, required: false
   public get maxTasksPerNode() {
     return this.getNumberAttribute('max_tasks_per_node');
   }
 
-  // metadata - computed: true, optional: false, required: true
+  // metadata - computed: true, optional: false, required: false
   public metadata(key: string): string {
     return new StringMap(this, 'metadata').lookup(key);
   }
@@ -217,13 +217,17 @@ export class DataAzurermBatchPool extends TerraformDataSource {
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
+  }
 
-  // node_agent_sku_id - computed: true, optional: false, required: true
+  // node_agent_sku_id - computed: true, optional: false, required: false
   public get nodeAgentSkuId() {
     return this.getStringAttribute('node_agent_sku_id');
   }
@@ -231,18 +235,22 @@ export class DataAzurermBatchPool extends TerraformDataSource {
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
-    return this._resourceGroupName;
+    return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
+  }
 
-  // storage_image_reference - computed: true, optional: false, required: true
+  // storage_image_reference - computed: true, optional: false, required: false
   public storageImageReference(index: string) {
     return new DataAzurermBatchPoolStorageImageReference(this, 'storage_image_reference', index);
   }
 
-  // vm_size - computed: true, optional: false, required: true
+  // vm_size - computed: true, optional: false, required: false
   public get vmSize() {
     return this.getStringAttribute('vm_size');
   }
@@ -250,37 +258,65 @@ export class DataAzurermBatchPool extends TerraformDataSource {
   // certificate - computed: false, optional: true, required: false
   private _certificate?: DataAzurermBatchPoolCertificate[];
   public get certificate() {
-    return this._certificate;
+    return this.interpolationForAttribute('certificate') as any;
   }
-  public set certificate(value: DataAzurermBatchPoolCertificate[] | undefined) {
+  public set certificate(value: DataAzurermBatchPoolCertificate[] ) {
     this._certificate = value;
+  }
+  public resetCertificate() {
+    this._certificate = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get certificateInput() {
+    return this._certificate
   }
 
   // network_configuration - computed: false, optional: true, required: false
   private _networkConfiguration?: DataAzurermBatchPoolNetworkConfiguration[];
   public get networkConfiguration() {
-    return this._networkConfiguration;
+    return this.interpolationForAttribute('network_configuration') as any;
   }
-  public set networkConfiguration(value: DataAzurermBatchPoolNetworkConfiguration[] | undefined) {
+  public set networkConfiguration(value: DataAzurermBatchPoolNetworkConfiguration[] ) {
     this._networkConfiguration = value;
+  }
+  public resetNetworkConfiguration() {
+    this._networkConfiguration = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get networkConfigurationInput() {
+    return this._networkConfiguration
   }
 
   // start_task - computed: false, optional: true, required: false
   private _startTask?: DataAzurermBatchPoolStartTask[];
   public get startTask() {
-    return this._startTask;
+    return this.interpolationForAttribute('start_task') as any;
   }
-  public set startTask(value: DataAzurermBatchPoolStartTask[] | undefined) {
+  public set startTask(value: DataAzurermBatchPoolStartTask[] ) {
     this._startTask = value;
+  }
+  public resetStartTask() {
+    this._startTask = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get startTaskInput() {
+    return this._startTask
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: DataAzurermBatchPoolTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: DataAzurermBatchPoolTimeouts | undefined) {
+  public set timeouts(value: DataAzurermBatchPoolTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

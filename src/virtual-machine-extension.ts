@@ -65,100 +65,151 @@ export class VirtualMachineExtension extends TerraformResource {
   // auto_upgrade_minor_version - computed: false, optional: true, required: false
   private _autoUpgradeMinorVersion?: boolean;
   public get autoUpgradeMinorVersion() {
-    return this._autoUpgradeMinorVersion;
+    return this.getBooleanAttribute('auto_upgrade_minor_version');
   }
-  public set autoUpgradeMinorVersion(value: boolean | undefined) {
+  public set autoUpgradeMinorVersion(value: boolean ) {
     this._autoUpgradeMinorVersion = value;
+  }
+  public resetAutoUpgradeMinorVersion() {
+    this._autoUpgradeMinorVersion = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get autoUpgradeMinorVersionInput() {
+    return this._autoUpgradeMinorVersion
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // protected_settings - computed: false, optional: true, required: false
   private _protectedSettings?: string;
   public get protectedSettings() {
-    return this._protectedSettings;
+    return this.getStringAttribute('protected_settings');
   }
-  public set protectedSettings(value: string | undefined) {
+  public set protectedSettings(value: string ) {
     this._protectedSettings = value;
+  }
+  public resetProtectedSettings() {
+    this._protectedSettings = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get protectedSettingsInput() {
+    return this._protectedSettings
   }
 
   // publisher - computed: false, optional: false, required: true
   private _publisher: string;
   public get publisher() {
-    return this._publisher;
+    return this.getStringAttribute('publisher');
   }
   public set publisher(value: string) {
     this._publisher = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get publisherInput() {
+    return this._publisher
   }
 
   // settings - computed: false, optional: true, required: false
   private _settings?: string;
   public get settings() {
-    return this._settings;
+    return this.getStringAttribute('settings');
   }
-  public set settings(value: string | undefined) {
+  public set settings(value: string ) {
     this._settings = value;
+  }
+  public resetSettings() {
+    this._settings = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get settingsInput() {
+    return this._settings
   }
 
   // tags - computed: false, optional: true, required: false
   private _tags?: { [key: string]: string };
   public get tags() {
-    return this._tags;
+    return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | undefined) {
+  public set tags(value: { [key: string]: string } ) {
     this._tags = value;
+  }
+  public resetTags() {
+    this._tags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsInput() {
+    return this._tags
   }
 
   // type - computed: false, optional: false, required: true
   private _type: string;
   public get type() {
-    return this._type;
+    return this.getStringAttribute('type');
   }
   public set type(value: string) {
     this._type = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get typeInput() {
+    return this._type
   }
 
   // type_handler_version - computed: false, optional: false, required: true
   private _typeHandlerVersion: string;
   public get typeHandlerVersion() {
-    return this._typeHandlerVersion;
+    return this.getStringAttribute('type_handler_version');
   }
   public set typeHandlerVersion(value: string) {
     this._typeHandlerVersion = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get typeHandlerVersionInput() {
+    return this._typeHandlerVersion
   }
 
   // virtual_machine_id - computed: false, optional: false, required: true
   private _virtualMachineId: string;
   public get virtualMachineId() {
-    return this._virtualMachineId;
+    return this.getStringAttribute('virtual_machine_id');
   }
   public set virtualMachineId(value: string) {
     this._virtualMachineId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get virtualMachineIdInput() {
+    return this._virtualMachineId
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: VirtualMachineExtensionTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: VirtualMachineExtensionTimeouts | undefined) {
+  public set timeouts(value: VirtualMachineExtensionTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

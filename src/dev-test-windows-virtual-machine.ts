@@ -91,135 +91,195 @@ export class DevTestWindowsVirtualMachine extends TerraformResource {
   // allow_claim - computed: false, optional: true, required: false
   private _allowClaim?: boolean;
   public get allowClaim() {
-    return this._allowClaim;
+    return this.getBooleanAttribute('allow_claim');
   }
-  public set allowClaim(value: boolean | undefined) {
+  public set allowClaim(value: boolean ) {
     this._allowClaim = value;
+  }
+  public resetAllowClaim() {
+    this._allowClaim = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get allowClaimInput() {
+    return this._allowClaim
   }
 
   // disallow_public_ip_address - computed: false, optional: true, required: false
   private _disallowPublicIpAddress?: boolean;
   public get disallowPublicIpAddress() {
-    return this._disallowPublicIpAddress;
+    return this.getBooleanAttribute('disallow_public_ip_address');
   }
-  public set disallowPublicIpAddress(value: boolean | undefined) {
+  public set disallowPublicIpAddress(value: boolean ) {
     this._disallowPublicIpAddress = value;
   }
+  public resetDisallowPublicIpAddress() {
+    this._disallowPublicIpAddress = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get disallowPublicIpAddressInput() {
+    return this._disallowPublicIpAddress
+  }
 
-  // fqdn - computed: true, optional: false, required: true
+  // fqdn - computed: true, optional: false, required: false
   public get fqdn() {
     return this.getStringAttribute('fqdn');
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // lab_name - computed: false, optional: false, required: true
   private _labName: string;
   public get labName() {
-    return this._labName;
+    return this.getStringAttribute('lab_name');
   }
   public set labName(value: string) {
     this._labName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get labNameInput() {
+    return this._labName
   }
 
   // lab_subnet_name - computed: false, optional: false, required: true
   private _labSubnetName: string;
   public get labSubnetName() {
-    return this._labSubnetName;
+    return this.getStringAttribute('lab_subnet_name');
   }
   public set labSubnetName(value: string) {
     this._labSubnetName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get labSubnetNameInput() {
+    return this._labSubnetName
   }
 
   // lab_virtual_network_id - computed: false, optional: false, required: true
   private _labVirtualNetworkId: string;
   public get labVirtualNetworkId() {
-    return this._labVirtualNetworkId;
+    return this.getStringAttribute('lab_virtual_network_id');
   }
   public set labVirtualNetworkId(value: string) {
     this._labVirtualNetworkId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get labVirtualNetworkIdInput() {
+    return this._labVirtualNetworkId
   }
 
   // location - computed: false, optional: false, required: true
   private _location: string;
   public get location() {
-    return this._location;
+    return this.getStringAttribute('location');
   }
   public set location(value: string) {
     this._location = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get locationInput() {
+    return this._location
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // notes - computed: false, optional: true, required: false
   private _notes?: string;
   public get notes() {
-    return this._notes;
+    return this.getStringAttribute('notes');
   }
-  public set notes(value: string | undefined) {
+  public set notes(value: string ) {
     this._notes = value;
+  }
+  public resetNotes() {
+    this._notes = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get notesInput() {
+    return this._notes
   }
 
   // password - computed: false, optional: false, required: true
   private _password: string;
   public get password() {
-    return this._password;
+    return this.getStringAttribute('password');
   }
   public set password(value: string) {
     this._password = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get passwordInput() {
+    return this._password
   }
 
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
-    return this._resourceGroupName;
+    return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
   }
 
   // size - computed: false, optional: false, required: true
   private _size: string;
   public get size() {
-    return this._size;
+    return this.getStringAttribute('size');
   }
   public set size(value: string) {
     this._size = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sizeInput() {
+    return this._size
   }
 
   // storage_type - computed: false, optional: false, required: true
   private _storageType: string;
   public get storageType() {
-    return this._storageType;
+    return this.getStringAttribute('storage_type');
   }
   public set storageType(value: string) {
     this._storageType = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get storageTypeInput() {
+    return this._storageType
   }
 
   // tags - computed: false, optional: true, required: false
   private _tags?: { [key: string]: string };
   public get tags() {
-    return this._tags;
+    return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | undefined) {
+  public set tags(value: { [key: string]: string } ) {
     this._tags = value;
   }
+  public resetTags() {
+    this._tags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsInput() {
+    return this._tags
+  }
 
-  // unique_identifier - computed: true, optional: false, required: true
+  // unique_identifier - computed: true, optional: false, required: false
   public get uniqueIdentifier() {
     return this.getStringAttribute('unique_identifier');
   }
@@ -227,37 +287,59 @@ export class DevTestWindowsVirtualMachine extends TerraformResource {
   // username - computed: false, optional: false, required: true
   private _username: string;
   public get username() {
-    return this._username;
+    return this.getStringAttribute('username');
   }
   public set username(value: string) {
     this._username = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get usernameInput() {
+    return this._username
   }
 
   // gallery_image_reference - computed: false, optional: false, required: true
   private _galleryImageReference: DevTestWindowsVirtualMachineGalleryImageReference[];
   public get galleryImageReference() {
-    return this._galleryImageReference;
+    return this.interpolationForAttribute('gallery_image_reference') as any;
   }
   public set galleryImageReference(value: DevTestWindowsVirtualMachineGalleryImageReference[]) {
     this._galleryImageReference = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get galleryImageReferenceInput() {
+    return this._galleryImageReference
   }
 
   // inbound_nat_rule - computed: false, optional: true, required: false
   private _inboundNatRule?: DevTestWindowsVirtualMachineInboundNatRule[];
   public get inboundNatRule() {
-    return this._inboundNatRule;
+    return this.interpolationForAttribute('inbound_nat_rule') as any;
   }
-  public set inboundNatRule(value: DevTestWindowsVirtualMachineInboundNatRule[] | undefined) {
+  public set inboundNatRule(value: DevTestWindowsVirtualMachineInboundNatRule[] ) {
     this._inboundNatRule = value;
+  }
+  public resetInboundNatRule() {
+    this._inboundNatRule = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get inboundNatRuleInput() {
+    return this._inboundNatRule
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: DevTestWindowsVirtualMachineTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: DevTestWindowsVirtualMachineTimeouts | undefined) {
+  public set timeouts(value: DevTestWindowsVirtualMachineTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

@@ -46,36 +46,32 @@ export class DataAzurermDevTestLab extends TerraformDataSource {
   // ATTRIBUTES
   // ==========
 
-  // artifacts_storage_account_id - computed: true, optional: false, required: true
+  // artifacts_storage_account_id - computed: true, optional: false, required: false
   public get artifactsStorageAccountId() {
     return this.getStringAttribute('artifacts_storage_account_id');
   }
 
-  // default_premium_storage_account_id - computed: true, optional: false, required: true
+  // default_premium_storage_account_id - computed: true, optional: false, required: false
   public get defaultPremiumStorageAccountId() {
     return this.getStringAttribute('default_premium_storage_account_id');
   }
 
-  // default_storage_account_id - computed: true, optional: false, required: true
+  // default_storage_account_id - computed: true, optional: false, required: false
   public get defaultStorageAccountId() {
     return this.getStringAttribute('default_storage_account_id');
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
-  // key_vault_id - computed: true, optional: false, required: true
+  // key_vault_id - computed: true, optional: false, required: false
   public get keyVaultId() {
     return this.getStringAttribute('key_vault_id');
   }
 
-  // location - computed: true, optional: false, required: true
+  // location - computed: true, optional: false, required: false
   public get location() {
     return this.getStringAttribute('location');
   }
@@ -83,13 +79,17 @@ export class DataAzurermDevTestLab extends TerraformDataSource {
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
+  }
 
-  // premium_data_disk_storage_account_id - computed: true, optional: false, required: true
+  // premium_data_disk_storage_account_id - computed: true, optional: false, required: false
   public get premiumDataDiskStorageAccountId() {
     return this.getStringAttribute('premium_data_disk_storage_account_id');
   }
@@ -97,23 +97,27 @@ export class DataAzurermDevTestLab extends TerraformDataSource {
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
-    return this._resourceGroupName;
+    return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
+  }
 
-  // storage_type - computed: true, optional: false, required: true
+  // storage_type - computed: true, optional: false, required: false
   public get storageType() {
     return this.getStringAttribute('storage_type');
   }
 
-  // tags - computed: true, optional: false, required: true
+  // tags - computed: true, optional: false, required: false
   public tags(key: string): string {
     return new StringMap(this, 'tags').lookup(key);
   }
 
-  // unique_identifier - computed: true, optional: false, required: true
+  // unique_identifier - computed: true, optional: false, required: false
   public get uniqueIdentifier() {
     return this.getStringAttribute('unique_identifier');
   }
@@ -121,10 +125,17 @@ export class DataAzurermDevTestLab extends TerraformDataSource {
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: DataAzurermDevTestLabTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: DataAzurermDevTestLabTimeouts | undefined) {
+  public set timeouts(value: DataAzurermDevTestLabTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

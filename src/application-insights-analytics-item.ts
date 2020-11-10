@@ -59,63 +59,82 @@ export class ApplicationInsightsAnalyticsItem extends TerraformResource {
   // application_insights_id - computed: false, optional: false, required: true
   private _applicationInsightsId: string;
   public get applicationInsightsId() {
-    return this._applicationInsightsId;
+    return this.getStringAttribute('application_insights_id');
   }
   public set applicationInsightsId(value: string) {
     this._applicationInsightsId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get applicationInsightsIdInput() {
+    return this._applicationInsightsId
   }
 
   // content - computed: false, optional: false, required: true
   private _content: string;
   public get content() {
-    return this._content;
+    return this.getStringAttribute('content');
   }
   public set content(value: string) {
     this._content = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get contentInput() {
+    return this._content
   }
 
   // function_alias - computed: false, optional: true, required: false
   private _functionAlias?: string;
   public get functionAlias() {
-    return this._functionAlias;
+    return this.getStringAttribute('function_alias');
   }
-  public set functionAlias(value: string | undefined) {
+  public set functionAlias(value: string ) {
     this._functionAlias = value;
+  }
+  public resetFunctionAlias() {
+    this._functionAlias = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get functionAliasInput() {
+    return this._functionAlias
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // scope - computed: false, optional: false, required: true
   private _scope: string;
   public get scope() {
-    return this._scope;
+    return this.getStringAttribute('scope');
   }
   public set scope(value: string) {
     this._scope = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get scopeInput() {
+    return this._scope
+  }
 
-  // time_created - computed: true, optional: false, required: true
+  // time_created - computed: true, optional: false, required: false
   public get timeCreated() {
     return this.getStringAttribute('time_created');
   }
 
-  // time_modified - computed: true, optional: false, required: true
+  // time_modified - computed: true, optional: false, required: false
   public get timeModified() {
     return this.getStringAttribute('time_modified');
   }
@@ -123,13 +142,17 @@ export class ApplicationInsightsAnalyticsItem extends TerraformResource {
   // type - computed: false, optional: false, required: true
   private _type: string;
   public get type() {
-    return this._type;
+    return this.getStringAttribute('type');
   }
   public set type(value: string) {
     this._type = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get typeInput() {
+    return this._type
+  }
 
-  // version - computed: true, optional: false, required: true
+  // version - computed: true, optional: false, required: false
   public get version() {
     return this.getStringAttribute('version');
   }
@@ -137,10 +160,17 @@ export class ApplicationInsightsAnalyticsItem extends TerraformResource {
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: ApplicationInsightsAnalyticsItemTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: ApplicationInsightsAnalyticsItemTimeouts | undefined) {
+  public set timeouts(value: ApplicationInsightsAnalyticsItemTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

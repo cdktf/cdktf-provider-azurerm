@@ -107,127 +107,199 @@ export class ApiManagementBackend extends TerraformResource {
   // api_management_name - computed: false, optional: false, required: true
   private _apiManagementName: string;
   public get apiManagementName() {
-    return this._apiManagementName;
+    return this.getStringAttribute('api_management_name');
   }
   public set apiManagementName(value: string) {
     this._apiManagementName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get apiManagementNameInput() {
+    return this._apiManagementName
   }
 
   // description - computed: false, optional: true, required: false
   private _description?: string;
   public get description() {
-    return this._description;
+    return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string ) {
     this._description = value;
+  }
+  public resetDescription() {
+    this._description = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get descriptionInput() {
+    return this._description
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // protocol - computed: false, optional: false, required: true
   private _protocol: string;
   public get protocol() {
-    return this._protocol;
+    return this.getStringAttribute('protocol');
   }
   public set protocol(value: string) {
     this._protocol = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get protocolInput() {
+    return this._protocol
   }
 
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
-    return this._resourceGroupName;
+    return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
   }
 
   // resource_id - computed: false, optional: true, required: false
   private _resourceId?: string;
   public get resourceId() {
-    return this._resourceId;
+    return this.getStringAttribute('resource_id');
   }
-  public set resourceId(value: string | undefined) {
+  public set resourceId(value: string ) {
     this._resourceId = value;
+  }
+  public resetResourceId() {
+    this._resourceId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resourceIdInput() {
+    return this._resourceId
   }
 
   // title - computed: false, optional: true, required: false
   private _title?: string;
   public get title() {
-    return this._title;
+    return this.getStringAttribute('title');
   }
-  public set title(value: string | undefined) {
+  public set title(value: string ) {
     this._title = value;
+  }
+  public resetTitle() {
+    this._title = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get titleInput() {
+    return this._title
   }
 
   // url - computed: false, optional: false, required: true
   private _url: string;
   public get url() {
-    return this._url;
+    return this.getStringAttribute('url');
   }
   public set url(value: string) {
     this._url = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get urlInput() {
+    return this._url
   }
 
   // credentials - computed: false, optional: true, required: false
   private _credentials?: ApiManagementBackendCredentials[];
   public get credentials() {
-    return this._credentials;
+    return this.interpolationForAttribute('credentials') as any;
   }
-  public set credentials(value: ApiManagementBackendCredentials[] | undefined) {
+  public set credentials(value: ApiManagementBackendCredentials[] ) {
     this._credentials = value;
+  }
+  public resetCredentials() {
+    this._credentials = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get credentialsInput() {
+    return this._credentials
   }
 
   // proxy - computed: false, optional: true, required: false
   private _proxy?: ApiManagementBackendProxy[];
   public get proxy() {
-    return this._proxy;
+    return this.interpolationForAttribute('proxy') as any;
   }
-  public set proxy(value: ApiManagementBackendProxy[] | undefined) {
+  public set proxy(value: ApiManagementBackendProxy[] ) {
     this._proxy = value;
+  }
+  public resetProxy() {
+    this._proxy = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get proxyInput() {
+    return this._proxy
   }
 
   // service_fabric_cluster - computed: false, optional: true, required: false
   private _serviceFabricCluster?: ApiManagementBackendServiceFabricCluster[];
   public get serviceFabricCluster() {
-    return this._serviceFabricCluster;
+    return this.interpolationForAttribute('service_fabric_cluster') as any;
   }
-  public set serviceFabricCluster(value: ApiManagementBackendServiceFabricCluster[] | undefined) {
+  public set serviceFabricCluster(value: ApiManagementBackendServiceFabricCluster[] ) {
     this._serviceFabricCluster = value;
+  }
+  public resetServiceFabricCluster() {
+    this._serviceFabricCluster = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get serviceFabricClusterInput() {
+    return this._serviceFabricCluster
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: ApiManagementBackendTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: ApiManagementBackendTimeouts | undefined) {
+  public set timeouts(value: ApiManagementBackendTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // tls - computed: false, optional: true, required: false
   private _tls?: ApiManagementBackendTls[];
   public get tls() {
-    return this._tls;
+    return this.interpolationForAttribute('tls') as any;
   }
-  public set tls(value: ApiManagementBackendTls[] | undefined) {
+  public set tls(value: ApiManagementBackendTls[] ) {
     this._tls = value;
+  }
+  public resetTls() {
+    this._tls = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tlsInput() {
+    return this._tls
   }
 
   // =========

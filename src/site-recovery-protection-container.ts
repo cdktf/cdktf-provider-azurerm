@@ -53,57 +53,76 @@ export class SiteRecoveryProtectionContainer extends TerraformResource {
   // ==========
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // recovery_fabric_name - computed: false, optional: false, required: true
   private _recoveryFabricName: string;
   public get recoveryFabricName() {
-    return this._recoveryFabricName;
+    return this.getStringAttribute('recovery_fabric_name');
   }
   public set recoveryFabricName(value: string) {
     this._recoveryFabricName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get recoveryFabricNameInput() {
+    return this._recoveryFabricName
   }
 
   // recovery_vault_name - computed: false, optional: false, required: true
   private _recoveryVaultName: string;
   public get recoveryVaultName() {
-    return this._recoveryVaultName;
+    return this.getStringAttribute('recovery_vault_name');
   }
   public set recoveryVaultName(value: string) {
     this._recoveryVaultName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get recoveryVaultNameInput() {
+    return this._recoveryVaultName
   }
 
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
-    return this._resourceGroupName;
+    return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: SiteRecoveryProtectionContainerTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: SiteRecoveryProtectionContainerTimeouts | undefined) {
+  public set timeouts(value: SiteRecoveryProtectionContainerTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

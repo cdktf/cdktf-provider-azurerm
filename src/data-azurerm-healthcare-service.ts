@@ -18,44 +18,44 @@ export interface DataAzurermHealthcareServiceConfig extends TerraformMetaArgumen
 }
 export class DataAzurermHealthcareServiceAuthenticationConfiguration extends ComplexComputedList {
 
-  // audience - computed: true, optional: false, required: true
+  // audience - computed: true, optional: false, required: false
   public get audience() {
     return this.getStringAttribute('audience');
   }
 
-  // authority - computed: true, optional: false, required: true
+  // authority - computed: true, optional: false, required: false
   public get authority() {
     return this.getStringAttribute('authority');
   }
 
-  // smart_proxy_enabled - computed: true, optional: false, required: true
+  // smart_proxy_enabled - computed: true, optional: false, required: false
   public get smartProxyEnabled() {
     return this.getBooleanAttribute('smart_proxy_enabled');
   }
 }
 export class DataAzurermHealthcareServiceCorsConfiguration extends ComplexComputedList {
 
-  // allow_credentials - computed: true, optional: false, required: true
+  // allow_credentials - computed: true, optional: false, required: false
   public get allowCredentials() {
     return this.getBooleanAttribute('allow_credentials');
   }
 
-  // allowed_headers - computed: true, optional: false, required: true
+  // allowed_headers - computed: true, optional: false, required: false
   public get allowedHeaders() {
     return this.getListAttribute('allowed_headers');
   }
 
-  // allowed_methods - computed: true, optional: false, required: true
+  // allowed_methods - computed: true, optional: false, required: false
   public get allowedMethods() {
     return this.getListAttribute('allowed_methods');
   }
 
-  // allowed_origins - computed: true, optional: false, required: true
+  // allowed_origins - computed: true, optional: false, required: false
   public get allowedOrigins() {
     return this.getListAttribute('allowed_origins');
   }
 
-  // max_age_in_seconds - computed: true, optional: false, required: true
+  // max_age_in_seconds - computed: true, optional: false, required: false
   public get maxAgeInSeconds() {
     return this.getNumberAttribute('max_age_in_seconds');
   }
@@ -93,36 +93,32 @@ export class DataAzurermHealthcareService extends TerraformDataSource {
   // ATTRIBUTES
   // ==========
 
-  // access_policy_object_ids - computed: true, optional: false, required: true
+  // access_policy_object_ids - computed: true, optional: false, required: false
   public get accessPolicyObjectIds() {
     return this.getListAttribute('access_policy_object_ids');
   }
 
-  // authentication_configuration - computed: true, optional: false, required: true
+  // authentication_configuration - computed: true, optional: false, required: false
   public authenticationConfiguration(index: string) {
     return new DataAzurermHealthcareServiceAuthenticationConfiguration(this, 'authentication_configuration', index);
   }
 
-  // cors_configuration - computed: true, optional: false, required: true
+  // cors_configuration - computed: true, optional: false, required: false
   public corsConfiguration(index: string) {
     return new DataAzurermHealthcareServiceCorsConfiguration(this, 'cors_configuration', index);
   }
 
-  // cosmosdb_throughput - computed: true, optional: false, required: true
+  // cosmosdb_throughput - computed: true, optional: false, required: false
   public get cosmosdbThroughput() {
     return this.getNumberAttribute('cosmosdb_throughput');
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
-  // kind - computed: true, optional: false, required: true
+  // kind - computed: true, optional: false, required: false
   public get kind() {
     return this.getStringAttribute('kind');
   }
@@ -130,31 +126,43 @@ export class DataAzurermHealthcareService extends TerraformDataSource {
   // location - computed: false, optional: false, required: true
   private _location: string;
   public get location() {
-    return this._location;
+    return this.getStringAttribute('location');
   }
   public set location(value: string) {
     this._location = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get locationInput() {
+    return this._location
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
-    return this._resourceGroupName;
+    return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
+  }
 
-  // tags - computed: true, optional: false, required: true
+  // tags - computed: true, optional: false, required: false
   public tags(key: string): string {
     return new StringMap(this, 'tags').lookup(key);
   }
@@ -162,10 +170,17 @@ export class DataAzurermHealthcareService extends TerraformDataSource {
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: DataAzurermHealthcareServiceTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: DataAzurermHealthcareServiceTimeouts | undefined) {
+  public set timeouts(value: DataAzurermHealthcareServiceTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

@@ -64,58 +64,80 @@ export class DevTestVirtualNetwork extends TerraformResource {
   // description - computed: false, optional: true, required: false
   private _description?: string;
   public get description() {
-    return this._description;
+    return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string ) {
     this._description = value;
+  }
+  public resetDescription() {
+    this._description = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get descriptionInput() {
+    return this._description
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // lab_name - computed: false, optional: false, required: true
   private _labName: string;
   public get labName() {
-    return this._labName;
+    return this.getStringAttribute('lab_name');
   }
   public set labName(value: string) {
     this._labName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get labNameInput() {
+    return this._labName
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
-    return this._resourceGroupName;
+    return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
   }
 
   // tags - computed: false, optional: true, required: false
   private _tags?: { [key: string]: string };
   public get tags() {
-    return this._tags;
+    return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | undefined) {
+  public set tags(value: { [key: string]: string } ) {
     this._tags = value;
   }
+  public resetTags() {
+    this._tags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsInput() {
+    return this._tags
+  }
 
-  // unique_identifier - computed: true, optional: false, required: true
+  // unique_identifier - computed: true, optional: false, required: false
   public get uniqueIdentifier() {
     return this.getStringAttribute('unique_identifier');
   }
@@ -123,19 +145,33 @@ export class DevTestVirtualNetwork extends TerraformResource {
   // subnet - computed: false, optional: true, required: false
   private _subnet?: DevTestVirtualNetworkSubnet[];
   public get subnet() {
-    return this._subnet;
+    return this.interpolationForAttribute('subnet') as any;
   }
-  public set subnet(value: DevTestVirtualNetworkSubnet[] | undefined) {
+  public set subnet(value: DevTestVirtualNetworkSubnet[] ) {
     this._subnet = value;
+  }
+  public resetSubnet() {
+    this._subnet = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get subnetInput() {
+    return this._subnet
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: DevTestVirtualNetworkTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: DevTestVirtualNetworkTimeouts | undefined) {
+  public set timeouts(value: DevTestVirtualNetworkTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

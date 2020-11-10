@@ -63,91 +63,141 @@ export class PolicySetDefinition extends TerraformResource {
   // description - computed: false, optional: true, required: false
   private _description?: string;
   public get description() {
-    return this._description;
+    return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string ) {
     this._description = value;
+  }
+  public resetDescription() {
+    this._description = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get descriptionInput() {
+    return this._description
   }
 
   // display_name - computed: false, optional: false, required: true
   private _displayName: string;
   public get displayName() {
-    return this._displayName;
+    return this.getStringAttribute('display_name');
   }
   public set displayName(value: string) {
     this._displayName = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get displayNameInput() {
+    return this._displayName
+  }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // management_group_id - computed: false, optional: true, required: false
   private _managementGroupId?: string;
   public get managementGroupId() {
-    return this._managementGroupId;
+    return this.getStringAttribute('management_group_id');
   }
-  public set managementGroupId(value: string | undefined) {
+  public set managementGroupId(value: string ) {
     this._managementGroupId = value;
+  }
+  public resetManagementGroupId() {
+    this._managementGroupId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get managementGroupIdInput() {
+    return this._managementGroupId
   }
 
   // metadata - computed: false, optional: true, required: false
   private _metadata?: string;
   public get metadata() {
-    return this._metadata;
+    return this.getStringAttribute('metadata');
   }
-  public set metadata(value: string | undefined) {
+  public set metadata(value: string ) {
     this._metadata = value;
+  }
+  public resetMetadata() {
+    this._metadata = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get metadataInput() {
+    return this._metadata
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // parameters - computed: false, optional: true, required: false
   private _parameters?: string;
   public get parameters() {
-    return this._parameters;
+    return this.getStringAttribute('parameters');
   }
-  public set parameters(value: string | undefined) {
+  public set parameters(value: string ) {
     this._parameters = value;
+  }
+  public resetParameters() {
+    this._parameters = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get parametersInput() {
+    return this._parameters
   }
 
   // policy_definitions - computed: false, optional: true, required: false
   private _policyDefinitions?: string;
   public get policyDefinitions() {
-    return this._policyDefinitions;
+    return this.getStringAttribute('policy_definitions');
   }
-  public set policyDefinitions(value: string | undefined) {
+  public set policyDefinitions(value: string ) {
     this._policyDefinitions = value;
+  }
+  public resetPolicyDefinitions() {
+    this._policyDefinitions = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get policyDefinitionsInput() {
+    return this._policyDefinitions
   }
 
   // policy_type - computed: false, optional: false, required: true
   private _policyType: string;
   public get policyType() {
-    return this._policyType;
+    return this.getStringAttribute('policy_type');
   }
   public set policyType(value: string) {
     this._policyType = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get policyTypeInput() {
+    return this._policyType
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: PolicySetDefinitionTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: PolicySetDefinitionTimeouts | undefined) {
+  public set timeouts(value: PolicySetDefinitionTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

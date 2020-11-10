@@ -57,64 +57,87 @@ export class StorageTableEntity extends TerraformResource {
   // entity - computed: false, optional: false, required: true
   private _entity: { [key: string]: string };
   public get entity() {
-    return this._entity;
+    return this.interpolationForAttribute('entity') as any;
   }
   public set entity(value: { [key: string]: string }) {
     this._entity = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get entityInput() {
+    return this._entity
+  }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // partition_key - computed: false, optional: false, required: true
   private _partitionKey: string;
   public get partitionKey() {
-    return this._partitionKey;
+    return this.getStringAttribute('partition_key');
   }
   public set partitionKey(value: string) {
     this._partitionKey = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get partitionKeyInput() {
+    return this._partitionKey
   }
 
   // row_key - computed: false, optional: false, required: true
   private _rowKey: string;
   public get rowKey() {
-    return this._rowKey;
+    return this.getStringAttribute('row_key');
   }
   public set rowKey(value: string) {
     this._rowKey = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get rowKeyInput() {
+    return this._rowKey
   }
 
   // storage_account_name - computed: false, optional: false, required: true
   private _storageAccountName: string;
   public get storageAccountName() {
-    return this._storageAccountName;
+    return this.getStringAttribute('storage_account_name');
   }
   public set storageAccountName(value: string) {
     this._storageAccountName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get storageAccountNameInput() {
+    return this._storageAccountName
   }
 
   // table_name - computed: false, optional: false, required: true
   private _tableName: string;
   public get tableName() {
-    return this._tableName;
+    return this.getStringAttribute('table_name');
   }
   public set tableName(value: string) {
     this._tableName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tableNameInput() {
+    return this._tableName
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: StorageTableEntityTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: StorageTableEntityTimeouts | undefined) {
+  public set timeouts(value: StorageTableEntityTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

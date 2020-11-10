@@ -65,100 +65,148 @@ export class DevTestPolicy extends TerraformResource {
   // description - computed: false, optional: true, required: false
   private _description?: string;
   public get description() {
-    return this._description;
+    return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string ) {
     this._description = value;
+  }
+  public resetDescription() {
+    this._description = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get descriptionInput() {
+    return this._description
   }
 
   // evaluator_type - computed: false, optional: false, required: true
   private _evaluatorType: string;
   public get evaluatorType() {
-    return this._evaluatorType;
+    return this.getStringAttribute('evaluator_type');
   }
   public set evaluatorType(value: string) {
     this._evaluatorType = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get evaluatorTypeInput() {
+    return this._evaluatorType
   }
 
   // fact_data - computed: false, optional: true, required: false
   private _factData?: string;
   public get factData() {
-    return this._factData;
+    return this.getStringAttribute('fact_data');
   }
-  public set factData(value: string | undefined) {
+  public set factData(value: string ) {
     this._factData = value;
+  }
+  public resetFactData() {
+    this._factData = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get factDataInput() {
+    return this._factData
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // lab_name - computed: false, optional: false, required: true
   private _labName: string;
   public get labName() {
-    return this._labName;
+    return this.getStringAttribute('lab_name');
   }
   public set labName(value: string) {
     this._labName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get labNameInput() {
+    return this._labName
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // policy_set_name - computed: false, optional: false, required: true
   private _policySetName: string;
   public get policySetName() {
-    return this._policySetName;
+    return this.getStringAttribute('policy_set_name');
   }
   public set policySetName(value: string) {
     this._policySetName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get policySetNameInput() {
+    return this._policySetName
   }
 
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
-    return this._resourceGroupName;
+    return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
   }
 
   // tags - computed: false, optional: true, required: false
   private _tags?: { [key: string]: string };
   public get tags() {
-    return this._tags;
+    return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | undefined) {
+  public set tags(value: { [key: string]: string } ) {
     this._tags = value;
+  }
+  public resetTags() {
+    this._tags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsInput() {
+    return this._tags
   }
 
   // threshold - computed: false, optional: false, required: true
   private _threshold: string;
   public get threshold() {
-    return this._threshold;
+    return this.getStringAttribute('threshold');
   }
   public set threshold(value: string) {
     this._threshold = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get thresholdInput() {
+    return this._threshold
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: DevTestPolicyTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: DevTestPolicyTimeouts | undefined) {
+  public set timeouts(value: DevTestPolicyTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

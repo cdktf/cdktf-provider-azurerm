@@ -92,7 +92,7 @@ export class CosmosdbAccount extends TerraformResource {
   // ATTRIBUTES
   // ==========
 
-  // connection_strings - computed: true, optional: false, required: true
+  // connection_strings - computed: true, optional: false, required: false
   public get connectionStrings() {
     return this.getListAttribute('connection_strings');
   }
@@ -100,100 +100,143 @@ export class CosmosdbAccount extends TerraformResource {
   // enable_automatic_failover - computed: false, optional: true, required: false
   private _enableAutomaticFailover?: boolean;
   public get enableAutomaticFailover() {
-    return this._enableAutomaticFailover;
+    return this.getBooleanAttribute('enable_automatic_failover');
   }
-  public set enableAutomaticFailover(value: boolean | undefined) {
+  public set enableAutomaticFailover(value: boolean ) {
     this._enableAutomaticFailover = value;
+  }
+  public resetEnableAutomaticFailover() {
+    this._enableAutomaticFailover = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enableAutomaticFailoverInput() {
+    return this._enableAutomaticFailover
   }
 
   // enable_multiple_write_locations - computed: false, optional: true, required: false
   private _enableMultipleWriteLocations?: boolean;
   public get enableMultipleWriteLocations() {
-    return this._enableMultipleWriteLocations;
+    return this.getBooleanAttribute('enable_multiple_write_locations');
   }
-  public set enableMultipleWriteLocations(value: boolean | undefined) {
+  public set enableMultipleWriteLocations(value: boolean ) {
     this._enableMultipleWriteLocations = value;
   }
+  public resetEnableMultipleWriteLocations() {
+    this._enableMultipleWriteLocations = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enableMultipleWriteLocationsInput() {
+    return this._enableMultipleWriteLocations
+  }
 
-  // endpoint - computed: true, optional: false, required: true
+  // endpoint - computed: true, optional: false, required: false
   public get endpoint() {
     return this.getStringAttribute('endpoint');
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // ip_range_filter - computed: false, optional: true, required: false
   private _ipRangeFilter?: string;
   public get ipRangeFilter() {
-    return this._ipRangeFilter;
+    return this.getStringAttribute('ip_range_filter');
   }
-  public set ipRangeFilter(value: string | undefined) {
+  public set ipRangeFilter(value: string ) {
     this._ipRangeFilter = value;
+  }
+  public resetIpRangeFilter() {
+    this._ipRangeFilter = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ipRangeFilterInput() {
+    return this._ipRangeFilter
   }
 
   // is_virtual_network_filter_enabled - computed: false, optional: true, required: false
   private _isVirtualNetworkFilterEnabled?: boolean;
   public get isVirtualNetworkFilterEnabled() {
-    return this._isVirtualNetworkFilterEnabled;
+    return this.getBooleanAttribute('is_virtual_network_filter_enabled');
   }
-  public set isVirtualNetworkFilterEnabled(value: boolean | undefined) {
+  public set isVirtualNetworkFilterEnabled(value: boolean ) {
     this._isVirtualNetworkFilterEnabled = value;
+  }
+  public resetIsVirtualNetworkFilterEnabled() {
+    this._isVirtualNetworkFilterEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get isVirtualNetworkFilterEnabledInput() {
+    return this._isVirtualNetworkFilterEnabled
   }
 
   // kind - computed: false, optional: true, required: false
   private _kind?: string;
   public get kind() {
-    return this._kind;
+    return this.getStringAttribute('kind');
   }
-  public set kind(value: string | undefined) {
+  public set kind(value: string ) {
     this._kind = value;
+  }
+  public resetKind() {
+    this._kind = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get kindInput() {
+    return this._kind
   }
 
   // location - computed: false, optional: false, required: true
   private _location: string;
   public get location() {
-    return this._location;
+    return this.getStringAttribute('location');
   }
   public set location(value: string) {
     this._location = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get locationInput() {
+    return this._location
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // offer_type - computed: false, optional: false, required: true
   private _offerType: string;
   public get offerType() {
-    return this._offerType;
+    return this.getStringAttribute('offer_type');
   }
   public set offerType(value: string) {
     this._offerType = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get offerTypeInput() {
+    return this._offerType
+  }
 
-  // primary_master_key - computed: true, optional: false, required: true
+  // primary_master_key - computed: true, optional: false, required: false
   public get primaryMasterKey() {
     return this.getStringAttribute('primary_master_key');
   }
 
-  // primary_readonly_master_key - computed: true, optional: false, required: true
+  // primary_readonly_master_key - computed: true, optional: false, required: false
   public get primaryReadonlyMasterKey() {
     return this.getStringAttribute('primary_readonly_master_key');
   }
 
-  // read_endpoints - computed: true, optional: false, required: true
+  // read_endpoints - computed: true, optional: false, required: false
   public get readEndpoints() {
     return this.getListAttribute('read_endpoints');
   }
@@ -201,18 +244,22 @@ export class CosmosdbAccount extends TerraformResource {
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
-    return this._resourceGroupName;
+    return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
+  }
 
-  // secondary_master_key - computed: true, optional: false, required: true
+  // secondary_master_key - computed: true, optional: false, required: false
   public get secondaryMasterKey() {
     return this.getStringAttribute('secondary_master_key');
   }
 
-  // secondary_readonly_master_key - computed: true, optional: false, required: true
+  // secondary_readonly_master_key - computed: true, optional: false, required: false
   public get secondaryReadonlyMasterKey() {
     return this.getStringAttribute('secondary_readonly_master_key');
   }
@@ -220,13 +267,20 @@ export class CosmosdbAccount extends TerraformResource {
   // tags - computed: false, optional: true, required: false
   private _tags?: { [key: string]: string };
   public get tags() {
-    return this._tags;
+    return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | undefined) {
+  public set tags(value: { [key: string]: string } ) {
     this._tags = value;
   }
+  public resetTags() {
+    this._tags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsInput() {
+    return this._tags
+  }
 
-  // write_endpoints - computed: true, optional: false, required: true
+  // write_endpoints - computed: true, optional: false, required: false
   public get writeEndpoints() {
     return this.getListAttribute('write_endpoints');
   }
@@ -234,46 +288,75 @@ export class CosmosdbAccount extends TerraformResource {
   // capabilities - computed: false, optional: true, required: false
   private _capabilities?: CosmosdbAccountCapabilities[];
   public get capabilities() {
-    return this._capabilities;
+    return this.interpolationForAttribute('capabilities') as any;
   }
-  public set capabilities(value: CosmosdbAccountCapabilities[] | undefined) {
+  public set capabilities(value: CosmosdbAccountCapabilities[] ) {
     this._capabilities = value;
+  }
+  public resetCapabilities() {
+    this._capabilities = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get capabilitiesInput() {
+    return this._capabilities
   }
 
   // consistency_policy - computed: false, optional: false, required: true
   private _consistencyPolicy: CosmosdbAccountConsistencyPolicy[];
   public get consistencyPolicy() {
-    return this._consistencyPolicy;
+    return this.interpolationForAttribute('consistency_policy') as any;
   }
   public set consistencyPolicy(value: CosmosdbAccountConsistencyPolicy[]) {
     this._consistencyPolicy = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get consistencyPolicyInput() {
+    return this._consistencyPolicy
   }
 
   // geo_location - computed: false, optional: false, required: true
   private _geoLocation: CosmosdbAccountGeoLocation[];
   public get geoLocation() {
-    return this._geoLocation;
+    return this.interpolationForAttribute('geo_location') as any;
   }
   public set geoLocation(value: CosmosdbAccountGeoLocation[]) {
     this._geoLocation = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get geoLocationInput() {
+    return this._geoLocation
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: CosmosdbAccountTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: CosmosdbAccountTimeouts | undefined) {
+  public set timeouts(value: CosmosdbAccountTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // virtual_network_rule - computed: false, optional: true, required: false
   private _virtualNetworkRule?: CosmosdbAccountVirtualNetworkRule[];
   public get virtualNetworkRule() {
-    return this._virtualNetworkRule;
+    return this.interpolationForAttribute('virtual_network_rule') as any;
   }
-  public set virtualNetworkRule(value: CosmosdbAccountVirtualNetworkRule[] | undefined) {
+  public set virtualNetworkRule(value: CosmosdbAccountVirtualNetworkRule[] ) {
     this._virtualNetworkRule = value;
+  }
+  public resetVirtualNetworkRule() {
+    this._virtualNetworkRule = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get virtualNetworkRuleInput() {
+    return this._virtualNetworkRule
   }
 
   // =========

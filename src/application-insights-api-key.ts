@@ -52,7 +52,7 @@ export class ApplicationInsightsApiKey extends TerraformResource {
   // ATTRIBUTES
   // ==========
 
-  // api_key - computed: true, optional: false, required: true
+  // api_key - computed: true, optional: false, required: false
   public get apiKey() {
     return this.getStringAttribute('api_key');
   }
@@ -60,55 +60,80 @@ export class ApplicationInsightsApiKey extends TerraformResource {
   // application_insights_id - computed: false, optional: false, required: true
   private _applicationInsightsId: string;
   public get applicationInsightsId() {
-    return this._applicationInsightsId;
+    return this.getStringAttribute('application_insights_id');
   }
   public set applicationInsightsId(value: string) {
     this._applicationInsightsId = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get applicationInsightsIdInput() {
+    return this._applicationInsightsId
+  }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // read_permissions - computed: false, optional: true, required: false
   private _readPermissions?: string[];
   public get readPermissions() {
-    return this._readPermissions;
+    return this.getListAttribute('read_permissions');
   }
-  public set readPermissions(value: string[] | undefined) {
+  public set readPermissions(value: string[] ) {
     this._readPermissions = value;
+  }
+  public resetReadPermissions() {
+    this._readPermissions = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readPermissionsInput() {
+    return this._readPermissions
   }
 
   // write_permissions - computed: false, optional: true, required: false
   private _writePermissions?: string[];
   public get writePermissions() {
-    return this._writePermissions;
+    return this.getListAttribute('write_permissions');
   }
-  public set writePermissions(value: string[] | undefined) {
+  public set writePermissions(value: string[] ) {
     this._writePermissions = value;
+  }
+  public resetWritePermissions() {
+    this._writePermissions = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get writePermissionsInput() {
+    return this._writePermissions
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: ApplicationInsightsApiKeyTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: ApplicationInsightsApiKeyTimeouts | undefined) {
+  public set timeouts(value: ApplicationInsightsApiKeyTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

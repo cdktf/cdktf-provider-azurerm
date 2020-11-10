@@ -73,90 +73,127 @@ export class TrafficManagerProfile extends TerraformResource {
   // ATTRIBUTES
   // ==========
 
-  // fqdn - computed: true, optional: false, required: true
+  // fqdn - computed: true, optional: false, required: false
   public get fqdn() {
     return this.getStringAttribute('fqdn');
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // profile_status - computed: true, optional: true, required: false
   private _profileStatus?: string;
   public get profileStatus() {
-    return this._profileStatus ?? this.getStringAttribute('profile_status');
+    return this.getStringAttribute('profile_status');
   }
-  public set profileStatus(value: string | undefined) {
+  public set profileStatus(value: string) {
     this._profileStatus = value;
+  }
+  public resetProfileStatus() {
+    this._profileStatus = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get profileStatusInput() {
+    return this._profileStatus
   }
 
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
-    return this._resourceGroupName;
+    return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
   }
 
   // tags - computed: false, optional: true, required: false
   private _tags?: { [key: string]: string };
   public get tags() {
-    return this._tags;
+    return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | undefined) {
+  public set tags(value: { [key: string]: string } ) {
     this._tags = value;
+  }
+  public resetTags() {
+    this._tags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsInput() {
+    return this._tags
   }
 
   // traffic_routing_method - computed: false, optional: false, required: true
   private _trafficRoutingMethod: string;
   public get trafficRoutingMethod() {
-    return this._trafficRoutingMethod;
+    return this.getStringAttribute('traffic_routing_method');
   }
   public set trafficRoutingMethod(value: string) {
     this._trafficRoutingMethod = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get trafficRoutingMethodInput() {
+    return this._trafficRoutingMethod
   }
 
   // dns_config - computed: false, optional: false, required: true
   private _dnsConfig: TrafficManagerProfileDnsConfig[];
   public get dnsConfig() {
-    return this._dnsConfig;
+    return this.interpolationForAttribute('dns_config') as any;
   }
   public set dnsConfig(value: TrafficManagerProfileDnsConfig[]) {
     this._dnsConfig = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dnsConfigInput() {
+    return this._dnsConfig
   }
 
   // monitor_config - computed: false, optional: false, required: true
   private _monitorConfig: TrafficManagerProfileMonitorConfig[];
   public get monitorConfig() {
-    return this._monitorConfig;
+    return this.interpolationForAttribute('monitor_config') as any;
   }
   public set monitorConfig(value: TrafficManagerProfileMonitorConfig[]) {
     this._monitorConfig = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get monitorConfigInput() {
+    return this._monitorConfig
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: TrafficManagerProfileTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: TrafficManagerProfileTimeouts | undefined) {
+  public set timeouts(value: TrafficManagerProfileTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

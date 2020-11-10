@@ -57,63 +57,82 @@ export class AutomationCertificate extends TerraformResource {
   // automation_account_name - computed: false, optional: false, required: true
   private _automationAccountName: string;
   public get automationAccountName() {
-    return this._automationAccountName;
+    return this.getStringAttribute('automation_account_name');
   }
   public set automationAccountName(value: string) {
     this._automationAccountName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get automationAccountNameInput() {
+    return this._automationAccountName
   }
 
   // base64 - computed: false, optional: false, required: true
   private _base64: string;
   public get base64() {
-    return this._base64;
+    return this.getStringAttribute('base64');
   }
   public set base64(value: string) {
     this._base64 = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get base64Input() {
+    return this._base64
   }
 
   // description - computed: false, optional: true, required: false
   private _description?: string;
   public get description() {
-    return this._description;
+    return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string ) {
     this._description = value;
   }
+  public resetDescription() {
+    this._description = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get descriptionInput() {
+    return this._description
+  }
 
-  // exportable - computed: true, optional: false, required: true
+  // exportable - computed: true, optional: false, required: false
   public get exportable() {
     return this.getBooleanAttribute('exportable');
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
-    return this._resourceGroupName;
+    return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
+  }
 
-  // thumbprint - computed: true, optional: false, required: true
+  // thumbprint - computed: true, optional: false, required: false
   public get thumbprint() {
     return this.getStringAttribute('thumbprint');
   }
@@ -121,10 +140,17 @@ export class AutomationCertificate extends TerraformResource {
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: AutomationCertificateTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: AutomationCertificateTimeouts | undefined) {
+  public set timeouts(value: AutomationCertificateTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

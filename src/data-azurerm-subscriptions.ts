@@ -16,37 +16,37 @@ export interface DataAzurermSubscriptionsConfig extends TerraformMetaArguments {
 }
 export class DataAzurermSubscriptionsSubscriptions extends ComplexComputedList {
 
-  // display_name - computed: true, optional: false, required: true
+  // display_name - computed: true, optional: false, required: false
   public get displayName() {
     return this.getStringAttribute('display_name');
   }
 
-  // location_placement_id - computed: true, optional: false, required: true
+  // location_placement_id - computed: true, optional: false, required: false
   public get locationPlacementId() {
     return this.getStringAttribute('location_placement_id');
   }
 
-  // quota_id - computed: true, optional: false, required: true
+  // quota_id - computed: true, optional: false, required: false
   public get quotaId() {
     return this.getStringAttribute('quota_id');
   }
 
-  // spending_limit - computed: true, optional: false, required: true
+  // spending_limit - computed: true, optional: false, required: false
   public get spendingLimit() {
     return this.getStringAttribute('spending_limit');
   }
 
-  // state - computed: true, optional: false, required: true
+  // state - computed: true, optional: false, required: false
   public get state() {
     return this.getStringAttribute('state');
   }
 
-  // subscription_id - computed: true, optional: false, required: true
+  // subscription_id - computed: true, optional: false, required: false
   public get subscriptionId() {
     return this.getStringAttribute('subscription_id');
   }
 
-  // tenant_id - computed: true, optional: false, required: true
+  // tenant_id - computed: true, optional: false, required: false
   public get tenantId() {
     return this.getStringAttribute('tenant_id');
   }
@@ -86,31 +86,41 @@ export class DataAzurermSubscriptions extends TerraformDataSource {
   // display_name_contains - computed: false, optional: true, required: false
   private _displayNameContains?: string;
   public get displayNameContains() {
-    return this._displayNameContains;
+    return this.getStringAttribute('display_name_contains');
   }
-  public set displayNameContains(value: string | undefined) {
+  public set displayNameContains(value: string ) {
     this._displayNameContains = value;
+  }
+  public resetDisplayNameContains() {
+    this._displayNameContains = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get displayNameContainsInput() {
+    return this._displayNameContains
   }
 
   // display_name_prefix - computed: false, optional: true, required: false
   private _displayNamePrefix?: string;
   public get displayNamePrefix() {
-    return this._displayNamePrefix;
+    return this.getStringAttribute('display_name_prefix');
   }
-  public set displayNamePrefix(value: string | undefined) {
+  public set displayNamePrefix(value: string ) {
     this._displayNamePrefix = value;
+  }
+  public resetDisplayNamePrefix() {
+    this._displayNamePrefix = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get displayNamePrefixInput() {
+    return this._displayNamePrefix
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
-  // subscriptions - computed: true, optional: false, required: true
+  // subscriptions - computed: true, optional: false, required: false
   public subscriptions(index: string) {
     return new DataAzurermSubscriptionsSubscriptions(this, 'subscriptions', index);
   }
@@ -118,10 +128,17 @@ export class DataAzurermSubscriptions extends TerraformDataSource {
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: DataAzurermSubscriptionsTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: DataAzurermSubscriptionsTimeouts | undefined) {
+  public set timeouts(value: DataAzurermSubscriptionsTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

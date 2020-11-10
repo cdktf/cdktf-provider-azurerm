@@ -34,12 +34,12 @@ export interface FunctionAppConfig extends TerraformMetaArguments {
 }
 export class FunctionAppSiteCredential extends ComplexComputedList {
 
-  // password - computed: true, optional: false, required: true
+  // password - computed: true, optional: false, required: false
   public get password() {
     return this.getStringAttribute('password');
   }
 
-  // username - computed: true, optional: false, required: true
+  // username - computed: true, optional: false, required: false
   public get username() {
     return this.getStringAttribute('username');
   }
@@ -170,31 +170,49 @@ export class FunctionApp extends TerraformResource {
   // app_service_plan_id - computed: false, optional: false, required: true
   private _appServicePlanId: string;
   public get appServicePlanId() {
-    return this._appServicePlanId;
+    return this.getStringAttribute('app_service_plan_id');
   }
   public set appServicePlanId(value: string) {
     this._appServicePlanId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get appServicePlanIdInput() {
+    return this._appServicePlanId
   }
 
   // app_settings - computed: false, optional: true, required: false
   private _appSettings?: { [key: string]: string };
   public get appSettings() {
-    return this._appSettings;
+    return this.interpolationForAttribute('app_settings') as any;
   }
-  public set appSettings(value: { [key: string]: string } | undefined) {
+  public set appSettings(value: { [key: string]: string } ) {
     this._appSettings = value;
+  }
+  public resetAppSettings() {
+    this._appSettings = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get appSettingsInput() {
+    return this._appSettings
   }
 
   // client_affinity_enabled - computed: true, optional: true, required: false
   private _clientAffinityEnabled?: boolean;
   public get clientAffinityEnabled() {
-    return this._clientAffinityEnabled ?? this.getBooleanAttribute('client_affinity_enabled');
+    return this.getBooleanAttribute('client_affinity_enabled');
   }
-  public set clientAffinityEnabled(value: boolean | undefined) {
+  public set clientAffinityEnabled(value: boolean) {
     this._clientAffinityEnabled = value;
   }
+  public resetClientAffinityEnabled() {
+    this._clientAffinityEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get clientAffinityEnabledInput() {
+    return this._clientAffinityEnabled
+  }
 
-  // default_hostname - computed: true, optional: false, required: true
+  // default_hostname - computed: true, optional: false, required: false
   public get defaultHostname() {
     return this.getStringAttribute('default_hostname');
   }
@@ -202,40 +220,57 @@ export class FunctionApp extends TerraformResource {
   // enable_builtin_logging - computed: false, optional: true, required: false
   private _enableBuiltinLogging?: boolean;
   public get enableBuiltinLogging() {
-    return this._enableBuiltinLogging;
+    return this.getBooleanAttribute('enable_builtin_logging');
   }
-  public set enableBuiltinLogging(value: boolean | undefined) {
+  public set enableBuiltinLogging(value: boolean ) {
     this._enableBuiltinLogging = value;
+  }
+  public resetEnableBuiltinLogging() {
+    this._enableBuiltinLogging = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enableBuiltinLoggingInput() {
+    return this._enableBuiltinLogging
   }
 
   // enabled - computed: false, optional: true, required: false
   private _enabled?: boolean;
   public get enabled() {
-    return this._enabled;
+    return this.getBooleanAttribute('enabled');
   }
-  public set enabled(value: boolean | undefined) {
+  public set enabled(value: boolean ) {
     this._enabled = value;
+  }
+  public resetEnabled() {
+    this._enabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enabledInput() {
+    return this._enabled
   }
 
   // https_only - computed: false, optional: true, required: false
   private _httpsOnly?: boolean;
   public get httpsOnly() {
-    return this._httpsOnly;
+    return this.getBooleanAttribute('https_only');
   }
-  public set httpsOnly(value: boolean | undefined) {
+  public set httpsOnly(value: boolean ) {
     this._httpsOnly = value;
+  }
+  public resetHttpsOnly() {
+    this._httpsOnly = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get httpsOnlyInput() {
+    return this._httpsOnly
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
-  // kind - computed: true, optional: false, required: true
+  // kind - computed: true, optional: false, required: false
   public get kind() {
     return this.getStringAttribute('kind');
   }
@@ -243,27 +278,35 @@ export class FunctionApp extends TerraformResource {
   // location - computed: false, optional: false, required: true
   private _location: string;
   public get location() {
-    return this._location;
+    return this.getStringAttribute('location');
   }
   public set location(value: string) {
     this._location = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get locationInput() {
+    return this._location
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
+  }
 
-  // outbound_ip_addresses - computed: true, optional: false, required: true
+  // outbound_ip_addresses - computed: true, optional: false, required: false
   public get outboundIpAddresses() {
     return this.getStringAttribute('outbound_ip_addresses');
   }
 
-  // possible_outbound_ip_addresses - computed: true, optional: false, required: true
+  // possible_outbound_ip_addresses - computed: true, optional: false, required: false
   public get possibleOutboundIpAddresses() {
     return this.getStringAttribute('possible_outbound_ip_addresses');
   }
@@ -271,13 +314,17 @@ export class FunctionApp extends TerraformResource {
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
-    return this._resourceGroupName;
+    return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
+  }
 
-  // site_credential - computed: true, optional: false, required: true
+  // site_credential - computed: true, optional: false, required: false
   public siteCredential(index: string) {
     return new FunctionAppSiteCredential(this, 'site_credential', index);
   }
@@ -285,73 +332,126 @@ export class FunctionApp extends TerraformResource {
   // storage_connection_string - computed: false, optional: false, required: true
   private _storageConnectionString: string;
   public get storageConnectionString() {
-    return this._storageConnectionString;
+    return this.getStringAttribute('storage_connection_string');
   }
   public set storageConnectionString(value: string) {
     this._storageConnectionString = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get storageConnectionStringInput() {
+    return this._storageConnectionString
   }
 
   // tags - computed: false, optional: true, required: false
   private _tags?: { [key: string]: string };
   public get tags() {
-    return this._tags;
+    return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | undefined) {
+  public set tags(value: { [key: string]: string } ) {
     this._tags = value;
+  }
+  public resetTags() {
+    this._tags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsInput() {
+    return this._tags
   }
 
   // version - computed: false, optional: true, required: false
   private _version?: string;
   public get version() {
-    return this._version;
+    return this.getStringAttribute('version');
   }
-  public set version(value: string | undefined) {
+  public set version(value: string ) {
     this._version = value;
+  }
+  public resetVersion() {
+    this._version = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get versionInput() {
+    return this._version
   }
 
   // auth_settings - computed: false, optional: true, required: false
   private _authSettings?: FunctionAppAuthSettings[];
   public get authSettings() {
-    return this._authSettings;
+    return this.interpolationForAttribute('auth_settings') as any;
   }
-  public set authSettings(value: FunctionAppAuthSettings[] | undefined) {
+  public set authSettings(value: FunctionAppAuthSettings[] ) {
     this._authSettings = value;
+  }
+  public resetAuthSettings() {
+    this._authSettings = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get authSettingsInput() {
+    return this._authSettings
   }
 
   // connection_string - computed: false, optional: true, required: false
   private _connectionString?: FunctionAppConnectionString[];
   public get connectionString() {
-    return this._connectionString;
+    return this.interpolationForAttribute('connection_string') as any;
   }
-  public set connectionString(value: FunctionAppConnectionString[] | undefined) {
+  public set connectionString(value: FunctionAppConnectionString[] ) {
     this._connectionString = value;
+  }
+  public resetConnectionString() {
+    this._connectionString = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get connectionStringInput() {
+    return this._connectionString
   }
 
   // identity - computed: false, optional: true, required: false
   private _identity?: FunctionAppIdentity[];
   public get identity() {
-    return this._identity;
+    return this.interpolationForAttribute('identity') as any;
   }
-  public set identity(value: FunctionAppIdentity[] | undefined) {
+  public set identity(value: FunctionAppIdentity[] ) {
     this._identity = value;
+  }
+  public resetIdentity() {
+    this._identity = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get identityInput() {
+    return this._identity
   }
 
   // site_config - computed: false, optional: true, required: false
   private _siteConfig?: FunctionAppSiteConfig[];
   public get siteConfig() {
-    return this._siteConfig;
+    return this.interpolationForAttribute('site_config') as any;
   }
-  public set siteConfig(value: FunctionAppSiteConfig[] | undefined) {
+  public set siteConfig(value: FunctionAppSiteConfig[] ) {
     this._siteConfig = value;
+  }
+  public resetSiteConfig() {
+    this._siteConfig = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get siteConfigInput() {
+    return this._siteConfig
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: FunctionAppTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: FunctionAppTimeouts | undefined) {
+  public set timeouts(value: FunctionAppTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

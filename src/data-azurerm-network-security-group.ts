@@ -17,82 +17,82 @@ export interface DataAzurermNetworkSecurityGroupConfig extends TerraformMetaArgu
 }
 export class DataAzurermNetworkSecurityGroupSecurityRule extends ComplexComputedList {
 
-  // access - computed: true, optional: false, required: true
+  // access - computed: true, optional: false, required: false
   public get access() {
     return this.getStringAttribute('access');
   }
 
-  // description - computed: true, optional: false, required: true
+  // description - computed: true, optional: false, required: false
   public get description() {
     return this.getStringAttribute('description');
   }
 
-  // destination_address_prefix - computed: true, optional: false, required: true
+  // destination_address_prefix - computed: true, optional: false, required: false
   public get destinationAddressPrefix() {
     return this.getStringAttribute('destination_address_prefix');
   }
 
-  // destination_address_prefixes - computed: true, optional: false, required: true
+  // destination_address_prefixes - computed: true, optional: false, required: false
   public get destinationAddressPrefixes() {
     return this.getListAttribute('destination_address_prefixes');
   }
 
-  // destination_application_security_group_ids - computed: true, optional: false, required: true
+  // destination_application_security_group_ids - computed: true, optional: false, required: false
   public get destinationApplicationSecurityGroupIds() {
     return this.getListAttribute('destination_application_security_group_ids');
   }
 
-  // destination_port_range - computed: true, optional: false, required: true
+  // destination_port_range - computed: true, optional: false, required: false
   public get destinationPortRange() {
     return this.getStringAttribute('destination_port_range');
   }
 
-  // destination_port_ranges - computed: true, optional: false, required: true
+  // destination_port_ranges - computed: true, optional: false, required: false
   public get destinationPortRanges() {
     return this.getListAttribute('destination_port_ranges');
   }
 
-  // direction - computed: true, optional: false, required: true
+  // direction - computed: true, optional: false, required: false
   public get direction() {
     return this.getStringAttribute('direction');
   }
 
-  // name - computed: true, optional: false, required: true
+  // name - computed: true, optional: false, required: false
   public get name() {
     return this.getStringAttribute('name');
   }
 
-  // priority - computed: true, optional: false, required: true
+  // priority - computed: true, optional: false, required: false
   public get priority() {
     return this.getNumberAttribute('priority');
   }
 
-  // protocol - computed: true, optional: false, required: true
+  // protocol - computed: true, optional: false, required: false
   public get protocol() {
     return this.getStringAttribute('protocol');
   }
 
-  // source_address_prefix - computed: true, optional: false, required: true
+  // source_address_prefix - computed: true, optional: false, required: false
   public get sourceAddressPrefix() {
     return this.getStringAttribute('source_address_prefix');
   }
 
-  // source_address_prefixes - computed: true, optional: false, required: true
+  // source_address_prefixes - computed: true, optional: false, required: false
   public get sourceAddressPrefixes() {
     return this.getListAttribute('source_address_prefixes');
   }
 
-  // source_application_security_group_ids - computed: true, optional: false, required: true
+  // source_application_security_group_ids - computed: true, optional: false, required: false
   public get sourceApplicationSecurityGroupIds() {
     return this.getListAttribute('source_application_security_group_ids');
   }
 
-  // source_port_range - computed: true, optional: false, required: true
+  // source_port_range - computed: true, optional: false, required: false
   public get sourcePortRange() {
     return this.getStringAttribute('source_port_range');
   }
 
-  // source_port_ranges - computed: true, optional: false, required: true
+  // source_port_ranges - computed: true, optional: false, required: false
   public get sourcePortRanges() {
     return this.getListAttribute('source_port_ranges');
   }
@@ -130,15 +130,11 @@ export class DataAzurermNetworkSecurityGroup extends TerraformDataSource {
   // ==========
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
-  // location - computed: true, optional: false, required: true
+  // location - computed: true, optional: false, required: false
   public get location() {
     return this.getStringAttribute('location');
   }
@@ -146,27 +142,35 @@ export class DataAzurermNetworkSecurityGroup extends TerraformDataSource {
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
-    return this._resourceGroupName;
+    return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
+  }
 
-  // security_rule - computed: true, optional: false, required: true
+  // security_rule - computed: true, optional: false, required: false
   public securityRule(index: string) {
     return new DataAzurermNetworkSecurityGroupSecurityRule(this, 'security_rule', index);
   }
 
-  // tags - computed: true, optional: false, required: true
+  // tags - computed: true, optional: false, required: false
   public tags(key: string): string {
     return new StringMap(this, 'tags').lookup(key);
   }
@@ -174,10 +178,17 @@ export class DataAzurermNetworkSecurityGroup extends TerraformDataSource {
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: DataAzurermNetworkSecurityGroupTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: DataAzurermNetworkSecurityGroupTimeouts | undefined) {
+  public set timeouts(value: DataAzurermNetworkSecurityGroupTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

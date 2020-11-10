@@ -91,45 +91,56 @@ export class ApiManagementApi extends TerraformResource {
   // api_management_name - computed: false, optional: false, required: true
   private _apiManagementName: string;
   public get apiManagementName() {
-    return this._apiManagementName;
+    return this.getStringAttribute('api_management_name');
   }
   public set apiManagementName(value: string) {
     this._apiManagementName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get apiManagementNameInput() {
+    return this._apiManagementName
   }
 
   // description - computed: false, optional: true, required: false
   private _description?: string;
   public get description() {
-    return this._description;
+    return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string ) {
     this._description = value;
+  }
+  public resetDescription() {
+    this._description = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get descriptionInput() {
+    return this._description
   }
 
   // display_name - computed: false, optional: false, required: true
   private _displayName: string;
   public get displayName() {
-    return this._displayName;
+    return this.getStringAttribute('display_name');
   }
   public set displayName(value: string) {
     this._displayName = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get displayNameInput() {
+    return this._displayName
+  }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
-  // is_current - computed: true, optional: false, required: true
+  // is_current - computed: true, optional: false, required: false
   public get isCurrent() {
     return this.getBooleanAttribute('is_current');
   }
 
-  // is_online - computed: true, optional: false, required: true
+  // is_online - computed: true, optional: false, required: false
   public get isOnline() {
     return this.getBooleanAttribute('is_online');
   }
@@ -137,109 +148,178 @@ export class ApiManagementApi extends TerraformResource {
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // path - computed: false, optional: false, required: true
   private _path: string;
   public get path() {
-    return this._path;
+    return this.getStringAttribute('path');
   }
   public set path(value: string) {
     this._path = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get pathInput() {
+    return this._path
   }
 
   // protocols - computed: false, optional: false, required: true
   private _protocols: string[];
   public get protocols() {
-    return this._protocols;
+    return this.getListAttribute('protocols');
   }
   public set protocols(value: string[]) {
     this._protocols = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get protocolsInput() {
+    return this._protocols
   }
 
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
-    return this._resourceGroupName;
+    return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
   }
 
   // revision - computed: false, optional: false, required: true
   private _revision: string;
   public get revision() {
-    return this._revision;
+    return this.getStringAttribute('revision');
   }
   public set revision(value: string) {
     this._revision = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get revisionInput() {
+    return this._revision
   }
 
   // service_url - computed: true, optional: true, required: false
   private _serviceUrl?: string;
   public get serviceUrl() {
-    return this._serviceUrl ?? this.getStringAttribute('service_url');
+    return this.getStringAttribute('service_url');
   }
-  public set serviceUrl(value: string | undefined) {
+  public set serviceUrl(value: string) {
     this._serviceUrl = value;
+  }
+  public resetServiceUrl() {
+    this._serviceUrl = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get serviceUrlInput() {
+    return this._serviceUrl
   }
 
   // soap_pass_through - computed: false, optional: true, required: false
   private _soapPassThrough?: boolean;
   public get soapPassThrough() {
-    return this._soapPassThrough;
+    return this.getBooleanAttribute('soap_pass_through');
   }
-  public set soapPassThrough(value: boolean | undefined) {
+  public set soapPassThrough(value: boolean ) {
     this._soapPassThrough = value;
+  }
+  public resetSoapPassThrough() {
+    this._soapPassThrough = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get soapPassThroughInput() {
+    return this._soapPassThrough
   }
 
   // version - computed: true, optional: true, required: false
   private _version?: string;
   public get version() {
-    return this._version ?? this.getStringAttribute('version');
+    return this.getStringAttribute('version');
   }
-  public set version(value: string | undefined) {
+  public set version(value: string) {
     this._version = value;
+  }
+  public resetVersion() {
+    this._version = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get versionInput() {
+    return this._version
   }
 
   // version_set_id - computed: true, optional: true, required: false
   private _versionSetId?: string;
   public get versionSetId() {
-    return this._versionSetId ?? this.getStringAttribute('version_set_id');
+    return this.getStringAttribute('version_set_id');
   }
-  public set versionSetId(value: string | undefined) {
+  public set versionSetId(value: string) {
     this._versionSetId = value;
+  }
+  public resetVersionSetId() {
+    this._versionSetId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get versionSetIdInput() {
+    return this._versionSetId
   }
 
   // import - computed: false, optional: true, required: false
   private _import?: ApiManagementApiImport[];
   public get import() {
-    return this._import;
+    return this.interpolationForAttribute('import') as any;
   }
-  public set import(value: ApiManagementApiImport[] | undefined) {
+  public set import(value: ApiManagementApiImport[] ) {
     this._import = value;
+  }
+  public resetImport() {
+    this._import = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get importInput() {
+    return this._import
   }
 
   // subscription_key_parameter_names - computed: false, optional: true, required: false
   private _subscriptionKeyParameterNames?: ApiManagementApiSubscriptionKeyParameterNames[];
   public get subscriptionKeyParameterNames() {
-    return this._subscriptionKeyParameterNames;
+    return this.interpolationForAttribute('subscription_key_parameter_names') as any;
   }
-  public set subscriptionKeyParameterNames(value: ApiManagementApiSubscriptionKeyParameterNames[] | undefined) {
+  public set subscriptionKeyParameterNames(value: ApiManagementApiSubscriptionKeyParameterNames[] ) {
     this._subscriptionKeyParameterNames = value;
+  }
+  public resetSubscriptionKeyParameterNames() {
+    this._subscriptionKeyParameterNames = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get subscriptionKeyParameterNamesInput() {
+    return this._subscriptionKeyParameterNames
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: ApiManagementApiTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: ApiManagementApiTimeouts | undefined) {
+  public set timeouts(value: ApiManagementApiTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

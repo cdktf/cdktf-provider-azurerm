@@ -59,84 +59,115 @@ export class SiteRecoveryProtectionContainerMapping extends TerraformResource {
   // ==========
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // recovery_fabric_name - computed: false, optional: false, required: true
   private _recoveryFabricName: string;
   public get recoveryFabricName() {
-    return this._recoveryFabricName;
+    return this.getStringAttribute('recovery_fabric_name');
   }
   public set recoveryFabricName(value: string) {
     this._recoveryFabricName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get recoveryFabricNameInput() {
+    return this._recoveryFabricName
   }
 
   // recovery_replication_policy_id - computed: false, optional: false, required: true
   private _recoveryReplicationPolicyId: string;
   public get recoveryReplicationPolicyId() {
-    return this._recoveryReplicationPolicyId;
+    return this.getStringAttribute('recovery_replication_policy_id');
   }
   public set recoveryReplicationPolicyId(value: string) {
     this._recoveryReplicationPolicyId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get recoveryReplicationPolicyIdInput() {
+    return this._recoveryReplicationPolicyId
   }
 
   // recovery_source_protection_container_name - computed: false, optional: false, required: true
   private _recoverySourceProtectionContainerName: string;
   public get recoverySourceProtectionContainerName() {
-    return this._recoverySourceProtectionContainerName;
+    return this.getStringAttribute('recovery_source_protection_container_name');
   }
   public set recoverySourceProtectionContainerName(value: string) {
     this._recoverySourceProtectionContainerName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get recoverySourceProtectionContainerNameInput() {
+    return this._recoverySourceProtectionContainerName
   }
 
   // recovery_target_protection_container_id - computed: false, optional: false, required: true
   private _recoveryTargetProtectionContainerId: string;
   public get recoveryTargetProtectionContainerId() {
-    return this._recoveryTargetProtectionContainerId;
+    return this.getStringAttribute('recovery_target_protection_container_id');
   }
   public set recoveryTargetProtectionContainerId(value: string) {
     this._recoveryTargetProtectionContainerId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get recoveryTargetProtectionContainerIdInput() {
+    return this._recoveryTargetProtectionContainerId
   }
 
   // recovery_vault_name - computed: false, optional: false, required: true
   private _recoveryVaultName: string;
   public get recoveryVaultName() {
-    return this._recoveryVaultName;
+    return this.getStringAttribute('recovery_vault_name');
   }
   public set recoveryVaultName(value: string) {
     this._recoveryVaultName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get recoveryVaultNameInput() {
+    return this._recoveryVaultName
   }
 
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
-    return this._resourceGroupName;
+    return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: SiteRecoveryProtectionContainerMappingTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: SiteRecoveryProtectionContainerMappingTimeouts | undefined) {
+  public set timeouts(value: SiteRecoveryProtectionContainerMappingTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

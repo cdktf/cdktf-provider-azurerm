@@ -59,58 +59,77 @@ export class NotificationHubNamespace extends TerraformResource {
   // enabled - computed: false, optional: true, required: false
   private _enabled?: boolean;
   public get enabled() {
-    return this._enabled;
+    return this.getBooleanAttribute('enabled');
   }
-  public set enabled(value: boolean | undefined) {
+  public set enabled(value: boolean ) {
     this._enabled = value;
+  }
+  public resetEnabled() {
+    this._enabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enabledInput() {
+    return this._enabled
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // location - computed: false, optional: false, required: true
   private _location: string;
   public get location() {
-    return this._location;
+    return this.getStringAttribute('location');
   }
   public set location(value: string) {
     this._location = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get locationInput() {
+    return this._location
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // namespace_type - computed: false, optional: false, required: true
   private _namespaceType: string;
   public get namespaceType() {
-    return this._namespaceType;
+    return this.getStringAttribute('namespace_type');
   }
   public set namespaceType(value: string) {
     this._namespaceType = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get namespaceTypeInput() {
+    return this._namespaceType
   }
 
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
-    return this._resourceGroupName;
+    return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
+  }
 
-  // servicebus_endpoint - computed: true, optional: false, required: true
+  // servicebus_endpoint - computed: true, optional: false, required: false
   public get servicebusEndpoint() {
     return this.getStringAttribute('servicebus_endpoint');
   }
@@ -118,19 +137,30 @@ export class NotificationHubNamespace extends TerraformResource {
   // sku_name - computed: false, optional: false, required: true
   private _skuName: string;
   public get skuName() {
-    return this._skuName;
+    return this.getStringAttribute('sku_name');
   }
   public set skuName(value: string) {
     this._skuName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get skuNameInput() {
+    return this._skuName
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: NotificationHubNamespaceTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: NotificationHubNamespaceTimeouts | undefined) {
+  public set timeouts(value: NotificationHubNamespaceTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

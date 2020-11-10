@@ -162,163 +162,260 @@ export class BatchPool extends TerraformResource {
   // account_name - computed: false, optional: false, required: true
   private _accountName: string;
   public get accountName() {
-    return this._accountName;
+    return this.getStringAttribute('account_name');
   }
   public set accountName(value: string) {
     this._accountName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get accountNameInput() {
+    return this._accountName
   }
 
   // display_name - computed: false, optional: true, required: false
   private _displayName?: string;
   public get displayName() {
-    return this._displayName;
+    return this.getStringAttribute('display_name');
   }
-  public set displayName(value: string | undefined) {
+  public set displayName(value: string ) {
     this._displayName = value;
+  }
+  public resetDisplayName() {
+    this._displayName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get displayNameInput() {
+    return this._displayName
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // max_tasks_per_node - computed: false, optional: true, required: false
   private _maxTasksPerNode?: number;
   public get maxTasksPerNode() {
-    return this._maxTasksPerNode;
+    return this.getNumberAttribute('max_tasks_per_node');
   }
-  public set maxTasksPerNode(value: number | undefined) {
+  public set maxTasksPerNode(value: number ) {
     this._maxTasksPerNode = value;
+  }
+  public resetMaxTasksPerNode() {
+    this._maxTasksPerNode = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get maxTasksPerNodeInput() {
+    return this._maxTasksPerNode
   }
 
   // metadata - computed: false, optional: true, required: false
   private _metadata?: { [key: string]: string };
   public get metadata() {
-    return this._metadata;
+    return this.interpolationForAttribute('metadata') as any;
   }
-  public set metadata(value: { [key: string]: string } | undefined) {
+  public set metadata(value: { [key: string]: string } ) {
     this._metadata = value;
+  }
+  public resetMetadata() {
+    this._metadata = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get metadataInput() {
+    return this._metadata
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // node_agent_sku_id - computed: false, optional: false, required: true
   private _nodeAgentSkuId: string;
   public get nodeAgentSkuId() {
-    return this._nodeAgentSkuId;
+    return this.getStringAttribute('node_agent_sku_id');
   }
   public set nodeAgentSkuId(value: string) {
     this._nodeAgentSkuId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nodeAgentSkuIdInput() {
+    return this._nodeAgentSkuId
   }
 
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
-    return this._resourceGroupName;
+    return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
   }
 
   // stop_pending_resize_operation - computed: false, optional: true, required: false
   private _stopPendingResizeOperation?: boolean;
   public get stopPendingResizeOperation() {
-    return this._stopPendingResizeOperation;
+    return this.getBooleanAttribute('stop_pending_resize_operation');
   }
-  public set stopPendingResizeOperation(value: boolean | undefined) {
+  public set stopPendingResizeOperation(value: boolean ) {
     this._stopPendingResizeOperation = value;
+  }
+  public resetStopPendingResizeOperation() {
+    this._stopPendingResizeOperation = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get stopPendingResizeOperationInput() {
+    return this._stopPendingResizeOperation
   }
 
   // vm_size - computed: false, optional: false, required: true
   private _vmSize: string;
   public get vmSize() {
-    return this._vmSize;
+    return this.getStringAttribute('vm_size');
   }
   public set vmSize(value: string) {
     this._vmSize = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get vmSizeInput() {
+    return this._vmSize
   }
 
   // auto_scale - computed: false, optional: true, required: false
   private _autoScale?: BatchPoolAutoScale[];
   public get autoScale() {
-    return this._autoScale;
+    return this.interpolationForAttribute('auto_scale') as any;
   }
-  public set autoScale(value: BatchPoolAutoScale[] | undefined) {
+  public set autoScale(value: BatchPoolAutoScale[] ) {
     this._autoScale = value;
+  }
+  public resetAutoScale() {
+    this._autoScale = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get autoScaleInput() {
+    return this._autoScale
   }
 
   // certificate - computed: false, optional: true, required: false
   private _certificate?: BatchPoolCertificate[];
   public get certificate() {
-    return this._certificate;
+    return this.interpolationForAttribute('certificate') as any;
   }
-  public set certificate(value: BatchPoolCertificate[] | undefined) {
+  public set certificate(value: BatchPoolCertificate[] ) {
     this._certificate = value;
+  }
+  public resetCertificate() {
+    this._certificate = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get certificateInput() {
+    return this._certificate
   }
 
   // container_configuration - computed: false, optional: true, required: false
   private _containerConfiguration?: BatchPoolContainerConfiguration[];
   public get containerConfiguration() {
-    return this._containerConfiguration;
+    return this.interpolationForAttribute('container_configuration') as any;
   }
-  public set containerConfiguration(value: BatchPoolContainerConfiguration[] | undefined) {
+  public set containerConfiguration(value: BatchPoolContainerConfiguration[] ) {
     this._containerConfiguration = value;
+  }
+  public resetContainerConfiguration() {
+    this._containerConfiguration = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get containerConfigurationInput() {
+    return this._containerConfiguration
   }
 
   // fixed_scale - computed: false, optional: true, required: false
   private _fixedScale?: BatchPoolFixedScale[];
   public get fixedScale() {
-    return this._fixedScale;
+    return this.interpolationForAttribute('fixed_scale') as any;
   }
-  public set fixedScale(value: BatchPoolFixedScale[] | undefined) {
+  public set fixedScale(value: BatchPoolFixedScale[] ) {
     this._fixedScale = value;
+  }
+  public resetFixedScale() {
+    this._fixedScale = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get fixedScaleInput() {
+    return this._fixedScale
   }
 
   // network_configuration - computed: false, optional: true, required: false
   private _networkConfiguration?: BatchPoolNetworkConfiguration[];
   public get networkConfiguration() {
-    return this._networkConfiguration;
+    return this.interpolationForAttribute('network_configuration') as any;
   }
-  public set networkConfiguration(value: BatchPoolNetworkConfiguration[] | undefined) {
+  public set networkConfiguration(value: BatchPoolNetworkConfiguration[] ) {
     this._networkConfiguration = value;
+  }
+  public resetNetworkConfiguration() {
+    this._networkConfiguration = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get networkConfigurationInput() {
+    return this._networkConfiguration
   }
 
   // start_task - computed: false, optional: true, required: false
   private _startTask?: BatchPoolStartTask[];
   public get startTask() {
-    return this._startTask;
+    return this.interpolationForAttribute('start_task') as any;
   }
-  public set startTask(value: BatchPoolStartTask[] | undefined) {
+  public set startTask(value: BatchPoolStartTask[] ) {
     this._startTask = value;
+  }
+  public resetStartTask() {
+    this._startTask = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get startTaskInput() {
+    return this._startTask
   }
 
   // storage_image_reference - computed: false, optional: false, required: true
   private _storageImageReference: BatchPoolStorageImageReference[];
   public get storageImageReference() {
-    return this._storageImageReference;
+    return this.interpolationForAttribute('storage_image_reference') as any;
   }
   public set storageImageReference(value: BatchPoolStorageImageReference[]) {
     this._storageImageReference = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get storageImageReferenceInput() {
+    return this._storageImageReference
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: BatchPoolTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: BatchPoolTimeouts | undefined) {
+  public set timeouts(value: BatchPoolTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

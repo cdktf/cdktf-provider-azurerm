@@ -63,91 +63,141 @@ export class VirtualWan extends TerraformResource {
   // allow_branch_to_branch_traffic - computed: false, optional: true, required: false
   private _allowBranchToBranchTraffic?: boolean;
   public get allowBranchToBranchTraffic() {
-    return this._allowBranchToBranchTraffic;
+    return this.getBooleanAttribute('allow_branch_to_branch_traffic');
   }
-  public set allowBranchToBranchTraffic(value: boolean | undefined) {
+  public set allowBranchToBranchTraffic(value: boolean ) {
     this._allowBranchToBranchTraffic = value;
+  }
+  public resetAllowBranchToBranchTraffic() {
+    this._allowBranchToBranchTraffic = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get allowBranchToBranchTrafficInput() {
+    return this._allowBranchToBranchTraffic
   }
 
   // allow_vnet_to_vnet_traffic - computed: false, optional: true, required: false
   private _allowVnetToVnetTraffic?: boolean;
   public get allowVnetToVnetTraffic() {
-    return this._allowVnetToVnetTraffic;
+    return this.getBooleanAttribute('allow_vnet_to_vnet_traffic');
   }
-  public set allowVnetToVnetTraffic(value: boolean | undefined) {
+  public set allowVnetToVnetTraffic(value: boolean ) {
     this._allowVnetToVnetTraffic = value;
+  }
+  public resetAllowVnetToVnetTraffic() {
+    this._allowVnetToVnetTraffic = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get allowVnetToVnetTrafficInput() {
+    return this._allowVnetToVnetTraffic
   }
 
   // disable_vpn_encryption - computed: false, optional: true, required: false
   private _disableVpnEncryption?: boolean;
   public get disableVpnEncryption() {
-    return this._disableVpnEncryption;
+    return this.getBooleanAttribute('disable_vpn_encryption');
   }
-  public set disableVpnEncryption(value: boolean | undefined) {
+  public set disableVpnEncryption(value: boolean ) {
     this._disableVpnEncryption = value;
+  }
+  public resetDisableVpnEncryption() {
+    this._disableVpnEncryption = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get disableVpnEncryptionInput() {
+    return this._disableVpnEncryption
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // location - computed: false, optional: false, required: true
   private _location: string;
   public get location() {
-    return this._location;
+    return this.getStringAttribute('location');
   }
   public set location(value: string) {
     this._location = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get locationInput() {
+    return this._location
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // office365_local_breakout_category - computed: false, optional: true, required: false
   private _office365LocalBreakoutCategory?: string;
   public get office365LocalBreakoutCategory() {
-    return this._office365LocalBreakoutCategory;
+    return this.getStringAttribute('office365_local_breakout_category');
   }
-  public set office365LocalBreakoutCategory(value: string | undefined) {
+  public set office365LocalBreakoutCategory(value: string ) {
     this._office365LocalBreakoutCategory = value;
+  }
+  public resetOffice365LocalBreakoutCategory() {
+    this._office365LocalBreakoutCategory = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get office365LocalBreakoutCategoryInput() {
+    return this._office365LocalBreakoutCategory
   }
 
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
-    return this._resourceGroupName;
+    return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
   }
 
   // tags - computed: false, optional: true, required: false
   private _tags?: { [key: string]: string };
   public get tags() {
-    return this._tags;
+    return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | undefined) {
+  public set tags(value: { [key: string]: string } ) {
     this._tags = value;
+  }
+  public resetTags() {
+    this._tags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsInput() {
+    return this._tags
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: VirtualWanTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: VirtualWanTimeouts | undefined) {
+  public set timeouts(value: VirtualWanTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

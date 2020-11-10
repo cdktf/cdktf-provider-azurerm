@@ -49,50 +49,50 @@ export class DataAzurermManagedDisk extends TerraformDataSource {
   // ATTRIBUTES
   // ==========
 
-  // create_option - computed: true, optional: false, required: true
+  // create_option - computed: true, optional: false, required: false
   public get createOption() {
     return this.getStringAttribute('create_option');
   }
 
-  // disk_encryption_set_id - computed: true, optional: false, required: true
+  // disk_encryption_set_id - computed: true, optional: false, required: false
   public get diskEncryptionSetId() {
     return this.getStringAttribute('disk_encryption_set_id');
   }
 
-  // disk_iops_read_write - computed: true, optional: false, required: true
+  // disk_iops_read_write - computed: true, optional: false, required: false
   public get diskIopsReadWrite() {
     return this.getNumberAttribute('disk_iops_read_write');
   }
 
-  // disk_mbps_read_write - computed: true, optional: false, required: true
+  // disk_mbps_read_write - computed: true, optional: false, required: false
   public get diskMbpsReadWrite() {
     return this.getNumberAttribute('disk_mbps_read_write');
   }
 
-  // disk_size_gb - computed: true, optional: false, required: true
+  // disk_size_gb - computed: true, optional: false, required: false
   public get diskSizeGb() {
     return this.getNumberAttribute('disk_size_gb');
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
+  }
 
-  // os_type - computed: true, optional: false, required: true
+  // os_type - computed: true, optional: false, required: false
   public get osType() {
     return this.getStringAttribute('os_type');
   }
@@ -100,28 +100,32 @@ export class DataAzurermManagedDisk extends TerraformDataSource {
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
-    return this._resourceGroupName;
+    return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
+  }
 
-  // source_resource_id - computed: true, optional: false, required: true
+  // source_resource_id - computed: true, optional: false, required: false
   public get sourceResourceId() {
     return this.getStringAttribute('source_resource_id');
   }
 
-  // source_uri - computed: true, optional: false, required: true
+  // source_uri - computed: true, optional: false, required: false
   public get sourceUri() {
     return this.getStringAttribute('source_uri');
   }
 
-  // storage_account_id - computed: true, optional: false, required: true
+  // storage_account_id - computed: true, optional: false, required: false
   public get storageAccountId() {
     return this.getStringAttribute('storage_account_id');
   }
 
-  // storage_account_type - computed: true, optional: false, required: true
+  // storage_account_type - computed: true, optional: false, required: false
   public get storageAccountType() {
     return this.getStringAttribute('storage_account_type');
   }
@@ -129,28 +133,49 @@ export class DataAzurermManagedDisk extends TerraformDataSource {
   // tags - computed: false, optional: true, required: false
   private _tags?: { [key: string]: string };
   public get tags() {
-    return this._tags;
+    return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | undefined) {
+  public set tags(value: { [key: string]: string } ) {
     this._tags = value;
+  }
+  public resetTags() {
+    this._tags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsInput() {
+    return this._tags
   }
 
   // zones - computed: true, optional: true, required: false
   private _zones?: string[];
   public get zones() {
-    return this._zones ?? this.getListAttribute('zones');
+    return this.getListAttribute('zones');
   }
-  public set zones(value: string[] | undefined) {
+  public set zones(value: string[]) {
     this._zones = value;
+  }
+  public resetZones() {
+    this._zones = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get zonesInput() {
+    return this._zones
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: DataAzurermManagedDiskTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: DataAzurermManagedDiskTimeouts | undefined) {
+  public set timeouts(value: DataAzurermManagedDiskTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

@@ -46,26 +46,22 @@ export class DataAzurermVirtualNetwork extends TerraformDataSource {
   // ATTRIBUTES
   // ==========
 
-  // address_space - computed: true, optional: false, required: true
+  // address_space - computed: true, optional: false, required: false
   public get addressSpace() {
     return this.getListAttribute('address_space');
   }
 
-  // dns_servers - computed: true, optional: false, required: true
+  // dns_servers - computed: true, optional: false, required: false
   public get dnsServers() {
     return this.getListAttribute('dns_servers');
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
-  // location - computed: true, optional: false, required: true
+  // location - computed: true, optional: false, required: false
   public get location() {
     return this.getStringAttribute('location');
   }
@@ -73,27 +69,35 @@ export class DataAzurermVirtualNetwork extends TerraformDataSource {
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
-    return this._resourceGroupName;
+    return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
+  }
 
-  // subnets - computed: true, optional: false, required: true
+  // subnets - computed: true, optional: false, required: false
   public get subnets() {
     return this.getListAttribute('subnets');
   }
 
-  // vnet_peerings - computed: true, optional: false, required: true
+  // vnet_peerings - computed: true, optional: false, required: false
   public vnetPeerings(key: string): string {
     return new StringMap(this, 'vnet_peerings').lookup(key);
   }
@@ -101,10 +105,17 @@ export class DataAzurermVirtualNetwork extends TerraformDataSource {
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: DataAzurermVirtualNetworkTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: DataAzurermVirtualNetworkTimeouts | undefined) {
+  public set timeouts(value: DataAzurermVirtualNetworkTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

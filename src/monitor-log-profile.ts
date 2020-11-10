@@ -64,73 +64,106 @@ export class MonitorLogProfile extends TerraformResource {
   // categories - computed: false, optional: false, required: true
   private _categories: string[];
   public get categories() {
-    return this._categories;
+    return this.getListAttribute('categories');
   }
   public set categories(value: string[]) {
     this._categories = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get categoriesInput() {
+    return this._categories
+  }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // locations - computed: false, optional: false, required: true
   private _locations: string[];
   public get locations() {
-    return this._locations;
+    return this.getListAttribute('locations');
   }
   public set locations(value: string[]) {
     this._locations = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get locationsInput() {
+    return this._locations
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // servicebus_rule_id - computed: false, optional: true, required: false
   private _servicebusRuleId?: string;
   public get servicebusRuleId() {
-    return this._servicebusRuleId;
+    return this.getStringAttribute('servicebus_rule_id');
   }
-  public set servicebusRuleId(value: string | undefined) {
+  public set servicebusRuleId(value: string ) {
     this._servicebusRuleId = value;
+  }
+  public resetServicebusRuleId() {
+    this._servicebusRuleId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get servicebusRuleIdInput() {
+    return this._servicebusRuleId
   }
 
   // storage_account_id - computed: false, optional: true, required: false
   private _storageAccountId?: string;
   public get storageAccountId() {
-    return this._storageAccountId;
+    return this.getStringAttribute('storage_account_id');
   }
-  public set storageAccountId(value: string | undefined) {
+  public set storageAccountId(value: string ) {
     this._storageAccountId = value;
+  }
+  public resetStorageAccountId() {
+    this._storageAccountId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get storageAccountIdInput() {
+    return this._storageAccountId
   }
 
   // retention_policy - computed: false, optional: false, required: true
   private _retentionPolicy: MonitorLogProfileRetentionPolicy[];
   public get retentionPolicy() {
-    return this._retentionPolicy;
+    return this.interpolationForAttribute('retention_policy') as any;
   }
   public set retentionPolicy(value: MonitorLogProfileRetentionPolicy[]) {
     this._retentionPolicy = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get retentionPolicyInput() {
+    return this._retentionPolicy
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: MonitorLogProfileTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: MonitorLogProfileTimeouts | undefined) {
+  public set timeouts(value: MonitorLogProfileTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

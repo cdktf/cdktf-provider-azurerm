@@ -86,13 +86,20 @@ export class TrafficManagerEndpoint extends TerraformResource {
   // endpoint_location - computed: true, optional: true, required: false
   private _endpointLocation?: string;
   public get endpointLocation() {
-    return this._endpointLocation ?? this.getStringAttribute('endpoint_location');
+    return this.getStringAttribute('endpoint_location');
   }
-  public set endpointLocation(value: string | undefined) {
+  public set endpointLocation(value: string) {
     this._endpointLocation = value;
   }
+  public resetEndpointLocation() {
+    this._endpointLocation = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get endpointLocationInput() {
+    return this._endpointLocation
+  }
 
-  // endpoint_monitor_status - computed: true, optional: false, required: true
+  // endpoint_monitor_status - computed: true, optional: false, required: false
   public get endpointMonitorStatus() {
     return this.getStringAttribute('endpoint_monitor_status');
   }
@@ -100,136 +107,218 @@ export class TrafficManagerEndpoint extends TerraformResource {
   // endpoint_status - computed: true, optional: true, required: false
   private _endpointStatus?: string;
   public get endpointStatus() {
-    return this._endpointStatus ?? this.getStringAttribute('endpoint_status');
+    return this.getStringAttribute('endpoint_status');
   }
-  public set endpointStatus(value: string | undefined) {
+  public set endpointStatus(value: string) {
     this._endpointStatus = value;
+  }
+  public resetEndpointStatus() {
+    this._endpointStatus = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get endpointStatusInput() {
+    return this._endpointStatus
   }
 
   // geo_mappings - computed: false, optional: true, required: false
   private _geoMappings?: string[];
   public get geoMappings() {
-    return this._geoMappings;
+    return this.getListAttribute('geo_mappings');
   }
-  public set geoMappings(value: string[] | undefined) {
+  public set geoMappings(value: string[] ) {
     this._geoMappings = value;
+  }
+  public resetGeoMappings() {
+    this._geoMappings = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get geoMappingsInput() {
+    return this._geoMappings
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // min_child_endpoints - computed: false, optional: true, required: false
   private _minChildEndpoints?: number;
   public get minChildEndpoints() {
-    return this._minChildEndpoints;
+    return this.getNumberAttribute('min_child_endpoints');
   }
-  public set minChildEndpoints(value: number | undefined) {
+  public set minChildEndpoints(value: number ) {
     this._minChildEndpoints = value;
+  }
+  public resetMinChildEndpoints() {
+    this._minChildEndpoints = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get minChildEndpointsInput() {
+    return this._minChildEndpoints
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // priority - computed: true, optional: true, required: false
   private _priority?: number;
   public get priority() {
-    return this._priority ?? this.getNumberAttribute('priority');
+    return this.getNumberAttribute('priority');
   }
-  public set priority(value: number | undefined) {
+  public set priority(value: number) {
     this._priority = value;
+  }
+  public resetPriority() {
+    this._priority = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get priorityInput() {
+    return this._priority
   }
 
   // profile_name - computed: false, optional: false, required: true
   private _profileName: string;
   public get profileName() {
-    return this._profileName;
+    return this.getStringAttribute('profile_name');
   }
   public set profileName(value: string) {
     this._profileName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get profileNameInput() {
+    return this._profileName
   }
 
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
-    return this._resourceGroupName;
+    return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
   }
 
   // target - computed: true, optional: true, required: false
   private _target?: string;
   public get target() {
-    return this._target ?? this.getStringAttribute('target');
+    return this.getStringAttribute('target');
   }
-  public set target(value: string | undefined) {
+  public set target(value: string) {
     this._target = value;
+  }
+  public resetTarget() {
+    this._target = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get targetInput() {
+    return this._target
   }
 
   // target_resource_id - computed: false, optional: true, required: false
   private _targetResourceId?: string;
   public get targetResourceId() {
-    return this._targetResourceId;
+    return this.getStringAttribute('target_resource_id');
   }
-  public set targetResourceId(value: string | undefined) {
+  public set targetResourceId(value: string ) {
     this._targetResourceId = value;
+  }
+  public resetTargetResourceId() {
+    this._targetResourceId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get targetResourceIdInput() {
+    return this._targetResourceId
   }
 
   // type - computed: false, optional: false, required: true
   private _type: string;
   public get type() {
-    return this._type;
+    return this.getStringAttribute('type');
   }
   public set type(value: string) {
     this._type = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get typeInput() {
+    return this._type
   }
 
   // weight - computed: true, optional: true, required: false
   private _weight?: number;
   public get weight() {
-    return this._weight ?? this.getNumberAttribute('weight');
+    return this.getNumberAttribute('weight');
   }
-  public set weight(value: number | undefined) {
+  public set weight(value: number) {
     this._weight = value;
+  }
+  public resetWeight() {
+    this._weight = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get weightInput() {
+    return this._weight
   }
 
   // custom_header - computed: false, optional: true, required: false
   private _customHeader?: TrafficManagerEndpointCustomHeader[];
   public get customHeader() {
-    return this._customHeader;
+    return this.interpolationForAttribute('custom_header') as any;
   }
-  public set customHeader(value: TrafficManagerEndpointCustomHeader[] | undefined) {
+  public set customHeader(value: TrafficManagerEndpointCustomHeader[] ) {
     this._customHeader = value;
+  }
+  public resetCustomHeader() {
+    this._customHeader = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get customHeaderInput() {
+    return this._customHeader
   }
 
   // subnet - computed: false, optional: true, required: false
   private _subnet?: TrafficManagerEndpointSubnet[];
   public get subnet() {
-    return this._subnet;
+    return this.interpolationForAttribute('subnet') as any;
   }
-  public set subnet(value: TrafficManagerEndpointSubnet[] | undefined) {
+  public set subnet(value: TrafficManagerEndpointSubnet[] ) {
     this._subnet = value;
+  }
+  public resetSubnet() {
+    this._subnet = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get subnetInput() {
+    return this._subnet
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: TrafficManagerEndpointTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: TrafficManagerEndpointTimeouts | undefined) {
+  public set timeouts(value: TrafficManagerEndpointTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

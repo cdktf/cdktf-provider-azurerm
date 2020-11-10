@@ -77,109 +77,155 @@ export class NetappVolume extends TerraformResource {
   // account_name - computed: false, optional: false, required: true
   private _accountName: string;
   public get accountName() {
-    return this._accountName;
+    return this.getStringAttribute('account_name');
   }
   public set accountName(value: string) {
     this._accountName = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get accountNameInput() {
+    return this._accountName
+  }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // location - computed: false, optional: false, required: true
   private _location: string;
   public get location() {
-    return this._location;
+    return this.getStringAttribute('location');
   }
   public set location(value: string) {
     this._location = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get locationInput() {
+    return this._location
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // pool_name - computed: false, optional: false, required: true
   private _poolName: string;
   public get poolName() {
-    return this._poolName;
+    return this.getStringAttribute('pool_name');
   }
   public set poolName(value: string) {
     this._poolName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get poolNameInput() {
+    return this._poolName
   }
 
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
-    return this._resourceGroupName;
+    return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
   }
 
   // service_level - computed: false, optional: false, required: true
   private _serviceLevel: string;
   public get serviceLevel() {
-    return this._serviceLevel;
+    return this.getStringAttribute('service_level');
   }
   public set serviceLevel(value: string) {
     this._serviceLevel = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get serviceLevelInput() {
+    return this._serviceLevel
   }
 
   // storage_quota_in_gb - computed: false, optional: false, required: true
   private _storageQuotaInGb: number;
   public get storageQuotaInGb() {
-    return this._storageQuotaInGb;
+    return this.getNumberAttribute('storage_quota_in_gb');
   }
   public set storageQuotaInGb(value: number) {
     this._storageQuotaInGb = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get storageQuotaInGbInput() {
+    return this._storageQuotaInGb
   }
 
   // subnet_id - computed: false, optional: false, required: true
   private _subnetId: string;
   public get subnetId() {
-    return this._subnetId;
+    return this.getStringAttribute('subnet_id');
   }
   public set subnetId(value: string) {
     this._subnetId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get subnetIdInput() {
+    return this._subnetId
   }
 
   // volume_path - computed: false, optional: false, required: true
   private _volumePath: string;
   public get volumePath() {
-    return this._volumePath;
+    return this.getStringAttribute('volume_path');
   }
   public set volumePath(value: string) {
     this._volumePath = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get volumePathInput() {
+    return this._volumePath
   }
 
   // export_policy_rule - computed: false, optional: true, required: false
   private _exportPolicyRule?: NetappVolumeExportPolicyRule[];
   public get exportPolicyRule() {
-    return this._exportPolicyRule;
+    return this.interpolationForAttribute('export_policy_rule') as any;
   }
-  public set exportPolicyRule(value: NetappVolumeExportPolicyRule[] | undefined) {
+  public set exportPolicyRule(value: NetappVolumeExportPolicyRule[] ) {
     this._exportPolicyRule = value;
+  }
+  public resetExportPolicyRule() {
+    this._exportPolicyRule = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get exportPolicyRuleInput() {
+    return this._exportPolicyRule
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: NetappVolumeTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: NetappVolumeTimeouts | undefined) {
+  public set timeouts(value: NetappVolumeTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

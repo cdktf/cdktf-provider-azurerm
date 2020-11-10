@@ -108,8 +108,15 @@ export class AzurermProvider extends TerraformProvider {
   public get auxiliaryTenantIds() {
     return this._auxiliaryTenantIds;
   }
-  public set auxiliaryTenantIds(value: string[] | undefined) {
+  public set auxiliaryTenantIds(value: string[]  | undefined) {
     this._auxiliaryTenantIds = value;
+  }
+  public resetAuxiliaryTenantIds() {
+    this._auxiliaryTenantIds = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get auxiliaryTenantIdsInput() {
+    return this._auxiliaryTenantIds
   }
 
   // client_certificate_password - computed: false, optional: true, required: false
@@ -117,8 +124,15 @@ export class AzurermProvider extends TerraformProvider {
   public get clientCertificatePassword() {
     return this._clientCertificatePassword;
   }
-  public set clientCertificatePassword(value: string | undefined) {
+  public set clientCertificatePassword(value: string  | undefined) {
     this._clientCertificatePassword = value;
+  }
+  public resetClientCertificatePassword() {
+    this._clientCertificatePassword = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get clientCertificatePasswordInput() {
+    return this._clientCertificatePassword
   }
 
   // client_certificate_path - computed: false, optional: true, required: false
@@ -126,8 +140,15 @@ export class AzurermProvider extends TerraformProvider {
   public get clientCertificatePath() {
     return this._clientCertificatePath;
   }
-  public set clientCertificatePath(value: string | undefined) {
+  public set clientCertificatePath(value: string  | undefined) {
     this._clientCertificatePath = value;
+  }
+  public resetClientCertificatePath() {
+    this._clientCertificatePath = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get clientCertificatePathInput() {
+    return this._clientCertificatePath
   }
 
   // client_id - computed: false, optional: true, required: false
@@ -135,8 +156,15 @@ export class AzurermProvider extends TerraformProvider {
   public get clientId() {
     return this._clientId;
   }
-  public set clientId(value: string | undefined) {
+  public set clientId(value: string  | undefined) {
     this._clientId = value;
+  }
+  public resetClientId() {
+    this._clientId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get clientIdInput() {
+    return this._clientId
   }
 
   // client_secret - computed: false, optional: true, required: false
@@ -144,8 +172,15 @@ export class AzurermProvider extends TerraformProvider {
   public get clientSecret() {
     return this._clientSecret;
   }
-  public set clientSecret(value: string | undefined) {
+  public set clientSecret(value: string  | undefined) {
     this._clientSecret = value;
+  }
+  public resetClientSecret() {
+    this._clientSecret = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get clientSecretInput() {
+    return this._clientSecret
   }
 
   // disable_correlation_request_id - computed: false, optional: true, required: false
@@ -153,8 +188,15 @@ export class AzurermProvider extends TerraformProvider {
   public get disableCorrelationRequestId() {
     return this._disableCorrelationRequestId;
   }
-  public set disableCorrelationRequestId(value: boolean | undefined) {
+  public set disableCorrelationRequestId(value: boolean  | undefined) {
     this._disableCorrelationRequestId = value;
+  }
+  public resetDisableCorrelationRequestId() {
+    this._disableCorrelationRequestId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get disableCorrelationRequestIdInput() {
+    return this._disableCorrelationRequestId
   }
 
   // disable_terraform_partner_id - computed: false, optional: true, required: false
@@ -162,8 +204,15 @@ export class AzurermProvider extends TerraformProvider {
   public get disableTerraformPartnerId() {
     return this._disableTerraformPartnerId;
   }
-  public set disableTerraformPartnerId(value: boolean | undefined) {
+  public set disableTerraformPartnerId(value: boolean  | undefined) {
     this._disableTerraformPartnerId = value;
+  }
+  public resetDisableTerraformPartnerId() {
+    this._disableTerraformPartnerId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get disableTerraformPartnerIdInput() {
+    return this._disableTerraformPartnerId
   }
 
   // environment - computed: false, optional: true, required: false
@@ -171,8 +220,15 @@ export class AzurermProvider extends TerraformProvider {
   public get environment() {
     return this._environment;
   }
-  public set environment(value: string | undefined) {
+  public set environment(value: string  | undefined) {
     this._environment = value;
+  }
+  public resetEnvironment() {
+    this._environment = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get environmentInput() {
+    return this._environment
   }
 
   // msi_endpoint - computed: false, optional: true, required: false
@@ -180,8 +236,15 @@ export class AzurermProvider extends TerraformProvider {
   public get msiEndpoint() {
     return this._msiEndpoint;
   }
-  public set msiEndpoint(value: string | undefined) {
+  public set msiEndpoint(value: string  | undefined) {
     this._msiEndpoint = value;
+  }
+  public resetMsiEndpoint() {
+    this._msiEndpoint = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get msiEndpointInput() {
+    return this._msiEndpoint
   }
 
   // partner_id - computed: false, optional: true, required: false
@@ -189,8 +252,15 @@ export class AzurermProvider extends TerraformProvider {
   public get partnerId() {
     return this._partnerId;
   }
-  public set partnerId(value: string | undefined) {
+  public set partnerId(value: string  | undefined) {
     this._partnerId = value;
+  }
+  public resetPartnerId() {
+    this._partnerId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get partnerIdInput() {
+    return this._partnerId
   }
 
   // skip_credentials_validation - computed: false, optional: true, required: false
@@ -198,8 +268,15 @@ export class AzurermProvider extends TerraformProvider {
   public get skipCredentialsValidation() {
     return this._skipCredentialsValidation;
   }
-  public set skipCredentialsValidation(value: boolean | undefined) {
+  public set skipCredentialsValidation(value: boolean  | undefined) {
     this._skipCredentialsValidation = value;
+  }
+  public resetSkipCredentialsValidation() {
+    this._skipCredentialsValidation = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get skipCredentialsValidationInput() {
+    return this._skipCredentialsValidation
   }
 
   // skip_provider_registration - computed: false, optional: true, required: false
@@ -207,8 +284,15 @@ export class AzurermProvider extends TerraformProvider {
   public get skipProviderRegistration() {
     return this._skipProviderRegistration;
   }
-  public set skipProviderRegistration(value: boolean | undefined) {
+  public set skipProviderRegistration(value: boolean  | undefined) {
     this._skipProviderRegistration = value;
+  }
+  public resetSkipProviderRegistration() {
+    this._skipProviderRegistration = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get skipProviderRegistrationInput() {
+    return this._skipProviderRegistration
   }
 
   // storage_use_azuread - computed: false, optional: true, required: false
@@ -216,8 +300,15 @@ export class AzurermProvider extends TerraformProvider {
   public get storageUseAzuread() {
     return this._storageUseAzuread;
   }
-  public set storageUseAzuread(value: boolean | undefined) {
+  public set storageUseAzuread(value: boolean  | undefined) {
     this._storageUseAzuread = value;
+  }
+  public resetStorageUseAzuread() {
+    this._storageUseAzuread = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get storageUseAzureadInput() {
+    return this._storageUseAzuread
   }
 
   // subscription_id - computed: false, optional: true, required: false
@@ -225,8 +316,15 @@ export class AzurermProvider extends TerraformProvider {
   public get subscriptionId() {
     return this._subscriptionId;
   }
-  public set subscriptionId(value: string | undefined) {
+  public set subscriptionId(value: string  | undefined) {
     this._subscriptionId = value;
+  }
+  public resetSubscriptionId() {
+    this._subscriptionId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get subscriptionIdInput() {
+    return this._subscriptionId
   }
 
   // tenant_id - computed: false, optional: true, required: false
@@ -234,8 +332,15 @@ export class AzurermProvider extends TerraformProvider {
   public get tenantId() {
     return this._tenantId;
   }
-  public set tenantId(value: string | undefined) {
+  public set tenantId(value: string  | undefined) {
     this._tenantId = value;
+  }
+  public resetTenantId() {
+    this._tenantId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tenantIdInput() {
+    return this._tenantId
   }
 
   // use_msi - computed: false, optional: true, required: false
@@ -243,8 +348,15 @@ export class AzurermProvider extends TerraformProvider {
   public get useMsi() {
     return this._useMsi;
   }
-  public set useMsi(value: boolean | undefined) {
+  public set useMsi(value: boolean  | undefined) {
     this._useMsi = value;
+  }
+  public resetUseMsi() {
+    this._useMsi = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get useMsiInput() {
+    return this._useMsi
   }
 
   // alias - computed: false, optional: true, required: false
@@ -252,8 +364,15 @@ export class AzurermProvider extends TerraformProvider {
   public get alias() {
     return this._alias;
   }
-  public set alias(value: string | undefined) {
+  public set alias(value: string  | undefined) {
     this._alias = value;
+  }
+  public resetAlias() {
+    this._alias = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get aliasInput() {
+    return this._alias
   }
 
   // features - computed: false, optional: false, required: true
@@ -263,6 +382,10 @@ export class AzurermProvider extends TerraformProvider {
   }
   public set features(value: AzurermProviderFeatures[]) {
     this._features = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get featuresInput() {
+    return this._features
   }
 
   // =========

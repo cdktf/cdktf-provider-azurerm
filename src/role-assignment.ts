@@ -57,33 +57,40 @@ export class RoleAssignment extends TerraformResource {
   // ==========
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // name - computed: true, optional: true, required: false
   private _name?: string;
   public get name() {
-    return this._name ?? this.getStringAttribute('name');
+    return this.getStringAttribute('name');
   }
-  public set name(value: string | undefined) {
+  public set name(value: string) {
     this._name = value;
+  }
+  public resetName() {
+    this._name = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // principal_id - computed: false, optional: false, required: true
   private _principalId: string;
   public get principalId() {
-    return this._principalId;
+    return this.getStringAttribute('principal_id');
   }
   public set principalId(value: string) {
     this._principalId = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get principalIdInput() {
+    return this._principalId
+  }
 
-  // principal_type - computed: true, optional: false, required: true
+  // principal_type - computed: true, optional: false, required: false
   public get principalType() {
     return this.getStringAttribute('principal_type');
   }
@@ -91,46 +98,78 @@ export class RoleAssignment extends TerraformResource {
   // role_definition_id - computed: true, optional: true, required: false
   private _roleDefinitionId?: string;
   public get roleDefinitionId() {
-    return this._roleDefinitionId ?? this.getStringAttribute('role_definition_id');
+    return this.getStringAttribute('role_definition_id');
   }
-  public set roleDefinitionId(value: string | undefined) {
+  public set roleDefinitionId(value: string) {
     this._roleDefinitionId = value;
+  }
+  public resetRoleDefinitionId() {
+    this._roleDefinitionId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get roleDefinitionIdInput() {
+    return this._roleDefinitionId
   }
 
   // role_definition_name - computed: true, optional: true, required: false
   private _roleDefinitionName?: string;
   public get roleDefinitionName() {
-    return this._roleDefinitionName ?? this.getStringAttribute('role_definition_name');
+    return this.getStringAttribute('role_definition_name');
   }
-  public set roleDefinitionName(value: string | undefined) {
+  public set roleDefinitionName(value: string) {
     this._roleDefinitionName = value;
+  }
+  public resetRoleDefinitionName() {
+    this._roleDefinitionName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get roleDefinitionNameInput() {
+    return this._roleDefinitionName
   }
 
   // scope - computed: false, optional: false, required: true
   private _scope: string;
   public get scope() {
-    return this._scope;
+    return this.getStringAttribute('scope');
   }
   public set scope(value: string) {
     this._scope = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get scopeInput() {
+    return this._scope
   }
 
   // skip_service_principal_aad_check - computed: true, optional: true, required: false
   private _skipServicePrincipalAadCheck?: boolean;
   public get skipServicePrincipalAadCheck() {
-    return this._skipServicePrincipalAadCheck ?? this.getBooleanAttribute('skip_service_principal_aad_check');
+    return this.getBooleanAttribute('skip_service_principal_aad_check');
   }
-  public set skipServicePrincipalAadCheck(value: boolean | undefined) {
+  public set skipServicePrincipalAadCheck(value: boolean) {
     this._skipServicePrincipalAadCheck = value;
+  }
+  public resetSkipServicePrincipalAadCheck() {
+    this._skipServicePrincipalAadCheck = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get skipServicePrincipalAadCheckInput() {
+    return this._skipServicePrincipalAadCheck
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: RoleAssignmentTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: RoleAssignmentTimeouts | undefined) {
+  public set timeouts(value: RoleAssignmentTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

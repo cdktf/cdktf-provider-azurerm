@@ -61,82 +61,122 @@ export class AutomationJobSchedule extends TerraformResource {
   // automation_account_name - computed: false, optional: false, required: true
   private _automationAccountName: string;
   public get automationAccountName() {
-    return this._automationAccountName;
+    return this.getStringAttribute('automation_account_name');
   }
   public set automationAccountName(value: string) {
     this._automationAccountName = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get automationAccountNameInput() {
+    return this._automationAccountName
+  }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // job_schedule_id - computed: true, optional: true, required: false
   private _jobScheduleId?: string;
   public get jobScheduleId() {
-    return this._jobScheduleId ?? this.getStringAttribute('job_schedule_id');
+    return this.getStringAttribute('job_schedule_id');
   }
-  public set jobScheduleId(value: string | undefined) {
+  public set jobScheduleId(value: string) {
     this._jobScheduleId = value;
+  }
+  public resetJobScheduleId() {
+    this._jobScheduleId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get jobScheduleIdInput() {
+    return this._jobScheduleId
   }
 
   // parameters - computed: false, optional: true, required: false
   private _parameters?: { [key: string]: string };
   public get parameters() {
-    return this._parameters;
+    return this.interpolationForAttribute('parameters') as any;
   }
-  public set parameters(value: { [key: string]: string } | undefined) {
+  public set parameters(value: { [key: string]: string } ) {
     this._parameters = value;
+  }
+  public resetParameters() {
+    this._parameters = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get parametersInput() {
+    return this._parameters
   }
 
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
-    return this._resourceGroupName;
+    return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
   }
 
   // run_on - computed: false, optional: true, required: false
   private _runOn?: string;
   public get runOn() {
-    return this._runOn;
+    return this.getStringAttribute('run_on');
   }
-  public set runOn(value: string | undefined) {
+  public set runOn(value: string ) {
     this._runOn = value;
+  }
+  public resetRunOn() {
+    this._runOn = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get runOnInput() {
+    return this._runOn
   }
 
   // runbook_name - computed: false, optional: false, required: true
   private _runbookName: string;
   public get runbookName() {
-    return this._runbookName;
+    return this.getStringAttribute('runbook_name');
   }
   public set runbookName(value: string) {
     this._runbookName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get runbookNameInput() {
+    return this._runbookName
   }
 
   // schedule_name - computed: false, optional: false, required: true
   private _scheduleName: string;
   public get scheduleName() {
-    return this._scheduleName;
+    return this.getStringAttribute('schedule_name');
   }
   public set scheduleName(value: string) {
     this._scheduleName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get scheduleNameInput() {
+    return this._scheduleName
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: AutomationJobScheduleTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: AutomationJobScheduleTimeouts | undefined) {
+  public set timeouts(value: AutomationJobScheduleTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

@@ -69,100 +69,151 @@ export class LbOutboundRule extends TerraformResource {
   // allocated_outbound_ports - computed: false, optional: true, required: false
   private _allocatedOutboundPorts?: number;
   public get allocatedOutboundPorts() {
-    return this._allocatedOutboundPorts;
+    return this.getNumberAttribute('allocated_outbound_ports');
   }
-  public set allocatedOutboundPorts(value: number | undefined) {
+  public set allocatedOutboundPorts(value: number ) {
     this._allocatedOutboundPorts = value;
+  }
+  public resetAllocatedOutboundPorts() {
+    this._allocatedOutboundPorts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get allocatedOutboundPortsInput() {
+    return this._allocatedOutboundPorts
   }
 
   // backend_address_pool_id - computed: false, optional: false, required: true
   private _backendAddressPoolId: string;
   public get backendAddressPoolId() {
-    return this._backendAddressPoolId;
+    return this.getStringAttribute('backend_address_pool_id');
   }
   public set backendAddressPoolId(value: string) {
     this._backendAddressPoolId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get backendAddressPoolIdInput() {
+    return this._backendAddressPoolId
   }
 
   // enable_tcp_reset - computed: false, optional: true, required: false
   private _enableTcpReset?: boolean;
   public get enableTcpReset() {
-    return this._enableTcpReset;
+    return this.getBooleanAttribute('enable_tcp_reset');
   }
-  public set enableTcpReset(value: boolean | undefined) {
+  public set enableTcpReset(value: boolean ) {
     this._enableTcpReset = value;
+  }
+  public resetEnableTcpReset() {
+    this._enableTcpReset = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enableTcpResetInput() {
+    return this._enableTcpReset
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // idle_timeout_in_minutes - computed: false, optional: true, required: false
   private _idleTimeoutInMinutes?: number;
   public get idleTimeoutInMinutes() {
-    return this._idleTimeoutInMinutes;
+    return this.getNumberAttribute('idle_timeout_in_minutes');
   }
-  public set idleTimeoutInMinutes(value: number | undefined) {
+  public set idleTimeoutInMinutes(value: number ) {
     this._idleTimeoutInMinutes = value;
+  }
+  public resetIdleTimeoutInMinutes() {
+    this._idleTimeoutInMinutes = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idleTimeoutInMinutesInput() {
+    return this._idleTimeoutInMinutes
   }
 
   // loadbalancer_id - computed: false, optional: false, required: true
   private _loadbalancerId: string;
   public get loadbalancerId() {
-    return this._loadbalancerId;
+    return this.getStringAttribute('loadbalancer_id');
   }
   public set loadbalancerId(value: string) {
     this._loadbalancerId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get loadbalancerIdInput() {
+    return this._loadbalancerId
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // protocol - computed: false, optional: false, required: true
   private _protocol: string;
   public get protocol() {
-    return this._protocol;
+    return this.getStringAttribute('protocol');
   }
   public set protocol(value: string) {
     this._protocol = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get protocolInput() {
+    return this._protocol
   }
 
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
-    return this._resourceGroupName;
+    return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
   }
 
   // frontend_ip_configuration - computed: false, optional: true, required: false
   private _frontendIpConfiguration?: LbOutboundRuleFrontendIpConfiguration[];
   public get frontendIpConfiguration() {
-    return this._frontendIpConfiguration;
+    return this.interpolationForAttribute('frontend_ip_configuration') as any;
   }
-  public set frontendIpConfiguration(value: LbOutboundRuleFrontendIpConfiguration[] | undefined) {
+  public set frontendIpConfiguration(value: LbOutboundRuleFrontendIpConfiguration[] ) {
     this._frontendIpConfiguration = value;
+  }
+  public resetFrontendIpConfiguration() {
+    this._frontendIpConfiguration = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get frontendIpConfigurationInput() {
+    return this._frontendIpConfiguration
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: LbOutboundRuleTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: LbOutboundRuleTimeouts | undefined) {
+  public set timeouts(value: LbOutboundRuleTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

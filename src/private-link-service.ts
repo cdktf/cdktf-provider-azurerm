@@ -70,7 +70,7 @@ export class PrivateLinkService extends TerraformResource {
   // ATTRIBUTES
   // ==========
 
-  // alias - computed: true, optional: false, required: true
+  // alias - computed: true, optional: false, required: false
   public get alias() {
     return this.getStringAttribute('alias');
   }
@@ -78,100 +78,151 @@ export class PrivateLinkService extends TerraformResource {
   // auto_approval_subscription_ids - computed: false, optional: true, required: false
   private _autoApprovalSubscriptionIds?: string[];
   public get autoApprovalSubscriptionIds() {
-    return this._autoApprovalSubscriptionIds;
+    return this.getListAttribute('auto_approval_subscription_ids');
   }
-  public set autoApprovalSubscriptionIds(value: string[] | undefined) {
+  public set autoApprovalSubscriptionIds(value: string[] ) {
     this._autoApprovalSubscriptionIds = value;
+  }
+  public resetAutoApprovalSubscriptionIds() {
+    this._autoApprovalSubscriptionIds = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get autoApprovalSubscriptionIdsInput() {
+    return this._autoApprovalSubscriptionIds
   }
 
   // enable_proxy_protocol - computed: false, optional: true, required: false
   private _enableProxyProtocol?: boolean;
   public get enableProxyProtocol() {
-    return this._enableProxyProtocol;
+    return this.getBooleanAttribute('enable_proxy_protocol');
   }
-  public set enableProxyProtocol(value: boolean | undefined) {
+  public set enableProxyProtocol(value: boolean ) {
     this._enableProxyProtocol = value;
+  }
+  public resetEnableProxyProtocol() {
+    this._enableProxyProtocol = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enableProxyProtocolInput() {
+    return this._enableProxyProtocol
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // load_balancer_frontend_ip_configuration_ids - computed: false, optional: false, required: true
   private _loadBalancerFrontendIpConfigurationIds: string[];
   public get loadBalancerFrontendIpConfigurationIds() {
-    return this._loadBalancerFrontendIpConfigurationIds;
+    return this.getListAttribute('load_balancer_frontend_ip_configuration_ids');
   }
   public set loadBalancerFrontendIpConfigurationIds(value: string[]) {
     this._loadBalancerFrontendIpConfigurationIds = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get loadBalancerFrontendIpConfigurationIdsInput() {
+    return this._loadBalancerFrontendIpConfigurationIds
   }
 
   // location - computed: false, optional: false, required: true
   private _location: string;
   public get location() {
-    return this._location;
+    return this.getStringAttribute('location');
   }
   public set location(value: string) {
     this._location = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get locationInput() {
+    return this._location
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
-    return this._resourceGroupName;
+    return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
   }
 
   // tags - computed: false, optional: true, required: false
   private _tags?: { [key: string]: string };
   public get tags() {
-    return this._tags;
+    return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | undefined) {
+  public set tags(value: { [key: string]: string } ) {
     this._tags = value;
+  }
+  public resetTags() {
+    this._tags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsInput() {
+    return this._tags
   }
 
   // visibility_subscription_ids - computed: false, optional: true, required: false
   private _visibilitySubscriptionIds?: string[];
   public get visibilitySubscriptionIds() {
-    return this._visibilitySubscriptionIds;
+    return this.getListAttribute('visibility_subscription_ids');
   }
-  public set visibilitySubscriptionIds(value: string[] | undefined) {
+  public set visibilitySubscriptionIds(value: string[] ) {
     this._visibilitySubscriptionIds = value;
+  }
+  public resetVisibilitySubscriptionIds() {
+    this._visibilitySubscriptionIds = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get visibilitySubscriptionIdsInput() {
+    return this._visibilitySubscriptionIds
   }
 
   // nat_ip_configuration - computed: false, optional: false, required: true
   private _natIpConfiguration: PrivateLinkServiceNatIpConfiguration[];
   public get natIpConfiguration() {
-    return this._natIpConfiguration;
+    return this.interpolationForAttribute('nat_ip_configuration') as any;
   }
   public set natIpConfiguration(value: PrivateLinkServiceNatIpConfiguration[]) {
     this._natIpConfiguration = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get natIpConfigurationInput() {
+    return this._natIpConfiguration
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: PrivateLinkServiceTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: PrivateLinkServiceTimeouts | undefined) {
+  public set timeouts(value: PrivateLinkServiceTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

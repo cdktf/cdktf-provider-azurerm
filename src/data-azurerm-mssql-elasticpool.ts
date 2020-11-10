@@ -49,25 +49,21 @@ export class DataAzurermMssqlElasticpool extends TerraformDataSource {
   // ==========
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
-  // location - computed: true, optional: false, required: true
+  // location - computed: true, optional: false, required: false
   public get location() {
     return this.getStringAttribute('location');
   }
 
-  // max_size_bytes - computed: true, optional: false, required: true
+  // max_size_bytes - computed: true, optional: false, required: false
   public get maxSizeBytes() {
     return this.getNumberAttribute('max_size_bytes');
   }
 
-  // max_size_gb - computed: true, optional: false, required: true
+  // max_size_gb - computed: true, optional: false, required: false
   public get maxSizeGb() {
     return this.getNumberAttribute('max_size_gb');
   }
@@ -75,18 +71,22 @@ export class DataAzurermMssqlElasticpool extends TerraformDataSource {
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
+  }
 
-  // per_db_max_capacity - computed: true, optional: false, required: true
+  // per_db_max_capacity - computed: true, optional: false, required: false
   public get perDbMaxCapacity() {
     return this.getNumberAttribute('per_db_max_capacity');
   }
 
-  // per_db_min_capacity - computed: true, optional: false, required: true
+  // per_db_min_capacity - computed: true, optional: false, required: false
   public get perDbMinCapacity() {
     return this.getNumberAttribute('per_db_min_capacity');
   }
@@ -94,27 +94,35 @@ export class DataAzurermMssqlElasticpool extends TerraformDataSource {
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
-    return this._resourceGroupName;
+    return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
   }
 
   // server_name - computed: false, optional: false, required: true
   private _serverName: string;
   public get serverName() {
-    return this._serverName;
+    return this.getStringAttribute('server_name');
   }
   public set serverName(value: string) {
     this._serverName = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get serverNameInput() {
+    return this._serverName
+  }
 
-  // tags - computed: true, optional: false, required: true
+  // tags - computed: true, optional: false, required: false
   public tags(key: string): string {
     return new StringMap(this, 'tags').lookup(key);
   }
 
-  // zone_redundant - computed: true, optional: false, required: true
+  // zone_redundant - computed: true, optional: false, required: false
   public get zoneRedundant() {
     return this.getBooleanAttribute('zone_redundant');
   }
@@ -122,10 +130,17 @@ export class DataAzurermMssqlElasticpool extends TerraformDataSource {
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: DataAzurermMssqlElasticpoolTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: DataAzurermMssqlElasticpoolTimeouts | undefined) {
+  public set timeouts(value: DataAzurermMssqlElasticpoolTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

@@ -59,73 +59,106 @@ export class VirtualMachineDataDiskAttachment extends TerraformResource {
   // caching - computed: false, optional: false, required: true
   private _caching: string;
   public get caching() {
-    return this._caching;
+    return this.getStringAttribute('caching');
   }
   public set caching(value: string) {
     this._caching = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get cachingInput() {
+    return this._caching
   }
 
   // create_option - computed: false, optional: true, required: false
   private _createOption?: string;
   public get createOption() {
-    return this._createOption;
+    return this.getStringAttribute('create_option');
   }
-  public set createOption(value: string | undefined) {
+  public set createOption(value: string ) {
     this._createOption = value;
+  }
+  public resetCreateOption() {
+    this._createOption = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createOptionInput() {
+    return this._createOption
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // lun - computed: false, optional: false, required: true
   private _lun: number;
   public get lun() {
-    return this._lun;
+    return this.getNumberAttribute('lun');
   }
   public set lun(value: number) {
     this._lun = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get lunInput() {
+    return this._lun
   }
 
   // managed_disk_id - computed: false, optional: false, required: true
   private _managedDiskId: string;
   public get managedDiskId() {
-    return this._managedDiskId;
+    return this.getStringAttribute('managed_disk_id');
   }
   public set managedDiskId(value: string) {
     this._managedDiskId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get managedDiskIdInput() {
+    return this._managedDiskId
   }
 
   // virtual_machine_id - computed: false, optional: false, required: true
   private _virtualMachineId: string;
   public get virtualMachineId() {
-    return this._virtualMachineId;
+    return this.getStringAttribute('virtual_machine_id');
   }
   public set virtualMachineId(value: string) {
     this._virtualMachineId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get virtualMachineIdInput() {
+    return this._virtualMachineId
   }
 
   // write_accelerator_enabled - computed: false, optional: true, required: false
   private _writeAcceleratorEnabled?: boolean;
   public get writeAcceleratorEnabled() {
-    return this._writeAcceleratorEnabled;
+    return this.getBooleanAttribute('write_accelerator_enabled');
   }
-  public set writeAcceleratorEnabled(value: boolean | undefined) {
+  public set writeAcceleratorEnabled(value: boolean ) {
     this._writeAcceleratorEnabled = value;
+  }
+  public resetWriteAcceleratorEnabled() {
+    this._writeAcceleratorEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get writeAcceleratorEnabledInput() {
+    return this._writeAcceleratorEnabled
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: VirtualMachineDataDiskAttachmentTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: VirtualMachineDataDiskAttachmentTimeouts | undefined) {
+  public set timeouts(value: VirtualMachineDataDiskAttachmentTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

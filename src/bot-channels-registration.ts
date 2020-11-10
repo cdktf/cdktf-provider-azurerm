@@ -69,118 +69,183 @@ export class BotChannelsRegistration extends TerraformResource {
   // developer_app_insights_api_key - computed: true, optional: true, required: false
   private _developerAppInsightsApiKey?: string;
   public get developerAppInsightsApiKey() {
-    return this._developerAppInsightsApiKey ?? this.getStringAttribute('developer_app_insights_api_key');
+    return this.getStringAttribute('developer_app_insights_api_key');
   }
-  public set developerAppInsightsApiKey(value: string | undefined) {
+  public set developerAppInsightsApiKey(value: string) {
     this._developerAppInsightsApiKey = value;
+  }
+  public resetDeveloperAppInsightsApiKey() {
+    this._developerAppInsightsApiKey = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get developerAppInsightsApiKeyInput() {
+    return this._developerAppInsightsApiKey
   }
 
   // developer_app_insights_application_id - computed: true, optional: true, required: false
   private _developerAppInsightsApplicationId?: string;
   public get developerAppInsightsApplicationId() {
-    return this._developerAppInsightsApplicationId ?? this.getStringAttribute('developer_app_insights_application_id');
+    return this.getStringAttribute('developer_app_insights_application_id');
   }
-  public set developerAppInsightsApplicationId(value: string | undefined) {
+  public set developerAppInsightsApplicationId(value: string) {
     this._developerAppInsightsApplicationId = value;
+  }
+  public resetDeveloperAppInsightsApplicationId() {
+    this._developerAppInsightsApplicationId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get developerAppInsightsApplicationIdInput() {
+    return this._developerAppInsightsApplicationId
   }
 
   // developer_app_insights_key - computed: true, optional: true, required: false
   private _developerAppInsightsKey?: string;
   public get developerAppInsightsKey() {
-    return this._developerAppInsightsKey ?? this.getStringAttribute('developer_app_insights_key');
+    return this.getStringAttribute('developer_app_insights_key');
   }
-  public set developerAppInsightsKey(value: string | undefined) {
+  public set developerAppInsightsKey(value: string) {
     this._developerAppInsightsKey = value;
+  }
+  public resetDeveloperAppInsightsKey() {
+    this._developerAppInsightsKey = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get developerAppInsightsKeyInput() {
+    return this._developerAppInsightsKey
   }
 
   // display_name - computed: true, optional: true, required: false
   private _displayName?: string;
   public get displayName() {
-    return this._displayName ?? this.getStringAttribute('display_name');
+    return this.getStringAttribute('display_name');
   }
-  public set displayName(value: string | undefined) {
+  public set displayName(value: string) {
     this._displayName = value;
+  }
+  public resetDisplayName() {
+    this._displayName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get displayNameInput() {
+    return this._displayName
   }
 
   // endpoint - computed: false, optional: true, required: false
   private _endpoint?: string;
   public get endpoint() {
-    return this._endpoint;
+    return this.getStringAttribute('endpoint');
   }
-  public set endpoint(value: string | undefined) {
+  public set endpoint(value: string ) {
     this._endpoint = value;
+  }
+  public resetEndpoint() {
+    this._endpoint = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get endpointInput() {
+    return this._endpoint
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // location - computed: false, optional: false, required: true
   private _location: string;
   public get location() {
-    return this._location;
+    return this.getStringAttribute('location');
   }
   public set location(value: string) {
     this._location = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get locationInput() {
+    return this._location
   }
 
   // microsoft_app_id - computed: false, optional: false, required: true
   private _microsoftAppId: string;
   public get microsoftAppId() {
-    return this._microsoftAppId;
+    return this.getStringAttribute('microsoft_app_id');
   }
   public set microsoftAppId(value: string) {
     this._microsoftAppId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get microsoftAppIdInput() {
+    return this._microsoftAppId
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
-    return this._resourceGroupName;
+    return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
   }
 
   // sku - computed: false, optional: false, required: true
   private _sku: string;
   public get sku() {
-    return this._sku;
+    return this.getStringAttribute('sku');
   }
   public set sku(value: string) {
     this._sku = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get skuInput() {
+    return this._sku
   }
 
   // tags - computed: false, optional: true, required: false
   private _tags?: { [key: string]: string };
   public get tags() {
-    return this._tags;
+    return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | undefined) {
+  public set tags(value: { [key: string]: string } ) {
     this._tags = value;
+  }
+  public resetTags() {
+    this._tags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsInput() {
+    return this._tags
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: BotChannelsRegistrationTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: BotChannelsRegistrationTimeouts | undefined) {
+  public set timeouts(value: BotChannelsRegistrationTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

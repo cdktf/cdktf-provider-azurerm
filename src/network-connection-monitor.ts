@@ -76,100 +76,148 @@ export class NetworkConnectionMonitor extends TerraformResource {
   // auto_start - computed: false, optional: true, required: false
   private _autoStart?: boolean;
   public get autoStart() {
-    return this._autoStart;
+    return this.getBooleanAttribute('auto_start');
   }
-  public set autoStart(value: boolean | undefined) {
+  public set autoStart(value: boolean ) {
     this._autoStart = value;
+  }
+  public resetAutoStart() {
+    this._autoStart = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get autoStartInput() {
+    return this._autoStart
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // interval_in_seconds - computed: false, optional: true, required: false
   private _intervalInSeconds?: number;
   public get intervalInSeconds() {
-    return this._intervalInSeconds;
+    return this.getNumberAttribute('interval_in_seconds');
   }
-  public set intervalInSeconds(value: number | undefined) {
+  public set intervalInSeconds(value: number ) {
     this._intervalInSeconds = value;
+  }
+  public resetIntervalInSeconds() {
+    this._intervalInSeconds = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get intervalInSecondsInput() {
+    return this._intervalInSeconds
   }
 
   // location - computed: false, optional: false, required: true
   private _location: string;
   public get location() {
-    return this._location;
+    return this.getStringAttribute('location');
   }
   public set location(value: string) {
     this._location = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get locationInput() {
+    return this._location
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // network_watcher_name - computed: false, optional: false, required: true
   private _networkWatcherName: string;
   public get networkWatcherName() {
-    return this._networkWatcherName;
+    return this.getStringAttribute('network_watcher_name');
   }
   public set networkWatcherName(value: string) {
     this._networkWatcherName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get networkWatcherNameInput() {
+    return this._networkWatcherName
   }
 
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
-    return this._resourceGroupName;
+    return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
   }
 
   // tags - computed: false, optional: true, required: false
   private _tags?: { [key: string]: string };
   public get tags() {
-    return this._tags;
+    return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | undefined) {
+  public set tags(value: { [key: string]: string } ) {
     this._tags = value;
+  }
+  public resetTags() {
+    this._tags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsInput() {
+    return this._tags
   }
 
   // destination - computed: false, optional: false, required: true
   private _destination: NetworkConnectionMonitorDestination[];
   public get destination() {
-    return this._destination;
+    return this.interpolationForAttribute('destination') as any;
   }
   public set destination(value: NetworkConnectionMonitorDestination[]) {
     this._destination = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get destinationInput() {
+    return this._destination
   }
 
   // source - computed: false, optional: false, required: true
   private _source: NetworkConnectionMonitorSource[];
   public get source() {
-    return this._source;
+    return this.interpolationForAttribute('source') as any;
   }
   public set source(value: NetworkConnectionMonitorSource[]) {
     this._source = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sourceInput() {
+    return this._source
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: NetworkConnectionMonitorTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: NetworkConnectionMonitorTimeouts | undefined) {
+  public set timeouts(value: NetworkConnectionMonitorTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

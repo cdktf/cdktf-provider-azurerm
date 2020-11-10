@@ -18,29 +18,29 @@ export interface DataAzurermFunctionAppConfig extends TerraformMetaArguments {
 }
 export class DataAzurermFunctionAppConnectionString extends ComplexComputedList {
 
-  // name - computed: true, optional: false, required: true
+  // name - computed: true, optional: false, required: false
   public get name() {
     return this.getStringAttribute('name');
   }
 
-  // type - computed: true, optional: false, required: true
+  // type - computed: true, optional: false, required: false
   public get type() {
     return this.getStringAttribute('type');
   }
 
-  // value - computed: true, optional: false, required: true
+  // value - computed: true, optional: false, required: false
   public get value() {
     return this.getStringAttribute('value');
   }
 }
 export class DataAzurermFunctionAppSiteCredential extends ComplexComputedList {
 
-  // password - computed: true, optional: false, required: true
+  // password - computed: true, optional: false, required: false
   public get password() {
     return this.getStringAttribute('password');
   }
 
-  // username - computed: true, optional: false, required: true
+  // username - computed: true, optional: false, required: false
   public get username() {
     return this.getStringAttribute('username');
   }
@@ -78,41 +78,37 @@ export class DataAzurermFunctionApp extends TerraformDataSource {
   // ATTRIBUTES
   // ==========
 
-  // app_service_plan_id - computed: true, optional: false, required: true
+  // app_service_plan_id - computed: true, optional: false, required: false
   public get appServicePlanId() {
     return this.getStringAttribute('app_service_plan_id');
   }
 
-  // app_settings - computed: true, optional: false, required: true
+  // app_settings - computed: true, optional: false, required: false
   public appSettings(key: string): string {
     return new StringMap(this, 'app_settings').lookup(key);
   }
 
-  // connection_string - computed: true, optional: false, required: true
+  // connection_string - computed: true, optional: false, required: false
   public connectionString(index: string) {
     return new DataAzurermFunctionAppConnectionString(this, 'connection_string', index);
   }
 
-  // default_hostname - computed: true, optional: false, required: true
+  // default_hostname - computed: true, optional: false, required: false
   public get defaultHostname() {
     return this.getStringAttribute('default_hostname');
   }
 
-  // enabled - computed: true, optional: false, required: true
+  // enabled - computed: true, optional: false, required: false
   public get enabled() {
     return this.getBooleanAttribute('enabled');
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
-  // location - computed: true, optional: false, required: true
+  // location - computed: true, optional: false, required: false
   public get location() {
     return this.getStringAttribute('location');
   }
@@ -120,18 +116,22 @@ export class DataAzurermFunctionApp extends TerraformDataSource {
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
+  }
 
-  // outbound_ip_addresses - computed: true, optional: false, required: true
+  // outbound_ip_addresses - computed: true, optional: false, required: false
   public get outboundIpAddresses() {
     return this.getStringAttribute('outbound_ip_addresses');
   }
 
-  // possible_outbound_ip_addresses - computed: true, optional: false, required: true
+  // possible_outbound_ip_addresses - computed: true, optional: false, required: false
   public get possibleOutboundIpAddresses() {
     return this.getStringAttribute('possible_outbound_ip_addresses');
   }
@@ -139,13 +139,17 @@ export class DataAzurermFunctionApp extends TerraformDataSource {
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
-    return this._resourceGroupName;
+    return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
+  }
 
-  // site_credential - computed: true, optional: false, required: true
+  // site_credential - computed: true, optional: false, required: false
   public siteCredential(index: string) {
     return new DataAzurermFunctionAppSiteCredential(this, 'site_credential', index);
   }
@@ -153,19 +157,33 @@ export class DataAzurermFunctionApp extends TerraformDataSource {
   // tags - computed: false, optional: true, required: false
   private _tags?: { [key: string]: string };
   public get tags() {
-    return this._tags;
+    return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | undefined) {
+  public set tags(value: { [key: string]: string } ) {
     this._tags = value;
+  }
+  public resetTags() {
+    this._tags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsInput() {
+    return this._tags
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: DataAzurermFunctionAppTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: DataAzurermFunctionAppTimeouts | undefined) {
+  public set timeouts(value: DataAzurermFunctionAppTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

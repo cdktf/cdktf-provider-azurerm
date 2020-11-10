@@ -46,31 +46,27 @@ export class DataAzurermKeyVaultKey extends TerraformDataSource {
   // ATTRIBUTES
   // ==========
 
-  // e - computed: true, optional: false, required: true
+  // e - computed: true, optional: false, required: false
   public get e() {
     return this.getStringAttribute('e');
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
-  // key_opts - computed: true, optional: false, required: true
+  // key_opts - computed: true, optional: false, required: false
   public get keyOpts() {
     return this.getListAttribute('key_opts');
   }
 
-  // key_size - computed: true, optional: false, required: true
+  // key_size - computed: true, optional: false, required: false
   public get keySize() {
     return this.getNumberAttribute('key_size');
   }
 
-  // key_type - computed: true, optional: false, required: true
+  // key_type - computed: true, optional: false, required: false
   public get keyType() {
     return this.getStringAttribute('key_type');
   }
@@ -78,13 +74,17 @@ export class DataAzurermKeyVaultKey extends TerraformDataSource {
   // key_vault_id - computed: false, optional: false, required: true
   private _keyVaultId: string;
   public get keyVaultId() {
-    return this._keyVaultId;
+    return this.getStringAttribute('key_vault_id');
   }
   public set keyVaultId(value: string) {
     this._keyVaultId = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get keyVaultIdInput() {
+    return this._keyVaultId
+  }
 
-  // n - computed: true, optional: false, required: true
+  // n - computed: true, optional: false, required: false
   public get n() {
     return this.getStringAttribute('n');
   }
@@ -92,18 +92,22 @@ export class DataAzurermKeyVaultKey extends TerraformDataSource {
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
+  }
 
-  // tags - computed: true, optional: false, required: true
+  // tags - computed: true, optional: false, required: false
   public tags(key: string): string {
     return new StringMap(this, 'tags').lookup(key);
   }
 
-  // version - computed: true, optional: false, required: true
+  // version - computed: true, optional: false, required: false
   public get version() {
     return this.getStringAttribute('version');
   }
@@ -111,10 +115,17 @@ export class DataAzurermKeyVaultKey extends TerraformDataSource {
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: DataAzurermKeyVaultKeyTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: DataAzurermKeyVaultKeyTimeouts | undefined) {
+  public set timeouts(value: DataAzurermKeyVaultKeyTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

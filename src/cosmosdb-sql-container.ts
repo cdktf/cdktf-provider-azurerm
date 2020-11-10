@@ -67,91 +67,138 @@ export class CosmosdbSqlContainer extends TerraformResource {
   // account_name - computed: false, optional: false, required: true
   private _accountName: string;
   public get accountName() {
-    return this._accountName;
+    return this.getStringAttribute('account_name');
   }
   public set accountName(value: string) {
     this._accountName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get accountNameInput() {
+    return this._accountName
   }
 
   // database_name - computed: false, optional: false, required: true
   private _databaseName: string;
   public get databaseName() {
-    return this._databaseName;
+    return this.getStringAttribute('database_name');
   }
   public set databaseName(value: string) {
     this._databaseName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get databaseNameInput() {
+    return this._databaseName
   }
 
   // default_ttl - computed: true, optional: true, required: false
   private _defaultTtl?: number;
   public get defaultTtl() {
-    return this._defaultTtl ?? this.getNumberAttribute('default_ttl');
+    return this.getNumberAttribute('default_ttl');
   }
-  public set defaultTtl(value: number | undefined) {
+  public set defaultTtl(value: number) {
     this._defaultTtl = value;
+  }
+  public resetDefaultTtl() {
+    this._defaultTtl = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get defaultTtlInput() {
+    return this._defaultTtl
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // partition_key_path - computed: false, optional: true, required: false
   private _partitionKeyPath?: string;
   public get partitionKeyPath() {
-    return this._partitionKeyPath;
+    return this.getStringAttribute('partition_key_path');
   }
-  public set partitionKeyPath(value: string | undefined) {
+  public set partitionKeyPath(value: string ) {
     this._partitionKeyPath = value;
+  }
+  public resetPartitionKeyPath() {
+    this._partitionKeyPath = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get partitionKeyPathInput() {
+    return this._partitionKeyPath
   }
 
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
-    return this._resourceGroupName;
+    return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
   }
 
   // throughput - computed: true, optional: true, required: false
   private _throughput?: number;
   public get throughput() {
-    return this._throughput ?? this.getNumberAttribute('throughput');
+    return this.getNumberAttribute('throughput');
   }
-  public set throughput(value: number | undefined) {
+  public set throughput(value: number) {
     this._throughput = value;
+  }
+  public resetThroughput() {
+    this._throughput = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get throughputInput() {
+    return this._throughput
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: CosmosdbSqlContainerTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: CosmosdbSqlContainerTimeouts | undefined) {
+  public set timeouts(value: CosmosdbSqlContainerTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // unique_key - computed: false, optional: true, required: false
   private _uniqueKey?: CosmosdbSqlContainerUniqueKey[];
   public get uniqueKey() {
-    return this._uniqueKey;
+    return this.interpolationForAttribute('unique_key') as any;
   }
-  public set uniqueKey(value: CosmosdbSqlContainerUniqueKey[] | undefined) {
+  public set uniqueKey(value: CosmosdbSqlContainerUniqueKey[] ) {
     this._uniqueKey = value;
+  }
+  public resetUniqueKey() {
+    this._uniqueKey = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get uniqueKeyInput() {
+    return this._uniqueKey
   }
 
   // =========

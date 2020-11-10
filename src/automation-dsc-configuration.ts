@@ -61,76 +61,106 @@ export class AutomationDscConfiguration extends TerraformResource {
   // automation_account_name - computed: false, optional: false, required: true
   private _automationAccountName: string;
   public get automationAccountName() {
-    return this._automationAccountName;
+    return this.getStringAttribute('automation_account_name');
   }
   public set automationAccountName(value: string) {
     this._automationAccountName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get automationAccountNameInput() {
+    return this._automationAccountName
   }
 
   // content_embedded - computed: false, optional: false, required: true
   private _contentEmbedded: string;
   public get contentEmbedded() {
-    return this._contentEmbedded;
+    return this.getStringAttribute('content_embedded');
   }
   public set contentEmbedded(value: string) {
     this._contentEmbedded = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get contentEmbeddedInput() {
+    return this._contentEmbedded
   }
 
   // description - computed: false, optional: true, required: false
   private _description?: string;
   public get description() {
-    return this._description;
+    return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string ) {
     this._description = value;
+  }
+  public resetDescription() {
+    this._description = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get descriptionInput() {
+    return this._description
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // location - computed: false, optional: false, required: true
   private _location: string;
   public get location() {
-    return this._location;
+    return this.getStringAttribute('location');
   }
   public set location(value: string) {
     this._location = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get locationInput() {
+    return this._location
   }
 
   // log_verbose - computed: false, optional: true, required: false
   private _logVerbose?: boolean;
   public get logVerbose() {
-    return this._logVerbose;
+    return this.getBooleanAttribute('log_verbose');
   }
-  public set logVerbose(value: boolean | undefined) {
+  public set logVerbose(value: boolean ) {
     this._logVerbose = value;
+  }
+  public resetLogVerbose() {
+    this._logVerbose = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get logVerboseInput() {
+    return this._logVerbose
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
-    return this._resourceGroupName;
+    return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
+  }
 
-  // state - computed: true, optional: false, required: true
+  // state - computed: true, optional: false, required: false
   public get state() {
     return this.getStringAttribute('state');
   }
@@ -138,10 +168,17 @@ export class AutomationDscConfiguration extends TerraformResource {
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: AutomationDscConfigurationTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: AutomationDscConfigurationTimeouts | undefined) {
+  public set timeouts(value: AutomationDscConfigurationTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

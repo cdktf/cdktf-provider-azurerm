@@ -68,26 +68,22 @@ export class IothubDps extends TerraformResource {
   // ATTRIBUTES
   // ==========
 
-  // allocation_policy - computed: true, optional: false, required: true
+  // allocation_policy - computed: true, optional: false, required: false
   public get allocationPolicy() {
     return this.getStringAttribute('allocation_policy');
   }
 
-  // device_provisioning_host_name - computed: true, optional: false, required: true
+  // device_provisioning_host_name - computed: true, optional: false, required: false
   public get deviceProvisioningHostName() {
     return this.getStringAttribute('device_provisioning_host_name');
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
-  // id_scope - computed: true, optional: false, required: true
+  // id_scope - computed: true, optional: false, required: false
   public get idScope() {
     return this.getStringAttribute('id_scope');
   }
@@ -95,31 +91,43 @@ export class IothubDps extends TerraformResource {
   // location - computed: false, optional: false, required: true
   private _location: string;
   public get location() {
-    return this._location;
+    return this.getStringAttribute('location');
   }
   public set location(value: string) {
     this._location = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get locationInput() {
+    return this._location
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
-    return this._resourceGroupName;
+    return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
+  }
 
-  // service_operations_host_name - computed: true, optional: false, required: true
+  // service_operations_host_name - computed: true, optional: false, required: false
   public get serviceOperationsHostName() {
     return this.getStringAttribute('service_operations_host_name');
   }
@@ -127,37 +135,62 @@ export class IothubDps extends TerraformResource {
   // tags - computed: false, optional: true, required: false
   private _tags?: { [key: string]: string };
   public get tags() {
-    return this._tags;
+    return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | undefined) {
+  public set tags(value: { [key: string]: string } ) {
     this._tags = value;
+  }
+  public resetTags() {
+    this._tags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsInput() {
+    return this._tags
   }
 
   // linked_hub - computed: false, optional: true, required: false
   private _linkedHub?: IothubDpsLinkedHub[];
   public get linkedHub() {
-    return this._linkedHub;
+    return this.interpolationForAttribute('linked_hub') as any;
   }
-  public set linkedHub(value: IothubDpsLinkedHub[] | undefined) {
+  public set linkedHub(value: IothubDpsLinkedHub[] ) {
     this._linkedHub = value;
+  }
+  public resetLinkedHub() {
+    this._linkedHub = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get linkedHubInput() {
+    return this._linkedHub
   }
 
   // sku - computed: false, optional: false, required: true
   private _sku: IothubDpsSku[];
   public get sku() {
-    return this._sku;
+    return this.interpolationForAttribute('sku') as any;
   }
   public set sku(value: IothubDpsSku[]) {
     this._sku = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get skuInput() {
+    return this._sku
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: IothubDpsTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: IothubDpsTimeouts | undefined) {
+  public set timeouts(value: IothubDpsTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

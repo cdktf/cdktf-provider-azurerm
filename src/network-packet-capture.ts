@@ -76,102 +76,153 @@ export class NetworkPacketCapture extends TerraformResource {
   // ==========
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // maximum_bytes_per_packet - computed: false, optional: true, required: false
   private _maximumBytesPerPacket?: number;
   public get maximumBytesPerPacket() {
-    return this._maximumBytesPerPacket;
+    return this.getNumberAttribute('maximum_bytes_per_packet');
   }
-  public set maximumBytesPerPacket(value: number | undefined) {
+  public set maximumBytesPerPacket(value: number ) {
     this._maximumBytesPerPacket = value;
+  }
+  public resetMaximumBytesPerPacket() {
+    this._maximumBytesPerPacket = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get maximumBytesPerPacketInput() {
+    return this._maximumBytesPerPacket
   }
 
   // maximum_bytes_per_session - computed: false, optional: true, required: false
   private _maximumBytesPerSession?: number;
   public get maximumBytesPerSession() {
-    return this._maximumBytesPerSession;
+    return this.getNumberAttribute('maximum_bytes_per_session');
   }
-  public set maximumBytesPerSession(value: number | undefined) {
+  public set maximumBytesPerSession(value: number ) {
     this._maximumBytesPerSession = value;
+  }
+  public resetMaximumBytesPerSession() {
+    this._maximumBytesPerSession = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get maximumBytesPerSessionInput() {
+    return this._maximumBytesPerSession
   }
 
   // maximum_capture_duration - computed: false, optional: true, required: false
   private _maximumCaptureDuration?: number;
   public get maximumCaptureDuration() {
-    return this._maximumCaptureDuration;
+    return this.getNumberAttribute('maximum_capture_duration');
   }
-  public set maximumCaptureDuration(value: number | undefined) {
+  public set maximumCaptureDuration(value: number ) {
     this._maximumCaptureDuration = value;
+  }
+  public resetMaximumCaptureDuration() {
+    this._maximumCaptureDuration = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get maximumCaptureDurationInput() {
+    return this._maximumCaptureDuration
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // network_watcher_name - computed: false, optional: false, required: true
   private _networkWatcherName: string;
   public get networkWatcherName() {
-    return this._networkWatcherName;
+    return this.getStringAttribute('network_watcher_name');
   }
   public set networkWatcherName(value: string) {
     this._networkWatcherName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get networkWatcherNameInput() {
+    return this._networkWatcherName
   }
 
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
-    return this._resourceGroupName;
+    return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
   }
 
   // target_resource_id - computed: false, optional: false, required: true
   private _targetResourceId: string;
   public get targetResourceId() {
-    return this._targetResourceId;
+    return this.getStringAttribute('target_resource_id');
   }
   public set targetResourceId(value: string) {
     this._targetResourceId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get targetResourceIdInput() {
+    return this._targetResourceId
   }
 
   // filter - computed: false, optional: true, required: false
   private _filter?: NetworkPacketCaptureFilter[];
   public get filter() {
-    return this._filter;
+    return this.interpolationForAttribute('filter') as any;
   }
-  public set filter(value: NetworkPacketCaptureFilter[] | undefined) {
+  public set filter(value: NetworkPacketCaptureFilter[] ) {
     this._filter = value;
+  }
+  public resetFilter() {
+    this._filter = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get filterInput() {
+    return this._filter
   }
 
   // storage_location - computed: false, optional: false, required: true
   private _storageLocation: NetworkPacketCaptureStorageLocation[];
   public get storageLocation() {
-    return this._storageLocation;
+    return this.interpolationForAttribute('storage_location') as any;
   }
   public set storageLocation(value: NetworkPacketCaptureStorageLocation[]) {
     this._storageLocation = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get storageLocationInput() {
+    return this._storageLocation
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: NetworkPacketCaptureTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: NetworkPacketCaptureTimeouts | undefined) {
+  public set timeouts(value: NetworkPacketCaptureTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

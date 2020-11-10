@@ -118,54 +118,66 @@ export class HdinsightStormCluster extends TerraformResource {
   // cluster_version - computed: false, optional: false, required: true
   private _clusterVersion: string;
   public get clusterVersion() {
-    return this._clusterVersion;
+    return this.getStringAttribute('cluster_version');
   }
   public set clusterVersion(value: string) {
     this._clusterVersion = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get clusterVersionInput() {
+    return this._clusterVersion
+  }
 
-  // https_endpoint - computed: true, optional: false, required: true
+  // https_endpoint - computed: true, optional: false, required: false
   public get httpsEndpoint() {
     return this.getStringAttribute('https_endpoint');
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // location - computed: false, optional: false, required: true
   private _location: string;
   public get location() {
-    return this._location;
+    return this.getStringAttribute('location');
   }
   public set location(value: string) {
     this._location = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get locationInput() {
+    return this._location
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
-    return this._resourceGroupName;
+    return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
+  }
 
-  // ssh_endpoint - computed: true, optional: false, required: true
+  // ssh_endpoint - computed: true, optional: false, required: false
   public get sshEndpoint() {
     return this.getStringAttribute('ssh_endpoint');
   }
@@ -173,64 +185,101 @@ export class HdinsightStormCluster extends TerraformResource {
   // tags - computed: false, optional: true, required: false
   private _tags?: { [key: string]: string };
   public get tags() {
-    return this._tags;
+    return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | undefined) {
+  public set tags(value: { [key: string]: string } ) {
     this._tags = value;
+  }
+  public resetTags() {
+    this._tags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsInput() {
+    return this._tags
   }
 
   // tier - computed: false, optional: false, required: true
   private _tier: string;
   public get tier() {
-    return this._tier;
+    return this.getStringAttribute('tier');
   }
   public set tier(value: string) {
     this._tier = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tierInput() {
+    return this._tier
   }
 
   // component_version - computed: false, optional: false, required: true
   private _componentVersion: HdinsightStormClusterComponentVersion[];
   public get componentVersion() {
-    return this._componentVersion;
+    return this.interpolationForAttribute('component_version') as any;
   }
   public set componentVersion(value: HdinsightStormClusterComponentVersion[]) {
     this._componentVersion = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get componentVersionInput() {
+    return this._componentVersion
   }
 
   // gateway - computed: false, optional: false, required: true
   private _gateway: HdinsightStormClusterGateway[];
   public get gateway() {
-    return this._gateway;
+    return this.interpolationForAttribute('gateway') as any;
   }
   public set gateway(value: HdinsightStormClusterGateway[]) {
     this._gateway = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get gatewayInput() {
+    return this._gateway
   }
 
   // roles - computed: false, optional: false, required: true
   private _roles: HdinsightStormClusterRoles[];
   public get roles() {
-    return this._roles;
+    return this.interpolationForAttribute('roles') as any;
   }
   public set roles(value: HdinsightStormClusterRoles[]) {
     this._roles = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get rolesInput() {
+    return this._roles
   }
 
   // storage_account - computed: false, optional: true, required: false
   private _storageAccount?: HdinsightStormClusterStorageAccount[];
   public get storageAccount() {
-    return this._storageAccount;
+    return this.interpolationForAttribute('storage_account') as any;
   }
-  public set storageAccount(value: HdinsightStormClusterStorageAccount[] | undefined) {
+  public set storageAccount(value: HdinsightStormClusterStorageAccount[] ) {
     this._storageAccount = value;
+  }
+  public resetStorageAccount() {
+    this._storageAccount = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get storageAccountInput() {
+    return this._storageAccount
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: HdinsightStormClusterTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: HdinsightStormClusterTimeouts | undefined) {
+  public set timeouts(value: HdinsightStormClusterTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

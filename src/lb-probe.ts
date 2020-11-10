@@ -61,24 +61,27 @@ export class LbProbe extends TerraformResource {
   // ==========
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // interval_in_seconds - computed: false, optional: true, required: false
   private _intervalInSeconds?: number;
   public get intervalInSeconds() {
-    return this._intervalInSeconds;
+    return this.getNumberAttribute('interval_in_seconds');
   }
-  public set intervalInSeconds(value: number | undefined) {
+  public set intervalInSeconds(value: number ) {
     this._intervalInSeconds = value;
   }
+  public resetIntervalInSeconds() {
+    this._intervalInSeconds = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get intervalInSecondsInput() {
+    return this._intervalInSeconds
+  }
 
-  // load_balancer_rules - computed: true, optional: false, required: true
+  // load_balancer_rules - computed: true, optional: false, required: false
   public get loadBalancerRules() {
     return this.getListAttribute('load_balancer_rules');
   }
@@ -86,73 +89,117 @@ export class LbProbe extends TerraformResource {
   // loadbalancer_id - computed: false, optional: false, required: true
   private _loadbalancerId: string;
   public get loadbalancerId() {
-    return this._loadbalancerId;
+    return this.getStringAttribute('loadbalancer_id');
   }
   public set loadbalancerId(value: string) {
     this._loadbalancerId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get loadbalancerIdInput() {
+    return this._loadbalancerId
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // number_of_probes - computed: false, optional: true, required: false
   private _numberOfProbes?: number;
   public get numberOfProbes() {
-    return this._numberOfProbes;
+    return this.getNumberAttribute('number_of_probes');
   }
-  public set numberOfProbes(value: number | undefined) {
+  public set numberOfProbes(value: number ) {
     this._numberOfProbes = value;
+  }
+  public resetNumberOfProbes() {
+    this._numberOfProbes = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get numberOfProbesInput() {
+    return this._numberOfProbes
   }
 
   // port - computed: false, optional: false, required: true
   private _port: number;
   public get port() {
-    return this._port;
+    return this.getNumberAttribute('port');
   }
   public set port(value: number) {
     this._port = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get portInput() {
+    return this._port
   }
 
   // protocol - computed: true, optional: true, required: false
   private _protocol?: string;
   public get protocol() {
-    return this._protocol ?? this.getStringAttribute('protocol');
+    return this.getStringAttribute('protocol');
   }
-  public set protocol(value: string | undefined) {
+  public set protocol(value: string) {
     this._protocol = value;
+  }
+  public resetProtocol() {
+    this._protocol = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get protocolInput() {
+    return this._protocol
   }
 
   // request_path - computed: false, optional: true, required: false
   private _requestPath?: string;
   public get requestPath() {
-    return this._requestPath;
+    return this.getStringAttribute('request_path');
   }
-  public set requestPath(value: string | undefined) {
+  public set requestPath(value: string ) {
     this._requestPath = value;
+  }
+  public resetRequestPath() {
+    this._requestPath = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get requestPathInput() {
+    return this._requestPath
   }
 
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
-    return this._resourceGroupName;
+    return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: LbProbeTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: LbProbeTimeouts | undefined) {
+  public set timeouts(value: LbProbeTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

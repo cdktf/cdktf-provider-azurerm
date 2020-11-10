@@ -45,7 +45,7 @@ export class DataAzurermPolicyDefinition extends TerraformDataSource {
   // ATTRIBUTES
   // ==========
 
-  // description - computed: true, optional: false, required: true
+  // description - computed: true, optional: false, required: false
   public get description() {
     return this.getStringAttribute('description');
   }
@@ -53,56 +53,63 @@ export class DataAzurermPolicyDefinition extends TerraformDataSource {
   // display_name - computed: false, optional: false, required: true
   private _displayName: string;
   public get displayName() {
-    return this._displayName;
+    return this.getStringAttribute('display_name');
   }
   public set displayName(value: string) {
     this._displayName = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get displayNameInput() {
+    return this._displayName
+  }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // management_group_id - computed: false, optional: true, required: false
   private _managementGroupId?: string;
   public get managementGroupId() {
-    return this._managementGroupId;
+    return this.getStringAttribute('management_group_id');
   }
-  public set managementGroupId(value: string | undefined) {
+  public set managementGroupId(value: string ) {
     this._managementGroupId = value;
   }
+  public resetManagementGroupId() {
+    this._managementGroupId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get managementGroupIdInput() {
+    return this._managementGroupId
+  }
 
-  // metadata - computed: true, optional: false, required: true
+  // metadata - computed: true, optional: false, required: false
   public get metadata() {
     return this.getStringAttribute('metadata');
   }
 
-  // name - computed: true, optional: false, required: true
+  // name - computed: true, optional: false, required: false
   public get name() {
     return this.getStringAttribute('name');
   }
 
-  // parameters - computed: true, optional: false, required: true
+  // parameters - computed: true, optional: false, required: false
   public get parameters() {
     return this.getStringAttribute('parameters');
   }
 
-  // policy_rule - computed: true, optional: false, required: true
+  // policy_rule - computed: true, optional: false, required: false
   public get policyRule() {
     return this.getStringAttribute('policy_rule');
   }
 
-  // policy_type - computed: true, optional: false, required: true
+  // policy_type - computed: true, optional: false, required: false
   public get policyType() {
     return this.getStringAttribute('policy_type');
   }
 
-  // type - computed: true, optional: false, required: true
+  // type - computed: true, optional: false, required: false
   public get type() {
     return this.getStringAttribute('type');
   }
@@ -110,10 +117,17 @@ export class DataAzurermPolicyDefinition extends TerraformDataSource {
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: DataAzurermPolicyDefinitionTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: DataAzurermPolicyDefinitionTimeouts | undefined) {
+  public set timeouts(value: DataAzurermPolicyDefinitionTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

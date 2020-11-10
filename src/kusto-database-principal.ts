@@ -58,7 +58,7 @@ export class KustoDatabasePrincipal extends TerraformResource {
   // ATTRIBUTES
   // ==========
 
-  // app_id - computed: true, optional: false, required: true
+  // app_id - computed: true, optional: false, required: false
   public get appId() {
     return this.getStringAttribute('app_id');
   }
@@ -66,50 +66,58 @@ export class KustoDatabasePrincipal extends TerraformResource {
   // client_id - computed: false, optional: false, required: true
   private _clientId: string;
   public get clientId() {
-    return this._clientId;
+    return this.getStringAttribute('client_id');
   }
   public set clientId(value: string) {
     this._clientId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get clientIdInput() {
+    return this._clientId
   }
 
   // cluster_name - computed: false, optional: false, required: true
   private _clusterName: string;
   public get clusterName() {
-    return this._clusterName;
+    return this.getStringAttribute('cluster_name');
   }
   public set clusterName(value: string) {
     this._clusterName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get clusterNameInput() {
+    return this._clusterName
   }
 
   // database_name - computed: false, optional: false, required: true
   private _databaseName: string;
   public get databaseName() {
-    return this._databaseName;
+    return this.getStringAttribute('database_name');
   }
   public set databaseName(value: string) {
     this._databaseName = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get databaseNameInput() {
+    return this._databaseName
+  }
 
-  // email - computed: true, optional: false, required: true
+  // email - computed: true, optional: false, required: false
   public get email() {
     return this.getStringAttribute('email');
   }
 
-  // fully_qualified_name - computed: true, optional: false, required: true
+  // fully_qualified_name - computed: true, optional: false, required: false
   public get fullyQualifiedName() {
     return this.getStringAttribute('fully_qualified_name');
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
-  // name - computed: true, optional: false, required: true
+  // name - computed: true, optional: false, required: false
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -117,46 +125,69 @@ export class KustoDatabasePrincipal extends TerraformResource {
   // object_id - computed: false, optional: false, required: true
   private _objectId: string;
   public get objectId() {
-    return this._objectId;
+    return this.getStringAttribute('object_id');
   }
   public set objectId(value: string) {
     this._objectId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get objectIdInput() {
+    return this._objectId
   }
 
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
-    return this._resourceGroupName;
+    return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
   }
 
   // role - computed: false, optional: false, required: true
   private _role: string;
   public get role() {
-    return this._role;
+    return this.getStringAttribute('role');
   }
   public set role(value: string) {
     this._role = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get roleInput() {
+    return this._role
   }
 
   // type - computed: false, optional: false, required: true
   private _type: string;
   public get type() {
-    return this._type;
+    return this.getStringAttribute('type');
   }
   public set type(value: string) {
     this._type = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get typeInput() {
+    return this._type
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: KustoDatabasePrincipalTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: KustoDatabasePrincipalTimeouts | undefined) {
+  public set timeouts(value: KustoDatabasePrincipalTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

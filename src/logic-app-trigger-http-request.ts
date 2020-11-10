@@ -55,66 +55,95 @@ export class LogicAppTriggerHttpRequest extends TerraformResource {
   // ==========
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // logic_app_id - computed: false, optional: false, required: true
   private _logicAppId: string;
   public get logicAppId() {
-    return this._logicAppId;
+    return this.getStringAttribute('logic_app_id');
   }
   public set logicAppId(value: string) {
     this._logicAppId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get logicAppIdInput() {
+    return this._logicAppId
   }
 
   // method - computed: false, optional: true, required: false
   private _method?: string;
   public get method() {
-    return this._method;
+    return this.getStringAttribute('method');
   }
-  public set method(value: string | undefined) {
+  public set method(value: string ) {
     this._method = value;
+  }
+  public resetMethod() {
+    this._method = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get methodInput() {
+    return this._method
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // relative_path - computed: false, optional: true, required: false
   private _relativePath?: string;
   public get relativePath() {
-    return this._relativePath;
+    return this.getStringAttribute('relative_path');
   }
-  public set relativePath(value: string | undefined) {
+  public set relativePath(value: string ) {
     this._relativePath = value;
+  }
+  public resetRelativePath() {
+    this._relativePath = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get relativePathInput() {
+    return this._relativePath
   }
 
   // schema - computed: false, optional: false, required: true
   private _schema: string;
   public get schema() {
-    return this._schema;
+    return this.getStringAttribute('schema');
   }
   public set schema(value: string) {
     this._schema = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get schemaInput() {
+    return this._schema
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: LogicAppTriggerHttpRequestTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: LogicAppTriggerHttpRequestTimeouts | undefined) {
+  public set timeouts(value: LogicAppTriggerHttpRequestTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

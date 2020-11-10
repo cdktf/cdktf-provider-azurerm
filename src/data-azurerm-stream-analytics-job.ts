@@ -45,46 +45,42 @@ export class DataAzurermStreamAnalyticsJob extends TerraformDataSource {
   // ATTRIBUTES
   // ==========
 
-  // compatibility_level - computed: true, optional: false, required: true
+  // compatibility_level - computed: true, optional: false, required: false
   public get compatibilityLevel() {
     return this.getStringAttribute('compatibility_level');
   }
 
-  // data_locale - computed: true, optional: false, required: true
+  // data_locale - computed: true, optional: false, required: false
   public get dataLocale() {
     return this.getStringAttribute('data_locale');
   }
 
-  // events_late_arrival_max_delay_in_seconds - computed: true, optional: false, required: true
+  // events_late_arrival_max_delay_in_seconds - computed: true, optional: false, required: false
   public get eventsLateArrivalMaxDelayInSeconds() {
     return this.getNumberAttribute('events_late_arrival_max_delay_in_seconds');
   }
 
-  // events_out_of_order_max_delay_in_seconds - computed: true, optional: false, required: true
+  // events_out_of_order_max_delay_in_seconds - computed: true, optional: false, required: false
   public get eventsOutOfOrderMaxDelayInSeconds() {
     return this.getNumberAttribute('events_out_of_order_max_delay_in_seconds');
   }
 
-  // events_out_of_order_policy - computed: true, optional: false, required: true
+  // events_out_of_order_policy - computed: true, optional: false, required: false
   public get eventsOutOfOrderPolicy() {
     return this.getStringAttribute('events_out_of_order_policy');
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
-  // job_id - computed: true, optional: false, required: true
+  // job_id - computed: true, optional: false, required: false
   public get jobId() {
     return this.getStringAttribute('job_id');
   }
 
-  // location - computed: true, optional: false, required: true
+  // location - computed: true, optional: false, required: false
   public get location() {
     return this.getStringAttribute('location');
   }
@@ -92,13 +88,17 @@ export class DataAzurermStreamAnalyticsJob extends TerraformDataSource {
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
+  }
 
-  // output_error_policy - computed: true, optional: false, required: true
+  // output_error_policy - computed: true, optional: false, required: false
   public get outputErrorPolicy() {
     return this.getStringAttribute('output_error_policy');
   }
@@ -106,18 +106,22 @@ export class DataAzurermStreamAnalyticsJob extends TerraformDataSource {
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
-    return this._resourceGroupName;
+    return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
+  }
 
-  // streaming_units - computed: true, optional: false, required: true
+  // streaming_units - computed: true, optional: false, required: false
   public get streamingUnits() {
     return this.getNumberAttribute('streaming_units');
   }
 
-  // transformation_query - computed: true, optional: false, required: true
+  // transformation_query - computed: true, optional: false, required: false
   public get transformationQuery() {
     return this.getStringAttribute('transformation_query');
   }
@@ -125,10 +129,17 @@ export class DataAzurermStreamAnalyticsJob extends TerraformDataSource {
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: DataAzurermStreamAnalyticsJobTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: DataAzurermStreamAnalyticsJobTimeouts | undefined) {
+  public set timeouts(value: DataAzurermStreamAnalyticsJobTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

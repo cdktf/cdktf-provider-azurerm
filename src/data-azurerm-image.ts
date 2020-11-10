@@ -19,59 +19,59 @@ export interface DataAzurermImageConfig extends TerraformMetaArguments {
 }
 export class DataAzurermImageDataDisk extends ComplexComputedList {
 
-  // blob_uri - computed: true, optional: false, required: true
+  // blob_uri - computed: true, optional: false, required: false
   public get blobUri() {
     return this.getStringAttribute('blob_uri');
   }
 
-  // caching - computed: true, optional: false, required: true
+  // caching - computed: true, optional: false, required: false
   public get caching() {
     return this.getStringAttribute('caching');
   }
 
-  // lun - computed: true, optional: false, required: true
+  // lun - computed: true, optional: false, required: false
   public get lun() {
     return this.getNumberAttribute('lun');
   }
 
-  // managed_disk_id - computed: true, optional: false, required: true
+  // managed_disk_id - computed: true, optional: false, required: false
   public get managedDiskId() {
     return this.getStringAttribute('managed_disk_id');
   }
 
-  // size_gb - computed: true, optional: false, required: true
+  // size_gb - computed: true, optional: false, required: false
   public get sizeGb() {
     return this.getNumberAttribute('size_gb');
   }
 }
 export class DataAzurermImageOsDisk extends ComplexComputedList {
 
-  // blob_uri - computed: true, optional: false, required: true
+  // blob_uri - computed: true, optional: false, required: false
   public get blobUri() {
     return this.getStringAttribute('blob_uri');
   }
 
-  // caching - computed: true, optional: false, required: true
+  // caching - computed: true, optional: false, required: false
   public get caching() {
     return this.getStringAttribute('caching');
   }
 
-  // managed_disk_id - computed: true, optional: false, required: true
+  // managed_disk_id - computed: true, optional: false, required: false
   public get managedDiskId() {
     return this.getStringAttribute('managed_disk_id');
   }
 
-  // os_state - computed: true, optional: false, required: true
+  // os_state - computed: true, optional: false, required: false
   public get osState() {
     return this.getStringAttribute('os_state');
   }
 
-  // os_type - computed: true, optional: false, required: true
+  // os_type - computed: true, optional: false, required: false
   public get osType() {
     return this.getStringAttribute('os_type');
   }
 
-  // size_gb - computed: true, optional: false, required: true
+  // size_gb - computed: true, optional: false, required: false
   public get sizeGb() {
     return this.getNumberAttribute('size_gb');
   }
@@ -110,21 +110,17 @@ export class DataAzurermImage extends TerraformDataSource {
   // ATTRIBUTES
   // ==========
 
-  // data_disk - computed: true, optional: false, required: true
+  // data_disk - computed: true, optional: false, required: false
   public dataDisk(index: string) {
     return new DataAzurermImageDataDisk(this, 'data_disk', index);
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
-  // location - computed: true, optional: false, required: true
+  // location - computed: true, optional: false, required: false
   public get location() {
     return this.getStringAttribute('location');
   }
@@ -132,22 +128,36 @@ export class DataAzurermImage extends TerraformDataSource {
   // name - computed: false, optional: true, required: false
   private _name?: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
-  public set name(value: string | undefined) {
+  public set name(value: string ) {
     this._name = value;
+  }
+  public resetName() {
+    this._name = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // name_regex - computed: false, optional: true, required: false
   private _nameRegex?: string;
   public get nameRegex() {
-    return this._nameRegex;
+    return this.getStringAttribute('name_regex');
   }
-  public set nameRegex(value: string | undefined) {
+  public set nameRegex(value: string ) {
     this._nameRegex = value;
   }
+  public resetNameRegex() {
+    this._nameRegex = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameRegexInput() {
+    return this._nameRegex
+  }
 
-  // os_disk - computed: true, optional: false, required: true
+  // os_disk - computed: true, optional: false, required: false
   public osDisk(index: string) {
     return new DataAzurermImageOsDisk(this, 'os_disk', index);
   }
@@ -155,27 +165,38 @@ export class DataAzurermImage extends TerraformDataSource {
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
-    return this._resourceGroupName;
+    return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
   }
 
   // sort_descending - computed: false, optional: true, required: false
   private _sortDescending?: boolean;
   public get sortDescending() {
-    return this._sortDescending;
+    return this.getBooleanAttribute('sort_descending');
   }
-  public set sortDescending(value: boolean | undefined) {
+  public set sortDescending(value: boolean ) {
     this._sortDescending = value;
   }
+  public resetSortDescending() {
+    this._sortDescending = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sortDescendingInput() {
+    return this._sortDescending
+  }
 
-  // tags - computed: true, optional: false, required: true
+  // tags - computed: true, optional: false, required: false
   public tags(key: string): string {
     return new StringMap(this, 'tags').lookup(key);
   }
 
-  // zone_resilient - computed: true, optional: false, required: true
+  // zone_resilient - computed: true, optional: false, required: false
   public get zoneResilient() {
     return this.getBooleanAttribute('zone_resilient');
   }
@@ -183,10 +204,17 @@ export class DataAzurermImage extends TerraformDataSource {
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: DataAzurermImageTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: DataAzurermImageTimeouts | undefined) {
+  public set timeouts(value: DataAzurermImageTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

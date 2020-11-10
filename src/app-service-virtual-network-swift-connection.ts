@@ -51,37 +51,48 @@ export class AppServiceVirtualNetworkSwiftConnection extends TerraformResource {
   // app_service_id - computed: false, optional: false, required: true
   private _appServiceId: string;
   public get appServiceId() {
-    return this._appServiceId;
+    return this.getStringAttribute('app_service_id');
   }
   public set appServiceId(value: string) {
     this._appServiceId = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get appServiceIdInput() {
+    return this._appServiceId
+  }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // subnet_id - computed: false, optional: false, required: true
   private _subnetId: string;
   public get subnetId() {
-    return this._subnetId;
+    return this.getStringAttribute('subnet_id');
   }
   public set subnetId(value: string) {
     this._subnetId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get subnetIdInput() {
+    return this._subnetId
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: AppServiceVirtualNetworkSwiftConnectionTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: AppServiceVirtualNetworkSwiftConnectionTimeouts | undefined) {
+  public set timeouts(value: AppServiceVirtualNetworkSwiftConnectionTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

@@ -70,67 +70,90 @@ export class ExpressRouteCircuit extends TerraformResource {
   // allow_classic_operations - computed: false, optional: true, required: false
   private _allowClassicOperations?: boolean;
   public get allowClassicOperations() {
-    return this._allowClassicOperations;
+    return this.getBooleanAttribute('allow_classic_operations');
   }
-  public set allowClassicOperations(value: boolean | undefined) {
+  public set allowClassicOperations(value: boolean ) {
     this._allowClassicOperations = value;
+  }
+  public resetAllowClassicOperations() {
+    this._allowClassicOperations = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get allowClassicOperationsInput() {
+    return this._allowClassicOperations
   }
 
   // bandwidth_in_mbps - computed: false, optional: false, required: true
   private _bandwidthInMbps: number;
   public get bandwidthInMbps() {
-    return this._bandwidthInMbps;
+    return this.getNumberAttribute('bandwidth_in_mbps');
   }
   public set bandwidthInMbps(value: number) {
     this._bandwidthInMbps = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get bandwidthInMbpsInput() {
+    return this._bandwidthInMbps
+  }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // location - computed: false, optional: false, required: true
   private _location: string;
   public get location() {
-    return this._location;
+    return this.getStringAttribute('location');
   }
   public set location(value: string) {
     this._location = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get locationInput() {
+    return this._location
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // peering_location - computed: false, optional: false, required: true
   private _peeringLocation: string;
   public get peeringLocation() {
-    return this._peeringLocation;
+    return this.getStringAttribute('peering_location');
   }
   public set peeringLocation(value: string) {
     this._peeringLocation = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get peeringLocationInput() {
+    return this._peeringLocation
   }
 
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
-    return this._resourceGroupName;
+    return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
+  }
 
-  // service_key - computed: true, optional: false, required: true
+  // service_key - computed: true, optional: false, required: false
   public get serviceKey() {
     return this.getStringAttribute('service_key');
   }
@@ -138,13 +161,17 @@ export class ExpressRouteCircuit extends TerraformResource {
   // service_provider_name - computed: false, optional: false, required: true
   private _serviceProviderName: string;
   public get serviceProviderName() {
-    return this._serviceProviderName;
+    return this.getStringAttribute('service_provider_name');
   }
   public set serviceProviderName(value: string) {
     this._serviceProviderName = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get serviceProviderNameInput() {
+    return this._serviceProviderName
+  }
 
-  // service_provider_provisioning_state - computed: true, optional: false, required: true
+  // service_provider_provisioning_state - computed: true, optional: false, required: false
   public get serviceProviderProvisioningState() {
     return this.getStringAttribute('service_provider_provisioning_state');
   }
@@ -152,28 +179,46 @@ export class ExpressRouteCircuit extends TerraformResource {
   // tags - computed: false, optional: true, required: false
   private _tags?: { [key: string]: string };
   public get tags() {
-    return this._tags;
+    return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | undefined) {
+  public set tags(value: { [key: string]: string } ) {
     this._tags = value;
+  }
+  public resetTags() {
+    this._tags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsInput() {
+    return this._tags
   }
 
   // sku - computed: false, optional: false, required: true
   private _sku: ExpressRouteCircuitSku[];
   public get sku() {
-    return this._sku;
+    return this.interpolationForAttribute('sku') as any;
   }
   public set sku(value: ExpressRouteCircuitSku[]) {
     this._sku = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get skuInput() {
+    return this._sku
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: ExpressRouteCircuitTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: ExpressRouteCircuitTimeouts | undefined) {
+  public set timeouts(value: ExpressRouteCircuitTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

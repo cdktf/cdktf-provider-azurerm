@@ -17,37 +17,37 @@ export interface DataAzurermLbConfig extends TerraformMetaArguments {
 }
 export class DataAzurermLbFrontendIpConfiguration extends ComplexComputedList {
 
-  // id - computed: true, optional: false, required: true
+  // id - computed: true, optional: false, required: false
   public get id() {
     return this.getStringAttribute('id');
   }
 
-  // name - computed: true, optional: false, required: true
+  // name - computed: true, optional: false, required: false
   public get name() {
     return this.getStringAttribute('name');
   }
 
-  // private_ip_address - computed: true, optional: false, required: true
+  // private_ip_address - computed: true, optional: false, required: false
   public get privateIpAddress() {
     return this.getStringAttribute('private_ip_address');
   }
 
-  // private_ip_address_allocation - computed: true, optional: false, required: true
+  // private_ip_address_allocation - computed: true, optional: false, required: false
   public get privateIpAddressAllocation() {
     return this.getStringAttribute('private_ip_address_allocation');
   }
 
-  // public_ip_address_id - computed: true, optional: false, required: true
+  // public_ip_address_id - computed: true, optional: false, required: false
   public get publicIpAddressId() {
     return this.getStringAttribute('public_ip_address_id');
   }
 
-  // subnet_id - computed: true, optional: false, required: true
+  // subnet_id - computed: true, optional: false, required: false
   public get subnetId() {
     return this.getStringAttribute('subnet_id');
   }
 
-  // zones - computed: true, optional: false, required: true
+  // zones - computed: true, optional: false, required: false
   public get zones() {
     return this.getListAttribute('zones');
   }
@@ -84,21 +84,17 @@ export class DataAzurermLb extends TerraformDataSource {
   // ATTRIBUTES
   // ==========
 
-  // frontend_ip_configuration - computed: true, optional: false, required: true
+  // frontend_ip_configuration - computed: true, optional: false, required: false
   public frontendIpConfiguration(index: string) {
     return new DataAzurermLbFrontendIpConfiguration(this, 'frontend_ip_configuration', index);
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
-  // location - computed: true, optional: false, required: true
+  // location - computed: true, optional: false, required: false
   public get location() {
     return this.getStringAttribute('location');
   }
@@ -106,18 +102,22 @@ export class DataAzurermLb extends TerraformDataSource {
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
+  }
 
-  // private_ip_address - computed: true, optional: false, required: true
+  // private_ip_address - computed: true, optional: false, required: false
   public get privateIpAddress() {
     return this.getStringAttribute('private_ip_address');
   }
 
-  // private_ip_addresses - computed: true, optional: false, required: true
+  // private_ip_addresses - computed: true, optional: false, required: false
   public get privateIpAddresses() {
     return this.getListAttribute('private_ip_addresses');
   }
@@ -125,18 +125,22 @@ export class DataAzurermLb extends TerraformDataSource {
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
-    return this._resourceGroupName;
+    return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
+  }
 
-  // sku - computed: true, optional: false, required: true
+  // sku - computed: true, optional: false, required: false
   public get sku() {
     return this.getStringAttribute('sku');
   }
 
-  // tags - computed: true, optional: false, required: true
+  // tags - computed: true, optional: false, required: false
   public tags(key: string): string {
     return new StringMap(this, 'tags').lookup(key);
   }
@@ -144,10 +148,17 @@ export class DataAzurermLb extends TerraformDataSource {
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: DataAzurermLbTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: DataAzurermLbTimeouts | undefined) {
+  public set timeouts(value: DataAzurermLbTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

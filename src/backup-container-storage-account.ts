@@ -51,48 +51,63 @@ export class BackupContainerStorageAccount extends TerraformResource {
   // ==========
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // recovery_vault_name - computed: false, optional: false, required: true
   private _recoveryVaultName: string;
   public get recoveryVaultName() {
-    return this._recoveryVaultName;
+    return this.getStringAttribute('recovery_vault_name');
   }
   public set recoveryVaultName(value: string) {
     this._recoveryVaultName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get recoveryVaultNameInput() {
+    return this._recoveryVaultName
   }
 
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
-    return this._resourceGroupName;
+    return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
   }
 
   // storage_account_id - computed: false, optional: false, required: true
   private _storageAccountId: string;
   public get storageAccountId() {
-    return this._storageAccountId;
+    return this.getStringAttribute('storage_account_id');
   }
   public set storageAccountId(value: string) {
     this._storageAccountId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get storageAccountIdInput() {
+    return this._storageAccountId
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: BackupContainerStorageAccountTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: BackupContainerStorageAccountTimeouts | undefined) {
+  public set timeouts(value: BackupContainerStorageAccountTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

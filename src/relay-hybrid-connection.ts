@@ -55,66 +55,95 @@ export class RelayHybridConnection extends TerraformResource {
   // ==========
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // relay_namespace_name - computed: false, optional: false, required: true
   private _relayNamespaceName: string;
   public get relayNamespaceName() {
-    return this._relayNamespaceName;
+    return this.getStringAttribute('relay_namespace_name');
   }
   public set relayNamespaceName(value: string) {
     this._relayNamespaceName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get relayNamespaceNameInput() {
+    return this._relayNamespaceName
   }
 
   // requires_client_authorization - computed: false, optional: true, required: false
   private _requiresClientAuthorization?: boolean;
   public get requiresClientAuthorization() {
-    return this._requiresClientAuthorization;
+    return this.getBooleanAttribute('requires_client_authorization');
   }
-  public set requiresClientAuthorization(value: boolean | undefined) {
+  public set requiresClientAuthorization(value: boolean ) {
     this._requiresClientAuthorization = value;
+  }
+  public resetRequiresClientAuthorization() {
+    this._requiresClientAuthorization = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get requiresClientAuthorizationInput() {
+    return this._requiresClientAuthorization
   }
 
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
-    return this._resourceGroupName;
+    return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
   }
 
   // user_metadata - computed: false, optional: true, required: false
   private _userMetadata?: string;
   public get userMetadata() {
-    return this._userMetadata;
+    return this.getStringAttribute('user_metadata');
   }
-  public set userMetadata(value: string | undefined) {
+  public set userMetadata(value: string ) {
     this._userMetadata = value;
+  }
+  public resetUserMetadata() {
+    this._userMetadata = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get userMetadataInput() {
+    return this._userMetadata
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: RelayHybridConnectionTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: RelayHybridConnectionTimeouts | undefined) {
+  public set timeouts(value: RelayHybridConnectionTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

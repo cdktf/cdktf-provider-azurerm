@@ -67,109 +67,170 @@ export class DataFactoryTriggerSchedule extends TerraformResource {
   // annotations - computed: false, optional: true, required: false
   private _annotations?: string[];
   public get annotations() {
-    return this._annotations;
+    return this.getListAttribute('annotations');
   }
-  public set annotations(value: string[] | undefined) {
+  public set annotations(value: string[] ) {
     this._annotations = value;
+  }
+  public resetAnnotations() {
+    this._annotations = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get annotationsInput() {
+    return this._annotations
   }
 
   // data_factory_name - computed: false, optional: false, required: true
   private _dataFactoryName: string;
   public get dataFactoryName() {
-    return this._dataFactoryName;
+    return this.getStringAttribute('data_factory_name');
   }
   public set dataFactoryName(value: string) {
     this._dataFactoryName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dataFactoryNameInput() {
+    return this._dataFactoryName
   }
 
   // end_time - computed: false, optional: true, required: false
   private _endTime?: string;
   public get endTime() {
-    return this._endTime;
+    return this.getStringAttribute('end_time');
   }
-  public set endTime(value: string | undefined) {
+  public set endTime(value: string ) {
     this._endTime = value;
+  }
+  public resetEndTime() {
+    this._endTime = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get endTimeInput() {
+    return this._endTime
   }
 
   // frequency - computed: false, optional: true, required: false
   private _frequency?: string;
   public get frequency() {
-    return this._frequency;
+    return this.getStringAttribute('frequency');
   }
-  public set frequency(value: string | undefined) {
+  public set frequency(value: string ) {
     this._frequency = value;
+  }
+  public resetFrequency() {
+    this._frequency = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get frequencyInput() {
+    return this._frequency
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // interval - computed: false, optional: true, required: false
   private _interval?: number;
   public get interval() {
-    return this._interval;
+    return this.getNumberAttribute('interval');
   }
-  public set interval(value: number | undefined) {
+  public set interval(value: number ) {
     this._interval = value;
+  }
+  public resetInterval() {
+    this._interval = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get intervalInput() {
+    return this._interval
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // pipeline_name - computed: false, optional: false, required: true
   private _pipelineName: string;
   public get pipelineName() {
-    return this._pipelineName;
+    return this.getStringAttribute('pipeline_name');
   }
   public set pipelineName(value: string) {
     this._pipelineName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get pipelineNameInput() {
+    return this._pipelineName
   }
 
   // pipeline_parameters - computed: false, optional: true, required: false
   private _pipelineParameters?: { [key: string]: string };
   public get pipelineParameters() {
-    return this._pipelineParameters;
+    return this.interpolationForAttribute('pipeline_parameters') as any;
   }
-  public set pipelineParameters(value: { [key: string]: string } | undefined) {
+  public set pipelineParameters(value: { [key: string]: string } ) {
     this._pipelineParameters = value;
+  }
+  public resetPipelineParameters() {
+    this._pipelineParameters = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get pipelineParametersInput() {
+    return this._pipelineParameters
   }
 
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
-    return this._resourceGroupName;
+    return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
   }
 
   // start_time - computed: true, optional: true, required: false
   private _startTime?: string;
   public get startTime() {
-    return this._startTime ?? this.getStringAttribute('start_time');
+    return this.getStringAttribute('start_time');
   }
-  public set startTime(value: string | undefined) {
+  public set startTime(value: string) {
     this._startTime = value;
+  }
+  public resetStartTime() {
+    this._startTime = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get startTimeInput() {
+    return this._startTime
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: DataFactoryTriggerScheduleTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: DataFactoryTriggerScheduleTimeouts | undefined) {
+  public set timeouts(value: DataFactoryTriggerScheduleTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

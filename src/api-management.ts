@@ -165,35 +165,35 @@ export class ApiManagement extends TerraformResource {
   // ATTRIBUTES
   // ==========
 
-  // gateway_regional_url - computed: true, optional: false, required: true
+  // gateway_regional_url - computed: true, optional: false, required: false
   public get gatewayRegionalUrl() {
     return this.getStringAttribute('gateway_regional_url');
   }
 
-  // gateway_url - computed: true, optional: false, required: true
+  // gateway_url - computed: true, optional: false, required: false
   public get gatewayUrl() {
     return this.getStringAttribute('gateway_url');
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // location - computed: false, optional: false, required: true
   private _location: string;
   public get location() {
-    return this._location;
+    return this.getStringAttribute('location');
   }
   public set location(value: string) {
     this._location = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get locationInput() {
+    return this._location
+  }
 
-  // management_api_url - computed: true, optional: false, required: true
+  // management_api_url - computed: true, optional: false, required: false
   public get managementApiUrl() {
     return this.getStringAttribute('management_api_url');
   }
@@ -201,36 +201,54 @@ export class ApiManagement extends TerraformResource {
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // notification_sender_email - computed: true, optional: true, required: false
   private _notificationSenderEmail?: string;
   public get notificationSenderEmail() {
-    return this._notificationSenderEmail ?? this.getStringAttribute('notification_sender_email');
+    return this.getStringAttribute('notification_sender_email');
   }
-  public set notificationSenderEmail(value: string | undefined) {
+  public set notificationSenderEmail(value: string) {
     this._notificationSenderEmail = value;
+  }
+  public resetNotificationSenderEmail() {
+    this._notificationSenderEmail = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get notificationSenderEmailInput() {
+    return this._notificationSenderEmail
   }
 
   // policy - computed: true, optional: true, required: false
   private _policy?: ApiManagementPolicy[]
-  public get policy(): ApiManagementPolicy[] | undefined {
-    return this._policy; // Getting the computed value is not yet implemented
+  public get policy(): ApiManagementPolicy[] {
+    return this.interpolationForAttribute('policy') as any; // Getting the computed value is not yet implemented
   }
-  public set policy(value: ApiManagementPolicy[] | undefined) {
+  public set policy(value: ApiManagementPolicy[]) {
     this._policy = value;
   }
+  public resetPolicy() {
+    this._policy = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get policyInput() {
+    return this._policy
+  }
 
-  // portal_url - computed: true, optional: false, required: true
+  // portal_url - computed: true, optional: false, required: false
   public get portalUrl() {
     return this.getStringAttribute('portal_url');
   }
 
-  // public_ip_addresses - computed: true, optional: false, required: true
+  // public_ip_addresses - computed: true, optional: false, required: false
   public get publicIpAddresses() {
     return this.getListAttribute('public_ip_addresses');
   }
@@ -238,31 +256,43 @@ export class ApiManagement extends TerraformResource {
   // publisher_email - computed: false, optional: false, required: true
   private _publisherEmail: string;
   public get publisherEmail() {
-    return this._publisherEmail;
+    return this.getStringAttribute('publisher_email');
   }
   public set publisherEmail(value: string) {
     this._publisherEmail = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get publisherEmailInput() {
+    return this._publisherEmail
   }
 
   // publisher_name - computed: false, optional: false, required: true
   private _publisherName: string;
   public get publisherName() {
-    return this._publisherName;
+    return this.getStringAttribute('publisher_name');
   }
   public set publisherName(value: string) {
     this._publisherName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get publisherNameInput() {
+    return this._publisherName
   }
 
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
-    return this._resourceGroupName;
+    return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
+  }
 
-  // scm_url - computed: true, optional: false, required: true
+  // scm_url - computed: true, optional: false, required: false
   public get scmUrl() {
     return this.getStringAttribute('scm_url');
   }
@@ -270,100 +300,174 @@ export class ApiManagement extends TerraformResource {
   // sku_name - computed: false, optional: false, required: true
   private _skuName: string;
   public get skuName() {
-    return this._skuName;
+    return this.getStringAttribute('sku_name');
   }
   public set skuName(value: string) {
     this._skuName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get skuNameInput() {
+    return this._skuName
   }
 
   // tags - computed: false, optional: true, required: false
   private _tags?: { [key: string]: string };
   public get tags() {
-    return this._tags;
+    return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | undefined) {
+  public set tags(value: { [key: string]: string } ) {
     this._tags = value;
+  }
+  public resetTags() {
+    this._tags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsInput() {
+    return this._tags
   }
 
   // additional_location - computed: false, optional: true, required: false
   private _additionalLocation?: ApiManagementAdditionalLocation[];
   public get additionalLocation() {
-    return this._additionalLocation;
+    return this.interpolationForAttribute('additional_location') as any;
   }
-  public set additionalLocation(value: ApiManagementAdditionalLocation[] | undefined) {
+  public set additionalLocation(value: ApiManagementAdditionalLocation[] ) {
     this._additionalLocation = value;
+  }
+  public resetAdditionalLocation() {
+    this._additionalLocation = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get additionalLocationInput() {
+    return this._additionalLocation
   }
 
   // certificate - computed: false, optional: true, required: false
   private _certificate?: ApiManagementCertificate[];
   public get certificate() {
-    return this._certificate;
+    return this.interpolationForAttribute('certificate') as any;
   }
-  public set certificate(value: ApiManagementCertificate[] | undefined) {
+  public set certificate(value: ApiManagementCertificate[] ) {
     this._certificate = value;
+  }
+  public resetCertificate() {
+    this._certificate = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get certificateInput() {
+    return this._certificate
   }
 
   // hostname_configuration - computed: false, optional: true, required: false
   private _hostnameConfiguration?: ApiManagementHostnameConfiguration[];
   public get hostnameConfiguration() {
-    return this._hostnameConfiguration;
+    return this.interpolationForAttribute('hostname_configuration') as any;
   }
-  public set hostnameConfiguration(value: ApiManagementHostnameConfiguration[] | undefined) {
+  public set hostnameConfiguration(value: ApiManagementHostnameConfiguration[] ) {
     this._hostnameConfiguration = value;
+  }
+  public resetHostnameConfiguration() {
+    this._hostnameConfiguration = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get hostnameConfigurationInput() {
+    return this._hostnameConfiguration
   }
 
   // identity - computed: false, optional: true, required: false
   private _identity?: ApiManagementIdentity[];
   public get identity() {
-    return this._identity;
+    return this.interpolationForAttribute('identity') as any;
   }
-  public set identity(value: ApiManagementIdentity[] | undefined) {
+  public set identity(value: ApiManagementIdentity[] ) {
     this._identity = value;
+  }
+  public resetIdentity() {
+    this._identity = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get identityInput() {
+    return this._identity
   }
 
   // protocols - computed: false, optional: true, required: false
   private _protocols?: ApiManagementProtocols[];
   public get protocols() {
-    return this._protocols;
+    return this.interpolationForAttribute('protocols') as any;
   }
-  public set protocols(value: ApiManagementProtocols[] | undefined) {
+  public set protocols(value: ApiManagementProtocols[] ) {
     this._protocols = value;
+  }
+  public resetProtocols() {
+    this._protocols = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get protocolsInput() {
+    return this._protocols
   }
 
   // security - computed: false, optional: true, required: false
   private _security?: ApiManagementSecurity[];
   public get security() {
-    return this._security;
+    return this.interpolationForAttribute('security') as any;
   }
-  public set security(value: ApiManagementSecurity[] | undefined) {
+  public set security(value: ApiManagementSecurity[] ) {
     this._security = value;
+  }
+  public resetSecurity() {
+    this._security = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get securityInput() {
+    return this._security
   }
 
   // sign_in - computed: false, optional: true, required: false
   private _signIn?: ApiManagementSignIn[];
   public get signIn() {
-    return this._signIn;
+    return this.interpolationForAttribute('sign_in') as any;
   }
-  public set signIn(value: ApiManagementSignIn[] | undefined) {
+  public set signIn(value: ApiManagementSignIn[] ) {
     this._signIn = value;
+  }
+  public resetSignIn() {
+    this._signIn = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get signInInput() {
+    return this._signIn
   }
 
   // sign_up - computed: false, optional: true, required: false
   private _signUp?: ApiManagementSignUp[];
   public get signUp() {
-    return this._signUp;
+    return this.interpolationForAttribute('sign_up') as any;
   }
-  public set signUp(value: ApiManagementSignUp[] | undefined) {
+  public set signUp(value: ApiManagementSignUp[] ) {
     this._signUp = value;
+  }
+  public resetSignUp() {
+    this._signUp = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get signUpInput() {
+    return this._signUp
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: ApiManagementTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: ApiManagementTimeouts | undefined) {
+  public set timeouts(value: ApiManagementTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

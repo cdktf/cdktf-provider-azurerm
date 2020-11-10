@@ -64,7 +64,7 @@ export class SqlElasticpool extends TerraformResource {
   // ATTRIBUTES
   // ==========
 
-  // creation_date - computed: true, optional: false, required: true
+  // creation_date - computed: true, optional: false, required: false
   public get creationDate() {
     return this.getStringAttribute('creation_date');
   }
@@ -72,109 +72,164 @@ export class SqlElasticpool extends TerraformResource {
   // db_dtu_max - computed: true, optional: true, required: false
   private _dbDtuMax?: number;
   public get dbDtuMax() {
-    return this._dbDtuMax ?? this.getNumberAttribute('db_dtu_max');
+    return this.getNumberAttribute('db_dtu_max');
   }
-  public set dbDtuMax(value: number | undefined) {
+  public set dbDtuMax(value: number) {
     this._dbDtuMax = value;
+  }
+  public resetDbDtuMax() {
+    this._dbDtuMax = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dbDtuMaxInput() {
+    return this._dbDtuMax
   }
 
   // db_dtu_min - computed: true, optional: true, required: false
   private _dbDtuMin?: number;
   public get dbDtuMin() {
-    return this._dbDtuMin ?? this.getNumberAttribute('db_dtu_min');
+    return this.getNumberAttribute('db_dtu_min');
   }
-  public set dbDtuMin(value: number | undefined) {
+  public set dbDtuMin(value: number) {
     this._dbDtuMin = value;
+  }
+  public resetDbDtuMin() {
+    this._dbDtuMin = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dbDtuMinInput() {
+    return this._dbDtuMin
   }
 
   // dtu - computed: false, optional: false, required: true
   private _dtu: number;
   public get dtu() {
-    return this._dtu;
+    return this.getNumberAttribute('dtu');
   }
   public set dtu(value: number) {
     this._dtu = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dtuInput() {
+    return this._dtu
   }
 
   // edition - computed: false, optional: false, required: true
   private _edition: string;
   public get edition() {
-    return this._edition;
+    return this.getStringAttribute('edition');
   }
   public set edition(value: string) {
     this._edition = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get editionInput() {
+    return this._edition
+  }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // location - computed: false, optional: false, required: true
   private _location: string;
   public get location() {
-    return this._location;
+    return this.getStringAttribute('location');
   }
   public set location(value: string) {
     this._location = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get locationInput() {
+    return this._location
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // pool_size - computed: true, optional: true, required: false
   private _poolSize?: number;
   public get poolSize() {
-    return this._poolSize ?? this.getNumberAttribute('pool_size');
+    return this.getNumberAttribute('pool_size');
   }
-  public set poolSize(value: number | undefined) {
+  public set poolSize(value: number) {
     this._poolSize = value;
+  }
+  public resetPoolSize() {
+    this._poolSize = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get poolSizeInput() {
+    return this._poolSize
   }
 
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
-    return this._resourceGroupName;
+    return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
   }
 
   // server_name - computed: false, optional: false, required: true
   private _serverName: string;
   public get serverName() {
-    return this._serverName;
+    return this.getStringAttribute('server_name');
   }
   public set serverName(value: string) {
     this._serverName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get serverNameInput() {
+    return this._serverName
   }
 
   // tags - computed: false, optional: true, required: false
   private _tags?: { [key: string]: string };
   public get tags() {
-    return this._tags;
+    return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | undefined) {
+  public set tags(value: { [key: string]: string } ) {
     this._tags = value;
+  }
+  public resetTags() {
+    this._tags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsInput() {
+    return this._tags
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: SqlElasticpoolTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: SqlElasticpoolTimeouts | undefined) {
+  public set timeouts(value: SqlElasticpoolTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

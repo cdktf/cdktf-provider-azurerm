@@ -69,100 +69,157 @@ export class PolicyAssignment extends TerraformResource {
   // description - computed: false, optional: true, required: false
   private _description?: string;
   public get description() {
-    return this._description;
+    return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string ) {
     this._description = value;
+  }
+  public resetDescription() {
+    this._description = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get descriptionInput() {
+    return this._description
   }
 
   // display_name - computed: false, optional: true, required: false
   private _displayName?: string;
   public get displayName() {
-    return this._displayName;
+    return this.getStringAttribute('display_name');
   }
-  public set displayName(value: string | undefined) {
+  public set displayName(value: string ) {
     this._displayName = value;
+  }
+  public resetDisplayName() {
+    this._displayName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get displayNameInput() {
+    return this._displayName
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // location - computed: false, optional: true, required: false
   private _location?: string;
   public get location() {
-    return this._location;
+    return this.getStringAttribute('location');
   }
-  public set location(value: string | undefined) {
+  public set location(value: string ) {
     this._location = value;
+  }
+  public resetLocation() {
+    this._location = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get locationInput() {
+    return this._location
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // not_scopes - computed: false, optional: true, required: false
   private _notScopes?: string[];
   public get notScopes() {
-    return this._notScopes;
+    return this.getListAttribute('not_scopes');
   }
-  public set notScopes(value: string[] | undefined) {
+  public set notScopes(value: string[] ) {
     this._notScopes = value;
+  }
+  public resetNotScopes() {
+    this._notScopes = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get notScopesInput() {
+    return this._notScopes
   }
 
   // parameters - computed: false, optional: true, required: false
   private _parameters?: string;
   public get parameters() {
-    return this._parameters;
+    return this.getStringAttribute('parameters');
   }
-  public set parameters(value: string | undefined) {
+  public set parameters(value: string ) {
     this._parameters = value;
+  }
+  public resetParameters() {
+    this._parameters = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get parametersInput() {
+    return this._parameters
   }
 
   // policy_definition_id - computed: false, optional: false, required: true
   private _policyDefinitionId: string;
   public get policyDefinitionId() {
-    return this._policyDefinitionId;
+    return this.getStringAttribute('policy_definition_id');
   }
   public set policyDefinitionId(value: string) {
     this._policyDefinitionId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get policyDefinitionIdInput() {
+    return this._policyDefinitionId
   }
 
   // scope - computed: false, optional: false, required: true
   private _scope: string;
   public get scope() {
-    return this._scope;
+    return this.getStringAttribute('scope');
   }
   public set scope(value: string) {
     this._scope = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get scopeInput() {
+    return this._scope
   }
 
   // identity - computed: false, optional: true, required: false
   private _identity?: PolicyAssignmentIdentity[];
   public get identity() {
-    return this._identity;
+    return this.interpolationForAttribute('identity') as any;
   }
-  public set identity(value: PolicyAssignmentIdentity[] | undefined) {
+  public set identity(value: PolicyAssignmentIdentity[] ) {
     this._identity = value;
+  }
+  public resetIdentity() {
+    this._identity = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get identityInput() {
+    return this._identity
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: PolicyAssignmentTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: PolicyAssignmentTimeouts | undefined) {
+  public set timeouts(value: PolicyAssignmentTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

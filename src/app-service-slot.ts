@@ -34,12 +34,12 @@ export interface AppServiceSlotConfig extends TerraformMetaArguments {
 }
 export class AppServiceSlotSiteCredential extends ComplexComputedList {
 
-  // password - computed: true, optional: false, required: true
+  // password - computed: true, optional: false, required: false
   public get password() {
     return this.getStringAttribute('password');
   }
 
-  // username - computed: true, optional: false, required: true
+  // username - computed: true, optional: false, required: false
   public get username() {
     return this.getStringAttribute('username');
   }
@@ -213,40 +213,62 @@ export class AppServiceSlot extends TerraformResource {
   // app_service_name - computed: false, optional: false, required: true
   private _appServiceName: string;
   public get appServiceName() {
-    return this._appServiceName;
+    return this.getStringAttribute('app_service_name');
   }
   public set appServiceName(value: string) {
     this._appServiceName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get appServiceNameInput() {
+    return this._appServiceName
   }
 
   // app_service_plan_id - computed: false, optional: false, required: true
   private _appServicePlanId: string;
   public get appServicePlanId() {
-    return this._appServicePlanId;
+    return this.getStringAttribute('app_service_plan_id');
   }
   public set appServicePlanId(value: string) {
     this._appServicePlanId = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get appServicePlanIdInput() {
+    return this._appServicePlanId
+  }
 
   // app_settings - computed: true, optional: true, required: false
   private _appSettings?: { [key: string]: string }
-  public get appSettings(): { [key: string]: string } | undefined {
-    return this._appSettings; // Getting the computed value is not yet implemented
+  public get appSettings(): { [key: string]: string } {
+    return this.interpolationForAttribute('app_settings') as any; // Getting the computed value is not yet implemented
   }
-  public set appSettings(value: { [key: string]: string } | undefined) {
+  public set appSettings(value: { [key: string]: string }) {
     this._appSettings = value;
+  }
+  public resetAppSettings() {
+    this._appSettings = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get appSettingsInput() {
+    return this._appSettings
   }
 
   // client_affinity_enabled - computed: true, optional: true, required: false
   private _clientAffinityEnabled?: boolean;
   public get clientAffinityEnabled() {
-    return this._clientAffinityEnabled ?? this.getBooleanAttribute('client_affinity_enabled');
+    return this.getBooleanAttribute('client_affinity_enabled');
   }
-  public set clientAffinityEnabled(value: boolean | undefined) {
+  public set clientAffinityEnabled(value: boolean) {
     this._clientAffinityEnabled = value;
   }
+  public resetClientAffinityEnabled() {
+    this._clientAffinityEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get clientAffinityEnabledInput() {
+    return this._clientAffinityEnabled
+  }
 
-  // default_site_hostname - computed: true, optional: false, required: true
+  // default_site_hostname - computed: true, optional: false, required: false
   public get defaultSiteHostname() {
     return this.getStringAttribute('default_site_hostname');
   }
@@ -254,58 +276,80 @@ export class AppServiceSlot extends TerraformResource {
   // enabled - computed: false, optional: true, required: false
   private _enabled?: boolean;
   public get enabled() {
-    return this._enabled;
+    return this.getBooleanAttribute('enabled');
   }
-  public set enabled(value: boolean | undefined) {
+  public set enabled(value: boolean ) {
     this._enabled = value;
+  }
+  public resetEnabled() {
+    this._enabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enabledInput() {
+    return this._enabled
   }
 
   // https_only - computed: false, optional: true, required: false
   private _httpsOnly?: boolean;
   public get httpsOnly() {
-    return this._httpsOnly;
+    return this.getBooleanAttribute('https_only');
   }
-  public set httpsOnly(value: boolean | undefined) {
+  public set httpsOnly(value: boolean ) {
     this._httpsOnly = value;
+  }
+  public resetHttpsOnly() {
+    this._httpsOnly = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get httpsOnlyInput() {
+    return this._httpsOnly
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // location - computed: false, optional: false, required: true
   private _location: string;
   public get location() {
-    return this._location;
+    return this.getStringAttribute('location');
   }
   public set location(value: string) {
     this._location = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get locationInput() {
+    return this._location
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
-    return this._resourceGroupName;
+    return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
+  }
 
-  // site_credential - computed: true, optional: false, required: true
+  // site_credential - computed: true, optional: false, required: false
   public siteCredential(index: string) {
     return new AppServiceSlotSiteCredential(this, 'site_credential', index);
   }
@@ -313,64 +357,113 @@ export class AppServiceSlot extends TerraformResource {
   // tags - computed: false, optional: true, required: false
   private _tags?: { [key: string]: string };
   public get tags() {
-    return this._tags;
+    return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | undefined) {
+  public set tags(value: { [key: string]: string } ) {
     this._tags = value;
+  }
+  public resetTags() {
+    this._tags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsInput() {
+    return this._tags
   }
 
   // auth_settings - computed: false, optional: true, required: false
   private _authSettings?: AppServiceSlotAuthSettings[];
   public get authSettings() {
-    return this._authSettings;
+    return this.interpolationForAttribute('auth_settings') as any;
   }
-  public set authSettings(value: AppServiceSlotAuthSettings[] | undefined) {
+  public set authSettings(value: AppServiceSlotAuthSettings[] ) {
     this._authSettings = value;
+  }
+  public resetAuthSettings() {
+    this._authSettings = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get authSettingsInput() {
+    return this._authSettings
   }
 
   // connection_string - computed: false, optional: true, required: false
   private _connectionString?: AppServiceSlotConnectionString[];
   public get connectionString() {
-    return this._connectionString;
+    return this.interpolationForAttribute('connection_string') as any;
   }
-  public set connectionString(value: AppServiceSlotConnectionString[] | undefined) {
+  public set connectionString(value: AppServiceSlotConnectionString[] ) {
     this._connectionString = value;
+  }
+  public resetConnectionString() {
+    this._connectionString = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get connectionStringInput() {
+    return this._connectionString
   }
 
   // identity - computed: false, optional: true, required: false
   private _identity?: AppServiceSlotIdentity[];
   public get identity() {
-    return this._identity;
+    return this.interpolationForAttribute('identity') as any;
   }
-  public set identity(value: AppServiceSlotIdentity[] | undefined) {
+  public set identity(value: AppServiceSlotIdentity[] ) {
     this._identity = value;
+  }
+  public resetIdentity() {
+    this._identity = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get identityInput() {
+    return this._identity
   }
 
   // logs - computed: false, optional: true, required: false
   private _logs?: AppServiceSlotLogs[];
   public get logs() {
-    return this._logs;
+    return this.interpolationForAttribute('logs') as any;
   }
-  public set logs(value: AppServiceSlotLogs[] | undefined) {
+  public set logs(value: AppServiceSlotLogs[] ) {
     this._logs = value;
+  }
+  public resetLogs() {
+    this._logs = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get logsInput() {
+    return this._logs
   }
 
   // site_config - computed: false, optional: true, required: false
   private _siteConfig?: AppServiceSlotSiteConfig[];
   public get siteConfig() {
-    return this._siteConfig;
+    return this.interpolationForAttribute('site_config') as any;
   }
-  public set siteConfig(value: AppServiceSlotSiteConfig[] | undefined) {
+  public set siteConfig(value: AppServiceSlotSiteConfig[] ) {
     this._siteConfig = value;
+  }
+  public resetSiteConfig() {
+    this._siteConfig = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get siteConfigInput() {
+    return this._siteConfig
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: AppServiceSlotTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: AppServiceSlotTimeouts | undefined) {
+  public set timeouts(value: AppServiceSlotTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

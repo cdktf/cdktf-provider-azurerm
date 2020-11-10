@@ -38,24 +38,24 @@ export interface AppServiceConfig extends TerraformMetaArguments {
 }
 export class AppServiceSiteCredential extends ComplexComputedList {
 
-  // password - computed: true, optional: false, required: true
+  // password - computed: true, optional: false, required: false
   public get password() {
     return this.getStringAttribute('password');
   }
 
-  // username - computed: true, optional: false, required: true
+  // username - computed: true, optional: false, required: false
   public get username() {
     return this.getStringAttribute('username');
   }
 }
 export class AppServiceSourceControl extends ComplexComputedList {
 
-  // branch - computed: true, optional: false, required: true
+  // branch - computed: true, optional: false, required: false
   public get branch() {
     return this.getStringAttribute('branch');
   }
 
-  // repo_url - computed: true, optional: false, required: true
+  // repo_url - computed: true, optional: false, required: false
   public get repoUrl() {
     return this.getStringAttribute('repo_url');
   }
@@ -253,40 +253,65 @@ export class AppService extends TerraformResource {
   // app_service_plan_id - computed: false, optional: false, required: true
   private _appServicePlanId: string;
   public get appServicePlanId() {
-    return this._appServicePlanId;
+    return this.getStringAttribute('app_service_plan_id');
   }
   public set appServicePlanId(value: string) {
     this._appServicePlanId = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get appServicePlanIdInput() {
+    return this._appServicePlanId
+  }
 
   // app_settings - computed: true, optional: true, required: false
   private _appSettings?: { [key: string]: string }
-  public get appSettings(): { [key: string]: string } | undefined {
-    return this._appSettings; // Getting the computed value is not yet implemented
+  public get appSettings(): { [key: string]: string } {
+    return this.interpolationForAttribute('app_settings') as any; // Getting the computed value is not yet implemented
   }
-  public set appSettings(value: { [key: string]: string } | undefined) {
+  public set appSettings(value: { [key: string]: string }) {
     this._appSettings = value;
+  }
+  public resetAppSettings() {
+    this._appSettings = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get appSettingsInput() {
+    return this._appSettings
   }
 
   // client_affinity_enabled - computed: true, optional: true, required: false
   private _clientAffinityEnabled?: boolean;
   public get clientAffinityEnabled() {
-    return this._clientAffinityEnabled ?? this.getBooleanAttribute('client_affinity_enabled');
+    return this.getBooleanAttribute('client_affinity_enabled');
   }
-  public set clientAffinityEnabled(value: boolean | undefined) {
+  public set clientAffinityEnabled(value: boolean) {
     this._clientAffinityEnabled = value;
+  }
+  public resetClientAffinityEnabled() {
+    this._clientAffinityEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get clientAffinityEnabledInput() {
+    return this._clientAffinityEnabled
   }
 
   // client_cert_enabled - computed: false, optional: true, required: false
   private _clientCertEnabled?: boolean;
   public get clientCertEnabled() {
-    return this._clientCertEnabled;
+    return this.getBooleanAttribute('client_cert_enabled');
   }
-  public set clientCertEnabled(value: boolean | undefined) {
+  public set clientCertEnabled(value: boolean ) {
     this._clientCertEnabled = value;
   }
+  public resetClientCertEnabled() {
+    this._clientCertEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get clientCertEnabledInput() {
+    return this._clientCertEnabled
+  }
 
-  // default_site_hostname - computed: true, optional: false, required: true
+  // default_site_hostname - computed: true, optional: false, required: false
   public get defaultSiteHostname() {
     return this.getStringAttribute('default_site_hostname');
   }
@@ -294,54 +319,72 @@ export class AppService extends TerraformResource {
   // enabled - computed: false, optional: true, required: false
   private _enabled?: boolean;
   public get enabled() {
-    return this._enabled;
+    return this.getBooleanAttribute('enabled');
   }
-  public set enabled(value: boolean | undefined) {
+  public set enabled(value: boolean ) {
     this._enabled = value;
+  }
+  public resetEnabled() {
+    this._enabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enabledInput() {
+    return this._enabled
   }
 
   // https_only - computed: false, optional: true, required: false
   private _httpsOnly?: boolean;
   public get httpsOnly() {
-    return this._httpsOnly;
+    return this.getBooleanAttribute('https_only');
   }
-  public set httpsOnly(value: boolean | undefined) {
+  public set httpsOnly(value: boolean ) {
     this._httpsOnly = value;
+  }
+  public resetHttpsOnly() {
+    this._httpsOnly = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get httpsOnlyInput() {
+    return this._httpsOnly
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // location - computed: false, optional: false, required: true
   private _location: string;
   public get location() {
-    return this._location;
+    return this.getStringAttribute('location');
   }
   public set location(value: string) {
     this._location = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get locationInput() {
+    return this._location
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
+  }
 
-  // outbound_ip_addresses - computed: true, optional: false, required: true
+  // outbound_ip_addresses - computed: true, optional: false, required: false
   public get outboundIpAddresses() {
     return this.getStringAttribute('outbound_ip_addresses');
   }
 
-  // possible_outbound_ip_addresses - computed: true, optional: false, required: true
+  // possible_outbound_ip_addresses - computed: true, optional: false, required: false
   public get possibleOutboundIpAddresses() {
     return this.getStringAttribute('possible_outbound_ip_addresses');
   }
@@ -349,18 +392,22 @@ export class AppService extends TerraformResource {
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
-    return this._resourceGroupName;
+    return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
+  }
 
-  // site_credential - computed: true, optional: false, required: true
+  // site_credential - computed: true, optional: false, required: false
   public siteCredential(index: string) {
     return new AppServiceSiteCredential(this, 'site_credential', index);
   }
 
-  // source_control - computed: true, optional: false, required: true
+  // source_control - computed: true, optional: false, required: false
   public sourceControl(index: string) {
     return new AppServiceSourceControl(this, 'source_control', index);
   }
@@ -368,82 +415,145 @@ export class AppService extends TerraformResource {
   // tags - computed: false, optional: true, required: false
   private _tags?: { [key: string]: string };
   public get tags() {
-    return this._tags;
+    return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | undefined) {
+  public set tags(value: { [key: string]: string } ) {
     this._tags = value;
+  }
+  public resetTags() {
+    this._tags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsInput() {
+    return this._tags
   }
 
   // auth_settings - computed: false, optional: true, required: false
   private _authSettings?: AppServiceAuthSettings[];
   public get authSettings() {
-    return this._authSettings;
+    return this.interpolationForAttribute('auth_settings') as any;
   }
-  public set authSettings(value: AppServiceAuthSettings[] | undefined) {
+  public set authSettings(value: AppServiceAuthSettings[] ) {
     this._authSettings = value;
+  }
+  public resetAuthSettings() {
+    this._authSettings = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get authSettingsInput() {
+    return this._authSettings
   }
 
   // backup - computed: false, optional: true, required: false
   private _backup?: AppServiceBackup[];
   public get backup() {
-    return this._backup;
+    return this.interpolationForAttribute('backup') as any;
   }
-  public set backup(value: AppServiceBackup[] | undefined) {
+  public set backup(value: AppServiceBackup[] ) {
     this._backup = value;
+  }
+  public resetBackup() {
+    this._backup = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get backupInput() {
+    return this._backup
   }
 
   // connection_string - computed: false, optional: true, required: false
   private _connectionString?: AppServiceConnectionString[];
   public get connectionString() {
-    return this._connectionString;
+    return this.interpolationForAttribute('connection_string') as any;
   }
-  public set connectionString(value: AppServiceConnectionString[] | undefined) {
+  public set connectionString(value: AppServiceConnectionString[] ) {
     this._connectionString = value;
+  }
+  public resetConnectionString() {
+    this._connectionString = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get connectionStringInput() {
+    return this._connectionString
   }
 
   // identity - computed: false, optional: true, required: false
   private _identity?: AppServiceIdentity[];
   public get identity() {
-    return this._identity;
+    return this.interpolationForAttribute('identity') as any;
   }
-  public set identity(value: AppServiceIdentity[] | undefined) {
+  public set identity(value: AppServiceIdentity[] ) {
     this._identity = value;
+  }
+  public resetIdentity() {
+    this._identity = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get identityInput() {
+    return this._identity
   }
 
   // logs - computed: false, optional: true, required: false
   private _logs?: AppServiceLogs[];
   public get logs() {
-    return this._logs;
+    return this.interpolationForAttribute('logs') as any;
   }
-  public set logs(value: AppServiceLogs[] | undefined) {
+  public set logs(value: AppServiceLogs[] ) {
     this._logs = value;
+  }
+  public resetLogs() {
+    this._logs = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get logsInput() {
+    return this._logs
   }
 
   // site_config - computed: false, optional: true, required: false
   private _siteConfig?: AppServiceSiteConfig[];
   public get siteConfig() {
-    return this._siteConfig;
+    return this.interpolationForAttribute('site_config') as any;
   }
-  public set siteConfig(value: AppServiceSiteConfig[] | undefined) {
+  public set siteConfig(value: AppServiceSiteConfig[] ) {
     this._siteConfig = value;
+  }
+  public resetSiteConfig() {
+    this._siteConfig = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get siteConfigInput() {
+    return this._siteConfig
   }
 
   // storage_account - computed: false, optional: true, required: false
   private _storageAccount?: AppServiceStorageAccount[];
   public get storageAccount() {
-    return this._storageAccount;
+    return this.interpolationForAttribute('storage_account') as any;
   }
-  public set storageAccount(value: AppServiceStorageAccount[] | undefined) {
+  public set storageAccount(value: AppServiceStorageAccount[] ) {
     this._storageAccount = value;
+  }
+  public resetStorageAccount() {
+    this._storageAccount = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get storageAccountInput() {
+    return this._storageAccount
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: AppServiceTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: AppServiceTimeouts | undefined) {
+  public set timeouts(value: AppServiceTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

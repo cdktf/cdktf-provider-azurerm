@@ -66,7 +66,7 @@ export class ExpressRouteCircuitPeering extends TerraformResource {
   // ATTRIBUTES
   // ==========
 
-  // azure_asn - computed: true, optional: false, required: true
+  // azure_asn - computed: true, optional: false, required: false
   public get azureAsn() {
     return this.getNumberAttribute('azure_asn');
   }
@@ -74,40 +74,51 @@ export class ExpressRouteCircuitPeering extends TerraformResource {
   // express_route_circuit_name - computed: false, optional: false, required: true
   private _expressRouteCircuitName: string;
   public get expressRouteCircuitName() {
-    return this._expressRouteCircuitName;
+    return this.getStringAttribute('express_route_circuit_name');
   }
   public set expressRouteCircuitName(value: string) {
     this._expressRouteCircuitName = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get expressRouteCircuitNameInput() {
+    return this._expressRouteCircuitName
+  }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // peer_asn - computed: true, optional: true, required: false
   private _peerAsn?: number;
   public get peerAsn() {
-    return this._peerAsn ?? this.getNumberAttribute('peer_asn');
+    return this.getNumberAttribute('peer_asn');
   }
-  public set peerAsn(value: number | undefined) {
+  public set peerAsn(value: number) {
     this._peerAsn = value;
+  }
+  public resetPeerAsn() {
+    this._peerAsn = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get peerAsnInput() {
+    return this._peerAsn
   }
 
   // peering_type - computed: false, optional: false, required: true
   private _peeringType: string;
   public get peeringType() {
-    return this._peeringType;
+    return this.getStringAttribute('peering_type');
   }
   public set peeringType(value: string) {
     this._peeringType = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get peeringTypeInput() {
+    return this._peeringType
+  }
 
-  // primary_azure_port - computed: true, optional: false, required: true
+  // primary_azure_port - computed: true, optional: false, required: false
   public get primaryAzurePort() {
     return this.getStringAttribute('primary_azure_port');
   }
@@ -115,22 +126,30 @@ export class ExpressRouteCircuitPeering extends TerraformResource {
   // primary_peer_address_prefix - computed: false, optional: false, required: true
   private _primaryPeerAddressPrefix: string;
   public get primaryPeerAddressPrefix() {
-    return this._primaryPeerAddressPrefix;
+    return this.getStringAttribute('primary_peer_address_prefix');
   }
   public set primaryPeerAddressPrefix(value: string) {
     this._primaryPeerAddressPrefix = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get primaryPeerAddressPrefixInput() {
+    return this._primaryPeerAddressPrefix
   }
 
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
-    return this._resourceGroupName;
+    return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
+  }
 
-  // secondary_azure_port - computed: true, optional: false, required: true
+  // secondary_azure_port - computed: true, optional: false, required: false
   public get secondaryAzurePort() {
     return this.getStringAttribute('secondary_azure_port');
   }
@@ -138,46 +157,75 @@ export class ExpressRouteCircuitPeering extends TerraformResource {
   // secondary_peer_address_prefix - computed: false, optional: false, required: true
   private _secondaryPeerAddressPrefix: string;
   public get secondaryPeerAddressPrefix() {
-    return this._secondaryPeerAddressPrefix;
+    return this.getStringAttribute('secondary_peer_address_prefix');
   }
   public set secondaryPeerAddressPrefix(value: string) {
     this._secondaryPeerAddressPrefix = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get secondaryPeerAddressPrefixInput() {
+    return this._secondaryPeerAddressPrefix
   }
 
   // shared_key - computed: false, optional: true, required: false
   private _sharedKey?: string;
   public get sharedKey() {
-    return this._sharedKey;
+    return this.getStringAttribute('shared_key');
   }
-  public set sharedKey(value: string | undefined) {
+  public set sharedKey(value: string ) {
     this._sharedKey = value;
+  }
+  public resetSharedKey() {
+    this._sharedKey = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sharedKeyInput() {
+    return this._sharedKey
   }
 
   // vlan_id - computed: false, optional: false, required: true
   private _vlanId: number;
   public get vlanId() {
-    return this._vlanId;
+    return this.getNumberAttribute('vlan_id');
   }
   public set vlanId(value: number) {
     this._vlanId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get vlanIdInput() {
+    return this._vlanId
   }
 
   // microsoft_peering_config - computed: false, optional: true, required: false
   private _microsoftPeeringConfig?: ExpressRouteCircuitPeeringMicrosoftPeeringConfig[];
   public get microsoftPeeringConfig() {
-    return this._microsoftPeeringConfig;
+    return this.interpolationForAttribute('microsoft_peering_config') as any;
   }
-  public set microsoftPeeringConfig(value: ExpressRouteCircuitPeeringMicrosoftPeeringConfig[] | undefined) {
+  public set microsoftPeeringConfig(value: ExpressRouteCircuitPeeringMicrosoftPeeringConfig[] ) {
     this._microsoftPeeringConfig = value;
+  }
+  public resetMicrosoftPeeringConfig() {
+    this._microsoftPeeringConfig = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get microsoftPeeringConfigInput() {
+    return this._microsoftPeeringConfig
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: ExpressRouteCircuitPeeringTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: ExpressRouteCircuitPeeringTimeouts | undefined) {
+  public set timeouts(value: ExpressRouteCircuitPeeringTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

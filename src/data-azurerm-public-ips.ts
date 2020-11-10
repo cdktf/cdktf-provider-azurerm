@@ -18,27 +18,27 @@ export interface DataAzurermPublicIpsConfig extends TerraformMetaArguments {
 }
 export class DataAzurermPublicIpsPublicIps extends ComplexComputedList {
 
-  // domain_name_label - computed: true, optional: false, required: true
+  // domain_name_label - computed: true, optional: false, required: false
   public get domainNameLabel() {
     return this.getStringAttribute('domain_name_label');
   }
 
-  // fqdn - computed: true, optional: false, required: true
+  // fqdn - computed: true, optional: false, required: false
   public get fqdn() {
     return this.getStringAttribute('fqdn');
   }
 
-  // id - computed: true, optional: false, required: true
+  // id - computed: true, optional: false, required: false
   public get id() {
     return this.getStringAttribute('id');
   }
 
-  // ip_address - computed: true, optional: false, required: true
+  // ip_address - computed: true, optional: false, required: false
   public get ipAddress() {
     return this.getStringAttribute('ip_address');
   }
 
-  // name - computed: true, optional: false, required: true
+  // name - computed: true, optional: false, required: false
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -80,40 +80,57 @@ export class DataAzurermPublicIps extends TerraformDataSource {
   // allocation_type - computed: false, optional: true, required: false
   private _allocationType?: string;
   public get allocationType() {
-    return this._allocationType;
+    return this.getStringAttribute('allocation_type');
   }
-  public set allocationType(value: string | undefined) {
+  public set allocationType(value: string ) {
     this._allocationType = value;
+  }
+  public resetAllocationType() {
+    this._allocationType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get allocationTypeInput() {
+    return this._allocationType
   }
 
   // attached - computed: false, optional: true, required: false
   private _attached?: boolean;
   public get attached() {
-    return this._attached;
+    return this.getBooleanAttribute('attached');
   }
-  public set attached(value: boolean | undefined) {
+  public set attached(value: boolean ) {
     this._attached = value;
+  }
+  public resetAttached() {
+    this._attached = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get attachedInput() {
+    return this._attached
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // name_prefix - computed: false, optional: true, required: false
   private _namePrefix?: string;
   public get namePrefix() {
-    return this._namePrefix;
+    return this.getStringAttribute('name_prefix');
   }
-  public set namePrefix(value: string | undefined) {
+  public set namePrefix(value: string ) {
     this._namePrefix = value;
   }
+  public resetNamePrefix() {
+    this._namePrefix = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get namePrefixInput() {
+    return this._namePrefix
+  }
 
-  // public_ips - computed: true, optional: false, required: true
+  // public_ips - computed: true, optional: false, required: false
   public publicIps(index: string) {
     return new DataAzurermPublicIpsPublicIps(this, 'public_ips', index);
   }
@@ -121,19 +138,30 @@ export class DataAzurermPublicIps extends TerraformDataSource {
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
-    return this._resourceGroupName;
+    return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: DataAzurermPublicIpsTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: DataAzurermPublicIpsTimeouts | undefined) {
+  public set timeouts(value: DataAzurermPublicIpsTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

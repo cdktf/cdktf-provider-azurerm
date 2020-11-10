@@ -73,91 +73,138 @@ export class Subnet extends TerraformResource {
   // address_prefix - computed: false, optional: false, required: true
   private _addressPrefix: string;
   public get addressPrefix() {
-    return this._addressPrefix;
+    return this.getStringAttribute('address_prefix');
   }
   public set addressPrefix(value: string) {
     this._addressPrefix = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get addressPrefixInput() {
+    return this._addressPrefix
   }
 
   // enforce_private_link_endpoint_network_policies - computed: false, optional: true, required: false
   private _enforcePrivateLinkEndpointNetworkPolicies?: boolean;
   public get enforcePrivateLinkEndpointNetworkPolicies() {
-    return this._enforcePrivateLinkEndpointNetworkPolicies;
+    return this.getBooleanAttribute('enforce_private_link_endpoint_network_policies');
   }
-  public set enforcePrivateLinkEndpointNetworkPolicies(value: boolean | undefined) {
+  public set enforcePrivateLinkEndpointNetworkPolicies(value: boolean ) {
     this._enforcePrivateLinkEndpointNetworkPolicies = value;
+  }
+  public resetEnforcePrivateLinkEndpointNetworkPolicies() {
+    this._enforcePrivateLinkEndpointNetworkPolicies = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enforcePrivateLinkEndpointNetworkPoliciesInput() {
+    return this._enforcePrivateLinkEndpointNetworkPolicies
   }
 
   // enforce_private_link_service_network_policies - computed: false, optional: true, required: false
   private _enforcePrivateLinkServiceNetworkPolicies?: boolean;
   public get enforcePrivateLinkServiceNetworkPolicies() {
-    return this._enforcePrivateLinkServiceNetworkPolicies;
+    return this.getBooleanAttribute('enforce_private_link_service_network_policies');
   }
-  public set enforcePrivateLinkServiceNetworkPolicies(value: boolean | undefined) {
+  public set enforcePrivateLinkServiceNetworkPolicies(value: boolean ) {
     this._enforcePrivateLinkServiceNetworkPolicies = value;
+  }
+  public resetEnforcePrivateLinkServiceNetworkPolicies() {
+    this._enforcePrivateLinkServiceNetworkPolicies = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enforcePrivateLinkServiceNetworkPoliciesInput() {
+    return this._enforcePrivateLinkServiceNetworkPolicies
   }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
-    return this._name;
+    return this.getStringAttribute('name');
   }
   public set name(value: string) {
     this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
-    return this._resourceGroupName;
+    return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
   }
 
   // service_endpoints - computed: false, optional: true, required: false
   private _serviceEndpoints?: string[];
   public get serviceEndpoints() {
-    return this._serviceEndpoints;
+    return this.getListAttribute('service_endpoints');
   }
-  public set serviceEndpoints(value: string[] | undefined) {
+  public set serviceEndpoints(value: string[] ) {
     this._serviceEndpoints = value;
+  }
+  public resetServiceEndpoints() {
+    this._serviceEndpoints = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get serviceEndpointsInput() {
+    return this._serviceEndpoints
   }
 
   // virtual_network_name - computed: false, optional: false, required: true
   private _virtualNetworkName: string;
   public get virtualNetworkName() {
-    return this._virtualNetworkName;
+    return this.getStringAttribute('virtual_network_name');
   }
   public set virtualNetworkName(value: string) {
     this._virtualNetworkName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get virtualNetworkNameInput() {
+    return this._virtualNetworkName
   }
 
   // delegation - computed: false, optional: true, required: false
   private _delegation?: SubnetDelegation[];
   public get delegation() {
-    return this._delegation;
+    return this.interpolationForAttribute('delegation') as any;
   }
-  public set delegation(value: SubnetDelegation[] | undefined) {
+  public set delegation(value: SubnetDelegation[] ) {
     this._delegation = value;
+  }
+  public resetDelegation() {
+    this._delegation = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get delegationInput() {
+    return this._delegation
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: SubnetTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: SubnetTimeouts | undefined) {
+  public set timeouts(value: SubnetTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========

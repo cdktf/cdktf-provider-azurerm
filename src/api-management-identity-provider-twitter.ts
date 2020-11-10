@@ -55,55 +55,74 @@ export class ApiManagementIdentityProviderTwitter extends TerraformResource {
   // api_key - computed: false, optional: false, required: true
   private _apiKey: string;
   public get apiKey() {
-    return this._apiKey;
+    return this.getStringAttribute('api_key');
   }
   public set apiKey(value: string) {
     this._apiKey = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get apiKeyInput() {
+    return this._apiKey
   }
 
   // api_management_name - computed: false, optional: false, required: true
   private _apiManagementName: string;
   public get apiManagementName() {
-    return this._apiManagementName;
+    return this.getStringAttribute('api_management_name');
   }
   public set apiManagementName(value: string) {
     this._apiManagementName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get apiManagementNameInput() {
+    return this._apiManagementName
   }
 
   // api_secret_key - computed: false, optional: false, required: true
   private _apiSecretKey: string;
   public get apiSecretKey() {
-    return this._apiSecretKey;
+    return this.getStringAttribute('api_secret_key');
   }
   public set apiSecretKey(value: string) {
     this._apiSecretKey = value;
   }
+  // Temporarily expose input value. Use with caution.
+  public get apiSecretKeyInput() {
+    return this._apiSecretKey
+  }
 
   // id - computed: true, optional: true, required: false
-  private _id?: string;
   public get id() {
-    return this._id ?? this.getStringAttribute('id');
-  }
-  public set id(value: string | undefined) {
-    this._id = value;
+    return this.getStringAttribute('id');
   }
 
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
-    return this._resourceGroupName;
+    return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
   }
 
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: ApiManagementIdentityProviderTwitterTimeouts;
   public get timeouts() {
-    return this._timeouts;
+    return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: ApiManagementIdentityProviderTwitterTimeouts | undefined) {
+  public set timeouts(value: ApiManagementIdentityProviderTwitterTimeouts ) {
     this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
   }
 
   // =========
