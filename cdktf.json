@@ -2,6 +2,6 @@
   "language": "typescript",
   "app": "echo noop",
   "terraformProviders": [
-    "azurerm@~> 2.0.0"
+    "azurerm@~> 2.0"
   ]
 }

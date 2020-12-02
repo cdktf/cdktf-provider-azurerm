@@ -1,5 +1,5 @@
 
-# Terraform CDK azurerm Provider ~> 2.0.0
+# Terraform CDK azurerm Provider ~> 2.0
 
 This repo builds and publishes the Terraform azurerm Provider bindings for [cdktf](https://cdk.tf).
 
@@ -10,7 +10,7 @@ Current build targets are:
 
 ## Versioning
 
-This project is explicitly not tracking the Terraform azurerm Provider version 1:1. In fact, it always tracks `latest` of `~> 2.0.0` with every release. If there scenarios where you explicitly have to pin your provider version, you can do so by generating the [provider constructs manually](https://cdk.tf/imports).
+This project is explicitly not tracking the Terraform azurerm Provider version 1:1. In fact, it always tracks `latest` of `~> 2.0` with every release. If there scenarios where you explicitly have to pin your provider version, you can do so by generating the [provider constructs manually](https://cdk.tf/imports).
 
 These are the upstream dependencies:
 
