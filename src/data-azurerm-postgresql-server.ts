@@ -4,6 +4,7 @@
 import { Construct } from 'constructs';
 import { TerraformDataSource } from 'cdktf';
 import { TerraformMetaArguments } from 'cdktf';
+import { ComplexComputedList } from "cdktf";
 import { StringMap } from "cdktf";
 
 // Configuration
@@ -13,6 +14,23 @@ export interface DataAzurermPostgresqlServerConfig extends TerraformMetaArgument
   readonly resourceGroupName: string;
   /** timeouts block */
   readonly timeouts?: DataAzurermPostgresqlServerTimeouts;
+}
+export class DataAzurermPostgresqlServerIdentity extends ComplexComputedList {
+
+  // principal_id - computed: true, optional: false, required: false
+  public get principalId() {
+    return this.getStringAttribute('principal_id');
+  }
+
+  // tenant_id - computed: true, optional: false, required: false
+  public get tenantId() {
+    return this.getStringAttribute('tenant_id');
+  }
+
+  // type - computed: true, optional: false, required: false
+  public get type() {
+    return this.getStringAttribute('type');
+  }
 }
 export interface DataAzurermPostgresqlServerTimeouts {
   readonly read?: string;
@@ -61,6 +79,11 @@ export class DataAzurermPostgresqlServer extends TerraformDataSource {
     return this.getStringAttribute('id');
   }
 
+  // identity - computed: true, optional: false, required: false
+  public identity(index: string) {
+    return new DataAzurermPostgresqlServerIdentity(this, 'identity', index);
+  }
+
   // location - computed: true, optional: false, required: false
   public get location() {
     return this.getStringAttribute('location');
@@ -90,6 +113,11 @@ export class DataAzurermPostgresqlServer extends TerraformDataSource {
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
     return this._resourceGroupName
+  }
+
+  // sku_name - computed: true, optional: false, required: false
+  public get skuName() {
+    return this.getStringAttribute('sku_name');
   }
 
   // tags - computed: true, optional: false, required: false

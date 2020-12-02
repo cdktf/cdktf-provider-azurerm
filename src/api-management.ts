@@ -17,6 +17,7 @@ export interface ApiManagementConfig extends TerraformMetaArguments {
   readonly resourceGroupName: string;
   readonly skuName: string;
   readonly tags?: { [key: string]: string };
+  readonly virtualNetworkType?: string;
   /** additional_location block */
   readonly additionalLocation?: ApiManagementAdditionalLocation[];
   /** certificate block */
@@ -35,18 +36,32 @@ export interface ApiManagementConfig extends TerraformMetaArguments {
   readonly signUp?: ApiManagementSignUp[];
   /** timeouts block */
   readonly timeouts?: ApiManagementTimeouts;
+  /** virtual_network_configuration block */
+  readonly virtualNetworkConfiguration?: ApiManagementVirtualNetworkConfiguration[];
 }
 export interface ApiManagementPolicy {
   readonly xmlContent?: string;
   readonly xmlLink?: string;
 }
+export interface ApiManagementAdditionalLocationVirtualNetworkConfiguration {
+  readonly subnetId: string;
+}
 export interface ApiManagementAdditionalLocation {
   readonly location: string;
+  /** virtual_network_configuration block */
+  readonly virtualNetworkConfiguration?: ApiManagementAdditionalLocationVirtualNetworkConfiguration[];
 }
 export interface ApiManagementCertificate {
   readonly certificatePassword: string;
   readonly encodedCertificate: string;
   readonly storeName: string;
+}
+export interface ApiManagementHostnameConfigurationDeveloperPortal {
+  readonly certificate?: string;
+  readonly certificatePassword?: string;
+  readonly hostName: string;
+  readonly keyVaultId?: string;
+  readonly negotiateClientCertificate?: boolean;
 }
 export interface ApiManagementHostnameConfigurationManagement {
   readonly certificate?: string;
@@ -78,6 +93,8 @@ export interface ApiManagementHostnameConfigurationScm {
   readonly negotiateClientCertificate?: boolean;
 }
 export interface ApiManagementHostnameConfiguration {
+  /** developer_portal block */
+  readonly developerPortal?: ApiManagementHostnameConfigurationDeveloperPortal[];
   /** management block */
   readonly management?: ApiManagementHostnameConfigurationManagement[];
   /** portal block */
@@ -88,7 +105,8 @@ export interface ApiManagementHostnameConfiguration {
   readonly scm?: ApiManagementHostnameConfigurationScm[];
 }
 export interface ApiManagementIdentity {
-  readonly type: string;
+  readonly identityIds?: string[];
+  readonly type?: string;
 }
 export interface ApiManagementProtocols {
   readonly enableHttp2?: boolean;
@@ -121,6 +139,9 @@ export interface ApiManagementTimeouts {
   readonly read?: string;
   readonly update?: string;
 }
+export interface ApiManagementVirtualNetworkConfiguration {
+  readonly subnetId: string;
+}
 
 // Resource
 
@@ -150,6 +171,7 @@ export class ApiManagement extends TerraformResource {
     this._resourceGroupName = config.resourceGroupName;
     this._skuName = config.skuName;
     this._tags = config.tags;
+    this._virtualNetworkType = config.virtualNetworkType;
     this._additionalLocation = config.additionalLocation;
     this._certificate = config.certificate;
     this._hostnameConfiguration = config.hostnameConfiguration;
@@ -159,11 +181,17 @@ export class ApiManagement extends TerraformResource {
     this._signIn = config.signIn;
     this._signUp = config.signUp;
     this._timeouts = config.timeouts;
+    this._virtualNetworkConfiguration = config.virtualNetworkConfiguration;
   }
 
   // ==========
   // ATTRIBUTES
   // ==========
+
+  // developer_portal_url - computed: true, optional: false, required: false
+  public get developerPortalUrl() {
+    return this.getStringAttribute('developer_portal_url');
+  }
 
   // gateway_regional_url - computed: true, optional: false, required: false
   public get gatewayRegionalUrl() {
@@ -248,6 +276,11 @@ export class ApiManagement extends TerraformResource {
     return this.getStringAttribute('portal_url');
   }
 
+  // private_ip_addresses - computed: true, optional: false, required: false
+  public get privateIpAddresses() {
+    return this.getListAttribute('private_ip_addresses');
+  }
+
   // public_ip_addresses - computed: true, optional: false, required: false
   public get publicIpAddresses() {
     return this.getListAttribute('public_ip_addresses');
@@ -324,6 +357,22 @@ export class ApiManagement extends TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get tagsInput() {
     return this._tags
+  }
+
+  // virtual_network_type - computed: false, optional: true, required: false
+  private _virtualNetworkType?: string;
+  public get virtualNetworkType() {
+    return this.getStringAttribute('virtual_network_type');
+  }
+  public set virtualNetworkType(value: string ) {
+    this._virtualNetworkType = value;
+  }
+  public resetVirtualNetworkType() {
+    this._virtualNetworkType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get virtualNetworkTypeInput() {
+    return this._virtualNetworkType
   }
 
   // additional_location - computed: false, optional: true, required: false
@@ -470,6 +519,22 @@ export class ApiManagement extends TerraformResource {
     return this._timeouts
   }
 
+  // virtual_network_configuration - computed: false, optional: true, required: false
+  private _virtualNetworkConfiguration?: ApiManagementVirtualNetworkConfiguration[];
+  public get virtualNetworkConfiguration() {
+    return this.interpolationForAttribute('virtual_network_configuration') as any;
+  }
+  public set virtualNetworkConfiguration(value: ApiManagementVirtualNetworkConfiguration[] ) {
+    this._virtualNetworkConfiguration = value;
+  }
+  public resetVirtualNetworkConfiguration() {
+    this._virtualNetworkConfiguration = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get virtualNetworkConfigurationInput() {
+    return this._virtualNetworkConfiguration
+  }
+
   // =========
   // SYNTHESIS
   // =========
@@ -485,6 +550,7 @@ export class ApiManagement extends TerraformResource {
       resource_group_name: this._resourceGroupName,
       sku_name: this._skuName,
       tags: this._tags,
+      virtual_network_type: this._virtualNetworkType,
       additional_location: this._additionalLocation,
       certificate: this._certificate,
       hostname_configuration: this._hostnameConfiguration,
@@ -494,6 +560,7 @@ export class ApiManagement extends TerraformResource {
       sign_in: this._signIn,
       sign_up: this._signUp,
       timeouts: this._timeouts,
+      virtual_network_configuration: this._virtualNetworkConfiguration,
     };
   }
 }

@@ -19,9 +19,19 @@ export interface VpnGatewayConfig extends TerraformMetaArguments {
   /** timeouts block */
   readonly timeouts?: VpnGatewayTimeouts;
 }
+export interface VpnGatewayBgpSettingsInstance0BgpPeeringAddress {
+  readonly customIps: string[];
+}
+export interface VpnGatewayBgpSettingsInstance1BgpPeeringAddress {
+  readonly customIps: string[];
+}
 export interface VpnGatewayBgpSettings {
   readonly asn: number;
   readonly peerWeight: number;
+  /** instance_0_bgp_peering_address block */
+  readonly instance0BgpPeeringAddress?: VpnGatewayBgpSettingsInstance0BgpPeeringAddress[];
+  /** instance_1_bgp_peering_address block */
+  readonly instance1BgpPeeringAddress?: VpnGatewayBgpSettingsInstance1BgpPeeringAddress[];
 }
 export interface VpnGatewayTimeouts {
   readonly create?: string;

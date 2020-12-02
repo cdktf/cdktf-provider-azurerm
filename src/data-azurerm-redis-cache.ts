@@ -196,6 +196,11 @@ export class DataAzurermRedisCache extends TerraformDataSource {
     return this.getStringAttribute('primary_access_key');
   }
 
+  // primary_connection_string - computed: true, optional: false, required: false
+  public get primaryConnectionString() {
+    return this.getStringAttribute('primary_connection_string');
+  }
+
   // private_static_ip_address - computed: true, optional: false, required: false
   public get privateStaticIpAddress() {
     return this.getStringAttribute('private_static_ip_address');
@@ -222,6 +227,11 @@ export class DataAzurermRedisCache extends TerraformDataSource {
   // secondary_access_key - computed: true, optional: false, required: false
   public get secondaryAccessKey() {
     return this.getStringAttribute('secondary_access_key');
+  }
+
+  // secondary_connection_string - computed: true, optional: false, required: false
+  public get secondaryConnectionString() {
+    return this.getStringAttribute('secondary_connection_string');
   }
 
   // shard_count - computed: true, optional: false, required: false

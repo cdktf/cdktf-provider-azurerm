@@ -56,6 +56,16 @@ export class DataAzurermAppServiceEnvironment extends TerraformDataSource {
     return this.getStringAttribute('id');
   }
 
+  // internal_ip_address - computed: true, optional: false, required: false
+  public get internalIpAddress() {
+    return this.getStringAttribute('internal_ip_address');
+  }
+
+  // location - computed: true, optional: false, required: false
+  public get location() {
+    return this.getStringAttribute('location');
+  }
+
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
@@ -67,6 +77,11 @@ export class DataAzurermAppServiceEnvironment extends TerraformDataSource {
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
     return this._name
+  }
+
+  // outbound_ip_addresses - computed: true, optional: false, required: false
+  public get outboundIpAddresses() {
+    return this.getListAttribute('outbound_ip_addresses');
   }
 
   // pricing_tier - computed: true, optional: false, required: false
@@ -85,6 +100,11 @@ export class DataAzurermAppServiceEnvironment extends TerraformDataSource {
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
     return this._resourceGroupName
+  }
+
+  // service_ip_address - computed: true, optional: false, required: false
+  public get serviceIpAddress() {
+    return this.getStringAttribute('service_ip_address');
   }
 
   // tags - computed: true, optional: false, required: false

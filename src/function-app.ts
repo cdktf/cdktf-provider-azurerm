@@ -12,13 +12,17 @@ export interface FunctionAppConfig extends TerraformMetaArguments {
   readonly appServicePlanId: string;
   readonly appSettings?: { [key: string]: string };
   readonly clientAffinityEnabled?: boolean;
+  readonly dailyMemoryTimeQuota?: number;
   readonly enableBuiltinLogging?: boolean;
   readonly enabled?: boolean;
   readonly httpsOnly?: boolean;
   readonly location: string;
   readonly name: string;
+  readonly osType?: string;
   readonly resourceGroupName: string;
-  readonly storageConnectionString: string;
+  readonly storageAccountAccessKey?: string;
+  readonly storageAccountName?: string;
+  readonly storageConnectionString?: string;
   readonly tags?: { [key: string]: string };
   readonly version?: string;
   /** auth_settings block */
@@ -29,6 +33,8 @@ export interface FunctionAppConfig extends TerraformMetaArguments {
   readonly identity?: FunctionAppIdentity[];
   /** site_config block */
   readonly siteConfig?: FunctionAppSiteConfig[];
+  /** source_control block */
+  readonly sourceControl?: FunctionAppSourceControl[];
   /** timeouts block */
   readonly timeouts?: FunctionAppTimeouts;
 }
@@ -99,8 +105,20 @@ export interface FunctionAppIdentity {
   readonly type: string;
 }
 export interface FunctionAppSiteConfigIpRestriction {
+  readonly action?: string;
   readonly ipAddress?: string;
+  readonly name?: string;
+  readonly priority?: number;
   readonly subnetId?: string;
+  readonly virtualNetworkSubnetId?: string;
+}
+export interface FunctionAppSiteConfigScmIpRestriction {
+  readonly action?: string;
+  readonly ipAddress?: string;
+  readonly name?: string;
+  readonly priority?: number;
+  readonly subnetId?: string;
+  readonly virtualNetworkSubnetId?: string;
 }
 export interface FunctionAppSiteConfigCors {
   readonly allowedOrigins: string[];
@@ -108,15 +126,28 @@ export interface FunctionAppSiteConfigCors {
 }
 export interface FunctionAppSiteConfig {
   readonly alwaysOn?: boolean;
+  readonly autoSwapSlotName?: string;
   readonly ftpsState?: string;
+  readonly healthCheckPath?: string;
   readonly http2Enabled?: boolean;
   readonly ipRestriction?: FunctionAppSiteConfigIpRestriction[];
   readonly linuxFxVersion?: string;
   readonly minTlsVersion?: string;
+  readonly preWarmedInstanceCount?: number;
+  readonly scmIpRestriction?: FunctionAppSiteConfigScmIpRestriction[];
+  readonly scmType?: string;
+  readonly scmUseMainIpRestriction?: boolean;
   readonly use32BitWorkerProcess?: boolean;
   readonly websocketsEnabled?: boolean;
   /** cors block */
   readonly cors?: FunctionAppSiteConfigCors[];
+}
+export interface FunctionAppSourceControl {
+  readonly branch?: string;
+  readonly manualIntegration?: boolean;
+  readonly repoUrl?: string;
+  readonly rollbackEnabled?: boolean;
+  readonly useMercurial?: boolean;
 }
 export interface FunctionAppTimeouts {
   readonly create?: string;
@@ -147,12 +178,16 @@ export class FunctionApp extends TerraformResource {
     this._appServicePlanId = config.appServicePlanId;
     this._appSettings = config.appSettings;
     this._clientAffinityEnabled = config.clientAffinityEnabled;
+    this._dailyMemoryTimeQuota = config.dailyMemoryTimeQuota;
     this._enableBuiltinLogging = config.enableBuiltinLogging;
     this._enabled = config.enabled;
     this._httpsOnly = config.httpsOnly;
     this._location = config.location;
     this._name = config.name;
+    this._osType = config.osType;
     this._resourceGroupName = config.resourceGroupName;
+    this._storageAccountAccessKey = config.storageAccountAccessKey;
+    this._storageAccountName = config.storageAccountName;
     this._storageConnectionString = config.storageConnectionString;
     this._tags = config.tags;
     this._version = config.version;
@@ -160,6 +195,7 @@ export class FunctionApp extends TerraformResource {
     this._connectionString = config.connectionString;
     this._identity = config.identity;
     this._siteConfig = config.siteConfig;
+    this._sourceControl = config.sourceControl;
     this._timeouts = config.timeouts;
   }
 
@@ -180,12 +216,12 @@ export class FunctionApp extends TerraformResource {
     return this._appServicePlanId
   }
 
-  // app_settings - computed: false, optional: true, required: false
-  private _appSettings?: { [key: string]: string };
-  public get appSettings() {
-    return this.interpolationForAttribute('app_settings') as any;
+  // app_settings - computed: true, optional: true, required: false
+  private _appSettings?: { [key: string]: string }
+  public get appSettings(): { [key: string]: string } {
+    return this.interpolationForAttribute('app_settings') as any; // Getting the computed value is not yet implemented
   }
-  public set appSettings(value: { [key: string]: string } ) {
+  public set appSettings(value: { [key: string]: string }) {
     this._appSettings = value;
   }
   public resetAppSettings() {
@@ -210,6 +246,27 @@ export class FunctionApp extends TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get clientAffinityEnabledInput() {
     return this._clientAffinityEnabled
+  }
+
+  // custom_domain_verification_id - computed: true, optional: false, required: false
+  public get customDomainVerificationId() {
+    return this.getStringAttribute('custom_domain_verification_id');
+  }
+
+  // daily_memory_time_quota - computed: false, optional: true, required: false
+  private _dailyMemoryTimeQuota?: number;
+  public get dailyMemoryTimeQuota() {
+    return this.getNumberAttribute('daily_memory_time_quota');
+  }
+  public set dailyMemoryTimeQuota(value: number ) {
+    this._dailyMemoryTimeQuota = value;
+  }
+  public resetDailyMemoryTimeQuota() {
+    this._dailyMemoryTimeQuota = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dailyMemoryTimeQuotaInput() {
+    return this._dailyMemoryTimeQuota
   }
 
   // default_hostname - computed: true, optional: false, required: false
@@ -301,6 +358,22 @@ export class FunctionApp extends TerraformResource {
     return this._name
   }
 
+  // os_type - computed: false, optional: true, required: false
+  private _osType?: string;
+  public get osType() {
+    return this.getStringAttribute('os_type');
+  }
+  public set osType(value: string ) {
+    this._osType = value;
+  }
+  public resetOsType() {
+    this._osType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get osTypeInput() {
+    return this._osType
+  }
+
   // outbound_ip_addresses - computed: true, optional: false, required: false
   public get outboundIpAddresses() {
     return this.getStringAttribute('outbound_ip_addresses');
@@ -329,13 +402,48 @@ export class FunctionApp extends TerraformResource {
     return new FunctionAppSiteCredential(this, 'site_credential', index);
   }
 
-  // storage_connection_string - computed: false, optional: false, required: true
-  private _storageConnectionString: string;
+  // storage_account_access_key - computed: true, optional: true, required: false
+  private _storageAccountAccessKey?: string;
+  public get storageAccountAccessKey() {
+    return this.getStringAttribute('storage_account_access_key');
+  }
+  public set storageAccountAccessKey(value: string) {
+    this._storageAccountAccessKey = value;
+  }
+  public resetStorageAccountAccessKey() {
+    this._storageAccountAccessKey = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get storageAccountAccessKeyInput() {
+    return this._storageAccountAccessKey
+  }
+
+  // storage_account_name - computed: true, optional: true, required: false
+  private _storageAccountName?: string;
+  public get storageAccountName() {
+    return this.getStringAttribute('storage_account_name');
+  }
+  public set storageAccountName(value: string) {
+    this._storageAccountName = value;
+  }
+  public resetStorageAccountName() {
+    this._storageAccountName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get storageAccountNameInput() {
+    return this._storageAccountName
+  }
+
+  // storage_connection_string - computed: true, optional: true, required: false
+  private _storageConnectionString?: string;
   public get storageConnectionString() {
     return this.getStringAttribute('storage_connection_string');
   }
   public set storageConnectionString(value: string) {
     this._storageConnectionString = value;
+  }
+  public resetStorageConnectionString() {
+    this._storageConnectionString = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get storageConnectionStringInput() {
@@ -438,6 +546,22 @@ export class FunctionApp extends TerraformResource {
     return this._siteConfig
   }
 
+  // source_control - computed: false, optional: true, required: false
+  private _sourceControl?: FunctionAppSourceControl[];
+  public get sourceControl() {
+    return this.interpolationForAttribute('source_control') as any;
+  }
+  public set sourceControl(value: FunctionAppSourceControl[] ) {
+    this._sourceControl = value;
+  }
+  public resetSourceControl() {
+    this._sourceControl = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sourceControlInput() {
+    return this._sourceControl
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: FunctionAppTimeouts;
   public get timeouts() {
@@ -463,12 +587,16 @@ export class FunctionApp extends TerraformResource {
       app_service_plan_id: this._appServicePlanId,
       app_settings: this._appSettings,
       client_affinity_enabled: this._clientAffinityEnabled,
+      daily_memory_time_quota: this._dailyMemoryTimeQuota,
       enable_builtin_logging: this._enableBuiltinLogging,
       enabled: this._enabled,
       https_only: this._httpsOnly,
       location: this._location,
       name: this._name,
+      os_type: this._osType,
       resource_group_name: this._resourceGroupName,
+      storage_account_access_key: this._storageAccountAccessKey,
+      storage_account_name: this._storageAccountName,
       storage_connection_string: this._storageConnectionString,
       tags: this._tags,
       version: this._version,
@@ -476,6 +604,7 @@ export class FunctionApp extends TerraformResource {
       connection_string: this._connectionString,
       identity: this._identity,
       site_config: this._siteConfig,
+      source_control: this._sourceControl,
       timeouts: this._timeouts,
     };
   }

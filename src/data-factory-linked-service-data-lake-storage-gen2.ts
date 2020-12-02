@@ -16,10 +16,11 @@ export interface DataFactoryLinkedServiceDataLakeStorageGen2Config extends Terra
   readonly name: string;
   readonly parameters?: { [key: string]: string };
   readonly resourceGroupName: string;
-  readonly servicePrincipalId: string;
-  readonly servicePrincipalKey: string;
-  readonly tenant: string;
+  readonly servicePrincipalId?: string;
+  readonly servicePrincipalKey?: string;
+  readonly tenant?: string;
   readonly url: string;
+  readonly useManagedIdentity?: boolean;
   /** timeouts block */
   readonly timeouts?: DataFactoryLinkedServiceDataLakeStorageGen2Timeouts;
 }
@@ -61,6 +62,7 @@ export class DataFactoryLinkedServiceDataLakeStorageGen2 extends TerraformResour
     this._servicePrincipalKey = config.servicePrincipalKey;
     this._tenant = config.tenant;
     this._url = config.url;
+    this._useManagedIdentity = config.useManagedIdentity;
     this._timeouts = config.timeouts;
   }
 
@@ -192,39 +194,48 @@ export class DataFactoryLinkedServiceDataLakeStorageGen2 extends TerraformResour
     return this._resourceGroupName
   }
 
-  // service_principal_id - computed: false, optional: false, required: true
-  private _servicePrincipalId: string;
+  // service_principal_id - computed: false, optional: true, required: false
+  private _servicePrincipalId?: string;
   public get servicePrincipalId() {
     return this.getStringAttribute('service_principal_id');
   }
-  public set servicePrincipalId(value: string) {
+  public set servicePrincipalId(value: string ) {
     this._servicePrincipalId = value;
+  }
+  public resetServicePrincipalId() {
+    this._servicePrincipalId = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get servicePrincipalIdInput() {
     return this._servicePrincipalId
   }
 
-  // service_principal_key - computed: false, optional: false, required: true
-  private _servicePrincipalKey: string;
+  // service_principal_key - computed: false, optional: true, required: false
+  private _servicePrincipalKey?: string;
   public get servicePrincipalKey() {
     return this.getStringAttribute('service_principal_key');
   }
-  public set servicePrincipalKey(value: string) {
+  public set servicePrincipalKey(value: string ) {
     this._servicePrincipalKey = value;
+  }
+  public resetServicePrincipalKey() {
+    this._servicePrincipalKey = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get servicePrincipalKeyInput() {
     return this._servicePrincipalKey
   }
 
-  // tenant - computed: false, optional: false, required: true
-  private _tenant: string;
+  // tenant - computed: false, optional: true, required: false
+  private _tenant?: string;
   public get tenant() {
     return this.getStringAttribute('tenant');
   }
-  public set tenant(value: string) {
+  public set tenant(value: string ) {
     this._tenant = value;
+  }
+  public resetTenant() {
+    this._tenant = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get tenantInput() {
@@ -242,6 +253,22 @@ export class DataFactoryLinkedServiceDataLakeStorageGen2 extends TerraformResour
   // Temporarily expose input value. Use with caution.
   public get urlInput() {
     return this._url
+  }
+
+  // use_managed_identity - computed: false, optional: true, required: false
+  private _useManagedIdentity?: boolean;
+  public get useManagedIdentity() {
+    return this.getBooleanAttribute('use_managed_identity');
+  }
+  public set useManagedIdentity(value: boolean ) {
+    this._useManagedIdentity = value;
+  }
+  public resetUseManagedIdentity() {
+    this._useManagedIdentity = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get useManagedIdentityInput() {
+    return this._useManagedIdentity
   }
 
   // timeouts - computed: false, optional: true, required: false
@@ -278,6 +305,7 @@ export class DataFactoryLinkedServiceDataLakeStorageGen2 extends TerraformResour
       service_principal_key: this._servicePrincipalKey,
       tenant: this._tenant,
       url: this._url,
+      use_managed_identity: this._useManagedIdentity,
       timeouts: this._timeouts,
     };
   }

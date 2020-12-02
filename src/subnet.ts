@@ -8,7 +8,8 @@ import { TerraformMetaArguments } from 'cdktf';
 // Configuration
 
 export interface SubnetConfig extends TerraformMetaArguments {
-  readonly addressPrefix: string;
+  readonly addressPrefix?: string;
+  readonly addressPrefixes?: string[];
   readonly enforcePrivateLinkEndpointNetworkPolicies?: boolean;
   readonly enforcePrivateLinkServiceNetworkPolicies?: boolean;
   readonly name: string;
@@ -56,6 +57,7 @@ export class Subnet extends TerraformResource {
       lifecycle: config.lifecycle
     });
     this._addressPrefix = config.addressPrefix;
+    this._addressPrefixes = config.addressPrefixes;
     this._enforcePrivateLinkEndpointNetworkPolicies = config.enforcePrivateLinkEndpointNetworkPolicies;
     this._enforcePrivateLinkServiceNetworkPolicies = config.enforcePrivateLinkServiceNetworkPolicies;
     this._name = config.name;
@@ -70,17 +72,36 @@ export class Subnet extends TerraformResource {
   // ATTRIBUTES
   // ==========
 
-  // address_prefix - computed: false, optional: false, required: true
-  private _addressPrefix: string;
+  // address_prefix - computed: true, optional: true, required: false
+  private _addressPrefix?: string;
   public get addressPrefix() {
     return this.getStringAttribute('address_prefix');
   }
   public set addressPrefix(value: string) {
     this._addressPrefix = value;
   }
+  public resetAddressPrefix() {
+    this._addressPrefix = undefined;
+  }
   // Temporarily expose input value. Use with caution.
   public get addressPrefixInput() {
     return this._addressPrefix
+  }
+
+  // address_prefixes - computed: true, optional: true, required: false
+  private _addressPrefixes?: string[];
+  public get addressPrefixes() {
+    return this.getListAttribute('address_prefixes');
+  }
+  public set addressPrefixes(value: string[]) {
+    this._addressPrefixes = value;
+  }
+  public resetAddressPrefixes() {
+    this._addressPrefixes = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get addressPrefixesInput() {
+    return this._addressPrefixes
   }
 
   // enforce_private_link_endpoint_network_policies - computed: false, optional: true, required: false
@@ -214,6 +235,7 @@ export class Subnet extends TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       address_prefix: this._addressPrefix,
+      address_prefixes: this._addressPrefixes,
       enforce_private_link_endpoint_network_policies: this._enforcePrivateLinkEndpointNetworkPolicies,
       enforce_private_link_service_network_policies: this._enforcePrivateLinkServiceNetworkPolicies,
       name: this._name,

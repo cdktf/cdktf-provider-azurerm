@@ -14,6 +14,7 @@ export interface VirtualNetworkGatewayConfig extends TerraformMetaArguments {
   readonly generation?: string;
   readonly location: string;
   readonly name: string;
+  readonly privateIpAddressEnabled?: boolean;
   readonly resourceGroupName: string;
   readonly sku: string;
   readonly tags?: { [key: string]: string };
@@ -21,6 +22,8 @@ export interface VirtualNetworkGatewayConfig extends TerraformMetaArguments {
   readonly vpnType?: string;
   /** bgp_settings block */
   readonly bgpSettings?: VirtualNetworkGatewayBgpSettings[];
+  /** custom_route block */
+  readonly customRoute?: VirtualNetworkGatewayCustomRoute[];
   /** ip_configuration block */
   readonly ipConfiguration: VirtualNetworkGatewayIpConfiguration[];
   /** timeouts block */
@@ -33,10 +36,13 @@ export interface VirtualNetworkGatewayBgpSettings {
   readonly peerWeight?: number;
   readonly peeringAddress?: string;
 }
+export interface VirtualNetworkGatewayCustomRoute {
+  readonly addressPrefixes?: string[];
+}
 export interface VirtualNetworkGatewayIpConfiguration {
   readonly name?: string;
   readonly privateIpAddressAllocation?: string;
-  readonly publicIpAddressId?: string;
+  readonly publicIpAddressId: string;
   readonly subnetId: string;
 }
 export interface VirtualNetworkGatewayTimeouts {
@@ -54,6 +60,9 @@ export interface VirtualNetworkGatewayVpnClientConfigurationRootCertificate {
   readonly publicCertData: string;
 }
 export interface VirtualNetworkGatewayVpnClientConfiguration {
+  readonly aadAudience?: string;
+  readonly aadIssuer?: string;
+  readonly aadTenant?: string;
   readonly addressSpace: string[];
   readonly radiusServerAddress?: string;
   readonly radiusServerSecret?: string;
@@ -89,12 +98,14 @@ export class VirtualNetworkGateway extends TerraformResource {
     this._generation = config.generation;
     this._location = config.location;
     this._name = config.name;
+    this._privateIpAddressEnabled = config.privateIpAddressEnabled;
     this._resourceGroupName = config.resourceGroupName;
     this._sku = config.sku;
     this._tags = config.tags;
     this._type = config.type;
     this._vpnType = config.vpnType;
     this._bgpSettings = config.bgpSettings;
+    this._customRoute = config.customRoute;
     this._ipConfiguration = config.ipConfiguration;
     this._timeouts = config.timeouts;
     this._vpnClientConfiguration = config.vpnClientConfiguration;
@@ -199,6 +210,22 @@ export class VirtualNetworkGateway extends TerraformResource {
     return this._name
   }
 
+  // private_ip_address_enabled - computed: false, optional: true, required: false
+  private _privateIpAddressEnabled?: boolean;
+  public get privateIpAddressEnabled() {
+    return this.getBooleanAttribute('private_ip_address_enabled');
+  }
+  public set privateIpAddressEnabled(value: boolean ) {
+    this._privateIpAddressEnabled = value;
+  }
+  public resetPrivateIpAddressEnabled() {
+    this._privateIpAddressEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get privateIpAddressEnabledInput() {
+    return this._privateIpAddressEnabled
+  }
+
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
@@ -286,6 +313,22 @@ export class VirtualNetworkGateway extends TerraformResource {
     return this._bgpSettings
   }
 
+  // custom_route - computed: false, optional: true, required: false
+  private _customRoute?: VirtualNetworkGatewayCustomRoute[];
+  public get customRoute() {
+    return this.interpolationForAttribute('custom_route') as any;
+  }
+  public set customRoute(value: VirtualNetworkGatewayCustomRoute[] ) {
+    this._customRoute = value;
+  }
+  public resetCustomRoute() {
+    this._customRoute = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get customRouteInput() {
+    return this._customRoute
+  }
+
   // ip_configuration - computed: false, optional: false, required: true
   private _ipConfiguration: VirtualNetworkGatewayIpConfiguration[];
   public get ipConfiguration() {
@@ -343,12 +386,14 @@ export class VirtualNetworkGateway extends TerraformResource {
       generation: this._generation,
       location: this._location,
       name: this._name,
+      private_ip_address_enabled: this._privateIpAddressEnabled,
       resource_group_name: this._resourceGroupName,
       sku: this._sku,
       tags: this._tags,
       type: this._type,
       vpn_type: this._vpnType,
       bgp_settings: this._bgpSettings,
+      custom_route: this._customRoute,
       ip_configuration: this._ipConfiguration,
       timeouts: this._timeouts,
       vpn_client_configuration: this._vpnClientConfiguration,

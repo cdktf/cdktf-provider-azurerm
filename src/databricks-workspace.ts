@@ -159,6 +159,16 @@ export class DatabricksWorkspace extends TerraformResource {
     return this._tags
   }
 
+  // workspace_id - computed: true, optional: false, required: false
+  public get workspaceId() {
+    return this.getStringAttribute('workspace_id');
+  }
+
+  // workspace_url - computed: true, optional: false, required: false
+  public get workspaceUrl() {
+    return this.getStringAttribute('workspace_url');
+  }
+
   // custom_parameters - computed: false, optional: true, required: false
   private _customParameters?: DatabricksWorkspaceCustomParameters[];
   public get customParameters() {

@@ -22,8 +22,10 @@ export interface VpnServerConfigurationConfig extends TerraformMetaArguments {
   readonly clientRootCertificate?: VpnServerConfigurationClientRootCertificate[];
   /** ipsec_policy block */
   readonly ipsecPolicy?: VpnServerConfigurationIpsecPolicy[];
+  /** radius block */
+  readonly radius?: VpnServerConfigurationRadius[];
   /** radius_server block */
-  readonly radiusServer?: VpnServerConfigurationRadiusServer[];
+  readonly radiusServer?: VpnServerConfigurationRadiusServerA[];
   /** timeouts block */
   readonly timeouts?: VpnServerConfigurationTimeouts;
 }
@@ -50,6 +52,27 @@ export interface VpnServerConfigurationIpsecPolicy {
   readonly saDataSizeKilobytes: number;
   readonly saLifetimeSeconds: number;
 }
+export interface VpnServerConfigurationRadiusClientRootCertificate {
+  readonly name: string;
+  readonly thumbprint: string;
+}
+export interface VpnServerConfigurationRadiusServer {
+  readonly address: string;
+  readonly score: number;
+  readonly secret: string;
+}
+export interface VpnServerConfigurationRadiusServerRootCertificate {
+  readonly name: string;
+  readonly publicCertData: string;
+}
+export interface VpnServerConfigurationRadius {
+  /** client_root_certificate block */
+  readonly clientRootCertificate?: VpnServerConfigurationRadiusClientRootCertificate[];
+  /** server block */
+  readonly server?: VpnServerConfigurationRadiusServer[];
+  /** server_root_certificate block */
+  readonly serverRootCertificate: VpnServerConfigurationRadiusServerRootCertificate[];
+}
 export interface VpnServerConfigurationRadiusServerClientRootCertificate {
   readonly name: string;
   readonly thumbprint: string;
@@ -58,7 +81,7 @@ export interface VpnServerConfigurationRadiusServerServerRootCertificate {
   readonly name: string;
   readonly publicCertData: string;
 }
-export interface VpnServerConfigurationRadiusServer {
+export interface VpnServerConfigurationRadiusServerA {
   readonly address: string;
   readonly secret: string;
   /** client_root_certificate block */
@@ -102,6 +125,7 @@ export class VpnServerConfiguration extends TerraformResource {
     this._clientRevokedCertificate = config.clientRevokedCertificate;
     this._clientRootCertificate = config.clientRootCertificate;
     this._ipsecPolicy = config.ipsecPolicy;
+    this._radius = config.radius;
     this._radiusServer = config.radiusServer;
     this._timeouts = config.timeouts;
   }
@@ -263,12 +287,28 @@ export class VpnServerConfiguration extends TerraformResource {
     return this._ipsecPolicy
   }
 
+  // radius - computed: false, optional: true, required: false
+  private _radius?: VpnServerConfigurationRadius[];
+  public get radius() {
+    return this.interpolationForAttribute('radius') as any;
+  }
+  public set radius(value: VpnServerConfigurationRadius[] ) {
+    this._radius = value;
+  }
+  public resetRadius() {
+    this._radius = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get radiusInput() {
+    return this._radius
+  }
+
   // radius_server - computed: false, optional: true, required: false
-  private _radiusServer?: VpnServerConfigurationRadiusServer[];
+  private _radiusServer?: VpnServerConfigurationRadiusServerA[];
   public get radiusServer() {
     return this.interpolationForAttribute('radius_server') as any;
   }
-  public set radiusServer(value: VpnServerConfigurationRadiusServer[] ) {
+  public set radiusServer(value: VpnServerConfigurationRadiusServerA[] ) {
     this._radiusServer = value;
   }
   public resetRadiusServer() {
@@ -311,6 +351,7 @@ export class VpnServerConfiguration extends TerraformResource {
       client_revoked_certificate: this._clientRevokedCertificate,
       client_root_certificate: this._clientRootCertificate,
       ipsec_policy: this._ipsecPolicy,
+      radius: this._radius,
       radius_server: this._radiusServer,
       timeouts: this._timeouts,
     };

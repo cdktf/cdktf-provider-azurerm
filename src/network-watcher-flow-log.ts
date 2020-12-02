@@ -33,6 +33,7 @@ export interface NetworkWatcherFlowLogTimeouts {
 }
 export interface NetworkWatcherFlowLogTrafficAnalytics {
   readonly enabled: boolean;
+  readonly intervalInMinutes?: number;
   readonly workspaceId: string;
   readonly workspaceRegion: string;
   readonly workspaceResourceId: string;

@@ -9,11 +9,20 @@ import { TerraformMetaArguments } from 'cdktf';
 
 export interface EventgridEventSubscriptionConfig extends TerraformMetaArguments {
   readonly eventDeliverySchema?: string;
+  readonly eventhubEndpointId?: string;
+  readonly expirationTimeUtc?: string;
+  readonly hybridConnectionEndpointId?: string;
   readonly includedEventTypes?: string[];
   readonly labels?: string[];
   readonly name: string;
   readonly scope: string;
+  readonly serviceBusQueueEndpointId?: string;
+  readonly serviceBusTopicEndpointId?: string;
   readonly topicName?: string;
+  /** advanced_filter block */
+  readonly advancedFilter?: EventgridEventSubscriptionAdvancedFilter[];
+  /** azure_function_endpoint block */
+  readonly azureFunctionEndpoint?: EventgridEventSubscriptionAzureFunctionEndpoint[];
   /** eventhub_endpoint block */
   readonly eventhubEndpoint?: EventgridEventSubscriptionEventhubEndpoint[];
   /** hybrid_connection_endpoint block */
@@ -31,11 +40,90 @@ export interface EventgridEventSubscriptionConfig extends TerraformMetaArguments
   /** webhook_endpoint block */
   readonly webhookEndpoint?: EventgridEventSubscriptionWebhookEndpoint[];
 }
+export interface EventgridEventSubscriptionAdvancedFilterBoolEquals {
+  readonly key: string;
+  readonly value: boolean;
+}
+export interface EventgridEventSubscriptionAdvancedFilterNumberGreaterThan {
+  readonly key: string;
+  readonly value: number;
+}
+export interface EventgridEventSubscriptionAdvancedFilterNumberGreaterThanOrEquals {
+  readonly key: string;
+  readonly value: number;
+}
+export interface EventgridEventSubscriptionAdvancedFilterNumberIn {
+  readonly key: string;
+  readonly values: number[];
+}
+export interface EventgridEventSubscriptionAdvancedFilterNumberLessThan {
+  readonly key: string;
+  readonly value: number;
+}
+export interface EventgridEventSubscriptionAdvancedFilterNumberLessThanOrEquals {
+  readonly key: string;
+  readonly value: number;
+}
+export interface EventgridEventSubscriptionAdvancedFilterNumberNotIn {
+  readonly key: string;
+  readonly values: number[];
+}
+export interface EventgridEventSubscriptionAdvancedFilterStringBeginsWith {
+  readonly key: string;
+  readonly values: string[];
+}
+export interface EventgridEventSubscriptionAdvancedFilterStringContains {
+  readonly key: string;
+  readonly values: string[];
+}
+export interface EventgridEventSubscriptionAdvancedFilterStringEndsWith {
+  readonly key: string;
+  readonly values: string[];
+}
+export interface EventgridEventSubscriptionAdvancedFilterStringIn {
+  readonly key: string;
+  readonly values: string[];
+}
+export interface EventgridEventSubscriptionAdvancedFilterStringNotIn {
+  readonly key: string;
+  readonly values: string[];
+}
+export interface EventgridEventSubscriptionAdvancedFilter {
+  /** bool_equals block */
+  readonly boolEquals?: EventgridEventSubscriptionAdvancedFilterBoolEquals[];
+  /** number_greater_than block */
+  readonly numberGreaterThan?: EventgridEventSubscriptionAdvancedFilterNumberGreaterThan[];
+  /** number_greater_than_or_equals block */
+  readonly numberGreaterThanOrEquals?: EventgridEventSubscriptionAdvancedFilterNumberGreaterThanOrEquals[];
+  /** number_in block */
+  readonly numberIn?: EventgridEventSubscriptionAdvancedFilterNumberIn[];
+  /** number_less_than block */
+  readonly numberLessThan?: EventgridEventSubscriptionAdvancedFilterNumberLessThan[];
+  /** number_less_than_or_equals block */
+  readonly numberLessThanOrEquals?: EventgridEventSubscriptionAdvancedFilterNumberLessThanOrEquals[];
+  /** number_not_in block */
+  readonly numberNotIn?: EventgridEventSubscriptionAdvancedFilterNumberNotIn[];
+  /** string_begins_with block */
+  readonly stringBeginsWith?: EventgridEventSubscriptionAdvancedFilterStringBeginsWith[];
+  /** string_contains block */
+  readonly stringContains?: EventgridEventSubscriptionAdvancedFilterStringContains[];
+  /** string_ends_with block */
+  readonly stringEndsWith?: EventgridEventSubscriptionAdvancedFilterStringEndsWith[];
+  /** string_in block */
+  readonly stringIn?: EventgridEventSubscriptionAdvancedFilterStringIn[];
+  /** string_not_in block */
+  readonly stringNotIn?: EventgridEventSubscriptionAdvancedFilterStringNotIn[];
+}
+export interface EventgridEventSubscriptionAzureFunctionEndpoint {
+  readonly functionId: string;
+  readonly maxEventsPerBatch?: number;
+  readonly preferredBatchSizeInKilobytes?: number;
+}
 export interface EventgridEventSubscriptionEventhubEndpoint {
-  readonly eventhubId: string;
+  readonly eventhubId?: string;
 }
 export interface EventgridEventSubscriptionHybridConnectionEndpoint {
-  readonly hybridConnectionId: string;
+  readonly hybridConnectionId?: string;
 }
 export interface EventgridEventSubscriptionRetryPolicy {
   readonly eventTimeToLive: number;
@@ -61,6 +149,10 @@ export interface EventgridEventSubscriptionTimeouts {
   readonly update?: string;
 }
 export interface EventgridEventSubscriptionWebhookEndpoint {
+  readonly activeDirectoryAppIdOrUri?: string;
+  readonly activeDirectoryTenantId?: string;
+  readonly maxEventsPerBatch?: number;
+  readonly preferredBatchSizeInKilobytes?: number;
   readonly url: string;
 }
 
@@ -84,11 +176,18 @@ export class EventgridEventSubscription extends TerraformResource {
       lifecycle: config.lifecycle
     });
     this._eventDeliverySchema = config.eventDeliverySchema;
+    this._eventhubEndpointId = config.eventhubEndpointId;
+    this._expirationTimeUtc = config.expirationTimeUtc;
+    this._hybridConnectionEndpointId = config.hybridConnectionEndpointId;
     this._includedEventTypes = config.includedEventTypes;
     this._labels = config.labels;
     this._name = config.name;
     this._scope = config.scope;
+    this._serviceBusQueueEndpointId = config.serviceBusQueueEndpointId;
+    this._serviceBusTopicEndpointId = config.serviceBusTopicEndpointId;
     this._topicName = config.topicName;
+    this._advancedFilter = config.advancedFilter;
+    this._azureFunctionEndpoint = config.azureFunctionEndpoint;
     this._eventhubEndpoint = config.eventhubEndpoint;
     this._hybridConnectionEndpoint = config.hybridConnectionEndpoint;
     this._retryPolicy = config.retryPolicy;
@@ -117,6 +216,54 @@ export class EventgridEventSubscription extends TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get eventDeliverySchemaInput() {
     return this._eventDeliverySchema
+  }
+
+  // eventhub_endpoint_id - computed: true, optional: true, required: false
+  private _eventhubEndpointId?: string;
+  public get eventhubEndpointId() {
+    return this.getStringAttribute('eventhub_endpoint_id');
+  }
+  public set eventhubEndpointId(value: string) {
+    this._eventhubEndpointId = value;
+  }
+  public resetEventhubEndpointId() {
+    this._eventhubEndpointId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get eventhubEndpointIdInput() {
+    return this._eventhubEndpointId
+  }
+
+  // expiration_time_utc - computed: false, optional: true, required: false
+  private _expirationTimeUtc?: string;
+  public get expirationTimeUtc() {
+    return this.getStringAttribute('expiration_time_utc');
+  }
+  public set expirationTimeUtc(value: string ) {
+    this._expirationTimeUtc = value;
+  }
+  public resetExpirationTimeUtc() {
+    this._expirationTimeUtc = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get expirationTimeUtcInput() {
+    return this._expirationTimeUtc
+  }
+
+  // hybrid_connection_endpoint_id - computed: true, optional: true, required: false
+  private _hybridConnectionEndpointId?: string;
+  public get hybridConnectionEndpointId() {
+    return this.getStringAttribute('hybrid_connection_endpoint_id');
+  }
+  public set hybridConnectionEndpointId(value: string) {
+    this._hybridConnectionEndpointId = value;
+  }
+  public resetHybridConnectionEndpointId() {
+    this._hybridConnectionEndpointId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get hybridConnectionEndpointIdInput() {
+    return this._hybridConnectionEndpointId
   }
 
   // id - computed: true, optional: true, required: false
@@ -182,6 +329,38 @@ export class EventgridEventSubscription extends TerraformResource {
     return this._scope
   }
 
+  // service_bus_queue_endpoint_id - computed: false, optional: true, required: false
+  private _serviceBusQueueEndpointId?: string;
+  public get serviceBusQueueEndpointId() {
+    return this.getStringAttribute('service_bus_queue_endpoint_id');
+  }
+  public set serviceBusQueueEndpointId(value: string ) {
+    this._serviceBusQueueEndpointId = value;
+  }
+  public resetServiceBusQueueEndpointId() {
+    this._serviceBusQueueEndpointId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get serviceBusQueueEndpointIdInput() {
+    return this._serviceBusQueueEndpointId
+  }
+
+  // service_bus_topic_endpoint_id - computed: false, optional: true, required: false
+  private _serviceBusTopicEndpointId?: string;
+  public get serviceBusTopicEndpointId() {
+    return this.getStringAttribute('service_bus_topic_endpoint_id');
+  }
+  public set serviceBusTopicEndpointId(value: string ) {
+    this._serviceBusTopicEndpointId = value;
+  }
+  public resetServiceBusTopicEndpointId() {
+    this._serviceBusTopicEndpointId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get serviceBusTopicEndpointIdInput() {
+    return this._serviceBusTopicEndpointId
+  }
+
   // topic_name - computed: true, optional: true, required: false
   private _topicName?: string;
   public get topicName() {
@@ -196,6 +375,38 @@ export class EventgridEventSubscription extends TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get topicNameInput() {
     return this._topicName
+  }
+
+  // advanced_filter - computed: false, optional: true, required: false
+  private _advancedFilter?: EventgridEventSubscriptionAdvancedFilter[];
+  public get advancedFilter() {
+    return this.interpolationForAttribute('advanced_filter') as any;
+  }
+  public set advancedFilter(value: EventgridEventSubscriptionAdvancedFilter[] ) {
+    this._advancedFilter = value;
+  }
+  public resetAdvancedFilter() {
+    this._advancedFilter = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get advancedFilterInput() {
+    return this._advancedFilter
+  }
+
+  // azure_function_endpoint - computed: false, optional: true, required: false
+  private _azureFunctionEndpoint?: EventgridEventSubscriptionAzureFunctionEndpoint[];
+  public get azureFunctionEndpoint() {
+    return this.interpolationForAttribute('azure_function_endpoint') as any;
+  }
+  public set azureFunctionEndpoint(value: EventgridEventSubscriptionAzureFunctionEndpoint[] ) {
+    this._azureFunctionEndpoint = value;
+  }
+  public resetAzureFunctionEndpoint() {
+    this._azureFunctionEndpoint = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get azureFunctionEndpointInput() {
+    return this._azureFunctionEndpoint
   }
 
   // eventhub_endpoint - computed: false, optional: true, required: false
@@ -333,11 +544,18 @@ export class EventgridEventSubscription extends TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       event_delivery_schema: this._eventDeliverySchema,
+      eventhub_endpoint_id: this._eventhubEndpointId,
+      expiration_time_utc: this._expirationTimeUtc,
+      hybrid_connection_endpoint_id: this._hybridConnectionEndpointId,
       included_event_types: this._includedEventTypes,
       labels: this._labels,
       name: this._name,
       scope: this._scope,
+      service_bus_queue_endpoint_id: this._serviceBusQueueEndpointId,
+      service_bus_topic_endpoint_id: this._serviceBusTopicEndpointId,
       topic_name: this._topicName,
+      advanced_filter: this._advancedFilter,
+      azure_function_endpoint: this._azureFunctionEndpoint,
       eventhub_endpoint: this._eventhubEndpoint,
       hybrid_connection_endpoint: this._hybridConnectionEndpoint,
       retry_policy: this._retryPolicy,

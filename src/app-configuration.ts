@@ -14,6 +14,8 @@ export interface AppConfigurationConfig extends TerraformMetaArguments {
   readonly resourceGroupName: string;
   readonly sku?: string;
   readonly tags?: { [key: string]: string };
+  /** identity block */
+  readonly identity?: AppConfigurationIdentity[];
   /** timeouts block */
   readonly timeouts?: AppConfigurationTimeouts;
 }
@@ -85,6 +87,9 @@ export class AppConfigurationSecondaryWriteKey extends ComplexComputedList {
     return this.getStringAttribute('secret');
   }
 }
+export interface AppConfigurationIdentity {
+  readonly type: string;
+}
 export interface AppConfigurationTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -116,6 +121,7 @@ export class AppConfiguration extends TerraformResource {
     this._resourceGroupName = config.resourceGroupName;
     this._sku = config.sku;
     this._tags = config.tags;
+    this._identity = config.identity;
     this._timeouts = config.timeouts;
   }
 
@@ -224,6 +230,22 @@ export class AppConfiguration extends TerraformResource {
     return this._tags
   }
 
+  // identity - computed: false, optional: true, required: false
+  private _identity?: AppConfigurationIdentity[];
+  public get identity() {
+    return this.interpolationForAttribute('identity') as any;
+  }
+  public set identity(value: AppConfigurationIdentity[] ) {
+    this._identity = value;
+  }
+  public resetIdentity() {
+    this._identity = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get identityInput() {
+    return this._identity
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: AppConfigurationTimeouts;
   public get timeouts() {
@@ -251,6 +273,7 @@ export class AppConfiguration extends TerraformResource {
       resource_group_name: this._resourceGroupName,
       sku: this._sku,
       tags: this._tags,
+      identity: this._identity,
       timeouts: this._timeouts,
     };
   }

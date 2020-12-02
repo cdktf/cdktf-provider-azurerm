@@ -10,6 +10,7 @@ import { TerraformMetaArguments } from 'cdktf';
 export interface EventhubNamespaceConfig extends TerraformMetaArguments {
   readonly autoInflateEnabled?: boolean;
   readonly capacity?: number;
+  readonly dedicatedClusterId?: string;
   readonly location: string;
   readonly maximumThroughputUnits?: number;
   readonly name: string;
@@ -17,6 +18,9 @@ export interface EventhubNamespaceConfig extends TerraformMetaArguments {
   readonly resourceGroupName: string;
   readonly sku: string;
   readonly tags?: { [key: string]: string };
+  readonly zoneRedundant?: boolean;
+  /** identity block */
+  readonly identity?: EventhubNamespaceIdentity[];
   /** timeouts block */
   readonly timeouts?: EventhubNamespaceTimeouts;
 }
@@ -32,6 +36,9 @@ export interface EventhubNamespaceNetworkRulesets {
   readonly defaultAction?: string;
   readonly ipRule?: EventhubNamespaceNetworkRulesetsIpRule[];
   readonly virtualNetworkRule?: EventhubNamespaceNetworkRulesetsVirtualNetworkRule[];
+}
+export interface EventhubNamespaceIdentity {
+  readonly type: string;
 }
 export interface EventhubNamespaceTimeouts {
   readonly create?: string;
@@ -61,6 +68,7 @@ export class EventhubNamespace extends TerraformResource {
     });
     this._autoInflateEnabled = config.autoInflateEnabled;
     this._capacity = config.capacity;
+    this._dedicatedClusterId = config.dedicatedClusterId;
     this._location = config.location;
     this._maximumThroughputUnits = config.maximumThroughputUnits;
     this._name = config.name;
@@ -68,6 +76,8 @@ export class EventhubNamespace extends TerraformResource {
     this._resourceGroupName = config.resourceGroupName;
     this._sku = config.sku;
     this._tags = config.tags;
+    this._zoneRedundant = config.zoneRedundant;
+    this._identity = config.identity;
     this._timeouts = config.timeouts;
   }
 
@@ -107,9 +117,30 @@ export class EventhubNamespace extends TerraformResource {
     return this._capacity
   }
 
+  // dedicated_cluster_id - computed: false, optional: true, required: false
+  private _dedicatedClusterId?: string;
+  public get dedicatedClusterId() {
+    return this.getStringAttribute('dedicated_cluster_id');
+  }
+  public set dedicatedClusterId(value: string ) {
+    this._dedicatedClusterId = value;
+  }
+  public resetDedicatedClusterId() {
+    this._dedicatedClusterId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dedicatedClusterIdInput() {
+    return this._dedicatedClusterId
+  }
+
   // default_primary_connection_string - computed: true, optional: false, required: false
   public get defaultPrimaryConnectionString() {
     return this.getStringAttribute('default_primary_connection_string');
+  }
+
+  // default_primary_connection_string_alias - computed: true, optional: false, required: false
+  public get defaultPrimaryConnectionStringAlias() {
+    return this.getStringAttribute('default_primary_connection_string_alias');
   }
 
   // default_primary_key - computed: true, optional: false, required: false
@@ -120,6 +151,11 @@ export class EventhubNamespace extends TerraformResource {
   // default_secondary_connection_string - computed: true, optional: false, required: false
   public get defaultSecondaryConnectionString() {
     return this.getStringAttribute('default_secondary_connection_string');
+  }
+
+  // default_secondary_connection_string_alias - computed: true, optional: false, required: false
+  public get defaultSecondaryConnectionStringAlias() {
+    return this.getStringAttribute('default_secondary_connection_string_alias');
   }
 
   // default_secondary_key - computed: true, optional: false, required: false
@@ -232,6 +268,38 @@ export class EventhubNamespace extends TerraformResource {
     return this._tags
   }
 
+  // zone_redundant - computed: false, optional: true, required: false
+  private _zoneRedundant?: boolean;
+  public get zoneRedundant() {
+    return this.getBooleanAttribute('zone_redundant');
+  }
+  public set zoneRedundant(value: boolean ) {
+    this._zoneRedundant = value;
+  }
+  public resetZoneRedundant() {
+    this._zoneRedundant = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get zoneRedundantInput() {
+    return this._zoneRedundant
+  }
+
+  // identity - computed: false, optional: true, required: false
+  private _identity?: EventhubNamespaceIdentity[];
+  public get identity() {
+    return this.interpolationForAttribute('identity') as any;
+  }
+  public set identity(value: EventhubNamespaceIdentity[] ) {
+    this._identity = value;
+  }
+  public resetIdentity() {
+    this._identity = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get identityInput() {
+    return this._identity
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: EventhubNamespaceTimeouts;
   public get timeouts() {
@@ -256,6 +324,7 @@ export class EventhubNamespace extends TerraformResource {
     return {
       auto_inflate_enabled: this._autoInflateEnabled,
       capacity: this._capacity,
+      dedicated_cluster_id: this._dedicatedClusterId,
       location: this._location,
       maximum_throughput_units: this._maximumThroughputUnits,
       name: this._name,
@@ -263,6 +332,8 @@ export class EventhubNamespace extends TerraformResource {
       resource_group_name: this._resourceGroupName,
       sku: this._sku,
       tags: this._tags,
+      zone_redundant: this._zoneRedundant,
+      identity: this._identity,
       timeouts: this._timeouts,
     };
   }

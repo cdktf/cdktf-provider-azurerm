@@ -22,17 +22,223 @@ export interface CdnEndpointConfig extends TerraformMetaArguments {
   readonly querystringCachingBehaviour?: string;
   readonly resourceGroupName: string;
   readonly tags?: { [key: string]: string };
+  /** delivery_rule block */
+  readonly deliveryRule?: CdnEndpointDeliveryRule[];
   /** geo_filter block */
   readonly geoFilter?: CdnEndpointGeoFilter[];
+  /** global_delivery_rule block */
+  readonly globalDeliveryRule?: CdnEndpointGlobalDeliveryRule[];
   /** origin block */
   readonly origin: CdnEndpointOrigin[];
   /** timeouts block */
   readonly timeouts?: CdnEndpointTimeouts;
 }
+export interface CdnEndpointDeliveryRuleCacheExpirationAction {
+  readonly behavior: string;
+  readonly duration?: string;
+}
+export interface CdnEndpointDeliveryRuleCacheKeyQueryStringAction {
+  readonly behavior: string;
+  readonly parameters?: string;
+}
+export interface CdnEndpointDeliveryRuleCookiesCondition {
+  readonly matchValues: string[];
+  readonly negateCondition?: boolean;
+  readonly operator: string;
+  readonly selector: string;
+  readonly transforms?: string[];
+}
+export interface CdnEndpointDeliveryRuleDeviceCondition {
+  readonly matchValues: string[];
+  readonly negateCondition?: boolean;
+  readonly operator?: string;
+}
+export interface CdnEndpointDeliveryRuleHttpVersionCondition {
+  readonly matchValues: string[];
+  readonly negateCondition?: boolean;
+  readonly operator?: string;
+}
+export interface CdnEndpointDeliveryRuleModifyRequestHeaderAction {
+  readonly action: string;
+  readonly name: string;
+  readonly value?: string;
+}
+export interface CdnEndpointDeliveryRuleModifyResponseHeaderAction {
+  readonly action: string;
+  readonly name: string;
+  readonly value?: string;
+}
+export interface CdnEndpointDeliveryRulePostArgCondition {
+  readonly matchValues: string[];
+  readonly negateCondition?: boolean;
+  readonly operator: string;
+  readonly selector: string;
+  readonly transforms?: string[];
+}
+export interface CdnEndpointDeliveryRuleQueryStringCondition {
+  readonly matchValues: string[];
+  readonly negateCondition?: boolean;
+  readonly operator: string;
+  readonly transforms?: string[];
+}
+export interface CdnEndpointDeliveryRuleRemoteAddressCondition {
+  readonly matchValues: string[];
+  readonly negateCondition?: boolean;
+  readonly operator: string;
+}
+export interface CdnEndpointDeliveryRuleRequestBodyCondition {
+  readonly matchValues: string[];
+  readonly negateCondition?: boolean;
+  readonly operator: string;
+  readonly transforms?: string[];
+}
+export interface CdnEndpointDeliveryRuleRequestHeaderCondition {
+  readonly matchValues: string[];
+  readonly negateCondition?: boolean;
+  readonly operator: string;
+  readonly selector: string;
+  readonly transforms?: string[];
+}
+export interface CdnEndpointDeliveryRuleRequestMethodCondition {
+  readonly matchValues: string[];
+  readonly negateCondition?: boolean;
+  readonly operator?: string;
+}
+export interface CdnEndpointDeliveryRuleRequestSchemeCondition {
+  readonly matchValues: string[];
+  readonly negateCondition?: boolean;
+  readonly operator?: string;
+}
+export interface CdnEndpointDeliveryRuleRequestUriCondition {
+  readonly matchValues: string[];
+  readonly negateCondition?: boolean;
+  readonly operator: string;
+  readonly transforms?: string[];
+}
+export interface CdnEndpointDeliveryRuleUrlFileExtensionCondition {
+  readonly matchValues: string[];
+  readonly negateCondition?: boolean;
+  readonly operator: string;
+  readonly transforms?: string[];
+}
+export interface CdnEndpointDeliveryRuleUrlFileNameCondition {
+  readonly matchValues: string[];
+  readonly negateCondition?: boolean;
+  readonly operator: string;
+  readonly transforms?: string[];
+}
+export interface CdnEndpointDeliveryRuleUrlPathCondition {
+  readonly matchValues: string[];
+  readonly negateCondition?: boolean;
+  readonly operator: string;
+  readonly transforms?: string[];
+}
+export interface CdnEndpointDeliveryRuleUrlRedirectAction {
+  readonly fragment?: string;
+  readonly hostname?: string;
+  readonly path?: string;
+  readonly protocol?: string;
+  readonly queryString?: string;
+  readonly redirectType: string;
+}
+export interface CdnEndpointDeliveryRuleUrlRewriteAction {
+  readonly destination: string;
+  readonly preserveUnmatchedPath?: boolean;
+  readonly sourcePattern: string;
+}
+export interface CdnEndpointDeliveryRule {
+  readonly name: string;
+  readonly order: number;
+  /** cache_expiration_action block */
+  readonly cacheExpirationAction?: CdnEndpointDeliveryRuleCacheExpirationAction[];
+  /** cache_key_query_string_action block */
+  readonly cacheKeyQueryStringAction?: CdnEndpointDeliveryRuleCacheKeyQueryStringAction[];
+  /** cookies_condition block */
+  readonly cookiesCondition?: CdnEndpointDeliveryRuleCookiesCondition[];
+  /** device_condition block */
+  readonly deviceCondition?: CdnEndpointDeliveryRuleDeviceCondition[];
+  /** http_version_condition block */
+  readonly httpVersionCondition?: CdnEndpointDeliveryRuleHttpVersionCondition[];
+  /** modify_request_header_action block */
+  readonly modifyRequestHeaderAction?: CdnEndpointDeliveryRuleModifyRequestHeaderAction[];
+  /** modify_response_header_action block */
+  readonly modifyResponseHeaderAction?: CdnEndpointDeliveryRuleModifyResponseHeaderAction[];
+  /** post_arg_condition block */
+  readonly postArgCondition?: CdnEndpointDeliveryRulePostArgCondition[];
+  /** query_string_condition block */
+  readonly queryStringCondition?: CdnEndpointDeliveryRuleQueryStringCondition[];
+  /** remote_address_condition block */
+  readonly remoteAddressCondition?: CdnEndpointDeliveryRuleRemoteAddressCondition[];
+  /** request_body_condition block */
+  readonly requestBodyCondition?: CdnEndpointDeliveryRuleRequestBodyCondition[];
+  /** request_header_condition block */
+  readonly requestHeaderCondition?: CdnEndpointDeliveryRuleRequestHeaderCondition[];
+  /** request_method_condition block */
+  readonly requestMethodCondition?: CdnEndpointDeliveryRuleRequestMethodCondition[];
+  /** request_scheme_condition block */
+  readonly requestSchemeCondition?: CdnEndpointDeliveryRuleRequestSchemeCondition[];
+  /** request_uri_condition block */
+  readonly requestUriCondition?: CdnEndpointDeliveryRuleRequestUriCondition[];
+  /** url_file_extension_condition block */
+  readonly urlFileExtensionCondition?: CdnEndpointDeliveryRuleUrlFileExtensionCondition[];
+  /** url_file_name_condition block */
+  readonly urlFileNameCondition?: CdnEndpointDeliveryRuleUrlFileNameCondition[];
+  /** url_path_condition block */
+  readonly urlPathCondition?: CdnEndpointDeliveryRuleUrlPathCondition[];
+  /** url_redirect_action block */
+  readonly urlRedirectAction?: CdnEndpointDeliveryRuleUrlRedirectAction[];
+  /** url_rewrite_action block */
+  readonly urlRewriteAction?: CdnEndpointDeliveryRuleUrlRewriteAction[];
+}
 export interface CdnEndpointGeoFilter {
   readonly action: string;
   readonly countryCodes: string[];
   readonly relativePath: string;
+}
+export interface CdnEndpointGlobalDeliveryRuleCacheExpirationAction {
+  readonly behavior: string;
+  readonly duration?: string;
+}
+export interface CdnEndpointGlobalDeliveryRuleCacheKeyQueryStringAction {
+  readonly behavior: string;
+  readonly parameters?: string;
+}
+export interface CdnEndpointGlobalDeliveryRuleModifyRequestHeaderAction {
+  readonly action: string;
+  readonly name: string;
+  readonly value?: string;
+}
+export interface CdnEndpointGlobalDeliveryRuleModifyResponseHeaderAction {
+  readonly action: string;
+  readonly name: string;
+  readonly value?: string;
+}
+export interface CdnEndpointGlobalDeliveryRuleUrlRedirectAction {
+  readonly fragment?: string;
+  readonly hostname?: string;
+  readonly path?: string;
+  readonly protocol?: string;
+  readonly queryString?: string;
+  readonly redirectType: string;
+}
+export interface CdnEndpointGlobalDeliveryRuleUrlRewriteAction {
+  readonly destination: string;
+  readonly preserveUnmatchedPath?: boolean;
+  readonly sourcePattern: string;
+}
+export interface CdnEndpointGlobalDeliveryRule {
+  /** cache_expiration_action block */
+  readonly cacheExpirationAction?: CdnEndpointGlobalDeliveryRuleCacheExpirationAction[];
+  /** cache_key_query_string_action block */
+  readonly cacheKeyQueryStringAction?: CdnEndpointGlobalDeliveryRuleCacheKeyQueryStringAction[];
+  /** modify_request_header_action block */
+  readonly modifyRequestHeaderAction?: CdnEndpointGlobalDeliveryRuleModifyRequestHeaderAction[];
+  /** modify_response_header_action block */
+  readonly modifyResponseHeaderAction?: CdnEndpointGlobalDeliveryRuleModifyResponseHeaderAction[];
+  /** url_redirect_action block */
+  readonly urlRedirectAction?: CdnEndpointGlobalDeliveryRuleUrlRedirectAction[];
+  /** url_rewrite_action block */
+  readonly urlRewriteAction?: CdnEndpointGlobalDeliveryRuleUrlRewriteAction[];
 }
 export interface CdnEndpointOrigin {
   readonly hostName: string;
@@ -80,7 +286,9 @@ export class CdnEndpoint extends TerraformResource {
     this._querystringCachingBehaviour = config.querystringCachingBehaviour;
     this._resourceGroupName = config.resourceGroupName;
     this._tags = config.tags;
+    this._deliveryRule = config.deliveryRule;
     this._geoFilter = config.geoFilter;
+    this._globalDeliveryRule = config.globalDeliveryRule;
     this._origin = config.origin;
     this._timeouts = config.timeouts;
   }
@@ -205,12 +413,12 @@ export class CdnEndpoint extends TerraformResource {
     return this._optimizationType
   }
 
-  // origin_host_header - computed: true, optional: true, required: false
+  // origin_host_header - computed: false, optional: true, required: false
   private _originHostHeader?: string;
   public get originHostHeader() {
     return this.getStringAttribute('origin_host_header');
   }
-  public set originHostHeader(value: string) {
+  public set originHostHeader(value: string ) {
     this._originHostHeader = value;
   }
   public resetOriginHostHeader() {
@@ -311,6 +519,22 @@ export class CdnEndpoint extends TerraformResource {
     return this._tags
   }
 
+  // delivery_rule - computed: false, optional: true, required: false
+  private _deliveryRule?: CdnEndpointDeliveryRule[];
+  public get deliveryRule() {
+    return this.interpolationForAttribute('delivery_rule') as any;
+  }
+  public set deliveryRule(value: CdnEndpointDeliveryRule[] ) {
+    this._deliveryRule = value;
+  }
+  public resetDeliveryRule() {
+    this._deliveryRule = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deliveryRuleInput() {
+    return this._deliveryRule
+  }
+
   // geo_filter - computed: false, optional: true, required: false
   private _geoFilter?: CdnEndpointGeoFilter[];
   public get geoFilter() {
@@ -325,6 +549,22 @@ export class CdnEndpoint extends TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get geoFilterInput() {
     return this._geoFilter
+  }
+
+  // global_delivery_rule - computed: false, optional: true, required: false
+  private _globalDeliveryRule?: CdnEndpointGlobalDeliveryRule[];
+  public get globalDeliveryRule() {
+    return this.interpolationForAttribute('global_delivery_rule') as any;
+  }
+  public set globalDeliveryRule(value: CdnEndpointGlobalDeliveryRule[] ) {
+    this._globalDeliveryRule = value;
+  }
+  public resetGlobalDeliveryRule() {
+    this._globalDeliveryRule = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get globalDeliveryRuleInput() {
+    return this._globalDeliveryRule
   }
 
   // origin - computed: false, optional: false, required: true
@@ -376,7 +616,9 @@ export class CdnEndpoint extends TerraformResource {
       querystring_caching_behaviour: this._querystringCachingBehaviour,
       resource_group_name: this._resourceGroupName,
       tags: this._tags,
+      delivery_rule: this._deliveryRule,
       geo_filter: this._geoFilter,
+      global_delivery_rule: this._globalDeliveryRule,
       origin: this._origin,
       timeouts: this._timeouts,
     };

@@ -52,6 +52,11 @@ export class DataAzurermSubnet extends TerraformDataSource {
     return this.getStringAttribute('address_prefix');
   }
 
+  // address_prefixes - computed: true, optional: false, required: false
+  public get addressPrefixes() {
+    return this.getListAttribute('address_prefixes');
+  }
+
   // enforce_private_link_endpoint_network_policies - computed: true, optional: false, required: false
   public get enforcePrivateLinkEndpointNetworkPolicies() {
     return this.getBooleanAttribute('enforce_private_link_endpoint_network_policies');

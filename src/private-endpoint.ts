@@ -4,6 +4,7 @@
 import { Construct } from 'constructs';
 import { TerraformResource } from 'cdktf';
 import { TerraformMetaArguments } from 'cdktf';
+import { ComplexComputedList } from "cdktf";
 
 // Configuration
 
@@ -12,10 +13,78 @@ export interface PrivateEndpointConfig extends TerraformMetaArguments {
   readonly name: string;
   readonly resourceGroupName: string;
   readonly subnetId: string;
+  readonly tags?: { [key: string]: string };
+  /** private_dns_zone_group block */
+  readonly privateDnsZoneGroup?: PrivateEndpointPrivateDnsZoneGroup[];
   /** private_service_connection block */
   readonly privateServiceConnection: PrivateEndpointPrivateServiceConnection[];
   /** timeouts block */
   readonly timeouts?: PrivateEndpointTimeouts;
+}
+export class PrivateEndpointCustomDnsConfigs extends ComplexComputedList {
+
+  // fqdn - computed: true, optional: false, required: false
+  public get fqdn() {
+    return this.getStringAttribute('fqdn');
+  }
+
+  // ip_addresses - computed: true, optional: false, required: false
+  public get ipAddresses() {
+    return this.getListAttribute('ip_addresses');
+  }
+}
+export class PrivateEndpointPrivateDnsZoneConfigsRecordSets extends ComplexComputedList {
+
+  // fqdn - computed: true, optional: false, required: false
+  public get fqdn() {
+    return this.getStringAttribute('fqdn');
+  }
+
+  // ip_addresses - computed: true, optional: false, required: false
+  public get ipAddresses() {
+    return this.getListAttribute('ip_addresses');
+  }
+
+  // name - computed: true, optional: false, required: false
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+
+  // ttl - computed: true, optional: false, required: false
+  public get ttl() {
+    return this.getNumberAttribute('ttl');
+  }
+
+  // type - computed: true, optional: false, required: false
+  public get type() {
+    return this.getStringAttribute('type');
+  }
+}
+export class PrivateEndpointPrivateDnsZoneConfigs extends ComplexComputedList {
+
+  // id - computed: true, optional: false, required: false
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+
+  // name - computed: true, optional: false, required: false
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+
+  // private_dns_zone_id - computed: true, optional: false, required: false
+  public get privateDnsZoneId() {
+    return this.getStringAttribute('private_dns_zone_id');
+  }
+
+  // record_sets - computed: true, optional: false, required: false
+  public get recordSets() {
+    return this.interpolationForAttribute('record_sets') as any;
+  }
+}
+export interface PrivateEndpointPrivateDnsZoneGroup {
+  readonly name: string;
+  readonly privateDnsZoneIds: string[];
 }
 export interface PrivateEndpointPrivateServiceConnection {
   readonly isManualConnection: boolean;
@@ -54,6 +123,8 @@ export class PrivateEndpoint extends TerraformResource {
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
     this._subnetId = config.subnetId;
+    this._tags = config.tags;
+    this._privateDnsZoneGroup = config.privateDnsZoneGroup;
     this._privateServiceConnection = config.privateServiceConnection;
     this._timeouts = config.timeouts;
   }
@@ -61,6 +132,11 @@ export class PrivateEndpoint extends TerraformResource {
   // ==========
   // ATTRIBUTES
   // ==========
+
+  // custom_dns_configs - computed: true, optional: false, required: false
+  public customDnsConfigs(index: string) {
+    return new PrivateEndpointCustomDnsConfigs(this, 'custom_dns_configs', index);
+  }
 
   // id - computed: true, optional: true, required: false
   public get id() {
@@ -93,6 +169,11 @@ export class PrivateEndpoint extends TerraformResource {
     return this._name
   }
 
+  // private_dns_zone_configs - computed: true, optional: false, required: false
+  public privateDnsZoneConfigs(index: string) {
+    return new PrivateEndpointPrivateDnsZoneConfigs(this, 'private_dns_zone_configs', index);
+  }
+
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
@@ -117,6 +198,38 @@ export class PrivateEndpoint extends TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get subnetIdInput() {
     return this._subnetId
+  }
+
+  // tags - computed: false, optional: true, required: false
+  private _tags?: { [key: string]: string };
+  public get tags() {
+    return this.interpolationForAttribute('tags') as any;
+  }
+  public set tags(value: { [key: string]: string } ) {
+    this._tags = value;
+  }
+  public resetTags() {
+    this._tags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsInput() {
+    return this._tags
+  }
+
+  // private_dns_zone_group - computed: false, optional: true, required: false
+  private _privateDnsZoneGroup?: PrivateEndpointPrivateDnsZoneGroup[];
+  public get privateDnsZoneGroup() {
+    return this.interpolationForAttribute('private_dns_zone_group') as any;
+  }
+  public set privateDnsZoneGroup(value: PrivateEndpointPrivateDnsZoneGroup[] ) {
+    this._privateDnsZoneGroup = value;
+  }
+  public resetPrivateDnsZoneGroup() {
+    this._privateDnsZoneGroup = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get privateDnsZoneGroupInput() {
+    return this._privateDnsZoneGroup
   }
 
   // private_service_connection - computed: false, optional: false, required: true
@@ -158,6 +271,8 @@ export class PrivateEndpoint extends TerraformResource {
       name: this._name,
       resource_group_name: this._resourceGroupName,
       subnet_id: this._subnetId,
+      tags: this._tags,
+      private_dns_zone_group: this._privateDnsZoneGroup,
       private_service_connection: this._privateServiceConnection,
       timeouts: this._timeouts,
     };

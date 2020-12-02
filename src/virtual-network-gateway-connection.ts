@@ -10,9 +10,11 @@ import { TerraformMetaArguments } from 'cdktf';
 export interface VirtualNetworkGatewayConnectionConfig extends TerraformMetaArguments {
   readonly authorizationKey?: string;
   readonly connectionProtocol?: string;
+  readonly dpdTimeoutSeconds?: number;
   readonly enableBgp?: boolean;
   readonly expressRouteCircuitId?: string;
   readonly expressRouteGatewayBypass?: boolean;
+  readonly localAzureIpAddressEnabled?: boolean;
   readonly localNetworkGatewayId?: string;
   readonly location: string;
   readonly name: string;
@@ -28,6 +30,8 @@ export interface VirtualNetworkGatewayConnectionConfig extends TerraformMetaArgu
   readonly ipsecPolicy?: VirtualNetworkGatewayConnectionIpsecPolicy[];
   /** timeouts block */
   readonly timeouts?: VirtualNetworkGatewayConnectionTimeouts;
+  /** traffic_selector_policy block */
+  readonly trafficSelectorPolicy?: VirtualNetworkGatewayConnectionTrafficSelectorPolicy[];
 }
 export interface VirtualNetworkGatewayConnectionIpsecPolicy {
   readonly dhGroup: string;
@@ -44,6 +48,10 @@ export interface VirtualNetworkGatewayConnectionTimeouts {
   readonly delete?: string;
   readonly read?: string;
   readonly update?: string;
+}
+export interface VirtualNetworkGatewayConnectionTrafficSelectorPolicy {
+  readonly localAddressCidrs: string[];
+  readonly remoteAddressCidrs: string[];
 }
 
 // Resource
@@ -67,9 +75,11 @@ export class VirtualNetworkGatewayConnection extends TerraformResource {
     });
     this._authorizationKey = config.authorizationKey;
     this._connectionProtocol = config.connectionProtocol;
+    this._dpdTimeoutSeconds = config.dpdTimeoutSeconds;
     this._enableBgp = config.enableBgp;
     this._expressRouteCircuitId = config.expressRouteCircuitId;
     this._expressRouteGatewayBypass = config.expressRouteGatewayBypass;
+    this._localAzureIpAddressEnabled = config.localAzureIpAddressEnabled;
     this._localNetworkGatewayId = config.localNetworkGatewayId;
     this._location = config.location;
     this._name = config.name;
@@ -83,6 +93,7 @@ export class VirtualNetworkGatewayConnection extends TerraformResource {
     this._virtualNetworkGatewayId = config.virtualNetworkGatewayId;
     this._ipsecPolicy = config.ipsecPolicy;
     this._timeouts = config.timeouts;
+    this._trafficSelectorPolicy = config.trafficSelectorPolicy;
   }
 
   // ==========
@@ -119,6 +130,22 @@ export class VirtualNetworkGatewayConnection extends TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get connectionProtocolInput() {
     return this._connectionProtocol
+  }
+
+  // dpd_timeout_seconds - computed: false, optional: true, required: false
+  private _dpdTimeoutSeconds?: number;
+  public get dpdTimeoutSeconds() {
+    return this.getNumberAttribute('dpd_timeout_seconds');
+  }
+  public set dpdTimeoutSeconds(value: number ) {
+    this._dpdTimeoutSeconds = value;
+  }
+  public resetDpdTimeoutSeconds() {
+    this._dpdTimeoutSeconds = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dpdTimeoutSecondsInput() {
+    return this._dpdTimeoutSeconds
   }
 
   // enable_bgp - computed: true, optional: true, required: false
@@ -172,6 +199,22 @@ export class VirtualNetworkGatewayConnection extends TerraformResource {
   // id - computed: true, optional: true, required: false
   public get id() {
     return this.getStringAttribute('id');
+  }
+
+  // local_azure_ip_address_enabled - computed: false, optional: true, required: false
+  private _localAzureIpAddressEnabled?: boolean;
+  public get localAzureIpAddressEnabled() {
+    return this.getBooleanAttribute('local_azure_ip_address_enabled');
+  }
+  public set localAzureIpAddressEnabled(value: boolean ) {
+    this._localAzureIpAddressEnabled = value;
+  }
+  public resetLocalAzureIpAddressEnabled() {
+    this._localAzureIpAddressEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get localAzureIpAddressEnabledInput() {
+    return this._localAzureIpAddressEnabled
   }
 
   // local_network_gateway_id - computed: false, optional: true, required: false
@@ -367,6 +410,22 @@ export class VirtualNetworkGatewayConnection extends TerraformResource {
     return this._timeouts
   }
 
+  // traffic_selector_policy - computed: false, optional: true, required: false
+  private _trafficSelectorPolicy?: VirtualNetworkGatewayConnectionTrafficSelectorPolicy[];
+  public get trafficSelectorPolicy() {
+    return this.interpolationForAttribute('traffic_selector_policy') as any;
+  }
+  public set trafficSelectorPolicy(value: VirtualNetworkGatewayConnectionTrafficSelectorPolicy[] ) {
+    this._trafficSelectorPolicy = value;
+  }
+  public resetTrafficSelectorPolicy() {
+    this._trafficSelectorPolicy = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get trafficSelectorPolicyInput() {
+    return this._trafficSelectorPolicy
+  }
+
   // =========
   // SYNTHESIS
   // =========
@@ -375,9 +434,11 @@ export class VirtualNetworkGatewayConnection extends TerraformResource {
     return {
       authorization_key: this._authorizationKey,
       connection_protocol: this._connectionProtocol,
+      dpd_timeout_seconds: this._dpdTimeoutSeconds,
       enable_bgp: this._enableBgp,
       express_route_circuit_id: this._expressRouteCircuitId,
       express_route_gateway_bypass: this._expressRouteGatewayBypass,
+      local_azure_ip_address_enabled: this._localAzureIpAddressEnabled,
       local_network_gateway_id: this._localNetworkGatewayId,
       location: this._location,
       name: this._name,
@@ -391,6 +452,7 @@ export class VirtualNetworkGatewayConnection extends TerraformResource {
       virtual_network_gateway_id: this._virtualNetworkGatewayId,
       ipsec_policy: this._ipsecPolicy,
       timeouts: this._timeouts,
+      traffic_selector_policy: this._trafficSelectorPolicy,
     };
   }
 }

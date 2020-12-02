@@ -8,7 +8,7 @@ import { TerraformMetaArguments } from 'cdktf';
 // Configuration
 
 export interface RoleDefinitionConfig extends TerraformMetaArguments {
-  readonly assignableScopes: string[];
+  readonly assignableScopes?: string[];
   readonly description?: string;
   readonly name: string;
   readonly roleDefinitionId?: string;
@@ -63,13 +63,16 @@ export class RoleDefinition extends TerraformResource {
   // ATTRIBUTES
   // ==========
 
-  // assignable_scopes - computed: false, optional: false, required: true
-  private _assignableScopes: string[];
+  // assignable_scopes - computed: true, optional: true, required: false
+  private _assignableScopes?: string[];
   public get assignableScopes() {
     return this.getListAttribute('assignable_scopes');
   }
   public set assignableScopes(value: string[]) {
     this._assignableScopes = value;
+  }
+  public resetAssignableScopes() {
+    this._assignableScopes = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get assignableScopesInput() {
@@ -124,6 +127,11 @@ export class RoleDefinition extends TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get roleDefinitionIdInput() {
     return this._roleDefinitionId
+  }
+
+  // role_definition_resource_id - computed: true, optional: false, required: false
+  public get roleDefinitionResourceId() {
+    return this.getStringAttribute('role_definition_resource_id');
   }
 
   // scope - computed: false, optional: false, required: true

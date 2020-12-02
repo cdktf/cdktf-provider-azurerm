@@ -14,6 +14,7 @@ export interface LinuxVirtualMachineScaleSetConfig extends TerraformMetaArgument
   readonly customData?: string;
   readonly disablePasswordAuthentication?: boolean;
   readonly doNotRunExtensionsOnOverprovisionedMachines?: boolean;
+  readonly encryptionAtHostEnabled?: boolean;
   readonly evictionPolicy?: string;
   readonly healthProbeId?: string;
   readonly instances: number;
@@ -21,10 +22,12 @@ export interface LinuxVirtualMachineScaleSetConfig extends TerraformMetaArgument
   readonly maxBidPrice?: number;
   readonly name: string;
   readonly overprovision?: boolean;
+  readonly platformFaultDomainCount?: number;
   readonly priority?: string;
   readonly provisionVmAgent?: boolean;
   readonly proximityPlacementGroupId?: string;
   readonly resourceGroupName: string;
+  readonly scaleInPolicy?: string;
   readonly singlePlacementGroup?: boolean;
   readonly sku: string;
   readonly sourceImageId?: string;
@@ -36,12 +39,16 @@ export interface LinuxVirtualMachineScaleSetConfig extends TerraformMetaArgument
   readonly additionalCapabilities?: LinuxVirtualMachineScaleSetAdditionalCapabilities[];
   /** admin_ssh_key block */
   readonly adminSshKey?: LinuxVirtualMachineScaleSetAdminSshKey[];
+  /** automatic_instance_repair block */
+  readonly automaticInstanceRepair?: LinuxVirtualMachineScaleSetAutomaticInstanceRepair[];
   /** automatic_os_upgrade_policy block */
   readonly automaticOsUpgradePolicy?: LinuxVirtualMachineScaleSetAutomaticOsUpgradePolicy[];
   /** boot_diagnostics block */
   readonly bootDiagnostics?: LinuxVirtualMachineScaleSetBootDiagnostics[];
   /** data_disk block */
   readonly dataDisk?: LinuxVirtualMachineScaleSetDataDisk[];
+  /** extension block */
+  readonly extension?: LinuxVirtualMachineScaleSetExtension[];
   /** identity block */
   readonly identity?: LinuxVirtualMachineScaleSetIdentity[];
   /** network_interface block */
@@ -56,6 +63,8 @@ export interface LinuxVirtualMachineScaleSetConfig extends TerraformMetaArgument
   readonly secret?: LinuxVirtualMachineScaleSetSecret[];
   /** source_image_reference block */
   readonly sourceImageReference?: LinuxVirtualMachineScaleSetSourceImageReference[];
+  /** terminate_notification block */
+  readonly terminateNotification?: LinuxVirtualMachineScaleSetTerminateNotification[];
   /** timeouts block */
   readonly timeouts?: LinuxVirtualMachineScaleSetTimeouts;
 }
@@ -66,20 +75,38 @@ export interface LinuxVirtualMachineScaleSetAdminSshKey {
   readonly publicKey: string;
   readonly username: string;
 }
+export interface LinuxVirtualMachineScaleSetAutomaticInstanceRepair {
+  readonly enabled: boolean;
+  readonly gracePeriod?: string;
+}
 export interface LinuxVirtualMachineScaleSetAutomaticOsUpgradePolicy {
   readonly disableAutomaticRollback: boolean;
   readonly enableAutomaticOsUpgrade: boolean;
 }
 export interface LinuxVirtualMachineScaleSetBootDiagnostics {
-  readonly storageAccountUri: string;
+  readonly storageAccountUri?: string;
 }
 export interface LinuxVirtualMachineScaleSetDataDisk {
   readonly caching: string;
+  readonly createOption?: string;
   readonly diskEncryptionSetId?: string;
+  readonly diskIopsReadWrite?: number;
+  readonly diskMbpsReadWrite?: number;
   readonly diskSizeGb: number;
   readonly lun: number;
   readonly storageAccountType: string;
   readonly writeAcceleratorEnabled?: boolean;
+}
+export interface LinuxVirtualMachineScaleSetExtension {
+  readonly autoUpgradeMinorVersion?: boolean;
+  readonly forceUpdateTag?: string;
+  readonly name: string;
+  readonly protectedSettings?: string;
+  readonly provisionAfterExtensions?: string[];
+  readonly publisher: string;
+  readonly settings?: string;
+  readonly type: string;
+  readonly typeHandlerVersion: string;
 }
 export interface LinuxVirtualMachineScaleSetIdentity {
   readonly identityIds?: string[];
@@ -156,6 +183,10 @@ export interface LinuxVirtualMachineScaleSetSourceImageReference {
   readonly sku: string;
   readonly version: string;
 }
+export interface LinuxVirtualMachineScaleSetTerminateNotification {
+  readonly enabled: boolean;
+  readonly timeout?: string;
+}
 export interface LinuxVirtualMachineScaleSetTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -188,6 +219,7 @@ export class LinuxVirtualMachineScaleSet extends TerraformResource {
     this._customData = config.customData;
     this._disablePasswordAuthentication = config.disablePasswordAuthentication;
     this._doNotRunExtensionsOnOverprovisionedMachines = config.doNotRunExtensionsOnOverprovisionedMachines;
+    this._encryptionAtHostEnabled = config.encryptionAtHostEnabled;
     this._evictionPolicy = config.evictionPolicy;
     this._healthProbeId = config.healthProbeId;
     this._instances = config.instances;
@@ -195,10 +227,12 @@ export class LinuxVirtualMachineScaleSet extends TerraformResource {
     this._maxBidPrice = config.maxBidPrice;
     this._name = config.name;
     this._overprovision = config.overprovision;
+    this._platformFaultDomainCount = config.platformFaultDomainCount;
     this._priority = config.priority;
     this._provisionVmAgent = config.provisionVmAgent;
     this._proximityPlacementGroupId = config.proximityPlacementGroupId;
     this._resourceGroupName = config.resourceGroupName;
+    this._scaleInPolicy = config.scaleInPolicy;
     this._singlePlacementGroup = config.singlePlacementGroup;
     this._sku = config.sku;
     this._sourceImageId = config.sourceImageId;
@@ -208,9 +242,11 @@ export class LinuxVirtualMachineScaleSet extends TerraformResource {
     this._zones = config.zones;
     this._additionalCapabilities = config.additionalCapabilities;
     this._adminSshKey = config.adminSshKey;
+    this._automaticInstanceRepair = config.automaticInstanceRepair;
     this._automaticOsUpgradePolicy = config.automaticOsUpgradePolicy;
     this._bootDiagnostics = config.bootDiagnostics;
     this._dataDisk = config.dataDisk;
+    this._extension = config.extension;
     this._identity = config.identity;
     this._networkInterface = config.networkInterface;
     this._osDisk = config.osDisk;
@@ -218,6 +254,7 @@ export class LinuxVirtualMachineScaleSet extends TerraformResource {
     this._rollingUpgradePolicy = config.rollingUpgradePolicy;
     this._secret = config.secret;
     this._sourceImageReference = config.sourceImageReference;
+    this._terminateNotification = config.terminateNotification;
     this._timeouts = config.timeouts;
   }
 
@@ -316,6 +353,22 @@ export class LinuxVirtualMachineScaleSet extends TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get doNotRunExtensionsOnOverprovisionedMachinesInput() {
     return this._doNotRunExtensionsOnOverprovisionedMachines
+  }
+
+  // encryption_at_host_enabled - computed: false, optional: true, required: false
+  private _encryptionAtHostEnabled?: boolean;
+  public get encryptionAtHostEnabled() {
+    return this.getBooleanAttribute('encryption_at_host_enabled');
+  }
+  public set encryptionAtHostEnabled(value: boolean ) {
+    this._encryptionAtHostEnabled = value;
+  }
+  public resetEncryptionAtHostEnabled() {
+    this._encryptionAtHostEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get encryptionAtHostEnabledInput() {
+    return this._encryptionAtHostEnabled
   }
 
   // eviction_policy - computed: false, optional: true, required: false
@@ -426,6 +479,22 @@ export class LinuxVirtualMachineScaleSet extends TerraformResource {
     return this._overprovision
   }
 
+  // platform_fault_domain_count - computed: true, optional: true, required: false
+  private _platformFaultDomainCount?: number;
+  public get platformFaultDomainCount() {
+    return this.getNumberAttribute('platform_fault_domain_count');
+  }
+  public set platformFaultDomainCount(value: number) {
+    this._platformFaultDomainCount = value;
+  }
+  public resetPlatformFaultDomainCount() {
+    this._platformFaultDomainCount = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get platformFaultDomainCountInput() {
+    return this._platformFaultDomainCount
+  }
+
   // priority - computed: false, optional: true, required: false
   private _priority?: string;
   public get priority() {
@@ -485,6 +554,22 @@ export class LinuxVirtualMachineScaleSet extends TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
     return this._resourceGroupName
+  }
+
+  // scale_in_policy - computed: false, optional: true, required: false
+  private _scaleInPolicy?: string;
+  public get scaleInPolicy() {
+    return this.getStringAttribute('scale_in_policy');
+  }
+  public set scaleInPolicy(value: string ) {
+    this._scaleInPolicy = value;
+  }
+  public resetScaleInPolicy() {
+    this._scaleInPolicy = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get scaleInPolicyInput() {
+    return this._scaleInPolicy
   }
 
   // single_placement_group - computed: false, optional: true, required: false
@@ -633,6 +718,22 @@ export class LinuxVirtualMachineScaleSet extends TerraformResource {
     return this._adminSshKey
   }
 
+  // automatic_instance_repair - computed: false, optional: true, required: false
+  private _automaticInstanceRepair?: LinuxVirtualMachineScaleSetAutomaticInstanceRepair[];
+  public get automaticInstanceRepair() {
+    return this.interpolationForAttribute('automatic_instance_repair') as any;
+  }
+  public set automaticInstanceRepair(value: LinuxVirtualMachineScaleSetAutomaticInstanceRepair[] ) {
+    this._automaticInstanceRepair = value;
+  }
+  public resetAutomaticInstanceRepair() {
+    this._automaticInstanceRepair = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get automaticInstanceRepairInput() {
+    return this._automaticInstanceRepair
+  }
+
   // automatic_os_upgrade_policy - computed: false, optional: true, required: false
   private _automaticOsUpgradePolicy?: LinuxVirtualMachineScaleSetAutomaticOsUpgradePolicy[];
   public get automaticOsUpgradePolicy() {
@@ -679,6 +780,22 @@ export class LinuxVirtualMachineScaleSet extends TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get dataDiskInput() {
     return this._dataDisk
+  }
+
+  // extension - computed: false, optional: true, required: false
+  private _extension?: LinuxVirtualMachineScaleSetExtension[];
+  public get extension() {
+    return this.interpolationForAttribute('extension') as any;
+  }
+  public set extension(value: LinuxVirtualMachineScaleSetExtension[] ) {
+    this._extension = value;
+  }
+  public resetExtension() {
+    this._extension = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get extensionInput() {
+    return this._extension
   }
 
   // identity - computed: false, optional: true, required: false
@@ -787,6 +904,22 @@ export class LinuxVirtualMachineScaleSet extends TerraformResource {
     return this._sourceImageReference
   }
 
+  // terminate_notification - computed: false, optional: true, required: false
+  private _terminateNotification?: LinuxVirtualMachineScaleSetTerminateNotification[];
+  public get terminateNotification() {
+    return this.interpolationForAttribute('terminate_notification') as any;
+  }
+  public set terminateNotification(value: LinuxVirtualMachineScaleSetTerminateNotification[] ) {
+    this._terminateNotification = value;
+  }
+  public resetTerminateNotification() {
+    this._terminateNotification = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get terminateNotificationInput() {
+    return this._terminateNotification
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: LinuxVirtualMachineScaleSetTimeouts;
   public get timeouts() {
@@ -815,6 +948,7 @@ export class LinuxVirtualMachineScaleSet extends TerraformResource {
       custom_data: this._customData,
       disable_password_authentication: this._disablePasswordAuthentication,
       do_not_run_extensions_on_overprovisioned_machines: this._doNotRunExtensionsOnOverprovisionedMachines,
+      encryption_at_host_enabled: this._encryptionAtHostEnabled,
       eviction_policy: this._evictionPolicy,
       health_probe_id: this._healthProbeId,
       instances: this._instances,
@@ -822,10 +956,12 @@ export class LinuxVirtualMachineScaleSet extends TerraformResource {
       max_bid_price: this._maxBidPrice,
       name: this._name,
       overprovision: this._overprovision,
+      platform_fault_domain_count: this._platformFaultDomainCount,
       priority: this._priority,
       provision_vm_agent: this._provisionVmAgent,
       proximity_placement_group_id: this._proximityPlacementGroupId,
       resource_group_name: this._resourceGroupName,
+      scale_in_policy: this._scaleInPolicy,
       single_placement_group: this._singlePlacementGroup,
       sku: this._sku,
       source_image_id: this._sourceImageId,
@@ -835,9 +971,11 @@ export class LinuxVirtualMachineScaleSet extends TerraformResource {
       zones: this._zones,
       additional_capabilities: this._additionalCapabilities,
       admin_ssh_key: this._adminSshKey,
+      automatic_instance_repair: this._automaticInstanceRepair,
       automatic_os_upgrade_policy: this._automaticOsUpgradePolicy,
       boot_diagnostics: this._bootDiagnostics,
       data_disk: this._dataDisk,
+      extension: this._extension,
       identity: this._identity,
       network_interface: this._networkInterface,
       os_disk: this._osDisk,
@@ -845,6 +983,7 @@ export class LinuxVirtualMachineScaleSet extends TerraformResource {
       rolling_upgrade_policy: this._rollingUpgradePolicy,
       secret: this._secret,
       source_image_reference: this._sourceImageReference,
+      terminate_notification: this._terminateNotification,
       timeouts: this._timeouts,
     };
   }

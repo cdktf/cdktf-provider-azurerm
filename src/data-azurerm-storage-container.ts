@@ -96,6 +96,11 @@ export class DataAzurermStorageContainer extends TerraformDataSource {
     return this._name
   }
 
+  // resource_manager_id - computed: true, optional: false, required: false
+  public get resourceManagerId() {
+    return this.getStringAttribute('resource_manager_id');
+  }
+
   // storage_account_name - computed: false, optional: false, required: true
   private _storageAccountName: string;
   public get storageAccountName() {

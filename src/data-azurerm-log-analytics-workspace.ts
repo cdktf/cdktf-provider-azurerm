@@ -46,6 +46,11 @@ export class DataAzurermLogAnalyticsWorkspace extends TerraformDataSource {
   // ATTRIBUTES
   // ==========
 
+  // daily_quota_gb - computed: true, optional: false, required: false
+  public get dailyQuotaGb() {
+    return this.getNumberAttribute('daily_quota_gb');
+  }
+
   // id - computed: true, optional: true, required: false
   public get id() {
     return this.getStringAttribute('id');

@@ -56,6 +56,11 @@ export class DataAzurermVirtualNetwork extends TerraformDataSource {
     return this.getListAttribute('dns_servers');
   }
 
+  // guid - computed: true, optional: false, required: false
+  public get guid() {
+    return this.getStringAttribute('guid');
+  }
+
   // id - computed: true, optional: true, required: false
   public get id() {
     return this.getStringAttribute('id');

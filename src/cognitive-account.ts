@@ -11,6 +11,7 @@ export interface CognitiveAccountConfig extends TerraformMetaArguments {
   readonly kind: string;
   readonly location: string;
   readonly name: string;
+  readonly qnaRuntimeEndpoint?: string;
   readonly resourceGroupName: string;
   readonly skuName: string;
   readonly tags?: { [key: string]: string };
@@ -46,6 +47,7 @@ export class CognitiveAccount extends TerraformResource {
     this._kind = config.kind;
     this._location = config.location;
     this._name = config.name;
+    this._qnaRuntimeEndpoint = config.qnaRuntimeEndpoint;
     this._resourceGroupName = config.resourceGroupName;
     this._skuName = config.skuName;
     this._tags = config.tags;
@@ -108,6 +110,22 @@ export class CognitiveAccount extends TerraformResource {
   // primary_access_key - computed: true, optional: false, required: false
   public get primaryAccessKey() {
     return this.getStringAttribute('primary_access_key');
+  }
+
+  // qna_runtime_endpoint - computed: false, optional: true, required: false
+  private _qnaRuntimeEndpoint?: string;
+  public get qnaRuntimeEndpoint() {
+    return this.getStringAttribute('qna_runtime_endpoint');
+  }
+  public set qnaRuntimeEndpoint(value: string ) {
+    this._qnaRuntimeEndpoint = value;
+  }
+  public resetQnaRuntimeEndpoint() {
+    this._qnaRuntimeEndpoint = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get qnaRuntimeEndpointInput() {
+    return this._qnaRuntimeEndpoint
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -182,6 +200,7 @@ export class CognitiveAccount extends TerraformResource {
       kind: this._kind,
       location: this._location,
       name: this._name,
+      qna_runtime_endpoint: this._qnaRuntimeEndpoint,
       resource_group_name: this._resourceGroupName,
       sku_name: this._skuName,
       tags: this._tags,

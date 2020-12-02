@@ -14,6 +14,7 @@ export interface NotificationHubNamespaceConfig extends TerraformMetaArguments {
   readonly namespaceType: string;
   readonly resourceGroupName: string;
   readonly skuName: string;
+  readonly tags?: { [key: string]: string };
   /** timeouts block */
   readonly timeouts?: NotificationHubNamespaceTimeouts;
 }
@@ -49,6 +50,7 @@ export class NotificationHubNamespace extends TerraformResource {
     this._namespaceType = config.namespaceType;
     this._resourceGroupName = config.resourceGroupName;
     this._skuName = config.skuName;
+    this._tags = config.tags;
     this._timeouts = config.timeouts;
   }
 
@@ -147,6 +149,22 @@ export class NotificationHubNamespace extends TerraformResource {
     return this._skuName
   }
 
+  // tags - computed: false, optional: true, required: false
+  private _tags?: { [key: string]: string };
+  public get tags() {
+    return this.interpolationForAttribute('tags') as any;
+  }
+  public set tags(value: { [key: string]: string } ) {
+    this._tags = value;
+  }
+  public resetTags() {
+    this._tags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsInput() {
+    return this._tags
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: NotificationHubNamespaceTimeouts;
   public get timeouts() {
@@ -175,6 +193,7 @@ export class NotificationHubNamespace extends TerraformResource {
       namespace_type: this._namespaceType,
       resource_group_name: this._resourceGroupName,
       sku_name: this._skuName,
+      tags: this._tags,
       timeouts: this._timeouts,
     };
   }

@@ -50,6 +50,7 @@ export interface BatchPoolContainerConfigurationContainerRegistries {
   readonly userName?: string;
 }
 export interface BatchPoolContainerConfiguration {
+  readonly containerImageNames?: string[];
   readonly containerRegistries?: BatchPoolContainerConfigurationContainerRegistries[];
   readonly type?: string;
 }
@@ -72,6 +73,7 @@ export interface BatchPoolNetworkConfigurationEndpointConfiguration {
   readonly networkSecurityGroupRules?: BatchPoolNetworkConfigurationEndpointConfigurationNetworkSecurityGroupRules[];
 }
 export interface BatchPoolNetworkConfiguration {
+  readonly publicIps?: string[];
   readonly subnetId: string;
   /** endpoint_configuration block */
   readonly endpointConfiguration?: BatchPoolNetworkConfigurationEndpointConfiguration[];

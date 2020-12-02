@@ -11,8 +11,21 @@ export interface DnsZoneConfig extends TerraformMetaArguments {
   readonly name: string;
   readonly resourceGroupName: string;
   readonly tags?: { [key: string]: string };
+  /** soa_record block */
+  readonly soaRecord?: DnsZoneSoaRecord[];
   /** timeouts block */
   readonly timeouts?: DnsZoneTimeouts;
+}
+export interface DnsZoneSoaRecord {
+  readonly email: string;
+  readonly expireTime?: number;
+  readonly hostName: string;
+  readonly minimumTtl?: number;
+  readonly refreshTime?: number;
+  readonly retryTime?: number;
+  readonly serialNumber?: number;
+  readonly tags?: { [key: string]: string };
+  readonly ttl?: number;
 }
 export interface DnsZoneTimeouts {
   readonly create?: string;
@@ -43,6 +56,7 @@ export class DnsZone extends TerraformResource {
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
     this._tags = config.tags;
+    this._soaRecord = config.soaRecord;
     this._timeouts = config.timeouts;
   }
 
@@ -112,6 +126,22 @@ export class DnsZone extends TerraformResource {
     return this._tags
   }
 
+  // soa_record - computed: false, optional: true, required: false
+  private _soaRecord?: DnsZoneSoaRecord[];
+  public get soaRecord() {
+    return this.interpolationForAttribute('soa_record') as any;
+  }
+  public set soaRecord(value: DnsZoneSoaRecord[] ) {
+    this._soaRecord = value;
+  }
+  public resetSoaRecord() {
+    this._soaRecord = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get soaRecordInput() {
+    return this._soaRecord
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: DnsZoneTimeouts;
   public get timeouts() {
@@ -137,6 +167,7 @@ export class DnsZone extends TerraformResource {
       name: this._name,
       resource_group_name: this._resourceGroupName,
       tags: this._tags,
+      soa_record: this._soaRecord,
       timeouts: this._timeouts,
     };
   }

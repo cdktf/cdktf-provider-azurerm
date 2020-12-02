@@ -11,6 +11,7 @@ export interface ApplicationInsightsConfig extends TerraformMetaArguments {
   readonly applicationType: string;
   readonly dailyDataCapInGb?: number;
   readonly dailyDataCapNotificationsDisabled?: boolean;
+  readonly disableIpMasking?: boolean;
   readonly location: string;
   readonly name: string;
   readonly resourceGroupName: string;
@@ -49,6 +50,7 @@ export class ApplicationInsights extends TerraformResource {
     this._applicationType = config.applicationType;
     this._dailyDataCapInGb = config.dailyDataCapInGb;
     this._dailyDataCapNotificationsDisabled = config.dailyDataCapNotificationsDisabled;
+    this._disableIpMasking = config.disableIpMasking;
     this._location = config.location;
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
@@ -78,6 +80,11 @@ export class ApplicationInsights extends TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get applicationTypeInput() {
     return this._applicationType
+  }
+
+  // connection_string - computed: true, optional: false, required: false
+  public get connectionString() {
+    return this.getStringAttribute('connection_string');
   }
 
   // daily_data_cap_in_gb - computed: true, optional: true, required: false
@@ -110,6 +117,22 @@ export class ApplicationInsights extends TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get dailyDataCapNotificationsDisabledInput() {
     return this._dailyDataCapNotificationsDisabled
+  }
+
+  // disable_ip_masking - computed: false, optional: true, required: false
+  private _disableIpMasking?: boolean;
+  public get disableIpMasking() {
+    return this.getBooleanAttribute('disable_ip_masking');
+  }
+  public set disableIpMasking(value: boolean ) {
+    this._disableIpMasking = value;
+  }
+  public resetDisableIpMasking() {
+    this._disableIpMasking = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get disableIpMaskingInput() {
+    return this._disableIpMasking
   }
 
   // id - computed: true, optional: true, required: false
@@ -234,6 +257,7 @@ export class ApplicationInsights extends TerraformResource {
       application_type: this._applicationType,
       daily_data_cap_in_gb: this._dailyDataCapInGb,
       daily_data_cap_notifications_disabled: this._dailyDataCapNotificationsDisabled,
+      disable_ip_masking: this._disableIpMasking,
       location: this._location,
       name: this._name,
       resource_group_name: this._resourceGroupName,

@@ -13,16 +13,33 @@ export interface ExpressRouteCircuitPeeringConfig extends TerraformMetaArguments
   readonly peeringType: string;
   readonly primaryPeerAddressPrefix: string;
   readonly resourceGroupName: string;
+  readonly routeFilterId?: string;
   readonly secondaryPeerAddressPrefix: string;
   readonly sharedKey?: string;
   readonly vlanId: number;
+  /** ipv6 block */
+  readonly ipv6?: ExpressRouteCircuitPeeringIpv6[];
   /** microsoft_peering_config block */
   readonly microsoftPeeringConfig?: ExpressRouteCircuitPeeringMicrosoftPeeringConfig[];
   /** timeouts block */
   readonly timeouts?: ExpressRouteCircuitPeeringTimeouts;
 }
+export interface ExpressRouteCircuitPeeringIpv6MicrosoftPeering {
+  readonly advertisedPublicPrefixes?: string[];
+  readonly customerAsn?: number;
+  readonly routingRegistryName?: string;
+}
+export interface ExpressRouteCircuitPeeringIpv6 {
+  readonly primaryPeerAddressPrefix: string;
+  readonly routeFilterId?: string;
+  readonly secondaryPeerAddressPrefix: string;
+  /** microsoft_peering block */
+  readonly microsoftPeering: ExpressRouteCircuitPeeringIpv6MicrosoftPeering[];
+}
 export interface ExpressRouteCircuitPeeringMicrosoftPeeringConfig {
   readonly advertisedPublicPrefixes: string[];
+  readonly customerAsn?: number;
+  readonly routingRegistryName?: string;
 }
 export interface ExpressRouteCircuitPeeringTimeouts {
   readonly create?: string;
@@ -55,9 +72,11 @@ export class ExpressRouteCircuitPeering extends TerraformResource {
     this._peeringType = config.peeringType;
     this._primaryPeerAddressPrefix = config.primaryPeerAddressPrefix;
     this._resourceGroupName = config.resourceGroupName;
+    this._routeFilterId = config.routeFilterId;
     this._secondaryPeerAddressPrefix = config.secondaryPeerAddressPrefix;
     this._sharedKey = config.sharedKey;
     this._vlanId = config.vlanId;
+    this._ipv6 = config.ipv6;
     this._microsoftPeeringConfig = config.microsoftPeeringConfig;
     this._timeouts = config.timeouts;
   }
@@ -149,6 +168,22 @@ export class ExpressRouteCircuitPeering extends TerraformResource {
     return this._resourceGroupName
   }
 
+  // route_filter_id - computed: false, optional: true, required: false
+  private _routeFilterId?: string;
+  public get routeFilterId() {
+    return this.getStringAttribute('route_filter_id');
+  }
+  public set routeFilterId(value: string ) {
+    this._routeFilterId = value;
+  }
+  public resetRouteFilterId() {
+    this._routeFilterId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get routeFilterIdInput() {
+    return this._routeFilterId
+  }
+
   // secondary_azure_port - computed: true, optional: false, required: false
   public get secondaryAzurePort() {
     return this.getStringAttribute('secondary_azure_port');
@@ -196,6 +231,22 @@ export class ExpressRouteCircuitPeering extends TerraformResource {
     return this._vlanId
   }
 
+  // ipv6 - computed: false, optional: true, required: false
+  private _ipv6?: ExpressRouteCircuitPeeringIpv6[];
+  public get ipv6() {
+    return this.interpolationForAttribute('ipv6') as any;
+  }
+  public set ipv6(value: ExpressRouteCircuitPeeringIpv6[] ) {
+    this._ipv6 = value;
+  }
+  public resetIpv6() {
+    this._ipv6 = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ipv6Input() {
+    return this._ipv6
+  }
+
   // microsoft_peering_config - computed: false, optional: true, required: false
   private _microsoftPeeringConfig?: ExpressRouteCircuitPeeringMicrosoftPeeringConfig[];
   public get microsoftPeeringConfig() {
@@ -239,9 +290,11 @@ export class ExpressRouteCircuitPeering extends TerraformResource {
       peering_type: this._peeringType,
       primary_peer_address_prefix: this._primaryPeerAddressPrefix,
       resource_group_name: this._resourceGroupName,
+      route_filter_id: this._routeFilterId,
       secondary_peer_address_prefix: this._secondaryPeerAddressPrefix,
       shared_key: this._sharedKey,
       vlan_id: this._vlanId,
+      ipv6: this._ipv6,
       microsoft_peering_config: this._microsoftPeeringConfig,
       timeouts: this._timeouts,
     };

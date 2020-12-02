@@ -56,6 +56,11 @@ export class DataAzurermApplicationInsights extends TerraformDataSource {
     return this.getStringAttribute('application_type');
   }
 
+  // connection_string - computed: true, optional: false, required: false
+  public get connectionString() {
+    return this.getStringAttribute('connection_string');
+  }
+
   // id - computed: true, optional: true, required: false
   public get id() {
     return this.getStringAttribute('id');

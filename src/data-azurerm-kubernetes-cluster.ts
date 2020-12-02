@@ -41,6 +41,23 @@ export class DataAzurermKubernetesClusterAddonProfileKubeDashboard extends Compl
     return this.getBooleanAttribute('enabled');
   }
 }
+export class DataAzurermKubernetesClusterAddonProfileOmsAgentOmsAgentIdentity extends ComplexComputedList {
+
+  // client_id - computed: true, optional: false, required: false
+  public get clientId() {
+    return this.getStringAttribute('client_id');
+  }
+
+  // object_id - computed: true, optional: false, required: false
+  public get objectId() {
+    return this.getStringAttribute('object_id');
+  }
+
+  // user_assigned_identity_id - computed: true, optional: false, required: false
+  public get userAssignedIdentityId() {
+    return this.getStringAttribute('user_assigned_identity_id');
+  }
+}
 export class DataAzurermKubernetesClusterAddonProfileOmsAgent extends ComplexComputedList {
 
   // enabled - computed: true, optional: false, required: false
@@ -51,6 +68,11 @@ export class DataAzurermKubernetesClusterAddonProfileOmsAgent extends ComplexCom
   // log_analytics_workspace_id - computed: true, optional: false, required: false
   public get logAnalyticsWorkspaceId() {
     return this.getStringAttribute('log_analytics_workspace_id');
+  }
+
+  // oms_agent_identity - computed: true, optional: false, required: false
+  public get omsAgentIdentity() {
+    return this.interpolationForAttribute('oms_agent_identity') as any;
   }
 }
 export class DataAzurermKubernetesClusterAddonProfile extends ComplexComputedList {
@@ -117,9 +139,19 @@ export class DataAzurermKubernetesClusterAgentPoolProfile extends ComplexCompute
     return this.getStringAttribute('name');
   }
 
+  // node_labels - computed: true, optional: false, required: false
+  public get nodeLabels() {
+    return this.interpolationForAttribute('node_labels') as any;
+  }
+
   // node_taints - computed: true, optional: false, required: false
   public get nodeTaints() {
     return this.getListAttribute('node_taints');
+  }
+
+  // orchestrator_version - computed: true, optional: false, required: false
+  public get orchestratorVersion() {
+    return this.getStringAttribute('orchestrator_version');
   }
 
   // os_disk_size_gb - computed: true, optional: false, required: false
@@ -130,6 +162,11 @@ export class DataAzurermKubernetesClusterAgentPoolProfile extends ComplexCompute
   // os_type - computed: true, optional: false, required: false
   public get osType() {
     return this.getStringAttribute('os_type');
+  }
+
+  // tags - computed: true, optional: false, required: false
+  public get tags() {
+    return this.interpolationForAttribute('tags') as any;
   }
 
   // type - computed: true, optional: false, required: false
@@ -145,6 +182,23 @@ export class DataAzurermKubernetesClusterAgentPoolProfile extends ComplexCompute
   // vnet_subnet_id - computed: true, optional: false, required: false
   public get vnetSubnetId() {
     return this.getStringAttribute('vnet_subnet_id');
+  }
+}
+export class DataAzurermKubernetesClusterIdentity extends ComplexComputedList {
+
+  // principal_id - computed: true, optional: false, required: false
+  public get principalId() {
+    return this.getStringAttribute('principal_id');
+  }
+
+  // tenant_id - computed: true, optional: false, required: false
+  public get tenantId() {
+    return this.getStringAttribute('tenant_id');
+  }
+
+  // type - computed: true, optional: false, required: false
+  public get type() {
+    return this.getStringAttribute('type');
   }
 }
 export class DataAzurermKubernetesClusterKubeAdminConfig extends ComplexComputedList {
@@ -211,6 +265,23 @@ export class DataAzurermKubernetesClusterKubeConfig extends ComplexComputedList 
     return this.getStringAttribute('username');
   }
 }
+export class DataAzurermKubernetesClusterKubeletIdentity extends ComplexComputedList {
+
+  // client_id - computed: true, optional: false, required: false
+  public get clientId() {
+    return this.getStringAttribute('client_id');
+  }
+
+  // object_id - computed: true, optional: false, required: false
+  public get objectId() {
+    return this.getStringAttribute('object_id');
+  }
+
+  // user_assigned_identity_id - computed: true, optional: false, required: false
+  public get userAssignedIdentityId() {
+    return this.getStringAttribute('user_assigned_identity_id');
+  }
+}
 export class DataAzurermKubernetesClusterLinuxProfileSshKey extends ComplexComputedList {
 
   // key_data - computed: true, optional: false, required: false
@@ -269,9 +340,19 @@ export class DataAzurermKubernetesClusterNetworkProfile extends ComplexComputedL
 }
 export class DataAzurermKubernetesClusterRoleBasedAccessControlAzureActiveDirectory extends ComplexComputedList {
 
+  // admin_group_object_ids - computed: true, optional: false, required: false
+  public get adminGroupObjectIds() {
+    return this.getListAttribute('admin_group_object_ids');
+  }
+
   // client_app_id - computed: true, optional: false, required: false
   public get clientAppId() {
     return this.getStringAttribute('client_app_id');
+  }
+
+  // managed - computed: true, optional: false, required: false
+  public get managed() {
+    return this.getBooleanAttribute('managed');
   }
 
   // server_app_id - computed: true, optional: false, required: false
@@ -357,6 +438,11 @@ export class DataAzurermKubernetesCluster extends TerraformDataSource {
     return this.getListAttribute('api_server_authorized_ip_ranges');
   }
 
+  // disk_encryption_set_id - computed: true, optional: false, required: false
+  public get diskEncryptionSetId() {
+    return this.getStringAttribute('disk_encryption_set_id');
+  }
+
   // dns_prefix - computed: true, optional: false, required: false
   public get dnsPrefix() {
     return this.getStringAttribute('dns_prefix');
@@ -370,6 +456,11 @@ export class DataAzurermKubernetesCluster extends TerraformDataSource {
   // id - computed: true, optional: true, required: false
   public get id() {
     return this.getStringAttribute('id');
+  }
+
+  // identity - computed: true, optional: false, required: false
+  public identity(index: string) {
+    return new DataAzurermKubernetesClusterIdentity(this, 'identity', index);
   }
 
   // kube_admin_config - computed: true, optional: false, required: false
@@ -390,6 +481,11 @@ export class DataAzurermKubernetesCluster extends TerraformDataSource {
   // kube_config_raw - computed: true, optional: false, required: false
   public get kubeConfigRaw() {
     return this.getStringAttribute('kube_config_raw');
+  }
+
+  // kubelet_identity - computed: true, optional: false, required: false
+  public kubeletIdentity(index: string) {
+    return new DataAzurermKubernetesClusterKubeletIdentity(this, 'kubelet_identity', index);
   }
 
   // kubernetes_version - computed: true, optional: false, required: false
@@ -428,6 +524,11 @@ export class DataAzurermKubernetesCluster extends TerraformDataSource {
   // node_resource_group - computed: true, optional: false, required: false
   public get nodeResourceGroup() {
     return this.getStringAttribute('node_resource_group');
+  }
+
+  // private_cluster_enabled - computed: true, optional: false, required: false
+  public get privateClusterEnabled() {
+    return this.getBooleanAttribute('private_cluster_enabled');
   }
 
   // private_fqdn - computed: true, optional: false, required: false

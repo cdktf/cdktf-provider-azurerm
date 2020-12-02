@@ -57,6 +57,18 @@ export class DataAzurermVirtualNetworkGatewayConnectionIpsecPolicy extends Compl
     return this.getNumberAttribute('sa_lifetime');
   }
 }
+export class DataAzurermVirtualNetworkGatewayConnectionTrafficSelectorPolicy extends ComplexComputedList {
+
+  // local_address_cidrs - computed: true, optional: false, required: false
+  public get localAddressCidrs() {
+    return this.getListAttribute('local_address_cidrs');
+  }
+
+  // remote_address_cidrs - computed: true, optional: false, required: false
+  public get remoteAddressCidrs() {
+    return this.getListAttribute('remote_address_cidrs');
+  }
+}
 export interface DataAzurermVirtualNetworkGatewayConnectionTimeouts {
   readonly read?: string;
 }
@@ -99,6 +111,11 @@ export class DataAzurermVirtualNetworkGatewayConnection extends TerraformDataSou
     return this.getStringAttribute('connection_protocol');
   }
 
+  // dpd_timeout_seconds - computed: true, optional: false, required: false
+  public get dpdTimeoutSeconds() {
+    return this.getNumberAttribute('dpd_timeout_seconds');
+  }
+
   // egress_bytes_transferred - computed: true, optional: false, required: false
   public get egressBytesTransferred() {
     return this.getNumberAttribute('egress_bytes_transferred');
@@ -132,6 +149,11 @@ export class DataAzurermVirtualNetworkGatewayConnection extends TerraformDataSou
   // ipsec_policy - computed: true, optional: false, required: false
   public ipsecPolicy(index: string) {
     return new DataAzurermVirtualNetworkGatewayConnectionIpsecPolicy(this, 'ipsec_policy', index);
+  }
+
+  // local_azure_ip_address_enabled - computed: true, optional: false, required: false
+  public get localAzureIpAddressEnabled() {
+    return this.getBooleanAttribute('local_azure_ip_address_enabled');
   }
 
   // local_network_gateway_id - computed: true, optional: false, required: false
@@ -193,6 +215,11 @@ export class DataAzurermVirtualNetworkGatewayConnection extends TerraformDataSou
   // tags - computed: true, optional: false, required: false
   public tags(key: string): string {
     return new StringMap(this, 'tags').lookup(key);
+  }
+
+  // traffic_selector_policy - computed: true, optional: false, required: false
+  public trafficSelectorPolicy(index: string) {
+    return new DataAzurermVirtualNetworkGatewayConnectionTrafficSelectorPolicy(this, 'traffic_selector_policy', index);
   }
 
   // type - computed: true, optional: false, required: false

@@ -199,6 +199,11 @@ export class RedisCache extends TerraformResource {
     return this.getStringAttribute('primary_access_key');
   }
 
+  // primary_connection_string - computed: true, optional: false, required: false
+  public get primaryConnectionString() {
+    return this.getStringAttribute('primary_connection_string');
+  }
+
   // private_static_ip_address - computed: true, optional: true, required: false
   private _privateStaticIpAddress?: string;
   public get privateStaticIpAddress() {
@@ -231,6 +236,11 @@ export class RedisCache extends TerraformResource {
   // secondary_access_key - computed: true, optional: false, required: false
   public get secondaryAccessKey() {
     return this.getStringAttribute('secondary_access_key');
+  }
+
+  // secondary_connection_string - computed: true, optional: false, required: false
+  public get secondaryConnectionString() {
+    return this.getStringAttribute('secondary_connection_string');
   }
 
   // shard_count - computed: false, optional: true, required: false

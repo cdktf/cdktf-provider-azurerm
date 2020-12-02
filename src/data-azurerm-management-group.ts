@@ -8,7 +8,9 @@ import { TerraformMetaArguments } from 'cdktf';
 // Configuration
 
 export interface DataAzurermManagementGroupConfig extends TerraformMetaArguments {
-  readonly groupId: string;
+  readonly displayName?: string;
+  readonly groupId?: string;
+  readonly name?: string;
   /** timeouts block */
   readonly timeouts?: DataAzurermManagementGroupTimeouts;
 }
@@ -24,7 +26,7 @@ export class DataAzurermManagementGroup extends TerraformDataSource {
   // INITIALIZER
   // ===========
 
-  public constructor(scope: Construct, id: string, config: DataAzurermManagementGroupConfig) {
+  public constructor(scope: Construct, id: string, config: DataAzurermManagementGroupConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'azurerm_management_group',
       terraformGeneratorMetadata: {
@@ -35,7 +37,9 @@ export class DataAzurermManagementGroup extends TerraformDataSource {
       count: config.count,
       lifecycle: config.lifecycle
     });
+    this._displayName = config.displayName;
     this._groupId = config.groupId;
+    this._name = config.name;
     this._timeouts = config.timeouts;
   }
 
@@ -43,18 +47,32 @@ export class DataAzurermManagementGroup extends TerraformDataSource {
   // ATTRIBUTES
   // ==========
 
-  // display_name - computed: true, optional: false, required: false
+  // display_name - computed: true, optional: true, required: false
+  private _displayName?: string;
   public get displayName() {
     return this.getStringAttribute('display_name');
   }
+  public set displayName(value: string) {
+    this._displayName = value;
+  }
+  public resetDisplayName() {
+    this._displayName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get displayNameInput() {
+    return this._displayName
+  }
 
-  // group_id - computed: false, optional: false, required: true
-  private _groupId: string;
+  // group_id - computed: true, optional: true, required: false
+  private _groupId?: string;
   public get groupId() {
     return this.getStringAttribute('group_id');
   }
   public set groupId(value: string) {
     this._groupId = value;
+  }
+  public resetGroupId() {
+    this._groupId = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get groupIdInput() {
@@ -64,6 +82,22 @@ export class DataAzurermManagementGroup extends TerraformDataSource {
   // id - computed: true, optional: true, required: false
   public get id() {
     return this.getStringAttribute('id');
+  }
+
+  // name - computed: true, optional: true, required: false
+  private _name?: string;
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  public resetName() {
+    this._name = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // parent_management_group_id - computed: true, optional: false, required: false
@@ -98,7 +132,9 @@ export class DataAzurermManagementGroup extends TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      display_name: this._displayName,
       group_id: this._groupId,
+      name: this._name,
       timeouts: this._timeouts,
     };
   }

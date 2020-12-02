@@ -10,7 +10,7 @@ import { TerraformMetaArguments } from 'cdktf';
 export interface StorageAccountCustomerManagedKeyConfig extends TerraformMetaArguments {
   readonly keyName: string;
   readonly keyVaultId: string;
-  readonly keyVersion: string;
+  readonly keyVersion?: string;
   readonly storageAccountId: string;
   /** timeouts block */
   readonly timeouts?: StorageAccountCustomerManagedKeyTimeouts;
@@ -83,13 +83,16 @@ export class StorageAccountCustomerManagedKey extends TerraformResource {
     return this._keyVaultId
   }
 
-  // key_version - computed: false, optional: false, required: true
-  private _keyVersion: string;
+  // key_version - computed: false, optional: true, required: false
+  private _keyVersion?: string;
   public get keyVersion() {
     return this.getStringAttribute('key_version');
   }
-  public set keyVersion(value: string) {
+  public set keyVersion(value: string ) {
     this._keyVersion = value;
+  }
+  public resetKeyVersion() {
+    this._keyVersion = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get keyVersionInput() {

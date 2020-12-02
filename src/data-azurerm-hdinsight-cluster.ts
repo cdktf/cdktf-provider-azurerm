@@ -145,6 +145,11 @@ export class DataAzurermHdinsightCluster extends TerraformDataSource {
     return this.getStringAttribute('tier');
   }
 
+  // tls_min_version - computed: true, optional: false, required: false
+  public get tlsMinVersion() {
+    return this.getStringAttribute('tls_min_version');
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: DataAzurermHdinsightClusterTimeouts;
   public get timeouts() {

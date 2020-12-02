@@ -8,10 +8,11 @@ import { TerraformMetaArguments } from 'cdktf';
 // Configuration
 
 export interface FrontdoorConfig extends TerraformMetaArguments {
+  readonly backendPoolsSendReceiveTimeoutSeconds?: number;
   readonly enforceBackendPoolsCertificateNameCheck: boolean;
   readonly friendlyName?: string;
   readonly loadBalancerEnabled?: boolean;
-  readonly location: string;
+  readonly location?: string;
   readonly name: string;
   readonly resourceGroupName: string;
   readonly tags?: { [key: string]: string };
@@ -45,9 +46,11 @@ export interface FrontdoorBackendPool {
   readonly backend: FrontdoorBackendPoolBackend[];
 }
 export interface FrontdoorBackendPoolHealthProbe {
+  readonly enabled?: boolean;
   readonly intervalInSeconds?: number;
   readonly name: string;
   readonly path?: string;
+  readonly probeMethod?: string;
   readonly protocol?: string;
 }
 export interface FrontdoorBackendPoolLoadBalancing {
@@ -63,7 +66,7 @@ export interface FrontdoorFrontendEndpointCustomHttpsConfiguration {
   readonly certificateSource?: string;
 }
 export interface FrontdoorFrontendEndpoint {
-  readonly customHttpsProvisioningEnabled: boolean;
+  readonly customHttpsProvisioningEnabled?: boolean;
   readonly hostName: string;
   readonly name: string;
   readonly sessionAffinityEnabled?: boolean;
@@ -125,6 +128,7 @@ export class Frontdoor extends TerraformResource {
       count: config.count,
       lifecycle: config.lifecycle
     });
+    this._backendPoolsSendReceiveTimeoutSeconds = config.backendPoolsSendReceiveTimeoutSeconds;
     this._enforceBackendPoolsCertificateNameCheck = config.enforceBackendPoolsCertificateNameCheck;
     this._friendlyName = config.friendlyName;
     this._loadBalancerEnabled = config.loadBalancerEnabled;
@@ -143,6 +147,22 @@ export class Frontdoor extends TerraformResource {
   // ==========
   // ATTRIBUTES
   // ==========
+
+  // backend_pools_send_receive_timeout_seconds - computed: false, optional: true, required: false
+  private _backendPoolsSendReceiveTimeoutSeconds?: number;
+  public get backendPoolsSendReceiveTimeoutSeconds() {
+    return this.getNumberAttribute('backend_pools_send_receive_timeout_seconds');
+  }
+  public set backendPoolsSendReceiveTimeoutSeconds(value: number ) {
+    this._backendPoolsSendReceiveTimeoutSeconds = value;
+  }
+  public resetBackendPoolsSendReceiveTimeoutSeconds() {
+    this._backendPoolsSendReceiveTimeoutSeconds = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get backendPoolsSendReceiveTimeoutSecondsInput() {
+    return this._backendPoolsSendReceiveTimeoutSeconds
+  }
 
   // cname - computed: true, optional: false, required: false
   public get cname() {
@@ -178,6 +198,11 @@ export class Frontdoor extends TerraformResource {
     return this._friendlyName
   }
 
+  // header_frontdoor_id - computed: true, optional: false, required: false
+  public get headerFrontdoorId() {
+    return this.getStringAttribute('header_frontdoor_id');
+  }
+
   // id - computed: true, optional: true, required: false
   public get id() {
     return this.getStringAttribute('id');
@@ -199,13 +224,16 @@ export class Frontdoor extends TerraformResource {
     return this._loadBalancerEnabled
   }
 
-  // location - computed: false, optional: false, required: true
-  private _location: string;
+  // location - computed: true, optional: true, required: false
+  private _location?: string;
   public get location() {
     return this.getStringAttribute('location');
   }
   public set location(value: string) {
     this._location = value;
+  }
+  public resetLocation() {
+    this._location = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get locationInput() {
@@ -341,6 +369,7 @@ export class Frontdoor extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      backend_pools_send_receive_timeout_seconds: this._backendPoolsSendReceiveTimeoutSeconds,
       enforce_backend_pools_certificate_name_check: this._enforceBackendPoolsCertificateNameCheck,
       friendly_name: this._friendlyName,
       load_balancer_enabled: this._loadBalancerEnabled,

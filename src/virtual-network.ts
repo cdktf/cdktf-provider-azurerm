@@ -9,26 +9,28 @@ import { TerraformMetaArguments } from 'cdktf';
 
 export interface VirtualNetworkConfig extends TerraformMetaArguments {
   readonly addressSpace: string[];
+  readonly bgpCommunity?: string;
   readonly dnsServers?: string[];
   readonly location: string;
   readonly name: string;
   readonly resourceGroupName: string;
+  readonly subnet?: VirtualNetworkSubnet[];
   readonly tags?: { [key: string]: string };
+  readonly vmProtectionEnabled?: boolean;
   /** ddos_protection_plan block */
   readonly ddosProtectionPlan?: VirtualNetworkDdosProtectionPlan[];
-  /** subnet block */
-  readonly subnet?: VirtualNetworkSubnet[];
   /** timeouts block */
   readonly timeouts?: VirtualNetworkTimeouts;
+}
+export interface VirtualNetworkSubnet {
+  readonly addressPrefix?: string;
+  readonly id?: string;
+  readonly name?: string;
+  readonly securityGroup?: string;
 }
 export interface VirtualNetworkDdosProtectionPlan {
   readonly enable: boolean;
   readonly id: string;
-}
-export interface VirtualNetworkSubnet {
-  readonly addressPrefix: string;
-  readonly name: string;
-  readonly securityGroup?: string;
 }
 export interface VirtualNetworkTimeouts {
   readonly create?: string;
@@ -57,13 +59,15 @@ export class VirtualNetwork extends TerraformResource {
       lifecycle: config.lifecycle
     });
     this._addressSpace = config.addressSpace;
+    this._bgpCommunity = config.bgpCommunity;
     this._dnsServers = config.dnsServers;
     this._location = config.location;
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
-    this._tags = config.tags;
-    this._ddosProtectionPlan = config.ddosProtectionPlan;
     this._subnet = config.subnet;
+    this._tags = config.tags;
+    this._vmProtectionEnabled = config.vmProtectionEnabled;
+    this._ddosProtectionPlan = config.ddosProtectionPlan;
     this._timeouts = config.timeouts;
   }
 
@@ -84,6 +88,22 @@ export class VirtualNetwork extends TerraformResource {
     return this._addressSpace
   }
 
+  // bgp_community - computed: false, optional: true, required: false
+  private _bgpCommunity?: string;
+  public get bgpCommunity() {
+    return this.getStringAttribute('bgp_community');
+  }
+  public set bgpCommunity(value: string ) {
+    this._bgpCommunity = value;
+  }
+  public resetBgpCommunity() {
+    this._bgpCommunity = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get bgpCommunityInput() {
+    return this._bgpCommunity
+  }
+
   // dns_servers - computed: false, optional: true, required: false
   private _dnsServers?: string[];
   public get dnsServers() {
@@ -98,6 +118,11 @@ export class VirtualNetwork extends TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get dnsServersInput() {
     return this._dnsServers
+  }
+
+  // guid - computed: true, optional: false, required: false
+  public get guid() {
+    return this.getStringAttribute('guid');
   }
 
   // id - computed: true, optional: true, required: false
@@ -144,6 +169,22 @@ export class VirtualNetwork extends TerraformResource {
     return this._resourceGroupName
   }
 
+  // subnet - computed: true, optional: true, required: false
+  private _subnet?: VirtualNetworkSubnet[]
+  public get subnet(): VirtualNetworkSubnet[] {
+    return this.interpolationForAttribute('subnet') as any; // Getting the computed value is not yet implemented
+  }
+  public set subnet(value: VirtualNetworkSubnet[]) {
+    this._subnet = value;
+  }
+  public resetSubnet() {
+    this._subnet = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get subnetInput() {
+    return this._subnet
+  }
+
   // tags - computed: false, optional: true, required: false
   private _tags?: { [key: string]: string };
   public get tags() {
@@ -160,6 +201,22 @@ export class VirtualNetwork extends TerraformResource {
     return this._tags
   }
 
+  // vm_protection_enabled - computed: false, optional: true, required: false
+  private _vmProtectionEnabled?: boolean;
+  public get vmProtectionEnabled() {
+    return this.getBooleanAttribute('vm_protection_enabled');
+  }
+  public set vmProtectionEnabled(value: boolean ) {
+    this._vmProtectionEnabled = value;
+  }
+  public resetVmProtectionEnabled() {
+    this._vmProtectionEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get vmProtectionEnabledInput() {
+    return this._vmProtectionEnabled
+  }
+
   // ddos_protection_plan - computed: false, optional: true, required: false
   private _ddosProtectionPlan?: VirtualNetworkDdosProtectionPlan[];
   public get ddosProtectionPlan() {
@@ -174,22 +231,6 @@ export class VirtualNetwork extends TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get ddosProtectionPlanInput() {
     return this._ddosProtectionPlan
-  }
-
-  // subnet - computed: false, optional: true, required: false
-  private _subnet?: VirtualNetworkSubnet[];
-  public get subnet() {
-    return this.interpolationForAttribute('subnet') as any;
-  }
-  public set subnet(value: VirtualNetworkSubnet[] ) {
-    this._subnet = value;
-  }
-  public resetSubnet() {
-    this._subnet = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get subnetInput() {
-    return this._subnet
   }
 
   // timeouts - computed: false, optional: true, required: false
@@ -215,13 +256,15 @@ export class VirtualNetwork extends TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       address_space: this._addressSpace,
+      bgp_community: this._bgpCommunity,
       dns_servers: this._dnsServers,
       location: this._location,
       name: this._name,
       resource_group_name: this._resourceGroupName,
-      tags: this._tags,
-      ddos_protection_plan: this._ddosProtectionPlan,
       subnet: this._subnet,
+      tags: this._tags,
+      vm_protection_enabled: this._vmProtectionEnabled,
+      ddos_protection_plan: this._ddosProtectionPlan,
       timeouts: this._timeouts,
     };
   }

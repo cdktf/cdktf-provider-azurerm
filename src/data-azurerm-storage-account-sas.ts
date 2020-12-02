@@ -11,6 +11,7 @@ export interface DataAzurermStorageAccountSasConfig extends TerraformMetaArgumen
   readonly connectionString: string;
   readonly expiry: string;
   readonly httpsOnly?: boolean;
+  readonly signedVersion?: string;
   readonly start: string;
   /** permissions block */
   readonly permissions: DataAzurermStorageAccountSasPermissions[];
@@ -68,6 +69,7 @@ export class DataAzurermStorageAccountSas extends TerraformDataSource {
     this._connectionString = config.connectionString;
     this._expiry = config.expiry;
     this._httpsOnly = config.httpsOnly;
+    this._signedVersion = config.signedVersion;
     this._start = config.start;
     this._permissions = config.permissions;
     this._resourceTypes = config.resourceTypes;
@@ -129,6 +131,22 @@ export class DataAzurermStorageAccountSas extends TerraformDataSource {
   // sas - computed: true, optional: false, required: false
   public get sas() {
     return this.getStringAttribute('sas');
+  }
+
+  // signed_version - computed: false, optional: true, required: false
+  private _signedVersion?: string;
+  public get signedVersion() {
+    return this.getStringAttribute('signed_version');
+  }
+  public set signedVersion(value: string ) {
+    this._signedVersion = value;
+  }
+  public resetSignedVersion() {
+    this._signedVersion = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get signedVersionInput() {
+    return this._signedVersion
   }
 
   // start - computed: false, optional: false, required: true
@@ -208,6 +226,7 @@ export class DataAzurermStorageAccountSas extends TerraformDataSource {
       connection_string: this._connectionString,
       expiry: this._expiry,
       https_only: this._httpsOnly,
+      signed_version: this._signedVersion,
       start: this._start,
       permissions: this._permissions,
       resource_types: this._resourceTypes,

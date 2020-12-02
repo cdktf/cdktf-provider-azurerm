@@ -11,6 +11,7 @@ export interface NetappAccountConfig extends TerraformMetaArguments {
   readonly location: string;
   readonly name: string;
   readonly resourceGroupName: string;
+  readonly tags?: { [key: string]: string };
   /** active_directory block */
   readonly activeDirectory?: NetappAccountActiveDirectory[];
   /** timeouts block */
@@ -53,6 +54,7 @@ export class NetappAccount extends TerraformResource {
     this._location = config.location;
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
+    this._tags = config.tags;
     this._activeDirectory = config.activeDirectory;
     this._timeouts = config.timeouts;
   }
@@ -105,6 +107,22 @@ export class NetappAccount extends TerraformResource {
     return this._resourceGroupName
   }
 
+  // tags - computed: false, optional: true, required: false
+  private _tags?: { [key: string]: string };
+  public get tags() {
+    return this.interpolationForAttribute('tags') as any;
+  }
+  public set tags(value: { [key: string]: string } ) {
+    this._tags = value;
+  }
+  public resetTags() {
+    this._tags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsInput() {
+    return this._tags
+  }
+
   // active_directory - computed: false, optional: true, required: false
   private _activeDirectory?: NetappAccountActiveDirectory[];
   public get activeDirectory() {
@@ -146,6 +164,7 @@ export class NetappAccount extends TerraformResource {
       location: this._location,
       name: this._name,
       resource_group_name: this._resourceGroupName,
+      tags: this._tags,
       active_directory: this._activeDirectory,
       timeouts: this._timeouts,
     };

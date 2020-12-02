@@ -51,6 +51,16 @@ export class DataAzurermLogicAppWorkflow extends TerraformDataSource {
     return this.getStringAttribute('access_endpoint');
   }
 
+  // connector_endpoint_ip_addresses - computed: true, optional: false, required: false
+  public get connectorEndpointIpAddresses() {
+    return this.getListAttribute('connector_endpoint_ip_addresses');
+  }
+
+  // connector_outbound_ip_addresses - computed: true, optional: false, required: false
+  public get connectorOutboundIpAddresses() {
+    return this.getListAttribute('connector_outbound_ip_addresses');
+  }
+
   // id - computed: true, optional: true, required: false
   public get id() {
     return this.getStringAttribute('id');
@@ -59,6 +69,11 @@ export class DataAzurermLogicAppWorkflow extends TerraformDataSource {
   // location - computed: true, optional: false, required: false
   public get location() {
     return this.getStringAttribute('location');
+  }
+
+  // logic_app_integration_account_id - computed: true, optional: false, required: false
+  public get logicAppIntegrationAccountId() {
+    return this.getStringAttribute('logic_app_integration_account_id');
   }
 
   // name - computed: false, optional: false, required: true
@@ -95,6 +110,16 @@ export class DataAzurermLogicAppWorkflow extends TerraformDataSource {
   // tags - computed: true, optional: false, required: false
   public tags(key: string): string {
     return new StringMap(this, 'tags').lookup(key);
+  }
+
+  // workflow_endpoint_ip_addresses - computed: true, optional: false, required: false
+  public get workflowEndpointIpAddresses() {
+    return this.getListAttribute('workflow_endpoint_ip_addresses');
+  }
+
+  // workflow_outbound_ip_addresses - computed: true, optional: false, required: false
+  public get workflowOutboundIpAddresses() {
+    return this.getListAttribute('workflow_outbound_ip_addresses');
   }
 
   // workflow_schema - computed: true, optional: false, required: false

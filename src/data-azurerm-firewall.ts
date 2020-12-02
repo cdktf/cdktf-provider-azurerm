@@ -12,15 +12,11 @@ import { StringMap } from "cdktf";
 export interface DataAzurermFirewallConfig extends TerraformMetaArguments {
   readonly name: string;
   readonly resourceGroupName: string;
+  readonly zones?: string[];
   /** timeouts block */
   readonly timeouts?: DataAzurermFirewallTimeouts;
 }
 export class DataAzurermFirewallIpConfiguration extends ComplexComputedList {
-
-  // internal_public_ip_address_id - computed: true, optional: false, required: false
-  public get internalPublicIpAddressId() {
-    return this.getStringAttribute('internal_public_ip_address_id');
-  }
 
   // name - computed: true, optional: false, required: false
   public get name() {
@@ -40,6 +36,50 @@ export class DataAzurermFirewallIpConfiguration extends ComplexComputedList {
   // subnet_id - computed: true, optional: false, required: false
   public get subnetId() {
     return this.getStringAttribute('subnet_id');
+  }
+}
+export class DataAzurermFirewallManagementIpConfiguration extends ComplexComputedList {
+
+  // name - computed: true, optional: false, required: false
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+
+  // private_ip_address - computed: true, optional: false, required: false
+  public get privateIpAddress() {
+    return this.getStringAttribute('private_ip_address');
+  }
+
+  // public_ip_address_id - computed: true, optional: false, required: false
+  public get publicIpAddressId() {
+    return this.getStringAttribute('public_ip_address_id');
+  }
+
+  // subnet_id - computed: true, optional: false, required: false
+  public get subnetId() {
+    return this.getStringAttribute('subnet_id');
+  }
+}
+export class DataAzurermFirewallVirtualHub extends ComplexComputedList {
+
+  // private_ip_address - computed: true, optional: false, required: false
+  public get privateIpAddress() {
+    return this.getStringAttribute('private_ip_address');
+  }
+
+  // public_ip_addresses - computed: true, optional: false, required: false
+  public get publicIpAddresses() {
+    return this.getListAttribute('public_ip_addresses');
+  }
+
+  // public_ip_count - computed: true, optional: false, required: false
+  public get publicIpCount() {
+    return this.getNumberAttribute('public_ip_count');
+  }
+
+  // virtual_hub_id - computed: true, optional: false, required: false
+  public get virtualHubId() {
+    return this.getStringAttribute('virtual_hub_id');
   }
 }
 export interface DataAzurermFirewallTimeouts {
@@ -67,12 +107,23 @@ export class DataAzurermFirewall extends TerraformDataSource {
     });
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
+    this._zones = config.zones;
     this._timeouts = config.timeouts;
   }
 
   // ==========
   // ATTRIBUTES
   // ==========
+
+  // dns_servers - computed: true, optional: false, required: false
+  public get dnsServers() {
+    return this.getListAttribute('dns_servers');
+  }
+
+  // firewall_policy_id - computed: true, optional: false, required: false
+  public get firewallPolicyId() {
+    return this.getStringAttribute('firewall_policy_id');
+  }
 
   // id - computed: true, optional: true, required: false
   public get id() {
@@ -87,6 +138,11 @@ export class DataAzurermFirewall extends TerraformDataSource {
   // location - computed: true, optional: false, required: false
   public get location() {
     return this.getStringAttribute('location');
+  }
+
+  // management_ip_configuration - computed: true, optional: false, required: false
+  public managementIpConfiguration(index: string) {
+    return new DataAzurermFirewallManagementIpConfiguration(this, 'management_ip_configuration', index);
   }
 
   // name - computed: false, optional: false, required: true
@@ -115,9 +171,45 @@ export class DataAzurermFirewall extends TerraformDataSource {
     return this._resourceGroupName
   }
 
+  // sku_name - computed: true, optional: false, required: false
+  public get skuName() {
+    return this.getStringAttribute('sku_name');
+  }
+
+  // sku_tier - computed: true, optional: false, required: false
+  public get skuTier() {
+    return this.getStringAttribute('sku_tier');
+  }
+
   // tags - computed: true, optional: false, required: false
   public tags(key: string): string {
     return new StringMap(this, 'tags').lookup(key);
+  }
+
+  // threat_intel_mode - computed: true, optional: false, required: false
+  public get threatIntelMode() {
+    return this.getStringAttribute('threat_intel_mode');
+  }
+
+  // virtual_hub - computed: true, optional: false, required: false
+  public virtualHub(index: string) {
+    return new DataAzurermFirewallVirtualHub(this, 'virtual_hub', index);
+  }
+
+  // zones - computed: true, optional: true, required: false
+  private _zones?: string[];
+  public get zones() {
+    return this.getListAttribute('zones');
+  }
+  public set zones(value: string[]) {
+    this._zones = value;
+  }
+  public resetZones() {
+    this._zones = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get zonesInput() {
+    return this._zones
   }
 
   // timeouts - computed: false, optional: true, required: false
@@ -144,6 +236,7 @@ export class DataAzurermFirewall extends TerraformDataSource {
     return {
       name: this._name,
       resource_group_name: this._resourceGroupName,
+      zones: this._zones,
       timeouts: this._timeouts,
     };
   }

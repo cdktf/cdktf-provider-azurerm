@@ -5,6 +5,7 @@ import { Construct } from 'constructs';
 import { TerraformDataSource } from 'cdktf';
 import { TerraformMetaArguments } from 'cdktf';
 import { ComplexComputedList } from "cdktf";
+import { StringMap } from "cdktf";
 
 // Configuration
 
@@ -139,6 +140,11 @@ export class DataAzurermNotificationHub extends TerraformDataSource {
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
     return this._resourceGroupName
+  }
+
+  // tags - computed: true, optional: false, required: false
+  public tags(key: string): string {
+    return new StringMap(this, 'tags').lookup(key);
   }
 
   // timeouts - computed: false, optional: true, required: false

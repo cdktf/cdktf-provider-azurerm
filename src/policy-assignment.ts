@@ -10,7 +10,9 @@ import { TerraformMetaArguments } from 'cdktf';
 export interface PolicyAssignmentConfig extends TerraformMetaArguments {
   readonly description?: string;
   readonly displayName?: string;
+  readonly enforcementMode?: boolean;
   readonly location?: string;
+  readonly metadata?: string;
   readonly name: string;
   readonly notScopes?: string[];
   readonly parameters?: string;
@@ -52,7 +54,9 @@ export class PolicyAssignment extends TerraformResource {
     });
     this._description = config.description;
     this._displayName = config.displayName;
+    this._enforcementMode = config.enforcementMode;
     this._location = config.location;
+    this._metadata = config.metadata;
     this._name = config.name;
     this._notScopes = config.notScopes;
     this._parameters = config.parameters;
@@ -98,6 +102,22 @@ export class PolicyAssignment extends TerraformResource {
     return this._displayName
   }
 
+  // enforcement_mode - computed: false, optional: true, required: false
+  private _enforcementMode?: boolean;
+  public get enforcementMode() {
+    return this.getBooleanAttribute('enforcement_mode');
+  }
+  public set enforcementMode(value: boolean ) {
+    this._enforcementMode = value;
+  }
+  public resetEnforcementMode() {
+    this._enforcementMode = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enforcementModeInput() {
+    return this._enforcementMode
+  }
+
   // id - computed: true, optional: true, required: false
   public get id() {
     return this.getStringAttribute('id');
@@ -117,6 +137,22 @@ export class PolicyAssignment extends TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get locationInput() {
     return this._location
+  }
+
+  // metadata - computed: true, optional: true, required: false
+  private _metadata?: string;
+  public get metadata() {
+    return this.getStringAttribute('metadata');
+  }
+  public set metadata(value: string) {
+    this._metadata = value;
+  }
+  public resetMetadata() {
+    this._metadata = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get metadataInput() {
+    return this._metadata
   }
 
   // name - computed: false, optional: false, required: true
@@ -230,7 +266,9 @@ export class PolicyAssignment extends TerraformResource {
     return {
       description: this._description,
       display_name: this._displayName,
+      enforcement_mode: this._enforcementMode,
       location: this._location,
+      metadata: this._metadata,
       name: this._name,
       not_scopes: this._notScopes,
       parameters: this._parameters,

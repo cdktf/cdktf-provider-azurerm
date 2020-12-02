@@ -13,6 +13,7 @@ export interface NetappSnapshotConfig extends TerraformMetaArguments {
   readonly name: string;
   readonly poolName: string;
   readonly resourceGroupName: string;
+  readonly tags?: { [key: string]: string };
   readonly volumeName: string;
   /** timeouts block */
   readonly timeouts?: NetappSnapshotTimeouts;
@@ -48,6 +49,7 @@ export class NetappSnapshot extends TerraformResource {
     this._name = config.name;
     this._poolName = config.poolName;
     this._resourceGroupName = config.resourceGroupName;
+    this._tags = config.tags;
     this._volumeName = config.volumeName;
     this._timeouts = config.timeouts;
   }
@@ -126,6 +128,22 @@ export class NetappSnapshot extends TerraformResource {
     return this._resourceGroupName
   }
 
+  // tags - computed: false, optional: true, required: false
+  private _tags?: { [key: string]: string };
+  public get tags() {
+    return this.interpolationForAttribute('tags') as any;
+  }
+  public set tags(value: { [key: string]: string } ) {
+    this._tags = value;
+  }
+  public resetTags() {
+    this._tags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsInput() {
+    return this._tags
+  }
+
   // volume_name - computed: false, optional: false, required: true
   private _volumeName: string;
   public get volumeName() {
@@ -166,6 +184,7 @@ export class NetappSnapshot extends TerraformResource {
       name: this._name,
       pool_name: this._poolName,
       resource_group_name: this._resourceGroupName,
+      tags: this._tags,
       volume_name: this._volumeName,
       timeouts: this._timeouts,
     };

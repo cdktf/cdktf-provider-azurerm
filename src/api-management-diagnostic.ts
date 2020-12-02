@@ -8,8 +8,9 @@ import { TerraformMetaArguments } from 'cdktf';
 // Configuration
 
 export interface ApiManagementDiagnosticConfig extends TerraformMetaArguments {
+  readonly apiManagementLoggerId: string;
   readonly apiManagementName: string;
-  readonly enabled: boolean;
+  readonly enabled?: boolean;
   readonly identifier: string;
   readonly resourceGroupName: string;
   /** timeouts block */
@@ -41,6 +42,7 @@ export class ApiManagementDiagnostic extends TerraformResource {
       count: config.count,
       lifecycle: config.lifecycle
     });
+    this._apiManagementLoggerId = config.apiManagementLoggerId;
     this._apiManagementName = config.apiManagementName;
     this._enabled = config.enabled;
     this._identifier = config.identifier;
@@ -51,6 +53,19 @@ export class ApiManagementDiagnostic extends TerraformResource {
   // ==========
   // ATTRIBUTES
   // ==========
+
+  // api_management_logger_id - computed: false, optional: false, required: true
+  private _apiManagementLoggerId: string;
+  public get apiManagementLoggerId() {
+    return this.getStringAttribute('api_management_logger_id');
+  }
+  public set apiManagementLoggerId(value: string) {
+    this._apiManagementLoggerId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get apiManagementLoggerIdInput() {
+    return this._apiManagementLoggerId
+  }
 
   // api_management_name - computed: false, optional: false, required: true
   private _apiManagementName: string;
@@ -65,13 +80,16 @@ export class ApiManagementDiagnostic extends TerraformResource {
     return this._apiManagementName
   }
 
-  // enabled - computed: false, optional: false, required: true
-  private _enabled: boolean;
+  // enabled - computed: false, optional: true, required: false
+  private _enabled?: boolean;
   public get enabled() {
     return this.getBooleanAttribute('enabled');
   }
-  public set enabled(value: boolean) {
+  public set enabled(value: boolean ) {
     this._enabled = value;
+  }
+  public resetEnabled() {
+    this._enabled = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get enabledInput() {
@@ -131,6 +149,7 @@ export class ApiManagementDiagnostic extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      api_management_logger_id: this._apiManagementLoggerId,
       api_management_name: this._apiManagementName,
       enabled: this._enabled,
       identifier: this._identifier,

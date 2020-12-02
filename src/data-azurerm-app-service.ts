@@ -46,9 +46,61 @@ export class DataAzurermAppServiceSiteConfigCors extends ComplexComputedList {
 }
 export class DataAzurermAppServiceSiteConfigIpRestriction extends ComplexComputedList {
 
+  // action - computed: true, optional: false, required: false
+  public get action() {
+    return this.getStringAttribute('action');
+  }
+
   // ip_address - computed: true, optional: false, required: false
   public get ipAddress() {
     return this.getStringAttribute('ip_address');
+  }
+
+  // name - computed: true, optional: false, required: false
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+
+  // priority - computed: true, optional: false, required: false
+  public get priority() {
+    return this.getNumberAttribute('priority');
+  }
+
+  // subnet_id - computed: true, optional: false, required: false
+  public get subnetId() {
+    return this.getStringAttribute('subnet_id');
+  }
+
+  // virtual_network_subnet_id - computed: true, optional: false, required: false
+  public get virtualNetworkSubnetId() {
+    return this.getStringAttribute('virtual_network_subnet_id');
+  }
+}
+export class DataAzurermAppServiceSiteConfigScmIpRestriction extends ComplexComputedList {
+
+  // action - computed: true, optional: false, required: false
+  public get action() {
+    return this.getStringAttribute('action');
+  }
+
+  // ip_address - computed: true, optional: false, required: false
+  public get ipAddress() {
+    return this.getStringAttribute('ip_address');
+  }
+
+  // name - computed: true, optional: false, required: false
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+
+  // priority - computed: true, optional: false, required: false
+  public get priority() {
+    return this.getNumberAttribute('priority');
+  }
+
+  // subnet_id - computed: true, optional: false, required: false
+  public get subnetId() {
+    return this.getStringAttribute('subnet_id');
   }
 
   // virtual_network_subnet_id - computed: true, optional: false, required: false
@@ -86,6 +138,11 @@ export class DataAzurermAppServiceSiteConfig extends ComplexComputedList {
   // ftps_state - computed: true, optional: false, required: false
   public get ftpsState() {
     return this.getStringAttribute('ftps_state');
+  }
+
+  // health_check_path - computed: true, optional: false, required: false
+  public get healthCheckPath() {
+    return this.getStringAttribute('health_check_path');
   }
 
   // http2_enabled - computed: true, optional: false, required: false
@@ -153,9 +210,19 @@ export class DataAzurermAppServiceSiteConfig extends ComplexComputedList {
     return this.getStringAttribute('remote_debugging_version');
   }
 
+  // scm_ip_restriction - computed: true, optional: false, required: false
+  public get scmIpRestriction() {
+    return this.interpolationForAttribute('scm_ip_restriction') as any;
+  }
+
   // scm_type - computed: true, optional: false, required: false
   public get scmType() {
     return this.getStringAttribute('scm_type');
+  }
+
+  // scm_use_main_ip_restriction - computed: true, optional: false, required: false
+  public get scmUseMainIpRestriction() {
+    return this.getBooleanAttribute('scm_use_main_ip_restriction');
   }
 
   // use_32_bit_worker_process - computed: true, optional: false, required: false
@@ -192,9 +259,24 @@ export class DataAzurermAppServiceSourceControl extends ComplexComputedList {
     return this.getStringAttribute('branch');
   }
 
+  // manual_integration - computed: true, optional: false, required: false
+  public get manualIntegration() {
+    return this.getBooleanAttribute('manual_integration');
+  }
+
   // repo_url - computed: true, optional: false, required: false
   public get repoUrl() {
     return this.getStringAttribute('repo_url');
+  }
+
+  // rollback_enabled - computed: true, optional: false, required: false
+  public get rollbackEnabled() {
+    return this.getBooleanAttribute('rollback_enabled');
+  }
+
+  // use_mercurial - computed: true, optional: false, required: false
+  public get useMercurial() {
+    return this.getBooleanAttribute('use_mercurial');
   }
 }
 export interface DataAzurermAppServiceTimeouts {
@@ -252,6 +334,11 @@ export class DataAzurermAppService extends TerraformDataSource {
   // connection_string - computed: true, optional: false, required: false
   public connectionString(index: string) {
     return new DataAzurermAppServiceConnectionString(this, 'connection_string', index);
+  }
+
+  // custom_domain_verification_id - computed: true, optional: false, required: false
+  public get customDomainVerificationId() {
+    return this.getStringAttribute('custom_domain_verification_id');
   }
 
   // default_site_hostname - computed: true, optional: false, required: false

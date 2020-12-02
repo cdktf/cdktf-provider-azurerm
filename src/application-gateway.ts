@@ -9,6 +9,7 @@ import { TerraformMetaArguments } from 'cdktf';
 
 export interface ApplicationGatewayConfig extends TerraformMetaArguments {
   readonly enableHttp2?: boolean;
+  readonly firewallPolicyId?: string;
   readonly location: string;
   readonly name: string;
   readonly resourceGroupName: string;
@@ -118,9 +119,11 @@ export interface ApplicationGatewayHttpListenerCustomErrorConfiguration {
   readonly statusCode: string;
 }
 export interface ApplicationGatewayHttpListener {
+  readonly firewallPolicyId?: string;
   readonly frontendIpConfigurationName: string;
   readonly frontendPortName: string;
   readonly hostName?: string;
+  readonly hostNames?: string[];
   readonly name: string;
   readonly protocol: string;
   readonly requireSni?: boolean;
@@ -143,6 +146,7 @@ export interface ApplicationGatewayProbe {
   readonly name: string;
   readonly path: string;
   readonly pickHostNameFromBackendHttpSettings?: boolean;
+  readonly port?: number;
   readonly protocol: string;
   readonly timeout: number;
   readonly unhealthyThreshold: number;
@@ -202,9 +206,10 @@ export interface ApplicationGatewaySku {
   readonly tier: string;
 }
 export interface ApplicationGatewaySslCertificate {
-  readonly data: string;
+  readonly data?: string;
+  readonly keyVaultSecretId?: string;
   readonly name: string;
-  readonly password: string;
+  readonly password?: string;
 }
 export interface ApplicationGatewaySslPolicy {
   readonly cipherSuites?: string[];
@@ -283,6 +288,7 @@ export class ApplicationGateway extends TerraformResource {
       lifecycle: config.lifecycle
     });
     this._enableHttp2 = config.enableHttp2;
+    this._firewallPolicyId = config.firewallPolicyId;
     this._location = config.location;
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
@@ -329,6 +335,22 @@ export class ApplicationGateway extends TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get enableHttp2Input() {
     return this._enableHttp2
+  }
+
+  // firewall_policy_id - computed: false, optional: true, required: false
+  private _firewallPolicyId?: string;
+  public get firewallPolicyId() {
+    return this.getStringAttribute('firewall_policy_id');
+  }
+  public set firewallPolicyId(value: string ) {
+    this._firewallPolicyId = value;
+  }
+  public resetFirewallPolicyId() {
+    this._firewallPolicyId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get firewallPolicyIdInput() {
+    return this._firewallPolicyId
   }
 
   // id - computed: true, optional: true, required: false
@@ -726,6 +748,7 @@ export class ApplicationGateway extends TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       enable_http2: this._enableHttp2,
+      firewall_policy_id: this._firewallPolicyId,
       location: this._location,
       name: this._name,
       resource_group_name: this._resourceGroupName,

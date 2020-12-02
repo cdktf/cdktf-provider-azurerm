@@ -16,7 +16,9 @@ export interface LinuxVirtualMachineConfig extends TerraformMetaArguments {
   readonly customData?: string;
   readonly dedicatedHostId?: string;
   readonly disablePasswordAuthentication?: boolean;
+  readonly encryptionAtHostEnabled?: boolean;
   readonly evictionPolicy?: string;
+  readonly extensionsTimeBudget?: string;
   readonly location: string;
   readonly maxBidPrice?: number;
   readonly name: string;
@@ -28,6 +30,7 @@ export interface LinuxVirtualMachineConfig extends TerraformMetaArguments {
   readonly size: string;
   readonly sourceImageId?: string;
   readonly tags?: { [key: string]: string };
+  readonly virtualMachineScaleSetId?: string;
   readonly zone?: string;
   /** additional_capabilities block */
   readonly additionalCapabilities?: LinuxVirtualMachineAdditionalCapabilities[];
@@ -56,7 +59,7 @@ export interface LinuxVirtualMachineAdminSshKey {
   readonly username: string;
 }
 export interface LinuxVirtualMachineBootDiagnostics {
-  readonly storageAccountUri: string;
+  readonly storageAccountUri?: string;
 }
 export interface LinuxVirtualMachineIdentity {
   readonly identityIds?: string[];
@@ -128,7 +131,9 @@ export class LinuxVirtualMachine extends TerraformResource {
     this._customData = config.customData;
     this._dedicatedHostId = config.dedicatedHostId;
     this._disablePasswordAuthentication = config.disablePasswordAuthentication;
+    this._encryptionAtHostEnabled = config.encryptionAtHostEnabled;
     this._evictionPolicy = config.evictionPolicy;
+    this._extensionsTimeBudget = config.extensionsTimeBudget;
     this._location = config.location;
     this._maxBidPrice = config.maxBidPrice;
     this._name = config.name;
@@ -140,6 +145,7 @@ export class LinuxVirtualMachine extends TerraformResource {
     this._size = config.size;
     this._sourceImageId = config.sourceImageId;
     this._tags = config.tags;
+    this._virtualMachineScaleSetId = config.virtualMachineScaleSetId;
     this._zone = config.zone;
     this._additionalCapabilities = config.additionalCapabilities;
     this._adminSshKey = config.adminSshKey;
@@ -281,6 +287,22 @@ export class LinuxVirtualMachine extends TerraformResource {
     return this._disablePasswordAuthentication
   }
 
+  // encryption_at_host_enabled - computed: false, optional: true, required: false
+  private _encryptionAtHostEnabled?: boolean;
+  public get encryptionAtHostEnabled() {
+    return this.getBooleanAttribute('encryption_at_host_enabled');
+  }
+  public set encryptionAtHostEnabled(value: boolean ) {
+    this._encryptionAtHostEnabled = value;
+  }
+  public resetEncryptionAtHostEnabled() {
+    this._encryptionAtHostEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get encryptionAtHostEnabledInput() {
+    return this._encryptionAtHostEnabled
+  }
+
   // eviction_policy - computed: false, optional: true, required: false
   private _evictionPolicy?: string;
   public get evictionPolicy() {
@@ -295,6 +317,22 @@ export class LinuxVirtualMachine extends TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get evictionPolicyInput() {
     return this._evictionPolicy
+  }
+
+  // extensions_time_budget - computed: false, optional: true, required: false
+  private _extensionsTimeBudget?: string;
+  public get extensionsTimeBudget() {
+    return this.getStringAttribute('extensions_time_budget');
+  }
+  public set extensionsTimeBudget(value: string ) {
+    this._extensionsTimeBudget = value;
+  }
+  public resetExtensionsTimeBudget() {
+    this._extensionsTimeBudget = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get extensionsTimeBudgetInput() {
+    return this._extensionsTimeBudget
   }
 
   // id - computed: true, optional: true, required: false
@@ -488,12 +526,28 @@ export class LinuxVirtualMachine extends TerraformResource {
     return this.getStringAttribute('virtual_machine_id');
   }
 
-  // zone - computed: false, optional: true, required: false
+  // virtual_machine_scale_set_id - computed: false, optional: true, required: false
+  private _virtualMachineScaleSetId?: string;
+  public get virtualMachineScaleSetId() {
+    return this.getStringAttribute('virtual_machine_scale_set_id');
+  }
+  public set virtualMachineScaleSetId(value: string ) {
+    this._virtualMachineScaleSetId = value;
+  }
+  public resetVirtualMachineScaleSetId() {
+    this._virtualMachineScaleSetId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get virtualMachineScaleSetIdInput() {
+    return this._virtualMachineScaleSetId
+  }
+
+  // zone - computed: true, optional: true, required: false
   private _zone?: string;
   public get zone() {
     return this.getStringAttribute('zone');
   }
-  public set zone(value: string ) {
+  public set zone(value: string) {
     this._zone = value;
   }
   public resetZone() {
@@ -659,7 +713,9 @@ export class LinuxVirtualMachine extends TerraformResource {
       custom_data: this._customData,
       dedicated_host_id: this._dedicatedHostId,
       disable_password_authentication: this._disablePasswordAuthentication,
+      encryption_at_host_enabled: this._encryptionAtHostEnabled,
       eviction_policy: this._evictionPolicy,
+      extensions_time_budget: this._extensionsTimeBudget,
       location: this._location,
       max_bid_price: this._maxBidPrice,
       name: this._name,
@@ -671,6 +727,7 @@ export class LinuxVirtualMachine extends TerraformResource {
       size: this._size,
       source_image_id: this._sourceImageId,
       tags: this._tags,
+      virtual_machine_scale_set_id: this._virtualMachineScaleSetId,
       zone: this._zone,
       additional_capabilities: this._additionalCapabilities,
       admin_ssh_key: this._adminSshKey,

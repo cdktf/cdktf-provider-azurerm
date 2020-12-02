@@ -8,12 +8,30 @@ import { TerraformMetaArguments } from 'cdktf';
 // Configuration
 
 export interface EventgridTopicConfig extends TerraformMetaArguments {
+  readonly inputSchema?: string;
   readonly location: string;
   readonly name: string;
   readonly resourceGroupName: string;
   readonly tags?: { [key: string]: string };
+  /** input_mapping_default_values block */
+  readonly inputMappingDefaultValues?: EventgridTopicInputMappingDefaultValues[];
+  /** input_mapping_fields block */
+  readonly inputMappingFields?: EventgridTopicInputMappingFields[];
   /** timeouts block */
   readonly timeouts?: EventgridTopicTimeouts;
+}
+export interface EventgridTopicInputMappingDefaultValues {
+  readonly dataVersion?: string;
+  readonly eventType?: string;
+  readonly subject?: string;
+}
+export interface EventgridTopicInputMappingFields {
+  readonly dataVersion?: string;
+  readonly eventTime?: string;
+  readonly eventType?: string;
+  readonly id?: string;
+  readonly subject?: string;
+  readonly topic?: string;
 }
 export interface EventgridTopicTimeouts {
   readonly create?: string;
@@ -41,10 +59,13 @@ export class EventgridTopic extends TerraformResource {
       count: config.count,
       lifecycle: config.lifecycle
     });
+    this._inputSchema = config.inputSchema;
     this._location = config.location;
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
     this._tags = config.tags;
+    this._inputMappingDefaultValues = config.inputMappingDefaultValues;
+    this._inputMappingFields = config.inputMappingFields;
     this._timeouts = config.timeouts;
   }
 
@@ -60,6 +81,22 @@ export class EventgridTopic extends TerraformResource {
   // id - computed: true, optional: true, required: false
   public get id() {
     return this.getStringAttribute('id');
+  }
+
+  // input_schema - computed: false, optional: true, required: false
+  private _inputSchema?: string;
+  public get inputSchema() {
+    return this.getStringAttribute('input_schema');
+  }
+  public set inputSchema(value: string ) {
+    this._inputSchema = value;
+  }
+  public resetInputSchema() {
+    this._inputSchema = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get inputSchemaInput() {
+    return this._inputSchema
   }
 
   // location - computed: false, optional: false, required: true
@@ -127,6 +164,38 @@ export class EventgridTopic extends TerraformResource {
     return this._tags
   }
 
+  // input_mapping_default_values - computed: false, optional: true, required: false
+  private _inputMappingDefaultValues?: EventgridTopicInputMappingDefaultValues[];
+  public get inputMappingDefaultValues() {
+    return this.interpolationForAttribute('input_mapping_default_values') as any;
+  }
+  public set inputMappingDefaultValues(value: EventgridTopicInputMappingDefaultValues[] ) {
+    this._inputMappingDefaultValues = value;
+  }
+  public resetInputMappingDefaultValues() {
+    this._inputMappingDefaultValues = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get inputMappingDefaultValuesInput() {
+    return this._inputMappingDefaultValues
+  }
+
+  // input_mapping_fields - computed: false, optional: true, required: false
+  private _inputMappingFields?: EventgridTopicInputMappingFields[];
+  public get inputMappingFields() {
+    return this.interpolationForAttribute('input_mapping_fields') as any;
+  }
+  public set inputMappingFields(value: EventgridTopicInputMappingFields[] ) {
+    this._inputMappingFields = value;
+  }
+  public resetInputMappingFields() {
+    this._inputMappingFields = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get inputMappingFieldsInput() {
+    return this._inputMappingFields
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: EventgridTopicTimeouts;
   public get timeouts() {
@@ -149,10 +218,13 @@ export class EventgridTopic extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      input_schema: this._inputSchema,
       location: this._location,
       name: this._name,
       resource_group_name: this._resourceGroupName,
       tags: this._tags,
+      input_mapping_default_values: this._inputMappingDefaultValues,
+      input_mapping_fields: this._inputMappingFields,
       timeouts: this._timeouts,
     };
   }

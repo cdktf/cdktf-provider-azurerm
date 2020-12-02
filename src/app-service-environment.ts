@@ -8,12 +8,15 @@ import { TerraformMetaArguments } from 'cdktf';
 // Configuration
 
 export interface AppServiceEnvironmentConfig extends TerraformMetaArguments {
+  readonly allowedUserIpCidrs?: string[];
   readonly frontEndScaleFactor?: number;
   readonly internalLoadBalancingMode?: string;
   readonly name: string;
   readonly pricingTier?: string;
+  readonly resourceGroupName?: string;
   readonly subnetId: string;
   readonly tags?: { [key: string]: string };
+  readonly userWhitelistedIpRanges?: string[];
   /** timeouts block */
   readonly timeouts?: AppServiceEnvironmentTimeouts;
 }
@@ -43,18 +46,37 @@ export class AppServiceEnvironment extends TerraformResource {
       count: config.count,
       lifecycle: config.lifecycle
     });
+    this._allowedUserIpCidrs = config.allowedUserIpCidrs;
     this._frontEndScaleFactor = config.frontEndScaleFactor;
     this._internalLoadBalancingMode = config.internalLoadBalancingMode;
     this._name = config.name;
     this._pricingTier = config.pricingTier;
+    this._resourceGroupName = config.resourceGroupName;
     this._subnetId = config.subnetId;
     this._tags = config.tags;
+    this._userWhitelistedIpRanges = config.userWhitelistedIpRanges;
     this._timeouts = config.timeouts;
   }
 
   // ==========
   // ATTRIBUTES
   // ==========
+
+  // allowed_user_ip_cidrs - computed: true, optional: true, required: false
+  private _allowedUserIpCidrs?: string[];
+  public get allowedUserIpCidrs() {
+    return this.getListAttribute('allowed_user_ip_cidrs');
+  }
+  public set allowedUserIpCidrs(value: string[]) {
+    this._allowedUserIpCidrs = value;
+  }
+  public resetAllowedUserIpCidrs() {
+    this._allowedUserIpCidrs = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get allowedUserIpCidrsInput() {
+    return this._allowedUserIpCidrs
+  }
 
   // front_end_scale_factor - computed: false, optional: true, required: false
   private _frontEndScaleFactor?: number;
@@ -127,9 +149,20 @@ export class AppServiceEnvironment extends TerraformResource {
     return this._pricingTier
   }
 
-  // resource_group_name - computed: true, optional: false, required: false
+  // resource_group_name - computed: true, optional: true, required: false
+  private _resourceGroupName?: string;
   public get resourceGroupName() {
     return this.getStringAttribute('resource_group_name');
+  }
+  public set resourceGroupName(value: string) {
+    this._resourceGroupName = value;
+  }
+  public resetResourceGroupName() {
+    this._resourceGroupName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
   }
 
   // subnet_id - computed: false, optional: false, required: true
@@ -161,6 +194,22 @@ export class AppServiceEnvironment extends TerraformResource {
     return this._tags
   }
 
+  // user_whitelisted_ip_ranges - computed: true, optional: true, required: false
+  private _userWhitelistedIpRanges?: string[];
+  public get userWhitelistedIpRanges() {
+    return this.getListAttribute('user_whitelisted_ip_ranges');
+  }
+  public set userWhitelistedIpRanges(value: string[]) {
+    this._userWhitelistedIpRanges = value;
+  }
+  public resetUserWhitelistedIpRanges() {
+    this._userWhitelistedIpRanges = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get userWhitelistedIpRangesInput() {
+    return this._userWhitelistedIpRanges
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: AppServiceEnvironmentTimeouts;
   public get timeouts() {
@@ -183,12 +232,15 @@ export class AppServiceEnvironment extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      allowed_user_ip_cidrs: this._allowedUserIpCidrs,
       front_end_scale_factor: this._frontEndScaleFactor,
       internal_load_balancing_mode: this._internalLoadBalancingMode,
       name: this._name,
       pricing_tier: this._pricingTier,
+      resource_group_name: this._resourceGroupName,
       subnet_id: this._subnetId,
       tags: this._tags,
+      user_whitelisted_ip_ranges: this._userWhitelistedIpRanges,
       timeouts: this._timeouts,
     };
   }

@@ -8,17 +8,26 @@ import { TerraformMetaArguments } from 'cdktf';
 // Configuration
 
 export interface MariadbServerConfig extends TerraformMetaArguments {
-  readonly administratorLogin: string;
-  readonly administratorLoginPassword: string;
+  readonly administratorLogin?: string;
+  readonly administratorLoginPassword?: string;
+  readonly autoGrowEnabled?: boolean;
+  readonly backupRetentionDays?: number;
+  readonly createMode?: string;
+  readonly creationSourceServerId?: string;
+  readonly geoRedundantBackupEnabled?: boolean;
   readonly location: string;
   readonly name: string;
+  readonly publicNetworkAccessEnabled?: boolean;
   readonly resourceGroupName: string;
+  readonly restorePointInTime?: string;
   readonly skuName: string;
-  readonly sslEnforcement: string;
+  readonly sslEnforcement?: string;
+  readonly sslEnforcementEnabled?: boolean;
+  readonly storageMb?: number;
   readonly tags?: { [key: string]: string };
   readonly version: string;
   /** storage_profile block */
-  readonly storageProfile: MariadbServerStorageProfile[];
+  readonly storageProfile?: MariadbServerStorageProfile[];
   /** timeouts block */
   readonly timeouts?: MariadbServerTimeouts;
 }
@@ -26,7 +35,7 @@ export interface MariadbServerStorageProfile {
   readonly autoGrow?: string;
   readonly backupRetentionDays?: number;
   readonly geoRedundantBackup?: string;
-  readonly storageMb: number;
+  readonly storageMb?: number;
 }
 export interface MariadbServerTimeouts {
   readonly create?: string;
@@ -56,11 +65,20 @@ export class MariadbServer extends TerraformResource {
     });
     this._administratorLogin = config.administratorLogin;
     this._administratorLoginPassword = config.administratorLoginPassword;
+    this._autoGrowEnabled = config.autoGrowEnabled;
+    this._backupRetentionDays = config.backupRetentionDays;
+    this._createMode = config.createMode;
+    this._creationSourceServerId = config.creationSourceServerId;
+    this._geoRedundantBackupEnabled = config.geoRedundantBackupEnabled;
     this._location = config.location;
     this._name = config.name;
+    this._publicNetworkAccessEnabled = config.publicNetworkAccessEnabled;
     this._resourceGroupName = config.resourceGroupName;
+    this._restorePointInTime = config.restorePointInTime;
     this._skuName = config.skuName;
     this._sslEnforcement = config.sslEnforcement;
+    this._sslEnforcementEnabled = config.sslEnforcementEnabled;
+    this._storageMb = config.storageMb;
     this._tags = config.tags;
     this._version = config.version;
     this._storageProfile = config.storageProfile;
@@ -71,35 +89,121 @@ export class MariadbServer extends TerraformResource {
   // ATTRIBUTES
   // ==========
 
-  // administrator_login - computed: false, optional: false, required: true
-  private _administratorLogin: string;
+  // administrator_login - computed: true, optional: true, required: false
+  private _administratorLogin?: string;
   public get administratorLogin() {
     return this.getStringAttribute('administrator_login');
   }
   public set administratorLogin(value: string) {
     this._administratorLogin = value;
   }
+  public resetAdministratorLogin() {
+    this._administratorLogin = undefined;
+  }
   // Temporarily expose input value. Use with caution.
   public get administratorLoginInput() {
     return this._administratorLogin
   }
 
-  // administrator_login_password - computed: false, optional: false, required: true
-  private _administratorLoginPassword: string;
+  // administrator_login_password - computed: false, optional: true, required: false
+  private _administratorLoginPassword?: string;
   public get administratorLoginPassword() {
     return this.getStringAttribute('administrator_login_password');
   }
-  public set administratorLoginPassword(value: string) {
+  public set administratorLoginPassword(value: string ) {
     this._administratorLoginPassword = value;
+  }
+  public resetAdministratorLoginPassword() {
+    this._administratorLoginPassword = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get administratorLoginPasswordInput() {
     return this._administratorLoginPassword
   }
 
+  // auto_grow_enabled - computed: true, optional: true, required: false
+  private _autoGrowEnabled?: boolean;
+  public get autoGrowEnabled() {
+    return this.getBooleanAttribute('auto_grow_enabled');
+  }
+  public set autoGrowEnabled(value: boolean) {
+    this._autoGrowEnabled = value;
+  }
+  public resetAutoGrowEnabled() {
+    this._autoGrowEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get autoGrowEnabledInput() {
+    return this._autoGrowEnabled
+  }
+
+  // backup_retention_days - computed: true, optional: true, required: false
+  private _backupRetentionDays?: number;
+  public get backupRetentionDays() {
+    return this.getNumberAttribute('backup_retention_days');
+  }
+  public set backupRetentionDays(value: number) {
+    this._backupRetentionDays = value;
+  }
+  public resetBackupRetentionDays() {
+    this._backupRetentionDays = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get backupRetentionDaysInput() {
+    return this._backupRetentionDays
+  }
+
+  // create_mode - computed: false, optional: true, required: false
+  private _createMode?: string;
+  public get createMode() {
+    return this.getStringAttribute('create_mode');
+  }
+  public set createMode(value: string ) {
+    this._createMode = value;
+  }
+  public resetCreateMode() {
+    this._createMode = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createModeInput() {
+    return this._createMode
+  }
+
+  // creation_source_server_id - computed: false, optional: true, required: false
+  private _creationSourceServerId?: string;
+  public get creationSourceServerId() {
+    return this.getStringAttribute('creation_source_server_id');
+  }
+  public set creationSourceServerId(value: string ) {
+    this._creationSourceServerId = value;
+  }
+  public resetCreationSourceServerId() {
+    this._creationSourceServerId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get creationSourceServerIdInput() {
+    return this._creationSourceServerId
+  }
+
   // fqdn - computed: true, optional: false, required: false
   public get fqdn() {
     return this.getStringAttribute('fqdn');
+  }
+
+  // geo_redundant_backup_enabled - computed: true, optional: true, required: false
+  private _geoRedundantBackupEnabled?: boolean;
+  public get geoRedundantBackupEnabled() {
+    return this.getBooleanAttribute('geo_redundant_backup_enabled');
+  }
+  public set geoRedundantBackupEnabled(value: boolean) {
+    this._geoRedundantBackupEnabled = value;
+  }
+  public resetGeoRedundantBackupEnabled() {
+    this._geoRedundantBackupEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get geoRedundantBackupEnabledInput() {
+    return this._geoRedundantBackupEnabled
   }
 
   // id - computed: true, optional: true, required: false
@@ -133,6 +237,22 @@ export class MariadbServer extends TerraformResource {
     return this._name
   }
 
+  // public_network_access_enabled - computed: false, optional: true, required: false
+  private _publicNetworkAccessEnabled?: boolean;
+  public get publicNetworkAccessEnabled() {
+    return this.getBooleanAttribute('public_network_access_enabled');
+  }
+  public set publicNetworkAccessEnabled(value: boolean ) {
+    this._publicNetworkAccessEnabled = value;
+  }
+  public resetPublicNetworkAccessEnabled() {
+    this._publicNetworkAccessEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get publicNetworkAccessEnabledInput() {
+    return this._publicNetworkAccessEnabled
+  }
+
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
@@ -144,6 +264,22 @@ export class MariadbServer extends TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
     return this._resourceGroupName
+  }
+
+  // restore_point_in_time - computed: false, optional: true, required: false
+  private _restorePointInTime?: string;
+  public get restorePointInTime() {
+    return this.getStringAttribute('restore_point_in_time');
+  }
+  public set restorePointInTime(value: string ) {
+    this._restorePointInTime = value;
+  }
+  public resetRestorePointInTime() {
+    this._restorePointInTime = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get restorePointInTimeInput() {
+    return this._restorePointInTime
   }
 
   // sku_name - computed: false, optional: false, required: true
@@ -159,17 +295,52 @@ export class MariadbServer extends TerraformResource {
     return this._skuName
   }
 
-  // ssl_enforcement - computed: false, optional: false, required: true
-  private _sslEnforcement: string;
+  // ssl_enforcement - computed: true, optional: true, required: false
+  private _sslEnforcement?: string;
   public get sslEnforcement() {
     return this.getStringAttribute('ssl_enforcement');
   }
   public set sslEnforcement(value: string) {
     this._sslEnforcement = value;
   }
+  public resetSslEnforcement() {
+    this._sslEnforcement = undefined;
+  }
   // Temporarily expose input value. Use with caution.
   public get sslEnforcementInput() {
     return this._sslEnforcement
+  }
+
+  // ssl_enforcement_enabled - computed: false, optional: true, required: false
+  private _sslEnforcementEnabled?: boolean;
+  public get sslEnforcementEnabled() {
+    return this.getBooleanAttribute('ssl_enforcement_enabled');
+  }
+  public set sslEnforcementEnabled(value: boolean ) {
+    this._sslEnforcementEnabled = value;
+  }
+  public resetSslEnforcementEnabled() {
+    this._sslEnforcementEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sslEnforcementEnabledInput() {
+    return this._sslEnforcementEnabled
+  }
+
+  // storage_mb - computed: true, optional: true, required: false
+  private _storageMb?: number;
+  public get storageMb() {
+    return this.getNumberAttribute('storage_mb');
+  }
+  public set storageMb(value: number) {
+    this._storageMb = value;
+  }
+  public resetStorageMb() {
+    this._storageMb = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get storageMbInput() {
+    return this._storageMb
   }
 
   // tags - computed: false, optional: true, required: false
@@ -201,13 +372,16 @@ export class MariadbServer extends TerraformResource {
     return this._version
   }
 
-  // storage_profile - computed: false, optional: false, required: true
-  private _storageProfile: MariadbServerStorageProfile[];
+  // storage_profile - computed: false, optional: true, required: false
+  private _storageProfile?: MariadbServerStorageProfile[];
   public get storageProfile() {
     return this.interpolationForAttribute('storage_profile') as any;
   }
-  public set storageProfile(value: MariadbServerStorageProfile[]) {
+  public set storageProfile(value: MariadbServerStorageProfile[] ) {
     this._storageProfile = value;
+  }
+  public resetStorageProfile() {
+    this._storageProfile = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get storageProfileInput() {
@@ -238,11 +412,20 @@ export class MariadbServer extends TerraformResource {
     return {
       administrator_login: this._administratorLogin,
       administrator_login_password: this._administratorLoginPassword,
+      auto_grow_enabled: this._autoGrowEnabled,
+      backup_retention_days: this._backupRetentionDays,
+      create_mode: this._createMode,
+      creation_source_server_id: this._creationSourceServerId,
+      geo_redundant_backup_enabled: this._geoRedundantBackupEnabled,
       location: this._location,
       name: this._name,
+      public_network_access_enabled: this._publicNetworkAccessEnabled,
       resource_group_name: this._resourceGroupName,
+      restore_point_in_time: this._restorePointInTime,
       sku_name: this._skuName,
       ssl_enforcement: this._sslEnforcement,
+      ssl_enforcement_enabled: this._sslEnforcementEnabled,
+      storage_mb: this._storageMb,
       tags: this._tags,
       version: this._version,
       storage_profile: this._storageProfile,

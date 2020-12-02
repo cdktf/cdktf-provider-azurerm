@@ -30,7 +30,7 @@ export interface MonitorDiagnosticSettingLog {
   readonly category: string;
   readonly enabled?: boolean;
   /** retention_policy block */
-  readonly retentionPolicy: MonitorDiagnosticSettingLogRetentionPolicy[];
+  readonly retentionPolicy?: MonitorDiagnosticSettingLogRetentionPolicy[];
 }
 export interface MonitorDiagnosticSettingMetricRetentionPolicy {
   readonly days?: number;
@@ -40,7 +40,7 @@ export interface MonitorDiagnosticSettingMetric {
   readonly category: string;
   readonly enabled?: boolean;
   /** retention_policy block */
-  readonly retentionPolicy: MonitorDiagnosticSettingMetricRetentionPolicy[];
+  readonly retentionPolicy?: MonitorDiagnosticSettingMetricRetentionPolicy[];
 }
 export interface MonitorDiagnosticSettingTimeouts {
   readonly create?: string;

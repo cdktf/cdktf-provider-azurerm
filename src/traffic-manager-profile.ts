@@ -24,6 +24,10 @@ export interface TrafficManagerProfileDnsConfig {
   readonly relativeName: string;
   readonly ttl: number;
 }
+export interface TrafficManagerProfileMonitorConfigCustomHeader {
+  readonly name: string;
+  readonly value: string;
+}
 export interface TrafficManagerProfileMonitorConfig {
   readonly expectedStatusCodeRanges?: string[];
   readonly intervalInSeconds?: number;
@@ -32,6 +36,8 @@ export interface TrafficManagerProfileMonitorConfig {
   readonly protocol: string;
   readonly timeoutInSeconds?: number;
   readonly toleratedNumberOfFailures?: number;
+  /** custom_header block */
+  readonly customHeader?: TrafficManagerProfileMonitorConfigCustomHeader[];
 }
 export interface TrafficManagerProfileTimeouts {
   readonly create?: string;

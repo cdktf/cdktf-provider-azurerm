@@ -14,6 +14,8 @@ export interface CosmosdbGremlinGraphConfig extends TerraformMetaArguments {
   readonly partitionKeyPath?: string;
   readonly resourceGroupName: string;
   readonly throughput?: number;
+  /** autoscale_settings block */
+  readonly autoscaleSettings?: CosmosdbGremlinGraphAutoscaleSettings[];
   /** conflict_resolution_policy block */
   readonly conflictResolutionPolicy: CosmosdbGremlinGraphConflictResolutionPolicy[];
   /** index_policy block */
@@ -22,6 +24,9 @@ export interface CosmosdbGremlinGraphConfig extends TerraformMetaArguments {
   readonly timeouts?: CosmosdbGremlinGraphTimeouts;
   /** unique_key block */
   readonly uniqueKey?: CosmosdbGremlinGraphUniqueKey[];
+}
+export interface CosmosdbGremlinGraphAutoscaleSettings {
+  readonly maxThroughput?: number;
 }
 export interface CosmosdbGremlinGraphConflictResolutionPolicy {
   readonly conflictResolutionPath?: string;
@@ -69,6 +74,7 @@ export class CosmosdbGremlinGraph extends TerraformResource {
     this._partitionKeyPath = config.partitionKeyPath;
     this._resourceGroupName = config.resourceGroupName;
     this._throughput = config.throughput;
+    this._autoscaleSettings = config.autoscaleSettings;
     this._conflictResolutionPolicy = config.conflictResolutionPolicy;
     this._indexPolicy = config.indexPolicy;
     this._timeouts = config.timeouts;
@@ -168,6 +174,22 @@ export class CosmosdbGremlinGraph extends TerraformResource {
     return this._throughput
   }
 
+  // autoscale_settings - computed: false, optional: true, required: false
+  private _autoscaleSettings?: CosmosdbGremlinGraphAutoscaleSettings[];
+  public get autoscaleSettings() {
+    return this.interpolationForAttribute('autoscale_settings') as any;
+  }
+  public set autoscaleSettings(value: CosmosdbGremlinGraphAutoscaleSettings[] ) {
+    this._autoscaleSettings = value;
+  }
+  public resetAutoscaleSettings() {
+    this._autoscaleSettings = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get autoscaleSettingsInput() {
+    return this._autoscaleSettings
+  }
+
   // conflict_resolution_policy - computed: false, optional: false, required: true
   private _conflictResolutionPolicy: CosmosdbGremlinGraphConflictResolutionPolicy[];
   public get conflictResolutionPolicy() {
@@ -238,6 +260,7 @@ export class CosmosdbGremlinGraph extends TerraformResource {
       partition_key_path: this._partitionKeyPath,
       resource_group_name: this._resourceGroupName,
       throughput: this._throughput,
+      autoscale_settings: this._autoscaleSettings,
       conflict_resolution_policy: this._conflictResolutionPolicy,
       index_policy: this._indexPolicy,
       timeouts: this._timeouts,

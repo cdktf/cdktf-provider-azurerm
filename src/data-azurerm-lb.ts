@@ -37,6 +37,11 @@ export class DataAzurermLbFrontendIpConfiguration extends ComplexComputedList {
     return this.getStringAttribute('private_ip_address_allocation');
   }
 
+  // private_ip_address_version - computed: true, optional: false, required: false
+  public get privateIpAddressVersion() {
+    return this.getStringAttribute('private_ip_address_version');
+  }
+
   // public_ip_address_id - computed: true, optional: false, required: false
   public get publicIpAddressId() {
     return this.getStringAttribute('public_ip_address_id');

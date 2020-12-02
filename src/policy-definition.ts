@@ -11,6 +11,7 @@ export interface PolicyDefinitionConfig extends TerraformMetaArguments {
   readonly description?: string;
   readonly displayName: string;
   readonly managementGroupId?: string;
+  readonly managementGroupName?: string;
   readonly metadata?: string;
   readonly mode: string;
   readonly name: string;
@@ -49,6 +50,7 @@ export class PolicyDefinition extends TerraformResource {
     this._description = config.description;
     this._displayName = config.displayName;
     this._managementGroupId = config.managementGroupId;
+    this._managementGroupName = config.managementGroupName;
     this._metadata = config.metadata;
     this._mode = config.mode;
     this._name = config.name;
@@ -96,12 +98,12 @@ export class PolicyDefinition extends TerraformResource {
     return this.getStringAttribute('id');
   }
 
-  // management_group_id - computed: false, optional: true, required: false
+  // management_group_id - computed: true, optional: true, required: false
   private _managementGroupId?: string;
   public get managementGroupId() {
     return this.getStringAttribute('management_group_id');
   }
-  public set managementGroupId(value: string ) {
+  public set managementGroupId(value: string) {
     this._managementGroupId = value;
   }
   public resetManagementGroupId() {
@@ -110,6 +112,22 @@ export class PolicyDefinition extends TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get managementGroupIdInput() {
     return this._managementGroupId
+  }
+
+  // management_group_name - computed: true, optional: true, required: false
+  private _managementGroupName?: string;
+  public get managementGroupName() {
+    return this.getStringAttribute('management_group_name');
+  }
+  public set managementGroupName(value: string) {
+    this._managementGroupName = value;
+  }
+  public resetManagementGroupName() {
+    this._managementGroupName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get managementGroupNameInput() {
+    return this._managementGroupName
   }
 
   // metadata - computed: true, optional: true, required: false
@@ -224,6 +242,7 @@ export class PolicyDefinition extends TerraformResource {
       description: this._description,
       display_name: this._displayName,
       management_group_id: this._managementGroupId,
+      management_group_name: this._managementGroupName,
       metadata: this._metadata,
       mode: this._mode,
       name: this._name,

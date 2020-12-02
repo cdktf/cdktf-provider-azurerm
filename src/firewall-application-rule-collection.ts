@@ -26,7 +26,8 @@ export interface FirewallApplicationRuleCollectionRule {
   readonly description?: string;
   readonly fqdnTags?: string[];
   readonly name: string;
-  readonly sourceAddresses: string[];
+  readonly sourceAddresses?: string[];
+  readonly sourceIpGroups?: string[];
   readonly targetFqdns?: string[];
   /** protocol block */
   readonly protocol?: FirewallApplicationRuleCollectionRuleProtocol[];

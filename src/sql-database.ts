@@ -12,8 +12,10 @@ export interface SqlDatabaseConfig extends TerraformMetaArguments {
   readonly createMode?: string;
   readonly edition?: string;
   readonly elasticPoolName?: string;
+  readonly extendedAuditingPolicy?: SqlDatabaseExtendedAuditingPolicy[];
   readonly location: string;
   readonly maxSizeBytes?: string;
+  readonly maxSizeGb?: string;
   readonly name: string;
   readonly readScale?: boolean;
   readonly requestedServiceObjectiveId?: string;
@@ -31,6 +33,12 @@ export interface SqlDatabaseConfig extends TerraformMetaArguments {
   readonly threatDetectionPolicy?: SqlDatabaseThreatDetectionPolicy[];
   /** timeouts block */
   readonly timeouts?: SqlDatabaseTimeouts;
+}
+export interface SqlDatabaseExtendedAuditingPolicy {
+  readonly retentionInDays?: number;
+  readonly storageAccountAccessKey?: string;
+  readonly storageAccountAccessKeyIsSecondary?: boolean;
+  readonly storageEndpoint?: string;
 }
 export interface SqlDatabaseImport {
   readonly administratorLogin: string;
@@ -81,8 +89,10 @@ export class SqlDatabase extends TerraformResource {
     this._createMode = config.createMode;
     this._edition = config.edition;
     this._elasticPoolName = config.elasticPoolName;
+    this._extendedAuditingPolicy = config.extendedAuditingPolicy;
     this._location = config.location;
     this._maxSizeBytes = config.maxSizeBytes;
+    this._maxSizeGb = config.maxSizeGb;
     this._name = config.name;
     this._readScale = config.readScale;
     this._requestedServiceObjectiveId = config.requestedServiceObjectiveId;
@@ -182,6 +192,22 @@ export class SqlDatabase extends TerraformResource {
     return this.getStringAttribute('encryption');
   }
 
+  // extended_auditing_policy - computed: true, optional: true, required: false
+  private _extendedAuditingPolicy?: SqlDatabaseExtendedAuditingPolicy[]
+  public get extendedAuditingPolicy(): SqlDatabaseExtendedAuditingPolicy[] {
+    return this.interpolationForAttribute('extended_auditing_policy') as any; // Getting the computed value is not yet implemented
+  }
+  public set extendedAuditingPolicy(value: SqlDatabaseExtendedAuditingPolicy[]) {
+    this._extendedAuditingPolicy = value;
+  }
+  public resetExtendedAuditingPolicy() {
+    this._extendedAuditingPolicy = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get extendedAuditingPolicyInput() {
+    return this._extendedAuditingPolicy
+  }
+
   // id - computed: true, optional: true, required: false
   public get id() {
     return this.getStringAttribute('id');
@@ -214,6 +240,22 @@ export class SqlDatabase extends TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get maxSizeBytesInput() {
     return this._maxSizeBytes
+  }
+
+  // max_size_gb - computed: true, optional: true, required: false
+  private _maxSizeGb?: string;
+  public get maxSizeGb() {
+    return this.getStringAttribute('max_size_gb');
+  }
+  public set maxSizeGb(value: string) {
+    this._maxSizeGb = value;
+  }
+  public resetMaxSizeGb() {
+    this._maxSizeGb = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get maxSizeGbInput() {
+    return this._maxSizeGb
   }
 
   // name - computed: false, optional: false, required: true
@@ -441,8 +483,10 @@ export class SqlDatabase extends TerraformResource {
       create_mode: this._createMode,
       edition: this._edition,
       elastic_pool_name: this._elasticPoolName,
+      extended_auditing_policy: this._extendedAuditingPolicy,
       location: this._location,
       max_size_bytes: this._maxSizeBytes,
+      max_size_gb: this._maxSizeGb,
       name: this._name,
       read_scale: this._readScale,
       requested_service_objective_id: this._requestedServiceObjectiveId,

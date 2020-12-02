@@ -13,6 +13,7 @@ export interface LogicAppTriggerRecurrenceConfig extends TerraformMetaArguments 
   readonly logicAppId: string;
   readonly name: string;
   readonly startTime?: string;
+  readonly timeZone?: string;
   /** timeouts block */
   readonly timeouts?: LogicAppTriggerRecurrenceTimeouts;
 }
@@ -47,6 +48,7 @@ export class LogicAppTriggerRecurrence extends TerraformResource {
     this._logicAppId = config.logicAppId;
     this._name = config.name;
     this._startTime = config.startTime;
+    this._timeZone = config.timeZone;
     this._timeouts = config.timeouts;
   }
 
@@ -127,6 +129,22 @@ export class LogicAppTriggerRecurrence extends TerraformResource {
     return this._startTime
   }
 
+  // time_zone - computed: true, optional: true, required: false
+  private _timeZone?: string;
+  public get timeZone() {
+    return this.getStringAttribute('time_zone');
+  }
+  public set timeZone(value: string) {
+    this._timeZone = value;
+  }
+  public resetTimeZone() {
+    this._timeZone = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeZoneInput() {
+    return this._timeZone
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: LogicAppTriggerRecurrenceTimeouts;
   public get timeouts() {
@@ -154,6 +172,7 @@ export class LogicAppTriggerRecurrence extends TerraformResource {
       logic_app_id: this._logicAppId,
       name: this._name,
       start_time: this._startTime,
+      time_zone: this._timeZone,
       timeouts: this._timeouts,
     };
   }

@@ -16,12 +16,15 @@ export interface WindowsVirtualMachineConfig extends TerraformMetaArguments {
   readonly customData?: string;
   readonly dedicatedHostId?: string;
   readonly enableAutomaticUpdates?: boolean;
+  readonly encryptionAtHostEnabled?: boolean;
   readonly evictionPolicy?: string;
+  readonly extensionsTimeBudget?: string;
   readonly licenseType?: string;
   readonly location: string;
   readonly maxBidPrice?: number;
   readonly name: string;
   readonly networkInterfaceIds: string[];
+  readonly patchMode?: string;
   readonly priority?: string;
   readonly provisionVmAgent?: boolean;
   readonly proximityPlacementGroupId?: string;
@@ -30,6 +33,7 @@ export interface WindowsVirtualMachineConfig extends TerraformMetaArguments {
   readonly sourceImageId?: string;
   readonly tags?: { [key: string]: string };
   readonly timezone?: string;
+  readonly virtualMachineScaleSetId?: string;
   readonly zone?: string;
   /** additional_capabilities block */
   readonly additionalCapabilities?: WindowsVirtualMachineAdditionalCapabilities[];
@@ -60,7 +64,7 @@ export interface WindowsVirtualMachineAdditionalUnattendContent {
   readonly setting: string;
 }
 export interface WindowsVirtualMachineBootDiagnostics {
-  readonly storageAccountUri: string;
+  readonly storageAccountUri?: string;
 }
 export interface WindowsVirtualMachineIdentity {
   readonly identityIds?: string[];
@@ -137,12 +141,15 @@ export class WindowsVirtualMachine extends TerraformResource {
     this._customData = config.customData;
     this._dedicatedHostId = config.dedicatedHostId;
     this._enableAutomaticUpdates = config.enableAutomaticUpdates;
+    this._encryptionAtHostEnabled = config.encryptionAtHostEnabled;
     this._evictionPolicy = config.evictionPolicy;
+    this._extensionsTimeBudget = config.extensionsTimeBudget;
     this._licenseType = config.licenseType;
     this._location = config.location;
     this._maxBidPrice = config.maxBidPrice;
     this._name = config.name;
     this._networkInterfaceIds = config.networkInterfaceIds;
+    this._patchMode = config.patchMode;
     this._priority = config.priority;
     this._provisionVmAgent = config.provisionVmAgent;
     this._proximityPlacementGroupId = config.proximityPlacementGroupId;
@@ -151,6 +158,7 @@ export class WindowsVirtualMachine extends TerraformResource {
     this._sourceImageId = config.sourceImageId;
     this._tags = config.tags;
     this._timezone = config.timezone;
+    this._virtualMachineScaleSetId = config.virtualMachineScaleSetId;
     this._zone = config.zone;
     this._additionalCapabilities = config.additionalCapabilities;
     this._additionalUnattendContent = config.additionalUnattendContent;
@@ -290,6 +298,22 @@ export class WindowsVirtualMachine extends TerraformResource {
     return this._enableAutomaticUpdates
   }
 
+  // encryption_at_host_enabled - computed: false, optional: true, required: false
+  private _encryptionAtHostEnabled?: boolean;
+  public get encryptionAtHostEnabled() {
+    return this.getBooleanAttribute('encryption_at_host_enabled');
+  }
+  public set encryptionAtHostEnabled(value: boolean ) {
+    this._encryptionAtHostEnabled = value;
+  }
+  public resetEncryptionAtHostEnabled() {
+    this._encryptionAtHostEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get encryptionAtHostEnabledInput() {
+    return this._encryptionAtHostEnabled
+  }
+
   // eviction_policy - computed: false, optional: true, required: false
   private _evictionPolicy?: string;
   public get evictionPolicy() {
@@ -304,6 +328,22 @@ export class WindowsVirtualMachine extends TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get evictionPolicyInput() {
     return this._evictionPolicy
+  }
+
+  // extensions_time_budget - computed: false, optional: true, required: false
+  private _extensionsTimeBudget?: string;
+  public get extensionsTimeBudget() {
+    return this.getStringAttribute('extensions_time_budget');
+  }
+  public set extensionsTimeBudget(value: string ) {
+    this._extensionsTimeBudget = value;
+  }
+  public resetExtensionsTimeBudget() {
+    this._extensionsTimeBudget = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get extensionsTimeBudgetInput() {
+    return this._extensionsTimeBudget
   }
 
   // id - computed: true, optional: true, required: false
@@ -380,6 +420,22 @@ export class WindowsVirtualMachine extends TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get networkInterfaceIdsInput() {
     return this._networkInterfaceIds
+  }
+
+  // patch_mode - computed: false, optional: true, required: false
+  private _patchMode?: string;
+  public get patchMode() {
+    return this.getStringAttribute('patch_mode');
+  }
+  public set patchMode(value: string ) {
+    this._patchMode = value;
+  }
+  public resetPatchMode() {
+    this._patchMode = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get patchModeInput() {
+    return this._patchMode
   }
 
   // priority - computed: false, optional: true, required: false
@@ -529,12 +585,28 @@ export class WindowsVirtualMachine extends TerraformResource {
     return this.getStringAttribute('virtual_machine_id');
   }
 
-  // zone - computed: false, optional: true, required: false
+  // virtual_machine_scale_set_id - computed: false, optional: true, required: false
+  private _virtualMachineScaleSetId?: string;
+  public get virtualMachineScaleSetId() {
+    return this.getStringAttribute('virtual_machine_scale_set_id');
+  }
+  public set virtualMachineScaleSetId(value: string ) {
+    this._virtualMachineScaleSetId = value;
+  }
+  public resetVirtualMachineScaleSetId() {
+    this._virtualMachineScaleSetId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get virtualMachineScaleSetIdInput() {
+    return this._virtualMachineScaleSetId
+  }
+
+  // zone - computed: true, optional: true, required: false
   private _zone?: string;
   public get zone() {
     return this.getStringAttribute('zone');
   }
-  public set zone(value: string ) {
+  public set zone(value: string) {
     this._zone = value;
   }
   public resetZone() {
@@ -716,12 +788,15 @@ export class WindowsVirtualMachine extends TerraformResource {
       custom_data: this._customData,
       dedicated_host_id: this._dedicatedHostId,
       enable_automatic_updates: this._enableAutomaticUpdates,
+      encryption_at_host_enabled: this._encryptionAtHostEnabled,
       eviction_policy: this._evictionPolicy,
+      extensions_time_budget: this._extensionsTimeBudget,
       license_type: this._licenseType,
       location: this._location,
       max_bid_price: this._maxBidPrice,
       name: this._name,
       network_interface_ids: this._networkInterfaceIds,
+      patch_mode: this._patchMode,
       priority: this._priority,
       provision_vm_agent: this._provisionVmAgent,
       proximity_placement_group_id: this._proximityPlacementGroupId,
@@ -730,6 +805,7 @@ export class WindowsVirtualMachine extends TerraformResource {
       source_image_id: this._sourceImageId,
       tags: this._tags,
       timezone: this._timezone,
+      virtual_machine_scale_set_id: this._virtualMachineScaleSetId,
       zone: this._zone,
       additional_capabilities: this._additionalCapabilities,
       additional_unattend_content: this._additionalUnattendContent,

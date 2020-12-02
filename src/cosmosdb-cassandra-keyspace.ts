@@ -12,8 +12,13 @@ export interface CosmosdbCassandraKeyspaceConfig extends TerraformMetaArguments 
   readonly name: string;
   readonly resourceGroupName: string;
   readonly throughput?: number;
+  /** autoscale_settings block */
+  readonly autoscaleSettings?: CosmosdbCassandraKeyspaceAutoscaleSettings[];
   /** timeouts block */
   readonly timeouts?: CosmosdbCassandraKeyspaceTimeouts;
+}
+export interface CosmosdbCassandraKeyspaceAutoscaleSettings {
+  readonly maxThroughput?: number;
 }
 export interface CosmosdbCassandraKeyspaceTimeouts {
   readonly create?: string;
@@ -45,6 +50,7 @@ export class CosmosdbCassandraKeyspace extends TerraformResource {
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
     this._throughput = config.throughput;
+    this._autoscaleSettings = config.autoscaleSettings;
     this._timeouts = config.timeouts;
   }
 
@@ -112,6 +118,22 @@ export class CosmosdbCassandraKeyspace extends TerraformResource {
     return this._throughput
   }
 
+  // autoscale_settings - computed: false, optional: true, required: false
+  private _autoscaleSettings?: CosmosdbCassandraKeyspaceAutoscaleSettings[];
+  public get autoscaleSettings() {
+    return this.interpolationForAttribute('autoscale_settings') as any;
+  }
+  public set autoscaleSettings(value: CosmosdbCassandraKeyspaceAutoscaleSettings[] ) {
+    this._autoscaleSettings = value;
+  }
+  public resetAutoscaleSettings() {
+    this._autoscaleSettings = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get autoscaleSettingsInput() {
+    return this._autoscaleSettings
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: CosmosdbCassandraKeyspaceTimeouts;
   public get timeouts() {
@@ -138,6 +160,7 @@ export class CosmosdbCassandraKeyspace extends TerraformResource {
       name: this._name,
       resource_group_name: this._resourceGroupName,
       throughput: this._throughput,
+      autoscale_settings: this._autoscaleSettings,
       timeouts: this._timeouts,
     };
   }

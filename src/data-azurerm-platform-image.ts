@@ -12,6 +12,7 @@ export interface DataAzurermPlatformImageConfig extends TerraformMetaArguments {
   readonly offer: string;
   readonly publisher: string;
   readonly sku: string;
+  readonly version?: string;
   /** timeouts block */
   readonly timeouts?: DataAzurermPlatformImageTimeouts;
 }
@@ -42,6 +43,7 @@ export class DataAzurermPlatformImage extends TerraformDataSource {
     this._offer = config.offer;
     this._publisher = config.publisher;
     this._sku = config.sku;
+    this._version = config.version;
     this._timeouts = config.timeouts;
   }
 
@@ -106,9 +108,20 @@ export class DataAzurermPlatformImage extends TerraformDataSource {
     return this._sku
   }
 
-  // version - computed: true, optional: false, required: false
+  // version - computed: true, optional: true, required: false
+  private _version?: string;
   public get version() {
     return this.getStringAttribute('version');
+  }
+  public set version(value: string) {
+    this._version = value;
+  }
+  public resetVersion() {
+    this._version = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get versionInput() {
+    return this._version
   }
 
   // timeouts - computed: false, optional: true, required: false
@@ -137,6 +150,7 @@ export class DataAzurermPlatformImage extends TerraformDataSource {
       offer: this._offer,
       publisher: this._publisher,
       sku: this._sku,
+      version: this._version,
       timeouts: this._timeouts,
     };
   }

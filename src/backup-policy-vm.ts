@@ -8,6 +8,7 @@ import { TerraformMetaArguments } from 'cdktf';
 // Configuration
 
 export interface BackupPolicyVmConfig extends TerraformMetaArguments {
+  readonly instantRestoreRetentionDays?: number;
   readonly name: string;
   readonly recoveryVaultName: string;
   readonly resourceGroupName: string;
@@ -75,6 +76,7 @@ export class BackupPolicyVm extends TerraformResource {
       count: config.count,
       lifecycle: config.lifecycle
     });
+    this._instantRestoreRetentionDays = config.instantRestoreRetentionDays;
     this._name = config.name;
     this._recoveryVaultName = config.recoveryVaultName;
     this._resourceGroupName = config.resourceGroupName;
@@ -95,6 +97,22 @@ export class BackupPolicyVm extends TerraformResource {
   // id - computed: true, optional: true, required: false
   public get id() {
     return this.getStringAttribute('id');
+  }
+
+  // instant_restore_retention_days - computed: true, optional: true, required: false
+  private _instantRestoreRetentionDays?: number;
+  public get instantRestoreRetentionDays() {
+    return this.getNumberAttribute('instant_restore_retention_days');
+  }
+  public set instantRestoreRetentionDays(value: number) {
+    this._instantRestoreRetentionDays = value;
+  }
+  public resetInstantRestoreRetentionDays() {
+    this._instantRestoreRetentionDays = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get instantRestoreRetentionDaysInput() {
+    return this._instantRestoreRetentionDays
   }
 
   // name - computed: false, optional: false, required: true
@@ -267,6 +285,7 @@ export class BackupPolicyVm extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      instant_restore_retention_days: this._instantRestoreRetentionDays,
       name: this._name,
       recovery_vault_name: this._recoveryVaultName,
       resource_group_name: this._resourceGroupName,

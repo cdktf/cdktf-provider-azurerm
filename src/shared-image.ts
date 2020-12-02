@@ -11,15 +11,19 @@ export interface SharedImageConfig extends TerraformMetaArguments {
   readonly description?: string;
   readonly eula?: string;
   readonly galleryName: string;
+  readonly hyperVGeneration?: string;
   readonly location: string;
   readonly name: string;
   readonly osType: string;
   readonly privacyStatementUri?: string;
   readonly releaseNoteUri?: string;
   readonly resourceGroupName: string;
+  readonly specialized?: boolean;
   readonly tags?: { [key: string]: string };
   /** identifier block */
   readonly identifier: SharedImageIdentifier[];
+  /** purchase_plan block */
+  readonly purchasePlan?: SharedImagePurchasePlan[];
   /** timeouts block */
   readonly timeouts?: SharedImageTimeouts;
 }
@@ -27,6 +31,11 @@ export interface SharedImageIdentifier {
   readonly offer: string;
   readonly publisher: string;
   readonly sku: string;
+}
+export interface SharedImagePurchasePlan {
+  readonly name: string;
+  readonly product?: string;
+  readonly publisher?: string;
 }
 export interface SharedImageTimeouts {
   readonly create?: string;
@@ -57,14 +66,17 @@ export class SharedImage extends TerraformResource {
     this._description = config.description;
     this._eula = config.eula;
     this._galleryName = config.galleryName;
+    this._hyperVGeneration = config.hyperVGeneration;
     this._location = config.location;
     this._name = config.name;
     this._osType = config.osType;
     this._privacyStatementUri = config.privacyStatementUri;
     this._releaseNoteUri = config.releaseNoteUri;
     this._resourceGroupName = config.resourceGroupName;
+    this._specialized = config.specialized;
     this._tags = config.tags;
     this._identifier = config.identifier;
+    this._purchasePlan = config.purchasePlan;
     this._timeouts = config.timeouts;
   }
 
@@ -115,6 +127,22 @@ export class SharedImage extends TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get galleryNameInput() {
     return this._galleryName
+  }
+
+  // hyper_v_generation - computed: false, optional: true, required: false
+  private _hyperVGeneration?: string;
+  public get hyperVGeneration() {
+    return this.getStringAttribute('hyper_v_generation');
+  }
+  public set hyperVGeneration(value: string ) {
+    this._hyperVGeneration = value;
+  }
+  public resetHyperVGeneration() {
+    this._hyperVGeneration = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get hyperVGenerationInput() {
+    return this._hyperVGeneration
   }
 
   // id - computed: true, optional: true, required: false
@@ -206,6 +234,22 @@ export class SharedImage extends TerraformResource {
     return this._resourceGroupName
   }
 
+  // specialized - computed: false, optional: true, required: false
+  private _specialized?: boolean;
+  public get specialized() {
+    return this.getBooleanAttribute('specialized');
+  }
+  public set specialized(value: boolean ) {
+    this._specialized = value;
+  }
+  public resetSpecialized() {
+    this._specialized = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get specializedInput() {
+    return this._specialized
+  }
+
   // tags - computed: false, optional: true, required: false
   private _tags?: { [key: string]: string };
   public get tags() {
@@ -235,6 +279,22 @@ export class SharedImage extends TerraformResource {
     return this._identifier
   }
 
+  // purchase_plan - computed: false, optional: true, required: false
+  private _purchasePlan?: SharedImagePurchasePlan[];
+  public get purchasePlan() {
+    return this.interpolationForAttribute('purchase_plan') as any;
+  }
+  public set purchasePlan(value: SharedImagePurchasePlan[] ) {
+    this._purchasePlan = value;
+  }
+  public resetPurchasePlan() {
+    this._purchasePlan = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get purchasePlanInput() {
+    return this._purchasePlan
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: SharedImageTimeouts;
   public get timeouts() {
@@ -260,14 +320,17 @@ export class SharedImage extends TerraformResource {
       description: this._description,
       eula: this._eula,
       gallery_name: this._galleryName,
+      hyper_v_generation: this._hyperVGeneration,
       location: this._location,
       name: this._name,
       os_type: this._osType,
       privacy_statement_uri: this._privacyStatementUri,
       release_note_uri: this._releaseNoteUri,
       resource_group_name: this._resourceGroupName,
+      specialized: this._specialized,
       tags: this._tags,
       identifier: this._identifier,
+      purchase_plan: this._purchasePlan,
       timeouts: this._timeouts,
     };
   }

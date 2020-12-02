@@ -14,8 +14,14 @@ export interface LogicAppActionHttpConfig extends TerraformMetaArguments {
   readonly method: string;
   readonly name: string;
   readonly uri: string;
+  /** run_after block */
+  readonly runAfter?: LogicAppActionHttpRunAfter[];
   /** timeouts block */
   readonly timeouts?: LogicAppActionHttpTimeouts;
+}
+export interface LogicAppActionHttpRunAfter {
+  readonly actionName: string;
+  readonly actionResult: string;
 }
 export interface LogicAppActionHttpTimeouts {
   readonly create?: string;
@@ -49,6 +55,7 @@ export class LogicAppActionHttp extends TerraformResource {
     this._method = config.method;
     this._name = config.name;
     this._uri = config.uri;
+    this._runAfter = config.runAfter;
     this._timeouts = config.timeouts;
   }
 
@@ -145,6 +152,22 @@ export class LogicAppActionHttp extends TerraformResource {
     return this._uri
   }
 
+  // run_after - computed: false, optional: true, required: false
+  private _runAfter?: LogicAppActionHttpRunAfter[];
+  public get runAfter() {
+    return this.interpolationForAttribute('run_after') as any;
+  }
+  public set runAfter(value: LogicAppActionHttpRunAfter[] ) {
+    this._runAfter = value;
+  }
+  public resetRunAfter() {
+    this._runAfter = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get runAfterInput() {
+    return this._runAfter
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: LogicAppActionHttpTimeouts;
   public get timeouts() {
@@ -173,6 +196,7 @@ export class LogicAppActionHttp extends TerraformResource {
       method: this._method,
       name: this._name,
       uri: this._uri,
+      run_after: this._runAfter,
       timeouts: this._timeouts,
     };
   }

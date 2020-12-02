@@ -16,6 +16,7 @@ export interface VirtualWanConfig extends TerraformMetaArguments {
   readonly office365LocalBreakoutCategory?: string;
   readonly resourceGroupName: string;
   readonly tags?: { [key: string]: string };
+  readonly type?: string;
   /** timeouts block */
   readonly timeouts?: VirtualWanTimeouts;
 }
@@ -53,6 +54,7 @@ export class VirtualWan extends TerraformResource {
     this._office365LocalBreakoutCategory = config.office365LocalBreakoutCategory;
     this._resourceGroupName = config.resourceGroupName;
     this._tags = config.tags;
+    this._type = config.type;
     this._timeouts = config.timeouts;
   }
 
@@ -184,6 +186,22 @@ export class VirtualWan extends TerraformResource {
     return this._tags
   }
 
+  // type - computed: false, optional: true, required: false
+  private _type?: string;
+  public get type() {
+    return this.getStringAttribute('type');
+  }
+  public set type(value: string ) {
+    this._type = value;
+  }
+  public resetType() {
+    this._type = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get typeInput() {
+    return this._type
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: VirtualWanTimeouts;
   public get timeouts() {
@@ -214,6 +232,7 @@ export class VirtualWan extends TerraformResource {
       office365_local_breakout_category: this._office365LocalBreakoutCategory,
       resource_group_name: this._resourceGroupName,
       tags: this._tags,
+      type: this._type,
       timeouts: this._timeouts,
     };
   }

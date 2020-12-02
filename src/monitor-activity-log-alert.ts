@@ -30,6 +30,9 @@ export interface MonitorActivityLogAlertCriteria {
   readonly category: string;
   readonly level?: string;
   readonly operationName?: string;
+  readonly recommendationCategory?: string;
+  readonly recommendationImpact?: string;
+  readonly recommendationType?: string;
   readonly resourceGroup?: string;
   readonly resourceId?: string;
   readonly resourceProvider?: string;

@@ -79,6 +79,11 @@ export class DataAzurermManagedDisk extends TerraformDataSource {
     return this.getStringAttribute('id');
   }
 
+  // image_reference_id - computed: true, optional: false, required: false
+  public get imageReferenceId() {
+    return this.getStringAttribute('image_reference_id');
+  }
+
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {

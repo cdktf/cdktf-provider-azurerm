@@ -9,7 +9,8 @@ import { TerraformMetaArguments } from 'cdktf';
 
 export interface LocalNetworkGatewayConfig extends TerraformMetaArguments {
   readonly addressSpace: string[];
-  readonly gatewayAddress: string;
+  readonly gatewayAddress?: string;
+  readonly gatewayFqdn?: string;
   readonly location: string;
   readonly name: string;
   readonly resourceGroupName: string;
@@ -52,6 +53,7 @@ export class LocalNetworkGateway extends TerraformResource {
     });
     this._addressSpace = config.addressSpace;
     this._gatewayAddress = config.gatewayAddress;
+    this._gatewayFqdn = config.gatewayFqdn;
     this._location = config.location;
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
@@ -77,17 +79,36 @@ export class LocalNetworkGateway extends TerraformResource {
     return this._addressSpace
   }
 
-  // gateway_address - computed: false, optional: false, required: true
-  private _gatewayAddress: string;
+  // gateway_address - computed: false, optional: true, required: false
+  private _gatewayAddress?: string;
   public get gatewayAddress() {
     return this.getStringAttribute('gateway_address');
   }
-  public set gatewayAddress(value: string) {
+  public set gatewayAddress(value: string ) {
     this._gatewayAddress = value;
+  }
+  public resetGatewayAddress() {
+    this._gatewayAddress = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get gatewayAddressInput() {
     return this._gatewayAddress
+  }
+
+  // gateway_fqdn - computed: false, optional: true, required: false
+  private _gatewayFqdn?: string;
+  public get gatewayFqdn() {
+    return this.getStringAttribute('gateway_fqdn');
+  }
+  public set gatewayFqdn(value: string ) {
+    this._gatewayFqdn = value;
+  }
+  public resetGatewayFqdn() {
+    this._gatewayFqdn = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get gatewayFqdnInput() {
+    return this._gatewayFqdn
   }
 
   // id - computed: true, optional: true, required: false
@@ -190,6 +211,7 @@ export class LocalNetworkGateway extends TerraformResource {
     return {
       address_space: this._addressSpace,
       gateway_address: this._gatewayAddress,
+      gateway_fqdn: this._gatewayFqdn,
       location: this._location,
       name: this._name,
       resource_group_name: this._resourceGroupName,

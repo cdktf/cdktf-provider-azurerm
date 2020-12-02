@@ -8,11 +8,14 @@ import { TerraformMetaArguments } from 'cdktf';
 // Configuration
 
 export interface LogAnalyticsWorkspaceConfig extends TerraformMetaArguments {
+  readonly dailyQuotaGb?: number;
+  readonly internetIngestionEnabled?: boolean;
+  readonly internetQueryEnabled?: boolean;
   readonly location: string;
   readonly name: string;
   readonly resourceGroupName: string;
   readonly retentionInDays?: number;
-  readonly sku: string;
+  readonly sku?: string;
   readonly tags?: { [key: string]: string };
   /** timeouts block */
   readonly timeouts?: LogAnalyticsWorkspaceTimeouts;
@@ -43,6 +46,9 @@ export class LogAnalyticsWorkspace extends TerraformResource {
       count: config.count,
       lifecycle: config.lifecycle
     });
+    this._dailyQuotaGb = config.dailyQuotaGb;
+    this._internetIngestionEnabled = config.internetIngestionEnabled;
+    this._internetQueryEnabled = config.internetQueryEnabled;
     this._location = config.location;
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
@@ -56,9 +62,57 @@ export class LogAnalyticsWorkspace extends TerraformResource {
   // ATTRIBUTES
   // ==========
 
+  // daily_quota_gb - computed: false, optional: true, required: false
+  private _dailyQuotaGb?: number;
+  public get dailyQuotaGb() {
+    return this.getNumberAttribute('daily_quota_gb');
+  }
+  public set dailyQuotaGb(value: number ) {
+    this._dailyQuotaGb = value;
+  }
+  public resetDailyQuotaGb() {
+    this._dailyQuotaGb = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dailyQuotaGbInput() {
+    return this._dailyQuotaGb
+  }
+
   // id - computed: true, optional: true, required: false
   public get id() {
     return this.getStringAttribute('id');
+  }
+
+  // internet_ingestion_enabled - computed: false, optional: true, required: false
+  private _internetIngestionEnabled?: boolean;
+  public get internetIngestionEnabled() {
+    return this.getBooleanAttribute('internet_ingestion_enabled');
+  }
+  public set internetIngestionEnabled(value: boolean ) {
+    this._internetIngestionEnabled = value;
+  }
+  public resetInternetIngestionEnabled() {
+    this._internetIngestionEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get internetIngestionEnabledInput() {
+    return this._internetIngestionEnabled
+  }
+
+  // internet_query_enabled - computed: false, optional: true, required: false
+  private _internetQueryEnabled?: boolean;
+  public get internetQueryEnabled() {
+    return this.getBooleanAttribute('internet_query_enabled');
+  }
+  public set internetQueryEnabled(value: boolean ) {
+    this._internetQueryEnabled = value;
+  }
+  public resetInternetQueryEnabled() {
+    this._internetQueryEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get internetQueryEnabledInput() {
+    return this._internetQueryEnabled
   }
 
   // location - computed: false, optional: false, required: true
@@ -131,13 +185,16 @@ export class LogAnalyticsWorkspace extends TerraformResource {
     return this.getStringAttribute('secondary_shared_key');
   }
 
-  // sku - computed: false, optional: false, required: true
-  private _sku: string;
+  // sku - computed: false, optional: true, required: false
+  private _sku?: string;
   public get sku() {
     return this.getStringAttribute('sku');
   }
-  public set sku(value: string) {
+  public set sku(value: string ) {
     this._sku = value;
+  }
+  public resetSku() {
+    this._sku = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get skuInput() {
@@ -187,6 +244,9 @@ export class LogAnalyticsWorkspace extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      daily_quota_gb: this._dailyQuotaGb,
+      internet_ingestion_enabled: this._internetIngestionEnabled,
+      internet_query_enabled: this._internetQueryEnabled,
       location: this._location,
       name: this._name,
       resource_group_name: this._resourceGroupName,

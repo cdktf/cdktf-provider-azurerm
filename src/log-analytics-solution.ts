@@ -11,6 +11,7 @@ export interface LogAnalyticsSolutionConfig extends TerraformMetaArguments {
   readonly location: string;
   readonly resourceGroupName: string;
   readonly solutionName: string;
+  readonly tags?: { [key: string]: string };
   readonly workspaceName: string;
   readonly workspaceResourceId: string;
   /** plan block */
@@ -52,6 +53,7 @@ export class LogAnalyticsSolution extends TerraformResource {
     this._location = config.location;
     this._resourceGroupName = config.resourceGroupName;
     this._solutionName = config.solutionName;
+    this._tags = config.tags;
     this._workspaceName = config.workspaceName;
     this._workspaceResourceId = config.workspaceResourceId;
     this._plan = config.plan;
@@ -104,6 +106,22 @@ export class LogAnalyticsSolution extends TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get solutionNameInput() {
     return this._solutionName
+  }
+
+  // tags - computed: false, optional: true, required: false
+  private _tags?: { [key: string]: string };
+  public get tags() {
+    return this.interpolationForAttribute('tags') as any;
+  }
+  public set tags(value: { [key: string]: string } ) {
+    this._tags = value;
+  }
+  public resetTags() {
+    this._tags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsInput() {
+    return this._tags
   }
 
   // workspace_name - computed: false, optional: false, required: true
@@ -170,6 +188,7 @@ export class LogAnalyticsSolution extends TerraformResource {
       location: this._location,
       resource_group_name: this._resourceGroupName,
       solution_name: this._solutionName,
+      tags: this._tags,
       workspace_name: this._workspaceName,
       workspace_resource_id: this._workspaceResourceId,
       plan: this._plan,

@@ -146,6 +146,11 @@ export class NetworkInterface extends TerraformResource {
     return this._internalDnsNameLabel
   }
 
+  // internal_domain_name_suffix - computed: true, optional: false, required: false
+  public get internalDomainNameSuffix() {
+    return this.getStringAttribute('internal_domain_name_suffix');
+  }
+
   // location - computed: false, optional: false, required: true
   private _location: string;
   public get location() {

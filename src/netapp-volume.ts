@@ -12,10 +12,12 @@ export interface NetappVolumeConfig extends TerraformMetaArguments {
   readonly location: string;
   readonly name: string;
   readonly poolName: string;
+  readonly protocols?: string[];
   readonly resourceGroupName: string;
   readonly serviceLevel: string;
   readonly storageQuotaInGb: number;
   readonly subnetId: string;
+  readonly tags?: { [key: string]: string };
   readonly volumePath: string;
   /** export_policy_rule block */
   readonly exportPolicyRule?: NetappVolumeExportPolicyRule[];
@@ -24,9 +26,10 @@ export interface NetappVolumeConfig extends TerraformMetaArguments {
 }
 export interface NetappVolumeExportPolicyRule {
   readonly allowedClients: string[];
-  readonly cifsEnabled: boolean;
-  readonly nfsv3Enabled: boolean;
-  readonly nfsv4Enabled: boolean;
+  readonly cifsEnabled?: boolean;
+  readonly nfsv3Enabled?: boolean;
+  readonly nfsv4Enabled?: boolean;
+  readonly protocolsEnabled?: string[];
   readonly ruleIndex: number;
   readonly unixReadOnly?: boolean;
   readonly unixReadWrite?: boolean;
@@ -61,10 +64,12 @@ export class NetappVolume extends TerraformResource {
     this._location = config.location;
     this._name = config.name;
     this._poolName = config.poolName;
+    this._protocols = config.protocols;
     this._resourceGroupName = config.resourceGroupName;
     this._serviceLevel = config.serviceLevel;
     this._storageQuotaInGb = config.storageQuotaInGb;
     this._subnetId = config.subnetId;
+    this._tags = config.tags;
     this._volumePath = config.volumePath;
     this._exportPolicyRule = config.exportPolicyRule;
     this._timeouts = config.timeouts;
@@ -105,6 +110,11 @@ export class NetappVolume extends TerraformResource {
     return this._location
   }
 
+  // mount_ip_addresses - computed: true, optional: false, required: false
+  public get mountIpAddresses() {
+    return this.getListAttribute('mount_ip_addresses');
+  }
+
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
@@ -129,6 +139,22 @@ export class NetappVolume extends TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get poolNameInput() {
     return this._poolName
+  }
+
+  // protocols - computed: true, optional: true, required: false
+  private _protocols?: string[];
+  public get protocols() {
+    return this.getListAttribute('protocols');
+  }
+  public set protocols(value: string[]) {
+    this._protocols = value;
+  }
+  public resetProtocols() {
+    this._protocols = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get protocolsInput() {
+    return this._protocols
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -181,6 +207,22 @@ export class NetappVolume extends TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get subnetIdInput() {
     return this._subnetId
+  }
+
+  // tags - computed: false, optional: true, required: false
+  private _tags?: { [key: string]: string };
+  public get tags() {
+    return this.interpolationForAttribute('tags') as any;
+  }
+  public set tags(value: { [key: string]: string } ) {
+    this._tags = value;
+  }
+  public resetTags() {
+    this._tags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsInput() {
+    return this._tags
   }
 
   // volume_path - computed: false, optional: false, required: true
@@ -238,10 +280,12 @@ export class NetappVolume extends TerraformResource {
       location: this._location,
       name: this._name,
       pool_name: this._poolName,
+      protocols: this._protocols,
       resource_group_name: this._resourceGroupName,
       service_level: this._serviceLevel,
       storage_quota_in_gb: this._storageQuotaInGb,
       subnet_id: this._subnetId,
+      tags: this._tags,
       volume_path: this._volumePath,
       export_policy_rule: this._exportPolicyRule,
       timeouts: this._timeouts,

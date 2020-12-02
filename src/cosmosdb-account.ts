@@ -9,13 +9,16 @@ import { TerraformMetaArguments } from 'cdktf';
 
 export interface CosmosdbAccountConfig extends TerraformMetaArguments {
   readonly enableAutomaticFailover?: boolean;
+  readonly enableFreeTier?: boolean;
   readonly enableMultipleWriteLocations?: boolean;
   readonly ipRangeFilter?: string;
   readonly isVirtualNetworkFilterEnabled?: boolean;
+  readonly keyVaultKeyId?: string;
   readonly kind?: string;
   readonly location: string;
   readonly name: string;
   readonly offerType: string;
+  readonly publicNetworkAccessEnabled?: boolean;
   readonly resourceGroupName: string;
   readonly tags?: { [key: string]: string };
   /** capabilities block */
@@ -41,6 +44,7 @@ export interface CosmosdbAccountGeoLocation {
   readonly failoverPriority: number;
   readonly location: string;
   readonly prefix?: string;
+  readonly zoneRedundant?: boolean;
 }
 export interface CosmosdbAccountTimeouts {
   readonly create?: string;
@@ -50,6 +54,7 @@ export interface CosmosdbAccountTimeouts {
 }
 export interface CosmosdbAccountVirtualNetworkRule {
   readonly id: string;
+  readonly ignoreMissingVnetServiceEndpoint?: boolean;
 }
 
 // Resource
@@ -72,13 +77,16 @@ export class CosmosdbAccount extends TerraformResource {
       lifecycle: config.lifecycle
     });
     this._enableAutomaticFailover = config.enableAutomaticFailover;
+    this._enableFreeTier = config.enableFreeTier;
     this._enableMultipleWriteLocations = config.enableMultipleWriteLocations;
     this._ipRangeFilter = config.ipRangeFilter;
     this._isVirtualNetworkFilterEnabled = config.isVirtualNetworkFilterEnabled;
+    this._keyVaultKeyId = config.keyVaultKeyId;
     this._kind = config.kind;
     this._location = config.location;
     this._name = config.name;
     this._offerType = config.offerType;
+    this._publicNetworkAccessEnabled = config.publicNetworkAccessEnabled;
     this._resourceGroupName = config.resourceGroupName;
     this._tags = config.tags;
     this._capabilities = config.capabilities;
@@ -111,6 +119,22 @@ export class CosmosdbAccount extends TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get enableAutomaticFailoverInput() {
     return this._enableAutomaticFailover
+  }
+
+  // enable_free_tier - computed: false, optional: true, required: false
+  private _enableFreeTier?: boolean;
+  public get enableFreeTier() {
+    return this.getBooleanAttribute('enable_free_tier');
+  }
+  public set enableFreeTier(value: boolean ) {
+    this._enableFreeTier = value;
+  }
+  public resetEnableFreeTier() {
+    this._enableFreeTier = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enableFreeTierInput() {
+    return this._enableFreeTier
   }
 
   // enable_multiple_write_locations - computed: false, optional: true, required: false
@@ -171,6 +195,22 @@ export class CosmosdbAccount extends TerraformResource {
     return this._isVirtualNetworkFilterEnabled
   }
 
+  // key_vault_key_id - computed: false, optional: true, required: false
+  private _keyVaultKeyId?: string;
+  public get keyVaultKeyId() {
+    return this.getStringAttribute('key_vault_key_id');
+  }
+  public set keyVaultKeyId(value: string ) {
+    this._keyVaultKeyId = value;
+  }
+  public resetKeyVaultKeyId() {
+    this._keyVaultKeyId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keyVaultKeyIdInput() {
+    return this._keyVaultKeyId
+  }
+
   // kind - computed: false, optional: true, required: false
   private _kind?: string;
   public get kind() {
@@ -226,14 +266,40 @@ export class CosmosdbAccount extends TerraformResource {
     return this._offerType
   }
 
+  // primary_key - computed: true, optional: false, required: false
+  public get primaryKey() {
+    return this.getStringAttribute('primary_key');
+  }
+
   // primary_master_key - computed: true, optional: false, required: false
   public get primaryMasterKey() {
     return this.getStringAttribute('primary_master_key');
   }
 
+  // primary_readonly_key - computed: true, optional: false, required: false
+  public get primaryReadonlyKey() {
+    return this.getStringAttribute('primary_readonly_key');
+  }
+
   // primary_readonly_master_key - computed: true, optional: false, required: false
   public get primaryReadonlyMasterKey() {
     return this.getStringAttribute('primary_readonly_master_key');
+  }
+
+  // public_network_access_enabled - computed: false, optional: true, required: false
+  private _publicNetworkAccessEnabled?: boolean;
+  public get publicNetworkAccessEnabled() {
+    return this.getBooleanAttribute('public_network_access_enabled');
+  }
+  public set publicNetworkAccessEnabled(value: boolean ) {
+    this._publicNetworkAccessEnabled = value;
+  }
+  public resetPublicNetworkAccessEnabled() {
+    this._publicNetworkAccessEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get publicNetworkAccessEnabledInput() {
+    return this._publicNetworkAccessEnabled
   }
 
   // read_endpoints - computed: true, optional: false, required: false
@@ -254,9 +320,19 @@ export class CosmosdbAccount extends TerraformResource {
     return this._resourceGroupName
   }
 
+  // secondary_key - computed: true, optional: false, required: false
+  public get secondaryKey() {
+    return this.getStringAttribute('secondary_key');
+  }
+
   // secondary_master_key - computed: true, optional: false, required: false
   public get secondaryMasterKey() {
     return this.getStringAttribute('secondary_master_key');
+  }
+
+  // secondary_readonly_key - computed: true, optional: false, required: false
+  public get secondaryReadonlyKey() {
+    return this.getStringAttribute('secondary_readonly_key');
   }
 
   // secondary_readonly_master_key - computed: true, optional: false, required: false
@@ -366,13 +442,16 @@ export class CosmosdbAccount extends TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       enable_automatic_failover: this._enableAutomaticFailover,
+      enable_free_tier: this._enableFreeTier,
       enable_multiple_write_locations: this._enableMultipleWriteLocations,
       ip_range_filter: this._ipRangeFilter,
       is_virtual_network_filter_enabled: this._isVirtualNetworkFilterEnabled,
+      key_vault_key_id: this._keyVaultKeyId,
       kind: this._kind,
       location: this._location,
       name: this._name,
       offer_type: this._offerType,
+      public_network_access_enabled: this._publicNetworkAccessEnabled,
       resource_group_name: this._resourceGroupName,
       tags: this._tags,
       capabilities: this._capabilities,

@@ -12,6 +12,7 @@ export interface NotificationHubConfig extends TerraformMetaArguments {
   readonly name: string;
   readonly namespaceName: string;
   readonly resourceGroupName: string;
+  readonly tags?: { [key: string]: string };
   /** apns_credential block */
   readonly apnsCredential?: NotificationHubApnsCredential[];
   /** gcm_credential block */
@@ -59,6 +60,7 @@ export class NotificationHub extends TerraformResource {
     this._name = config.name;
     this._namespaceName = config.namespaceName;
     this._resourceGroupName = config.resourceGroupName;
+    this._tags = config.tags;
     this._apnsCredential = config.apnsCredential;
     this._gcmCredential = config.gcmCredential;
     this._timeouts = config.timeouts;
@@ -125,6 +127,22 @@ export class NotificationHub extends TerraformResource {
     return this._resourceGroupName
   }
 
+  // tags - computed: false, optional: true, required: false
+  private _tags?: { [key: string]: string };
+  public get tags() {
+    return this.interpolationForAttribute('tags') as any;
+  }
+  public set tags(value: { [key: string]: string } ) {
+    this._tags = value;
+  }
+  public resetTags() {
+    this._tags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsInput() {
+    return this._tags
+  }
+
   // apns_credential - computed: false, optional: true, required: false
   private _apnsCredential?: NotificationHubApnsCredential[];
   public get apnsCredential() {
@@ -183,6 +201,7 @@ export class NotificationHub extends TerraformResource {
       name: this._name,
       namespace_name: this._namespaceName,
       resource_group_name: this._resourceGroupName,
+      tags: this._tags,
       apns_credential: this._apnsCredential,
       gcm_credential: this._gcmCredential,
       timeouts: this._timeouts,

@@ -9,13 +9,17 @@ import { ComplexComputedList } from "cdktf";
 // Configuration
 
 export interface SearchServiceConfig extends TerraformMetaArguments {
+  readonly allowedIps?: string[];
   readonly location: string;
   readonly name: string;
   readonly partitionCount?: number;
+  readonly publicNetworkAccessEnabled?: boolean;
   readonly replicaCount?: number;
   readonly resourceGroupName: string;
   readonly sku: string;
   readonly tags?: { [key: string]: string };
+  /** identity block */
+  readonly identity?: SearchServiceIdentity[];
   /** timeouts block */
   readonly timeouts?: SearchServiceTimeouts;
 }
@@ -30,6 +34,9 @@ export class SearchServiceQueryKeys extends ComplexComputedList {
   public get name() {
     return this.getStringAttribute('name');
   }
+}
+export interface SearchServiceIdentity {
+  readonly type: string;
 }
 export interface SearchServiceTimeouts {
   readonly create?: string;
@@ -57,19 +64,38 @@ export class SearchService extends TerraformResource {
       count: config.count,
       lifecycle: config.lifecycle
     });
+    this._allowedIps = config.allowedIps;
     this._location = config.location;
     this._name = config.name;
     this._partitionCount = config.partitionCount;
+    this._publicNetworkAccessEnabled = config.publicNetworkAccessEnabled;
     this._replicaCount = config.replicaCount;
     this._resourceGroupName = config.resourceGroupName;
     this._sku = config.sku;
     this._tags = config.tags;
+    this._identity = config.identity;
     this._timeouts = config.timeouts;
   }
 
   // ==========
   // ATTRIBUTES
   // ==========
+
+  // allowed_ips - computed: false, optional: true, required: false
+  private _allowedIps?: string[];
+  public get allowedIps() {
+    return this.getListAttribute('allowed_ips');
+  }
+  public set allowedIps(value: string[] ) {
+    this._allowedIps = value;
+  }
+  public resetAllowedIps() {
+    this._allowedIps = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get allowedIpsInput() {
+    return this._allowedIps
+  }
 
   // id - computed: true, optional: true, required: false
   public get id() {
@@ -121,6 +147,22 @@ export class SearchService extends TerraformResource {
   // primary_key - computed: true, optional: false, required: false
   public get primaryKey() {
     return this.getStringAttribute('primary_key');
+  }
+
+  // public_network_access_enabled - computed: false, optional: true, required: false
+  private _publicNetworkAccessEnabled?: boolean;
+  public get publicNetworkAccessEnabled() {
+    return this.getBooleanAttribute('public_network_access_enabled');
+  }
+  public set publicNetworkAccessEnabled(value: boolean ) {
+    this._publicNetworkAccessEnabled = value;
+  }
+  public resetPublicNetworkAccessEnabled() {
+    this._publicNetworkAccessEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get publicNetworkAccessEnabledInput() {
+    return this._publicNetworkAccessEnabled
   }
 
   // query_keys - computed: true, optional: false, required: false
@@ -191,6 +233,22 @@ export class SearchService extends TerraformResource {
     return this._tags
   }
 
+  // identity - computed: false, optional: true, required: false
+  private _identity?: SearchServiceIdentity[];
+  public get identity() {
+    return this.interpolationForAttribute('identity') as any;
+  }
+  public set identity(value: SearchServiceIdentity[] ) {
+    this._identity = value;
+  }
+  public resetIdentity() {
+    this._identity = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get identityInput() {
+    return this._identity
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: SearchServiceTimeouts;
   public get timeouts() {
@@ -213,13 +271,16 @@ export class SearchService extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      allowed_ips: this._allowedIps,
       location: this._location,
       name: this._name,
       partition_count: this._partitionCount,
+      public_network_access_enabled: this._publicNetworkAccessEnabled,
       replica_count: this._replicaCount,
       resource_group_name: this._resourceGroupName,
       sku: this._sku,
       tags: this._tags,
+      identity: this._identity,
       timeouts: this._timeouts,
     };
   }

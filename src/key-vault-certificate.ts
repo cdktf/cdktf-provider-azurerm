@@ -4,6 +4,7 @@
 import { Construct } from 'constructs';
 import { TerraformResource } from 'cdktf';
 import { TerraformMetaArguments } from 'cdktf';
+import { ComplexComputedList } from "cdktf";
 
 // Configuration
 
@@ -17,6 +18,38 @@ export interface KeyVaultCertificateConfig extends TerraformMetaArguments {
   readonly certificatePolicy: KeyVaultCertificateCertificatePolicy[];
   /** timeouts block */
   readonly timeouts?: KeyVaultCertificateTimeouts;
+}
+export class KeyVaultCertificateCertificateAttribute extends ComplexComputedList {
+
+  // created - computed: true, optional: false, required: false
+  public get created() {
+    return this.getStringAttribute('created');
+  }
+
+  // enabled - computed: true, optional: false, required: false
+  public get enabled() {
+    return this.getBooleanAttribute('enabled');
+  }
+
+  // expires - computed: true, optional: false, required: false
+  public get expires() {
+    return this.getStringAttribute('expires');
+  }
+
+  // not_before - computed: true, optional: false, required: false
+  public get notBefore() {
+    return this.getStringAttribute('not_before');
+  }
+
+  // recovery_level - computed: true, optional: false, required: false
+  public get recoveryLevel() {
+    return this.getStringAttribute('recovery_level');
+  }
+
+  // updated - computed: true, optional: false, required: false
+  public get updated() {
+    return this.getStringAttribute('updated');
+  }
 }
 export interface KeyVaultCertificateCertificate {
   readonly contents: string;
@@ -108,6 +141,11 @@ export class KeyVaultCertificate extends TerraformResource {
   // ==========
   // ATTRIBUTES
   // ==========
+
+  // certificate_attribute - computed: true, optional: false, required: false
+  public certificateAttribute(index: string) {
+    return new KeyVaultCertificateCertificateAttribute(this, 'certificate_attribute', index);
+  }
 
   // certificate_data - computed: true, optional: false, required: false
   public get certificateData() {

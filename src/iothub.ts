@@ -9,26 +9,43 @@ import { ComplexComputedList } from "cdktf";
 // Configuration
 
 export interface IothubConfig extends TerraformMetaArguments {
+  readonly endpoint?: IothubEndpoint[];
   readonly eventHubPartitionCount?: number;
   readonly eventHubRetentionInDays?: number;
   readonly location: string;
   readonly name: string;
+  readonly publicNetworkAccessEnabled?: boolean;
   readonly resourceGroupName: string;
+  readonly route?: IothubRoute[];
   readonly tags?: { [key: string]: string };
-  /** endpoint block */
-  readonly endpoint?: IothubEndpoint[];
   /** fallback_route block */
   readonly fallbackRoute?: IothubFallbackRoute[];
   /** file_upload block */
   readonly fileUpload?: IothubFileUpload[];
   /** ip_filter_rule block */
   readonly ipFilterRule?: IothubIpFilterRule[];
-  /** route block */
-  readonly route?: IothubRoute[];
   /** sku block */
   readonly sku: IothubSku[];
   /** timeouts block */
   readonly timeouts?: IothubTimeouts;
+}
+export interface IothubEndpoint {
+  readonly batchFrequencyInSeconds?: number;
+  readonly connectionString?: string;
+  readonly containerName?: string;
+  readonly encoding?: string;
+  readonly fileNameFormat?: string;
+  readonly maxChunkSizeInBytes?: number;
+  readonly name?: string;
+  readonly resourceGroupName?: string;
+  readonly type?: string;
+}
+export interface IothubRoute {
+  readonly condition?: string;
+  readonly enabled?: boolean;
+  readonly endpointNames?: string[];
+  readonly name?: string;
+  readonly source?: string;
 }
 export class IothubSharedAccessPolicy extends ComplexComputedList {
 
@@ -52,16 +69,6 @@ export class IothubSharedAccessPolicy extends ComplexComputedList {
     return this.getStringAttribute('secondary_key');
   }
 }
-export interface IothubEndpoint {
-  readonly batchFrequencyInSeconds?: number;
-  readonly connectionString: string;
-  readonly containerName?: string;
-  readonly encoding?: string;
-  readonly fileNameFormat?: string;
-  readonly maxChunkSizeInBytes?: number;
-  readonly name: string;
-  readonly type: string;
-}
 export interface IothubFallbackRoute {
   readonly condition?: string;
   readonly enabled?: boolean;
@@ -81,13 +88,6 @@ export interface IothubIpFilterRule {
   readonly action: string;
   readonly ipMask: string;
   readonly name: string;
-}
-export interface IothubRoute {
-  readonly condition?: string;
-  readonly enabled: boolean;
-  readonly endpointNames: string[];
-  readonly name: string;
-  readonly source: string;
 }
 export interface IothubSku {
   readonly capacity: number;
@@ -119,17 +119,18 @@ export class Iothub extends TerraformResource {
       count: config.count,
       lifecycle: config.lifecycle
     });
+    this._endpoint = config.endpoint;
     this._eventHubPartitionCount = config.eventHubPartitionCount;
     this._eventHubRetentionInDays = config.eventHubRetentionInDays;
     this._location = config.location;
     this._name = config.name;
+    this._publicNetworkAccessEnabled = config.publicNetworkAccessEnabled;
     this._resourceGroupName = config.resourceGroupName;
+    this._route = config.route;
     this._tags = config.tags;
-    this._endpoint = config.endpoint;
     this._fallbackRoute = config.fallbackRoute;
     this._fileUpload = config.fileUpload;
     this._ipFilterRule = config.ipFilterRule;
-    this._route = config.route;
     this._sku = config.sku;
     this._timeouts = config.timeouts;
   }
@@ -137,6 +138,22 @@ export class Iothub extends TerraformResource {
   // ==========
   // ATTRIBUTES
   // ==========
+
+  // endpoint - computed: true, optional: true, required: false
+  private _endpoint?: IothubEndpoint[]
+  public get endpoint(): IothubEndpoint[] {
+    return this.interpolationForAttribute('endpoint') as any; // Getting the computed value is not yet implemented
+  }
+  public set endpoint(value: IothubEndpoint[]) {
+    this._endpoint = value;
+  }
+  public resetEndpoint() {
+    this._endpoint = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get endpointInput() {
+    return this._endpoint
+  }
 
   // event_hub_events_endpoint - computed: true, optional: false, required: false
   public get eventHubEventsEndpoint() {
@@ -226,6 +243,22 @@ export class Iothub extends TerraformResource {
     return this._name
   }
 
+  // public_network_access_enabled - computed: false, optional: true, required: false
+  private _publicNetworkAccessEnabled?: boolean;
+  public get publicNetworkAccessEnabled() {
+    return this.getBooleanAttribute('public_network_access_enabled');
+  }
+  public set publicNetworkAccessEnabled(value: boolean ) {
+    this._publicNetworkAccessEnabled = value;
+  }
+  public resetPublicNetworkAccessEnabled() {
+    this._publicNetworkAccessEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get publicNetworkAccessEnabledInput() {
+    return this._publicNetworkAccessEnabled
+  }
+
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
@@ -237,6 +270,22 @@ export class Iothub extends TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
     return this._resourceGroupName
+  }
+
+  // route - computed: true, optional: true, required: false
+  private _route?: IothubRoute[]
+  public get route(): IothubRoute[] {
+    return this.interpolationForAttribute('route') as any; // Getting the computed value is not yet implemented
+  }
+  public set route(value: IothubRoute[]) {
+    this._route = value;
+  }
+  public resetRoute() {
+    this._route = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get routeInput() {
+    return this._route
   }
 
   // shared_access_policy - computed: true, optional: false, required: false
@@ -263,22 +312,6 @@ export class Iothub extends TerraformResource {
   // type - computed: true, optional: false, required: false
   public get type() {
     return this.getStringAttribute('type');
-  }
-
-  // endpoint - computed: false, optional: true, required: false
-  private _endpoint?: IothubEndpoint[];
-  public get endpoint() {
-    return this.interpolationForAttribute('endpoint') as any;
-  }
-  public set endpoint(value: IothubEndpoint[] ) {
-    this._endpoint = value;
-  }
-  public resetEndpoint() {
-    this._endpoint = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get endpointInput() {
-    return this._endpoint
   }
 
   // fallback_route - computed: false, optional: true, required: false
@@ -329,22 +362,6 @@ export class Iothub extends TerraformResource {
     return this._ipFilterRule
   }
 
-  // route - computed: false, optional: true, required: false
-  private _route?: IothubRoute[];
-  public get route() {
-    return this.interpolationForAttribute('route') as any;
-  }
-  public set route(value: IothubRoute[] ) {
-    this._route = value;
-  }
-  public resetRoute() {
-    this._route = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get routeInput() {
-    return this._route
-  }
-
   // sku - computed: false, optional: false, required: true
   private _sku: IothubSku[];
   public get sku() {
@@ -380,17 +397,18 @@ export class Iothub extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      endpoint: this._endpoint,
       event_hub_partition_count: this._eventHubPartitionCount,
       event_hub_retention_in_days: this._eventHubRetentionInDays,
       location: this._location,
       name: this._name,
+      public_network_access_enabled: this._publicNetworkAccessEnabled,
       resource_group_name: this._resourceGroupName,
+      route: this._route,
       tags: this._tags,
-      endpoint: this._endpoint,
       fallback_route: this._fallbackRoute,
       file_upload: this._fileUpload,
       ip_filter_rule: this._ipFilterRule,
-      route: this._route,
       sku: this._sku,
       timeouts: this._timeouts,
     };

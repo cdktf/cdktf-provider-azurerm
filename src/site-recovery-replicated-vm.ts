@@ -10,6 +10,7 @@ import { TerraformMetaArguments } from 'cdktf';
 export interface SiteRecoveryReplicatedVmConfig extends TerraformMetaArguments {
   readonly managedDisk?: SiteRecoveryReplicatedVmManagedDisk[];
   readonly name: string;
+  readonly networkInterface?: SiteRecoveryReplicatedVmNetworkInterface[];
   readonly recoveryReplicationPolicyId: string;
   readonly recoveryVaultName: string;
   readonly resourceGroupName: string;
@@ -17,6 +18,7 @@ export interface SiteRecoveryReplicatedVmConfig extends TerraformMetaArguments {
   readonly sourceRecoveryProtectionContainerName: string;
   readonly sourceVmId: string;
   readonly targetAvailabilitySetId?: string;
+  readonly targetNetworkId?: string;
   readonly targetRecoveryFabricId: string;
   readonly targetRecoveryProtectionContainerId: string;
   readonly targetResourceGroupId: string;
@@ -29,6 +31,11 @@ export interface SiteRecoveryReplicatedVmManagedDisk {
   readonly targetDiskType?: string;
   readonly targetReplicaDiskType?: string;
   readonly targetResourceGroupId?: string;
+}
+export interface SiteRecoveryReplicatedVmNetworkInterface {
+  readonly sourceNetworkInterfaceId?: string;
+  readonly targetStaticIp?: string;
+  readonly targetSubnetName?: string;
 }
 export interface SiteRecoveryReplicatedVmTimeouts {
   readonly create?: string;
@@ -58,6 +65,7 @@ export class SiteRecoveryReplicatedVm extends TerraformResource {
     });
     this._managedDisk = config.managedDisk;
     this._name = config.name;
+    this._networkInterface = config.networkInterface;
     this._recoveryReplicationPolicyId = config.recoveryReplicationPolicyId;
     this._recoveryVaultName = config.recoveryVaultName;
     this._resourceGroupName = config.resourceGroupName;
@@ -65,6 +73,7 @@ export class SiteRecoveryReplicatedVm extends TerraformResource {
     this._sourceRecoveryProtectionContainerName = config.sourceRecoveryProtectionContainerName;
     this._sourceVmId = config.sourceVmId;
     this._targetAvailabilitySetId = config.targetAvailabilitySetId;
+    this._targetNetworkId = config.targetNetworkId;
     this._targetRecoveryFabricId = config.targetRecoveryFabricId;
     this._targetRecoveryProtectionContainerId = config.targetRecoveryProtectionContainerId;
     this._targetResourceGroupId = config.targetResourceGroupId;
@@ -107,6 +116,22 @@ export class SiteRecoveryReplicatedVm extends TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
     return this._name
+  }
+
+  // network_interface - computed: true, optional: true, required: false
+  private _networkInterface?: SiteRecoveryReplicatedVmNetworkInterface[]
+  public get networkInterface(): SiteRecoveryReplicatedVmNetworkInterface[] {
+    return this.interpolationForAttribute('network_interface') as any; // Getting the computed value is not yet implemented
+  }
+  public set networkInterface(value: SiteRecoveryReplicatedVmNetworkInterface[]) {
+    this._networkInterface = value;
+  }
+  public resetNetworkInterface() {
+    this._networkInterface = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get networkInterfaceInput() {
+    return this._networkInterface
   }
 
   // recovery_replication_policy_id - computed: false, optional: false, required: true
@@ -203,6 +228,22 @@ export class SiteRecoveryReplicatedVm extends TerraformResource {
     return this._targetAvailabilitySetId
   }
 
+  // target_network_id - computed: true, optional: true, required: false
+  private _targetNetworkId?: string;
+  public get targetNetworkId() {
+    return this.getStringAttribute('target_network_id');
+  }
+  public set targetNetworkId(value: string) {
+    this._targetNetworkId = value;
+  }
+  public resetTargetNetworkId() {
+    this._targetNetworkId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get targetNetworkIdInput() {
+    return this._targetNetworkId
+  }
+
   // target_recovery_fabric_id - computed: false, optional: false, required: true
   private _targetRecoveryFabricId: string;
   public get targetRecoveryFabricId() {
@@ -266,6 +307,7 @@ export class SiteRecoveryReplicatedVm extends TerraformResource {
     return {
       managed_disk: this._managedDisk,
       name: this._name,
+      network_interface: this._networkInterface,
       recovery_replication_policy_id: this._recoveryReplicationPolicyId,
       recovery_vault_name: this._recoveryVaultName,
       resource_group_name: this._resourceGroupName,
@@ -273,6 +315,7 @@ export class SiteRecoveryReplicatedVm extends TerraformResource {
       source_recovery_protection_container_name: this._sourceRecoveryProtectionContainerName,
       source_vm_id: this._sourceVmId,
       target_availability_set_id: this._targetAvailabilitySetId,
+      target_network_id: this._targetNetworkId,
       target_recovery_fabric_id: this._targetRecoveryFabricId,
       target_recovery_protection_container_id: this._targetRecoveryProtectionContainerId,
       target_resource_group_id: this._targetResourceGroupId,

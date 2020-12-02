@@ -9,6 +9,7 @@ import { TerraformMetaArguments } from 'cdktf';
 
 export interface ServicebusSubscriptionConfig extends TerraformMetaArguments {
   readonly autoDeleteOnIdle?: string;
+  readonly deadLetteringOnFilterEvaluationError?: boolean;
   readonly deadLetteringOnMessageExpiration?: boolean;
   readonly defaultMessageTtl?: string;
   readonly enableBatchedOperations?: boolean;
@@ -20,6 +21,7 @@ export interface ServicebusSubscriptionConfig extends TerraformMetaArguments {
   readonly namespaceName: string;
   readonly requiresSession?: boolean;
   readonly resourceGroupName: string;
+  readonly status?: string;
   readonly topicName: string;
   /** timeouts block */
   readonly timeouts?: ServicebusSubscriptionTimeouts;
@@ -51,6 +53,7 @@ export class ServicebusSubscription extends TerraformResource {
       lifecycle: config.lifecycle
     });
     this._autoDeleteOnIdle = config.autoDeleteOnIdle;
+    this._deadLetteringOnFilterEvaluationError = config.deadLetteringOnFilterEvaluationError;
     this._deadLetteringOnMessageExpiration = config.deadLetteringOnMessageExpiration;
     this._defaultMessageTtl = config.defaultMessageTtl;
     this._enableBatchedOperations = config.enableBatchedOperations;
@@ -62,6 +65,7 @@ export class ServicebusSubscription extends TerraformResource {
     this._namespaceName = config.namespaceName;
     this._requiresSession = config.requiresSession;
     this._resourceGroupName = config.resourceGroupName;
+    this._status = config.status;
     this._topicName = config.topicName;
     this._timeouts = config.timeouts;
   }
@@ -84,6 +88,22 @@ export class ServicebusSubscription extends TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get autoDeleteOnIdleInput() {
     return this._autoDeleteOnIdle
+  }
+
+  // dead_lettering_on_filter_evaluation_error - computed: false, optional: true, required: false
+  private _deadLetteringOnFilterEvaluationError?: boolean;
+  public get deadLetteringOnFilterEvaluationError() {
+    return this.getBooleanAttribute('dead_lettering_on_filter_evaluation_error');
+  }
+  public set deadLetteringOnFilterEvaluationError(value: boolean ) {
+    this._deadLetteringOnFilterEvaluationError = value;
+  }
+  public resetDeadLetteringOnFilterEvaluationError() {
+    this._deadLetteringOnFilterEvaluationError = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deadLetteringOnFilterEvaluationErrorInput() {
+    return this._deadLetteringOnFilterEvaluationError
   }
 
   // dead_lettering_on_message_expiration - computed: false, optional: true, required: false
@@ -255,6 +275,22 @@ export class ServicebusSubscription extends TerraformResource {
     return this._resourceGroupName
   }
 
+  // status - computed: false, optional: true, required: false
+  private _status?: string;
+  public get status() {
+    return this.getStringAttribute('status');
+  }
+  public set status(value: string ) {
+    this._status = value;
+  }
+  public resetStatus() {
+    this._status = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get statusInput() {
+    return this._status
+  }
+
   // topic_name - computed: false, optional: false, required: true
   private _topicName: string;
   public get topicName() {
@@ -291,6 +327,7 @@ export class ServicebusSubscription extends TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       auto_delete_on_idle: this._autoDeleteOnIdle,
+      dead_lettering_on_filter_evaluation_error: this._deadLetteringOnFilterEvaluationError,
       dead_lettering_on_message_expiration: this._deadLetteringOnMessageExpiration,
       default_message_ttl: this._defaultMessageTtl,
       enable_batched_operations: this._enableBatchedOperations,
@@ -302,6 +339,7 @@ export class ServicebusSubscription extends TerraformResource {
       namespace_name: this._namespaceName,
       requires_session: this._requiresSession,
       resource_group_name: this._resourceGroupName,
+      status: this._status,
       topic_name: this._topicName,
       timeouts: this._timeouts,
     };

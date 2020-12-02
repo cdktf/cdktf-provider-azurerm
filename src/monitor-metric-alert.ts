@@ -17,17 +17,30 @@ export interface MonitorMetricAlertConfig extends TerraformMetaArguments {
   readonly scopes: string[];
   readonly severity?: number;
   readonly tags?: { [key: string]: string };
+  /** The location of the target resource. Required when using subscription, resource group scope or multiple scopes. */
+  readonly targetResourceLocation?: string;
+  /** The resource type (e.g. Microsoft.Compute/virtualMachines) of the target resource. Required when using subscription, resource group scope or multiple scopes. */
+  readonly targetResourceType?: string;
   readonly windowSize?: string;
   /** action block */
   readonly action?: MonitorMetricAlertAction[];
+  /** application_insights_web_test_location_availability_criteria block */
+  readonly applicationInsightsWebTestLocationAvailabilityCriteria?: MonitorMetricAlertApplicationInsightsWebTestLocationAvailabilityCriteria[];
   /** criteria block */
-  readonly criteria: MonitorMetricAlertCriteria[];
+  readonly criteria?: MonitorMetricAlertCriteria[];
+  /** dynamic_criteria block */
+  readonly dynamicCriteria?: MonitorMetricAlertDynamicCriteria[];
   /** timeouts block */
   readonly timeouts?: MonitorMetricAlertTimeouts;
 }
 export interface MonitorMetricAlertAction {
   readonly actionGroupId: string;
   readonly webhookProperties?: { [key: string]: string };
+}
+export interface MonitorMetricAlertApplicationInsightsWebTestLocationAvailabilityCriteria {
+  readonly componentId: string;
+  readonly failedLocationCount: number;
+  readonly webTestId: string;
 }
 export interface MonitorMetricAlertCriteriaDimension {
   readonly name: string;
@@ -42,6 +55,23 @@ export interface MonitorMetricAlertCriteria {
   readonly threshold: number;
   /** dimension block */
   readonly dimension?: MonitorMetricAlertCriteriaDimension[];
+}
+export interface MonitorMetricAlertDynamicCriteriaDimension {
+  readonly name: string;
+  readonly operator: string;
+  readonly values: string[];
+}
+export interface MonitorMetricAlertDynamicCriteria {
+  readonly aggregation: string;
+  readonly alertSensitivity: string;
+  readonly evaluationFailureCount?: number;
+  readonly evaluationTotalCount?: number;
+  readonly ignoreDataBefore?: string;
+  readonly metricName: string;
+  readonly metricNamespace: string;
+  readonly operator: string;
+  /** dimension block */
+  readonly dimension?: MonitorMetricAlertDynamicCriteriaDimension[];
 }
 export interface MonitorMetricAlertTimeouts {
   readonly create?: string;
@@ -78,9 +108,13 @@ export class MonitorMetricAlert extends TerraformResource {
     this._scopes = config.scopes;
     this._severity = config.severity;
     this._tags = config.tags;
+    this._targetResourceLocation = config.targetResourceLocation;
+    this._targetResourceType = config.targetResourceType;
     this._windowSize = config.windowSize;
     this._action = config.action;
+    this._applicationInsightsWebTestLocationAvailabilityCriteria = config.applicationInsightsWebTestLocationAvailabilityCriteria;
     this._criteria = config.criteria;
+    this._dynamicCriteria = config.dynamicCriteria;
     this._timeouts = config.timeouts;
   }
 
@@ -228,6 +262,38 @@ export class MonitorMetricAlert extends TerraformResource {
     return this._tags
   }
 
+  // target_resource_location - computed: true, optional: true, required: false
+  private _targetResourceLocation?: string;
+  public get targetResourceLocation() {
+    return this.getStringAttribute('target_resource_location');
+  }
+  public set targetResourceLocation(value: string) {
+    this._targetResourceLocation = value;
+  }
+  public resetTargetResourceLocation() {
+    this._targetResourceLocation = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get targetResourceLocationInput() {
+    return this._targetResourceLocation
+  }
+
+  // target_resource_type - computed: true, optional: true, required: false
+  private _targetResourceType?: string;
+  public get targetResourceType() {
+    return this.getStringAttribute('target_resource_type');
+  }
+  public set targetResourceType(value: string) {
+    this._targetResourceType = value;
+  }
+  public resetTargetResourceType() {
+    this._targetResourceType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get targetResourceTypeInput() {
+    return this._targetResourceType
+  }
+
   // window_size - computed: false, optional: true, required: false
   private _windowSize?: string;
   public get windowSize() {
@@ -260,17 +326,52 @@ export class MonitorMetricAlert extends TerraformResource {
     return this._action
   }
 
-  // criteria - computed: false, optional: false, required: true
-  private _criteria: MonitorMetricAlertCriteria[];
+  // application_insights_web_test_location_availability_criteria - computed: false, optional: true, required: false
+  private _applicationInsightsWebTestLocationAvailabilityCriteria?: MonitorMetricAlertApplicationInsightsWebTestLocationAvailabilityCriteria[];
+  public get applicationInsightsWebTestLocationAvailabilityCriteria() {
+    return this.interpolationForAttribute('application_insights_web_test_location_availability_criteria') as any;
+  }
+  public set applicationInsightsWebTestLocationAvailabilityCriteria(value: MonitorMetricAlertApplicationInsightsWebTestLocationAvailabilityCriteria[] ) {
+    this._applicationInsightsWebTestLocationAvailabilityCriteria = value;
+  }
+  public resetApplicationInsightsWebTestLocationAvailabilityCriteria() {
+    this._applicationInsightsWebTestLocationAvailabilityCriteria = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get applicationInsightsWebTestLocationAvailabilityCriteriaInput() {
+    return this._applicationInsightsWebTestLocationAvailabilityCriteria
+  }
+
+  // criteria - computed: false, optional: true, required: false
+  private _criteria?: MonitorMetricAlertCriteria[];
   public get criteria() {
     return this.interpolationForAttribute('criteria') as any;
   }
-  public set criteria(value: MonitorMetricAlertCriteria[]) {
+  public set criteria(value: MonitorMetricAlertCriteria[] ) {
     this._criteria = value;
+  }
+  public resetCriteria() {
+    this._criteria = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get criteriaInput() {
     return this._criteria
+  }
+
+  // dynamic_criteria - computed: false, optional: true, required: false
+  private _dynamicCriteria?: MonitorMetricAlertDynamicCriteria[];
+  public get dynamicCriteria() {
+    return this.interpolationForAttribute('dynamic_criteria') as any;
+  }
+  public set dynamicCriteria(value: MonitorMetricAlertDynamicCriteria[] ) {
+    this._dynamicCriteria = value;
+  }
+  public resetDynamicCriteria() {
+    this._dynamicCriteria = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dynamicCriteriaInput() {
+    return this._dynamicCriteria
   }
 
   // timeouts - computed: false, optional: true, required: false
@@ -304,9 +405,13 @@ export class MonitorMetricAlert extends TerraformResource {
       scopes: this._scopes,
       severity: this._severity,
       tags: this._tags,
+      target_resource_location: this._targetResourceLocation,
+      target_resource_type: this._targetResourceType,
       window_size: this._windowSize,
       action: this._action,
+      application_insights_web_test_location_availability_criteria: this._applicationInsightsWebTestLocationAvailabilityCriteria,
       criteria: this._criteria,
+      dynamic_criteria: this._dynamicCriteria,
       timeouts: this._timeouts,
     };
   }

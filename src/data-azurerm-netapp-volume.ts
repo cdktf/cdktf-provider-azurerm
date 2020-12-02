@@ -72,6 +72,11 @@ export class DataAzurermNetappVolume extends TerraformDataSource {
     return this.getStringAttribute('location');
   }
 
+  // mount_ip_addresses - computed: true, optional: false, required: false
+  public get mountIpAddresses() {
+    return this.getListAttribute('mount_ip_addresses');
+  }
+
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
@@ -96,6 +101,11 @@ export class DataAzurermNetappVolume extends TerraformDataSource {
   // Temporarily expose input value. Use with caution.
   public get poolNameInput() {
     return this._poolName
+  }
+
+  // protocols - computed: true, optional: false, required: false
+  public get protocols() {
+    return this.getListAttribute('protocols');
   }
 
   // resource_group_name - computed: false, optional: false, required: true

@@ -63,6 +63,11 @@ export class PrivateDnsSrvRecord extends TerraformResource {
   // ATTRIBUTES
   // ==========
 
+  // fqdn - computed: true, optional: false, required: false
+  public get fqdn() {
+    return this.getStringAttribute('fqdn');
+  }
+
   // id - computed: true, optional: true, required: false
   public get id() {
     return this.getStringAttribute('id');

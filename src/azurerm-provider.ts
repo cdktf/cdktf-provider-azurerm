@@ -22,6 +22,10 @@ export interface AzurermProviderConfig {
   readonly disableTerraformPartnerId?: boolean;
   /** The Cloud Environment which should be used. Possible values are public, usgovernment, german, and china. Defaults to public. */
   readonly environment?: string;
+  /** The Hostname which should be used for the Azure Metadata Service. */
+  readonly metadataHost?: string;
+  /** Deprecated - replaced by `metadata_host`. */
+  readonly metadataUrl?: string;
   /** The path to a custom endpoint for Managed Service Identity - in most circumstances this should be detected automatically.  */
   readonly msiEndpoint?: string;
   /** A GUID/UUID that is registered with Microsoft to facilitate partner resource usage attribution. */
@@ -47,8 +51,15 @@ export interface AzurermProviderFeaturesKeyVault {
   readonly purgeSoftDeleteOnDestroy?: boolean;
   readonly recoverSoftDeletedKeyVaults?: boolean;
 }
+export interface AzurermProviderFeaturesNetwork {
+  readonly relaxedLocking: boolean;
+}
+export interface AzurermProviderFeaturesTemplateDeployment {
+  readonly deleteNestedItemsDuringDeletion: boolean;
+}
 export interface AzurermProviderFeaturesVirtualMachine {
-  readonly deleteOsDiskOnDeletion: boolean;
+  readonly deleteOsDiskOnDeletion?: boolean;
+  readonly gracefulShutdown?: boolean;
 }
 export interface AzurermProviderFeaturesVirtualMachineScaleSet {
   readonly rollInstancesWhenRequired: boolean;
@@ -56,6 +67,10 @@ export interface AzurermProviderFeaturesVirtualMachineScaleSet {
 export interface AzurermProviderFeatures {
   /** key_vault block */
   readonly keyVault?: AzurermProviderFeaturesKeyVault[];
+  /** network block */
+  readonly network?: AzurermProviderFeaturesNetwork[];
+  /** template_deployment block */
+  readonly templateDeployment?: AzurermProviderFeaturesTemplateDeployment[];
   /** virtual_machine block */
   readonly virtualMachine?: AzurermProviderFeaturesVirtualMachine[];
   /** virtual_machine_scale_set block */
@@ -75,7 +90,7 @@ export class AzurermProvider extends TerraformProvider {
       terraformResourceType: 'azurerm',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersionConstraint: '~> 2.0.0'
+        providerVersionConstraint: '~> 2.0'
       },
       terraformProviderSource: 'azurerm'
     });
@@ -87,6 +102,8 @@ export class AzurermProvider extends TerraformProvider {
     this._disableCorrelationRequestId = config.disableCorrelationRequestId;
     this._disableTerraformPartnerId = config.disableTerraformPartnerId;
     this._environment = config.environment;
+    this._metadataHost = config.metadataHost;
+    this._metadataUrl = config.metadataUrl;
     this._msiEndpoint = config.msiEndpoint;
     this._partnerId = config.partnerId;
     this._skipCredentialsValidation = config.skipCredentialsValidation;
@@ -229,6 +246,38 @@ export class AzurermProvider extends TerraformProvider {
   // Temporarily expose input value. Use with caution.
   public get environmentInput() {
     return this._environment
+  }
+
+  // metadata_host - computed: false, optional: true, required: false
+  private _metadataHost?: string;
+  public get metadataHost() {
+    return this._metadataHost;
+  }
+  public set metadataHost(value: string  | undefined) {
+    this._metadataHost = value;
+  }
+  public resetMetadataHost() {
+    this._metadataHost = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get metadataHostInput() {
+    return this._metadataHost
+  }
+
+  // metadata_url - computed: false, optional: true, required: false
+  private _metadataUrl?: string;
+  public get metadataUrl() {
+    return this._metadataUrl;
+  }
+  public set metadataUrl(value: string  | undefined) {
+    this._metadataUrl = value;
+  }
+  public resetMetadataUrl() {
+    this._metadataUrl = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get metadataUrlInput() {
+    return this._metadataUrl
   }
 
   // msi_endpoint - computed: false, optional: true, required: false
@@ -402,6 +451,8 @@ export class AzurermProvider extends TerraformProvider {
       disable_correlation_request_id: this._disableCorrelationRequestId,
       disable_terraform_partner_id: this._disableTerraformPartnerId,
       environment: this._environment,
+      metadata_host: this._metadataHost,
+      metadata_url: this._metadataUrl,
       msi_endpoint: this._msiEndpoint,
       partner_id: this._partnerId,
       skip_credentials_validation: this._skipCredentialsValidation,

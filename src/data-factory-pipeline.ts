@@ -8,6 +8,7 @@ import { TerraformMetaArguments } from 'cdktf';
 // Configuration
 
 export interface DataFactoryPipelineConfig extends TerraformMetaArguments {
+  readonly activitiesJson?: string;
   readonly annotations?: string[];
   readonly dataFactoryName: string;
   readonly description?: string;
@@ -44,6 +45,7 @@ export class DataFactoryPipeline extends TerraformResource {
       count: config.count,
       lifecycle: config.lifecycle
     });
+    this._activitiesJson = config.activitiesJson;
     this._annotations = config.annotations;
     this._dataFactoryName = config.dataFactoryName;
     this._description = config.description;
@@ -57,6 +59,22 @@ export class DataFactoryPipeline extends TerraformResource {
   // ==========
   // ATTRIBUTES
   // ==========
+
+  // activities_json - computed: false, optional: true, required: false
+  private _activitiesJson?: string;
+  public get activitiesJson() {
+    return this.getStringAttribute('activities_json');
+  }
+  public set activitiesJson(value: string ) {
+    this._activitiesJson = value;
+  }
+  public resetActivitiesJson() {
+    this._activitiesJson = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get activitiesJsonInput() {
+    return this._activitiesJson
+  }
 
   // annotations - computed: false, optional: true, required: false
   private _annotations?: string[];
@@ -188,6 +206,7 @@ export class DataFactoryPipeline extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      activities_json: this._activitiesJson,
       annotations: this._annotations,
       data_factory_name: this._dataFactoryName,
       description: this._description,

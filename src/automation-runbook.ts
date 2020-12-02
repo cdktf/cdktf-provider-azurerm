@@ -11,6 +11,7 @@ export interface AutomationRunbookConfig extends TerraformMetaArguments {
   readonly automationAccountName: string;
   readonly content?: string;
   readonly description?: string;
+  readonly jobSchedule?: AutomationRunbookJobSchedule[];
   readonly location: string;
   readonly logProgress: boolean;
   readonly logVerbose: boolean;
@@ -19,9 +20,15 @@ export interface AutomationRunbookConfig extends TerraformMetaArguments {
   readonly runbookType: string;
   readonly tags?: { [key: string]: string };
   /** publish_content_link block */
-  readonly publishContentLink: AutomationRunbookPublishContentLink[];
+  readonly publishContentLink?: AutomationRunbookPublishContentLink[];
   /** timeouts block */
   readonly timeouts?: AutomationRunbookTimeouts;
+}
+export interface AutomationRunbookJobSchedule {
+  readonly jobScheduleId?: string;
+  readonly parameters?: { [key: string]: string };
+  readonly runOn?: string;
+  readonly scheduleName?: string;
 }
 export interface AutomationRunbookPublishContentLinkHash {
   readonly algorithm: string;
@@ -62,6 +69,7 @@ export class AutomationRunbook extends TerraformResource {
     this._automationAccountName = config.automationAccountName;
     this._content = config.content;
     this._description = config.description;
+    this._jobSchedule = config.jobSchedule;
     this._location = config.location;
     this._logProgress = config.logProgress;
     this._logVerbose = config.logVerbose;
@@ -125,6 +133,22 @@ export class AutomationRunbook extends TerraformResource {
   // id - computed: true, optional: true, required: false
   public get id() {
     return this.getStringAttribute('id');
+  }
+
+  // job_schedule - computed: true, optional: true, required: false
+  private _jobSchedule?: AutomationRunbookJobSchedule[]
+  public get jobSchedule(): AutomationRunbookJobSchedule[] {
+    return this.interpolationForAttribute('job_schedule') as any; // Getting the computed value is not yet implemented
+  }
+  public set jobSchedule(value: AutomationRunbookJobSchedule[]) {
+    this._jobSchedule = value;
+  }
+  public resetJobSchedule() {
+    this._jobSchedule = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get jobScheduleInput() {
+    return this._jobSchedule
   }
 
   // location - computed: false, optional: false, required: true
@@ -221,13 +245,16 @@ export class AutomationRunbook extends TerraformResource {
     return this._tags
   }
 
-  // publish_content_link - computed: false, optional: false, required: true
-  private _publishContentLink: AutomationRunbookPublishContentLink[];
+  // publish_content_link - computed: false, optional: true, required: false
+  private _publishContentLink?: AutomationRunbookPublishContentLink[];
   public get publishContentLink() {
     return this.interpolationForAttribute('publish_content_link') as any;
   }
-  public set publishContentLink(value: AutomationRunbookPublishContentLink[]) {
+  public set publishContentLink(value: AutomationRunbookPublishContentLink[] ) {
     this._publishContentLink = value;
+  }
+  public resetPublishContentLink() {
+    this._publishContentLink = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get publishContentLinkInput() {
@@ -259,6 +286,7 @@ export class AutomationRunbook extends TerraformResource {
       automation_account_name: this._automationAccountName,
       content: this._content,
       description: this._description,
+      job_schedule: this._jobSchedule,
       location: this._location,
       log_progress: this._logProgress,
       log_verbose: this._logVerbose,

@@ -8,6 +8,7 @@ import { TerraformMetaArguments } from 'cdktf';
 // Configuration
 
 export interface SecurityCenterSubscriptionPricingConfig extends TerraformMetaArguments {
+  readonly resourceType?: string;
   readonly tier: string;
   /** timeouts block */
   readonly timeouts?: SecurityCenterSubscriptionPricingTimeouts;
@@ -38,6 +39,7 @@ export class SecurityCenterSubscriptionPricing extends TerraformResource {
       count: config.count,
       lifecycle: config.lifecycle
     });
+    this._resourceType = config.resourceType;
     this._tier = config.tier;
     this._timeouts = config.timeouts;
   }
@@ -49,6 +51,22 @@ export class SecurityCenterSubscriptionPricing extends TerraformResource {
   // id - computed: true, optional: true, required: false
   public get id() {
     return this.getStringAttribute('id');
+  }
+
+  // resource_type - computed: false, optional: true, required: false
+  private _resourceType?: string;
+  public get resourceType() {
+    return this.getStringAttribute('resource_type');
+  }
+  public set resourceType(value: string ) {
+    this._resourceType = value;
+  }
+  public resetResourceType() {
+    this._resourceType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resourceTypeInput() {
+    return this._resourceType
   }
 
   // tier - computed: false, optional: false, required: true
@@ -86,6 +104,7 @@ export class SecurityCenterSubscriptionPricing extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      resource_type: this._resourceType,
       tier: this._tier,
       timeouts: this._timeouts,
     };

@@ -8,7 +8,7 @@ import { TerraformMetaArguments } from 'cdktf';
 // Configuration
 
 export interface HealthcareServiceConfig extends TerraformMetaArguments {
-  readonly accessPolicyObjectIds: string[];
+  readonly accessPolicyObjectIds?: string[];
   readonly cosmosdbThroughput?: number;
   readonly kind?: string;
   readonly location: string;
@@ -76,13 +76,16 @@ export class HealthcareService extends TerraformResource {
   // ATTRIBUTES
   // ==========
 
-  // access_policy_object_ids - computed: false, optional: false, required: true
-  private _accessPolicyObjectIds: string[];
+  // access_policy_object_ids - computed: false, optional: true, required: false
+  private _accessPolicyObjectIds?: string[];
   public get accessPolicyObjectIds() {
     return this.getListAttribute('access_policy_object_ids');
   }
-  public set accessPolicyObjectIds(value: string[]) {
+  public set accessPolicyObjectIds(value: string[] ) {
     this._accessPolicyObjectIds = value;
+  }
+  public resetAccessPolicyObjectIds() {
+    this._accessPolicyObjectIds = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get accessPolicyObjectIdsInput() {

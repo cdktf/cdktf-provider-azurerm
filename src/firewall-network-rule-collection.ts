@@ -20,11 +20,14 @@ export interface FirewallNetworkRuleCollectionConfig extends TerraformMetaArgume
 }
 export interface FirewallNetworkRuleCollectionRule {
   readonly description?: string;
-  readonly destinationAddresses: string[];
+  readonly destinationAddresses?: string[];
+  readonly destinationFqdns?: string[];
+  readonly destinationIpGroups?: string[];
   readonly destinationPorts: string[];
   readonly name: string;
   readonly protocols: string[];
-  readonly sourceAddresses: string[];
+  readonly sourceAddresses?: string[];
+  readonly sourceIpGroups?: string[];
 }
 export interface FirewallNetworkRuleCollectionTimeouts {
   readonly create?: string;

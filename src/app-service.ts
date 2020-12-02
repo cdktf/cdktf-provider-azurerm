@@ -31,6 +31,8 @@ export interface AppServiceConfig extends TerraformMetaArguments {
   readonly logs?: AppServiceLogs[];
   /** site_config block */
   readonly siteConfig?: AppServiceSiteConfig[];
+  /** source_control block */
+  readonly sourceControl?: AppServiceSourceControl[];
   /** storage_account block */
   readonly storageAccount?: AppServiceStorageAccount[];
   /** timeouts block */
@@ -46,18 +48,6 @@ export class AppServiceSiteCredential extends ComplexComputedList {
   // username - computed: true, optional: false, required: false
   public get username() {
     return this.getStringAttribute('username');
-  }
-}
-export class AppServiceSourceControl extends ComplexComputedList {
-
-  // branch - computed: true, optional: false, required: false
-  public get branch() {
-    return this.getStringAttribute('branch');
-  }
-
-  // repo_url - computed: true, optional: false, required: false
-  public get repoUrl() {
-    return this.getStringAttribute('repo_url');
   }
 }
 export interface AppServiceAuthSettingsActiveDirectory {
@@ -134,6 +124,7 @@ export interface AppServiceLogsApplicationLogsAzureBlobStorage {
   readonly sasUrl: string;
 }
 export interface AppServiceLogsApplicationLogs {
+  readonly fileSystemLevel?: string;
   /** azure_blob_storage block */
   readonly azureBlobStorage?: AppServiceLogsApplicationLogsAzureBlobStorage[];
 }
@@ -158,7 +149,19 @@ export interface AppServiceLogs {
   readonly httpLogs?: AppServiceLogsHttpLogs[];
 }
 export interface AppServiceSiteConfigIpRestriction {
+  readonly action?: string;
   readonly ipAddress?: string;
+  readonly name?: string;
+  readonly priority?: number;
+  readonly subnetId?: string;
+  readonly virtualNetworkSubnetId?: string;
+}
+export interface AppServiceSiteConfigScmIpRestriction {
+  readonly action?: string;
+  readonly ipAddress?: string;
+  readonly name?: string;
+  readonly priority?: number;
+  readonly subnetId?: string;
   readonly virtualNetworkSubnetId?: string;
 }
 export interface AppServiceSiteConfigCors {
@@ -172,6 +175,7 @@ export interface AppServiceSiteConfig {
   readonly defaultDocuments?: string[];
   readonly dotnetFrameworkVersion?: string;
   readonly ftpsState?: string;
+  readonly healthCheckPath?: string;
   readonly http2Enabled?: boolean;
   readonly ipRestriction?: AppServiceSiteConfigIpRestriction[];
   readonly javaContainer?: string;
@@ -185,12 +189,21 @@ export interface AppServiceSiteConfig {
   readonly pythonVersion?: string;
   readonly remoteDebuggingEnabled?: boolean;
   readonly remoteDebuggingVersion?: string;
+  readonly scmIpRestriction?: AppServiceSiteConfigScmIpRestriction[];
   readonly scmType?: string;
+  readonly scmUseMainIpRestriction?: boolean;
   readonly use32BitWorkerProcess?: boolean;
   readonly websocketsEnabled?: boolean;
   readonly windowsFxVersion?: string;
   /** cors block */
   readonly cors?: AppServiceSiteConfigCors[];
+}
+export interface AppServiceSourceControl {
+  readonly branch?: string;
+  readonly manualIntegration?: boolean;
+  readonly repoUrl?: string;
+  readonly rollbackEnabled?: boolean;
+  readonly useMercurial?: boolean;
 }
 export interface AppServiceStorageAccount {
   readonly accessKey: string;
@@ -242,6 +255,7 @@ export class AppService extends TerraformResource {
     this._identity = config.identity;
     this._logs = config.logs;
     this._siteConfig = config.siteConfig;
+    this._sourceControl = config.sourceControl;
     this._storageAccount = config.storageAccount;
     this._timeouts = config.timeouts;
   }
@@ -279,12 +293,12 @@ export class AppService extends TerraformResource {
     return this._appSettings
   }
 
-  // client_affinity_enabled - computed: true, optional: true, required: false
+  // client_affinity_enabled - computed: false, optional: true, required: false
   private _clientAffinityEnabled?: boolean;
   public get clientAffinityEnabled() {
     return this.getBooleanAttribute('client_affinity_enabled');
   }
-  public set clientAffinityEnabled(value: boolean) {
+  public set clientAffinityEnabled(value: boolean ) {
     this._clientAffinityEnabled = value;
   }
   public resetClientAffinityEnabled() {
@@ -309,6 +323,11 @@ export class AppService extends TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get clientCertEnabledInput() {
     return this._clientCertEnabled
+  }
+
+  // custom_domain_verification_id - computed: true, optional: false, required: false
+  public get customDomainVerificationId() {
+    return this.getStringAttribute('custom_domain_verification_id');
   }
 
   // default_site_hostname - computed: true, optional: false, required: false
@@ -405,11 +424,6 @@ export class AppService extends TerraformResource {
   // site_credential - computed: true, optional: false, required: false
   public siteCredential(index: string) {
     return new AppServiceSiteCredential(this, 'site_credential', index);
-  }
-
-  // source_control - computed: true, optional: false, required: false
-  public sourceControl(index: string) {
-    return new AppServiceSourceControl(this, 'source_control', index);
   }
 
   // tags - computed: false, optional: true, required: false
@@ -524,6 +538,22 @@ export class AppService extends TerraformResource {
     return this._siteConfig
   }
 
+  // source_control - computed: false, optional: true, required: false
+  private _sourceControl?: AppServiceSourceControl[];
+  public get sourceControl() {
+    return this.interpolationForAttribute('source_control') as any;
+  }
+  public set sourceControl(value: AppServiceSourceControl[] ) {
+    this._sourceControl = value;
+  }
+  public resetSourceControl() {
+    this._sourceControl = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sourceControlInput() {
+    return this._sourceControl
+  }
+
   // storage_account - computed: false, optional: true, required: false
   private _storageAccount?: AppServiceStorageAccount[];
   public get storageAccount() {
@@ -578,6 +608,7 @@ export class AppService extends TerraformResource {
       identity: this._identity,
       logs: this._logs,
       site_config: this._siteConfig,
+      source_control: this._sourceControl,
       storage_account: this._storageAccount,
       timeouts: this._timeouts,
     };

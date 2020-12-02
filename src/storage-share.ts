@@ -18,9 +18,9 @@ export interface StorageShareConfig extends TerraformMetaArguments {
   readonly timeouts?: StorageShareTimeouts;
 }
 export interface StorageShareAclAccessPolicy {
-  readonly expiry: string;
+  readonly expiry?: string;
   readonly permissions: string;
-  readonly start: string;
+  readonly start?: string;
 }
 export interface StorageShareAcl {
   readonly id: string;
@@ -70,12 +70,12 @@ export class StorageShare extends TerraformResource {
     return this.getStringAttribute('id');
   }
 
-  // metadata - computed: false, optional: true, required: false
-  private _metadata?: { [key: string]: string };
-  public get metadata() {
-    return this.interpolationForAttribute('metadata') as any;
+  // metadata - computed: true, optional: true, required: false
+  private _metadata?: { [key: string]: string }
+  public get metadata(): { [key: string]: string } {
+    return this.interpolationForAttribute('metadata') as any; // Getting the computed value is not yet implemented
   }
-  public set metadata(value: { [key: string]: string } ) {
+  public set metadata(value: { [key: string]: string }) {
     this._metadata = value;
   }
   public resetMetadata() {
@@ -113,6 +113,11 @@ export class StorageShare extends TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get quotaInput() {
     return this._quota
+  }
+
+  // resource_manager_id - computed: true, optional: false, required: false
+  public get resourceManagerId() {
+    return this.getStringAttribute('resource_manager_id');
   }
 
   // storage_account_name - computed: false, optional: false, required: true

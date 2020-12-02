@@ -24,6 +24,8 @@ export interface ServiceFabricClusterConfig extends TerraformMetaArguments {
   readonly certificate?: ServiceFabricClusterCertificate[];
   /** certificate_common_names block */
   readonly certificateCommonNames?: ServiceFabricClusterCertificateCommonNames[];
+  /** client_certificate_common_name block */
+  readonly clientCertificateCommonName?: ServiceFabricClusterClientCertificateCommonName[];
   /** client_certificate_thumbprint block */
   readonly clientCertificateThumbprint?: ServiceFabricClusterClientCertificateThumbprint[];
   /** diagnostics_config block */
@@ -55,6 +57,11 @@ export interface ServiceFabricClusterCertificateCommonNames {
   readonly x509StoreName: string;
   /** common_names block */
   readonly commonNames: ServiceFabricClusterCertificateCommonNamesCommonNames[];
+}
+export interface ServiceFabricClusterClientCertificateCommonName {
+  readonly commonName: string;
+  readonly isAdmin: boolean;
+  readonly issuerThumbprint?: string;
 }
 export interface ServiceFabricClusterClientCertificateThumbprint {
   readonly isAdmin: boolean;
@@ -138,6 +145,7 @@ export class ServiceFabricCluster extends TerraformResource {
     this._azureActiveDirectory = config.azureActiveDirectory;
     this._certificate = config.certificate;
     this._certificateCommonNames = config.certificateCommonNames;
+    this._clientCertificateCommonName = config.clientCertificateCommonName;
     this._clientCertificateThumbprint = config.clientCertificateThumbprint;
     this._diagnosticsConfig = config.diagnosticsConfig;
     this._fabricSettings = config.fabricSettings;
@@ -347,6 +355,22 @@ export class ServiceFabricCluster extends TerraformResource {
     return this._certificateCommonNames
   }
 
+  // client_certificate_common_name - computed: false, optional: true, required: false
+  private _clientCertificateCommonName?: ServiceFabricClusterClientCertificateCommonName[];
+  public get clientCertificateCommonName() {
+    return this.interpolationForAttribute('client_certificate_common_name') as any;
+  }
+  public set clientCertificateCommonName(value: ServiceFabricClusterClientCertificateCommonName[] ) {
+    this._clientCertificateCommonName = value;
+  }
+  public resetClientCertificateCommonName() {
+    this._clientCertificateCommonName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get clientCertificateCommonNameInput() {
+    return this._clientCertificateCommonName
+  }
+
   // client_certificate_thumbprint - computed: false, optional: true, required: false
   private _clientCertificateThumbprint?: ServiceFabricClusterClientCertificateThumbprint[];
   public get clientCertificateThumbprint() {
@@ -459,6 +483,7 @@ export class ServiceFabricCluster extends TerraformResource {
       azure_active_directory: this._azureActiveDirectory,
       certificate: this._certificate,
       certificate_common_names: this._certificateCommonNames,
+      client_certificate_common_name: this._clientCertificateCommonName,
       client_certificate_thumbprint: this._clientCertificateThumbprint,
       diagnostics_config: this._diagnosticsConfig,
       fabric_settings: this._fabricSettings,

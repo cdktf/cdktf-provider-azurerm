@@ -10,6 +10,7 @@ import { TerraformMetaArguments } from 'cdktf';
 export interface ManagementGroupConfig extends TerraformMetaArguments {
   readonly displayName?: string;
   readonly groupId?: string;
+  readonly name?: string;
   readonly parentManagementGroupId?: string;
   readonly subscriptionIds?: string[];
   /** timeouts block */
@@ -43,6 +44,7 @@ export class ManagementGroup extends TerraformResource {
     });
     this._displayName = config.displayName;
     this._groupId = config.groupId;
+    this._name = config.name;
     this._parentManagementGroupId = config.parentManagementGroupId;
     this._subscriptionIds = config.subscriptionIds;
     this._timeouts = config.timeouts;
@@ -87,6 +89,22 @@ export class ManagementGroup extends TerraformResource {
   // id - computed: true, optional: true, required: false
   public get id() {
     return this.getStringAttribute('id');
+  }
+
+  // name - computed: true, optional: true, required: false
+  private _name?: string;
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  public resetName() {
+    this._name = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
   }
 
   // parent_management_group_id - computed: true, optional: true, required: false
@@ -145,6 +163,7 @@ export class ManagementGroup extends TerraformResource {
     return {
       display_name: this._displayName,
       group_id: this._groupId,
+      name: this._name,
       parent_management_group_id: this._parentManagementGroupId,
       subscription_ids: this._subscriptionIds,
       timeouts: this._timeouts,

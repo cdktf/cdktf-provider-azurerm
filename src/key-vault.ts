@@ -9,6 +9,7 @@ import { TerraformMetaArguments } from 'cdktf';
 
 export interface KeyVaultConfig extends TerraformMetaArguments {
   readonly accessPolicy?: KeyVaultAccessPolicy[];
+  readonly enableRbacAuthorization?: boolean;
   readonly enabledForDeployment?: boolean;
   readonly enabledForDiskEncryption?: boolean;
   readonly enabledForTemplateDeployment?: boolean;
@@ -18,8 +19,11 @@ export interface KeyVaultConfig extends TerraformMetaArguments {
   readonly resourceGroupName: string;
   readonly skuName: string;
   readonly softDeleteEnabled?: boolean;
+  readonly softDeleteRetentionDays?: number;
   readonly tags?: { [key: string]: string };
   readonly tenantId: string;
+  /** contact block */
+  readonly contact?: KeyVaultContact[];
   /** network_acls block */
   readonly networkAcls?: KeyVaultNetworkAcls[];
   /** timeouts block */
@@ -33,6 +37,11 @@ export interface KeyVaultAccessPolicy {
   readonly secretPermissions?: string[];
   readonly storagePermissions?: string[];
   readonly tenantId?: string;
+}
+export interface KeyVaultContact {
+  readonly email: string;
+  readonly name?: string;
+  readonly phone?: string;
 }
 export interface KeyVaultNetworkAcls {
   readonly bypass: string;
@@ -67,6 +76,7 @@ export class KeyVault extends TerraformResource {
       lifecycle: config.lifecycle
     });
     this._accessPolicy = config.accessPolicy;
+    this._enableRbacAuthorization = config.enableRbacAuthorization;
     this._enabledForDeployment = config.enabledForDeployment;
     this._enabledForDiskEncryption = config.enabledForDiskEncryption;
     this._enabledForTemplateDeployment = config.enabledForTemplateDeployment;
@@ -76,8 +86,10 @@ export class KeyVault extends TerraformResource {
     this._resourceGroupName = config.resourceGroupName;
     this._skuName = config.skuName;
     this._softDeleteEnabled = config.softDeleteEnabled;
+    this._softDeleteRetentionDays = config.softDeleteRetentionDays;
     this._tags = config.tags;
     this._tenantId = config.tenantId;
+    this._contact = config.contact;
     this._networkAcls = config.networkAcls;
     this._timeouts = config.timeouts;
   }
@@ -100,6 +112,22 @@ export class KeyVault extends TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get accessPolicyInput() {
     return this._accessPolicy
+  }
+
+  // enable_rbac_authorization - computed: false, optional: true, required: false
+  private _enableRbacAuthorization?: boolean;
+  public get enableRbacAuthorization() {
+    return this.getBooleanAttribute('enable_rbac_authorization');
+  }
+  public set enableRbacAuthorization(value: boolean ) {
+    this._enableRbacAuthorization = value;
+  }
+  public resetEnableRbacAuthorization() {
+    this._enableRbacAuthorization = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enableRbacAuthorizationInput() {
+    return this._enableRbacAuthorization
   }
 
   // enabled_for_deployment - computed: false, optional: true, required: false
@@ -239,6 +267,22 @@ export class KeyVault extends TerraformResource {
     return this._softDeleteEnabled
   }
 
+  // soft_delete_retention_days - computed: false, optional: true, required: false
+  private _softDeleteRetentionDays?: number;
+  public get softDeleteRetentionDays() {
+    return this.getNumberAttribute('soft_delete_retention_days');
+  }
+  public set softDeleteRetentionDays(value: number ) {
+    this._softDeleteRetentionDays = value;
+  }
+  public resetSoftDeleteRetentionDays() {
+    this._softDeleteRetentionDays = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get softDeleteRetentionDaysInput() {
+    return this._softDeleteRetentionDays
+  }
+
   // tags - computed: false, optional: true, required: false
   private _tags?: { [key: string]: string };
   public get tags() {
@@ -271,6 +315,22 @@ export class KeyVault extends TerraformResource {
   // vault_uri - computed: true, optional: false, required: false
   public get vaultUri() {
     return this.getStringAttribute('vault_uri');
+  }
+
+  // contact - computed: false, optional: true, required: false
+  private _contact?: KeyVaultContact[];
+  public get contact() {
+    return this.interpolationForAttribute('contact') as any;
+  }
+  public set contact(value: KeyVaultContact[] ) {
+    this._contact = value;
+  }
+  public resetContact() {
+    this._contact = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get contactInput() {
+    return this._contact
   }
 
   // network_acls - computed: false, optional: true, required: false
@@ -312,6 +372,7 @@ export class KeyVault extends TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       access_policy: this._accessPolicy,
+      enable_rbac_authorization: this._enableRbacAuthorization,
       enabled_for_deployment: this._enabledForDeployment,
       enabled_for_disk_encryption: this._enabledForDiskEncryption,
       enabled_for_template_deployment: this._enabledForTemplateDeployment,
@@ -321,8 +382,10 @@ export class KeyVault extends TerraformResource {
       resource_group_name: this._resourceGroupName,
       sku_name: this._skuName,
       soft_delete_enabled: this._softDeleteEnabled,
+      soft_delete_retention_days: this._softDeleteRetentionDays,
       tags: this._tags,
       tenant_id: this._tenantId,
+      contact: this._contact,
       network_acls: this._networkAcls,
       timeouts: this._timeouts,
     };

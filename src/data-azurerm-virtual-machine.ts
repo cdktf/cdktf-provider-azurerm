@@ -4,6 +4,7 @@
 import { Construct } from 'constructs';
 import { TerraformDataSource } from 'cdktf';
 import { TerraformMetaArguments } from 'cdktf';
+import { ComplexComputedList } from "cdktf";
 
 // Configuration
 
@@ -12,6 +13,28 @@ export interface DataAzurermVirtualMachineConfig extends TerraformMetaArguments 
   readonly resourceGroupName: string;
   /** timeouts block */
   readonly timeouts?: DataAzurermVirtualMachineTimeouts;
+}
+export class DataAzurermVirtualMachineIdentity extends ComplexComputedList {
+
+  // identity_ids - computed: true, optional: false, required: false
+  public get identityIds() {
+    return this.getListAttribute('identity_ids');
+  }
+
+  // principal_id - computed: true, optional: false, required: false
+  public get principalId() {
+    return this.getStringAttribute('principal_id');
+  }
+
+  // tenant_id - computed: true, optional: false, required: false
+  public get tenantId() {
+    return this.getStringAttribute('tenant_id');
+  }
+
+  // type - computed: true, optional: false, required: false
+  public get type() {
+    return this.getStringAttribute('type');
+  }
 }
 export interface DataAzurermVirtualMachineTimeouts {
   readonly read?: string;
@@ -48,6 +71,16 @@ export class DataAzurermVirtualMachine extends TerraformDataSource {
   // id - computed: true, optional: true, required: false
   public get id() {
     return this.getStringAttribute('id');
+  }
+
+  // identity - computed: true, optional: false, required: false
+  public identity(index: string) {
+    return new DataAzurermVirtualMachineIdentity(this, 'identity', index);
+  }
+
+  // location - computed: true, optional: false, required: false
+  public get location() {
+    return this.getStringAttribute('location');
   }
 
   // name - computed: false, optional: false, required: true

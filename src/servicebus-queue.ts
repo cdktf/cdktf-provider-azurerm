@@ -12,8 +12,11 @@ export interface ServicebusQueueConfig extends TerraformMetaArguments {
   readonly deadLetteringOnMessageExpiration?: boolean;
   readonly defaultMessageTtl?: string;
   readonly duplicateDetectionHistoryTimeWindow?: string;
+  readonly enableBatchedOperations?: boolean;
   readonly enableExpress?: boolean;
   readonly enablePartitioning?: boolean;
+  readonly forwardDeadLetteredMessagesTo?: string;
+  readonly forwardTo?: string;
   readonly lockDuration?: string;
   readonly maxDeliveryCount?: number;
   readonly maxSizeInMegabytes?: number;
@@ -22,6 +25,7 @@ export interface ServicebusQueueConfig extends TerraformMetaArguments {
   readonly requiresDuplicateDetection?: boolean;
   readonly requiresSession?: boolean;
   readonly resourceGroupName: string;
+  readonly status?: string;
   /** timeouts block */
   readonly timeouts?: ServicebusQueueTimeouts;
 }
@@ -55,8 +59,11 @@ export class ServicebusQueue extends TerraformResource {
     this._deadLetteringOnMessageExpiration = config.deadLetteringOnMessageExpiration;
     this._defaultMessageTtl = config.defaultMessageTtl;
     this._duplicateDetectionHistoryTimeWindow = config.duplicateDetectionHistoryTimeWindow;
+    this._enableBatchedOperations = config.enableBatchedOperations;
     this._enableExpress = config.enableExpress;
     this._enablePartitioning = config.enablePartitioning;
+    this._forwardDeadLetteredMessagesTo = config.forwardDeadLetteredMessagesTo;
+    this._forwardTo = config.forwardTo;
     this._lockDuration = config.lockDuration;
     this._maxDeliveryCount = config.maxDeliveryCount;
     this._maxSizeInMegabytes = config.maxSizeInMegabytes;
@@ -65,6 +72,7 @@ export class ServicebusQueue extends TerraformResource {
     this._requiresDuplicateDetection = config.requiresDuplicateDetection;
     this._requiresSession = config.requiresSession;
     this._resourceGroupName = config.resourceGroupName;
+    this._status = config.status;
     this._timeouts = config.timeouts;
   }
 
@@ -136,6 +144,22 @@ export class ServicebusQueue extends TerraformResource {
     return this._duplicateDetectionHistoryTimeWindow
   }
 
+  // enable_batched_operations - computed: false, optional: true, required: false
+  private _enableBatchedOperations?: boolean;
+  public get enableBatchedOperations() {
+    return this.getBooleanAttribute('enable_batched_operations');
+  }
+  public set enableBatchedOperations(value: boolean ) {
+    this._enableBatchedOperations = value;
+  }
+  public resetEnableBatchedOperations() {
+    this._enableBatchedOperations = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enableBatchedOperationsInput() {
+    return this._enableBatchedOperations
+  }
+
   // enable_express - computed: false, optional: true, required: false
   private _enableExpress?: boolean;
   public get enableExpress() {
@@ -166,6 +190,38 @@ export class ServicebusQueue extends TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get enablePartitioningInput() {
     return this._enablePartitioning
+  }
+
+  // forward_dead_lettered_messages_to - computed: false, optional: true, required: false
+  private _forwardDeadLetteredMessagesTo?: string;
+  public get forwardDeadLetteredMessagesTo() {
+    return this.getStringAttribute('forward_dead_lettered_messages_to');
+  }
+  public set forwardDeadLetteredMessagesTo(value: string ) {
+    this._forwardDeadLetteredMessagesTo = value;
+  }
+  public resetForwardDeadLetteredMessagesTo() {
+    this._forwardDeadLetteredMessagesTo = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get forwardDeadLetteredMessagesToInput() {
+    return this._forwardDeadLetteredMessagesTo
+  }
+
+  // forward_to - computed: false, optional: true, required: false
+  private _forwardTo?: string;
+  public get forwardTo() {
+    return this.getStringAttribute('forward_to');
+  }
+  public set forwardTo(value: string ) {
+    this._forwardTo = value;
+  }
+  public resetForwardTo() {
+    this._forwardTo = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get forwardToInput() {
+    return this._forwardTo
   }
 
   // id - computed: true, optional: true, required: false
@@ -292,6 +348,22 @@ export class ServicebusQueue extends TerraformResource {
     return this._resourceGroupName
   }
 
+  // status - computed: false, optional: true, required: false
+  private _status?: string;
+  public get status() {
+    return this.getStringAttribute('status');
+  }
+  public set status(value: string ) {
+    this._status = value;
+  }
+  public resetStatus() {
+    this._status = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get statusInput() {
+    return this._status
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: ServicebusQueueTimeouts;
   public get timeouts() {
@@ -318,8 +390,11 @@ export class ServicebusQueue extends TerraformResource {
       dead_lettering_on_message_expiration: this._deadLetteringOnMessageExpiration,
       default_message_ttl: this._defaultMessageTtl,
       duplicate_detection_history_time_window: this._duplicateDetectionHistoryTimeWindow,
+      enable_batched_operations: this._enableBatchedOperations,
       enable_express: this._enableExpress,
       enable_partitioning: this._enablePartitioning,
+      forward_dead_lettered_messages_to: this._forwardDeadLetteredMessagesTo,
+      forward_to: this._forwardTo,
       lock_duration: this._lockDuration,
       max_delivery_count: this._maxDeliveryCount,
       max_size_in_megabytes: this._maxSizeInMegabytes,
@@ -328,6 +403,7 @@ export class ServicebusQueue extends TerraformResource {
       requires_duplicate_detection: this._requiresDuplicateDetection,
       requires_session: this._requiresSession,
       resource_group_name: this._resourceGroupName,
+      status: this._status,
       timeouts: this._timeouts,
     };
   }

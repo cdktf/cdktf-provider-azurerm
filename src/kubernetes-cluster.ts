@@ -10,17 +10,22 @@ import { ComplexComputedList } from "cdktf";
 
 export interface KubernetesClusterConfig extends TerraformMetaArguments {
   readonly apiServerAuthorizedIpRanges?: string[];
+  readonly diskEncryptionSetId?: string;
   readonly dnsPrefix: string;
   readonly enablePodSecurityPolicy?: boolean;
   readonly kubernetesVersion?: string;
   readonly location: string;
   readonly name: string;
   readonly nodeResourceGroup?: string;
+  readonly privateClusterEnabled?: boolean;
   readonly privateLinkEnabled?: boolean;
   readonly resourceGroupName: string;
+  readonly skuTier?: string;
   readonly tags?: { [key: string]: string };
   /** addon_profile block */
   readonly addonProfile?: KubernetesClusterAddonProfile[];
+  /** auto_scaler_profile block */
+  readonly autoScalerProfile?: KubernetesClusterAutoScalerProfile[];
   /** default_node_pool block */
   readonly defaultNodePool: KubernetesClusterDefaultNodePool[];
   /** identity block */
@@ -32,7 +37,7 @@ export interface KubernetesClusterConfig extends TerraformMetaArguments {
   /** role_based_access_control block */
   readonly roleBasedAccessControl?: KubernetesClusterRoleBasedAccessControl[];
   /** service_principal block */
-  readonly servicePrincipal: KubernetesClusterServicePrincipal[];
+  readonly servicePrincipal?: KubernetesClusterServicePrincipal[];
   /** timeouts block */
   readonly timeouts?: KubernetesClusterTimeouts;
   /** windows_profile block */
@@ -102,6 +107,23 @@ export class KubernetesClusterKubeConfig extends ComplexComputedList {
     return this.getStringAttribute('username');
   }
 }
+export class KubernetesClusterKubeletIdentity extends ComplexComputedList {
+
+  // client_id - computed: true, optional: false, required: false
+  public get clientId() {
+    return this.getStringAttribute('client_id');
+  }
+
+  // object_id - computed: true, optional: false, required: false
+  public get objectId() {
+    return this.getStringAttribute('object_id');
+  }
+
+  // user_assigned_identity_id - computed: true, optional: false, required: false
+  public get userAssignedIdentityId() {
+    return this.getStringAttribute('user_assigned_identity_id');
+  }
+}
 export interface KubernetesClusterAddonProfileAciConnectorLinux {
   readonly enabled: boolean;
   readonly subnetName?: string;
@@ -131,6 +153,17 @@ export interface KubernetesClusterAddonProfile {
   /** oms_agent block */
   readonly omsAgent?: KubernetesClusterAddonProfileOmsAgent[];
 }
+export interface KubernetesClusterAutoScalerProfile {
+  readonly balanceSimilarNodeGroups?: boolean;
+  readonly maxGracefulTerminationSec?: string;
+  readonly scaleDownDelayAfterAdd?: string;
+  readonly scaleDownDelayAfterDelete?: string;
+  readonly scaleDownDelayAfterFailure?: string;
+  readonly scaleDownUnneeded?: string;
+  readonly scaleDownUnready?: string;
+  readonly scaleDownUtilizationThreshold?: string;
+  readonly scanInterval?: string;
+}
 export interface KubernetesClusterDefaultNodePool {
   readonly availabilityZones?: string[];
   readonly enableAutoScaling?: boolean;
@@ -140,8 +173,13 @@ export interface KubernetesClusterDefaultNodePool {
   readonly minCount?: number;
   readonly name: string;
   readonly nodeCount?: number;
+  readonly nodeLabels?: { [key: string]: string };
   readonly nodeTaints?: string[];
+  readonly orchestratorVersion?: string;
   readonly osDiskSizeGb?: number;
+  readonly osDiskType?: string;
+  readonly proximityPlacementGroupId?: string;
+  readonly tags?: { [key: string]: string };
   readonly type?: string;
   readonly vmSize: string;
   readonly vnetSubnetId?: string;
@@ -158,9 +196,11 @@ export interface KubernetesClusterLinuxProfile {
   readonly sshKey: KubernetesClusterLinuxProfileSshKey[];
 }
 export interface KubernetesClusterNetworkProfileLoadBalancerProfile {
+  readonly idleTimeoutInMinutes?: number;
   readonly managedOutboundIpCount?: number;
   readonly outboundIpAddressIds?: string[];
   readonly outboundIpPrefixIds?: string[];
+  readonly outboundPortsAllocated?: number;
 }
 export interface KubernetesClusterNetworkProfile {
   readonly dnsServiceIp?: string;
@@ -168,15 +208,18 @@ export interface KubernetesClusterNetworkProfile {
   readonly loadBalancerSku?: string;
   readonly networkPlugin: string;
   readonly networkPolicy?: string;
+  readonly outboundType?: string;
   readonly podCidr?: string;
   readonly serviceCidr?: string;
   /** load_balancer_profile block */
   readonly loadBalancerProfile?: KubernetesClusterNetworkProfileLoadBalancerProfile[];
 }
 export interface KubernetesClusterRoleBasedAccessControlAzureActiveDirectory {
-  readonly clientAppId: string;
-  readonly serverAppId: string;
-  readonly serverAppSecret: string;
+  readonly adminGroupObjectIds?: string[];
+  readonly clientAppId?: string;
+  readonly managed?: boolean;
+  readonly serverAppId?: string;
+  readonly serverAppSecret?: string;
   readonly tenantId?: string;
 }
 export interface KubernetesClusterRoleBasedAccessControl {
@@ -219,16 +262,20 @@ export class KubernetesCluster extends TerraformResource {
       lifecycle: config.lifecycle
     });
     this._apiServerAuthorizedIpRanges = config.apiServerAuthorizedIpRanges;
+    this._diskEncryptionSetId = config.diskEncryptionSetId;
     this._dnsPrefix = config.dnsPrefix;
     this._enablePodSecurityPolicy = config.enablePodSecurityPolicy;
     this._kubernetesVersion = config.kubernetesVersion;
     this._location = config.location;
     this._name = config.name;
     this._nodeResourceGroup = config.nodeResourceGroup;
+    this._privateClusterEnabled = config.privateClusterEnabled;
     this._privateLinkEnabled = config.privateLinkEnabled;
     this._resourceGroupName = config.resourceGroupName;
+    this._skuTier = config.skuTier;
     this._tags = config.tags;
     this._addonProfile = config.addonProfile;
+    this._autoScalerProfile = config.autoScalerProfile;
     this._defaultNodePool = config.defaultNodePool;
     this._identity = config.identity;
     this._linuxProfile = config.linuxProfile;
@@ -257,6 +304,22 @@ export class KubernetesCluster extends TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get apiServerAuthorizedIpRangesInput() {
     return this._apiServerAuthorizedIpRanges
+  }
+
+  // disk_encryption_set_id - computed: false, optional: true, required: false
+  private _diskEncryptionSetId?: string;
+  public get diskEncryptionSetId() {
+    return this.getStringAttribute('disk_encryption_set_id');
+  }
+  public set diskEncryptionSetId(value: string ) {
+    this._diskEncryptionSetId = value;
+  }
+  public resetDiskEncryptionSetId() {
+    this._diskEncryptionSetId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get diskEncryptionSetIdInput() {
+    return this._diskEncryptionSetId
   }
 
   // dns_prefix - computed: false, optional: false, required: true
@@ -318,6 +381,11 @@ export class KubernetesCluster extends TerraformResource {
     return this.getStringAttribute('kube_config_raw');
   }
 
+  // kubelet_identity - computed: true, optional: false, required: false
+  public kubeletIdentity(index: string) {
+    return new KubernetesClusterKubeletIdentity(this, 'kubelet_identity', index);
+  }
+
   // kubernetes_version - computed: true, optional: true, required: false
   private _kubernetesVersion?: string;
   public get kubernetesVersion() {
@@ -376,17 +444,33 @@ export class KubernetesCluster extends TerraformResource {
     return this._nodeResourceGroup
   }
 
+  // private_cluster_enabled - computed: true, optional: true, required: false
+  private _privateClusterEnabled?: boolean;
+  public get privateClusterEnabled() {
+    return this.getBooleanAttribute('private_cluster_enabled');
+  }
+  public set privateClusterEnabled(value: boolean) {
+    this._privateClusterEnabled = value;
+  }
+  public resetPrivateClusterEnabled() {
+    this._privateClusterEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get privateClusterEnabledInput() {
+    return this._privateClusterEnabled
+  }
+
   // private_fqdn - computed: true, optional: false, required: false
   public get privateFqdn() {
     return this.getStringAttribute('private_fqdn');
   }
 
-  // private_link_enabled - computed: false, optional: true, required: false
+  // private_link_enabled - computed: true, optional: true, required: false
   private _privateLinkEnabled?: boolean;
   public get privateLinkEnabled() {
     return this.getBooleanAttribute('private_link_enabled');
   }
-  public set privateLinkEnabled(value: boolean ) {
+  public set privateLinkEnabled(value: boolean) {
     this._privateLinkEnabled = value;
   }
   public resetPrivateLinkEnabled() {
@@ -408,6 +492,22 @@ export class KubernetesCluster extends TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
     return this._resourceGroupName
+  }
+
+  // sku_tier - computed: false, optional: true, required: false
+  private _skuTier?: string;
+  public get skuTier() {
+    return this.getStringAttribute('sku_tier');
+  }
+  public set skuTier(value: string ) {
+    this._skuTier = value;
+  }
+  public resetSkuTier() {
+    this._skuTier = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get skuTierInput() {
+    return this._skuTier
   }
 
   // tags - computed: false, optional: true, required: false
@@ -440,6 +540,22 @@ export class KubernetesCluster extends TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get addonProfileInput() {
     return this._addonProfile
+  }
+
+  // auto_scaler_profile - computed: false, optional: true, required: false
+  private _autoScalerProfile?: KubernetesClusterAutoScalerProfile[];
+  public get autoScalerProfile() {
+    return this.interpolationForAttribute('auto_scaler_profile') as any;
+  }
+  public set autoScalerProfile(value: KubernetesClusterAutoScalerProfile[] ) {
+    this._autoScalerProfile = value;
+  }
+  public resetAutoScalerProfile() {
+    this._autoScalerProfile = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get autoScalerProfileInput() {
+    return this._autoScalerProfile
   }
 
   // default_node_pool - computed: false, optional: false, required: true
@@ -519,13 +635,16 @@ export class KubernetesCluster extends TerraformResource {
     return this._roleBasedAccessControl
   }
 
-  // service_principal - computed: false, optional: false, required: true
-  private _servicePrincipal: KubernetesClusterServicePrincipal[];
+  // service_principal - computed: false, optional: true, required: false
+  private _servicePrincipal?: KubernetesClusterServicePrincipal[];
   public get servicePrincipal() {
     return this.interpolationForAttribute('service_principal') as any;
   }
-  public set servicePrincipal(value: KubernetesClusterServicePrincipal[]) {
+  public set servicePrincipal(value: KubernetesClusterServicePrincipal[] ) {
     this._servicePrincipal = value;
+  }
+  public resetServicePrincipal() {
+    this._servicePrincipal = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get servicePrincipalInput() {
@@ -571,16 +690,20 @@ export class KubernetesCluster extends TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       api_server_authorized_ip_ranges: this._apiServerAuthorizedIpRanges,
+      disk_encryption_set_id: this._diskEncryptionSetId,
       dns_prefix: this._dnsPrefix,
       enable_pod_security_policy: this._enablePodSecurityPolicy,
       kubernetes_version: this._kubernetesVersion,
       location: this._location,
       name: this._name,
       node_resource_group: this._nodeResourceGroup,
+      private_cluster_enabled: this._privateClusterEnabled,
       private_link_enabled: this._privateLinkEnabled,
       resource_group_name: this._resourceGroupName,
+      sku_tier: this._skuTier,
       tags: this._tags,
       addon_profile: this._addonProfile,
+      auto_scaler_profile: this._autoScalerProfile,
       default_node_pool: this._defaultNodePool,
       identity: this._identity,
       linux_profile: this._linuxProfile,

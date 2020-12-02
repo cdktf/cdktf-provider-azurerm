@@ -4,6 +4,7 @@
 import { Construct } from 'constructs';
 import { TerraformResource } from 'cdktf';
 import { TerraformMetaArguments } from 'cdktf';
+import { ComplexComputedList } from "cdktf";
 
 // Configuration
 
@@ -15,8 +16,31 @@ export interface CosmosdbMongoCollectionConfig extends TerraformMetaArguments {
   readonly resourceGroupName: string;
   readonly shardKey?: string;
   readonly throughput?: number;
+  /** autoscale_settings block */
+  readonly autoscaleSettings?: CosmosdbMongoCollectionAutoscaleSettings[];
+  /** index block */
+  readonly index?: CosmosdbMongoCollectionIndex[];
   /** timeouts block */
   readonly timeouts?: CosmosdbMongoCollectionTimeouts;
+}
+export class CosmosdbMongoCollectionSystemIndexes extends ComplexComputedList {
+
+  // keys - computed: true, optional: false, required: false
+  public get keys() {
+    return this.getListAttribute('keys');
+  }
+
+  // unique - computed: true, optional: false, required: false
+  public get unique() {
+    return this.getBooleanAttribute('unique');
+  }
+}
+export interface CosmosdbMongoCollectionAutoscaleSettings {
+  readonly maxThroughput?: number;
+}
+export interface CosmosdbMongoCollectionIndex {
+  readonly keys: string[];
+  readonly unique?: boolean;
 }
 export interface CosmosdbMongoCollectionTimeouts {
   readonly create?: string;
@@ -51,6 +75,8 @@ export class CosmosdbMongoCollection extends TerraformResource {
     this._resourceGroupName = config.resourceGroupName;
     this._shardKey = config.shardKey;
     this._throughput = config.throughput;
+    this._autoscaleSettings = config.autoscaleSettings;
+    this._index = config.index;
     this._timeouts = config.timeouts;
   }
 
@@ -147,6 +173,11 @@ export class CosmosdbMongoCollection extends TerraformResource {
     return this._shardKey
   }
 
+  // system_indexes - computed: true, optional: false, required: false
+  public systemIndexes(index: string) {
+    return new CosmosdbMongoCollectionSystemIndexes(this, 'system_indexes', index);
+  }
+
   // throughput - computed: true, optional: true, required: false
   private _throughput?: number;
   public get throughput() {
@@ -161,6 +192,38 @@ export class CosmosdbMongoCollection extends TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get throughputInput() {
     return this._throughput
+  }
+
+  // autoscale_settings - computed: false, optional: true, required: false
+  private _autoscaleSettings?: CosmosdbMongoCollectionAutoscaleSettings[];
+  public get autoscaleSettings() {
+    return this.interpolationForAttribute('autoscale_settings') as any;
+  }
+  public set autoscaleSettings(value: CosmosdbMongoCollectionAutoscaleSettings[] ) {
+    this._autoscaleSettings = value;
+  }
+  public resetAutoscaleSettings() {
+    this._autoscaleSettings = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get autoscaleSettingsInput() {
+    return this._autoscaleSettings
+  }
+
+  // index - computed: false, optional: true, required: false
+  private _index?: CosmosdbMongoCollectionIndex[];
+  public get index() {
+    return this.interpolationForAttribute('index') as any;
+  }
+  public set index(value: CosmosdbMongoCollectionIndex[] ) {
+    this._index = value;
+  }
+  public resetIndex() {
+    this._index = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get indexInput() {
+    return this._index
   }
 
   // timeouts - computed: false, optional: true, required: false
@@ -192,6 +255,8 @@ export class CosmosdbMongoCollection extends TerraformResource {
       resource_group_name: this._resourceGroupName,
       shard_key: this._shardKey,
       throughput: this._throughput,
+      autoscale_settings: this._autoscaleSettings,
+      index: this._index,
       timeouts: this._timeouts,
     };
   }

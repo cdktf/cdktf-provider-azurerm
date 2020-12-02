@@ -13,6 +13,7 @@ export interface ApiManagementIdentityProviderAadConfig extends TerraformMetaArg
   readonly clientId: string;
   readonly clientSecret: string;
   readonly resourceGroupName: string;
+  readonly signinTenant?: string;
   /** timeouts block */
   readonly timeouts?: ApiManagementIdentityProviderAadTimeouts;
 }
@@ -47,6 +48,7 @@ export class ApiManagementIdentityProviderAad extends TerraformResource {
     this._clientId = config.clientId;
     this._clientSecret = config.clientSecret;
     this._resourceGroupName = config.resourceGroupName;
+    this._signinTenant = config.signinTenant;
     this._timeouts = config.timeouts;
   }
 
@@ -124,6 +126,22 @@ export class ApiManagementIdentityProviderAad extends TerraformResource {
     return this._resourceGroupName
   }
 
+  // signin_tenant - computed: false, optional: true, required: false
+  private _signinTenant?: string;
+  public get signinTenant() {
+    return this.getStringAttribute('signin_tenant');
+  }
+  public set signinTenant(value: string ) {
+    this._signinTenant = value;
+  }
+  public resetSigninTenant() {
+    this._signinTenant = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get signinTenantInput() {
+    return this._signinTenant
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: ApiManagementIdentityProviderAadTimeouts;
   public get timeouts() {
@@ -151,6 +169,7 @@ export class ApiManagementIdentityProviderAad extends TerraformResource {
       client_id: this._clientId,
       client_secret: this._clientSecret,
       resource_group_name: this._resourceGroupName,
+      signin_tenant: this._signinTenant,
       timeouts: this._timeouts,
     };
   }

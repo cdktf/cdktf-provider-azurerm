@@ -74,11 +74,6 @@ export class DataAzurermMariadbServer extends TerraformDataSource {
     return this.getStringAttribute('administrator_login');
   }
 
-  // administrator_login_password - computed: true, optional: false, required: false
-  public get administratorLoginPassword() {
-    return this.getStringAttribute('administrator_login_password');
-  }
-
   // fqdn - computed: true, optional: false, required: false
   public get fqdn() {
     return this.getStringAttribute('fqdn');

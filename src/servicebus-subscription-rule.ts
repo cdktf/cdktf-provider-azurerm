@@ -26,6 +26,7 @@ export interface ServicebusSubscriptionRuleCorrelationFilter {
   readonly correlationId?: string;
   readonly label?: string;
   readonly messageId?: string;
+  readonly properties?: { [key: string]: string };
   readonly replyTo?: string;
   readonly replyToSessionId?: string;
   readonly sessionId?: string;

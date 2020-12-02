@@ -32,6 +32,13 @@ export class DataAzurermVirtualNetworkGatewayBgpSettings extends ComplexComputed
     return this.getStringAttribute('peering_address');
   }
 }
+export class DataAzurermVirtualNetworkGatewayCustomRoute extends ComplexComputedList {
+
+  // address_prefixes - computed: true, optional: false, required: false
+  public get addressPrefixes() {
+    return this.getListAttribute('address_prefixes');
+  }
+}
 export class DataAzurermVirtualNetworkGatewayIpConfiguration extends ComplexComputedList {
 
   // name - computed: true, optional: false, required: false
@@ -79,6 +86,21 @@ export class DataAzurermVirtualNetworkGatewayVpnClientConfigurationRootCertifica
   }
 }
 export class DataAzurermVirtualNetworkGatewayVpnClientConfiguration extends ComplexComputedList {
+
+  // aad_audience - computed: true, optional: false, required: false
+  public get aadAudience() {
+    return this.getStringAttribute('aad_audience');
+  }
+
+  // aad_issuer - computed: true, optional: false, required: false
+  public get aadIssuer() {
+    return this.getStringAttribute('aad_issuer');
+  }
+
+  // aad_tenant - computed: true, optional: false, required: false
+  public get aadTenant() {
+    return this.getStringAttribute('aad_tenant');
+  }
 
   // address_space - computed: true, optional: false, required: false
   public get addressSpace() {
@@ -152,6 +174,11 @@ export class DataAzurermVirtualNetworkGateway extends TerraformDataSource {
     return new DataAzurermVirtualNetworkGatewayBgpSettings(this, 'bgp_settings', index);
   }
 
+  // custom_route - computed: true, optional: false, required: false
+  public customRoute(index: string) {
+    return new DataAzurermVirtualNetworkGatewayCustomRoute(this, 'custom_route', index);
+  }
+
   // default_local_network_gateway_id - computed: true, optional: false, required: false
   public get defaultLocalNetworkGatewayId() {
     return this.getStringAttribute('default_local_network_gateway_id');
@@ -193,6 +220,11 @@ export class DataAzurermVirtualNetworkGateway extends TerraformDataSource {
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
     return this._name
+  }
+
+  // private_ip_address_enabled - computed: true, optional: false, required: false
+  public get privateIpAddressEnabled() {
+    return this.getBooleanAttribute('private_ip_address_enabled');
   }
 
   // resource_group_name - computed: false, optional: false, required: true

@@ -10,6 +10,7 @@ import { StringMap } from "cdktf";
 // Configuration
 
 export interface DataAzurermStorageAccountConfig extends TerraformMetaArguments {
+  readonly minTlsVersion?: string;
   readonly name: string;
   readonly resourceGroupName: string;
   /** timeouts block */
@@ -45,6 +46,7 @@ export class DataAzurermStorageAccount extends TerraformDataSource {
       count: config.count,
       lifecycle: config.lifecycle
     });
+    this._minTlsVersion = config.minTlsVersion;
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
     this._timeouts = config.timeouts;
@@ -74,6 +76,11 @@ export class DataAzurermStorageAccount extends TerraformDataSource {
     return this.getStringAttribute('account_tier');
   }
 
+  // allow_blob_public_access - computed: true, optional: false, required: false
+  public get allowBlobPublicAccess() {
+    return this.getBooleanAttribute('allow_blob_public_access');
+  }
+
   // custom_domain - computed: true, optional: false, required: false
   public customDomain(index: string) {
     return new DataAzurermStorageAccountCustomDomain(this, 'custom_domain', index);
@@ -97,6 +104,22 @@ export class DataAzurermStorageAccount extends TerraformDataSource {
   // location - computed: true, optional: false, required: false
   public get location() {
     return this.getStringAttribute('location');
+  }
+
+  // min_tls_version - computed: false, optional: true, required: false
+  private _minTlsVersion?: string;
+  public get minTlsVersion() {
+    return this.getStringAttribute('min_tls_version');
+  }
+  public set minTlsVersion(value: string ) {
+    this._minTlsVersion = value;
+  }
+  public resetMinTlsVersion() {
+    this._minTlsVersion = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get minTlsVersionInput() {
+    return this._minTlsVersion
   }
 
   // name - computed: false, optional: false, required: true
@@ -312,6 +335,7 @@ export class DataAzurermStorageAccount extends TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      min_tls_version: this._minTlsVersion,
       name: this._name,
       resource_group_name: this._resourceGroupName,
       timeouts: this._timeouts,

@@ -22,6 +22,7 @@ export interface LbFrontendIpConfiguration {
   readonly name: string;
   readonly privateIpAddress?: string;
   readonly privateIpAddressAllocation?: string;
+  readonly privateIpAddressVersion?: string;
   readonly publicIpAddressId?: string;
   readonly publicIpPrefixId?: string;
   readonly subnetId?: string;

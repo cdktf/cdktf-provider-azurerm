@@ -14,9 +14,11 @@ export interface ContainerRegistryConfig extends TerraformMetaArguments {
   readonly name: string;
   readonly networkRuleSet?: ContainerRegistryNetworkRuleSet[];
   readonly resourceGroupName: string;
+  readonly retentionPolicy?: ContainerRegistryRetentionPolicy[];
   readonly sku?: string;
   readonly storageAccountId?: string;
   readonly tags?: { [key: string]: string };
+  readonly trustPolicy?: ContainerRegistryTrustPolicy[];
   /** timeouts block */
   readonly timeouts?: ContainerRegistryTimeouts;
 }
@@ -32,6 +34,13 @@ export interface ContainerRegistryNetworkRuleSet {
   readonly defaultAction?: string;
   readonly ipRule?: ContainerRegistryNetworkRuleSetIpRule[];
   readonly virtualNetwork?: ContainerRegistryNetworkRuleSetVirtualNetwork[];
+}
+export interface ContainerRegistryRetentionPolicy {
+  readonly days?: number;
+  readonly enabled?: boolean;
+}
+export interface ContainerRegistryTrustPolicy {
+  readonly enabled?: boolean;
 }
 export interface ContainerRegistryTimeouts {
   readonly create?: string;
@@ -65,9 +74,11 @@ export class ContainerRegistry extends TerraformResource {
     this._name = config.name;
     this._networkRuleSet = config.networkRuleSet;
     this._resourceGroupName = config.resourceGroupName;
+    this._retentionPolicy = config.retentionPolicy;
     this._sku = config.sku;
     this._storageAccountId = config.storageAccountId;
     this._tags = config.tags;
+    this._trustPolicy = config.trustPolicy;
     this._timeouts = config.timeouts;
   }
 
@@ -182,6 +193,22 @@ export class ContainerRegistry extends TerraformResource {
     return this._resourceGroupName
   }
 
+  // retention_policy - computed: true, optional: true, required: false
+  private _retentionPolicy?: ContainerRegistryRetentionPolicy[]
+  public get retentionPolicy(): ContainerRegistryRetentionPolicy[] {
+    return this.interpolationForAttribute('retention_policy') as any; // Getting the computed value is not yet implemented
+  }
+  public set retentionPolicy(value: ContainerRegistryRetentionPolicy[]) {
+    this._retentionPolicy = value;
+  }
+  public resetRetentionPolicy() {
+    this._retentionPolicy = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get retentionPolicyInput() {
+    return this._retentionPolicy
+  }
+
   // sku - computed: false, optional: true, required: false
   private _sku?: string;
   public get sku() {
@@ -230,6 +257,22 @@ export class ContainerRegistry extends TerraformResource {
     return this._tags
   }
 
+  // trust_policy - computed: true, optional: true, required: false
+  private _trustPolicy?: ContainerRegistryTrustPolicy[]
+  public get trustPolicy(): ContainerRegistryTrustPolicy[] {
+    return this.interpolationForAttribute('trust_policy') as any; // Getting the computed value is not yet implemented
+  }
+  public set trustPolicy(value: ContainerRegistryTrustPolicy[]) {
+    this._trustPolicy = value;
+  }
+  public resetTrustPolicy() {
+    this._trustPolicy = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get trustPolicyInput() {
+    return this._trustPolicy
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: ContainerRegistryTimeouts;
   public get timeouts() {
@@ -258,9 +301,11 @@ export class ContainerRegistry extends TerraformResource {
       name: this._name,
       network_rule_set: this._networkRuleSet,
       resource_group_name: this._resourceGroupName,
+      retention_policy: this._retentionPolicy,
       sku: this._sku,
       storage_account_id: this._storageAccountId,
       tags: this._tags,
+      trust_policy: this._trustPolicy,
       timeouts: this._timeouts,
     };
   }

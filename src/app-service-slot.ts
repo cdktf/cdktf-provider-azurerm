@@ -104,6 +104,7 @@ export interface AppServiceSlotLogsApplicationLogsAzureBlobStorage {
   readonly sasUrl: string;
 }
 export interface AppServiceSlotLogsApplicationLogs {
+  readonly fileSystemLevel?: string;
   /** azure_blob_storage block */
   readonly azureBlobStorage?: AppServiceSlotLogsApplicationLogsAzureBlobStorage[];
 }
@@ -128,7 +129,19 @@ export interface AppServiceSlotLogs {
   readonly httpLogs?: AppServiceSlotLogsHttpLogs[];
 }
 export interface AppServiceSlotSiteConfigIpRestriction {
+  readonly action?: string;
   readonly ipAddress?: string;
+  readonly name?: string;
+  readonly priority?: number;
+  readonly subnetId?: string;
+  readonly virtualNetworkSubnetId?: string;
+}
+export interface AppServiceSlotSiteConfigScmIpRestriction {
+  readonly action?: string;
+  readonly ipAddress?: string;
+  readonly name?: string;
+  readonly priority?: number;
+  readonly subnetId?: string;
   readonly virtualNetworkSubnetId?: string;
 }
 export interface AppServiceSlotSiteConfigCors {
@@ -142,6 +155,7 @@ export interface AppServiceSlotSiteConfig {
   readonly defaultDocuments?: string[];
   readonly dotnetFrameworkVersion?: string;
   readonly ftpsState?: string;
+  readonly healthCheckPath?: string;
   readonly http2Enabled?: boolean;
   readonly ipRestriction?: AppServiceSlotSiteConfigIpRestriction[];
   readonly javaContainer?: string;
@@ -155,7 +169,9 @@ export interface AppServiceSlotSiteConfig {
   readonly pythonVersion?: string;
   readonly remoteDebuggingEnabled?: boolean;
   readonly remoteDebuggingVersion?: string;
+  readonly scmIpRestriction?: AppServiceSlotSiteConfigScmIpRestriction[];
   readonly scmType?: string;
+  readonly scmUseMainIpRestriction?: boolean;
   readonly use32BitWorkerProcess?: boolean;
   readonly websocketsEnabled?: boolean;
   readonly windowsFxVersion?: string;

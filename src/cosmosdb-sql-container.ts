@@ -15,10 +15,40 @@ export interface CosmosdbSqlContainerConfig extends TerraformMetaArguments {
   readonly partitionKeyPath?: string;
   readonly resourceGroupName: string;
   readonly throughput?: number;
+  /** autoscale_settings block */
+  readonly autoscaleSettings?: CosmosdbSqlContainerAutoscaleSettings[];
+  /** indexing_policy block */
+  readonly indexingPolicy?: CosmosdbSqlContainerIndexingPolicy[];
   /** timeouts block */
   readonly timeouts?: CosmosdbSqlContainerTimeouts;
   /** unique_key block */
   readonly uniqueKey?: CosmosdbSqlContainerUniqueKey[];
+}
+export interface CosmosdbSqlContainerAutoscaleSettings {
+  readonly maxThroughput?: number;
+}
+export interface CosmosdbSqlContainerIndexingPolicyCompositeIndexIndex {
+  readonly order: string;
+  readonly path: string;
+}
+export interface CosmosdbSqlContainerIndexingPolicyCompositeIndex {
+  /** index block */
+  readonly index: CosmosdbSqlContainerIndexingPolicyCompositeIndexIndex[];
+}
+export interface CosmosdbSqlContainerIndexingPolicyExcludedPath {
+  readonly path: string;
+}
+export interface CosmosdbSqlContainerIndexingPolicyIncludedPath {
+  readonly path: string;
+}
+export interface CosmosdbSqlContainerIndexingPolicy {
+  readonly indexingMode?: string;
+  /** composite_index block */
+  readonly compositeIndex?: CosmosdbSqlContainerIndexingPolicyCompositeIndex[];
+  /** excluded_path block */
+  readonly excludedPath?: CosmosdbSqlContainerIndexingPolicyExcludedPath[];
+  /** included_path block */
+  readonly includedPath?: CosmosdbSqlContainerIndexingPolicyIncludedPath[];
 }
 export interface CosmosdbSqlContainerTimeouts {
   readonly create?: string;
@@ -56,6 +86,8 @@ export class CosmosdbSqlContainer extends TerraformResource {
     this._partitionKeyPath = config.partitionKeyPath;
     this._resourceGroupName = config.resourceGroupName;
     this._throughput = config.throughput;
+    this._autoscaleSettings = config.autoscaleSettings;
+    this._indexingPolicy = config.indexingPolicy;
     this._timeouts = config.timeouts;
     this._uniqueKey = config.uniqueKey;
   }
@@ -169,6 +201,38 @@ export class CosmosdbSqlContainer extends TerraformResource {
     return this._throughput
   }
 
+  // autoscale_settings - computed: false, optional: true, required: false
+  private _autoscaleSettings?: CosmosdbSqlContainerAutoscaleSettings[];
+  public get autoscaleSettings() {
+    return this.interpolationForAttribute('autoscale_settings') as any;
+  }
+  public set autoscaleSettings(value: CosmosdbSqlContainerAutoscaleSettings[] ) {
+    this._autoscaleSettings = value;
+  }
+  public resetAutoscaleSettings() {
+    this._autoscaleSettings = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get autoscaleSettingsInput() {
+    return this._autoscaleSettings
+  }
+
+  // indexing_policy - computed: false, optional: true, required: false
+  private _indexingPolicy?: CosmosdbSqlContainerIndexingPolicy[];
+  public get indexingPolicy() {
+    return this.interpolationForAttribute('indexing_policy') as any;
+  }
+  public set indexingPolicy(value: CosmosdbSqlContainerIndexingPolicy[] ) {
+    this._indexingPolicy = value;
+  }
+  public resetIndexingPolicy() {
+    this._indexingPolicy = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get indexingPolicyInput() {
+    return this._indexingPolicy
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: CosmosdbSqlContainerTimeouts;
   public get timeouts() {
@@ -214,6 +278,8 @@ export class CosmosdbSqlContainer extends TerraformResource {
       partition_key_path: this._partitionKeyPath,
       resource_group_name: this._resourceGroupName,
       throughput: this._throughput,
+      autoscale_settings: this._autoscaleSettings,
+      indexing_policy: this._indexingPolicy,
       timeouts: this._timeouts,
       unique_key: this._uniqueKey,
     };

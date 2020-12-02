@@ -15,6 +15,7 @@ export interface HdinsightMlServicesClusterConfig extends TerraformMetaArguments
   readonly rstudio: boolean;
   readonly tags?: { [key: string]: string };
   readonly tier: string;
+  readonly tlsMinVersion?: string;
   /** gateway block */
   readonly gateway: HdinsightMlServicesClusterGateway[];
   /** roles block */
@@ -25,7 +26,7 @@ export interface HdinsightMlServicesClusterConfig extends TerraformMetaArguments
   readonly timeouts?: HdinsightMlServicesClusterTimeouts;
 }
 export interface HdinsightMlServicesClusterGateway {
-  readonly enabled: boolean;
+  readonly enabled?: boolean;
   readonly password: string;
   readonly username: string;
 }
@@ -111,6 +112,7 @@ export class HdinsightMlServicesCluster extends TerraformResource {
     this._rstudio = config.rstudio;
     this._tags = config.tags;
     this._tier = config.tier;
+    this._tlsMinVersion = config.tlsMinVersion;
     this._gateway = config.gateway;
     this._roles = config.roles;
     this._storageAccount = config.storageAccount;
@@ -235,6 +237,22 @@ export class HdinsightMlServicesCluster extends TerraformResource {
     return this._tier
   }
 
+  // tls_min_version - computed: false, optional: true, required: false
+  private _tlsMinVersion?: string;
+  public get tlsMinVersion() {
+    return this.getStringAttribute('tls_min_version');
+  }
+  public set tlsMinVersion(value: string ) {
+    this._tlsMinVersion = value;
+  }
+  public resetTlsMinVersion() {
+    this._tlsMinVersion = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tlsMinVersionInput() {
+    return this._tlsMinVersion
+  }
+
   // gateway - computed: false, optional: false, required: true
   private _gateway: HdinsightMlServicesClusterGateway[];
   public get gateway() {
@@ -306,6 +324,7 @@ export class HdinsightMlServicesCluster extends TerraformResource {
       rstudio: this._rstudio,
       tags: this._tags,
       tier: this._tier,
+      tls_min_version: this._tlsMinVersion,
       gateway: this._gateway,
       roles: this._roles,
       storage_account: this._storageAccount,

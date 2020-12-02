@@ -27,9 +27,31 @@ export class DataAzurermApiManagementAdditionalLocation extends ComplexComputedL
     return this.getStringAttribute('location');
   }
 
+  // private_ip_addresses - computed: true, optional: false, required: false
+  public get privateIpAddresses() {
+    return this.getListAttribute('private_ip_addresses');
+  }
+
   // public_ip_addresses - computed: true, optional: false, required: false
   public get publicIpAddresses() {
     return this.getListAttribute('public_ip_addresses');
+  }
+}
+export class DataAzurermApiManagementHostnameConfigurationDeveloperPortal extends ComplexComputedList {
+
+  // host_name - computed: true, optional: false, required: false
+  public get hostName() {
+    return this.getStringAttribute('host_name');
+  }
+
+  // key_vault_id - computed: true, optional: false, required: false
+  public get keyVaultId() {
+    return this.getStringAttribute('key_vault_id');
+  }
+
+  // negotiate_client_certificate - computed: true, optional: false, required: false
+  public get negotiateClientCertificate() {
+    return this.getBooleanAttribute('negotiate_client_certificate');
   }
 }
 export class DataAzurermApiManagementHostnameConfigurationManagement extends ComplexComputedList {
@@ -107,6 +129,11 @@ export class DataAzurermApiManagementHostnameConfigurationScm extends ComplexCom
 }
 export class DataAzurermApiManagementHostnameConfiguration extends ComplexComputedList {
 
+  // developer_portal - computed: true, optional: false, required: false
+  public get developerPortal() {
+    return this.interpolationForAttribute('developer_portal') as any;
+  }
+
   // management - computed: true, optional: false, required: false
   public get management() {
     return this.interpolationForAttribute('management') as any;
@@ -125,6 +152,28 @@ export class DataAzurermApiManagementHostnameConfiguration extends ComplexComput
   // scm - computed: true, optional: false, required: false
   public get scm() {
     return this.interpolationForAttribute('scm') as any;
+  }
+}
+export class DataAzurermApiManagementIdentity extends ComplexComputedList {
+
+  // identity_ids - computed: true, optional: false, required: false
+  public get identityIds() {
+    return this.getListAttribute('identity_ids');
+  }
+
+  // principal_id - computed: true, optional: false, required: false
+  public get principalId() {
+    return this.getStringAttribute('principal_id');
+  }
+
+  // tenant_id - computed: true, optional: false, required: false
+  public get tenantId() {
+    return this.getStringAttribute('tenant_id');
+  }
+
+  // type - computed: true, optional: false, required: false
+  public get type() {
+    return this.getStringAttribute('type');
   }
 }
 export interface DataAzurermApiManagementTimeouts {
@@ -164,6 +213,11 @@ export class DataAzurermApiManagement extends TerraformDataSource {
     return new DataAzurermApiManagementAdditionalLocation(this, 'additional_location', index);
   }
 
+  // developer_portal_url - computed: true, optional: false, required: false
+  public get developerPortalUrl() {
+    return this.getStringAttribute('developer_portal_url');
+  }
+
   // gateway_regional_url - computed: true, optional: false, required: false
   public get gatewayRegionalUrl() {
     return this.getStringAttribute('gateway_regional_url');
@@ -182,6 +236,11 @@ export class DataAzurermApiManagement extends TerraformDataSource {
   // id - computed: true, optional: true, required: false
   public get id() {
     return this.getStringAttribute('id');
+  }
+
+  // identity - computed: true, optional: false, required: false
+  public identity(index: string) {
+    return new DataAzurermApiManagementIdentity(this, 'identity', index);
   }
 
   // location - computed: true, optional: false, required: false
@@ -215,6 +274,11 @@ export class DataAzurermApiManagement extends TerraformDataSource {
   // portal_url - computed: true, optional: false, required: false
   public get portalUrl() {
     return this.getStringAttribute('portal_url');
+  }
+
+  // private_ip_addresses - computed: true, optional: false, required: false
+  public get privateIpAddresses() {
+    return this.getListAttribute('private_ip_addresses');
   }
 
   // public_ip_addresses - computed: true, optional: false, required: false

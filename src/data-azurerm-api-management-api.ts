@@ -164,6 +164,11 @@ export class DataAzurermApiManagementApi extends TerraformDataSource {
     return new DataAzurermApiManagementApiSubscriptionKeyParameterNames(this, 'subscription_key_parameter_names', index);
   }
 
+  // subscription_required - computed: true, optional: false, required: false
+  public get subscriptionRequired() {
+    return this.getBooleanAttribute('subscription_required');
+  }
+
   // version - computed: true, optional: false, required: false
   public get version() {
     return this.getStringAttribute('version');

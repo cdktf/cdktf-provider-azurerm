@@ -21,6 +21,8 @@ export interface ContainerGroupConfig extends TerraformMetaArguments {
   readonly container: ContainerGroupContainer[];
   /** diagnostics block */
   readonly diagnostics?: ContainerGroupDiagnostics[];
+  /** dns_config block */
+  readonly dnsConfig?: ContainerGroupDnsConfig[];
   /** identity block */
   readonly identity?: ContainerGroupIdentity[];
   /** image_registry_credential block */
@@ -66,13 +68,21 @@ export interface ContainerGroupContainerReadinessProbe {
   /** http_get block */
   readonly httpGet?: ContainerGroupContainerReadinessProbeHttpGet[];
 }
+export interface ContainerGroupContainerVolumeGitRepo {
+  readonly directory?: string;
+  readonly revision?: string;
+  readonly url: string;
+}
 export interface ContainerGroupContainerVolume {
   readonly mountPath: string;
   readonly name: string;
   readonly readOnly?: boolean;
-  readonly shareName: string;
-  readonly storageAccountKey: string;
-  readonly storageAccountName: string;
+  readonly secret?: { [key: string]: string };
+  readonly shareName?: string;
+  readonly storageAccountKey?: string;
+  readonly storageAccountName?: string;
+  /** git_repo block */
+  readonly gitRepo?: ContainerGroupContainerVolumeGitRepo[];
 }
 export interface ContainerGroupContainer {
   readonly commands?: string[];
@@ -102,6 +112,11 @@ export interface ContainerGroupDiagnosticsLogAnalytics {
 export interface ContainerGroupDiagnostics {
   /** log_analytics block */
   readonly logAnalytics: ContainerGroupDiagnosticsLogAnalytics[];
+}
+export interface ContainerGroupDnsConfig {
+  readonly nameservers: string[];
+  readonly options: string[];
+  readonly searchDomains: string[];
 }
 export interface ContainerGroupIdentity {
   readonly identityIds?: string[];
@@ -149,6 +164,7 @@ export class ContainerGroup extends TerraformResource {
     this._tags = config.tags;
     this._container = config.container;
     this._diagnostics = config.diagnostics;
+    this._dnsConfig = config.dnsConfig;
     this._identity = config.identity;
     this._imageRegistryCredential = config.imageRegistryCredential;
     this._timeouts = config.timeouts;
@@ -334,6 +350,22 @@ export class ContainerGroup extends TerraformResource {
     return this._diagnostics
   }
 
+  // dns_config - computed: false, optional: true, required: false
+  private _dnsConfig?: ContainerGroupDnsConfig[];
+  public get dnsConfig() {
+    return this.interpolationForAttribute('dns_config') as any;
+  }
+  public set dnsConfig(value: ContainerGroupDnsConfig[] ) {
+    this._dnsConfig = value;
+  }
+  public resetDnsConfig() {
+    this._dnsConfig = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dnsConfigInput() {
+    return this._dnsConfig
+  }
+
   // identity - computed: false, optional: true, required: false
   private _identity?: ContainerGroupIdentity[];
   public get identity() {
@@ -399,6 +431,7 @@ export class ContainerGroup extends TerraformResource {
       tags: this._tags,
       container: this._container,
       diagnostics: this._diagnostics,
+      dns_config: this._dnsConfig,
       identity: this._identity,
       image_registry_credential: this._imageRegistryCredential,
       timeouts: this._timeouts,

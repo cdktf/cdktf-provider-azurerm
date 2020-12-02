@@ -89,6 +89,11 @@ export class DataAzurermSharedImage extends TerraformDataSource {
     return this._galleryName
   }
 
+  // hyper_v_generation - computed: true, optional: false, required: false
+  public get hyperVGeneration() {
+    return this.getStringAttribute('hyper_v_generation');
+  }
+
   // id - computed: true, optional: true, required: false
   public get id() {
     return this.getStringAttribute('id');
@@ -143,6 +148,11 @@ export class DataAzurermSharedImage extends TerraformDataSource {
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
     return this._resourceGroupName
+  }
+
+  // specialized - computed: true, optional: false, required: false
+  public get specialized() {
+    return this.getBooleanAttribute('specialized');
   }
 
   // tags - computed: true, optional: false, required: false

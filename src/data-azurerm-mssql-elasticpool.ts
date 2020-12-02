@@ -53,6 +53,11 @@ export class DataAzurermMssqlElasticpool extends TerraformDataSource {
     return this.getStringAttribute('id');
   }
 
+  // license_type - computed: true, optional: false, required: false
+  public get licenseType() {
+    return this.getStringAttribute('license_type');
+  }
+
   // location - computed: true, optional: false, required: false
   public get location() {
     return this.getStringAttribute('location');

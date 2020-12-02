@@ -8,12 +8,13 @@ import { TerraformMetaArguments } from 'cdktf';
 // Configuration
 
 export interface VirtualHubConfig extends TerraformMetaArguments {
-  readonly addressPrefix: string;
+  readonly addressPrefix?: string;
   readonly location: string;
   readonly name: string;
   readonly resourceGroupName: string;
+  readonly sku?: string;
   readonly tags?: { [key: string]: string };
-  readonly virtualWanId: string;
+  readonly virtualWanId?: string;
   /** route block */
   readonly route?: VirtualHubRoute[];
   /** timeouts block */
@@ -53,6 +54,7 @@ export class VirtualHub extends TerraformResource {
     this._location = config.location;
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
+    this._sku = config.sku;
     this._tags = config.tags;
     this._virtualWanId = config.virtualWanId;
     this._route = config.route;
@@ -63,13 +65,16 @@ export class VirtualHub extends TerraformResource {
   // ATTRIBUTES
   // ==========
 
-  // address_prefix - computed: false, optional: false, required: true
-  private _addressPrefix: string;
+  // address_prefix - computed: false, optional: true, required: false
+  private _addressPrefix?: string;
   public get addressPrefix() {
     return this.getStringAttribute('address_prefix');
   }
-  public set addressPrefix(value: string) {
+  public set addressPrefix(value: string ) {
     this._addressPrefix = value;
+  }
+  public resetAddressPrefix() {
+    this._addressPrefix = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get addressPrefixInput() {
@@ -120,6 +125,22 @@ export class VirtualHub extends TerraformResource {
     return this._resourceGroupName
   }
 
+  // sku - computed: false, optional: true, required: false
+  private _sku?: string;
+  public get sku() {
+    return this.getStringAttribute('sku');
+  }
+  public set sku(value: string ) {
+    this._sku = value;
+  }
+  public resetSku() {
+    this._sku = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get skuInput() {
+    return this._sku
+  }
+
   // tags - computed: false, optional: true, required: false
   private _tags?: { [key: string]: string };
   public get tags() {
@@ -136,13 +157,16 @@ export class VirtualHub extends TerraformResource {
     return this._tags
   }
 
-  // virtual_wan_id - computed: false, optional: false, required: true
-  private _virtualWanId: string;
+  // virtual_wan_id - computed: false, optional: true, required: false
+  private _virtualWanId?: string;
   public get virtualWanId() {
     return this.getStringAttribute('virtual_wan_id');
   }
-  public set virtualWanId(value: string) {
+  public set virtualWanId(value: string ) {
     this._virtualWanId = value;
+  }
+  public resetVirtualWanId() {
+    this._virtualWanId = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get virtualWanIdInput() {
@@ -191,6 +215,7 @@ export class VirtualHub extends TerraformResource {
       location: this._location,
       name: this._name,
       resource_group_name: this._resourceGroupName,
+      sku: this._sku,
       tags: this._tags,
       virtual_wan_id: this._virtualWanId,
       route: this._route,

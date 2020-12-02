@@ -67,12 +67,12 @@ export class BotChannelMsTeams extends TerraformResource {
     return this._botName
   }
 
-  // calling_web_hook - computed: false, optional: true, required: false
+  // calling_web_hook - computed: true, optional: true, required: false
   private _callingWebHook?: string;
   public get callingWebHook() {
     return this.getStringAttribute('calling_web_hook');
   }
-  public set callingWebHook(value: string ) {
+  public set callingWebHook(value: string) {
     this._callingWebHook = value;
   }
   public resetCallingWebHook() {

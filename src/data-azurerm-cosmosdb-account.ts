@@ -110,6 +110,11 @@ export class DataAzurermCosmosdbAccount extends TerraformDataSource {
     return this.getBooleanAttribute('enable_automatic_failover');
   }
 
+  // enable_free_tier - computed: true, optional: false, required: false
+  public get enableFreeTier() {
+    return this.getBooleanAttribute('enable_free_tier');
+  }
+
   // enable_multiple_write_locations - computed: true, optional: false, required: false
   public get enableMultipleWriteLocations() {
     return this.getBooleanAttribute('enable_multiple_write_locations');
@@ -140,6 +145,11 @@ export class DataAzurermCosmosdbAccount extends TerraformDataSource {
     return this.getBooleanAttribute('is_virtual_network_filter_enabled');
   }
 
+  // key_vault_key_id - computed: true, optional: false, required: false
+  public get keyVaultKeyId() {
+    return this.getStringAttribute('key_vault_key_id');
+  }
+
   // kind - computed: true, optional: false, required: false
   public get kind() {
     return this.getStringAttribute('kind');
@@ -168,9 +178,19 @@ export class DataAzurermCosmosdbAccount extends TerraformDataSource {
     return this.getStringAttribute('offer_type');
   }
 
+  // primary_key - computed: true, optional: false, required: false
+  public get primaryKey() {
+    return this.getStringAttribute('primary_key');
+  }
+
   // primary_master_key - computed: true, optional: false, required: false
   public get primaryMasterKey() {
     return this.getStringAttribute('primary_master_key');
+  }
+
+  // primary_readonly_key - computed: true, optional: false, required: false
+  public get primaryReadonlyKey() {
+    return this.getStringAttribute('primary_readonly_key');
   }
 
   // primary_readonly_master_key - computed: true, optional: false, required: false
@@ -196,9 +216,19 @@ export class DataAzurermCosmosdbAccount extends TerraformDataSource {
     return this._resourceGroupName
   }
 
+  // secondary_key - computed: true, optional: false, required: false
+  public get secondaryKey() {
+    return this.getStringAttribute('secondary_key');
+  }
+
   // secondary_master_key - computed: true, optional: false, required: false
   public get secondaryMasterKey() {
     return this.getStringAttribute('secondary_master_key');
+  }
+
+  // secondary_readonly_key - computed: true, optional: false, required: false
+  public get secondaryReadonlyKey() {
+    return this.getStringAttribute('secondary_readonly_key');
   }
 
   // secondary_readonly_master_key - computed: true, optional: false, required: false

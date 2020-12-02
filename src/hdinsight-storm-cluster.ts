@@ -14,10 +14,15 @@ export interface HdinsightStormClusterConfig extends TerraformMetaArguments {
   readonly resourceGroupName: string;
   readonly tags?: { [key: string]: string };
   readonly tier: string;
+  readonly tlsMinVersion?: string;
   /** component_version block */
   readonly componentVersion: HdinsightStormClusterComponentVersion[];
   /** gateway block */
   readonly gateway: HdinsightStormClusterGateway[];
+  /** metastores block */
+  readonly metastores?: HdinsightStormClusterMetastores[];
+  /** monitor block */
+  readonly monitor?: HdinsightStormClusterMonitor[];
   /** roles block */
   readonly roles: HdinsightStormClusterRoles[];
   /** storage_account block */
@@ -29,9 +34,39 @@ export interface HdinsightStormClusterComponentVersion {
   readonly storm: string;
 }
 export interface HdinsightStormClusterGateway {
-  readonly enabled: boolean;
+  readonly enabled?: boolean;
   readonly password: string;
   readonly username: string;
+}
+export interface HdinsightStormClusterMetastoresAmbari {
+  readonly databaseName: string;
+  readonly password: string;
+  readonly server: string;
+  readonly username: string;
+}
+export interface HdinsightStormClusterMetastoresHive {
+  readonly databaseName: string;
+  readonly password: string;
+  readonly server: string;
+  readonly username: string;
+}
+export interface HdinsightStormClusterMetastoresOozie {
+  readonly databaseName: string;
+  readonly password: string;
+  readonly server: string;
+  readonly username: string;
+}
+export interface HdinsightStormClusterMetastores {
+  /** ambari block */
+  readonly ambari?: HdinsightStormClusterMetastoresAmbari[];
+  /** hive block */
+  readonly hive?: HdinsightStormClusterMetastoresHive[];
+  /** oozie block */
+  readonly oozie?: HdinsightStormClusterMetastoresOozie[];
+}
+export interface HdinsightStormClusterMonitor {
+  readonly logAnalyticsWorkspaceId: string;
+  readonly primaryKey: string;
 }
 export interface HdinsightStormClusterRolesHeadNode {
   readonly password?: string;
@@ -104,8 +139,11 @@ export class HdinsightStormCluster extends TerraformResource {
     this._resourceGroupName = config.resourceGroupName;
     this._tags = config.tags;
     this._tier = config.tier;
+    this._tlsMinVersion = config.tlsMinVersion;
     this._componentVersion = config.componentVersion;
     this._gateway = config.gateway;
+    this._metastores = config.metastores;
+    this._monitor = config.monitor;
     this._roles = config.roles;
     this._storageAccount = config.storageAccount;
     this._timeouts = config.timeouts;
@@ -211,6 +249,22 @@ export class HdinsightStormCluster extends TerraformResource {
     return this._tier
   }
 
+  // tls_min_version - computed: false, optional: true, required: false
+  private _tlsMinVersion?: string;
+  public get tlsMinVersion() {
+    return this.getStringAttribute('tls_min_version');
+  }
+  public set tlsMinVersion(value: string ) {
+    this._tlsMinVersion = value;
+  }
+  public resetTlsMinVersion() {
+    this._tlsMinVersion = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tlsMinVersionInput() {
+    return this._tlsMinVersion
+  }
+
   // component_version - computed: false, optional: false, required: true
   private _componentVersion: HdinsightStormClusterComponentVersion[];
   public get componentVersion() {
@@ -235,6 +289,38 @@ export class HdinsightStormCluster extends TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get gatewayInput() {
     return this._gateway
+  }
+
+  // metastores - computed: false, optional: true, required: false
+  private _metastores?: HdinsightStormClusterMetastores[];
+  public get metastores() {
+    return this.interpolationForAttribute('metastores') as any;
+  }
+  public set metastores(value: HdinsightStormClusterMetastores[] ) {
+    this._metastores = value;
+  }
+  public resetMetastores() {
+    this._metastores = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get metastoresInput() {
+    return this._metastores
+  }
+
+  // monitor - computed: false, optional: true, required: false
+  private _monitor?: HdinsightStormClusterMonitor[];
+  public get monitor() {
+    return this.interpolationForAttribute('monitor') as any;
+  }
+  public set monitor(value: HdinsightStormClusterMonitor[] ) {
+    this._monitor = value;
+  }
+  public resetMonitor() {
+    this._monitor = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get monitorInput() {
+    return this._monitor
   }
 
   // roles - computed: false, optional: false, required: true
@@ -294,8 +380,11 @@ export class HdinsightStormCluster extends TerraformResource {
       resource_group_name: this._resourceGroupName,
       tags: this._tags,
       tier: this._tier,
+      tls_min_version: this._tlsMinVersion,
       component_version: this._componentVersion,
       gateway: this._gateway,
+      metastores: this._metastores,
+      monitor: this._monitor,
       roles: this._roles,
       storage_account: this._storageAccount,
       timeouts: this._timeouts,

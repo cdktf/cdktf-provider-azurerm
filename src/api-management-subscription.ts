@@ -8,10 +8,11 @@ import { TerraformMetaArguments } from 'cdktf';
 // Configuration
 
 export interface ApiManagementSubscriptionConfig extends TerraformMetaArguments {
+  readonly allowTracing?: boolean;
   readonly apiManagementName: string;
   readonly displayName: string;
   readonly primaryKey?: string;
-  readonly productId: string;
+  readonly productId?: string;
   readonly resourceGroupName: string;
   readonly secondaryKey?: string;
   readonly state?: string;
@@ -46,6 +47,7 @@ export class ApiManagementSubscription extends TerraformResource {
       count: config.count,
       lifecycle: config.lifecycle
     });
+    this._allowTracing = config.allowTracing;
     this._apiManagementName = config.apiManagementName;
     this._displayName = config.displayName;
     this._primaryKey = config.primaryKey;
@@ -61,6 +63,22 @@ export class ApiManagementSubscription extends TerraformResource {
   // ==========
   // ATTRIBUTES
   // ==========
+
+  // allow_tracing - computed: false, optional: true, required: false
+  private _allowTracing?: boolean;
+  public get allowTracing() {
+    return this.getBooleanAttribute('allow_tracing');
+  }
+  public set allowTracing(value: boolean ) {
+    this._allowTracing = value;
+  }
+  public resetAllowTracing() {
+    this._allowTracing = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get allowTracingInput() {
+    return this._allowTracing
+  }
 
   // api_management_name - computed: false, optional: false, required: true
   private _apiManagementName: string;
@@ -109,13 +127,16 @@ export class ApiManagementSubscription extends TerraformResource {
     return this._primaryKey
   }
 
-  // product_id - computed: false, optional: false, required: true
-  private _productId: string;
+  // product_id - computed: false, optional: true, required: false
+  private _productId?: string;
   public get productId() {
     return this.getStringAttribute('product_id');
   }
-  public set productId(value: string) {
+  public set productId(value: string ) {
     this._productId = value;
+  }
+  public resetProductId() {
+    this._productId = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get productIdInput() {
@@ -218,6 +239,7 @@ export class ApiManagementSubscription extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      allow_tracing: this._allowTracing,
       api_management_name: this._apiManagementName,
       display_name: this._displayName,
       primary_key: this._primaryKey,

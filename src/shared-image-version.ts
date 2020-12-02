@@ -12,8 +12,9 @@ export interface SharedImageVersionConfig extends TerraformMetaArguments {
   readonly galleryName: string;
   readonly imageName: string;
   readonly location: string;
-  readonly managedImageId: string;
+  readonly managedImageId?: string;
   readonly name: string;
+  readonly osDiskSnapshotId?: string;
   readonly resourceGroupName: string;
   readonly tags?: { [key: string]: string };
   /** target_region block */
@@ -58,6 +59,7 @@ export class SharedImageVersion extends TerraformResource {
     this._location = config.location;
     this._managedImageId = config.managedImageId;
     this._name = config.name;
+    this._osDiskSnapshotId = config.osDiskSnapshotId;
     this._resourceGroupName = config.resourceGroupName;
     this._tags = config.tags;
     this._targetRegion = config.targetRegion;
@@ -128,13 +130,16 @@ export class SharedImageVersion extends TerraformResource {
     return this._location
   }
 
-  // managed_image_id - computed: false, optional: false, required: true
-  private _managedImageId: string;
+  // managed_image_id - computed: false, optional: true, required: false
+  private _managedImageId?: string;
   public get managedImageId() {
     return this.getStringAttribute('managed_image_id');
   }
-  public set managedImageId(value: string) {
+  public set managedImageId(value: string ) {
     this._managedImageId = value;
+  }
+  public resetManagedImageId() {
+    this._managedImageId = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get managedImageIdInput() {
@@ -152,6 +157,22 @@ export class SharedImageVersion extends TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
     return this._name
+  }
+
+  // os_disk_snapshot_id - computed: false, optional: true, required: false
+  private _osDiskSnapshotId?: string;
+  public get osDiskSnapshotId() {
+    return this.getStringAttribute('os_disk_snapshot_id');
+  }
+  public set osDiskSnapshotId(value: string ) {
+    this._osDiskSnapshotId = value;
+  }
+  public resetOsDiskSnapshotId() {
+    this._osDiskSnapshotId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get osDiskSnapshotIdInput() {
+    return this._osDiskSnapshotId
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -224,6 +245,7 @@ export class SharedImageVersion extends TerraformResource {
       location: this._location,
       managed_image_id: this._managedImageId,
       name: this._name,
+      os_disk_snapshot_id: this._osDiskSnapshotId,
       resource_group_name: this._resourceGroupName,
       tags: this._tags,
       target_region: this._targetRegion,

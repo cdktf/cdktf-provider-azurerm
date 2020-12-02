@@ -127,6 +127,16 @@ export class DataAzurermSharedImageVersion extends TerraformDataSource {
     return this._name
   }
 
+  // os_disk_image_size_gb - computed: true, optional: false, required: false
+  public get osDiskImageSizeGb() {
+    return this.getNumberAttribute('os_disk_image_size_gb');
+  }
+
+  // os_disk_snapshot_id - computed: true, optional: false, required: false
+  public get osDiskSnapshotId() {
+    return this.getStringAttribute('os_disk_snapshot_id');
+  }
+
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {

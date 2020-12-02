@@ -8,6 +8,7 @@ import { TerraformMetaArguments } from 'cdktf';
 // Configuration
 
 export interface PointToSiteVpnGatewayConfig extends TerraformMetaArguments {
+  readonly dnsServers?: string[];
   readonly location: string;
   readonly name: string;
   readonly resourceGroupName: string;
@@ -20,11 +21,22 @@ export interface PointToSiteVpnGatewayConfig extends TerraformMetaArguments {
   /** timeouts block */
   readonly timeouts?: PointToSiteVpnGatewayTimeouts;
 }
+export interface PointToSiteVpnGatewayConnectionConfigurationRoutePropagatedRouteTable {
+  readonly ids: string[];
+  readonly labels?: string[];
+}
+export interface PointToSiteVpnGatewayConnectionConfigurationRoute {
+  readonly associatedRouteTableId: string;
+  /** propagated_route_table block */
+  readonly propagatedRouteTable?: PointToSiteVpnGatewayConnectionConfigurationRoutePropagatedRouteTable[];
+}
 export interface PointToSiteVpnGatewayConnectionConfigurationVpnClientAddressPool {
   readonly addressPrefixes: string[];
 }
 export interface PointToSiteVpnGatewayConnectionConfiguration {
   readonly name: string;
+  /** route block */
+  readonly route?: PointToSiteVpnGatewayConnectionConfigurationRoute[];
   /** vpn_client_address_pool block */
   readonly vpnClientAddressPool: PointToSiteVpnGatewayConnectionConfigurationVpnClientAddressPool[];
 }
@@ -54,6 +66,7 @@ export class PointToSiteVpnGateway extends TerraformResource {
       count: config.count,
       lifecycle: config.lifecycle
     });
+    this._dnsServers = config.dnsServers;
     this._location = config.location;
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
@@ -68,6 +81,22 @@ export class PointToSiteVpnGateway extends TerraformResource {
   // ==========
   // ATTRIBUTES
   // ==========
+
+  // dns_servers - computed: false, optional: true, required: false
+  private _dnsServers?: string[];
+  public get dnsServers() {
+    return this.getListAttribute('dns_servers');
+  }
+  public set dnsServers(value: string[] ) {
+    this._dnsServers = value;
+  }
+  public resetDnsServers() {
+    this._dnsServers = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dnsServersInput() {
+    return this._dnsServers
+  }
 
   // id - computed: true, optional: true, required: false
   public get id() {
@@ -203,6 +232,7 @@ export class PointToSiteVpnGateway extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      dns_servers: this._dnsServers,
       location: this._location,
       name: this._name,
       resource_group_name: this._resourceGroupName,

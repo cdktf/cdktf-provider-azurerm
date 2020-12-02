@@ -14,6 +14,7 @@ export interface NetappPoolConfig extends TerraformMetaArguments {
   readonly resourceGroupName: string;
   readonly serviceLevel: string;
   readonly sizeInTb: number;
+  readonly tags?: { [key: string]: string };
   /** timeouts block */
   readonly timeouts?: NetappPoolTimeouts;
 }
@@ -49,6 +50,7 @@ export class NetappPool extends TerraformResource {
     this._resourceGroupName = config.resourceGroupName;
     this._serviceLevel = config.serviceLevel;
     this._sizeInTb = config.sizeInTb;
+    this._tags = config.tags;
     this._timeouts = config.timeouts;
   }
 
@@ -139,6 +141,22 @@ export class NetappPool extends TerraformResource {
     return this._sizeInTb
   }
 
+  // tags - computed: false, optional: true, required: false
+  private _tags?: { [key: string]: string };
+  public get tags() {
+    return this.interpolationForAttribute('tags') as any;
+  }
+  public set tags(value: { [key: string]: string } ) {
+    this._tags = value;
+  }
+  public resetTags() {
+    this._tags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsInput() {
+    return this._tags
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: NetappPoolTimeouts;
   public get timeouts() {
@@ -167,6 +185,7 @@ export class NetappPool extends TerraformResource {
       resource_group_name: this._resourceGroupName,
       service_level: this._serviceLevel,
       size_in_tb: this._sizeInTb,
+      tags: this._tags,
       timeouts: this._timeouts,
     };
   }

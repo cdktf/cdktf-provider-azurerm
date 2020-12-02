@@ -109,12 +109,12 @@ export class NatGateway extends TerraformResource {
     return this._name
   }
 
-  // public_ip_address_ids - computed: false, optional: true, required: false
+  // public_ip_address_ids - computed: true, optional: true, required: false
   private _publicIpAddressIds?: string[];
   public get publicIpAddressIds() {
     return this.getListAttribute('public_ip_address_ids');
   }
-  public set publicIpAddressIds(value: string[] ) {
+  public set publicIpAddressIds(value: string[]) {
     this._publicIpAddressIds = value;
   }
   public resetPublicIpAddressIds() {

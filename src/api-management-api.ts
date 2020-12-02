@@ -18,10 +18,15 @@ export interface ApiManagementApiConfig extends TerraformMetaArguments {
   readonly revision: string;
   readonly serviceUrl?: string;
   readonly soapPassThrough?: boolean;
+  readonly subscriptionRequired?: boolean;
   readonly version?: string;
   readonly versionSetId?: string;
   /** import block */
   readonly import?: ApiManagementApiImport[];
+  /** oauth2_authorization block */
+  readonly oauth2Authorization?: ApiManagementApiOauth2Authorization[];
+  /** openid_authentication block */
+  readonly openidAuthentication?: ApiManagementApiOpenidAuthentication[];
   /** subscription_key_parameter_names block */
   readonly subscriptionKeyParameterNames?: ApiManagementApiSubscriptionKeyParameterNames[];
   /** timeouts block */
@@ -36,6 +41,14 @@ export interface ApiManagementApiImport {
   readonly contentValue: string;
   /** wsdl_selector block */
   readonly wsdlSelector?: ApiManagementApiImportWsdlSelector[];
+}
+export interface ApiManagementApiOauth2Authorization {
+  readonly authorizationServerName: string;
+  readonly scope?: string;
+}
+export interface ApiManagementApiOpenidAuthentication {
+  readonly bearerTokenSendingMethods?: string[];
+  readonly openidProviderName: string;
 }
 export interface ApiManagementApiSubscriptionKeyParameterNames {
   readonly header: string;
@@ -77,9 +90,12 @@ export class ApiManagementApi extends TerraformResource {
     this._revision = config.revision;
     this._serviceUrl = config.serviceUrl;
     this._soapPassThrough = config.soapPassThrough;
+    this._subscriptionRequired = config.subscriptionRequired;
     this._version = config.version;
     this._versionSetId = config.versionSetId;
     this._import = config.import;
+    this._oauth2Authorization = config.oauth2Authorization;
+    this._openidAuthentication = config.openidAuthentication;
     this._subscriptionKeyParameterNames = config.subscriptionKeyParameterNames;
     this._timeouts = config.timeouts;
   }
@@ -242,6 +258,22 @@ export class ApiManagementApi extends TerraformResource {
     return this._soapPassThrough
   }
 
+  // subscription_required - computed: false, optional: true, required: false
+  private _subscriptionRequired?: boolean;
+  public get subscriptionRequired() {
+    return this.getBooleanAttribute('subscription_required');
+  }
+  public set subscriptionRequired(value: boolean ) {
+    this._subscriptionRequired = value;
+  }
+  public resetSubscriptionRequired() {
+    this._subscriptionRequired = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get subscriptionRequiredInput() {
+    return this._subscriptionRequired
+  }
+
   // version - computed: true, optional: true, required: false
   private _version?: string;
   public get version() {
@@ -288,6 +320,38 @@ export class ApiManagementApi extends TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get importInput() {
     return this._import
+  }
+
+  // oauth2_authorization - computed: false, optional: true, required: false
+  private _oauth2Authorization?: ApiManagementApiOauth2Authorization[];
+  public get oauth2Authorization() {
+    return this.interpolationForAttribute('oauth2_authorization') as any;
+  }
+  public set oauth2Authorization(value: ApiManagementApiOauth2Authorization[] ) {
+    this._oauth2Authorization = value;
+  }
+  public resetOauth2Authorization() {
+    this._oauth2Authorization = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get oauth2AuthorizationInput() {
+    return this._oauth2Authorization
+  }
+
+  // openid_authentication - computed: false, optional: true, required: false
+  private _openidAuthentication?: ApiManagementApiOpenidAuthentication[];
+  public get openidAuthentication() {
+    return this.interpolationForAttribute('openid_authentication') as any;
+  }
+  public set openidAuthentication(value: ApiManagementApiOpenidAuthentication[] ) {
+    this._openidAuthentication = value;
+  }
+  public resetOpenidAuthentication() {
+    this._openidAuthentication = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get openidAuthenticationInput() {
+    return this._openidAuthentication
   }
 
   // subscription_key_parameter_names - computed: false, optional: true, required: false
@@ -338,9 +402,12 @@ export class ApiManagementApi extends TerraformResource {
       revision: this._revision,
       service_url: this._serviceUrl,
       soap_pass_through: this._soapPassThrough,
+      subscription_required: this._subscriptionRequired,
       version: this._version,
       version_set_id: this._versionSetId,
       import: this._import,
+      oauth2_authorization: this._oauth2Authorization,
+      openid_authentication: this._openidAuthentication,
       subscription_key_parameter_names: this._subscriptionKeyParameterNames,
       timeouts: this._timeouts,
     };

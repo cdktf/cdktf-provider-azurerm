@@ -8,7 +8,9 @@ import { TerraformMetaArguments } from 'cdktf';
 // Configuration
 
 export interface LogicAppWorkflowConfig extends TerraformMetaArguments {
+  readonly integrationServiceEnvironmentId?: string;
   readonly location: string;
+  readonly logicAppIntegrationAccountId?: string;
   readonly name: string;
   readonly parameters?: { [key: string]: string };
   readonly resourceGroupName: string;
@@ -44,7 +46,9 @@ export class LogicAppWorkflow extends TerraformResource {
       count: config.count,
       lifecycle: config.lifecycle
     });
+    this._integrationServiceEnvironmentId = config.integrationServiceEnvironmentId;
     this._location = config.location;
+    this._logicAppIntegrationAccountId = config.logicAppIntegrationAccountId;
     this._name = config.name;
     this._parameters = config.parameters;
     this._resourceGroupName = config.resourceGroupName;
@@ -63,9 +67,35 @@ export class LogicAppWorkflow extends TerraformResource {
     return this.getStringAttribute('access_endpoint');
   }
 
+  // connector_endpoint_ip_addresses - computed: true, optional: false, required: false
+  public get connectorEndpointIpAddresses() {
+    return this.getListAttribute('connector_endpoint_ip_addresses');
+  }
+
+  // connector_outbound_ip_addresses - computed: true, optional: false, required: false
+  public get connectorOutboundIpAddresses() {
+    return this.getListAttribute('connector_outbound_ip_addresses');
+  }
+
   // id - computed: true, optional: true, required: false
   public get id() {
     return this.getStringAttribute('id');
+  }
+
+  // integration_service_environment_id - computed: false, optional: true, required: false
+  private _integrationServiceEnvironmentId?: string;
+  public get integrationServiceEnvironmentId() {
+    return this.getStringAttribute('integration_service_environment_id');
+  }
+  public set integrationServiceEnvironmentId(value: string ) {
+    this._integrationServiceEnvironmentId = value;
+  }
+  public resetIntegrationServiceEnvironmentId() {
+    this._integrationServiceEnvironmentId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get integrationServiceEnvironmentIdInput() {
+    return this._integrationServiceEnvironmentId
   }
 
   // location - computed: false, optional: false, required: true
@@ -79,6 +109,22 @@ export class LogicAppWorkflow extends TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get locationInput() {
     return this._location
+  }
+
+  // logic_app_integration_account_id - computed: false, optional: true, required: false
+  private _logicAppIntegrationAccountId?: string;
+  public get logicAppIntegrationAccountId() {
+    return this.getStringAttribute('logic_app_integration_account_id');
+  }
+  public set logicAppIntegrationAccountId(value: string ) {
+    this._logicAppIntegrationAccountId = value;
+  }
+  public resetLogicAppIntegrationAccountId() {
+    this._logicAppIntegrationAccountId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get logicAppIntegrationAccountIdInput() {
+    return this._logicAppIntegrationAccountId
   }
 
   // name - computed: false, optional: false, required: true
@@ -139,6 +185,16 @@ export class LogicAppWorkflow extends TerraformResource {
     return this._tags
   }
 
+  // workflow_endpoint_ip_addresses - computed: true, optional: false, required: false
+  public get workflowEndpointIpAddresses() {
+    return this.getListAttribute('workflow_endpoint_ip_addresses');
+  }
+
+  // workflow_outbound_ip_addresses - computed: true, optional: false, required: false
+  public get workflowOutboundIpAddresses() {
+    return this.getListAttribute('workflow_outbound_ip_addresses');
+  }
+
   // workflow_schema - computed: false, optional: true, required: false
   private _workflowSchema?: string;
   public get workflowSchema() {
@@ -193,7 +249,9 @@ export class LogicAppWorkflow extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      integration_service_environment_id: this._integrationServiceEnvironmentId,
       location: this._location,
+      logic_app_integration_account_id: this._logicAppIntegrationAccountId,
       name: this._name,
       parameters: this._parameters,
       resource_group_name: this._resourceGroupName,

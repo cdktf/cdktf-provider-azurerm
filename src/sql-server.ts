@@ -10,6 +10,8 @@ import { TerraformMetaArguments } from 'cdktf';
 export interface SqlServerConfig extends TerraformMetaArguments {
   readonly administratorLogin: string;
   readonly administratorLoginPassword: string;
+  readonly connectionPolicy?: string;
+  readonly extendedAuditingPolicy?: SqlServerExtendedAuditingPolicy[];
   readonly location: string;
   readonly name: string;
   readonly resourceGroupName: string;
@@ -19,6 +21,12 @@ export interface SqlServerConfig extends TerraformMetaArguments {
   readonly identity?: SqlServerIdentity[];
   /** timeouts block */
   readonly timeouts?: SqlServerTimeouts;
+}
+export interface SqlServerExtendedAuditingPolicy {
+  readonly retentionInDays?: number;
+  readonly storageAccountAccessKey?: string;
+  readonly storageAccountAccessKeyIsSecondary?: boolean;
+  readonly storageEndpoint?: string;
 }
 export interface SqlServerIdentity {
   readonly type: string;
@@ -51,6 +59,8 @@ export class SqlServer extends TerraformResource {
     });
     this._administratorLogin = config.administratorLogin;
     this._administratorLoginPassword = config.administratorLoginPassword;
+    this._connectionPolicy = config.connectionPolicy;
+    this._extendedAuditingPolicy = config.extendedAuditingPolicy;
     this._location = config.location;
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
@@ -88,6 +98,38 @@ export class SqlServer extends TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get administratorLoginPasswordInput() {
     return this._administratorLoginPassword
+  }
+
+  // connection_policy - computed: false, optional: true, required: false
+  private _connectionPolicy?: string;
+  public get connectionPolicy() {
+    return this.getStringAttribute('connection_policy');
+  }
+  public set connectionPolicy(value: string ) {
+    this._connectionPolicy = value;
+  }
+  public resetConnectionPolicy() {
+    this._connectionPolicy = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get connectionPolicyInput() {
+    return this._connectionPolicy
+  }
+
+  // extended_auditing_policy - computed: true, optional: true, required: false
+  private _extendedAuditingPolicy?: SqlServerExtendedAuditingPolicy[]
+  public get extendedAuditingPolicy(): SqlServerExtendedAuditingPolicy[] {
+    return this.interpolationForAttribute('extended_auditing_policy') as any; // Getting the computed value is not yet implemented
+  }
+  public set extendedAuditingPolicy(value: SqlServerExtendedAuditingPolicy[]) {
+    this._extendedAuditingPolicy = value;
+  }
+  public resetExtendedAuditingPolicy() {
+    this._extendedAuditingPolicy = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get extendedAuditingPolicyInput() {
+    return this._extendedAuditingPolicy
   }
 
   // fully_qualified_domain_name - computed: true, optional: false, required: false
@@ -208,6 +250,8 @@ export class SqlServer extends TerraformResource {
     return {
       administrator_login: this._administratorLogin,
       administrator_login_password: this._administratorLoginPassword,
+      connection_policy: this._connectionPolicy,
+      extended_auditing_policy: this._extendedAuditingPolicy,
       location: this._location,
       name: this._name,
       resource_group_name: this._resourceGroupName,

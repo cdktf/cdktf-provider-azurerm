@@ -9,6 +9,7 @@ import { TerraformMetaArguments } from 'cdktf';
 
 export interface StorageBlobConfig extends TerraformMetaArguments {
   readonly accessTier?: string;
+  readonly contentMd5?: string;
   readonly contentType?: string;
   readonly metadata?: { [key: string]: string };
   readonly name: string;
@@ -50,6 +51,7 @@ export class StorageBlob extends TerraformResource {
       lifecycle: config.lifecycle
     });
     this._accessTier = config.accessTier;
+    this._contentMd5 = config.contentMd5;
     this._contentType = config.contentType;
     this._metadata = config.metadata;
     this._name = config.name;
@@ -82,6 +84,22 @@ export class StorageBlob extends TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get accessTierInput() {
     return this._accessTier
+  }
+
+  // content_md5 - computed: false, optional: true, required: false
+  private _contentMd5?: string;
+  public get contentMd5() {
+    return this.getStringAttribute('content_md5');
+  }
+  public set contentMd5(value: string ) {
+    this._contentMd5 = value;
+  }
+  public resetContentMd5() {
+    this._contentMd5 = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get contentMd5Input() {
+    return this._contentMd5
   }
 
   // content_type - computed: false, optional: true, required: false
@@ -281,6 +299,7 @@ export class StorageBlob extends TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       access_tier: this._accessTier,
+      content_md5: this._contentMd5,
       content_type: this._contentType,
       metadata: this._metadata,
       name: this._name,

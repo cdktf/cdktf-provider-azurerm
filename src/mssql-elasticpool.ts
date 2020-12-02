@@ -8,6 +8,7 @@ import { TerraformMetaArguments } from 'cdktf';
 // Configuration
 
 export interface MssqlElasticpoolConfig extends TerraformMetaArguments {
+  readonly licenseType?: string;
   readonly location: string;
   readonly maxSizeBytes?: number;
   readonly maxSizeGb?: number;
@@ -59,6 +60,7 @@ export class MssqlElasticpool extends TerraformResource {
       count: config.count,
       lifecycle: config.lifecycle
     });
+    this._licenseType = config.licenseType;
     this._location = config.location;
     this._maxSizeBytes = config.maxSizeBytes;
     this._maxSizeGb = config.maxSizeGb;
@@ -79,6 +81,22 @@ export class MssqlElasticpool extends TerraformResource {
   // id - computed: true, optional: true, required: false
   public get id() {
     return this.getStringAttribute('id');
+  }
+
+  // license_type - computed: true, optional: true, required: false
+  private _licenseType?: string;
+  public get licenseType() {
+    return this.getStringAttribute('license_type');
+  }
+  public set licenseType(value: string) {
+    this._licenseType = value;
+  }
+  public resetLicenseType() {
+    this._licenseType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get licenseTypeInput() {
+    return this._licenseType
   }
 
   // location - computed: false, optional: false, required: true
@@ -245,6 +263,7 @@ export class MssqlElasticpool extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      license_type: this._licenseType,
       location: this._location,
       max_size_bytes: this._maxSizeBytes,
       max_size_gb: this._maxSizeGb,

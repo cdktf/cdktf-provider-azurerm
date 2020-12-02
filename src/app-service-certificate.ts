@@ -8,6 +8,7 @@ import { TerraformMetaArguments } from 'cdktf';
 // Configuration
 
 export interface AppServiceCertificateConfig extends TerraformMetaArguments {
+  readonly hostingEnvironmentProfileId?: string;
   readonly keyVaultSecretId?: string;
   readonly location: string;
   readonly name: string;
@@ -44,6 +45,7 @@ export class AppServiceCertificate extends TerraformResource {
       count: config.count,
       lifecycle: config.lifecycle
     });
+    this._hostingEnvironmentProfileId = config.hostingEnvironmentProfileId;
     this._keyVaultSecretId = config.keyVaultSecretId;
     this._location = config.location;
     this._name = config.name;
@@ -71,6 +73,22 @@ export class AppServiceCertificate extends TerraformResource {
   // host_names - computed: true, optional: false, required: false
   public get hostNames() {
     return this.getListAttribute('host_names');
+  }
+
+  // hosting_environment_profile_id - computed: false, optional: true, required: false
+  private _hostingEnvironmentProfileId?: string;
+  public get hostingEnvironmentProfileId() {
+    return this.getStringAttribute('hosting_environment_profile_id');
+  }
+  public set hostingEnvironmentProfileId(value: string ) {
+    this._hostingEnvironmentProfileId = value;
+  }
+  public resetHostingEnvironmentProfileId() {
+    this._hostingEnvironmentProfileId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get hostingEnvironmentProfileIdInput() {
+    return this._hostingEnvironmentProfileId
   }
 
   // id - computed: true, optional: true, required: false
@@ -223,6 +241,7 @@ export class AppServiceCertificate extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      hosting_environment_profile_id: this._hostingEnvironmentProfileId,
       key_vault_secret_id: this._keyVaultSecretId,
       location: this._location,
       name: this._name,

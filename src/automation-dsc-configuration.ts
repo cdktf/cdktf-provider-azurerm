@@ -15,6 +15,7 @@ export interface AutomationDscConfigurationConfig extends TerraformMetaArguments
   readonly logVerbose?: boolean;
   readonly name: string;
   readonly resourceGroupName: string;
+  readonly tags?: { [key: string]: string };
   /** timeouts block */
   readonly timeouts?: AutomationDscConfigurationTimeouts;
 }
@@ -51,6 +52,7 @@ export class AutomationDscConfiguration extends TerraformResource {
     this._logVerbose = config.logVerbose;
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
+    this._tags = config.tags;
     this._timeouts = config.timeouts;
   }
 
@@ -165,6 +167,22 @@ export class AutomationDscConfiguration extends TerraformResource {
     return this.getStringAttribute('state');
   }
 
+  // tags - computed: false, optional: true, required: false
+  private _tags?: { [key: string]: string };
+  public get tags() {
+    return this.interpolationForAttribute('tags') as any;
+  }
+  public set tags(value: { [key: string]: string } ) {
+    this._tags = value;
+  }
+  public resetTags() {
+    this._tags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsInput() {
+    return this._tags
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: AutomationDscConfigurationTimeouts;
   public get timeouts() {
@@ -194,6 +212,7 @@ export class AutomationDscConfiguration extends TerraformResource {
       log_verbose: this._logVerbose,
       name: this._name,
       resource_group_name: this._resourceGroupName,
+      tags: this._tags,
       timeouts: this._timeouts,
     };
   }

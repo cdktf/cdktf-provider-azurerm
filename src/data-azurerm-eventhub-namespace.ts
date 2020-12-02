@@ -56,9 +56,19 @@ export class DataAzurermEventhubNamespace extends TerraformDataSource {
     return this.getNumberAttribute('capacity');
   }
 
+  // dedicated_cluster_id - computed: true, optional: false, required: false
+  public get dedicatedClusterId() {
+    return this.getStringAttribute('dedicated_cluster_id');
+  }
+
   // default_primary_connection_string - computed: true, optional: false, required: false
   public get defaultPrimaryConnectionString() {
     return this.getStringAttribute('default_primary_connection_string');
+  }
+
+  // default_primary_connection_string_alias - computed: true, optional: false, required: false
+  public get defaultPrimaryConnectionStringAlias() {
+    return this.getStringAttribute('default_primary_connection_string_alias');
   }
 
   // default_primary_key - computed: true, optional: false, required: false
@@ -69,6 +79,11 @@ export class DataAzurermEventhubNamespace extends TerraformDataSource {
   // default_secondary_connection_string - computed: true, optional: false, required: false
   public get defaultSecondaryConnectionString() {
     return this.getStringAttribute('default_secondary_connection_string');
+  }
+
+  // default_secondary_connection_string_alias - computed: true, optional: false, required: false
+  public get defaultSecondaryConnectionStringAlias() {
+    return this.getStringAttribute('default_secondary_connection_string_alias');
   }
 
   // default_secondary_key - computed: true, optional: false, required: false
@@ -130,6 +145,11 @@ export class DataAzurermEventhubNamespace extends TerraformDataSource {
   // tags - computed: true, optional: false, required: false
   public tags(key: string): string {
     return new StringMap(this, 'tags').lookup(key);
+  }
+
+  // zone_redundant - computed: true, optional: false, required: false
+  public get zoneRedundant() {
+    return this.getBooleanAttribute('zone_redundant');
   }
 
   // timeouts - computed: false, optional: true, required: false

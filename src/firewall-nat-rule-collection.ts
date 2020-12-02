@@ -24,7 +24,8 @@ export interface FirewallNatRuleCollectionRule {
   readonly destinationPorts: string[];
   readonly name: string;
   readonly protocols: string[];
-  readonly sourceAddresses: string[];
+  readonly sourceAddresses?: string[];
+  readonly sourceIpGroups?: string[];
   readonly translatedAddress: string;
   readonly translatedPort: string;
 }

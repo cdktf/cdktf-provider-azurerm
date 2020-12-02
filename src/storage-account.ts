@@ -12,9 +12,12 @@ export interface StorageAccountConfig extends TerraformMetaArguments {
   readonly accountKind?: string;
   readonly accountReplicationType: string;
   readonly accountTier: string;
+  readonly allowBlobPublicAccess?: boolean;
   readonly enableHttpsTrafficOnly?: boolean;
   readonly isHnsEnabled?: boolean;
+  readonly largeFileShareEnabled?: boolean;
   readonly location: string;
+  readonly minTlsVersion?: string;
   readonly name: string;
   readonly resourceGroupName: string;
   readonly tags?: { [key: string]: string };
@@ -132,9 +135,12 @@ export class StorageAccount extends TerraformResource {
     this._accountKind = config.accountKind;
     this._accountReplicationType = config.accountReplicationType;
     this._accountTier = config.accountTier;
+    this._allowBlobPublicAccess = config.allowBlobPublicAccess;
     this._enableHttpsTrafficOnly = config.enableHttpsTrafficOnly;
     this._isHnsEnabled = config.isHnsEnabled;
+    this._largeFileShareEnabled = config.largeFileShareEnabled;
     this._location = config.location;
+    this._minTlsVersion = config.minTlsVersion;
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
     this._tags = config.tags;
@@ -209,6 +215,22 @@ export class StorageAccount extends TerraformResource {
     return this._accountTier
   }
 
+  // allow_blob_public_access - computed: false, optional: true, required: false
+  private _allowBlobPublicAccess?: boolean;
+  public get allowBlobPublicAccess() {
+    return this.getBooleanAttribute('allow_blob_public_access');
+  }
+  public set allowBlobPublicAccess(value: boolean ) {
+    this._allowBlobPublicAccess = value;
+  }
+  public resetAllowBlobPublicAccess() {
+    this._allowBlobPublicAccess = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get allowBlobPublicAccessInput() {
+    return this._allowBlobPublicAccess
+  }
+
   // enable_https_traffic_only - computed: false, optional: true, required: false
   private _enableHttpsTrafficOnly?: boolean;
   public get enableHttpsTrafficOnly() {
@@ -246,6 +268,22 @@ export class StorageAccount extends TerraformResource {
     return this._isHnsEnabled
   }
 
+  // large_file_share_enabled - computed: true, optional: true, required: false
+  private _largeFileShareEnabled?: boolean;
+  public get largeFileShareEnabled() {
+    return this.getBooleanAttribute('large_file_share_enabled');
+  }
+  public set largeFileShareEnabled(value: boolean) {
+    this._largeFileShareEnabled = value;
+  }
+  public resetLargeFileShareEnabled() {
+    this._largeFileShareEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get largeFileShareEnabledInput() {
+    return this._largeFileShareEnabled
+  }
+
   // location - computed: false, optional: false, required: true
   private _location: string;
   public get location() {
@@ -257,6 +295,22 @@ export class StorageAccount extends TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get locationInput() {
     return this._location
+  }
+
+  // min_tls_version - computed: false, optional: true, required: false
+  private _minTlsVersion?: string;
+  public get minTlsVersion() {
+    return this.getStringAttribute('min_tls_version');
+  }
+  public set minTlsVersion(value: string ) {
+    this._minTlsVersion = value;
+  }
+  public resetMinTlsVersion() {
+    this._minTlsVersion = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get minTlsVersionInput() {
+    return this._minTlsVersion
   }
 
   // name - computed: false, optional: false, required: true
@@ -445,12 +499,12 @@ export class StorageAccount extends TerraformResource {
     return this.getStringAttribute('secondary_web_host');
   }
 
-  // tags - computed: true, optional: true, required: false
-  private _tags?: { [key: string]: string }
-  public get tags(): { [key: string]: string } {
-    return this.interpolationForAttribute('tags') as any; // Getting the computed value is not yet implemented
+  // tags - computed: false, optional: true, required: false
+  private _tags?: { [key: string]: string };
+  public get tags() {
+    return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string }) {
+  public set tags(value: { [key: string]: string } ) {
     this._tags = value;
   }
   public resetTags() {
@@ -583,9 +637,12 @@ export class StorageAccount extends TerraformResource {
       account_kind: this._accountKind,
       account_replication_type: this._accountReplicationType,
       account_tier: this._accountTier,
+      allow_blob_public_access: this._allowBlobPublicAccess,
       enable_https_traffic_only: this._enableHttpsTrafficOnly,
       is_hns_enabled: this._isHnsEnabled,
+      large_file_share_enabled: this._largeFileShareEnabled,
       location: this._location,
+      min_tls_version: this._minTlsVersion,
       name: this._name,
       resource_group_name: this._resourceGroupName,
       tags: this._tags,

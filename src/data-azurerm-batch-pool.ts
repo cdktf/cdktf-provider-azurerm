@@ -53,6 +53,11 @@ export class DataAzurermBatchPoolContainerConfigurationContainerRegistries exten
 }
 export class DataAzurermBatchPoolContainerConfiguration extends ComplexComputedList {
 
+  // container_image_names - computed: true, optional: false, required: false
+  public get containerImageNames() {
+    return this.getListAttribute('container_image_names');
+  }
+
   // container_registries - computed: true, optional: false, required: false
   public get containerRegistries() {
     return this.interpolationForAttribute('container_registries') as any;

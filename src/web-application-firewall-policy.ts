@@ -14,6 +14,8 @@ export interface WebApplicationFirewallPolicyConfig extends TerraformMetaArgumen
   readonly tags?: { [key: string]: string };
   /** custom_rules block */
   readonly customRules?: WebApplicationFirewallPolicyCustomRules[];
+  /** managed_rules block */
+  readonly managedRules: WebApplicationFirewallPolicyManagedRules[];
   /** policy_settings block */
   readonly policySettings?: WebApplicationFirewallPolicyPolicySettings[];
   /** timeouts block */
@@ -27,6 +29,7 @@ export interface WebApplicationFirewallPolicyCustomRulesMatchConditions {
   readonly matchValues: string[];
   readonly negationCondition?: boolean;
   readonly operator: string;
+  readonly transforms?: string[];
   /** match_variables block */
   readonly matchVariables: WebApplicationFirewallPolicyCustomRulesMatchConditionsMatchVariables[];
 }
@@ -38,9 +41,33 @@ export interface WebApplicationFirewallPolicyCustomRules {
   /** match_conditions block */
   readonly matchConditions: WebApplicationFirewallPolicyCustomRulesMatchConditions[];
 }
+export interface WebApplicationFirewallPolicyManagedRulesExclusion {
+  readonly matchVariable: string;
+  readonly selector: string;
+  readonly selectorMatchOperator: string;
+}
+export interface WebApplicationFirewallPolicyManagedRulesManagedRuleSetRuleGroupOverride {
+  readonly disabledRules: string[];
+  readonly ruleGroupName: string;
+}
+export interface WebApplicationFirewallPolicyManagedRulesManagedRuleSet {
+  readonly type?: string;
+  readonly version: string;
+  /** rule_group_override block */
+  readonly ruleGroupOverride?: WebApplicationFirewallPolicyManagedRulesManagedRuleSetRuleGroupOverride[];
+}
+export interface WebApplicationFirewallPolicyManagedRules {
+  /** exclusion block */
+  readonly exclusion?: WebApplicationFirewallPolicyManagedRulesExclusion[];
+  /** managed_rule_set block */
+  readonly managedRuleSet: WebApplicationFirewallPolicyManagedRulesManagedRuleSet[];
+}
 export interface WebApplicationFirewallPolicyPolicySettings {
   readonly enabled?: boolean;
+  readonly fileUploadLimitInMb?: number;
+  readonly maxRequestBodySizeInKb?: number;
   readonly mode?: string;
+  readonly requestBodyCheck?: boolean;
 }
 export interface WebApplicationFirewallPolicyTimeouts {
   readonly create?: string;
@@ -73,6 +100,7 @@ export class WebApplicationFirewallPolicy extends TerraformResource {
     this._resourceGroupName = config.resourceGroupName;
     this._tags = config.tags;
     this._customRules = config.customRules;
+    this._managedRules = config.managedRules;
     this._policySettings = config.policySettings;
     this._timeouts = config.timeouts;
   }
@@ -157,6 +185,19 @@ export class WebApplicationFirewallPolicy extends TerraformResource {
     return this._customRules
   }
 
+  // managed_rules - computed: false, optional: false, required: true
+  private _managedRules: WebApplicationFirewallPolicyManagedRules[];
+  public get managedRules() {
+    return this.interpolationForAttribute('managed_rules') as any;
+  }
+  public set managedRules(value: WebApplicationFirewallPolicyManagedRules[]) {
+    this._managedRules = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get managedRulesInput() {
+    return this._managedRules
+  }
+
   // policy_settings - computed: false, optional: true, required: false
   private _policySettings?: WebApplicationFirewallPolicyPolicySettings[];
   public get policySettings() {
@@ -200,6 +241,7 @@ export class WebApplicationFirewallPolicy extends TerraformResource {
       resource_group_name: this._resourceGroupName,
       tags: this._tags,
       custom_rules: this._customRules,
+      managed_rules: this._managedRules,
       policy_settings: this._policySettings,
       timeouts: this._timeouts,
     };
