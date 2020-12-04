@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/media_services_account.html
+// https://www.terraform.io/docs/providers/azurerm/r/iot_time_series_insights_gen2_environment.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,27 +7,24 @@ import { TerraformMetaArguments } from 'cdktf';
 
 // Configuration
 
-export interface MediaServicesAccountConfig extends TerraformMetaArguments {
+export interface IotTimeSeriesInsightsGen2EnvironmentConfig extends TerraformMetaArguments {
+  readonly idProperties: string[];
   readonly location: string;
   readonly name: string;
   readonly resourceGroupName: string;
-  readonly storageAuthenticationType?: string;
+  readonly skuName: string;
   readonly tags?: { [key: string]: string };
-  /** identity block */
-  readonly identity?: MediaServicesAccountIdentity[];
-  /** storage_account block */
-  readonly storageAccount: MediaServicesAccountStorageAccount[];
+  readonly warmStoreDataRetentionTime?: string;
+  /** storage block */
+  readonly storage: IotTimeSeriesInsightsGen2EnvironmentStorage[];
   /** timeouts block */
-  readonly timeouts?: MediaServicesAccountTimeouts;
+  readonly timeouts?: IotTimeSeriesInsightsGen2EnvironmentTimeouts;
 }
-export interface MediaServicesAccountIdentity {
-  readonly type?: string;
+export interface IotTimeSeriesInsightsGen2EnvironmentStorage {
+  readonly key: string;
+  readonly name: string;
 }
-export interface MediaServicesAccountStorageAccount {
-  readonly id: string;
-  readonly isPrimary?: boolean;
-}
-export interface MediaServicesAccountTimeouts {
+export interface IotTimeSeriesInsightsGen2EnvironmentTimeouts {
   readonly create?: string;
   readonly delete?: string;
   readonly read?: string;
@@ -36,15 +33,15 @@ export interface MediaServicesAccountTimeouts {
 
 // Resource
 
-export class MediaServicesAccount extends TerraformResource {
+export class IotTimeSeriesInsightsGen2Environment extends TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
-  public constructor(scope: Construct, id: string, config: MediaServicesAccountConfig) {
+  public constructor(scope: Construct, id: string, config: IotTimeSeriesInsightsGen2EnvironmentConfig) {
     super(scope, id, {
-      terraformResourceType: 'azurerm_media_services_account',
+      terraformResourceType: 'azurerm_iot_time_series_insights_gen2_environment',
       terraformGeneratorMetadata: {
         providerName: 'azurerm'
       },
@@ -53,13 +50,14 @@ export class MediaServicesAccount extends TerraformResource {
       count: config.count,
       lifecycle: config.lifecycle
     });
+    this._idProperties = config.idProperties;
     this._location = config.location;
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
-    this._storageAuthenticationType = config.storageAuthenticationType;
+    this._skuName = config.skuName;
     this._tags = config.tags;
-    this._identity = config.identity;
-    this._storageAccount = config.storageAccount;
+    this._warmStoreDataRetentionTime = config.warmStoreDataRetentionTime;
+    this._storage = config.storage;
     this._timeouts = config.timeouts;
   }
 
@@ -70,6 +68,19 @@ export class MediaServicesAccount extends TerraformResource {
   // id - computed: true, optional: true, required: false
   public get id() {
     return this.getStringAttribute('id');
+  }
+
+  // id_properties - computed: false, optional: false, required: true
+  private _idProperties: string[];
+  public get idProperties() {
+    return this.getListAttribute('id_properties');
+  }
+  public set idProperties(value: string[]) {
+    this._idProperties = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idPropertiesInput() {
+    return this._idProperties
   }
 
   // location - computed: false, optional: false, required: true
@@ -111,20 +122,17 @@ export class MediaServicesAccount extends TerraformResource {
     return this._resourceGroupName
   }
 
-  // storage_authentication_type - computed: true, optional: true, required: false
-  private _storageAuthenticationType?: string;
-  public get storageAuthenticationType() {
-    return this.getStringAttribute('storage_authentication_type');
+  // sku_name - computed: false, optional: false, required: true
+  private _skuName: string;
+  public get skuName() {
+    return this.getStringAttribute('sku_name');
   }
-  public set storageAuthenticationType(value: string) {
-    this._storageAuthenticationType = value;
-  }
-  public resetStorageAuthenticationType() {
-    this._storageAuthenticationType = undefined;
+  public set skuName(value: string) {
+    this._skuName = value;
   }
   // Temporarily expose input value. Use with caution.
-  public get storageAuthenticationTypeInput() {
-    return this._storageAuthenticationType
+  public get skuNameInput() {
+    return this._skuName
   }
 
   // tags - computed: false, optional: true, required: false
@@ -143,41 +151,41 @@ export class MediaServicesAccount extends TerraformResource {
     return this._tags
   }
 
-  // identity - computed: false, optional: true, required: false
-  private _identity?: MediaServicesAccountIdentity[];
-  public get identity() {
-    return this.interpolationForAttribute('identity') as any;
+  // warm_store_data_retention_time - computed: false, optional: true, required: false
+  private _warmStoreDataRetentionTime?: string;
+  public get warmStoreDataRetentionTime() {
+    return this.getStringAttribute('warm_store_data_retention_time');
   }
-  public set identity(value: MediaServicesAccountIdentity[] ) {
-    this._identity = value;
+  public set warmStoreDataRetentionTime(value: string ) {
+    this._warmStoreDataRetentionTime = value;
   }
-  public resetIdentity() {
-    this._identity = undefined;
+  public resetWarmStoreDataRetentionTime() {
+    this._warmStoreDataRetentionTime = undefined;
   }
   // Temporarily expose input value. Use with caution.
-  public get identityInput() {
-    return this._identity
+  public get warmStoreDataRetentionTimeInput() {
+    return this._warmStoreDataRetentionTime
   }
 
-  // storage_account - computed: false, optional: false, required: true
-  private _storageAccount: MediaServicesAccountStorageAccount[];
-  public get storageAccount() {
-    return this.interpolationForAttribute('storage_account') as any;
+  // storage - computed: false, optional: false, required: true
+  private _storage: IotTimeSeriesInsightsGen2EnvironmentStorage[];
+  public get storage() {
+    return this.interpolationForAttribute('storage') as any;
   }
-  public set storageAccount(value: MediaServicesAccountStorageAccount[]) {
-    this._storageAccount = value;
+  public set storage(value: IotTimeSeriesInsightsGen2EnvironmentStorage[]) {
+    this._storage = value;
   }
   // Temporarily expose input value. Use with caution.
-  public get storageAccountInput() {
-    return this._storageAccount
+  public get storageInput() {
+    return this._storage
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: MediaServicesAccountTimeouts;
+  private _timeouts?: IotTimeSeriesInsightsGen2EnvironmentTimeouts;
   public get timeouts() {
     return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: MediaServicesAccountTimeouts ) {
+  public set timeouts(value: IotTimeSeriesInsightsGen2EnvironmentTimeouts ) {
     this._timeouts = value;
   }
   public resetTimeouts() {
@@ -194,13 +202,14 @@ export class MediaServicesAccount extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      id_properties: this._idProperties,
       location: this._location,
       name: this._name,
       resource_group_name: this._resourceGroupName,
-      storage_authentication_type: this._storageAuthenticationType,
+      sku_name: this._skuName,
       tags: this._tags,
-      identity: this._identity,
-      storage_account: this._storageAccount,
+      warm_store_data_retention_time: this._warmStoreDataRetentionTime,
+      storage: this._storage,
       timeouts: this._timeouts,
     };
   }
