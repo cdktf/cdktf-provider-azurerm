@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface AutomationConnectionConfig extends TerraformMetaArguments {
+export interface AutomationConnectionConfig extends cdktf.TerraformMetaArguments {
   readonly automationAccountName: string;
   readonly description?: string;
   readonly name: string;
@@ -24,9 +23,20 @@ export interface AutomationConnectionTimeouts {
   readonly update?: string;
 }
 
+function automationConnectionTimeoutsToTerraform(struct?: AutomationConnectionTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class AutomationConnection extends TerraformResource {
+export class AutomationConnection extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -164,13 +174,13 @@ export class AutomationConnection extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      automation_account_name: this._automationAccountName,
-      description: this._description,
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      type: this._type,
-      values: this._values,
-      timeouts: this._timeouts,
+      automation_account_name: cdktf.stringToTerraform(this._automationAccountName),
+      description: cdktf.stringToTerraform(this._description),
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      type: cdktf.stringToTerraform(this._type),
+      values: cdktf.hashMapper(cdktf.anyToTerraform)(this._values),
+      timeouts: automationConnectionTimeoutsToTerraform(this._timeouts),
     };
   }
 }

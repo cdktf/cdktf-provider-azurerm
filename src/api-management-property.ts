@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface ApiManagementPropertyConfig extends TerraformMetaArguments {
+export interface ApiManagementPropertyConfig extends cdktf.TerraformMetaArguments {
   readonly apiManagementName: string;
   readonly displayName: string;
   readonly name: string;
@@ -25,9 +24,20 @@ export interface ApiManagementPropertyTimeouts {
   readonly update?: string;
 }
 
+function apiManagementPropertyTimeoutsToTerraform(struct?: ApiManagementPropertyTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class ApiManagementProperty extends TerraformResource {
+export class ApiManagementProperty extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -182,14 +192,14 @@ export class ApiManagementProperty extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      api_management_name: this._apiManagementName,
-      display_name: this._displayName,
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      secret: this._secret,
-      tags: this._tags,
-      value: this._value,
-      timeouts: this._timeouts,
+      api_management_name: cdktf.stringToTerraform(this._apiManagementName),
+      display_name: cdktf.stringToTerraform(this._displayName),
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      secret: cdktf.booleanToTerraform(this._secret),
+      tags: cdktf.listMapper(cdktf.stringToTerraform)(this._tags),
+      value: cdktf.stringToTerraform(this._value),
+      timeouts: apiManagementPropertyTimeoutsToTerraform(this._timeouts),
     };
   }
 }

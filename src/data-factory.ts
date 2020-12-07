@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataFactoryConfig extends TerraformMetaArguments {
+export interface DataFactoryConfig extends cdktf.TerraformMetaArguments {
   readonly location: string;
   readonly name: string;
   readonly resourceGroupName: string;
@@ -28,15 +27,46 @@ export interface DataFactoryGithubConfiguration {
   readonly repositoryName: string;
   readonly rootFolder: string;
 }
+
+function dataFactoryGithubConfigurationToTerraform(struct?: DataFactoryGithubConfiguration): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    account_name: cdktf.stringToTerraform(struct!.accountName),
+    branch_name: cdktf.stringToTerraform(struct!.branchName),
+    git_url: cdktf.stringToTerraform(struct!.gitUrl),
+    repository_name: cdktf.stringToTerraform(struct!.repositoryName),
+    root_folder: cdktf.stringToTerraform(struct!.rootFolder),
+  }
+}
+
 export interface DataFactoryIdentity {
   readonly type: string;
 }
+
+function dataFactoryIdentityToTerraform(struct?: DataFactoryIdentity): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    type: cdktf.stringToTerraform(struct!.type),
+  }
+}
+
 export interface DataFactoryTimeouts {
   readonly create?: string;
   readonly delete?: string;
   readonly read?: string;
   readonly update?: string;
 }
+
+function dataFactoryTimeoutsToTerraform(struct?: DataFactoryTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
 export interface DataFactoryVstsConfiguration {
   readonly accountName: string;
   readonly branchName: string;
@@ -46,9 +76,22 @@ export interface DataFactoryVstsConfiguration {
   readonly tenantId: string;
 }
 
+function dataFactoryVstsConfigurationToTerraform(struct?: DataFactoryVstsConfiguration): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    account_name: cdktf.stringToTerraform(struct!.accountName),
+    branch_name: cdktf.stringToTerraform(struct!.branchName),
+    project_name: cdktf.stringToTerraform(struct!.projectName),
+    repository_name: cdktf.stringToTerraform(struct!.repositoryName),
+    root_folder: cdktf.stringToTerraform(struct!.rootFolder),
+    tenant_id: cdktf.stringToTerraform(struct!.tenantId),
+  }
+}
+
+
 // Resource
 
-export class DataFactory extends TerraformResource {
+export class DataFactory extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -209,14 +252,14 @@ export class DataFactory extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      location: this._location,
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      tags: this._tags,
-      github_configuration: this._githubConfiguration,
-      identity: this._identity,
-      timeouts: this._timeouts,
-      vsts_configuration: this._vstsConfiguration,
+      location: cdktf.stringToTerraform(this._location),
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      github_configuration: cdktf.listMapper(dataFactoryGithubConfigurationToTerraform)(this._githubConfiguration),
+      identity: cdktf.listMapper(dataFactoryIdentityToTerraform)(this._identity),
+      timeouts: dataFactoryTimeoutsToTerraform(this._timeouts),
+      vsts_configuration: cdktf.listMapper(dataFactoryVstsConfigurationToTerraform)(this._vstsConfiguration),
     };
   }
 }

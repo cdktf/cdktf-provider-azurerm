@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface AppServicePlanConfig extends TerraformMetaArguments {
+export interface AppServicePlanConfig extends cdktf.TerraformMetaArguments {
   readonly appServiceEnvironmentId?: string;
   readonly isXenon?: boolean;
   readonly kind?: string;
@@ -28,6 +27,16 @@ export interface AppServicePlanSku {
   readonly size: string;
   readonly tier: string;
 }
+
+function appServicePlanSkuToTerraform(struct?: AppServicePlanSku): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    capacity: cdktf.numberToTerraform(struct!.capacity),
+    size: cdktf.stringToTerraform(struct!.size),
+    tier: cdktf.stringToTerraform(struct!.tier),
+  }
+}
+
 export interface AppServicePlanTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -35,9 +44,20 @@ export interface AppServicePlanTimeouts {
   readonly update?: string;
 }
 
+function appServicePlanTimeoutsToTerraform(struct?: AppServicePlanTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class AppServicePlan extends TerraformResource {
+export class AppServicePlan extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -268,18 +288,18 @@ export class AppServicePlan extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      app_service_environment_id: this._appServiceEnvironmentId,
-      is_xenon: this._isXenon,
-      kind: this._kind,
-      location: this._location,
-      maximum_elastic_worker_count: this._maximumElasticWorkerCount,
-      name: this._name,
-      per_site_scaling: this._perSiteScaling,
-      reserved: this._reserved,
-      resource_group_name: this._resourceGroupName,
-      tags: this._tags,
-      sku: this._sku,
-      timeouts: this._timeouts,
+      app_service_environment_id: cdktf.stringToTerraform(this._appServiceEnvironmentId),
+      is_xenon: cdktf.booleanToTerraform(this._isXenon),
+      kind: cdktf.stringToTerraform(this._kind),
+      location: cdktf.stringToTerraform(this._location),
+      maximum_elastic_worker_count: cdktf.numberToTerraform(this._maximumElasticWorkerCount),
+      name: cdktf.stringToTerraform(this._name),
+      per_site_scaling: cdktf.booleanToTerraform(this._perSiteScaling),
+      reserved: cdktf.booleanToTerraform(this._reserved),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      sku: cdktf.listMapper(appServicePlanSkuToTerraform)(this._sku),
+      timeouts: appServicePlanTimeoutsToTerraform(this._timeouts),
     };
   }
 }

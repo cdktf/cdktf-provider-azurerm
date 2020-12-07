@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformDataSource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataAzurermStorageAccountBlobContainerSasConfig extends TerraformMetaArguments {
+export interface DataAzurermStorageAccountBlobContainerSasConfig extends cdktf.TerraformMetaArguments {
   readonly cacheControl?: string;
   readonly connectionString: string;
   readonly containerName: string;
@@ -32,13 +31,34 @@ export interface DataAzurermStorageAccountBlobContainerSasPermissions {
   readonly read: boolean;
   readonly write: boolean;
 }
+
+function dataAzurermStorageAccountBlobContainerSasPermissionsToTerraform(struct?: DataAzurermStorageAccountBlobContainerSasPermissions): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    add: cdktf.booleanToTerraform(struct!.add),
+    create: cdktf.booleanToTerraform(struct!.create),
+    delete: cdktf.booleanToTerraform(struct!.delete),
+    list: cdktf.booleanToTerraform(struct!.list),
+    read: cdktf.booleanToTerraform(struct!.read),
+    write: cdktf.booleanToTerraform(struct!.write),
+  }
+}
+
 export interface DataAzurermStorageAccountBlobContainerSasTimeouts {
   readonly read?: string;
 }
 
+function dataAzurermStorageAccountBlobContainerSasTimeoutsToTerraform(struct?: DataAzurermStorageAccountBlobContainerSasTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    read: cdktf.stringToTerraform(struct!.read),
+  }
+}
+
+
 // Resource
 
-export class DataAzurermStorageAccountBlobContainerSas extends TerraformDataSource {
+export class DataAzurermStorageAccountBlobContainerSas extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
@@ -283,19 +303,19 @@ export class DataAzurermStorageAccountBlobContainerSas extends TerraformDataSour
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      cache_control: this._cacheControl,
-      connection_string: this._connectionString,
-      container_name: this._containerName,
-      content_disposition: this._contentDisposition,
-      content_encoding: this._contentEncoding,
-      content_language: this._contentLanguage,
-      content_type: this._contentType,
-      expiry: this._expiry,
-      https_only: this._httpsOnly,
-      ip_address: this._ipAddress,
-      start: this._start,
-      permissions: this._permissions,
-      timeouts: this._timeouts,
+      cache_control: cdktf.stringToTerraform(this._cacheControl),
+      connection_string: cdktf.stringToTerraform(this._connectionString),
+      container_name: cdktf.stringToTerraform(this._containerName),
+      content_disposition: cdktf.stringToTerraform(this._contentDisposition),
+      content_encoding: cdktf.stringToTerraform(this._contentEncoding),
+      content_language: cdktf.stringToTerraform(this._contentLanguage),
+      content_type: cdktf.stringToTerraform(this._contentType),
+      expiry: cdktf.stringToTerraform(this._expiry),
+      https_only: cdktf.booleanToTerraform(this._httpsOnly),
+      ip_address: cdktf.stringToTerraform(this._ipAddress),
+      start: cdktf.stringToTerraform(this._start),
+      permissions: cdktf.listMapper(dataAzurermStorageAccountBlobContainerSasPermissionsToTerraform)(this._permissions),
+      timeouts: dataAzurermStorageAccountBlobContainerSasTimeoutsToTerraform(this._timeouts),
     };
   }
 }

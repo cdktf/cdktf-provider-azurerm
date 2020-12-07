@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface AppServiceSlotVirtualNetworkSwiftConnectionConfig extends TerraformMetaArguments {
+export interface AppServiceSlotVirtualNetworkSwiftConnectionConfig extends cdktf.TerraformMetaArguments {
   readonly appServiceId: string;
   readonly slotName: string;
   readonly subnetId: string;
@@ -21,9 +20,20 @@ export interface AppServiceSlotVirtualNetworkSwiftConnectionTimeouts {
   readonly update?: string;
 }
 
+function appServiceSlotVirtualNetworkSwiftConnectionTimeoutsToTerraform(struct?: AppServiceSlotVirtualNetworkSwiftConnectionTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class AppServiceSlotVirtualNetworkSwiftConnection extends TerraformResource {
+export class AppServiceSlotVirtualNetworkSwiftConnection extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -116,10 +126,10 @@ export class AppServiceSlotVirtualNetworkSwiftConnection extends TerraformResour
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      app_service_id: this._appServiceId,
-      slot_name: this._slotName,
-      subnet_id: this._subnetId,
-      timeouts: this._timeouts,
+      app_service_id: cdktf.stringToTerraform(this._appServiceId),
+      slot_name: cdktf.stringToTerraform(this._slotName),
+      subnet_id: cdktf.stringToTerraform(this._subnetId),
+      timeouts: appServiceSlotVirtualNetworkSwiftConnectionTimeoutsToTerraform(this._timeouts),
     };
   }
 }

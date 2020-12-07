@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DevTestLinuxVirtualMachineConfig extends TerraformMetaArguments {
+export interface DevTestLinuxVirtualMachineConfig extends cdktf.TerraformMetaArguments {
   readonly allowClaim?: boolean;
   readonly disallowPublicIpAddress?: boolean;
   readonly labName: string;
@@ -36,10 +35,30 @@ export interface DevTestLinuxVirtualMachineGalleryImageReference {
   readonly sku: string;
   readonly version: string;
 }
+
+function devTestLinuxVirtualMachineGalleryImageReferenceToTerraform(struct?: DevTestLinuxVirtualMachineGalleryImageReference): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    offer: cdktf.stringToTerraform(struct!.offer),
+    publisher: cdktf.stringToTerraform(struct!.publisher),
+    sku: cdktf.stringToTerraform(struct!.sku),
+    version: cdktf.stringToTerraform(struct!.version),
+  }
+}
+
 export interface DevTestLinuxVirtualMachineInboundNatRule {
   readonly backendPort: number;
   readonly protocol: string;
 }
+
+function devTestLinuxVirtualMachineInboundNatRuleToTerraform(struct?: DevTestLinuxVirtualMachineInboundNatRule): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    backend_port: cdktf.numberToTerraform(struct!.backendPort),
+    protocol: cdktf.stringToTerraform(struct!.protocol),
+  }
+}
+
 export interface DevTestLinuxVirtualMachineTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -47,9 +66,20 @@ export interface DevTestLinuxVirtualMachineTimeouts {
   readonly update?: string;
 }
 
+function devTestLinuxVirtualMachineTimeoutsToTerraform(struct?: DevTestLinuxVirtualMachineTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class DevTestLinuxVirtualMachine extends TerraformResource {
+export class DevTestLinuxVirtualMachine extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -369,24 +399,24 @@ export class DevTestLinuxVirtualMachine extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      allow_claim: this._allowClaim,
-      disallow_public_ip_address: this._disallowPublicIpAddress,
-      lab_name: this._labName,
-      lab_subnet_name: this._labSubnetName,
-      lab_virtual_network_id: this._labVirtualNetworkId,
-      location: this._location,
-      name: this._name,
-      notes: this._notes,
-      password: this._password,
-      resource_group_name: this._resourceGroupName,
-      size: this._size,
-      ssh_key: this._sshKey,
-      storage_type: this._storageType,
-      tags: this._tags,
-      username: this._username,
-      gallery_image_reference: this._galleryImageReference,
-      inbound_nat_rule: this._inboundNatRule,
-      timeouts: this._timeouts,
+      allow_claim: cdktf.booleanToTerraform(this._allowClaim),
+      disallow_public_ip_address: cdktf.booleanToTerraform(this._disallowPublicIpAddress),
+      lab_name: cdktf.stringToTerraform(this._labName),
+      lab_subnet_name: cdktf.stringToTerraform(this._labSubnetName),
+      lab_virtual_network_id: cdktf.stringToTerraform(this._labVirtualNetworkId),
+      location: cdktf.stringToTerraform(this._location),
+      name: cdktf.stringToTerraform(this._name),
+      notes: cdktf.stringToTerraform(this._notes),
+      password: cdktf.stringToTerraform(this._password),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      size: cdktf.stringToTerraform(this._size),
+      ssh_key: cdktf.stringToTerraform(this._sshKey),
+      storage_type: cdktf.stringToTerraform(this._storageType),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      username: cdktf.stringToTerraform(this._username),
+      gallery_image_reference: cdktf.listMapper(devTestLinuxVirtualMachineGalleryImageReferenceToTerraform)(this._galleryImageReference),
+      inbound_nat_rule: cdktf.listMapper(devTestLinuxVirtualMachineInboundNatRuleToTerraform)(this._inboundNatRule),
+      timeouts: devTestLinuxVirtualMachineTimeoutsToTerraform(this._timeouts),
     };
   }
 }

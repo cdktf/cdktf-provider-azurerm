@@ -2,21 +2,18 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformDataSource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
-import { ComplexComputedList } from "cdktf";
-import { StringMap } from "cdktf";
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataAzurermStorageAccountConfig extends TerraformMetaArguments {
+export interface DataAzurermStorageAccountConfig extends cdktf.TerraformMetaArguments {
   readonly minTlsVersion?: string;
   readonly name: string;
   readonly resourceGroupName: string;
   /** timeouts block */
   readonly timeouts?: DataAzurermStorageAccountTimeouts;
 }
-export class DataAzurermStorageAccountCustomDomain extends ComplexComputedList {
+export class DataAzurermStorageAccountCustomDomain extends cdktf.ComplexComputedList {
 
   // name - computed: true, optional: false, required: false
   public get name() {
@@ -27,9 +24,17 @@ export interface DataAzurermStorageAccountTimeouts {
   readonly read?: string;
 }
 
+function dataAzurermStorageAccountTimeoutsToTerraform(struct?: DataAzurermStorageAccountTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    read: cdktf.stringToTerraform(struct!.read),
+  }
+}
+
+
 // Resource
 
-export class DataAzurermStorageAccount extends TerraformDataSource {
+export class DataAzurermStorageAccount extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
@@ -310,7 +315,7 @@ export class DataAzurermStorageAccount extends TerraformDataSource {
 
   // tags - computed: true, optional: false, required: false
   public tags(key: string): string {
-    return new StringMap(this, 'tags').lookup(key);
+    return new cdktf.StringMap(this, 'tags').lookup(key);
   }
 
   // timeouts - computed: false, optional: true, required: false
@@ -335,10 +340,10 @@ export class DataAzurermStorageAccount extends TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      min_tls_version: this._minTlsVersion,
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      timeouts: this._timeouts,
+      min_tls_version: cdktf.stringToTerraform(this._minTlsVersion),
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      timeouts: dataAzurermStorageAccountTimeoutsToTerraform(this._timeouts),
     };
   }
 }

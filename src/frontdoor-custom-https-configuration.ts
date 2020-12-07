@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface FrontdoorCustomHttpsConfigurationConfig extends TerraformMetaArguments {
+export interface FrontdoorCustomHttpsConfigurationConfig extends cdktf.TerraformMetaArguments {
   readonly customHttpsProvisioningEnabled: boolean;
   readonly frontendEndpointId: string;
   readonly resourceGroupName?: string;
@@ -22,6 +21,17 @@ export interface FrontdoorCustomHttpsConfigurationCustomHttpsConfiguration {
   readonly azureKeyVaultCertificateVaultId?: string;
   readonly certificateSource?: string;
 }
+
+function frontdoorCustomHttpsConfigurationCustomHttpsConfigurationToTerraform(struct?: FrontdoorCustomHttpsConfigurationCustomHttpsConfiguration): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    azure_key_vault_certificate_secret_name: cdktf.stringToTerraform(struct!.azureKeyVaultCertificateSecretName),
+    azure_key_vault_certificate_secret_version: cdktf.stringToTerraform(struct!.azureKeyVaultCertificateSecretVersion),
+    azure_key_vault_certificate_vault_id: cdktf.stringToTerraform(struct!.azureKeyVaultCertificateVaultId),
+    certificate_source: cdktf.stringToTerraform(struct!.certificateSource),
+  }
+}
+
 export interface FrontdoorCustomHttpsConfigurationTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -29,9 +39,20 @@ export interface FrontdoorCustomHttpsConfigurationTimeouts {
   readonly update?: string;
 }
 
+function frontdoorCustomHttpsConfigurationTimeoutsToTerraform(struct?: FrontdoorCustomHttpsConfigurationTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class FrontdoorCustomHttpsConfiguration extends TerraformResource {
+export class FrontdoorCustomHttpsConfiguration extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -144,11 +165,11 @@ export class FrontdoorCustomHttpsConfiguration extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      custom_https_provisioning_enabled: this._customHttpsProvisioningEnabled,
-      frontend_endpoint_id: this._frontendEndpointId,
-      resource_group_name: this._resourceGroupName,
-      custom_https_configuration: this._customHttpsConfiguration,
-      timeouts: this._timeouts,
+      custom_https_provisioning_enabled: cdktf.booleanToTerraform(this._customHttpsProvisioningEnabled),
+      frontend_endpoint_id: cdktf.stringToTerraform(this._frontendEndpointId),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      custom_https_configuration: cdktf.listMapper(frontdoorCustomHttpsConfigurationCustomHttpsConfigurationToTerraform)(this._customHttpsConfiguration),
+      timeouts: frontdoorCustomHttpsConfigurationTimeoutsToTerraform(this._timeouts),
     };
   }
 }

@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface ApplicationInsightsWebTestConfig extends TerraformMetaArguments {
+export interface ApplicationInsightsWebTestConfig extends cdktf.TerraformMetaArguments {
   readonly applicationInsightsId: string;
   readonly configuration: string;
   readonly description?: string;
@@ -31,9 +30,20 @@ export interface ApplicationInsightsWebTestTimeouts {
   readonly update?: string;
 }
 
+function applicationInsightsWebTestTimeoutsToTerraform(struct?: ApplicationInsightsWebTestTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class ApplicationInsightsWebTest extends TerraformResource {
+export class ApplicationInsightsWebTest extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -289,20 +299,20 @@ export class ApplicationInsightsWebTest extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      application_insights_id: this._applicationInsightsId,
-      configuration: this._configuration,
-      description: this._description,
-      enabled: this._enabled,
-      frequency: this._frequency,
-      geo_locations: this._geoLocations,
-      kind: this._kind,
-      location: this._location,
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      retry_enabled: this._retryEnabled,
-      tags: this._tags,
-      timeout: this._timeout,
-      timeouts: this._timeouts,
+      application_insights_id: cdktf.stringToTerraform(this._applicationInsightsId),
+      configuration: cdktf.stringToTerraform(this._configuration),
+      description: cdktf.stringToTerraform(this._description),
+      enabled: cdktf.booleanToTerraform(this._enabled),
+      frequency: cdktf.numberToTerraform(this._frequency),
+      geo_locations: cdktf.listMapper(cdktf.stringToTerraform)(this._geoLocations),
+      kind: cdktf.stringToTerraform(this._kind),
+      location: cdktf.stringToTerraform(this._location),
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      retry_enabled: cdktf.booleanToTerraform(this._retryEnabled),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      timeout: cdktf.numberToTerraform(this._timeout),
+      timeouts: applicationInsightsWebTestTimeoutsToTerraform(this._timeouts),
     };
   }
 }

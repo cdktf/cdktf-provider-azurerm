@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface SpringCloudServiceConfig extends TerraformMetaArguments {
+export interface SpringCloudServiceConfig extends cdktf.TerraformMetaArguments {
   readonly location: string;
   readonly name: string;
   readonly resourceGroupName: string;
@@ -26,16 +25,45 @@ export interface SpringCloudServiceConfigServerGitSettingHttpBasicAuth {
   readonly password: string;
   readonly username: string;
 }
+
+function springCloudServiceConfigServerGitSettingHttpBasicAuthToTerraform(struct?: SpringCloudServiceConfigServerGitSettingHttpBasicAuth): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    password: cdktf.stringToTerraform(struct!.password),
+    username: cdktf.stringToTerraform(struct!.username),
+  }
+}
+
 export interface SpringCloudServiceConfigServerGitSettingRepositoryHttpBasicAuth {
   readonly password: string;
   readonly username: string;
 }
+
+function springCloudServiceConfigServerGitSettingRepositoryHttpBasicAuthToTerraform(struct?: SpringCloudServiceConfigServerGitSettingRepositoryHttpBasicAuth): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    password: cdktf.stringToTerraform(struct!.password),
+    username: cdktf.stringToTerraform(struct!.username),
+  }
+}
+
 export interface SpringCloudServiceConfigServerGitSettingRepositorySshAuth {
   readonly hostKey?: string;
   readonly hostKeyAlgorithm?: string;
   readonly privateKey: string;
   readonly strictHostKeyCheckingEnabled?: boolean;
 }
+
+function springCloudServiceConfigServerGitSettingRepositorySshAuthToTerraform(struct?: SpringCloudServiceConfigServerGitSettingRepositorySshAuth): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    host_key: cdktf.stringToTerraform(struct!.hostKey),
+    host_key_algorithm: cdktf.stringToTerraform(struct!.hostKeyAlgorithm),
+    private_key: cdktf.stringToTerraform(struct!.privateKey),
+    strict_host_key_checking_enabled: cdktf.booleanToTerraform(struct!.strictHostKeyCheckingEnabled),
+  }
+}
+
 export interface SpringCloudServiceConfigServerGitSettingRepository {
   readonly label?: string;
   readonly name: string;
@@ -47,12 +75,37 @@ export interface SpringCloudServiceConfigServerGitSettingRepository {
   /** ssh_auth block */
   readonly sshAuth?: SpringCloudServiceConfigServerGitSettingRepositorySshAuth[];
 }
+
+function springCloudServiceConfigServerGitSettingRepositoryToTerraform(struct?: SpringCloudServiceConfigServerGitSettingRepository): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    label: cdktf.stringToTerraform(struct!.label),
+    name: cdktf.stringToTerraform(struct!.name),
+    pattern: cdktf.listMapper(cdktf.stringToTerraform)(struct!.pattern),
+    search_paths: cdktf.listMapper(cdktf.stringToTerraform)(struct!.searchPaths),
+    uri: cdktf.stringToTerraform(struct!.uri),
+    http_basic_auth: cdktf.listMapper(springCloudServiceConfigServerGitSettingRepositoryHttpBasicAuthToTerraform)(struct!.httpBasicAuth),
+    ssh_auth: cdktf.listMapper(springCloudServiceConfigServerGitSettingRepositorySshAuthToTerraform)(struct!.sshAuth),
+  }
+}
+
 export interface SpringCloudServiceConfigServerGitSettingSshAuth {
   readonly hostKey?: string;
   readonly hostKeyAlgorithm?: string;
   readonly privateKey: string;
   readonly strictHostKeyCheckingEnabled?: boolean;
 }
+
+function springCloudServiceConfigServerGitSettingSshAuthToTerraform(struct?: SpringCloudServiceConfigServerGitSettingSshAuth): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    host_key: cdktf.stringToTerraform(struct!.hostKey),
+    host_key_algorithm: cdktf.stringToTerraform(struct!.hostKeyAlgorithm),
+    private_key: cdktf.stringToTerraform(struct!.privateKey),
+    strict_host_key_checking_enabled: cdktf.booleanToTerraform(struct!.strictHostKeyCheckingEnabled),
+  }
+}
+
 export interface SpringCloudServiceConfigServerGitSetting {
   readonly label?: string;
   readonly searchPaths?: string[];
@@ -64,6 +117,19 @@ export interface SpringCloudServiceConfigServerGitSetting {
   /** ssh_auth block */
   readonly sshAuth?: SpringCloudServiceConfigServerGitSettingSshAuth[];
 }
+
+function springCloudServiceConfigServerGitSettingToTerraform(struct?: SpringCloudServiceConfigServerGitSetting): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    label: cdktf.stringToTerraform(struct!.label),
+    search_paths: cdktf.listMapper(cdktf.stringToTerraform)(struct!.searchPaths),
+    uri: cdktf.stringToTerraform(struct!.uri),
+    http_basic_auth: cdktf.listMapper(springCloudServiceConfigServerGitSettingHttpBasicAuthToTerraform)(struct!.httpBasicAuth),
+    repository: cdktf.listMapper(springCloudServiceConfigServerGitSettingRepositoryToTerraform)(struct!.repository),
+    ssh_auth: cdktf.listMapper(springCloudServiceConfigServerGitSettingSshAuthToTerraform)(struct!.sshAuth),
+  }
+}
+
 export interface SpringCloudServiceNetwork {
   readonly appNetworkResourceGroup?: string;
   readonly appSubnetId: string;
@@ -71,19 +137,50 @@ export interface SpringCloudServiceNetwork {
   readonly serviceRuntimeNetworkResourceGroup?: string;
   readonly serviceRuntimeSubnetId: string;
 }
+
+function springCloudServiceNetworkToTerraform(struct?: SpringCloudServiceNetwork): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    app_network_resource_group: cdktf.stringToTerraform(struct!.appNetworkResourceGroup),
+    app_subnet_id: cdktf.stringToTerraform(struct!.appSubnetId),
+    cidr_ranges: cdktf.listMapper(cdktf.stringToTerraform)(struct!.cidrRanges),
+    service_runtime_network_resource_group: cdktf.stringToTerraform(struct!.serviceRuntimeNetworkResourceGroup),
+    service_runtime_subnet_id: cdktf.stringToTerraform(struct!.serviceRuntimeSubnetId),
+  }
+}
+
 export interface SpringCloudServiceTimeouts {
   readonly create?: string;
   readonly delete?: string;
   readonly read?: string;
   readonly update?: string;
 }
+
+function springCloudServiceTimeoutsToTerraform(struct?: SpringCloudServiceTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
 export interface SpringCloudServiceTrace {
   readonly instrumentationKey: string;
 }
 
+function springCloudServiceTraceToTerraform(struct?: SpringCloudServiceTrace): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    instrumentation_key: cdktf.stringToTerraform(struct!.instrumentationKey),
+  }
+}
+
+
 // Resource
 
-export class SpringCloudService extends TerraformResource {
+export class SpringCloudService extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -266,15 +363,15 @@ export class SpringCloudService extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      location: this._location,
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      sku_name: this._skuName,
-      tags: this._tags,
-      config_server_git_setting: this._configServerGitSetting,
-      network: this._network,
-      timeouts: this._timeouts,
-      trace: this._trace,
+      location: cdktf.stringToTerraform(this._location),
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      sku_name: cdktf.stringToTerraform(this._skuName),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      config_server_git_setting: cdktf.listMapper(springCloudServiceConfigServerGitSettingToTerraform)(this._configServerGitSetting),
+      network: cdktf.listMapper(springCloudServiceNetworkToTerraform)(this._network),
+      timeouts: springCloudServiceTimeoutsToTerraform(this._timeouts),
+      trace: cdktf.listMapper(springCloudServiceTraceToTerraform)(this._trace),
     };
   }
 }

@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataFactoryLinkedServiceWebConfig extends TerraformMetaArguments {
+export interface DataFactoryLinkedServiceWebConfig extends cdktf.TerraformMetaArguments {
   readonly additionalProperties?: { [key: string]: string };
   readonly annotations?: string[];
   readonly authenticationType: string;
@@ -30,9 +29,20 @@ export interface DataFactoryLinkedServiceWebTimeouts {
   readonly update?: string;
 }
 
+function dataFactoryLinkedServiceWebTimeoutsToTerraform(struct?: DataFactoryLinkedServiceWebTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class DataFactoryLinkedServiceWeb extends TerraformResource {
+export class DataFactoryLinkedServiceWeb extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -272,19 +282,19 @@ export class DataFactoryLinkedServiceWeb extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      additional_properties: this._additionalProperties,
-      annotations: this._annotations,
-      authentication_type: this._authenticationType,
-      data_factory_name: this._dataFactoryName,
-      description: this._description,
-      integration_runtime_name: this._integrationRuntimeName,
-      name: this._name,
-      parameters: this._parameters,
-      password: this._password,
-      resource_group_name: this._resourceGroupName,
-      url: this._url,
-      username: this._username,
-      timeouts: this._timeouts,
+      additional_properties: cdktf.hashMapper(cdktf.anyToTerraform)(this._additionalProperties),
+      annotations: cdktf.listMapper(cdktf.stringToTerraform)(this._annotations),
+      authentication_type: cdktf.stringToTerraform(this._authenticationType),
+      data_factory_name: cdktf.stringToTerraform(this._dataFactoryName),
+      description: cdktf.stringToTerraform(this._description),
+      integration_runtime_name: cdktf.stringToTerraform(this._integrationRuntimeName),
+      name: cdktf.stringToTerraform(this._name),
+      parameters: cdktf.hashMapper(cdktf.anyToTerraform)(this._parameters),
+      password: cdktf.stringToTerraform(this._password),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      url: cdktf.stringToTerraform(this._url),
+      username: cdktf.stringToTerraform(this._username),
+      timeouts: dataFactoryLinkedServiceWebTimeoutsToTerraform(this._timeouts),
     };
   }
 }

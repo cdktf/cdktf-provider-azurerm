@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface StorageTableEntityConfig extends TerraformMetaArguments {
+export interface StorageTableEntityConfig extends cdktf.TerraformMetaArguments {
   readonly entity: { [key: string]: string };
   readonly partitionKey: string;
   readonly rowKey: string;
@@ -23,9 +22,20 @@ export interface StorageTableEntityTimeouts {
   readonly update?: string;
 }
 
+function storageTableEntityTimeoutsToTerraform(struct?: StorageTableEntityTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class StorageTableEntity extends TerraformResource {
+export class StorageTableEntity extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -146,12 +156,12 @@ export class StorageTableEntity extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      entity: this._entity,
-      partition_key: this._partitionKey,
-      row_key: this._rowKey,
-      storage_account_name: this._storageAccountName,
-      table_name: this._tableName,
-      timeouts: this._timeouts,
+      entity: cdktf.hashMapper(cdktf.anyToTerraform)(this._entity),
+      partition_key: cdktf.stringToTerraform(this._partitionKey),
+      row_key: cdktf.stringToTerraform(this._rowKey),
+      storage_account_name: cdktf.stringToTerraform(this._storageAccountName),
+      table_name: cdktf.stringToTerraform(this._tableName),
+      timeouts: storageTableEntityTimeoutsToTerraform(this._timeouts),
     };
   }
 }

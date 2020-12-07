@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataShareAccountConfig extends TerraformMetaArguments {
+export interface DataShareAccountConfig extends cdktf.TerraformMetaArguments {
   readonly location: string;
   readonly name: string;
   readonly resourceGroupName: string;
@@ -20,6 +19,14 @@ export interface DataShareAccountConfig extends TerraformMetaArguments {
 export interface DataShareAccountIdentity {
   readonly type: string;
 }
+
+function dataShareAccountIdentityToTerraform(struct?: DataShareAccountIdentity): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    type: cdktf.stringToTerraform(struct!.type),
+  }
+}
+
 export interface DataShareAccountTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -27,9 +34,20 @@ export interface DataShareAccountTimeouts {
   readonly update?: string;
 }
 
+function dataShareAccountTimeoutsToTerraform(struct?: DataShareAccountTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class DataShareAccount extends TerraformResource {
+export class DataShareAccount extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -153,12 +171,12 @@ export class DataShareAccount extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      location: this._location,
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      tags: this._tags,
-      identity: this._identity,
-      timeouts: this._timeouts,
+      location: cdktf.stringToTerraform(this._location),
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      identity: cdktf.listMapper(dataShareAccountIdentityToTerraform)(this._identity),
+      timeouts: dataShareAccountTimeoutsToTerraform(this._timeouts),
     };
   }
 }

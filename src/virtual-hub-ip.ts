@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface VirtualHubIpConfig extends TerraformMetaArguments {
+export interface VirtualHubIpConfig extends cdktf.TerraformMetaArguments {
   readonly name: string;
   readonly privateIpAddress?: string;
   readonly privateIpAllocationMethod?: string;
@@ -24,9 +23,20 @@ export interface VirtualHubIpTimeouts {
   readonly update?: string;
 }
 
+function virtualHubIpTimeoutsToTerraform(struct?: VirtualHubIpTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class VirtualHubIp extends TerraformResource {
+export class VirtualHubIp extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -170,13 +180,13 @@ export class VirtualHubIp extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      name: this._name,
-      private_ip_address: this._privateIpAddress,
-      private_ip_allocation_method: this._privateIpAllocationMethod,
-      public_ip_address_id: this._publicIpAddressId,
-      subnet_id: this._subnetId,
-      virtual_hub_id: this._virtualHubId,
-      timeouts: this._timeouts,
+      name: cdktf.stringToTerraform(this._name),
+      private_ip_address: cdktf.stringToTerraform(this._privateIpAddress),
+      private_ip_allocation_method: cdktf.stringToTerraform(this._privateIpAllocationMethod),
+      public_ip_address_id: cdktf.stringToTerraform(this._publicIpAddressId),
+      subnet_id: cdktf.stringToTerraform(this._subnetId),
+      virtual_hub_id: cdktf.stringToTerraform(this._virtualHubId),
+      timeouts: virtualHubIpTimeoutsToTerraform(this._timeouts),
     };
   }
 }

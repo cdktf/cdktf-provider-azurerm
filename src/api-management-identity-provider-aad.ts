@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface ApiManagementIdentityProviderAadConfig extends TerraformMetaArguments {
+export interface ApiManagementIdentityProviderAadConfig extends cdktf.TerraformMetaArguments {
   readonly allowedTenants: string[];
   readonly apiManagementName: string;
   readonly clientId: string;
@@ -24,9 +23,20 @@ export interface ApiManagementIdentityProviderAadTimeouts {
   readonly update?: string;
 }
 
+function apiManagementIdentityProviderAadTimeoutsToTerraform(struct?: ApiManagementIdentityProviderAadTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class ApiManagementIdentityProviderAad extends TerraformResource {
+export class ApiManagementIdentityProviderAad extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -164,13 +174,13 @@ export class ApiManagementIdentityProviderAad extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      allowed_tenants: this._allowedTenants,
-      api_management_name: this._apiManagementName,
-      client_id: this._clientId,
-      client_secret: this._clientSecret,
-      resource_group_name: this._resourceGroupName,
-      signin_tenant: this._signinTenant,
-      timeouts: this._timeouts,
+      allowed_tenants: cdktf.listMapper(cdktf.stringToTerraform)(this._allowedTenants),
+      api_management_name: cdktf.stringToTerraform(this._apiManagementName),
+      client_id: cdktf.stringToTerraform(this._clientId),
+      client_secret: cdktf.stringToTerraform(this._clientSecret),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      signin_tenant: cdktf.stringToTerraform(this._signinTenant),
+      timeouts: apiManagementIdentityProviderAadTimeoutsToTerraform(this._timeouts),
     };
   }
 }

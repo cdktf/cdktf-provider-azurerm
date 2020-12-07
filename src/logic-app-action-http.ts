@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface LogicAppActionHttpConfig extends TerraformMetaArguments {
+export interface LogicAppActionHttpConfig extends cdktf.TerraformMetaArguments {
   readonly body?: string;
   readonly headers?: { [key: string]: string };
   readonly logicAppId: string;
@@ -23,6 +22,15 @@ export interface LogicAppActionHttpRunAfter {
   readonly actionName: string;
   readonly actionResult: string;
 }
+
+function logicAppActionHttpRunAfterToTerraform(struct?: LogicAppActionHttpRunAfter): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    action_name: cdktf.stringToTerraform(struct!.actionName),
+    action_result: cdktf.stringToTerraform(struct!.actionResult),
+  }
+}
+
 export interface LogicAppActionHttpTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -30,9 +38,20 @@ export interface LogicAppActionHttpTimeouts {
   readonly update?: string;
 }
 
+function logicAppActionHttpTimeoutsToTerraform(struct?: LogicAppActionHttpTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class LogicAppActionHttp extends TerraformResource {
+export class LogicAppActionHttp extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -190,14 +209,14 @@ export class LogicAppActionHttp extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      body: this._body,
-      headers: this._headers,
-      logic_app_id: this._logicAppId,
-      method: this._method,
-      name: this._name,
-      uri: this._uri,
-      run_after: this._runAfter,
-      timeouts: this._timeouts,
+      body: cdktf.stringToTerraform(this._body),
+      headers: cdktf.hashMapper(cdktf.anyToTerraform)(this._headers),
+      logic_app_id: cdktf.stringToTerraform(this._logicAppId),
+      method: cdktf.stringToTerraform(this._method),
+      name: cdktf.stringToTerraform(this._name),
+      uri: cdktf.stringToTerraform(this._uri),
+      run_after: cdktf.listMapper(logicAppActionHttpRunAfterToTerraform)(this._runAfter),
+      timeouts: logicAppActionHttpTimeoutsToTerraform(this._timeouts),
     };
   }
 }

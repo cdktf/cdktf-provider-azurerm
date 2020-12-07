@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface ApplicationInsightsApiKeyConfig extends TerraformMetaArguments {
+export interface ApplicationInsightsApiKeyConfig extends cdktf.TerraformMetaArguments {
   readonly applicationInsightsId: string;
   readonly name: string;
   readonly readPermissions?: string[];
@@ -22,9 +21,20 @@ export interface ApplicationInsightsApiKeyTimeouts {
   readonly update?: string;
 }
 
+function applicationInsightsApiKeyTimeoutsToTerraform(struct?: ApplicationInsightsApiKeyTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class ApplicationInsightsApiKey extends TerraformResource {
+export class ApplicationInsightsApiKey extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -142,11 +152,11 @@ export class ApplicationInsightsApiKey extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      application_insights_id: this._applicationInsightsId,
-      name: this._name,
-      read_permissions: this._readPermissions,
-      write_permissions: this._writePermissions,
-      timeouts: this._timeouts,
+      application_insights_id: cdktf.stringToTerraform(this._applicationInsightsId),
+      name: cdktf.stringToTerraform(this._name),
+      read_permissions: cdktf.listMapper(cdktf.stringToTerraform)(this._readPermissions),
+      write_permissions: cdktf.listMapper(cdktf.stringToTerraform)(this._writePermissions),
+      timeouts: applicationInsightsApiKeyTimeoutsToTerraform(this._timeouts),
     };
   }
 }

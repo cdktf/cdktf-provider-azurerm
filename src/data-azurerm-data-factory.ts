@@ -2,20 +2,17 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformDataSource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
-import { ComplexComputedList } from "cdktf";
-import { StringMap } from "cdktf";
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataAzurermDataFactoryConfig extends TerraformMetaArguments {
+export interface DataAzurermDataFactoryConfig extends cdktf.TerraformMetaArguments {
   readonly name: string;
   readonly resourceGroupName: string;
   /** timeouts block */
   readonly timeouts?: DataAzurermDataFactoryTimeouts;
 }
-export class DataAzurermDataFactoryGithubConfiguration extends ComplexComputedList {
+export class DataAzurermDataFactoryGithubConfiguration extends cdktf.ComplexComputedList {
 
   // account_name - computed: true, optional: false, required: false
   public get accountName() {
@@ -42,7 +39,7 @@ export class DataAzurermDataFactoryGithubConfiguration extends ComplexComputedLi
     return this.getStringAttribute('root_folder');
   }
 }
-export class DataAzurermDataFactoryIdentity extends ComplexComputedList {
+export class DataAzurermDataFactoryIdentity extends cdktf.ComplexComputedList {
 
   // principal_id - computed: true, optional: false, required: false
   public get principalId() {
@@ -59,7 +56,7 @@ export class DataAzurermDataFactoryIdentity extends ComplexComputedList {
     return this.getStringAttribute('type');
   }
 }
-export class DataAzurermDataFactoryVstsConfiguration extends ComplexComputedList {
+export class DataAzurermDataFactoryVstsConfiguration extends cdktf.ComplexComputedList {
 
   // account_name - computed: true, optional: false, required: false
   public get accountName() {
@@ -95,9 +92,17 @@ export interface DataAzurermDataFactoryTimeouts {
   readonly read?: string;
 }
 
+function dataAzurermDataFactoryTimeoutsToTerraform(struct?: DataAzurermDataFactoryTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    read: cdktf.stringToTerraform(struct!.read),
+  }
+}
+
+
 // Resource
 
-export class DataAzurermDataFactory extends TerraformDataSource {
+export class DataAzurermDataFactory extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
@@ -171,7 +176,7 @@ export class DataAzurermDataFactory extends TerraformDataSource {
 
   // tags - computed: true, optional: false, required: false
   public tags(key: string): string {
-    return new StringMap(this, 'tags').lookup(key);
+    return new cdktf.StringMap(this, 'tags').lookup(key);
   }
 
   // vsts_configuration - computed: true, optional: false, required: false
@@ -201,9 +206,9 @@ export class DataAzurermDataFactory extends TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      timeouts: this._timeouts,
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      timeouts: dataAzurermDataFactoryTimeoutsToTerraform(this._timeouts),
     };
   }
 }

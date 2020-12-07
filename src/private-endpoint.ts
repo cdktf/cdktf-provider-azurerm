@@ -2,13 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
-import { ComplexComputedList } from "cdktf";
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface PrivateEndpointConfig extends TerraformMetaArguments {
+export interface PrivateEndpointConfig extends cdktf.TerraformMetaArguments {
   readonly location: string;
   readonly name: string;
   readonly resourceGroupName: string;
@@ -21,7 +19,7 @@ export interface PrivateEndpointConfig extends TerraformMetaArguments {
   /** timeouts block */
   readonly timeouts?: PrivateEndpointTimeouts;
 }
-export class PrivateEndpointCustomDnsConfigs extends ComplexComputedList {
+export class PrivateEndpointCustomDnsConfigs extends cdktf.ComplexComputedList {
 
   // fqdn - computed: true, optional: false, required: false
   public get fqdn() {
@@ -33,7 +31,7 @@ export class PrivateEndpointCustomDnsConfigs extends ComplexComputedList {
     return this.getListAttribute('ip_addresses');
   }
 }
-export class PrivateEndpointPrivateDnsZoneConfigsRecordSets extends ComplexComputedList {
+export class PrivateEndpointPrivateDnsZoneConfigsRecordSets extends cdktf.ComplexComputedList {
 
   // fqdn - computed: true, optional: false, required: false
   public get fqdn() {
@@ -60,7 +58,7 @@ export class PrivateEndpointPrivateDnsZoneConfigsRecordSets extends ComplexCompu
     return this.getStringAttribute('type');
   }
 }
-export class PrivateEndpointPrivateDnsZoneConfigs extends ComplexComputedList {
+export class PrivateEndpointPrivateDnsZoneConfigs extends cdktf.ComplexComputedList {
 
   // id - computed: true, optional: false, required: false
   public get id() {
@@ -86,6 +84,15 @@ export interface PrivateEndpointPrivateDnsZoneGroup {
   readonly name: string;
   readonly privateDnsZoneIds: string[];
 }
+
+function privateEndpointPrivateDnsZoneGroupToTerraform(struct?: PrivateEndpointPrivateDnsZoneGroup): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    name: cdktf.stringToTerraform(struct!.name),
+    private_dns_zone_ids: cdktf.listMapper(cdktf.stringToTerraform)(struct!.privateDnsZoneIds),
+  }
+}
+
 export interface PrivateEndpointPrivateServiceConnection {
   readonly isManualConnection: boolean;
   readonly name: string;
@@ -93,6 +100,18 @@ export interface PrivateEndpointPrivateServiceConnection {
   readonly requestMessage?: string;
   readonly subresourceNames?: string[];
 }
+
+function privateEndpointPrivateServiceConnectionToTerraform(struct?: PrivateEndpointPrivateServiceConnection): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    is_manual_connection: cdktf.booleanToTerraform(struct!.isManualConnection),
+    name: cdktf.stringToTerraform(struct!.name),
+    private_connection_resource_id: cdktf.stringToTerraform(struct!.privateConnectionResourceId),
+    request_message: cdktf.stringToTerraform(struct!.requestMessage),
+    subresource_names: cdktf.listMapper(cdktf.stringToTerraform)(struct!.subresourceNames),
+  }
+}
+
 export interface PrivateEndpointTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -100,9 +119,20 @@ export interface PrivateEndpointTimeouts {
   readonly update?: string;
 }
 
+function privateEndpointTimeoutsToTerraform(struct?: PrivateEndpointTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class PrivateEndpoint extends TerraformResource {
+export class PrivateEndpoint extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -267,14 +297,14 @@ export class PrivateEndpoint extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      location: this._location,
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      subnet_id: this._subnetId,
-      tags: this._tags,
-      private_dns_zone_group: this._privateDnsZoneGroup,
-      private_service_connection: this._privateServiceConnection,
-      timeouts: this._timeouts,
+      location: cdktf.stringToTerraform(this._location),
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      subnet_id: cdktf.stringToTerraform(this._subnetId),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      private_dns_zone_group: cdktf.listMapper(privateEndpointPrivateDnsZoneGroupToTerraform)(this._privateDnsZoneGroup),
+      private_service_connection: cdktf.listMapper(privateEndpointPrivateServiceConnectionToTerraform)(this._privateServiceConnection),
+      timeouts: privateEndpointTimeoutsToTerraform(this._timeouts),
     };
   }
 }

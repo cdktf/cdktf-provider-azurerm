@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface SecurityCenterSubscriptionPricingConfig extends TerraformMetaArguments {
+export interface SecurityCenterSubscriptionPricingConfig extends cdktf.TerraformMetaArguments {
   readonly resourceType?: string;
   readonly tier: string;
   /** timeouts block */
@@ -20,9 +19,20 @@ export interface SecurityCenterSubscriptionPricingTimeouts {
   readonly update?: string;
 }
 
+function securityCenterSubscriptionPricingTimeoutsToTerraform(struct?: SecurityCenterSubscriptionPricingTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class SecurityCenterSubscriptionPricing extends TerraformResource {
+export class SecurityCenterSubscriptionPricing extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -104,9 +114,9 @@ export class SecurityCenterSubscriptionPricing extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      resource_type: this._resourceType,
-      tier: this._tier,
-      timeouts: this._timeouts,
+      resource_type: cdktf.stringToTerraform(this._resourceType),
+      tier: cdktf.stringToTerraform(this._tier),
+      timeouts: securityCenterSubscriptionPricingTimeoutsToTerraform(this._timeouts),
     };
   }
 }

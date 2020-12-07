@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformDataSource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataAzurermStorageContainerConfig extends TerraformMetaArguments {
+export interface DataAzurermStorageContainerConfig extends cdktf.TerraformMetaArguments {
   readonly metadata?: { [key: string]: string };
   readonly name: string;
   readonly storageAccountName: string;
@@ -18,9 +17,17 @@ export interface DataAzurermStorageContainerTimeouts {
   readonly read?: string;
 }
 
+function dataAzurermStorageContainerTimeoutsToTerraform(struct?: DataAzurermStorageContainerTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    read: cdktf.stringToTerraform(struct!.read),
+  }
+}
+
+
 // Resource
 
-export class DataAzurermStorageContainer extends TerraformDataSource {
+export class DataAzurermStorageContainer extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
@@ -136,10 +143,10 @@ export class DataAzurermStorageContainer extends TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      metadata: this._metadata,
-      name: this._name,
-      storage_account_name: this._storageAccountName,
-      timeouts: this._timeouts,
+      metadata: cdktf.hashMapper(cdktf.anyToTerraform)(this._metadata),
+      name: cdktf.stringToTerraform(this._name),
+      storage_account_name: cdktf.stringToTerraform(this._storageAccountName),
+      timeouts: dataAzurermStorageContainerTimeoutsToTerraform(this._timeouts),
     };
   }
 }

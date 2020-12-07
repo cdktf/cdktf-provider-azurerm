@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface SqlFirewallRuleConfig extends TerraformMetaArguments {
+export interface SqlFirewallRuleConfig extends cdktf.TerraformMetaArguments {
   readonly endIpAddress: string;
   readonly name: string;
   readonly resourceGroupName: string;
@@ -23,9 +22,20 @@ export interface SqlFirewallRuleTimeouts {
   readonly update?: string;
 }
 
+function sqlFirewallRuleTimeoutsToTerraform(struct?: SqlFirewallRuleTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class SqlFirewallRule extends TerraformResource {
+export class SqlFirewallRule extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -146,12 +156,12 @@ export class SqlFirewallRule extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      end_ip_address: this._endIpAddress,
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      server_name: this._serverName,
-      start_ip_address: this._startIpAddress,
-      timeouts: this._timeouts,
+      end_ip_address: cdktf.stringToTerraform(this._endIpAddress),
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      server_name: cdktf.stringToTerraform(this._serverName),
+      start_ip_address: cdktf.stringToTerraform(this._startIpAddress),
+      timeouts: sqlFirewallRuleTimeoutsToTerraform(this._timeouts),
     };
   }
 }

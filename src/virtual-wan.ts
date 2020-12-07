@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface VirtualWanConfig extends TerraformMetaArguments {
+export interface VirtualWanConfig extends cdktf.TerraformMetaArguments {
   readonly allowBranchToBranchTraffic?: boolean;
   readonly allowVnetToVnetTraffic?: boolean;
   readonly disableVpnEncryption?: boolean;
@@ -27,9 +26,20 @@ export interface VirtualWanTimeouts {
   readonly update?: string;
 }
 
+function virtualWanTimeoutsToTerraform(struct?: VirtualWanTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class VirtualWan extends TerraformResource {
+export class VirtualWan extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -224,16 +234,16 @@ export class VirtualWan extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      allow_branch_to_branch_traffic: this._allowBranchToBranchTraffic,
-      allow_vnet_to_vnet_traffic: this._allowVnetToVnetTraffic,
-      disable_vpn_encryption: this._disableVpnEncryption,
-      location: this._location,
-      name: this._name,
-      office365_local_breakout_category: this._office365LocalBreakoutCategory,
-      resource_group_name: this._resourceGroupName,
-      tags: this._tags,
-      type: this._type,
-      timeouts: this._timeouts,
+      allow_branch_to_branch_traffic: cdktf.booleanToTerraform(this._allowBranchToBranchTraffic),
+      allow_vnet_to_vnet_traffic: cdktf.booleanToTerraform(this._allowVnetToVnetTraffic),
+      disable_vpn_encryption: cdktf.booleanToTerraform(this._disableVpnEncryption),
+      location: cdktf.stringToTerraform(this._location),
+      name: cdktf.stringToTerraform(this._name),
+      office365_local_breakout_category: cdktf.stringToTerraform(this._office365LocalBreakoutCategory),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      type: cdktf.stringToTerraform(this._type),
+      timeouts: virtualWanTimeoutsToTerraform(this._timeouts),
     };
   }
 }

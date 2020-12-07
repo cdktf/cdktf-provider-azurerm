@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface IotTimeSeriesInsightsStandardEnvironmentConfig extends TerraformMetaArguments {
+export interface IotTimeSeriesInsightsStandardEnvironmentConfig extends cdktf.TerraformMetaArguments {
   readonly dataRetentionTime: string;
   readonly location: string;
   readonly name: string;
@@ -26,9 +25,20 @@ export interface IotTimeSeriesInsightsStandardEnvironmentTimeouts {
   readonly update?: string;
 }
 
+function iotTimeSeriesInsightsStandardEnvironmentTimeoutsToTerraform(struct?: IotTimeSeriesInsightsStandardEnvironmentTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class IotTimeSeriesInsightsStandardEnvironment extends TerraformResource {
+export class IotTimeSeriesInsightsStandardEnvironment extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -200,15 +210,15 @@ export class IotTimeSeriesInsightsStandardEnvironment extends TerraformResource 
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      data_retention_time: this._dataRetentionTime,
-      location: this._location,
-      name: this._name,
-      partition_key: this._partitionKey,
-      resource_group_name: this._resourceGroupName,
-      sku_name: this._skuName,
-      storage_limit_exceeded_behavior: this._storageLimitExceededBehavior,
-      tags: this._tags,
-      timeouts: this._timeouts,
+      data_retention_time: cdktf.stringToTerraform(this._dataRetentionTime),
+      location: cdktf.stringToTerraform(this._location),
+      name: cdktf.stringToTerraform(this._name),
+      partition_key: cdktf.stringToTerraform(this._partitionKey),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      sku_name: cdktf.stringToTerraform(this._skuName),
+      storage_limit_exceeded_behavior: cdktf.stringToTerraform(this._storageLimitExceededBehavior),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      timeouts: iotTimeSeriesInsightsStandardEnvironmentTimeoutsToTerraform(this._timeouts),
     };
   }
 }

@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface BatchApplicationConfig extends TerraformMetaArguments {
+export interface BatchApplicationConfig extends cdktf.TerraformMetaArguments {
   readonly accountName: string;
   readonly allowUpdates?: boolean;
   readonly defaultVersion?: string;
@@ -24,9 +23,20 @@ export interface BatchApplicationTimeouts {
   readonly update?: string;
 }
 
+function batchApplicationTimeoutsToTerraform(struct?: BatchApplicationTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class BatchApplication extends TerraformResource {
+export class BatchApplication extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -170,13 +180,13 @@ export class BatchApplication extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      account_name: this._accountName,
-      allow_updates: this._allowUpdates,
-      default_version: this._defaultVersion,
-      display_name: this._displayName,
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      timeouts: this._timeouts,
+      account_name: cdktf.stringToTerraform(this._accountName),
+      allow_updates: cdktf.booleanToTerraform(this._allowUpdates),
+      default_version: cdktf.stringToTerraform(this._defaultVersion),
+      display_name: cdktf.stringToTerraform(this._displayName),
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      timeouts: batchApplicationTimeoutsToTerraform(this._timeouts),
     };
   }
 }

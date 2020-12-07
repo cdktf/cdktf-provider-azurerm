@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataFactoryLinkedServiceKeyVaultConfig extends TerraformMetaArguments {
+export interface DataFactoryLinkedServiceKeyVaultConfig extends cdktf.TerraformMetaArguments {
   readonly additionalProperties?: { [key: string]: string };
   readonly annotations?: string[];
   readonly dataFactoryName: string;
@@ -27,9 +26,20 @@ export interface DataFactoryLinkedServiceKeyVaultTimeouts {
   readonly update?: string;
 }
 
+function dataFactoryLinkedServiceKeyVaultTimeoutsToTerraform(struct?: DataFactoryLinkedServiceKeyVaultTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class DataFactoryLinkedServiceKeyVault extends TerraformResource {
+export class DataFactoryLinkedServiceKeyVault extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -221,16 +231,16 @@ export class DataFactoryLinkedServiceKeyVault extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      additional_properties: this._additionalProperties,
-      annotations: this._annotations,
-      data_factory_name: this._dataFactoryName,
-      description: this._description,
-      integration_runtime_name: this._integrationRuntimeName,
-      key_vault_id: this._keyVaultId,
-      name: this._name,
-      parameters: this._parameters,
-      resource_group_name: this._resourceGroupName,
-      timeouts: this._timeouts,
+      additional_properties: cdktf.hashMapper(cdktf.anyToTerraform)(this._additionalProperties),
+      annotations: cdktf.listMapper(cdktf.stringToTerraform)(this._annotations),
+      data_factory_name: cdktf.stringToTerraform(this._dataFactoryName),
+      description: cdktf.stringToTerraform(this._description),
+      integration_runtime_name: cdktf.stringToTerraform(this._integrationRuntimeName),
+      key_vault_id: cdktf.stringToTerraform(this._keyVaultId),
+      name: cdktf.stringToTerraform(this._name),
+      parameters: cdktf.hashMapper(cdktf.anyToTerraform)(this._parameters),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      timeouts: dataFactoryLinkedServiceKeyVaultTimeoutsToTerraform(this._timeouts),
     };
   }
 }

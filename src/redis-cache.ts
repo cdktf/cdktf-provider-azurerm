@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface RedisCacheConfig extends TerraformMetaArguments {
+export interface RedisCacheConfig extends cdktf.TerraformMetaArguments {
   readonly capacity: number;
   readonly enableNonSslPort?: boolean;
   readonly family: string;
@@ -32,6 +31,15 @@ export interface RedisCachePatchSchedule {
   readonly dayOfWeek: string;
   readonly startHourUtc?: number;
 }
+
+function redisCachePatchScheduleToTerraform(struct?: RedisCachePatchSchedule): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    day_of_week: cdktf.stringToTerraform(struct!.dayOfWeek),
+    start_hour_utc: cdktf.numberToTerraform(struct!.startHourUtc),
+  }
+}
+
 export interface RedisCacheRedisConfiguration {
   readonly aofBackupEnabled?: boolean;
   readonly aofStorageConnectionString0?: string;
@@ -47,6 +55,26 @@ export interface RedisCacheRedisConfiguration {
   readonly rdbBackupMaxSnapshotCount?: number;
   readonly rdbStorageConnectionString?: string;
 }
+
+function redisCacheRedisConfigurationToTerraform(struct?: RedisCacheRedisConfiguration): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    aof_backup_enabled: cdktf.booleanToTerraform(struct!.aofBackupEnabled),
+    aof_storage_connection_string_0: cdktf.stringToTerraform(struct!.aofStorageConnectionString0),
+    aof_storage_connection_string_1: cdktf.stringToTerraform(struct!.aofStorageConnectionString1),
+    enable_authentication: cdktf.booleanToTerraform(struct!.enableAuthentication),
+    maxfragmentationmemory_reserved: cdktf.numberToTerraform(struct!.maxfragmentationmemoryReserved),
+    maxmemory_delta: cdktf.numberToTerraform(struct!.maxmemoryDelta),
+    maxmemory_policy: cdktf.stringToTerraform(struct!.maxmemoryPolicy),
+    maxmemory_reserved: cdktf.numberToTerraform(struct!.maxmemoryReserved),
+    notify_keyspace_events: cdktf.stringToTerraform(struct!.notifyKeyspaceEvents),
+    rdb_backup_enabled: cdktf.booleanToTerraform(struct!.rdbBackupEnabled),
+    rdb_backup_frequency: cdktf.numberToTerraform(struct!.rdbBackupFrequency),
+    rdb_backup_max_snapshot_count: cdktf.numberToTerraform(struct!.rdbBackupMaxSnapshotCount),
+    rdb_storage_connection_string: cdktf.stringToTerraform(struct!.rdbStorageConnectionString),
+  }
+}
+
 export interface RedisCacheTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -54,9 +82,20 @@ export interface RedisCacheTimeouts {
   readonly update?: string;
 }
 
+function redisCacheTimeoutsToTerraform(struct?: RedisCacheTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class RedisCache extends TerraformResource {
+export class RedisCache extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -379,22 +418,22 @@ export class RedisCache extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      capacity: this._capacity,
-      enable_non_ssl_port: this._enableNonSslPort,
-      family: this._family,
-      location: this._location,
-      minimum_tls_version: this._minimumTlsVersion,
-      name: this._name,
-      private_static_ip_address: this._privateStaticIpAddress,
-      resource_group_name: this._resourceGroupName,
-      shard_count: this._shardCount,
-      sku_name: this._skuName,
-      subnet_id: this._subnetId,
-      tags: this._tags,
-      zones: this._zones,
-      patch_schedule: this._patchSchedule,
-      redis_configuration: this._redisConfiguration,
-      timeouts: this._timeouts,
+      capacity: cdktf.numberToTerraform(this._capacity),
+      enable_non_ssl_port: cdktf.booleanToTerraform(this._enableNonSslPort),
+      family: cdktf.stringToTerraform(this._family),
+      location: cdktf.stringToTerraform(this._location),
+      minimum_tls_version: cdktf.stringToTerraform(this._minimumTlsVersion),
+      name: cdktf.stringToTerraform(this._name),
+      private_static_ip_address: cdktf.stringToTerraform(this._privateStaticIpAddress),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      shard_count: cdktf.numberToTerraform(this._shardCount),
+      sku_name: cdktf.stringToTerraform(this._skuName),
+      subnet_id: cdktf.stringToTerraform(this._subnetId),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      zones: cdktf.listMapper(cdktf.stringToTerraform)(this._zones),
+      patch_schedule: cdktf.listMapper(redisCachePatchScheduleToTerraform)(this._patchSchedule),
+      redis_configuration: cdktf.listMapper(redisCacheRedisConfigurationToTerraform)(this._redisConfiguration),
+      timeouts: redisCacheTimeoutsToTerraform(this._timeouts),
     };
   }
 }

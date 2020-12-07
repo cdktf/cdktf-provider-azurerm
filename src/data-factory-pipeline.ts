@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataFactoryPipelineConfig extends TerraformMetaArguments {
+export interface DataFactoryPipelineConfig extends cdktf.TerraformMetaArguments {
   readonly activitiesJson?: string;
   readonly annotations?: string[];
   readonly dataFactoryName: string;
@@ -26,9 +25,20 @@ export interface DataFactoryPipelineTimeouts {
   readonly update?: string;
 }
 
+function dataFactoryPipelineTimeoutsToTerraform(struct?: DataFactoryPipelineTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class DataFactoryPipeline extends TerraformResource {
+export class DataFactoryPipeline extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -206,15 +216,15 @@ export class DataFactoryPipeline extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      activities_json: this._activitiesJson,
-      annotations: this._annotations,
-      data_factory_name: this._dataFactoryName,
-      description: this._description,
-      name: this._name,
-      parameters: this._parameters,
-      resource_group_name: this._resourceGroupName,
-      variables: this._variables,
-      timeouts: this._timeouts,
+      activities_json: cdktf.stringToTerraform(this._activitiesJson),
+      annotations: cdktf.listMapper(cdktf.stringToTerraform)(this._annotations),
+      data_factory_name: cdktf.stringToTerraform(this._dataFactoryName),
+      description: cdktf.stringToTerraform(this._description),
+      name: cdktf.stringToTerraform(this._name),
+      parameters: cdktf.hashMapper(cdktf.anyToTerraform)(this._parameters),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      variables: cdktf.hashMapper(cdktf.anyToTerraform)(this._variables),
+      timeouts: dataFactoryPipelineTimeoutsToTerraform(this._timeouts),
     };
   }
 }

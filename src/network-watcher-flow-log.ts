@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface NetworkWatcherFlowLogConfig extends TerraformMetaArguments {
+export interface NetworkWatcherFlowLogConfig extends cdktf.TerraformMetaArguments {
   readonly enabled: boolean;
   readonly networkSecurityGroupId: string;
   readonly networkWatcherName: string;
@@ -25,12 +24,32 @@ export interface NetworkWatcherFlowLogRetentionPolicy {
   readonly days: number;
   readonly enabled: boolean;
 }
+
+function networkWatcherFlowLogRetentionPolicyToTerraform(struct?: NetworkWatcherFlowLogRetentionPolicy): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    days: cdktf.numberToTerraform(struct!.days),
+    enabled: cdktf.booleanToTerraform(struct!.enabled),
+  }
+}
+
 export interface NetworkWatcherFlowLogTimeouts {
   readonly create?: string;
   readonly delete?: string;
   readonly read?: string;
   readonly update?: string;
 }
+
+function networkWatcherFlowLogTimeoutsToTerraform(struct?: NetworkWatcherFlowLogTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
 export interface NetworkWatcherFlowLogTrafficAnalytics {
   readonly enabled: boolean;
   readonly intervalInMinutes?: number;
@@ -39,9 +58,21 @@ export interface NetworkWatcherFlowLogTrafficAnalytics {
   readonly workspaceResourceId: string;
 }
 
+function networkWatcherFlowLogTrafficAnalyticsToTerraform(struct?: NetworkWatcherFlowLogTrafficAnalytics): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    enabled: cdktf.booleanToTerraform(struct!.enabled),
+    interval_in_minutes: cdktf.numberToTerraform(struct!.intervalInMinutes),
+    workspace_id: cdktf.stringToTerraform(struct!.workspaceId),
+    workspace_region: cdktf.stringToTerraform(struct!.workspaceRegion),
+    workspace_resource_id: cdktf.stringToTerraform(struct!.workspaceResourceId),
+  }
+}
+
+
 // Resource
 
-export class NetworkWatcherFlowLog extends TerraformResource {
+export class NetworkWatcherFlowLog extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -210,15 +241,15 @@ export class NetworkWatcherFlowLog extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      enabled: this._enabled,
-      network_security_group_id: this._networkSecurityGroupId,
-      network_watcher_name: this._networkWatcherName,
-      resource_group_name: this._resourceGroupName,
-      storage_account_id: this._storageAccountId,
-      version: this._version,
-      retention_policy: this._retentionPolicy,
-      timeouts: this._timeouts,
-      traffic_analytics: this._trafficAnalytics,
+      enabled: cdktf.booleanToTerraform(this._enabled),
+      network_security_group_id: cdktf.stringToTerraform(this._networkSecurityGroupId),
+      network_watcher_name: cdktf.stringToTerraform(this._networkWatcherName),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      storage_account_id: cdktf.stringToTerraform(this._storageAccountId),
+      version: cdktf.numberToTerraform(this._version),
+      retention_policy: cdktf.listMapper(networkWatcherFlowLogRetentionPolicyToTerraform)(this._retentionPolicy),
+      timeouts: networkWatcherFlowLogTimeoutsToTerraform(this._timeouts),
+      traffic_analytics: cdktf.listMapper(networkWatcherFlowLogTrafficAnalyticsToTerraform)(this._trafficAnalytics),
     };
   }
 }

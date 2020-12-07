@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface SpringCloudAppConfig extends TerraformMetaArguments {
+export interface SpringCloudAppConfig extends cdktf.TerraformMetaArguments {
   readonly name: string;
   readonly resourceGroupName: string;
   readonly serviceName: string;
@@ -19,6 +18,14 @@ export interface SpringCloudAppConfig extends TerraformMetaArguments {
 export interface SpringCloudAppIdentity {
   readonly type: string;
 }
+
+function springCloudAppIdentityToTerraform(struct?: SpringCloudAppIdentity): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    type: cdktf.stringToTerraform(struct!.type),
+  }
+}
+
 export interface SpringCloudAppTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -26,9 +33,20 @@ export interface SpringCloudAppTimeouts {
   readonly update?: string;
 }
 
+function springCloudAppTimeoutsToTerraform(struct?: SpringCloudAppTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class SpringCloudApp extends TerraformResource {
+export class SpringCloudApp extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -138,11 +156,11 @@ export class SpringCloudApp extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      service_name: this._serviceName,
-      identity: this._identity,
-      timeouts: this._timeouts,
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      service_name: cdktf.stringToTerraform(this._serviceName),
+      identity: cdktf.listMapper(springCloudAppIdentityToTerraform)(this._identity),
+      timeouts: springCloudAppTimeoutsToTerraform(this._timeouts),
     };
   }
 }

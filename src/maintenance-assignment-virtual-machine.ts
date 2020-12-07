@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface MaintenanceAssignmentVirtualMachineConfig extends TerraformMetaArguments {
+export interface MaintenanceAssignmentVirtualMachineConfig extends cdktf.TerraformMetaArguments {
   readonly location: string;
   readonly maintenanceConfigurationId: string;
   readonly virtualMachineId: string;
@@ -20,9 +19,19 @@ export interface MaintenanceAssignmentVirtualMachineTimeouts {
   readonly read?: string;
 }
 
+function maintenanceAssignmentVirtualMachineTimeoutsToTerraform(struct?: MaintenanceAssignmentVirtualMachineTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+  }
+}
+
+
 // Resource
 
-export class MaintenanceAssignmentVirtualMachine extends TerraformResource {
+export class MaintenanceAssignmentVirtualMachine extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -115,10 +124,10 @@ export class MaintenanceAssignmentVirtualMachine extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      location: this._location,
-      maintenance_configuration_id: this._maintenanceConfigurationId,
-      virtual_machine_id: this._virtualMachineId,
-      timeouts: this._timeouts,
+      location: cdktf.stringToTerraform(this._location),
+      maintenance_configuration_id: cdktf.stringToTerraform(this._maintenanceConfigurationId),
+      virtual_machine_id: cdktf.stringToTerraform(this._virtualMachineId),
+      timeouts: maintenanceAssignmentVirtualMachineTimeoutsToTerraform(this._timeouts),
     };
   }
 }

@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface LogicAppTriggerRecurrenceConfig extends TerraformMetaArguments {
+export interface LogicAppTriggerRecurrenceConfig extends cdktf.TerraformMetaArguments {
   readonly frequency: string;
   readonly interval: number;
   readonly logicAppId: string;
@@ -24,9 +23,20 @@ export interface LogicAppTriggerRecurrenceTimeouts {
   readonly update?: string;
 }
 
+function logicAppTriggerRecurrenceTimeoutsToTerraform(struct?: LogicAppTriggerRecurrenceTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class LogicAppTriggerRecurrence extends TerraformResource {
+export class LogicAppTriggerRecurrence extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -167,13 +177,13 @@ export class LogicAppTriggerRecurrence extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      frequency: this._frequency,
-      interval: this._interval,
-      logic_app_id: this._logicAppId,
-      name: this._name,
-      start_time: this._startTime,
-      time_zone: this._timeZone,
-      timeouts: this._timeouts,
+      frequency: cdktf.stringToTerraform(this._frequency),
+      interval: cdktf.numberToTerraform(this._interval),
+      logic_app_id: cdktf.stringToTerraform(this._logicAppId),
+      name: cdktf.stringToTerraform(this._name),
+      start_time: cdktf.stringToTerraform(this._startTime),
+      time_zone: cdktf.stringToTerraform(this._timeZone),
+      timeouts: logicAppTriggerRecurrenceTimeoutsToTerraform(this._timeouts),
     };
   }
 }

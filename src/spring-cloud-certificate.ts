@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface SpringCloudCertificateConfig extends TerraformMetaArguments {
+export interface SpringCloudCertificateConfig extends cdktf.TerraformMetaArguments {
   readonly keyVaultCertificateId: string;
   readonly name: string;
   readonly resourceGroupName: string;
@@ -21,9 +20,19 @@ export interface SpringCloudCertificateTimeouts {
   readonly read?: string;
 }
 
+function springCloudCertificateTimeoutsToTerraform(struct?: SpringCloudCertificateTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+  }
+}
+
+
 // Resource
 
-export class SpringCloudCertificate extends TerraformResource {
+export class SpringCloudCertificate extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -130,11 +139,11 @@ export class SpringCloudCertificate extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      key_vault_certificate_id: this._keyVaultCertificateId,
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      service_name: this._serviceName,
-      timeouts: this._timeouts,
+      key_vault_certificate_id: cdktf.stringToTerraform(this._keyVaultCertificateId),
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      service_name: cdktf.stringToTerraform(this._serviceName),
+      timeouts: springCloudCertificateTimeoutsToTerraform(this._timeouts),
     };
   }
 }

@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataShareDatasetDataLakeGen2Config extends TerraformMetaArguments {
+export interface DataShareDatasetDataLakeGen2Config extends cdktf.TerraformMetaArguments {
   readonly filePath?: string;
   readonly fileSystemName: string;
   readonly folderPath?: string;
@@ -23,9 +22,19 @@ export interface DataShareDatasetDataLakeGen2Timeouts {
   readonly read?: string;
 }
 
+function dataShareDatasetDataLakeGen2TimeoutsToTerraform(struct?: DataShareDatasetDataLakeGen2Timeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+  }
+}
+
+
 // Resource
 
-export class DataShareDatasetDataLakeGen2 extends TerraformResource {
+export class DataShareDatasetDataLakeGen2 extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -171,13 +180,13 @@ export class DataShareDatasetDataLakeGen2 extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      file_path: this._filePath,
-      file_system_name: this._fileSystemName,
-      folder_path: this._folderPath,
-      name: this._name,
-      share_id: this._shareId,
-      storage_account_id: this._storageAccountId,
-      timeouts: this._timeouts,
+      file_path: cdktf.stringToTerraform(this._filePath),
+      file_system_name: cdktf.stringToTerraform(this._fileSystemName),
+      folder_path: cdktf.stringToTerraform(this._folderPath),
+      name: cdktf.stringToTerraform(this._name),
+      share_id: cdktf.stringToTerraform(this._shareId),
+      storage_account_id: cdktf.stringToTerraform(this._storageAccountId),
+      timeouts: dataShareDatasetDataLakeGen2TimeoutsToTerraform(this._timeouts),
     };
   }
 }

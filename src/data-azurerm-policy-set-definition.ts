@@ -2,20 +2,18 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformDataSource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
-import { ComplexComputedList } from "cdktf";
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataAzurermPolicySetDefinitionConfig extends TerraformMetaArguments {
+export interface DataAzurermPolicySetDefinitionConfig extends cdktf.TerraformMetaArguments {
   readonly displayName?: string;
   readonly managementGroupName?: string;
   readonly name?: string;
   /** timeouts block */
   readonly timeouts?: DataAzurermPolicySetDefinitionTimeouts;
 }
-export class DataAzurermPolicySetDefinitionPolicyDefinitionGroup extends ComplexComputedList {
+export class DataAzurermPolicySetDefinitionPolicyDefinitionGroup extends cdktf.ComplexComputedList {
 
   // additional_metadata_resource_id - computed: true, optional: false, required: false
   public get additionalMetadataResourceId() {
@@ -42,7 +40,7 @@ export class DataAzurermPolicySetDefinitionPolicyDefinitionGroup extends Complex
     return this.getStringAttribute('name');
   }
 }
-export class DataAzurermPolicySetDefinitionPolicyDefinitionReference extends ComplexComputedList {
+export class DataAzurermPolicySetDefinitionPolicyDefinitionReference extends cdktf.ComplexComputedList {
 
   // parameter_values - computed: true, optional: false, required: false
   public get parameterValues() {
@@ -73,9 +71,17 @@ export interface DataAzurermPolicySetDefinitionTimeouts {
   readonly read?: string;
 }
 
+function dataAzurermPolicySetDefinitionTimeoutsToTerraform(struct?: DataAzurermPolicySetDefinitionTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    read: cdktf.stringToTerraform(struct!.read),
+  }
+}
+
+
 // Resource
 
-export class DataAzurermPolicySetDefinition extends TerraformDataSource {
+export class DataAzurermPolicySetDefinition extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
@@ -212,10 +218,10 @@ export class DataAzurermPolicySetDefinition extends TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      display_name: this._displayName,
-      management_group_name: this._managementGroupName,
-      name: this._name,
-      timeouts: this._timeouts,
+      display_name: cdktf.stringToTerraform(this._displayName),
+      management_group_name: cdktf.stringToTerraform(this._managementGroupName),
+      name: cdktf.stringToTerraform(this._name),
+      timeouts: dataAzurermPolicySetDefinitionTimeoutsToTerraform(this._timeouts),
     };
   }
 }

@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformDataSource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataAzurermEventhubAuthorizationRuleConfig extends TerraformMetaArguments {
+export interface DataAzurermEventhubAuthorizationRuleConfig extends cdktf.TerraformMetaArguments {
   readonly eventhubName: string;
   readonly listen?: boolean;
   readonly manage?: boolean;
@@ -22,9 +21,17 @@ export interface DataAzurermEventhubAuthorizationRuleTimeouts {
   readonly read?: string;
 }
 
+function dataAzurermEventhubAuthorizationRuleTimeoutsToTerraform(struct?: DataAzurermEventhubAuthorizationRuleTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    read: cdktf.stringToTerraform(struct!.read),
+  }
+}
+
+
 // Resource
 
-export class DataAzurermEventhubAuthorizationRule extends TerraformDataSource {
+export class DataAzurermEventhubAuthorizationRule extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
@@ -217,14 +224,14 @@ export class DataAzurermEventhubAuthorizationRule extends TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      eventhub_name: this._eventhubName,
-      listen: this._listen,
-      manage: this._manage,
-      name: this._name,
-      namespace_name: this._namespaceName,
-      resource_group_name: this._resourceGroupName,
-      send: this._send,
-      timeouts: this._timeouts,
+      eventhub_name: cdktf.stringToTerraform(this._eventhubName),
+      listen: cdktf.booleanToTerraform(this._listen),
+      manage: cdktf.booleanToTerraform(this._manage),
+      name: cdktf.stringToTerraform(this._name),
+      namespace_name: cdktf.stringToTerraform(this._namespaceName),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      send: cdktf.booleanToTerraform(this._send),
+      timeouts: dataAzurermEventhubAuthorizationRuleTimeoutsToTerraform(this._timeouts),
     };
   }
 }

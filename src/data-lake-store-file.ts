@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataLakeStoreFileConfig extends TerraformMetaArguments {
+export interface DataLakeStoreFileConfig extends cdktf.TerraformMetaArguments {
   readonly accountName: string;
   readonly localFilePath: string;
   readonly remoteFilePath: string;
@@ -21,9 +20,20 @@ export interface DataLakeStoreFileTimeouts {
   readonly update?: string;
 }
 
+function dataLakeStoreFileTimeoutsToTerraform(struct?: DataLakeStoreFileTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class DataLakeStoreFile extends TerraformResource {
+export class DataLakeStoreFile extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -116,10 +126,10 @@ export class DataLakeStoreFile extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      account_name: this._accountName,
-      local_file_path: this._localFilePath,
-      remote_file_path: this._remoteFilePath,
-      timeouts: this._timeouts,
+      account_name: cdktf.stringToTerraform(this._accountName),
+      local_file_path: cdktf.stringToTerraform(this._localFilePath),
+      remote_file_path: cdktf.stringToTerraform(this._remoteFilePath),
+      timeouts: dataLakeStoreFileTimeoutsToTerraform(this._timeouts),
     };
   }
 }

@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface SiteRecoveryFabricConfig extends TerraformMetaArguments {
+export interface SiteRecoveryFabricConfig extends cdktf.TerraformMetaArguments {
   readonly location: string;
   readonly name: string;
   readonly recoveryVaultName: string;
@@ -22,9 +21,20 @@ export interface SiteRecoveryFabricTimeouts {
   readonly update?: string;
 }
 
+function siteRecoveryFabricTimeoutsToTerraform(struct?: SiteRecoveryFabricTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class SiteRecoveryFabric extends TerraformResource {
+export class SiteRecoveryFabric extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -131,11 +141,11 @@ export class SiteRecoveryFabric extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      location: this._location,
-      name: this._name,
-      recovery_vault_name: this._recoveryVaultName,
-      resource_group_name: this._resourceGroupName,
-      timeouts: this._timeouts,
+      location: cdktf.stringToTerraform(this._location),
+      name: cdktf.stringToTerraform(this._name),
+      recovery_vault_name: cdktf.stringToTerraform(this._recoveryVaultName),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      timeouts: siteRecoveryFabricTimeoutsToTerraform(this._timeouts),
     };
   }
 }

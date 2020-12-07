@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformDataSource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataAzurermPolicyDefinitionConfig extends TerraformMetaArguments {
+export interface DataAzurermPolicyDefinitionConfig extends cdktf.TerraformMetaArguments {
   readonly displayName?: string;
   readonly managementGroupId?: string;
   readonly managementGroupName?: string;
@@ -19,9 +18,17 @@ export interface DataAzurermPolicyDefinitionTimeouts {
   readonly read?: string;
 }
 
+function dataAzurermPolicyDefinitionTimeoutsToTerraform(struct?: DataAzurermPolicyDefinitionTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    read: cdktf.stringToTerraform(struct!.read),
+  }
+}
+
+
 // Resource
 
-export class DataAzurermPolicyDefinition extends TerraformDataSource {
+export class DataAzurermPolicyDefinition extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
@@ -170,11 +177,11 @@ export class DataAzurermPolicyDefinition extends TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      display_name: this._displayName,
-      management_group_id: this._managementGroupId,
-      management_group_name: this._managementGroupName,
-      name: this._name,
-      timeouts: this._timeouts,
+      display_name: cdktf.stringToTerraform(this._displayName),
+      management_group_id: cdktf.stringToTerraform(this._managementGroupId),
+      management_group_name: cdktf.stringToTerraform(this._managementGroupName),
+      name: cdktf.stringToTerraform(this._name),
+      timeouts: dataAzurermPolicyDefinitionTimeoutsToTerraform(this._timeouts),
     };
   }
 }

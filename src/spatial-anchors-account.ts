@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface SpatialAnchorsAccountConfig extends TerraformMetaArguments {
+export interface SpatialAnchorsAccountConfig extends cdktf.TerraformMetaArguments {
   readonly location: string;
   readonly name: string;
   readonly resourceGroupName: string;
@@ -22,9 +21,20 @@ export interface SpatialAnchorsAccountTimeouts {
   readonly update?: string;
 }
 
+function spatialAnchorsAccountTimeoutsToTerraform(struct?: SpatialAnchorsAccountTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class SpatialAnchorsAccount extends TerraformResource {
+export class SpatialAnchorsAccount extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -134,11 +144,11 @@ export class SpatialAnchorsAccount extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      location: this._location,
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      tags: this._tags,
-      timeouts: this._timeouts,
+      location: cdktf.stringToTerraform(this._location),
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      timeouts: spatialAnchorsAccountTimeoutsToTerraform(this._timeouts),
     };
   }
 }

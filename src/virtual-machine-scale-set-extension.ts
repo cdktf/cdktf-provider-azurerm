@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface VirtualMachineScaleSetExtensionAConfig extends TerraformMetaArguments {
+export interface VirtualMachineScaleSetExtensionAConfig extends cdktf.TerraformMetaArguments {
   readonly autoUpgradeMinorVersion?: boolean;
   readonly forceUpdateTag?: string;
   readonly name: string;
@@ -28,9 +27,20 @@ export interface VirtualMachineScaleSetExtensionTimeouts {
   readonly update?: string;
 }
 
+function virtualMachineScaleSetExtensionTimeoutsToTerraform(struct?: VirtualMachineScaleSetExtensionTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class VirtualMachineScaleSetExtensionA extends TerraformResource {
+export class VirtualMachineScaleSetExtensionA extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -236,17 +246,17 @@ export class VirtualMachineScaleSetExtensionA extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      auto_upgrade_minor_version: this._autoUpgradeMinorVersion,
-      force_update_tag: this._forceUpdateTag,
-      name: this._name,
-      protected_settings: this._protectedSettings,
-      provision_after_extensions: this._provisionAfterExtensions,
-      publisher: this._publisher,
-      settings: this._settings,
-      type: this._type,
-      type_handler_version: this._typeHandlerVersion,
-      virtual_machine_scale_set_id: this._virtualMachineScaleSetId,
-      timeouts: this._timeouts,
+      auto_upgrade_minor_version: cdktf.booleanToTerraform(this._autoUpgradeMinorVersion),
+      force_update_tag: cdktf.stringToTerraform(this._forceUpdateTag),
+      name: cdktf.stringToTerraform(this._name),
+      protected_settings: cdktf.stringToTerraform(this._protectedSettings),
+      provision_after_extensions: cdktf.listMapper(cdktf.stringToTerraform)(this._provisionAfterExtensions),
+      publisher: cdktf.stringToTerraform(this._publisher),
+      settings: cdktf.stringToTerraform(this._settings),
+      type: cdktf.stringToTerraform(this._type),
+      type_handler_version: cdktf.stringToTerraform(this._typeHandlerVersion),
+      virtual_machine_scale_set_id: cdktf.stringToTerraform(this._virtualMachineScaleSetId),
+      timeouts: virtualMachineScaleSetExtensionTimeoutsToTerraform(this._timeouts),
     };
   }
 }

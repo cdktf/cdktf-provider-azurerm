@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface KustoDatabasePrincipalAssignmentConfig extends TerraformMetaArguments {
+export interface KustoDatabasePrincipalAssignmentConfig extends cdktf.TerraformMetaArguments {
   readonly clusterName: string;
   readonly databaseName: string;
   readonly name: string;
@@ -25,9 +24,19 @@ export interface KustoDatabasePrincipalAssignmentTimeouts {
   readonly read?: string;
 }
 
+function kustoDatabasePrincipalAssignmentTimeoutsToTerraform(struct?: KustoDatabasePrincipalAssignmentTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+  }
+}
+
+
 // Resource
 
-export class KustoDatabasePrincipalAssignment extends TerraformResource {
+export class KustoDatabasePrincipalAssignment extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -200,15 +209,15 @@ export class KustoDatabasePrincipalAssignment extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      cluster_name: this._clusterName,
-      database_name: this._databaseName,
-      name: this._name,
-      principal_id: this._principalId,
-      principal_type: this._principalType,
-      resource_group_name: this._resourceGroupName,
-      role: this._role,
-      tenant_id: this._tenantId,
-      timeouts: this._timeouts,
+      cluster_name: cdktf.stringToTerraform(this._clusterName),
+      database_name: cdktf.stringToTerraform(this._databaseName),
+      name: cdktf.stringToTerraform(this._name),
+      principal_id: cdktf.stringToTerraform(this._principalId),
+      principal_type: cdktf.stringToTerraform(this._principalType),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      role: cdktf.stringToTerraform(this._role),
+      tenant_id: cdktf.stringToTerraform(this._tenantId),
+      timeouts: kustoDatabasePrincipalAssignmentTimeoutsToTerraform(this._timeouts),
     };
   }
 }

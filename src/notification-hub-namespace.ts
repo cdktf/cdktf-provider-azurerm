@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface NotificationHubNamespaceConfig extends TerraformMetaArguments {
+export interface NotificationHubNamespaceConfig extends cdktf.TerraformMetaArguments {
   readonly enabled?: boolean;
   readonly location: string;
   readonly name: string;
@@ -25,9 +24,20 @@ export interface NotificationHubNamespaceTimeouts {
   readonly update?: string;
 }
 
+function notificationHubNamespaceTimeoutsToTerraform(struct?: NotificationHubNamespaceTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class NotificationHubNamespace extends TerraformResource {
+export class NotificationHubNamespace extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -187,14 +197,14 @@ export class NotificationHubNamespace extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      enabled: this._enabled,
-      location: this._location,
-      name: this._name,
-      namespace_type: this._namespaceType,
-      resource_group_name: this._resourceGroupName,
-      sku_name: this._skuName,
-      tags: this._tags,
-      timeouts: this._timeouts,
+      enabled: cdktf.booleanToTerraform(this._enabled),
+      location: cdktf.stringToTerraform(this._location),
+      name: cdktf.stringToTerraform(this._name),
+      namespace_type: cdktf.stringToTerraform(this._namespaceType),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      sku_name: cdktf.stringToTerraform(this._skuName),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      timeouts: notificationHubNamespaceTimeoutsToTerraform(this._timeouts),
     };
   }
 }

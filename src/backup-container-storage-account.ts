@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface BackupContainerStorageAccountConfig extends TerraformMetaArguments {
+export interface BackupContainerStorageAccountConfig extends cdktf.TerraformMetaArguments {
   readonly recoveryVaultName: string;
   readonly resourceGroupName: string;
   readonly storageAccountId: string;
@@ -21,9 +20,20 @@ export interface BackupContainerStorageAccountTimeouts {
   readonly update?: string;
 }
 
+function backupContainerStorageAccountTimeoutsToTerraform(struct?: BackupContainerStorageAccountTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class BackupContainerStorageAccount extends TerraformResource {
+export class BackupContainerStorageAccount extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -116,10 +126,10 @@ export class BackupContainerStorageAccount extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      recovery_vault_name: this._recoveryVaultName,
-      resource_group_name: this._resourceGroupName,
-      storage_account_id: this._storageAccountId,
-      timeouts: this._timeouts,
+      recovery_vault_name: cdktf.stringToTerraform(this._recoveryVaultName),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      storage_account_id: cdktf.stringToTerraform(this._storageAccountId),
+      timeouts: backupContainerStorageAccountTimeoutsToTerraform(this._timeouts),
     };
   }
 }

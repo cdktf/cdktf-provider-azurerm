@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface BatchPoolConfig extends TerraformMetaArguments {
+export interface BatchPoolConfig extends cdktf.TerraformMetaArguments {
   readonly accountName: string;
   readonly displayName?: string;
   readonly maxTasksPerNode?: number;
@@ -38,32 +37,92 @@ export interface BatchPoolAutoScale {
   readonly evaluationInterval?: string;
   readonly formula: string;
 }
+
+function batchPoolAutoScaleToTerraform(struct?: BatchPoolAutoScale): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    evaluation_interval: cdktf.stringToTerraform(struct!.evaluationInterval),
+    formula: cdktf.stringToTerraform(struct!.formula),
+  }
+}
+
 export interface BatchPoolCertificate {
   readonly id: string;
   readonly storeLocation: string;
   readonly storeName?: string;
   readonly visibility?: string[];
 }
+
+function batchPoolCertificateToTerraform(struct?: BatchPoolCertificate): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    id: cdktf.stringToTerraform(struct!.id),
+    store_location: cdktf.stringToTerraform(struct!.storeLocation),
+    store_name: cdktf.stringToTerraform(struct!.storeName),
+    visibility: cdktf.listMapper(cdktf.stringToTerraform)(struct!.visibility),
+  }
+}
+
 export interface BatchPoolContainerConfigurationContainerRegistries {
   readonly password?: string;
   readonly registryServer?: string;
   readonly userName?: string;
 }
+
+function batchPoolContainerConfigurationContainerRegistriesToTerraform(struct?: BatchPoolContainerConfigurationContainerRegistries): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    password: cdktf.stringToTerraform(struct!.password),
+    registry_server: cdktf.stringToTerraform(struct!.registryServer),
+    user_name: cdktf.stringToTerraform(struct!.userName),
+  }
+}
+
 export interface BatchPoolContainerConfiguration {
   readonly containerImageNames?: string[];
   readonly containerRegistries?: BatchPoolContainerConfigurationContainerRegistries[];
   readonly type?: string;
 }
+
+function batchPoolContainerConfigurationToTerraform(struct?: BatchPoolContainerConfiguration): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    container_image_names: cdktf.listMapper(cdktf.stringToTerraform)(struct!.containerImageNames),
+    container_registries: cdktf.listMapper(batchPoolContainerConfigurationContainerRegistriesToTerraform)(struct!.containerRegistries),
+    type: cdktf.stringToTerraform(struct!.type),
+  }
+}
+
 export interface BatchPoolFixedScale {
   readonly resizeTimeout?: string;
   readonly targetDedicatedNodes?: number;
   readonly targetLowPriorityNodes?: number;
 }
+
+function batchPoolFixedScaleToTerraform(struct?: BatchPoolFixedScale): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    resize_timeout: cdktf.stringToTerraform(struct!.resizeTimeout),
+    target_dedicated_nodes: cdktf.numberToTerraform(struct!.targetDedicatedNodes),
+    target_low_priority_nodes: cdktf.numberToTerraform(struct!.targetLowPriorityNodes),
+  }
+}
+
 export interface BatchPoolNetworkConfigurationEndpointConfigurationNetworkSecurityGroupRules {
   readonly access: string;
   readonly priority: number;
   readonly sourceAddressPrefix: string;
 }
+
+function batchPoolNetworkConfigurationEndpointConfigurationNetworkSecurityGroupRulesToTerraform(struct?: BatchPoolNetworkConfigurationEndpointConfigurationNetworkSecurityGroupRules): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    access: cdktf.stringToTerraform(struct!.access),
+    priority: cdktf.numberToTerraform(struct!.priority),
+    source_address_prefix: cdktf.stringToTerraform(struct!.sourceAddressPrefix),
+  }
+}
+
 export interface BatchPoolNetworkConfigurationEndpointConfiguration {
   readonly backendPort: number;
   readonly frontendPortRange: string;
@@ -72,12 +131,34 @@ export interface BatchPoolNetworkConfigurationEndpointConfiguration {
   /** network_security_group_rules block */
   readonly networkSecurityGroupRules?: BatchPoolNetworkConfigurationEndpointConfigurationNetworkSecurityGroupRules[];
 }
+
+function batchPoolNetworkConfigurationEndpointConfigurationToTerraform(struct?: BatchPoolNetworkConfigurationEndpointConfiguration): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    backend_port: cdktf.numberToTerraform(struct!.backendPort),
+    frontend_port_range: cdktf.stringToTerraform(struct!.frontendPortRange),
+    name: cdktf.stringToTerraform(struct!.name),
+    protocol: cdktf.stringToTerraform(struct!.protocol),
+    network_security_group_rules: cdktf.listMapper(batchPoolNetworkConfigurationEndpointConfigurationNetworkSecurityGroupRulesToTerraform)(struct!.networkSecurityGroupRules),
+  }
+}
+
 export interface BatchPoolNetworkConfiguration {
   readonly publicIps?: string[];
   readonly subnetId: string;
   /** endpoint_configuration block */
   readonly endpointConfiguration?: BatchPoolNetworkConfigurationEndpointConfiguration[];
 }
+
+function batchPoolNetworkConfigurationToTerraform(struct?: BatchPoolNetworkConfiguration): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    public_ips: cdktf.listMapper(cdktf.stringToTerraform)(struct!.publicIps),
+    subnet_id: cdktf.stringToTerraform(struct!.subnetId),
+    endpoint_configuration: cdktf.listMapper(batchPoolNetworkConfigurationEndpointConfigurationToTerraform)(struct!.endpointConfiguration),
+  }
+}
+
 export interface BatchPoolStartTaskResourceFile {
   readonly autoStorageContainerName?: string;
   readonly blobPrefix?: string;
@@ -86,15 +167,46 @@ export interface BatchPoolStartTaskResourceFile {
   readonly httpUrl?: string;
   readonly storageContainerUrl?: string;
 }
+
+function batchPoolStartTaskResourceFileToTerraform(struct?: BatchPoolStartTaskResourceFile): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    auto_storage_container_name: cdktf.stringToTerraform(struct!.autoStorageContainerName),
+    blob_prefix: cdktf.stringToTerraform(struct!.blobPrefix),
+    file_mode: cdktf.stringToTerraform(struct!.fileMode),
+    file_path: cdktf.stringToTerraform(struct!.filePath),
+    http_url: cdktf.stringToTerraform(struct!.httpUrl),
+    storage_container_url: cdktf.stringToTerraform(struct!.storageContainerUrl),
+  }
+}
+
 export interface BatchPoolStartTaskUserIdentityAutoUser {
   readonly elevationLevel?: string;
   readonly scope?: string;
 }
+
+function batchPoolStartTaskUserIdentityAutoUserToTerraform(struct?: BatchPoolStartTaskUserIdentityAutoUser): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    elevation_level: cdktf.stringToTerraform(struct!.elevationLevel),
+    scope: cdktf.stringToTerraform(struct!.scope),
+  }
+}
+
 export interface BatchPoolStartTaskUserIdentity {
   readonly userName?: string;
   /** auto_user block */
   readonly autoUser?: BatchPoolStartTaskUserIdentityAutoUser[];
 }
+
+function batchPoolStartTaskUserIdentityToTerraform(struct?: BatchPoolStartTaskUserIdentity): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    user_name: cdktf.stringToTerraform(struct!.userName),
+    auto_user: cdktf.listMapper(batchPoolStartTaskUserIdentityAutoUserToTerraform)(struct!.autoUser),
+  }
+}
+
 export interface BatchPoolStartTask {
   readonly commandLine: string;
   readonly environment?: { [key: string]: string };
@@ -105,6 +217,19 @@ export interface BatchPoolStartTask {
   /** user_identity block */
   readonly userIdentity: BatchPoolStartTaskUserIdentity[];
 }
+
+function batchPoolStartTaskToTerraform(struct?: BatchPoolStartTask): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    command_line: cdktf.stringToTerraform(struct!.commandLine),
+    environment: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.environment),
+    max_task_retry_count: cdktf.numberToTerraform(struct!.maxTaskRetryCount),
+    wait_for_success: cdktf.booleanToTerraform(struct!.waitForSuccess),
+    resource_file: cdktf.listMapper(batchPoolStartTaskResourceFileToTerraform)(struct!.resourceFile),
+    user_identity: cdktf.listMapper(batchPoolStartTaskUserIdentityToTerraform)(struct!.userIdentity),
+  }
+}
+
 export interface BatchPoolStorageImageReference {
   readonly id?: string;
   readonly offer?: string;
@@ -112,6 +237,18 @@ export interface BatchPoolStorageImageReference {
   readonly sku?: string;
   readonly version?: string;
 }
+
+function batchPoolStorageImageReferenceToTerraform(struct?: BatchPoolStorageImageReference): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    id: cdktf.stringToTerraform(struct!.id),
+    offer: cdktf.stringToTerraform(struct!.offer),
+    publisher: cdktf.stringToTerraform(struct!.publisher),
+    sku: cdktf.stringToTerraform(struct!.sku),
+    version: cdktf.stringToTerraform(struct!.version),
+  }
+}
+
 export interface BatchPoolTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -119,9 +256,20 @@ export interface BatchPoolTimeouts {
   readonly update?: string;
 }
 
+function batchPoolTimeoutsToTerraform(struct?: BatchPoolTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class BatchPool extends TerraformResource {
+export class BatchPool extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -426,23 +574,23 @@ export class BatchPool extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      account_name: this._accountName,
-      display_name: this._displayName,
-      max_tasks_per_node: this._maxTasksPerNode,
-      metadata: this._metadata,
-      name: this._name,
-      node_agent_sku_id: this._nodeAgentSkuId,
-      resource_group_name: this._resourceGroupName,
-      stop_pending_resize_operation: this._stopPendingResizeOperation,
-      vm_size: this._vmSize,
-      auto_scale: this._autoScale,
-      certificate: this._certificate,
-      container_configuration: this._containerConfiguration,
-      fixed_scale: this._fixedScale,
-      network_configuration: this._networkConfiguration,
-      start_task: this._startTask,
-      storage_image_reference: this._storageImageReference,
-      timeouts: this._timeouts,
+      account_name: cdktf.stringToTerraform(this._accountName),
+      display_name: cdktf.stringToTerraform(this._displayName),
+      max_tasks_per_node: cdktf.numberToTerraform(this._maxTasksPerNode),
+      metadata: cdktf.hashMapper(cdktf.anyToTerraform)(this._metadata),
+      name: cdktf.stringToTerraform(this._name),
+      node_agent_sku_id: cdktf.stringToTerraform(this._nodeAgentSkuId),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      stop_pending_resize_operation: cdktf.booleanToTerraform(this._stopPendingResizeOperation),
+      vm_size: cdktf.stringToTerraform(this._vmSize),
+      auto_scale: cdktf.listMapper(batchPoolAutoScaleToTerraform)(this._autoScale),
+      certificate: cdktf.listMapper(batchPoolCertificateToTerraform)(this._certificate),
+      container_configuration: cdktf.listMapper(batchPoolContainerConfigurationToTerraform)(this._containerConfiguration),
+      fixed_scale: cdktf.listMapper(batchPoolFixedScaleToTerraform)(this._fixedScale),
+      network_configuration: cdktf.listMapper(batchPoolNetworkConfigurationToTerraform)(this._networkConfiguration),
+      start_task: cdktf.listMapper(batchPoolStartTaskToTerraform)(this._startTask),
+      storage_image_reference: cdktf.listMapper(batchPoolStorageImageReferenceToTerraform)(this._storageImageReference),
+      timeouts: batchPoolTimeoutsToTerraform(this._timeouts),
     };
   }
 }

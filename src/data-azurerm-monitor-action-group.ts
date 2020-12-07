@@ -2,19 +2,17 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformDataSource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
-import { ComplexComputedList } from "cdktf";
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataAzurermMonitorActionGroupConfig extends TerraformMetaArguments {
+export interface DataAzurermMonitorActionGroupConfig extends cdktf.TerraformMetaArguments {
   readonly name: string;
   readonly resourceGroupName: string;
   /** timeouts block */
   readonly timeouts?: DataAzurermMonitorActionGroupTimeouts;
 }
-export class DataAzurermMonitorActionGroupArmRoleReceiver extends ComplexComputedList {
+export class DataAzurermMonitorActionGroupArmRoleReceiver extends cdktf.ComplexComputedList {
 
   // name - computed: true, optional: false, required: false
   public get name() {
@@ -31,7 +29,7 @@ export class DataAzurermMonitorActionGroupArmRoleReceiver extends ComplexCompute
     return this.getBooleanAttribute('use_common_alert_schema');
   }
 }
-export class DataAzurermMonitorActionGroupAutomationRunbookReceiver extends ComplexComputedList {
+export class DataAzurermMonitorActionGroupAutomationRunbookReceiver extends cdktf.ComplexComputedList {
 
   // automation_account_id - computed: true, optional: false, required: false
   public get automationAccountId() {
@@ -68,7 +66,7 @@ export class DataAzurermMonitorActionGroupAutomationRunbookReceiver extends Comp
     return this.getStringAttribute('webhook_resource_id');
   }
 }
-export class DataAzurermMonitorActionGroupAzureAppPushReceiver extends ComplexComputedList {
+export class DataAzurermMonitorActionGroupAzureAppPushReceiver extends cdktf.ComplexComputedList {
 
   // email_address - computed: true, optional: false, required: false
   public get emailAddress() {
@@ -80,7 +78,7 @@ export class DataAzurermMonitorActionGroupAzureAppPushReceiver extends ComplexCo
     return this.getStringAttribute('name');
   }
 }
-export class DataAzurermMonitorActionGroupAzureFunctionReceiver extends ComplexComputedList {
+export class DataAzurermMonitorActionGroupAzureFunctionReceiver extends cdktf.ComplexComputedList {
 
   // function_app_resource_id - computed: true, optional: false, required: false
   public get functionAppResourceId() {
@@ -107,7 +105,7 @@ export class DataAzurermMonitorActionGroupAzureFunctionReceiver extends ComplexC
     return this.getBooleanAttribute('use_common_alert_schema');
   }
 }
-export class DataAzurermMonitorActionGroupEmailReceiver extends ComplexComputedList {
+export class DataAzurermMonitorActionGroupEmailReceiver extends cdktf.ComplexComputedList {
 
   // email_address - computed: true, optional: false, required: false
   public get emailAddress() {
@@ -124,7 +122,7 @@ export class DataAzurermMonitorActionGroupEmailReceiver extends ComplexComputedL
     return this.getBooleanAttribute('use_common_alert_schema');
   }
 }
-export class DataAzurermMonitorActionGroupItsmReceiver extends ComplexComputedList {
+export class DataAzurermMonitorActionGroupItsmReceiver extends cdktf.ComplexComputedList {
 
   // connection_id - computed: true, optional: false, required: false
   public get connectionId() {
@@ -151,7 +149,7 @@ export class DataAzurermMonitorActionGroupItsmReceiver extends ComplexComputedLi
     return this.getStringAttribute('workspace_id');
   }
 }
-export class DataAzurermMonitorActionGroupLogicAppReceiver extends ComplexComputedList {
+export class DataAzurermMonitorActionGroupLogicAppReceiver extends cdktf.ComplexComputedList {
 
   // callback_url - computed: true, optional: false, required: false
   public get callbackUrl() {
@@ -173,7 +171,7 @@ export class DataAzurermMonitorActionGroupLogicAppReceiver extends ComplexComput
     return this.getBooleanAttribute('use_common_alert_schema');
   }
 }
-export class DataAzurermMonitorActionGroupSmsReceiver extends ComplexComputedList {
+export class DataAzurermMonitorActionGroupSmsReceiver extends cdktf.ComplexComputedList {
 
   // country_code - computed: true, optional: false, required: false
   public get countryCode() {
@@ -190,7 +188,7 @@ export class DataAzurermMonitorActionGroupSmsReceiver extends ComplexComputedLis
     return this.getStringAttribute('phone_number');
   }
 }
-export class DataAzurermMonitorActionGroupVoiceReceiver extends ComplexComputedList {
+export class DataAzurermMonitorActionGroupVoiceReceiver extends cdktf.ComplexComputedList {
 
   // country_code - computed: true, optional: false, required: false
   public get countryCode() {
@@ -207,7 +205,7 @@ export class DataAzurermMonitorActionGroupVoiceReceiver extends ComplexComputedL
     return this.getStringAttribute('phone_number');
   }
 }
-export class DataAzurermMonitorActionGroupWebhookReceiver extends ComplexComputedList {
+export class DataAzurermMonitorActionGroupWebhookReceiver extends cdktf.ComplexComputedList {
 
   // name - computed: true, optional: false, required: false
   public get name() {
@@ -228,9 +226,17 @@ export interface DataAzurermMonitorActionGroupTimeouts {
   readonly read?: string;
 }
 
+function dataAzurermMonitorActionGroupTimeoutsToTerraform(struct?: DataAzurermMonitorActionGroupTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    read: cdktf.stringToTerraform(struct!.read),
+  }
+}
+
+
 // Resource
 
-export class DataAzurermMonitorActionGroup extends TerraformDataSource {
+export class DataAzurermMonitorActionGroup extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
@@ -369,9 +375,9 @@ export class DataAzurermMonitorActionGroup extends TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      timeouts: this._timeouts,
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      timeouts: dataAzurermMonitorActionGroupTimeoutsToTerraform(this._timeouts),
     };
   }
 }

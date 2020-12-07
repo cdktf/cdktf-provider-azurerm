@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface SignalrServiceConfig extends TerraformMetaArguments {
+export interface SignalrServiceConfig extends cdktf.TerraformMetaArguments {
   readonly location: string;
   readonly name: string;
   readonly resourceGroupName: string;
@@ -24,14 +23,40 @@ export interface SignalrServiceConfig extends TerraformMetaArguments {
 export interface SignalrServiceCors {
   readonly allowedOrigins: string[];
 }
+
+function signalrServiceCorsToTerraform(struct?: SignalrServiceCors): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    allowed_origins: cdktf.listMapper(cdktf.stringToTerraform)(struct!.allowedOrigins),
+  }
+}
+
 export interface SignalrServiceFeatures {
   readonly flag: string;
   readonly value: string;
 }
+
+function signalrServiceFeaturesToTerraform(struct?: SignalrServiceFeatures): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    flag: cdktf.stringToTerraform(struct!.flag),
+    value: cdktf.stringToTerraform(struct!.value),
+  }
+}
+
 export interface SignalrServiceSku {
   readonly capacity: number;
   readonly name: string;
 }
+
+function signalrServiceSkuToTerraform(struct?: SignalrServiceSku): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    capacity: cdktf.numberToTerraform(struct!.capacity),
+    name: cdktf.stringToTerraform(struct!.name),
+  }
+}
+
 export interface SignalrServiceTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -39,9 +64,20 @@ export interface SignalrServiceTimeouts {
   readonly update?: string;
 }
 
+function signalrServiceTimeoutsToTerraform(struct?: SignalrServiceTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class SignalrService extends TerraformResource {
+export class SignalrService extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -239,14 +275,14 @@ export class SignalrService extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      location: this._location,
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      tags: this._tags,
-      cors: this._cors,
-      features: this._features,
-      sku: this._sku,
-      timeouts: this._timeouts,
+      location: cdktf.stringToTerraform(this._location),
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      cors: cdktf.listMapper(signalrServiceCorsToTerraform)(this._cors),
+      features: cdktf.listMapper(signalrServiceFeaturesToTerraform)(this._features),
+      sku: cdktf.listMapper(signalrServiceSkuToTerraform)(this._sku),
+      timeouts: signalrServiceTimeoutsToTerraform(this._timeouts),
     };
   }
 }

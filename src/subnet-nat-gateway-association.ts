@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface SubnetNatGatewayAssociationConfig extends TerraformMetaArguments {
+export interface SubnetNatGatewayAssociationConfig extends cdktf.TerraformMetaArguments {
   readonly natGatewayId: string;
   readonly subnetId: string;
   /** timeouts block */
@@ -20,9 +19,20 @@ export interface SubnetNatGatewayAssociationTimeouts {
   readonly update?: string;
 }
 
+function subnetNatGatewayAssociationTimeoutsToTerraform(struct?: SubnetNatGatewayAssociationTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class SubnetNatGatewayAssociation extends TerraformResource {
+export class SubnetNatGatewayAssociation extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -101,9 +111,9 @@ export class SubnetNatGatewayAssociation extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      nat_gateway_id: this._natGatewayId,
-      subnet_id: this._subnetId,
-      timeouts: this._timeouts,
+      nat_gateway_id: cdktf.stringToTerraform(this._natGatewayId),
+      subnet_id: cdktf.stringToTerraform(this._subnetId),
+      timeouts: subnetNatGatewayAssociationTimeoutsToTerraform(this._timeouts),
     };
   }
 }

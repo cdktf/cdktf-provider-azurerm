@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface ServicebusNamespaceNetworkRuleSetConfig extends TerraformMetaArguments {
+export interface ServicebusNamespaceNetworkRuleSetConfig extends cdktf.TerraformMetaArguments {
   readonly defaultAction?: string;
   readonly ipRules?: string[];
   readonly namespaceName: string;
@@ -21,6 +20,15 @@ export interface ServicebusNamespaceNetworkRuleSetNetworkRules {
   readonly ignoreMissingVnetServiceEndpoint?: boolean;
   readonly subnetId: string;
 }
+
+function servicebusNamespaceNetworkRuleSetNetworkRulesToTerraform(struct?: ServicebusNamespaceNetworkRuleSetNetworkRules): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    ignore_missing_vnet_service_endpoint: cdktf.booleanToTerraform(struct!.ignoreMissingVnetServiceEndpoint),
+    subnet_id: cdktf.stringToTerraform(struct!.subnetId),
+  }
+}
+
 export interface ServicebusNamespaceNetworkRuleSetTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -28,9 +36,20 @@ export interface ServicebusNamespaceNetworkRuleSetTimeouts {
   readonly update?: string;
 }
 
+function servicebusNamespaceNetworkRuleSetTimeoutsToTerraform(struct?: ServicebusNamespaceNetworkRuleSetTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class ServicebusNamespaceNetworkRuleSet extends TerraformResource {
+export class ServicebusNamespaceNetworkRuleSet extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -160,12 +179,12 @@ export class ServicebusNamespaceNetworkRuleSet extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      default_action: this._defaultAction,
-      ip_rules: this._ipRules,
-      namespace_name: this._namespaceName,
-      resource_group_name: this._resourceGroupName,
-      network_rules: this._networkRules,
-      timeouts: this._timeouts,
+      default_action: cdktf.stringToTerraform(this._defaultAction),
+      ip_rules: cdktf.listMapper(cdktf.stringToTerraform)(this._ipRules),
+      namespace_name: cdktf.stringToTerraform(this._namespaceName),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      network_rules: cdktf.listMapper(servicebusNamespaceNetworkRuleSetNetworkRulesToTerraform)(this._networkRules),
+      timeouts: servicebusNamespaceNetworkRuleSetTimeoutsToTerraform(this._timeouts),
     };
   }
 }

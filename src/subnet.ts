@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface SubnetConfig extends TerraformMetaArguments {
+export interface SubnetConfig extends cdktf.TerraformMetaArguments {
   readonly addressPrefix?: string;
   readonly addressPrefixes?: string[];
   readonly enforcePrivateLinkEndpointNetworkPolicies?: boolean;
@@ -25,11 +24,29 @@ export interface SubnetDelegationServiceDelegation {
   readonly actions?: string[];
   readonly name: string;
 }
+
+function subnetDelegationServiceDelegationToTerraform(struct?: SubnetDelegationServiceDelegation): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    actions: cdktf.listMapper(cdktf.stringToTerraform)(struct!.actions),
+    name: cdktf.stringToTerraform(struct!.name),
+  }
+}
+
 export interface SubnetDelegation {
   readonly name: string;
   /** service_delegation block */
   readonly serviceDelegation: SubnetDelegationServiceDelegation[];
 }
+
+function subnetDelegationToTerraform(struct?: SubnetDelegation): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    name: cdktf.stringToTerraform(struct!.name),
+    service_delegation: cdktf.listMapper(subnetDelegationServiceDelegationToTerraform)(struct!.serviceDelegation),
+  }
+}
+
 export interface SubnetTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -37,9 +54,20 @@ export interface SubnetTimeouts {
   readonly update?: string;
 }
 
+function subnetTimeoutsToTerraform(struct?: SubnetTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class Subnet extends TerraformResource {
+export class Subnet extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -234,16 +262,16 @@ export class Subnet extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      address_prefix: this._addressPrefix,
-      address_prefixes: this._addressPrefixes,
-      enforce_private_link_endpoint_network_policies: this._enforcePrivateLinkEndpointNetworkPolicies,
-      enforce_private_link_service_network_policies: this._enforcePrivateLinkServiceNetworkPolicies,
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      service_endpoints: this._serviceEndpoints,
-      virtual_network_name: this._virtualNetworkName,
-      delegation: this._delegation,
-      timeouts: this._timeouts,
+      address_prefix: cdktf.stringToTerraform(this._addressPrefix),
+      address_prefixes: cdktf.listMapper(cdktf.stringToTerraform)(this._addressPrefixes),
+      enforce_private_link_endpoint_network_policies: cdktf.booleanToTerraform(this._enforcePrivateLinkEndpointNetworkPolicies),
+      enforce_private_link_service_network_policies: cdktf.booleanToTerraform(this._enforcePrivateLinkServiceNetworkPolicies),
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      service_endpoints: cdktf.listMapper(cdktf.stringToTerraform)(this._serviceEndpoints),
+      virtual_network_name: cdktf.stringToTerraform(this._virtualNetworkName),
+      delegation: cdktf.listMapper(subnetDelegationToTerraform)(this._delegation),
+      timeouts: subnetTimeoutsToTerraform(this._timeouts),
     };
   }
 }

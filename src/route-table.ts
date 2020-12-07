@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface RouteTableConfig extends TerraformMetaArguments {
+export interface RouteTableConfig extends cdktf.TerraformMetaArguments {
   readonly disableBgpRoutePropagation?: boolean;
   readonly location: string;
   readonly name: string;
@@ -23,6 +22,17 @@ export interface RouteTableRoute {
   readonly nextHopInIpAddress?: string;
   readonly nextHopType?: string;
 }
+
+function routeTableRouteToTerraform(struct?: RouteTableRoute): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    address_prefix: cdktf.stringToTerraform(struct!.addressPrefix),
+    name: cdktf.stringToTerraform(struct!.name),
+    next_hop_in_ip_address: cdktf.stringToTerraform(struct!.nextHopInIpAddress),
+    next_hop_type: cdktf.stringToTerraform(struct!.nextHopType),
+  }
+}
+
 export interface RouteTableTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -30,9 +40,20 @@ export interface RouteTableTimeouts {
   readonly update?: string;
 }
 
+function routeTableTimeoutsToTerraform(struct?: RouteTableTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class RouteTable extends TerraformResource {
+export class RouteTable extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -181,13 +202,13 @@ export class RouteTable extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      disable_bgp_route_propagation: this._disableBgpRoutePropagation,
-      location: this._location,
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      route: this._route,
-      tags: this._tags,
-      timeouts: this._timeouts,
+      disable_bgp_route_propagation: cdktf.booleanToTerraform(this._disableBgpRoutePropagation),
+      location: cdktf.stringToTerraform(this._location),
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      route: cdktf.listMapper(routeTableRouteToTerraform)(this._route),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      timeouts: routeTableTimeoutsToTerraform(this._timeouts),
     };
   }
 }

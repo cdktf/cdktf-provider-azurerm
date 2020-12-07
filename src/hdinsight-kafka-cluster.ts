@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface HdinsightKafkaClusterConfig extends TerraformMetaArguments {
+export interface HdinsightKafkaClusterConfig extends cdktf.TerraformMetaArguments {
   readonly clusterVersion: string;
   readonly location: string;
   readonly name: string;
@@ -35,29 +34,80 @@ export interface HdinsightKafkaClusterConfig extends TerraformMetaArguments {
 export interface HdinsightKafkaClusterComponentVersion {
   readonly kafka: string;
 }
+
+function hdinsightKafkaClusterComponentVersionToTerraform(struct?: HdinsightKafkaClusterComponentVersion): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    kafka: cdktf.stringToTerraform(struct!.kafka),
+  }
+}
+
 export interface HdinsightKafkaClusterGateway {
   readonly enabled?: boolean;
   readonly password: string;
   readonly username: string;
 }
+
+function hdinsightKafkaClusterGatewayToTerraform(struct?: HdinsightKafkaClusterGateway): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    enabled: cdktf.booleanToTerraform(struct!.enabled),
+    password: cdktf.stringToTerraform(struct!.password),
+    username: cdktf.stringToTerraform(struct!.username),
+  }
+}
+
 export interface HdinsightKafkaClusterMetastoresAmbari {
   readonly databaseName: string;
   readonly password: string;
   readonly server: string;
   readonly username: string;
 }
+
+function hdinsightKafkaClusterMetastoresAmbariToTerraform(struct?: HdinsightKafkaClusterMetastoresAmbari): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    database_name: cdktf.stringToTerraform(struct!.databaseName),
+    password: cdktf.stringToTerraform(struct!.password),
+    server: cdktf.stringToTerraform(struct!.server),
+    username: cdktf.stringToTerraform(struct!.username),
+  }
+}
+
 export interface HdinsightKafkaClusterMetastoresHive {
   readonly databaseName: string;
   readonly password: string;
   readonly server: string;
   readonly username: string;
 }
+
+function hdinsightKafkaClusterMetastoresHiveToTerraform(struct?: HdinsightKafkaClusterMetastoresHive): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    database_name: cdktf.stringToTerraform(struct!.databaseName),
+    password: cdktf.stringToTerraform(struct!.password),
+    server: cdktf.stringToTerraform(struct!.server),
+    username: cdktf.stringToTerraform(struct!.username),
+  }
+}
+
 export interface HdinsightKafkaClusterMetastoresOozie {
   readonly databaseName: string;
   readonly password: string;
   readonly server: string;
   readonly username: string;
 }
+
+function hdinsightKafkaClusterMetastoresOozieToTerraform(struct?: HdinsightKafkaClusterMetastoresOozie): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    database_name: cdktf.stringToTerraform(struct!.databaseName),
+    password: cdktf.stringToTerraform(struct!.password),
+    server: cdktf.stringToTerraform(struct!.server),
+    username: cdktf.stringToTerraform(struct!.username),
+  }
+}
+
 export interface HdinsightKafkaClusterMetastores {
   /** ambari block */
   readonly ambari?: HdinsightKafkaClusterMetastoresAmbari[];
@@ -66,10 +116,29 @@ export interface HdinsightKafkaClusterMetastores {
   /** oozie block */
   readonly oozie?: HdinsightKafkaClusterMetastoresOozie[];
 }
+
+function hdinsightKafkaClusterMetastoresToTerraform(struct?: HdinsightKafkaClusterMetastores): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    ambari: cdktf.listMapper(hdinsightKafkaClusterMetastoresAmbariToTerraform)(struct!.ambari),
+    hive: cdktf.listMapper(hdinsightKafkaClusterMetastoresHiveToTerraform)(struct!.hive),
+    oozie: cdktf.listMapper(hdinsightKafkaClusterMetastoresOozieToTerraform)(struct!.oozie),
+  }
+}
+
 export interface HdinsightKafkaClusterMonitor {
   readonly logAnalyticsWorkspaceId: string;
   readonly primaryKey: string;
 }
+
+function hdinsightKafkaClusterMonitorToTerraform(struct?: HdinsightKafkaClusterMonitor): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    log_analytics_workspace_id: cdktf.stringToTerraform(struct!.logAnalyticsWorkspaceId),
+    primary_key: cdktf.stringToTerraform(struct!.primaryKey),
+  }
+}
+
 export interface HdinsightKafkaClusterRolesHeadNode {
   readonly password?: string;
   readonly sshKeys?: string[];
@@ -78,6 +147,19 @@ export interface HdinsightKafkaClusterRolesHeadNode {
   readonly virtualNetworkId?: string;
   readonly vmSize: string;
 }
+
+function hdinsightKafkaClusterRolesHeadNodeToTerraform(struct?: HdinsightKafkaClusterRolesHeadNode): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    password: cdktf.stringToTerraform(struct!.password),
+    ssh_keys: cdktf.listMapper(cdktf.stringToTerraform)(struct!.sshKeys),
+    subnet_id: cdktf.stringToTerraform(struct!.subnetId),
+    username: cdktf.stringToTerraform(struct!.username),
+    virtual_network_id: cdktf.stringToTerraform(struct!.virtualNetworkId),
+    vm_size: cdktf.stringToTerraform(struct!.vmSize),
+  }
+}
+
 export interface HdinsightKafkaClusterRolesWorkerNode {
   readonly minInstanceCount?: number;
   readonly numberOfDisksPerNode: number;
@@ -89,6 +171,22 @@ export interface HdinsightKafkaClusterRolesWorkerNode {
   readonly virtualNetworkId?: string;
   readonly vmSize: string;
 }
+
+function hdinsightKafkaClusterRolesWorkerNodeToTerraform(struct?: HdinsightKafkaClusterRolesWorkerNode): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    min_instance_count: cdktf.numberToTerraform(struct!.minInstanceCount),
+    number_of_disks_per_node: cdktf.numberToTerraform(struct!.numberOfDisksPerNode),
+    password: cdktf.stringToTerraform(struct!.password),
+    ssh_keys: cdktf.listMapper(cdktf.stringToTerraform)(struct!.sshKeys),
+    subnet_id: cdktf.stringToTerraform(struct!.subnetId),
+    target_instance_count: cdktf.numberToTerraform(struct!.targetInstanceCount),
+    username: cdktf.stringToTerraform(struct!.username),
+    virtual_network_id: cdktf.stringToTerraform(struct!.virtualNetworkId),
+    vm_size: cdktf.stringToTerraform(struct!.vmSize),
+  }
+}
+
 export interface HdinsightKafkaClusterRolesZookeeperNode {
   readonly password?: string;
   readonly sshKeys?: string[];
@@ -97,6 +195,19 @@ export interface HdinsightKafkaClusterRolesZookeeperNode {
   readonly virtualNetworkId?: string;
   readonly vmSize: string;
 }
+
+function hdinsightKafkaClusterRolesZookeeperNodeToTerraform(struct?: HdinsightKafkaClusterRolesZookeeperNode): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    password: cdktf.stringToTerraform(struct!.password),
+    ssh_keys: cdktf.listMapper(cdktf.stringToTerraform)(struct!.sshKeys),
+    subnet_id: cdktf.stringToTerraform(struct!.subnetId),
+    username: cdktf.stringToTerraform(struct!.username),
+    virtual_network_id: cdktf.stringToTerraform(struct!.virtualNetworkId),
+    vm_size: cdktf.stringToTerraform(struct!.vmSize),
+  }
+}
+
 export interface HdinsightKafkaClusterRoles {
   /** head_node block */
   readonly headNode: HdinsightKafkaClusterRolesHeadNode[];
@@ -105,17 +216,48 @@ export interface HdinsightKafkaClusterRoles {
   /** zookeeper_node block */
   readonly zookeeperNode: HdinsightKafkaClusterRolesZookeeperNode[];
 }
+
+function hdinsightKafkaClusterRolesToTerraform(struct?: HdinsightKafkaClusterRoles): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    head_node: cdktf.listMapper(hdinsightKafkaClusterRolesHeadNodeToTerraform)(struct!.headNode),
+    worker_node: cdktf.listMapper(hdinsightKafkaClusterRolesWorkerNodeToTerraform)(struct!.workerNode),
+    zookeeper_node: cdktf.listMapper(hdinsightKafkaClusterRolesZookeeperNodeToTerraform)(struct!.zookeeperNode),
+  }
+}
+
 export interface HdinsightKafkaClusterStorageAccount {
   readonly isDefault: boolean;
   readonly storageAccountKey: string;
   readonly storageContainerId: string;
 }
+
+function hdinsightKafkaClusterStorageAccountToTerraform(struct?: HdinsightKafkaClusterStorageAccount): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    is_default: cdktf.booleanToTerraform(struct!.isDefault),
+    storage_account_key: cdktf.stringToTerraform(struct!.storageAccountKey),
+    storage_container_id: cdktf.stringToTerraform(struct!.storageContainerId),
+  }
+}
+
 export interface HdinsightKafkaClusterStorageAccountGen2 {
   readonly filesystemId: string;
   readonly isDefault: boolean;
   readonly managedIdentityResourceId: string;
   readonly storageResourceId: string;
 }
+
+function hdinsightKafkaClusterStorageAccountGen2ToTerraform(struct?: HdinsightKafkaClusterStorageAccountGen2): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    filesystem_id: cdktf.stringToTerraform(struct!.filesystemId),
+    is_default: cdktf.booleanToTerraform(struct!.isDefault),
+    managed_identity_resource_id: cdktf.stringToTerraform(struct!.managedIdentityResourceId),
+    storage_resource_id: cdktf.stringToTerraform(struct!.storageResourceId),
+  }
+}
+
 export interface HdinsightKafkaClusterTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -123,9 +265,20 @@ export interface HdinsightKafkaClusterTimeouts {
   readonly update?: string;
 }
 
+function hdinsightKafkaClusterTimeoutsToTerraform(struct?: HdinsightKafkaClusterTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class HdinsightKafkaCluster extends TerraformResource {
+export class HdinsightKafkaCluster extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -400,21 +553,21 @@ export class HdinsightKafkaCluster extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      cluster_version: this._clusterVersion,
-      location: this._location,
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      tags: this._tags,
-      tier: this._tier,
-      tls_min_version: this._tlsMinVersion,
-      component_version: this._componentVersion,
-      gateway: this._gateway,
-      metastores: this._metastores,
-      monitor: this._monitor,
-      roles: this._roles,
-      storage_account: this._storageAccount,
-      storage_account_gen2: this._storageAccountGen2,
-      timeouts: this._timeouts,
+      cluster_version: cdktf.stringToTerraform(this._clusterVersion),
+      location: cdktf.stringToTerraform(this._location),
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      tier: cdktf.stringToTerraform(this._tier),
+      tls_min_version: cdktf.stringToTerraform(this._tlsMinVersion),
+      component_version: cdktf.listMapper(hdinsightKafkaClusterComponentVersionToTerraform)(this._componentVersion),
+      gateway: cdktf.listMapper(hdinsightKafkaClusterGatewayToTerraform)(this._gateway),
+      metastores: cdktf.listMapper(hdinsightKafkaClusterMetastoresToTerraform)(this._metastores),
+      monitor: cdktf.listMapper(hdinsightKafkaClusterMonitorToTerraform)(this._monitor),
+      roles: cdktf.listMapper(hdinsightKafkaClusterRolesToTerraform)(this._roles),
+      storage_account: cdktf.listMapper(hdinsightKafkaClusterStorageAccountToTerraform)(this._storageAccount),
+      storage_account_gen2: cdktf.listMapper(hdinsightKafkaClusterStorageAccountGen2ToTerraform)(this._storageAccountGen2),
+      timeouts: hdinsightKafkaClusterTimeoutsToTerraform(this._timeouts),
     };
   }
 }

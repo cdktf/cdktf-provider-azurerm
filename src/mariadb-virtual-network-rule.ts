@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface MariadbVirtualNetworkRuleConfig extends TerraformMetaArguments {
+export interface MariadbVirtualNetworkRuleConfig extends cdktf.TerraformMetaArguments {
   readonly name: string;
   readonly resourceGroupName: string;
   readonly serverName: string;
@@ -22,9 +21,20 @@ export interface MariadbVirtualNetworkRuleTimeouts {
   readonly update?: string;
 }
 
+function mariadbVirtualNetworkRuleTimeoutsToTerraform(struct?: MariadbVirtualNetworkRuleTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class MariadbVirtualNetworkRule extends TerraformResource {
+export class MariadbVirtualNetworkRule extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -131,11 +141,11 @@ export class MariadbVirtualNetworkRule extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      server_name: this._serverName,
-      subnet_id: this._subnetId,
-      timeouts: this._timeouts,
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      server_name: cdktf.stringToTerraform(this._serverName),
+      subnet_id: cdktf.stringToTerraform(this._subnetId),
+      timeouts: mariadbVirtualNetworkRuleTimeoutsToTerraform(this._timeouts),
     };
   }
 }

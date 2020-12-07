@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface LocalNetworkGatewayConfig extends TerraformMetaArguments {
+export interface LocalNetworkGatewayConfig extends cdktf.TerraformMetaArguments {
   readonly addressSpace: string[];
   readonly gatewayAddress?: string;
   readonly gatewayFqdn?: string;
@@ -25,6 +24,16 @@ export interface LocalNetworkGatewayBgpSettings {
   readonly bgpPeeringAddress: string;
   readonly peerWeight?: number;
 }
+
+function localNetworkGatewayBgpSettingsToTerraform(struct?: LocalNetworkGatewayBgpSettings): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    asn: cdktf.numberToTerraform(struct!.asn),
+    bgp_peering_address: cdktf.stringToTerraform(struct!.bgpPeeringAddress),
+    peer_weight: cdktf.numberToTerraform(struct!.peerWeight),
+  }
+}
+
 export interface LocalNetworkGatewayTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -32,9 +41,20 @@ export interface LocalNetworkGatewayTimeouts {
   readonly update?: string;
 }
 
+function localNetworkGatewayTimeoutsToTerraform(struct?: LocalNetworkGatewayTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class LocalNetworkGateway extends TerraformResource {
+export class LocalNetworkGateway extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -209,15 +229,15 @@ export class LocalNetworkGateway extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      address_space: this._addressSpace,
-      gateway_address: this._gatewayAddress,
-      gateway_fqdn: this._gatewayFqdn,
-      location: this._location,
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      tags: this._tags,
-      bgp_settings: this._bgpSettings,
-      timeouts: this._timeouts,
+      address_space: cdktf.listMapper(cdktf.stringToTerraform)(this._addressSpace),
+      gateway_address: cdktf.stringToTerraform(this._gatewayAddress),
+      gateway_fqdn: cdktf.stringToTerraform(this._gatewayFqdn),
+      location: cdktf.stringToTerraform(this._location),
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      bgp_settings: cdktf.listMapper(localNetworkGatewayBgpSettingsToTerraform)(this._bgpSettings),
+      timeouts: localNetworkGatewayTimeoutsToTerraform(this._timeouts),
     };
   }
 }

@@ -2,19 +2,17 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformDataSource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
-import { ComplexComputedList } from "cdktf";
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataAzurermImagesConfig extends TerraformMetaArguments {
+export interface DataAzurermImagesConfig extends cdktf.TerraformMetaArguments {
   readonly resourceGroupName: string;
   readonly tagsFilter?: { [key: string]: string };
   /** timeouts block */
   readonly timeouts?: DataAzurermImagesTimeouts;
 }
-export class DataAzurermImagesImagesDataDisk extends ComplexComputedList {
+export class DataAzurermImagesImagesDataDisk extends cdktf.ComplexComputedList {
 
   // blob_uri - computed: true, optional: false, required: false
   public get blobUri() {
@@ -41,7 +39,7 @@ export class DataAzurermImagesImagesDataDisk extends ComplexComputedList {
     return this.getNumberAttribute('size_gb');
   }
 }
-export class DataAzurermImagesImagesOsDisk extends ComplexComputedList {
+export class DataAzurermImagesImagesOsDisk extends cdktf.ComplexComputedList {
 
   // blob_uri - computed: true, optional: false, required: false
   public get blobUri() {
@@ -73,7 +71,7 @@ export class DataAzurermImagesImagesOsDisk extends ComplexComputedList {
     return this.getNumberAttribute('size_gb');
   }
 }
-export class DataAzurermImagesImages extends ComplexComputedList {
+export class DataAzurermImagesImages extends cdktf.ComplexComputedList {
 
   // data_disk - computed: true, optional: false, required: false
   public get dataDisk() {
@@ -109,9 +107,17 @@ export interface DataAzurermImagesTimeouts {
   readonly read?: string;
 }
 
+function dataAzurermImagesTimeoutsToTerraform(struct?: DataAzurermImagesTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    read: cdktf.stringToTerraform(struct!.read),
+  }
+}
+
+
 // Resource
 
-export class DataAzurermImages extends TerraformDataSource {
+export class DataAzurermImages extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
@@ -198,9 +204,9 @@ export class DataAzurermImages extends TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      resource_group_name: this._resourceGroupName,
-      tags_filter: this._tagsFilter,
-      timeouts: this._timeouts,
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      tags_filter: cdktf.hashMapper(cdktf.anyToTerraform)(this._tagsFilter),
+      timeouts: dataAzurermImagesTimeoutsToTerraform(this._timeouts),
     };
   }
 }

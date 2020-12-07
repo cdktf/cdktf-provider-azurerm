@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface StorageSyncGroupConfig extends TerraformMetaArguments {
+export interface StorageSyncGroupConfig extends cdktf.TerraformMetaArguments {
   readonly name: string;
   readonly storageSyncId: string;
   /** timeouts block */
@@ -19,9 +18,19 @@ export interface StorageSyncGroupTimeouts {
   readonly read?: string;
 }
 
+function storageSyncGroupTimeoutsToTerraform(struct?: StorageSyncGroupTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+  }
+}
+
+
 // Resource
 
-export class StorageSyncGroup extends TerraformResource {
+export class StorageSyncGroup extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -100,9 +109,9 @@ export class StorageSyncGroup extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      name: this._name,
-      storage_sync_id: this._storageSyncId,
-      timeouts: this._timeouts,
+      name: cdktf.stringToTerraform(this._name),
+      storage_sync_id: cdktf.stringToTerraform(this._storageSyncId),
+      timeouts: storageSyncGroupTimeoutsToTerraform(this._timeouts),
     };
   }
 }

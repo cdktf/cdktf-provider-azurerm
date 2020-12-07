@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface KustoClusterCustomerManagedKeyConfig extends TerraformMetaArguments {
+export interface KustoClusterCustomerManagedKeyConfig extends cdktf.TerraformMetaArguments {
   readonly clusterId: string;
   readonly keyName: string;
   readonly keyVaultId: string;
@@ -22,9 +21,20 @@ export interface KustoClusterCustomerManagedKeyTimeouts {
   readonly update?: string;
 }
 
+function kustoClusterCustomerManagedKeyTimeoutsToTerraform(struct?: KustoClusterCustomerManagedKeyTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class KustoClusterCustomerManagedKey extends TerraformResource {
+export class KustoClusterCustomerManagedKey extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -131,11 +141,11 @@ export class KustoClusterCustomerManagedKey extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      cluster_id: this._clusterId,
-      key_name: this._keyName,
-      key_vault_id: this._keyVaultId,
-      key_version: this._keyVersion,
-      timeouts: this._timeouts,
+      cluster_id: cdktf.stringToTerraform(this._clusterId),
+      key_name: cdktf.stringToTerraform(this._keyName),
+      key_vault_id: cdktf.stringToTerraform(this._keyVaultId),
+      key_version: cdktf.stringToTerraform(this._keyVersion),
+      timeouts: kustoClusterCustomerManagedKeyTimeoutsToTerraform(this._timeouts),
     };
   }
 }

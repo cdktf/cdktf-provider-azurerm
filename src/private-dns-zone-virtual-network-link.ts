@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface PrivateDnsZoneVirtualNetworkLinkConfig extends TerraformMetaArguments {
+export interface PrivateDnsZoneVirtualNetworkLinkConfig extends cdktf.TerraformMetaArguments {
   readonly name: string;
   readonly privateDnsZoneName: string;
   readonly registrationEnabled?: boolean;
@@ -24,9 +23,20 @@ export interface PrivateDnsZoneVirtualNetworkLinkTimeouts {
   readonly update?: string;
 }
 
+function privateDnsZoneVirtualNetworkLinkTimeoutsToTerraform(struct?: PrivateDnsZoneVirtualNetworkLinkTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class PrivateDnsZoneVirtualNetworkLink extends TerraformResource {
+export class PrivateDnsZoneVirtualNetworkLink extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -167,13 +177,13 @@ export class PrivateDnsZoneVirtualNetworkLink extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      name: this._name,
-      private_dns_zone_name: this._privateDnsZoneName,
-      registration_enabled: this._registrationEnabled,
-      resource_group_name: this._resourceGroupName,
-      tags: this._tags,
-      virtual_network_id: this._virtualNetworkId,
-      timeouts: this._timeouts,
+      name: cdktf.stringToTerraform(this._name),
+      private_dns_zone_name: cdktf.stringToTerraform(this._privateDnsZoneName),
+      registration_enabled: cdktf.booleanToTerraform(this._registrationEnabled),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      virtual_network_id: cdktf.stringToTerraform(this._virtualNetworkId),
+      timeouts: privateDnsZoneVirtualNetworkLinkTimeoutsToTerraform(this._timeouts),
     };
   }
 }

@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface ServicebusNamespaceConfig extends TerraformMetaArguments {
+export interface ServicebusNamespaceConfig extends cdktf.TerraformMetaArguments {
   readonly capacity?: number;
   readonly location: string;
   readonly name: string;
@@ -25,9 +24,20 @@ export interface ServicebusNamespaceTimeouts {
   readonly update?: string;
 }
 
+function servicebusNamespaceTimeoutsToTerraform(struct?: ServicebusNamespaceTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class ServicebusNamespace extends TerraformResource {
+export class ServicebusNamespace extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -205,14 +215,14 @@ export class ServicebusNamespace extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      capacity: this._capacity,
-      location: this._location,
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      sku: this._sku,
-      tags: this._tags,
-      zone_redundant: this._zoneRedundant,
-      timeouts: this._timeouts,
+      capacity: cdktf.numberToTerraform(this._capacity),
+      location: cdktf.stringToTerraform(this._location),
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      sku: cdktf.stringToTerraform(this._sku),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      zone_redundant: cdktf.booleanToTerraform(this._zoneRedundant),
+      timeouts: servicebusNamespaceTimeoutsToTerraform(this._timeouts),
     };
   }
 }

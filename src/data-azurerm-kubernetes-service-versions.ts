@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformDataSource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataAzurermKubernetesServiceVersionsConfig extends TerraformMetaArguments {
+export interface DataAzurermKubernetesServiceVersionsConfig extends cdktf.TerraformMetaArguments {
   readonly includePreview?: boolean;
   readonly location: string;
   readonly versionPrefix?: string;
@@ -18,9 +17,17 @@ export interface DataAzurermKubernetesServiceVersionsTimeouts {
   readonly read?: string;
 }
 
+function dataAzurermKubernetesServiceVersionsTimeoutsToTerraform(struct?: DataAzurermKubernetesServiceVersionsTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    read: cdktf.stringToTerraform(struct!.read),
+  }
+}
+
+
 // Resource
 
-export class DataAzurermKubernetesServiceVersions extends TerraformDataSource {
+export class DataAzurermKubernetesServiceVersions extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
@@ -129,10 +136,10 @@ export class DataAzurermKubernetesServiceVersions extends TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      include_preview: this._includePreview,
-      location: this._location,
-      version_prefix: this._versionPrefix,
-      timeouts: this._timeouts,
+      include_preview: cdktf.booleanToTerraform(this._includePreview),
+      location: cdktf.stringToTerraform(this._location),
+      version_prefix: cdktf.stringToTerraform(this._versionPrefix),
+      timeouts: dataAzurermKubernetesServiceVersionsTimeoutsToTerraform(this._timeouts),
     };
   }
 }

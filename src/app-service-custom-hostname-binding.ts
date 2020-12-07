@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface AppServiceCustomHostnameBindingConfig extends TerraformMetaArguments {
+export interface AppServiceCustomHostnameBindingConfig extends cdktf.TerraformMetaArguments {
   readonly appServiceName: string;
   readonly hostname: string;
   readonly resourceGroupName: string;
@@ -23,9 +22,20 @@ export interface AppServiceCustomHostnameBindingTimeouts {
   readonly update?: string;
 }
 
+function appServiceCustomHostnameBindingTimeoutsToTerraform(struct?: AppServiceCustomHostnameBindingTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class AppServiceCustomHostnameBinding extends TerraformResource {
+export class AppServiceCustomHostnameBinding extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -157,12 +167,12 @@ export class AppServiceCustomHostnameBinding extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      app_service_name: this._appServiceName,
-      hostname: this._hostname,
-      resource_group_name: this._resourceGroupName,
-      ssl_state: this._sslState,
-      thumbprint: this._thumbprint,
-      timeouts: this._timeouts,
+      app_service_name: cdktf.stringToTerraform(this._appServiceName),
+      hostname: cdktf.stringToTerraform(this._hostname),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      ssl_state: cdktf.stringToTerraform(this._sslState),
+      thumbprint: cdktf.stringToTerraform(this._thumbprint),
+      timeouts: appServiceCustomHostnameBindingTimeoutsToTerraform(this._timeouts),
     };
   }
 }

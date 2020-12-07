@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface BotChannelMsTeamsConfig extends TerraformMetaArguments {
+export interface BotChannelMsTeamsConfig extends cdktf.TerraformMetaArguments {
   readonly botName: string;
   readonly callingWebHook?: string;
   readonly enableCalling?: boolean;
@@ -23,9 +22,20 @@ export interface BotChannelMsTeamsTimeouts {
   readonly update?: string;
 }
 
+function botChannelMsTeamsTimeoutsToTerraform(struct?: BotChannelMsTeamsTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class BotChannelMsTeams extends TerraformResource {
+export class BotChannelMsTeams extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -152,12 +162,12 @@ export class BotChannelMsTeams extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      bot_name: this._botName,
-      calling_web_hook: this._callingWebHook,
-      enable_calling: this._enableCalling,
-      location: this._location,
-      resource_group_name: this._resourceGroupName,
-      timeouts: this._timeouts,
+      bot_name: cdktf.stringToTerraform(this._botName),
+      calling_web_hook: cdktf.stringToTerraform(this._callingWebHook),
+      enable_calling: cdktf.booleanToTerraform(this._enableCalling),
+      location: cdktf.stringToTerraform(this._location),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      timeouts: botChannelMsTeamsTimeoutsToTerraform(this._timeouts),
     };
   }
 }

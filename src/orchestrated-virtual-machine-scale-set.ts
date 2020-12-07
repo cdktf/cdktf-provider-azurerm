@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface OrchestratedVirtualMachineScaleSetConfig extends TerraformMetaArguments {
+export interface OrchestratedVirtualMachineScaleSetConfig extends cdktf.TerraformMetaArguments {
   readonly location: string;
   readonly name: string;
   readonly platformFaultDomainCount: number;
@@ -26,9 +25,20 @@ export interface OrchestratedVirtualMachineScaleSetTimeouts {
   readonly update?: string;
 }
 
+function orchestratedVirtualMachineScaleSetTimeoutsToTerraform(struct?: OrchestratedVirtualMachineScaleSetTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class OrchestratedVirtualMachineScaleSet extends TerraformResource {
+export class OrchestratedVirtualMachineScaleSet extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -208,15 +218,15 @@ export class OrchestratedVirtualMachineScaleSet extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      location: this._location,
-      name: this._name,
-      platform_fault_domain_count: this._platformFaultDomainCount,
-      proximity_placement_group_id: this._proximityPlacementGroupId,
-      resource_group_name: this._resourceGroupName,
-      single_placement_group: this._singlePlacementGroup,
-      tags: this._tags,
-      zones: this._zones,
-      timeouts: this._timeouts,
+      location: cdktf.stringToTerraform(this._location),
+      name: cdktf.stringToTerraform(this._name),
+      platform_fault_domain_count: cdktf.numberToTerraform(this._platformFaultDomainCount),
+      proximity_placement_group_id: cdktf.stringToTerraform(this._proximityPlacementGroupId),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      single_placement_group: cdktf.booleanToTerraform(this._singlePlacementGroup),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      zones: cdktf.listMapper(cdktf.stringToTerraform)(this._zones),
+      timeouts: orchestratedVirtualMachineScaleSetTimeoutsToTerraform(this._timeouts),
     };
   }
 }

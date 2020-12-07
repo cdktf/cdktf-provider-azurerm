@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformDataSource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataAzurermAutomationAccountConfig extends TerraformMetaArguments {
+export interface DataAzurermAutomationAccountConfig extends cdktf.TerraformMetaArguments {
   readonly name: string;
   readonly resourceGroupName: string;
   /** timeouts block */
@@ -17,9 +16,17 @@ export interface DataAzurermAutomationAccountTimeouts {
   readonly read?: string;
 }
 
+function dataAzurermAutomationAccountTimeoutsToTerraform(struct?: DataAzurermAutomationAccountTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    read: cdktf.stringToTerraform(struct!.read),
+  }
+}
+
+
 // Resource
 
-export class DataAzurermAutomationAccount extends TerraformDataSource {
+export class DataAzurermAutomationAccount extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
@@ -113,9 +120,9 @@ export class DataAzurermAutomationAccount extends TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      timeouts: this._timeouts,
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      timeouts: dataAzurermAutomationAccountTimeoutsToTerraform(this._timeouts),
     };
   }
 }

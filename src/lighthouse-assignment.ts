@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface LighthouseAssignmentConfig extends TerraformMetaArguments {
+export interface LighthouseAssignmentConfig extends cdktf.TerraformMetaArguments {
   readonly lighthouseDefinitionId: string;
   readonly name?: string;
   readonly scope: string;
@@ -20,9 +19,19 @@ export interface LighthouseAssignmentTimeouts {
   readonly read?: string;
 }
 
+function lighthouseAssignmentTimeoutsToTerraform(struct?: LighthouseAssignmentTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+  }
+}
+
+
 // Resource
 
-export class LighthouseAssignment extends TerraformResource {
+export class LighthouseAssignment extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -118,10 +127,10 @@ export class LighthouseAssignment extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      lighthouse_definition_id: this._lighthouseDefinitionId,
-      name: this._name,
-      scope: this._scope,
-      timeouts: this._timeouts,
+      lighthouse_definition_id: cdktf.stringToTerraform(this._lighthouseDefinitionId),
+      name: cdktf.stringToTerraform(this._name),
+      scope: cdktf.stringToTerraform(this._scope),
+      timeouts: lighthouseAssignmentTimeoutsToTerraform(this._timeouts),
     };
   }
 }

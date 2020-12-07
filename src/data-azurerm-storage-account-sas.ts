@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformDataSource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataAzurermStorageAccountSasConfig extends TerraformMetaArguments {
+export interface DataAzurermStorageAccountSasConfig extends cdktf.TerraformMetaArguments {
   readonly connectionString: string;
   readonly expiry: string;
   readonly httpsOnly?: boolean;
@@ -32,24 +31,68 @@ export interface DataAzurermStorageAccountSasPermissions {
   readonly update: boolean;
   readonly write: boolean;
 }
+
+function dataAzurermStorageAccountSasPermissionsToTerraform(struct?: DataAzurermStorageAccountSasPermissions): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    add: cdktf.booleanToTerraform(struct!.add),
+    create: cdktf.booleanToTerraform(struct!.create),
+    delete: cdktf.booleanToTerraform(struct!.delete),
+    list: cdktf.booleanToTerraform(struct!.list),
+    process: cdktf.booleanToTerraform(struct!.process),
+    read: cdktf.booleanToTerraform(struct!.read),
+    update: cdktf.booleanToTerraform(struct!.update),
+    write: cdktf.booleanToTerraform(struct!.write),
+  }
+}
+
 export interface DataAzurermStorageAccountSasResourceTypes {
   readonly container: boolean;
   readonly object: boolean;
   readonly service: boolean;
 }
+
+function dataAzurermStorageAccountSasResourceTypesToTerraform(struct?: DataAzurermStorageAccountSasResourceTypes): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    container: cdktf.booleanToTerraform(struct!.container),
+    object: cdktf.booleanToTerraform(struct!.object),
+    service: cdktf.booleanToTerraform(struct!.service),
+  }
+}
+
 export interface DataAzurermStorageAccountSasServices {
   readonly blob: boolean;
   readonly file: boolean;
   readonly queue: boolean;
   readonly table: boolean;
 }
+
+function dataAzurermStorageAccountSasServicesToTerraform(struct?: DataAzurermStorageAccountSasServices): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    blob: cdktf.booleanToTerraform(struct!.blob),
+    file: cdktf.booleanToTerraform(struct!.file),
+    queue: cdktf.booleanToTerraform(struct!.queue),
+    table: cdktf.booleanToTerraform(struct!.table),
+  }
+}
+
 export interface DataAzurermStorageAccountSasTimeouts {
   readonly read?: string;
 }
 
+function dataAzurermStorageAccountSasTimeoutsToTerraform(struct?: DataAzurermStorageAccountSasTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    read: cdktf.stringToTerraform(struct!.read),
+  }
+}
+
+
 // Resource
 
-export class DataAzurermStorageAccountSas extends TerraformDataSource {
+export class DataAzurermStorageAccountSas extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
@@ -223,15 +266,15 @@ export class DataAzurermStorageAccountSas extends TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      connection_string: this._connectionString,
-      expiry: this._expiry,
-      https_only: this._httpsOnly,
-      signed_version: this._signedVersion,
-      start: this._start,
-      permissions: this._permissions,
-      resource_types: this._resourceTypes,
-      services: this._services,
-      timeouts: this._timeouts,
+      connection_string: cdktf.stringToTerraform(this._connectionString),
+      expiry: cdktf.stringToTerraform(this._expiry),
+      https_only: cdktf.booleanToTerraform(this._httpsOnly),
+      signed_version: cdktf.stringToTerraform(this._signedVersion),
+      start: cdktf.stringToTerraform(this._start),
+      permissions: cdktf.listMapper(dataAzurermStorageAccountSasPermissionsToTerraform)(this._permissions),
+      resource_types: cdktf.listMapper(dataAzurermStorageAccountSasResourceTypesToTerraform)(this._resourceTypes),
+      services: cdktf.listMapper(dataAzurermStorageAccountSasServicesToTerraform)(this._services),
+      timeouts: dataAzurermStorageAccountSasTimeoutsToTerraform(this._timeouts),
     };
   }
 }

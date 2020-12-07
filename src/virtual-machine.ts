@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface VirtualMachineConfig extends TerraformMetaArguments {
+export interface VirtualMachineConfig extends cdktf.TerraformMetaArguments {
   readonly availabilitySetId?: string;
   readonly deleteDataDisksOnTermination?: boolean;
   readonly deleteOsDiskOnTermination?: boolean;
@@ -49,48 +48,141 @@ export interface VirtualMachineConfig extends TerraformMetaArguments {
 export interface VirtualMachineAdditionalCapabilities {
   readonly ultraSsdEnabled: boolean;
 }
+
+function virtualMachineAdditionalCapabilitiesToTerraform(struct?: VirtualMachineAdditionalCapabilities): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    ultra_ssd_enabled: cdktf.booleanToTerraform(struct!.ultraSsdEnabled),
+  }
+}
+
 export interface VirtualMachineBootDiagnostics {
   readonly enabled: boolean;
   readonly storageUri: string;
 }
+
+function virtualMachineBootDiagnosticsToTerraform(struct?: VirtualMachineBootDiagnostics): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    enabled: cdktf.booleanToTerraform(struct!.enabled),
+    storage_uri: cdktf.stringToTerraform(struct!.storageUri),
+  }
+}
+
 export interface VirtualMachineIdentity {
   readonly identityIds?: string[];
   readonly type: string;
 }
+
+function virtualMachineIdentityToTerraform(struct?: VirtualMachineIdentity): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    identity_ids: cdktf.listMapper(cdktf.stringToTerraform)(struct!.identityIds),
+    type: cdktf.stringToTerraform(struct!.type),
+  }
+}
+
 export interface VirtualMachineOsProfile {
   readonly adminPassword?: string;
   readonly adminUsername: string;
   readonly computerName: string;
   readonly customData?: string;
 }
+
+function virtualMachineOsProfileToTerraform(struct?: VirtualMachineOsProfile): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    admin_password: cdktf.stringToTerraform(struct!.adminPassword),
+    admin_username: cdktf.stringToTerraform(struct!.adminUsername),
+    computer_name: cdktf.stringToTerraform(struct!.computerName),
+    custom_data: cdktf.stringToTerraform(struct!.customData),
+  }
+}
+
 export interface VirtualMachineOsProfileLinuxConfigSshKeys {
   readonly keyData: string;
   readonly path: string;
 }
+
+function virtualMachineOsProfileLinuxConfigSshKeysToTerraform(struct?: VirtualMachineOsProfileLinuxConfigSshKeys): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    key_data: cdktf.stringToTerraform(struct!.keyData),
+    path: cdktf.stringToTerraform(struct!.path),
+  }
+}
+
 export interface VirtualMachineOsProfileLinuxConfig {
   readonly disablePasswordAuthentication: boolean;
   /** ssh_keys block */
   readonly sshKeys?: VirtualMachineOsProfileLinuxConfigSshKeys[];
 }
+
+function virtualMachineOsProfileLinuxConfigToTerraform(struct?: VirtualMachineOsProfileLinuxConfig): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    disable_password_authentication: cdktf.booleanToTerraform(struct!.disablePasswordAuthentication),
+    ssh_keys: cdktf.listMapper(virtualMachineOsProfileLinuxConfigSshKeysToTerraform)(struct!.sshKeys),
+  }
+}
+
 export interface VirtualMachineOsProfileSecretsVaultCertificates {
   readonly certificateStore?: string;
   readonly certificateUrl: string;
 }
+
+function virtualMachineOsProfileSecretsVaultCertificatesToTerraform(struct?: VirtualMachineOsProfileSecretsVaultCertificates): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    certificate_store: cdktf.stringToTerraform(struct!.certificateStore),
+    certificate_url: cdktf.stringToTerraform(struct!.certificateUrl),
+  }
+}
+
 export interface VirtualMachineOsProfileSecrets {
   readonly sourceVaultId: string;
   /** vault_certificates block */
   readonly vaultCertificates?: VirtualMachineOsProfileSecretsVaultCertificates[];
 }
+
+function virtualMachineOsProfileSecretsToTerraform(struct?: VirtualMachineOsProfileSecrets): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    source_vault_id: cdktf.stringToTerraform(struct!.sourceVaultId),
+    vault_certificates: cdktf.listMapper(virtualMachineOsProfileSecretsVaultCertificatesToTerraform)(struct!.vaultCertificates),
+  }
+}
+
 export interface VirtualMachineOsProfileWindowsConfigAdditionalUnattendConfig {
   readonly component: string;
   readonly content: string;
   readonly pass: string;
   readonly settingName: string;
 }
+
+function virtualMachineOsProfileWindowsConfigAdditionalUnattendConfigToTerraform(struct?: VirtualMachineOsProfileWindowsConfigAdditionalUnattendConfig): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    component: cdktf.stringToTerraform(struct!.component),
+    content: cdktf.stringToTerraform(struct!.content),
+    pass: cdktf.stringToTerraform(struct!.pass),
+    setting_name: cdktf.stringToTerraform(struct!.settingName),
+  }
+}
+
 export interface VirtualMachineOsProfileWindowsConfigWinrm {
   readonly certificateUrl?: string;
   readonly protocol: string;
 }
+
+function virtualMachineOsProfileWindowsConfigWinrmToTerraform(struct?: VirtualMachineOsProfileWindowsConfigWinrm): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    certificate_url: cdktf.stringToTerraform(struct!.certificateUrl),
+    protocol: cdktf.stringToTerraform(struct!.protocol),
+  }
+}
+
 export interface VirtualMachineOsProfileWindowsConfig {
   readonly enableAutomaticUpgrades?: boolean;
   readonly provisionVmAgent?: boolean;
@@ -100,11 +192,33 @@ export interface VirtualMachineOsProfileWindowsConfig {
   /** winrm block */
   readonly winrm?: VirtualMachineOsProfileWindowsConfigWinrm[];
 }
+
+function virtualMachineOsProfileWindowsConfigToTerraform(struct?: VirtualMachineOsProfileWindowsConfig): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    enable_automatic_upgrades: cdktf.booleanToTerraform(struct!.enableAutomaticUpgrades),
+    provision_vm_agent: cdktf.booleanToTerraform(struct!.provisionVmAgent),
+    timezone: cdktf.stringToTerraform(struct!.timezone),
+    additional_unattend_config: cdktf.listMapper(virtualMachineOsProfileWindowsConfigAdditionalUnattendConfigToTerraform)(struct!.additionalUnattendConfig),
+    winrm: cdktf.listMapper(virtualMachineOsProfileWindowsConfigWinrmToTerraform)(struct!.winrm),
+  }
+}
+
 export interface VirtualMachinePlan {
   readonly name: string;
   readonly product: string;
   readonly publisher: string;
 }
+
+function virtualMachinePlanToTerraform(struct?: VirtualMachinePlan): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    name: cdktf.stringToTerraform(struct!.name),
+    product: cdktf.stringToTerraform(struct!.product),
+    publisher: cdktf.stringToTerraform(struct!.publisher),
+  }
+}
+
 export interface VirtualMachineStorageDataDisk {
   readonly caching?: string;
   readonly createOption: string;
@@ -116,6 +230,22 @@ export interface VirtualMachineStorageDataDisk {
   readonly vhdUri?: string;
   readonly writeAcceleratorEnabled?: boolean;
 }
+
+function virtualMachineStorageDataDiskToTerraform(struct?: VirtualMachineStorageDataDisk): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    caching: cdktf.stringToTerraform(struct!.caching),
+    create_option: cdktf.stringToTerraform(struct!.createOption),
+    disk_size_gb: cdktf.numberToTerraform(struct!.diskSizeGb),
+    lun: cdktf.numberToTerraform(struct!.lun),
+    managed_disk_id: cdktf.stringToTerraform(struct!.managedDiskId),
+    managed_disk_type: cdktf.stringToTerraform(struct!.managedDiskType),
+    name: cdktf.stringToTerraform(struct!.name),
+    vhd_uri: cdktf.stringToTerraform(struct!.vhdUri),
+    write_accelerator_enabled: cdktf.booleanToTerraform(struct!.writeAcceleratorEnabled),
+  }
+}
+
 export interface VirtualMachineStorageImageReference {
   readonly id?: string;
   readonly offer?: string;
@@ -123,6 +253,18 @@ export interface VirtualMachineStorageImageReference {
   readonly sku?: string;
   readonly version?: string;
 }
+
+function virtualMachineStorageImageReferenceToTerraform(struct?: VirtualMachineStorageImageReference): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    id: cdktf.stringToTerraform(struct!.id),
+    offer: cdktf.stringToTerraform(struct!.offer),
+    publisher: cdktf.stringToTerraform(struct!.publisher),
+    sku: cdktf.stringToTerraform(struct!.sku),
+    version: cdktf.stringToTerraform(struct!.version),
+  }
+}
+
 export interface VirtualMachineStorageOsDisk {
   readonly caching?: string;
   readonly createOption: string;
@@ -135,6 +277,23 @@ export interface VirtualMachineStorageOsDisk {
   readonly vhdUri?: string;
   readonly writeAcceleratorEnabled?: boolean;
 }
+
+function virtualMachineStorageOsDiskToTerraform(struct?: VirtualMachineStorageOsDisk): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    caching: cdktf.stringToTerraform(struct!.caching),
+    create_option: cdktf.stringToTerraform(struct!.createOption),
+    disk_size_gb: cdktf.numberToTerraform(struct!.diskSizeGb),
+    image_uri: cdktf.stringToTerraform(struct!.imageUri),
+    managed_disk_id: cdktf.stringToTerraform(struct!.managedDiskId),
+    managed_disk_type: cdktf.stringToTerraform(struct!.managedDiskType),
+    name: cdktf.stringToTerraform(struct!.name),
+    os_type: cdktf.stringToTerraform(struct!.osType),
+    vhd_uri: cdktf.stringToTerraform(struct!.vhdUri),
+    write_accelerator_enabled: cdktf.booleanToTerraform(struct!.writeAcceleratorEnabled),
+  }
+}
+
 export interface VirtualMachineTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -142,9 +301,20 @@ export interface VirtualMachineTimeouts {
   readonly update?: string;
 }
 
+function virtualMachineTimeoutsToTerraform(struct?: VirtualMachineTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class VirtualMachine extends TerraformResource {
+export class VirtualMachine extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -585,31 +755,31 @@ export class VirtualMachine extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      availability_set_id: this._availabilitySetId,
-      delete_data_disks_on_termination: this._deleteDataDisksOnTermination,
-      delete_os_disk_on_termination: this._deleteOsDiskOnTermination,
-      license_type: this._licenseType,
-      location: this._location,
-      name: this._name,
-      network_interface_ids: this._networkInterfaceIds,
-      primary_network_interface_id: this._primaryNetworkInterfaceId,
-      proximity_placement_group_id: this._proximityPlacementGroupId,
-      resource_group_name: this._resourceGroupName,
-      tags: this._tags,
-      vm_size: this._vmSize,
-      zones: this._zones,
-      additional_capabilities: this._additionalCapabilities,
-      boot_diagnostics: this._bootDiagnostics,
-      identity: this._identity,
-      os_profile: this._osProfile,
-      os_profile_linux_config: this._osProfileLinuxConfig,
-      os_profile_secrets: this._osProfileSecrets,
-      os_profile_windows_config: this._osProfileWindowsConfig,
-      plan: this._plan,
-      storage_data_disk: this._storageDataDisk,
-      storage_image_reference: this._storageImageReference,
-      storage_os_disk: this._storageOsDisk,
-      timeouts: this._timeouts,
+      availability_set_id: cdktf.stringToTerraform(this._availabilitySetId),
+      delete_data_disks_on_termination: cdktf.booleanToTerraform(this._deleteDataDisksOnTermination),
+      delete_os_disk_on_termination: cdktf.booleanToTerraform(this._deleteOsDiskOnTermination),
+      license_type: cdktf.stringToTerraform(this._licenseType),
+      location: cdktf.stringToTerraform(this._location),
+      name: cdktf.stringToTerraform(this._name),
+      network_interface_ids: cdktf.listMapper(cdktf.stringToTerraform)(this._networkInterfaceIds),
+      primary_network_interface_id: cdktf.stringToTerraform(this._primaryNetworkInterfaceId),
+      proximity_placement_group_id: cdktf.stringToTerraform(this._proximityPlacementGroupId),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      vm_size: cdktf.stringToTerraform(this._vmSize),
+      zones: cdktf.listMapper(cdktf.stringToTerraform)(this._zones),
+      additional_capabilities: cdktf.listMapper(virtualMachineAdditionalCapabilitiesToTerraform)(this._additionalCapabilities),
+      boot_diagnostics: cdktf.listMapper(virtualMachineBootDiagnosticsToTerraform)(this._bootDiagnostics),
+      identity: cdktf.listMapper(virtualMachineIdentityToTerraform)(this._identity),
+      os_profile: cdktf.listMapper(virtualMachineOsProfileToTerraform)(this._osProfile),
+      os_profile_linux_config: cdktf.listMapper(virtualMachineOsProfileLinuxConfigToTerraform)(this._osProfileLinuxConfig),
+      os_profile_secrets: cdktf.listMapper(virtualMachineOsProfileSecretsToTerraform)(this._osProfileSecrets),
+      os_profile_windows_config: cdktf.listMapper(virtualMachineOsProfileWindowsConfigToTerraform)(this._osProfileWindowsConfig),
+      plan: cdktf.listMapper(virtualMachinePlanToTerraform)(this._plan),
+      storage_data_disk: cdktf.listMapper(virtualMachineStorageDataDiskToTerraform)(this._storageDataDisk),
+      storage_image_reference: cdktf.listMapper(virtualMachineStorageImageReferenceToTerraform)(this._storageImageReference),
+      storage_os_disk: cdktf.listMapper(virtualMachineStorageOsDiskToTerraform)(this._storageOsDisk),
+      timeouts: virtualMachineTimeoutsToTerraform(this._timeouts),
     };
   }
 }

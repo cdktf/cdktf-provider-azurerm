@@ -2,13 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
-import { ComplexComputedList } from "cdktf";
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface KubernetesClusterConfig extends TerraformMetaArguments {
+export interface KubernetesClusterConfig extends cdktf.TerraformMetaArguments {
   readonly apiServerAuthorizedIpRanges?: string[];
   readonly diskEncryptionSetId?: string;
   readonly dnsPrefix: string;
@@ -43,7 +41,7 @@ export interface KubernetesClusterConfig extends TerraformMetaArguments {
   /** windows_profile block */
   readonly windowsProfile?: KubernetesClusterWindowsProfile[];
 }
-export class KubernetesClusterKubeAdminConfig extends ComplexComputedList {
+export class KubernetesClusterKubeAdminConfig extends cdktf.ComplexComputedList {
 
   // client_certificate - computed: true, optional: false, required: false
   public get clientCertificate() {
@@ -75,7 +73,7 @@ export class KubernetesClusterKubeAdminConfig extends ComplexComputedList {
     return this.getStringAttribute('username');
   }
 }
-export class KubernetesClusterKubeConfig extends ComplexComputedList {
+export class KubernetesClusterKubeConfig extends cdktf.ComplexComputedList {
 
   // client_certificate - computed: true, optional: false, required: false
   public get clientCertificate() {
@@ -107,7 +105,7 @@ export class KubernetesClusterKubeConfig extends ComplexComputedList {
     return this.getStringAttribute('username');
   }
 }
-export class KubernetesClusterKubeletIdentity extends ComplexComputedList {
+export class KubernetesClusterKubeletIdentity extends cdktf.ComplexComputedList {
 
   // client_id - computed: true, optional: false, required: false
   public get clientId() {
@@ -128,19 +126,61 @@ export interface KubernetesClusterAddonProfileAciConnectorLinux {
   readonly enabled: boolean;
   readonly subnetName?: string;
 }
+
+function kubernetesClusterAddonProfileAciConnectorLinuxToTerraform(struct?: KubernetesClusterAddonProfileAciConnectorLinux): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    enabled: cdktf.booleanToTerraform(struct!.enabled),
+    subnet_name: cdktf.stringToTerraform(struct!.subnetName),
+  }
+}
+
 export interface KubernetesClusterAddonProfileAzurePolicy {
   readonly enabled: boolean;
 }
+
+function kubernetesClusterAddonProfileAzurePolicyToTerraform(struct?: KubernetesClusterAddonProfileAzurePolicy): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    enabled: cdktf.booleanToTerraform(struct!.enabled),
+  }
+}
+
 export interface KubernetesClusterAddonProfileHttpApplicationRouting {
   readonly enabled: boolean;
 }
+
+function kubernetesClusterAddonProfileHttpApplicationRoutingToTerraform(struct?: KubernetesClusterAddonProfileHttpApplicationRouting): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    enabled: cdktf.booleanToTerraform(struct!.enabled),
+  }
+}
+
 export interface KubernetesClusterAddonProfileKubeDashboard {
   readonly enabled: boolean;
 }
+
+function kubernetesClusterAddonProfileKubeDashboardToTerraform(struct?: KubernetesClusterAddonProfileKubeDashboard): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    enabled: cdktf.booleanToTerraform(struct!.enabled),
+  }
+}
+
 export interface KubernetesClusterAddonProfileOmsAgent {
   readonly enabled: boolean;
   readonly logAnalyticsWorkspaceId?: string;
 }
+
+function kubernetesClusterAddonProfileOmsAgentToTerraform(struct?: KubernetesClusterAddonProfileOmsAgent): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    enabled: cdktf.booleanToTerraform(struct!.enabled),
+    log_analytics_workspace_id: cdktf.stringToTerraform(struct!.logAnalyticsWorkspaceId),
+  }
+}
+
 export interface KubernetesClusterAddonProfile {
   /** aci_connector_linux block */
   readonly aciConnectorLinux?: KubernetesClusterAddonProfileAciConnectorLinux[];
@@ -153,6 +193,18 @@ export interface KubernetesClusterAddonProfile {
   /** oms_agent block */
   readonly omsAgent?: KubernetesClusterAddonProfileOmsAgent[];
 }
+
+function kubernetesClusterAddonProfileToTerraform(struct?: KubernetesClusterAddonProfile): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    aci_connector_linux: cdktf.listMapper(kubernetesClusterAddonProfileAciConnectorLinuxToTerraform)(struct!.aciConnectorLinux),
+    azure_policy: cdktf.listMapper(kubernetesClusterAddonProfileAzurePolicyToTerraform)(struct!.azurePolicy),
+    http_application_routing: cdktf.listMapper(kubernetesClusterAddonProfileHttpApplicationRoutingToTerraform)(struct!.httpApplicationRouting),
+    kube_dashboard: cdktf.listMapper(kubernetesClusterAddonProfileKubeDashboardToTerraform)(struct!.kubeDashboard),
+    oms_agent: cdktf.listMapper(kubernetesClusterAddonProfileOmsAgentToTerraform)(struct!.omsAgent),
+  }
+}
+
 export interface KubernetesClusterAutoScalerProfile {
   readonly balanceSimilarNodeGroups?: boolean;
   readonly maxGracefulTerminationSec?: string;
@@ -164,6 +216,22 @@ export interface KubernetesClusterAutoScalerProfile {
   readonly scaleDownUtilizationThreshold?: string;
   readonly scanInterval?: string;
 }
+
+function kubernetesClusterAutoScalerProfileToTerraform(struct?: KubernetesClusterAutoScalerProfile): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    balance_similar_node_groups: cdktf.booleanToTerraform(struct!.balanceSimilarNodeGroups),
+    max_graceful_termination_sec: cdktf.stringToTerraform(struct!.maxGracefulTerminationSec),
+    scale_down_delay_after_add: cdktf.stringToTerraform(struct!.scaleDownDelayAfterAdd),
+    scale_down_delay_after_delete: cdktf.stringToTerraform(struct!.scaleDownDelayAfterDelete),
+    scale_down_delay_after_failure: cdktf.stringToTerraform(struct!.scaleDownDelayAfterFailure),
+    scale_down_unneeded: cdktf.stringToTerraform(struct!.scaleDownUnneeded),
+    scale_down_unready: cdktf.stringToTerraform(struct!.scaleDownUnready),
+    scale_down_utilization_threshold: cdktf.stringToTerraform(struct!.scaleDownUtilizationThreshold),
+    scan_interval: cdktf.stringToTerraform(struct!.scanInterval),
+  }
+}
+
 export interface KubernetesClusterDefaultNodePool {
   readonly availabilityZones?: string[];
   readonly enableAutoScaling?: boolean;
@@ -184,17 +252,67 @@ export interface KubernetesClusterDefaultNodePool {
   readonly vmSize: string;
   readonly vnetSubnetId?: string;
 }
+
+function kubernetesClusterDefaultNodePoolToTerraform(struct?: KubernetesClusterDefaultNodePool): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    availability_zones: cdktf.listMapper(cdktf.stringToTerraform)(struct!.availabilityZones),
+    enable_auto_scaling: cdktf.booleanToTerraform(struct!.enableAutoScaling),
+    enable_node_public_ip: cdktf.booleanToTerraform(struct!.enableNodePublicIp),
+    max_count: cdktf.numberToTerraform(struct!.maxCount),
+    max_pods: cdktf.numberToTerraform(struct!.maxPods),
+    min_count: cdktf.numberToTerraform(struct!.minCount),
+    name: cdktf.stringToTerraform(struct!.name),
+    node_count: cdktf.numberToTerraform(struct!.nodeCount),
+    node_labels: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.nodeLabels),
+    node_taints: cdktf.listMapper(cdktf.stringToTerraform)(struct!.nodeTaints),
+    orchestrator_version: cdktf.stringToTerraform(struct!.orchestratorVersion),
+    os_disk_size_gb: cdktf.numberToTerraform(struct!.osDiskSizeGb),
+    os_disk_type: cdktf.stringToTerraform(struct!.osDiskType),
+    proximity_placement_group_id: cdktf.stringToTerraform(struct!.proximityPlacementGroupId),
+    tags: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.tags),
+    type: cdktf.stringToTerraform(struct!.type),
+    vm_size: cdktf.stringToTerraform(struct!.vmSize),
+    vnet_subnet_id: cdktf.stringToTerraform(struct!.vnetSubnetId),
+  }
+}
+
 export interface KubernetesClusterIdentity {
   readonly type: string;
 }
+
+function kubernetesClusterIdentityToTerraform(struct?: KubernetesClusterIdentity): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    type: cdktf.stringToTerraform(struct!.type),
+  }
+}
+
 export interface KubernetesClusterLinuxProfileSshKey {
   readonly keyData: string;
 }
+
+function kubernetesClusterLinuxProfileSshKeyToTerraform(struct?: KubernetesClusterLinuxProfileSshKey): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    key_data: cdktf.stringToTerraform(struct!.keyData),
+  }
+}
+
 export interface KubernetesClusterLinuxProfile {
   readonly adminUsername: string;
   /** ssh_key block */
   readonly sshKey: KubernetesClusterLinuxProfileSshKey[];
 }
+
+function kubernetesClusterLinuxProfileToTerraform(struct?: KubernetesClusterLinuxProfile): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    admin_username: cdktf.stringToTerraform(struct!.adminUsername),
+    ssh_key: cdktf.listMapper(kubernetesClusterLinuxProfileSshKeyToTerraform)(struct!.sshKey),
+  }
+}
+
 export interface KubernetesClusterNetworkProfileLoadBalancerProfile {
   readonly idleTimeoutInMinutes?: number;
   readonly managedOutboundIpCount?: number;
@@ -202,6 +320,18 @@ export interface KubernetesClusterNetworkProfileLoadBalancerProfile {
   readonly outboundIpPrefixIds?: string[];
   readonly outboundPortsAllocated?: number;
 }
+
+function kubernetesClusterNetworkProfileLoadBalancerProfileToTerraform(struct?: KubernetesClusterNetworkProfileLoadBalancerProfile): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    idle_timeout_in_minutes: cdktf.numberToTerraform(struct!.idleTimeoutInMinutes),
+    managed_outbound_ip_count: cdktf.numberToTerraform(struct!.managedOutboundIpCount),
+    outbound_ip_address_ids: cdktf.listMapper(cdktf.stringToTerraform)(struct!.outboundIpAddressIds),
+    outbound_ip_prefix_ids: cdktf.listMapper(cdktf.stringToTerraform)(struct!.outboundIpPrefixIds),
+    outbound_ports_allocated: cdktf.numberToTerraform(struct!.outboundPortsAllocated),
+  }
+}
+
 export interface KubernetesClusterNetworkProfile {
   readonly dnsServiceIp?: string;
   readonly dockerBridgeCidr?: string;
@@ -214,6 +344,22 @@ export interface KubernetesClusterNetworkProfile {
   /** load_balancer_profile block */
   readonly loadBalancerProfile?: KubernetesClusterNetworkProfileLoadBalancerProfile[];
 }
+
+function kubernetesClusterNetworkProfileToTerraform(struct?: KubernetesClusterNetworkProfile): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    dns_service_ip: cdktf.stringToTerraform(struct!.dnsServiceIp),
+    docker_bridge_cidr: cdktf.stringToTerraform(struct!.dockerBridgeCidr),
+    load_balancer_sku: cdktf.stringToTerraform(struct!.loadBalancerSku),
+    network_plugin: cdktf.stringToTerraform(struct!.networkPlugin),
+    network_policy: cdktf.stringToTerraform(struct!.networkPolicy),
+    outbound_type: cdktf.stringToTerraform(struct!.outboundType),
+    pod_cidr: cdktf.stringToTerraform(struct!.podCidr),
+    service_cidr: cdktf.stringToTerraform(struct!.serviceCidr),
+    load_balancer_profile: cdktf.listMapper(kubernetesClusterNetworkProfileLoadBalancerProfileToTerraform)(struct!.loadBalancerProfile),
+  }
+}
+
 export interface KubernetesClusterRoleBasedAccessControlAzureActiveDirectory {
   readonly adminGroupObjectIds?: string[];
   readonly clientAppId?: string;
@@ -222,29 +368,80 @@ export interface KubernetesClusterRoleBasedAccessControlAzureActiveDirectory {
   readonly serverAppSecret?: string;
   readonly tenantId?: string;
 }
+
+function kubernetesClusterRoleBasedAccessControlAzureActiveDirectoryToTerraform(struct?: KubernetesClusterRoleBasedAccessControlAzureActiveDirectory): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    admin_group_object_ids: cdktf.listMapper(cdktf.stringToTerraform)(struct!.adminGroupObjectIds),
+    client_app_id: cdktf.stringToTerraform(struct!.clientAppId),
+    managed: cdktf.booleanToTerraform(struct!.managed),
+    server_app_id: cdktf.stringToTerraform(struct!.serverAppId),
+    server_app_secret: cdktf.stringToTerraform(struct!.serverAppSecret),
+    tenant_id: cdktf.stringToTerraform(struct!.tenantId),
+  }
+}
+
 export interface KubernetesClusterRoleBasedAccessControl {
   readonly enabled: boolean;
   /** azure_active_directory block */
   readonly azureActiveDirectory?: KubernetesClusterRoleBasedAccessControlAzureActiveDirectory[];
 }
+
+function kubernetesClusterRoleBasedAccessControlToTerraform(struct?: KubernetesClusterRoleBasedAccessControl): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    enabled: cdktf.booleanToTerraform(struct!.enabled),
+    azure_active_directory: cdktf.listMapper(kubernetesClusterRoleBasedAccessControlAzureActiveDirectoryToTerraform)(struct!.azureActiveDirectory),
+  }
+}
+
 export interface KubernetesClusterServicePrincipal {
   readonly clientId: string;
   readonly clientSecret: string;
 }
+
+function kubernetesClusterServicePrincipalToTerraform(struct?: KubernetesClusterServicePrincipal): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    client_id: cdktf.stringToTerraform(struct!.clientId),
+    client_secret: cdktf.stringToTerraform(struct!.clientSecret),
+  }
+}
+
 export interface KubernetesClusterTimeouts {
   readonly create?: string;
   readonly delete?: string;
   readonly read?: string;
   readonly update?: string;
 }
+
+function kubernetesClusterTimeoutsToTerraform(struct?: KubernetesClusterTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
 export interface KubernetesClusterWindowsProfile {
   readonly adminPassword?: string;
   readonly adminUsername: string;
 }
 
+function kubernetesClusterWindowsProfileToTerraform(struct?: KubernetesClusterWindowsProfile): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    admin_password: cdktf.stringToTerraform(struct!.adminPassword),
+    admin_username: cdktf.stringToTerraform(struct!.adminUsername),
+  }
+}
+
+
 // Resource
 
-export class KubernetesCluster extends TerraformResource {
+export class KubernetesCluster extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -689,29 +886,29 @@ export class KubernetesCluster extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      api_server_authorized_ip_ranges: this._apiServerAuthorizedIpRanges,
-      disk_encryption_set_id: this._diskEncryptionSetId,
-      dns_prefix: this._dnsPrefix,
-      enable_pod_security_policy: this._enablePodSecurityPolicy,
-      kubernetes_version: this._kubernetesVersion,
-      location: this._location,
-      name: this._name,
-      node_resource_group: this._nodeResourceGroup,
-      private_cluster_enabled: this._privateClusterEnabled,
-      private_link_enabled: this._privateLinkEnabled,
-      resource_group_name: this._resourceGroupName,
-      sku_tier: this._skuTier,
-      tags: this._tags,
-      addon_profile: this._addonProfile,
-      auto_scaler_profile: this._autoScalerProfile,
-      default_node_pool: this._defaultNodePool,
-      identity: this._identity,
-      linux_profile: this._linuxProfile,
-      network_profile: this._networkProfile,
-      role_based_access_control: this._roleBasedAccessControl,
-      service_principal: this._servicePrincipal,
-      timeouts: this._timeouts,
-      windows_profile: this._windowsProfile,
+      api_server_authorized_ip_ranges: cdktf.listMapper(cdktf.stringToTerraform)(this._apiServerAuthorizedIpRanges),
+      disk_encryption_set_id: cdktf.stringToTerraform(this._diskEncryptionSetId),
+      dns_prefix: cdktf.stringToTerraform(this._dnsPrefix),
+      enable_pod_security_policy: cdktf.booleanToTerraform(this._enablePodSecurityPolicy),
+      kubernetes_version: cdktf.stringToTerraform(this._kubernetesVersion),
+      location: cdktf.stringToTerraform(this._location),
+      name: cdktf.stringToTerraform(this._name),
+      node_resource_group: cdktf.stringToTerraform(this._nodeResourceGroup),
+      private_cluster_enabled: cdktf.booleanToTerraform(this._privateClusterEnabled),
+      private_link_enabled: cdktf.booleanToTerraform(this._privateLinkEnabled),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      sku_tier: cdktf.stringToTerraform(this._skuTier),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      addon_profile: cdktf.listMapper(kubernetesClusterAddonProfileToTerraform)(this._addonProfile),
+      auto_scaler_profile: cdktf.listMapper(kubernetesClusterAutoScalerProfileToTerraform)(this._autoScalerProfile),
+      default_node_pool: cdktf.listMapper(kubernetesClusterDefaultNodePoolToTerraform)(this._defaultNodePool),
+      identity: cdktf.listMapper(kubernetesClusterIdentityToTerraform)(this._identity),
+      linux_profile: cdktf.listMapper(kubernetesClusterLinuxProfileToTerraform)(this._linuxProfile),
+      network_profile: cdktf.listMapper(kubernetesClusterNetworkProfileToTerraform)(this._networkProfile),
+      role_based_access_control: cdktf.listMapper(kubernetesClusterRoleBasedAccessControlToTerraform)(this._roleBasedAccessControl),
+      service_principal: cdktf.listMapper(kubernetesClusterServicePrincipalToTerraform)(this._servicePrincipal),
+      timeouts: kubernetesClusterTimeoutsToTerraform(this._timeouts),
+      windows_profile: cdktf.listMapper(kubernetesClusterWindowsProfileToTerraform)(this._windowsProfile),
     };
   }
 }

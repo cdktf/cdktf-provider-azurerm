@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface CdnProfileConfig extends TerraformMetaArguments {
+export interface CdnProfileConfig extends cdktf.TerraformMetaArguments {
   readonly location: string;
   readonly name: string;
   readonly resourceGroupName: string;
@@ -23,9 +22,20 @@ export interface CdnProfileTimeouts {
   readonly update?: string;
 }
 
+function cdnProfileTimeoutsToTerraform(struct?: CdnProfileTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class CdnProfile extends TerraformResource {
+export class CdnProfile extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -149,12 +159,12 @@ export class CdnProfile extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      location: this._location,
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      sku: this._sku,
-      tags: this._tags,
-      timeouts: this._timeouts,
+      location: cdktf.stringToTerraform(this._location),
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      sku: cdktf.stringToTerraform(this._sku),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      timeouts: cdnProfileTimeoutsToTerraform(this._timeouts),
     };
   }
 }

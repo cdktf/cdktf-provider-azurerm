@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformDataSource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataAzurermLbRuleConfig extends TerraformMetaArguments {
+export interface DataAzurermLbRuleConfig extends cdktf.TerraformMetaArguments {
   readonly loadbalancerId: string;
   readonly name: string;
   readonly resourceGroupName: string;
@@ -18,9 +17,17 @@ export interface DataAzurermLbRuleTimeouts {
   readonly read?: string;
 }
 
+function dataAzurermLbRuleTimeoutsToTerraform(struct?: DataAzurermLbRuleTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    read: cdktf.stringToTerraform(struct!.read),
+  }
+}
+
+
 // Resource
 
-export class DataAzurermLbRule extends TerraformDataSource {
+export class DataAzurermLbRule extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
@@ -168,10 +175,10 @@ export class DataAzurermLbRule extends TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      loadbalancer_id: this._loadbalancerId,
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      timeouts: this._timeouts,
+      loadbalancer_id: cdktf.stringToTerraform(this._loadbalancerId),
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      timeouts: dataAzurermLbRuleTimeoutsToTerraform(this._timeouts),
     };
   }
 }

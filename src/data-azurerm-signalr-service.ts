@@ -2,13 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformDataSource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
-import { StringMap } from "cdktf";
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataAzurermSignalrServiceConfig extends TerraformMetaArguments {
+export interface DataAzurermSignalrServiceConfig extends cdktf.TerraformMetaArguments {
   readonly name: string;
   readonly resourceGroupName: string;
   /** timeouts block */
@@ -18,9 +16,17 @@ export interface DataAzurermSignalrServiceTimeouts {
   readonly read?: string;
 }
 
+function dataAzurermSignalrServiceTimeoutsToTerraform(struct?: DataAzurermSignalrServiceTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    read: cdktf.stringToTerraform(struct!.read),
+  }
+}
+
+
 // Resource
 
-export class DataAzurermSignalrService extends TerraformDataSource {
+export class DataAzurermSignalrService extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
@@ -124,7 +130,7 @@ export class DataAzurermSignalrService extends TerraformDataSource {
 
   // tags - computed: true, optional: false, required: false
   public tags(key: string): string {
-    return new StringMap(this, 'tags').lookup(key);
+    return new cdktf.StringMap(this, 'tags').lookup(key);
   }
 
   // timeouts - computed: false, optional: true, required: false
@@ -149,9 +155,9 @@ export class DataAzurermSignalrService extends TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      timeouts: this._timeouts,
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      timeouts: dataAzurermSignalrServiceTimeoutsToTerraform(this._timeouts),
     };
   }
 }

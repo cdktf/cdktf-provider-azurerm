@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface AutomationDscConfigurationConfig extends TerraformMetaArguments {
+export interface AutomationDscConfigurationConfig extends cdktf.TerraformMetaArguments {
   readonly automationAccountName: string;
   readonly contentEmbedded: string;
   readonly description?: string;
@@ -26,9 +25,20 @@ export interface AutomationDscConfigurationTimeouts {
   readonly update?: string;
 }
 
+function automationDscConfigurationTimeoutsToTerraform(struct?: AutomationDscConfigurationTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class AutomationDscConfiguration extends TerraformResource {
+export class AutomationDscConfiguration extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -205,15 +215,15 @@ export class AutomationDscConfiguration extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      automation_account_name: this._automationAccountName,
-      content_embedded: this._contentEmbedded,
-      description: this._description,
-      location: this._location,
-      log_verbose: this._logVerbose,
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      tags: this._tags,
-      timeouts: this._timeouts,
+      automation_account_name: cdktf.stringToTerraform(this._automationAccountName),
+      content_embedded: cdktf.stringToTerraform(this._contentEmbedded),
+      description: cdktf.stringToTerraform(this._description),
+      location: cdktf.stringToTerraform(this._location),
+      log_verbose: cdktf.booleanToTerraform(this._logVerbose),
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      timeouts: automationDscConfigurationTimeoutsToTerraform(this._timeouts),
     };
   }
 }

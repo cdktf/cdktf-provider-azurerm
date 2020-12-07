@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface ApiManagementApiVersionSetConfig extends TerraformMetaArguments {
+export interface ApiManagementApiVersionSetConfig extends cdktf.TerraformMetaArguments {
   readonly apiManagementName: string;
   readonly description?: string;
   readonly displayName: string;
@@ -26,9 +25,20 @@ export interface ApiManagementApiVersionSetTimeouts {
   readonly update?: string;
 }
 
+function apiManagementApiVersionSetTimeoutsToTerraform(struct?: ApiManagementApiVersionSetTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class ApiManagementApiVersionSet extends TerraformResource {
+export class ApiManagementApiVersionSet extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -200,15 +210,15 @@ export class ApiManagementApiVersionSet extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      api_management_name: this._apiManagementName,
-      description: this._description,
-      display_name: this._displayName,
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      version_header_name: this._versionHeaderName,
-      version_query_name: this._versionQueryName,
-      versioning_scheme: this._versioningScheme,
-      timeouts: this._timeouts,
+      api_management_name: cdktf.stringToTerraform(this._apiManagementName),
+      description: cdktf.stringToTerraform(this._description),
+      display_name: cdktf.stringToTerraform(this._displayName),
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      version_header_name: cdktf.stringToTerraform(this._versionHeaderName),
+      version_query_name: cdktf.stringToTerraform(this._versionQueryName),
+      versioning_scheme: cdktf.stringToTerraform(this._versioningScheme),
+      timeouts: apiManagementApiVersionSetTimeoutsToTerraform(this._timeouts),
     };
   }
 }

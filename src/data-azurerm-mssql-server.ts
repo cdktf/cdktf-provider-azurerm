@@ -2,20 +2,17 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformDataSource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
-import { ComplexComputedList } from "cdktf";
-import { StringMap } from "cdktf";
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataAzurermMssqlServerConfig extends TerraformMetaArguments {
+export interface DataAzurermMssqlServerConfig extends cdktf.TerraformMetaArguments {
   readonly name: string;
   readonly resourceGroupName: string;
   /** timeouts block */
   readonly timeouts?: DataAzurermMssqlServerTimeouts;
 }
-export class DataAzurermMssqlServerIdentity extends ComplexComputedList {
+export class DataAzurermMssqlServerIdentity extends cdktf.ComplexComputedList {
 
   // principal_id - computed: true, optional: false, required: false
   public get principalId() {
@@ -36,9 +33,17 @@ export interface DataAzurermMssqlServerTimeouts {
   readonly read?: string;
 }
 
+function dataAzurermMssqlServerTimeoutsToTerraform(struct?: DataAzurermMssqlServerTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    read: cdktf.stringToTerraform(struct!.read),
+  }
+}
+
+
 // Resource
 
-export class DataAzurermMssqlServer extends TerraformDataSource {
+export class DataAzurermMssqlServer extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
@@ -122,7 +127,7 @@ export class DataAzurermMssqlServer extends TerraformDataSource {
 
   // tags - computed: true, optional: false, required: false
   public tags(key: string): string {
-    return new StringMap(this, 'tags').lookup(key);
+    return new cdktf.StringMap(this, 'tags').lookup(key);
   }
 
   // version - computed: true, optional: false, required: false
@@ -152,9 +157,9 @@ export class DataAzurermMssqlServer extends TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      timeouts: this._timeouts,
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      timeouts: dataAzurermMssqlServerTimeoutsToTerraform(this._timeouts),
     };
   }
 }

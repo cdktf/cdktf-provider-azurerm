@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface KeyVaultCertificateIssuerConfig extends TerraformMetaArguments {
+export interface KeyVaultCertificateIssuerConfig extends cdktf.TerraformMetaArguments {
   readonly accountId?: string;
   readonly keyVaultId: string;
   readonly name: string;
@@ -25,6 +24,17 @@ export interface KeyVaultCertificateIssuerAdmin {
   readonly lastName?: string;
   readonly phone?: string;
 }
+
+function keyVaultCertificateIssuerAdminToTerraform(struct?: KeyVaultCertificateIssuerAdmin): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    email_address: cdktf.stringToTerraform(struct!.emailAddress),
+    first_name: cdktf.stringToTerraform(struct!.firstName),
+    last_name: cdktf.stringToTerraform(struct!.lastName),
+    phone: cdktf.stringToTerraform(struct!.phone),
+  }
+}
+
 export interface KeyVaultCertificateIssuerTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -32,9 +42,20 @@ export interface KeyVaultCertificateIssuerTimeouts {
   readonly update?: string;
 }
 
+function keyVaultCertificateIssuerTimeoutsToTerraform(struct?: KeyVaultCertificateIssuerTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class KeyVaultCertificateIssuer extends TerraformResource {
+export class KeyVaultCertificateIssuer extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -195,14 +216,14 @@ export class KeyVaultCertificateIssuer extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      account_id: this._accountId,
-      key_vault_id: this._keyVaultId,
-      name: this._name,
-      org_id: this._orgId,
-      password: this._password,
-      provider_name: this._providerName,
-      admin: this._admin,
-      timeouts: this._timeouts,
+      account_id: cdktf.stringToTerraform(this._accountId),
+      key_vault_id: cdktf.stringToTerraform(this._keyVaultId),
+      name: cdktf.stringToTerraform(this._name),
+      org_id: cdktf.stringToTerraform(this._orgId),
+      password: cdktf.stringToTerraform(this._password),
+      provider_name: cdktf.stringToTerraform(this._providerName),
+      admin: cdktf.listMapper(keyVaultCertificateIssuerAdminToTerraform)(this._admin),
+      timeouts: keyVaultCertificateIssuerTimeoutsToTerraform(this._timeouts),
     };
   }
 }

@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataLakeStoreConfig extends TerraformMetaArguments {
+export interface DataLakeStoreConfig extends cdktf.TerraformMetaArguments {
   readonly encryptionState?: string;
   readonly encryptionType?: string;
   readonly firewallAllowAzureIps?: string;
@@ -27,9 +26,20 @@ export interface DataLakeStoreTimeouts {
   readonly update?: string;
 }
 
+function dataLakeStoreTimeoutsToTerraform(struct?: DataLakeStoreTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class DataLakeStore extends TerraformResource {
+export class DataLakeStore extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -229,16 +239,16 @@ export class DataLakeStore extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      encryption_state: this._encryptionState,
-      encryption_type: this._encryptionType,
-      firewall_allow_azure_ips: this._firewallAllowAzureIps,
-      firewall_state: this._firewallState,
-      location: this._location,
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      tags: this._tags,
-      tier: this._tier,
-      timeouts: this._timeouts,
+      encryption_state: cdktf.stringToTerraform(this._encryptionState),
+      encryption_type: cdktf.stringToTerraform(this._encryptionType),
+      firewall_allow_azure_ips: cdktf.stringToTerraform(this._firewallAllowAzureIps),
+      firewall_state: cdktf.stringToTerraform(this._firewallState),
+      location: cdktf.stringToTerraform(this._location),
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      tier: cdktf.stringToTerraform(this._tier),
+      timeouts: dataLakeStoreTimeoutsToTerraform(this._timeouts),
     };
   }
 }

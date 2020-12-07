@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface KustoAttachedDatabaseConfigurationConfig extends TerraformMetaArguments {
+export interface KustoAttachedDatabaseConfigurationConfig extends cdktf.TerraformMetaArguments {
   readonly clusterName: string;
   readonly clusterResourceId: string;
   readonly databaseName: string;
@@ -25,9 +24,20 @@ export interface KustoAttachedDatabaseConfigurationTimeouts {
   readonly update?: string;
 }
 
+function kustoAttachedDatabaseConfigurationTimeoutsToTerraform(struct?: KustoAttachedDatabaseConfigurationTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class KustoAttachedDatabaseConfiguration extends TerraformResource {
+export class KustoAttachedDatabaseConfiguration extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -184,14 +194,14 @@ export class KustoAttachedDatabaseConfiguration extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      cluster_name: this._clusterName,
-      cluster_resource_id: this._clusterResourceId,
-      database_name: this._databaseName,
-      default_principal_modification_kind: this._defaultPrincipalModificationKind,
-      location: this._location,
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      timeouts: this._timeouts,
+      cluster_name: cdktf.stringToTerraform(this._clusterName),
+      cluster_resource_id: cdktf.stringToTerraform(this._clusterResourceId),
+      database_name: cdktf.stringToTerraform(this._databaseName),
+      default_principal_modification_kind: cdktf.stringToTerraform(this._defaultPrincipalModificationKind),
+      location: cdktf.stringToTerraform(this._location),
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      timeouts: kustoAttachedDatabaseConfigurationTimeoutsToTerraform(this._timeouts),
     };
   }
 }

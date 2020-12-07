@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface LogicAppWorkflowConfig extends TerraformMetaArguments {
+export interface LogicAppWorkflowConfig extends cdktf.TerraformMetaArguments {
   readonly integrationServiceEnvironmentId?: string;
   readonly location: string;
   readonly logicAppIntegrationAccountId?: string;
@@ -27,9 +26,20 @@ export interface LogicAppWorkflowTimeouts {
   readonly update?: string;
 }
 
+function logicAppWorkflowTimeoutsToTerraform(struct?: LogicAppWorkflowTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class LogicAppWorkflow extends TerraformResource {
+export class LogicAppWorkflow extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -249,16 +259,16 @@ export class LogicAppWorkflow extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      integration_service_environment_id: this._integrationServiceEnvironmentId,
-      location: this._location,
-      logic_app_integration_account_id: this._logicAppIntegrationAccountId,
-      name: this._name,
-      parameters: this._parameters,
-      resource_group_name: this._resourceGroupName,
-      tags: this._tags,
-      workflow_schema: this._workflowSchema,
-      workflow_version: this._workflowVersion,
-      timeouts: this._timeouts,
+      integration_service_environment_id: cdktf.stringToTerraform(this._integrationServiceEnvironmentId),
+      location: cdktf.stringToTerraform(this._location),
+      logic_app_integration_account_id: cdktf.stringToTerraform(this._logicAppIntegrationAccountId),
+      name: cdktf.stringToTerraform(this._name),
+      parameters: cdktf.hashMapper(cdktf.anyToTerraform)(this._parameters),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      workflow_schema: cdktf.stringToTerraform(this._workflowSchema),
+      workflow_version: cdktf.stringToTerraform(this._workflowVersion),
+      timeouts: logicAppWorkflowTimeoutsToTerraform(this._timeouts),
     };
   }
 }

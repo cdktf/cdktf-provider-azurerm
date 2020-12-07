@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface ContainerRegistryWebhookConfig extends TerraformMetaArguments {
+export interface ContainerRegistryWebhookConfig extends cdktf.TerraformMetaArguments {
   readonly actions: string[];
   readonly customHeaders?: { [key: string]: string };
   readonly location: string;
@@ -28,9 +27,20 @@ export interface ContainerRegistryWebhookTimeouts {
   readonly update?: string;
 }
 
+function containerRegistryWebhookTimeoutsToTerraform(struct?: ContainerRegistryWebhookTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class ContainerRegistryWebhook extends TerraformResource {
+export class ContainerRegistryWebhook extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -233,17 +243,17 @@ export class ContainerRegistryWebhook extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      actions: this._actions,
-      custom_headers: this._customHeaders,
-      location: this._location,
-      name: this._name,
-      registry_name: this._registryName,
-      resource_group_name: this._resourceGroupName,
-      scope: this._scope,
-      service_uri: this._serviceUri,
-      status: this._status,
-      tags: this._tags,
-      timeouts: this._timeouts,
+      actions: cdktf.listMapper(cdktf.stringToTerraform)(this._actions),
+      custom_headers: cdktf.hashMapper(cdktf.anyToTerraform)(this._customHeaders),
+      location: cdktf.stringToTerraform(this._location),
+      name: cdktf.stringToTerraform(this._name),
+      registry_name: cdktf.stringToTerraform(this._registryName),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      scope: cdktf.stringToTerraform(this._scope),
+      service_uri: cdktf.stringToTerraform(this._serviceUri),
+      status: cdktf.stringToTerraform(this._status),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      timeouts: containerRegistryWebhookTimeoutsToTerraform(this._timeouts),
     };
   }
 }

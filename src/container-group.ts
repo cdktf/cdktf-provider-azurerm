@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface ContainerGroupConfig extends TerraformMetaArguments {
+export interface ContainerGroupConfig extends cdktf.TerraformMetaArguments {
   readonly dnsNameLabel?: string;
   readonly ipAddressType?: string;
   readonly location: string;
@@ -34,11 +33,30 @@ export interface ContainerGroupContainerGpu {
   readonly count?: number;
   readonly sku?: string;
 }
+
+function containerGroupContainerGpuToTerraform(struct?: ContainerGroupContainerGpu): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    count: cdktf.numberToTerraform(struct!.count),
+    sku: cdktf.stringToTerraform(struct!.sku),
+  }
+}
+
 export interface ContainerGroupContainerLivenessProbeHttpGet {
   readonly path?: string;
   readonly port?: number;
   readonly scheme?: string;
 }
+
+function containerGroupContainerLivenessProbeHttpGetToTerraform(struct?: ContainerGroupContainerLivenessProbeHttpGet): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    path: cdktf.stringToTerraform(struct!.path),
+    port: cdktf.numberToTerraform(struct!.port),
+    scheme: cdktf.stringToTerraform(struct!.scheme),
+  }
+}
+
 export interface ContainerGroupContainerLivenessProbe {
   readonly exec?: string[];
   readonly failureThreshold?: number;
@@ -49,15 +67,48 @@ export interface ContainerGroupContainerLivenessProbe {
   /** http_get block */
   readonly httpGet?: ContainerGroupContainerLivenessProbeHttpGet[];
 }
+
+function containerGroupContainerLivenessProbeToTerraform(struct?: ContainerGroupContainerLivenessProbe): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    exec: cdktf.listMapper(cdktf.stringToTerraform)(struct!.exec),
+    failure_threshold: cdktf.numberToTerraform(struct!.failureThreshold),
+    initial_delay_seconds: cdktf.numberToTerraform(struct!.initialDelaySeconds),
+    period_seconds: cdktf.numberToTerraform(struct!.periodSeconds),
+    success_threshold: cdktf.numberToTerraform(struct!.successThreshold),
+    timeout_seconds: cdktf.numberToTerraform(struct!.timeoutSeconds),
+    http_get: cdktf.listMapper(containerGroupContainerLivenessProbeHttpGetToTerraform)(struct!.httpGet),
+  }
+}
+
 export interface ContainerGroupContainerPorts {
   readonly port?: number;
   readonly protocol?: string;
 }
+
+function containerGroupContainerPortsToTerraform(struct?: ContainerGroupContainerPorts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    port: cdktf.numberToTerraform(struct!.port),
+    protocol: cdktf.stringToTerraform(struct!.protocol),
+  }
+}
+
 export interface ContainerGroupContainerReadinessProbeHttpGet {
   readonly path?: string;
   readonly port?: number;
   readonly scheme?: string;
 }
+
+function containerGroupContainerReadinessProbeHttpGetToTerraform(struct?: ContainerGroupContainerReadinessProbeHttpGet): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    path: cdktf.stringToTerraform(struct!.path),
+    port: cdktf.numberToTerraform(struct!.port),
+    scheme: cdktf.stringToTerraform(struct!.scheme),
+  }
+}
+
 export interface ContainerGroupContainerReadinessProbe {
   readonly exec?: string[];
   readonly failureThreshold?: number;
@@ -68,11 +119,35 @@ export interface ContainerGroupContainerReadinessProbe {
   /** http_get block */
   readonly httpGet?: ContainerGroupContainerReadinessProbeHttpGet[];
 }
+
+function containerGroupContainerReadinessProbeToTerraform(struct?: ContainerGroupContainerReadinessProbe): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    exec: cdktf.listMapper(cdktf.stringToTerraform)(struct!.exec),
+    failure_threshold: cdktf.numberToTerraform(struct!.failureThreshold),
+    initial_delay_seconds: cdktf.numberToTerraform(struct!.initialDelaySeconds),
+    period_seconds: cdktf.numberToTerraform(struct!.periodSeconds),
+    success_threshold: cdktf.numberToTerraform(struct!.successThreshold),
+    timeout_seconds: cdktf.numberToTerraform(struct!.timeoutSeconds),
+    http_get: cdktf.listMapper(containerGroupContainerReadinessProbeHttpGetToTerraform)(struct!.httpGet),
+  }
+}
+
 export interface ContainerGroupContainerVolumeGitRepo {
   readonly directory?: string;
   readonly revision?: string;
   readonly url: string;
 }
+
+function containerGroupContainerVolumeGitRepoToTerraform(struct?: ContainerGroupContainerVolumeGitRepo): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    directory: cdktf.stringToTerraform(struct!.directory),
+    revision: cdktf.stringToTerraform(struct!.revision),
+    url: cdktf.stringToTerraform(struct!.url),
+  }
+}
+
 export interface ContainerGroupContainerVolume {
   readonly mountPath: string;
   readonly name: string;
@@ -84,6 +159,21 @@ export interface ContainerGroupContainerVolume {
   /** git_repo block */
   readonly gitRepo?: ContainerGroupContainerVolumeGitRepo[];
 }
+
+function containerGroupContainerVolumeToTerraform(struct?: ContainerGroupContainerVolume): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    mount_path: cdktf.stringToTerraform(struct!.mountPath),
+    name: cdktf.stringToTerraform(struct!.name),
+    read_only: cdktf.booleanToTerraform(struct!.readOnly),
+    secret: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.secret),
+    share_name: cdktf.stringToTerraform(struct!.shareName),
+    storage_account_key: cdktf.stringToTerraform(struct!.storageAccountKey),
+    storage_account_name: cdktf.stringToTerraform(struct!.storageAccountName),
+    git_repo: cdktf.listMapper(containerGroupContainerVolumeGitRepoToTerraform)(struct!.gitRepo),
+  }
+}
+
 export interface ContainerGroupContainer {
   readonly commands?: string[];
   readonly cpu: number;
@@ -103,30 +193,97 @@ export interface ContainerGroupContainer {
   /** volume block */
   readonly volume?: ContainerGroupContainerVolume[];
 }
+
+function containerGroupContainerToTerraform(struct?: ContainerGroupContainer): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    commands: cdktf.listMapper(cdktf.stringToTerraform)(struct!.commands),
+    cpu: cdktf.numberToTerraform(struct!.cpu),
+    environment_variables: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.environmentVariables),
+    image: cdktf.stringToTerraform(struct!.image),
+    memory: cdktf.numberToTerraform(struct!.memory),
+    name: cdktf.stringToTerraform(struct!.name),
+    secure_environment_variables: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.secureEnvironmentVariables),
+    gpu: cdktf.listMapper(containerGroupContainerGpuToTerraform)(struct!.gpu),
+    liveness_probe: cdktf.listMapper(containerGroupContainerLivenessProbeToTerraform)(struct!.livenessProbe),
+    ports: cdktf.listMapper(containerGroupContainerPortsToTerraform)(struct!.ports),
+    readiness_probe: cdktf.listMapper(containerGroupContainerReadinessProbeToTerraform)(struct!.readinessProbe),
+    volume: cdktf.listMapper(containerGroupContainerVolumeToTerraform)(struct!.volume),
+  }
+}
+
 export interface ContainerGroupDiagnosticsLogAnalytics {
   readonly logType?: string;
   readonly metadata?: { [key: string]: string };
   readonly workspaceId: string;
   readonly workspaceKey: string;
 }
+
+function containerGroupDiagnosticsLogAnalyticsToTerraform(struct?: ContainerGroupDiagnosticsLogAnalytics): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    log_type: cdktf.stringToTerraform(struct!.logType),
+    metadata: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.metadata),
+    workspace_id: cdktf.stringToTerraform(struct!.workspaceId),
+    workspace_key: cdktf.stringToTerraform(struct!.workspaceKey),
+  }
+}
+
 export interface ContainerGroupDiagnostics {
   /** log_analytics block */
   readonly logAnalytics: ContainerGroupDiagnosticsLogAnalytics[];
 }
+
+function containerGroupDiagnosticsToTerraform(struct?: ContainerGroupDiagnostics): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    log_analytics: cdktf.listMapper(containerGroupDiagnosticsLogAnalyticsToTerraform)(struct!.logAnalytics),
+  }
+}
+
 export interface ContainerGroupDnsConfig {
   readonly nameservers: string[];
   readonly options: string[];
   readonly searchDomains: string[];
 }
+
+function containerGroupDnsConfigToTerraform(struct?: ContainerGroupDnsConfig): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    nameservers: cdktf.listMapper(cdktf.stringToTerraform)(struct!.nameservers),
+    options: cdktf.listMapper(cdktf.stringToTerraform)(struct!.options),
+    search_domains: cdktf.listMapper(cdktf.stringToTerraform)(struct!.searchDomains),
+  }
+}
+
 export interface ContainerGroupIdentity {
   readonly identityIds?: string[];
   readonly type: string;
 }
+
+function containerGroupIdentityToTerraform(struct?: ContainerGroupIdentity): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    identity_ids: cdktf.listMapper(cdktf.stringToTerraform)(struct!.identityIds),
+    type: cdktf.stringToTerraform(struct!.type),
+  }
+}
+
 export interface ContainerGroupImageRegistryCredential {
   readonly password: string;
   readonly server: string;
   readonly username: string;
 }
+
+function containerGroupImageRegistryCredentialToTerraform(struct?: ContainerGroupImageRegistryCredential): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    password: cdktf.stringToTerraform(struct!.password),
+    server: cdktf.stringToTerraform(struct!.server),
+    username: cdktf.stringToTerraform(struct!.username),
+  }
+}
+
 export interface ContainerGroupTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -134,9 +291,20 @@ export interface ContainerGroupTimeouts {
   readonly update?: string;
 }
 
+function containerGroupTimeoutsToTerraform(struct?: ContainerGroupTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class ContainerGroup extends TerraformResource {
+export class ContainerGroup extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -420,21 +588,21 @@ export class ContainerGroup extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      dns_name_label: this._dnsNameLabel,
-      ip_address_type: this._ipAddressType,
-      location: this._location,
-      name: this._name,
-      network_profile_id: this._networkProfileId,
-      os_type: this._osType,
-      resource_group_name: this._resourceGroupName,
-      restart_policy: this._restartPolicy,
-      tags: this._tags,
-      container: this._container,
-      diagnostics: this._diagnostics,
-      dns_config: this._dnsConfig,
-      identity: this._identity,
-      image_registry_credential: this._imageRegistryCredential,
-      timeouts: this._timeouts,
+      dns_name_label: cdktf.stringToTerraform(this._dnsNameLabel),
+      ip_address_type: cdktf.stringToTerraform(this._ipAddressType),
+      location: cdktf.stringToTerraform(this._location),
+      name: cdktf.stringToTerraform(this._name),
+      network_profile_id: cdktf.stringToTerraform(this._networkProfileId),
+      os_type: cdktf.stringToTerraform(this._osType),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      restart_policy: cdktf.stringToTerraform(this._restartPolicy),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      container: cdktf.listMapper(containerGroupContainerToTerraform)(this._container),
+      diagnostics: cdktf.listMapper(containerGroupDiagnosticsToTerraform)(this._diagnostics),
+      dns_config: cdktf.listMapper(containerGroupDnsConfigToTerraform)(this._dnsConfig),
+      identity: cdktf.listMapper(containerGroupIdentityToTerraform)(this._identity),
+      image_registry_credential: cdktf.listMapper(containerGroupImageRegistryCredentialToTerraform)(this._imageRegistryCredential),
+      timeouts: containerGroupTimeoutsToTerraform(this._timeouts),
     };
   }
 }

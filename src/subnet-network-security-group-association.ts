@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface SubnetNetworkSecurityGroupAssociationConfig extends TerraformMetaArguments {
+export interface SubnetNetworkSecurityGroupAssociationConfig extends cdktf.TerraformMetaArguments {
   readonly networkSecurityGroupId: string;
   readonly subnetId: string;
   /** timeouts block */
@@ -20,9 +19,20 @@ export interface SubnetNetworkSecurityGroupAssociationTimeouts {
   readonly update?: string;
 }
 
+function subnetNetworkSecurityGroupAssociationTimeoutsToTerraform(struct?: SubnetNetworkSecurityGroupAssociationTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class SubnetNetworkSecurityGroupAssociation extends TerraformResource {
+export class SubnetNetworkSecurityGroupAssociation extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -101,9 +111,9 @@ export class SubnetNetworkSecurityGroupAssociation extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      network_security_group_id: this._networkSecurityGroupId,
-      subnet_id: this._subnetId,
-      timeouts: this._timeouts,
+      network_security_group_id: cdktf.stringToTerraform(this._networkSecurityGroupId),
+      subnet_id: cdktf.stringToTerraform(this._subnetId),
+      timeouts: subnetNetworkSecurityGroupAssociationTimeoutsToTerraform(this._timeouts),
     };
   }
 }

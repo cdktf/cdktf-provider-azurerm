@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface MariadbServerConfig extends TerraformMetaArguments {
+export interface MariadbServerConfig extends cdktf.TerraformMetaArguments {
   readonly administratorLogin?: string;
   readonly administratorLoginPassword?: string;
   readonly autoGrowEnabled?: boolean;
@@ -37,6 +36,17 @@ export interface MariadbServerStorageProfile {
   readonly geoRedundantBackup?: string;
   readonly storageMb?: number;
 }
+
+function mariadbServerStorageProfileToTerraform(struct?: MariadbServerStorageProfile): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    auto_grow: cdktf.stringToTerraform(struct!.autoGrow),
+    backup_retention_days: cdktf.numberToTerraform(struct!.backupRetentionDays),
+    geo_redundant_backup: cdktf.stringToTerraform(struct!.geoRedundantBackup),
+    storage_mb: cdktf.numberToTerraform(struct!.storageMb),
+  }
+}
+
 export interface MariadbServerTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -44,9 +54,20 @@ export interface MariadbServerTimeouts {
   readonly update?: string;
 }
 
+function mariadbServerTimeoutsToTerraform(struct?: MariadbServerTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class MariadbServer extends TerraformResource {
+export class MariadbServer extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -410,26 +431,26 @@ export class MariadbServer extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      administrator_login: this._administratorLogin,
-      administrator_login_password: this._administratorLoginPassword,
-      auto_grow_enabled: this._autoGrowEnabled,
-      backup_retention_days: this._backupRetentionDays,
-      create_mode: this._createMode,
-      creation_source_server_id: this._creationSourceServerId,
-      geo_redundant_backup_enabled: this._geoRedundantBackupEnabled,
-      location: this._location,
-      name: this._name,
-      public_network_access_enabled: this._publicNetworkAccessEnabled,
-      resource_group_name: this._resourceGroupName,
-      restore_point_in_time: this._restorePointInTime,
-      sku_name: this._skuName,
-      ssl_enforcement: this._sslEnforcement,
-      ssl_enforcement_enabled: this._sslEnforcementEnabled,
-      storage_mb: this._storageMb,
-      tags: this._tags,
-      version: this._version,
-      storage_profile: this._storageProfile,
-      timeouts: this._timeouts,
+      administrator_login: cdktf.stringToTerraform(this._administratorLogin),
+      administrator_login_password: cdktf.stringToTerraform(this._administratorLoginPassword),
+      auto_grow_enabled: cdktf.booleanToTerraform(this._autoGrowEnabled),
+      backup_retention_days: cdktf.numberToTerraform(this._backupRetentionDays),
+      create_mode: cdktf.stringToTerraform(this._createMode),
+      creation_source_server_id: cdktf.stringToTerraform(this._creationSourceServerId),
+      geo_redundant_backup_enabled: cdktf.booleanToTerraform(this._geoRedundantBackupEnabled),
+      location: cdktf.stringToTerraform(this._location),
+      name: cdktf.stringToTerraform(this._name),
+      public_network_access_enabled: cdktf.booleanToTerraform(this._publicNetworkAccessEnabled),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      restore_point_in_time: cdktf.stringToTerraform(this._restorePointInTime),
+      sku_name: cdktf.stringToTerraform(this._skuName),
+      ssl_enforcement: cdktf.stringToTerraform(this._sslEnforcement),
+      ssl_enforcement_enabled: cdktf.booleanToTerraform(this._sslEnforcementEnabled),
+      storage_mb: cdktf.numberToTerraform(this._storageMb),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      version: cdktf.stringToTerraform(this._version),
+      storage_profile: cdktf.listMapper(mariadbServerStorageProfileToTerraform)(this._storageProfile),
+      timeouts: mariadbServerTimeoutsToTerraform(this._timeouts),
     };
   }
 }

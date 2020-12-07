@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface NetappVolumeConfig extends TerraformMetaArguments {
+export interface NetappVolumeConfig extends cdktf.TerraformMetaArguments {
   readonly accountName: string;
   readonly location: string;
   readonly name: string;
@@ -34,6 +33,21 @@ export interface NetappVolumeExportPolicyRule {
   readonly unixReadOnly?: boolean;
   readonly unixReadWrite?: boolean;
 }
+
+function netappVolumeExportPolicyRuleToTerraform(struct?: NetappVolumeExportPolicyRule): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    allowed_clients: cdktf.listMapper(cdktf.stringToTerraform)(struct!.allowedClients),
+    cifs_enabled: cdktf.booleanToTerraform(struct!.cifsEnabled),
+    nfsv3_enabled: cdktf.booleanToTerraform(struct!.nfsv3Enabled),
+    nfsv4_enabled: cdktf.booleanToTerraform(struct!.nfsv4Enabled),
+    protocols_enabled: cdktf.listMapper(cdktf.stringToTerraform)(struct!.protocolsEnabled),
+    rule_index: cdktf.numberToTerraform(struct!.ruleIndex),
+    unix_read_only: cdktf.booleanToTerraform(struct!.unixReadOnly),
+    unix_read_write: cdktf.booleanToTerraform(struct!.unixReadWrite),
+  }
+}
+
 export interface NetappVolumeTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -41,9 +55,20 @@ export interface NetappVolumeTimeouts {
   readonly update?: string;
 }
 
+function netappVolumeTimeoutsToTerraform(struct?: NetappVolumeTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class NetappVolume extends TerraformResource {
+export class NetappVolume extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -276,19 +301,19 @@ export class NetappVolume extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      account_name: this._accountName,
-      location: this._location,
-      name: this._name,
-      pool_name: this._poolName,
-      protocols: this._protocols,
-      resource_group_name: this._resourceGroupName,
-      service_level: this._serviceLevel,
-      storage_quota_in_gb: this._storageQuotaInGb,
-      subnet_id: this._subnetId,
-      tags: this._tags,
-      volume_path: this._volumePath,
-      export_policy_rule: this._exportPolicyRule,
-      timeouts: this._timeouts,
+      account_name: cdktf.stringToTerraform(this._accountName),
+      location: cdktf.stringToTerraform(this._location),
+      name: cdktf.stringToTerraform(this._name),
+      pool_name: cdktf.stringToTerraform(this._poolName),
+      protocols: cdktf.listMapper(cdktf.stringToTerraform)(this._protocols),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      service_level: cdktf.stringToTerraform(this._serviceLevel),
+      storage_quota_in_gb: cdktf.numberToTerraform(this._storageQuotaInGb),
+      subnet_id: cdktf.stringToTerraform(this._subnetId),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      volume_path: cdktf.stringToTerraform(this._volumePath),
+      export_policy_rule: cdktf.listMapper(netappVolumeExportPolicyRuleToTerraform)(this._exportPolicyRule),
+      timeouts: netappVolumeTimeoutsToTerraform(this._timeouts),
     };
   }
 }

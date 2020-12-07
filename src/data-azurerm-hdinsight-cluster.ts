@@ -2,20 +2,17 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformDataSource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
-import { StringMap } from "cdktf";
-import { ComplexComputedList } from "cdktf";
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataAzurermHdinsightClusterConfig extends TerraformMetaArguments {
+export interface DataAzurermHdinsightClusterConfig extends cdktf.TerraformMetaArguments {
   readonly name: string;
   readonly resourceGroupName: string;
   /** timeouts block */
   readonly timeouts?: DataAzurermHdinsightClusterTimeouts;
 }
-export class DataAzurermHdinsightClusterGateway extends ComplexComputedList {
+export class DataAzurermHdinsightClusterGateway extends cdktf.ComplexComputedList {
 
   // enabled - computed: true, optional: false, required: false
   public get enabled() {
@@ -36,9 +33,17 @@ export interface DataAzurermHdinsightClusterTimeouts {
   readonly read?: string;
 }
 
+function dataAzurermHdinsightClusterTimeoutsToTerraform(struct?: DataAzurermHdinsightClusterTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    read: cdktf.stringToTerraform(struct!.read),
+  }
+}
+
+
 // Resource
 
-export class DataAzurermHdinsightCluster extends TerraformDataSource {
+export class DataAzurermHdinsightCluster extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
@@ -71,7 +76,7 @@ export class DataAzurermHdinsightCluster extends TerraformDataSource {
 
   // component_versions - computed: true, optional: false, required: false
   public componentVersions(key: string): string {
-    return new StringMap(this, 'component_versions').lookup(key);
+    return new cdktf.StringMap(this, 'component_versions').lookup(key);
   }
 
   // edge_ssh_endpoint - computed: true, optional: false, required: false
@@ -137,7 +142,7 @@ export class DataAzurermHdinsightCluster extends TerraformDataSource {
 
   // tags - computed: true, optional: false, required: false
   public tags(key: string): string {
-    return new StringMap(this, 'tags').lookup(key);
+    return new cdktf.StringMap(this, 'tags').lookup(key);
   }
 
   // tier - computed: true, optional: false, required: false
@@ -172,9 +177,9 @@ export class DataAzurermHdinsightCluster extends TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      timeouts: this._timeouts,
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      timeouts: dataAzurermHdinsightClusterTimeoutsToTerraform(this._timeouts),
     };
   }
 }

@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface MysqlServerKeyConfig extends TerraformMetaArguments {
+export interface MysqlServerKeyConfig extends cdktf.TerraformMetaArguments {
   readonly keyVaultKeyId: string;
   readonly serverId: string;
   /** timeouts block */
@@ -20,9 +19,20 @@ export interface MysqlServerKeyTimeouts {
   readonly update?: string;
 }
 
+function mysqlServerKeyTimeoutsToTerraform(struct?: MysqlServerKeyTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class MysqlServerKey extends TerraformResource {
+export class MysqlServerKey extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -101,9 +111,9 @@ export class MysqlServerKey extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      key_vault_key_id: this._keyVaultKeyId,
-      server_id: this._serverId,
-      timeouts: this._timeouts,
+      key_vault_key_id: cdktf.stringToTerraform(this._keyVaultKeyId),
+      server_id: cdktf.stringToTerraform(this._serverId),
+      timeouts: mysqlServerKeyTimeoutsToTerraform(this._timeouts),
     };
   }
 }

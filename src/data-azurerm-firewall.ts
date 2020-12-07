@@ -2,21 +2,18 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformDataSource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
-import { ComplexComputedList } from "cdktf";
-import { StringMap } from "cdktf";
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataAzurermFirewallConfig extends TerraformMetaArguments {
+export interface DataAzurermFirewallConfig extends cdktf.TerraformMetaArguments {
   readonly name: string;
   readonly resourceGroupName: string;
   readonly zones?: string[];
   /** timeouts block */
   readonly timeouts?: DataAzurermFirewallTimeouts;
 }
-export class DataAzurermFirewallIpConfiguration extends ComplexComputedList {
+export class DataAzurermFirewallIpConfiguration extends cdktf.ComplexComputedList {
 
   // name - computed: true, optional: false, required: false
   public get name() {
@@ -38,7 +35,7 @@ export class DataAzurermFirewallIpConfiguration extends ComplexComputedList {
     return this.getStringAttribute('subnet_id');
   }
 }
-export class DataAzurermFirewallManagementIpConfiguration extends ComplexComputedList {
+export class DataAzurermFirewallManagementIpConfiguration extends cdktf.ComplexComputedList {
 
   // name - computed: true, optional: false, required: false
   public get name() {
@@ -60,7 +57,7 @@ export class DataAzurermFirewallManagementIpConfiguration extends ComplexCompute
     return this.getStringAttribute('subnet_id');
   }
 }
-export class DataAzurermFirewallVirtualHub extends ComplexComputedList {
+export class DataAzurermFirewallVirtualHub extends cdktf.ComplexComputedList {
 
   // private_ip_address - computed: true, optional: false, required: false
   public get privateIpAddress() {
@@ -86,9 +83,17 @@ export interface DataAzurermFirewallTimeouts {
   readonly read?: string;
 }
 
+function dataAzurermFirewallTimeoutsToTerraform(struct?: DataAzurermFirewallTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    read: cdktf.stringToTerraform(struct!.read),
+  }
+}
+
+
 // Resource
 
-export class DataAzurermFirewall extends TerraformDataSource {
+export class DataAzurermFirewall extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
@@ -183,7 +188,7 @@ export class DataAzurermFirewall extends TerraformDataSource {
 
   // tags - computed: true, optional: false, required: false
   public tags(key: string): string {
-    return new StringMap(this, 'tags').lookup(key);
+    return new cdktf.StringMap(this, 'tags').lookup(key);
   }
 
   // threat_intel_mode - computed: true, optional: false, required: false
@@ -234,10 +239,10 @@ export class DataAzurermFirewall extends TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      zones: this._zones,
-      timeouts: this._timeouts,
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      zones: cdktf.listMapper(cdktf.stringToTerraform)(this._zones),
+      timeouts: dataAzurermFirewallTimeoutsToTerraform(this._timeouts),
     };
   }
 }

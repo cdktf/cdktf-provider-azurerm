@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataFactoryIntegrationRuntimeSelfHostedConfig extends TerraformMetaArguments {
+export interface DataFactoryIntegrationRuntimeSelfHostedConfig extends cdktf.TerraformMetaArguments {
   readonly dataFactoryName: string;
   readonly description?: string;
   readonly name: string;
@@ -20,6 +19,14 @@ export interface DataFactoryIntegrationRuntimeSelfHostedConfig extends Terraform
 export interface DataFactoryIntegrationRuntimeSelfHostedRbacAuthorization {
   readonly resourceId: string;
 }
+
+function dataFactoryIntegrationRuntimeSelfHostedRbacAuthorizationToTerraform(struct?: DataFactoryIntegrationRuntimeSelfHostedRbacAuthorization): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    resource_id: cdktf.stringToTerraform(struct!.resourceId),
+  }
+}
+
 export interface DataFactoryIntegrationRuntimeSelfHostedTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -27,9 +34,20 @@ export interface DataFactoryIntegrationRuntimeSelfHostedTimeouts {
   readonly update?: string;
 }
 
+function dataFactoryIntegrationRuntimeSelfHostedTimeoutsToTerraform(struct?: DataFactoryIntegrationRuntimeSelfHostedTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class DataFactoryIntegrationRuntimeSelfHosted extends TerraformResource {
+export class DataFactoryIntegrationRuntimeSelfHosted extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -166,12 +184,12 @@ export class DataFactoryIntegrationRuntimeSelfHosted extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      data_factory_name: this._dataFactoryName,
-      description: this._description,
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      rbac_authorization: this._rbacAuthorization,
-      timeouts: this._timeouts,
+      data_factory_name: cdktf.stringToTerraform(this._dataFactoryName),
+      description: cdktf.stringToTerraform(this._description),
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      rbac_authorization: cdktf.listMapper(dataFactoryIntegrationRuntimeSelfHostedRbacAuthorizationToTerraform)(this._rbacAuthorization),
+      timeouts: dataFactoryIntegrationRuntimeSelfHostedTimeoutsToTerraform(this._timeouts),
     };
   }
 }

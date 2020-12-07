@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface MaintenanceConfigurationConfig extends TerraformMetaArguments {
+export interface MaintenanceConfigurationConfig extends cdktf.TerraformMetaArguments {
   readonly location: string;
   readonly name: string;
   readonly resourceGroupName: string;
@@ -23,9 +22,20 @@ export interface MaintenanceConfigurationTimeouts {
   readonly update?: string;
 }
 
+function maintenanceConfigurationTimeoutsToTerraform(struct?: MaintenanceConfigurationTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class MaintenanceConfiguration extends TerraformResource {
+export class MaintenanceConfiguration extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -152,12 +162,12 @@ export class MaintenanceConfiguration extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      location: this._location,
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      scope: this._scope,
-      tags: this._tags,
-      timeouts: this._timeouts,
+      location: cdktf.stringToTerraform(this._location),
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      scope: cdktf.stringToTerraform(this._scope),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      timeouts: maintenanceConfigurationTimeoutsToTerraform(this._timeouts),
     };
   }
 }

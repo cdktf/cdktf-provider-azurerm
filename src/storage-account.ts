@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface StorageAccountConfig extends TerraformMetaArguments {
+export interface StorageAccountConfig extends cdktf.TerraformMetaArguments {
   readonly accessTier?: string;
   readonly accountKind?: string;
   readonly accountReplicationType: string;
@@ -43,28 +42,85 @@ export interface StorageAccountBlobPropertiesCorsRule {
   readonly exposedHeaders: string[];
   readonly maxAgeInSeconds: number;
 }
+
+function storageAccountBlobPropertiesCorsRuleToTerraform(struct?: StorageAccountBlobPropertiesCorsRule): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    allowed_headers: cdktf.listMapper(cdktf.stringToTerraform)(struct!.allowedHeaders),
+    allowed_methods: cdktf.listMapper(cdktf.stringToTerraform)(struct!.allowedMethods),
+    allowed_origins: cdktf.listMapper(cdktf.stringToTerraform)(struct!.allowedOrigins),
+    exposed_headers: cdktf.listMapper(cdktf.stringToTerraform)(struct!.exposedHeaders),
+    max_age_in_seconds: cdktf.numberToTerraform(struct!.maxAgeInSeconds),
+  }
+}
+
 export interface StorageAccountBlobPropertiesDeleteRetentionPolicy {
   readonly days?: number;
 }
+
+function storageAccountBlobPropertiesDeleteRetentionPolicyToTerraform(struct?: StorageAccountBlobPropertiesDeleteRetentionPolicy): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    days: cdktf.numberToTerraform(struct!.days),
+  }
+}
+
 export interface StorageAccountBlobProperties {
   /** cors_rule block */
   readonly corsRule?: StorageAccountBlobPropertiesCorsRule[];
   /** delete_retention_policy block */
   readonly deleteRetentionPolicy?: StorageAccountBlobPropertiesDeleteRetentionPolicy[];
 }
+
+function storageAccountBlobPropertiesToTerraform(struct?: StorageAccountBlobProperties): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    cors_rule: cdktf.listMapper(storageAccountBlobPropertiesCorsRuleToTerraform)(struct!.corsRule),
+    delete_retention_policy: cdktf.listMapper(storageAccountBlobPropertiesDeleteRetentionPolicyToTerraform)(struct!.deleteRetentionPolicy),
+  }
+}
+
 export interface StorageAccountCustomDomain {
   readonly name: string;
   readonly useSubdomain?: boolean;
 }
+
+function storageAccountCustomDomainToTerraform(struct?: StorageAccountCustomDomain): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    name: cdktf.stringToTerraform(struct!.name),
+    use_subdomain: cdktf.booleanToTerraform(struct!.useSubdomain),
+  }
+}
+
 export interface StorageAccountIdentity {
   readonly type: string;
 }
+
+function storageAccountIdentityToTerraform(struct?: StorageAccountIdentity): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    type: cdktf.stringToTerraform(struct!.type),
+  }
+}
+
 export interface StorageAccountNetworkRules {
   readonly bypass?: string[];
   readonly defaultAction: string;
   readonly ipRules?: string[];
   readonly virtualNetworkSubnetIds?: string[];
 }
+
+function storageAccountNetworkRulesToTerraform(struct?: StorageAccountNetworkRules): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    bypass: cdktf.listMapper(cdktf.stringToTerraform)(struct!.bypass),
+    default_action: cdktf.stringToTerraform(struct!.defaultAction),
+    ip_rules: cdktf.listMapper(cdktf.stringToTerraform)(struct!.ipRules),
+    virtual_network_subnet_ids: cdktf.listMapper(cdktf.stringToTerraform)(struct!.virtualNetworkSubnetIds),
+  }
+}
+
 export interface StorageAccountQueuePropertiesCorsRule {
   readonly allowedHeaders: string[];
   readonly allowedMethods: string[];
@@ -72,12 +128,35 @@ export interface StorageAccountQueuePropertiesCorsRule {
   readonly exposedHeaders: string[];
   readonly maxAgeInSeconds: number;
 }
+
+function storageAccountQueuePropertiesCorsRuleToTerraform(struct?: StorageAccountQueuePropertiesCorsRule): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    allowed_headers: cdktf.listMapper(cdktf.stringToTerraform)(struct!.allowedHeaders),
+    allowed_methods: cdktf.listMapper(cdktf.stringToTerraform)(struct!.allowedMethods),
+    allowed_origins: cdktf.listMapper(cdktf.stringToTerraform)(struct!.allowedOrigins),
+    exposed_headers: cdktf.listMapper(cdktf.stringToTerraform)(struct!.exposedHeaders),
+    max_age_in_seconds: cdktf.numberToTerraform(struct!.maxAgeInSeconds),
+  }
+}
+
 export interface StorageAccountQueuePropertiesHourMetrics {
   readonly enabled: boolean;
   readonly includeApis?: boolean;
   readonly retentionPolicyDays?: number;
   readonly version: string;
 }
+
+function storageAccountQueuePropertiesHourMetricsToTerraform(struct?: StorageAccountQueuePropertiesHourMetrics): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    enabled: cdktf.booleanToTerraform(struct!.enabled),
+    include_apis: cdktf.booleanToTerraform(struct!.includeApis),
+    retention_policy_days: cdktf.numberToTerraform(struct!.retentionPolicyDays),
+    version: cdktf.stringToTerraform(struct!.version),
+  }
+}
+
 export interface StorageAccountQueuePropertiesLogging {
   readonly delete: boolean;
   readonly read: boolean;
@@ -85,12 +164,35 @@ export interface StorageAccountQueuePropertiesLogging {
   readonly version: string;
   readonly write: boolean;
 }
+
+function storageAccountQueuePropertiesLoggingToTerraform(struct?: StorageAccountQueuePropertiesLogging): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    delete: cdktf.booleanToTerraform(struct!.delete),
+    read: cdktf.booleanToTerraform(struct!.read),
+    retention_policy_days: cdktf.numberToTerraform(struct!.retentionPolicyDays),
+    version: cdktf.stringToTerraform(struct!.version),
+    write: cdktf.booleanToTerraform(struct!.write),
+  }
+}
+
 export interface StorageAccountQueuePropertiesMinuteMetrics {
   readonly enabled: boolean;
   readonly includeApis?: boolean;
   readonly retentionPolicyDays?: number;
   readonly version: string;
 }
+
+function storageAccountQueuePropertiesMinuteMetricsToTerraform(struct?: StorageAccountQueuePropertiesMinuteMetrics): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    enabled: cdktf.booleanToTerraform(struct!.enabled),
+    include_apis: cdktf.booleanToTerraform(struct!.includeApis),
+    retention_policy_days: cdktf.numberToTerraform(struct!.retentionPolicyDays),
+    version: cdktf.stringToTerraform(struct!.version),
+  }
+}
+
 export interface StorageAccountQueueProperties {
   /** cors_rule block */
   readonly corsRule?: StorageAccountQueuePropertiesCorsRule[];
@@ -101,10 +203,30 @@ export interface StorageAccountQueueProperties {
   /** minute_metrics block */
   readonly minuteMetrics?: StorageAccountQueuePropertiesMinuteMetrics[];
 }
+
+function storageAccountQueuePropertiesToTerraform(struct?: StorageAccountQueueProperties): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    cors_rule: cdktf.listMapper(storageAccountQueuePropertiesCorsRuleToTerraform)(struct!.corsRule),
+    hour_metrics: cdktf.listMapper(storageAccountQueuePropertiesHourMetricsToTerraform)(struct!.hourMetrics),
+    logging: cdktf.listMapper(storageAccountQueuePropertiesLoggingToTerraform)(struct!.logging),
+    minute_metrics: cdktf.listMapper(storageAccountQueuePropertiesMinuteMetricsToTerraform)(struct!.minuteMetrics),
+  }
+}
+
 export interface StorageAccountStaticWebsite {
   readonly error404Document?: string;
   readonly indexDocument?: string;
 }
+
+function storageAccountStaticWebsiteToTerraform(struct?: StorageAccountStaticWebsite): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    error_404_document: cdktf.stringToTerraform(struct!.error404Document),
+    index_document: cdktf.stringToTerraform(struct!.indexDocument),
+  }
+}
+
 export interface StorageAccountTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -112,9 +234,20 @@ export interface StorageAccountTimeouts {
   readonly update?: string;
 }
 
+function storageAccountTimeoutsToTerraform(struct?: StorageAccountTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class StorageAccount extends TerraformResource {
+export class StorageAccount extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -633,26 +766,26 @@ export class StorageAccount extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      access_tier: this._accessTier,
-      account_kind: this._accountKind,
-      account_replication_type: this._accountReplicationType,
-      account_tier: this._accountTier,
-      allow_blob_public_access: this._allowBlobPublicAccess,
-      enable_https_traffic_only: this._enableHttpsTrafficOnly,
-      is_hns_enabled: this._isHnsEnabled,
-      large_file_share_enabled: this._largeFileShareEnabled,
-      location: this._location,
-      min_tls_version: this._minTlsVersion,
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      tags: this._tags,
-      blob_properties: this._blobProperties,
-      custom_domain: this._customDomain,
-      identity: this._identity,
-      network_rules: this._networkRules,
-      queue_properties: this._queueProperties,
-      static_website: this._staticWebsite,
-      timeouts: this._timeouts,
+      access_tier: cdktf.stringToTerraform(this._accessTier),
+      account_kind: cdktf.stringToTerraform(this._accountKind),
+      account_replication_type: cdktf.stringToTerraform(this._accountReplicationType),
+      account_tier: cdktf.stringToTerraform(this._accountTier),
+      allow_blob_public_access: cdktf.booleanToTerraform(this._allowBlobPublicAccess),
+      enable_https_traffic_only: cdktf.booleanToTerraform(this._enableHttpsTrafficOnly),
+      is_hns_enabled: cdktf.booleanToTerraform(this._isHnsEnabled),
+      large_file_share_enabled: cdktf.booleanToTerraform(this._largeFileShareEnabled),
+      location: cdktf.stringToTerraform(this._location),
+      min_tls_version: cdktf.stringToTerraform(this._minTlsVersion),
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      blob_properties: cdktf.listMapper(storageAccountBlobPropertiesToTerraform)(this._blobProperties),
+      custom_domain: cdktf.listMapper(storageAccountCustomDomainToTerraform)(this._customDomain),
+      identity: cdktf.listMapper(storageAccountIdentityToTerraform)(this._identity),
+      network_rules: cdktf.listMapper(storageAccountNetworkRulesToTerraform)(this._networkRules),
+      queue_properties: cdktf.listMapper(storageAccountQueuePropertiesToTerraform)(this._queueProperties),
+      static_website: cdktf.listMapper(storageAccountStaticWebsiteToTerraform)(this._staticWebsite),
+      timeouts: storageAccountTimeoutsToTerraform(this._timeouts),
     };
   }
 }

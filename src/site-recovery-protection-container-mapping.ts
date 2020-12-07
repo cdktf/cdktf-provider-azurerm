@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface SiteRecoveryProtectionContainerMappingConfig extends TerraformMetaArguments {
+export interface SiteRecoveryProtectionContainerMappingConfig extends cdktf.TerraformMetaArguments {
   readonly name: string;
   readonly recoveryFabricName: string;
   readonly recoveryReplicationPolicyId: string;
@@ -25,9 +24,20 @@ export interface SiteRecoveryProtectionContainerMappingTimeouts {
   readonly update?: string;
 }
 
+function siteRecoveryProtectionContainerMappingTimeoutsToTerraform(struct?: SiteRecoveryProtectionContainerMappingTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class SiteRecoveryProtectionContainerMapping extends TerraformResource {
+export class SiteRecoveryProtectionContainerMapping extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -176,14 +186,14 @@ export class SiteRecoveryProtectionContainerMapping extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      name: this._name,
-      recovery_fabric_name: this._recoveryFabricName,
-      recovery_replication_policy_id: this._recoveryReplicationPolicyId,
-      recovery_source_protection_container_name: this._recoverySourceProtectionContainerName,
-      recovery_target_protection_container_id: this._recoveryTargetProtectionContainerId,
-      recovery_vault_name: this._recoveryVaultName,
-      resource_group_name: this._resourceGroupName,
-      timeouts: this._timeouts,
+      name: cdktf.stringToTerraform(this._name),
+      recovery_fabric_name: cdktf.stringToTerraform(this._recoveryFabricName),
+      recovery_replication_policy_id: cdktf.stringToTerraform(this._recoveryReplicationPolicyId),
+      recovery_source_protection_container_name: cdktf.stringToTerraform(this._recoverySourceProtectionContainerName),
+      recovery_target_protection_container_id: cdktf.stringToTerraform(this._recoveryTargetProtectionContainerId),
+      recovery_vault_name: cdktf.stringToTerraform(this._recoveryVaultName),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      timeouts: siteRecoveryProtectionContainerMappingTimeoutsToTerraform(this._timeouts),
     };
   }
 }

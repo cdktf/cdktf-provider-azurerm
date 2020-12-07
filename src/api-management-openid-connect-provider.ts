@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface ApiManagementOpenidConnectProviderConfig extends TerraformMetaArguments {
+export interface ApiManagementOpenidConnectProviderConfig extends cdktf.TerraformMetaArguments {
   readonly apiManagementName: string;
   readonly clientId: string;
   readonly clientSecret: string;
@@ -26,9 +25,20 @@ export interface ApiManagementOpenidConnectProviderTimeouts {
   readonly update?: string;
 }
 
+function apiManagementOpenidConnectProviderTimeoutsToTerraform(struct?: ApiManagementOpenidConnectProviderTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class ApiManagementOpenidConnectProvider extends TerraformResource {
+export class ApiManagementOpenidConnectProvider extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -194,15 +204,15 @@ export class ApiManagementOpenidConnectProvider extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      api_management_name: this._apiManagementName,
-      client_id: this._clientId,
-      client_secret: this._clientSecret,
-      description: this._description,
-      display_name: this._displayName,
-      metadata_endpoint: this._metadataEndpoint,
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      timeouts: this._timeouts,
+      api_management_name: cdktf.stringToTerraform(this._apiManagementName),
+      client_id: cdktf.stringToTerraform(this._clientId),
+      client_secret: cdktf.stringToTerraform(this._clientSecret),
+      description: cdktf.stringToTerraform(this._description),
+      display_name: cdktf.stringToTerraform(this._displayName),
+      metadata_endpoint: cdktf.stringToTerraform(this._metadataEndpoint),
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      timeouts: apiManagementOpenidConnectProviderTimeoutsToTerraform(this._timeouts),
     };
   }
 }

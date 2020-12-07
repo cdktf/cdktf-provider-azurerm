@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface StorageBlobConfig extends TerraformMetaArguments {
+export interface StorageBlobConfig extends cdktf.TerraformMetaArguments {
   readonly accessTier?: string;
   readonly contentMd5?: string;
   readonly contentType?: string;
@@ -31,9 +30,20 @@ export interface StorageBlobTimeouts {
   readonly update?: string;
 }
 
+function storageBlobTimeoutsToTerraform(struct?: StorageBlobTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class StorageBlob extends TerraformResource {
+export class StorageBlob extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -298,20 +308,20 @@ export class StorageBlob extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      access_tier: this._accessTier,
-      content_md5: this._contentMd5,
-      content_type: this._contentType,
-      metadata: this._metadata,
-      name: this._name,
-      parallelism: this._parallelism,
-      size: this._size,
-      source: this._source,
-      source_content: this._sourceContent,
-      source_uri: this._sourceUri,
-      storage_account_name: this._storageAccountName,
-      storage_container_name: this._storageContainerName,
-      type: this._type,
-      timeouts: this._timeouts,
+      access_tier: cdktf.stringToTerraform(this._accessTier),
+      content_md5: cdktf.stringToTerraform(this._contentMd5),
+      content_type: cdktf.stringToTerraform(this._contentType),
+      metadata: cdktf.hashMapper(cdktf.anyToTerraform)(this._metadata),
+      name: cdktf.stringToTerraform(this._name),
+      parallelism: cdktf.numberToTerraform(this._parallelism),
+      size: cdktf.numberToTerraform(this._size),
+      source: cdktf.stringToTerraform(this._source),
+      source_content: cdktf.stringToTerraform(this._sourceContent),
+      source_uri: cdktf.stringToTerraform(this._sourceUri),
+      storage_account_name: cdktf.stringToTerraform(this._storageAccountName),
+      storage_container_name: cdktf.stringToTerraform(this._storageContainerName),
+      type: cdktf.stringToTerraform(this._type),
+      timeouts: storageBlobTimeoutsToTerraform(this._timeouts),
     };
   }
 }

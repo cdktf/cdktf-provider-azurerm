@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface NetworkSecurityGroupConfig extends TerraformMetaArguments {
+export interface NetworkSecurityGroupConfig extends cdktf.TerraformMetaArguments {
   readonly location: string;
   readonly name: string;
   readonly resourceGroupName: string;
@@ -34,6 +33,29 @@ export interface NetworkSecurityGroupSecurityRule {
   readonly sourcePortRange?: string;
   readonly sourcePortRanges?: string[];
 }
+
+function networkSecurityGroupSecurityRuleToTerraform(struct?: NetworkSecurityGroupSecurityRule): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    access: cdktf.stringToTerraform(struct!.access),
+    description: cdktf.stringToTerraform(struct!.description),
+    destination_address_prefix: cdktf.stringToTerraform(struct!.destinationAddressPrefix),
+    destination_address_prefixes: cdktf.listMapper(cdktf.stringToTerraform)(struct!.destinationAddressPrefixes),
+    destination_application_security_group_ids: cdktf.listMapper(cdktf.stringToTerraform)(struct!.destinationApplicationSecurityGroupIds),
+    destination_port_range: cdktf.stringToTerraform(struct!.destinationPortRange),
+    destination_port_ranges: cdktf.listMapper(cdktf.stringToTerraform)(struct!.destinationPortRanges),
+    direction: cdktf.stringToTerraform(struct!.direction),
+    name: cdktf.stringToTerraform(struct!.name),
+    priority: cdktf.numberToTerraform(struct!.priority),
+    protocol: cdktf.stringToTerraform(struct!.protocol),
+    source_address_prefix: cdktf.stringToTerraform(struct!.sourceAddressPrefix),
+    source_address_prefixes: cdktf.listMapper(cdktf.stringToTerraform)(struct!.sourceAddressPrefixes),
+    source_application_security_group_ids: cdktf.listMapper(cdktf.stringToTerraform)(struct!.sourceApplicationSecurityGroupIds),
+    source_port_range: cdktf.stringToTerraform(struct!.sourcePortRange),
+    source_port_ranges: cdktf.listMapper(cdktf.stringToTerraform)(struct!.sourcePortRanges),
+  }
+}
+
 export interface NetworkSecurityGroupTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -41,9 +63,20 @@ export interface NetworkSecurityGroupTimeouts {
   readonly update?: string;
 }
 
+function networkSecurityGroupTimeoutsToTerraform(struct?: NetworkSecurityGroupTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class NetworkSecurityGroup extends TerraformResource {
+export class NetworkSecurityGroup extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -170,12 +203,12 @@ export class NetworkSecurityGroup extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      location: this._location,
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      security_rule: this._securityRule,
-      tags: this._tags,
-      timeouts: this._timeouts,
+      location: cdktf.stringToTerraform(this._location),
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      security_rule: cdktf.listMapper(networkSecurityGroupSecurityRuleToTerraform)(this._securityRule),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      timeouts: networkSecurityGroupTimeoutsToTerraform(this._timeouts),
     };
   }
 }

@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface MediaServicesAccountConfig extends TerraformMetaArguments {
+export interface MediaServicesAccountConfig extends cdktf.TerraformMetaArguments {
   readonly location: string;
   readonly name: string;
   readonly resourceGroupName: string;
@@ -23,10 +22,27 @@ export interface MediaServicesAccountConfig extends TerraformMetaArguments {
 export interface MediaServicesAccountIdentity {
   readonly type?: string;
 }
+
+function mediaServicesAccountIdentityToTerraform(struct?: MediaServicesAccountIdentity): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    type: cdktf.stringToTerraform(struct!.type),
+  }
+}
+
 export interface MediaServicesAccountStorageAccount {
   readonly id: string;
   readonly isPrimary?: boolean;
 }
+
+function mediaServicesAccountStorageAccountToTerraform(struct?: MediaServicesAccountStorageAccount): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    id: cdktf.stringToTerraform(struct!.id),
+    is_primary: cdktf.booleanToTerraform(struct!.isPrimary),
+  }
+}
+
 export interface MediaServicesAccountTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -34,9 +50,20 @@ export interface MediaServicesAccountTimeouts {
   readonly update?: string;
 }
 
+function mediaServicesAccountTimeoutsToTerraform(struct?: MediaServicesAccountTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class MediaServicesAccount extends TerraformResource {
+export class MediaServicesAccount extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -194,14 +221,14 @@ export class MediaServicesAccount extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      location: this._location,
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      storage_authentication_type: this._storageAuthenticationType,
-      tags: this._tags,
-      identity: this._identity,
-      storage_account: this._storageAccount,
-      timeouts: this._timeouts,
+      location: cdktf.stringToTerraform(this._location),
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      storage_authentication_type: cdktf.stringToTerraform(this._storageAuthenticationType),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      identity: cdktf.listMapper(mediaServicesAccountIdentityToTerraform)(this._identity),
+      storage_account: cdktf.listMapper(mediaServicesAccountStorageAccountToTerraform)(this._storageAccount),
+      timeouts: mediaServicesAccountTimeoutsToTerraform(this._timeouts),
     };
   }
 }

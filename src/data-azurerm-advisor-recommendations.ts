@@ -2,19 +2,17 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformDataSource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
-import { ComplexComputedList } from "cdktf";
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataAzurermAdvisorRecommendationsConfig extends TerraformMetaArguments {
+export interface DataAzurermAdvisorRecommendationsConfig extends cdktf.TerraformMetaArguments {
   readonly filterByCategory?: string[];
   readonly filterByResourceGroups?: string[];
   /** timeouts block */
   readonly timeouts?: DataAzurermAdvisorRecommendationsTimeouts;
 }
-export class DataAzurermAdvisorRecommendationsRecommendations extends ComplexComputedList {
+export class DataAzurermAdvisorRecommendationsRecommendations extends cdktf.ComplexComputedList {
 
   // category - computed: true, optional: false, required: false
   public get category() {
@@ -65,9 +63,17 @@ export interface DataAzurermAdvisorRecommendationsTimeouts {
   readonly read?: string;
 }
 
+function dataAzurermAdvisorRecommendationsTimeoutsToTerraform(struct?: DataAzurermAdvisorRecommendationsTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    read: cdktf.stringToTerraform(struct!.read),
+  }
+}
+
+
 // Resource
 
-export class DataAzurermAdvisorRecommendations extends TerraformDataSource {
+export class DataAzurermAdvisorRecommendations extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
@@ -157,9 +163,9 @@ export class DataAzurermAdvisorRecommendations extends TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      filter_by_category: this._filterByCategory,
-      filter_by_resource_groups: this._filterByResourceGroups,
-      timeouts: this._timeouts,
+      filter_by_category: cdktf.listMapper(cdktf.stringToTerraform)(this._filterByCategory),
+      filter_by_resource_groups: cdktf.listMapper(cdktf.stringToTerraform)(this._filterByResourceGroups),
+      timeouts: dataAzurermAdvisorRecommendationsTimeoutsToTerraform(this._timeouts),
     };
   }
 }

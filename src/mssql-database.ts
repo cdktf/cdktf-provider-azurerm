@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface MssqlDatabaseConfig extends TerraformMetaArguments {
+export interface MssqlDatabaseConfig extends cdktf.TerraformMetaArguments {
   readonly autoPauseDelayInMinutes?: number;
   readonly collation?: string;
   readonly createMode?: string;
@@ -43,15 +42,45 @@ export interface MssqlDatabaseExtendedAuditingPolicy {
   readonly storageAccountAccessKeyIsSecondary?: boolean;
   readonly storageEndpoint?: string;
 }
+
+function mssqlDatabaseExtendedAuditingPolicyToTerraform(struct?: MssqlDatabaseExtendedAuditingPolicy): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    retention_in_days: cdktf.numberToTerraform(struct!.retentionInDays),
+    storage_account_access_key: cdktf.stringToTerraform(struct!.storageAccountAccessKey),
+    storage_account_access_key_is_secondary: cdktf.booleanToTerraform(struct!.storageAccountAccessKeyIsSecondary),
+    storage_endpoint: cdktf.stringToTerraform(struct!.storageEndpoint),
+  }
+}
+
 export interface MssqlDatabaseLongTermRetentionPolicy {
   readonly monthlyRetention?: string;
   readonly weekOfYear?: number;
   readonly weeklyRetention?: string;
   readonly yearlyRetention?: string;
 }
+
+function mssqlDatabaseLongTermRetentionPolicyToTerraform(struct?: MssqlDatabaseLongTermRetentionPolicy): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    monthly_retention: cdktf.stringToTerraform(struct!.monthlyRetention),
+    week_of_year: cdktf.numberToTerraform(struct!.weekOfYear),
+    weekly_retention: cdktf.stringToTerraform(struct!.weeklyRetention),
+    yearly_retention: cdktf.stringToTerraform(struct!.yearlyRetention),
+  }
+}
+
 export interface MssqlDatabaseShortTermRetentionPolicy {
   readonly retentionDays: number;
 }
+
+function mssqlDatabaseShortTermRetentionPolicyToTerraform(struct?: MssqlDatabaseShortTermRetentionPolicy): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    retention_days: cdktf.numberToTerraform(struct!.retentionDays),
+  }
+}
+
 export interface MssqlDatabaseThreatDetectionPolicy {
   readonly disabledAlerts?: string[];
   readonly emailAccountAdmins?: string;
@@ -62,6 +91,21 @@ export interface MssqlDatabaseThreatDetectionPolicy {
   readonly storageEndpoint?: string;
   readonly useServerDefault?: string;
 }
+
+function mssqlDatabaseThreatDetectionPolicyToTerraform(struct?: MssqlDatabaseThreatDetectionPolicy): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    disabled_alerts: cdktf.listMapper(cdktf.stringToTerraform)(struct!.disabledAlerts),
+    email_account_admins: cdktf.stringToTerraform(struct!.emailAccountAdmins),
+    email_addresses: cdktf.listMapper(cdktf.stringToTerraform)(struct!.emailAddresses),
+    retention_days: cdktf.numberToTerraform(struct!.retentionDays),
+    state: cdktf.stringToTerraform(struct!.state),
+    storage_account_access_key: cdktf.stringToTerraform(struct!.storageAccountAccessKey),
+    storage_endpoint: cdktf.stringToTerraform(struct!.storageEndpoint),
+    use_server_default: cdktf.stringToTerraform(struct!.useServerDefault),
+  }
+}
+
 export interface MssqlDatabaseTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -69,9 +113,20 @@ export interface MssqlDatabaseTimeouts {
   readonly update?: string;
 }
 
+function mssqlDatabaseTimeoutsToTerraform(struct?: MssqlDatabaseTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class MssqlDatabase extends TerraformResource {
+export class MssqlDatabase extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -507,30 +562,30 @@ export class MssqlDatabase extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      auto_pause_delay_in_minutes: this._autoPauseDelayInMinutes,
-      collation: this._collation,
-      create_mode: this._createMode,
-      creation_source_database_id: this._creationSourceDatabaseId,
-      elastic_pool_id: this._elasticPoolId,
-      extended_auditing_policy: this._extendedAuditingPolicy,
-      license_type: this._licenseType,
-      max_size_gb: this._maxSizeGb,
-      min_capacity: this._minCapacity,
-      name: this._name,
-      read_replica_count: this._readReplicaCount,
-      read_scale: this._readScale,
-      recover_database_id: this._recoverDatabaseId,
-      restore_dropped_database_id: this._restoreDroppedDatabaseId,
-      restore_point_in_time: this._restorePointInTime,
-      sample_name: this._sampleName,
-      server_id: this._serverId,
-      sku_name: this._skuName,
-      tags: this._tags,
-      zone_redundant: this._zoneRedundant,
-      long_term_retention_policy: this._longTermRetentionPolicy,
-      short_term_retention_policy: this._shortTermRetentionPolicy,
-      threat_detection_policy: this._threatDetectionPolicy,
-      timeouts: this._timeouts,
+      auto_pause_delay_in_minutes: cdktf.numberToTerraform(this._autoPauseDelayInMinutes),
+      collation: cdktf.stringToTerraform(this._collation),
+      create_mode: cdktf.stringToTerraform(this._createMode),
+      creation_source_database_id: cdktf.stringToTerraform(this._creationSourceDatabaseId),
+      elastic_pool_id: cdktf.stringToTerraform(this._elasticPoolId),
+      extended_auditing_policy: cdktf.listMapper(mssqlDatabaseExtendedAuditingPolicyToTerraform)(this._extendedAuditingPolicy),
+      license_type: cdktf.stringToTerraform(this._licenseType),
+      max_size_gb: cdktf.numberToTerraform(this._maxSizeGb),
+      min_capacity: cdktf.numberToTerraform(this._minCapacity),
+      name: cdktf.stringToTerraform(this._name),
+      read_replica_count: cdktf.numberToTerraform(this._readReplicaCount),
+      read_scale: cdktf.booleanToTerraform(this._readScale),
+      recover_database_id: cdktf.stringToTerraform(this._recoverDatabaseId),
+      restore_dropped_database_id: cdktf.stringToTerraform(this._restoreDroppedDatabaseId),
+      restore_point_in_time: cdktf.stringToTerraform(this._restorePointInTime),
+      sample_name: cdktf.stringToTerraform(this._sampleName),
+      server_id: cdktf.stringToTerraform(this._serverId),
+      sku_name: cdktf.stringToTerraform(this._skuName),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      zone_redundant: cdktf.booleanToTerraform(this._zoneRedundant),
+      long_term_retention_policy: cdktf.listMapper(mssqlDatabaseLongTermRetentionPolicyToTerraform)(this._longTermRetentionPolicy),
+      short_term_retention_policy: cdktf.listMapper(mssqlDatabaseShortTermRetentionPolicyToTerraform)(this._shortTermRetentionPolicy),
+      threat_detection_policy: cdktf.listMapper(mssqlDatabaseThreatDetectionPolicyToTerraform)(this._threatDetectionPolicy),
+      timeouts: mssqlDatabaseTimeoutsToTerraform(this._timeouts),
     };
   }
 }

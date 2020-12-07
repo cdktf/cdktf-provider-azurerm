@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface KustoClusterConfig extends TerraformMetaArguments {
+export interface KustoClusterConfig extends cdktf.TerraformMetaArguments {
   readonly enableDiskEncryption?: boolean;
   readonly enablePurge?: boolean;
   readonly enableStreamingIngest?: boolean;
@@ -32,29 +31,76 @@ export interface KustoClusterConfig extends TerraformMetaArguments {
 export interface KustoClusterIdentity {
   readonly type: string;
 }
+
+function kustoClusterIdentityToTerraform(struct?: KustoClusterIdentity): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    type: cdktf.stringToTerraform(struct!.type),
+  }
+}
+
 export interface KustoClusterOptimizedAutoScale {
   readonly maximumInstances: number;
   readonly minimumInstances: number;
 }
+
+function kustoClusterOptimizedAutoScaleToTerraform(struct?: KustoClusterOptimizedAutoScale): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    maximum_instances: cdktf.numberToTerraform(struct!.maximumInstances),
+    minimum_instances: cdktf.numberToTerraform(struct!.minimumInstances),
+  }
+}
+
 export interface KustoClusterSku {
   readonly capacity?: number;
   readonly name: string;
 }
+
+function kustoClusterSkuToTerraform(struct?: KustoClusterSku): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    capacity: cdktf.numberToTerraform(struct!.capacity),
+    name: cdktf.stringToTerraform(struct!.name),
+  }
+}
+
 export interface KustoClusterTimeouts {
   readonly create?: string;
   readonly delete?: string;
   readonly read?: string;
   readonly update?: string;
 }
+
+function kustoClusterTimeoutsToTerraform(struct?: KustoClusterTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
 export interface KustoClusterVirtualNetworkConfiguration {
   readonly dataManagementPublicIpId: string;
   readonly enginePublicIpId: string;
   readonly subnetId: string;
 }
 
+function kustoClusterVirtualNetworkConfigurationToTerraform(struct?: KustoClusterVirtualNetworkConfiguration): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    data_management_public_ip_id: cdktf.stringToTerraform(struct!.dataManagementPublicIpId),
+    engine_public_ip_id: cdktf.stringToTerraform(struct!.enginePublicIpId),
+    subnet_id: cdktf.stringToTerraform(struct!.subnetId),
+  }
+}
+
+
 // Resource
 
-export class KustoCluster extends TerraformResource {
+export class KustoCluster extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -341,21 +387,21 @@ export class KustoCluster extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      enable_disk_encryption: this._enableDiskEncryption,
-      enable_purge: this._enablePurge,
-      enable_streaming_ingest: this._enableStreamingIngest,
-      language_extensions: this._languageExtensions,
-      location: this._location,
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      tags: this._tags,
-      trusted_external_tenants: this._trustedExternalTenants,
-      zones: this._zones,
-      identity: this._identity,
-      optimized_auto_scale: this._optimizedAutoScale,
-      sku: this._sku,
-      timeouts: this._timeouts,
-      virtual_network_configuration: this._virtualNetworkConfiguration,
+      enable_disk_encryption: cdktf.booleanToTerraform(this._enableDiskEncryption),
+      enable_purge: cdktf.booleanToTerraform(this._enablePurge),
+      enable_streaming_ingest: cdktf.booleanToTerraform(this._enableStreamingIngest),
+      language_extensions: cdktf.listMapper(cdktf.stringToTerraform)(this._languageExtensions),
+      location: cdktf.stringToTerraform(this._location),
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      trusted_external_tenants: cdktf.listMapper(cdktf.stringToTerraform)(this._trustedExternalTenants),
+      zones: cdktf.listMapper(cdktf.stringToTerraform)(this._zones),
+      identity: cdktf.listMapper(kustoClusterIdentityToTerraform)(this._identity),
+      optimized_auto_scale: cdktf.listMapper(kustoClusterOptimizedAutoScaleToTerraform)(this._optimizedAutoScale),
+      sku: cdktf.listMapper(kustoClusterSkuToTerraform)(this._sku),
+      timeouts: kustoClusterTimeoutsToTerraform(this._timeouts),
+      virtual_network_configuration: cdktf.listMapper(kustoClusterVirtualNetworkConfigurationToTerraform)(this._virtualNetworkConfiguration),
     };
   }
 }

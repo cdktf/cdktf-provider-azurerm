@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface AutomationConnectionClassicCertificateConfig extends TerraformMetaArguments {
+export interface AutomationConnectionClassicCertificateConfig extends cdktf.TerraformMetaArguments {
   readonly automationAccountName: string;
   readonly certificateAssetName: string;
   readonly description?: string;
@@ -25,9 +24,20 @@ export interface AutomationConnectionClassicCertificateTimeouts {
   readonly update?: string;
 }
 
+function automationConnectionClassicCertificateTimeoutsToTerraform(struct?: AutomationConnectionClassicCertificateTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class AutomationConnectionClassicCertificate extends TerraformResource {
+export class AutomationConnectionClassicCertificate extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -179,14 +189,14 @@ export class AutomationConnectionClassicCertificate extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      automation_account_name: this._automationAccountName,
-      certificate_asset_name: this._certificateAssetName,
-      description: this._description,
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      subscription_id: this._subscriptionId,
-      subscription_name: this._subscriptionName,
-      timeouts: this._timeouts,
+      automation_account_name: cdktf.stringToTerraform(this._automationAccountName),
+      certificate_asset_name: cdktf.stringToTerraform(this._certificateAssetName),
+      description: cdktf.stringToTerraform(this._description),
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      subscription_id: cdktf.stringToTerraform(this._subscriptionId),
+      subscription_name: cdktf.stringToTerraform(this._subscriptionName),
+      timeouts: automationConnectionClassicCertificateTimeoutsToTerraform(this._timeouts),
     };
   }
 }

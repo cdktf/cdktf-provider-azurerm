@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface LinuxVirtualMachineScaleSetConfig extends TerraformMetaArguments {
+export interface LinuxVirtualMachineScaleSetConfig extends cdktf.TerraformMetaArguments {
   readonly adminPassword?: string;
   readonly adminUsername: string;
   readonly computerNamePrefix?: string;
@@ -71,21 +70,64 @@ export interface LinuxVirtualMachineScaleSetConfig extends TerraformMetaArgument
 export interface LinuxVirtualMachineScaleSetAdditionalCapabilities {
   readonly ultraSsdEnabled?: boolean;
 }
+
+function linuxVirtualMachineScaleSetAdditionalCapabilitiesToTerraform(struct?: LinuxVirtualMachineScaleSetAdditionalCapabilities): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    ultra_ssd_enabled: cdktf.booleanToTerraform(struct!.ultraSsdEnabled),
+  }
+}
+
 export interface LinuxVirtualMachineScaleSetAdminSshKey {
   readonly publicKey: string;
   readonly username: string;
 }
+
+function linuxVirtualMachineScaleSetAdminSshKeyToTerraform(struct?: LinuxVirtualMachineScaleSetAdminSshKey): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    public_key: cdktf.stringToTerraform(struct!.publicKey),
+    username: cdktf.stringToTerraform(struct!.username),
+  }
+}
+
 export interface LinuxVirtualMachineScaleSetAutomaticInstanceRepair {
   readonly enabled: boolean;
   readonly gracePeriod?: string;
 }
+
+function linuxVirtualMachineScaleSetAutomaticInstanceRepairToTerraform(struct?: LinuxVirtualMachineScaleSetAutomaticInstanceRepair): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    enabled: cdktf.booleanToTerraform(struct!.enabled),
+    grace_period: cdktf.stringToTerraform(struct!.gracePeriod),
+  }
+}
+
 export interface LinuxVirtualMachineScaleSetAutomaticOsUpgradePolicy {
   readonly disableAutomaticRollback: boolean;
   readonly enableAutomaticOsUpgrade: boolean;
 }
+
+function linuxVirtualMachineScaleSetAutomaticOsUpgradePolicyToTerraform(struct?: LinuxVirtualMachineScaleSetAutomaticOsUpgradePolicy): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    disable_automatic_rollback: cdktf.booleanToTerraform(struct!.disableAutomaticRollback),
+    enable_automatic_os_upgrade: cdktf.booleanToTerraform(struct!.enableAutomaticOsUpgrade),
+  }
+}
+
 export interface LinuxVirtualMachineScaleSetBootDiagnostics {
   readonly storageAccountUri?: string;
 }
+
+function linuxVirtualMachineScaleSetBootDiagnosticsToTerraform(struct?: LinuxVirtualMachineScaleSetBootDiagnostics): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    storage_account_uri: cdktf.stringToTerraform(struct!.storageAccountUri),
+  }
+}
+
 export interface LinuxVirtualMachineScaleSetDataDisk {
   readonly caching: string;
   readonly createOption?: string;
@@ -97,6 +139,22 @@ export interface LinuxVirtualMachineScaleSetDataDisk {
   readonly storageAccountType: string;
   readonly writeAcceleratorEnabled?: boolean;
 }
+
+function linuxVirtualMachineScaleSetDataDiskToTerraform(struct?: LinuxVirtualMachineScaleSetDataDisk): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    caching: cdktf.stringToTerraform(struct!.caching),
+    create_option: cdktf.stringToTerraform(struct!.createOption),
+    disk_encryption_set_id: cdktf.stringToTerraform(struct!.diskEncryptionSetId),
+    disk_iops_read_write: cdktf.numberToTerraform(struct!.diskIopsReadWrite),
+    disk_mbps_read_write: cdktf.numberToTerraform(struct!.diskMbpsReadWrite),
+    disk_size_gb: cdktf.numberToTerraform(struct!.diskSizeGb),
+    lun: cdktf.numberToTerraform(struct!.lun),
+    storage_account_type: cdktf.stringToTerraform(struct!.storageAccountType),
+    write_accelerator_enabled: cdktf.booleanToTerraform(struct!.writeAcceleratorEnabled),
+  }
+}
+
 export interface LinuxVirtualMachineScaleSetExtension {
   readonly autoUpgradeMinorVersion?: boolean;
   readonly forceUpdateTag?: string;
@@ -108,14 +166,48 @@ export interface LinuxVirtualMachineScaleSetExtension {
   readonly type: string;
   readonly typeHandlerVersion: string;
 }
+
+function linuxVirtualMachineScaleSetExtensionToTerraform(struct?: LinuxVirtualMachineScaleSetExtension): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    auto_upgrade_minor_version: cdktf.booleanToTerraform(struct!.autoUpgradeMinorVersion),
+    force_update_tag: cdktf.stringToTerraform(struct!.forceUpdateTag),
+    name: cdktf.stringToTerraform(struct!.name),
+    protected_settings: cdktf.stringToTerraform(struct!.protectedSettings),
+    provision_after_extensions: cdktf.listMapper(cdktf.stringToTerraform)(struct!.provisionAfterExtensions),
+    publisher: cdktf.stringToTerraform(struct!.publisher),
+    settings: cdktf.stringToTerraform(struct!.settings),
+    type: cdktf.stringToTerraform(struct!.type),
+    type_handler_version: cdktf.stringToTerraform(struct!.typeHandlerVersion),
+  }
+}
+
 export interface LinuxVirtualMachineScaleSetIdentity {
   readonly identityIds?: string[];
   readonly type: string;
 }
+
+function linuxVirtualMachineScaleSetIdentityToTerraform(struct?: LinuxVirtualMachineScaleSetIdentity): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    identity_ids: cdktf.listMapper(cdktf.stringToTerraform)(struct!.identityIds),
+    type: cdktf.stringToTerraform(struct!.type),
+  }
+}
+
 export interface LinuxVirtualMachineScaleSetNetworkInterfaceIpConfigurationPublicIpAddressIpTag {
   readonly tag: string;
   readonly type: string;
 }
+
+function linuxVirtualMachineScaleSetNetworkInterfaceIpConfigurationPublicIpAddressIpTagToTerraform(struct?: LinuxVirtualMachineScaleSetNetworkInterfaceIpConfigurationPublicIpAddressIpTag): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    tag: cdktf.stringToTerraform(struct!.tag),
+    type: cdktf.stringToTerraform(struct!.type),
+  }
+}
+
 export interface LinuxVirtualMachineScaleSetNetworkInterfaceIpConfigurationPublicIpAddress {
   readonly domainNameLabel?: string;
   readonly idleTimeoutInMinutes?: number;
@@ -124,6 +216,18 @@ export interface LinuxVirtualMachineScaleSetNetworkInterfaceIpConfigurationPubli
   /** ip_tag block */
   readonly ipTag?: LinuxVirtualMachineScaleSetNetworkInterfaceIpConfigurationPublicIpAddressIpTag[];
 }
+
+function linuxVirtualMachineScaleSetNetworkInterfaceIpConfigurationPublicIpAddressToTerraform(struct?: LinuxVirtualMachineScaleSetNetworkInterfaceIpConfigurationPublicIpAddress): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    domain_name_label: cdktf.stringToTerraform(struct!.domainNameLabel),
+    idle_timeout_in_minutes: cdktf.numberToTerraform(struct!.idleTimeoutInMinutes),
+    name: cdktf.stringToTerraform(struct!.name),
+    public_ip_prefix_id: cdktf.stringToTerraform(struct!.publicIpPrefixId),
+    ip_tag: cdktf.listMapper(linuxVirtualMachineScaleSetNetworkInterfaceIpConfigurationPublicIpAddressIpTagToTerraform)(struct!.ipTag),
+  }
+}
+
 export interface LinuxVirtualMachineScaleSetNetworkInterfaceIpConfiguration {
   readonly applicationGatewayBackendAddressPoolIds?: string[];
   readonly applicationSecurityGroupIds?: string[];
@@ -136,6 +240,22 @@ export interface LinuxVirtualMachineScaleSetNetworkInterfaceIpConfiguration {
   /** public_ip_address block */
   readonly publicIpAddress?: LinuxVirtualMachineScaleSetNetworkInterfaceIpConfigurationPublicIpAddress[];
 }
+
+function linuxVirtualMachineScaleSetNetworkInterfaceIpConfigurationToTerraform(struct?: LinuxVirtualMachineScaleSetNetworkInterfaceIpConfiguration): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    application_gateway_backend_address_pool_ids: cdktf.listMapper(cdktf.stringToTerraform)(struct!.applicationGatewayBackendAddressPoolIds),
+    application_security_group_ids: cdktf.listMapper(cdktf.stringToTerraform)(struct!.applicationSecurityGroupIds),
+    load_balancer_backend_address_pool_ids: cdktf.listMapper(cdktf.stringToTerraform)(struct!.loadBalancerBackendAddressPoolIds),
+    load_balancer_inbound_nat_rules_ids: cdktf.listMapper(cdktf.stringToTerraform)(struct!.loadBalancerInboundNatRulesIds),
+    name: cdktf.stringToTerraform(struct!.name),
+    primary: cdktf.booleanToTerraform(struct!.primary),
+    subnet_id: cdktf.stringToTerraform(struct!.subnetId),
+    version: cdktf.stringToTerraform(struct!.version),
+    public_ip_address: cdktf.listMapper(linuxVirtualMachineScaleSetNetworkInterfaceIpConfigurationPublicIpAddressToTerraform)(struct!.publicIpAddress),
+  }
+}
+
 export interface LinuxVirtualMachineScaleSetNetworkInterface {
   readonly dnsServers?: string[];
   readonly enableAcceleratedNetworking?: boolean;
@@ -146,9 +266,31 @@ export interface LinuxVirtualMachineScaleSetNetworkInterface {
   /** ip_configuration block */
   readonly ipConfiguration: LinuxVirtualMachineScaleSetNetworkInterfaceIpConfiguration[];
 }
+
+function linuxVirtualMachineScaleSetNetworkInterfaceToTerraform(struct?: LinuxVirtualMachineScaleSetNetworkInterface): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    dns_servers: cdktf.listMapper(cdktf.stringToTerraform)(struct!.dnsServers),
+    enable_accelerated_networking: cdktf.booleanToTerraform(struct!.enableAcceleratedNetworking),
+    enable_ip_forwarding: cdktf.booleanToTerraform(struct!.enableIpForwarding),
+    name: cdktf.stringToTerraform(struct!.name),
+    network_security_group_id: cdktf.stringToTerraform(struct!.networkSecurityGroupId),
+    primary: cdktf.booleanToTerraform(struct!.primary),
+    ip_configuration: cdktf.listMapper(linuxVirtualMachineScaleSetNetworkInterfaceIpConfigurationToTerraform)(struct!.ipConfiguration),
+  }
+}
+
 export interface LinuxVirtualMachineScaleSetOsDiskDiffDiskSettings {
   readonly option: string;
 }
+
+function linuxVirtualMachineScaleSetOsDiskDiffDiskSettingsToTerraform(struct?: LinuxVirtualMachineScaleSetOsDiskDiffDiskSettings): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    option: cdktf.stringToTerraform(struct!.option),
+  }
+}
+
 export interface LinuxVirtualMachineScaleSetOsDisk {
   readonly caching: string;
   readonly diskEncryptionSetId?: string;
@@ -158,35 +300,106 @@ export interface LinuxVirtualMachineScaleSetOsDisk {
   /** diff_disk_settings block */
   readonly diffDiskSettings?: LinuxVirtualMachineScaleSetOsDiskDiffDiskSettings[];
 }
+
+function linuxVirtualMachineScaleSetOsDiskToTerraform(struct?: LinuxVirtualMachineScaleSetOsDisk): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    caching: cdktf.stringToTerraform(struct!.caching),
+    disk_encryption_set_id: cdktf.stringToTerraform(struct!.diskEncryptionSetId),
+    disk_size_gb: cdktf.numberToTerraform(struct!.diskSizeGb),
+    storage_account_type: cdktf.stringToTerraform(struct!.storageAccountType),
+    write_accelerator_enabled: cdktf.booleanToTerraform(struct!.writeAcceleratorEnabled),
+    diff_disk_settings: cdktf.listMapper(linuxVirtualMachineScaleSetOsDiskDiffDiskSettingsToTerraform)(struct!.diffDiskSettings),
+  }
+}
+
 export interface LinuxVirtualMachineScaleSetPlan {
   readonly name: string;
   readonly product: string;
   readonly publisher: string;
 }
+
+function linuxVirtualMachineScaleSetPlanToTerraform(struct?: LinuxVirtualMachineScaleSetPlan): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    name: cdktf.stringToTerraform(struct!.name),
+    product: cdktf.stringToTerraform(struct!.product),
+    publisher: cdktf.stringToTerraform(struct!.publisher),
+  }
+}
+
 export interface LinuxVirtualMachineScaleSetRollingUpgradePolicy {
   readonly maxBatchInstancePercent: number;
   readonly maxUnhealthyInstancePercent: number;
   readonly maxUnhealthyUpgradedInstancePercent: number;
   readonly pauseTimeBetweenBatches: string;
 }
+
+function linuxVirtualMachineScaleSetRollingUpgradePolicyToTerraform(struct?: LinuxVirtualMachineScaleSetRollingUpgradePolicy): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    max_batch_instance_percent: cdktf.numberToTerraform(struct!.maxBatchInstancePercent),
+    max_unhealthy_instance_percent: cdktf.numberToTerraform(struct!.maxUnhealthyInstancePercent),
+    max_unhealthy_upgraded_instance_percent: cdktf.numberToTerraform(struct!.maxUnhealthyUpgradedInstancePercent),
+    pause_time_between_batches: cdktf.stringToTerraform(struct!.pauseTimeBetweenBatches),
+  }
+}
+
 export interface LinuxVirtualMachineScaleSetSecretCertificate {
   readonly url: string;
 }
+
+function linuxVirtualMachineScaleSetSecretCertificateToTerraform(struct?: LinuxVirtualMachineScaleSetSecretCertificate): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    url: cdktf.stringToTerraform(struct!.url),
+  }
+}
+
 export interface LinuxVirtualMachineScaleSetSecret {
   readonly keyVaultId: string;
   /** certificate block */
   readonly certificate: LinuxVirtualMachineScaleSetSecretCertificate[];
 }
+
+function linuxVirtualMachineScaleSetSecretToTerraform(struct?: LinuxVirtualMachineScaleSetSecret): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    key_vault_id: cdktf.stringToTerraform(struct!.keyVaultId),
+    certificate: cdktf.listMapper(linuxVirtualMachineScaleSetSecretCertificateToTerraform)(struct!.certificate),
+  }
+}
+
 export interface LinuxVirtualMachineScaleSetSourceImageReference {
   readonly offer: string;
   readonly publisher: string;
   readonly sku: string;
   readonly version: string;
 }
+
+function linuxVirtualMachineScaleSetSourceImageReferenceToTerraform(struct?: LinuxVirtualMachineScaleSetSourceImageReference): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    offer: cdktf.stringToTerraform(struct!.offer),
+    publisher: cdktf.stringToTerraform(struct!.publisher),
+    sku: cdktf.stringToTerraform(struct!.sku),
+    version: cdktf.stringToTerraform(struct!.version),
+  }
+}
+
 export interface LinuxVirtualMachineScaleSetTerminateNotification {
   readonly enabled: boolean;
   readonly timeout?: string;
 }
+
+function linuxVirtualMachineScaleSetTerminateNotificationToTerraform(struct?: LinuxVirtualMachineScaleSetTerminateNotification): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    enabled: cdktf.booleanToTerraform(struct!.enabled),
+    timeout: cdktf.stringToTerraform(struct!.timeout),
+  }
+}
+
 export interface LinuxVirtualMachineScaleSetTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -194,9 +407,20 @@ export interface LinuxVirtualMachineScaleSetTimeouts {
   readonly update?: string;
 }
 
+function linuxVirtualMachineScaleSetTimeoutsToTerraform(struct?: LinuxVirtualMachineScaleSetTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class LinuxVirtualMachineScaleSet extends TerraformResource {
+export class LinuxVirtualMachineScaleSet extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -942,49 +1166,49 @@ export class LinuxVirtualMachineScaleSet extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      admin_password: this._adminPassword,
-      admin_username: this._adminUsername,
-      computer_name_prefix: this._computerNamePrefix,
-      custom_data: this._customData,
-      disable_password_authentication: this._disablePasswordAuthentication,
-      do_not_run_extensions_on_overprovisioned_machines: this._doNotRunExtensionsOnOverprovisionedMachines,
-      encryption_at_host_enabled: this._encryptionAtHostEnabled,
-      eviction_policy: this._evictionPolicy,
-      health_probe_id: this._healthProbeId,
-      instances: this._instances,
-      location: this._location,
-      max_bid_price: this._maxBidPrice,
-      name: this._name,
-      overprovision: this._overprovision,
-      platform_fault_domain_count: this._platformFaultDomainCount,
-      priority: this._priority,
-      provision_vm_agent: this._provisionVmAgent,
-      proximity_placement_group_id: this._proximityPlacementGroupId,
-      resource_group_name: this._resourceGroupName,
-      scale_in_policy: this._scaleInPolicy,
-      single_placement_group: this._singlePlacementGroup,
-      sku: this._sku,
-      source_image_id: this._sourceImageId,
-      tags: this._tags,
-      upgrade_mode: this._upgradeMode,
-      zone_balance: this._zoneBalance,
-      zones: this._zones,
-      additional_capabilities: this._additionalCapabilities,
-      admin_ssh_key: this._adminSshKey,
-      automatic_instance_repair: this._automaticInstanceRepair,
-      automatic_os_upgrade_policy: this._automaticOsUpgradePolicy,
-      boot_diagnostics: this._bootDiagnostics,
-      data_disk: this._dataDisk,
-      extension: this._extension,
-      identity: this._identity,
-      network_interface: this._networkInterface,
-      os_disk: this._osDisk,
-      plan: this._plan,
-      rolling_upgrade_policy: this._rollingUpgradePolicy,
-      secret: this._secret,
-      source_image_reference: this._sourceImageReference,
-      terminate_notification: this._terminateNotification,
-      timeouts: this._timeouts,
+      admin_password: cdktf.stringToTerraform(this._adminPassword),
+      admin_username: cdktf.stringToTerraform(this._adminUsername),
+      computer_name_prefix: cdktf.stringToTerraform(this._computerNamePrefix),
+      custom_data: cdktf.stringToTerraform(this._customData),
+      disable_password_authentication: cdktf.booleanToTerraform(this._disablePasswordAuthentication),
+      do_not_run_extensions_on_overprovisioned_machines: cdktf.booleanToTerraform(this._doNotRunExtensionsOnOverprovisionedMachines),
+      encryption_at_host_enabled: cdktf.booleanToTerraform(this._encryptionAtHostEnabled),
+      eviction_policy: cdktf.stringToTerraform(this._evictionPolicy),
+      health_probe_id: cdktf.stringToTerraform(this._healthProbeId),
+      instances: cdktf.numberToTerraform(this._instances),
+      location: cdktf.stringToTerraform(this._location),
+      max_bid_price: cdktf.numberToTerraform(this._maxBidPrice),
+      name: cdktf.stringToTerraform(this._name),
+      overprovision: cdktf.booleanToTerraform(this._overprovision),
+      platform_fault_domain_count: cdktf.numberToTerraform(this._platformFaultDomainCount),
+      priority: cdktf.stringToTerraform(this._priority),
+      provision_vm_agent: cdktf.booleanToTerraform(this._provisionVmAgent),
+      proximity_placement_group_id: cdktf.stringToTerraform(this._proximityPlacementGroupId),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      scale_in_policy: cdktf.stringToTerraform(this._scaleInPolicy),
+      single_placement_group: cdktf.booleanToTerraform(this._singlePlacementGroup),
+      sku: cdktf.stringToTerraform(this._sku),
+      source_image_id: cdktf.stringToTerraform(this._sourceImageId),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      upgrade_mode: cdktf.stringToTerraform(this._upgradeMode),
+      zone_balance: cdktf.booleanToTerraform(this._zoneBalance),
+      zones: cdktf.listMapper(cdktf.stringToTerraform)(this._zones),
+      additional_capabilities: cdktf.listMapper(linuxVirtualMachineScaleSetAdditionalCapabilitiesToTerraform)(this._additionalCapabilities),
+      admin_ssh_key: cdktf.listMapper(linuxVirtualMachineScaleSetAdminSshKeyToTerraform)(this._adminSshKey),
+      automatic_instance_repair: cdktf.listMapper(linuxVirtualMachineScaleSetAutomaticInstanceRepairToTerraform)(this._automaticInstanceRepair),
+      automatic_os_upgrade_policy: cdktf.listMapper(linuxVirtualMachineScaleSetAutomaticOsUpgradePolicyToTerraform)(this._automaticOsUpgradePolicy),
+      boot_diagnostics: cdktf.listMapper(linuxVirtualMachineScaleSetBootDiagnosticsToTerraform)(this._bootDiagnostics),
+      data_disk: cdktf.listMapper(linuxVirtualMachineScaleSetDataDiskToTerraform)(this._dataDisk),
+      extension: cdktf.listMapper(linuxVirtualMachineScaleSetExtensionToTerraform)(this._extension),
+      identity: cdktf.listMapper(linuxVirtualMachineScaleSetIdentityToTerraform)(this._identity),
+      network_interface: cdktf.listMapper(linuxVirtualMachineScaleSetNetworkInterfaceToTerraform)(this._networkInterface),
+      os_disk: cdktf.listMapper(linuxVirtualMachineScaleSetOsDiskToTerraform)(this._osDisk),
+      plan: cdktf.listMapper(linuxVirtualMachineScaleSetPlanToTerraform)(this._plan),
+      rolling_upgrade_policy: cdktf.listMapper(linuxVirtualMachineScaleSetRollingUpgradePolicyToTerraform)(this._rollingUpgradePolicy),
+      secret: cdktf.listMapper(linuxVirtualMachineScaleSetSecretToTerraform)(this._secret),
+      source_image_reference: cdktf.listMapper(linuxVirtualMachineScaleSetSourceImageReferenceToTerraform)(this._sourceImageReference),
+      terminate_notification: cdktf.listMapper(linuxVirtualMachineScaleSetTerminateNotificationToTerraform)(this._terminateNotification),
+      timeouts: linuxVirtualMachineScaleSetTimeoutsToTerraform(this._timeouts),
     };
   }
 }

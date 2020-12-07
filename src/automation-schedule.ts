@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface AutomationScheduleConfig extends TerraformMetaArguments {
+export interface AutomationScheduleConfig extends cdktf.TerraformMetaArguments {
   readonly automationAccountName: string;
   readonly description?: string;
   readonly expiryTime?: string;
@@ -28,6 +27,15 @@ export interface AutomationScheduleMonthlyOccurrence {
   readonly day: string;
   readonly occurrence: number;
 }
+
+function automationScheduleMonthlyOccurrenceToTerraform(struct?: AutomationScheduleMonthlyOccurrence): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    day: cdktf.stringToTerraform(struct!.day),
+    occurrence: cdktf.numberToTerraform(struct!.occurrence),
+  }
+}
+
 export interface AutomationScheduleTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -35,9 +43,20 @@ export interface AutomationScheduleTimeouts {
   readonly update?: string;
 }
 
+function automationScheduleTimeoutsToTerraform(struct?: AutomationScheduleTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class AutomationSchedule extends TerraformResource {
+export class AutomationSchedule extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -280,19 +299,19 @@ export class AutomationSchedule extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      automation_account_name: this._automationAccountName,
-      description: this._description,
-      expiry_time: this._expiryTime,
-      frequency: this._frequency,
-      interval: this._interval,
-      month_days: this._monthDays,
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      start_time: this._startTime,
-      timezone: this._timezone,
-      week_days: this._weekDays,
-      monthly_occurrence: this._monthlyOccurrence,
-      timeouts: this._timeouts,
+      automation_account_name: cdktf.stringToTerraform(this._automationAccountName),
+      description: cdktf.stringToTerraform(this._description),
+      expiry_time: cdktf.stringToTerraform(this._expiryTime),
+      frequency: cdktf.stringToTerraform(this._frequency),
+      interval: cdktf.numberToTerraform(this._interval),
+      month_days: cdktf.listMapper(cdktf.numberToTerraform)(this._monthDays),
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      start_time: cdktf.stringToTerraform(this._startTime),
+      timezone: cdktf.stringToTerraform(this._timezone),
+      week_days: cdktf.listMapper(cdktf.stringToTerraform)(this._weekDays),
+      monthly_occurrence: cdktf.listMapper(automationScheduleMonthlyOccurrenceToTerraform)(this._monthlyOccurrence),
+      timeouts: automationScheduleTimeoutsToTerraform(this._timeouts),
     };
   }
 }

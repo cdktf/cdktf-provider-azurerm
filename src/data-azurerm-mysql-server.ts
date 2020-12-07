@@ -2,20 +2,17 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformDataSource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
-import { ComplexComputedList } from "cdktf";
-import { StringMap } from "cdktf";
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataAzurermMysqlServerConfig extends TerraformMetaArguments {
+export interface DataAzurermMysqlServerConfig extends cdktf.TerraformMetaArguments {
   readonly name: string;
   readonly resourceGroupName: string;
   /** timeouts block */
   readonly timeouts?: DataAzurermMysqlServerTimeouts;
 }
-export class DataAzurermMysqlServerIdentity extends ComplexComputedList {
+export class DataAzurermMysqlServerIdentity extends cdktf.ComplexComputedList {
 
   // principal_id - computed: true, optional: false, required: false
   public get principalId() {
@@ -32,7 +29,7 @@ export class DataAzurermMysqlServerIdentity extends ComplexComputedList {
     return this.getStringAttribute('type');
   }
 }
-export class DataAzurermMysqlServerThreatDetectionPolicy extends ComplexComputedList {
+export class DataAzurermMysqlServerThreatDetectionPolicy extends cdktf.ComplexComputedList {
 
   // disabled_alerts - computed: true, optional: false, required: false
   public get disabledAlerts() {
@@ -73,9 +70,17 @@ export interface DataAzurermMysqlServerTimeouts {
   readonly read?: string;
 }
 
+function dataAzurermMysqlServerTimeoutsToTerraform(struct?: DataAzurermMysqlServerTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    read: cdktf.stringToTerraform(struct!.read),
+  }
+}
+
+
 // Resource
 
-export class DataAzurermMysqlServer extends TerraformDataSource {
+export class DataAzurermMysqlServer extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
@@ -204,7 +209,7 @@ export class DataAzurermMysqlServer extends TerraformDataSource {
 
   // tags - computed: true, optional: false, required: false
   public tags(key: string): string {
-    return new StringMap(this, 'tags').lookup(key);
+    return new cdktf.StringMap(this, 'tags').lookup(key);
   }
 
   // threat_detection_policy - computed: true, optional: false, required: false
@@ -239,9 +244,9 @@ export class DataAzurermMysqlServer extends TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      timeouts: this._timeouts,
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      timeouts: dataAzurermMysqlServerTimeoutsToTerraform(this._timeouts),
     };
   }
 }

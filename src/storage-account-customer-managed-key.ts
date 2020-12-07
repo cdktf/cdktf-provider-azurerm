@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface StorageAccountCustomerManagedKeyConfig extends TerraformMetaArguments {
+export interface StorageAccountCustomerManagedKeyConfig extends cdktf.TerraformMetaArguments {
   readonly keyName: string;
   readonly keyVaultId: string;
   readonly keyVersion?: string;
@@ -22,9 +21,20 @@ export interface StorageAccountCustomerManagedKeyTimeouts {
   readonly update?: string;
 }
 
+function storageAccountCustomerManagedKeyTimeoutsToTerraform(struct?: StorageAccountCustomerManagedKeyTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class StorageAccountCustomerManagedKey extends TerraformResource {
+export class StorageAccountCustomerManagedKey extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -134,11 +144,11 @@ export class StorageAccountCustomerManagedKey extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      key_name: this._keyName,
-      key_vault_id: this._keyVaultId,
-      key_version: this._keyVersion,
-      storage_account_id: this._storageAccountId,
-      timeouts: this._timeouts,
+      key_name: cdktf.stringToTerraform(this._keyName),
+      key_vault_id: cdktf.stringToTerraform(this._keyVaultId),
+      key_version: cdktf.stringToTerraform(this._keyVersion),
+      storage_account_id: cdktf.stringToTerraform(this._storageAccountId),
+      timeouts: storageAccountCustomerManagedKeyTimeoutsToTerraform(this._timeouts),
     };
   }
 }

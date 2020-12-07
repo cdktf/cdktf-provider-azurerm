@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface LogAnalyticsWorkspaceConfig extends TerraformMetaArguments {
+export interface LogAnalyticsWorkspaceConfig extends cdktf.TerraformMetaArguments {
   readonly dailyQuotaGb?: number;
   readonly internetIngestionEnabled?: boolean;
   readonly internetQueryEnabled?: boolean;
@@ -27,9 +26,20 @@ export interface LogAnalyticsWorkspaceTimeouts {
   readonly update?: string;
 }
 
+function logAnalyticsWorkspaceTimeoutsToTerraform(struct?: LogAnalyticsWorkspaceTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class LogAnalyticsWorkspace extends TerraformResource {
+export class LogAnalyticsWorkspace extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -244,16 +254,16 @@ export class LogAnalyticsWorkspace extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      daily_quota_gb: this._dailyQuotaGb,
-      internet_ingestion_enabled: this._internetIngestionEnabled,
-      internet_query_enabled: this._internetQueryEnabled,
-      location: this._location,
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      retention_in_days: this._retentionInDays,
-      sku: this._sku,
-      tags: this._tags,
-      timeouts: this._timeouts,
+      daily_quota_gb: cdktf.numberToTerraform(this._dailyQuotaGb),
+      internet_ingestion_enabled: cdktf.booleanToTerraform(this._internetIngestionEnabled),
+      internet_query_enabled: cdktf.booleanToTerraform(this._internetQueryEnabled),
+      location: cdktf.stringToTerraform(this._location),
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      retention_in_days: cdktf.numberToTerraform(this._retentionInDays),
+      sku: cdktf.stringToTerraform(this._sku),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      timeouts: logAnalyticsWorkspaceTimeoutsToTerraform(this._timeouts),
     };
   }
 }

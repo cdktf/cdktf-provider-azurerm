@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface ImageConfig extends TerraformMetaArguments {
+export interface ImageConfig extends cdktf.TerraformMetaArguments {
   readonly hyperVGeneration?: string;
   readonly location: string;
   readonly name: string;
@@ -29,6 +28,18 @@ export interface ImageDataDisk {
   readonly managedDiskId?: string;
   readonly sizeGb?: number;
 }
+
+function imageDataDiskToTerraform(struct?: ImageDataDisk): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    blob_uri: cdktf.stringToTerraform(struct!.blobUri),
+    caching: cdktf.stringToTerraform(struct!.caching),
+    lun: cdktf.numberToTerraform(struct!.lun),
+    managed_disk_id: cdktf.stringToTerraform(struct!.managedDiskId),
+    size_gb: cdktf.numberToTerraform(struct!.sizeGb),
+  }
+}
+
 export interface ImageOsDisk {
   readonly blobUri?: string;
   readonly caching?: string;
@@ -37,6 +48,19 @@ export interface ImageOsDisk {
   readonly osType?: string;
   readonly sizeGb?: number;
 }
+
+function imageOsDiskToTerraform(struct?: ImageOsDisk): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    blob_uri: cdktf.stringToTerraform(struct!.blobUri),
+    caching: cdktf.stringToTerraform(struct!.caching),
+    managed_disk_id: cdktf.stringToTerraform(struct!.managedDiskId),
+    os_state: cdktf.stringToTerraform(struct!.osState),
+    os_type: cdktf.stringToTerraform(struct!.osType),
+    size_gb: cdktf.numberToTerraform(struct!.sizeGb),
+  }
+}
+
 export interface ImageTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -44,9 +68,20 @@ export interface ImageTimeouts {
   readonly update?: string;
 }
 
+function imageTimeoutsToTerraform(struct?: ImageTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class Image extends TerraformResource {
+export class Image extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -241,16 +276,16 @@ export class Image extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      hyper_v_generation: this._hyperVGeneration,
-      location: this._location,
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      source_virtual_machine_id: this._sourceVirtualMachineId,
-      tags: this._tags,
-      zone_resilient: this._zoneResilient,
-      data_disk: this._dataDisk,
-      os_disk: this._osDisk,
-      timeouts: this._timeouts,
+      hyper_v_generation: cdktf.stringToTerraform(this._hyperVGeneration),
+      location: cdktf.stringToTerraform(this._location),
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      source_virtual_machine_id: cdktf.stringToTerraform(this._sourceVirtualMachineId),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      zone_resilient: cdktf.booleanToTerraform(this._zoneResilient),
+      data_disk: cdktf.listMapper(imageDataDiskToTerraform)(this._dataDisk),
+      os_disk: cdktf.listMapper(imageOsDiskToTerraform)(this._osDisk),
+      timeouts: imageTimeoutsToTerraform(this._timeouts),
     };
   }
 }

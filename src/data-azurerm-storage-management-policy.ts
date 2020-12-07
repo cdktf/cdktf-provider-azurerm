@@ -2,18 +2,16 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformDataSource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
-import { ComplexComputedList } from "cdktf";
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataAzurermStorageManagementPolicyConfig extends TerraformMetaArguments {
+export interface DataAzurermStorageManagementPolicyConfig extends cdktf.TerraformMetaArguments {
   readonly storageAccountId: string;
   /** timeouts block */
   readonly timeouts?: DataAzurermStorageManagementPolicyTimeouts;
 }
-export class DataAzurermStorageManagementPolicyRuleActionsBaseBlob extends ComplexComputedList {
+export class DataAzurermStorageManagementPolicyRuleActionsBaseBlob extends cdktf.ComplexComputedList {
 
   // delete_after_days_since_modification_greater_than - computed: true, optional: false, required: false
   public get deleteAfterDaysSinceModificationGreaterThan() {
@@ -30,14 +28,14 @@ export class DataAzurermStorageManagementPolicyRuleActionsBaseBlob extends Compl
     return this.getNumberAttribute('tier_to_cool_after_days_since_modification_greater_than');
   }
 }
-export class DataAzurermStorageManagementPolicyRuleActionsSnapshot extends ComplexComputedList {
+export class DataAzurermStorageManagementPolicyRuleActionsSnapshot extends cdktf.ComplexComputedList {
 
   // delete_after_days_since_creation_greater_than - computed: true, optional: false, required: false
   public get deleteAfterDaysSinceCreationGreaterThan() {
     return this.getNumberAttribute('delete_after_days_since_creation_greater_than');
   }
 }
-export class DataAzurermStorageManagementPolicyRuleActions extends ComplexComputedList {
+export class DataAzurermStorageManagementPolicyRuleActions extends cdktf.ComplexComputedList {
 
   // base_blob - computed: true, optional: false, required: false
   public get baseBlob() {
@@ -49,7 +47,7 @@ export class DataAzurermStorageManagementPolicyRuleActions extends ComplexComput
     return this.interpolationForAttribute('snapshot') as any;
   }
 }
-export class DataAzurermStorageManagementPolicyRuleFilters extends ComplexComputedList {
+export class DataAzurermStorageManagementPolicyRuleFilters extends cdktf.ComplexComputedList {
 
   // blob_types - computed: true, optional: false, required: false
   public get blobTypes() {
@@ -61,7 +59,7 @@ export class DataAzurermStorageManagementPolicyRuleFilters extends ComplexComput
     return this.getListAttribute('prefix_match');
   }
 }
-export class DataAzurermStorageManagementPolicyRule extends ComplexComputedList {
+export class DataAzurermStorageManagementPolicyRule extends cdktf.ComplexComputedList {
 
   // actions - computed: true, optional: false, required: false
   public get actions() {
@@ -87,9 +85,17 @@ export interface DataAzurermStorageManagementPolicyTimeouts {
   readonly read?: string;
 }
 
+function dataAzurermStorageManagementPolicyTimeoutsToTerraform(struct?: DataAzurermStorageManagementPolicyTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    read: cdktf.stringToTerraform(struct!.read),
+  }
+}
+
+
 // Resource
 
-export class DataAzurermStorageManagementPolicy extends TerraformDataSource {
+export class DataAzurermStorageManagementPolicy extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
@@ -159,8 +165,8 @@ export class DataAzurermStorageManagementPolicy extends TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      storage_account_id: this._storageAccountId,
-      timeouts: this._timeouts,
+      storage_account_id: cdktf.stringToTerraform(this._storageAccountId),
+      timeouts: dataAzurermStorageManagementPolicyTimeoutsToTerraform(this._timeouts),
     };
   }
 }

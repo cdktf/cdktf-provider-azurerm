@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface LogAnalyticsClusterCustomerManagedKeyConfig extends TerraformMetaArguments {
+export interface LogAnalyticsClusterCustomerManagedKeyConfig extends cdktf.TerraformMetaArguments {
   readonly keyVaultKeyId: string;
   readonly logAnalyticsClusterId: string;
   /** timeouts block */
@@ -20,9 +19,20 @@ export interface LogAnalyticsClusterCustomerManagedKeyTimeouts {
   readonly update?: string;
 }
 
+function logAnalyticsClusterCustomerManagedKeyTimeoutsToTerraform(struct?: LogAnalyticsClusterCustomerManagedKeyTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class LogAnalyticsClusterCustomerManagedKey extends TerraformResource {
+export class LogAnalyticsClusterCustomerManagedKey extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -101,9 +111,9 @@ export class LogAnalyticsClusterCustomerManagedKey extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      key_vault_key_id: this._keyVaultKeyId,
-      log_analytics_cluster_id: this._logAnalyticsClusterId,
-      timeouts: this._timeouts,
+      key_vault_key_id: cdktf.stringToTerraform(this._keyVaultKeyId),
+      log_analytics_cluster_id: cdktf.stringToTerraform(this._logAnalyticsClusterId),
+      timeouts: logAnalyticsClusterCustomerManagedKeyTimeoutsToTerraform(this._timeouts),
     };
   }
 }

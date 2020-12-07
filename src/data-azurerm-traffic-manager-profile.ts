@@ -2,20 +2,18 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformDataSource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
-import { ComplexComputedList } from "cdktf";
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataAzurermTrafficManagerProfileConfig extends TerraformMetaArguments {
+export interface DataAzurermTrafficManagerProfileConfig extends cdktf.TerraformMetaArguments {
   readonly name: string;
   readonly resourceGroupName: string;
   readonly tags?: { [key: string]: string };
   /** timeouts block */
   readonly timeouts?: DataAzurermTrafficManagerProfileTimeouts;
 }
-export class DataAzurermTrafficManagerProfileDnsConfig extends ComplexComputedList {
+export class DataAzurermTrafficManagerProfileDnsConfig extends cdktf.ComplexComputedList {
 
   // relative_name - computed: true, optional: false, required: false
   public get relativeName() {
@@ -27,7 +25,7 @@ export class DataAzurermTrafficManagerProfileDnsConfig extends ComplexComputedLi
     return this.getNumberAttribute('ttl');
   }
 }
-export class DataAzurermTrafficManagerProfileMonitorConfigCustomHeader extends ComplexComputedList {
+export class DataAzurermTrafficManagerProfileMonitorConfigCustomHeader extends cdktf.ComplexComputedList {
 
   // name - computed: true, optional: false, required: false
   public get name() {
@@ -39,7 +37,7 @@ export class DataAzurermTrafficManagerProfileMonitorConfigCustomHeader extends C
     return this.getStringAttribute('value');
   }
 }
-export class DataAzurermTrafficManagerProfileMonitorConfig extends ComplexComputedList {
+export class DataAzurermTrafficManagerProfileMonitorConfig extends cdktf.ComplexComputedList {
 
   // custom_header - computed: true, optional: false, required: false
   public get customHeader() {
@@ -85,9 +83,17 @@ export interface DataAzurermTrafficManagerProfileTimeouts {
   readonly read?: string;
 }
 
+function dataAzurermTrafficManagerProfileTimeoutsToTerraform(struct?: DataAzurermTrafficManagerProfileTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    read: cdktf.stringToTerraform(struct!.read),
+  }
+}
+
+
 // Resource
 
-export class DataAzurermTrafficManagerProfile extends TerraformDataSource {
+export class DataAzurermTrafficManagerProfile extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
@@ -208,10 +214,10 @@ export class DataAzurermTrafficManagerProfile extends TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      tags: this._tags,
-      timeouts: this._timeouts,
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      timeouts: dataAzurermTrafficManagerProfileTimeoutsToTerraform(this._timeouts),
     };
   }
 }

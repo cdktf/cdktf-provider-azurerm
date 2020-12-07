@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface TrafficManagerEndpointConfig extends TerraformMetaArguments {
+export interface TrafficManagerEndpointConfig extends cdktf.TerraformMetaArguments {
   readonly endpointLocation?: string;
   readonly endpointStatus?: string;
   readonly geoMappings?: string[];
@@ -31,11 +30,30 @@ export interface TrafficManagerEndpointCustomHeader {
   readonly name: string;
   readonly value: string;
 }
+
+function trafficManagerEndpointCustomHeaderToTerraform(struct?: TrafficManagerEndpointCustomHeader): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    name: cdktf.stringToTerraform(struct!.name),
+    value: cdktf.stringToTerraform(struct!.value),
+  }
+}
+
 export interface TrafficManagerEndpointSubnet {
   readonly first: string;
   readonly last?: string;
   readonly scope?: number;
 }
+
+function trafficManagerEndpointSubnetToTerraform(struct?: TrafficManagerEndpointSubnet): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    first: cdktf.stringToTerraform(struct!.first),
+    last: cdktf.stringToTerraform(struct!.last),
+    scope: cdktf.numberToTerraform(struct!.scope),
+  }
+}
+
 export interface TrafficManagerEndpointTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -43,9 +61,20 @@ export interface TrafficManagerEndpointTimeouts {
   readonly update?: string;
 }
 
+function trafficManagerEndpointTimeoutsToTerraform(struct?: TrafficManagerEndpointTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class TrafficManagerEndpoint extends TerraformResource {
+export class TrafficManagerEndpoint extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -327,21 +356,21 @@ export class TrafficManagerEndpoint extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      endpoint_location: this._endpointLocation,
-      endpoint_status: this._endpointStatus,
-      geo_mappings: this._geoMappings,
-      min_child_endpoints: this._minChildEndpoints,
-      name: this._name,
-      priority: this._priority,
-      profile_name: this._profileName,
-      resource_group_name: this._resourceGroupName,
-      target: this._target,
-      target_resource_id: this._targetResourceId,
-      type: this._type,
-      weight: this._weight,
-      custom_header: this._customHeader,
-      subnet: this._subnet,
-      timeouts: this._timeouts,
+      endpoint_location: cdktf.stringToTerraform(this._endpointLocation),
+      endpoint_status: cdktf.stringToTerraform(this._endpointStatus),
+      geo_mappings: cdktf.listMapper(cdktf.stringToTerraform)(this._geoMappings),
+      min_child_endpoints: cdktf.numberToTerraform(this._minChildEndpoints),
+      name: cdktf.stringToTerraform(this._name),
+      priority: cdktf.numberToTerraform(this._priority),
+      profile_name: cdktf.stringToTerraform(this._profileName),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      target: cdktf.stringToTerraform(this._target),
+      target_resource_id: cdktf.stringToTerraform(this._targetResourceId),
+      type: cdktf.stringToTerraform(this._type),
+      weight: cdktf.numberToTerraform(this._weight),
+      custom_header: cdktf.listMapper(trafficManagerEndpointCustomHeaderToTerraform)(this._customHeader),
+      subnet: cdktf.listMapper(trafficManagerEndpointSubnetToTerraform)(this._subnet),
+      timeouts: trafficManagerEndpointTimeoutsToTerraform(this._timeouts),
     };
   }
 }

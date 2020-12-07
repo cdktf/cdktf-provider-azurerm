@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface ApiManagementBackendConfig extends TerraformMetaArguments {
+export interface ApiManagementBackendConfig extends cdktf.TerraformMetaArguments {
   readonly apiManagementName: string;
   readonly description?: string;
   readonly name: string;
@@ -31,6 +30,15 @@ export interface ApiManagementBackendCredentialsAuthorization {
   readonly parameter?: string;
   readonly scheme?: string;
 }
+
+function apiManagementBackendCredentialsAuthorizationToTerraform(struct?: ApiManagementBackendCredentialsAuthorization): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    parameter: cdktf.stringToTerraform(struct!.parameter),
+    scheme: cdktf.stringToTerraform(struct!.scheme),
+  }
+}
+
 export interface ApiManagementBackendCredentials {
   readonly certificate?: string[];
   readonly header?: { [key: string]: string };
@@ -38,15 +46,45 @@ export interface ApiManagementBackendCredentials {
   /** authorization block */
   readonly authorization?: ApiManagementBackendCredentialsAuthorization[];
 }
+
+function apiManagementBackendCredentialsToTerraform(struct?: ApiManagementBackendCredentials): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    certificate: cdktf.listMapper(cdktf.stringToTerraform)(struct!.certificate),
+    header: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.header),
+    query: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.query),
+    authorization: cdktf.listMapper(apiManagementBackendCredentialsAuthorizationToTerraform)(struct!.authorization),
+  }
+}
+
 export interface ApiManagementBackendProxy {
   readonly password?: string;
   readonly url: string;
   readonly username: string;
 }
+
+function apiManagementBackendProxyToTerraform(struct?: ApiManagementBackendProxy): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    password: cdktf.stringToTerraform(struct!.password),
+    url: cdktf.stringToTerraform(struct!.url),
+    username: cdktf.stringToTerraform(struct!.username),
+  }
+}
+
 export interface ApiManagementBackendServiceFabricClusterServerX509Name {
   readonly issuerCertificateThumbprint: string;
   readonly name: string;
 }
+
+function apiManagementBackendServiceFabricClusterServerX509NameToTerraform(struct?: ApiManagementBackendServiceFabricClusterServerX509Name): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    issuer_certificate_thumbprint: cdktf.stringToTerraform(struct!.issuerCertificateThumbprint),
+    name: cdktf.stringToTerraform(struct!.name),
+  }
+}
+
 export interface ApiManagementBackendServiceFabricCluster {
   readonly clientCertificateThumbprint: string;
   readonly managementEndpoints: string[];
@@ -55,20 +93,52 @@ export interface ApiManagementBackendServiceFabricCluster {
   /** server_x509_name block */
   readonly serverX509Name?: ApiManagementBackendServiceFabricClusterServerX509Name[];
 }
+
+function apiManagementBackendServiceFabricClusterToTerraform(struct?: ApiManagementBackendServiceFabricCluster): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    client_certificate_thumbprint: cdktf.stringToTerraform(struct!.clientCertificateThumbprint),
+    management_endpoints: cdktf.listMapper(cdktf.stringToTerraform)(struct!.managementEndpoints),
+    max_partition_resolution_retries: cdktf.numberToTerraform(struct!.maxPartitionResolutionRetries),
+    server_certificate_thumbprints: cdktf.listMapper(cdktf.stringToTerraform)(struct!.serverCertificateThumbprints),
+    server_x509_name: cdktf.listMapper(apiManagementBackendServiceFabricClusterServerX509NameToTerraform)(struct!.serverX509Name),
+  }
+}
+
 export interface ApiManagementBackendTimeouts {
   readonly create?: string;
   readonly delete?: string;
   readonly read?: string;
   readonly update?: string;
 }
+
+function apiManagementBackendTimeoutsToTerraform(struct?: ApiManagementBackendTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
 export interface ApiManagementBackendTls {
   readonly validateCertificateChain?: boolean;
   readonly validateCertificateName?: boolean;
 }
 
+function apiManagementBackendTlsToTerraform(struct?: ApiManagementBackendTls): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    validate_certificate_chain: cdktf.booleanToTerraform(struct!.validateCertificateChain),
+    validate_certificate_name: cdktf.booleanToTerraform(struct!.validateCertificateName),
+  }
+}
+
+
 // Resource
 
-export class ApiManagementBackend extends TerraformResource {
+export class ApiManagementBackend extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -308,19 +378,19 @@ export class ApiManagementBackend extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      api_management_name: this._apiManagementName,
-      description: this._description,
-      name: this._name,
-      protocol: this._protocol,
-      resource_group_name: this._resourceGroupName,
-      resource_id: this._resourceId,
-      title: this._title,
-      url: this._url,
-      credentials: this._credentials,
-      proxy: this._proxy,
-      service_fabric_cluster: this._serviceFabricCluster,
-      timeouts: this._timeouts,
-      tls: this._tls,
+      api_management_name: cdktf.stringToTerraform(this._apiManagementName),
+      description: cdktf.stringToTerraform(this._description),
+      name: cdktf.stringToTerraform(this._name),
+      protocol: cdktf.stringToTerraform(this._protocol),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      resource_id: cdktf.stringToTerraform(this._resourceId),
+      title: cdktf.stringToTerraform(this._title),
+      url: cdktf.stringToTerraform(this._url),
+      credentials: cdktf.listMapper(apiManagementBackendCredentialsToTerraform)(this._credentials),
+      proxy: cdktf.listMapper(apiManagementBackendProxyToTerraform)(this._proxy),
+      service_fabric_cluster: cdktf.listMapper(apiManagementBackendServiceFabricClusterToTerraform)(this._serviceFabricCluster),
+      timeouts: apiManagementBackendTimeoutsToTerraform(this._timeouts),
+      tls: cdktf.listMapper(apiManagementBackendTlsToTerraform)(this._tls),
     };
   }
 }

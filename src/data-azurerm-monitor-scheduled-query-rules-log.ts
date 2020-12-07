@@ -2,20 +2,17 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformDataSource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
-import { ComplexComputedList } from "cdktf";
-import { StringMap } from "cdktf";
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataAzurermMonitorScheduledQueryRulesLogConfig extends TerraformMetaArguments {
+export interface DataAzurermMonitorScheduledQueryRulesLogConfig extends cdktf.TerraformMetaArguments {
   readonly name: string;
   readonly resourceGroupName: string;
   /** timeouts block */
   readonly timeouts?: DataAzurermMonitorScheduledQueryRulesLogTimeouts;
 }
-export class DataAzurermMonitorScheduledQueryRulesLogCriteriaDimension extends ComplexComputedList {
+export class DataAzurermMonitorScheduledQueryRulesLogCriteriaDimension extends cdktf.ComplexComputedList {
 
   // name - computed: true, optional: false, required: false
   public get name() {
@@ -32,7 +29,7 @@ export class DataAzurermMonitorScheduledQueryRulesLogCriteriaDimension extends C
     return this.getListAttribute('values');
   }
 }
-export class DataAzurermMonitorScheduledQueryRulesLogCriteria extends ComplexComputedList {
+export class DataAzurermMonitorScheduledQueryRulesLogCriteria extends cdktf.ComplexComputedList {
 
   // dimension - computed: true, optional: false, required: false
   public get dimension() {
@@ -48,9 +45,17 @@ export interface DataAzurermMonitorScheduledQueryRulesLogTimeouts {
   readonly read?: string;
 }
 
+function dataAzurermMonitorScheduledQueryRulesLogTimeoutsToTerraform(struct?: DataAzurermMonitorScheduledQueryRulesLogTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    read: cdktf.stringToTerraform(struct!.read),
+  }
+}
+
+
 // Resource
 
-export class DataAzurermMonitorScheduledQueryRulesLog extends TerraformDataSource {
+export class DataAzurermMonitorScheduledQueryRulesLog extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
@@ -139,7 +144,7 @@ export class DataAzurermMonitorScheduledQueryRulesLog extends TerraformDataSourc
 
   // tags - computed: true, optional: false, required: false
   public tags(key: string): string {
-    return new StringMap(this, 'tags').lookup(key);
+    return new cdktf.StringMap(this, 'tags').lookup(key);
   }
 
   // timeouts - computed: false, optional: true, required: false
@@ -164,9 +169,9 @@ export class DataAzurermMonitorScheduledQueryRulesLog extends TerraformDataSourc
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      timeouts: this._timeouts,
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      timeouts: dataAzurermMonitorScheduledQueryRulesLogTimeoutsToTerraform(this._timeouts),
     };
   }
 }

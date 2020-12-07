@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface MonitorDiagnosticSettingConfig extends TerraformMetaArguments {
+export interface MonitorDiagnosticSettingConfig extends cdktf.TerraformMetaArguments {
   readonly eventhubAuthorizationRuleId?: string;
   readonly eventhubName?: string;
   readonly logAnalyticsDestinationType?: string;
@@ -26,22 +25,60 @@ export interface MonitorDiagnosticSettingLogRetentionPolicy {
   readonly days?: number;
   readonly enabled: boolean;
 }
+
+function monitorDiagnosticSettingLogRetentionPolicyToTerraform(struct?: MonitorDiagnosticSettingLogRetentionPolicy): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    days: cdktf.numberToTerraform(struct!.days),
+    enabled: cdktf.booleanToTerraform(struct!.enabled),
+  }
+}
+
 export interface MonitorDiagnosticSettingLog {
   readonly category: string;
   readonly enabled?: boolean;
   /** retention_policy block */
   readonly retentionPolicy?: MonitorDiagnosticSettingLogRetentionPolicy[];
 }
+
+function monitorDiagnosticSettingLogToTerraform(struct?: MonitorDiagnosticSettingLog): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    category: cdktf.stringToTerraform(struct!.category),
+    enabled: cdktf.booleanToTerraform(struct!.enabled),
+    retention_policy: cdktf.listMapper(monitorDiagnosticSettingLogRetentionPolicyToTerraform)(struct!.retentionPolicy),
+  }
+}
+
 export interface MonitorDiagnosticSettingMetricRetentionPolicy {
   readonly days?: number;
   readonly enabled: boolean;
 }
+
+function monitorDiagnosticSettingMetricRetentionPolicyToTerraform(struct?: MonitorDiagnosticSettingMetricRetentionPolicy): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    days: cdktf.numberToTerraform(struct!.days),
+    enabled: cdktf.booleanToTerraform(struct!.enabled),
+  }
+}
+
 export interface MonitorDiagnosticSettingMetric {
   readonly category: string;
   readonly enabled?: boolean;
   /** retention_policy block */
   readonly retentionPolicy?: MonitorDiagnosticSettingMetricRetentionPolicy[];
 }
+
+function monitorDiagnosticSettingMetricToTerraform(struct?: MonitorDiagnosticSettingMetric): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    category: cdktf.stringToTerraform(struct!.category),
+    enabled: cdktf.booleanToTerraform(struct!.enabled),
+    retention_policy: cdktf.listMapper(monitorDiagnosticSettingMetricRetentionPolicyToTerraform)(struct!.retentionPolicy),
+  }
+}
+
 export interface MonitorDiagnosticSettingTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -49,9 +86,20 @@ export interface MonitorDiagnosticSettingTimeouts {
   readonly update?: string;
 }
 
+function monitorDiagnosticSettingTimeoutsToTerraform(struct?: MonitorDiagnosticSettingTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class MonitorDiagnosticSetting extends TerraformResource {
+export class MonitorDiagnosticSetting extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -249,16 +297,16 @@ export class MonitorDiagnosticSetting extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      eventhub_authorization_rule_id: this._eventhubAuthorizationRuleId,
-      eventhub_name: this._eventhubName,
-      log_analytics_destination_type: this._logAnalyticsDestinationType,
-      log_analytics_workspace_id: this._logAnalyticsWorkspaceId,
-      name: this._name,
-      storage_account_id: this._storageAccountId,
-      target_resource_id: this._targetResourceId,
-      log: this._log,
-      metric: this._metric,
-      timeouts: this._timeouts,
+      eventhub_authorization_rule_id: cdktf.stringToTerraform(this._eventhubAuthorizationRuleId),
+      eventhub_name: cdktf.stringToTerraform(this._eventhubName),
+      log_analytics_destination_type: cdktf.stringToTerraform(this._logAnalyticsDestinationType),
+      log_analytics_workspace_id: cdktf.stringToTerraform(this._logAnalyticsWorkspaceId),
+      name: cdktf.stringToTerraform(this._name),
+      storage_account_id: cdktf.stringToTerraform(this._storageAccountId),
+      target_resource_id: cdktf.stringToTerraform(this._targetResourceId),
+      log: cdktf.listMapper(monitorDiagnosticSettingLogToTerraform)(this._log),
+      metric: cdktf.listMapper(monitorDiagnosticSettingMetricToTerraform)(this._metric),
+      timeouts: monitorDiagnosticSettingTimeoutsToTerraform(this._timeouts),
     };
   }
 }

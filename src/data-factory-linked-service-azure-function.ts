@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataFactoryLinkedServiceAzureFunctionConfig extends TerraformMetaArguments {
+export interface DataFactoryLinkedServiceAzureFunctionConfig extends cdktf.TerraformMetaArguments {
   readonly additionalProperties?: { [key: string]: string };
   readonly annotations?: string[];
   readonly dataFactoryName: string;
@@ -28,9 +27,20 @@ export interface DataFactoryLinkedServiceAzureFunctionTimeouts {
   readonly update?: string;
 }
 
+function dataFactoryLinkedServiceAzureFunctionTimeoutsToTerraform(struct?: DataFactoryLinkedServiceAzureFunctionTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class DataFactoryLinkedServiceAzureFunction extends TerraformResource {
+export class DataFactoryLinkedServiceAzureFunction extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -236,17 +246,17 @@ export class DataFactoryLinkedServiceAzureFunction extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      additional_properties: this._additionalProperties,
-      annotations: this._annotations,
-      data_factory_name: this._dataFactoryName,
-      description: this._description,
-      integration_runtime_name: this._integrationRuntimeName,
-      key: this._key,
-      name: this._name,
-      parameters: this._parameters,
-      resource_group_name: this._resourceGroupName,
-      url: this._url,
-      timeouts: this._timeouts,
+      additional_properties: cdktf.hashMapper(cdktf.anyToTerraform)(this._additionalProperties),
+      annotations: cdktf.listMapper(cdktf.stringToTerraform)(this._annotations),
+      data_factory_name: cdktf.stringToTerraform(this._dataFactoryName),
+      description: cdktf.stringToTerraform(this._description),
+      integration_runtime_name: cdktf.stringToTerraform(this._integrationRuntimeName),
+      key: cdktf.stringToTerraform(this._key),
+      name: cdktf.stringToTerraform(this._name),
+      parameters: cdktf.hashMapper(cdktf.anyToTerraform)(this._parameters),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      url: cdktf.stringToTerraform(this._url),
+      timeouts: dataFactoryLinkedServiceAzureFunctionTimeoutsToTerraform(this._timeouts),
     };
   }
 }

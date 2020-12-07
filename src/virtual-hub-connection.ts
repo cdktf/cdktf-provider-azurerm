@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface VirtualHubConnectionConfig extends TerraformMetaArguments {
+export interface VirtualHubConnectionConfig extends cdktf.TerraformMetaArguments {
   readonly hubToVitualNetworkTrafficAllowed?: boolean;
   readonly internetSecurityEnabled?: boolean;
   readonly name: string;
@@ -23,11 +22,30 @@ export interface VirtualHubConnectionRoutingPropagatedRouteTable {
   readonly labels?: string[];
   readonly routeTableIds?: string[];
 }
+
+function virtualHubConnectionRoutingPropagatedRouteTableToTerraform(struct?: VirtualHubConnectionRoutingPropagatedRouteTable): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    labels: cdktf.listMapper(cdktf.stringToTerraform)(struct!.labels),
+    route_table_ids: cdktf.listMapper(cdktf.stringToTerraform)(struct!.routeTableIds),
+  }
+}
+
 export interface VirtualHubConnectionRoutingStaticVnetRoute {
   readonly addressPrefixes?: string[];
   readonly name?: string;
   readonly nextHopIpAddress?: string;
 }
+
+function virtualHubConnectionRoutingStaticVnetRouteToTerraform(struct?: VirtualHubConnectionRoutingStaticVnetRoute): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    address_prefixes: cdktf.listMapper(cdktf.stringToTerraform)(struct!.addressPrefixes),
+    name: cdktf.stringToTerraform(struct!.name),
+    next_hop_ip_address: cdktf.stringToTerraform(struct!.nextHopIpAddress),
+  }
+}
+
 export interface VirtualHubConnectionRouting {
   readonly associatedRouteTableId?: string;
   /** propagated_route_table block */
@@ -35,6 +53,16 @@ export interface VirtualHubConnectionRouting {
   /** static_vnet_route block */
   readonly staticVnetRoute?: VirtualHubConnectionRoutingStaticVnetRoute[];
 }
+
+function virtualHubConnectionRoutingToTerraform(struct?: VirtualHubConnectionRouting): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    associated_route_table_id: cdktf.stringToTerraform(struct!.associatedRouteTableId),
+    propagated_route_table: cdktf.listMapper(virtualHubConnectionRoutingPropagatedRouteTableToTerraform)(struct!.propagatedRouteTable),
+    static_vnet_route: cdktf.listMapper(virtualHubConnectionRoutingStaticVnetRouteToTerraform)(struct!.staticVnetRoute),
+  }
+}
+
 export interface VirtualHubConnectionTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -42,9 +70,20 @@ export interface VirtualHubConnectionTimeouts {
   readonly update?: string;
 }
 
+function virtualHubConnectionTimeoutsToTerraform(struct?: VirtualHubConnectionTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class VirtualHubConnection extends TerraformResource {
+export class VirtualHubConnection extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -205,14 +244,14 @@ export class VirtualHubConnection extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      hub_to_vitual_network_traffic_allowed: this._hubToVitualNetworkTrafficAllowed,
-      internet_security_enabled: this._internetSecurityEnabled,
-      name: this._name,
-      remote_virtual_network_id: this._remoteVirtualNetworkId,
-      virtual_hub_id: this._virtualHubId,
-      vitual_network_to_hub_gateways_traffic_allowed: this._vitualNetworkToHubGatewaysTrafficAllowed,
-      routing: this._routing,
-      timeouts: this._timeouts,
+      hub_to_vitual_network_traffic_allowed: cdktf.booleanToTerraform(this._hubToVitualNetworkTrafficAllowed),
+      internet_security_enabled: cdktf.booleanToTerraform(this._internetSecurityEnabled),
+      name: cdktf.stringToTerraform(this._name),
+      remote_virtual_network_id: cdktf.stringToTerraform(this._remoteVirtualNetworkId),
+      virtual_hub_id: cdktf.stringToTerraform(this._virtualHubId),
+      vitual_network_to_hub_gateways_traffic_allowed: cdktf.booleanToTerraform(this._vitualNetworkToHubGatewaysTrafficAllowed),
+      routing: cdktf.listMapper(virtualHubConnectionRoutingToTerraform)(this._routing),
+      timeouts: virtualHubConnectionTimeoutsToTerraform(this._timeouts),
     };
   }
 }

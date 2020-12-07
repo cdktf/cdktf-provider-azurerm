@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataFactoryDatasetJsonConfig extends TerraformMetaArguments {
+export interface DataFactoryDatasetJsonConfig extends cdktf.TerraformMetaArguments {
   readonly additionalProperties?: { [key: string]: string };
   readonly annotations?: string[];
   readonly dataFactoryName: string;
@@ -32,16 +31,46 @@ export interface DataFactoryDatasetJsonAzureBlobStorageLocation {
   readonly filename: string;
   readonly path: string;
 }
+
+function dataFactoryDatasetJsonAzureBlobStorageLocationToTerraform(struct?: DataFactoryDatasetJsonAzureBlobStorageLocation): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    container: cdktf.stringToTerraform(struct!.container),
+    filename: cdktf.stringToTerraform(struct!.filename),
+    path: cdktf.stringToTerraform(struct!.path),
+  }
+}
+
 export interface DataFactoryDatasetJsonHttpServerLocation {
   readonly filename: string;
   readonly path: string;
   readonly relativeUrl: string;
 }
+
+function dataFactoryDatasetJsonHttpServerLocationToTerraform(struct?: DataFactoryDatasetJsonHttpServerLocation): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    filename: cdktf.stringToTerraform(struct!.filename),
+    path: cdktf.stringToTerraform(struct!.path),
+    relative_url: cdktf.stringToTerraform(struct!.relativeUrl),
+  }
+}
+
 export interface DataFactoryDatasetJsonSchemaColumn {
   readonly description?: string;
   readonly name: string;
   readonly type?: string;
 }
+
+function dataFactoryDatasetJsonSchemaColumnToTerraform(struct?: DataFactoryDatasetJsonSchemaColumn): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    description: cdktf.stringToTerraform(struct!.description),
+    name: cdktf.stringToTerraform(struct!.name),
+    type: cdktf.stringToTerraform(struct!.type),
+  }
+}
+
 export interface DataFactoryDatasetJsonTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -49,9 +78,20 @@ export interface DataFactoryDatasetJsonTimeouts {
   readonly update?: string;
 }
 
+function dataFactoryDatasetJsonTimeoutsToTerraform(struct?: DataFactoryDatasetJsonTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class DataFactoryDatasetJson extends TerraformResource {
+export class DataFactoryDatasetJson extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -311,20 +351,20 @@ export class DataFactoryDatasetJson extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      additional_properties: this._additionalProperties,
-      annotations: this._annotations,
-      data_factory_name: this._dataFactoryName,
-      description: this._description,
-      encoding: this._encoding,
-      folder: this._folder,
-      linked_service_name: this._linkedServiceName,
-      name: this._name,
-      parameters: this._parameters,
-      resource_group_name: this._resourceGroupName,
-      azure_blob_storage_location: this._azureBlobStorageLocation,
-      http_server_location: this._httpServerLocation,
-      schema_column: this._schemaColumn,
-      timeouts: this._timeouts,
+      additional_properties: cdktf.hashMapper(cdktf.anyToTerraform)(this._additionalProperties),
+      annotations: cdktf.listMapper(cdktf.stringToTerraform)(this._annotations),
+      data_factory_name: cdktf.stringToTerraform(this._dataFactoryName),
+      description: cdktf.stringToTerraform(this._description),
+      encoding: cdktf.stringToTerraform(this._encoding),
+      folder: cdktf.stringToTerraform(this._folder),
+      linked_service_name: cdktf.stringToTerraform(this._linkedServiceName),
+      name: cdktf.stringToTerraform(this._name),
+      parameters: cdktf.hashMapper(cdktf.anyToTerraform)(this._parameters),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      azure_blob_storage_location: cdktf.listMapper(dataFactoryDatasetJsonAzureBlobStorageLocationToTerraform)(this._azureBlobStorageLocation),
+      http_server_location: cdktf.listMapper(dataFactoryDatasetJsonHttpServerLocationToTerraform)(this._httpServerLocation),
+      schema_column: cdktf.listMapper(dataFactoryDatasetJsonSchemaColumnToTerraform)(this._schemaColumn),
+      timeouts: dataFactoryDatasetJsonTimeoutsToTerraform(this._timeouts),
     };
   }
 }

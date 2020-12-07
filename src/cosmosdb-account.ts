@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface CosmosdbAccountConfig extends TerraformMetaArguments {
+export interface CosmosdbAccountConfig extends cdktf.TerraformMetaArguments {
   readonly enableAutomaticFailover?: boolean;
   readonly enableFreeTier?: boolean;
   readonly enableMultipleWriteLocations?: boolean;
@@ -35,31 +34,80 @@ export interface CosmosdbAccountConfig extends TerraformMetaArguments {
 export interface CosmosdbAccountCapabilities {
   readonly name: string;
 }
+
+function cosmosdbAccountCapabilitiesToTerraform(struct?: CosmosdbAccountCapabilities): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    name: cdktf.stringToTerraform(struct!.name),
+  }
+}
+
 export interface CosmosdbAccountConsistencyPolicy {
   readonly consistencyLevel: string;
   readonly maxIntervalInSeconds?: number;
   readonly maxStalenessPrefix?: number;
 }
+
+function cosmosdbAccountConsistencyPolicyToTerraform(struct?: CosmosdbAccountConsistencyPolicy): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    consistency_level: cdktf.stringToTerraform(struct!.consistencyLevel),
+    max_interval_in_seconds: cdktf.numberToTerraform(struct!.maxIntervalInSeconds),
+    max_staleness_prefix: cdktf.numberToTerraform(struct!.maxStalenessPrefix),
+  }
+}
+
 export interface CosmosdbAccountGeoLocation {
   readonly failoverPriority: number;
   readonly location: string;
   readonly prefix?: string;
   readonly zoneRedundant?: boolean;
 }
+
+function cosmosdbAccountGeoLocationToTerraform(struct?: CosmosdbAccountGeoLocation): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    failover_priority: cdktf.numberToTerraform(struct!.failoverPriority),
+    location: cdktf.stringToTerraform(struct!.location),
+    prefix: cdktf.stringToTerraform(struct!.prefix),
+    zone_redundant: cdktf.booleanToTerraform(struct!.zoneRedundant),
+  }
+}
+
 export interface CosmosdbAccountTimeouts {
   readonly create?: string;
   readonly delete?: string;
   readonly read?: string;
   readonly update?: string;
 }
+
+function cosmosdbAccountTimeoutsToTerraform(struct?: CosmosdbAccountTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
 export interface CosmosdbAccountVirtualNetworkRule {
   readonly id: string;
   readonly ignoreMissingVnetServiceEndpoint?: boolean;
 }
 
+function cosmosdbAccountVirtualNetworkRuleToTerraform(struct?: CosmosdbAccountVirtualNetworkRule): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    id: cdktf.stringToTerraform(struct!.id),
+    ignore_missing_vnet_service_endpoint: cdktf.booleanToTerraform(struct!.ignoreMissingVnetServiceEndpoint),
+  }
+}
+
+
 // Resource
 
-export class CosmosdbAccount extends TerraformResource {
+export class CosmosdbAccount extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -441,24 +489,24 @@ export class CosmosdbAccount extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      enable_automatic_failover: this._enableAutomaticFailover,
-      enable_free_tier: this._enableFreeTier,
-      enable_multiple_write_locations: this._enableMultipleWriteLocations,
-      ip_range_filter: this._ipRangeFilter,
-      is_virtual_network_filter_enabled: this._isVirtualNetworkFilterEnabled,
-      key_vault_key_id: this._keyVaultKeyId,
-      kind: this._kind,
-      location: this._location,
-      name: this._name,
-      offer_type: this._offerType,
-      public_network_access_enabled: this._publicNetworkAccessEnabled,
-      resource_group_name: this._resourceGroupName,
-      tags: this._tags,
-      capabilities: this._capabilities,
-      consistency_policy: this._consistencyPolicy,
-      geo_location: this._geoLocation,
-      timeouts: this._timeouts,
-      virtual_network_rule: this._virtualNetworkRule,
+      enable_automatic_failover: cdktf.booleanToTerraform(this._enableAutomaticFailover),
+      enable_free_tier: cdktf.booleanToTerraform(this._enableFreeTier),
+      enable_multiple_write_locations: cdktf.booleanToTerraform(this._enableMultipleWriteLocations),
+      ip_range_filter: cdktf.stringToTerraform(this._ipRangeFilter),
+      is_virtual_network_filter_enabled: cdktf.booleanToTerraform(this._isVirtualNetworkFilterEnabled),
+      key_vault_key_id: cdktf.stringToTerraform(this._keyVaultKeyId),
+      kind: cdktf.stringToTerraform(this._kind),
+      location: cdktf.stringToTerraform(this._location),
+      name: cdktf.stringToTerraform(this._name),
+      offer_type: cdktf.stringToTerraform(this._offerType),
+      public_network_access_enabled: cdktf.booleanToTerraform(this._publicNetworkAccessEnabled),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      capabilities: cdktf.listMapper(cosmosdbAccountCapabilitiesToTerraform)(this._capabilities),
+      consistency_policy: cdktf.listMapper(cosmosdbAccountConsistencyPolicyToTerraform)(this._consistencyPolicy),
+      geo_location: cdktf.listMapper(cosmosdbAccountGeoLocationToTerraform)(this._geoLocation),
+      timeouts: cosmosdbAccountTimeoutsToTerraform(this._timeouts),
+      virtual_network_rule: cdktf.listMapper(cosmosdbAccountVirtualNetworkRuleToTerraform)(this._virtualNetworkRule),
     };
   }
 }

@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface SqlFailoverGroupConfig extends TerraformMetaArguments {
+export interface SqlFailoverGroupConfig extends cdktf.TerraformMetaArguments {
   readonly databases?: string[];
   readonly name: string;
   readonly resourceGroupName: string;
@@ -25,13 +24,38 @@ export interface SqlFailoverGroupConfig extends TerraformMetaArguments {
 export interface SqlFailoverGroupPartnerServers {
   readonly id: string;
 }
+
+function sqlFailoverGroupPartnerServersToTerraform(struct?: SqlFailoverGroupPartnerServers): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    id: cdktf.stringToTerraform(struct!.id),
+  }
+}
+
 export interface SqlFailoverGroupReadWriteEndpointFailoverPolicy {
   readonly graceMinutes?: number;
   readonly mode: string;
 }
+
+function sqlFailoverGroupReadWriteEndpointFailoverPolicyToTerraform(struct?: SqlFailoverGroupReadWriteEndpointFailoverPolicy): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    grace_minutes: cdktf.numberToTerraform(struct!.graceMinutes),
+    mode: cdktf.stringToTerraform(struct!.mode),
+  }
+}
+
 export interface SqlFailoverGroupReadonlyEndpointFailoverPolicy {
   readonly mode: string;
 }
+
+function sqlFailoverGroupReadonlyEndpointFailoverPolicyToTerraform(struct?: SqlFailoverGroupReadonlyEndpointFailoverPolicy): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    mode: cdktf.stringToTerraform(struct!.mode),
+  }
+}
+
 export interface SqlFailoverGroupTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -39,9 +63,20 @@ export interface SqlFailoverGroupTimeouts {
   readonly update?: string;
 }
 
+function sqlFailoverGroupTimeoutsToTerraform(struct?: SqlFailoverGroupTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class SqlFailoverGroup extends TerraformResource {
+export class SqlFailoverGroup extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -223,15 +258,15 @@ export class SqlFailoverGroup extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      databases: this._databases,
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      server_name: this._serverName,
-      tags: this._tags,
-      partner_servers: this._partnerServers,
-      read_write_endpoint_failover_policy: this._readWriteEndpointFailoverPolicy,
-      readonly_endpoint_failover_policy: this._readonlyEndpointFailoverPolicy,
-      timeouts: this._timeouts,
+      databases: cdktf.listMapper(cdktf.stringToTerraform)(this._databases),
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      server_name: cdktf.stringToTerraform(this._serverName),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      partner_servers: cdktf.listMapper(sqlFailoverGroupPartnerServersToTerraform)(this._partnerServers),
+      read_write_endpoint_failover_policy: cdktf.listMapper(sqlFailoverGroupReadWriteEndpointFailoverPolicyToTerraform)(this._readWriteEndpointFailoverPolicy),
+      readonly_endpoint_failover_policy: cdktf.listMapper(sqlFailoverGroupReadonlyEndpointFailoverPolicyToTerraform)(this._readonlyEndpointFailoverPolicy),
+      timeouts: sqlFailoverGroupTimeoutsToTerraform(this._timeouts),
     };
   }
 }

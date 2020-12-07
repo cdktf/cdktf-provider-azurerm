@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface MonitorActivityLogAlertConfig extends TerraformMetaArguments {
+export interface MonitorActivityLogAlertConfig extends cdktf.TerraformMetaArguments {
   readonly description?: string;
   readonly enabled?: boolean;
   readonly name: string;
@@ -25,6 +24,15 @@ export interface MonitorActivityLogAlertAction {
   readonly actionGroupId: string;
   readonly webhookProperties?: { [key: string]: string };
 }
+
+function monitorActivityLogAlertActionToTerraform(struct?: MonitorActivityLogAlertAction): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    action_group_id: cdktf.stringToTerraform(struct!.actionGroupId),
+    webhook_properties: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.webhookProperties),
+  }
+}
+
 export interface MonitorActivityLogAlertCriteria {
   readonly caller?: string;
   readonly category: string;
@@ -40,6 +48,26 @@ export interface MonitorActivityLogAlertCriteria {
   readonly status?: string;
   readonly subStatus?: string;
 }
+
+function monitorActivityLogAlertCriteriaToTerraform(struct?: MonitorActivityLogAlertCriteria): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    caller: cdktf.stringToTerraform(struct!.caller),
+    category: cdktf.stringToTerraform(struct!.category),
+    level: cdktf.stringToTerraform(struct!.level),
+    operation_name: cdktf.stringToTerraform(struct!.operationName),
+    recommendation_category: cdktf.stringToTerraform(struct!.recommendationCategory),
+    recommendation_impact: cdktf.stringToTerraform(struct!.recommendationImpact),
+    recommendation_type: cdktf.stringToTerraform(struct!.recommendationType),
+    resource_group: cdktf.stringToTerraform(struct!.resourceGroup),
+    resource_id: cdktf.stringToTerraform(struct!.resourceId),
+    resource_provider: cdktf.stringToTerraform(struct!.resourceProvider),
+    resource_type: cdktf.stringToTerraform(struct!.resourceType),
+    status: cdktf.stringToTerraform(struct!.status),
+    sub_status: cdktf.stringToTerraform(struct!.subStatus),
+  }
+}
+
 export interface MonitorActivityLogAlertTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -47,9 +75,20 @@ export interface MonitorActivityLogAlertTimeouts {
   readonly update?: string;
 }
 
+function monitorActivityLogAlertTimeoutsToTerraform(struct?: MonitorActivityLogAlertTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class MonitorActivityLogAlert extends TerraformResource {
+export class MonitorActivityLogAlert extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -224,15 +263,15 @@ export class MonitorActivityLogAlert extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      description: this._description,
-      enabled: this._enabled,
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      scopes: this._scopes,
-      tags: this._tags,
-      action: this._action,
-      criteria: this._criteria,
-      timeouts: this._timeouts,
+      description: cdktf.stringToTerraform(this._description),
+      enabled: cdktf.booleanToTerraform(this._enabled),
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      scopes: cdktf.listMapper(cdktf.stringToTerraform)(this._scopes),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      action: cdktf.listMapper(monitorActivityLogAlertActionToTerraform)(this._action),
+      criteria: cdktf.listMapper(monitorActivityLogAlertCriteriaToTerraform)(this._criteria),
+      timeouts: monitorActivityLogAlertTimeoutsToTerraform(this._timeouts),
     };
   }
 }

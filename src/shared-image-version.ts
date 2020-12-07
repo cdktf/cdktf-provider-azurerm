@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface SharedImageVersionConfig extends TerraformMetaArguments {
+export interface SharedImageVersionConfig extends cdktf.TerraformMetaArguments {
   readonly excludeFromLatest?: boolean;
   readonly galleryName: string;
   readonly imageName: string;
@@ -27,6 +26,16 @@ export interface SharedImageVersionTargetRegion {
   readonly regionalReplicaCount: number;
   readonly storageAccountType?: string;
 }
+
+function sharedImageVersionTargetRegionToTerraform(struct?: SharedImageVersionTargetRegion): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    name: cdktf.stringToTerraform(struct!.name),
+    regional_replica_count: cdktf.numberToTerraform(struct!.regionalReplicaCount),
+    storage_account_type: cdktf.stringToTerraform(struct!.storageAccountType),
+  }
+}
+
 export interface SharedImageVersionTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -34,9 +43,20 @@ export interface SharedImageVersionTimeouts {
   readonly update?: string;
 }
 
+function sharedImageVersionTimeoutsToTerraform(struct?: SharedImageVersionTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class SharedImageVersion extends TerraformResource {
+export class SharedImageVersion extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -239,17 +259,17 @@ export class SharedImageVersion extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      exclude_from_latest: this._excludeFromLatest,
-      gallery_name: this._galleryName,
-      image_name: this._imageName,
-      location: this._location,
-      managed_image_id: this._managedImageId,
-      name: this._name,
-      os_disk_snapshot_id: this._osDiskSnapshotId,
-      resource_group_name: this._resourceGroupName,
-      tags: this._tags,
-      target_region: this._targetRegion,
-      timeouts: this._timeouts,
+      exclude_from_latest: cdktf.booleanToTerraform(this._excludeFromLatest),
+      gallery_name: cdktf.stringToTerraform(this._galleryName),
+      image_name: cdktf.stringToTerraform(this._imageName),
+      location: cdktf.stringToTerraform(this._location),
+      managed_image_id: cdktf.stringToTerraform(this._managedImageId),
+      name: cdktf.stringToTerraform(this._name),
+      os_disk_snapshot_id: cdktf.stringToTerraform(this._osDiskSnapshotId),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      target_region: cdktf.listMapper(sharedImageVersionTargetRegionToTerraform)(this._targetRegion),
+      timeouts: sharedImageVersionTimeoutsToTerraform(this._timeouts),
     };
   }
 }

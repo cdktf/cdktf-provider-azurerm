@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface ServicebusTopicConfig extends TerraformMetaArguments {
+export interface ServicebusTopicConfig extends cdktf.TerraformMetaArguments {
   readonly autoDeleteOnIdle?: string;
   readonly defaultMessageTtl?: string;
   readonly duplicateDetectionHistoryTimeWindow?: string;
@@ -31,9 +30,20 @@ export interface ServicebusTopicTimeouts {
   readonly update?: string;
 }
 
+function servicebusTopicTimeoutsToTerraform(struct?: ServicebusTopicTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class ServicebusTopic extends TerraformResource {
+export class ServicebusTopic extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -296,20 +306,20 @@ export class ServicebusTopic extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      auto_delete_on_idle: this._autoDeleteOnIdle,
-      default_message_ttl: this._defaultMessageTtl,
-      duplicate_detection_history_time_window: this._duplicateDetectionHistoryTimeWindow,
-      enable_batched_operations: this._enableBatchedOperations,
-      enable_express: this._enableExpress,
-      enable_partitioning: this._enablePartitioning,
-      max_size_in_megabytes: this._maxSizeInMegabytes,
-      name: this._name,
-      namespace_name: this._namespaceName,
-      requires_duplicate_detection: this._requiresDuplicateDetection,
-      resource_group_name: this._resourceGroupName,
-      status: this._status,
-      support_ordering: this._supportOrdering,
-      timeouts: this._timeouts,
+      auto_delete_on_idle: cdktf.stringToTerraform(this._autoDeleteOnIdle),
+      default_message_ttl: cdktf.stringToTerraform(this._defaultMessageTtl),
+      duplicate_detection_history_time_window: cdktf.stringToTerraform(this._duplicateDetectionHistoryTimeWindow),
+      enable_batched_operations: cdktf.booleanToTerraform(this._enableBatchedOperations),
+      enable_express: cdktf.booleanToTerraform(this._enableExpress),
+      enable_partitioning: cdktf.booleanToTerraform(this._enablePartitioning),
+      max_size_in_megabytes: cdktf.numberToTerraform(this._maxSizeInMegabytes),
+      name: cdktf.stringToTerraform(this._name),
+      namespace_name: cdktf.stringToTerraform(this._namespaceName),
+      requires_duplicate_detection: cdktf.booleanToTerraform(this._requiresDuplicateDetection),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      status: cdktf.stringToTerraform(this._status),
+      support_ordering: cdktf.booleanToTerraform(this._supportOrdering),
+      timeouts: servicebusTopicTimeoutsToTerraform(this._timeouts),
     };
   }
 }

@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface ApiManagementIdentityProviderMicrosoftConfig extends TerraformMetaArguments {
+export interface ApiManagementIdentityProviderMicrosoftConfig extends cdktf.TerraformMetaArguments {
   readonly apiManagementName: string;
   readonly clientId: string;
   readonly clientSecret: string;
@@ -22,9 +21,20 @@ export interface ApiManagementIdentityProviderMicrosoftTimeouts {
   readonly update?: string;
 }
 
+function apiManagementIdentityProviderMicrosoftTimeoutsToTerraform(struct?: ApiManagementIdentityProviderMicrosoftTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class ApiManagementIdentityProviderMicrosoft extends TerraformResource {
+export class ApiManagementIdentityProviderMicrosoft extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -131,11 +141,11 @@ export class ApiManagementIdentityProviderMicrosoft extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      api_management_name: this._apiManagementName,
-      client_id: this._clientId,
-      client_secret: this._clientSecret,
-      resource_group_name: this._resourceGroupName,
-      timeouts: this._timeouts,
+      api_management_name: cdktf.stringToTerraform(this._apiManagementName),
+      client_id: cdktf.stringToTerraform(this._clientId),
+      client_secret: cdktf.stringToTerraform(this._clientSecret),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      timeouts: apiManagementIdentityProviderMicrosoftTimeoutsToTerraform(this._timeouts),
     };
   }
 }

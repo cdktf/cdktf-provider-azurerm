@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface AutomationDscNodeconfigurationConfig extends TerraformMetaArguments {
+export interface AutomationDscNodeconfigurationConfig extends cdktf.TerraformMetaArguments {
   readonly automationAccountName: string;
   readonly contentEmbedded: string;
   readonly name: string;
@@ -22,9 +21,20 @@ export interface AutomationDscNodeconfigurationTimeouts {
   readonly update?: string;
 }
 
+function automationDscNodeconfigurationTimeoutsToTerraform(struct?: AutomationDscNodeconfigurationTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class AutomationDscNodeconfiguration extends TerraformResource {
+export class AutomationDscNodeconfiguration extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -136,11 +146,11 @@ export class AutomationDscNodeconfiguration extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      automation_account_name: this._automationAccountName,
-      content_embedded: this._contentEmbedded,
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      timeouts: this._timeouts,
+      automation_account_name: cdktf.stringToTerraform(this._automationAccountName),
+      content_embedded: cdktf.stringToTerraform(this._contentEmbedded),
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      timeouts: automationDscNodeconfigurationTimeoutsToTerraform(this._timeouts),
     };
   }
 }

@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface RouteFilterConfig extends TerraformMetaArguments {
+export interface RouteFilterConfig extends cdktf.TerraformMetaArguments {
   readonly location: string;
   readonly name: string;
   readonly resourceGroupName: string;
@@ -22,6 +21,17 @@ export interface RouteFilterRule {
   readonly name?: string;
   readonly ruleType?: string;
 }
+
+function routeFilterRuleToTerraform(struct?: RouteFilterRule): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    access: cdktf.stringToTerraform(struct!.access),
+    communities: cdktf.listMapper(cdktf.stringToTerraform)(struct!.communities),
+    name: cdktf.stringToTerraform(struct!.name),
+    rule_type: cdktf.stringToTerraform(struct!.ruleType),
+  }
+}
+
 export interface RouteFilterTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -29,9 +39,20 @@ export interface RouteFilterTimeouts {
   readonly update?: string;
 }
 
+function routeFilterTimeoutsToTerraform(struct?: RouteFilterTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class RouteFilter extends TerraformResource {
+export class RouteFilter extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -158,12 +179,12 @@ export class RouteFilter extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      location: this._location,
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      rule: this._rule,
-      tags: this._tags,
-      timeouts: this._timeouts,
+      location: cdktf.stringToTerraform(this._location),
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      rule: cdktf.listMapper(routeFilterRuleToTerraform)(this._rule),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      timeouts: routeFilterTimeoutsToTerraform(this._timeouts),
     };
   }
 }

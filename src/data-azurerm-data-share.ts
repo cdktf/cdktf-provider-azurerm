@@ -2,19 +2,17 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformDataSource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
-import { ComplexComputedList } from "cdktf";
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataAzurermDataShareConfig extends TerraformMetaArguments {
+export interface DataAzurermDataShareConfig extends cdktf.TerraformMetaArguments {
   readonly accountId: string;
   readonly name: string;
   /** timeouts block */
   readonly timeouts?: DataAzurermDataShareTimeouts;
 }
-export class DataAzurermDataShareSnapshotSchedule extends ComplexComputedList {
+export class DataAzurermDataShareSnapshotSchedule extends cdktf.ComplexComputedList {
 
   // name - computed: true, optional: false, required: false
   public get name() {
@@ -35,9 +33,17 @@ export interface DataAzurermDataShareTimeouts {
   readonly read?: string;
 }
 
+function dataAzurermDataShareTimeoutsToTerraform(struct?: DataAzurermDataShareTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    read: cdktf.stringToTerraform(struct!.read),
+  }
+}
+
+
 // Resource
 
-export class DataAzurermDataShare extends TerraformDataSource {
+export class DataAzurermDataShare extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
@@ -136,9 +142,9 @@ export class DataAzurermDataShare extends TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      account_id: this._accountId,
-      name: this._name,
-      timeouts: this._timeouts,
+      account_id: cdktf.stringToTerraform(this._accountId),
+      name: cdktf.stringToTerraform(this._name),
+      timeouts: dataAzurermDataShareTimeoutsToTerraform(this._timeouts),
     };
   }
 }

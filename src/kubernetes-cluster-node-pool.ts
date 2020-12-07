@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface KubernetesClusterNodePoolConfig extends TerraformMetaArguments {
+export interface KubernetesClusterNodePoolConfig extends cdktf.TerraformMetaArguments {
   readonly availabilityZones?: string[];
   readonly enableAutoScaling?: boolean;
   readonly enableNodePublicIp?: boolean;
@@ -41,9 +40,20 @@ export interface KubernetesClusterNodePoolTimeouts {
   readonly update?: string;
 }
 
+function kubernetesClusterNodePoolTimeoutsToTerraform(struct?: KubernetesClusterNodePoolTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class KubernetesClusterNodePool extends TerraformResource {
+export class KubernetesClusterNodePool extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -476,30 +486,30 @@ export class KubernetesClusterNodePool extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      availability_zones: this._availabilityZones,
-      enable_auto_scaling: this._enableAutoScaling,
-      enable_node_public_ip: this._enableNodePublicIp,
-      eviction_policy: this._evictionPolicy,
-      kubernetes_cluster_id: this._kubernetesClusterId,
-      max_count: this._maxCount,
-      max_pods: this._maxPods,
-      min_count: this._minCount,
-      mode: this._mode,
-      name: this._name,
-      node_count: this._nodeCount,
-      node_labels: this._nodeLabels,
-      node_taints: this._nodeTaints,
-      orchestrator_version: this._orchestratorVersion,
-      os_disk_size_gb: this._osDiskSizeGb,
-      os_disk_type: this._osDiskType,
-      os_type: this._osType,
-      priority: this._priority,
-      proximity_placement_group_id: this._proximityPlacementGroupId,
-      spot_max_price: this._spotMaxPrice,
-      tags: this._tags,
-      vm_size: this._vmSize,
-      vnet_subnet_id: this._vnetSubnetId,
-      timeouts: this._timeouts,
+      availability_zones: cdktf.listMapper(cdktf.stringToTerraform)(this._availabilityZones),
+      enable_auto_scaling: cdktf.booleanToTerraform(this._enableAutoScaling),
+      enable_node_public_ip: cdktf.booleanToTerraform(this._enableNodePublicIp),
+      eviction_policy: cdktf.stringToTerraform(this._evictionPolicy),
+      kubernetes_cluster_id: cdktf.stringToTerraform(this._kubernetesClusterId),
+      max_count: cdktf.numberToTerraform(this._maxCount),
+      max_pods: cdktf.numberToTerraform(this._maxPods),
+      min_count: cdktf.numberToTerraform(this._minCount),
+      mode: cdktf.stringToTerraform(this._mode),
+      name: cdktf.stringToTerraform(this._name),
+      node_count: cdktf.numberToTerraform(this._nodeCount),
+      node_labels: cdktf.hashMapper(cdktf.anyToTerraform)(this._nodeLabels),
+      node_taints: cdktf.listMapper(cdktf.stringToTerraform)(this._nodeTaints),
+      orchestrator_version: cdktf.stringToTerraform(this._orchestratorVersion),
+      os_disk_size_gb: cdktf.numberToTerraform(this._osDiskSizeGb),
+      os_disk_type: cdktf.stringToTerraform(this._osDiskType),
+      os_type: cdktf.stringToTerraform(this._osType),
+      priority: cdktf.stringToTerraform(this._priority),
+      proximity_placement_group_id: cdktf.stringToTerraform(this._proximityPlacementGroupId),
+      spot_max_price: cdktf.numberToTerraform(this._spotMaxPrice),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      vm_size: cdktf.stringToTerraform(this._vmSize),
+      vnet_subnet_id: cdktf.stringToTerraform(this._vnetSubnetId),
+      timeouts: kubernetesClusterNodePoolTimeoutsToTerraform(this._timeouts),
     };
   }
 }

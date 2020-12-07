@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface NatGatewayPublicIpAssociationConfig extends TerraformMetaArguments {
+export interface NatGatewayPublicIpAssociationConfig extends cdktf.TerraformMetaArguments {
   readonly natGatewayId: string;
   readonly publicIpAddressId: string;
   /** timeouts block */
@@ -19,9 +18,19 @@ export interface NatGatewayPublicIpAssociationTimeouts {
   readonly read?: string;
 }
 
+function natGatewayPublicIpAssociationTimeoutsToTerraform(struct?: NatGatewayPublicIpAssociationTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+  }
+}
+
+
 // Resource
 
-export class NatGatewayPublicIpAssociation extends TerraformResource {
+export class NatGatewayPublicIpAssociation extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -100,9 +109,9 @@ export class NatGatewayPublicIpAssociation extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      nat_gateway_id: this._natGatewayId,
-      public_ip_address_id: this._publicIpAddressId,
-      timeouts: this._timeouts,
+      nat_gateway_id: cdktf.stringToTerraform(this._natGatewayId),
+      public_ip_address_id: cdktf.stringToTerraform(this._publicIpAddressId),
+      timeouts: natGatewayPublicIpAssociationTimeoutsToTerraform(this._timeouts),
     };
   }
 }

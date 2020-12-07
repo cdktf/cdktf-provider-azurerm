@@ -2,20 +2,17 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformDataSource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
-import { ComplexComputedList } from "cdktf";
-import { StringMap } from "cdktf";
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataAzurermPrivateLinkServiceConfig extends TerraformMetaArguments {
+export interface DataAzurermPrivateLinkServiceConfig extends cdktf.TerraformMetaArguments {
   readonly name: string;
   readonly resourceGroupName: string;
   /** timeouts block */
   readonly timeouts?: DataAzurermPrivateLinkServiceTimeouts;
 }
-export class DataAzurermPrivateLinkServiceNatIpConfiguration extends ComplexComputedList {
+export class DataAzurermPrivateLinkServiceNatIpConfiguration extends cdktf.ComplexComputedList {
 
   // name - computed: true, optional: false, required: false
   public get name() {
@@ -46,9 +43,17 @@ export interface DataAzurermPrivateLinkServiceTimeouts {
   readonly read?: string;
 }
 
+function dataAzurermPrivateLinkServiceTimeoutsToTerraform(struct?: DataAzurermPrivateLinkServiceTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    read: cdktf.stringToTerraform(struct!.read),
+  }
+}
+
+
 // Resource
 
-export class DataAzurermPrivateLinkService extends TerraformDataSource {
+export class DataAzurermPrivateLinkService extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
@@ -137,7 +142,7 @@ export class DataAzurermPrivateLinkService extends TerraformDataSource {
 
   // tags - computed: true, optional: false, required: false
   public tags(key: string): string {
-    return new StringMap(this, 'tags').lookup(key);
+    return new cdktf.StringMap(this, 'tags').lookup(key);
   }
 
   // visibility_subscription_ids - computed: true, optional: false, required: false
@@ -167,9 +172,9 @@ export class DataAzurermPrivateLinkService extends TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      timeouts: this._timeouts,
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      timeouts: dataAzurermPrivateLinkServiceTimeoutsToTerraform(this._timeouts),
     };
   }
 }

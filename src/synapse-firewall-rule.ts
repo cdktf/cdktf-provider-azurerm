@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface SynapseFirewallRuleConfig extends TerraformMetaArguments {
+export interface SynapseFirewallRuleConfig extends cdktf.TerraformMetaArguments {
   readonly endIpAddress: string;
   readonly name: string;
   readonly startIpAddress: string;
@@ -22,9 +21,20 @@ export interface SynapseFirewallRuleTimeouts {
   readonly update?: string;
 }
 
+function synapseFirewallRuleTimeoutsToTerraform(struct?: SynapseFirewallRuleTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class SynapseFirewallRule extends TerraformResource {
+export class SynapseFirewallRule extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -131,11 +141,11 @@ export class SynapseFirewallRule extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      end_ip_address: this._endIpAddress,
-      name: this._name,
-      start_ip_address: this._startIpAddress,
-      synapse_workspace_id: this._synapseWorkspaceId,
-      timeouts: this._timeouts,
+      end_ip_address: cdktf.stringToTerraform(this._endIpAddress),
+      name: cdktf.stringToTerraform(this._name),
+      start_ip_address: cdktf.stringToTerraform(this._startIpAddress),
+      synapse_workspace_id: cdktf.stringToTerraform(this._synapseWorkspaceId),
+      timeouts: synapseFirewallRuleTimeoutsToTerraform(this._timeouts),
     };
   }
 }

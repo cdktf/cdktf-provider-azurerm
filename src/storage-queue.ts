@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface StorageQueueConfig extends TerraformMetaArguments {
+export interface StorageQueueConfig extends cdktf.TerraformMetaArguments {
   readonly metadata?: { [key: string]: string };
   readonly name: string;
   readonly storageAccountName: string;
@@ -21,9 +20,20 @@ export interface StorageQueueTimeouts {
   readonly update?: string;
 }
 
+function storageQueueTimeoutsToTerraform(struct?: StorageQueueTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class StorageQueue extends TerraformResource {
+export class StorageQueue extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -119,10 +129,10 @@ export class StorageQueue extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      metadata: this._metadata,
-      name: this._name,
-      storage_account_name: this._storageAccountName,
-      timeouts: this._timeouts,
+      metadata: cdktf.hashMapper(cdktf.anyToTerraform)(this._metadata),
+      name: cdktf.stringToTerraform(this._name),
+      storage_account_name: cdktf.stringToTerraform(this._storageAccountName),
+      timeouts: storageQueueTimeoutsToTerraform(this._timeouts),
     };
   }
 }

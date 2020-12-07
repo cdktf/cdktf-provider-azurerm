@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface IntegrationServiceEnvironmentConfig extends TerraformMetaArguments {
+export interface IntegrationServiceEnvironmentConfig extends cdktf.TerraformMetaArguments {
   readonly accessEndpointType: string;
   readonly location: string;
   readonly name: string;
@@ -25,9 +24,20 @@ export interface IntegrationServiceEnvironmentTimeouts {
   readonly update?: string;
 }
 
+function integrationServiceEnvironmentTimeoutsToTerraform(struct?: IntegrationServiceEnvironmentTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class IntegrationServiceEnvironment extends TerraformResource {
+export class IntegrationServiceEnvironment extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -202,14 +212,14 @@ export class IntegrationServiceEnvironment extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      access_endpoint_type: this._accessEndpointType,
-      location: this._location,
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      sku_name: this._skuName,
-      tags: this._tags,
-      virtual_network_subnet_ids: this._virtualNetworkSubnetIds,
-      timeouts: this._timeouts,
+      access_endpoint_type: cdktf.stringToTerraform(this._accessEndpointType),
+      location: cdktf.stringToTerraform(this._location),
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      sku_name: cdktf.stringToTerraform(this._skuName),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      virtual_network_subnet_ids: cdktf.listMapper(cdktf.stringToTerraform)(this._virtualNetworkSubnetIds),
+      timeouts: integrationServiceEnvironmentTimeoutsToTerraform(this._timeouts),
     };
   }
 }

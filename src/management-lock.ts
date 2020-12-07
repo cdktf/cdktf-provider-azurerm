@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface ManagementLockConfig extends TerraformMetaArguments {
+export interface ManagementLockConfig extends cdktf.TerraformMetaArguments {
   readonly lockLevel: string;
   readonly name: string;
   readonly notes?: string;
@@ -22,9 +21,20 @@ export interface ManagementLockTimeouts {
   readonly update?: string;
 }
 
+function managementLockTimeoutsToTerraform(struct?: ManagementLockTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class ManagementLock extends TerraformResource {
+export class ManagementLock extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -134,11 +144,11 @@ export class ManagementLock extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      lock_level: this._lockLevel,
-      name: this._name,
-      notes: this._notes,
-      scope: this._scope,
-      timeouts: this._timeouts,
+      lock_level: cdktf.stringToTerraform(this._lockLevel),
+      name: cdktf.stringToTerraform(this._name),
+      notes: cdktf.stringToTerraform(this._notes),
+      scope: cdktf.stringToTerraform(this._scope),
+      timeouts: managementLockTimeoutsToTerraform(this._timeouts),
     };
   }
 }

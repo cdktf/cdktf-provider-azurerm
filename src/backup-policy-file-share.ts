@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface BackupPolicyFileShareConfig extends TerraformMetaArguments {
+export interface BackupPolicyFileShareConfig extends cdktf.TerraformMetaArguments {
   readonly name: string;
   readonly recoveryVaultName: string;
   readonly resourceGroupName: string;
@@ -23,9 +22,26 @@ export interface BackupPolicyFileShareBackup {
   readonly frequency: string;
   readonly time: string;
 }
+
+function backupPolicyFileShareBackupToTerraform(struct?: BackupPolicyFileShareBackup): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    frequency: cdktf.stringToTerraform(struct!.frequency),
+    time: cdktf.stringToTerraform(struct!.time),
+  }
+}
+
 export interface BackupPolicyFileShareRetentionDaily {
   readonly count: number;
 }
+
+function backupPolicyFileShareRetentionDailyToTerraform(struct?: BackupPolicyFileShareRetentionDaily): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    count: cdktf.numberToTerraform(struct!.count),
+  }
+}
+
 export interface BackupPolicyFileShareTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -33,9 +49,20 @@ export interface BackupPolicyFileShareTimeouts {
   readonly update?: string;
 }
 
+function backupPolicyFileShareTimeoutsToTerraform(struct?: BackupPolicyFileShareTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class BackupPolicyFileShare extends TerraformResource {
+export class BackupPolicyFileShare extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -173,13 +200,13 @@ export class BackupPolicyFileShare extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      name: this._name,
-      recovery_vault_name: this._recoveryVaultName,
-      resource_group_name: this._resourceGroupName,
-      timezone: this._timezone,
-      backup: this._backup,
-      retention_daily: this._retentionDaily,
-      timeouts: this._timeouts,
+      name: cdktf.stringToTerraform(this._name),
+      recovery_vault_name: cdktf.stringToTerraform(this._recoveryVaultName),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      timezone: cdktf.stringToTerraform(this._timezone),
+      backup: cdktf.listMapper(backupPolicyFileShareBackupToTerraform)(this._backup),
+      retention_daily: cdktf.listMapper(backupPolicyFileShareRetentionDailyToTerraform)(this._retentionDaily),
+      timeouts: backupPolicyFileShareTimeoutsToTerraform(this._timeouts),
     };
   }
 }

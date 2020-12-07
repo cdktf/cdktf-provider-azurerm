@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface RecoveryServicesVaultConfig extends TerraformMetaArguments {
+export interface RecoveryServicesVaultConfig extends cdktf.TerraformMetaArguments {
   readonly location: string;
   readonly name: string;
   readonly resourceGroupName: string;
@@ -24,9 +23,20 @@ export interface RecoveryServicesVaultTimeouts {
   readonly update?: string;
 }
 
+function recoveryServicesVaultTimeoutsToTerraform(struct?: RecoveryServicesVaultTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class RecoveryServicesVault extends TerraformResource {
+export class RecoveryServicesVault extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -167,13 +177,13 @@ export class RecoveryServicesVault extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      location: this._location,
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      sku: this._sku,
-      soft_delete_enabled: this._softDeleteEnabled,
-      tags: this._tags,
-      timeouts: this._timeouts,
+      location: cdktf.stringToTerraform(this._location),
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      sku: cdktf.stringToTerraform(this._sku),
+      soft_delete_enabled: cdktf.booleanToTerraform(this._softDeleteEnabled),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      timeouts: recoveryServicesVaultTimeoutsToTerraform(this._timeouts),
     };
   }
 }

@@ -2,20 +2,17 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformDataSource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
-import { ComplexComputedList } from "cdktf";
-import { StringMap } from "cdktf";
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataAzurermKeyVaultConfig extends TerraformMetaArguments {
+export interface DataAzurermKeyVaultConfig extends cdktf.TerraformMetaArguments {
   readonly name: string;
   readonly resourceGroupName: string;
   /** timeouts block */
   readonly timeouts?: DataAzurermKeyVaultTimeouts;
 }
-export class DataAzurermKeyVaultAccessPolicy extends ComplexComputedList {
+export class DataAzurermKeyVaultAccessPolicy extends cdktf.ComplexComputedList {
 
   // application_id - computed: true, optional: false, required: false
   public get applicationId() {
@@ -52,7 +49,7 @@ export class DataAzurermKeyVaultAccessPolicy extends ComplexComputedList {
     return this.getStringAttribute('tenant_id');
   }
 }
-export class DataAzurermKeyVaultNetworkAcls extends ComplexComputedList {
+export class DataAzurermKeyVaultNetworkAcls extends cdktf.ComplexComputedList {
 
   // bypass - computed: true, optional: false, required: false
   public get bypass() {
@@ -78,9 +75,17 @@ export interface DataAzurermKeyVaultTimeouts {
   readonly read?: string;
 }
 
+function dataAzurermKeyVaultTimeoutsToTerraform(struct?: DataAzurermKeyVaultTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    read: cdktf.stringToTerraform(struct!.read),
+  }
+}
+
+
 // Resource
 
-export class DataAzurermKeyVault extends TerraformDataSource {
+export class DataAzurermKeyVault extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
@@ -184,7 +189,7 @@ export class DataAzurermKeyVault extends TerraformDataSource {
 
   // tags - computed: true, optional: false, required: false
   public tags(key: string): string {
-    return new StringMap(this, 'tags').lookup(key);
+    return new cdktf.StringMap(this, 'tags').lookup(key);
   }
 
   // tenant_id - computed: true, optional: false, required: false
@@ -219,9 +224,9 @@ export class DataAzurermKeyVault extends TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      timeouts: this._timeouts,
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      timeouts: dataAzurermKeyVaultTimeoutsToTerraform(this._timeouts),
     };
   }
 }

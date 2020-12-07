@@ -2,21 +2,18 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformDataSource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
-import { ComplexComputedList } from "cdktf";
-import { StringMap } from "cdktf";
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataAzurermNotificationHubConfig extends TerraformMetaArguments {
+export interface DataAzurermNotificationHubConfig extends cdktf.TerraformMetaArguments {
   readonly name: string;
   readonly namespaceName: string;
   readonly resourceGroupName: string;
   /** timeouts block */
   readonly timeouts?: DataAzurermNotificationHubTimeouts;
 }
-export class DataAzurermNotificationHubApnsCredential extends ComplexComputedList {
+export class DataAzurermNotificationHubApnsCredential extends cdktf.ComplexComputedList {
 
   // application_mode - computed: true, optional: false, required: false
   public get applicationMode() {
@@ -43,7 +40,7 @@ export class DataAzurermNotificationHubApnsCredential extends ComplexComputedLis
     return this.getStringAttribute('token');
   }
 }
-export class DataAzurermNotificationHubGcmCredential extends ComplexComputedList {
+export class DataAzurermNotificationHubGcmCredential extends cdktf.ComplexComputedList {
 
   // api_key - computed: true, optional: false, required: false
   public get apiKey() {
@@ -54,9 +51,17 @@ export interface DataAzurermNotificationHubTimeouts {
   readonly read?: string;
 }
 
+function dataAzurermNotificationHubTimeoutsToTerraform(struct?: DataAzurermNotificationHubTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    read: cdktf.stringToTerraform(struct!.read),
+  }
+}
+
+
 // Resource
 
-export class DataAzurermNotificationHub extends TerraformDataSource {
+export class DataAzurermNotificationHub extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
@@ -144,7 +149,7 @@ export class DataAzurermNotificationHub extends TerraformDataSource {
 
   // tags - computed: true, optional: false, required: false
   public tags(key: string): string {
-    return new StringMap(this, 'tags').lookup(key);
+    return new cdktf.StringMap(this, 'tags').lookup(key);
   }
 
   // timeouts - computed: false, optional: true, required: false
@@ -169,10 +174,10 @@ export class DataAzurermNotificationHub extends TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      name: this._name,
-      namespace_name: this._namespaceName,
-      resource_group_name: this._resourceGroupName,
-      timeouts: this._timeouts,
+      name: cdktf.stringToTerraform(this._name),
+      namespace_name: cdktf.stringToTerraform(this._namespaceName),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      timeouts: dataAzurermNotificationHubTimeoutsToTerraform(this._timeouts),
     };
   }
 }

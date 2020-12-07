@@ -2,13 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformDataSource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
-import { ComplexComputedList } from "cdktf";
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataAzurermApiManagementApiConfig extends TerraformMetaArguments {
+export interface DataAzurermApiManagementApiConfig extends cdktf.TerraformMetaArguments {
   readonly apiManagementName: string;
   readonly name: string;
   readonly resourceGroupName: string;
@@ -16,7 +14,7 @@ export interface DataAzurermApiManagementApiConfig extends TerraformMetaArgument
   /** timeouts block */
   readonly timeouts?: DataAzurermApiManagementApiTimeouts;
 }
-export class DataAzurermApiManagementApiSubscriptionKeyParameterNames extends ComplexComputedList {
+export class DataAzurermApiManagementApiSubscriptionKeyParameterNames extends cdktf.ComplexComputedList {
 
   // header - computed: true, optional: false, required: false
   public get header() {
@@ -32,9 +30,17 @@ export interface DataAzurermApiManagementApiTimeouts {
   readonly read?: string;
 }
 
+function dataAzurermApiManagementApiTimeoutsToTerraform(struct?: DataAzurermApiManagementApiTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    read: cdktf.stringToTerraform(struct!.read),
+  }
+}
+
+
 // Resource
 
-export class DataAzurermApiManagementApi extends TerraformDataSource {
+export class DataAzurermApiManagementApi extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
@@ -201,11 +207,11 @@ export class DataAzurermApiManagementApi extends TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      api_management_name: this._apiManagementName,
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      revision: this._revision,
-      timeouts: this._timeouts,
+      api_management_name: cdktf.stringToTerraform(this._apiManagementName),
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      revision: cdktf.stringToTerraform(this._revision),
+      timeouts: dataAzurermApiManagementApiTimeoutsToTerraform(this._timeouts),
     };
   }
 }

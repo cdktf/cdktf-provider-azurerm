@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface LogAnalyticsClusterConfig extends TerraformMetaArguments {
+export interface LogAnalyticsClusterConfig extends cdktf.TerraformMetaArguments {
   readonly location: string;
   readonly name: string;
   readonly resourceGroupName: string;
@@ -21,6 +20,14 @@ export interface LogAnalyticsClusterConfig extends TerraformMetaArguments {
 export interface LogAnalyticsClusterIdentity {
   readonly type: string;
 }
+
+function logAnalyticsClusterIdentityToTerraform(struct?: LogAnalyticsClusterIdentity): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    type: cdktf.stringToTerraform(struct!.type),
+  }
+}
+
 export interface LogAnalyticsClusterTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -28,9 +35,20 @@ export interface LogAnalyticsClusterTimeouts {
   readonly update?: string;
 }
 
+function logAnalyticsClusterTimeoutsToTerraform(struct?: LogAnalyticsClusterTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class LogAnalyticsCluster extends TerraformResource {
+export class LogAnalyticsCluster extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -176,13 +194,13 @@ export class LogAnalyticsCluster extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      location: this._location,
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      size_gb: this._sizeGb,
-      tags: this._tags,
-      identity: this._identity,
-      timeouts: this._timeouts,
+      location: cdktf.stringToTerraform(this._location),
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      size_gb: cdktf.numberToTerraform(this._sizeGb),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      identity: cdktf.listMapper(logAnalyticsClusterIdentityToTerraform)(this._identity),
+      timeouts: logAnalyticsClusterTimeoutsToTerraform(this._timeouts),
     };
   }
 }

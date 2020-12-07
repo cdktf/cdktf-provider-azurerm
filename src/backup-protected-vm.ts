@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface BackupProtectedVmConfig extends TerraformMetaArguments {
+export interface BackupProtectedVmConfig extends cdktf.TerraformMetaArguments {
   readonly backupPolicyId: string;
   readonly recoveryVaultName: string;
   readonly resourceGroupName: string;
@@ -23,9 +22,20 @@ export interface BackupProtectedVmTimeouts {
   readonly update?: string;
 }
 
+function backupProtectedVmTimeoutsToTerraform(struct?: BackupProtectedVmTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class BackupProtectedVm extends TerraformResource {
+export class BackupProtectedVm extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -149,12 +159,12 @@ export class BackupProtectedVm extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      backup_policy_id: this._backupPolicyId,
-      recovery_vault_name: this._recoveryVaultName,
-      resource_group_name: this._resourceGroupName,
-      source_vm_id: this._sourceVmId,
-      tags: this._tags,
-      timeouts: this._timeouts,
+      backup_policy_id: cdktf.stringToTerraform(this._backupPolicyId),
+      recovery_vault_name: cdktf.stringToTerraform(this._recoveryVaultName),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      source_vm_id: cdktf.stringToTerraform(this._sourceVmId),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      timeouts: backupProtectedVmTimeoutsToTerraform(this._timeouts),
     };
   }
 }

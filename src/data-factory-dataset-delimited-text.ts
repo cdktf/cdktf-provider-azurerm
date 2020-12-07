@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataFactoryDatasetDelimitedTextConfig extends TerraformMetaArguments {
+export interface DataFactoryDatasetDelimitedTextConfig extends cdktf.TerraformMetaArguments {
   readonly additionalProperties?: { [key: string]: string };
   readonly annotations?: string[];
   readonly columnDelimiter?: string;
@@ -38,16 +37,46 @@ export interface DataFactoryDatasetDelimitedTextAzureBlobStorageLocation {
   readonly filename: string;
   readonly path: string;
 }
+
+function dataFactoryDatasetDelimitedTextAzureBlobStorageLocationToTerraform(struct?: DataFactoryDatasetDelimitedTextAzureBlobStorageLocation): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    container: cdktf.stringToTerraform(struct!.container),
+    filename: cdktf.stringToTerraform(struct!.filename),
+    path: cdktf.stringToTerraform(struct!.path),
+  }
+}
+
 export interface DataFactoryDatasetDelimitedTextHttpServerLocation {
   readonly filename: string;
   readonly path: string;
   readonly relativeUrl: string;
 }
+
+function dataFactoryDatasetDelimitedTextHttpServerLocationToTerraform(struct?: DataFactoryDatasetDelimitedTextHttpServerLocation): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    filename: cdktf.stringToTerraform(struct!.filename),
+    path: cdktf.stringToTerraform(struct!.path),
+    relative_url: cdktf.stringToTerraform(struct!.relativeUrl),
+  }
+}
+
 export interface DataFactoryDatasetDelimitedTextSchemaColumn {
   readonly description?: string;
   readonly name: string;
   readonly type?: string;
 }
+
+function dataFactoryDatasetDelimitedTextSchemaColumnToTerraform(struct?: DataFactoryDatasetDelimitedTextSchemaColumn): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    description: cdktf.stringToTerraform(struct!.description),
+    name: cdktf.stringToTerraform(struct!.name),
+    type: cdktf.stringToTerraform(struct!.type),
+  }
+}
+
 export interface DataFactoryDatasetDelimitedTextTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -55,9 +84,20 @@ export interface DataFactoryDatasetDelimitedTextTimeouts {
   readonly update?: string;
 }
 
+function dataFactoryDatasetDelimitedTextTimeoutsToTerraform(struct?: DataFactoryDatasetDelimitedTextTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class DataFactoryDatasetDelimitedText extends TerraformResource {
+export class DataFactoryDatasetDelimitedText extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -419,26 +459,26 @@ export class DataFactoryDatasetDelimitedText extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      additional_properties: this._additionalProperties,
-      annotations: this._annotations,
-      column_delimiter: this._columnDelimiter,
-      data_factory_name: this._dataFactoryName,
-      description: this._description,
-      encoding: this._encoding,
-      escape_character: this._escapeCharacter,
-      first_row_as_header: this._firstRowAsHeader,
-      folder: this._folder,
-      linked_service_name: this._linkedServiceName,
-      name: this._name,
-      null_value: this._nullValue,
-      parameters: this._parameters,
-      quote_character: this._quoteCharacter,
-      resource_group_name: this._resourceGroupName,
-      row_delimiter: this._rowDelimiter,
-      azure_blob_storage_location: this._azureBlobStorageLocation,
-      http_server_location: this._httpServerLocation,
-      schema_column: this._schemaColumn,
-      timeouts: this._timeouts,
+      additional_properties: cdktf.hashMapper(cdktf.anyToTerraform)(this._additionalProperties),
+      annotations: cdktf.listMapper(cdktf.stringToTerraform)(this._annotations),
+      column_delimiter: cdktf.stringToTerraform(this._columnDelimiter),
+      data_factory_name: cdktf.stringToTerraform(this._dataFactoryName),
+      description: cdktf.stringToTerraform(this._description),
+      encoding: cdktf.stringToTerraform(this._encoding),
+      escape_character: cdktf.stringToTerraform(this._escapeCharacter),
+      first_row_as_header: cdktf.booleanToTerraform(this._firstRowAsHeader),
+      folder: cdktf.stringToTerraform(this._folder),
+      linked_service_name: cdktf.stringToTerraform(this._linkedServiceName),
+      name: cdktf.stringToTerraform(this._name),
+      null_value: cdktf.stringToTerraform(this._nullValue),
+      parameters: cdktf.hashMapper(cdktf.anyToTerraform)(this._parameters),
+      quote_character: cdktf.stringToTerraform(this._quoteCharacter),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      row_delimiter: cdktf.stringToTerraform(this._rowDelimiter),
+      azure_blob_storage_location: cdktf.listMapper(dataFactoryDatasetDelimitedTextAzureBlobStorageLocationToTerraform)(this._azureBlobStorageLocation),
+      http_server_location: cdktf.listMapper(dataFactoryDatasetDelimitedTextHttpServerLocationToTerraform)(this._httpServerLocation),
+      schema_column: cdktf.listMapper(dataFactoryDatasetDelimitedTextSchemaColumnToTerraform)(this._schemaColumn),
+      timeouts: dataFactoryDatasetDelimitedTextTimeoutsToTerraform(this._timeouts),
     };
   }
 }

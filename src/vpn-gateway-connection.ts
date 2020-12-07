@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface VpnGatewayConnectionConfig extends TerraformMetaArguments {
+export interface VpnGatewayConnectionConfig extends cdktf.TerraformMetaArguments {
   readonly internetSecurityEnabled?: boolean;
   readonly name: string;
   readonly remoteVpnSiteId: string;
@@ -23,12 +22,32 @@ export interface VpnGatewayConnectionRouting {
   readonly associatedRouteTable: string;
   readonly propagatedRouteTables: string[];
 }
+
+function vpnGatewayConnectionRoutingToTerraform(struct?: VpnGatewayConnectionRouting): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    associated_route_table: cdktf.stringToTerraform(struct!.associatedRouteTable),
+    propagated_route_tables: cdktf.listMapper(cdktf.stringToTerraform)(struct!.propagatedRouteTables),
+  }
+}
+
 export interface VpnGatewayConnectionTimeouts {
   readonly create?: string;
   readonly delete?: string;
   readonly read?: string;
   readonly update?: string;
 }
+
+function vpnGatewayConnectionTimeoutsToTerraform(struct?: VpnGatewayConnectionTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
 export interface VpnGatewayConnectionVpnLinkIpsecPolicy {
   readonly dhGroup: string;
   readonly encryptionAlgorithm: string;
@@ -39,6 +58,21 @@ export interface VpnGatewayConnectionVpnLinkIpsecPolicy {
   readonly saDataSizeKb: number;
   readonly saLifetimeSec: number;
 }
+
+function vpnGatewayConnectionVpnLinkIpsecPolicyToTerraform(struct?: VpnGatewayConnectionVpnLinkIpsecPolicy): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    dh_group: cdktf.stringToTerraform(struct!.dhGroup),
+    encryption_algorithm: cdktf.stringToTerraform(struct!.encryptionAlgorithm),
+    ike_encryption_algorithm: cdktf.stringToTerraform(struct!.ikeEncryptionAlgorithm),
+    ike_integrity_algorithm: cdktf.stringToTerraform(struct!.ikeIntegrityAlgorithm),
+    integrity_algorithm: cdktf.stringToTerraform(struct!.integrityAlgorithm),
+    pfs_group: cdktf.stringToTerraform(struct!.pfsGroup),
+    sa_data_size_kb: cdktf.numberToTerraform(struct!.saDataSizeKb),
+    sa_lifetime_sec: cdktf.numberToTerraform(struct!.saLifetimeSec),
+  }
+}
+
 export interface VpnGatewayConnectionVpnLink {
   readonly bandwidthMbps?: number;
   readonly bgpEnabled?: boolean;
@@ -54,9 +88,27 @@ export interface VpnGatewayConnectionVpnLink {
   readonly ipsecPolicy?: VpnGatewayConnectionVpnLinkIpsecPolicy[];
 }
 
+function vpnGatewayConnectionVpnLinkToTerraform(struct?: VpnGatewayConnectionVpnLink): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    bandwidth_mbps: cdktf.numberToTerraform(struct!.bandwidthMbps),
+    bgp_enabled: cdktf.booleanToTerraform(struct!.bgpEnabled),
+    local_azure_ip_address_enabled: cdktf.booleanToTerraform(struct!.localAzureIpAddressEnabled),
+    name: cdktf.stringToTerraform(struct!.name),
+    policy_based_traffic_selector_enabled: cdktf.booleanToTerraform(struct!.policyBasedTrafficSelectorEnabled),
+    protocol: cdktf.stringToTerraform(struct!.protocol),
+    ratelimit_enabled: cdktf.booleanToTerraform(struct!.ratelimitEnabled),
+    route_weight: cdktf.numberToTerraform(struct!.routeWeight),
+    shared_key: cdktf.stringToTerraform(struct!.sharedKey),
+    vpn_site_link_id: cdktf.stringToTerraform(struct!.vpnSiteLinkId),
+    ipsec_policy: cdktf.listMapper(vpnGatewayConnectionVpnLinkIpsecPolicyToTerraform)(struct!.ipsecPolicy),
+  }
+}
+
+
 // Resource
 
-export class VpnGatewayConnection extends TerraformResource {
+export class VpnGatewayConnection extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -197,13 +249,13 @@ export class VpnGatewayConnection extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      internet_security_enabled: this._internetSecurityEnabled,
-      name: this._name,
-      remote_vpn_site_id: this._remoteVpnSiteId,
-      vpn_gateway_id: this._vpnGatewayId,
-      routing: this._routing,
-      timeouts: this._timeouts,
-      vpn_link: this._vpnLink,
+      internet_security_enabled: cdktf.booleanToTerraform(this._internetSecurityEnabled),
+      name: cdktf.stringToTerraform(this._name),
+      remote_vpn_site_id: cdktf.stringToTerraform(this._remoteVpnSiteId),
+      vpn_gateway_id: cdktf.stringToTerraform(this._vpnGatewayId),
+      routing: cdktf.listMapper(vpnGatewayConnectionRoutingToTerraform)(this._routing),
+      timeouts: vpnGatewayConnectionTimeoutsToTerraform(this._timeouts),
+      vpn_link: cdktf.listMapper(vpnGatewayConnectionVpnLinkToTerraform)(this._vpnLink),
     };
   }
 }

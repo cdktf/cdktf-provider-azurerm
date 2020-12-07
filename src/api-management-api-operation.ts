@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface ApiManagementApiOperationConfig extends TerraformMetaArguments {
+export interface ApiManagementApiOperationConfig extends cdktf.TerraformMetaArguments {
   readonly apiManagementName: string;
   readonly apiName: string;
   readonly description?: string;
@@ -33,6 +32,19 @@ export interface ApiManagementApiOperationRequestHeader {
   readonly type: string;
   readonly values?: string[];
 }
+
+function apiManagementApiOperationRequestHeaderToTerraform(struct?: ApiManagementApiOperationRequestHeader): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    default_value: cdktf.stringToTerraform(struct!.defaultValue),
+    description: cdktf.stringToTerraform(struct!.description),
+    name: cdktf.stringToTerraform(struct!.name),
+    required: cdktf.booleanToTerraform(struct!.required),
+    type: cdktf.stringToTerraform(struct!.type),
+    values: cdktf.listMapper(cdktf.stringToTerraform)(struct!.values),
+  }
+}
+
 export interface ApiManagementApiOperationRequestQueryParameter {
   readonly defaultValue?: string;
   readonly description?: string;
@@ -41,6 +53,19 @@ export interface ApiManagementApiOperationRequestQueryParameter {
   readonly type: string;
   readonly values?: string[];
 }
+
+function apiManagementApiOperationRequestQueryParameterToTerraform(struct?: ApiManagementApiOperationRequestQueryParameter): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    default_value: cdktf.stringToTerraform(struct!.defaultValue),
+    description: cdktf.stringToTerraform(struct!.description),
+    name: cdktf.stringToTerraform(struct!.name),
+    required: cdktf.booleanToTerraform(struct!.required),
+    type: cdktf.stringToTerraform(struct!.type),
+    values: cdktf.listMapper(cdktf.stringToTerraform)(struct!.values),
+  }
+}
+
 export interface ApiManagementApiOperationRequestRepresentationFormParameter {
   readonly defaultValue?: string;
   readonly description?: string;
@@ -49,6 +74,19 @@ export interface ApiManagementApiOperationRequestRepresentationFormParameter {
   readonly type: string;
   readonly values?: string[];
 }
+
+function apiManagementApiOperationRequestRepresentationFormParameterToTerraform(struct?: ApiManagementApiOperationRequestRepresentationFormParameter): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    default_value: cdktf.stringToTerraform(struct!.defaultValue),
+    description: cdktf.stringToTerraform(struct!.description),
+    name: cdktf.stringToTerraform(struct!.name),
+    required: cdktf.booleanToTerraform(struct!.required),
+    type: cdktf.stringToTerraform(struct!.type),
+    values: cdktf.listMapper(cdktf.stringToTerraform)(struct!.values),
+  }
+}
+
 export interface ApiManagementApiOperationRequestRepresentation {
   readonly contentType: string;
   readonly sample?: string;
@@ -57,6 +95,18 @@ export interface ApiManagementApiOperationRequestRepresentation {
   /** form_parameter block */
   readonly formParameter?: ApiManagementApiOperationRequestRepresentationFormParameter[];
 }
+
+function apiManagementApiOperationRequestRepresentationToTerraform(struct?: ApiManagementApiOperationRequestRepresentation): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    content_type: cdktf.stringToTerraform(struct!.contentType),
+    sample: cdktf.stringToTerraform(struct!.sample),
+    schema_id: cdktf.stringToTerraform(struct!.schemaId),
+    type_name: cdktf.stringToTerraform(struct!.typeName),
+    form_parameter: cdktf.listMapper(apiManagementApiOperationRequestRepresentationFormParameterToTerraform)(struct!.formParameter),
+  }
+}
+
 export interface ApiManagementApiOperationRequest {
   readonly description?: string;
   /** header block */
@@ -66,6 +116,17 @@ export interface ApiManagementApiOperationRequest {
   /** representation block */
   readonly representation?: ApiManagementApiOperationRequestRepresentation[];
 }
+
+function apiManagementApiOperationRequestToTerraform(struct?: ApiManagementApiOperationRequest): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    description: cdktf.stringToTerraform(struct!.description),
+    header: cdktf.listMapper(apiManagementApiOperationRequestHeaderToTerraform)(struct!.header),
+    query_parameter: cdktf.listMapper(apiManagementApiOperationRequestQueryParameterToTerraform)(struct!.queryParameter),
+    representation: cdktf.listMapper(apiManagementApiOperationRequestRepresentationToTerraform)(struct!.representation),
+  }
+}
+
 export interface ApiManagementApiOperationResponseHeader {
   readonly defaultValue?: string;
   readonly description?: string;
@@ -74,6 +135,19 @@ export interface ApiManagementApiOperationResponseHeader {
   readonly type: string;
   readonly values?: string[];
 }
+
+function apiManagementApiOperationResponseHeaderToTerraform(struct?: ApiManagementApiOperationResponseHeader): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    default_value: cdktf.stringToTerraform(struct!.defaultValue),
+    description: cdktf.stringToTerraform(struct!.description),
+    name: cdktf.stringToTerraform(struct!.name),
+    required: cdktf.booleanToTerraform(struct!.required),
+    type: cdktf.stringToTerraform(struct!.type),
+    values: cdktf.listMapper(cdktf.stringToTerraform)(struct!.values),
+  }
+}
+
 export interface ApiManagementApiOperationResponseRepresentationFormParameter {
   readonly defaultValue?: string;
   readonly description?: string;
@@ -82,6 +156,19 @@ export interface ApiManagementApiOperationResponseRepresentationFormParameter {
   readonly type: string;
   readonly values?: string[];
 }
+
+function apiManagementApiOperationResponseRepresentationFormParameterToTerraform(struct?: ApiManagementApiOperationResponseRepresentationFormParameter): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    default_value: cdktf.stringToTerraform(struct!.defaultValue),
+    description: cdktf.stringToTerraform(struct!.description),
+    name: cdktf.stringToTerraform(struct!.name),
+    required: cdktf.booleanToTerraform(struct!.required),
+    type: cdktf.stringToTerraform(struct!.type),
+    values: cdktf.listMapper(cdktf.stringToTerraform)(struct!.values),
+  }
+}
+
 export interface ApiManagementApiOperationResponseRepresentation {
   readonly contentType: string;
   readonly sample?: string;
@@ -90,6 +177,18 @@ export interface ApiManagementApiOperationResponseRepresentation {
   /** form_parameter block */
   readonly formParameter?: ApiManagementApiOperationResponseRepresentationFormParameter[];
 }
+
+function apiManagementApiOperationResponseRepresentationToTerraform(struct?: ApiManagementApiOperationResponseRepresentation): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    content_type: cdktf.stringToTerraform(struct!.contentType),
+    sample: cdktf.stringToTerraform(struct!.sample),
+    schema_id: cdktf.stringToTerraform(struct!.schemaId),
+    type_name: cdktf.stringToTerraform(struct!.typeName),
+    form_parameter: cdktf.listMapper(apiManagementApiOperationResponseRepresentationFormParameterToTerraform)(struct!.formParameter),
+  }
+}
+
 export interface ApiManagementApiOperationResponse {
   readonly description?: string;
   readonly statusCode: number;
@@ -98,6 +197,17 @@ export interface ApiManagementApiOperationResponse {
   /** representation block */
   readonly representation?: ApiManagementApiOperationResponseRepresentation[];
 }
+
+function apiManagementApiOperationResponseToTerraform(struct?: ApiManagementApiOperationResponse): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    description: cdktf.stringToTerraform(struct!.description),
+    status_code: cdktf.numberToTerraform(struct!.statusCode),
+    header: cdktf.listMapper(apiManagementApiOperationResponseHeaderToTerraform)(struct!.header),
+    representation: cdktf.listMapper(apiManagementApiOperationResponseRepresentationToTerraform)(struct!.representation),
+  }
+}
+
 export interface ApiManagementApiOperationTemplateParameter {
   readonly defaultValue?: string;
   readonly description?: string;
@@ -106,6 +216,19 @@ export interface ApiManagementApiOperationTemplateParameter {
   readonly type: string;
   readonly values?: string[];
 }
+
+function apiManagementApiOperationTemplateParameterToTerraform(struct?: ApiManagementApiOperationTemplateParameter): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    default_value: cdktf.stringToTerraform(struct!.defaultValue),
+    description: cdktf.stringToTerraform(struct!.description),
+    name: cdktf.stringToTerraform(struct!.name),
+    required: cdktf.booleanToTerraform(struct!.required),
+    type: cdktf.stringToTerraform(struct!.type),
+    values: cdktf.listMapper(cdktf.stringToTerraform)(struct!.values),
+  }
+}
+
 export interface ApiManagementApiOperationTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -113,9 +236,20 @@ export interface ApiManagementApiOperationTimeouts {
   readonly update?: string;
 }
 
+function apiManagementApiOperationTimeoutsToTerraform(struct?: ApiManagementApiOperationTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class ApiManagementApiOperation extends TerraformResource {
+export class ApiManagementApiOperation extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -332,18 +466,18 @@ export class ApiManagementApiOperation extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      api_management_name: this._apiManagementName,
-      api_name: this._apiName,
-      description: this._description,
-      display_name: this._displayName,
-      method: this._method,
-      operation_id: this._operationId,
-      resource_group_name: this._resourceGroupName,
-      url_template: this._urlTemplate,
-      request: this._request,
-      response: this._response,
-      template_parameter: this._templateParameter,
-      timeouts: this._timeouts,
+      api_management_name: cdktf.stringToTerraform(this._apiManagementName),
+      api_name: cdktf.stringToTerraform(this._apiName),
+      description: cdktf.stringToTerraform(this._description),
+      display_name: cdktf.stringToTerraform(this._displayName),
+      method: cdktf.stringToTerraform(this._method),
+      operation_id: cdktf.stringToTerraform(this._operationId),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      url_template: cdktf.stringToTerraform(this._urlTemplate),
+      request: cdktf.listMapper(apiManagementApiOperationRequestToTerraform)(this._request),
+      response: cdktf.listMapper(apiManagementApiOperationResponseToTerraform)(this._response),
+      template_parameter: cdktf.listMapper(apiManagementApiOperationTemplateParameterToTerraform)(this._templateParameter),
+      timeouts: apiManagementApiOperationTimeoutsToTerraform(this._timeouts),
     };
   }
 }

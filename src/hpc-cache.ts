@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface HpcCacheConfig extends TerraformMetaArguments {
+export interface HpcCacheConfig extends cdktf.TerraformMetaArguments {
   readonly cacheSizeInGb: number;
   readonly location: string;
   readonly mtu?: number;
@@ -26,9 +25,20 @@ export interface HpcCacheTimeouts {
   readonly update?: string;
 }
 
+function hpcCacheTimeoutsToTerraform(struct?: HpcCacheTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class HpcCache extends TerraformResource {
+export class HpcCache extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -202,15 +212,15 @@ export class HpcCache extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      cache_size_in_gb: this._cacheSizeInGb,
-      location: this._location,
-      mtu: this._mtu,
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      root_squash_enabled: this._rootSquashEnabled,
-      sku_name: this._skuName,
-      subnet_id: this._subnetId,
-      timeouts: this._timeouts,
+      cache_size_in_gb: cdktf.numberToTerraform(this._cacheSizeInGb),
+      location: cdktf.stringToTerraform(this._location),
+      mtu: cdktf.numberToTerraform(this._mtu),
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      root_squash_enabled: cdktf.booleanToTerraform(this._rootSquashEnabled),
+      sku_name: cdktf.stringToTerraform(this._skuName),
+      subnet_id: cdktf.stringToTerraform(this._subnetId),
+      timeouts: hpcCacheTimeoutsToTerraform(this._timeouts),
     };
   }
 }

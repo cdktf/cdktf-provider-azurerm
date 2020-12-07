@@ -2,14 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
-import { StringMap } from "cdktf";
-import { ComplexComputedList } from "cdktf";
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface SynapseWorkspaceConfig extends TerraformMetaArguments {
+export interface SynapseWorkspaceConfig extends cdktf.TerraformMetaArguments {
   readonly aadAdmin?: SynapseWorkspaceAadAdmin[];
   readonly location: string;
   readonly managedVirtualNetworkEnabled?: boolean;
@@ -27,7 +24,17 @@ export interface SynapseWorkspaceAadAdmin {
   readonly objectId?: string;
   readonly tenantId?: string;
 }
-export class SynapseWorkspaceIdentity extends ComplexComputedList {
+
+function synapseWorkspaceAadAdminToTerraform(struct?: SynapseWorkspaceAadAdmin): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    login: cdktf.stringToTerraform(struct!.login),
+    object_id: cdktf.stringToTerraform(struct!.objectId),
+    tenant_id: cdktf.stringToTerraform(struct!.tenantId),
+  }
+}
+
+export class SynapseWorkspaceIdentity extends cdktf.ComplexComputedList {
 
   // principal_id - computed: true, optional: false, required: false
   public get principalId() {
@@ -51,9 +58,20 @@ export interface SynapseWorkspaceTimeouts {
   readonly update?: string;
 }
 
+function synapseWorkspaceTimeoutsToTerraform(struct?: SynapseWorkspaceTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class SynapseWorkspace extends TerraformResource {
+export class SynapseWorkspace extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -104,7 +122,7 @@ export class SynapseWorkspace extends TerraformResource {
 
   // connectivity_endpoints - computed: true, optional: false, required: false
   public connectivityEndpoints(key: string): string {
-    return new StringMap(this, 'connectivity_endpoints').lookup(key);
+    return new cdktf.StringMap(this, 'connectivity_endpoints').lookup(key);
   }
 
   // id - computed: true, optional: true, required: false
@@ -254,16 +272,16 @@ export class SynapseWorkspace extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      aad_admin: this._aadAdmin,
-      location: this._location,
-      managed_virtual_network_enabled: this._managedVirtualNetworkEnabled,
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      sql_administrator_login: this._sqlAdministratorLogin,
-      sql_administrator_login_password: this._sqlAdministratorLoginPassword,
-      storage_data_lake_gen2_filesystem_id: this._storageDataLakeGen2FilesystemId,
-      tags: this._tags,
-      timeouts: this._timeouts,
+      aad_admin: cdktf.listMapper(synapseWorkspaceAadAdminToTerraform)(this._aadAdmin),
+      location: cdktf.stringToTerraform(this._location),
+      managed_virtual_network_enabled: cdktf.booleanToTerraform(this._managedVirtualNetworkEnabled),
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      sql_administrator_login: cdktf.stringToTerraform(this._sqlAdministratorLogin),
+      sql_administrator_login_password: cdktf.stringToTerraform(this._sqlAdministratorLoginPassword),
+      storage_data_lake_gen2_filesystem_id: cdktf.stringToTerraform(this._storageDataLakeGen2FilesystemId),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      timeouts: synapseWorkspaceTimeoutsToTerraform(this._timeouts),
     };
   }
 }

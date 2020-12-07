@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface CosmosdbSqlContainerConfig extends TerraformMetaArguments {
+export interface CosmosdbSqlContainerConfig extends cdktf.TerraformMetaArguments {
   readonly accountName: string;
   readonly databaseName: string;
   readonly defaultTtl?: number;
@@ -27,20 +26,61 @@ export interface CosmosdbSqlContainerConfig extends TerraformMetaArguments {
 export interface CosmosdbSqlContainerAutoscaleSettings {
   readonly maxThroughput?: number;
 }
+
+function cosmosdbSqlContainerAutoscaleSettingsToTerraform(struct?: CosmosdbSqlContainerAutoscaleSettings): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    max_throughput: cdktf.numberToTerraform(struct!.maxThroughput),
+  }
+}
+
 export interface CosmosdbSqlContainerIndexingPolicyCompositeIndexIndex {
   readonly order: string;
   readonly path: string;
 }
+
+function cosmosdbSqlContainerIndexingPolicyCompositeIndexIndexToTerraform(struct?: CosmosdbSqlContainerIndexingPolicyCompositeIndexIndex): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    order: cdktf.stringToTerraform(struct!.order),
+    path: cdktf.stringToTerraform(struct!.path),
+  }
+}
+
 export interface CosmosdbSqlContainerIndexingPolicyCompositeIndex {
   /** index block */
   readonly index: CosmosdbSqlContainerIndexingPolicyCompositeIndexIndex[];
 }
+
+function cosmosdbSqlContainerIndexingPolicyCompositeIndexToTerraform(struct?: CosmosdbSqlContainerIndexingPolicyCompositeIndex): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    index: cdktf.listMapper(cosmosdbSqlContainerIndexingPolicyCompositeIndexIndexToTerraform)(struct!.index),
+  }
+}
+
 export interface CosmosdbSqlContainerIndexingPolicyExcludedPath {
   readonly path: string;
 }
+
+function cosmosdbSqlContainerIndexingPolicyExcludedPathToTerraform(struct?: CosmosdbSqlContainerIndexingPolicyExcludedPath): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    path: cdktf.stringToTerraform(struct!.path),
+  }
+}
+
 export interface CosmosdbSqlContainerIndexingPolicyIncludedPath {
   readonly path: string;
 }
+
+function cosmosdbSqlContainerIndexingPolicyIncludedPathToTerraform(struct?: CosmosdbSqlContainerIndexingPolicyIncludedPath): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    path: cdktf.stringToTerraform(struct!.path),
+  }
+}
+
 export interface CosmosdbSqlContainerIndexingPolicy {
   readonly indexingMode?: string;
   /** composite_index block */
@@ -50,19 +90,49 @@ export interface CosmosdbSqlContainerIndexingPolicy {
   /** included_path block */
   readonly includedPath?: CosmosdbSqlContainerIndexingPolicyIncludedPath[];
 }
+
+function cosmosdbSqlContainerIndexingPolicyToTerraform(struct?: CosmosdbSqlContainerIndexingPolicy): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    indexing_mode: cdktf.stringToTerraform(struct!.indexingMode),
+    composite_index: cdktf.listMapper(cosmosdbSqlContainerIndexingPolicyCompositeIndexToTerraform)(struct!.compositeIndex),
+    excluded_path: cdktf.listMapper(cosmosdbSqlContainerIndexingPolicyExcludedPathToTerraform)(struct!.excludedPath),
+    included_path: cdktf.listMapper(cosmosdbSqlContainerIndexingPolicyIncludedPathToTerraform)(struct!.includedPath),
+  }
+}
+
 export interface CosmosdbSqlContainerTimeouts {
   readonly create?: string;
   readonly delete?: string;
   readonly read?: string;
   readonly update?: string;
 }
+
+function cosmosdbSqlContainerTimeoutsToTerraform(struct?: CosmosdbSqlContainerTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
 export interface CosmosdbSqlContainerUniqueKey {
   readonly paths: string[];
 }
 
+function cosmosdbSqlContainerUniqueKeyToTerraform(struct?: CosmosdbSqlContainerUniqueKey): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    paths: cdktf.listMapper(cdktf.stringToTerraform)(struct!.paths),
+  }
+}
+
+
 // Resource
 
-export class CosmosdbSqlContainer extends TerraformResource {
+export class CosmosdbSqlContainer extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -271,17 +341,17 @@ export class CosmosdbSqlContainer extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      account_name: this._accountName,
-      database_name: this._databaseName,
-      default_ttl: this._defaultTtl,
-      name: this._name,
-      partition_key_path: this._partitionKeyPath,
-      resource_group_name: this._resourceGroupName,
-      throughput: this._throughput,
-      autoscale_settings: this._autoscaleSettings,
-      indexing_policy: this._indexingPolicy,
-      timeouts: this._timeouts,
-      unique_key: this._uniqueKey,
+      account_name: cdktf.stringToTerraform(this._accountName),
+      database_name: cdktf.stringToTerraform(this._databaseName),
+      default_ttl: cdktf.numberToTerraform(this._defaultTtl),
+      name: cdktf.stringToTerraform(this._name),
+      partition_key_path: cdktf.stringToTerraform(this._partitionKeyPath),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      throughput: cdktf.numberToTerraform(this._throughput),
+      autoscale_settings: cdktf.listMapper(cosmosdbSqlContainerAutoscaleSettingsToTerraform)(this._autoscaleSettings),
+      indexing_policy: cdktf.listMapper(cosmosdbSqlContainerIndexingPolicyToTerraform)(this._indexingPolicy),
+      timeouts: cosmosdbSqlContainerTimeoutsToTerraform(this._timeouts),
+      unique_key: cdktf.listMapper(cosmosdbSqlContainerUniqueKeyToTerraform)(this._uniqueKey),
     };
   }
 }

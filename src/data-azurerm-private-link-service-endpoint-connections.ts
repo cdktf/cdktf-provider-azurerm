@@ -2,19 +2,17 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformDataSource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
-import { ComplexComputedList } from "cdktf";
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataAzurermPrivateLinkServiceEndpointConnectionsConfig extends TerraformMetaArguments {
+export interface DataAzurermPrivateLinkServiceEndpointConnectionsConfig extends cdktf.TerraformMetaArguments {
   readonly resourceGroupName: string;
   readonly serviceId: string;
   /** timeouts block */
   readonly timeouts?: DataAzurermPrivateLinkServiceEndpointConnectionsTimeouts;
 }
-export class DataAzurermPrivateLinkServiceEndpointConnectionsPrivateEndpointConnections extends ComplexComputedList {
+export class DataAzurermPrivateLinkServiceEndpointConnectionsPrivateEndpointConnections extends cdktf.ComplexComputedList {
 
   // action_required - computed: true, optional: false, required: false
   public get actionRequired() {
@@ -55,9 +53,17 @@ export interface DataAzurermPrivateLinkServiceEndpointConnectionsTimeouts {
   readonly read?: string;
 }
 
+function dataAzurermPrivateLinkServiceEndpointConnectionsTimeoutsToTerraform(struct?: DataAzurermPrivateLinkServiceEndpointConnectionsTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    read: cdktf.stringToTerraform(struct!.read),
+  }
+}
+
+
 // Resource
 
-export class DataAzurermPrivateLinkServiceEndpointConnections extends TerraformDataSource {
+export class DataAzurermPrivateLinkServiceEndpointConnections extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
@@ -151,9 +157,9 @@ export class DataAzurermPrivateLinkServiceEndpointConnections extends TerraformD
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      resource_group_name: this._resourceGroupName,
-      service_id: this._serviceId,
-      timeouts: this._timeouts,
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      service_id: cdktf.stringToTerraform(this._serviceId),
+      timeouts: dataAzurermPrivateLinkServiceEndpointConnectionsTimeoutsToTerraform(this._timeouts),
     };
   }
 }

@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface CosmosdbGremlinGraphConfig extends TerraformMetaArguments {
+export interface CosmosdbGremlinGraphConfig extends cdktf.TerraformMetaArguments {
   readonly accountName: string;
   readonly databaseName: string;
   readonly name: string;
@@ -28,30 +27,78 @@ export interface CosmosdbGremlinGraphConfig extends TerraformMetaArguments {
 export interface CosmosdbGremlinGraphAutoscaleSettings {
   readonly maxThroughput?: number;
 }
+
+function cosmosdbGremlinGraphAutoscaleSettingsToTerraform(struct?: CosmosdbGremlinGraphAutoscaleSettings): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    max_throughput: cdktf.numberToTerraform(struct!.maxThroughput),
+  }
+}
+
 export interface CosmosdbGremlinGraphConflictResolutionPolicy {
   readonly conflictResolutionPath?: string;
   readonly conflictResolutionProcedure?: string;
   readonly mode: string;
 }
+
+function cosmosdbGremlinGraphConflictResolutionPolicyToTerraform(struct?: CosmosdbGremlinGraphConflictResolutionPolicy): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    conflict_resolution_path: cdktf.stringToTerraform(struct!.conflictResolutionPath),
+    conflict_resolution_procedure: cdktf.stringToTerraform(struct!.conflictResolutionProcedure),
+    mode: cdktf.stringToTerraform(struct!.mode),
+  }
+}
+
 export interface CosmosdbGremlinGraphIndexPolicy {
   readonly automatic?: boolean;
   readonly excludedPaths?: string[];
   readonly includedPaths?: string[];
   readonly indexingMode: string;
 }
+
+function cosmosdbGremlinGraphIndexPolicyToTerraform(struct?: CosmosdbGremlinGraphIndexPolicy): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    automatic: cdktf.booleanToTerraform(struct!.automatic),
+    excluded_paths: cdktf.listMapper(cdktf.stringToTerraform)(struct!.excludedPaths),
+    included_paths: cdktf.listMapper(cdktf.stringToTerraform)(struct!.includedPaths),
+    indexing_mode: cdktf.stringToTerraform(struct!.indexingMode),
+  }
+}
+
 export interface CosmosdbGremlinGraphTimeouts {
   readonly create?: string;
   readonly delete?: string;
   readonly read?: string;
   readonly update?: string;
 }
+
+function cosmosdbGremlinGraphTimeoutsToTerraform(struct?: CosmosdbGremlinGraphTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
 export interface CosmosdbGremlinGraphUniqueKey {
   readonly paths: string[];
 }
 
+function cosmosdbGremlinGraphUniqueKeyToTerraform(struct?: CosmosdbGremlinGraphUniqueKey): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    paths: cdktf.listMapper(cdktf.stringToTerraform)(struct!.paths),
+  }
+}
+
+
 // Resource
 
-export class CosmosdbGremlinGraph extends TerraformResource {
+export class CosmosdbGremlinGraph extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -254,17 +301,17 @@ export class CosmosdbGremlinGraph extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      account_name: this._accountName,
-      database_name: this._databaseName,
-      name: this._name,
-      partition_key_path: this._partitionKeyPath,
-      resource_group_name: this._resourceGroupName,
-      throughput: this._throughput,
-      autoscale_settings: this._autoscaleSettings,
-      conflict_resolution_policy: this._conflictResolutionPolicy,
-      index_policy: this._indexPolicy,
-      timeouts: this._timeouts,
-      unique_key: this._uniqueKey,
+      account_name: cdktf.stringToTerraform(this._accountName),
+      database_name: cdktf.stringToTerraform(this._databaseName),
+      name: cdktf.stringToTerraform(this._name),
+      partition_key_path: cdktf.stringToTerraform(this._partitionKeyPath),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      throughput: cdktf.numberToTerraform(this._throughput),
+      autoscale_settings: cdktf.listMapper(cosmosdbGremlinGraphAutoscaleSettingsToTerraform)(this._autoscaleSettings),
+      conflict_resolution_policy: cdktf.listMapper(cosmosdbGremlinGraphConflictResolutionPolicyToTerraform)(this._conflictResolutionPolicy),
+      index_policy: cdktf.listMapper(cosmosdbGremlinGraphIndexPolicyToTerraform)(this._indexPolicy),
+      timeouts: cosmosdbGremlinGraphTimeoutsToTerraform(this._timeouts),
+      unique_key: cdktf.listMapper(cosmosdbGremlinGraphUniqueKeyToTerraform)(this._uniqueKey),
     };
   }
 }

@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface LbNatPoolConfig extends TerraformMetaArguments {
+export interface LbNatPoolConfig extends cdktf.TerraformMetaArguments {
   readonly backendPort: number;
   readonly frontendIpConfigurationName: string;
   readonly frontendPortEnd: number;
@@ -26,9 +25,20 @@ export interface LbNatPoolTimeouts {
   readonly update?: string;
 }
 
+function lbNatPoolTimeoutsToTerraform(struct?: LbNatPoolTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class LbNatPool extends TerraformResource {
+export class LbNatPool extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -196,15 +206,15 @@ export class LbNatPool extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      backend_port: this._backendPort,
-      frontend_ip_configuration_name: this._frontendIpConfigurationName,
-      frontend_port_end: this._frontendPortEnd,
-      frontend_port_start: this._frontendPortStart,
-      loadbalancer_id: this._loadbalancerId,
-      name: this._name,
-      protocol: this._protocol,
-      resource_group_name: this._resourceGroupName,
-      timeouts: this._timeouts,
+      backend_port: cdktf.numberToTerraform(this._backendPort),
+      frontend_ip_configuration_name: cdktf.stringToTerraform(this._frontendIpConfigurationName),
+      frontend_port_end: cdktf.numberToTerraform(this._frontendPortEnd),
+      frontend_port_start: cdktf.numberToTerraform(this._frontendPortStart),
+      loadbalancer_id: cdktf.stringToTerraform(this._loadbalancerId),
+      name: cdktf.stringToTerraform(this._name),
+      protocol: cdktf.stringToTerraform(this._protocol),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      timeouts: lbNatPoolTimeoutsToTerraform(this._timeouts),
     };
   }
 }

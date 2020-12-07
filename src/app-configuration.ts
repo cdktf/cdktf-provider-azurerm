@@ -2,13 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
-import { ComplexComputedList } from "cdktf";
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface AppConfigurationConfig extends TerraformMetaArguments {
+export interface AppConfigurationConfig extends cdktf.TerraformMetaArguments {
   readonly location: string;
   readonly name: string;
   readonly resourceGroupName: string;
@@ -19,7 +17,7 @@ export interface AppConfigurationConfig extends TerraformMetaArguments {
   /** timeouts block */
   readonly timeouts?: AppConfigurationTimeouts;
 }
-export class AppConfigurationPrimaryReadKey extends ComplexComputedList {
+export class AppConfigurationPrimaryReadKey extends cdktf.ComplexComputedList {
 
   // connection_string - computed: true, optional: false, required: false
   public get connectionString() {
@@ -36,7 +34,7 @@ export class AppConfigurationPrimaryReadKey extends ComplexComputedList {
     return this.getStringAttribute('secret');
   }
 }
-export class AppConfigurationPrimaryWriteKey extends ComplexComputedList {
+export class AppConfigurationPrimaryWriteKey extends cdktf.ComplexComputedList {
 
   // connection_string - computed: true, optional: false, required: false
   public get connectionString() {
@@ -53,7 +51,7 @@ export class AppConfigurationPrimaryWriteKey extends ComplexComputedList {
     return this.getStringAttribute('secret');
   }
 }
-export class AppConfigurationSecondaryReadKey extends ComplexComputedList {
+export class AppConfigurationSecondaryReadKey extends cdktf.ComplexComputedList {
 
   // connection_string - computed: true, optional: false, required: false
   public get connectionString() {
@@ -70,7 +68,7 @@ export class AppConfigurationSecondaryReadKey extends ComplexComputedList {
     return this.getStringAttribute('secret');
   }
 }
-export class AppConfigurationSecondaryWriteKey extends ComplexComputedList {
+export class AppConfigurationSecondaryWriteKey extends cdktf.ComplexComputedList {
 
   // connection_string - computed: true, optional: false, required: false
   public get connectionString() {
@@ -90,6 +88,14 @@ export class AppConfigurationSecondaryWriteKey extends ComplexComputedList {
 export interface AppConfigurationIdentity {
   readonly type: string;
 }
+
+function appConfigurationIdentityToTerraform(struct?: AppConfigurationIdentity): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    type: cdktf.stringToTerraform(struct!.type),
+  }
+}
+
 export interface AppConfigurationTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -97,9 +103,20 @@ export interface AppConfigurationTimeouts {
   readonly update?: string;
 }
 
+function appConfigurationTimeoutsToTerraform(struct?: AppConfigurationTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class AppConfiguration extends TerraformResource {
+export class AppConfiguration extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -268,13 +285,13 @@ export class AppConfiguration extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      location: this._location,
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      sku: this._sku,
-      tags: this._tags,
-      identity: this._identity,
-      timeouts: this._timeouts,
+      location: cdktf.stringToTerraform(this._location),
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      sku: cdktf.stringToTerraform(this._sku),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      identity: cdktf.listMapper(appConfigurationIdentityToTerraform)(this._identity),
+      timeouts: appConfigurationTimeoutsToTerraform(this._timeouts),
     };
   }
 }

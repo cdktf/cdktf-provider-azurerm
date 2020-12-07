@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface VirtualHubConfig extends TerraformMetaArguments {
+export interface VirtualHubConfig extends cdktf.TerraformMetaArguments {
   readonly addressPrefix?: string;
   readonly location: string;
   readonly name: string;
@@ -24,6 +23,15 @@ export interface VirtualHubRoute {
   readonly addressPrefixes: string[];
   readonly nextHopIpAddress: string;
 }
+
+function virtualHubRouteToTerraform(struct?: VirtualHubRoute): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    address_prefixes: cdktf.listMapper(cdktf.stringToTerraform)(struct!.addressPrefixes),
+    next_hop_ip_address: cdktf.stringToTerraform(struct!.nextHopIpAddress),
+  }
+}
+
 export interface VirtualHubTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -31,9 +39,20 @@ export interface VirtualHubTimeouts {
   readonly update?: string;
 }
 
+function virtualHubTimeoutsToTerraform(struct?: VirtualHubTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class VirtualHub extends TerraformResource {
+export class VirtualHub extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -211,15 +230,15 @@ export class VirtualHub extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      address_prefix: this._addressPrefix,
-      location: this._location,
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      sku: this._sku,
-      tags: this._tags,
-      virtual_wan_id: this._virtualWanId,
-      route: this._route,
-      timeouts: this._timeouts,
+      address_prefix: cdktf.stringToTerraform(this._addressPrefix),
+      location: cdktf.stringToTerraform(this._location),
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      sku: cdktf.stringToTerraform(this._sku),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      virtual_wan_id: cdktf.stringToTerraform(this._virtualWanId),
+      route: cdktf.listMapper(virtualHubRouteToTerraform)(this._route),
+      timeouts: virtualHubTimeoutsToTerraform(this._timeouts),
     };
   }
 }

@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface ManagementGroupConfig extends TerraformMetaArguments {
+export interface ManagementGroupConfig extends cdktf.TerraformMetaArguments {
   readonly displayName?: string;
   readonly groupId?: string;
   readonly name?: string;
@@ -23,9 +22,20 @@ export interface ManagementGroupTimeouts {
   readonly update?: string;
 }
 
+function managementGroupTimeoutsToTerraform(struct?: ManagementGroupTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class ManagementGroup extends TerraformResource {
+export class ManagementGroup extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -161,12 +171,12 @@ export class ManagementGroup extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      display_name: this._displayName,
-      group_id: this._groupId,
-      name: this._name,
-      parent_management_group_id: this._parentManagementGroupId,
-      subscription_ids: this._subscriptionIds,
-      timeouts: this._timeouts,
+      display_name: cdktf.stringToTerraform(this._displayName),
+      group_id: cdktf.stringToTerraform(this._groupId),
+      name: cdktf.stringToTerraform(this._name),
+      parent_management_group_id: cdktf.stringToTerraform(this._parentManagementGroupId),
+      subscription_ids: cdktf.listMapper(cdktf.stringToTerraform)(this._subscriptionIds),
+      timeouts: managementGroupTimeoutsToTerraform(this._timeouts),
     };
   }
 }

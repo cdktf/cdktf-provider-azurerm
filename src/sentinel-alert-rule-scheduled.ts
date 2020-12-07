@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface SentinelAlertRuleScheduledConfig extends TerraformMetaArguments {
+export interface SentinelAlertRuleScheduledConfig extends cdktf.TerraformMetaArguments {
   readonly description?: string;
   readonly displayName: string;
   readonly enabled?: boolean;
@@ -32,9 +31,20 @@ export interface SentinelAlertRuleScheduledTimeouts {
   readonly update?: string;
 }
 
+function sentinelAlertRuleScheduledTimeoutsToTerraform(struct?: SentinelAlertRuleScheduledTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class SentinelAlertRuleScheduled extends TerraformResource {
+export class SentinelAlertRuleScheduled extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -308,21 +318,21 @@ export class SentinelAlertRuleScheduled extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      description: this._description,
-      display_name: this._displayName,
-      enabled: this._enabled,
-      log_analytics_workspace_id: this._logAnalyticsWorkspaceId,
-      name: this._name,
-      query: this._query,
-      query_frequency: this._queryFrequency,
-      query_period: this._queryPeriod,
-      severity: this._severity,
-      suppression_duration: this._suppressionDuration,
-      suppression_enabled: this._suppressionEnabled,
-      tactics: this._tactics,
-      trigger_operator: this._triggerOperator,
-      trigger_threshold: this._triggerThreshold,
-      timeouts: this._timeouts,
+      description: cdktf.stringToTerraform(this._description),
+      display_name: cdktf.stringToTerraform(this._displayName),
+      enabled: cdktf.booleanToTerraform(this._enabled),
+      log_analytics_workspace_id: cdktf.stringToTerraform(this._logAnalyticsWorkspaceId),
+      name: cdktf.stringToTerraform(this._name),
+      query: cdktf.stringToTerraform(this._query),
+      query_frequency: cdktf.stringToTerraform(this._queryFrequency),
+      query_period: cdktf.stringToTerraform(this._queryPeriod),
+      severity: cdktf.stringToTerraform(this._severity),
+      suppression_duration: cdktf.stringToTerraform(this._suppressionDuration),
+      suppression_enabled: cdktf.booleanToTerraform(this._suppressionEnabled),
+      tactics: cdktf.listMapper(cdktf.stringToTerraform)(this._tactics),
+      trigger_operator: cdktf.stringToTerraform(this._triggerOperator),
+      trigger_threshold: cdktf.numberToTerraform(this._triggerThreshold),
+      timeouts: sentinelAlertRuleScheduledTimeoutsToTerraform(this._timeouts),
     };
   }
 }

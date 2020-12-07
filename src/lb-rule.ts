@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface LbRuleConfig extends TerraformMetaArguments {
+export interface LbRuleConfig extends cdktf.TerraformMetaArguments {
   readonly backendAddressPoolId?: string;
   readonly backendPort: number;
   readonly disableOutboundSnat?: boolean;
@@ -32,9 +31,20 @@ export interface LbRuleTimeouts {
   readonly update?: string;
 }
 
+function lbRuleTimeoutsToTerraform(struct?: LbRuleTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class LbRule extends TerraformResource {
+export class LbRule extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -307,21 +317,21 @@ export class LbRule extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      backend_address_pool_id: this._backendAddressPoolId,
-      backend_port: this._backendPort,
-      disable_outbound_snat: this._disableOutboundSnat,
-      enable_floating_ip: this._enableFloatingIp,
-      enable_tcp_reset: this._enableTcpReset,
-      frontend_ip_configuration_name: this._frontendIpConfigurationName,
-      frontend_port: this._frontendPort,
-      idle_timeout_in_minutes: this._idleTimeoutInMinutes,
-      load_distribution: this._loadDistribution,
-      loadbalancer_id: this._loadbalancerId,
-      name: this._name,
-      probe_id: this._probeId,
-      protocol: this._protocol,
-      resource_group_name: this._resourceGroupName,
-      timeouts: this._timeouts,
+      backend_address_pool_id: cdktf.stringToTerraform(this._backendAddressPoolId),
+      backend_port: cdktf.numberToTerraform(this._backendPort),
+      disable_outbound_snat: cdktf.booleanToTerraform(this._disableOutboundSnat),
+      enable_floating_ip: cdktf.booleanToTerraform(this._enableFloatingIp),
+      enable_tcp_reset: cdktf.booleanToTerraform(this._enableTcpReset),
+      frontend_ip_configuration_name: cdktf.stringToTerraform(this._frontendIpConfigurationName),
+      frontend_port: cdktf.numberToTerraform(this._frontendPort),
+      idle_timeout_in_minutes: cdktf.numberToTerraform(this._idleTimeoutInMinutes),
+      load_distribution: cdktf.stringToTerraform(this._loadDistribution),
+      loadbalancer_id: cdktf.stringToTerraform(this._loadbalancerId),
+      name: cdktf.stringToTerraform(this._name),
+      probe_id: cdktf.stringToTerraform(this._probeId),
+      protocol: cdktf.stringToTerraform(this._protocol),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      timeouts: lbRuleTimeoutsToTerraform(this._timeouts),
     };
   }
 }

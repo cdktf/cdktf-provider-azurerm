@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface KeyVaultConfig extends TerraformMetaArguments {
+export interface KeyVaultConfig extends cdktf.TerraformMetaArguments {
   readonly accessPolicy?: KeyVaultAccessPolicy[];
   readonly enableRbacAuthorization?: boolean;
   readonly enabledForDeployment?: boolean;
@@ -38,17 +37,52 @@ export interface KeyVaultAccessPolicy {
   readonly storagePermissions?: string[];
   readonly tenantId?: string;
 }
+
+function keyVaultAccessPolicyToTerraform(struct?: KeyVaultAccessPolicy): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    application_id: cdktf.stringToTerraform(struct!.applicationId),
+    certificate_permissions: cdktf.listMapper(cdktf.stringToTerraform)(struct!.certificatePermissions),
+    key_permissions: cdktf.listMapper(cdktf.stringToTerraform)(struct!.keyPermissions),
+    object_id: cdktf.stringToTerraform(struct!.objectId),
+    secret_permissions: cdktf.listMapper(cdktf.stringToTerraform)(struct!.secretPermissions),
+    storage_permissions: cdktf.listMapper(cdktf.stringToTerraform)(struct!.storagePermissions),
+    tenant_id: cdktf.stringToTerraform(struct!.tenantId),
+  }
+}
+
 export interface KeyVaultContact {
   readonly email: string;
   readonly name?: string;
   readonly phone?: string;
 }
+
+function keyVaultContactToTerraform(struct?: KeyVaultContact): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    email: cdktf.stringToTerraform(struct!.email),
+    name: cdktf.stringToTerraform(struct!.name),
+    phone: cdktf.stringToTerraform(struct!.phone),
+  }
+}
+
 export interface KeyVaultNetworkAcls {
   readonly bypass: string;
   readonly defaultAction: string;
   readonly ipRules?: string[];
   readonly virtualNetworkSubnetIds?: string[];
 }
+
+function keyVaultNetworkAclsToTerraform(struct?: KeyVaultNetworkAcls): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    bypass: cdktf.stringToTerraform(struct!.bypass),
+    default_action: cdktf.stringToTerraform(struct!.defaultAction),
+    ip_rules: cdktf.listMapper(cdktf.stringToTerraform)(struct!.ipRules),
+    virtual_network_subnet_ids: cdktf.listMapper(cdktf.stringToTerraform)(struct!.virtualNetworkSubnetIds),
+  }
+}
+
 export interface KeyVaultTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -56,9 +90,20 @@ export interface KeyVaultTimeouts {
   readonly update?: string;
 }
 
+function keyVaultTimeoutsToTerraform(struct?: KeyVaultTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class KeyVault extends TerraformResource {
+export class KeyVault extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -371,23 +416,23 @@ export class KeyVault extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      access_policy: this._accessPolicy,
-      enable_rbac_authorization: this._enableRbacAuthorization,
-      enabled_for_deployment: this._enabledForDeployment,
-      enabled_for_disk_encryption: this._enabledForDiskEncryption,
-      enabled_for_template_deployment: this._enabledForTemplateDeployment,
-      location: this._location,
-      name: this._name,
-      purge_protection_enabled: this._purgeProtectionEnabled,
-      resource_group_name: this._resourceGroupName,
-      sku_name: this._skuName,
-      soft_delete_enabled: this._softDeleteEnabled,
-      soft_delete_retention_days: this._softDeleteRetentionDays,
-      tags: this._tags,
-      tenant_id: this._tenantId,
-      contact: this._contact,
-      network_acls: this._networkAcls,
-      timeouts: this._timeouts,
+      access_policy: cdktf.listMapper(keyVaultAccessPolicyToTerraform)(this._accessPolicy),
+      enable_rbac_authorization: cdktf.booleanToTerraform(this._enableRbacAuthorization),
+      enabled_for_deployment: cdktf.booleanToTerraform(this._enabledForDeployment),
+      enabled_for_disk_encryption: cdktf.booleanToTerraform(this._enabledForDiskEncryption),
+      enabled_for_template_deployment: cdktf.booleanToTerraform(this._enabledForTemplateDeployment),
+      location: cdktf.stringToTerraform(this._location),
+      name: cdktf.stringToTerraform(this._name),
+      purge_protection_enabled: cdktf.booleanToTerraform(this._purgeProtectionEnabled),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      sku_name: cdktf.stringToTerraform(this._skuName),
+      soft_delete_enabled: cdktf.booleanToTerraform(this._softDeleteEnabled),
+      soft_delete_retention_days: cdktf.numberToTerraform(this._softDeleteRetentionDays),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      tenant_id: cdktf.stringToTerraform(this._tenantId),
+      contact: cdktf.listMapper(keyVaultContactToTerraform)(this._contact),
+      network_acls: cdktf.listMapper(keyVaultNetworkAclsToTerraform)(this._networkAcls),
+      timeouts: keyVaultTimeoutsToTerraform(this._timeouts),
     };
   }
 }

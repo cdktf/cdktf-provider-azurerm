@@ -2,13 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformDataSource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
-import { ComplexComputedList } from "cdktf";
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataAzurermSharedImageVersionsConfig extends TerraformMetaArguments {
+export interface DataAzurermSharedImageVersionsConfig extends cdktf.TerraformMetaArguments {
   readonly galleryName: string;
   readonly imageName: string;
   readonly resourceGroupName: string;
@@ -16,7 +14,7 @@ export interface DataAzurermSharedImageVersionsConfig extends TerraformMetaArgum
   /** timeouts block */
   readonly timeouts?: DataAzurermSharedImageVersionsTimeouts;
 }
-export class DataAzurermSharedImageVersionsImagesTargetRegion extends ComplexComputedList {
+export class DataAzurermSharedImageVersionsImagesTargetRegion extends cdktf.ComplexComputedList {
 
   // name - computed: true, optional: false, required: false
   public get name() {
@@ -33,7 +31,7 @@ export class DataAzurermSharedImageVersionsImagesTargetRegion extends ComplexCom
     return this.getStringAttribute('storage_account_type');
   }
 }
-export class DataAzurermSharedImageVersionsImages extends ComplexComputedList {
+export class DataAzurermSharedImageVersionsImages extends cdktf.ComplexComputedList {
 
   // exclude_from_latest - computed: true, optional: false, required: false
   public get excludeFromLatest() {
@@ -69,9 +67,17 @@ export interface DataAzurermSharedImageVersionsTimeouts {
   readonly read?: string;
 }
 
+function dataAzurermSharedImageVersionsTimeoutsToTerraform(struct?: DataAzurermSharedImageVersionsTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    read: cdktf.stringToTerraform(struct!.read),
+  }
+}
+
+
 // Resource
 
-export class DataAzurermSharedImageVersions extends TerraformDataSource {
+export class DataAzurermSharedImageVersions extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
@@ -186,11 +192,11 @@ export class DataAzurermSharedImageVersions extends TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      gallery_name: this._galleryName,
-      image_name: this._imageName,
-      resource_group_name: this._resourceGroupName,
-      tags_filter: this._tagsFilter,
-      timeouts: this._timeouts,
+      gallery_name: cdktf.stringToTerraform(this._galleryName),
+      image_name: cdktf.stringToTerraform(this._imageName),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      tags_filter: cdktf.hashMapper(cdktf.anyToTerraform)(this._tagsFilter),
+      timeouts: dataAzurermSharedImageVersionsTimeoutsToTerraform(this._timeouts),
     };
   }
 }

@@ -2,20 +2,17 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformDataSource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
-import { ComplexComputedList } from "cdktf";
-import { StringMap } from "cdktf";
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataAzurermAppServiceCertificateOrderConfig extends TerraformMetaArguments {
+export interface DataAzurermAppServiceCertificateOrderConfig extends cdktf.TerraformMetaArguments {
   readonly name: string;
   readonly resourceGroupName: string;
   /** timeouts block */
   readonly timeouts?: DataAzurermAppServiceCertificateOrderTimeouts;
 }
-export class DataAzurermAppServiceCertificateOrderCertificates extends ComplexComputedList {
+export class DataAzurermAppServiceCertificateOrderCertificates extends cdktf.ComplexComputedList {
 
   // certificate_name - computed: true, optional: false, required: false
   public get certificateName() {
@@ -41,9 +38,17 @@ export interface DataAzurermAppServiceCertificateOrderTimeouts {
   readonly read?: string;
 }
 
+function dataAzurermAppServiceCertificateOrderTimeoutsToTerraform(struct?: DataAzurermAppServiceCertificateOrderTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    read: cdktf.stringToTerraform(struct!.read),
+  }
+}
+
+
 // Resource
 
-export class DataAzurermAppServiceCertificateOrder extends TerraformDataSource {
+export class DataAzurermAppServiceCertificateOrder extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
@@ -177,7 +182,7 @@ export class DataAzurermAppServiceCertificateOrder extends TerraformDataSource {
 
   // tags - computed: true, optional: false, required: false
   public tags(key: string): string {
-    return new StringMap(this, 'tags').lookup(key);
+    return new cdktf.StringMap(this, 'tags').lookup(key);
   }
 
   // validity_in_years - computed: true, optional: false, required: false
@@ -207,9 +212,9 @@ export class DataAzurermAppServiceCertificateOrder extends TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      timeouts: this._timeouts,
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      timeouts: dataAzurermAppServiceCertificateOrderTimeoutsToTerraform(this._timeouts),
     };
   }
 }

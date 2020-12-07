@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface ServiceFabricMeshApplicationConfig extends TerraformMetaArguments {
+export interface ServiceFabricMeshApplicationConfig extends cdktf.TerraformMetaArguments {
   readonly location: string;
   readonly name: string;
   readonly resourceGroupName: string;
@@ -21,28 +20,75 @@ export interface ServiceFabricMeshApplicationServiceCodePackageResourcesLimits {
   readonly cpu: number;
   readonly memory: number;
 }
+
+function serviceFabricMeshApplicationServiceCodePackageResourcesLimitsToTerraform(struct?: ServiceFabricMeshApplicationServiceCodePackageResourcesLimits): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    cpu: cdktf.numberToTerraform(struct!.cpu),
+    memory: cdktf.numberToTerraform(struct!.memory),
+  }
+}
+
 export interface ServiceFabricMeshApplicationServiceCodePackageResourcesRequests {
   readonly cpu: number;
   readonly memory: number;
 }
+
+function serviceFabricMeshApplicationServiceCodePackageResourcesRequestsToTerraform(struct?: ServiceFabricMeshApplicationServiceCodePackageResourcesRequests): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    cpu: cdktf.numberToTerraform(struct!.cpu),
+    memory: cdktf.numberToTerraform(struct!.memory),
+  }
+}
+
 export interface ServiceFabricMeshApplicationServiceCodePackageResources {
   /** limits block */
   readonly limits?: ServiceFabricMeshApplicationServiceCodePackageResourcesLimits[];
   /** requests block */
   readonly requests: ServiceFabricMeshApplicationServiceCodePackageResourcesRequests[];
 }
+
+function serviceFabricMeshApplicationServiceCodePackageResourcesToTerraform(struct?: ServiceFabricMeshApplicationServiceCodePackageResources): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    limits: cdktf.listMapper(serviceFabricMeshApplicationServiceCodePackageResourcesLimitsToTerraform)(struct!.limits),
+    requests: cdktf.listMapper(serviceFabricMeshApplicationServiceCodePackageResourcesRequestsToTerraform)(struct!.requests),
+  }
+}
+
 export interface ServiceFabricMeshApplicationServiceCodePackage {
   readonly imageName: string;
   readonly name: string;
   /** resources block */
   readonly resources: ServiceFabricMeshApplicationServiceCodePackageResources[];
 }
+
+function serviceFabricMeshApplicationServiceCodePackageToTerraform(struct?: ServiceFabricMeshApplicationServiceCodePackage): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    image_name: cdktf.stringToTerraform(struct!.imageName),
+    name: cdktf.stringToTerraform(struct!.name),
+    resources: cdktf.listMapper(serviceFabricMeshApplicationServiceCodePackageResourcesToTerraform)(struct!.resources),
+  }
+}
+
 export interface ServiceFabricMeshApplicationService {
   readonly name: string;
   readonly osType: string;
   /** code_package block */
   readonly codePackage: ServiceFabricMeshApplicationServiceCodePackage[];
 }
+
+function serviceFabricMeshApplicationServiceToTerraform(struct?: ServiceFabricMeshApplicationService): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    name: cdktf.stringToTerraform(struct!.name),
+    os_type: cdktf.stringToTerraform(struct!.osType),
+    code_package: cdktf.listMapper(serviceFabricMeshApplicationServiceCodePackageToTerraform)(struct!.codePackage),
+  }
+}
+
 export interface ServiceFabricMeshApplicationTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -50,9 +96,20 @@ export interface ServiceFabricMeshApplicationTimeouts {
   readonly update?: string;
 }
 
+function serviceFabricMeshApplicationTimeoutsToTerraform(struct?: ServiceFabricMeshApplicationTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class ServiceFabricMeshApplication extends TerraformResource {
+export class ServiceFabricMeshApplication extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -176,12 +233,12 @@ export class ServiceFabricMeshApplication extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      location: this._location,
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      tags: this._tags,
-      service: this._service,
-      timeouts: this._timeouts,
+      location: cdktf.stringToTerraform(this._location),
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      service: cdktf.listMapper(serviceFabricMeshApplicationServiceToTerraform)(this._service),
+      timeouts: serviceFabricMeshApplicationTimeoutsToTerraform(this._timeouts),
     };
   }
 }

@@ -2,21 +2,18 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformDataSource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
-import { StringMap } from "cdktf";
-import { ComplexComputedList } from "cdktf";
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataAzurermFunctionAppConfig extends TerraformMetaArguments {
+export interface DataAzurermFunctionAppConfig extends cdktf.TerraformMetaArguments {
   readonly name: string;
   readonly resourceGroupName: string;
   readonly tags?: { [key: string]: string };
   /** timeouts block */
   readonly timeouts?: DataAzurermFunctionAppTimeouts;
 }
-export class DataAzurermFunctionAppConnectionString extends ComplexComputedList {
+export class DataAzurermFunctionAppConnectionString extends cdktf.ComplexComputedList {
 
   // name - computed: true, optional: false, required: false
   public get name() {
@@ -33,7 +30,7 @@ export class DataAzurermFunctionAppConnectionString extends ComplexComputedList 
     return this.getStringAttribute('value');
   }
 }
-export class DataAzurermFunctionAppIdentity extends ComplexComputedList {
+export class DataAzurermFunctionAppIdentity extends cdktf.ComplexComputedList {
 
   // principal_id - computed: true, optional: false, required: false
   public get principalId() {
@@ -50,7 +47,7 @@ export class DataAzurermFunctionAppIdentity extends ComplexComputedList {
     return this.getStringAttribute('type');
   }
 }
-export class DataAzurermFunctionAppSiteConfigCors extends ComplexComputedList {
+export class DataAzurermFunctionAppSiteConfigCors extends cdktf.ComplexComputedList {
 
   // allowed_origins - computed: true, optional: false, required: false
   public get allowedOrigins() {
@@ -62,7 +59,7 @@ export class DataAzurermFunctionAppSiteConfigCors extends ComplexComputedList {
     return this.getBooleanAttribute('support_credentials');
   }
 }
-export class DataAzurermFunctionAppSiteConfigIpRestriction extends ComplexComputedList {
+export class DataAzurermFunctionAppSiteConfigIpRestriction extends cdktf.ComplexComputedList {
 
   // action - computed: true, optional: false, required: false
   public get action() {
@@ -94,7 +91,7 @@ export class DataAzurermFunctionAppSiteConfigIpRestriction extends ComplexComput
     return this.getStringAttribute('virtual_network_subnet_id');
   }
 }
-export class DataAzurermFunctionAppSiteConfigScmIpRestriction extends ComplexComputedList {
+export class DataAzurermFunctionAppSiteConfigScmIpRestriction extends cdktf.ComplexComputedList {
 
   // action - computed: true, optional: false, required: false
   public get action() {
@@ -126,7 +123,7 @@ export class DataAzurermFunctionAppSiteConfigScmIpRestriction extends ComplexCom
     return this.getStringAttribute('virtual_network_subnet_id');
   }
 }
-export class DataAzurermFunctionAppSiteConfig extends ComplexComputedList {
+export class DataAzurermFunctionAppSiteConfig extends cdktf.ComplexComputedList {
 
   // always_on - computed: true, optional: false, required: false
   public get alwaysOn() {
@@ -203,7 +200,7 @@ export class DataAzurermFunctionAppSiteConfig extends ComplexComputedList {
     return this.getBooleanAttribute('websockets_enabled');
   }
 }
-export class DataAzurermFunctionAppSiteCredential extends ComplexComputedList {
+export class DataAzurermFunctionAppSiteCredential extends cdktf.ComplexComputedList {
 
   // password - computed: true, optional: false, required: false
   public get password() {
@@ -215,7 +212,7 @@ export class DataAzurermFunctionAppSiteCredential extends ComplexComputedList {
     return this.getStringAttribute('username');
   }
 }
-export class DataAzurermFunctionAppSourceControl extends ComplexComputedList {
+export class DataAzurermFunctionAppSourceControl extends cdktf.ComplexComputedList {
 
   // branch - computed: true, optional: false, required: false
   public get branch() {
@@ -246,9 +243,17 @@ export interface DataAzurermFunctionAppTimeouts {
   readonly read?: string;
 }
 
+function dataAzurermFunctionAppTimeoutsToTerraform(struct?: DataAzurermFunctionAppTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    read: cdktf.stringToTerraform(struct!.read),
+  }
+}
+
+
 // Resource
 
-export class DataAzurermFunctionApp extends TerraformDataSource {
+export class DataAzurermFunctionApp extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
@@ -282,7 +287,7 @@ export class DataAzurermFunctionApp extends TerraformDataSource {
 
   // app_settings - computed: true, optional: false, required: false
   public appSettings(key: string): string {
-    return new StringMap(this, 'app_settings').lookup(key);
+    return new cdktf.StringMap(this, 'app_settings').lookup(key);
   }
 
   // connection_string - computed: true, optional: false, required: false
@@ -414,10 +419,10 @@ export class DataAzurermFunctionApp extends TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      tags: this._tags,
-      timeouts: this._timeouts,
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      timeouts: dataAzurermFunctionAppTimeoutsToTerraform(this._timeouts),
     };
   }
 }

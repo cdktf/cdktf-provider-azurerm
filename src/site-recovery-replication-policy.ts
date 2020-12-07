@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface SiteRecoveryReplicationPolicyConfig extends TerraformMetaArguments {
+export interface SiteRecoveryReplicationPolicyConfig extends cdktf.TerraformMetaArguments {
   readonly applicationConsistentSnapshotFrequencyInMinutes: number;
   readonly name: string;
   readonly recoveryPointRetentionInMinutes: number;
@@ -23,9 +22,20 @@ export interface SiteRecoveryReplicationPolicyTimeouts {
   readonly update?: string;
 }
 
+function siteRecoveryReplicationPolicyTimeoutsToTerraform(struct?: SiteRecoveryReplicationPolicyTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class SiteRecoveryReplicationPolicy extends TerraformResource {
+export class SiteRecoveryReplicationPolicy extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -146,12 +156,12 @@ export class SiteRecoveryReplicationPolicy extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      application_consistent_snapshot_frequency_in_minutes: this._applicationConsistentSnapshotFrequencyInMinutes,
-      name: this._name,
-      recovery_point_retention_in_minutes: this._recoveryPointRetentionInMinutes,
-      recovery_vault_name: this._recoveryVaultName,
-      resource_group_name: this._resourceGroupName,
-      timeouts: this._timeouts,
+      application_consistent_snapshot_frequency_in_minutes: cdktf.numberToTerraform(this._applicationConsistentSnapshotFrequencyInMinutes),
+      name: cdktf.stringToTerraform(this._name),
+      recovery_point_retention_in_minutes: cdktf.numberToTerraform(this._recoveryPointRetentionInMinutes),
+      recovery_vault_name: cdktf.stringToTerraform(this._recoveryVaultName),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      timeouts: siteRecoveryReplicationPolicyTimeoutsToTerraform(this._timeouts),
     };
   }
 }

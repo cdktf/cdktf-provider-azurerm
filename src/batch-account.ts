@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface BatchAccountConfig extends TerraformMetaArguments {
+export interface BatchAccountConfig extends cdktf.TerraformMetaArguments {
   readonly location: string;
   readonly name: string;
   readonly poolAllocationMode?: string;
@@ -23,6 +22,15 @@ export interface BatchAccountKeyVaultReference {
   readonly id: string;
   readonly url: string;
 }
+
+function batchAccountKeyVaultReferenceToTerraform(struct?: BatchAccountKeyVaultReference): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    id: cdktf.stringToTerraform(struct!.id),
+    url: cdktf.stringToTerraform(struct!.url),
+  }
+}
+
 export interface BatchAccountTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -30,9 +38,20 @@ export interface BatchAccountTimeouts {
   readonly update?: string;
 }
 
+function batchAccountTimeoutsToTerraform(struct?: BatchAccountTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class BatchAccount extends TerraformResource {
+export class BatchAccount extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -208,14 +227,14 @@ export class BatchAccount extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      location: this._location,
-      name: this._name,
-      pool_allocation_mode: this._poolAllocationMode,
-      resource_group_name: this._resourceGroupName,
-      storage_account_id: this._storageAccountId,
-      tags: this._tags,
-      key_vault_reference: this._keyVaultReference,
-      timeouts: this._timeouts,
+      location: cdktf.stringToTerraform(this._location),
+      name: cdktf.stringToTerraform(this._name),
+      pool_allocation_mode: cdktf.stringToTerraform(this._poolAllocationMode),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      storage_account_id: cdktf.stringToTerraform(this._storageAccountId),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      key_vault_reference: cdktf.listMapper(batchAccountKeyVaultReferenceToTerraform)(this._keyVaultReference),
+      timeouts: batchAccountTimeoutsToTerraform(this._timeouts),
     };
   }
 }

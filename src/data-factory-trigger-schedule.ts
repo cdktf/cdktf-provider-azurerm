@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataFactoryTriggerScheduleConfig extends TerraformMetaArguments {
+export interface DataFactoryTriggerScheduleConfig extends cdktf.TerraformMetaArguments {
   readonly annotations?: string[];
   readonly dataFactoryName: string;
   readonly endTime?: string;
@@ -28,9 +27,20 @@ export interface DataFactoryTriggerScheduleTimeouts {
   readonly update?: string;
 }
 
+function dataFactoryTriggerScheduleTimeoutsToTerraform(struct?: DataFactoryTriggerScheduleTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class DataFactoryTriggerSchedule extends TerraformResource {
+export class DataFactoryTriggerSchedule extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -239,17 +249,17 @@ export class DataFactoryTriggerSchedule extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      annotations: this._annotations,
-      data_factory_name: this._dataFactoryName,
-      end_time: this._endTime,
-      frequency: this._frequency,
-      interval: this._interval,
-      name: this._name,
-      pipeline_name: this._pipelineName,
-      pipeline_parameters: this._pipelineParameters,
-      resource_group_name: this._resourceGroupName,
-      start_time: this._startTime,
-      timeouts: this._timeouts,
+      annotations: cdktf.listMapper(cdktf.stringToTerraform)(this._annotations),
+      data_factory_name: cdktf.stringToTerraform(this._dataFactoryName),
+      end_time: cdktf.stringToTerraform(this._endTime),
+      frequency: cdktf.stringToTerraform(this._frequency),
+      interval: cdktf.numberToTerraform(this._interval),
+      name: cdktf.stringToTerraform(this._name),
+      pipeline_name: cdktf.stringToTerraform(this._pipelineName),
+      pipeline_parameters: cdktf.hashMapper(cdktf.anyToTerraform)(this._pipelineParameters),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      start_time: cdktf.stringToTerraform(this._startTime),
+      timeouts: dataFactoryTriggerScheduleTimeoutsToTerraform(this._timeouts),
     };
   }
 }

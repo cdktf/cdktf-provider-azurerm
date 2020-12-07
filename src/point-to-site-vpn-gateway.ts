@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface PointToSiteVpnGatewayConfig extends TerraformMetaArguments {
+export interface PointToSiteVpnGatewayConfig extends cdktf.TerraformMetaArguments {
   readonly dnsServers?: string[];
   readonly location: string;
   readonly name: string;
@@ -25,14 +24,40 @@ export interface PointToSiteVpnGatewayConnectionConfigurationRoutePropagatedRout
   readonly ids: string[];
   readonly labels?: string[];
 }
+
+function pointToSiteVpnGatewayConnectionConfigurationRoutePropagatedRouteTableToTerraform(struct?: PointToSiteVpnGatewayConnectionConfigurationRoutePropagatedRouteTable): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    ids: cdktf.listMapper(cdktf.stringToTerraform)(struct!.ids),
+    labels: cdktf.listMapper(cdktf.stringToTerraform)(struct!.labels),
+  }
+}
+
 export interface PointToSiteVpnGatewayConnectionConfigurationRoute {
   readonly associatedRouteTableId: string;
   /** propagated_route_table block */
   readonly propagatedRouteTable?: PointToSiteVpnGatewayConnectionConfigurationRoutePropagatedRouteTable[];
 }
+
+function pointToSiteVpnGatewayConnectionConfigurationRouteToTerraform(struct?: PointToSiteVpnGatewayConnectionConfigurationRoute): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    associated_route_table_id: cdktf.stringToTerraform(struct!.associatedRouteTableId),
+    propagated_route_table: cdktf.listMapper(pointToSiteVpnGatewayConnectionConfigurationRoutePropagatedRouteTableToTerraform)(struct!.propagatedRouteTable),
+  }
+}
+
 export interface PointToSiteVpnGatewayConnectionConfigurationVpnClientAddressPool {
   readonly addressPrefixes: string[];
 }
+
+function pointToSiteVpnGatewayConnectionConfigurationVpnClientAddressPoolToTerraform(struct?: PointToSiteVpnGatewayConnectionConfigurationVpnClientAddressPool): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    address_prefixes: cdktf.listMapper(cdktf.stringToTerraform)(struct!.addressPrefixes),
+  }
+}
+
 export interface PointToSiteVpnGatewayConnectionConfiguration {
   readonly name: string;
   /** route block */
@@ -40,6 +65,16 @@ export interface PointToSiteVpnGatewayConnectionConfiguration {
   /** vpn_client_address_pool block */
   readonly vpnClientAddressPool: PointToSiteVpnGatewayConnectionConfigurationVpnClientAddressPool[];
 }
+
+function pointToSiteVpnGatewayConnectionConfigurationToTerraform(struct?: PointToSiteVpnGatewayConnectionConfiguration): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    name: cdktf.stringToTerraform(struct!.name),
+    route: cdktf.listMapper(pointToSiteVpnGatewayConnectionConfigurationRouteToTerraform)(struct!.route),
+    vpn_client_address_pool: cdktf.listMapper(pointToSiteVpnGatewayConnectionConfigurationVpnClientAddressPoolToTerraform)(struct!.vpnClientAddressPool),
+  }
+}
+
 export interface PointToSiteVpnGatewayTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -47,9 +82,20 @@ export interface PointToSiteVpnGatewayTimeouts {
   readonly update?: string;
 }
 
+function pointToSiteVpnGatewayTimeoutsToTerraform(struct?: PointToSiteVpnGatewayTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class PointToSiteVpnGateway extends TerraformResource {
+export class PointToSiteVpnGateway extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -232,16 +278,16 @@ export class PointToSiteVpnGateway extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      dns_servers: this._dnsServers,
-      location: this._location,
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      scale_unit: this._scaleUnit,
-      tags: this._tags,
-      virtual_hub_id: this._virtualHubId,
-      vpn_server_configuration_id: this._vpnServerConfigurationId,
-      connection_configuration: this._connectionConfiguration,
-      timeouts: this._timeouts,
+      dns_servers: cdktf.listMapper(cdktf.stringToTerraform)(this._dnsServers),
+      location: cdktf.stringToTerraform(this._location),
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      scale_unit: cdktf.numberToTerraform(this._scaleUnit),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      virtual_hub_id: cdktf.stringToTerraform(this._virtualHubId),
+      vpn_server_configuration_id: cdktf.stringToTerraform(this._vpnServerConfigurationId),
+      connection_configuration: cdktf.listMapper(pointToSiteVpnGatewayConnectionConfigurationToTerraform)(this._connectionConfiguration),
+      timeouts: pointToSiteVpnGatewayTimeoutsToTerraform(this._timeouts),
     };
   }
 }

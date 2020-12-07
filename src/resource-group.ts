@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface ResourceGroupConfig extends TerraformMetaArguments {
+export interface ResourceGroupConfig extends cdktf.TerraformMetaArguments {
   readonly location: string;
   readonly name: string;
   readonly tags?: { [key: string]: string };
@@ -21,9 +20,20 @@ export interface ResourceGroupTimeouts {
   readonly update?: string;
 }
 
+function resourceGroupTimeoutsToTerraform(struct?: ResourceGroupTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class ResourceGroup extends TerraformResource {
+export class ResourceGroup extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -119,10 +129,10 @@ export class ResourceGroup extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      location: this._location,
-      name: this._name,
-      tags: this._tags,
-      timeouts: this._timeouts,
+      location: cdktf.stringToTerraform(this._location),
+      name: cdktf.stringToTerraform(this._name),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      timeouts: resourceGroupTimeoutsToTerraform(this._timeouts),
     };
   }
 }

@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface ApiManagementIdentityProviderTwitterConfig extends TerraformMetaArguments {
+export interface ApiManagementIdentityProviderTwitterConfig extends cdktf.TerraformMetaArguments {
   readonly apiKey: string;
   readonly apiManagementName: string;
   readonly apiSecretKey: string;
@@ -22,9 +21,20 @@ export interface ApiManagementIdentityProviderTwitterTimeouts {
   readonly update?: string;
 }
 
+function apiManagementIdentityProviderTwitterTimeoutsToTerraform(struct?: ApiManagementIdentityProviderTwitterTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class ApiManagementIdentityProviderTwitter extends TerraformResource {
+export class ApiManagementIdentityProviderTwitter extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -131,11 +141,11 @@ export class ApiManagementIdentityProviderTwitter extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      api_key: this._apiKey,
-      api_management_name: this._apiManagementName,
-      api_secret_key: this._apiSecretKey,
-      resource_group_name: this._resourceGroupName,
-      timeouts: this._timeouts,
+      api_key: cdktf.stringToTerraform(this._apiKey),
+      api_management_name: cdktf.stringToTerraform(this._apiManagementName),
+      api_secret_key: cdktf.stringToTerraform(this._apiSecretKey),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      timeouts: apiManagementIdentityProviderTwitterTimeoutsToTerraform(this._timeouts),
     };
   }
 }

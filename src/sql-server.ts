@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface SqlServerConfig extends TerraformMetaArguments {
+export interface SqlServerConfig extends cdktf.TerraformMetaArguments {
   readonly administratorLogin: string;
   readonly administratorLoginPassword: string;
   readonly connectionPolicy?: string;
@@ -28,9 +27,28 @@ export interface SqlServerExtendedAuditingPolicy {
   readonly storageAccountAccessKeyIsSecondary?: boolean;
   readonly storageEndpoint?: string;
 }
+
+function sqlServerExtendedAuditingPolicyToTerraform(struct?: SqlServerExtendedAuditingPolicy): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    retention_in_days: cdktf.numberToTerraform(struct!.retentionInDays),
+    storage_account_access_key: cdktf.stringToTerraform(struct!.storageAccountAccessKey),
+    storage_account_access_key_is_secondary: cdktf.booleanToTerraform(struct!.storageAccountAccessKeyIsSecondary),
+    storage_endpoint: cdktf.stringToTerraform(struct!.storageEndpoint),
+  }
+}
+
 export interface SqlServerIdentity {
   readonly type: string;
 }
+
+function sqlServerIdentityToTerraform(struct?: SqlServerIdentity): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    type: cdktf.stringToTerraform(struct!.type),
+  }
+}
+
 export interface SqlServerTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -38,9 +56,20 @@ export interface SqlServerTimeouts {
   readonly update?: string;
 }
 
+function sqlServerTimeoutsToTerraform(struct?: SqlServerTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class SqlServer extends TerraformResource {
+export class SqlServer extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -248,17 +277,17 @@ export class SqlServer extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      administrator_login: this._administratorLogin,
-      administrator_login_password: this._administratorLoginPassword,
-      connection_policy: this._connectionPolicy,
-      extended_auditing_policy: this._extendedAuditingPolicy,
-      location: this._location,
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      tags: this._tags,
-      version: this._version,
-      identity: this._identity,
-      timeouts: this._timeouts,
+      administrator_login: cdktf.stringToTerraform(this._administratorLogin),
+      administrator_login_password: cdktf.stringToTerraform(this._administratorLoginPassword),
+      connection_policy: cdktf.stringToTerraform(this._connectionPolicy),
+      extended_auditing_policy: cdktf.listMapper(sqlServerExtendedAuditingPolicyToTerraform)(this._extendedAuditingPolicy),
+      location: cdktf.stringToTerraform(this._location),
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      version: cdktf.stringToTerraform(this._version),
+      identity: cdktf.listMapper(sqlServerIdentityToTerraform)(this._identity),
+      timeouts: sqlServerTimeoutsToTerraform(this._timeouts),
     };
   }
 }

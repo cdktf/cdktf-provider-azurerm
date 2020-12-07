@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface ServicebusSubscriptionConfig extends TerraformMetaArguments {
+export interface ServicebusSubscriptionConfig extends cdktf.TerraformMetaArguments {
   readonly autoDeleteOnIdle?: string;
   readonly deadLetteringOnFilterEvaluationError?: boolean;
   readonly deadLetteringOnMessageExpiration?: boolean;
@@ -33,9 +32,20 @@ export interface ServicebusSubscriptionTimeouts {
   readonly update?: string;
 }
 
+function servicebusSubscriptionTimeoutsToTerraform(struct?: ServicebusSubscriptionTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class ServicebusSubscription extends TerraformResource {
+export class ServicebusSubscription extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -326,22 +336,22 @@ export class ServicebusSubscription extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      auto_delete_on_idle: this._autoDeleteOnIdle,
-      dead_lettering_on_filter_evaluation_error: this._deadLetteringOnFilterEvaluationError,
-      dead_lettering_on_message_expiration: this._deadLetteringOnMessageExpiration,
-      default_message_ttl: this._defaultMessageTtl,
-      enable_batched_operations: this._enableBatchedOperations,
-      forward_dead_lettered_messages_to: this._forwardDeadLetteredMessagesTo,
-      forward_to: this._forwardTo,
-      lock_duration: this._lockDuration,
-      max_delivery_count: this._maxDeliveryCount,
-      name: this._name,
-      namespace_name: this._namespaceName,
-      requires_session: this._requiresSession,
-      resource_group_name: this._resourceGroupName,
-      status: this._status,
-      topic_name: this._topicName,
-      timeouts: this._timeouts,
+      auto_delete_on_idle: cdktf.stringToTerraform(this._autoDeleteOnIdle),
+      dead_lettering_on_filter_evaluation_error: cdktf.booleanToTerraform(this._deadLetteringOnFilterEvaluationError),
+      dead_lettering_on_message_expiration: cdktf.booleanToTerraform(this._deadLetteringOnMessageExpiration),
+      default_message_ttl: cdktf.stringToTerraform(this._defaultMessageTtl),
+      enable_batched_operations: cdktf.booleanToTerraform(this._enableBatchedOperations),
+      forward_dead_lettered_messages_to: cdktf.stringToTerraform(this._forwardDeadLetteredMessagesTo),
+      forward_to: cdktf.stringToTerraform(this._forwardTo),
+      lock_duration: cdktf.stringToTerraform(this._lockDuration),
+      max_delivery_count: cdktf.numberToTerraform(this._maxDeliveryCount),
+      name: cdktf.stringToTerraform(this._name),
+      namespace_name: cdktf.stringToTerraform(this._namespaceName),
+      requires_session: cdktf.booleanToTerraform(this._requiresSession),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      status: cdktf.stringToTerraform(this._status),
+      topic_name: cdktf.stringToTerraform(this._topicName),
+      timeouts: servicebusSubscriptionTimeoutsToTerraform(this._timeouts),
     };
   }
 }

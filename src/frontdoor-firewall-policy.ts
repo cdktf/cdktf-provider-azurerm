@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface FrontdoorFirewallPolicyConfig extends TerraformMetaArguments {
+export interface FrontdoorFirewallPolicyConfig extends cdktf.TerraformMetaArguments {
   readonly customBlockResponseBody?: string;
   readonly customBlockResponseStatusCode?: number;
   readonly enabled?: boolean;
@@ -31,6 +30,19 @@ export interface FrontdoorFirewallPolicyCustomRuleMatchCondition {
   readonly selector?: string;
   readonly transforms?: string[];
 }
+
+function frontdoorFirewallPolicyCustomRuleMatchConditionToTerraform(struct?: FrontdoorFirewallPolicyCustomRuleMatchCondition): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    match_values: cdktf.listMapper(cdktf.stringToTerraform)(struct!.matchValues),
+    match_variable: cdktf.stringToTerraform(struct!.matchVariable),
+    negation_condition: cdktf.booleanToTerraform(struct!.negationCondition),
+    operator: cdktf.stringToTerraform(struct!.operator),
+    selector: cdktf.stringToTerraform(struct!.selector),
+    transforms: cdktf.listMapper(cdktf.stringToTerraform)(struct!.transforms),
+  }
+}
+
 export interface FrontdoorFirewallPolicyCustomRule {
   readonly action: string;
   readonly enabled?: boolean;
@@ -42,21 +54,66 @@ export interface FrontdoorFirewallPolicyCustomRule {
   /** match_condition block */
   readonly matchCondition?: FrontdoorFirewallPolicyCustomRuleMatchCondition[];
 }
+
+function frontdoorFirewallPolicyCustomRuleToTerraform(struct?: FrontdoorFirewallPolicyCustomRule): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    action: cdktf.stringToTerraform(struct!.action),
+    enabled: cdktf.booleanToTerraform(struct!.enabled),
+    name: cdktf.stringToTerraform(struct!.name),
+    priority: cdktf.numberToTerraform(struct!.priority),
+    rate_limit_duration_in_minutes: cdktf.numberToTerraform(struct!.rateLimitDurationInMinutes),
+    rate_limit_threshold: cdktf.numberToTerraform(struct!.rateLimitThreshold),
+    type: cdktf.stringToTerraform(struct!.type),
+    match_condition: cdktf.listMapper(frontdoorFirewallPolicyCustomRuleMatchConditionToTerraform)(struct!.matchCondition),
+  }
+}
+
 export interface FrontdoorFirewallPolicyManagedRuleExclusion {
   readonly matchVariable: string;
   readonly operator: string;
   readonly selector: string;
 }
+
+function frontdoorFirewallPolicyManagedRuleExclusionToTerraform(struct?: FrontdoorFirewallPolicyManagedRuleExclusion): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    match_variable: cdktf.stringToTerraform(struct!.matchVariable),
+    operator: cdktf.stringToTerraform(struct!.operator),
+    selector: cdktf.stringToTerraform(struct!.selector),
+  }
+}
+
 export interface FrontdoorFirewallPolicyManagedRuleOverrideExclusion {
   readonly matchVariable: string;
   readonly operator: string;
   readonly selector: string;
 }
+
+function frontdoorFirewallPolicyManagedRuleOverrideExclusionToTerraform(struct?: FrontdoorFirewallPolicyManagedRuleOverrideExclusion): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    match_variable: cdktf.stringToTerraform(struct!.matchVariable),
+    operator: cdktf.stringToTerraform(struct!.operator),
+    selector: cdktf.stringToTerraform(struct!.selector),
+  }
+}
+
 export interface FrontdoorFirewallPolicyManagedRuleOverrideRuleExclusion {
   readonly matchVariable: string;
   readonly operator: string;
   readonly selector: string;
 }
+
+function frontdoorFirewallPolicyManagedRuleOverrideRuleExclusionToTerraform(struct?: FrontdoorFirewallPolicyManagedRuleOverrideRuleExclusion): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    match_variable: cdktf.stringToTerraform(struct!.matchVariable),
+    operator: cdktf.stringToTerraform(struct!.operator),
+    selector: cdktf.stringToTerraform(struct!.selector),
+  }
+}
+
 export interface FrontdoorFirewallPolicyManagedRuleOverrideRule {
   readonly action: string;
   readonly enabled?: boolean;
@@ -64,6 +121,17 @@ export interface FrontdoorFirewallPolicyManagedRuleOverrideRule {
   /** exclusion block */
   readonly exclusion?: FrontdoorFirewallPolicyManagedRuleOverrideRuleExclusion[];
 }
+
+function frontdoorFirewallPolicyManagedRuleOverrideRuleToTerraform(struct?: FrontdoorFirewallPolicyManagedRuleOverrideRule): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    action: cdktf.stringToTerraform(struct!.action),
+    enabled: cdktf.booleanToTerraform(struct!.enabled),
+    rule_id: cdktf.stringToTerraform(struct!.ruleId),
+    exclusion: cdktf.listMapper(frontdoorFirewallPolicyManagedRuleOverrideRuleExclusionToTerraform)(struct!.exclusion),
+  }
+}
+
 export interface FrontdoorFirewallPolicyManagedRuleOverride {
   readonly ruleGroupName: string;
   /** exclusion block */
@@ -71,6 +139,16 @@ export interface FrontdoorFirewallPolicyManagedRuleOverride {
   /** rule block */
   readonly rule?: FrontdoorFirewallPolicyManagedRuleOverrideRule[];
 }
+
+function frontdoorFirewallPolicyManagedRuleOverrideToTerraform(struct?: FrontdoorFirewallPolicyManagedRuleOverride): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    rule_group_name: cdktf.stringToTerraform(struct!.ruleGroupName),
+    exclusion: cdktf.listMapper(frontdoorFirewallPolicyManagedRuleOverrideExclusionToTerraform)(struct!.exclusion),
+    rule: cdktf.listMapper(frontdoorFirewallPolicyManagedRuleOverrideRuleToTerraform)(struct!.rule),
+  }
+}
+
 export interface FrontdoorFirewallPolicyManagedRule {
   readonly type: string;
   readonly version: string;
@@ -79,6 +157,17 @@ export interface FrontdoorFirewallPolicyManagedRule {
   /** override block */
   readonly override?: FrontdoorFirewallPolicyManagedRuleOverride[];
 }
+
+function frontdoorFirewallPolicyManagedRuleToTerraform(struct?: FrontdoorFirewallPolicyManagedRule): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    type: cdktf.stringToTerraform(struct!.type),
+    version: cdktf.stringToTerraform(struct!.version),
+    exclusion: cdktf.listMapper(frontdoorFirewallPolicyManagedRuleExclusionToTerraform)(struct!.exclusion),
+    override: cdktf.listMapper(frontdoorFirewallPolicyManagedRuleOverrideToTerraform)(struct!.override),
+  }
+}
+
 export interface FrontdoorFirewallPolicyTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -86,9 +175,20 @@ export interface FrontdoorFirewallPolicyTimeouts {
   readonly update?: string;
 }
 
+function frontdoorFirewallPolicyTimeoutsToTerraform(struct?: FrontdoorFirewallPolicyTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class FrontdoorFirewallPolicy extends TerraformResource {
+export class FrontdoorFirewallPolicy extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -313,17 +413,17 @@ export class FrontdoorFirewallPolicy extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      custom_block_response_body: this._customBlockResponseBody,
-      custom_block_response_status_code: this._customBlockResponseStatusCode,
-      enabled: this._enabled,
-      mode: this._mode,
-      name: this._name,
-      redirect_url: this._redirectUrl,
-      resource_group_name: this._resourceGroupName,
-      tags: this._tags,
-      custom_rule: this._customRule,
-      managed_rule: this._managedRule,
-      timeouts: this._timeouts,
+      custom_block_response_body: cdktf.stringToTerraform(this._customBlockResponseBody),
+      custom_block_response_status_code: cdktf.numberToTerraform(this._customBlockResponseStatusCode),
+      enabled: cdktf.booleanToTerraform(this._enabled),
+      mode: cdktf.stringToTerraform(this._mode),
+      name: cdktf.stringToTerraform(this._name),
+      redirect_url: cdktf.stringToTerraform(this._redirectUrl),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      custom_rule: cdktf.listMapper(frontdoorFirewallPolicyCustomRuleToTerraform)(this._customRule),
+      managed_rule: cdktf.listMapper(frontdoorFirewallPolicyManagedRuleToTerraform)(this._managedRule),
+      timeouts: frontdoorFirewallPolicyTimeoutsToTerraform(this._timeouts),
     };
   }
 }

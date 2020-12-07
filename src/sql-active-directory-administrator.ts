@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface SqlActiveDirectoryAdministratorConfig extends TerraformMetaArguments {
+export interface SqlActiveDirectoryAdministratorConfig extends cdktf.TerraformMetaArguments {
   readonly login: string;
   readonly objectId: string;
   readonly resourceGroupName: string;
@@ -23,9 +22,20 @@ export interface SqlActiveDirectoryAdministratorTimeouts {
   readonly update?: string;
 }
 
+function sqlActiveDirectoryAdministratorTimeoutsToTerraform(struct?: SqlActiveDirectoryAdministratorTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class SqlActiveDirectoryAdministrator extends TerraformResource {
+export class SqlActiveDirectoryAdministrator extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -146,12 +156,12 @@ export class SqlActiveDirectoryAdministrator extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      login: this._login,
-      object_id: this._objectId,
-      resource_group_name: this._resourceGroupName,
-      server_name: this._serverName,
-      tenant_id: this._tenantId,
-      timeouts: this._timeouts,
+      login: cdktf.stringToTerraform(this._login),
+      object_id: cdktf.stringToTerraform(this._objectId),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      server_name: cdktf.stringToTerraform(this._serverName),
+      tenant_id: cdktf.stringToTerraform(this._tenantId),
+      timeouts: sqlActiveDirectoryAdministratorTimeoutsToTerraform(this._timeouts),
     };
   }
 }

@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformDataSource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataAzurermStreamAnalyticsJobConfig extends TerraformMetaArguments {
+export interface DataAzurermStreamAnalyticsJobConfig extends cdktf.TerraformMetaArguments {
   readonly name: string;
   readonly resourceGroupName: string;
   /** timeouts block */
@@ -17,9 +16,17 @@ export interface DataAzurermStreamAnalyticsJobTimeouts {
   readonly read?: string;
 }
 
+function dataAzurermStreamAnalyticsJobTimeoutsToTerraform(struct?: DataAzurermStreamAnalyticsJobTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    read: cdktf.stringToTerraform(struct!.read),
+  }
+}
+
+
 // Resource
 
-export class DataAzurermStreamAnalyticsJob extends TerraformDataSource {
+export class DataAzurermStreamAnalyticsJob extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
@@ -148,9 +155,9 @@ export class DataAzurermStreamAnalyticsJob extends TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      timeouts: this._timeouts,
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      timeouts: dataAzurermStreamAnalyticsJobTimeoutsToTerraform(this._timeouts),
     };
   }
 }

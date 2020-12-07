@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface IothubRouteAConfig extends TerraformMetaArguments {
+export interface IothubRouteAConfig extends cdktf.TerraformMetaArguments {
   readonly condition?: string;
   readonly enabled: boolean;
   readonly endpointNames: string[];
@@ -25,9 +24,20 @@ export interface IothubRouteTimeouts {
   readonly update?: string;
 }
 
+function iothubRouteTimeoutsToTerraform(struct?: IothubRouteTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class IothubRouteA extends TerraformResource {
+export class IothubRouteA extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -179,14 +189,14 @@ export class IothubRouteA extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      condition: this._condition,
-      enabled: this._enabled,
-      endpoint_names: this._endpointNames,
-      iothub_name: this._iothubName,
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      source: this._source,
-      timeouts: this._timeouts,
+      condition: cdktf.stringToTerraform(this._condition),
+      enabled: cdktf.booleanToTerraform(this._enabled),
+      endpoint_names: cdktf.listMapper(cdktf.stringToTerraform)(this._endpointNames),
+      iothub_name: cdktf.stringToTerraform(this._iothubName),
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      source: cdktf.stringToTerraform(this._source),
+      timeouts: iothubRouteTimeoutsToTerraform(this._timeouts),
     };
   }
 }

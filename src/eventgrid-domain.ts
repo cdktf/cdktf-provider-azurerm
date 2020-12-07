@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface EventgridDomainConfig extends TerraformMetaArguments {
+export interface EventgridDomainConfig extends cdktf.TerraformMetaArguments {
   readonly inputSchema?: string;
   readonly location: string;
   readonly name: string;
@@ -25,6 +24,16 @@ export interface EventgridDomainInputMappingDefaultValues {
   readonly eventType?: string;
   readonly subject?: string;
 }
+
+function eventgridDomainInputMappingDefaultValuesToTerraform(struct?: EventgridDomainInputMappingDefaultValues): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    data_version: cdktf.stringToTerraform(struct!.dataVersion),
+    event_type: cdktf.stringToTerraform(struct!.eventType),
+    subject: cdktf.stringToTerraform(struct!.subject),
+  }
+}
+
 export interface EventgridDomainInputMappingFields {
   readonly dataVersion?: string;
   readonly eventTime?: string;
@@ -33,6 +42,19 @@ export interface EventgridDomainInputMappingFields {
   readonly subject?: string;
   readonly topic?: string;
 }
+
+function eventgridDomainInputMappingFieldsToTerraform(struct?: EventgridDomainInputMappingFields): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    data_version: cdktf.stringToTerraform(struct!.dataVersion),
+    event_time: cdktf.stringToTerraform(struct!.eventTime),
+    event_type: cdktf.stringToTerraform(struct!.eventType),
+    id: cdktf.stringToTerraform(struct!.id),
+    subject: cdktf.stringToTerraform(struct!.subject),
+    topic: cdktf.stringToTerraform(struct!.topic),
+  }
+}
+
 export interface EventgridDomainTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -40,9 +62,20 @@ export interface EventgridDomainTimeouts {
   readonly update?: string;
 }
 
+function eventgridDomainTimeoutsToTerraform(struct?: EventgridDomainTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class EventgridDomain extends TerraformResource {
+export class EventgridDomain extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -218,14 +251,14 @@ export class EventgridDomain extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      input_schema: this._inputSchema,
-      location: this._location,
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      tags: this._tags,
-      input_mapping_default_values: this._inputMappingDefaultValues,
-      input_mapping_fields: this._inputMappingFields,
-      timeouts: this._timeouts,
+      input_schema: cdktf.stringToTerraform(this._inputSchema),
+      location: cdktf.stringToTerraform(this._location),
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      input_mapping_default_values: cdktf.listMapper(eventgridDomainInputMappingDefaultValuesToTerraform)(this._inputMappingDefaultValues),
+      input_mapping_fields: cdktf.listMapper(eventgridDomainInputMappingFieldsToTerraform)(this._inputMappingFields),
+      timeouts: eventgridDomainTimeoutsToTerraform(this._timeouts),
     };
   }
 }

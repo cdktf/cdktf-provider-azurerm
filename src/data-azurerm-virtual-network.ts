@@ -2,13 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformDataSource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
-import { StringMap } from "cdktf";
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataAzurermVirtualNetworkConfig extends TerraformMetaArguments {
+export interface DataAzurermVirtualNetworkConfig extends cdktf.TerraformMetaArguments {
   readonly name: string;
   readonly resourceGroupName: string;
   /** timeouts block */
@@ -18,9 +16,17 @@ export interface DataAzurermVirtualNetworkTimeouts {
   readonly read?: string;
 }
 
+function dataAzurermVirtualNetworkTimeoutsToTerraform(struct?: DataAzurermVirtualNetworkTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    read: cdktf.stringToTerraform(struct!.read),
+  }
+}
+
+
 // Resource
 
-export class DataAzurermVirtualNetwork extends TerraformDataSource {
+export class DataAzurermVirtualNetwork extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
@@ -104,7 +110,7 @@ export class DataAzurermVirtualNetwork extends TerraformDataSource {
 
   // vnet_peerings - computed: true, optional: false, required: false
   public vnetPeerings(key: string): string {
-    return new StringMap(this, 'vnet_peerings').lookup(key);
+    return new cdktf.StringMap(this, 'vnet_peerings').lookup(key);
   }
 
   // timeouts - computed: false, optional: true, required: false
@@ -129,9 +135,9 @@ export class DataAzurermVirtualNetwork extends TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      timeouts: this._timeouts,
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      timeouts: dataAzurermVirtualNetworkTimeoutsToTerraform(this._timeouts),
     };
   }
 }

@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface SubnetRouteTableAssociationConfig extends TerraformMetaArguments {
+export interface SubnetRouteTableAssociationConfig extends cdktf.TerraformMetaArguments {
   readonly routeTableId: string;
   readonly subnetId: string;
   /** timeouts block */
@@ -20,9 +19,20 @@ export interface SubnetRouteTableAssociationTimeouts {
   readonly update?: string;
 }
 
+function subnetRouteTableAssociationTimeoutsToTerraform(struct?: SubnetRouteTableAssociationTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class SubnetRouteTableAssociation extends TerraformResource {
+export class SubnetRouteTableAssociation extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -101,9 +111,9 @@ export class SubnetRouteTableAssociation extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      route_table_id: this._routeTableId,
-      subnet_id: this._subnetId,
-      timeouts: this._timeouts,
+      route_table_id: cdktf.stringToTerraform(this._routeTableId),
+      subnet_id: cdktf.stringToTerraform(this._subnetId),
+      timeouts: subnetRouteTableAssociationTimeoutsToTerraform(this._timeouts),
     };
   }
 }

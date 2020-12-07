@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface PostgresqlServerKeyConfig extends TerraformMetaArguments {
+export interface PostgresqlServerKeyConfig extends cdktf.TerraformMetaArguments {
   readonly keyVaultKeyId: string;
   readonly serverId: string;
   /** timeouts block */
@@ -20,9 +19,20 @@ export interface PostgresqlServerKeyTimeouts {
   readonly update?: string;
 }
 
+function postgresqlServerKeyTimeoutsToTerraform(struct?: PostgresqlServerKeyTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class PostgresqlServerKey extends TerraformResource {
+export class PostgresqlServerKey extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -101,9 +111,9 @@ export class PostgresqlServerKey extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      key_vault_key_id: this._keyVaultKeyId,
-      server_id: this._serverId,
-      timeouts: this._timeouts,
+      key_vault_key_id: cdktf.stringToTerraform(this._keyVaultKeyId),
+      server_id: cdktf.stringToTerraform(this._serverId),
+      timeouts: postgresqlServerKeyTimeoutsToTerraform(this._timeouts),
     };
   }
 }

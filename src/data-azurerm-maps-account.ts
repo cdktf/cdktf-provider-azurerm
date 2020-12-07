@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformDataSource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataAzurermMapsAccountConfig extends TerraformMetaArguments {
+export interface DataAzurermMapsAccountConfig extends cdktf.TerraformMetaArguments {
   readonly name: string;
   readonly resourceGroupName: string;
   readonly tags?: { [key: string]: string };
@@ -18,9 +17,17 @@ export interface DataAzurermMapsAccountTimeouts {
   readonly read?: string;
 }
 
+function dataAzurermMapsAccountTimeoutsToTerraform(struct?: DataAzurermMapsAccountTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    read: cdktf.stringToTerraform(struct!.read),
+  }
+}
+
+
 // Resource
 
-export class DataAzurermMapsAccount extends TerraformDataSource {
+export class DataAzurermMapsAccount extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
@@ -136,10 +143,10 @@ export class DataAzurermMapsAccount extends TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      tags: this._tags,
-      timeouts: this._timeouts,
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      timeouts: dataAzurermMapsAccountTimeoutsToTerraform(this._timeouts),
     };
   }
 }

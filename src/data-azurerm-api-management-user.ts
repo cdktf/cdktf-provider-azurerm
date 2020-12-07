@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformDataSource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataAzurermApiManagementUserConfig extends TerraformMetaArguments {
+export interface DataAzurermApiManagementUserConfig extends cdktf.TerraformMetaArguments {
   readonly apiManagementName: string;
   readonly resourceGroupName: string;
   readonly userId: string;
@@ -18,9 +17,17 @@ export interface DataAzurermApiManagementUserTimeouts {
   readonly read?: string;
 }
 
+function dataAzurermApiManagementUserTimeoutsToTerraform(struct?: DataAzurermApiManagementUserTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    read: cdktf.stringToTerraform(struct!.read),
+  }
+}
+
+
 // Resource
 
-export class DataAzurermApiManagementUser extends TerraformDataSource {
+export class DataAzurermApiManagementUser extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
@@ -138,10 +145,10 @@ export class DataAzurermApiManagementUser extends TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      api_management_name: this._apiManagementName,
-      resource_group_name: this._resourceGroupName,
-      user_id: this._userId,
-      timeouts: this._timeouts,
+      api_management_name: cdktf.stringToTerraform(this._apiManagementName),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      user_id: cdktf.stringToTerraform(this._userId),
+      timeouts: dataAzurermApiManagementUserTimeoutsToTerraform(this._timeouts),
     };
   }
 }

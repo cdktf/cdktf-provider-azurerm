@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface PolicyRemediationConfig extends TerraformMetaArguments {
+export interface PolicyRemediationConfig extends cdktf.TerraformMetaArguments {
   readonly locationFilters?: string[];
   readonly name: string;
   readonly policyAssignmentId: string;
@@ -24,9 +23,20 @@ export interface PolicyRemediationTimeouts {
   readonly update?: string;
 }
 
+function policyRemediationTimeoutsToTerraform(struct?: PolicyRemediationTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class PolicyRemediation extends TerraformResource {
+export class PolicyRemediation extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -170,13 +180,13 @@ export class PolicyRemediation extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      location_filters: this._locationFilters,
-      name: this._name,
-      policy_assignment_id: this._policyAssignmentId,
-      policy_definition_reference_id: this._policyDefinitionReferenceId,
-      resource_discovery_mode: this._resourceDiscoveryMode,
-      scope: this._scope,
-      timeouts: this._timeouts,
+      location_filters: cdktf.listMapper(cdktf.stringToTerraform)(this._locationFilters),
+      name: cdktf.stringToTerraform(this._name),
+      policy_assignment_id: cdktf.stringToTerraform(this._policyAssignmentId),
+      policy_definition_reference_id: cdktf.stringToTerraform(this._policyDefinitionReferenceId),
+      resource_discovery_mode: cdktf.stringToTerraform(this._resourceDiscoveryMode),
+      scope: cdktf.stringToTerraform(this._scope),
+      timeouts: policyRemediationTimeoutsToTerraform(this._timeouts),
     };
   }
 }

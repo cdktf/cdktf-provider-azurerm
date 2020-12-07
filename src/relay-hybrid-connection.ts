@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface RelayHybridConnectionConfig extends TerraformMetaArguments {
+export interface RelayHybridConnectionConfig extends cdktf.TerraformMetaArguments {
   readonly name: string;
   readonly relayNamespaceName: string;
   readonly requiresClientAuthorization?: boolean;
@@ -23,9 +22,20 @@ export interface RelayHybridConnectionTimeouts {
   readonly update?: string;
 }
 
+function relayHybridConnectionTimeoutsToTerraform(struct?: RelayHybridConnectionTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class RelayHybridConnection extends TerraformResource {
+export class RelayHybridConnection extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -152,12 +162,12 @@ export class RelayHybridConnection extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      name: this._name,
-      relay_namespace_name: this._relayNamespaceName,
-      requires_client_authorization: this._requiresClientAuthorization,
-      resource_group_name: this._resourceGroupName,
-      user_metadata: this._userMetadata,
-      timeouts: this._timeouts,
+      name: cdktf.stringToTerraform(this._name),
+      relay_namespace_name: cdktf.stringToTerraform(this._relayNamespaceName),
+      requires_client_authorization: cdktf.booleanToTerraform(this._requiresClientAuthorization),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      user_metadata: cdktf.stringToTerraform(this._userMetadata),
+      timeouts: relayHybridConnectionTimeoutsToTerraform(this._timeouts),
     };
   }
 }

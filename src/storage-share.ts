@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface StorageShareConfig extends TerraformMetaArguments {
+export interface StorageShareConfig extends cdktf.TerraformMetaArguments {
   readonly metadata?: { [key: string]: string };
   readonly name: string;
   readonly quota?: number;
@@ -22,11 +21,30 @@ export interface StorageShareAclAccessPolicy {
   readonly permissions: string;
   readonly start?: string;
 }
+
+function storageShareAclAccessPolicyToTerraform(struct?: StorageShareAclAccessPolicy): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    expiry: cdktf.stringToTerraform(struct!.expiry),
+    permissions: cdktf.stringToTerraform(struct!.permissions),
+    start: cdktf.stringToTerraform(struct!.start),
+  }
+}
+
 export interface StorageShareAcl {
   readonly id: string;
   /** access_policy block */
   readonly accessPolicy?: StorageShareAclAccessPolicy[];
 }
+
+function storageShareAclToTerraform(struct?: StorageShareAcl): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    id: cdktf.stringToTerraform(struct!.id),
+    access_policy: cdktf.listMapper(storageShareAclAccessPolicyToTerraform)(struct!.accessPolicy),
+  }
+}
+
 export interface StorageShareTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -34,9 +52,20 @@ export interface StorageShareTimeouts {
   readonly update?: string;
 }
 
+function storageShareTimeoutsToTerraform(struct?: StorageShareTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class StorageShare extends TerraformResource {
+export class StorageShare extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -176,12 +205,12 @@ export class StorageShare extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      metadata: this._metadata,
-      name: this._name,
-      quota: this._quota,
-      storage_account_name: this._storageAccountName,
-      acl: this._acl,
-      timeouts: this._timeouts,
+      metadata: cdktf.hashMapper(cdktf.anyToTerraform)(this._metadata),
+      name: cdktf.stringToTerraform(this._name),
+      quota: cdktf.numberToTerraform(this._quota),
+      storage_account_name: cdktf.stringToTerraform(this._storageAccountName),
+      acl: cdktf.listMapper(storageShareAclToTerraform)(this._acl),
+      timeouts: storageShareTimeoutsToTerraform(this._timeouts),
     };
   }
 }

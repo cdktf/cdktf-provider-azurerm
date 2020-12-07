@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface LighthouseDefinitionConfig extends TerraformMetaArguments {
+export interface LighthouseDefinitionConfig extends cdktf.TerraformMetaArguments {
   readonly description?: string;
   readonly lighthouseDefinitionId?: string;
   readonly managingTenantId: string;
@@ -22,6 +21,15 @@ export interface LighthouseDefinitionAuthorization {
   readonly principalId: string;
   readonly roleDefinitionId: string;
 }
+
+function lighthouseDefinitionAuthorizationToTerraform(struct?: LighthouseDefinitionAuthorization): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    principal_id: cdktf.stringToTerraform(struct!.principalId),
+    role_definition_id: cdktf.stringToTerraform(struct!.roleDefinitionId),
+  }
+}
+
 export interface LighthouseDefinitionTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -29,9 +37,20 @@ export interface LighthouseDefinitionTimeouts {
   readonly update?: string;
 }
 
+function lighthouseDefinitionTimeoutsToTerraform(struct?: LighthouseDefinitionTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class LighthouseDefinition extends TerraformResource {
+export class LighthouseDefinition extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -172,13 +191,13 @@ export class LighthouseDefinition extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      description: this._description,
-      lighthouse_definition_id: this._lighthouseDefinitionId,
-      managing_tenant_id: this._managingTenantId,
-      name: this._name,
-      scope: this._scope,
-      authorization: this._authorization,
-      timeouts: this._timeouts,
+      description: cdktf.stringToTerraform(this._description),
+      lighthouse_definition_id: cdktf.stringToTerraform(this._lighthouseDefinitionId),
+      managing_tenant_id: cdktf.stringToTerraform(this._managingTenantId),
+      name: cdktf.stringToTerraform(this._name),
+      scope: cdktf.stringToTerraform(this._scope),
+      authorization: cdktf.listMapper(lighthouseDefinitionAuthorizationToTerraform)(this._authorization),
+      timeouts: lighthouseDefinitionTimeoutsToTerraform(this._timeouts),
     };
   }
 }

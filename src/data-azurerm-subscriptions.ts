@@ -2,19 +2,17 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformDataSource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
-import { ComplexComputedList } from "cdktf";
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataAzurermSubscriptionsConfig extends TerraformMetaArguments {
+export interface DataAzurermSubscriptionsConfig extends cdktf.TerraformMetaArguments {
   readonly displayNameContains?: string;
   readonly displayNamePrefix?: string;
   /** timeouts block */
   readonly timeouts?: DataAzurermSubscriptionsTimeouts;
 }
-export class DataAzurermSubscriptionsSubscriptions extends ComplexComputedList {
+export class DataAzurermSubscriptionsSubscriptions extends cdktf.ComplexComputedList {
 
   // display_name - computed: true, optional: false, required: false
   public get displayName() {
@@ -55,9 +53,17 @@ export interface DataAzurermSubscriptionsTimeouts {
   readonly read?: string;
 }
 
+function dataAzurermSubscriptionsTimeoutsToTerraform(struct?: DataAzurermSubscriptionsTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    read: cdktf.stringToTerraform(struct!.read),
+  }
+}
+
+
 // Resource
 
-export class DataAzurermSubscriptions extends TerraformDataSource {
+export class DataAzurermSubscriptions extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
@@ -147,9 +153,9 @@ export class DataAzurermSubscriptions extends TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      display_name_contains: this._displayNameContains,
-      display_name_prefix: this._displayNamePrefix,
-      timeouts: this._timeouts,
+      display_name_contains: cdktf.stringToTerraform(this._displayNameContains),
+      display_name_prefix: cdktf.stringToTerraform(this._displayNamePrefix),
+      timeouts: dataAzurermSubscriptionsTimeoutsToTerraform(this._timeouts),
     };
   }
 }

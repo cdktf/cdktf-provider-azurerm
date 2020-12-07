@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface BlueprintAssignmentConfig extends TerraformMetaArguments {
+export interface BlueprintAssignmentConfig extends cdktf.TerraformMetaArguments {
   readonly location: string;
   readonly lockExcludePrincipals?: string[];
   readonly lockMode?: string;
@@ -25,6 +24,15 @@ export interface BlueprintAssignmentIdentity {
   readonly identityIds: string[];
   readonly type: string;
 }
+
+function blueprintAssignmentIdentityToTerraform(struct?: BlueprintAssignmentIdentity): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    identity_ids: cdktf.listMapper(cdktf.stringToTerraform)(struct!.identityIds),
+    type: cdktf.stringToTerraform(struct!.type),
+  }
+}
+
 export interface BlueprintAssignmentTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -32,9 +40,20 @@ export interface BlueprintAssignmentTimeouts {
   readonly update?: string;
 }
 
+function blueprintAssignmentTimeoutsToTerraform(struct?: BlueprintAssignmentTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class BlueprintAssignment extends TerraformResource {
+export class BlueprintAssignment extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -246,16 +265,16 @@ export class BlueprintAssignment extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      location: this._location,
-      lock_exclude_principals: this._lockExcludePrincipals,
-      lock_mode: this._lockMode,
-      name: this._name,
-      parameter_values: this._parameterValues,
-      resource_groups: this._resourceGroups,
-      target_subscription_id: this._targetSubscriptionId,
-      version_id: this._versionId,
-      identity: this._identity,
-      timeouts: this._timeouts,
+      location: cdktf.stringToTerraform(this._location),
+      lock_exclude_principals: cdktf.listMapper(cdktf.stringToTerraform)(this._lockExcludePrincipals),
+      lock_mode: cdktf.stringToTerraform(this._lockMode),
+      name: cdktf.stringToTerraform(this._name),
+      parameter_values: cdktf.stringToTerraform(this._parameterValues),
+      resource_groups: cdktf.stringToTerraform(this._resourceGroups),
+      target_subscription_id: cdktf.stringToTerraform(this._targetSubscriptionId),
+      version_id: cdktf.stringToTerraform(this._versionId),
+      identity: cdktf.listMapper(blueprintAssignmentIdentityToTerraform)(this._identity),
+      timeouts: blueprintAssignmentTimeoutsToTerraform(this._timeouts),
     };
   }
 }

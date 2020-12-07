@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface AutomationVariableIntConfig extends TerraformMetaArguments {
+export interface AutomationVariableIntConfig extends cdktf.TerraformMetaArguments {
   readonly automationAccountName: string;
   readonly description?: string;
   readonly encrypted?: boolean;
@@ -24,9 +23,20 @@ export interface AutomationVariableIntTimeouts {
   readonly update?: string;
 }
 
+function automationVariableIntTimeoutsToTerraform(struct?: AutomationVariableIntTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class AutomationVariableInt extends TerraformResource {
+export class AutomationVariableInt extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -170,13 +180,13 @@ export class AutomationVariableInt extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      automation_account_name: this._automationAccountName,
-      description: this._description,
-      encrypted: this._encrypted,
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      value: this._value,
-      timeouts: this._timeouts,
+      automation_account_name: cdktf.stringToTerraform(this._automationAccountName),
+      description: cdktf.stringToTerraform(this._description),
+      encrypted: cdktf.booleanToTerraform(this._encrypted),
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      value: cdktf.numberToTerraform(this._value),
+      timeouts: automationVariableIntTimeoutsToTerraform(this._timeouts),
     };
   }
 }

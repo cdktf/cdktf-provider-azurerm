@@ -2,20 +2,17 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformDataSource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
-import { ComplexComputedList } from "cdktf";
-import { StringMap } from "cdktf";
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataAzurermSpringCloudServiceConfig extends TerraformMetaArguments {
+export interface DataAzurermSpringCloudServiceConfig extends cdktf.TerraformMetaArguments {
   readonly name: string;
   readonly resourceGroupName: string;
   /** timeouts block */
   readonly timeouts?: DataAzurermSpringCloudServiceTimeouts;
 }
-export class DataAzurermSpringCloudServiceConfigServerGitSettingHttpBasicAuth extends ComplexComputedList {
+export class DataAzurermSpringCloudServiceConfigServerGitSettingHttpBasicAuth extends cdktf.ComplexComputedList {
 
   // password - computed: true, optional: false, required: false
   public get password() {
@@ -27,7 +24,7 @@ export class DataAzurermSpringCloudServiceConfigServerGitSettingHttpBasicAuth ex
     return this.getStringAttribute('username');
   }
 }
-export class DataAzurermSpringCloudServiceConfigServerGitSettingRepositoryHttpBasicAuth extends ComplexComputedList {
+export class DataAzurermSpringCloudServiceConfigServerGitSettingRepositoryHttpBasicAuth extends cdktf.ComplexComputedList {
 
   // password - computed: true, optional: false, required: false
   public get password() {
@@ -39,7 +36,7 @@ export class DataAzurermSpringCloudServiceConfigServerGitSettingRepositoryHttpBa
     return this.getStringAttribute('username');
   }
 }
-export class DataAzurermSpringCloudServiceConfigServerGitSettingRepositorySshAuth extends ComplexComputedList {
+export class DataAzurermSpringCloudServiceConfigServerGitSettingRepositorySshAuth extends cdktf.ComplexComputedList {
 
   // host_key - computed: true, optional: false, required: false
   public get hostKey() {
@@ -61,7 +58,7 @@ export class DataAzurermSpringCloudServiceConfigServerGitSettingRepositorySshAut
     return this.getBooleanAttribute('strict_host_key_checking_enabled');
   }
 }
-export class DataAzurermSpringCloudServiceConfigServerGitSettingRepository extends ComplexComputedList {
+export class DataAzurermSpringCloudServiceConfigServerGitSettingRepository extends cdktf.ComplexComputedList {
 
   // http_basic_auth - computed: true, optional: false, required: false
   public get httpBasicAuth() {
@@ -98,7 +95,7 @@ export class DataAzurermSpringCloudServiceConfigServerGitSettingRepository exten
     return this.getStringAttribute('uri');
   }
 }
-export class DataAzurermSpringCloudServiceConfigServerGitSettingSshAuth extends ComplexComputedList {
+export class DataAzurermSpringCloudServiceConfigServerGitSettingSshAuth extends cdktf.ComplexComputedList {
 
   // host_key - computed: true, optional: false, required: false
   public get hostKey() {
@@ -120,7 +117,7 @@ export class DataAzurermSpringCloudServiceConfigServerGitSettingSshAuth extends 
     return this.getBooleanAttribute('strict_host_key_checking_enabled');
   }
 }
-export class DataAzurermSpringCloudServiceConfigServerGitSetting extends ComplexComputedList {
+export class DataAzurermSpringCloudServiceConfigServerGitSetting extends cdktf.ComplexComputedList {
 
   // http_basic_auth - computed: true, optional: false, required: false
   public get httpBasicAuth() {
@@ -156,9 +153,17 @@ export interface DataAzurermSpringCloudServiceTimeouts {
   readonly read?: string;
 }
 
+function dataAzurermSpringCloudServiceTimeoutsToTerraform(struct?: DataAzurermSpringCloudServiceTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    read: cdktf.stringToTerraform(struct!.read),
+  }
+}
+
+
 // Resource
 
-export class DataAzurermSpringCloudService extends TerraformDataSource {
+export class DataAzurermSpringCloudService extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
@@ -232,7 +237,7 @@ export class DataAzurermSpringCloudService extends TerraformDataSource {
 
   // tags - computed: true, optional: false, required: false
   public tags(key: string): string {
-    return new StringMap(this, 'tags').lookup(key);
+    return new cdktf.StringMap(this, 'tags').lookup(key);
   }
 
   // timeouts - computed: false, optional: true, required: false
@@ -257,9 +262,9 @@ export class DataAzurermSpringCloudService extends TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      timeouts: this._timeouts,
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      timeouts: dataAzurermSpringCloudServiceTimeoutsToTerraform(this._timeouts),
     };
   }
 }

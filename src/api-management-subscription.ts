@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface ApiManagementSubscriptionConfig extends TerraformMetaArguments {
+export interface ApiManagementSubscriptionConfig extends cdktf.TerraformMetaArguments {
   readonly allowTracing?: boolean;
   readonly apiManagementName: string;
   readonly displayName: string;
@@ -28,9 +27,20 @@ export interface ApiManagementSubscriptionTimeouts {
   readonly update?: string;
 }
 
+function apiManagementSubscriptionTimeoutsToTerraform(struct?: ApiManagementSubscriptionTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class ApiManagementSubscription extends TerraformResource {
+export class ApiManagementSubscription extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -239,17 +249,17 @@ export class ApiManagementSubscription extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      allow_tracing: this._allowTracing,
-      api_management_name: this._apiManagementName,
-      display_name: this._displayName,
-      primary_key: this._primaryKey,
-      product_id: this._productId,
-      resource_group_name: this._resourceGroupName,
-      secondary_key: this._secondaryKey,
-      state: this._state,
-      subscription_id: this._subscriptionId,
-      user_id: this._userId,
-      timeouts: this._timeouts,
+      allow_tracing: cdktf.booleanToTerraform(this._allowTracing),
+      api_management_name: cdktf.stringToTerraform(this._apiManagementName),
+      display_name: cdktf.stringToTerraform(this._displayName),
+      primary_key: cdktf.stringToTerraform(this._primaryKey),
+      product_id: cdktf.stringToTerraform(this._productId),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      secondary_key: cdktf.stringToTerraform(this._secondaryKey),
+      state: cdktf.stringToTerraform(this._state),
+      subscription_id: cdktf.stringToTerraform(this._subscriptionId),
+      user_id: cdktf.stringToTerraform(this._userId),
+      timeouts: apiManagementSubscriptionTimeoutsToTerraform(this._timeouts),
     };
   }
 }

@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface NetworkDdosProtectionPlanConfig extends TerraformMetaArguments {
+export interface NetworkDdosProtectionPlanConfig extends cdktf.TerraformMetaArguments {
   readonly location: string;
   readonly name: string;
   readonly resourceGroupName: string;
@@ -22,9 +21,20 @@ export interface NetworkDdosProtectionPlanTimeouts {
   readonly update?: string;
 }
 
+function networkDdosProtectionPlanTimeoutsToTerraform(struct?: NetworkDdosProtectionPlanTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class NetworkDdosProtectionPlan extends TerraformResource {
+export class NetworkDdosProtectionPlan extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -139,11 +149,11 @@ export class NetworkDdosProtectionPlan extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      location: this._location,
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      tags: this._tags,
-      timeouts: this._timeouts,
+      location: cdktf.stringToTerraform(this._location),
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      timeouts: networkDdosProtectionPlanTimeoutsToTerraform(this._timeouts),
     };
   }
 }

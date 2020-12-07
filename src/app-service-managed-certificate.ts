@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface AppServiceManagedCertificateConfig extends TerraformMetaArguments {
+export interface AppServiceManagedCertificateConfig extends cdktf.TerraformMetaArguments {
   readonly customHostnameBindingId: string;
   readonly tags?: { [key: string]: string };
   /** timeouts block */
@@ -20,9 +19,20 @@ export interface AppServiceManagedCertificateTimeouts {
   readonly update?: string;
 }
 
+function appServiceManagedCertificateTimeoutsToTerraform(struct?: AppServiceManagedCertificateTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class AppServiceManagedCertificate extends TerraformResource {
+export class AppServiceManagedCertificate extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -144,9 +154,9 @@ export class AppServiceManagedCertificate extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      custom_hostname_binding_id: this._customHostnameBindingId,
-      tags: this._tags,
-      timeouts: this._timeouts,
+      custom_hostname_binding_id: cdktf.stringToTerraform(this._customHostnameBindingId),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      timeouts: appServiceManagedCertificateTimeoutsToTerraform(this._timeouts),
     };
   }
 }

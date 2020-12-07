@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface MssqlDatabaseExtendedAuditingPolicyAConfig extends TerraformMetaArguments {
+export interface MssqlDatabaseExtendedAuditingPolicyAConfig extends cdktf.TerraformMetaArguments {
   readonly databaseId: string;
   readonly retentionInDays?: number;
   readonly storageAccountAccessKey?: string;
@@ -23,9 +22,20 @@ export interface MssqlDatabaseExtendedAuditingPolicyTimeouts {
   readonly update?: string;
 }
 
+function mssqlDatabaseExtendedAuditingPolicyTimeoutsToTerraform(struct?: MssqlDatabaseExtendedAuditingPolicyTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class MssqlDatabaseExtendedAuditingPolicyA extends TerraformResource {
+export class MssqlDatabaseExtendedAuditingPolicyA extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -155,12 +165,12 @@ export class MssqlDatabaseExtendedAuditingPolicyA extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      database_id: this._databaseId,
-      retention_in_days: this._retentionInDays,
-      storage_account_access_key: this._storageAccountAccessKey,
-      storage_account_access_key_is_secondary: this._storageAccountAccessKeyIsSecondary,
-      storage_endpoint: this._storageEndpoint,
-      timeouts: this._timeouts,
+      database_id: cdktf.stringToTerraform(this._databaseId),
+      retention_in_days: cdktf.numberToTerraform(this._retentionInDays),
+      storage_account_access_key: cdktf.stringToTerraform(this._storageAccountAccessKey),
+      storage_account_access_key_is_secondary: cdktf.booleanToTerraform(this._storageAccountAccessKeyIsSecondary),
+      storage_endpoint: cdktf.stringToTerraform(this._storageEndpoint),
+      timeouts: mssqlDatabaseExtendedAuditingPolicyTimeoutsToTerraform(this._timeouts),
     };
   }
 }

@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface VirtualNetworkGatewayConnectionConfig extends TerraformMetaArguments {
+export interface VirtualNetworkGatewayConnectionConfig extends cdktf.TerraformMetaArguments {
   readonly authorizationKey?: string;
   readonly connectionProtocol?: string;
   readonly dpdTimeoutSeconds?: number;
@@ -43,20 +42,55 @@ export interface VirtualNetworkGatewayConnectionIpsecPolicy {
   readonly saDatasize?: number;
   readonly saLifetime?: number;
 }
+
+function virtualNetworkGatewayConnectionIpsecPolicyToTerraform(struct?: VirtualNetworkGatewayConnectionIpsecPolicy): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    dh_group: cdktf.stringToTerraform(struct!.dhGroup),
+    ike_encryption: cdktf.stringToTerraform(struct!.ikeEncryption),
+    ike_integrity: cdktf.stringToTerraform(struct!.ikeIntegrity),
+    ipsec_encryption: cdktf.stringToTerraform(struct!.ipsecEncryption),
+    ipsec_integrity: cdktf.stringToTerraform(struct!.ipsecIntegrity),
+    pfs_group: cdktf.stringToTerraform(struct!.pfsGroup),
+    sa_datasize: cdktf.numberToTerraform(struct!.saDatasize),
+    sa_lifetime: cdktf.numberToTerraform(struct!.saLifetime),
+  }
+}
+
 export interface VirtualNetworkGatewayConnectionTimeouts {
   readonly create?: string;
   readonly delete?: string;
   readonly read?: string;
   readonly update?: string;
 }
+
+function virtualNetworkGatewayConnectionTimeoutsToTerraform(struct?: VirtualNetworkGatewayConnectionTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
 export interface VirtualNetworkGatewayConnectionTrafficSelectorPolicy {
   readonly localAddressCidrs: string[];
   readonly remoteAddressCidrs: string[];
 }
 
+function virtualNetworkGatewayConnectionTrafficSelectorPolicyToTerraform(struct?: VirtualNetworkGatewayConnectionTrafficSelectorPolicy): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    local_address_cidrs: cdktf.listMapper(cdktf.stringToTerraform)(struct!.localAddressCidrs),
+    remote_address_cidrs: cdktf.listMapper(cdktf.stringToTerraform)(struct!.remoteAddressCidrs),
+  }
+}
+
+
 // Resource
 
-export class VirtualNetworkGatewayConnection extends TerraformResource {
+export class VirtualNetworkGatewayConnection extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -432,27 +466,27 @@ export class VirtualNetworkGatewayConnection extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      authorization_key: this._authorizationKey,
-      connection_protocol: this._connectionProtocol,
-      dpd_timeout_seconds: this._dpdTimeoutSeconds,
-      enable_bgp: this._enableBgp,
-      express_route_circuit_id: this._expressRouteCircuitId,
-      express_route_gateway_bypass: this._expressRouteGatewayBypass,
-      local_azure_ip_address_enabled: this._localAzureIpAddressEnabled,
-      local_network_gateway_id: this._localNetworkGatewayId,
-      location: this._location,
-      name: this._name,
-      peer_virtual_network_gateway_id: this._peerVirtualNetworkGatewayId,
-      resource_group_name: this._resourceGroupName,
-      routing_weight: this._routingWeight,
-      shared_key: this._sharedKey,
-      tags: this._tags,
-      type: this._type,
-      use_policy_based_traffic_selectors: this._usePolicyBasedTrafficSelectors,
-      virtual_network_gateway_id: this._virtualNetworkGatewayId,
-      ipsec_policy: this._ipsecPolicy,
-      timeouts: this._timeouts,
-      traffic_selector_policy: this._trafficSelectorPolicy,
+      authorization_key: cdktf.stringToTerraform(this._authorizationKey),
+      connection_protocol: cdktf.stringToTerraform(this._connectionProtocol),
+      dpd_timeout_seconds: cdktf.numberToTerraform(this._dpdTimeoutSeconds),
+      enable_bgp: cdktf.booleanToTerraform(this._enableBgp),
+      express_route_circuit_id: cdktf.stringToTerraform(this._expressRouteCircuitId),
+      express_route_gateway_bypass: cdktf.booleanToTerraform(this._expressRouteGatewayBypass),
+      local_azure_ip_address_enabled: cdktf.booleanToTerraform(this._localAzureIpAddressEnabled),
+      local_network_gateway_id: cdktf.stringToTerraform(this._localNetworkGatewayId),
+      location: cdktf.stringToTerraform(this._location),
+      name: cdktf.stringToTerraform(this._name),
+      peer_virtual_network_gateway_id: cdktf.stringToTerraform(this._peerVirtualNetworkGatewayId),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      routing_weight: cdktf.numberToTerraform(this._routingWeight),
+      shared_key: cdktf.stringToTerraform(this._sharedKey),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      type: cdktf.stringToTerraform(this._type),
+      use_policy_based_traffic_selectors: cdktf.booleanToTerraform(this._usePolicyBasedTrafficSelectors),
+      virtual_network_gateway_id: cdktf.stringToTerraform(this._virtualNetworkGatewayId),
+      ipsec_policy: cdktf.listMapper(virtualNetworkGatewayConnectionIpsecPolicyToTerraform)(this._ipsecPolicy),
+      timeouts: virtualNetworkGatewayConnectionTimeoutsToTerraform(this._timeouts),
+      traffic_selector_policy: cdktf.listMapper(virtualNetworkGatewayConnectionTrafficSelectorPolicyToTerraform)(this._trafficSelectorPolicy),
     };
   }
 }

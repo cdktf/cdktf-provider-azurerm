@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface CustomProviderConfig extends TerraformMetaArguments {
+export interface CustomProviderConfig extends cdktf.TerraformMetaArguments {
   readonly location: string;
   readonly name: string;
   readonly resourceGroupName: string;
@@ -25,24 +24,62 @@ export interface CustomProviderAction {
   readonly endpoint: string;
   readonly name: string;
 }
+
+function customProviderActionToTerraform(struct?: CustomProviderAction): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    endpoint: cdktf.stringToTerraform(struct!.endpoint),
+    name: cdktf.stringToTerraform(struct!.name),
+  }
+}
+
 export interface CustomProviderResourceType {
   readonly endpoint: string;
   readonly name: string;
   readonly routingType?: string;
 }
+
+function customProviderResourceTypeToTerraform(struct?: CustomProviderResourceType): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    endpoint: cdktf.stringToTerraform(struct!.endpoint),
+    name: cdktf.stringToTerraform(struct!.name),
+    routing_type: cdktf.stringToTerraform(struct!.routingType),
+  }
+}
+
 export interface CustomProviderTimeouts {
   readonly create?: string;
   readonly delete?: string;
   readonly read?: string;
   readonly update?: string;
 }
+
+function customProviderTimeoutsToTerraform(struct?: CustomProviderTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
 export interface CustomProviderValidation {
   readonly specification: string;
 }
 
+function customProviderValidationToTerraform(struct?: CustomProviderValidation): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    specification: cdktf.stringToTerraform(struct!.specification),
+  }
+}
+
+
 // Resource
 
-export class CustomProvider extends TerraformResource {
+export class CustomProvider extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -203,14 +240,14 @@ export class CustomProvider extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      location: this._location,
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      tags: this._tags,
-      action: this._action,
-      resource_type: this._resourceType,
-      timeouts: this._timeouts,
-      validation: this._validation,
+      location: cdktf.stringToTerraform(this._location),
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      action: cdktf.listMapper(customProviderActionToTerraform)(this._action),
+      resource_type: cdktf.listMapper(customProviderResourceTypeToTerraform)(this._resourceType),
+      timeouts: customProviderTimeoutsToTerraform(this._timeouts),
+      validation: cdktf.listMapper(customProviderValidationToTerraform)(this._validation),
     };
   }
 }

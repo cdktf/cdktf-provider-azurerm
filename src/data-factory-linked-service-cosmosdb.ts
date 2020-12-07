@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataFactoryLinkedServiceCosmosdbConfig extends TerraformMetaArguments {
+export interface DataFactoryLinkedServiceCosmosdbConfig extends cdktf.TerraformMetaArguments {
   readonly accountEndpoint?: string;
   readonly accountKey?: string;
   readonly additionalProperties?: { [key: string]: string };
@@ -30,9 +29,20 @@ export interface DataFactoryLinkedServiceCosmosdbTimeouts {
   readonly update?: string;
 }
 
+function dataFactoryLinkedServiceCosmosdbTimeoutsToTerraform(struct?: DataFactoryLinkedServiceCosmosdbTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class DataFactoryLinkedServiceCosmosdb extends TerraformResource {
+export class DataFactoryLinkedServiceCosmosdb extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -278,19 +288,19 @@ export class DataFactoryLinkedServiceCosmosdb extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      account_endpoint: this._accountEndpoint,
-      account_key: this._accountKey,
-      additional_properties: this._additionalProperties,
-      annotations: this._annotations,
-      connection_string: this._connectionString,
-      data_factory_name: this._dataFactoryName,
-      database: this._database,
-      description: this._description,
-      integration_runtime_name: this._integrationRuntimeName,
-      name: this._name,
-      parameters: this._parameters,
-      resource_group_name: this._resourceGroupName,
-      timeouts: this._timeouts,
+      account_endpoint: cdktf.stringToTerraform(this._accountEndpoint),
+      account_key: cdktf.stringToTerraform(this._accountKey),
+      additional_properties: cdktf.hashMapper(cdktf.anyToTerraform)(this._additionalProperties),
+      annotations: cdktf.listMapper(cdktf.stringToTerraform)(this._annotations),
+      connection_string: cdktf.stringToTerraform(this._connectionString),
+      data_factory_name: cdktf.stringToTerraform(this._dataFactoryName),
+      database: cdktf.stringToTerraform(this._database),
+      description: cdktf.stringToTerraform(this._description),
+      integration_runtime_name: cdktf.stringToTerraform(this._integrationRuntimeName),
+      name: cdktf.stringToTerraform(this._name),
+      parameters: cdktf.hashMapper(cdktf.anyToTerraform)(this._parameters),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      timeouts: dataFactoryLinkedServiceCosmosdbTimeoutsToTerraform(this._timeouts),
     };
   }
 }

@@ -2,13 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformDataSource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
-import { StringMap } from "cdktf";
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataAzurermPublicIpPrefixConfig extends TerraformMetaArguments {
+export interface DataAzurermPublicIpPrefixConfig extends cdktf.TerraformMetaArguments {
   readonly name: string;
   readonly resourceGroupName: string;
   readonly zones?: string[];
@@ -19,9 +17,17 @@ export interface DataAzurermPublicIpPrefixTimeouts {
   readonly read?: string;
 }
 
+function dataAzurermPublicIpPrefixTimeoutsToTerraform(struct?: DataAzurermPublicIpPrefixTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    read: cdktf.stringToTerraform(struct!.read),
+  }
+}
+
+
 // Resource
 
-export class DataAzurermPublicIpPrefix extends TerraformDataSource {
+export class DataAzurermPublicIpPrefix extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
@@ -101,7 +107,7 @@ export class DataAzurermPublicIpPrefix extends TerraformDataSource {
 
   // tags - computed: true, optional: false, required: false
   public tags(key: string): string {
-    return new StringMap(this, 'tags').lookup(key);
+    return new cdktf.StringMap(this, 'tags').lookup(key);
   }
 
   // zones - computed: true, optional: true, required: false
@@ -142,10 +148,10 @@ export class DataAzurermPublicIpPrefix extends TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      zones: this._zones,
-      timeouts: this._timeouts,
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      zones: cdktf.listMapper(cdktf.stringToTerraform)(this._zones),
+      timeouts: dataAzurermPublicIpPrefixTimeoutsToTerraform(this._timeouts),
     };
   }
 }

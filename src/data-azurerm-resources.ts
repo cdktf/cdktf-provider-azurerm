@@ -2,13 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformDataSource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
-import { ComplexComputedList } from "cdktf";
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataAzurermResourcesConfig extends TerraformMetaArguments {
+export interface DataAzurermResourcesConfig extends cdktf.TerraformMetaArguments {
   readonly name?: string;
   readonly requiredTags?: { [key: string]: string };
   readonly resourceGroupName?: string;
@@ -16,7 +14,7 @@ export interface DataAzurermResourcesConfig extends TerraformMetaArguments {
   /** timeouts block */
   readonly timeouts?: DataAzurermResourcesTimeouts;
 }
-export class DataAzurermResourcesResources extends ComplexComputedList {
+export class DataAzurermResourcesResources extends cdktf.ComplexComputedList {
 
   // id - computed: true, optional: false, required: false
   public get id() {
@@ -47,9 +45,17 @@ export interface DataAzurermResourcesTimeouts {
   readonly read?: string;
 }
 
+function dataAzurermResourcesTimeoutsToTerraform(struct?: DataAzurermResourcesTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    read: cdktf.stringToTerraform(struct!.read),
+  }
+}
+
+
 // Resource
 
-export class DataAzurermResources extends TerraformDataSource {
+export class DataAzurermResources extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
@@ -173,11 +179,11 @@ export class DataAzurermResources extends TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      name: this._name,
-      required_tags: this._requiredTags,
-      resource_group_name: this._resourceGroupName,
-      type: this._type,
-      timeouts: this._timeouts,
+      name: cdktf.stringToTerraform(this._name),
+      required_tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._requiredTags),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      type: cdktf.stringToTerraform(this._type),
+      timeouts: dataAzurermResourcesTimeoutsToTerraform(this._timeouts),
     };
   }
 }

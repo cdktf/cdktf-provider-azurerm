@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface KustoDatabaseConfig extends TerraformMetaArguments {
+export interface KustoDatabaseConfig extends cdktf.TerraformMetaArguments {
   readonly clusterName: string;
   readonly hotCachePeriod?: string;
   readonly location: string;
@@ -24,9 +23,20 @@ export interface KustoDatabaseTimeouts {
   readonly update?: string;
 }
 
+function kustoDatabaseTimeoutsToTerraform(struct?: KustoDatabaseTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class KustoDatabase extends TerraformResource {
+export class KustoDatabase extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -172,13 +182,13 @@ export class KustoDatabase extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      cluster_name: this._clusterName,
-      hot_cache_period: this._hotCachePeriod,
-      location: this._location,
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      soft_delete_period: this._softDeletePeriod,
-      timeouts: this._timeouts,
+      cluster_name: cdktf.stringToTerraform(this._clusterName),
+      hot_cache_period: cdktf.stringToTerraform(this._hotCachePeriod),
+      location: cdktf.stringToTerraform(this._location),
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      soft_delete_period: cdktf.stringToTerraform(this._softDeletePeriod),
+      timeouts: kustoDatabaseTimeoutsToTerraform(this._timeouts),
     };
   }
 }

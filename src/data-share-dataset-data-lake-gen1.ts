@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataShareDatasetDataLakeGen1Config extends TerraformMetaArguments {
+export interface DataShareDatasetDataLakeGen1Config extends cdktf.TerraformMetaArguments {
   readonly dataLakeStoreId: string;
   readonly dataShareId: string;
   readonly fileName?: string;
@@ -22,9 +21,19 @@ export interface DataShareDatasetDataLakeGen1Timeouts {
   readonly read?: string;
 }
 
+function dataShareDatasetDataLakeGen1TimeoutsToTerraform(struct?: DataShareDatasetDataLakeGen1Timeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+  }
+}
+
+
 // Resource
 
-export class DataShareDatasetDataLakeGen1 extends TerraformResource {
+export class DataShareDatasetDataLakeGen1 extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -153,12 +162,12 @@ export class DataShareDatasetDataLakeGen1 extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      data_lake_store_id: this._dataLakeStoreId,
-      data_share_id: this._dataShareId,
-      file_name: this._fileName,
-      folder_path: this._folderPath,
-      name: this._name,
-      timeouts: this._timeouts,
+      data_lake_store_id: cdktf.stringToTerraform(this._dataLakeStoreId),
+      data_share_id: cdktf.stringToTerraform(this._dataShareId),
+      file_name: cdktf.stringToTerraform(this._fileName),
+      folder_path: cdktf.stringToTerraform(this._folderPath),
+      name: cdktf.stringToTerraform(this._name),
+      timeouts: dataShareDatasetDataLakeGen1TimeoutsToTerraform(this._timeouts),
     };
   }
 }

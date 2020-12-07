@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface MaintenanceAssignmentDedicatedHostConfig extends TerraformMetaArguments {
+export interface MaintenanceAssignmentDedicatedHostConfig extends cdktf.TerraformMetaArguments {
   readonly dedicatedHostId: string;
   readonly location: string;
   readonly maintenanceConfigurationId: string;
@@ -20,9 +19,19 @@ export interface MaintenanceAssignmentDedicatedHostTimeouts {
   readonly read?: string;
 }
 
+function maintenanceAssignmentDedicatedHostTimeoutsToTerraform(struct?: MaintenanceAssignmentDedicatedHostTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+  }
+}
+
+
 // Resource
 
-export class MaintenanceAssignmentDedicatedHost extends TerraformResource {
+export class MaintenanceAssignmentDedicatedHost extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -115,10 +124,10 @@ export class MaintenanceAssignmentDedicatedHost extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      dedicated_host_id: this._dedicatedHostId,
-      location: this._location,
-      maintenance_configuration_id: this._maintenanceConfigurationId,
-      timeouts: this._timeouts,
+      dedicated_host_id: cdktf.stringToTerraform(this._dedicatedHostId),
+      location: cdktf.stringToTerraform(this._location),
+      maintenance_configuration_id: cdktf.stringToTerraform(this._maintenanceConfigurationId),
+      timeouts: maintenanceAssignmentDedicatedHostTimeoutsToTerraform(this._timeouts),
     };
   }
 }

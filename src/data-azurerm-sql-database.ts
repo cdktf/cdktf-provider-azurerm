@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformDataSource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataAzurermSqlDatabaseConfig extends TerraformMetaArguments {
+export interface DataAzurermSqlDatabaseConfig extends cdktf.TerraformMetaArguments {
   readonly name: string;
   readonly resourceGroupName: string;
   readonly serverName: string;
@@ -19,9 +18,17 @@ export interface DataAzurermSqlDatabaseTimeouts {
   readonly read?: string;
 }
 
+function dataAzurermSqlDatabaseTimeoutsToTerraform(struct?: DataAzurermSqlDatabaseTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    read: cdktf.stringToTerraform(struct!.read),
+  }
+}
+
+
 // Resource
 
-export class DataAzurermSqlDatabase extends TerraformDataSource {
+export class DataAzurermSqlDatabase extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
@@ -166,11 +173,11 @@ export class DataAzurermSqlDatabase extends TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      server_name: this._serverName,
-      tags: this._tags,
-      timeouts: this._timeouts,
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      server_name: cdktf.stringToTerraform(this._serverName),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      timeouts: dataAzurermSqlDatabaseTimeoutsToTerraform(this._timeouts),
     };
   }
 }

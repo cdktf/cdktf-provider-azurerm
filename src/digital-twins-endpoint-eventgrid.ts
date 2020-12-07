@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DigitalTwinsEndpointEventgridConfig extends TerraformMetaArguments {
+export interface DigitalTwinsEndpointEventgridConfig extends cdktf.TerraformMetaArguments {
   readonly deadLetterStorageSecret?: string;
   readonly digitalTwinsId: string;
   readonly eventgridTopicEndpoint: string;
@@ -24,9 +23,20 @@ export interface DigitalTwinsEndpointEventgridTimeouts {
   readonly update?: string;
 }
 
+function digitalTwinsEndpointEventgridTimeoutsToTerraform(struct?: DigitalTwinsEndpointEventgridTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class DigitalTwinsEndpointEventgrid extends TerraformResource {
+export class DigitalTwinsEndpointEventgrid extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -164,13 +174,13 @@ export class DigitalTwinsEndpointEventgrid extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      dead_letter_storage_secret: this._deadLetterStorageSecret,
-      digital_twins_id: this._digitalTwinsId,
-      eventgrid_topic_endpoint: this._eventgridTopicEndpoint,
-      eventgrid_topic_primary_access_key: this._eventgridTopicPrimaryAccessKey,
-      eventgrid_topic_secondary_access_key: this._eventgridTopicSecondaryAccessKey,
-      name: this._name,
-      timeouts: this._timeouts,
+      dead_letter_storage_secret: cdktf.stringToTerraform(this._deadLetterStorageSecret),
+      digital_twins_id: cdktf.stringToTerraform(this._digitalTwinsId),
+      eventgrid_topic_endpoint: cdktf.stringToTerraform(this._eventgridTopicEndpoint),
+      eventgrid_topic_primary_access_key: cdktf.stringToTerraform(this._eventgridTopicPrimaryAccessKey),
+      eventgrid_topic_secondary_access_key: cdktf.stringToTerraform(this._eventgridTopicSecondaryAccessKey),
+      name: cdktf.stringToTerraform(this._name),
+      timeouts: digitalTwinsEndpointEventgridTimeoutsToTerraform(this._timeouts),
     };
   }
 }

@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface PrivateLinkServiceConfig extends TerraformMetaArguments {
+export interface PrivateLinkServiceConfig extends cdktf.TerraformMetaArguments {
   readonly autoApprovalSubscriptionIds?: string[];
   readonly enableProxyProtocol?: boolean;
   readonly loadBalancerFrontendIpConfigurationIds: string[];
@@ -28,6 +27,18 @@ export interface PrivateLinkServiceNatIpConfiguration {
   readonly privateIpAddressVersion?: string;
   readonly subnetId: string;
 }
+
+function privateLinkServiceNatIpConfigurationToTerraform(struct?: PrivateLinkServiceNatIpConfiguration): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    name: cdktf.stringToTerraform(struct!.name),
+    primary: cdktf.booleanToTerraform(struct!.primary),
+    private_ip_address: cdktf.stringToTerraform(struct!.privateIpAddress),
+    private_ip_address_version: cdktf.stringToTerraform(struct!.privateIpAddressVersion),
+    subnet_id: cdktf.stringToTerraform(struct!.subnetId),
+  }
+}
+
 export interface PrivateLinkServiceTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -35,9 +46,20 @@ export interface PrivateLinkServiceTimeouts {
   readonly update?: string;
 }
 
+function privateLinkServiceTimeoutsToTerraform(struct?: PrivateLinkServiceTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class PrivateLinkService extends TerraformResource {
+export class PrivateLinkService extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -231,16 +253,16 @@ export class PrivateLinkService extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      auto_approval_subscription_ids: this._autoApprovalSubscriptionIds,
-      enable_proxy_protocol: this._enableProxyProtocol,
-      load_balancer_frontend_ip_configuration_ids: this._loadBalancerFrontendIpConfigurationIds,
-      location: this._location,
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      tags: this._tags,
-      visibility_subscription_ids: this._visibilitySubscriptionIds,
-      nat_ip_configuration: this._natIpConfiguration,
-      timeouts: this._timeouts,
+      auto_approval_subscription_ids: cdktf.listMapper(cdktf.stringToTerraform)(this._autoApprovalSubscriptionIds),
+      enable_proxy_protocol: cdktf.booleanToTerraform(this._enableProxyProtocol),
+      load_balancer_frontend_ip_configuration_ids: cdktf.listMapper(cdktf.stringToTerraform)(this._loadBalancerFrontendIpConfigurationIds),
+      location: cdktf.stringToTerraform(this._location),
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      visibility_subscription_ids: cdktf.listMapper(cdktf.stringToTerraform)(this._visibilitySubscriptionIds),
+      nat_ip_configuration: cdktf.listMapper(privateLinkServiceNatIpConfigurationToTerraform)(this._natIpConfiguration),
+      timeouts: privateLinkServiceTimeoutsToTerraform(this._timeouts),
     };
   }
 }

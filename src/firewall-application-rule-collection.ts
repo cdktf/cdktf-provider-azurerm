@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface FirewallApplicationRuleCollectionConfig extends TerraformMetaArguments {
+export interface FirewallApplicationRuleCollectionConfig extends cdktf.TerraformMetaArguments {
   readonly action: string;
   readonly azureFirewallName: string;
   readonly name: string;
@@ -22,6 +21,15 @@ export interface FirewallApplicationRuleCollectionRuleProtocol {
   readonly port?: number;
   readonly type: string;
 }
+
+function firewallApplicationRuleCollectionRuleProtocolToTerraform(struct?: FirewallApplicationRuleCollectionRuleProtocol): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    port: cdktf.numberToTerraform(struct!.port),
+    type: cdktf.stringToTerraform(struct!.type),
+  }
+}
+
 export interface FirewallApplicationRuleCollectionRule {
   readonly description?: string;
   readonly fqdnTags?: string[];
@@ -32,6 +40,20 @@ export interface FirewallApplicationRuleCollectionRule {
   /** protocol block */
   readonly protocol?: FirewallApplicationRuleCollectionRuleProtocol[];
 }
+
+function firewallApplicationRuleCollectionRuleToTerraform(struct?: FirewallApplicationRuleCollectionRule): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    description: cdktf.stringToTerraform(struct!.description),
+    fqdn_tags: cdktf.listMapper(cdktf.stringToTerraform)(struct!.fqdnTags),
+    name: cdktf.stringToTerraform(struct!.name),
+    source_addresses: cdktf.listMapper(cdktf.stringToTerraform)(struct!.sourceAddresses),
+    source_ip_groups: cdktf.listMapper(cdktf.stringToTerraform)(struct!.sourceIpGroups),
+    target_fqdns: cdktf.listMapper(cdktf.stringToTerraform)(struct!.targetFqdns),
+    protocol: cdktf.listMapper(firewallApplicationRuleCollectionRuleProtocolToTerraform)(struct!.protocol),
+  }
+}
+
 export interface FirewallApplicationRuleCollectionTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -39,9 +61,20 @@ export interface FirewallApplicationRuleCollectionTimeouts {
   readonly update?: string;
 }
 
+function firewallApplicationRuleCollectionTimeoutsToTerraform(struct?: FirewallApplicationRuleCollectionTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class FirewallApplicationRuleCollection extends TerraformResource {
+export class FirewallApplicationRuleCollection extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -176,13 +209,13 @@ export class FirewallApplicationRuleCollection extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      action: this._action,
-      azure_firewall_name: this._azureFirewallName,
-      name: this._name,
-      priority: this._priority,
-      resource_group_name: this._resourceGroupName,
-      rule: this._rule,
-      timeouts: this._timeouts,
+      action: cdktf.stringToTerraform(this._action),
+      azure_firewall_name: cdktf.stringToTerraform(this._azureFirewallName),
+      name: cdktf.stringToTerraform(this._name),
+      priority: cdktf.numberToTerraform(this._priority),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      rule: cdktf.listMapper(firewallApplicationRuleCollectionRuleToTerraform)(this._rule),
+      timeouts: firewallApplicationRuleCollectionTimeoutsToTerraform(this._timeouts),
     };
   }
 }

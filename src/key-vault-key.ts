@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface KeyVaultKeyConfig extends TerraformMetaArguments {
+export interface KeyVaultKeyConfig extends cdktf.TerraformMetaArguments {
   readonly curve?: string;
   readonly expirationDate?: string;
   readonly keyOpts: string[];
@@ -27,9 +26,20 @@ export interface KeyVaultKeyTimeouts {
   readonly update?: string;
 }
 
+function keyVaultKeyTimeoutsToTerraform(struct?: KeyVaultKeyTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class KeyVaultKey extends TerraformResource {
+export class KeyVaultKey extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -246,16 +256,16 @@ export class KeyVaultKey extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      curve: this._curve,
-      expiration_date: this._expirationDate,
-      key_opts: this._keyOpts,
-      key_size: this._keySize,
-      key_type: this._keyType,
-      key_vault_id: this._keyVaultId,
-      name: this._name,
-      not_before_date: this._notBeforeDate,
-      tags: this._tags,
-      timeouts: this._timeouts,
+      curve: cdktf.stringToTerraform(this._curve),
+      expiration_date: cdktf.stringToTerraform(this._expirationDate),
+      key_opts: cdktf.listMapper(cdktf.stringToTerraform)(this._keyOpts),
+      key_size: cdktf.numberToTerraform(this._keySize),
+      key_type: cdktf.stringToTerraform(this._keyType),
+      key_vault_id: cdktf.stringToTerraform(this._keyVaultId),
+      name: cdktf.stringToTerraform(this._name),
+      not_before_date: cdktf.stringToTerraform(this._notBeforeDate),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      timeouts: keyVaultKeyTimeoutsToTerraform(this._timeouts),
     };
   }
 }

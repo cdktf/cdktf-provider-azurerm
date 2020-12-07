@@ -2,20 +2,17 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformDataSource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
-import { ComplexComputedList } from "cdktf";
-import { StringMap } from "cdktf";
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataAzurermNetworkInterfaceConfig extends TerraformMetaArguments {
+export interface DataAzurermNetworkInterfaceConfig extends cdktf.TerraformMetaArguments {
   readonly name: string;
   readonly resourceGroupName: string;
   /** timeouts block */
   readonly timeouts?: DataAzurermNetworkInterfaceTimeouts;
 }
-export class DataAzurermNetworkInterfaceIpConfiguration extends ComplexComputedList {
+export class DataAzurermNetworkInterfaceIpConfiguration extends cdktf.ComplexComputedList {
 
   // application_gateway_backend_address_pools_ids - computed: true, optional: false, required: false
   public get applicationGatewayBackendAddressPoolsIds() {
@@ -76,9 +73,17 @@ export interface DataAzurermNetworkInterfaceTimeouts {
   readonly read?: string;
 }
 
+function dataAzurermNetworkInterfaceTimeoutsToTerraform(struct?: DataAzurermNetworkInterfaceTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    read: cdktf.stringToTerraform(struct!.read),
+  }
+}
+
+
 // Resource
 
-export class DataAzurermNetworkInterface extends TerraformDataSource {
+export class DataAzurermNetworkInterface extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
@@ -192,7 +197,7 @@ export class DataAzurermNetworkInterface extends TerraformDataSource {
 
   // tags - computed: true, optional: false, required: false
   public tags(key: string): string {
-    return new StringMap(this, 'tags').lookup(key);
+    return new cdktf.StringMap(this, 'tags').lookup(key);
   }
 
   // virtual_machine_id - computed: true, optional: false, required: false
@@ -222,9 +227,9 @@ export class DataAzurermNetworkInterface extends TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      timeouts: this._timeouts,
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      timeouts: dataAzurermNetworkInterfaceTimeoutsToTerraform(this._timeouts),
     };
   }
 }

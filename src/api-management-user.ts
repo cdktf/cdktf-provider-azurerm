@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface ApiManagementUserConfig extends TerraformMetaArguments {
+export interface ApiManagementUserConfig extends cdktf.TerraformMetaArguments {
   readonly apiManagementName: string;
   readonly confirmation?: string;
   readonly email: string;
@@ -28,9 +27,20 @@ export interface ApiManagementUserTimeouts {
   readonly update?: string;
 }
 
+function apiManagementUserTimeoutsToTerraform(struct?: ApiManagementUserTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class ApiManagementUser extends TerraformResource {
+export class ApiManagementUser extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -233,17 +243,17 @@ export class ApiManagementUser extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      api_management_name: this._apiManagementName,
-      confirmation: this._confirmation,
-      email: this._email,
-      first_name: this._firstName,
-      last_name: this._lastName,
-      note: this._note,
-      password: this._password,
-      resource_group_name: this._resourceGroupName,
-      state: this._state,
-      user_id: this._userId,
-      timeouts: this._timeouts,
+      api_management_name: cdktf.stringToTerraform(this._apiManagementName),
+      confirmation: cdktf.stringToTerraform(this._confirmation),
+      email: cdktf.stringToTerraform(this._email),
+      first_name: cdktf.stringToTerraform(this._firstName),
+      last_name: cdktf.stringToTerraform(this._lastName),
+      note: cdktf.stringToTerraform(this._note),
+      password: cdktf.stringToTerraform(this._password),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      state: cdktf.stringToTerraform(this._state),
+      user_id: cdktf.stringToTerraform(this._userId),
+      timeouts: apiManagementUserTimeoutsToTerraform(this._timeouts),
     };
   }
 }

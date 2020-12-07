@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DnsZoneConfig extends TerraformMetaArguments {
+export interface DnsZoneConfig extends cdktf.TerraformMetaArguments {
   readonly name: string;
   readonly resourceGroupName: string;
   readonly tags?: { [key: string]: string };
@@ -27,6 +26,22 @@ export interface DnsZoneSoaRecord {
   readonly tags?: { [key: string]: string };
   readonly ttl?: number;
 }
+
+function dnsZoneSoaRecordToTerraform(struct?: DnsZoneSoaRecord): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    email: cdktf.stringToTerraform(struct!.email),
+    expire_time: cdktf.numberToTerraform(struct!.expireTime),
+    host_name: cdktf.stringToTerraform(struct!.hostName),
+    minimum_ttl: cdktf.numberToTerraform(struct!.minimumTtl),
+    refresh_time: cdktf.numberToTerraform(struct!.refreshTime),
+    retry_time: cdktf.numberToTerraform(struct!.retryTime),
+    serial_number: cdktf.numberToTerraform(struct!.serialNumber),
+    tags: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.tags),
+    ttl: cdktf.numberToTerraform(struct!.ttl),
+  }
+}
+
 export interface DnsZoneTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -34,9 +49,20 @@ export interface DnsZoneTimeouts {
   readonly update?: string;
 }
 
+function dnsZoneTimeoutsToTerraform(struct?: DnsZoneTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class DnsZone extends TerraformResource {
+export class DnsZone extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -164,11 +190,11 @@ export class DnsZone extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      tags: this._tags,
-      soa_record: this._soaRecord,
-      timeouts: this._timeouts,
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      soa_record: cdktf.listMapper(dnsZoneSoaRecordToTerraform)(this._soaRecord),
+      timeouts: dnsZoneTimeoutsToTerraform(this._timeouts),
     };
   }
 }

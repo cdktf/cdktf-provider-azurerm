@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface StorageShareDirectoryConfig extends TerraformMetaArguments {
+export interface StorageShareDirectoryConfig extends cdktf.TerraformMetaArguments {
   readonly metadata?: { [key: string]: string };
   readonly name: string;
   readonly shareName: string;
@@ -22,9 +21,20 @@ export interface StorageShareDirectoryTimeouts {
   readonly update?: string;
 }
 
+function storageShareDirectoryTimeoutsToTerraform(struct?: StorageShareDirectoryTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class StorageShareDirectory extends TerraformResource {
+export class StorageShareDirectory extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -134,11 +144,11 @@ export class StorageShareDirectory extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      metadata: this._metadata,
-      name: this._name,
-      share_name: this._shareName,
-      storage_account_name: this._storageAccountName,
-      timeouts: this._timeouts,
+      metadata: cdktf.hashMapper(cdktf.anyToTerraform)(this._metadata),
+      name: cdktf.stringToTerraform(this._name),
+      share_name: cdktf.stringToTerraform(this._shareName),
+      storage_account_name: cdktf.stringToTerraform(this._storageAccountName),
+      timeouts: storageShareDirectoryTimeoutsToTerraform(this._timeouts),
     };
   }
 }

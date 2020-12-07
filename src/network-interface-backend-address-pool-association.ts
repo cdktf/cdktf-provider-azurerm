@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface NetworkInterfaceBackendAddressPoolAssociationConfig extends TerraformMetaArguments {
+export interface NetworkInterfaceBackendAddressPoolAssociationConfig extends cdktf.TerraformMetaArguments {
   readonly backendAddressPoolId: string;
   readonly ipConfigurationName: string;
   readonly networkInterfaceId: string;
@@ -21,9 +20,20 @@ export interface NetworkInterfaceBackendAddressPoolAssociationTimeouts {
   readonly update?: string;
 }
 
+function networkInterfaceBackendAddressPoolAssociationTimeoutsToTerraform(struct?: NetworkInterfaceBackendAddressPoolAssociationTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class NetworkInterfaceBackendAddressPoolAssociation extends TerraformResource {
+export class NetworkInterfaceBackendAddressPoolAssociation extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -116,10 +126,10 @@ export class NetworkInterfaceBackendAddressPoolAssociation extends TerraformReso
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      backend_address_pool_id: this._backendAddressPoolId,
-      ip_configuration_name: this._ipConfigurationName,
-      network_interface_id: this._networkInterfaceId,
-      timeouts: this._timeouts,
+      backend_address_pool_id: cdktf.stringToTerraform(this._backendAddressPoolId),
+      ip_configuration_name: cdktf.stringToTerraform(this._ipConfigurationName),
+      network_interface_id: cdktf.stringToTerraform(this._networkInterfaceId),
+      timeouts: networkInterfaceBackendAddressPoolAssociationTimeoutsToTerraform(this._timeouts),
     };
   }
 }

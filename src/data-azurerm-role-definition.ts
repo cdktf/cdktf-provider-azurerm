@@ -2,20 +2,18 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformDataSource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
-import { ComplexComputedList } from "cdktf";
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataAzurermRoleDefinitionConfig extends TerraformMetaArguments {
+export interface DataAzurermRoleDefinitionConfig extends cdktf.TerraformMetaArguments {
   readonly name?: string;
   readonly roleDefinitionId?: string;
   readonly scope?: string;
   /** timeouts block */
   readonly timeouts?: DataAzurermRoleDefinitionTimeouts;
 }
-export class DataAzurermRoleDefinitionPermissions extends ComplexComputedList {
+export class DataAzurermRoleDefinitionPermissions extends cdktf.ComplexComputedList {
 
   // actions - computed: true, optional: false, required: false
   public get actions() {
@@ -41,9 +39,17 @@ export interface DataAzurermRoleDefinitionTimeouts {
   readonly read?: string;
 }
 
+function dataAzurermRoleDefinitionTimeoutsToTerraform(struct?: DataAzurermRoleDefinitionTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    read: cdktf.stringToTerraform(struct!.read),
+  }
+}
+
+
 // Resource
 
-export class DataAzurermRoleDefinition extends TerraformDataSource {
+export class DataAzurermRoleDefinition extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
@@ -165,10 +171,10 @@ export class DataAzurermRoleDefinition extends TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      name: this._name,
-      role_definition_id: this._roleDefinitionId,
-      scope: this._scope,
-      timeouts: this._timeouts,
+      name: cdktf.stringToTerraform(this._name),
+      role_definition_id: cdktf.stringToTerraform(this._roleDefinitionId),
+      scope: cdktf.stringToTerraform(this._scope),
+      timeouts: dataAzurermRoleDefinitionTimeoutsToTerraform(this._timeouts),
     };
   }
 }

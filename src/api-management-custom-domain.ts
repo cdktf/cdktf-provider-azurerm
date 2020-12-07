@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface ApiManagementCustomDomainConfig extends TerraformMetaArguments {
+export interface ApiManagementCustomDomainConfig extends cdktf.TerraformMetaArguments {
   readonly apiManagementId: string;
   /** developer_portal block */
   readonly developerPortal?: ApiManagementCustomDomainDeveloperPortal[];
@@ -29,6 +28,18 @@ export interface ApiManagementCustomDomainDeveloperPortal {
   readonly keyVaultId?: string;
   readonly negotiateClientCertificate?: boolean;
 }
+
+function apiManagementCustomDomainDeveloperPortalToTerraform(struct?: ApiManagementCustomDomainDeveloperPortal): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    certificate: cdktf.stringToTerraform(struct!.certificate),
+    certificate_password: cdktf.stringToTerraform(struct!.certificatePassword),
+    host_name: cdktf.stringToTerraform(struct!.hostName),
+    key_vault_id: cdktf.stringToTerraform(struct!.keyVaultId),
+    negotiate_client_certificate: cdktf.booleanToTerraform(struct!.negotiateClientCertificate),
+  }
+}
+
 export interface ApiManagementCustomDomainManagement {
   readonly certificate?: string;
   readonly certificatePassword?: string;
@@ -36,6 +47,18 @@ export interface ApiManagementCustomDomainManagement {
   readonly keyVaultId?: string;
   readonly negotiateClientCertificate?: boolean;
 }
+
+function apiManagementCustomDomainManagementToTerraform(struct?: ApiManagementCustomDomainManagement): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    certificate: cdktf.stringToTerraform(struct!.certificate),
+    certificate_password: cdktf.stringToTerraform(struct!.certificatePassword),
+    host_name: cdktf.stringToTerraform(struct!.hostName),
+    key_vault_id: cdktf.stringToTerraform(struct!.keyVaultId),
+    negotiate_client_certificate: cdktf.booleanToTerraform(struct!.negotiateClientCertificate),
+  }
+}
+
 export interface ApiManagementCustomDomainPortal {
   readonly certificate?: string;
   readonly certificatePassword?: string;
@@ -43,6 +66,18 @@ export interface ApiManagementCustomDomainPortal {
   readonly keyVaultId?: string;
   readonly negotiateClientCertificate?: boolean;
 }
+
+function apiManagementCustomDomainPortalToTerraform(struct?: ApiManagementCustomDomainPortal): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    certificate: cdktf.stringToTerraform(struct!.certificate),
+    certificate_password: cdktf.stringToTerraform(struct!.certificatePassword),
+    host_name: cdktf.stringToTerraform(struct!.hostName),
+    key_vault_id: cdktf.stringToTerraform(struct!.keyVaultId),
+    negotiate_client_certificate: cdktf.booleanToTerraform(struct!.negotiateClientCertificate),
+  }
+}
+
 export interface ApiManagementCustomDomainProxy {
   readonly certificate?: string;
   readonly certificatePassword?: string;
@@ -51,6 +86,19 @@ export interface ApiManagementCustomDomainProxy {
   readonly keyVaultId?: string;
   readonly negotiateClientCertificate?: boolean;
 }
+
+function apiManagementCustomDomainProxyToTerraform(struct?: ApiManagementCustomDomainProxy): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    certificate: cdktf.stringToTerraform(struct!.certificate),
+    certificate_password: cdktf.stringToTerraform(struct!.certificatePassword),
+    default_ssl_binding: cdktf.booleanToTerraform(struct!.defaultSslBinding),
+    host_name: cdktf.stringToTerraform(struct!.hostName),
+    key_vault_id: cdktf.stringToTerraform(struct!.keyVaultId),
+    negotiate_client_certificate: cdktf.booleanToTerraform(struct!.negotiateClientCertificate),
+  }
+}
+
 export interface ApiManagementCustomDomainScm {
   readonly certificate?: string;
   readonly certificatePassword?: string;
@@ -58,6 +106,18 @@ export interface ApiManagementCustomDomainScm {
   readonly keyVaultId?: string;
   readonly negotiateClientCertificate?: boolean;
 }
+
+function apiManagementCustomDomainScmToTerraform(struct?: ApiManagementCustomDomainScm): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    certificate: cdktf.stringToTerraform(struct!.certificate),
+    certificate_password: cdktf.stringToTerraform(struct!.certificatePassword),
+    host_name: cdktf.stringToTerraform(struct!.hostName),
+    key_vault_id: cdktf.stringToTerraform(struct!.keyVaultId),
+    negotiate_client_certificate: cdktf.booleanToTerraform(struct!.negotiateClientCertificate),
+  }
+}
+
 export interface ApiManagementCustomDomainTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -65,9 +125,20 @@ export interface ApiManagementCustomDomainTimeouts {
   readonly update?: string;
 }
 
+function apiManagementCustomDomainTimeoutsToTerraform(struct?: ApiManagementCustomDomainTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class ApiManagementCustomDomain extends TerraformResource {
+export class ApiManagementCustomDomain extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -217,13 +288,13 @@ export class ApiManagementCustomDomain extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      api_management_id: this._apiManagementId,
-      developer_portal: this._developerPortal,
-      management: this._management,
-      portal: this._portal,
-      proxy: this._proxy,
-      scm: this._scm,
-      timeouts: this._timeouts,
+      api_management_id: cdktf.stringToTerraform(this._apiManagementId),
+      developer_portal: cdktf.listMapper(apiManagementCustomDomainDeveloperPortalToTerraform)(this._developerPortal),
+      management: cdktf.listMapper(apiManagementCustomDomainManagementToTerraform)(this._management),
+      portal: cdktf.listMapper(apiManagementCustomDomainPortalToTerraform)(this._portal),
+      proxy: cdktf.listMapper(apiManagementCustomDomainProxyToTerraform)(this._proxy),
+      scm: cdktf.listMapper(apiManagementCustomDomainScmToTerraform)(this._scm),
+      timeouts: apiManagementCustomDomainTimeoutsToTerraform(this._timeouts),
     };
   }
 }

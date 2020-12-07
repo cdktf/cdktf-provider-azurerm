@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface VpnSiteConfig extends TerraformMetaArguments {
+export interface VpnSiteConfig extends cdktf.TerraformMetaArguments {
   readonly addressCidrs?: string[];
   readonly deviceModel?: string;
   readonly deviceVendor?: string;
@@ -25,6 +24,15 @@ export interface VpnSiteLinkBgp {
   readonly asn: number;
   readonly peeringAddress: string;
 }
+
+function vpnSiteLinkBgpToTerraform(struct?: VpnSiteLinkBgp): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    asn: cdktf.numberToTerraform(struct!.asn),
+    peering_address: cdktf.stringToTerraform(struct!.peeringAddress),
+  }
+}
+
 export interface VpnSiteLink {
   readonly fqdn?: string;
   readonly ipAddress?: string;
@@ -34,6 +42,19 @@ export interface VpnSiteLink {
   /** bgp block */
   readonly bgp?: VpnSiteLinkBgp[];
 }
+
+function vpnSiteLinkToTerraform(struct?: VpnSiteLink): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    fqdn: cdktf.stringToTerraform(struct!.fqdn),
+    ip_address: cdktf.stringToTerraform(struct!.ipAddress),
+    name: cdktf.stringToTerraform(struct!.name),
+    provider_name: cdktf.stringToTerraform(struct!.providerName),
+    speed_in_mbps: cdktf.numberToTerraform(struct!.speedInMbps),
+    bgp: cdktf.listMapper(vpnSiteLinkBgpToTerraform)(struct!.bgp),
+  }
+}
+
 export interface VpnSiteTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -41,9 +62,20 @@ export interface VpnSiteTimeouts {
   readonly update?: string;
 }
 
+function vpnSiteTimeoutsToTerraform(struct?: VpnSiteTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class VpnSite extends TerraformResource {
+export class VpnSite extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -235,16 +267,16 @@ export class VpnSite extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      address_cidrs: this._addressCidrs,
-      device_model: this._deviceModel,
-      device_vendor: this._deviceVendor,
-      location: this._location,
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      tags: this._tags,
-      virtual_wan_id: this._virtualWanId,
-      link: this._link,
-      timeouts: this._timeouts,
+      address_cidrs: cdktf.listMapper(cdktf.stringToTerraform)(this._addressCidrs),
+      device_model: cdktf.stringToTerraform(this._deviceModel),
+      device_vendor: cdktf.stringToTerraform(this._deviceVendor),
+      location: cdktf.stringToTerraform(this._location),
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      virtual_wan_id: cdktf.stringToTerraform(this._virtualWanId),
+      link: cdktf.listMapper(vpnSiteLinkToTerraform)(this._link),
+      timeouts: vpnSiteTimeoutsToTerraform(this._timeouts),
     };
   }
 }

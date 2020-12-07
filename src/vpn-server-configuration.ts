@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface VpnServerConfigurationConfig extends TerraformMetaArguments {
+export interface VpnServerConfigurationConfig extends cdktf.TerraformMetaArguments {
   readonly location: string;
   readonly name: string;
   readonly resourceGroupName: string;
@@ -34,14 +33,42 @@ export interface VpnServerConfigurationAzureActiveDirectoryAuthentication {
   readonly issuer: string;
   readonly tenant: string;
 }
+
+function vpnServerConfigurationAzureActiveDirectoryAuthenticationToTerraform(struct?: VpnServerConfigurationAzureActiveDirectoryAuthentication): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    audience: cdktf.stringToTerraform(struct!.audience),
+    issuer: cdktf.stringToTerraform(struct!.issuer),
+    tenant: cdktf.stringToTerraform(struct!.tenant),
+  }
+}
+
 export interface VpnServerConfigurationClientRevokedCertificate {
   readonly name: string;
   readonly thumbprint: string;
 }
+
+function vpnServerConfigurationClientRevokedCertificateToTerraform(struct?: VpnServerConfigurationClientRevokedCertificate): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    name: cdktf.stringToTerraform(struct!.name),
+    thumbprint: cdktf.stringToTerraform(struct!.thumbprint),
+  }
+}
+
 export interface VpnServerConfigurationClientRootCertificate {
   readonly name: string;
   readonly publicCertData: string;
 }
+
+function vpnServerConfigurationClientRootCertificateToTerraform(struct?: VpnServerConfigurationClientRootCertificate): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    name: cdktf.stringToTerraform(struct!.name),
+    public_cert_data: cdktf.stringToTerraform(struct!.publicCertData),
+  }
+}
+
 export interface VpnServerConfigurationIpsecPolicy {
   readonly dhGroup: string;
   readonly ikeEncryption: string;
@@ -52,19 +79,62 @@ export interface VpnServerConfigurationIpsecPolicy {
   readonly saDataSizeKilobytes: number;
   readonly saLifetimeSeconds: number;
 }
+
+function vpnServerConfigurationIpsecPolicyToTerraform(struct?: VpnServerConfigurationIpsecPolicy): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    dh_group: cdktf.stringToTerraform(struct!.dhGroup),
+    ike_encryption: cdktf.stringToTerraform(struct!.ikeEncryption),
+    ike_integrity: cdktf.stringToTerraform(struct!.ikeIntegrity),
+    ipsec_encryption: cdktf.stringToTerraform(struct!.ipsecEncryption),
+    ipsec_integrity: cdktf.stringToTerraform(struct!.ipsecIntegrity),
+    pfs_group: cdktf.stringToTerraform(struct!.pfsGroup),
+    sa_data_size_kilobytes: cdktf.numberToTerraform(struct!.saDataSizeKilobytes),
+    sa_lifetime_seconds: cdktf.numberToTerraform(struct!.saLifetimeSeconds),
+  }
+}
+
 export interface VpnServerConfigurationRadiusClientRootCertificate {
   readonly name: string;
   readonly thumbprint: string;
 }
+
+function vpnServerConfigurationRadiusClientRootCertificateToTerraform(struct?: VpnServerConfigurationRadiusClientRootCertificate): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    name: cdktf.stringToTerraform(struct!.name),
+    thumbprint: cdktf.stringToTerraform(struct!.thumbprint),
+  }
+}
+
 export interface VpnServerConfigurationRadiusServer {
   readonly address: string;
   readonly score: number;
   readonly secret: string;
 }
+
+function vpnServerConfigurationRadiusServerToTerraform(struct?: VpnServerConfigurationRadiusServer): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    address: cdktf.stringToTerraform(struct!.address),
+    score: cdktf.numberToTerraform(struct!.score),
+    secret: cdktf.stringToTerraform(struct!.secret),
+  }
+}
+
 export interface VpnServerConfigurationRadiusServerRootCertificate {
   readonly name: string;
   readonly publicCertData: string;
 }
+
+function vpnServerConfigurationRadiusServerRootCertificateToTerraform(struct?: VpnServerConfigurationRadiusServerRootCertificate): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    name: cdktf.stringToTerraform(struct!.name),
+    public_cert_data: cdktf.stringToTerraform(struct!.publicCertData),
+  }
+}
+
 export interface VpnServerConfigurationRadius {
   /** client_root_certificate block */
   readonly clientRootCertificate?: VpnServerConfigurationRadiusClientRootCertificate[];
@@ -73,14 +143,42 @@ export interface VpnServerConfigurationRadius {
   /** server_root_certificate block */
   readonly serverRootCertificate: VpnServerConfigurationRadiusServerRootCertificate[];
 }
+
+function vpnServerConfigurationRadiusToTerraform(struct?: VpnServerConfigurationRadius): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    client_root_certificate: cdktf.listMapper(vpnServerConfigurationRadiusClientRootCertificateToTerraform)(struct!.clientRootCertificate),
+    server: cdktf.listMapper(vpnServerConfigurationRadiusServerToTerraform)(struct!.server),
+    server_root_certificate: cdktf.listMapper(vpnServerConfigurationRadiusServerRootCertificateToTerraform)(struct!.serverRootCertificate),
+  }
+}
+
 export interface VpnServerConfigurationRadiusServerClientRootCertificate {
   readonly name: string;
   readonly thumbprint: string;
 }
+
+function vpnServerConfigurationRadiusServerClientRootCertificateToTerraform(struct?: VpnServerConfigurationRadiusServerClientRootCertificate): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    name: cdktf.stringToTerraform(struct!.name),
+    thumbprint: cdktf.stringToTerraform(struct!.thumbprint),
+  }
+}
+
 export interface VpnServerConfigurationRadiusServerServerRootCertificate {
   readonly name: string;
   readonly publicCertData: string;
 }
+
+function vpnServerConfigurationRadiusServerServerRootCertificateToTerraform(struct?: VpnServerConfigurationRadiusServerServerRootCertificate): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    name: cdktf.stringToTerraform(struct!.name),
+    public_cert_data: cdktf.stringToTerraform(struct!.publicCertData),
+  }
+}
+
 export interface VpnServerConfigurationRadiusServerA {
   readonly address: string;
   readonly secret: string;
@@ -89,6 +187,17 @@ export interface VpnServerConfigurationRadiusServerA {
   /** server_root_certificate block */
   readonly serverRootCertificate: VpnServerConfigurationRadiusServerServerRootCertificate[];
 }
+
+function vpnServerConfigurationRadiusServerAToTerraform(struct?: VpnServerConfigurationRadiusServerA): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    address: cdktf.stringToTerraform(struct!.address),
+    secret: cdktf.stringToTerraform(struct!.secret),
+    client_root_certificate: cdktf.listMapper(vpnServerConfigurationRadiusServerClientRootCertificateToTerraform)(struct!.clientRootCertificate),
+    server_root_certificate: cdktf.listMapper(vpnServerConfigurationRadiusServerServerRootCertificateToTerraform)(struct!.serverRootCertificate),
+  }
+}
+
 export interface VpnServerConfigurationTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -96,9 +205,20 @@ export interface VpnServerConfigurationTimeouts {
   readonly update?: string;
 }
 
+function vpnServerConfigurationTimeoutsToTerraform(struct?: VpnServerConfigurationTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class VpnServerConfiguration extends TerraformResource {
+export class VpnServerConfiguration extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -341,19 +461,19 @@ export class VpnServerConfiguration extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      location: this._location,
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      tags: this._tags,
-      vpn_authentication_types: this._vpnAuthenticationTypes,
-      vpn_protocols: this._vpnProtocols,
-      azure_active_directory_authentication: this._azureActiveDirectoryAuthentication,
-      client_revoked_certificate: this._clientRevokedCertificate,
-      client_root_certificate: this._clientRootCertificate,
-      ipsec_policy: this._ipsecPolicy,
-      radius: this._radius,
-      radius_server: this._radiusServer,
-      timeouts: this._timeouts,
+      location: cdktf.stringToTerraform(this._location),
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      vpn_authentication_types: cdktf.listMapper(cdktf.stringToTerraform)(this._vpnAuthenticationTypes),
+      vpn_protocols: cdktf.listMapper(cdktf.stringToTerraform)(this._vpnProtocols),
+      azure_active_directory_authentication: cdktf.listMapper(vpnServerConfigurationAzureActiveDirectoryAuthenticationToTerraform)(this._azureActiveDirectoryAuthentication),
+      client_revoked_certificate: cdktf.listMapper(vpnServerConfigurationClientRevokedCertificateToTerraform)(this._clientRevokedCertificate),
+      client_root_certificate: cdktf.listMapper(vpnServerConfigurationClientRootCertificateToTerraform)(this._clientRootCertificate),
+      ipsec_policy: cdktf.listMapper(vpnServerConfigurationIpsecPolicyToTerraform)(this._ipsecPolicy),
+      radius: cdktf.listMapper(vpnServerConfigurationRadiusToTerraform)(this._radius),
+      radius_server: cdktf.listMapper(vpnServerConfigurationRadiusServerAToTerraform)(this._radiusServer),
+      timeouts: vpnServerConfigurationTimeoutsToTerraform(this._timeouts),
     };
   }
 }

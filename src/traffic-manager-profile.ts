@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface TrafficManagerProfileConfig extends TerraformMetaArguments {
+export interface TrafficManagerProfileConfig extends cdktf.TerraformMetaArguments {
   readonly name: string;
   readonly profileStatus?: string;
   readonly resourceGroupName: string;
@@ -24,10 +23,28 @@ export interface TrafficManagerProfileDnsConfig {
   readonly relativeName: string;
   readonly ttl: number;
 }
+
+function trafficManagerProfileDnsConfigToTerraform(struct?: TrafficManagerProfileDnsConfig): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    relative_name: cdktf.stringToTerraform(struct!.relativeName),
+    ttl: cdktf.numberToTerraform(struct!.ttl),
+  }
+}
+
 export interface TrafficManagerProfileMonitorConfigCustomHeader {
   readonly name: string;
   readonly value: string;
 }
+
+function trafficManagerProfileMonitorConfigCustomHeaderToTerraform(struct?: TrafficManagerProfileMonitorConfigCustomHeader): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    name: cdktf.stringToTerraform(struct!.name),
+    value: cdktf.stringToTerraform(struct!.value),
+  }
+}
+
 export interface TrafficManagerProfileMonitorConfig {
   readonly expectedStatusCodeRanges?: string[];
   readonly intervalInSeconds?: number;
@@ -39,6 +56,21 @@ export interface TrafficManagerProfileMonitorConfig {
   /** custom_header block */
   readonly customHeader?: TrafficManagerProfileMonitorConfigCustomHeader[];
 }
+
+function trafficManagerProfileMonitorConfigToTerraform(struct?: TrafficManagerProfileMonitorConfig): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    expected_status_code_ranges: cdktf.listMapper(cdktf.stringToTerraform)(struct!.expectedStatusCodeRanges),
+    interval_in_seconds: cdktf.numberToTerraform(struct!.intervalInSeconds),
+    path: cdktf.stringToTerraform(struct!.path),
+    port: cdktf.numberToTerraform(struct!.port),
+    protocol: cdktf.stringToTerraform(struct!.protocol),
+    timeout_in_seconds: cdktf.numberToTerraform(struct!.timeoutInSeconds),
+    tolerated_number_of_failures: cdktf.numberToTerraform(struct!.toleratedNumberOfFailures),
+    custom_header: cdktf.listMapper(trafficManagerProfileMonitorConfigCustomHeaderToTerraform)(struct!.customHeader),
+  }
+}
+
 export interface TrafficManagerProfileTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -46,9 +78,20 @@ export interface TrafficManagerProfileTimeouts {
   readonly update?: string;
 }
 
+function trafficManagerProfileTimeoutsToTerraform(struct?: TrafficManagerProfileTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class TrafficManagerProfile extends TerraformResource {
+export class TrafficManagerProfile extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -208,14 +251,14 @@ export class TrafficManagerProfile extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      name: this._name,
-      profile_status: this._profileStatus,
-      resource_group_name: this._resourceGroupName,
-      tags: this._tags,
-      traffic_routing_method: this._trafficRoutingMethod,
-      dns_config: this._dnsConfig,
-      monitor_config: this._monitorConfig,
-      timeouts: this._timeouts,
+      name: cdktf.stringToTerraform(this._name),
+      profile_status: cdktf.stringToTerraform(this._profileStatus),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      traffic_routing_method: cdktf.stringToTerraform(this._trafficRoutingMethod),
+      dns_config: cdktf.listMapper(trafficManagerProfileDnsConfigToTerraform)(this._dnsConfig),
+      monitor_config: cdktf.listMapper(trafficManagerProfileMonitorConfigToTerraform)(this._monitorConfig),
+      timeouts: trafficManagerProfileTimeoutsToTerraform(this._timeouts),
     };
   }
 }

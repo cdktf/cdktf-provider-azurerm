@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface EventhubConsumerGroupConfig extends TerraformMetaArguments {
+export interface EventhubConsumerGroupConfig extends cdktf.TerraformMetaArguments {
   readonly eventhubName: string;
   readonly name: string;
   readonly namespaceName: string;
@@ -23,9 +22,20 @@ export interface EventhubConsumerGroupTimeouts {
   readonly update?: string;
 }
 
+function eventhubConsumerGroupTimeoutsToTerraform(struct?: EventhubConsumerGroupTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class EventhubConsumerGroup extends TerraformResource {
+export class EventhubConsumerGroup extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -149,12 +159,12 @@ export class EventhubConsumerGroup extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      eventhub_name: this._eventhubName,
-      name: this._name,
-      namespace_name: this._namespaceName,
-      resource_group_name: this._resourceGroupName,
-      user_metadata: this._userMetadata,
-      timeouts: this._timeouts,
+      eventhub_name: cdktf.stringToTerraform(this._eventhubName),
+      name: cdktf.stringToTerraform(this._name),
+      namespace_name: cdktf.stringToTerraform(this._namespaceName),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      user_metadata: cdktf.stringToTerraform(this._userMetadata),
+      timeouts: eventhubConsumerGroupTimeoutsToTerraform(this._timeouts),
     };
   }
 }

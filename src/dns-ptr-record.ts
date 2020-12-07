@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DnsPtrRecordConfig extends TerraformMetaArguments {
+export interface DnsPtrRecordConfig extends cdktf.TerraformMetaArguments {
   readonly name: string;
   readonly records: string[];
   readonly resourceGroupName: string;
@@ -24,9 +23,20 @@ export interface DnsPtrRecordTimeouts {
   readonly update?: string;
 }
 
+function dnsPtrRecordTimeoutsToTerraform(struct?: DnsPtrRecordTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class DnsPtrRecord extends TerraformResource {
+export class DnsPtrRecord extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -169,13 +179,13 @@ export class DnsPtrRecord extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      name: this._name,
-      records: this._records,
-      resource_group_name: this._resourceGroupName,
-      tags: this._tags,
-      ttl: this._ttl,
-      zone_name: this._zoneName,
-      timeouts: this._timeouts,
+      name: cdktf.stringToTerraform(this._name),
+      records: cdktf.listMapper(cdktf.stringToTerraform)(this._records),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      ttl: cdktf.numberToTerraform(this._ttl),
+      zone_name: cdktf.stringToTerraform(this._zoneName),
+      timeouts: dnsPtrRecordTimeoutsToTerraform(this._timeouts),
     };
   }
 }

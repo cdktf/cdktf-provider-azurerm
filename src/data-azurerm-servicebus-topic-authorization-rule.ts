@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformDataSource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataAzurermServicebusTopicAuthorizationRuleConfig extends TerraformMetaArguments {
+export interface DataAzurermServicebusTopicAuthorizationRuleConfig extends cdktf.TerraformMetaArguments {
   readonly name: string;
   readonly namespaceName: string;
   readonly resourceGroupName: string;
@@ -19,9 +18,17 @@ export interface DataAzurermServicebusTopicAuthorizationRuleTimeouts {
   readonly read?: string;
 }
 
+function dataAzurermServicebusTopicAuthorizationRuleTimeoutsToTerraform(struct?: DataAzurermServicebusTopicAuthorizationRuleTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    read: cdktf.stringToTerraform(struct!.read),
+  }
+}
+
+
 // Resource
 
-export class DataAzurermServicebusTopicAuthorizationRule extends TerraformDataSource {
+export class DataAzurermServicebusTopicAuthorizationRule extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
@@ -163,11 +170,11 @@ export class DataAzurermServicebusTopicAuthorizationRule extends TerraformDataSo
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      name: this._name,
-      namespace_name: this._namespaceName,
-      resource_group_name: this._resourceGroupName,
-      topic_name: this._topicName,
-      timeouts: this._timeouts,
+      name: cdktf.stringToTerraform(this._name),
+      namespace_name: cdktf.stringToTerraform(this._namespaceName),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      topic_name: cdktf.stringToTerraform(this._topicName),
+      timeouts: dataAzurermServicebusTopicAuthorizationRuleTimeoutsToTerraform(this._timeouts),
     };
   }
 }

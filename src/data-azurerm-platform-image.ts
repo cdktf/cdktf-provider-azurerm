@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformDataSource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataAzurermPlatformImageConfig extends TerraformMetaArguments {
+export interface DataAzurermPlatformImageConfig extends cdktf.TerraformMetaArguments {
   readonly location: string;
   readonly offer: string;
   readonly publisher: string;
@@ -20,9 +19,17 @@ export interface DataAzurermPlatformImageTimeouts {
   readonly read?: string;
 }
 
+function dataAzurermPlatformImageTimeoutsToTerraform(struct?: DataAzurermPlatformImageTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    read: cdktf.stringToTerraform(struct!.read),
+  }
+}
+
+
 // Resource
 
-export class DataAzurermPlatformImage extends TerraformDataSource {
+export class DataAzurermPlatformImage extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
@@ -146,12 +153,12 @@ export class DataAzurermPlatformImage extends TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      location: this._location,
-      offer: this._offer,
-      publisher: this._publisher,
-      sku: this._sku,
-      version: this._version,
-      timeouts: this._timeouts,
+      location: cdktf.stringToTerraform(this._location),
+      offer: cdktf.stringToTerraform(this._offer),
+      publisher: cdktf.stringToTerraform(this._publisher),
+      sku: cdktf.stringToTerraform(this._sku),
+      version: cdktf.stringToTerraform(this._version),
+      timeouts: dataAzurermPlatformImageTimeoutsToTerraform(this._timeouts),
     };
   }
 }

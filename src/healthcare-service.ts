@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface HealthcareServiceConfig extends TerraformMetaArguments {
+export interface HealthcareServiceConfig extends cdktf.TerraformMetaArguments {
   readonly accessPolicyObjectIds?: string[];
   readonly cosmosdbThroughput?: number;
   readonly kind?: string;
@@ -27,6 +26,16 @@ export interface HealthcareServiceAuthenticationConfiguration {
   readonly authority?: string;
   readonly smartProxyEnabled?: boolean;
 }
+
+function healthcareServiceAuthenticationConfigurationToTerraform(struct?: HealthcareServiceAuthenticationConfiguration): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    audience: cdktf.stringToTerraform(struct!.audience),
+    authority: cdktf.stringToTerraform(struct!.authority),
+    smart_proxy_enabled: cdktf.booleanToTerraform(struct!.smartProxyEnabled),
+  }
+}
+
 export interface HealthcareServiceCorsConfiguration {
   readonly allowCredentials?: boolean;
   readonly allowedHeaders?: string[];
@@ -34,6 +43,18 @@ export interface HealthcareServiceCorsConfiguration {
   readonly allowedOrigins?: string[];
   readonly maxAgeInSeconds?: number;
 }
+
+function healthcareServiceCorsConfigurationToTerraform(struct?: HealthcareServiceCorsConfiguration): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    allow_credentials: cdktf.booleanToTerraform(struct!.allowCredentials),
+    allowed_headers: cdktf.listMapper(cdktf.stringToTerraform)(struct!.allowedHeaders),
+    allowed_methods: cdktf.listMapper(cdktf.stringToTerraform)(struct!.allowedMethods),
+    allowed_origins: cdktf.listMapper(cdktf.stringToTerraform)(struct!.allowedOrigins),
+    max_age_in_seconds: cdktf.numberToTerraform(struct!.maxAgeInSeconds),
+  }
+}
+
 export interface HealthcareServiceTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -41,9 +62,20 @@ export interface HealthcareServiceTimeouts {
   readonly update?: string;
 }
 
+function healthcareServiceTimeoutsToTerraform(struct?: HealthcareServiceTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class HealthcareService extends TerraformResource {
+export class HealthcareService extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -238,16 +270,16 @@ export class HealthcareService extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      access_policy_object_ids: this._accessPolicyObjectIds,
-      cosmosdb_throughput: this._cosmosdbThroughput,
-      kind: this._kind,
-      location: this._location,
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      tags: this._tags,
-      authentication_configuration: this._authenticationConfiguration,
-      cors_configuration: this._corsConfiguration,
-      timeouts: this._timeouts,
+      access_policy_object_ids: cdktf.listMapper(cdktf.stringToTerraform)(this._accessPolicyObjectIds),
+      cosmosdb_throughput: cdktf.numberToTerraform(this._cosmosdbThroughput),
+      kind: cdktf.stringToTerraform(this._kind),
+      location: cdktf.stringToTerraform(this._location),
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      authentication_configuration: cdktf.listMapper(healthcareServiceAuthenticationConfigurationToTerraform)(this._authenticationConfiguration),
+      cors_configuration: cdktf.listMapper(healthcareServiceCorsConfigurationToTerraform)(this._corsConfiguration),
+      timeouts: healthcareServiceTimeoutsToTerraform(this._timeouts),
     };
   }
 }

@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface AppServiceHybridConnectionConfig extends TerraformMetaArguments {
+export interface AppServiceHybridConnectionConfig extends cdktf.TerraformMetaArguments {
   readonly appServiceName: string;
   readonly hostname: string;
   readonly port: number;
@@ -24,9 +23,20 @@ export interface AppServiceHybridConnectionTimeouts {
   readonly update?: string;
 }
 
+function appServiceHybridConnectionTimeoutsToTerraform(struct?: AppServiceHybridConnectionTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class AppServiceHybridConnection extends TerraformResource {
+export class AppServiceHybridConnection extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -189,13 +199,13 @@ export class AppServiceHybridConnection extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      app_service_name: this._appServiceName,
-      hostname: this._hostname,
-      port: this._port,
-      relay_id: this._relayId,
-      resource_group_name: this._resourceGroupName,
-      send_key_name: this._sendKeyName,
-      timeouts: this._timeouts,
+      app_service_name: cdktf.stringToTerraform(this._appServiceName),
+      hostname: cdktf.stringToTerraform(this._hostname),
+      port: cdktf.numberToTerraform(this._port),
+      relay_id: cdktf.stringToTerraform(this._relayId),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      send_key_name: cdktf.stringToTerraform(this._sendKeyName),
+      timeouts: appServiceHybridConnectionTimeoutsToTerraform(this._timeouts),
     };
   }
 }

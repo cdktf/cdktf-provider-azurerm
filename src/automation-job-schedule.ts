@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface AutomationJobScheduleConfig extends TerraformMetaArguments {
+export interface AutomationJobScheduleConfig extends cdktf.TerraformMetaArguments {
   readonly automationAccountName: string;
   readonly jobScheduleId?: string;
   readonly parameters?: { [key: string]: string };
@@ -25,9 +24,20 @@ export interface AutomationJobScheduleTimeouts {
   readonly update?: string;
 }
 
+function automationJobScheduleTimeoutsToTerraform(struct?: AutomationJobScheduleTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class AutomationJobSchedule extends TerraformResource {
+export class AutomationJobSchedule extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -185,14 +195,14 @@ export class AutomationJobSchedule extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      automation_account_name: this._automationAccountName,
-      job_schedule_id: this._jobScheduleId,
-      parameters: this._parameters,
-      resource_group_name: this._resourceGroupName,
-      run_on: this._runOn,
-      runbook_name: this._runbookName,
-      schedule_name: this._scheduleName,
-      timeouts: this._timeouts,
+      automation_account_name: cdktf.stringToTerraform(this._automationAccountName),
+      job_schedule_id: cdktf.stringToTerraform(this._jobScheduleId),
+      parameters: cdktf.hashMapper(cdktf.anyToTerraform)(this._parameters),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      run_on: cdktf.stringToTerraform(this._runOn),
+      runbook_name: cdktf.stringToTerraform(this._runbookName),
+      schedule_name: cdktf.stringToTerraform(this._scheduleName),
+      timeouts: automationJobScheduleTimeoutsToTerraform(this._timeouts),
     };
   }
 }

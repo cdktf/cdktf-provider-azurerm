@@ -2,13 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
-import { ComplexComputedList } from "cdktf";
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface IothubConfig extends TerraformMetaArguments {
+export interface IothubConfig extends cdktf.TerraformMetaArguments {
   readonly endpoint?: IothubEndpoint[];
   readonly eventHubPartitionCount?: number;
   readonly eventHubRetentionInDays?: number;
@@ -40,6 +38,22 @@ export interface IothubEndpoint {
   readonly resourceGroupName?: string;
   readonly type?: string;
 }
+
+function iothubEndpointToTerraform(struct?: IothubEndpoint): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    batch_frequency_in_seconds: cdktf.numberToTerraform(struct!.batchFrequencyInSeconds),
+    connection_string: cdktf.stringToTerraform(struct!.connectionString),
+    container_name: cdktf.stringToTerraform(struct!.containerName),
+    encoding: cdktf.stringToTerraform(struct!.encoding),
+    file_name_format: cdktf.stringToTerraform(struct!.fileNameFormat),
+    max_chunk_size_in_bytes: cdktf.numberToTerraform(struct!.maxChunkSizeInBytes),
+    name: cdktf.stringToTerraform(struct!.name),
+    resource_group_name: cdktf.stringToTerraform(struct!.resourceGroupName),
+    type: cdktf.stringToTerraform(struct!.type),
+  }
+}
+
 export interface IothubRoute {
   readonly condition?: string;
   readonly enabled?: boolean;
@@ -47,7 +61,19 @@ export interface IothubRoute {
   readonly name?: string;
   readonly source?: string;
 }
-export class IothubSharedAccessPolicy extends ComplexComputedList {
+
+function iothubRouteToTerraform(struct?: IothubRoute): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    condition: cdktf.stringToTerraform(struct!.condition),
+    enabled: cdktf.booleanToTerraform(struct!.enabled),
+    endpoint_names: cdktf.listMapper(cdktf.stringToTerraform)(struct!.endpointNames),
+    name: cdktf.stringToTerraform(struct!.name),
+    source: cdktf.stringToTerraform(struct!.source),
+  }
+}
+
+export class IothubSharedAccessPolicy extends cdktf.ComplexComputedList {
 
   // key_name - computed: true, optional: false, required: false
   public get keyName() {
@@ -75,6 +101,17 @@ export interface IothubFallbackRoute {
   readonly endpointNames?: string[];
   readonly source?: string;
 }
+
+function iothubFallbackRouteToTerraform(struct?: IothubFallbackRoute): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    condition: cdktf.stringToTerraform(struct!.condition),
+    enabled: cdktf.booleanToTerraform(struct!.enabled),
+    endpoint_names: cdktf.listMapper(cdktf.stringToTerraform)(struct!.endpointNames),
+    source: cdktf.stringToTerraform(struct!.source),
+  }
+}
+
 export interface IothubFileUpload {
   readonly connectionString: string;
   readonly containerName: string;
@@ -84,15 +121,48 @@ export interface IothubFileUpload {
   readonly notifications?: boolean;
   readonly sasTtl?: string;
 }
+
+function iothubFileUploadToTerraform(struct?: IothubFileUpload): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    connection_string: cdktf.stringToTerraform(struct!.connectionString),
+    container_name: cdktf.stringToTerraform(struct!.containerName),
+    default_ttl: cdktf.stringToTerraform(struct!.defaultTtl),
+    lock_duration: cdktf.stringToTerraform(struct!.lockDuration),
+    max_delivery_count: cdktf.numberToTerraform(struct!.maxDeliveryCount),
+    notifications: cdktf.booleanToTerraform(struct!.notifications),
+    sas_ttl: cdktf.stringToTerraform(struct!.sasTtl),
+  }
+}
+
 export interface IothubIpFilterRule {
   readonly action: string;
   readonly ipMask: string;
   readonly name: string;
 }
+
+function iothubIpFilterRuleToTerraform(struct?: IothubIpFilterRule): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    action: cdktf.stringToTerraform(struct!.action),
+    ip_mask: cdktf.stringToTerraform(struct!.ipMask),
+    name: cdktf.stringToTerraform(struct!.name),
+  }
+}
+
 export interface IothubSku {
   readonly capacity: number;
   readonly name: string;
 }
+
+function iothubSkuToTerraform(struct?: IothubSku): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    capacity: cdktf.numberToTerraform(struct!.capacity),
+    name: cdktf.stringToTerraform(struct!.name),
+  }
+}
+
 export interface IothubTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -100,9 +170,20 @@ export interface IothubTimeouts {
   readonly update?: string;
 }
 
+function iothubTimeoutsToTerraform(struct?: IothubTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class Iothub extends TerraformResource {
+export class Iothub extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -397,20 +478,20 @@ export class Iothub extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      endpoint: this._endpoint,
-      event_hub_partition_count: this._eventHubPartitionCount,
-      event_hub_retention_in_days: this._eventHubRetentionInDays,
-      location: this._location,
-      name: this._name,
-      public_network_access_enabled: this._publicNetworkAccessEnabled,
-      resource_group_name: this._resourceGroupName,
-      route: this._route,
-      tags: this._tags,
-      fallback_route: this._fallbackRoute,
-      file_upload: this._fileUpload,
-      ip_filter_rule: this._ipFilterRule,
-      sku: this._sku,
-      timeouts: this._timeouts,
+      endpoint: cdktf.listMapper(iothubEndpointToTerraform)(this._endpoint),
+      event_hub_partition_count: cdktf.numberToTerraform(this._eventHubPartitionCount),
+      event_hub_retention_in_days: cdktf.numberToTerraform(this._eventHubRetentionInDays),
+      location: cdktf.stringToTerraform(this._location),
+      name: cdktf.stringToTerraform(this._name),
+      public_network_access_enabled: cdktf.booleanToTerraform(this._publicNetworkAccessEnabled),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      route: cdktf.listMapper(iothubRouteToTerraform)(this._route),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      fallback_route: cdktf.listMapper(iothubFallbackRouteToTerraform)(this._fallbackRoute),
+      file_upload: cdktf.listMapper(iothubFileUploadToTerraform)(this._fileUpload),
+      ip_filter_rule: cdktf.listMapper(iothubIpFilterRuleToTerraform)(this._ipFilterRule),
+      sku: cdktf.listMapper(iothubSkuToTerraform)(this._sku),
+      timeouts: iothubTimeoutsToTerraform(this._timeouts),
     };
   }
 }

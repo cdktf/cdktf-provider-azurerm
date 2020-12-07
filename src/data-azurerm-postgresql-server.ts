@@ -2,20 +2,17 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformDataSource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
-import { ComplexComputedList } from "cdktf";
-import { StringMap } from "cdktf";
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataAzurermPostgresqlServerConfig extends TerraformMetaArguments {
+export interface DataAzurermPostgresqlServerConfig extends cdktf.TerraformMetaArguments {
   readonly name: string;
   readonly resourceGroupName: string;
   /** timeouts block */
   readonly timeouts?: DataAzurermPostgresqlServerTimeouts;
 }
-export class DataAzurermPostgresqlServerIdentity extends ComplexComputedList {
+export class DataAzurermPostgresqlServerIdentity extends cdktf.ComplexComputedList {
 
   // principal_id - computed: true, optional: false, required: false
   public get principalId() {
@@ -36,9 +33,17 @@ export interface DataAzurermPostgresqlServerTimeouts {
   readonly read?: string;
 }
 
+function dataAzurermPostgresqlServerTimeoutsToTerraform(struct?: DataAzurermPostgresqlServerTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    read: cdktf.stringToTerraform(struct!.read),
+  }
+}
+
+
 // Resource
 
-export class DataAzurermPostgresqlServer extends TerraformDataSource {
+export class DataAzurermPostgresqlServer extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
@@ -122,7 +127,7 @@ export class DataAzurermPostgresqlServer extends TerraformDataSource {
 
   // tags - computed: true, optional: false, required: false
   public tags(key: string): string {
-    return new StringMap(this, 'tags').lookup(key);
+    return new cdktf.StringMap(this, 'tags').lookup(key);
   }
 
   // version - computed: true, optional: false, required: false
@@ -152,9 +157,9 @@ export class DataAzurermPostgresqlServer extends TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      timeouts: this._timeouts,
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      timeouts: dataAzurermPostgresqlServerTimeoutsToTerraform(this._timeouts),
     };
   }
 }

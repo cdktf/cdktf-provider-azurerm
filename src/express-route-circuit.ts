@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface ExpressRouteCircuitConfig extends TerraformMetaArguments {
+export interface ExpressRouteCircuitConfig extends cdktf.TerraformMetaArguments {
   readonly allowClassicOperations?: boolean;
   readonly bandwidthInMbps: number;
   readonly location: string;
@@ -25,6 +24,15 @@ export interface ExpressRouteCircuitSku {
   readonly family: string;
   readonly tier: string;
 }
+
+function expressRouteCircuitSkuToTerraform(struct?: ExpressRouteCircuitSku): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    family: cdktf.stringToTerraform(struct!.family),
+    tier: cdktf.stringToTerraform(struct!.tier),
+  }
+}
+
 export interface ExpressRouteCircuitTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -32,9 +40,20 @@ export interface ExpressRouteCircuitTimeouts {
   readonly update?: string;
 }
 
+function expressRouteCircuitTimeoutsToTerraform(struct?: ExpressRouteCircuitTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class ExpressRouteCircuit extends TerraformResource {
+export class ExpressRouteCircuit extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -227,16 +246,16 @@ export class ExpressRouteCircuit extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      allow_classic_operations: this._allowClassicOperations,
-      bandwidth_in_mbps: this._bandwidthInMbps,
-      location: this._location,
-      name: this._name,
-      peering_location: this._peeringLocation,
-      resource_group_name: this._resourceGroupName,
-      service_provider_name: this._serviceProviderName,
-      tags: this._tags,
-      sku: this._sku,
-      timeouts: this._timeouts,
+      allow_classic_operations: cdktf.booleanToTerraform(this._allowClassicOperations),
+      bandwidth_in_mbps: cdktf.numberToTerraform(this._bandwidthInMbps),
+      location: cdktf.stringToTerraform(this._location),
+      name: cdktf.stringToTerraform(this._name),
+      peering_location: cdktf.stringToTerraform(this._peeringLocation),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      service_provider_name: cdktf.stringToTerraform(this._serviceProviderName),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      sku: cdktf.listMapper(expressRouteCircuitSkuToTerraform)(this._sku),
+      timeouts: expressRouteCircuitTimeoutsToTerraform(this._timeouts),
     };
   }
 }

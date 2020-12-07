@@ -2,13 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformDataSource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
-import { StringMap } from "cdktf";
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataAzurermDedicatedHostConfig extends TerraformMetaArguments {
+export interface DataAzurermDedicatedHostConfig extends cdktf.TerraformMetaArguments {
   readonly dedicatedHostGroupName: string;
   readonly name: string;
   readonly resourceGroupName: string;
@@ -19,9 +17,17 @@ export interface DataAzurermDedicatedHostTimeouts {
   readonly read?: string;
 }
 
+function dataAzurermDedicatedHostTimeoutsToTerraform(struct?: DataAzurermDedicatedHostTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    read: cdktf.stringToTerraform(struct!.read),
+  }
+}
+
+
 // Resource
 
-export class DataAzurermDedicatedHost extends TerraformDataSource {
+export class DataAzurermDedicatedHost extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
@@ -99,7 +105,7 @@ export class DataAzurermDedicatedHost extends TerraformDataSource {
 
   // tags - computed: true, optional: false, required: false
   public tags(key: string): string {
-    return new StringMap(this, 'tags').lookup(key);
+    return new cdktf.StringMap(this, 'tags').lookup(key);
   }
 
   // timeouts - computed: false, optional: true, required: false
@@ -124,10 +130,10 @@ export class DataAzurermDedicatedHost extends TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      dedicated_host_group_name: this._dedicatedHostGroupName,
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      timeouts: this._timeouts,
+      dedicated_host_group_name: cdktf.stringToTerraform(this._dedicatedHostGroupName),
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      timeouts: dataAzurermDedicatedHostTimeoutsToTerraform(this._timeouts),
     };
   }
 }

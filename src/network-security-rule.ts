@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface NetworkSecurityRuleConfig extends TerraformMetaArguments {
+export interface NetworkSecurityRuleConfig extends cdktf.TerraformMetaArguments {
   readonly access: string;
   readonly description?: string;
   readonly destinationAddressPrefix?: string;
@@ -36,9 +35,20 @@ export interface NetworkSecurityRuleTimeouts {
   readonly update?: string;
 }
 
+function networkSecurityRuleTimeoutsToTerraform(struct?: NetworkSecurityRuleTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class NetworkSecurityRule extends TerraformResource {
+export class NetworkSecurityRule extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -374,25 +384,25 @@ export class NetworkSecurityRule extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      access: this._access,
-      description: this._description,
-      destination_address_prefix: this._destinationAddressPrefix,
-      destination_address_prefixes: this._destinationAddressPrefixes,
-      destination_application_security_group_ids: this._destinationApplicationSecurityGroupIds,
-      destination_port_range: this._destinationPortRange,
-      destination_port_ranges: this._destinationPortRanges,
-      direction: this._direction,
-      name: this._name,
-      network_security_group_name: this._networkSecurityGroupName,
-      priority: this._priority,
-      protocol: this._protocol,
-      resource_group_name: this._resourceGroupName,
-      source_address_prefix: this._sourceAddressPrefix,
-      source_address_prefixes: this._sourceAddressPrefixes,
-      source_application_security_group_ids: this._sourceApplicationSecurityGroupIds,
-      source_port_range: this._sourcePortRange,
-      source_port_ranges: this._sourcePortRanges,
-      timeouts: this._timeouts,
+      access: cdktf.stringToTerraform(this._access),
+      description: cdktf.stringToTerraform(this._description),
+      destination_address_prefix: cdktf.stringToTerraform(this._destinationAddressPrefix),
+      destination_address_prefixes: cdktf.listMapper(cdktf.stringToTerraform)(this._destinationAddressPrefixes),
+      destination_application_security_group_ids: cdktf.listMapper(cdktf.stringToTerraform)(this._destinationApplicationSecurityGroupIds),
+      destination_port_range: cdktf.stringToTerraform(this._destinationPortRange),
+      destination_port_ranges: cdktf.listMapper(cdktf.stringToTerraform)(this._destinationPortRanges),
+      direction: cdktf.stringToTerraform(this._direction),
+      name: cdktf.stringToTerraform(this._name),
+      network_security_group_name: cdktf.stringToTerraform(this._networkSecurityGroupName),
+      priority: cdktf.numberToTerraform(this._priority),
+      protocol: cdktf.stringToTerraform(this._protocol),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      source_address_prefix: cdktf.stringToTerraform(this._sourceAddressPrefix),
+      source_address_prefixes: cdktf.listMapper(cdktf.stringToTerraform)(this._sourceAddressPrefixes),
+      source_application_security_group_ids: cdktf.listMapper(cdktf.stringToTerraform)(this._sourceApplicationSecurityGroupIds),
+      source_port_range: cdktf.stringToTerraform(this._sourcePortRange),
+      source_port_ranges: cdktf.listMapper(cdktf.stringToTerraform)(this._sourcePortRanges),
+      timeouts: networkSecurityRuleTimeoutsToTerraform(this._timeouts),
     };
   }
 }

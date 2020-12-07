@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface CosmosdbSqlDatabaseConfig extends TerraformMetaArguments {
+export interface CosmosdbSqlDatabaseConfig extends cdktf.TerraformMetaArguments {
   readonly accountName: string;
   readonly name: string;
   readonly resourceGroupName: string;
@@ -20,6 +19,14 @@ export interface CosmosdbSqlDatabaseConfig extends TerraformMetaArguments {
 export interface CosmosdbSqlDatabaseAutoscaleSettings {
   readonly maxThroughput?: number;
 }
+
+function cosmosdbSqlDatabaseAutoscaleSettingsToTerraform(struct?: CosmosdbSqlDatabaseAutoscaleSettings): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    max_throughput: cdktf.numberToTerraform(struct!.maxThroughput),
+  }
+}
+
 export interface CosmosdbSqlDatabaseTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -27,9 +34,20 @@ export interface CosmosdbSqlDatabaseTimeouts {
   readonly update?: string;
 }
 
+function cosmosdbSqlDatabaseTimeoutsToTerraform(struct?: CosmosdbSqlDatabaseTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class CosmosdbSqlDatabase extends TerraformResource {
+export class CosmosdbSqlDatabase extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -156,12 +174,12 @@ export class CosmosdbSqlDatabase extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      account_name: this._accountName,
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      throughput: this._throughput,
-      autoscale_settings: this._autoscaleSettings,
-      timeouts: this._timeouts,
+      account_name: cdktf.stringToTerraform(this._accountName),
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      throughput: cdktf.numberToTerraform(this._throughput),
+      autoscale_settings: cdktf.listMapper(cosmosdbSqlDatabaseAutoscaleSettingsToTerraform)(this._autoscaleSettings),
+      timeouts: cosmosdbSqlDatabaseTimeoutsToTerraform(this._timeouts),
     };
   }
 }

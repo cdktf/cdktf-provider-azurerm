@@ -2,20 +2,17 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformDataSource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
-import { ComplexComputedList } from "cdktf";
-import { StringMap } from "cdktf";
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataAzurermFirewallPolicyConfig extends TerraformMetaArguments {
+export interface DataAzurermFirewallPolicyConfig extends cdktf.TerraformMetaArguments {
   readonly name: string;
   readonly resourceGroupName: string;
   /** timeouts block */
   readonly timeouts?: DataAzurermFirewallPolicyTimeouts;
 }
-export class DataAzurermFirewallPolicyDns extends ComplexComputedList {
+export class DataAzurermFirewallPolicyDns extends cdktf.ComplexComputedList {
 
   // network_rule_fqdn_enabled - computed: true, optional: false, required: false
   public get networkRuleFqdnEnabled() {
@@ -32,7 +29,7 @@ export class DataAzurermFirewallPolicyDns extends ComplexComputedList {
     return this.getListAttribute('servers');
   }
 }
-export class DataAzurermFirewallPolicyThreatIntelligenceAllowlist extends ComplexComputedList {
+export class DataAzurermFirewallPolicyThreatIntelligenceAllowlist extends cdktf.ComplexComputedList {
 
   // fqdns - computed: true, optional: false, required: false
   public get fqdns() {
@@ -48,9 +45,17 @@ export interface DataAzurermFirewallPolicyTimeouts {
   readonly read?: string;
 }
 
+function dataAzurermFirewallPolicyTimeoutsToTerraform(struct?: DataAzurermFirewallPolicyTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    read: cdktf.stringToTerraform(struct!.read),
+  }
+}
+
+
 // Resource
 
-export class DataAzurermFirewallPolicy extends TerraformDataSource {
+export class DataAzurermFirewallPolicy extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
@@ -139,7 +144,7 @@ export class DataAzurermFirewallPolicy extends TerraformDataSource {
 
   // tags - computed: true, optional: false, required: false
   public tags(key: string): string {
-    return new StringMap(this, 'tags').lookup(key);
+    return new cdktf.StringMap(this, 'tags').lookup(key);
   }
 
   // threat_intelligence_allowlist - computed: true, optional: false, required: false
@@ -174,9 +179,9 @@ export class DataAzurermFirewallPolicy extends TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      timeouts: this._timeouts,
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      timeouts: dataAzurermFirewallPolicyTimeoutsToTerraform(this._timeouts),
     };
   }
 }

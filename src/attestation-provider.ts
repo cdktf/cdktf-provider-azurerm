@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface AttestationProviderConfig extends TerraformMetaArguments {
+export interface AttestationProviderConfig extends cdktf.TerraformMetaArguments {
   readonly location: string;
   readonly name: string;
   readonly policySigningCertificateData?: string;
@@ -23,9 +22,20 @@ export interface AttestationProviderTimeouts {
   readonly update?: string;
 }
 
+function attestationProviderTimeoutsToTerraform(struct?: AttestationProviderTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class AttestationProvider extends TerraformResource {
+export class AttestationProvider extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -162,12 +172,12 @@ export class AttestationProvider extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      location: this._location,
-      name: this._name,
-      policy_signing_certificate_data: this._policySigningCertificateData,
-      resource_group_name: this._resourceGroupName,
-      tags: this._tags,
-      timeouts: this._timeouts,
+      location: cdktf.stringToTerraform(this._location),
+      name: cdktf.stringToTerraform(this._name),
+      policy_signing_certificate_data: cdktf.stringToTerraform(this._policySigningCertificateData),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      timeouts: attestationProviderTimeoutsToTerraform(this._timeouts),
     };
   }
 }

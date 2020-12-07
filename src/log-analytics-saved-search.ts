@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface LogAnalyticsSavedSearchConfig extends TerraformMetaArguments {
+export interface LogAnalyticsSavedSearchConfig extends cdktf.TerraformMetaArguments {
   readonly category: string;
   readonly displayName: string;
   readonly functionAlias?: string;
@@ -26,9 +25,20 @@ export interface LogAnalyticsSavedSearchTimeouts {
   readonly update?: string;
 }
 
+function logAnalyticsSavedSearchTimeoutsToTerraform(struct?: LogAnalyticsSavedSearchTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class LogAnalyticsSavedSearch extends TerraformResource {
+export class LogAnalyticsSavedSearch extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -200,15 +210,15 @@ export class LogAnalyticsSavedSearch extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      category: this._category,
-      display_name: this._displayName,
-      function_alias: this._functionAlias,
-      function_parameters: this._functionParameters,
-      log_analytics_workspace_id: this._logAnalyticsWorkspaceId,
-      name: this._name,
-      query: this._query,
-      tags: this._tags,
-      timeouts: this._timeouts,
+      category: cdktf.stringToTerraform(this._category),
+      display_name: cdktf.stringToTerraform(this._displayName),
+      function_alias: cdktf.stringToTerraform(this._functionAlias),
+      function_parameters: cdktf.listMapper(cdktf.stringToTerraform)(this._functionParameters),
+      log_analytics_workspace_id: cdktf.stringToTerraform(this._logAnalyticsWorkspaceId),
+      name: cdktf.stringToTerraform(this._name),
+      query: cdktf.stringToTerraform(this._query),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      timeouts: logAnalyticsSavedSearchTimeoutsToTerraform(this._timeouts),
     };
   }
 }

@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface MysqlServerConfig extends TerraformMetaArguments {
+export interface MysqlServerConfig extends cdktf.TerraformMetaArguments {
   readonly administratorLogin?: string;
   readonly administratorLoginPassword?: string;
   readonly autoGrowEnabled?: boolean;
@@ -40,12 +39,31 @@ export interface MysqlServerConfig extends TerraformMetaArguments {
 export interface MysqlServerIdentity {
   readonly type: string;
 }
+
+function mysqlServerIdentityToTerraform(struct?: MysqlServerIdentity): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    type: cdktf.stringToTerraform(struct!.type),
+  }
+}
+
 export interface MysqlServerStorageProfile {
   readonly autoGrow?: string;
   readonly backupRetentionDays?: number;
   readonly geoRedundantBackup?: string;
   readonly storageMb?: number;
 }
+
+function mysqlServerStorageProfileToTerraform(struct?: MysqlServerStorageProfile): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    auto_grow: cdktf.stringToTerraform(struct!.autoGrow),
+    backup_retention_days: cdktf.numberToTerraform(struct!.backupRetentionDays),
+    geo_redundant_backup: cdktf.stringToTerraform(struct!.geoRedundantBackup),
+    storage_mb: cdktf.numberToTerraform(struct!.storageMb),
+  }
+}
+
 export interface MysqlServerThreatDetectionPolicy {
   readonly disabledAlerts?: string[];
   readonly emailAccountAdmins?: boolean;
@@ -55,6 +73,20 @@ export interface MysqlServerThreatDetectionPolicy {
   readonly storageAccountAccessKey?: string;
   readonly storageEndpoint?: string;
 }
+
+function mysqlServerThreatDetectionPolicyToTerraform(struct?: MysqlServerThreatDetectionPolicy): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    disabled_alerts: cdktf.listMapper(cdktf.stringToTerraform)(struct!.disabledAlerts),
+    email_account_admins: cdktf.booleanToTerraform(struct!.emailAccountAdmins),
+    email_addresses: cdktf.listMapper(cdktf.stringToTerraform)(struct!.emailAddresses),
+    enabled: cdktf.booleanToTerraform(struct!.enabled),
+    retention_days: cdktf.numberToTerraform(struct!.retentionDays),
+    storage_account_access_key: cdktf.stringToTerraform(struct!.storageAccountAccessKey),
+    storage_endpoint: cdktf.stringToTerraform(struct!.storageEndpoint),
+  }
+}
+
 export interface MysqlServerTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -62,9 +94,20 @@ export interface MysqlServerTimeouts {
   readonly update?: string;
 }
 
+function mysqlServerTimeoutsToTerraform(struct?: MysqlServerTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class MysqlServer extends TerraformResource {
+export class MysqlServer extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -496,30 +539,30 @@ export class MysqlServer extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      administrator_login: this._administratorLogin,
-      administrator_login_password: this._administratorLoginPassword,
-      auto_grow_enabled: this._autoGrowEnabled,
-      backup_retention_days: this._backupRetentionDays,
-      create_mode: this._createMode,
-      creation_source_server_id: this._creationSourceServerId,
-      geo_redundant_backup_enabled: this._geoRedundantBackupEnabled,
-      infrastructure_encryption_enabled: this._infrastructureEncryptionEnabled,
-      location: this._location,
-      name: this._name,
-      public_network_access_enabled: this._publicNetworkAccessEnabled,
-      resource_group_name: this._resourceGroupName,
-      restore_point_in_time: this._restorePointInTime,
-      sku_name: this._skuName,
-      ssl_enforcement: this._sslEnforcement,
-      ssl_enforcement_enabled: this._sslEnforcementEnabled,
-      ssl_minimal_tls_version_enforced: this._sslMinimalTlsVersionEnforced,
-      storage_mb: this._storageMb,
-      tags: this._tags,
-      version: this._version,
-      identity: this._identity,
-      storage_profile: this._storageProfile,
-      threat_detection_policy: this._threatDetectionPolicy,
-      timeouts: this._timeouts,
+      administrator_login: cdktf.stringToTerraform(this._administratorLogin),
+      administrator_login_password: cdktf.stringToTerraform(this._administratorLoginPassword),
+      auto_grow_enabled: cdktf.booleanToTerraform(this._autoGrowEnabled),
+      backup_retention_days: cdktf.numberToTerraform(this._backupRetentionDays),
+      create_mode: cdktf.stringToTerraform(this._createMode),
+      creation_source_server_id: cdktf.stringToTerraform(this._creationSourceServerId),
+      geo_redundant_backup_enabled: cdktf.booleanToTerraform(this._geoRedundantBackupEnabled),
+      infrastructure_encryption_enabled: cdktf.booleanToTerraform(this._infrastructureEncryptionEnabled),
+      location: cdktf.stringToTerraform(this._location),
+      name: cdktf.stringToTerraform(this._name),
+      public_network_access_enabled: cdktf.booleanToTerraform(this._publicNetworkAccessEnabled),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      restore_point_in_time: cdktf.stringToTerraform(this._restorePointInTime),
+      sku_name: cdktf.stringToTerraform(this._skuName),
+      ssl_enforcement: cdktf.stringToTerraform(this._sslEnforcement),
+      ssl_enforcement_enabled: cdktf.booleanToTerraform(this._sslEnforcementEnabled),
+      ssl_minimal_tls_version_enforced: cdktf.stringToTerraform(this._sslMinimalTlsVersionEnforced),
+      storage_mb: cdktf.numberToTerraform(this._storageMb),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      version: cdktf.stringToTerraform(this._version),
+      identity: cdktf.listMapper(mysqlServerIdentityToTerraform)(this._identity),
+      storage_profile: cdktf.listMapper(mysqlServerStorageProfileToTerraform)(this._storageProfile),
+      threat_detection_policy: cdktf.listMapper(mysqlServerThreatDetectionPolicyToTerraform)(this._threatDetectionPolicy),
+      timeouts: mysqlServerTimeoutsToTerraform(this._timeouts),
     };
   }
 }

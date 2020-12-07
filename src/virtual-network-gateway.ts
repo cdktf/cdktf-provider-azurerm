@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface VirtualNetworkGatewayConfig extends TerraformMetaArguments {
+export interface VirtualNetworkGatewayConfig extends cdktf.TerraformMetaArguments {
   readonly activeActive?: boolean;
   readonly defaultLocalNetworkGatewayId?: string;
   readonly enableBgp?: boolean;
@@ -36,29 +35,87 @@ export interface VirtualNetworkGatewayBgpSettings {
   readonly peerWeight?: number;
   readonly peeringAddress?: string;
 }
+
+function virtualNetworkGatewayBgpSettingsToTerraform(struct?: VirtualNetworkGatewayBgpSettings): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    asn: cdktf.numberToTerraform(struct!.asn),
+    peer_weight: cdktf.numberToTerraform(struct!.peerWeight),
+    peering_address: cdktf.stringToTerraform(struct!.peeringAddress),
+  }
+}
+
 export interface VirtualNetworkGatewayCustomRoute {
   readonly addressPrefixes?: string[];
 }
+
+function virtualNetworkGatewayCustomRouteToTerraform(struct?: VirtualNetworkGatewayCustomRoute): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    address_prefixes: cdktf.listMapper(cdktf.stringToTerraform)(struct!.addressPrefixes),
+  }
+}
+
 export interface VirtualNetworkGatewayIpConfiguration {
   readonly name?: string;
   readonly privateIpAddressAllocation?: string;
   readonly publicIpAddressId: string;
   readonly subnetId: string;
 }
+
+function virtualNetworkGatewayIpConfigurationToTerraform(struct?: VirtualNetworkGatewayIpConfiguration): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    name: cdktf.stringToTerraform(struct!.name),
+    private_ip_address_allocation: cdktf.stringToTerraform(struct!.privateIpAddressAllocation),
+    public_ip_address_id: cdktf.stringToTerraform(struct!.publicIpAddressId),
+    subnet_id: cdktf.stringToTerraform(struct!.subnetId),
+  }
+}
+
 export interface VirtualNetworkGatewayTimeouts {
   readonly create?: string;
   readonly delete?: string;
   readonly read?: string;
   readonly update?: string;
 }
+
+function virtualNetworkGatewayTimeoutsToTerraform(struct?: VirtualNetworkGatewayTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
 export interface VirtualNetworkGatewayVpnClientConfigurationRevokedCertificate {
   readonly name: string;
   readonly thumbprint: string;
 }
+
+function virtualNetworkGatewayVpnClientConfigurationRevokedCertificateToTerraform(struct?: VirtualNetworkGatewayVpnClientConfigurationRevokedCertificate): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    name: cdktf.stringToTerraform(struct!.name),
+    thumbprint: cdktf.stringToTerraform(struct!.thumbprint),
+  }
+}
+
 export interface VirtualNetworkGatewayVpnClientConfigurationRootCertificate {
   readonly name: string;
   readonly publicCertData: string;
 }
+
+function virtualNetworkGatewayVpnClientConfigurationRootCertificateToTerraform(struct?: VirtualNetworkGatewayVpnClientConfigurationRootCertificate): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    name: cdktf.stringToTerraform(struct!.name),
+    public_cert_data: cdktf.stringToTerraform(struct!.publicCertData),
+  }
+}
+
 export interface VirtualNetworkGatewayVpnClientConfiguration {
   readonly aadAudience?: string;
   readonly aadIssuer?: string;
@@ -73,9 +130,25 @@ export interface VirtualNetworkGatewayVpnClientConfiguration {
   readonly rootCertificate?: VirtualNetworkGatewayVpnClientConfigurationRootCertificate[];
 }
 
+function virtualNetworkGatewayVpnClientConfigurationToTerraform(struct?: VirtualNetworkGatewayVpnClientConfiguration): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    aad_audience: cdktf.stringToTerraform(struct!.aadAudience),
+    aad_issuer: cdktf.stringToTerraform(struct!.aadIssuer),
+    aad_tenant: cdktf.stringToTerraform(struct!.aadTenant),
+    address_space: cdktf.listMapper(cdktf.stringToTerraform)(struct!.addressSpace),
+    radius_server_address: cdktf.stringToTerraform(struct!.radiusServerAddress),
+    radius_server_secret: cdktf.stringToTerraform(struct!.radiusServerSecret),
+    vpn_client_protocols: cdktf.listMapper(cdktf.stringToTerraform)(struct!.vpnClientProtocols),
+    revoked_certificate: cdktf.listMapper(virtualNetworkGatewayVpnClientConfigurationRevokedCertificateToTerraform)(struct!.revokedCertificate),
+    root_certificate: cdktf.listMapper(virtualNetworkGatewayVpnClientConfigurationRootCertificateToTerraform)(struct!.rootCertificate),
+  }
+}
+
+
 // Resource
 
-export class VirtualNetworkGateway extends TerraformResource {
+export class VirtualNetworkGateway extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -380,23 +453,23 @@ export class VirtualNetworkGateway extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      active_active: this._activeActive,
-      default_local_network_gateway_id: this._defaultLocalNetworkGatewayId,
-      enable_bgp: this._enableBgp,
-      generation: this._generation,
-      location: this._location,
-      name: this._name,
-      private_ip_address_enabled: this._privateIpAddressEnabled,
-      resource_group_name: this._resourceGroupName,
-      sku: this._sku,
-      tags: this._tags,
-      type: this._type,
-      vpn_type: this._vpnType,
-      bgp_settings: this._bgpSettings,
-      custom_route: this._customRoute,
-      ip_configuration: this._ipConfiguration,
-      timeouts: this._timeouts,
-      vpn_client_configuration: this._vpnClientConfiguration,
+      active_active: cdktf.booleanToTerraform(this._activeActive),
+      default_local_network_gateway_id: cdktf.stringToTerraform(this._defaultLocalNetworkGatewayId),
+      enable_bgp: cdktf.booleanToTerraform(this._enableBgp),
+      generation: cdktf.stringToTerraform(this._generation),
+      location: cdktf.stringToTerraform(this._location),
+      name: cdktf.stringToTerraform(this._name),
+      private_ip_address_enabled: cdktf.booleanToTerraform(this._privateIpAddressEnabled),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      sku: cdktf.stringToTerraform(this._sku),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      type: cdktf.stringToTerraform(this._type),
+      vpn_type: cdktf.stringToTerraform(this._vpnType),
+      bgp_settings: cdktf.listMapper(virtualNetworkGatewayBgpSettingsToTerraform)(this._bgpSettings),
+      custom_route: cdktf.listMapper(virtualNetworkGatewayCustomRouteToTerraform)(this._customRoute),
+      ip_configuration: cdktf.listMapper(virtualNetworkGatewayIpConfigurationToTerraform)(this._ipConfiguration),
+      timeouts: virtualNetworkGatewayTimeoutsToTerraform(this._timeouts),
+      vpn_client_configuration: cdktf.listMapper(virtualNetworkGatewayVpnClientConfigurationToTerraform)(this._vpnClientConfiguration),
     };
   }
 }

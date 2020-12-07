@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface LogAnalyticsSolutionConfig extends TerraformMetaArguments {
+export interface LogAnalyticsSolutionConfig extends cdktf.TerraformMetaArguments {
   readonly location: string;
   readonly resourceGroupName: string;
   readonly solutionName: string;
@@ -24,6 +23,16 @@ export interface LogAnalyticsSolutionPlan {
   readonly promotionCode?: string;
   readonly publisher: string;
 }
+
+function logAnalyticsSolutionPlanToTerraform(struct?: LogAnalyticsSolutionPlan): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    product: cdktf.stringToTerraform(struct!.product),
+    promotion_code: cdktf.stringToTerraform(struct!.promotionCode),
+    publisher: cdktf.stringToTerraform(struct!.publisher),
+  }
+}
+
 export interface LogAnalyticsSolutionTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -31,9 +40,20 @@ export interface LogAnalyticsSolutionTimeouts {
   readonly update?: string;
 }
 
+function logAnalyticsSolutionTimeoutsToTerraform(struct?: LogAnalyticsSolutionTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class LogAnalyticsSolution extends TerraformResource {
+export class LogAnalyticsSolution extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -185,14 +205,14 @@ export class LogAnalyticsSolution extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      location: this._location,
-      resource_group_name: this._resourceGroupName,
-      solution_name: this._solutionName,
-      tags: this._tags,
-      workspace_name: this._workspaceName,
-      workspace_resource_id: this._workspaceResourceId,
-      plan: this._plan,
-      timeouts: this._timeouts,
+      location: cdktf.stringToTerraform(this._location),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      solution_name: cdktf.stringToTerraform(this._solutionName),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      workspace_name: cdktf.stringToTerraform(this._workspaceName),
+      workspace_resource_id: cdktf.stringToTerraform(this._workspaceResourceId),
+      plan: cdktf.listMapper(logAnalyticsSolutionPlanToTerraform)(this._plan),
+      timeouts: logAnalyticsSolutionTimeoutsToTerraform(this._timeouts),
     };
   }
 }

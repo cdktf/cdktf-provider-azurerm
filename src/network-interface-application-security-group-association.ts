@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface NetworkInterfaceApplicationSecurityGroupAssociationConfig extends TerraformMetaArguments {
+export interface NetworkInterfaceApplicationSecurityGroupAssociationConfig extends cdktf.TerraformMetaArguments {
   readonly applicationSecurityGroupId: string;
   readonly networkInterfaceId: string;
   /** timeouts block */
@@ -20,9 +19,20 @@ export interface NetworkInterfaceApplicationSecurityGroupAssociationTimeouts {
   readonly update?: string;
 }
 
+function networkInterfaceApplicationSecurityGroupAssociationTimeoutsToTerraform(struct?: NetworkInterfaceApplicationSecurityGroupAssociationTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class NetworkInterfaceApplicationSecurityGroupAssociation extends TerraformResource {
+export class NetworkInterfaceApplicationSecurityGroupAssociation extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -101,9 +111,9 @@ export class NetworkInterfaceApplicationSecurityGroupAssociation extends Terrafo
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      application_security_group_id: this._applicationSecurityGroupId,
-      network_interface_id: this._networkInterfaceId,
-      timeouts: this._timeouts,
+      application_security_group_id: cdktf.stringToTerraform(this._applicationSecurityGroupId),
+      network_interface_id: cdktf.stringToTerraform(this._networkInterfaceId),
+      timeouts: networkInterfaceApplicationSecurityGroupAssociationTimeoutsToTerraform(this._timeouts),
     };
   }
 }

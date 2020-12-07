@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface IotTimeSeriesInsightsAccessPolicyConfig extends TerraformMetaArguments {
+export interface IotTimeSeriesInsightsAccessPolicyConfig extends cdktf.TerraformMetaArguments {
   readonly description?: string;
   readonly name: string;
   readonly principalObjectId: string;
@@ -23,9 +22,20 @@ export interface IotTimeSeriesInsightsAccessPolicyTimeouts {
   readonly update?: string;
 }
 
+function iotTimeSeriesInsightsAccessPolicyTimeoutsToTerraform(struct?: IotTimeSeriesInsightsAccessPolicyTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class IotTimeSeriesInsightsAccessPolicy extends TerraformResource {
+export class IotTimeSeriesInsightsAccessPolicy extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -149,12 +159,12 @@ export class IotTimeSeriesInsightsAccessPolicy extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      description: this._description,
-      name: this._name,
-      principal_object_id: this._principalObjectId,
-      roles: this._roles,
-      time_series_insights_environment_id: this._timeSeriesInsightsEnvironmentId,
-      timeouts: this._timeouts,
+      description: cdktf.stringToTerraform(this._description),
+      name: cdktf.stringToTerraform(this._name),
+      principal_object_id: cdktf.stringToTerraform(this._principalObjectId),
+      roles: cdktf.listMapper(cdktf.stringToTerraform)(this._roles),
+      time_series_insights_environment_id: cdktf.stringToTerraform(this._timeSeriesInsightsEnvironmentId),
+      timeouts: iotTimeSeriesInsightsAccessPolicyTimeoutsToTerraform(this._timeouts),
     };
   }
 }

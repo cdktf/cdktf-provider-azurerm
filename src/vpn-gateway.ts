@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface VpnGatewayConfig extends TerraformMetaArguments {
+export interface VpnGatewayConfig extends cdktf.TerraformMetaArguments {
   readonly location: string;
   readonly name: string;
   readonly resourceGroupName: string;
@@ -22,9 +21,25 @@ export interface VpnGatewayConfig extends TerraformMetaArguments {
 export interface VpnGatewayBgpSettingsInstance0BgpPeeringAddress {
   readonly customIps: string[];
 }
+
+function vpnGatewayBgpSettingsInstance0BgpPeeringAddressToTerraform(struct?: VpnGatewayBgpSettingsInstance0BgpPeeringAddress): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    custom_ips: cdktf.listMapper(cdktf.stringToTerraform)(struct!.customIps),
+  }
+}
+
 export interface VpnGatewayBgpSettingsInstance1BgpPeeringAddress {
   readonly customIps: string[];
 }
+
+function vpnGatewayBgpSettingsInstance1BgpPeeringAddressToTerraform(struct?: VpnGatewayBgpSettingsInstance1BgpPeeringAddress): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    custom_ips: cdktf.listMapper(cdktf.stringToTerraform)(struct!.customIps),
+  }
+}
+
 export interface VpnGatewayBgpSettings {
   readonly asn: number;
   readonly peerWeight: number;
@@ -33,6 +48,17 @@ export interface VpnGatewayBgpSettings {
   /** instance_1_bgp_peering_address block */
   readonly instance1BgpPeeringAddress?: VpnGatewayBgpSettingsInstance1BgpPeeringAddress[];
 }
+
+function vpnGatewayBgpSettingsToTerraform(struct?: VpnGatewayBgpSettings): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    asn: cdktf.numberToTerraform(struct!.asn),
+    peer_weight: cdktf.numberToTerraform(struct!.peerWeight),
+    instance_0_bgp_peering_address: cdktf.listMapper(vpnGatewayBgpSettingsInstance0BgpPeeringAddressToTerraform)(struct!.instance0BgpPeeringAddress),
+    instance_1_bgp_peering_address: cdktf.listMapper(vpnGatewayBgpSettingsInstance1BgpPeeringAddressToTerraform)(struct!.instance1BgpPeeringAddress),
+  }
+}
+
 export interface VpnGatewayTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -40,9 +66,20 @@ export interface VpnGatewayTimeouts {
   readonly update?: string;
 }
 
+function vpnGatewayTimeoutsToTerraform(struct?: VpnGatewayTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class VpnGateway extends TerraformResource {
+export class VpnGateway extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -200,14 +237,14 @@ export class VpnGateway extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      location: this._location,
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      scale_unit: this._scaleUnit,
-      tags: this._tags,
-      virtual_hub_id: this._virtualHubId,
-      bgp_settings: this._bgpSettings,
-      timeouts: this._timeouts,
+      location: cdktf.stringToTerraform(this._location),
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      scale_unit: cdktf.numberToTerraform(this._scaleUnit),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      virtual_hub_id: cdktf.stringToTerraform(this._virtualHubId),
+      bgp_settings: cdktf.listMapper(vpnGatewayBgpSettingsToTerraform)(this._bgpSettings),
+      timeouts: vpnGatewayTimeoutsToTerraform(this._timeouts),
     };
   }
 }

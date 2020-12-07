@@ -2,20 +2,17 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformDataSource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
-import { ComplexComputedList } from "cdktf";
-import { StringMap } from "cdktf";
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataAzurermVirtualNetworkGatewayConnectionConfig extends TerraformMetaArguments {
+export interface DataAzurermVirtualNetworkGatewayConnectionConfig extends cdktf.TerraformMetaArguments {
   readonly name: string;
   readonly resourceGroupName: string;
   /** timeouts block */
   readonly timeouts?: DataAzurermVirtualNetworkGatewayConnectionTimeouts;
 }
-export class DataAzurermVirtualNetworkGatewayConnectionIpsecPolicy extends ComplexComputedList {
+export class DataAzurermVirtualNetworkGatewayConnectionIpsecPolicy extends cdktf.ComplexComputedList {
 
   // dh_group - computed: true, optional: false, required: false
   public get dhGroup() {
@@ -57,7 +54,7 @@ export class DataAzurermVirtualNetworkGatewayConnectionIpsecPolicy extends Compl
     return this.getNumberAttribute('sa_lifetime');
   }
 }
-export class DataAzurermVirtualNetworkGatewayConnectionTrafficSelectorPolicy extends ComplexComputedList {
+export class DataAzurermVirtualNetworkGatewayConnectionTrafficSelectorPolicy extends cdktf.ComplexComputedList {
 
   // local_address_cidrs - computed: true, optional: false, required: false
   public get localAddressCidrs() {
@@ -73,9 +70,17 @@ export interface DataAzurermVirtualNetworkGatewayConnectionTimeouts {
   readonly read?: string;
 }
 
+function dataAzurermVirtualNetworkGatewayConnectionTimeoutsToTerraform(struct?: DataAzurermVirtualNetworkGatewayConnectionTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    read: cdktf.stringToTerraform(struct!.read),
+  }
+}
+
+
 // Resource
 
-export class DataAzurermVirtualNetworkGatewayConnection extends TerraformDataSource {
+export class DataAzurermVirtualNetworkGatewayConnection extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
@@ -214,7 +219,7 @@ export class DataAzurermVirtualNetworkGatewayConnection extends TerraformDataSou
 
   // tags - computed: true, optional: false, required: false
   public tags(key: string): string {
-    return new StringMap(this, 'tags').lookup(key);
+    return new cdktf.StringMap(this, 'tags').lookup(key);
   }
 
   // traffic_selector_policy - computed: true, optional: false, required: false
@@ -259,9 +264,9 @@ export class DataAzurermVirtualNetworkGatewayConnection extends TerraformDataSou
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      timeouts: this._timeouts,
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      timeouts: dataAzurermVirtualNetworkGatewayConnectionTimeoutsToTerraform(this._timeouts),
     };
   }
 }

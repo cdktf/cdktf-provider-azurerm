@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataShareDatasetKustoDatabaseConfig extends TerraformMetaArguments {
+export interface DataShareDatasetKustoDatabaseConfig extends cdktf.TerraformMetaArguments {
   readonly kustoDatabaseId: string;
   readonly name: string;
   readonly shareId: string;
@@ -20,9 +19,19 @@ export interface DataShareDatasetKustoDatabaseTimeouts {
   readonly read?: string;
 }
 
+function dataShareDatasetKustoDatabaseTimeoutsToTerraform(struct?: DataShareDatasetKustoDatabaseTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+  }
+}
+
+
 // Resource
 
-export class DataShareDatasetKustoDatabase extends TerraformResource {
+export class DataShareDatasetKustoDatabase extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -125,10 +134,10 @@ export class DataShareDatasetKustoDatabase extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      kusto_database_id: this._kustoDatabaseId,
-      name: this._name,
-      share_id: this._shareId,
-      timeouts: this._timeouts,
+      kusto_database_id: cdktf.stringToTerraform(this._kustoDatabaseId),
+      name: cdktf.stringToTerraform(this._name),
+      share_id: cdktf.stringToTerraform(this._shareId),
+      timeouts: dataShareDatasetKustoDatabaseTimeoutsToTerraform(this._timeouts),
     };
   }
 }

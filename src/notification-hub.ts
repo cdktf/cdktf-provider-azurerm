@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface NotificationHubConfig extends TerraformMetaArguments {
+export interface NotificationHubConfig extends cdktf.TerraformMetaArguments {
   readonly location: string;
   readonly name: string;
   readonly namespaceName: string;
@@ -27,9 +26,29 @@ export interface NotificationHubApnsCredential {
   readonly teamId: string;
   readonly token: string;
 }
+
+function notificationHubApnsCredentialToTerraform(struct?: NotificationHubApnsCredential): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    application_mode: cdktf.stringToTerraform(struct!.applicationMode),
+    bundle_id: cdktf.stringToTerraform(struct!.bundleId),
+    key_id: cdktf.stringToTerraform(struct!.keyId),
+    team_id: cdktf.stringToTerraform(struct!.teamId),
+    token: cdktf.stringToTerraform(struct!.token),
+  }
+}
+
 export interface NotificationHubGcmCredential {
   readonly apiKey: string;
 }
+
+function notificationHubGcmCredentialToTerraform(struct?: NotificationHubGcmCredential): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    api_key: cdktf.stringToTerraform(struct!.apiKey),
+  }
+}
+
 export interface NotificationHubTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -37,9 +56,20 @@ export interface NotificationHubTimeouts {
   readonly update?: string;
 }
 
+function notificationHubTimeoutsToTerraform(struct?: NotificationHubTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class NotificationHub extends TerraformResource {
+export class NotificationHub extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -197,14 +227,14 @@ export class NotificationHub extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      location: this._location,
-      name: this._name,
-      namespace_name: this._namespaceName,
-      resource_group_name: this._resourceGroupName,
-      tags: this._tags,
-      apns_credential: this._apnsCredential,
-      gcm_credential: this._gcmCredential,
-      timeouts: this._timeouts,
+      location: cdktf.stringToTerraform(this._location),
+      name: cdktf.stringToTerraform(this._name),
+      namespace_name: cdktf.stringToTerraform(this._namespaceName),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      apns_credential: cdktf.listMapper(notificationHubApnsCredentialToTerraform)(this._apnsCredential),
+      gcm_credential: cdktf.listMapper(notificationHubGcmCredentialToTerraform)(this._gcmCredential),
+      timeouts: notificationHubTimeoutsToTerraform(this._timeouts),
     };
   }
 }

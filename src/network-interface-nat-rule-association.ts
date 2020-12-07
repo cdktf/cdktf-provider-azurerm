@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface NetworkInterfaceNatRuleAssociationConfig extends TerraformMetaArguments {
+export interface NetworkInterfaceNatRuleAssociationConfig extends cdktf.TerraformMetaArguments {
   readonly ipConfigurationName: string;
   readonly natRuleId: string;
   readonly networkInterfaceId: string;
@@ -21,9 +20,20 @@ export interface NetworkInterfaceNatRuleAssociationTimeouts {
   readonly update?: string;
 }
 
+function networkInterfaceNatRuleAssociationTimeoutsToTerraform(struct?: NetworkInterfaceNatRuleAssociationTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class NetworkInterfaceNatRuleAssociation extends TerraformResource {
+export class NetworkInterfaceNatRuleAssociation extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -116,10 +126,10 @@ export class NetworkInterfaceNatRuleAssociation extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      ip_configuration_name: this._ipConfigurationName,
-      nat_rule_id: this._natRuleId,
-      network_interface_id: this._networkInterfaceId,
-      timeouts: this._timeouts,
+      ip_configuration_name: cdktf.stringToTerraform(this._ipConfigurationName),
+      nat_rule_id: cdktf.stringToTerraform(this._natRuleId),
+      network_interface_id: cdktf.stringToTerraform(this._networkInterfaceId),
+      timeouts: networkInterfaceNatRuleAssociationTimeoutsToTerraform(this._timeouts),
     };
   }
 }

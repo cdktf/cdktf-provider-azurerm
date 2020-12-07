@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface ApiManagementConfig extends TerraformMetaArguments {
+export interface ApiManagementConfig extends cdktf.TerraformMetaArguments {
   readonly location: string;
   readonly name: string;
   readonly notificationSenderEmail?: string;
@@ -43,19 +42,55 @@ export interface ApiManagementPolicy {
   readonly xmlContent?: string;
   readonly xmlLink?: string;
 }
+
+function apiManagementPolicyToTerraform(struct?: ApiManagementPolicy): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    xml_content: cdktf.stringToTerraform(struct!.xmlContent),
+    xml_link: cdktf.stringToTerraform(struct!.xmlLink),
+  }
+}
+
 export interface ApiManagementAdditionalLocationVirtualNetworkConfiguration {
   readonly subnetId: string;
 }
+
+function apiManagementAdditionalLocationVirtualNetworkConfigurationToTerraform(struct?: ApiManagementAdditionalLocationVirtualNetworkConfiguration): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    subnet_id: cdktf.stringToTerraform(struct!.subnetId),
+  }
+}
+
 export interface ApiManagementAdditionalLocation {
   readonly location: string;
   /** virtual_network_configuration block */
   readonly virtualNetworkConfiguration?: ApiManagementAdditionalLocationVirtualNetworkConfiguration[];
 }
+
+function apiManagementAdditionalLocationToTerraform(struct?: ApiManagementAdditionalLocation): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    location: cdktf.stringToTerraform(struct!.location),
+    virtual_network_configuration: cdktf.listMapper(apiManagementAdditionalLocationVirtualNetworkConfigurationToTerraform)(struct!.virtualNetworkConfiguration),
+  }
+}
+
 export interface ApiManagementCertificate {
   readonly certificatePassword: string;
   readonly encodedCertificate: string;
   readonly storeName: string;
 }
+
+function apiManagementCertificateToTerraform(struct?: ApiManagementCertificate): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    certificate_password: cdktf.stringToTerraform(struct!.certificatePassword),
+    encoded_certificate: cdktf.stringToTerraform(struct!.encodedCertificate),
+    store_name: cdktf.stringToTerraform(struct!.storeName),
+  }
+}
+
 export interface ApiManagementHostnameConfigurationDeveloperPortal {
   readonly certificate?: string;
   readonly certificatePassword?: string;
@@ -63,6 +98,18 @@ export interface ApiManagementHostnameConfigurationDeveloperPortal {
   readonly keyVaultId?: string;
   readonly negotiateClientCertificate?: boolean;
 }
+
+function apiManagementHostnameConfigurationDeveloperPortalToTerraform(struct?: ApiManagementHostnameConfigurationDeveloperPortal): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    certificate: cdktf.stringToTerraform(struct!.certificate),
+    certificate_password: cdktf.stringToTerraform(struct!.certificatePassword),
+    host_name: cdktf.stringToTerraform(struct!.hostName),
+    key_vault_id: cdktf.stringToTerraform(struct!.keyVaultId),
+    negotiate_client_certificate: cdktf.booleanToTerraform(struct!.negotiateClientCertificate),
+  }
+}
+
 export interface ApiManagementHostnameConfigurationManagement {
   readonly certificate?: string;
   readonly certificatePassword?: string;
@@ -70,6 +117,18 @@ export interface ApiManagementHostnameConfigurationManagement {
   readonly keyVaultId?: string;
   readonly negotiateClientCertificate?: boolean;
 }
+
+function apiManagementHostnameConfigurationManagementToTerraform(struct?: ApiManagementHostnameConfigurationManagement): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    certificate: cdktf.stringToTerraform(struct!.certificate),
+    certificate_password: cdktf.stringToTerraform(struct!.certificatePassword),
+    host_name: cdktf.stringToTerraform(struct!.hostName),
+    key_vault_id: cdktf.stringToTerraform(struct!.keyVaultId),
+    negotiate_client_certificate: cdktf.booleanToTerraform(struct!.negotiateClientCertificate),
+  }
+}
+
 export interface ApiManagementHostnameConfigurationPortal {
   readonly certificate?: string;
   readonly certificatePassword?: string;
@@ -77,6 +136,18 @@ export interface ApiManagementHostnameConfigurationPortal {
   readonly keyVaultId?: string;
   readonly negotiateClientCertificate?: boolean;
 }
+
+function apiManagementHostnameConfigurationPortalToTerraform(struct?: ApiManagementHostnameConfigurationPortal): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    certificate: cdktf.stringToTerraform(struct!.certificate),
+    certificate_password: cdktf.stringToTerraform(struct!.certificatePassword),
+    host_name: cdktf.stringToTerraform(struct!.hostName),
+    key_vault_id: cdktf.stringToTerraform(struct!.keyVaultId),
+    negotiate_client_certificate: cdktf.booleanToTerraform(struct!.negotiateClientCertificate),
+  }
+}
+
 export interface ApiManagementHostnameConfigurationProxy {
   readonly certificate?: string;
   readonly certificatePassword?: string;
@@ -85,6 +156,19 @@ export interface ApiManagementHostnameConfigurationProxy {
   readonly keyVaultId?: string;
   readonly negotiateClientCertificate?: boolean;
 }
+
+function apiManagementHostnameConfigurationProxyToTerraform(struct?: ApiManagementHostnameConfigurationProxy): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    certificate: cdktf.stringToTerraform(struct!.certificate),
+    certificate_password: cdktf.stringToTerraform(struct!.certificatePassword),
+    default_ssl_binding: cdktf.booleanToTerraform(struct!.defaultSslBinding),
+    host_name: cdktf.stringToTerraform(struct!.hostName),
+    key_vault_id: cdktf.stringToTerraform(struct!.keyVaultId),
+    negotiate_client_certificate: cdktf.booleanToTerraform(struct!.negotiateClientCertificate),
+  }
+}
+
 export interface ApiManagementHostnameConfigurationScm {
   readonly certificate?: string;
   readonly certificatePassword?: string;
@@ -92,6 +176,18 @@ export interface ApiManagementHostnameConfigurationScm {
   readonly keyVaultId?: string;
   readonly negotiateClientCertificate?: boolean;
 }
+
+function apiManagementHostnameConfigurationScmToTerraform(struct?: ApiManagementHostnameConfigurationScm): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    certificate: cdktf.stringToTerraform(struct!.certificate),
+    certificate_password: cdktf.stringToTerraform(struct!.certificatePassword),
+    host_name: cdktf.stringToTerraform(struct!.hostName),
+    key_vault_id: cdktf.stringToTerraform(struct!.keyVaultId),
+    negotiate_client_certificate: cdktf.booleanToTerraform(struct!.negotiateClientCertificate),
+  }
+}
+
 export interface ApiManagementHostnameConfiguration {
   /** developer_portal block */
   readonly developerPortal?: ApiManagementHostnameConfigurationDeveloperPortal[];
@@ -104,13 +200,42 @@ export interface ApiManagementHostnameConfiguration {
   /** scm block */
   readonly scm?: ApiManagementHostnameConfigurationScm[];
 }
+
+function apiManagementHostnameConfigurationToTerraform(struct?: ApiManagementHostnameConfiguration): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    developer_portal: cdktf.listMapper(apiManagementHostnameConfigurationDeveloperPortalToTerraform)(struct!.developerPortal),
+    management: cdktf.listMapper(apiManagementHostnameConfigurationManagementToTerraform)(struct!.management),
+    portal: cdktf.listMapper(apiManagementHostnameConfigurationPortalToTerraform)(struct!.portal),
+    proxy: cdktf.listMapper(apiManagementHostnameConfigurationProxyToTerraform)(struct!.proxy),
+    scm: cdktf.listMapper(apiManagementHostnameConfigurationScmToTerraform)(struct!.scm),
+  }
+}
+
 export interface ApiManagementIdentity {
   readonly identityIds?: string[];
   readonly type?: string;
 }
+
+function apiManagementIdentityToTerraform(struct?: ApiManagementIdentity): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    identity_ids: cdktf.listMapper(cdktf.stringToTerraform)(struct!.identityIds),
+    type: cdktf.stringToTerraform(struct!.type),
+  }
+}
+
 export interface ApiManagementProtocols {
   readonly enableHttp2?: boolean;
 }
+
+function apiManagementProtocolsToTerraform(struct?: ApiManagementProtocols): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    enable_http2: cdktf.booleanToTerraform(struct!.enableHttp2),
+  }
+}
+
 export interface ApiManagementSecurity {
   readonly enableBackendSsl30?: boolean;
   readonly enableBackendTls10?: boolean;
@@ -120,32 +245,92 @@ export interface ApiManagementSecurity {
   readonly enableFrontendTls11?: boolean;
   readonly enableTripleDesCiphers?: boolean;
 }
+
+function apiManagementSecurityToTerraform(struct?: ApiManagementSecurity): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    enable_backend_ssl30: cdktf.booleanToTerraform(struct!.enableBackendSsl30),
+    enable_backend_tls10: cdktf.booleanToTerraform(struct!.enableBackendTls10),
+    enable_backend_tls11: cdktf.booleanToTerraform(struct!.enableBackendTls11),
+    enable_frontend_ssl30: cdktf.booleanToTerraform(struct!.enableFrontendSsl30),
+    enable_frontend_tls10: cdktf.booleanToTerraform(struct!.enableFrontendTls10),
+    enable_frontend_tls11: cdktf.booleanToTerraform(struct!.enableFrontendTls11),
+    enable_triple_des_ciphers: cdktf.booleanToTerraform(struct!.enableTripleDesCiphers),
+  }
+}
+
 export interface ApiManagementSignIn {
   readonly enabled: boolean;
 }
+
+function apiManagementSignInToTerraform(struct?: ApiManagementSignIn): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    enabled: cdktf.booleanToTerraform(struct!.enabled),
+  }
+}
+
 export interface ApiManagementSignUpTermsOfService {
   readonly consentRequired: boolean;
   readonly enabled: boolean;
   readonly text?: string;
 }
+
+function apiManagementSignUpTermsOfServiceToTerraform(struct?: ApiManagementSignUpTermsOfService): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    consent_required: cdktf.booleanToTerraform(struct!.consentRequired),
+    enabled: cdktf.booleanToTerraform(struct!.enabled),
+    text: cdktf.stringToTerraform(struct!.text),
+  }
+}
+
 export interface ApiManagementSignUp {
   readonly enabled: boolean;
   /** terms_of_service block */
   readonly termsOfService: ApiManagementSignUpTermsOfService[];
 }
+
+function apiManagementSignUpToTerraform(struct?: ApiManagementSignUp): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    enabled: cdktf.booleanToTerraform(struct!.enabled),
+    terms_of_service: cdktf.listMapper(apiManagementSignUpTermsOfServiceToTerraform)(struct!.termsOfService),
+  }
+}
+
 export interface ApiManagementTimeouts {
   readonly create?: string;
   readonly delete?: string;
   readonly read?: string;
   readonly update?: string;
 }
+
+function apiManagementTimeoutsToTerraform(struct?: ApiManagementTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
 export interface ApiManagementVirtualNetworkConfiguration {
   readonly subnetId: string;
 }
 
+function apiManagementVirtualNetworkConfigurationToTerraform(struct?: ApiManagementVirtualNetworkConfiguration): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    subnet_id: cdktf.stringToTerraform(struct!.subnetId),
+  }
+}
+
+
 // Resource
 
-export class ApiManagement extends TerraformResource {
+export class ApiManagement extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -541,26 +726,26 @@ export class ApiManagement extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      location: this._location,
-      name: this._name,
-      notification_sender_email: this._notificationSenderEmail,
-      policy: this._policy,
-      publisher_email: this._publisherEmail,
-      publisher_name: this._publisherName,
-      resource_group_name: this._resourceGroupName,
-      sku_name: this._skuName,
-      tags: this._tags,
-      virtual_network_type: this._virtualNetworkType,
-      additional_location: this._additionalLocation,
-      certificate: this._certificate,
-      hostname_configuration: this._hostnameConfiguration,
-      identity: this._identity,
-      protocols: this._protocols,
-      security: this._security,
-      sign_in: this._signIn,
-      sign_up: this._signUp,
-      timeouts: this._timeouts,
-      virtual_network_configuration: this._virtualNetworkConfiguration,
+      location: cdktf.stringToTerraform(this._location),
+      name: cdktf.stringToTerraform(this._name),
+      notification_sender_email: cdktf.stringToTerraform(this._notificationSenderEmail),
+      policy: cdktf.listMapper(apiManagementPolicyToTerraform)(this._policy),
+      publisher_email: cdktf.stringToTerraform(this._publisherEmail),
+      publisher_name: cdktf.stringToTerraform(this._publisherName),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      sku_name: cdktf.stringToTerraform(this._skuName),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      virtual_network_type: cdktf.stringToTerraform(this._virtualNetworkType),
+      additional_location: cdktf.listMapper(apiManagementAdditionalLocationToTerraform)(this._additionalLocation),
+      certificate: cdktf.listMapper(apiManagementCertificateToTerraform)(this._certificate),
+      hostname_configuration: cdktf.listMapper(apiManagementHostnameConfigurationToTerraform)(this._hostnameConfiguration),
+      identity: cdktf.listMapper(apiManagementIdentityToTerraform)(this._identity),
+      protocols: cdktf.listMapper(apiManagementProtocolsToTerraform)(this._protocols),
+      security: cdktf.listMapper(apiManagementSecurityToTerraform)(this._security),
+      sign_in: cdktf.listMapper(apiManagementSignInToTerraform)(this._signIn),
+      sign_up: cdktf.listMapper(apiManagementSignUpToTerraform)(this._signUp),
+      timeouts: apiManagementTimeoutsToTerraform(this._timeouts),
+      virtual_network_configuration: cdktf.listMapper(apiManagementVirtualNetworkConfigurationToTerraform)(this._virtualNetworkConfiguration),
     };
   }
 }

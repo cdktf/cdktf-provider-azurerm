@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface VirtualNetworkConfig extends TerraformMetaArguments {
+export interface VirtualNetworkConfig extends cdktf.TerraformMetaArguments {
   readonly addressSpace: string[];
   readonly bgpCommunity?: string;
   readonly dnsServers?: string[];
@@ -28,10 +27,30 @@ export interface VirtualNetworkSubnet {
   readonly name?: string;
   readonly securityGroup?: string;
 }
+
+function virtualNetworkSubnetToTerraform(struct?: VirtualNetworkSubnet): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    address_prefix: cdktf.stringToTerraform(struct!.addressPrefix),
+    id: cdktf.stringToTerraform(struct!.id),
+    name: cdktf.stringToTerraform(struct!.name),
+    security_group: cdktf.stringToTerraform(struct!.securityGroup),
+  }
+}
+
 export interface VirtualNetworkDdosProtectionPlan {
   readonly enable: boolean;
   readonly id: string;
 }
+
+function virtualNetworkDdosProtectionPlanToTerraform(struct?: VirtualNetworkDdosProtectionPlan): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    enable: cdktf.booleanToTerraform(struct!.enable),
+    id: cdktf.stringToTerraform(struct!.id),
+  }
+}
+
 export interface VirtualNetworkTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -39,9 +58,20 @@ export interface VirtualNetworkTimeouts {
   readonly update?: string;
 }
 
+function virtualNetworkTimeoutsToTerraform(struct?: VirtualNetworkTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class VirtualNetwork extends TerraformResource {
+export class VirtualNetwork extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -255,17 +285,17 @@ export class VirtualNetwork extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      address_space: this._addressSpace,
-      bgp_community: this._bgpCommunity,
-      dns_servers: this._dnsServers,
-      location: this._location,
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      subnet: this._subnet,
-      tags: this._tags,
-      vm_protection_enabled: this._vmProtectionEnabled,
-      ddos_protection_plan: this._ddosProtectionPlan,
-      timeouts: this._timeouts,
+      address_space: cdktf.listMapper(cdktf.stringToTerraform)(this._addressSpace),
+      bgp_community: cdktf.stringToTerraform(this._bgpCommunity),
+      dns_servers: cdktf.listMapper(cdktf.stringToTerraform)(this._dnsServers),
+      location: cdktf.stringToTerraform(this._location),
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      subnet: cdktf.listMapper(virtualNetworkSubnetToTerraform)(this._subnet),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      vm_protection_enabled: cdktf.booleanToTerraform(this._vmProtectionEnabled),
+      ddos_protection_plan: cdktf.listMapper(virtualNetworkDdosProtectionPlanToTerraform)(this._ddosProtectionPlan),
+      timeouts: virtualNetworkTimeoutsToTerraform(this._timeouts),
     };
   }
 }

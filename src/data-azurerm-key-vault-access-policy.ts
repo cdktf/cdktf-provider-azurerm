@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformDataSource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataAzurermKeyVaultAccessPolicyAConfig extends TerraformMetaArguments {
+export interface DataAzurermKeyVaultAccessPolicyAConfig extends cdktf.TerraformMetaArguments {
   readonly name: string;
   /** timeouts block */
   readonly timeouts?: DataAzurermKeyVaultAccessPolicyTimeouts;
@@ -16,9 +15,17 @@ export interface DataAzurermKeyVaultAccessPolicyTimeouts {
   readonly read?: string;
 }
 
+function dataAzurermKeyVaultAccessPolicyTimeoutsToTerraform(struct?: DataAzurermKeyVaultAccessPolicyTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    read: cdktf.stringToTerraform(struct!.read),
+  }
+}
+
+
 // Resource
 
-export class DataAzurermKeyVaultAccessPolicyA extends TerraformDataSource {
+export class DataAzurermKeyVaultAccessPolicyA extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
@@ -98,8 +105,8 @@ export class DataAzurermKeyVaultAccessPolicyA extends TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      name: this._name,
-      timeouts: this._timeouts,
+      name: cdktf.stringToTerraform(this._name),
+      timeouts: dataAzurermKeyVaultAccessPolicyTimeoutsToTerraform(this._timeouts),
     };
   }
 }

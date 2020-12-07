@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface SqlDatabaseConfig extends TerraformMetaArguments {
+export interface SqlDatabaseConfig extends cdktf.TerraformMetaArguments {
   readonly collation?: string;
   readonly createMode?: string;
   readonly edition?: string;
@@ -40,6 +39,17 @@ export interface SqlDatabaseExtendedAuditingPolicy {
   readonly storageAccountAccessKeyIsSecondary?: boolean;
   readonly storageEndpoint?: string;
 }
+
+function sqlDatabaseExtendedAuditingPolicyToTerraform(struct?: SqlDatabaseExtendedAuditingPolicy): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    retention_in_days: cdktf.numberToTerraform(struct!.retentionInDays),
+    storage_account_access_key: cdktf.stringToTerraform(struct!.storageAccountAccessKey),
+    storage_account_access_key_is_secondary: cdktf.booleanToTerraform(struct!.storageAccountAccessKeyIsSecondary),
+    storage_endpoint: cdktf.stringToTerraform(struct!.storageEndpoint),
+  }
+}
+
 export interface SqlDatabaseImport {
   readonly administratorLogin: string;
   readonly administratorLoginPassword: string;
@@ -49,6 +59,20 @@ export interface SqlDatabaseImport {
   readonly storageKeyType: string;
   readonly storageUri: string;
 }
+
+function sqlDatabaseImportToTerraform(struct?: SqlDatabaseImport): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    administrator_login: cdktf.stringToTerraform(struct!.administratorLogin),
+    administrator_login_password: cdktf.stringToTerraform(struct!.administratorLoginPassword),
+    authentication_type: cdktf.stringToTerraform(struct!.authenticationType),
+    operation_mode: cdktf.stringToTerraform(struct!.operationMode),
+    storage_key: cdktf.stringToTerraform(struct!.storageKey),
+    storage_key_type: cdktf.stringToTerraform(struct!.storageKeyType),
+    storage_uri: cdktf.stringToTerraform(struct!.storageUri),
+  }
+}
+
 export interface SqlDatabaseThreatDetectionPolicy {
   readonly disabledAlerts?: string[];
   readonly emailAccountAdmins?: string;
@@ -59,6 +83,21 @@ export interface SqlDatabaseThreatDetectionPolicy {
   readonly storageEndpoint?: string;
   readonly useServerDefault?: string;
 }
+
+function sqlDatabaseThreatDetectionPolicyToTerraform(struct?: SqlDatabaseThreatDetectionPolicy): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    disabled_alerts: cdktf.listMapper(cdktf.stringToTerraform)(struct!.disabledAlerts),
+    email_account_admins: cdktf.stringToTerraform(struct!.emailAccountAdmins),
+    email_addresses: cdktf.listMapper(cdktf.stringToTerraform)(struct!.emailAddresses),
+    retention_days: cdktf.numberToTerraform(struct!.retentionDays),
+    state: cdktf.stringToTerraform(struct!.state),
+    storage_account_access_key: cdktf.stringToTerraform(struct!.storageAccountAccessKey),
+    storage_endpoint: cdktf.stringToTerraform(struct!.storageEndpoint),
+    use_server_default: cdktf.stringToTerraform(struct!.useServerDefault),
+  }
+}
+
 export interface SqlDatabaseTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -66,9 +105,20 @@ export interface SqlDatabaseTimeouts {
   readonly update?: string;
 }
 
+function sqlDatabaseTimeoutsToTerraform(struct?: SqlDatabaseTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class SqlDatabase extends TerraformResource {
+export class SqlDatabase extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -479,28 +529,28 @@ export class SqlDatabase extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      collation: this._collation,
-      create_mode: this._createMode,
-      edition: this._edition,
-      elastic_pool_name: this._elasticPoolName,
-      extended_auditing_policy: this._extendedAuditingPolicy,
-      location: this._location,
-      max_size_bytes: this._maxSizeBytes,
-      max_size_gb: this._maxSizeGb,
-      name: this._name,
-      read_scale: this._readScale,
-      requested_service_objective_id: this._requestedServiceObjectiveId,
-      requested_service_objective_name: this._requestedServiceObjectiveName,
-      resource_group_name: this._resourceGroupName,
-      restore_point_in_time: this._restorePointInTime,
-      server_name: this._serverName,
-      source_database_deletion_date: this._sourceDatabaseDeletionDate,
-      source_database_id: this._sourceDatabaseId,
-      tags: this._tags,
-      zone_redundant: this._zoneRedundant,
-      import: this._import,
-      threat_detection_policy: this._threatDetectionPolicy,
-      timeouts: this._timeouts,
+      collation: cdktf.stringToTerraform(this._collation),
+      create_mode: cdktf.stringToTerraform(this._createMode),
+      edition: cdktf.stringToTerraform(this._edition),
+      elastic_pool_name: cdktf.stringToTerraform(this._elasticPoolName),
+      extended_auditing_policy: cdktf.listMapper(sqlDatabaseExtendedAuditingPolicyToTerraform)(this._extendedAuditingPolicy),
+      location: cdktf.stringToTerraform(this._location),
+      max_size_bytes: cdktf.stringToTerraform(this._maxSizeBytes),
+      max_size_gb: cdktf.stringToTerraform(this._maxSizeGb),
+      name: cdktf.stringToTerraform(this._name),
+      read_scale: cdktf.booleanToTerraform(this._readScale),
+      requested_service_objective_id: cdktf.stringToTerraform(this._requestedServiceObjectiveId),
+      requested_service_objective_name: cdktf.stringToTerraform(this._requestedServiceObjectiveName),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      restore_point_in_time: cdktf.stringToTerraform(this._restorePointInTime),
+      server_name: cdktf.stringToTerraform(this._serverName),
+      source_database_deletion_date: cdktf.stringToTerraform(this._sourceDatabaseDeletionDate),
+      source_database_id: cdktf.stringToTerraform(this._sourceDatabaseId),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      zone_redundant: cdktf.booleanToTerraform(this._zoneRedundant),
+      import: cdktf.listMapper(sqlDatabaseImportToTerraform)(this._import),
+      threat_detection_policy: cdktf.listMapper(sqlDatabaseThreatDetectionPolicyToTerraform)(this._threatDetectionPolicy),
+      timeouts: sqlDatabaseTimeoutsToTerraform(this._timeouts),
     };
   }
 }

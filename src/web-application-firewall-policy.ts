@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface WebApplicationFirewallPolicyConfig extends TerraformMetaArguments {
+export interface WebApplicationFirewallPolicyConfig extends cdktf.TerraformMetaArguments {
   readonly location: string;
   readonly name: string;
   readonly resourceGroupName: string;
@@ -25,6 +24,15 @@ export interface WebApplicationFirewallPolicyCustomRulesMatchConditionsMatchVari
   readonly selector?: string;
   readonly variableName: string;
 }
+
+function webApplicationFirewallPolicyCustomRulesMatchConditionsMatchVariablesToTerraform(struct?: WebApplicationFirewallPolicyCustomRulesMatchConditionsMatchVariables): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    selector: cdktf.stringToTerraform(struct!.selector),
+    variable_name: cdktf.stringToTerraform(struct!.variableName),
+  }
+}
+
 export interface WebApplicationFirewallPolicyCustomRulesMatchConditions {
   readonly matchValues: string[];
   readonly negationCondition?: boolean;
@@ -33,6 +41,18 @@ export interface WebApplicationFirewallPolicyCustomRulesMatchConditions {
   /** match_variables block */
   readonly matchVariables: WebApplicationFirewallPolicyCustomRulesMatchConditionsMatchVariables[];
 }
+
+function webApplicationFirewallPolicyCustomRulesMatchConditionsToTerraform(struct?: WebApplicationFirewallPolicyCustomRulesMatchConditions): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    match_values: cdktf.listMapper(cdktf.stringToTerraform)(struct!.matchValues),
+    negation_condition: cdktf.booleanToTerraform(struct!.negationCondition),
+    operator: cdktf.stringToTerraform(struct!.operator),
+    transforms: cdktf.listMapper(cdktf.stringToTerraform)(struct!.transforms),
+    match_variables: cdktf.listMapper(webApplicationFirewallPolicyCustomRulesMatchConditionsMatchVariablesToTerraform)(struct!.matchVariables),
+  }
+}
+
 export interface WebApplicationFirewallPolicyCustomRules {
   readonly action: string;
   readonly name?: string;
@@ -41,27 +61,77 @@ export interface WebApplicationFirewallPolicyCustomRules {
   /** match_conditions block */
   readonly matchConditions: WebApplicationFirewallPolicyCustomRulesMatchConditions[];
 }
+
+function webApplicationFirewallPolicyCustomRulesToTerraform(struct?: WebApplicationFirewallPolicyCustomRules): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    action: cdktf.stringToTerraform(struct!.action),
+    name: cdktf.stringToTerraform(struct!.name),
+    priority: cdktf.numberToTerraform(struct!.priority),
+    rule_type: cdktf.stringToTerraform(struct!.ruleType),
+    match_conditions: cdktf.listMapper(webApplicationFirewallPolicyCustomRulesMatchConditionsToTerraform)(struct!.matchConditions),
+  }
+}
+
 export interface WebApplicationFirewallPolicyManagedRulesExclusion {
   readonly matchVariable: string;
   readonly selector: string;
   readonly selectorMatchOperator: string;
 }
+
+function webApplicationFirewallPolicyManagedRulesExclusionToTerraform(struct?: WebApplicationFirewallPolicyManagedRulesExclusion): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    match_variable: cdktf.stringToTerraform(struct!.matchVariable),
+    selector: cdktf.stringToTerraform(struct!.selector),
+    selector_match_operator: cdktf.stringToTerraform(struct!.selectorMatchOperator),
+  }
+}
+
 export interface WebApplicationFirewallPolicyManagedRulesManagedRuleSetRuleGroupOverride {
   readonly disabledRules: string[];
   readonly ruleGroupName: string;
 }
+
+function webApplicationFirewallPolicyManagedRulesManagedRuleSetRuleGroupOverrideToTerraform(struct?: WebApplicationFirewallPolicyManagedRulesManagedRuleSetRuleGroupOverride): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    disabled_rules: cdktf.listMapper(cdktf.stringToTerraform)(struct!.disabledRules),
+    rule_group_name: cdktf.stringToTerraform(struct!.ruleGroupName),
+  }
+}
+
 export interface WebApplicationFirewallPolicyManagedRulesManagedRuleSet {
   readonly type?: string;
   readonly version: string;
   /** rule_group_override block */
   readonly ruleGroupOverride?: WebApplicationFirewallPolicyManagedRulesManagedRuleSetRuleGroupOverride[];
 }
+
+function webApplicationFirewallPolicyManagedRulesManagedRuleSetToTerraform(struct?: WebApplicationFirewallPolicyManagedRulesManagedRuleSet): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    type: cdktf.stringToTerraform(struct!.type),
+    version: cdktf.stringToTerraform(struct!.version),
+    rule_group_override: cdktf.listMapper(webApplicationFirewallPolicyManagedRulesManagedRuleSetRuleGroupOverrideToTerraform)(struct!.ruleGroupOverride),
+  }
+}
+
 export interface WebApplicationFirewallPolicyManagedRules {
   /** exclusion block */
   readonly exclusion?: WebApplicationFirewallPolicyManagedRulesExclusion[];
   /** managed_rule_set block */
   readonly managedRuleSet: WebApplicationFirewallPolicyManagedRulesManagedRuleSet[];
 }
+
+function webApplicationFirewallPolicyManagedRulesToTerraform(struct?: WebApplicationFirewallPolicyManagedRules): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    exclusion: cdktf.listMapper(webApplicationFirewallPolicyManagedRulesExclusionToTerraform)(struct!.exclusion),
+    managed_rule_set: cdktf.listMapper(webApplicationFirewallPolicyManagedRulesManagedRuleSetToTerraform)(struct!.managedRuleSet),
+  }
+}
+
 export interface WebApplicationFirewallPolicyPolicySettings {
   readonly enabled?: boolean;
   readonly fileUploadLimitInMb?: number;
@@ -69,6 +139,18 @@ export interface WebApplicationFirewallPolicyPolicySettings {
   readonly mode?: string;
   readonly requestBodyCheck?: boolean;
 }
+
+function webApplicationFirewallPolicyPolicySettingsToTerraform(struct?: WebApplicationFirewallPolicyPolicySettings): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    enabled: cdktf.booleanToTerraform(struct!.enabled),
+    file_upload_limit_in_mb: cdktf.numberToTerraform(struct!.fileUploadLimitInMb),
+    max_request_body_size_in_kb: cdktf.numberToTerraform(struct!.maxRequestBodySizeInKb),
+    mode: cdktf.stringToTerraform(struct!.mode),
+    request_body_check: cdktf.booleanToTerraform(struct!.requestBodyCheck),
+  }
+}
+
 export interface WebApplicationFirewallPolicyTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -76,9 +158,20 @@ export interface WebApplicationFirewallPolicyTimeouts {
   readonly update?: string;
 }
 
+function webApplicationFirewallPolicyTimeoutsToTerraform(struct?: WebApplicationFirewallPolicyTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class WebApplicationFirewallPolicy extends TerraformResource {
+export class WebApplicationFirewallPolicy extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -236,14 +329,14 @@ export class WebApplicationFirewallPolicy extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      location: this._location,
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      tags: this._tags,
-      custom_rules: this._customRules,
-      managed_rules: this._managedRules,
-      policy_settings: this._policySettings,
-      timeouts: this._timeouts,
+      location: cdktf.stringToTerraform(this._location),
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      custom_rules: cdktf.listMapper(webApplicationFirewallPolicyCustomRulesToTerraform)(this._customRules),
+      managed_rules: cdktf.listMapper(webApplicationFirewallPolicyManagedRulesToTerraform)(this._managedRules),
+      policy_settings: cdktf.listMapper(webApplicationFirewallPolicyPolicySettingsToTerraform)(this._policySettings),
+      timeouts: webApplicationFirewallPolicyTimeoutsToTerraform(this._timeouts),
     };
   }
 }

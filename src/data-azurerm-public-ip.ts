@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformDataSource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataAzurermPublicIpConfig extends TerraformMetaArguments {
+export interface DataAzurermPublicIpConfig extends cdktf.TerraformMetaArguments {
   readonly name: string;
   readonly resourceGroupName: string;
   readonly tags?: { [key: string]: string };
@@ -19,9 +18,17 @@ export interface DataAzurermPublicIpTimeouts {
   readonly read?: string;
 }
 
+function dataAzurermPublicIpTimeoutsToTerraform(struct?: DataAzurermPublicIpTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    read: cdktf.stringToTerraform(struct!.read),
+  }
+}
+
+
 // Resource
 
-export class DataAzurermPublicIp extends TerraformDataSource {
+export class DataAzurermPublicIp extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
@@ -179,11 +186,11 @@ export class DataAzurermPublicIp extends TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      tags: this._tags,
-      zones: this._zones,
-      timeouts: this._timeouts,
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      zones: cdktf.listMapper(cdktf.stringToTerraform)(this._zones),
+      timeouts: dataAzurermPublicIpTimeoutsToTerraform(this._timeouts),
     };
   }
 }

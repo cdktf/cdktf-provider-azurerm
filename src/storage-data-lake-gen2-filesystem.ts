@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface StorageDataLakeGen2FilesystemConfig extends TerraformMetaArguments {
+export interface StorageDataLakeGen2FilesystemConfig extends cdktf.TerraformMetaArguments {
   readonly name: string;
   readonly properties?: { [key: string]: string };
   readonly storageAccountId: string;
@@ -21,9 +20,20 @@ export interface StorageDataLakeGen2FilesystemTimeouts {
   readonly update?: string;
 }
 
+function storageDataLakeGen2FilesystemTimeoutsToTerraform(struct?: StorageDataLakeGen2FilesystemTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class StorageDataLakeGen2Filesystem extends TerraformResource {
+export class StorageDataLakeGen2Filesystem extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -119,10 +129,10 @@ export class StorageDataLakeGen2Filesystem extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      name: this._name,
-      properties: this._properties,
-      storage_account_id: this._storageAccountId,
-      timeouts: this._timeouts,
+      name: cdktf.stringToTerraform(this._name),
+      properties: cdktf.hashMapper(cdktf.anyToTerraform)(this._properties),
+      storage_account_id: cdktf.stringToTerraform(this._storageAccountId),
+      timeouts: storageDataLakeGen2FilesystemTimeoutsToTerraform(this._timeouts),
     };
   }
 }

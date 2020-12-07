@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface PowerbiEmbeddedConfig extends TerraformMetaArguments {
+export interface PowerbiEmbeddedConfig extends cdktf.TerraformMetaArguments {
   readonly administrators: string[];
   readonly location: string;
   readonly name: string;
@@ -24,9 +23,20 @@ export interface PowerbiEmbeddedTimeouts {
   readonly update?: string;
 }
 
+function powerbiEmbeddedTimeoutsToTerraform(struct?: PowerbiEmbeddedTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class PowerbiEmbedded extends TerraformResource {
+export class PowerbiEmbedded extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -164,13 +174,13 @@ export class PowerbiEmbedded extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      administrators: this._administrators,
-      location: this._location,
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      sku_name: this._skuName,
-      tags: this._tags,
-      timeouts: this._timeouts,
+      administrators: cdktf.listMapper(cdktf.stringToTerraform)(this._administrators),
+      location: cdktf.stringToTerraform(this._location),
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      sku_name: cdktf.stringToTerraform(this._skuName),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      timeouts: powerbiEmbeddedTimeoutsToTerraform(this._timeouts),
     };
   }
 }

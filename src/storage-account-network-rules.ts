@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface StorageAccountNetworkRulesAConfig extends TerraformMetaArguments {
+export interface StorageAccountNetworkRulesAConfig extends cdktf.TerraformMetaArguments {
   readonly bypass?: string[];
   readonly defaultAction: string;
   readonly ipRules?: string[];
@@ -24,9 +23,20 @@ export interface StorageAccountNetworkRulesTimeouts {
   readonly update?: string;
 }
 
+function storageAccountNetworkRulesTimeoutsToTerraform(struct?: StorageAccountNetworkRulesTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class StorageAccountNetworkRulesA extends TerraformResource {
+export class StorageAccountNetworkRulesA extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -170,13 +180,13 @@ export class StorageAccountNetworkRulesA extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      bypass: this._bypass,
-      default_action: this._defaultAction,
-      ip_rules: this._ipRules,
-      resource_group_name: this._resourceGroupName,
-      storage_account_name: this._storageAccountName,
-      virtual_network_subnet_ids: this._virtualNetworkSubnetIds,
-      timeouts: this._timeouts,
+      bypass: cdktf.listMapper(cdktf.stringToTerraform)(this._bypass),
+      default_action: cdktf.stringToTerraform(this._defaultAction),
+      ip_rules: cdktf.listMapper(cdktf.stringToTerraform)(this._ipRules),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      storage_account_name: cdktf.stringToTerraform(this._storageAccountName),
+      virtual_network_subnet_ids: cdktf.listMapper(cdktf.stringToTerraform)(this._virtualNetworkSubnetIds),
+      timeouts: storageAccountNetworkRulesTimeoutsToTerraform(this._timeouts),
     };
   }
 }

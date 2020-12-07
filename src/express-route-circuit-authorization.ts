@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface ExpressRouteCircuitAuthorizationConfig extends TerraformMetaArguments {
+export interface ExpressRouteCircuitAuthorizationConfig extends cdktf.TerraformMetaArguments {
   readonly expressRouteCircuitName: string;
   readonly name: string;
   readonly resourceGroupName: string;
@@ -21,9 +20,20 @@ export interface ExpressRouteCircuitAuthorizationTimeouts {
   readonly update?: string;
 }
 
+function expressRouteCircuitAuthorizationTimeoutsToTerraform(struct?: ExpressRouteCircuitAuthorizationTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class ExpressRouteCircuitAuthorization extends TerraformResource {
+export class ExpressRouteCircuitAuthorization extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -126,10 +136,10 @@ export class ExpressRouteCircuitAuthorization extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      express_route_circuit_name: this._expressRouteCircuitName,
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      timeouts: this._timeouts,
+      express_route_circuit_name: cdktf.stringToTerraform(this._expressRouteCircuitName),
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      timeouts: expressRouteCircuitAuthorizationTimeoutsToTerraform(this._timeouts),
     };
   }
 }

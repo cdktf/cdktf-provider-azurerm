@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface StorageSyncConfig extends TerraformMetaArguments {
+export interface StorageSyncConfig extends cdktf.TerraformMetaArguments {
   readonly incomingTrafficPolicy?: string;
   readonly location: string;
   readonly name: string;
@@ -23,9 +22,20 @@ export interface StorageSyncTimeouts {
   readonly update?: string;
 }
 
+function storageSyncTimeoutsToTerraform(struct?: StorageSyncTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class StorageSync extends TerraformResource {
+export class StorageSync extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -152,12 +162,12 @@ export class StorageSync extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      incoming_traffic_policy: this._incomingTrafficPolicy,
-      location: this._location,
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      tags: this._tags,
-      timeouts: this._timeouts,
+      incoming_traffic_policy: cdktf.stringToTerraform(this._incomingTrafficPolicy),
+      location: cdktf.stringToTerraform(this._location),
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      timeouts: storageSyncTimeoutsToTerraform(this._timeouts),
     };
   }
 }

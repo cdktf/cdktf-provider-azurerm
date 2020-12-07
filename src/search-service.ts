@@ -2,13 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
-import { ComplexComputedList } from "cdktf";
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface SearchServiceConfig extends TerraformMetaArguments {
+export interface SearchServiceConfig extends cdktf.TerraformMetaArguments {
   readonly allowedIps?: string[];
   readonly location: string;
   readonly name: string;
@@ -23,7 +21,7 @@ export interface SearchServiceConfig extends TerraformMetaArguments {
   /** timeouts block */
   readonly timeouts?: SearchServiceTimeouts;
 }
-export class SearchServiceQueryKeys extends ComplexComputedList {
+export class SearchServiceQueryKeys extends cdktf.ComplexComputedList {
 
   // key - computed: true, optional: false, required: false
   public get key() {
@@ -38,6 +36,14 @@ export class SearchServiceQueryKeys extends ComplexComputedList {
 export interface SearchServiceIdentity {
   readonly type: string;
 }
+
+function searchServiceIdentityToTerraform(struct?: SearchServiceIdentity): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    type: cdktf.stringToTerraform(struct!.type),
+  }
+}
+
 export interface SearchServiceTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -45,9 +51,20 @@ export interface SearchServiceTimeouts {
   readonly update?: string;
 }
 
+function searchServiceTimeoutsToTerraform(struct?: SearchServiceTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class SearchService extends TerraformResource {
+export class SearchService extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -271,17 +288,17 @@ export class SearchService extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      allowed_ips: this._allowedIps,
-      location: this._location,
-      name: this._name,
-      partition_count: this._partitionCount,
-      public_network_access_enabled: this._publicNetworkAccessEnabled,
-      replica_count: this._replicaCount,
-      resource_group_name: this._resourceGroupName,
-      sku: this._sku,
-      tags: this._tags,
-      identity: this._identity,
-      timeouts: this._timeouts,
+      allowed_ips: cdktf.listMapper(cdktf.stringToTerraform)(this._allowedIps),
+      location: cdktf.stringToTerraform(this._location),
+      name: cdktf.stringToTerraform(this._name),
+      partition_count: cdktf.numberToTerraform(this._partitionCount),
+      public_network_access_enabled: cdktf.booleanToTerraform(this._publicNetworkAccessEnabled),
+      replica_count: cdktf.numberToTerraform(this._replicaCount),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      sku: cdktf.stringToTerraform(this._sku),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      identity: cdktf.listMapper(searchServiceIdentityToTerraform)(this._identity),
+      timeouts: searchServiceTimeoutsToTerraform(this._timeouts),
     };
   }
 }

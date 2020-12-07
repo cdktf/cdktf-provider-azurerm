@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface StreamAnalyticsOutputServicebusQueueConfig extends TerraformMetaArguments {
+export interface StreamAnalyticsOutputServicebusQueueConfig extends cdktf.TerraformMetaArguments {
   readonly name: string;
   readonly queueName: string;
   readonly resourceGroupName: string;
@@ -26,6 +25,17 @@ export interface StreamAnalyticsOutputServicebusQueueSerialization {
   readonly format?: string;
   readonly type: string;
 }
+
+function streamAnalyticsOutputServicebusQueueSerializationToTerraform(struct?: StreamAnalyticsOutputServicebusQueueSerialization): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    encoding: cdktf.stringToTerraform(struct!.encoding),
+    field_delimiter: cdktf.stringToTerraform(struct!.fieldDelimiter),
+    format: cdktf.stringToTerraform(struct!.format),
+    type: cdktf.stringToTerraform(struct!.type),
+  }
+}
+
 export interface StreamAnalyticsOutputServicebusQueueTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -33,9 +43,20 @@ export interface StreamAnalyticsOutputServicebusQueueTimeouts {
   readonly update?: string;
 }
 
+function streamAnalyticsOutputServicebusQueueTimeoutsToTerraform(struct?: StreamAnalyticsOutputServicebusQueueTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class StreamAnalyticsOutputServicebusQueue extends TerraformResource {
+export class StreamAnalyticsOutputServicebusQueue extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -198,15 +219,15 @@ export class StreamAnalyticsOutputServicebusQueue extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      name: this._name,
-      queue_name: this._queueName,
-      resource_group_name: this._resourceGroupName,
-      servicebus_namespace: this._servicebusNamespace,
-      shared_access_policy_key: this._sharedAccessPolicyKey,
-      shared_access_policy_name: this._sharedAccessPolicyName,
-      stream_analytics_job_name: this._streamAnalyticsJobName,
-      serialization: this._serialization,
-      timeouts: this._timeouts,
+      name: cdktf.stringToTerraform(this._name),
+      queue_name: cdktf.stringToTerraform(this._queueName),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      servicebus_namespace: cdktf.stringToTerraform(this._servicebusNamespace),
+      shared_access_policy_key: cdktf.stringToTerraform(this._sharedAccessPolicyKey),
+      shared_access_policy_name: cdktf.stringToTerraform(this._sharedAccessPolicyName),
+      stream_analytics_job_name: cdktf.stringToTerraform(this._streamAnalyticsJobName),
+      serialization: cdktf.listMapper(streamAnalyticsOutputServicebusQueueSerializationToTerraform)(this._serialization),
+      timeouts: streamAnalyticsOutputServicebusQueueTimeoutsToTerraform(this._timeouts),
     };
   }
 }

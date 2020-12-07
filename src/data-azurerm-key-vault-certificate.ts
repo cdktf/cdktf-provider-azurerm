@@ -2,28 +2,25 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformDataSource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
-import { ComplexComputedList } from "cdktf";
-import { StringMap } from "cdktf";
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataAzurermKeyVaultCertificateConfig extends TerraformMetaArguments {
+export interface DataAzurermKeyVaultCertificateConfig extends cdktf.TerraformMetaArguments {
   readonly keyVaultId: string;
   readonly name: string;
   readonly version?: string;
   /** timeouts block */
   readonly timeouts?: DataAzurermKeyVaultCertificateTimeouts;
 }
-export class DataAzurermKeyVaultCertificateCertificatePolicyIssuerParameters extends ComplexComputedList {
+export class DataAzurermKeyVaultCertificateCertificatePolicyIssuerParameters extends cdktf.ComplexComputedList {
 
   // name - computed: true, optional: false, required: false
   public get name() {
     return this.getStringAttribute('name');
   }
 }
-export class DataAzurermKeyVaultCertificateCertificatePolicyKeyProperties extends ComplexComputedList {
+export class DataAzurermKeyVaultCertificateCertificatePolicyKeyProperties extends cdktf.ComplexComputedList {
 
   // exportable - computed: true, optional: false, required: false
   public get exportable() {
@@ -45,14 +42,14 @@ export class DataAzurermKeyVaultCertificateCertificatePolicyKeyProperties extend
     return this.getBooleanAttribute('reuse_key');
   }
 }
-export class DataAzurermKeyVaultCertificateCertificatePolicyLifetimeActionAction extends ComplexComputedList {
+export class DataAzurermKeyVaultCertificateCertificatePolicyLifetimeActionAction extends cdktf.ComplexComputedList {
 
   // action_type - computed: true, optional: false, required: false
   public get actionType() {
     return this.getStringAttribute('action_type');
   }
 }
-export class DataAzurermKeyVaultCertificateCertificatePolicyLifetimeActionTrigger extends ComplexComputedList {
+export class DataAzurermKeyVaultCertificateCertificatePolicyLifetimeActionTrigger extends cdktf.ComplexComputedList {
 
   // days_before_expiry - computed: true, optional: false, required: false
   public get daysBeforeExpiry() {
@@ -64,7 +61,7 @@ export class DataAzurermKeyVaultCertificateCertificatePolicyLifetimeActionTrigge
     return this.getNumberAttribute('lifetime_percentage');
   }
 }
-export class DataAzurermKeyVaultCertificateCertificatePolicyLifetimeAction extends ComplexComputedList {
+export class DataAzurermKeyVaultCertificateCertificatePolicyLifetimeAction extends cdktf.ComplexComputedList {
 
   // action - computed: true, optional: false, required: false
   public get action() {
@@ -76,14 +73,14 @@ export class DataAzurermKeyVaultCertificateCertificatePolicyLifetimeAction exten
     return this.interpolationForAttribute('trigger') as any;
   }
 }
-export class DataAzurermKeyVaultCertificateCertificatePolicySecretProperties extends ComplexComputedList {
+export class DataAzurermKeyVaultCertificateCertificatePolicySecretProperties extends cdktf.ComplexComputedList {
 
   // content_type - computed: true, optional: false, required: false
   public get contentType() {
     return this.getStringAttribute('content_type');
   }
 }
-export class DataAzurermKeyVaultCertificateCertificatePolicyX509CertificatePropertiesSubjectAlternativeNames extends ComplexComputedList {
+export class DataAzurermKeyVaultCertificateCertificatePolicyX509CertificatePropertiesSubjectAlternativeNames extends cdktf.ComplexComputedList {
 
   // dns_names - computed: true, optional: false, required: false
   public get dnsNames() {
@@ -100,7 +97,7 @@ export class DataAzurermKeyVaultCertificateCertificatePolicyX509CertificatePrope
     return this.getListAttribute('upns');
   }
 }
-export class DataAzurermKeyVaultCertificateCertificatePolicyX509CertificateProperties extends ComplexComputedList {
+export class DataAzurermKeyVaultCertificateCertificatePolicyX509CertificateProperties extends cdktf.ComplexComputedList {
 
   // extended_key_usage - computed: true, optional: false, required: false
   public get extendedKeyUsage() {
@@ -127,7 +124,7 @@ export class DataAzurermKeyVaultCertificateCertificatePolicyX509CertificatePrope
     return this.getNumberAttribute('validity_in_months');
   }
 }
-export class DataAzurermKeyVaultCertificateCertificatePolicy extends ComplexComputedList {
+export class DataAzurermKeyVaultCertificateCertificatePolicy extends cdktf.ComplexComputedList {
 
   // issuer_parameters - computed: true, optional: false, required: false
   public get issuerParameters() {
@@ -158,9 +155,17 @@ export interface DataAzurermKeyVaultCertificateTimeouts {
   readonly read?: string;
 }
 
+function dataAzurermKeyVaultCertificateTimeoutsToTerraform(struct?: DataAzurermKeyVaultCertificateTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    read: cdktf.stringToTerraform(struct!.read),
+  }
+}
+
+
 // Resource
 
-export class DataAzurermKeyVaultCertificate extends TerraformDataSource {
+export class DataAzurermKeyVaultCertificate extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
@@ -235,7 +240,7 @@ export class DataAzurermKeyVaultCertificate extends TerraformDataSource {
 
   // tags - computed: true, optional: false, required: false
   public tags(key: string): string {
-    return new StringMap(this, 'tags').lookup(key);
+    return new cdktf.StringMap(this, 'tags').lookup(key);
   }
 
   // thumbprint - computed: true, optional: false, required: false
@@ -281,10 +286,10 @@ export class DataAzurermKeyVaultCertificate extends TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      key_vault_id: this._keyVaultId,
-      name: this._name,
-      version: this._version,
-      timeouts: this._timeouts,
+      key_vault_id: cdktf.stringToTerraform(this._keyVaultId),
+      name: cdktf.stringToTerraform(this._name),
+      version: cdktf.stringToTerraform(this._version),
+      timeouts: dataAzurermKeyVaultCertificateTimeoutsToTerraform(this._timeouts),
     };
   }
 }

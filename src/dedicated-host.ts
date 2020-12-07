@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DedicatedHostConfig extends TerraformMetaArguments {
+export interface DedicatedHostConfig extends cdktf.TerraformMetaArguments {
   readonly autoReplaceOnFailure?: boolean;
   readonly dedicatedHostGroupId: string;
   readonly licenseType?: string;
@@ -26,9 +25,20 @@ export interface DedicatedHostTimeouts {
   readonly update?: string;
 }
 
+function dedicatedHostTimeoutsToTerraform(struct?: DedicatedHostTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class DedicatedHost extends TerraformResource {
+export class DedicatedHost extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -200,15 +210,15 @@ export class DedicatedHost extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      auto_replace_on_failure: this._autoReplaceOnFailure,
-      dedicated_host_group_id: this._dedicatedHostGroupId,
-      license_type: this._licenseType,
-      location: this._location,
-      name: this._name,
-      platform_fault_domain: this._platformFaultDomain,
-      sku_name: this._skuName,
-      tags: this._tags,
-      timeouts: this._timeouts,
+      auto_replace_on_failure: cdktf.booleanToTerraform(this._autoReplaceOnFailure),
+      dedicated_host_group_id: cdktf.stringToTerraform(this._dedicatedHostGroupId),
+      license_type: cdktf.stringToTerraform(this._licenseType),
+      location: cdktf.stringToTerraform(this._location),
+      name: cdktf.stringToTerraform(this._name),
+      platform_fault_domain: cdktf.numberToTerraform(this._platformFaultDomain),
+      sku_name: cdktf.stringToTerraform(this._skuName),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      timeouts: dedicatedHostTimeoutsToTerraform(this._timeouts),
     };
   }
 }

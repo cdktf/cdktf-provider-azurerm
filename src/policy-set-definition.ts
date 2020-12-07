@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface PolicySetDefinitionConfig extends TerraformMetaArguments {
+export interface PolicySetDefinitionConfig extends cdktf.TerraformMetaArguments {
   readonly description?: string;
   readonly displayName: string;
   readonly managementGroupId?: string;
@@ -31,6 +30,18 @@ export interface PolicySetDefinitionPolicyDefinitionGroup {
   readonly displayName?: string;
   readonly name: string;
 }
+
+function policySetDefinitionPolicyDefinitionGroupToTerraform(struct?: PolicySetDefinitionPolicyDefinitionGroup): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    additional_metadata_resource_id: cdktf.stringToTerraform(struct!.additionalMetadataResourceId),
+    category: cdktf.stringToTerraform(struct!.category),
+    description: cdktf.stringToTerraform(struct!.description),
+    display_name: cdktf.stringToTerraform(struct!.displayName),
+    name: cdktf.stringToTerraform(struct!.name),
+  }
+}
+
 export interface PolicySetDefinitionPolicyDefinitionReference {
   readonly parameterValues?: string;
   readonly parameters?: { [key: string]: string };
@@ -38,6 +49,18 @@ export interface PolicySetDefinitionPolicyDefinitionReference {
   readonly policyGroupNames?: string[];
   readonly referenceId?: string;
 }
+
+function policySetDefinitionPolicyDefinitionReferenceToTerraform(struct?: PolicySetDefinitionPolicyDefinitionReference): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    parameter_values: cdktf.stringToTerraform(struct!.parameterValues),
+    parameters: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.parameters),
+    policy_definition_id: cdktf.stringToTerraform(struct!.policyDefinitionId),
+    policy_group_names: cdktf.listMapper(cdktf.stringToTerraform)(struct!.policyGroupNames),
+    reference_id: cdktf.stringToTerraform(struct!.referenceId),
+  }
+}
+
 export interface PolicySetDefinitionTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -45,9 +68,20 @@ export interface PolicySetDefinitionTimeouts {
   readonly update?: string;
 }
 
+function policySetDefinitionTimeoutsToTerraform(struct?: PolicySetDefinitionTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class PolicySetDefinition extends TerraformResource {
+export class PolicySetDefinition extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -276,18 +310,18 @@ export class PolicySetDefinition extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      description: this._description,
-      display_name: this._displayName,
-      management_group_id: this._managementGroupId,
-      management_group_name: this._managementGroupName,
-      metadata: this._metadata,
-      name: this._name,
-      parameters: this._parameters,
-      policy_definitions: this._policyDefinitions,
-      policy_type: this._policyType,
-      policy_definition_group: this._policyDefinitionGroup,
-      policy_definition_reference: this._policyDefinitionReference,
-      timeouts: this._timeouts,
+      description: cdktf.stringToTerraform(this._description),
+      display_name: cdktf.stringToTerraform(this._displayName),
+      management_group_id: cdktf.stringToTerraform(this._managementGroupId),
+      management_group_name: cdktf.stringToTerraform(this._managementGroupName),
+      metadata: cdktf.stringToTerraform(this._metadata),
+      name: cdktf.stringToTerraform(this._name),
+      parameters: cdktf.stringToTerraform(this._parameters),
+      policy_definitions: cdktf.stringToTerraform(this._policyDefinitions),
+      policy_type: cdktf.stringToTerraform(this._policyType),
+      policy_definition_group: cdktf.listMapper(policySetDefinitionPolicyDefinitionGroupToTerraform)(this._policyDefinitionGroup),
+      policy_definition_reference: cdktf.listMapper(policySetDefinitionPolicyDefinitionReferenceToTerraform)(this._policyDefinitionReference),
+      timeouts: policySetDefinitionTimeoutsToTerraform(this._timeouts),
     };
   }
 }

@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface SiteRecoveryReplicatedVmConfig extends TerraformMetaArguments {
+export interface SiteRecoveryReplicatedVmConfig extends cdktf.TerraformMetaArguments {
   readonly managedDisk?: SiteRecoveryReplicatedVmManagedDisk[];
   readonly name: string;
   readonly networkInterface?: SiteRecoveryReplicatedVmNetworkInterface[];
@@ -32,11 +31,33 @@ export interface SiteRecoveryReplicatedVmManagedDisk {
   readonly targetReplicaDiskType?: string;
   readonly targetResourceGroupId?: string;
 }
+
+function siteRecoveryReplicatedVmManagedDiskToTerraform(struct?: SiteRecoveryReplicatedVmManagedDisk): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    disk_id: cdktf.stringToTerraform(struct!.diskId),
+    staging_storage_account_id: cdktf.stringToTerraform(struct!.stagingStorageAccountId),
+    target_disk_type: cdktf.stringToTerraform(struct!.targetDiskType),
+    target_replica_disk_type: cdktf.stringToTerraform(struct!.targetReplicaDiskType),
+    target_resource_group_id: cdktf.stringToTerraform(struct!.targetResourceGroupId),
+  }
+}
+
 export interface SiteRecoveryReplicatedVmNetworkInterface {
   readonly sourceNetworkInterfaceId?: string;
   readonly targetStaticIp?: string;
   readonly targetSubnetName?: string;
 }
+
+function siteRecoveryReplicatedVmNetworkInterfaceToTerraform(struct?: SiteRecoveryReplicatedVmNetworkInterface): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    source_network_interface_id: cdktf.stringToTerraform(struct!.sourceNetworkInterfaceId),
+    target_static_ip: cdktf.stringToTerraform(struct!.targetStaticIp),
+    target_subnet_name: cdktf.stringToTerraform(struct!.targetSubnetName),
+  }
+}
+
 export interface SiteRecoveryReplicatedVmTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -44,9 +65,20 @@ export interface SiteRecoveryReplicatedVmTimeouts {
   readonly update?: string;
 }
 
+function siteRecoveryReplicatedVmTimeoutsToTerraform(struct?: SiteRecoveryReplicatedVmTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class SiteRecoveryReplicatedVm extends TerraformResource {
+export class SiteRecoveryReplicatedVm extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -305,21 +337,21 @@ export class SiteRecoveryReplicatedVm extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      managed_disk: this._managedDisk,
-      name: this._name,
-      network_interface: this._networkInterface,
-      recovery_replication_policy_id: this._recoveryReplicationPolicyId,
-      recovery_vault_name: this._recoveryVaultName,
-      resource_group_name: this._resourceGroupName,
-      source_recovery_fabric_name: this._sourceRecoveryFabricName,
-      source_recovery_protection_container_name: this._sourceRecoveryProtectionContainerName,
-      source_vm_id: this._sourceVmId,
-      target_availability_set_id: this._targetAvailabilitySetId,
-      target_network_id: this._targetNetworkId,
-      target_recovery_fabric_id: this._targetRecoveryFabricId,
-      target_recovery_protection_container_id: this._targetRecoveryProtectionContainerId,
-      target_resource_group_id: this._targetResourceGroupId,
-      timeouts: this._timeouts,
+      managed_disk: cdktf.listMapper(siteRecoveryReplicatedVmManagedDiskToTerraform)(this._managedDisk),
+      name: cdktf.stringToTerraform(this._name),
+      network_interface: cdktf.listMapper(siteRecoveryReplicatedVmNetworkInterfaceToTerraform)(this._networkInterface),
+      recovery_replication_policy_id: cdktf.stringToTerraform(this._recoveryReplicationPolicyId),
+      recovery_vault_name: cdktf.stringToTerraform(this._recoveryVaultName),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      source_recovery_fabric_name: cdktf.stringToTerraform(this._sourceRecoveryFabricName),
+      source_recovery_protection_container_name: cdktf.stringToTerraform(this._sourceRecoveryProtectionContainerName),
+      source_vm_id: cdktf.stringToTerraform(this._sourceVmId),
+      target_availability_set_id: cdktf.stringToTerraform(this._targetAvailabilitySetId),
+      target_network_id: cdktf.stringToTerraform(this._targetNetworkId),
+      target_recovery_fabric_id: cdktf.stringToTerraform(this._targetRecoveryFabricId),
+      target_recovery_protection_container_id: cdktf.stringToTerraform(this._targetRecoveryProtectionContainerId),
+      target_resource_group_id: cdktf.stringToTerraform(this._targetResourceGroupId),
+      timeouts: siteRecoveryReplicatedVmTimeoutsToTerraform(this._timeouts),
     };
   }
 }

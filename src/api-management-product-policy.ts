@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface ApiManagementProductPolicyConfig extends TerraformMetaArguments {
+export interface ApiManagementProductPolicyConfig extends cdktf.TerraformMetaArguments {
   readonly apiManagementName: string;
   readonly productId: string;
   readonly resourceGroupName: string;
@@ -23,9 +22,20 @@ export interface ApiManagementProductPolicyTimeouts {
   readonly update?: string;
 }
 
+function apiManagementProductPolicyTimeoutsToTerraform(struct?: ApiManagementProductPolicyTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class ApiManagementProductPolicy extends TerraformResource {
+export class ApiManagementProductPolicy extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -152,12 +162,12 @@ export class ApiManagementProductPolicy extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      api_management_name: this._apiManagementName,
-      product_id: this._productId,
-      resource_group_name: this._resourceGroupName,
-      xml_content: this._xmlContent,
-      xml_link: this._xmlLink,
-      timeouts: this._timeouts,
+      api_management_name: cdktf.stringToTerraform(this._apiManagementName),
+      product_id: cdktf.stringToTerraform(this._productId),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      xml_content: cdktf.stringToTerraform(this._xmlContent),
+      xml_link: cdktf.stringToTerraform(this._xmlLink),
+      timeouts: apiManagementProductPolicyTimeoutsToTerraform(this._timeouts),
     };
   }
 }

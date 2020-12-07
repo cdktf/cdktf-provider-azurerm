@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface NetworkInterfaceConfig extends TerraformMetaArguments {
+export interface NetworkInterfaceConfig extends cdktf.TerraformMetaArguments {
   readonly dnsServers?: string[];
   readonly enableAcceleratedNetworking?: boolean;
   readonly enableIpForwarding?: boolean;
@@ -30,6 +29,20 @@ export interface NetworkInterfaceIpConfiguration {
   readonly publicIpAddressId?: string;
   readonly subnetId?: string;
 }
+
+function networkInterfaceIpConfigurationToTerraform(struct?: NetworkInterfaceIpConfiguration): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    name: cdktf.stringToTerraform(struct!.name),
+    primary: cdktf.booleanToTerraform(struct!.primary),
+    private_ip_address: cdktf.stringToTerraform(struct!.privateIpAddress),
+    private_ip_address_allocation: cdktf.stringToTerraform(struct!.privateIpAddressAllocation),
+    private_ip_address_version: cdktf.stringToTerraform(struct!.privateIpAddressVersion),
+    public_ip_address_id: cdktf.stringToTerraform(struct!.publicIpAddressId),
+    subnet_id: cdktf.stringToTerraform(struct!.subnetId),
+  }
+}
+
 export interface NetworkInterfaceTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -37,9 +50,20 @@ export interface NetworkInterfaceTimeouts {
   readonly update?: string;
 }
 
+function networkInterfaceTimeoutsToTerraform(struct?: NetworkInterfaceTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class NetworkInterface extends TerraformResource {
+export class NetworkInterface extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -261,16 +285,16 @@ export class NetworkInterface extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      dns_servers: this._dnsServers,
-      enable_accelerated_networking: this._enableAcceleratedNetworking,
-      enable_ip_forwarding: this._enableIpForwarding,
-      internal_dns_name_label: this._internalDnsNameLabel,
-      location: this._location,
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      tags: this._tags,
-      ip_configuration: this._ipConfiguration,
-      timeouts: this._timeouts,
+      dns_servers: cdktf.listMapper(cdktf.stringToTerraform)(this._dnsServers),
+      enable_accelerated_networking: cdktf.booleanToTerraform(this._enableAcceleratedNetworking),
+      enable_ip_forwarding: cdktf.booleanToTerraform(this._enableIpForwarding),
+      internal_dns_name_label: cdktf.stringToTerraform(this._internalDnsNameLabel),
+      location: cdktf.stringToTerraform(this._location),
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      ip_configuration: cdktf.listMapper(networkInterfaceIpConfigurationToTerraform)(this._ipConfiguration),
+      timeouts: networkInterfaceTimeoutsToTerraform(this._timeouts),
     };
   }
 }

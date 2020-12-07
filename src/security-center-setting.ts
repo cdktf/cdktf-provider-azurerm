@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface SecurityCenterSettingConfig extends TerraformMetaArguments {
+export interface SecurityCenterSettingConfig extends cdktf.TerraformMetaArguments {
   readonly enabled: boolean;
   readonly settingName: string;
   /** timeouts block */
@@ -20,9 +19,20 @@ export interface SecurityCenterSettingTimeouts {
   readonly update?: string;
 }
 
+function securityCenterSettingTimeoutsToTerraform(struct?: SecurityCenterSettingTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class SecurityCenterSetting extends TerraformResource {
+export class SecurityCenterSetting extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -101,9 +111,9 @@ export class SecurityCenterSetting extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      enabled: this._enabled,
-      setting_name: this._settingName,
-      timeouts: this._timeouts,
+      enabled: cdktf.booleanToTerraform(this._enabled),
+      setting_name: cdktf.stringToTerraform(this._settingName),
+      timeouts: securityCenterSettingTimeoutsToTerraform(this._timeouts),
     };
   }
 }

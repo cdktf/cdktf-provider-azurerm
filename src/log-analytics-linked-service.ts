@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface LogAnalyticsLinkedServiceConfig extends TerraformMetaArguments {
+export interface LogAnalyticsLinkedServiceConfig extends cdktf.TerraformMetaArguments {
   readonly linkedServiceName?: string;
   readonly resourceGroupName: string;
   readonly resourceId: string;
@@ -23,9 +22,20 @@ export interface LogAnalyticsLinkedServiceTimeouts {
   readonly update?: string;
 }
 
+function logAnalyticsLinkedServiceTimeoutsToTerraform(struct?: LogAnalyticsLinkedServiceTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class LogAnalyticsLinkedService extends TerraformResource {
+export class LogAnalyticsLinkedService extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -157,12 +167,12 @@ export class LogAnalyticsLinkedService extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      linked_service_name: this._linkedServiceName,
-      resource_group_name: this._resourceGroupName,
-      resource_id: this._resourceId,
-      tags: this._tags,
-      workspace_name: this._workspaceName,
-      timeouts: this._timeouts,
+      linked_service_name: cdktf.stringToTerraform(this._linkedServiceName),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      resource_id: cdktf.stringToTerraform(this._resourceId),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      workspace_name: cdktf.stringToTerraform(this._workspaceName),
+      timeouts: logAnalyticsLinkedServiceTimeoutsToTerraform(this._timeouts),
     };
   }
 }

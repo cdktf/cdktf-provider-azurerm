@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface VirtualMachineExtensionConfig extends TerraformMetaArguments {
+export interface VirtualMachineExtensionConfig extends cdktf.TerraformMetaArguments {
   readonly autoUpgradeMinorVersion?: boolean;
   readonly name: string;
   readonly protectedSettings?: string;
@@ -27,9 +26,20 @@ export interface VirtualMachineExtensionTimeouts {
   readonly update?: string;
 }
 
+function virtualMachineExtensionTimeoutsToTerraform(struct?: VirtualMachineExtensionTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class VirtualMachineExtension extends TerraformResource {
+export class VirtualMachineExtension extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -218,16 +228,16 @@ export class VirtualMachineExtension extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      auto_upgrade_minor_version: this._autoUpgradeMinorVersion,
-      name: this._name,
-      protected_settings: this._protectedSettings,
-      publisher: this._publisher,
-      settings: this._settings,
-      tags: this._tags,
-      type: this._type,
-      type_handler_version: this._typeHandlerVersion,
-      virtual_machine_id: this._virtualMachineId,
-      timeouts: this._timeouts,
+      auto_upgrade_minor_version: cdktf.booleanToTerraform(this._autoUpgradeMinorVersion),
+      name: cdktf.stringToTerraform(this._name),
+      protected_settings: cdktf.stringToTerraform(this._protectedSettings),
+      publisher: cdktf.stringToTerraform(this._publisher),
+      settings: cdktf.stringToTerraform(this._settings),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      type: cdktf.stringToTerraform(this._type),
+      type_handler_version: cdktf.stringToTerraform(this._typeHandlerVersion),
+      virtual_machine_id: cdktf.stringToTerraform(this._virtualMachineId),
+      timeouts: virtualMachineExtensionTimeoutsToTerraform(this._timeouts),
     };
   }
 }

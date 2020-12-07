@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface StorageTableConfig extends TerraformMetaArguments {
+export interface StorageTableConfig extends cdktf.TerraformMetaArguments {
   readonly name: string;
   readonly storageAccountName: string;
   /** acl block */
@@ -20,11 +19,30 @@ export interface StorageTableAclAccessPolicy {
   readonly permissions: string;
   readonly start: string;
 }
+
+function storageTableAclAccessPolicyToTerraform(struct?: StorageTableAclAccessPolicy): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    expiry: cdktf.stringToTerraform(struct!.expiry),
+    permissions: cdktf.stringToTerraform(struct!.permissions),
+    start: cdktf.stringToTerraform(struct!.start),
+  }
+}
+
 export interface StorageTableAcl {
   readonly id: string;
   /** access_policy block */
   readonly accessPolicy?: StorageTableAclAccessPolicy[];
 }
+
+function storageTableAclToTerraform(struct?: StorageTableAcl): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    id: cdktf.stringToTerraform(struct!.id),
+    access_policy: cdktf.listMapper(storageTableAclAccessPolicyToTerraform)(struct!.accessPolicy),
+  }
+}
+
 export interface StorageTableTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -32,9 +50,20 @@ export interface StorageTableTimeouts {
   readonly update?: string;
 }
 
+function storageTableTimeoutsToTerraform(struct?: StorageTableTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class StorageTable extends TerraformResource {
+export class StorageTable extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -130,10 +159,10 @@ export class StorageTable extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      name: this._name,
-      storage_account_name: this._storageAccountName,
-      acl: this._acl,
-      timeouts: this._timeouts,
+      name: cdktf.stringToTerraform(this._name),
+      storage_account_name: cdktf.stringToTerraform(this._storageAccountName),
+      acl: cdktf.listMapper(storageTableAclToTerraform)(this._acl),
+      timeouts: storageTableTimeoutsToTerraform(this._timeouts),
     };
   }
 }

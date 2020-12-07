@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DnsCaaRecordConfig extends TerraformMetaArguments {
+export interface DnsCaaRecordConfig extends cdktf.TerraformMetaArguments {
   readonly name: string;
   readonly resourceGroupName: string;
   readonly tags?: { [key: string]: string };
@@ -23,6 +22,16 @@ export interface DnsCaaRecordRecord {
   readonly tag: string;
   readonly value: string;
 }
+
+function dnsCaaRecordRecordToTerraform(struct?: DnsCaaRecordRecord): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    flags: cdktf.numberToTerraform(struct!.flags),
+    tag: cdktf.stringToTerraform(struct!.tag),
+    value: cdktf.stringToTerraform(struct!.value),
+  }
+}
+
 export interface DnsCaaRecordTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -30,9 +39,20 @@ export interface DnsCaaRecordTimeouts {
   readonly update?: string;
 }
 
+function dnsCaaRecordTimeoutsToTerraform(struct?: DnsCaaRecordTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class DnsCaaRecord extends TerraformResource {
+export class DnsCaaRecord extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -175,13 +195,13 @@ export class DnsCaaRecord extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      tags: this._tags,
-      ttl: this._ttl,
-      zone_name: this._zoneName,
-      record: this._record,
-      timeouts: this._timeouts,
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      ttl: cdktf.numberToTerraform(this._ttl),
+      zone_name: cdktf.stringToTerraform(this._zoneName),
+      record: cdktf.listMapper(dnsCaaRecordRecordToTerraform)(this._record),
+      timeouts: dnsCaaRecordTimeoutsToTerraform(this._timeouts),
     };
   }
 }

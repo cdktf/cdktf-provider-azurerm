@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface MonitorAutoscaleSettingConfig extends TerraformMetaArguments {
+export interface MonitorAutoscaleSettingConfig extends cdktf.TerraformMetaArguments {
   readonly enabled?: boolean;
   readonly location: string;
   readonly name: string;
@@ -26,32 +25,91 @@ export interface MonitorAutoscaleSettingNotificationEmail {
   readonly sendToSubscriptionAdministrator?: boolean;
   readonly sendToSubscriptionCoAdministrator?: boolean;
 }
+
+function monitorAutoscaleSettingNotificationEmailToTerraform(struct?: MonitorAutoscaleSettingNotificationEmail): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    custom_emails: cdktf.listMapper(cdktf.stringToTerraform)(struct!.customEmails),
+    send_to_subscription_administrator: cdktf.booleanToTerraform(struct!.sendToSubscriptionAdministrator),
+    send_to_subscription_co_administrator: cdktf.booleanToTerraform(struct!.sendToSubscriptionCoAdministrator),
+  }
+}
+
 export interface MonitorAutoscaleSettingNotificationWebhook {
   readonly properties?: { [key: string]: string };
   readonly serviceUri: string;
 }
+
+function monitorAutoscaleSettingNotificationWebhookToTerraform(struct?: MonitorAutoscaleSettingNotificationWebhook): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    properties: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.properties),
+    service_uri: cdktf.stringToTerraform(struct!.serviceUri),
+  }
+}
+
 export interface MonitorAutoscaleSettingNotification {
   /** email block */
   readonly email?: MonitorAutoscaleSettingNotificationEmail[];
   /** webhook block */
   readonly webhook?: MonitorAutoscaleSettingNotificationWebhook[];
 }
+
+function monitorAutoscaleSettingNotificationToTerraform(struct?: MonitorAutoscaleSettingNotification): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    email: cdktf.listMapper(monitorAutoscaleSettingNotificationEmailToTerraform)(struct!.email),
+    webhook: cdktf.listMapper(monitorAutoscaleSettingNotificationWebhookToTerraform)(struct!.webhook),
+  }
+}
+
 export interface MonitorAutoscaleSettingProfileCapacity {
   readonly default: number;
   readonly maximum: number;
   readonly minimum: number;
 }
+
+function monitorAutoscaleSettingProfileCapacityToTerraform(struct?: MonitorAutoscaleSettingProfileCapacity): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    default: cdktf.numberToTerraform(struct!.default),
+    maximum: cdktf.numberToTerraform(struct!.maximum),
+    minimum: cdktf.numberToTerraform(struct!.minimum),
+  }
+}
+
 export interface MonitorAutoscaleSettingProfileFixedDate {
   readonly end: string;
   readonly start: string;
   readonly timezone?: string;
 }
+
+function monitorAutoscaleSettingProfileFixedDateToTerraform(struct?: MonitorAutoscaleSettingProfileFixedDate): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    end: cdktf.stringToTerraform(struct!.end),
+    start: cdktf.stringToTerraform(struct!.start),
+    timezone: cdktf.stringToTerraform(struct!.timezone),
+  }
+}
+
 export interface MonitorAutoscaleSettingProfileRecurrence {
   readonly days: string[];
   readonly hours: number[];
   readonly minutes: number[];
   readonly timezone?: string;
 }
+
+function monitorAutoscaleSettingProfileRecurrenceToTerraform(struct?: MonitorAutoscaleSettingProfileRecurrence): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    days: cdktf.listMapper(cdktf.stringToTerraform)(struct!.days),
+    hours: cdktf.listMapper(cdktf.numberToTerraform)(struct!.hours),
+    minutes: cdktf.listMapper(cdktf.numberToTerraform)(struct!.minutes),
+    timezone: cdktf.stringToTerraform(struct!.timezone),
+  }
+}
+
 export interface MonitorAutoscaleSettingProfileRuleMetricTrigger {
   readonly metricName: string;
   readonly metricResourceId: string;
@@ -62,18 +120,53 @@ export interface MonitorAutoscaleSettingProfileRuleMetricTrigger {
   readonly timeGrain: string;
   readonly timeWindow: string;
 }
+
+function monitorAutoscaleSettingProfileRuleMetricTriggerToTerraform(struct?: MonitorAutoscaleSettingProfileRuleMetricTrigger): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    metric_name: cdktf.stringToTerraform(struct!.metricName),
+    metric_resource_id: cdktf.stringToTerraform(struct!.metricResourceId),
+    operator: cdktf.stringToTerraform(struct!.operator),
+    statistic: cdktf.stringToTerraform(struct!.statistic),
+    threshold: cdktf.numberToTerraform(struct!.threshold),
+    time_aggregation: cdktf.stringToTerraform(struct!.timeAggregation),
+    time_grain: cdktf.stringToTerraform(struct!.timeGrain),
+    time_window: cdktf.stringToTerraform(struct!.timeWindow),
+  }
+}
+
 export interface MonitorAutoscaleSettingProfileRuleScaleAction {
   readonly cooldown: string;
   readonly direction: string;
   readonly type: string;
   readonly value: number;
 }
+
+function monitorAutoscaleSettingProfileRuleScaleActionToTerraform(struct?: MonitorAutoscaleSettingProfileRuleScaleAction): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    cooldown: cdktf.stringToTerraform(struct!.cooldown),
+    direction: cdktf.stringToTerraform(struct!.direction),
+    type: cdktf.stringToTerraform(struct!.type),
+    value: cdktf.numberToTerraform(struct!.value),
+  }
+}
+
 export interface MonitorAutoscaleSettingProfileRule {
   /** metric_trigger block */
   readonly metricTrigger: MonitorAutoscaleSettingProfileRuleMetricTrigger[];
   /** scale_action block */
   readonly scaleAction: MonitorAutoscaleSettingProfileRuleScaleAction[];
 }
+
+function monitorAutoscaleSettingProfileRuleToTerraform(struct?: MonitorAutoscaleSettingProfileRule): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    metric_trigger: cdktf.listMapper(monitorAutoscaleSettingProfileRuleMetricTriggerToTerraform)(struct!.metricTrigger),
+    scale_action: cdktf.listMapper(monitorAutoscaleSettingProfileRuleScaleActionToTerraform)(struct!.scaleAction),
+  }
+}
+
 export interface MonitorAutoscaleSettingProfile {
   readonly name: string;
   /** capacity block */
@@ -85,6 +178,18 @@ export interface MonitorAutoscaleSettingProfile {
   /** rule block */
   readonly rule?: MonitorAutoscaleSettingProfileRule[];
 }
+
+function monitorAutoscaleSettingProfileToTerraform(struct?: MonitorAutoscaleSettingProfile): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    name: cdktf.stringToTerraform(struct!.name),
+    capacity: cdktf.listMapper(monitorAutoscaleSettingProfileCapacityToTerraform)(struct!.capacity),
+    fixed_date: cdktf.listMapper(monitorAutoscaleSettingProfileFixedDateToTerraform)(struct!.fixedDate),
+    recurrence: cdktf.listMapper(monitorAutoscaleSettingProfileRecurrenceToTerraform)(struct!.recurrence),
+    rule: cdktf.listMapper(monitorAutoscaleSettingProfileRuleToTerraform)(struct!.rule),
+  }
+}
+
 export interface MonitorAutoscaleSettingTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -92,9 +197,20 @@ export interface MonitorAutoscaleSettingTimeouts {
   readonly update?: string;
 }
 
+function monitorAutoscaleSettingTimeoutsToTerraform(struct?: MonitorAutoscaleSettingTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class MonitorAutoscaleSetting extends TerraformResource {
+export class MonitorAutoscaleSetting extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -266,15 +382,15 @@ export class MonitorAutoscaleSetting extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      enabled: this._enabled,
-      location: this._location,
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      tags: this._tags,
-      target_resource_id: this._targetResourceId,
-      notification: this._notification,
-      profile: this._profile,
-      timeouts: this._timeouts,
+      enabled: cdktf.booleanToTerraform(this._enabled),
+      location: cdktf.stringToTerraform(this._location),
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      target_resource_id: cdktf.stringToTerraform(this._targetResourceId),
+      notification: cdktf.listMapper(monitorAutoscaleSettingNotificationToTerraform)(this._notification),
+      profile: cdktf.listMapper(monitorAutoscaleSettingProfileToTerraform)(this._profile),
+      timeouts: monitorAutoscaleSettingTimeoutsToTerraform(this._timeouts),
     };
   }
 }

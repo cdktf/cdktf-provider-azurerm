@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface StreamAnalyticsStreamInputIothubConfig extends TerraformMetaArguments {
+export interface StreamAnalyticsStreamInputIothubConfig extends cdktf.TerraformMetaArguments {
   readonly endpoint: string;
   readonly eventhubConsumerGroupName: string;
   readonly iothubNamespace: string;
@@ -26,6 +25,16 @@ export interface StreamAnalyticsStreamInputIothubSerialization {
   readonly fieldDelimiter?: string;
   readonly type: string;
 }
+
+function streamAnalyticsStreamInputIothubSerializationToTerraform(struct?: StreamAnalyticsStreamInputIothubSerialization): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    encoding: cdktf.stringToTerraform(struct!.encoding),
+    field_delimiter: cdktf.stringToTerraform(struct!.fieldDelimiter),
+    type: cdktf.stringToTerraform(struct!.type),
+  }
+}
+
 export interface StreamAnalyticsStreamInputIothubTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -33,9 +42,20 @@ export interface StreamAnalyticsStreamInputIothubTimeouts {
   readonly update?: string;
 }
 
+function streamAnalyticsStreamInputIothubTimeoutsToTerraform(struct?: StreamAnalyticsStreamInputIothubTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class StreamAnalyticsStreamInputIothub extends TerraformResource {
+export class StreamAnalyticsStreamInputIothub extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -212,16 +232,16 @@ export class StreamAnalyticsStreamInputIothub extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      endpoint: this._endpoint,
-      eventhub_consumer_group_name: this._eventhubConsumerGroupName,
-      iothub_namespace: this._iothubNamespace,
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      shared_access_policy_key: this._sharedAccessPolicyKey,
-      shared_access_policy_name: this._sharedAccessPolicyName,
-      stream_analytics_job_name: this._streamAnalyticsJobName,
-      serialization: this._serialization,
-      timeouts: this._timeouts,
+      endpoint: cdktf.stringToTerraform(this._endpoint),
+      eventhub_consumer_group_name: cdktf.stringToTerraform(this._eventhubConsumerGroupName),
+      iothub_namespace: cdktf.stringToTerraform(this._iothubNamespace),
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      shared_access_policy_key: cdktf.stringToTerraform(this._sharedAccessPolicyKey),
+      shared_access_policy_name: cdktf.stringToTerraform(this._sharedAccessPolicyName),
+      stream_analytics_job_name: cdktf.stringToTerraform(this._streamAnalyticsJobName),
+      serialization: cdktf.listMapper(streamAnalyticsStreamInputIothubSerializationToTerraform)(this._serialization),
+      timeouts: streamAnalyticsStreamInputIothubTimeoutsToTerraform(this._timeouts),
     };
   }
 }

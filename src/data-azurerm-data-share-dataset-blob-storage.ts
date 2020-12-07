@@ -2,19 +2,17 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformDataSource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
-import { ComplexComputedList } from "cdktf";
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataAzurermDataShareDatasetBlobStorageConfig extends TerraformMetaArguments {
+export interface DataAzurermDataShareDatasetBlobStorageConfig extends cdktf.TerraformMetaArguments {
   readonly dataShareId: string;
   readonly name: string;
   /** timeouts block */
   readonly timeouts?: DataAzurermDataShareDatasetBlobStorageTimeouts;
 }
-export class DataAzurermDataShareDatasetBlobStorageStorageAccount extends ComplexComputedList {
+export class DataAzurermDataShareDatasetBlobStorageStorageAccount extends cdktf.ComplexComputedList {
 
   // name - computed: true, optional: false, required: false
   public get name() {
@@ -35,9 +33,17 @@ export interface DataAzurermDataShareDatasetBlobStorageTimeouts {
   readonly read?: string;
 }
 
+function dataAzurermDataShareDatasetBlobStorageTimeoutsToTerraform(struct?: DataAzurermDataShareDatasetBlobStorageTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    read: cdktf.stringToTerraform(struct!.read),
+  }
+}
+
+
 // Resource
 
-export class DataAzurermDataShareDatasetBlobStorage extends TerraformDataSource {
+export class DataAzurermDataShareDatasetBlobStorage extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
@@ -141,9 +147,9 @@ export class DataAzurermDataShareDatasetBlobStorage extends TerraformDataSource 
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      data_share_id: this._dataShareId,
-      name: this._name,
-      timeouts: this._timeouts,
+      data_share_id: cdktf.stringToTerraform(this._dataShareId),
+      name: cdktf.stringToTerraform(this._name),
+      timeouts: dataAzurermDataShareDatasetBlobStorageTimeoutsToTerraform(this._timeouts),
     };
   }
 }

@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface AppServiceCertificateConfig extends TerraformMetaArguments {
+export interface AppServiceCertificateConfig extends cdktf.TerraformMetaArguments {
   readonly hostingEnvironmentProfileId?: string;
   readonly keyVaultSecretId?: string;
   readonly location: string;
@@ -26,9 +25,20 @@ export interface AppServiceCertificateTimeouts {
   readonly update?: string;
 }
 
+function appServiceCertificateTimeoutsToTerraform(struct?: AppServiceCertificateTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class AppServiceCertificate extends TerraformResource {
+export class AppServiceCertificate extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -241,15 +251,15 @@ export class AppServiceCertificate extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      hosting_environment_profile_id: this._hostingEnvironmentProfileId,
-      key_vault_secret_id: this._keyVaultSecretId,
-      location: this._location,
-      name: this._name,
-      password: this._password,
-      pfx_blob: this._pfxBlob,
-      resource_group_name: this._resourceGroupName,
-      tags: this._tags,
-      timeouts: this._timeouts,
+      hosting_environment_profile_id: cdktf.stringToTerraform(this._hostingEnvironmentProfileId),
+      key_vault_secret_id: cdktf.stringToTerraform(this._keyVaultSecretId),
+      location: cdktf.stringToTerraform(this._location),
+      name: cdktf.stringToTerraform(this._name),
+      password: cdktf.stringToTerraform(this._password),
+      pfx_blob: cdktf.stringToTerraform(this._pfxBlob),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      timeouts: appServiceCertificateTimeoutsToTerraform(this._timeouts),
     };
   }
 }

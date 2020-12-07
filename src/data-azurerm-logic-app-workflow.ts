@@ -2,13 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformDataSource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
-import { StringMap } from "cdktf";
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataAzurermLogicAppWorkflowConfig extends TerraformMetaArguments {
+export interface DataAzurermLogicAppWorkflowConfig extends cdktf.TerraformMetaArguments {
   readonly name: string;
   readonly resourceGroupName: string;
   /** timeouts block */
@@ -18,9 +16,17 @@ export interface DataAzurermLogicAppWorkflowTimeouts {
   readonly read?: string;
 }
 
+function dataAzurermLogicAppWorkflowTimeoutsToTerraform(struct?: DataAzurermLogicAppWorkflowTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    read: cdktf.stringToTerraform(struct!.read),
+  }
+}
+
+
 // Resource
 
-export class DataAzurermLogicAppWorkflow extends TerraformDataSource {
+export class DataAzurermLogicAppWorkflow extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
@@ -91,7 +97,7 @@ export class DataAzurermLogicAppWorkflow extends TerraformDataSource {
 
   // parameters - computed: true, optional: false, required: false
   public parameters(key: string): string {
-    return new StringMap(this, 'parameters').lookup(key);
+    return new cdktf.StringMap(this, 'parameters').lookup(key);
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -109,7 +115,7 @@ export class DataAzurermLogicAppWorkflow extends TerraformDataSource {
 
   // tags - computed: true, optional: false, required: false
   public tags(key: string): string {
-    return new StringMap(this, 'tags').lookup(key);
+    return new cdktf.StringMap(this, 'tags').lookup(key);
   }
 
   // workflow_endpoint_ip_addresses - computed: true, optional: false, required: false
@@ -154,9 +160,9 @@ export class DataAzurermLogicAppWorkflow extends TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      timeouts: this._timeouts,
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      timeouts: dataAzurermLogicAppWorkflowTimeoutsToTerraform(this._timeouts),
     };
   }
 }

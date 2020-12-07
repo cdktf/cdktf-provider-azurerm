@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface BatchCertificateConfig extends TerraformMetaArguments {
+export interface BatchCertificateConfig extends cdktf.TerraformMetaArguments {
   readonly accountName: string;
   readonly certificate: string;
   readonly format: string;
@@ -25,9 +24,20 @@ export interface BatchCertificateTimeouts {
   readonly update?: string;
 }
 
+function batchCertificateTimeoutsToTerraform(struct?: BatchCertificateTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class BatchCertificate extends TerraformResource {
+export class BatchCertificate extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -189,14 +199,14 @@ export class BatchCertificate extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      account_name: this._accountName,
-      certificate: this._certificate,
-      format: this._format,
-      password: this._password,
-      resource_group_name: this._resourceGroupName,
-      thumbprint: this._thumbprint,
-      thumbprint_algorithm: this._thumbprintAlgorithm,
-      timeouts: this._timeouts,
+      account_name: cdktf.stringToTerraform(this._accountName),
+      certificate: cdktf.stringToTerraform(this._certificate),
+      format: cdktf.stringToTerraform(this._format),
+      password: cdktf.stringToTerraform(this._password),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      thumbprint: cdktf.stringToTerraform(this._thumbprint),
+      thumbprint_algorithm: cdktf.stringToTerraform(this._thumbprintAlgorithm),
+      timeouts: batchCertificateTimeoutsToTerraform(this._timeouts),
     };
   }
 }

@@ -2,13 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformDataSource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
-import { ComplexComputedList } from "cdktf";
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataAzurermPublicIpsConfig extends TerraformMetaArguments {
+export interface DataAzurermPublicIpsConfig extends cdktf.TerraformMetaArguments {
   readonly allocationType?: string;
   readonly attached?: boolean;
   readonly namePrefix?: string;
@@ -16,7 +14,7 @@ export interface DataAzurermPublicIpsConfig extends TerraformMetaArguments {
   /** timeouts block */
   readonly timeouts?: DataAzurermPublicIpsTimeouts;
 }
-export class DataAzurermPublicIpsPublicIps extends ComplexComputedList {
+export class DataAzurermPublicIpsPublicIps extends cdktf.ComplexComputedList {
 
   // domain_name_label - computed: true, optional: false, required: false
   public get domainNameLabel() {
@@ -47,9 +45,17 @@ export interface DataAzurermPublicIpsTimeouts {
   readonly read?: string;
 }
 
+function dataAzurermPublicIpsTimeoutsToTerraform(struct?: DataAzurermPublicIpsTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    read: cdktf.stringToTerraform(struct!.read),
+  }
+}
+
+
 // Resource
 
-export class DataAzurermPublicIps extends TerraformDataSource {
+export class DataAzurermPublicIps extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
@@ -170,11 +176,11 @@ export class DataAzurermPublicIps extends TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      allocation_type: this._allocationType,
-      attached: this._attached,
-      name_prefix: this._namePrefix,
-      resource_group_name: this._resourceGroupName,
-      timeouts: this._timeouts,
+      allocation_type: cdktf.stringToTerraform(this._allocationType),
+      attached: cdktf.booleanToTerraform(this._attached),
+      name_prefix: cdktf.stringToTerraform(this._namePrefix),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      timeouts: dataAzurermPublicIpsTimeoutsToTerraform(this._timeouts),
     };
   }
 }

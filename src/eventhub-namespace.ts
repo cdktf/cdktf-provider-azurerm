@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface EventhubNamespaceConfig extends TerraformMetaArguments {
+export interface EventhubNamespaceConfig extends cdktf.TerraformMetaArguments {
   readonly autoInflateEnabled?: boolean;
   readonly capacity?: number;
   readonly dedicatedClusterId?: string;
@@ -28,18 +27,54 @@ export interface EventhubNamespaceNetworkRulesetsIpRule {
   readonly action?: string;
   readonly ipMask?: string;
 }
+
+function eventhubNamespaceNetworkRulesetsIpRuleToTerraform(struct?: EventhubNamespaceNetworkRulesetsIpRule): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    action: cdktf.stringToTerraform(struct!.action),
+    ip_mask: cdktf.stringToTerraform(struct!.ipMask),
+  }
+}
+
 export interface EventhubNamespaceNetworkRulesetsVirtualNetworkRule {
   readonly ignoreMissingVirtualNetworkServiceEndpoint?: boolean;
   readonly subnetId?: string;
 }
+
+function eventhubNamespaceNetworkRulesetsVirtualNetworkRuleToTerraform(struct?: EventhubNamespaceNetworkRulesetsVirtualNetworkRule): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    ignore_missing_virtual_network_service_endpoint: cdktf.booleanToTerraform(struct!.ignoreMissingVirtualNetworkServiceEndpoint),
+    subnet_id: cdktf.stringToTerraform(struct!.subnetId),
+  }
+}
+
 export interface EventhubNamespaceNetworkRulesets {
   readonly defaultAction?: string;
   readonly ipRule?: EventhubNamespaceNetworkRulesetsIpRule[];
   readonly virtualNetworkRule?: EventhubNamespaceNetworkRulesetsVirtualNetworkRule[];
 }
+
+function eventhubNamespaceNetworkRulesetsToTerraform(struct?: EventhubNamespaceNetworkRulesets): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    default_action: cdktf.stringToTerraform(struct!.defaultAction),
+    ip_rule: cdktf.listMapper(eventhubNamespaceNetworkRulesetsIpRuleToTerraform)(struct!.ipRule),
+    virtual_network_rule: cdktf.listMapper(eventhubNamespaceNetworkRulesetsVirtualNetworkRuleToTerraform)(struct!.virtualNetworkRule),
+  }
+}
+
 export interface EventhubNamespaceIdentity {
   readonly type: string;
 }
+
+function eventhubNamespaceIdentityToTerraform(struct?: EventhubNamespaceIdentity): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    type: cdktf.stringToTerraform(struct!.type),
+  }
+}
+
 export interface EventhubNamespaceTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -47,9 +82,20 @@ export interface EventhubNamespaceTimeouts {
   readonly update?: string;
 }
 
+function eventhubNamespaceTimeoutsToTerraform(struct?: EventhubNamespaceTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class EventhubNamespace extends TerraformResource {
+export class EventhubNamespace extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -322,19 +368,19 @@ export class EventhubNamespace extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      auto_inflate_enabled: this._autoInflateEnabled,
-      capacity: this._capacity,
-      dedicated_cluster_id: this._dedicatedClusterId,
-      location: this._location,
-      maximum_throughput_units: this._maximumThroughputUnits,
-      name: this._name,
-      network_rulesets: this._networkRulesets,
-      resource_group_name: this._resourceGroupName,
-      sku: this._sku,
-      tags: this._tags,
-      zone_redundant: this._zoneRedundant,
-      identity: this._identity,
-      timeouts: this._timeouts,
+      auto_inflate_enabled: cdktf.booleanToTerraform(this._autoInflateEnabled),
+      capacity: cdktf.numberToTerraform(this._capacity),
+      dedicated_cluster_id: cdktf.stringToTerraform(this._dedicatedClusterId),
+      location: cdktf.stringToTerraform(this._location),
+      maximum_throughput_units: cdktf.numberToTerraform(this._maximumThroughputUnits),
+      name: cdktf.stringToTerraform(this._name),
+      network_rulesets: cdktf.listMapper(eventhubNamespaceNetworkRulesetsToTerraform)(this._networkRulesets),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      sku: cdktf.stringToTerraform(this._sku),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      zone_redundant: cdktf.booleanToTerraform(this._zoneRedundant),
+      identity: cdktf.listMapper(eventhubNamespaceIdentityToTerraform)(this._identity),
+      timeouts: eventhubNamespaceTimeoutsToTerraform(this._timeouts),
     };
   }
 }

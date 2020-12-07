@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformDataSource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataAzurermIothubDpsConfig extends TerraformMetaArguments {
+export interface DataAzurermIothubDpsConfig extends cdktf.TerraformMetaArguments {
   readonly name: string;
   readonly resourceGroupName: string;
   readonly tags?: { [key: string]: string };
@@ -18,9 +17,17 @@ export interface DataAzurermIothubDpsTimeouts {
   readonly read?: string;
 }
 
+function dataAzurermIothubDpsTimeoutsToTerraform(struct?: DataAzurermIothubDpsTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    read: cdktf.stringToTerraform(struct!.read),
+  }
+}
+
+
 // Resource
 
-export class DataAzurermIothubDps extends TerraformDataSource {
+export class DataAzurermIothubDps extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
@@ -141,10 +148,10 @@ export class DataAzurermIothubDps extends TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      tags: this._tags,
-      timeouts: this._timeouts,
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      timeouts: dataAzurermIothubDpsTimeoutsToTerraform(this._timeouts),
     };
   }
 }

@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface PolicyAssignmentConfig extends TerraformMetaArguments {
+export interface PolicyAssignmentConfig extends cdktf.TerraformMetaArguments {
   readonly description?: string;
   readonly displayName?: string;
   readonly enforcementMode?: boolean;
@@ -26,6 +25,14 @@ export interface PolicyAssignmentConfig extends TerraformMetaArguments {
 export interface PolicyAssignmentIdentity {
   readonly type?: string;
 }
+
+function policyAssignmentIdentityToTerraform(struct?: PolicyAssignmentIdentity): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    type: cdktf.stringToTerraform(struct!.type),
+  }
+}
+
 export interface PolicyAssignmentTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -33,9 +40,20 @@ export interface PolicyAssignmentTimeouts {
   readonly update?: string;
 }
 
+function policyAssignmentTimeoutsToTerraform(struct?: PolicyAssignmentTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class PolicyAssignment extends TerraformResource {
+export class PolicyAssignment extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -264,18 +282,18 @@ export class PolicyAssignment extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      description: this._description,
-      display_name: this._displayName,
-      enforcement_mode: this._enforcementMode,
-      location: this._location,
-      metadata: this._metadata,
-      name: this._name,
-      not_scopes: this._notScopes,
-      parameters: this._parameters,
-      policy_definition_id: this._policyDefinitionId,
-      scope: this._scope,
-      identity: this._identity,
-      timeouts: this._timeouts,
+      description: cdktf.stringToTerraform(this._description),
+      display_name: cdktf.stringToTerraform(this._displayName),
+      enforcement_mode: cdktf.booleanToTerraform(this._enforcementMode),
+      location: cdktf.stringToTerraform(this._location),
+      metadata: cdktf.stringToTerraform(this._metadata),
+      name: cdktf.stringToTerraform(this._name),
+      not_scopes: cdktf.listMapper(cdktf.stringToTerraform)(this._notScopes),
+      parameters: cdktf.stringToTerraform(this._parameters),
+      policy_definition_id: cdktf.stringToTerraform(this._policyDefinitionId),
+      scope: cdktf.stringToTerraform(this._scope),
+      identity: cdktf.listMapper(policyAssignmentIdentityToTerraform)(this._identity),
+      timeouts: policyAssignmentTimeoutsToTerraform(this._timeouts),
     };
   }
 }

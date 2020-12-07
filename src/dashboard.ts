@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DashboardConfig extends TerraformMetaArguments {
+export interface DashboardConfig extends cdktf.TerraformMetaArguments {
   readonly dashboardProperties?: string;
   readonly location: string;
   readonly name: string;
@@ -23,9 +22,20 @@ export interface DashboardTimeouts {
   readonly update?: string;
 }
 
+function dashboardTimeoutsToTerraform(struct?: DashboardTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class Dashboard extends TerraformResource {
+export class Dashboard extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -152,12 +162,12 @@ export class Dashboard extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      dashboard_properties: this._dashboardProperties,
-      location: this._location,
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      tags: this._tags,
-      timeouts: this._timeouts,
+      dashboard_properties: cdktf.stringToTerraform(this._dashboardProperties),
+      location: cdktf.stringToTerraform(this._location),
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      timeouts: dashboardTimeoutsToTerraform(this._timeouts),
     };
   }
 }

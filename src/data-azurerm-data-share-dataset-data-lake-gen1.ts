@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformDataSource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataAzurermDataShareDatasetDataLakeGen1Config extends TerraformMetaArguments {
+export interface DataAzurermDataShareDatasetDataLakeGen1Config extends cdktf.TerraformMetaArguments {
   readonly dataShareId: string;
   readonly name: string;
   /** timeouts block */
@@ -17,9 +16,17 @@ export interface DataAzurermDataShareDatasetDataLakeGen1Timeouts {
   readonly read?: string;
 }
 
+function dataAzurermDataShareDatasetDataLakeGen1TimeoutsToTerraform(struct?: DataAzurermDataShareDatasetDataLakeGen1Timeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    read: cdktf.stringToTerraform(struct!.read),
+  }
+}
+
+
 // Resource
 
-export class DataAzurermDataShareDatasetDataLakeGen1 extends TerraformDataSource {
+export class DataAzurermDataShareDatasetDataLakeGen1 extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
@@ -118,9 +125,9 @@ export class DataAzurermDataShareDatasetDataLakeGen1 extends TerraformDataSource
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      data_share_id: this._dataShareId,
-      name: this._name,
-      timeouts: this._timeouts,
+      data_share_id: cdktf.stringToTerraform(this._dataShareId),
+      name: cdktf.stringToTerraform(this._name),
+      timeouts: dataAzurermDataShareDatasetDataLakeGen1TimeoutsToTerraform(this._timeouts),
     };
   }
 }

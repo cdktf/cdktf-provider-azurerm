@@ -2,20 +2,17 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformDataSource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
-import { ComplexComputedList } from "cdktf";
-import { StringMap } from "cdktf";
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataAzurermMariadbServerConfig extends TerraformMetaArguments {
+export interface DataAzurermMariadbServerConfig extends cdktf.TerraformMetaArguments {
   readonly name: string;
   readonly resourceGroupName: string;
   /** timeouts block */
   readonly timeouts?: DataAzurermMariadbServerTimeouts;
 }
-export class DataAzurermMariadbServerStorageProfile extends ComplexComputedList {
+export class DataAzurermMariadbServerStorageProfile extends cdktf.ComplexComputedList {
 
   // auto_grow - computed: true, optional: false, required: false
   public get autoGrow() {
@@ -41,9 +38,17 @@ export interface DataAzurermMariadbServerTimeouts {
   readonly read?: string;
 }
 
+function dataAzurermMariadbServerTimeoutsToTerraform(struct?: DataAzurermMariadbServerTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    read: cdktf.stringToTerraform(struct!.read),
+  }
+}
+
+
 // Resource
 
-export class DataAzurermMariadbServer extends TerraformDataSource {
+export class DataAzurermMariadbServer extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
@@ -132,7 +137,7 @@ export class DataAzurermMariadbServer extends TerraformDataSource {
 
   // tags - computed: true, optional: false, required: false
   public tags(key: string): string {
-    return new StringMap(this, 'tags').lookup(key);
+    return new cdktf.StringMap(this, 'tags').lookup(key);
   }
 
   // version - computed: true, optional: false, required: false
@@ -162,9 +167,9 @@ export class DataAzurermMariadbServer extends TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      timeouts: this._timeouts,
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      timeouts: dataAzurermMariadbServerTimeoutsToTerraform(this._timeouts),
     };
   }
 }

@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface ServicebusNamespaceAuthorizationRuleConfig extends TerraformMetaArguments {
+export interface ServicebusNamespaceAuthorizationRuleConfig extends cdktf.TerraformMetaArguments {
   readonly listen?: boolean;
   readonly manage?: boolean;
   readonly name: string;
@@ -24,9 +23,20 @@ export interface ServicebusNamespaceAuthorizationRuleTimeouts {
   readonly update?: string;
 }
 
+function servicebusNamespaceAuthorizationRuleTimeoutsToTerraform(struct?: ServicebusNamespaceAuthorizationRuleTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class ServicebusNamespaceAuthorizationRule extends TerraformResource {
+export class ServicebusNamespaceAuthorizationRule extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -190,13 +200,13 @@ export class ServicebusNamespaceAuthorizationRule extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      listen: this._listen,
-      manage: this._manage,
-      name: this._name,
-      namespace_name: this._namespaceName,
-      resource_group_name: this._resourceGroupName,
-      send: this._send,
-      timeouts: this._timeouts,
+      listen: cdktf.booleanToTerraform(this._listen),
+      manage: cdktf.booleanToTerraform(this._manage),
+      name: cdktf.stringToTerraform(this._name),
+      namespace_name: cdktf.stringToTerraform(this._namespaceName),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      send: cdktf.booleanToTerraform(this._send),
+      timeouts: servicebusNamespaceAuthorizationRuleTimeoutsToTerraform(this._timeouts),
     };
   }
 }

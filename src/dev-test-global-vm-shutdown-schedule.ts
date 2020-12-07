@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DevTestGlobalVmShutdownScheduleConfig extends TerraformMetaArguments {
+export interface DevTestGlobalVmShutdownScheduleConfig extends cdktf.TerraformMetaArguments {
   readonly dailyRecurrenceTime: string;
   readonly enabled?: boolean;
   readonly location: string;
@@ -24,6 +23,16 @@ export interface DevTestGlobalVmShutdownScheduleNotificationSettings {
   readonly timeInMinutes?: number;
   readonly webhookUrl?: string;
 }
+
+function devTestGlobalVmShutdownScheduleNotificationSettingsToTerraform(struct?: DevTestGlobalVmShutdownScheduleNotificationSettings): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    enabled: cdktf.booleanToTerraform(struct!.enabled),
+    time_in_minutes: cdktf.numberToTerraform(struct!.timeInMinutes),
+    webhook_url: cdktf.stringToTerraform(struct!.webhookUrl),
+  }
+}
+
 export interface DevTestGlobalVmShutdownScheduleTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -31,9 +40,20 @@ export interface DevTestGlobalVmShutdownScheduleTimeouts {
   readonly update?: string;
 }
 
+function devTestGlobalVmShutdownScheduleTimeoutsToTerraform(struct?: DevTestGlobalVmShutdownScheduleTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class DevTestGlobalVmShutdownSchedule extends TerraformResource {
+export class DevTestGlobalVmShutdownSchedule extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -188,14 +208,14 @@ export class DevTestGlobalVmShutdownSchedule extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      daily_recurrence_time: this._dailyRecurrenceTime,
-      enabled: this._enabled,
-      location: this._location,
-      tags: this._tags,
-      timezone: this._timezone,
-      virtual_machine_id: this._virtualMachineId,
-      notification_settings: this._notificationSettings,
-      timeouts: this._timeouts,
+      daily_recurrence_time: cdktf.stringToTerraform(this._dailyRecurrenceTime),
+      enabled: cdktf.booleanToTerraform(this._enabled),
+      location: cdktf.stringToTerraform(this._location),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      timezone: cdktf.stringToTerraform(this._timezone),
+      virtual_machine_id: cdktf.stringToTerraform(this._virtualMachineId),
+      notification_settings: cdktf.listMapper(devTestGlobalVmShutdownScheduleNotificationSettingsToTerraform)(this._notificationSettings),
+      timeouts: devTestGlobalVmShutdownScheduleTimeoutsToTerraform(this._timeouts),
     };
   }
 }

@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface NetworkConnectionMonitorConfig extends TerraformMetaArguments {
+export interface NetworkConnectionMonitorConfig extends cdktf.TerraformMetaArguments {
   readonly autoStart?: boolean;
   readonly intervalInSeconds?: number;
   readonly location: string;
@@ -34,15 +33,43 @@ export interface NetworkConnectionMonitorDestination {
   readonly port?: number;
   readonly virtualMachineId?: string;
 }
+
+function networkConnectionMonitorDestinationToTerraform(struct?: NetworkConnectionMonitorDestination): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    address: cdktf.stringToTerraform(struct!.address),
+    port: cdktf.numberToTerraform(struct!.port),
+    virtual_machine_id: cdktf.stringToTerraform(struct!.virtualMachineId),
+  }
+}
+
 export interface NetworkConnectionMonitorEndpointFilterItem {
   readonly address?: string;
   readonly type?: string;
 }
+
+function networkConnectionMonitorEndpointFilterItemToTerraform(struct?: NetworkConnectionMonitorEndpointFilterItem): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    address: cdktf.stringToTerraform(struct!.address),
+    type: cdktf.stringToTerraform(struct!.type),
+  }
+}
+
 export interface NetworkConnectionMonitorEndpointFilter {
   readonly type?: string;
   /** item block */
   readonly item?: NetworkConnectionMonitorEndpointFilterItem[];
 }
+
+function networkConnectionMonitorEndpointFilterToTerraform(struct?: NetworkConnectionMonitorEndpointFilter): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    type: cdktf.stringToTerraform(struct!.type),
+    item: cdktf.listMapper(networkConnectionMonitorEndpointFilterItemToTerraform)(struct!.item),
+  }
+}
+
 export interface NetworkConnectionMonitorEndpoint {
   readonly address?: string;
   readonly name: string;
@@ -50,14 +77,43 @@ export interface NetworkConnectionMonitorEndpoint {
   /** filter block */
   readonly filter?: NetworkConnectionMonitorEndpointFilter[];
 }
+
+function networkConnectionMonitorEndpointToTerraform(struct?: NetworkConnectionMonitorEndpoint): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    address: cdktf.stringToTerraform(struct!.address),
+    name: cdktf.stringToTerraform(struct!.name),
+    virtual_machine_id: cdktf.stringToTerraform(struct!.virtualMachineId),
+    filter: cdktf.listMapper(networkConnectionMonitorEndpointFilterToTerraform)(struct!.filter),
+  }
+}
+
 export interface NetworkConnectionMonitorSource {
   readonly port?: number;
   readonly virtualMachineId?: string;
 }
+
+function networkConnectionMonitorSourceToTerraform(struct?: NetworkConnectionMonitorSource): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    port: cdktf.numberToTerraform(struct!.port),
+    virtual_machine_id: cdktf.stringToTerraform(struct!.virtualMachineId),
+  }
+}
+
 export interface NetworkConnectionMonitorTestConfigurationHttpConfigurationRequestHeader {
   readonly name: string;
   readonly value: string;
 }
+
+function networkConnectionMonitorTestConfigurationHttpConfigurationRequestHeaderToTerraform(struct?: NetworkConnectionMonitorTestConfigurationHttpConfigurationRequestHeader): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    name: cdktf.stringToTerraform(struct!.name),
+    value: cdktf.stringToTerraform(struct!.value),
+  }
+}
+
 export interface NetworkConnectionMonitorTestConfigurationHttpConfiguration {
   readonly method?: string;
   readonly path?: string;
@@ -67,17 +123,56 @@ export interface NetworkConnectionMonitorTestConfigurationHttpConfiguration {
   /** request_header block */
   readonly requestHeader?: NetworkConnectionMonitorTestConfigurationHttpConfigurationRequestHeader[];
 }
+
+function networkConnectionMonitorTestConfigurationHttpConfigurationToTerraform(struct?: NetworkConnectionMonitorTestConfigurationHttpConfiguration): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    method: cdktf.stringToTerraform(struct!.method),
+    path: cdktf.stringToTerraform(struct!.path),
+    port: cdktf.numberToTerraform(struct!.port),
+    prefer_https: cdktf.booleanToTerraform(struct!.preferHttps),
+    valid_status_code_ranges: cdktf.listMapper(cdktf.stringToTerraform)(struct!.validStatusCodeRanges),
+    request_header: cdktf.listMapper(networkConnectionMonitorTestConfigurationHttpConfigurationRequestHeaderToTerraform)(struct!.requestHeader),
+  }
+}
+
 export interface NetworkConnectionMonitorTestConfigurationIcmpConfiguration {
   readonly traceRouteEnabled?: boolean;
 }
+
+function networkConnectionMonitorTestConfigurationIcmpConfigurationToTerraform(struct?: NetworkConnectionMonitorTestConfigurationIcmpConfiguration): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    trace_route_enabled: cdktf.booleanToTerraform(struct!.traceRouteEnabled),
+  }
+}
+
 export interface NetworkConnectionMonitorTestConfigurationSuccessThreshold {
   readonly checksFailedPercent?: number;
   readonly roundTripTimeMs?: number;
 }
+
+function networkConnectionMonitorTestConfigurationSuccessThresholdToTerraform(struct?: NetworkConnectionMonitorTestConfigurationSuccessThreshold): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    checks_failed_percent: cdktf.numberToTerraform(struct!.checksFailedPercent),
+    round_trip_time_ms: cdktf.numberToTerraform(struct!.roundTripTimeMs),
+  }
+}
+
 export interface NetworkConnectionMonitorTestConfigurationTcpConfiguration {
   readonly port: number;
   readonly traceRouteEnabled?: boolean;
 }
+
+function networkConnectionMonitorTestConfigurationTcpConfigurationToTerraform(struct?: NetworkConnectionMonitorTestConfigurationTcpConfiguration): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    port: cdktf.numberToTerraform(struct!.port),
+    trace_route_enabled: cdktf.booleanToTerraform(struct!.traceRouteEnabled),
+  }
+}
+
 export interface NetworkConnectionMonitorTestConfiguration {
   readonly name: string;
   readonly preferredIpVersion?: string;
@@ -92,6 +187,21 @@ export interface NetworkConnectionMonitorTestConfiguration {
   /** tcp_configuration block */
   readonly tcpConfiguration?: NetworkConnectionMonitorTestConfigurationTcpConfiguration[];
 }
+
+function networkConnectionMonitorTestConfigurationToTerraform(struct?: NetworkConnectionMonitorTestConfiguration): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    name: cdktf.stringToTerraform(struct!.name),
+    preferred_ip_version: cdktf.stringToTerraform(struct!.preferredIpVersion),
+    protocol: cdktf.stringToTerraform(struct!.protocol),
+    test_frequency_in_seconds: cdktf.numberToTerraform(struct!.testFrequencyInSeconds),
+    http_configuration: cdktf.listMapper(networkConnectionMonitorTestConfigurationHttpConfigurationToTerraform)(struct!.httpConfiguration),
+    icmp_configuration: cdktf.listMapper(networkConnectionMonitorTestConfigurationIcmpConfigurationToTerraform)(struct!.icmpConfiguration),
+    success_threshold: cdktf.listMapper(networkConnectionMonitorTestConfigurationSuccessThresholdToTerraform)(struct!.successThreshold),
+    tcp_configuration: cdktf.listMapper(networkConnectionMonitorTestConfigurationTcpConfigurationToTerraform)(struct!.tcpConfiguration),
+  }
+}
+
 export interface NetworkConnectionMonitorTestGroup {
   readonly destinationEndpoints: string[];
   readonly enabled?: boolean;
@@ -99,6 +209,18 @@ export interface NetworkConnectionMonitorTestGroup {
   readonly sourceEndpoints: string[];
   readonly testConfigurationNames: string[];
 }
+
+function networkConnectionMonitorTestGroupToTerraform(struct?: NetworkConnectionMonitorTestGroup): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    destination_endpoints: cdktf.listMapper(cdktf.stringToTerraform)(struct!.destinationEndpoints),
+    enabled: cdktf.booleanToTerraform(struct!.enabled),
+    name: cdktf.stringToTerraform(struct!.name),
+    source_endpoints: cdktf.listMapper(cdktf.stringToTerraform)(struct!.sourceEndpoints),
+    test_configuration_names: cdktf.listMapper(cdktf.stringToTerraform)(struct!.testConfigurationNames),
+  }
+}
+
 export interface NetworkConnectionMonitorTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -106,9 +228,20 @@ export interface NetworkConnectionMonitorTimeouts {
   readonly update?: string;
 }
 
+function networkConnectionMonitorTimeoutsToTerraform(struct?: NetworkConnectionMonitorTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class NetworkConnectionMonitor extends TerraformResource {
+export class NetworkConnectionMonitor extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -362,20 +495,20 @@ export class NetworkConnectionMonitor extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      auto_start: this._autoStart,
-      interval_in_seconds: this._intervalInSeconds,
-      location: this._location,
-      name: this._name,
-      network_watcher_id: this._networkWatcherId,
-      notes: this._notes,
-      output_workspace_resource_ids: this._outputWorkspaceResourceIds,
-      tags: this._tags,
-      destination: this._destination,
-      endpoint: this._endpoint,
-      source: this._source,
-      test_configuration: this._testConfiguration,
-      test_group: this._testGroup,
-      timeouts: this._timeouts,
+      auto_start: cdktf.booleanToTerraform(this._autoStart),
+      interval_in_seconds: cdktf.numberToTerraform(this._intervalInSeconds),
+      location: cdktf.stringToTerraform(this._location),
+      name: cdktf.stringToTerraform(this._name),
+      network_watcher_id: cdktf.stringToTerraform(this._networkWatcherId),
+      notes: cdktf.stringToTerraform(this._notes),
+      output_workspace_resource_ids: cdktf.listMapper(cdktf.stringToTerraform)(this._outputWorkspaceResourceIds),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      destination: cdktf.listMapper(networkConnectionMonitorDestinationToTerraform)(this._destination),
+      endpoint: cdktf.listMapper(networkConnectionMonitorEndpointToTerraform)(this._endpoint),
+      source: cdktf.listMapper(networkConnectionMonitorSourceToTerraform)(this._source),
+      test_configuration: cdktf.listMapper(networkConnectionMonitorTestConfigurationToTerraform)(this._testConfiguration),
+      test_group: cdktf.listMapper(networkConnectionMonitorTestGroupToTerraform)(this._testGroup),
+      timeouts: networkConnectionMonitorTimeoutsToTerraform(this._timeouts),
     };
   }
 }

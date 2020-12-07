@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface SiteRecoveryNetworkMappingConfig extends TerraformMetaArguments {
+export interface SiteRecoveryNetworkMappingConfig extends cdktf.TerraformMetaArguments {
   readonly name: string;
   readonly recoveryVaultName: string;
   readonly resourceGroupName: string;
@@ -25,9 +24,20 @@ export interface SiteRecoveryNetworkMappingTimeouts {
   readonly update?: string;
 }
 
+function siteRecoveryNetworkMappingTimeoutsToTerraform(struct?: SiteRecoveryNetworkMappingTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class SiteRecoveryNetworkMapping extends TerraformResource {
+export class SiteRecoveryNetworkMapping extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -176,14 +186,14 @@ export class SiteRecoveryNetworkMapping extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      name: this._name,
-      recovery_vault_name: this._recoveryVaultName,
-      resource_group_name: this._resourceGroupName,
-      source_network_id: this._sourceNetworkId,
-      source_recovery_fabric_name: this._sourceRecoveryFabricName,
-      target_network_id: this._targetNetworkId,
-      target_recovery_fabric_name: this._targetRecoveryFabricName,
-      timeouts: this._timeouts,
+      name: cdktf.stringToTerraform(this._name),
+      recovery_vault_name: cdktf.stringToTerraform(this._recoveryVaultName),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      source_network_id: cdktf.stringToTerraform(this._sourceNetworkId),
+      source_recovery_fabric_name: cdktf.stringToTerraform(this._sourceRecoveryFabricName),
+      target_network_id: cdktf.stringToTerraform(this._targetNetworkId),
+      target_recovery_fabric_name: cdktf.stringToTerraform(this._targetRecoveryFabricName),
+      timeouts: siteRecoveryNetworkMappingTimeoutsToTerraform(this._timeouts),
     };
   }
 }

@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformDataSource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataAzurermTrafficManagerGeographicalLocationConfig extends TerraformMetaArguments {
+export interface DataAzurermTrafficManagerGeographicalLocationConfig extends cdktf.TerraformMetaArguments {
   readonly name: string;
   /** timeouts block */
   readonly timeouts?: DataAzurermTrafficManagerGeographicalLocationTimeouts;
@@ -16,9 +15,17 @@ export interface DataAzurermTrafficManagerGeographicalLocationTimeouts {
   readonly read?: string;
 }
 
+function dataAzurermTrafficManagerGeographicalLocationTimeoutsToTerraform(struct?: DataAzurermTrafficManagerGeographicalLocationTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    read: cdktf.stringToTerraform(struct!.read),
+  }
+}
+
+
 // Resource
 
-export class DataAzurermTrafficManagerGeographicalLocation extends TerraformDataSource {
+export class DataAzurermTrafficManagerGeographicalLocation extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
@@ -83,8 +90,8 @@ export class DataAzurermTrafficManagerGeographicalLocation extends TerraformData
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      name: this._name,
-      timeouts: this._timeouts,
+      name: cdktf.stringToTerraform(this._name),
+      timeouts: dataAzurermTrafficManagerGeographicalLocationTimeoutsToTerraform(this._timeouts),
     };
   }
 }

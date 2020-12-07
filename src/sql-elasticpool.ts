@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface SqlElasticpoolConfig extends TerraformMetaArguments {
+export interface SqlElasticpoolConfig extends cdktf.TerraformMetaArguments {
   readonly dbDtuMax?: number;
   readonly dbDtuMin?: number;
   readonly dtu: number;
@@ -28,9 +27,20 @@ export interface SqlElasticpoolTimeouts {
   readonly update?: string;
 }
 
+function sqlElasticpoolTimeoutsToTerraform(struct?: SqlElasticpoolTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class SqlElasticpool extends TerraformResource {
+export class SqlElasticpool extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -238,17 +248,17 @@ export class SqlElasticpool extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      db_dtu_max: this._dbDtuMax,
-      db_dtu_min: this._dbDtuMin,
-      dtu: this._dtu,
-      edition: this._edition,
-      location: this._location,
-      name: this._name,
-      pool_size: this._poolSize,
-      resource_group_name: this._resourceGroupName,
-      server_name: this._serverName,
-      tags: this._tags,
-      timeouts: this._timeouts,
+      db_dtu_max: cdktf.numberToTerraform(this._dbDtuMax),
+      db_dtu_min: cdktf.numberToTerraform(this._dbDtuMin),
+      dtu: cdktf.numberToTerraform(this._dtu),
+      edition: cdktf.stringToTerraform(this._edition),
+      location: cdktf.stringToTerraform(this._location),
+      name: cdktf.stringToTerraform(this._name),
+      pool_size: cdktf.numberToTerraform(this._poolSize),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      server_name: cdktf.stringToTerraform(this._serverName),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      timeouts: sqlElasticpoolTimeoutsToTerraform(this._timeouts),
     };
   }
 }

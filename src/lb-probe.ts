@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface LbProbeConfig extends TerraformMetaArguments {
+export interface LbProbeConfig extends cdktf.TerraformMetaArguments {
   readonly intervalInSeconds?: number;
   readonly loadbalancerId: string;
   readonly name: string;
@@ -26,9 +25,20 @@ export interface LbProbeTimeouts {
   readonly update?: string;
 }
 
+function lbProbeTimeoutsToTerraform(struct?: LbProbeTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class LbProbe extends TerraformResource {
+export class LbProbe extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -208,15 +218,15 @@ export class LbProbe extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      interval_in_seconds: this._intervalInSeconds,
-      loadbalancer_id: this._loadbalancerId,
-      name: this._name,
-      number_of_probes: this._numberOfProbes,
-      port: this._port,
-      protocol: this._protocol,
-      request_path: this._requestPath,
-      resource_group_name: this._resourceGroupName,
-      timeouts: this._timeouts,
+      interval_in_seconds: cdktf.numberToTerraform(this._intervalInSeconds),
+      loadbalancer_id: cdktf.stringToTerraform(this._loadbalancerId),
+      name: cdktf.stringToTerraform(this._name),
+      number_of_probes: cdktf.numberToTerraform(this._numberOfProbes),
+      port: cdktf.numberToTerraform(this._port),
+      protocol: cdktf.stringToTerraform(this._protocol),
+      request_path: cdktf.stringToTerraform(this._requestPath),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      timeouts: lbProbeTimeoutsToTerraform(this._timeouts),
     };
   }
 }

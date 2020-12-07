@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataFactoryIntegrationRuntimeManagedConfig extends TerraformMetaArguments {
+export interface DataFactoryIntegrationRuntimeManagedConfig extends cdktf.TerraformMetaArguments {
   readonly dataFactoryName: string;
   readonly description?: string;
   readonly edition?: string;
@@ -33,24 +32,64 @@ export interface DataFactoryIntegrationRuntimeManagedCatalogInfo {
   readonly pricingTier?: string;
   readonly serverEndpoint: string;
 }
+
+function dataFactoryIntegrationRuntimeManagedCatalogInfoToTerraform(struct?: DataFactoryIntegrationRuntimeManagedCatalogInfo): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    administrator_login: cdktf.stringToTerraform(struct!.administratorLogin),
+    administrator_password: cdktf.stringToTerraform(struct!.administratorPassword),
+    pricing_tier: cdktf.stringToTerraform(struct!.pricingTier),
+    server_endpoint: cdktf.stringToTerraform(struct!.serverEndpoint),
+  }
+}
+
 export interface DataFactoryIntegrationRuntimeManagedCustomSetupScript {
   readonly blobContainerUri: string;
   readonly sasToken: string;
 }
+
+function dataFactoryIntegrationRuntimeManagedCustomSetupScriptToTerraform(struct?: DataFactoryIntegrationRuntimeManagedCustomSetupScript): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    blob_container_uri: cdktf.stringToTerraform(struct!.blobContainerUri),
+    sas_token: cdktf.stringToTerraform(struct!.sasToken),
+  }
+}
+
 export interface DataFactoryIntegrationRuntimeManagedTimeouts {
   readonly create?: string;
   readonly delete?: string;
   readonly read?: string;
   readonly update?: string;
 }
+
+function dataFactoryIntegrationRuntimeManagedTimeoutsToTerraform(struct?: DataFactoryIntegrationRuntimeManagedTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
 export interface DataFactoryIntegrationRuntimeManagedVnetIntegration {
   readonly subnetName: string;
   readonly vnetId: string;
 }
 
+function dataFactoryIntegrationRuntimeManagedVnetIntegrationToTerraform(struct?: DataFactoryIntegrationRuntimeManagedVnetIntegration): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    subnet_name: cdktf.stringToTerraform(struct!.subnetName),
+    vnet_id: cdktf.stringToTerraform(struct!.vnetId),
+  }
+}
+
+
 // Resource
 
-export class DataFactoryIntegrationRuntimeManaged extends TerraformResource {
+export class DataFactoryIntegrationRuntimeManaged extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -307,20 +346,20 @@ export class DataFactoryIntegrationRuntimeManaged extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      data_factory_name: this._dataFactoryName,
-      description: this._description,
-      edition: this._edition,
-      license_type: this._licenseType,
-      location: this._location,
-      max_parallel_executions_per_node: this._maxParallelExecutionsPerNode,
-      name: this._name,
-      node_size: this._nodeSize,
-      number_of_nodes: this._numberOfNodes,
-      resource_group_name: this._resourceGroupName,
-      catalog_info: this._catalogInfo,
-      custom_setup_script: this._customSetupScript,
-      timeouts: this._timeouts,
-      vnet_integration: this._vnetIntegration,
+      data_factory_name: cdktf.stringToTerraform(this._dataFactoryName),
+      description: cdktf.stringToTerraform(this._description),
+      edition: cdktf.stringToTerraform(this._edition),
+      license_type: cdktf.stringToTerraform(this._licenseType),
+      location: cdktf.stringToTerraform(this._location),
+      max_parallel_executions_per_node: cdktf.numberToTerraform(this._maxParallelExecutionsPerNode),
+      name: cdktf.stringToTerraform(this._name),
+      node_size: cdktf.stringToTerraform(this._nodeSize),
+      number_of_nodes: cdktf.numberToTerraform(this._numberOfNodes),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      catalog_info: cdktf.listMapper(dataFactoryIntegrationRuntimeManagedCatalogInfoToTerraform)(this._catalogInfo),
+      custom_setup_script: cdktf.listMapper(dataFactoryIntegrationRuntimeManagedCustomSetupScriptToTerraform)(this._customSetupScript),
+      timeouts: dataFactoryIntegrationRuntimeManagedTimeoutsToTerraform(this._timeouts),
+      vnet_integration: cdktf.listMapper(dataFactoryIntegrationRuntimeManagedVnetIntegrationToTerraform)(this._vnetIntegration),
     };
   }
 }

@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface LogAnalyticsDatasourceWindowsPerformanceCounterConfig extends TerraformMetaArguments {
+export interface LogAnalyticsDatasourceWindowsPerformanceCounterConfig extends cdktf.TerraformMetaArguments {
   readonly counterName: string;
   readonly instanceName: string;
   readonly intervalSeconds: number;
@@ -25,9 +24,20 @@ export interface LogAnalyticsDatasourceWindowsPerformanceCounterTimeouts {
   readonly update?: string;
 }
 
+function logAnalyticsDatasourceWindowsPerformanceCounterTimeoutsToTerraform(struct?: LogAnalyticsDatasourceWindowsPerformanceCounterTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class LogAnalyticsDatasourceWindowsPerformanceCounter extends TerraformResource {
+export class LogAnalyticsDatasourceWindowsPerformanceCounter extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -176,14 +186,14 @@ export class LogAnalyticsDatasourceWindowsPerformanceCounter extends TerraformRe
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      counter_name: this._counterName,
-      instance_name: this._instanceName,
-      interval_seconds: this._intervalSeconds,
-      name: this._name,
-      object_name: this._objectName,
-      resource_group_name: this._resourceGroupName,
-      workspace_name: this._workspaceName,
-      timeouts: this._timeouts,
+      counter_name: cdktf.stringToTerraform(this._counterName),
+      instance_name: cdktf.stringToTerraform(this._instanceName),
+      interval_seconds: cdktf.numberToTerraform(this._intervalSeconds),
+      name: cdktf.stringToTerraform(this._name),
+      object_name: cdktf.stringToTerraform(this._objectName),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      workspace_name: cdktf.stringToTerraform(this._workspaceName),
+      timeouts: logAnalyticsDatasourceWindowsPerformanceCounterTimeoutsToTerraform(this._timeouts),
     };
   }
 }

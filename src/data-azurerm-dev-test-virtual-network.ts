@@ -2,20 +2,18 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformDataSource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
-import { ComplexComputedList } from "cdktf";
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataAzurermDevTestVirtualNetworkConfig extends TerraformMetaArguments {
+export interface DataAzurermDevTestVirtualNetworkConfig extends cdktf.TerraformMetaArguments {
   readonly labName: string;
   readonly name: string;
   readonly resourceGroupName: string;
   /** timeouts block */
   readonly timeouts?: DataAzurermDevTestVirtualNetworkTimeouts;
 }
-export class DataAzurermDevTestVirtualNetworkAllowedSubnets extends ComplexComputedList {
+export class DataAzurermDevTestVirtualNetworkAllowedSubnets extends cdktf.ComplexComputedList {
 
   // allow_public_ip - computed: true, optional: false, required: false
   public get allowPublicIp() {
@@ -32,7 +30,7 @@ export class DataAzurermDevTestVirtualNetworkAllowedSubnets extends ComplexCompu
     return this.getStringAttribute('resource_id');
   }
 }
-export class DataAzurermDevTestVirtualNetworkSubnetOverrides extends ComplexComputedList {
+export class DataAzurermDevTestVirtualNetworkSubnetOverrides extends cdktf.ComplexComputedList {
 
   // lab_subnet_name - computed: true, optional: false, required: false
   public get labSubnetName() {
@@ -63,9 +61,17 @@ export interface DataAzurermDevTestVirtualNetworkTimeouts {
   readonly read?: string;
 }
 
+function dataAzurermDevTestVirtualNetworkTimeoutsToTerraform(struct?: DataAzurermDevTestVirtualNetworkTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    read: cdktf.stringToTerraform(struct!.read),
+  }
+}
+
+
 // Resource
 
-export class DataAzurermDevTestVirtualNetwork extends TerraformDataSource {
+export class DataAzurermDevTestVirtualNetwork extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
@@ -173,10 +179,10 @@ export class DataAzurermDevTestVirtualNetwork extends TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      lab_name: this._labName,
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      timeouts: this._timeouts,
+      lab_name: cdktf.stringToTerraform(this._labName),
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      timeouts: dataAzurermDevTestVirtualNetworkTimeoutsToTerraform(this._timeouts),
     };
   }
 }

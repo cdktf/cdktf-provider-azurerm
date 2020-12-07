@@ -2,7 +2,7 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformProvider } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
@@ -51,19 +51,61 @@ export interface AzurermProviderFeaturesKeyVault {
   readonly purgeSoftDeleteOnDestroy?: boolean;
   readonly recoverSoftDeletedKeyVaults?: boolean;
 }
+
+function azurermProviderFeaturesKeyVaultToTerraform(struct?: AzurermProviderFeaturesKeyVault): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    purge_soft_delete_on_destroy: cdktf.booleanToTerraform(struct!.purgeSoftDeleteOnDestroy),
+    recover_soft_deleted_key_vaults: cdktf.booleanToTerraform(struct!.recoverSoftDeletedKeyVaults),
+  }
+}
+
 export interface AzurermProviderFeaturesNetwork {
   readonly relaxedLocking: boolean;
 }
+
+function azurermProviderFeaturesNetworkToTerraform(struct?: AzurermProviderFeaturesNetwork): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    relaxed_locking: cdktf.booleanToTerraform(struct!.relaxedLocking),
+  }
+}
+
 export interface AzurermProviderFeaturesTemplateDeployment {
   readonly deleteNestedItemsDuringDeletion: boolean;
 }
+
+function azurermProviderFeaturesTemplateDeploymentToTerraform(struct?: AzurermProviderFeaturesTemplateDeployment): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    delete_nested_items_during_deletion: cdktf.booleanToTerraform(struct!.deleteNestedItemsDuringDeletion),
+  }
+}
+
 export interface AzurermProviderFeaturesVirtualMachine {
   readonly deleteOsDiskOnDeletion?: boolean;
   readonly gracefulShutdown?: boolean;
 }
+
+function azurermProviderFeaturesVirtualMachineToTerraform(struct?: AzurermProviderFeaturesVirtualMachine): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    delete_os_disk_on_deletion: cdktf.booleanToTerraform(struct!.deleteOsDiskOnDeletion),
+    graceful_shutdown: cdktf.booleanToTerraform(struct!.gracefulShutdown),
+  }
+}
+
 export interface AzurermProviderFeaturesVirtualMachineScaleSet {
   readonly rollInstancesWhenRequired: boolean;
 }
+
+function azurermProviderFeaturesVirtualMachineScaleSetToTerraform(struct?: AzurermProviderFeaturesVirtualMachineScaleSet): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    roll_instances_when_required: cdktf.booleanToTerraform(struct!.rollInstancesWhenRequired),
+  }
+}
+
 export interface AzurermProviderFeatures {
   /** key_vault block */
   readonly keyVault?: AzurermProviderFeaturesKeyVault[];
@@ -77,9 +119,21 @@ export interface AzurermProviderFeatures {
   readonly virtualMachineScaleSet?: AzurermProviderFeaturesVirtualMachineScaleSet[];
 }
 
+function azurermProviderFeaturesToTerraform(struct?: AzurermProviderFeatures): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    key_vault: cdktf.listMapper(azurermProviderFeaturesKeyVaultToTerraform)(struct!.keyVault),
+    network: cdktf.listMapper(azurermProviderFeaturesNetworkToTerraform)(struct!.network),
+    template_deployment: cdktf.listMapper(azurermProviderFeaturesTemplateDeploymentToTerraform)(struct!.templateDeployment),
+    virtual_machine: cdktf.listMapper(azurermProviderFeaturesVirtualMachineToTerraform)(struct!.virtualMachine),
+    virtual_machine_scale_set: cdktf.listMapper(azurermProviderFeaturesVirtualMachineScaleSetToTerraform)(struct!.virtualMachineScaleSet),
+  }
+}
+
+
 // Resource
 
-export class AzurermProvider extends TerraformProvider {
+export class AzurermProvider extends cdktf.TerraformProvider {
 
   // ===========
   // INITIALIZER
@@ -443,26 +497,26 @@ export class AzurermProvider extends TerraformProvider {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      auxiliary_tenant_ids: this._auxiliaryTenantIds,
-      client_certificate_password: this._clientCertificatePassword,
-      client_certificate_path: this._clientCertificatePath,
-      client_id: this._clientId,
-      client_secret: this._clientSecret,
-      disable_correlation_request_id: this._disableCorrelationRequestId,
-      disable_terraform_partner_id: this._disableTerraformPartnerId,
-      environment: this._environment,
-      metadata_host: this._metadataHost,
-      metadata_url: this._metadataUrl,
-      msi_endpoint: this._msiEndpoint,
-      partner_id: this._partnerId,
-      skip_credentials_validation: this._skipCredentialsValidation,
-      skip_provider_registration: this._skipProviderRegistration,
-      storage_use_azuread: this._storageUseAzuread,
-      subscription_id: this._subscriptionId,
-      tenant_id: this._tenantId,
-      use_msi: this._useMsi,
-      alias: this._alias,
-      features: this._features,
+      auxiliary_tenant_ids: cdktf.listMapper(cdktf.stringToTerraform)(this._auxiliaryTenantIds),
+      client_certificate_password: cdktf.stringToTerraform(this._clientCertificatePassword),
+      client_certificate_path: cdktf.stringToTerraform(this._clientCertificatePath),
+      client_id: cdktf.stringToTerraform(this._clientId),
+      client_secret: cdktf.stringToTerraform(this._clientSecret),
+      disable_correlation_request_id: cdktf.booleanToTerraform(this._disableCorrelationRequestId),
+      disable_terraform_partner_id: cdktf.booleanToTerraform(this._disableTerraformPartnerId),
+      environment: cdktf.stringToTerraform(this._environment),
+      metadata_host: cdktf.stringToTerraform(this._metadataHost),
+      metadata_url: cdktf.stringToTerraform(this._metadataUrl),
+      msi_endpoint: cdktf.stringToTerraform(this._msiEndpoint),
+      partner_id: cdktf.stringToTerraform(this._partnerId),
+      skip_credentials_validation: cdktf.booleanToTerraform(this._skipCredentialsValidation),
+      skip_provider_registration: cdktf.booleanToTerraform(this._skipProviderRegistration),
+      storage_use_azuread: cdktf.booleanToTerraform(this._storageUseAzuread),
+      subscription_id: cdktf.stringToTerraform(this._subscriptionId),
+      tenant_id: cdktf.stringToTerraform(this._tenantId),
+      use_msi: cdktf.booleanToTerraform(this._useMsi),
+      alias: cdktf.stringToTerraform(this._alias),
+      features: cdktf.listMapper(azurermProviderFeaturesToTerraform)(this._features),
     };
   }
 }

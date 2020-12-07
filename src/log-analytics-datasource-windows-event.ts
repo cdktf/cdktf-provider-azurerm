@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface LogAnalyticsDatasourceWindowsEventConfig extends TerraformMetaArguments {
+export interface LogAnalyticsDatasourceWindowsEventConfig extends cdktf.TerraformMetaArguments {
   readonly eventLogName: string;
   readonly eventTypes: string[];
   readonly name: string;
@@ -23,9 +22,20 @@ export interface LogAnalyticsDatasourceWindowsEventTimeouts {
   readonly update?: string;
 }
 
+function logAnalyticsDatasourceWindowsEventTimeoutsToTerraform(struct?: LogAnalyticsDatasourceWindowsEventTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class LogAnalyticsDatasourceWindowsEvent extends TerraformResource {
+export class LogAnalyticsDatasourceWindowsEvent extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -146,12 +156,12 @@ export class LogAnalyticsDatasourceWindowsEvent extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      event_log_name: this._eventLogName,
-      event_types: this._eventTypes,
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      workspace_name: this._workspaceName,
-      timeouts: this._timeouts,
+      event_log_name: cdktf.stringToTerraform(this._eventLogName),
+      event_types: cdktf.listMapper(cdktf.stringToTerraform)(this._eventTypes),
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      workspace_name: cdktf.stringToTerraform(this._workspaceName),
+      timeouts: logAnalyticsDatasourceWindowsEventTimeoutsToTerraform(this._timeouts),
     };
   }
 }

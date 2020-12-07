@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface FirewallPolicyConfig extends TerraformMetaArguments {
+export interface FirewallPolicyConfig extends cdktf.TerraformMetaArguments {
   readonly basePolicyId?: string;
   readonly location: string;
   readonly name: string;
@@ -26,10 +25,29 @@ export interface FirewallPolicyDns {
   readonly proxyEnabled?: boolean;
   readonly servers?: string[];
 }
+
+function firewallPolicyDnsToTerraform(struct?: FirewallPolicyDns): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    network_rule_fqdn_enabled: cdktf.booleanToTerraform(struct!.networkRuleFqdnEnabled),
+    proxy_enabled: cdktf.booleanToTerraform(struct!.proxyEnabled),
+    servers: cdktf.listMapper(cdktf.stringToTerraform)(struct!.servers),
+  }
+}
+
 export interface FirewallPolicyThreatIntelligenceAllowlist {
   readonly fqdns?: string[];
   readonly ipAddresses?: string[];
 }
+
+function firewallPolicyThreatIntelligenceAllowlistToTerraform(struct?: FirewallPolicyThreatIntelligenceAllowlist): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    fqdns: cdktf.listMapper(cdktf.stringToTerraform)(struct!.fqdns),
+    ip_addresses: cdktf.listMapper(cdktf.stringToTerraform)(struct!.ipAddresses),
+  }
+}
+
 export interface FirewallPolicyTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -37,9 +55,20 @@ export interface FirewallPolicyTimeouts {
   readonly update?: string;
 }
 
+function firewallPolicyTimeoutsToTerraform(struct?: FirewallPolicyTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class FirewallPolicy extends TerraformResource {
+export class FirewallPolicy extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -232,15 +261,15 @@ export class FirewallPolicy extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      base_policy_id: this._basePolicyId,
-      location: this._location,
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      tags: this._tags,
-      threat_intelligence_mode: this._threatIntelligenceMode,
-      dns: this._dns,
-      threat_intelligence_allowlist: this._threatIntelligenceAllowlist,
-      timeouts: this._timeouts,
+      base_policy_id: cdktf.stringToTerraform(this._basePolicyId),
+      location: cdktf.stringToTerraform(this._location),
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      threat_intelligence_mode: cdktf.stringToTerraform(this._threatIntelligenceMode),
+      dns: cdktf.listMapper(firewallPolicyDnsToTerraform)(this._dns),
+      threat_intelligence_allowlist: cdktf.listMapper(firewallPolicyThreatIntelligenceAllowlistToTerraform)(this._threatIntelligenceAllowlist),
+      timeouts: firewallPolicyTimeoutsToTerraform(this._timeouts),
     };
   }
 }

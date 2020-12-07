@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface AppServiceEnvironmentConfig extends TerraformMetaArguments {
+export interface AppServiceEnvironmentConfig extends cdktf.TerraformMetaArguments {
   readonly allowedUserIpCidrs?: string[];
   readonly frontEndScaleFactor?: number;
   readonly internalLoadBalancingMode?: string;
@@ -27,9 +26,20 @@ export interface AppServiceEnvironmentTimeouts {
   readonly update?: string;
 }
 
+function appServiceEnvironmentTimeoutsToTerraform(struct?: AppServiceEnvironmentTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class AppServiceEnvironment extends TerraformResource {
+export class AppServiceEnvironment extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -232,16 +242,16 @@ export class AppServiceEnvironment extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      allowed_user_ip_cidrs: this._allowedUserIpCidrs,
-      front_end_scale_factor: this._frontEndScaleFactor,
-      internal_load_balancing_mode: this._internalLoadBalancingMode,
-      name: this._name,
-      pricing_tier: this._pricingTier,
-      resource_group_name: this._resourceGroupName,
-      subnet_id: this._subnetId,
-      tags: this._tags,
-      user_whitelisted_ip_ranges: this._userWhitelistedIpRanges,
-      timeouts: this._timeouts,
+      allowed_user_ip_cidrs: cdktf.listMapper(cdktf.stringToTerraform)(this._allowedUserIpCidrs),
+      front_end_scale_factor: cdktf.numberToTerraform(this._frontEndScaleFactor),
+      internal_load_balancing_mode: cdktf.stringToTerraform(this._internalLoadBalancingMode),
+      name: cdktf.stringToTerraform(this._name),
+      pricing_tier: cdktf.stringToTerraform(this._pricingTier),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      subnet_id: cdktf.stringToTerraform(this._subnetId),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      user_whitelisted_ip_ranges: cdktf.listMapper(cdktf.stringToTerraform)(this._userWhitelistedIpRanges),
+      timeouts: appServiceEnvironmentTimeoutsToTerraform(this._timeouts),
     };
   }
 }

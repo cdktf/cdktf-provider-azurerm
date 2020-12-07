@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataFactoryLinkedServiceAzureFileStorageConfig extends TerraformMetaArguments {
+export interface DataFactoryLinkedServiceAzureFileStorageConfig extends cdktf.TerraformMetaArguments {
   readonly additionalProperties?: { [key: string]: string };
   readonly annotations?: string[];
   readonly connectionString: string;
@@ -30,9 +29,20 @@ export interface DataFactoryLinkedServiceAzureFileStorageTimeouts {
   readonly update?: string;
 }
 
+function dataFactoryLinkedServiceAzureFileStorageTimeoutsToTerraform(struct?: DataFactoryLinkedServiceAzureFileStorageTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class DataFactoryLinkedServiceAzureFileStorage extends TerraformResource {
+export class DataFactoryLinkedServiceAzureFileStorage extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -275,19 +285,19 @@ export class DataFactoryLinkedServiceAzureFileStorage extends TerraformResource 
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      additional_properties: this._additionalProperties,
-      annotations: this._annotations,
-      connection_string: this._connectionString,
-      data_factory_name: this._dataFactoryName,
-      description: this._description,
-      host: this._host,
-      integration_runtime_name: this._integrationRuntimeName,
-      name: this._name,
-      parameters: this._parameters,
-      password: this._password,
-      resource_group_name: this._resourceGroupName,
-      user_id: this._userId,
-      timeouts: this._timeouts,
+      additional_properties: cdktf.hashMapper(cdktf.anyToTerraform)(this._additionalProperties),
+      annotations: cdktf.listMapper(cdktf.stringToTerraform)(this._annotations),
+      connection_string: cdktf.stringToTerraform(this._connectionString),
+      data_factory_name: cdktf.stringToTerraform(this._dataFactoryName),
+      description: cdktf.stringToTerraform(this._description),
+      host: cdktf.stringToTerraform(this._host),
+      integration_runtime_name: cdktf.stringToTerraform(this._integrationRuntimeName),
+      name: cdktf.stringToTerraform(this._name),
+      parameters: cdktf.hashMapper(cdktf.anyToTerraform)(this._parameters),
+      password: cdktf.stringToTerraform(this._password),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      user_id: cdktf.stringToTerraform(this._userId),
+      timeouts: dataFactoryLinkedServiceAzureFileStorageTimeoutsToTerraform(this._timeouts),
     };
   }
 }

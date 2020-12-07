@@ -2,13 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
-import { ComplexComputedList } from "cdktf";
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface AppServiceCertificateOrderConfig extends TerraformMetaArguments {
+export interface AppServiceCertificateOrderConfig extends cdktf.TerraformMetaArguments {
   readonly autoRenew?: boolean;
   readonly csr?: string;
   readonly distinguishedName?: string;
@@ -22,7 +20,7 @@ export interface AppServiceCertificateOrderConfig extends TerraformMetaArguments
   /** timeouts block */
   readonly timeouts?: AppServiceCertificateOrderTimeouts;
 }
-export class AppServiceCertificateOrderCertificates extends ComplexComputedList {
+export class AppServiceCertificateOrderCertificates extends cdktf.ComplexComputedList {
 
   // certificate_name - computed: true, optional: false, required: false
   public get certificateName() {
@@ -51,9 +49,20 @@ export interface AppServiceCertificateOrderTimeouts {
   readonly update?: string;
 }
 
+function appServiceCertificateOrderTimeoutsToTerraform(struct?: AppServiceCertificateOrderTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class AppServiceCertificateOrder extends TerraformResource {
+export class AppServiceCertificateOrder extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -310,17 +319,17 @@ export class AppServiceCertificateOrder extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      auto_renew: this._autoRenew,
-      csr: this._csr,
-      distinguished_name: this._distinguishedName,
-      key_size: this._keySize,
-      location: this._location,
-      name: this._name,
-      product_type: this._productType,
-      resource_group_name: this._resourceGroupName,
-      tags: this._tags,
-      validity_in_years: this._validityInYears,
-      timeouts: this._timeouts,
+      auto_renew: cdktf.booleanToTerraform(this._autoRenew),
+      csr: cdktf.stringToTerraform(this._csr),
+      distinguished_name: cdktf.stringToTerraform(this._distinguishedName),
+      key_size: cdktf.numberToTerraform(this._keySize),
+      location: cdktf.stringToTerraform(this._location),
+      name: cdktf.stringToTerraform(this._name),
+      product_type: cdktf.stringToTerraform(this._productType),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      validity_in_years: cdktf.numberToTerraform(this._validityInYears),
+      timeouts: appServiceCertificateOrderTimeoutsToTerraform(this._timeouts),
     };
   }
 }

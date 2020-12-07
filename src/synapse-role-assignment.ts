@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface SynapseRoleAssignmentConfig extends TerraformMetaArguments {
+export interface SynapseRoleAssignmentConfig extends cdktf.TerraformMetaArguments {
   readonly principalId: string;
   readonly roleName: string;
   readonly synapseWorkspaceId: string;
@@ -20,9 +19,19 @@ export interface SynapseRoleAssignmentTimeouts {
   readonly read?: string;
 }
 
+function synapseRoleAssignmentTimeoutsToTerraform(struct?: SynapseRoleAssignmentTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+  }
+}
+
+
 // Resource
 
-export class SynapseRoleAssignment extends TerraformResource {
+export class SynapseRoleAssignment extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -115,10 +124,10 @@ export class SynapseRoleAssignment extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      principal_id: this._principalId,
-      role_name: this._roleName,
-      synapse_workspace_id: this._synapseWorkspaceId,
-      timeouts: this._timeouts,
+      principal_id: cdktf.stringToTerraform(this._principalId),
+      role_name: cdktf.stringToTerraform(this._roleName),
+      synapse_workspace_id: cdktf.stringToTerraform(this._synapseWorkspaceId),
+      timeouts: synapseRoleAssignmentTimeoutsToTerraform(this._timeouts),
     };
   }
 }

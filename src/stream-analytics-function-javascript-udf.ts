@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface StreamAnalyticsFunctionJavascriptUdfConfig extends TerraformMetaArguments {
+export interface StreamAnalyticsFunctionJavascriptUdfConfig extends cdktf.TerraformMetaArguments {
   readonly name: string;
   readonly resourceGroupName: string;
   readonly script: string;
@@ -22,9 +21,25 @@ export interface StreamAnalyticsFunctionJavascriptUdfConfig extends TerraformMet
 export interface StreamAnalyticsFunctionJavascriptUdfInput {
   readonly type: string;
 }
+
+function streamAnalyticsFunctionJavascriptUdfInputToTerraform(struct?: StreamAnalyticsFunctionJavascriptUdfInput): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    type: cdktf.stringToTerraform(struct!.type),
+  }
+}
+
 export interface StreamAnalyticsFunctionJavascriptUdfOutput {
   readonly type: string;
 }
+
+function streamAnalyticsFunctionJavascriptUdfOutputToTerraform(struct?: StreamAnalyticsFunctionJavascriptUdfOutput): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    type: cdktf.stringToTerraform(struct!.type),
+  }
+}
+
 export interface StreamAnalyticsFunctionJavascriptUdfTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -32,9 +47,20 @@ export interface StreamAnalyticsFunctionJavascriptUdfTimeouts {
   readonly update?: string;
 }
 
+function streamAnalyticsFunctionJavascriptUdfTimeoutsToTerraform(struct?: StreamAnalyticsFunctionJavascriptUdfTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class StreamAnalyticsFunctionJavascriptUdf extends TerraformResource {
+export class StreamAnalyticsFunctionJavascriptUdf extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -169,13 +195,13 @@ export class StreamAnalyticsFunctionJavascriptUdf extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      script: this._script,
-      stream_analytics_job_name: this._streamAnalyticsJobName,
-      input: this._input,
-      output: this._output,
-      timeouts: this._timeouts,
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      script: cdktf.stringToTerraform(this._script),
+      stream_analytics_job_name: cdktf.stringToTerraform(this._streamAnalyticsJobName),
+      input: cdktf.listMapper(streamAnalyticsFunctionJavascriptUdfInputToTerraform)(this._input),
+      output: cdktf.listMapper(streamAnalyticsFunctionJavascriptUdfOutputToTerraform)(this._output),
+      timeouts: streamAnalyticsFunctionJavascriptUdfTimeoutsToTerraform(this._timeouts),
     };
   }
 }

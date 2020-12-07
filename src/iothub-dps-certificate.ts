@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface IothubDpsCertificateConfig extends TerraformMetaArguments {
+export interface IothubDpsCertificateConfig extends cdktf.TerraformMetaArguments {
   readonly certificateContent: string;
   readonly iotDpsName: string;
   readonly name: string;
@@ -22,9 +21,20 @@ export interface IothubDpsCertificateTimeouts {
   readonly update?: string;
 }
 
+function iothubDpsCertificateTimeoutsToTerraform(struct?: IothubDpsCertificateTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class IothubDpsCertificate extends TerraformResource {
+export class IothubDpsCertificate extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -131,11 +141,11 @@ export class IothubDpsCertificate extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      certificate_content: this._certificateContent,
-      iot_dps_name: this._iotDpsName,
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      timeouts: this._timeouts,
+      certificate_content: cdktf.stringToTerraform(this._certificateContent),
+      iot_dps_name: cdktf.stringToTerraform(this._iotDpsName),
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      timeouts: iothubDpsCertificateTimeoutsToTerraform(this._timeouts),
     };
   }
 }

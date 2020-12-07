@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface MonitorScheduledQueryRulesLogConfig extends TerraformMetaArguments {
+export interface MonitorScheduledQueryRulesLogConfig extends cdktf.TerraformMetaArguments {
   readonly authorizedResourceIds?: string[];
   readonly dataSourceId: string;
   readonly description?: string;
@@ -26,11 +25,30 @@ export interface MonitorScheduledQueryRulesLogCriteriaDimension {
   readonly operator?: string;
   readonly values: string[];
 }
+
+function monitorScheduledQueryRulesLogCriteriaDimensionToTerraform(struct?: MonitorScheduledQueryRulesLogCriteriaDimension): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    name: cdktf.stringToTerraform(struct!.name),
+    operator: cdktf.stringToTerraform(struct!.operator),
+    values: cdktf.listMapper(cdktf.stringToTerraform)(struct!.values),
+  }
+}
+
 export interface MonitorScheduledQueryRulesLogCriteria {
   readonly metricName: string;
   /** dimension block */
   readonly dimension: MonitorScheduledQueryRulesLogCriteriaDimension[];
 }
+
+function monitorScheduledQueryRulesLogCriteriaToTerraform(struct?: MonitorScheduledQueryRulesLogCriteria): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    metric_name: cdktf.stringToTerraform(struct!.metricName),
+    dimension: cdktf.listMapper(monitorScheduledQueryRulesLogCriteriaDimensionToTerraform)(struct!.dimension),
+  }
+}
+
 export interface MonitorScheduledQueryRulesLogTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -38,9 +56,20 @@ export interface MonitorScheduledQueryRulesLogTimeouts {
   readonly update?: string;
 }
 
+function monitorScheduledQueryRulesLogTimeoutsToTerraform(struct?: MonitorScheduledQueryRulesLogTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class MonitorScheduledQueryRulesLog extends TerraformResource {
+export class MonitorScheduledQueryRulesLog extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -229,16 +258,16 @@ export class MonitorScheduledQueryRulesLog extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      authorized_resource_ids: this._authorizedResourceIds,
-      data_source_id: this._dataSourceId,
-      description: this._description,
-      enabled: this._enabled,
-      location: this._location,
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      tags: this._tags,
-      criteria: this._criteria,
-      timeouts: this._timeouts,
+      authorized_resource_ids: cdktf.listMapper(cdktf.stringToTerraform)(this._authorizedResourceIds),
+      data_source_id: cdktf.stringToTerraform(this._dataSourceId),
+      description: cdktf.stringToTerraform(this._description),
+      enabled: cdktf.booleanToTerraform(this._enabled),
+      location: cdktf.stringToTerraform(this._location),
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      criteria: cdktf.listMapper(monitorScheduledQueryRulesLogCriteriaToTerraform)(this._criteria),
+      timeouts: monitorScheduledQueryRulesLogTimeoutsToTerraform(this._timeouts),
     };
   }
 }

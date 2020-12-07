@@ -2,20 +2,17 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformDataSource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
-import { ComplexComputedList } from "cdktf";
-import { StringMap } from "cdktf";
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataAzurermAppConfigurationConfig extends TerraformMetaArguments {
+export interface DataAzurermAppConfigurationConfig extends cdktf.TerraformMetaArguments {
   readonly name: string;
   readonly resourceGroupName: string;
   /** timeouts block */
   readonly timeouts?: DataAzurermAppConfigurationTimeouts;
 }
-export class DataAzurermAppConfigurationPrimaryReadKey extends ComplexComputedList {
+export class DataAzurermAppConfigurationPrimaryReadKey extends cdktf.ComplexComputedList {
 
   // connection_string - computed: true, optional: false, required: false
   public get connectionString() {
@@ -32,7 +29,7 @@ export class DataAzurermAppConfigurationPrimaryReadKey extends ComplexComputedLi
     return this.getStringAttribute('secret');
   }
 }
-export class DataAzurermAppConfigurationPrimaryWriteKey extends ComplexComputedList {
+export class DataAzurermAppConfigurationPrimaryWriteKey extends cdktf.ComplexComputedList {
 
   // connection_string - computed: true, optional: false, required: false
   public get connectionString() {
@@ -49,7 +46,7 @@ export class DataAzurermAppConfigurationPrimaryWriteKey extends ComplexComputedL
     return this.getStringAttribute('secret');
   }
 }
-export class DataAzurermAppConfigurationSecondaryReadKey extends ComplexComputedList {
+export class DataAzurermAppConfigurationSecondaryReadKey extends cdktf.ComplexComputedList {
 
   // connection_string - computed: true, optional: false, required: false
   public get connectionString() {
@@ -66,7 +63,7 @@ export class DataAzurermAppConfigurationSecondaryReadKey extends ComplexComputed
     return this.getStringAttribute('secret');
   }
 }
-export class DataAzurermAppConfigurationSecondaryWriteKey extends ComplexComputedList {
+export class DataAzurermAppConfigurationSecondaryWriteKey extends cdktf.ComplexComputedList {
 
   // connection_string - computed: true, optional: false, required: false
   public get connectionString() {
@@ -87,9 +84,17 @@ export interface DataAzurermAppConfigurationTimeouts {
   readonly read?: string;
 }
 
+function dataAzurermAppConfigurationTimeoutsToTerraform(struct?: DataAzurermAppConfigurationTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    read: cdktf.stringToTerraform(struct!.read),
+  }
+}
+
+
 // Resource
 
-export class DataAzurermAppConfiguration extends TerraformDataSource {
+export class DataAzurermAppConfiguration extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
@@ -183,7 +188,7 @@ export class DataAzurermAppConfiguration extends TerraformDataSource {
 
   // tags - computed: true, optional: false, required: false
   public tags(key: string): string {
-    return new StringMap(this, 'tags').lookup(key);
+    return new cdktf.StringMap(this, 'tags').lookup(key);
   }
 
   // timeouts - computed: false, optional: true, required: false
@@ -208,9 +213,9 @@ export class DataAzurermAppConfiguration extends TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      timeouts: this._timeouts,
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      timeouts: dataAzurermAppConfigurationTimeoutsToTerraform(this._timeouts),
     };
   }
 }

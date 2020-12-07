@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface PrivateDnsZoneConfig extends TerraformMetaArguments {
+export interface PrivateDnsZoneConfig extends cdktf.TerraformMetaArguments {
   readonly name: string;
   readonly resourceGroupName: string;
   readonly tags?: { [key: string]: string };
@@ -25,6 +24,20 @@ export interface PrivateDnsZoneSoaRecord {
   readonly tags?: { [key: string]: string };
   readonly ttl?: number;
 }
+
+function privateDnsZoneSoaRecordToTerraform(struct?: PrivateDnsZoneSoaRecord): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    email: cdktf.stringToTerraform(struct!.email),
+    expire_time: cdktf.numberToTerraform(struct!.expireTime),
+    minimum_ttl: cdktf.numberToTerraform(struct!.minimumTtl),
+    refresh_time: cdktf.numberToTerraform(struct!.refreshTime),
+    retry_time: cdktf.numberToTerraform(struct!.retryTime),
+    tags: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.tags),
+    ttl: cdktf.numberToTerraform(struct!.ttl),
+  }
+}
+
 export interface PrivateDnsZoneTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -32,9 +45,20 @@ export interface PrivateDnsZoneTimeouts {
   readonly update?: string;
 }
 
+function privateDnsZoneTimeoutsToTerraform(struct?: PrivateDnsZoneTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class PrivateDnsZone extends TerraformResource {
+export class PrivateDnsZone extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -167,11 +191,11 @@ export class PrivateDnsZone extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      tags: this._tags,
-      soa_record: this._soaRecord,
-      timeouts: this._timeouts,
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      soa_record: cdktf.listMapper(privateDnsZoneSoaRecordToTerraform)(this._soaRecord),
+      timeouts: privateDnsZoneTimeoutsToTerraform(this._timeouts),
     };
   }
 }

@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface ApiManagementProductConfig extends TerraformMetaArguments {
+export interface ApiManagementProductConfig extends cdktf.TerraformMetaArguments {
   readonly apiManagementName: string;
   readonly approvalRequired?: boolean;
   readonly description?: string;
@@ -28,9 +27,20 @@ export interface ApiManagementProductTimeouts {
   readonly update?: string;
 }
 
+function apiManagementProductTimeoutsToTerraform(struct?: ApiManagementProductTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class ApiManagementProduct extends TerraformResource {
+export class ApiManagementProduct extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -233,17 +243,17 @@ export class ApiManagementProduct extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      api_management_name: this._apiManagementName,
-      approval_required: this._approvalRequired,
-      description: this._description,
-      display_name: this._displayName,
-      product_id: this._productId,
-      published: this._published,
-      resource_group_name: this._resourceGroupName,
-      subscription_required: this._subscriptionRequired,
-      subscriptions_limit: this._subscriptionsLimit,
-      terms: this._terms,
-      timeouts: this._timeouts,
+      api_management_name: cdktf.stringToTerraform(this._apiManagementName),
+      approval_required: cdktf.booleanToTerraform(this._approvalRequired),
+      description: cdktf.stringToTerraform(this._description),
+      display_name: cdktf.stringToTerraform(this._displayName),
+      product_id: cdktf.stringToTerraform(this._productId),
+      published: cdktf.booleanToTerraform(this._published),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      subscription_required: cdktf.booleanToTerraform(this._subscriptionRequired),
+      subscriptions_limit: cdktf.numberToTerraform(this._subscriptionsLimit),
+      terms: cdktf.stringToTerraform(this._terms),
+      timeouts: apiManagementProductTimeoutsToTerraform(this._timeouts),
     };
   }
 }

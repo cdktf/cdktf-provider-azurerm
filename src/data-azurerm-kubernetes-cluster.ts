@@ -2,27 +2,24 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformDataSource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
-import { ComplexComputedList } from "cdktf";
-import { StringMap } from "cdktf";
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataAzurermKubernetesClusterConfig extends TerraformMetaArguments {
+export interface DataAzurermKubernetesClusterConfig extends cdktf.TerraformMetaArguments {
   readonly name: string;
   readonly resourceGroupName: string;
   /** timeouts block */
   readonly timeouts?: DataAzurermKubernetesClusterTimeouts;
 }
-export class DataAzurermKubernetesClusterAddonProfileAzurePolicy extends ComplexComputedList {
+export class DataAzurermKubernetesClusterAddonProfileAzurePolicy extends cdktf.ComplexComputedList {
 
   // enabled - computed: true, optional: false, required: false
   public get enabled() {
     return this.getBooleanAttribute('enabled');
   }
 }
-export class DataAzurermKubernetesClusterAddonProfileHttpApplicationRouting extends ComplexComputedList {
+export class DataAzurermKubernetesClusterAddonProfileHttpApplicationRouting extends cdktf.ComplexComputedList {
 
   // enabled - computed: true, optional: false, required: false
   public get enabled() {
@@ -34,14 +31,14 @@ export class DataAzurermKubernetesClusterAddonProfileHttpApplicationRouting exte
     return this.getStringAttribute('http_application_routing_zone_name');
   }
 }
-export class DataAzurermKubernetesClusterAddonProfileKubeDashboard extends ComplexComputedList {
+export class DataAzurermKubernetesClusterAddonProfileKubeDashboard extends cdktf.ComplexComputedList {
 
   // enabled - computed: true, optional: false, required: false
   public get enabled() {
     return this.getBooleanAttribute('enabled');
   }
 }
-export class DataAzurermKubernetesClusterAddonProfileOmsAgentOmsAgentIdentity extends ComplexComputedList {
+export class DataAzurermKubernetesClusterAddonProfileOmsAgentOmsAgentIdentity extends cdktf.ComplexComputedList {
 
   // client_id - computed: true, optional: false, required: false
   public get clientId() {
@@ -58,7 +55,7 @@ export class DataAzurermKubernetesClusterAddonProfileOmsAgentOmsAgentIdentity ex
     return this.getStringAttribute('user_assigned_identity_id');
   }
 }
-export class DataAzurermKubernetesClusterAddonProfileOmsAgent extends ComplexComputedList {
+export class DataAzurermKubernetesClusterAddonProfileOmsAgent extends cdktf.ComplexComputedList {
 
   // enabled - computed: true, optional: false, required: false
   public get enabled() {
@@ -75,7 +72,7 @@ export class DataAzurermKubernetesClusterAddonProfileOmsAgent extends ComplexCom
     return this.interpolationForAttribute('oms_agent_identity') as any;
   }
 }
-export class DataAzurermKubernetesClusterAddonProfile extends ComplexComputedList {
+export class DataAzurermKubernetesClusterAddonProfile extends cdktf.ComplexComputedList {
 
   // azure_policy - computed: true, optional: false, required: false
   public get azurePolicy() {
@@ -97,7 +94,7 @@ export class DataAzurermKubernetesClusterAddonProfile extends ComplexComputedLis
     return this.interpolationForAttribute('oms_agent') as any;
   }
 }
-export class DataAzurermKubernetesClusterAgentPoolProfile extends ComplexComputedList {
+export class DataAzurermKubernetesClusterAgentPoolProfile extends cdktf.ComplexComputedList {
 
   // availability_zones - computed: true, optional: false, required: false
   public get availabilityZones() {
@@ -184,7 +181,7 @@ export class DataAzurermKubernetesClusterAgentPoolProfile extends ComplexCompute
     return this.getStringAttribute('vnet_subnet_id');
   }
 }
-export class DataAzurermKubernetesClusterIdentity extends ComplexComputedList {
+export class DataAzurermKubernetesClusterIdentity extends cdktf.ComplexComputedList {
 
   // principal_id - computed: true, optional: false, required: false
   public get principalId() {
@@ -201,7 +198,7 @@ export class DataAzurermKubernetesClusterIdentity extends ComplexComputedList {
     return this.getStringAttribute('type');
   }
 }
-export class DataAzurermKubernetesClusterKubeAdminConfig extends ComplexComputedList {
+export class DataAzurermKubernetesClusterKubeAdminConfig extends cdktf.ComplexComputedList {
 
   // client_certificate - computed: true, optional: false, required: false
   public get clientCertificate() {
@@ -233,7 +230,7 @@ export class DataAzurermKubernetesClusterKubeAdminConfig extends ComplexComputed
     return this.getStringAttribute('username');
   }
 }
-export class DataAzurermKubernetesClusterKubeConfig extends ComplexComputedList {
+export class DataAzurermKubernetesClusterKubeConfig extends cdktf.ComplexComputedList {
 
   // client_certificate - computed: true, optional: false, required: false
   public get clientCertificate() {
@@ -265,7 +262,7 @@ export class DataAzurermKubernetesClusterKubeConfig extends ComplexComputedList 
     return this.getStringAttribute('username');
   }
 }
-export class DataAzurermKubernetesClusterKubeletIdentity extends ComplexComputedList {
+export class DataAzurermKubernetesClusterKubeletIdentity extends cdktf.ComplexComputedList {
 
   // client_id - computed: true, optional: false, required: false
   public get clientId() {
@@ -282,14 +279,14 @@ export class DataAzurermKubernetesClusterKubeletIdentity extends ComplexComputed
     return this.getStringAttribute('user_assigned_identity_id');
   }
 }
-export class DataAzurermKubernetesClusterLinuxProfileSshKey extends ComplexComputedList {
+export class DataAzurermKubernetesClusterLinuxProfileSshKey extends cdktf.ComplexComputedList {
 
   // key_data - computed: true, optional: false, required: false
   public get keyData() {
     return this.getStringAttribute('key_data');
   }
 }
-export class DataAzurermKubernetesClusterLinuxProfile extends ComplexComputedList {
+export class DataAzurermKubernetesClusterLinuxProfile extends cdktf.ComplexComputedList {
 
   // admin_username - computed: true, optional: false, required: false
   public get adminUsername() {
@@ -301,7 +298,7 @@ export class DataAzurermKubernetesClusterLinuxProfile extends ComplexComputedLis
     return this.interpolationForAttribute('ssh_key') as any;
   }
 }
-export class DataAzurermKubernetesClusterNetworkProfile extends ComplexComputedList {
+export class DataAzurermKubernetesClusterNetworkProfile extends cdktf.ComplexComputedList {
 
   // dns_service_ip - computed: true, optional: false, required: false
   public get dnsServiceIp() {
@@ -338,7 +335,7 @@ export class DataAzurermKubernetesClusterNetworkProfile extends ComplexComputedL
     return this.getStringAttribute('service_cidr');
   }
 }
-export class DataAzurermKubernetesClusterRoleBasedAccessControlAzureActiveDirectory extends ComplexComputedList {
+export class DataAzurermKubernetesClusterRoleBasedAccessControlAzureActiveDirectory extends cdktf.ComplexComputedList {
 
   // admin_group_object_ids - computed: true, optional: false, required: false
   public get adminGroupObjectIds() {
@@ -365,7 +362,7 @@ export class DataAzurermKubernetesClusterRoleBasedAccessControlAzureActiveDirect
     return this.getStringAttribute('tenant_id');
   }
 }
-export class DataAzurermKubernetesClusterRoleBasedAccessControl extends ComplexComputedList {
+export class DataAzurermKubernetesClusterRoleBasedAccessControl extends cdktf.ComplexComputedList {
 
   // azure_active_directory - computed: true, optional: false, required: false
   public get azureActiveDirectory() {
@@ -377,14 +374,14 @@ export class DataAzurermKubernetesClusterRoleBasedAccessControl extends ComplexC
     return this.getBooleanAttribute('enabled');
   }
 }
-export class DataAzurermKubernetesClusterServicePrincipal extends ComplexComputedList {
+export class DataAzurermKubernetesClusterServicePrincipal extends cdktf.ComplexComputedList {
 
   // client_id - computed: true, optional: false, required: false
   public get clientId() {
     return this.getStringAttribute('client_id');
   }
 }
-export class DataAzurermKubernetesClusterWindowsProfile extends ComplexComputedList {
+export class DataAzurermKubernetesClusterWindowsProfile extends cdktf.ComplexComputedList {
 
   // admin_username - computed: true, optional: false, required: false
   public get adminUsername() {
@@ -395,9 +392,17 @@ export interface DataAzurermKubernetesClusterTimeouts {
   readonly read?: string;
 }
 
+function dataAzurermKubernetesClusterTimeoutsToTerraform(struct?: DataAzurermKubernetesClusterTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    read: cdktf.stringToTerraform(struct!.read),
+  }
+}
+
+
 // Resource
 
-export class DataAzurermKubernetesCluster extends TerraformDataSource {
+export class DataAzurermKubernetesCluster extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
@@ -566,7 +571,7 @@ export class DataAzurermKubernetesCluster extends TerraformDataSource {
 
   // tags - computed: true, optional: false, required: false
   public tags(key: string): string {
-    return new StringMap(this, 'tags').lookup(key);
+    return new cdktf.StringMap(this, 'tags').lookup(key);
   }
 
   // windows_profile - computed: true, optional: false, required: false
@@ -596,9 +601,9 @@ export class DataAzurermKubernetesCluster extends TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      timeouts: this._timeouts,
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      timeouts: dataAzurermKubernetesClusterTimeoutsToTerraform(this._timeouts),
     };
   }
 }

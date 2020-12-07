@@ -2,20 +2,17 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformDataSource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
-import { ComplexComputedList } from "cdktf";
-import { StringMap } from "cdktf";
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataAzurermMonitorScheduledQueryRulesAlertConfig extends TerraformMetaArguments {
+export interface DataAzurermMonitorScheduledQueryRulesAlertConfig extends cdktf.TerraformMetaArguments {
   readonly name: string;
   readonly resourceGroupName: string;
   /** timeouts block */
   readonly timeouts?: DataAzurermMonitorScheduledQueryRulesAlertTimeouts;
 }
-export class DataAzurermMonitorScheduledQueryRulesAlertAction extends ComplexComputedList {
+export class DataAzurermMonitorScheduledQueryRulesAlertAction extends cdktf.ComplexComputedList {
 
   // action_group - computed: true, optional: false, required: false
   public get actionGroup() {
@@ -32,7 +29,7 @@ export class DataAzurermMonitorScheduledQueryRulesAlertAction extends ComplexCom
     return this.getStringAttribute('email_subject');
   }
 }
-export class DataAzurermMonitorScheduledQueryRulesAlertTriggerMetricTrigger extends ComplexComputedList {
+export class DataAzurermMonitorScheduledQueryRulesAlertTriggerMetricTrigger extends cdktf.ComplexComputedList {
 
   // metric_column - computed: true, optional: false, required: false
   public get metricColumn() {
@@ -54,7 +51,7 @@ export class DataAzurermMonitorScheduledQueryRulesAlertTriggerMetricTrigger exte
     return this.getNumberAttribute('threshold');
   }
 }
-export class DataAzurermMonitorScheduledQueryRulesAlertTrigger extends ComplexComputedList {
+export class DataAzurermMonitorScheduledQueryRulesAlertTrigger extends cdktf.ComplexComputedList {
 
   // metric_trigger - computed: true, optional: false, required: false
   public get metricTrigger() {
@@ -75,9 +72,17 @@ export interface DataAzurermMonitorScheduledQueryRulesAlertTimeouts {
   readonly read?: string;
 }
 
+function dataAzurermMonitorScheduledQueryRulesAlertTimeoutsToTerraform(struct?: DataAzurermMonitorScheduledQueryRulesAlertTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    read: cdktf.stringToTerraform(struct!.read),
+  }
+}
+
+
 // Resource
 
-export class DataAzurermMonitorScheduledQueryRulesAlert extends TerraformDataSource {
+export class DataAzurermMonitorScheduledQueryRulesAlert extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
@@ -186,7 +191,7 @@ export class DataAzurermMonitorScheduledQueryRulesAlert extends TerraformDataSou
 
   // tags - computed: true, optional: false, required: false
   public tags(key: string): string {
-    return new StringMap(this, 'tags').lookup(key);
+    return new cdktf.StringMap(this, 'tags').lookup(key);
   }
 
   // throttling - computed: true, optional: false, required: false
@@ -226,9 +231,9 @@ export class DataAzurermMonitorScheduledQueryRulesAlert extends TerraformDataSou
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      timeouts: this._timeouts,
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      timeouts: dataAzurermMonitorScheduledQueryRulesAlertTimeoutsToTerraform(this._timeouts),
     };
   }
 }

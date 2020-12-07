@@ -2,21 +2,18 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformDataSource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
-import { ComplexComputedList } from "cdktf";
-import { StringMap } from "cdktf";
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataAzurermHealthcareServiceConfig extends TerraformMetaArguments {
+export interface DataAzurermHealthcareServiceConfig extends cdktf.TerraformMetaArguments {
   readonly location: string;
   readonly name: string;
   readonly resourceGroupName: string;
   /** timeouts block */
   readonly timeouts?: DataAzurermHealthcareServiceTimeouts;
 }
-export class DataAzurermHealthcareServiceAuthenticationConfiguration extends ComplexComputedList {
+export class DataAzurermHealthcareServiceAuthenticationConfiguration extends cdktf.ComplexComputedList {
 
   // audience - computed: true, optional: false, required: false
   public get audience() {
@@ -33,7 +30,7 @@ export class DataAzurermHealthcareServiceAuthenticationConfiguration extends Com
     return this.getBooleanAttribute('smart_proxy_enabled');
   }
 }
-export class DataAzurermHealthcareServiceCorsConfiguration extends ComplexComputedList {
+export class DataAzurermHealthcareServiceCorsConfiguration extends cdktf.ComplexComputedList {
 
   // allow_credentials - computed: true, optional: false, required: false
   public get allowCredentials() {
@@ -64,9 +61,17 @@ export interface DataAzurermHealthcareServiceTimeouts {
   readonly read?: string;
 }
 
+function dataAzurermHealthcareServiceTimeoutsToTerraform(struct?: DataAzurermHealthcareServiceTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    read: cdktf.stringToTerraform(struct!.read),
+  }
+}
+
+
 // Resource
 
-export class DataAzurermHealthcareService extends TerraformDataSource {
+export class DataAzurermHealthcareService extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
@@ -164,7 +169,7 @@ export class DataAzurermHealthcareService extends TerraformDataSource {
 
   // tags - computed: true, optional: false, required: false
   public tags(key: string): string {
-    return new StringMap(this, 'tags').lookup(key);
+    return new cdktf.StringMap(this, 'tags').lookup(key);
   }
 
   // timeouts - computed: false, optional: true, required: false
@@ -189,10 +194,10 @@ export class DataAzurermHealthcareService extends TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      location: this._location,
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      timeouts: this._timeouts,
+      location: cdktf.stringToTerraform(this._location),
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      timeouts: dataAzurermHealthcareServiceTimeoutsToTerraform(this._timeouts),
     };
   }
 }

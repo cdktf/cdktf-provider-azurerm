@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface KustoEventhubDataConnectionConfig extends TerraformMetaArguments {
+export interface KustoEventhubDataConnectionConfig extends cdktf.TerraformMetaArguments {
   readonly clusterName: string;
   readonly consumerGroup: string;
   readonly dataFormat?: string;
@@ -28,9 +27,20 @@ export interface KustoEventhubDataConnectionTimeouts {
   readonly update?: string;
 }
 
+function kustoEventhubDataConnectionTimeoutsToTerraform(struct?: KustoEventhubDataConnectionTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class KustoEventhubDataConnection extends TerraformResource {
+export class KustoEventhubDataConnection extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -230,17 +240,17 @@ export class KustoEventhubDataConnection extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      cluster_name: this._clusterName,
-      consumer_group: this._consumerGroup,
-      data_format: this._dataFormat,
-      database_name: this._databaseName,
-      eventhub_id: this._eventhubId,
-      location: this._location,
-      mapping_rule_name: this._mappingRuleName,
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      table_name: this._tableName,
-      timeouts: this._timeouts,
+      cluster_name: cdktf.stringToTerraform(this._clusterName),
+      consumer_group: cdktf.stringToTerraform(this._consumerGroup),
+      data_format: cdktf.stringToTerraform(this._dataFormat),
+      database_name: cdktf.stringToTerraform(this._databaseName),
+      eventhub_id: cdktf.stringToTerraform(this._eventhubId),
+      location: cdktf.stringToTerraform(this._location),
+      mapping_rule_name: cdktf.stringToTerraform(this._mappingRuleName),
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      table_name: cdktf.stringToTerraform(this._tableName),
+      timeouts: kustoEventhubDataConnectionTimeoutsToTerraform(this._timeouts),
     };
   }
 }

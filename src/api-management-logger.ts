@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface ApiManagementLoggerConfig extends TerraformMetaArguments {
+export interface ApiManagementLoggerConfig extends cdktf.TerraformMetaArguments {
   readonly apiManagementName: string;
   readonly buffered?: boolean;
   readonly description?: string;
@@ -23,10 +22,27 @@ export interface ApiManagementLoggerConfig extends TerraformMetaArguments {
 export interface ApiManagementLoggerApplicationInsights {
   readonly instrumentationKey: string;
 }
+
+function apiManagementLoggerApplicationInsightsToTerraform(struct?: ApiManagementLoggerApplicationInsights): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    instrumentation_key: cdktf.stringToTerraform(struct!.instrumentationKey),
+  }
+}
+
 export interface ApiManagementLoggerEventhub {
   readonly connectionString: string;
   readonly name: string;
 }
+
+function apiManagementLoggerEventhubToTerraform(struct?: ApiManagementLoggerEventhub): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    connection_string: cdktf.stringToTerraform(struct!.connectionString),
+    name: cdktf.stringToTerraform(struct!.name),
+  }
+}
+
 export interface ApiManagementLoggerTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -34,9 +50,20 @@ export interface ApiManagementLoggerTimeouts {
   readonly update?: string;
 }
 
+function apiManagementLoggerTimeoutsToTerraform(struct?: ApiManagementLoggerTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class ApiManagementLogger extends TerraformResource {
+export class ApiManagementLogger extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -197,14 +224,14 @@ export class ApiManagementLogger extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      api_management_name: this._apiManagementName,
-      buffered: this._buffered,
-      description: this._description,
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      application_insights: this._applicationInsights,
-      eventhub: this._eventhub,
-      timeouts: this._timeouts,
+      api_management_name: cdktf.stringToTerraform(this._apiManagementName),
+      buffered: cdktf.booleanToTerraform(this._buffered),
+      description: cdktf.stringToTerraform(this._description),
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      application_insights: cdktf.listMapper(apiManagementLoggerApplicationInsightsToTerraform)(this._applicationInsights),
+      eventhub: cdktf.listMapper(apiManagementLoggerEventhubToTerraform)(this._eventhub),
+      timeouts: apiManagementLoggerTimeoutsToTerraform(this._timeouts),
     };
   }
 }

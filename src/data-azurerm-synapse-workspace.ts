@@ -2,13 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformDataSource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
-import { StringMap } from "cdktf";
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataAzurermSynapseWorkspaceConfig extends TerraformMetaArguments {
+export interface DataAzurermSynapseWorkspaceConfig extends cdktf.TerraformMetaArguments {
   readonly name: string;
   readonly resourceGroupName: string;
   /** timeouts block */
@@ -18,9 +16,17 @@ export interface DataAzurermSynapseWorkspaceTimeouts {
   readonly read?: string;
 }
 
+function dataAzurermSynapseWorkspaceTimeoutsToTerraform(struct?: DataAzurermSynapseWorkspaceTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    read: cdktf.stringToTerraform(struct!.read),
+  }
+}
+
+
 // Resource
 
-export class DataAzurermSynapseWorkspace extends TerraformDataSource {
+export class DataAzurermSynapseWorkspace extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
@@ -48,7 +54,7 @@ export class DataAzurermSynapseWorkspace extends TerraformDataSource {
 
   // connectivity_endpoints - computed: true, optional: false, required: false
   public connectivityEndpoints(key: string): string {
-    return new StringMap(this, 'connectivity_endpoints').lookup(key);
+    return new cdktf.StringMap(this, 'connectivity_endpoints').lookup(key);
   }
 
   // id - computed: true, optional: true, required: false
@@ -89,7 +95,7 @@ export class DataAzurermSynapseWorkspace extends TerraformDataSource {
 
   // tags - computed: true, optional: false, required: false
   public tags(key: string): string {
-    return new StringMap(this, 'tags').lookup(key);
+    return new cdktf.StringMap(this, 'tags').lookup(key);
   }
 
   // timeouts - computed: false, optional: true, required: false
@@ -114,9 +120,9 @@ export class DataAzurermSynapseWorkspace extends TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      timeouts: this._timeouts,
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      timeouts: dataAzurermSynapseWorkspaceTimeoutsToTerraform(this._timeouts),
     };
   }
 }

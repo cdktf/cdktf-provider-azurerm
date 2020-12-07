@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformDataSource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataAzurermNetworkServiceTagsConfig extends TerraformMetaArguments {
+export interface DataAzurermNetworkServiceTagsConfig extends cdktf.TerraformMetaArguments {
   readonly location: string;
   readonly locationFilter?: string;
   readonly service: string;
@@ -18,9 +17,17 @@ export interface DataAzurermNetworkServiceTagsTimeouts {
   readonly read?: string;
 }
 
+function dataAzurermNetworkServiceTagsTimeoutsToTerraform(struct?: DataAzurermNetworkServiceTagsTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    read: cdktf.stringToTerraform(struct!.read),
+  }
+}
+
+
 // Resource
 
-export class DataAzurermNetworkServiceTags extends TerraformDataSource {
+export class DataAzurermNetworkServiceTags extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
@@ -121,10 +128,10 @@ export class DataAzurermNetworkServiceTags extends TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      location: this._location,
-      location_filter: this._locationFilter,
-      service: this._service,
-      timeouts: this._timeouts,
+      location: cdktf.stringToTerraform(this._location),
+      location_filter: cdktf.stringToTerraform(this._locationFilter),
+      service: cdktf.stringToTerraform(this._service),
+      timeouts: dataAzurermNetworkServiceTagsTimeoutsToTerraform(this._timeouts),
     };
   }
 }

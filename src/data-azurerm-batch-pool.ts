@@ -2,14 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformDataSource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
-import { ComplexComputedList } from "cdktf";
-import { StringMap } from "cdktf";
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataAzurermBatchPoolConfig extends TerraformMetaArguments {
+export interface DataAzurermBatchPoolConfig extends cdktf.TerraformMetaArguments {
   readonly accountName: string;
   readonly name: string;
   readonly resourceGroupName: string;
@@ -22,7 +19,7 @@ export interface DataAzurermBatchPoolConfig extends TerraformMetaArguments {
   /** timeouts block */
   readonly timeouts?: DataAzurermBatchPoolTimeouts;
 }
-export class DataAzurermBatchPoolAutoScale extends ComplexComputedList {
+export class DataAzurermBatchPoolAutoScale extends cdktf.ComplexComputedList {
 
   // evaluation_interval - computed: true, optional: false, required: false
   public get evaluationInterval() {
@@ -34,7 +31,7 @@ export class DataAzurermBatchPoolAutoScale extends ComplexComputedList {
     return this.getStringAttribute('formula');
   }
 }
-export class DataAzurermBatchPoolContainerConfigurationContainerRegistries extends ComplexComputedList {
+export class DataAzurermBatchPoolContainerConfigurationContainerRegistries extends cdktf.ComplexComputedList {
 
   // password - computed: true, optional: false, required: false
   public get password() {
@@ -51,7 +48,7 @@ export class DataAzurermBatchPoolContainerConfigurationContainerRegistries exten
     return this.getStringAttribute('user_name');
   }
 }
-export class DataAzurermBatchPoolContainerConfiguration extends ComplexComputedList {
+export class DataAzurermBatchPoolContainerConfiguration extends cdktf.ComplexComputedList {
 
   // container_image_names - computed: true, optional: false, required: false
   public get containerImageNames() {
@@ -68,7 +65,7 @@ export class DataAzurermBatchPoolContainerConfiguration extends ComplexComputedL
     return this.getStringAttribute('type');
   }
 }
-export class DataAzurermBatchPoolFixedScale extends ComplexComputedList {
+export class DataAzurermBatchPoolFixedScale extends cdktf.ComplexComputedList {
 
   // resize_timeout - computed: true, optional: false, required: false
   public get resizeTimeout() {
@@ -85,7 +82,7 @@ export class DataAzurermBatchPoolFixedScale extends ComplexComputedList {
     return this.getNumberAttribute('target_low_priority_nodes');
   }
 }
-export class DataAzurermBatchPoolStorageImageReference extends ComplexComputedList {
+export class DataAzurermBatchPoolStorageImageReference extends cdktf.ComplexComputedList {
 
   // id - computed: true, optional: false, required: false
   public get id() {
@@ -118,30 +115,84 @@ export interface DataAzurermBatchPoolCertificate {
   readonly storeName?: string;
   readonly visibility?: string[];
 }
+
+function dataAzurermBatchPoolCertificateToTerraform(struct?: DataAzurermBatchPoolCertificate): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    id: cdktf.stringToTerraform(struct!.id),
+    store_location: cdktf.stringToTerraform(struct!.storeLocation),
+    store_name: cdktf.stringToTerraform(struct!.storeName),
+    visibility: cdktf.listMapper(cdktf.stringToTerraform)(struct!.visibility),
+  }
+}
+
 export interface DataAzurermBatchPoolNetworkConfigurationEndpointConfigurationNetworkSecurityGroupRules {
 }
+
+function dataAzurermBatchPoolNetworkConfigurationEndpointConfigurationNetworkSecurityGroupRulesToTerraform(struct?: DataAzurermBatchPoolNetworkConfigurationEndpointConfigurationNetworkSecurityGroupRules): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+  }
+}
+
 export interface DataAzurermBatchPoolNetworkConfigurationEndpointConfiguration {
   /** network_security_group_rules block */
   readonly networkSecurityGroupRules?: DataAzurermBatchPoolNetworkConfigurationEndpointConfigurationNetworkSecurityGroupRules[];
 }
+
+function dataAzurermBatchPoolNetworkConfigurationEndpointConfigurationToTerraform(struct?: DataAzurermBatchPoolNetworkConfigurationEndpointConfiguration): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    network_security_group_rules: cdktf.listMapper(dataAzurermBatchPoolNetworkConfigurationEndpointConfigurationNetworkSecurityGroupRulesToTerraform)(struct!.networkSecurityGroupRules),
+  }
+}
+
 export interface DataAzurermBatchPoolNetworkConfiguration {
   readonly subnetId?: string;
   /** endpoint_configuration block */
   readonly endpointConfiguration?: DataAzurermBatchPoolNetworkConfigurationEndpointConfiguration[];
 }
+
+function dataAzurermBatchPoolNetworkConfigurationToTerraform(struct?: DataAzurermBatchPoolNetworkConfiguration): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    subnet_id: cdktf.stringToTerraform(struct!.subnetId),
+    endpoint_configuration: cdktf.listMapper(dataAzurermBatchPoolNetworkConfigurationEndpointConfigurationToTerraform)(struct!.endpointConfiguration),
+  }
+}
+
 export interface DataAzurermBatchPoolStartTask {
   readonly commandLine: string;
   readonly environment?: { [key: string]: string };
   readonly maxTaskRetryCount?: number;
   readonly waitForSuccess?: boolean;
 }
+
+function dataAzurermBatchPoolStartTaskToTerraform(struct?: DataAzurermBatchPoolStartTask): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    command_line: cdktf.stringToTerraform(struct!.commandLine),
+    environment: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.environment),
+    max_task_retry_count: cdktf.numberToTerraform(struct!.maxTaskRetryCount),
+    wait_for_success: cdktf.booleanToTerraform(struct!.waitForSuccess),
+  }
+}
+
 export interface DataAzurermBatchPoolTimeouts {
   readonly read?: string;
 }
 
+function dataAzurermBatchPoolTimeoutsToTerraform(struct?: DataAzurermBatchPoolTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    read: cdktf.stringToTerraform(struct!.read),
+  }
+}
+
+
 // Resource
 
-export class DataAzurermBatchPool extends TerraformDataSource {
+export class DataAzurermBatchPool extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
@@ -216,7 +267,7 @@ export class DataAzurermBatchPool extends TerraformDataSource {
 
   // metadata - computed: true, optional: false, required: false
   public metadata(key: string): string {
-    return new StringMap(this, 'metadata').lookup(key);
+    return new cdktf.StringMap(this, 'metadata').lookup(key);
   }
 
   // name - computed: false, optional: false, required: true
@@ -330,13 +381,13 @@ export class DataAzurermBatchPool extends TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      account_name: this._accountName,
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      certificate: this._certificate,
-      network_configuration: this._networkConfiguration,
-      start_task: this._startTask,
-      timeouts: this._timeouts,
+      account_name: cdktf.stringToTerraform(this._accountName),
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      certificate: cdktf.listMapper(dataAzurermBatchPoolCertificateToTerraform)(this._certificate),
+      network_configuration: cdktf.listMapper(dataAzurermBatchPoolNetworkConfigurationToTerraform)(this._networkConfiguration),
+      start_task: cdktf.listMapper(dataAzurermBatchPoolStartTaskToTerraform)(this._startTask),
+      timeouts: dataAzurermBatchPoolTimeoutsToTerraform(this._timeouts),
     };
   }
 }

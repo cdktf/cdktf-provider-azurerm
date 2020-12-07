@@ -2,13 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
-import { ComplexComputedList } from "cdktf";
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface CosmosdbMongoCollectionConfig extends TerraformMetaArguments {
+export interface CosmosdbMongoCollectionConfig extends cdktf.TerraformMetaArguments {
   readonly accountName: string;
   readonly databaseName: string;
   readonly defaultTtlSeconds?: number;
@@ -23,7 +21,7 @@ export interface CosmosdbMongoCollectionConfig extends TerraformMetaArguments {
   /** timeouts block */
   readonly timeouts?: CosmosdbMongoCollectionTimeouts;
 }
-export class CosmosdbMongoCollectionSystemIndexes extends ComplexComputedList {
+export class CosmosdbMongoCollectionSystemIndexes extends cdktf.ComplexComputedList {
 
   // keys - computed: true, optional: false, required: false
   public get keys() {
@@ -38,10 +36,27 @@ export class CosmosdbMongoCollectionSystemIndexes extends ComplexComputedList {
 export interface CosmosdbMongoCollectionAutoscaleSettings {
   readonly maxThroughput?: number;
 }
+
+function cosmosdbMongoCollectionAutoscaleSettingsToTerraform(struct?: CosmosdbMongoCollectionAutoscaleSettings): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    max_throughput: cdktf.numberToTerraform(struct!.maxThroughput),
+  }
+}
+
 export interface CosmosdbMongoCollectionIndex {
   readonly keys: string[];
   readonly unique?: boolean;
 }
+
+function cosmosdbMongoCollectionIndexToTerraform(struct?: CosmosdbMongoCollectionIndex): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    keys: cdktf.listMapper(cdktf.stringToTerraform)(struct!.keys),
+    unique: cdktf.booleanToTerraform(struct!.unique),
+  }
+}
+
 export interface CosmosdbMongoCollectionTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -49,9 +64,20 @@ export interface CosmosdbMongoCollectionTimeouts {
   readonly update?: string;
 }
 
+function cosmosdbMongoCollectionTimeoutsToTerraform(struct?: CosmosdbMongoCollectionTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class CosmosdbMongoCollection extends TerraformResource {
+export class CosmosdbMongoCollection extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -248,16 +274,16 @@ export class CosmosdbMongoCollection extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      account_name: this._accountName,
-      database_name: this._databaseName,
-      default_ttl_seconds: this._defaultTtlSeconds,
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      shard_key: this._shardKey,
-      throughput: this._throughput,
-      autoscale_settings: this._autoscaleSettings,
-      index: this._index,
-      timeouts: this._timeouts,
+      account_name: cdktf.stringToTerraform(this._accountName),
+      database_name: cdktf.stringToTerraform(this._databaseName),
+      default_ttl_seconds: cdktf.numberToTerraform(this._defaultTtlSeconds),
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      shard_key: cdktf.stringToTerraform(this._shardKey),
+      throughput: cdktf.numberToTerraform(this._throughput),
+      autoscale_settings: cdktf.listMapper(cosmosdbMongoCollectionAutoscaleSettingsToTerraform)(this._autoscaleSettings),
+      index: cdktf.listMapper(cosmosdbMongoCollectionIndexToTerraform)(this._index),
+      timeouts: cosmosdbMongoCollectionTimeoutsToTerraform(this._timeouts),
     };
   }
 }

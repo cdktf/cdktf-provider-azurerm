@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface AvailabilitySetConfig extends TerraformMetaArguments {
+export interface AvailabilitySetConfig extends cdktf.TerraformMetaArguments {
   readonly location: string;
   readonly managed?: boolean;
   readonly name: string;
@@ -26,9 +25,20 @@ export interface AvailabilitySetTimeouts {
   readonly update?: string;
 }
 
+function availabilitySetTimeoutsToTerraform(struct?: AvailabilitySetTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class AvailabilitySet extends TerraformResource {
+export class AvailabilitySet extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -206,15 +216,15 @@ export class AvailabilitySet extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      location: this._location,
-      managed: this._managed,
-      name: this._name,
-      platform_fault_domain_count: this._platformFaultDomainCount,
-      platform_update_domain_count: this._platformUpdateDomainCount,
-      proximity_placement_group_id: this._proximityPlacementGroupId,
-      resource_group_name: this._resourceGroupName,
-      tags: this._tags,
-      timeouts: this._timeouts,
+      location: cdktf.stringToTerraform(this._location),
+      managed: cdktf.booleanToTerraform(this._managed),
+      name: cdktf.stringToTerraform(this._name),
+      platform_fault_domain_count: cdktf.numberToTerraform(this._platformFaultDomainCount),
+      platform_update_domain_count: cdktf.numberToTerraform(this._platformUpdateDomainCount),
+      proximity_placement_group_id: cdktf.stringToTerraform(this._proximityPlacementGroupId),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      timeouts: availabilitySetTimeoutsToTerraform(this._timeouts),
     };
   }
 }

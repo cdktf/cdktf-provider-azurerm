@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface LbConfig extends TerraformMetaArguments {
+export interface LbConfig extends cdktf.TerraformMetaArguments {
   readonly location: string;
   readonly name: string;
   readonly resourceGroupName: string;
@@ -28,6 +27,21 @@ export interface LbFrontendIpConfiguration {
   readonly subnetId?: string;
   readonly zones?: string[];
 }
+
+function lbFrontendIpConfigurationToTerraform(struct?: LbFrontendIpConfiguration): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    name: cdktf.stringToTerraform(struct!.name),
+    private_ip_address: cdktf.stringToTerraform(struct!.privateIpAddress),
+    private_ip_address_allocation: cdktf.stringToTerraform(struct!.privateIpAddressAllocation),
+    private_ip_address_version: cdktf.stringToTerraform(struct!.privateIpAddressVersion),
+    public_ip_address_id: cdktf.stringToTerraform(struct!.publicIpAddressId),
+    public_ip_prefix_id: cdktf.stringToTerraform(struct!.publicIpPrefixId),
+    subnet_id: cdktf.stringToTerraform(struct!.subnetId),
+    zones: cdktf.listMapper(cdktf.stringToTerraform)(struct!.zones),
+  }
+}
+
 export interface LbTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -35,9 +49,20 @@ export interface LbTimeouts {
   readonly update?: string;
 }
 
+function lbTimeoutsToTerraform(struct?: LbTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class Lb extends TerraformResource {
+export class Lb extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -191,13 +216,13 @@ export class Lb extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      location: this._location,
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      sku: this._sku,
-      tags: this._tags,
-      frontend_ip_configuration: this._frontendIpConfiguration,
-      timeouts: this._timeouts,
+      location: cdktf.stringToTerraform(this._location),
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      sku: cdktf.stringToTerraform(this._sku),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      frontend_ip_configuration: cdktf.listMapper(lbFrontendIpConfigurationToTerraform)(this._frontendIpConfiguration),
+      timeouts: lbTimeoutsToTerraform(this._timeouts),
     };
   }
 }

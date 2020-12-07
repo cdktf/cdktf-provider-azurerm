@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface BotChannelEmailConfig extends TerraformMetaArguments {
+export interface BotChannelEmailConfig extends cdktf.TerraformMetaArguments {
   readonly botName: string;
   readonly emailAddress: string;
   readonly emailPassword: string;
@@ -23,9 +22,20 @@ export interface BotChannelEmailTimeouts {
   readonly update?: string;
 }
 
+function botChannelEmailTimeoutsToTerraform(struct?: BotChannelEmailTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class BotChannelEmail extends TerraformResource {
+export class BotChannelEmail extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -146,12 +156,12 @@ export class BotChannelEmail extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      bot_name: this._botName,
-      email_address: this._emailAddress,
-      email_password: this._emailPassword,
-      location: this._location,
-      resource_group_name: this._resourceGroupName,
-      timeouts: this._timeouts,
+      bot_name: cdktf.stringToTerraform(this._botName),
+      email_address: cdktf.stringToTerraform(this._emailAddress),
+      email_password: cdktf.stringToTerraform(this._emailPassword),
+      location: cdktf.stringToTerraform(this._location),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      timeouts: botChannelEmailTimeoutsToTerraform(this._timeouts),
     };
   }
 }

@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface MonitorScheduledQueryRulesAlertConfig extends TerraformMetaArguments {
+export interface MonitorScheduledQueryRulesAlertConfig extends cdktf.TerraformMetaArguments {
   readonly authorizedResourceIds?: string[];
   readonly dataSourceId: string;
   readonly description?: string;
@@ -34,18 +33,50 @@ export interface MonitorScheduledQueryRulesAlertAction {
   readonly customWebhookPayload?: string;
   readonly emailSubject?: string;
 }
+
+function monitorScheduledQueryRulesAlertActionToTerraform(struct?: MonitorScheduledQueryRulesAlertAction): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    action_group: cdktf.listMapper(cdktf.stringToTerraform)(struct!.actionGroup),
+    custom_webhook_payload: cdktf.stringToTerraform(struct!.customWebhookPayload),
+    email_subject: cdktf.stringToTerraform(struct!.emailSubject),
+  }
+}
+
 export interface MonitorScheduledQueryRulesAlertTimeouts {
   readonly create?: string;
   readonly delete?: string;
   readonly read?: string;
   readonly update?: string;
 }
+
+function monitorScheduledQueryRulesAlertTimeoutsToTerraform(struct?: MonitorScheduledQueryRulesAlertTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
 export interface MonitorScheduledQueryRulesAlertTriggerMetricTrigger {
   readonly metricColumn: string;
   readonly metricTriggerType: string;
   readonly operator: string;
   readonly threshold: number;
 }
+
+function monitorScheduledQueryRulesAlertTriggerMetricTriggerToTerraform(struct?: MonitorScheduledQueryRulesAlertTriggerMetricTrigger): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    metric_column: cdktf.stringToTerraform(struct!.metricColumn),
+    metric_trigger_type: cdktf.stringToTerraform(struct!.metricTriggerType),
+    operator: cdktf.stringToTerraform(struct!.operator),
+    threshold: cdktf.numberToTerraform(struct!.threshold),
+  }
+}
+
 export interface MonitorScheduledQueryRulesAlertTrigger {
   readonly operator: string;
   readonly threshold: number;
@@ -53,9 +84,19 @@ export interface MonitorScheduledQueryRulesAlertTrigger {
   readonly metricTrigger?: MonitorScheduledQueryRulesAlertTriggerMetricTrigger[];
 }
 
+function monitorScheduledQueryRulesAlertTriggerToTerraform(struct?: MonitorScheduledQueryRulesAlertTrigger): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    operator: cdktf.stringToTerraform(struct!.operator),
+    threshold: cdktf.numberToTerraform(struct!.threshold),
+    metric_trigger: cdktf.listMapper(monitorScheduledQueryRulesAlertTriggerMetricTriggerToTerraform)(struct!.metricTrigger),
+  }
+}
+
+
 // Resource
 
-export class MonitorScheduledQueryRulesAlert extends TerraformResource {
+export class MonitorScheduledQueryRulesAlert extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -351,23 +392,23 @@ export class MonitorScheduledQueryRulesAlert extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      authorized_resource_ids: this._authorizedResourceIds,
-      data_source_id: this._dataSourceId,
-      description: this._description,
-      enabled: this._enabled,
-      frequency: this._frequency,
-      location: this._location,
-      name: this._name,
-      query: this._query,
-      query_type: this._queryType,
-      resource_group_name: this._resourceGroupName,
-      severity: this._severity,
-      tags: this._tags,
-      throttling: this._throttling,
-      time_window: this._timeWindow,
-      action: this._action,
-      timeouts: this._timeouts,
-      trigger: this._trigger,
+      authorized_resource_ids: cdktf.listMapper(cdktf.stringToTerraform)(this._authorizedResourceIds),
+      data_source_id: cdktf.stringToTerraform(this._dataSourceId),
+      description: cdktf.stringToTerraform(this._description),
+      enabled: cdktf.booleanToTerraform(this._enabled),
+      frequency: cdktf.numberToTerraform(this._frequency),
+      location: cdktf.stringToTerraform(this._location),
+      name: cdktf.stringToTerraform(this._name),
+      query: cdktf.stringToTerraform(this._query),
+      query_type: cdktf.stringToTerraform(this._queryType),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      severity: cdktf.numberToTerraform(this._severity),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      throttling: cdktf.numberToTerraform(this._throttling),
+      time_window: cdktf.numberToTerraform(this._timeWindow),
+      action: cdktf.listMapper(monitorScheduledQueryRulesAlertActionToTerraform)(this._action),
+      timeouts: monitorScheduledQueryRulesAlertTimeoutsToTerraform(this._timeouts),
+      trigger: cdktf.listMapper(monitorScheduledQueryRulesAlertTriggerToTerraform)(this._trigger),
     };
   }
 }

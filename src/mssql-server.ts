@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface MssqlServerConfig extends TerraformMetaArguments {
+export interface MssqlServerConfig extends cdktf.TerraformMetaArguments {
   readonly administratorLogin: string;
   readonly administratorLoginPassword: string;
   readonly connectionPolicy?: string;
@@ -32,14 +31,43 @@ export interface MssqlServerExtendedAuditingPolicy {
   readonly storageAccountAccessKeyIsSecondary?: boolean;
   readonly storageEndpoint?: string;
 }
+
+function mssqlServerExtendedAuditingPolicyToTerraform(struct?: MssqlServerExtendedAuditingPolicy): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    retention_in_days: cdktf.numberToTerraform(struct!.retentionInDays),
+    storage_account_access_key: cdktf.stringToTerraform(struct!.storageAccountAccessKey),
+    storage_account_access_key_is_secondary: cdktf.booleanToTerraform(struct!.storageAccountAccessKeyIsSecondary),
+    storage_endpoint: cdktf.stringToTerraform(struct!.storageEndpoint),
+  }
+}
+
 export interface MssqlServerAzureadAdministrator {
   readonly loginUsername: string;
   readonly objectId: string;
   readonly tenantId?: string;
 }
+
+function mssqlServerAzureadAdministratorToTerraform(struct?: MssqlServerAzureadAdministrator): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    login_username: cdktf.stringToTerraform(struct!.loginUsername),
+    object_id: cdktf.stringToTerraform(struct!.objectId),
+    tenant_id: cdktf.stringToTerraform(struct!.tenantId),
+  }
+}
+
 export interface MssqlServerIdentity {
   readonly type: string;
 }
+
+function mssqlServerIdentityToTerraform(struct?: MssqlServerIdentity): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    type: cdktf.stringToTerraform(struct!.type),
+  }
+}
+
 export interface MssqlServerTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -47,9 +75,20 @@ export interface MssqlServerTimeouts {
   readonly update?: string;
 }
 
+function mssqlServerTimeoutsToTerraform(struct?: MssqlServerTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class MssqlServer extends TerraformResource {
+export class MssqlServer extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -313,20 +352,20 @@ export class MssqlServer extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      administrator_login: this._administratorLogin,
-      administrator_login_password: this._administratorLoginPassword,
-      connection_policy: this._connectionPolicy,
-      extended_auditing_policy: this._extendedAuditingPolicy,
-      location: this._location,
-      minimum_tls_version: this._minimumTlsVersion,
-      name: this._name,
-      public_network_access_enabled: this._publicNetworkAccessEnabled,
-      resource_group_name: this._resourceGroupName,
-      tags: this._tags,
-      version: this._version,
-      azuread_administrator: this._azureadAdministrator,
-      identity: this._identity,
-      timeouts: this._timeouts,
+      administrator_login: cdktf.stringToTerraform(this._administratorLogin),
+      administrator_login_password: cdktf.stringToTerraform(this._administratorLoginPassword),
+      connection_policy: cdktf.stringToTerraform(this._connectionPolicy),
+      extended_auditing_policy: cdktf.listMapper(mssqlServerExtendedAuditingPolicyToTerraform)(this._extendedAuditingPolicy),
+      location: cdktf.stringToTerraform(this._location),
+      minimum_tls_version: cdktf.stringToTerraform(this._minimumTlsVersion),
+      name: cdktf.stringToTerraform(this._name),
+      public_network_access_enabled: cdktf.booleanToTerraform(this._publicNetworkAccessEnabled),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      version: cdktf.stringToTerraform(this._version),
+      azuread_administrator: cdktf.listMapper(mssqlServerAzureadAdministratorToTerraform)(this._azureadAdministrator),
+      identity: cdktf.listMapper(mssqlServerIdentityToTerraform)(this._identity),
+      timeouts: mssqlServerTimeoutsToTerraform(this._timeouts),
     };
   }
 }

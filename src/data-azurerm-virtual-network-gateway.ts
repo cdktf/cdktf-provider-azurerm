@@ -2,20 +2,17 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformDataSource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
-import { ComplexComputedList } from "cdktf";
-import { StringMap } from "cdktf";
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataAzurermVirtualNetworkGatewayConfig extends TerraformMetaArguments {
+export interface DataAzurermVirtualNetworkGatewayConfig extends cdktf.TerraformMetaArguments {
   readonly name: string;
   readonly resourceGroupName: string;
   /** timeouts block */
   readonly timeouts?: DataAzurermVirtualNetworkGatewayTimeouts;
 }
-export class DataAzurermVirtualNetworkGatewayBgpSettings extends ComplexComputedList {
+export class DataAzurermVirtualNetworkGatewayBgpSettings extends cdktf.ComplexComputedList {
 
   // asn - computed: true, optional: false, required: false
   public get asn() {
@@ -32,14 +29,14 @@ export class DataAzurermVirtualNetworkGatewayBgpSettings extends ComplexComputed
     return this.getStringAttribute('peering_address');
   }
 }
-export class DataAzurermVirtualNetworkGatewayCustomRoute extends ComplexComputedList {
+export class DataAzurermVirtualNetworkGatewayCustomRoute extends cdktf.ComplexComputedList {
 
   // address_prefixes - computed: true, optional: false, required: false
   public get addressPrefixes() {
     return this.getListAttribute('address_prefixes');
   }
 }
-export class DataAzurermVirtualNetworkGatewayIpConfiguration extends ComplexComputedList {
+export class DataAzurermVirtualNetworkGatewayIpConfiguration extends cdktf.ComplexComputedList {
 
   // name - computed: true, optional: false, required: false
   public get name() {
@@ -61,7 +58,7 @@ export class DataAzurermVirtualNetworkGatewayIpConfiguration extends ComplexComp
     return this.getStringAttribute('subnet_id');
   }
 }
-export class DataAzurermVirtualNetworkGatewayVpnClientConfigurationRevokedCertificate extends ComplexComputedList {
+export class DataAzurermVirtualNetworkGatewayVpnClientConfigurationRevokedCertificate extends cdktf.ComplexComputedList {
 
   // name - computed: true, optional: false, required: false
   public get name() {
@@ -73,7 +70,7 @@ export class DataAzurermVirtualNetworkGatewayVpnClientConfigurationRevokedCertif
     return this.getStringAttribute('thumbprint');
   }
 }
-export class DataAzurermVirtualNetworkGatewayVpnClientConfigurationRootCertificate extends ComplexComputedList {
+export class DataAzurermVirtualNetworkGatewayVpnClientConfigurationRootCertificate extends cdktf.ComplexComputedList {
 
   // name - computed: true, optional: false, required: false
   public get name() {
@@ -85,7 +82,7 @@ export class DataAzurermVirtualNetworkGatewayVpnClientConfigurationRootCertifica
     return this.getStringAttribute('public_cert_data');
   }
 }
-export class DataAzurermVirtualNetworkGatewayVpnClientConfiguration extends ComplexComputedList {
+export class DataAzurermVirtualNetworkGatewayVpnClientConfiguration extends cdktf.ComplexComputedList {
 
   // aad_audience - computed: true, optional: false, required: false
   public get aadAudience() {
@@ -136,9 +133,17 @@ export interface DataAzurermVirtualNetworkGatewayTimeouts {
   readonly read?: string;
 }
 
+function dataAzurermVirtualNetworkGatewayTimeoutsToTerraform(struct?: DataAzurermVirtualNetworkGatewayTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    read: cdktf.stringToTerraform(struct!.read),
+  }
+}
+
+
 // Resource
 
-export class DataAzurermVirtualNetworkGateway extends TerraformDataSource {
+export class DataAzurermVirtualNetworkGateway extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
@@ -247,7 +252,7 @@ export class DataAzurermVirtualNetworkGateway extends TerraformDataSource {
 
   // tags - computed: true, optional: false, required: false
   public tags(key: string): string {
-    return new StringMap(this, 'tags').lookup(key);
+    return new cdktf.StringMap(this, 'tags').lookup(key);
   }
 
   // type - computed: true, optional: false, required: false
@@ -287,9 +292,9 @@ export class DataAzurermVirtualNetworkGateway extends TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      timeouts: this._timeouts,
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      timeouts: dataAzurermVirtualNetworkGatewayTimeoutsToTerraform(this._timeouts),
     };
   }
 }

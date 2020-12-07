@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataLakeAnalyticsFirewallRuleConfig extends TerraformMetaArguments {
+export interface DataLakeAnalyticsFirewallRuleConfig extends cdktf.TerraformMetaArguments {
   readonly accountName: string;
   readonly endIpAddress: string;
   readonly name: string;
@@ -23,9 +22,20 @@ export interface DataLakeAnalyticsFirewallRuleTimeouts {
   readonly update?: string;
 }
 
+function dataLakeAnalyticsFirewallRuleTimeoutsToTerraform(struct?: DataLakeAnalyticsFirewallRuleTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class DataLakeAnalyticsFirewallRule extends TerraformResource {
+export class DataLakeAnalyticsFirewallRule extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -146,12 +156,12 @@ export class DataLakeAnalyticsFirewallRule extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      account_name: this._accountName,
-      end_ip_address: this._endIpAddress,
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      start_ip_address: this._startIpAddress,
-      timeouts: this._timeouts,
+      account_name: cdktf.stringToTerraform(this._accountName),
+      end_ip_address: cdktf.stringToTerraform(this._endIpAddress),
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      start_ip_address: cdktf.stringToTerraform(this._startIpAddress),
+      timeouts: dataLakeAnalyticsFirewallRuleTimeoutsToTerraform(this._timeouts),
     };
   }
 }

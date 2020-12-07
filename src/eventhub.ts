@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface EventhubConfig extends TerraformMetaArguments {
+export interface EventhubConfig extends cdktf.TerraformMetaArguments {
   readonly messageRetention: number;
   readonly name: string;
   readonly namespaceName: string;
@@ -24,6 +23,17 @@ export interface EventhubCaptureDescriptionDestination {
   readonly name: string;
   readonly storageAccountId: string;
 }
+
+function eventhubCaptureDescriptionDestinationToTerraform(struct?: EventhubCaptureDescriptionDestination): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    archive_name_format: cdktf.stringToTerraform(struct!.archiveNameFormat),
+    blob_container_name: cdktf.stringToTerraform(struct!.blobContainerName),
+    name: cdktf.stringToTerraform(struct!.name),
+    storage_account_id: cdktf.stringToTerraform(struct!.storageAccountId),
+  }
+}
+
 export interface EventhubCaptureDescription {
   readonly enabled: boolean;
   readonly encoding: string;
@@ -33,6 +43,19 @@ export interface EventhubCaptureDescription {
   /** destination block */
   readonly destination: EventhubCaptureDescriptionDestination[];
 }
+
+function eventhubCaptureDescriptionToTerraform(struct?: EventhubCaptureDescription): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    enabled: cdktf.booleanToTerraform(struct!.enabled),
+    encoding: cdktf.stringToTerraform(struct!.encoding),
+    interval_in_seconds: cdktf.numberToTerraform(struct!.intervalInSeconds),
+    size_limit_in_bytes: cdktf.numberToTerraform(struct!.sizeLimitInBytes),
+    skip_empty_archives: cdktf.booleanToTerraform(struct!.skipEmptyArchives),
+    destination: cdktf.listMapper(eventhubCaptureDescriptionDestinationToTerraform)(struct!.destination),
+  }
+}
+
 export interface EventhubTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -40,9 +63,20 @@ export interface EventhubTimeouts {
   readonly update?: string;
 }
 
+function eventhubTimeoutsToTerraform(struct?: EventhubTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class Eventhub extends TerraformResource {
+export class Eventhub extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -185,13 +219,13 @@ export class Eventhub extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      message_retention: this._messageRetention,
-      name: this._name,
-      namespace_name: this._namespaceName,
-      partition_count: this._partitionCount,
-      resource_group_name: this._resourceGroupName,
-      capture_description: this._captureDescription,
-      timeouts: this._timeouts,
+      message_retention: cdktf.numberToTerraform(this._messageRetention),
+      name: cdktf.stringToTerraform(this._name),
+      namespace_name: cdktf.stringToTerraform(this._namespaceName),
+      partition_count: cdktf.numberToTerraform(this._partitionCount),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      capture_description: cdktf.listMapper(eventhubCaptureDescriptionToTerraform)(this._captureDescription),
+      timeouts: eventhubTimeoutsToTerraform(this._timeouts),
     };
   }
 }

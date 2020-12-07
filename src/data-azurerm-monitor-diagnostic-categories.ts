@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformDataSource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataAzurermMonitorDiagnosticCategoriesConfig extends TerraformMetaArguments {
+export interface DataAzurermMonitorDiagnosticCategoriesConfig extends cdktf.TerraformMetaArguments {
   readonly resourceId: string;
   /** timeouts block */
   readonly timeouts?: DataAzurermMonitorDiagnosticCategoriesTimeouts;
@@ -16,9 +15,17 @@ export interface DataAzurermMonitorDiagnosticCategoriesTimeouts {
   readonly read?: string;
 }
 
+function dataAzurermMonitorDiagnosticCategoriesTimeoutsToTerraform(struct?: DataAzurermMonitorDiagnosticCategoriesTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    read: cdktf.stringToTerraform(struct!.read),
+  }
+}
+
+
 // Resource
 
-export class DataAzurermMonitorDiagnosticCategories extends TerraformDataSource {
+export class DataAzurermMonitorDiagnosticCategories extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
@@ -93,8 +100,8 @@ export class DataAzurermMonitorDiagnosticCategories extends TerraformDataSource 
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      resource_id: this._resourceId,
-      timeouts: this._timeouts,
+      resource_id: cdktf.stringToTerraform(this._resourceId),
+      timeouts: dataAzurermMonitorDiagnosticCategoriesTimeoutsToTerraform(this._timeouts),
     };
   }
 }

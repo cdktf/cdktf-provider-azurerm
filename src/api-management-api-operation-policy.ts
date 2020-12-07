@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface ApiManagementApiOperationPolicyConfig extends TerraformMetaArguments {
+export interface ApiManagementApiOperationPolicyConfig extends cdktf.TerraformMetaArguments {
   readonly apiManagementName: string;
   readonly apiName: string;
   readonly operationId: string;
@@ -24,9 +23,20 @@ export interface ApiManagementApiOperationPolicyTimeouts {
   readonly update?: string;
 }
 
+function apiManagementApiOperationPolicyTimeoutsToTerraform(struct?: ApiManagementApiOperationPolicyTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class ApiManagementApiOperationPolicy extends TerraformResource {
+export class ApiManagementApiOperationPolicy extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -167,13 +177,13 @@ export class ApiManagementApiOperationPolicy extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      api_management_name: this._apiManagementName,
-      api_name: this._apiName,
-      operation_id: this._operationId,
-      resource_group_name: this._resourceGroupName,
-      xml_content: this._xmlContent,
-      xml_link: this._xmlLink,
-      timeouts: this._timeouts,
+      api_management_name: cdktf.stringToTerraform(this._apiManagementName),
+      api_name: cdktf.stringToTerraform(this._apiName),
+      operation_id: cdktf.stringToTerraform(this._operationId),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      xml_content: cdktf.stringToTerraform(this._xmlContent),
+      xml_link: cdktf.stringToTerraform(this._xmlLink),
+      timeouts: apiManagementApiOperationPolicyTimeoutsToTerraform(this._timeouts),
     };
   }
 }

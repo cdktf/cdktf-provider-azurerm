@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface ApiManagementProductGroupConfig extends TerraformMetaArguments {
+export interface ApiManagementProductGroupConfig extends cdktf.TerraformMetaArguments {
   readonly apiManagementName: string;
   readonly groupName: string;
   readonly productId: string;
@@ -22,9 +21,20 @@ export interface ApiManagementProductGroupTimeouts {
   readonly update?: string;
 }
 
+function apiManagementProductGroupTimeoutsToTerraform(struct?: ApiManagementProductGroupTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class ApiManagementProductGroup extends TerraformResource {
+export class ApiManagementProductGroup extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -131,11 +141,11 @@ export class ApiManagementProductGroup extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      api_management_name: this._apiManagementName,
-      group_name: this._groupName,
-      product_id: this._productId,
-      resource_group_name: this._resourceGroupName,
-      timeouts: this._timeouts,
+      api_management_name: cdktf.stringToTerraform(this._apiManagementName),
+      group_name: cdktf.stringToTerraform(this._groupName),
+      product_id: cdktf.stringToTerraform(this._productId),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      timeouts: apiManagementProductGroupTimeoutsToTerraform(this._timeouts),
     };
   }
 }

@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface IotTimeSeriesInsightsGen2EnvironmentConfig extends TerraformMetaArguments {
+export interface IotTimeSeriesInsightsGen2EnvironmentConfig extends cdktf.TerraformMetaArguments {
   readonly idProperties: string[];
   readonly location: string;
   readonly name: string;
@@ -24,6 +23,15 @@ export interface IotTimeSeriesInsightsGen2EnvironmentStorage {
   readonly key: string;
   readonly name: string;
 }
+
+function iotTimeSeriesInsightsGen2EnvironmentStorageToTerraform(struct?: IotTimeSeriesInsightsGen2EnvironmentStorage): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    key: cdktf.stringToTerraform(struct!.key),
+    name: cdktf.stringToTerraform(struct!.name),
+  }
+}
+
 export interface IotTimeSeriesInsightsGen2EnvironmentTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -31,9 +39,20 @@ export interface IotTimeSeriesInsightsGen2EnvironmentTimeouts {
   readonly update?: string;
 }
 
+function iotTimeSeriesInsightsGen2EnvironmentTimeoutsToTerraform(struct?: IotTimeSeriesInsightsGen2EnvironmentTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class IotTimeSeriesInsightsGen2Environment extends TerraformResource {
+export class IotTimeSeriesInsightsGen2Environment extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -202,15 +221,15 @@ export class IotTimeSeriesInsightsGen2Environment extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      id_properties: this._idProperties,
-      location: this._location,
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      sku_name: this._skuName,
-      tags: this._tags,
-      warm_store_data_retention_time: this._warmStoreDataRetentionTime,
-      storage: this._storage,
-      timeouts: this._timeouts,
+      id_properties: cdktf.listMapper(cdktf.stringToTerraform)(this._idProperties),
+      location: cdktf.stringToTerraform(this._location),
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      sku_name: cdktf.stringToTerraform(this._skuName),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      warm_store_data_retention_time: cdktf.stringToTerraform(this._warmStoreDataRetentionTime),
+      storage: cdktf.listMapper(iotTimeSeriesInsightsGen2EnvironmentStorageToTerraform)(this._storage),
+      timeouts: iotTimeSeriesInsightsGen2EnvironmentTimeoutsToTerraform(this._timeouts),
     };
   }
 }

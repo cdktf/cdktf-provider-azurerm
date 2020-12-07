@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface StreamAnalyticsOutputMssqlConfig extends TerraformMetaArguments {
+export interface StreamAnalyticsOutputMssqlConfig extends cdktf.TerraformMetaArguments {
   readonly database: string;
   readonly name: string;
   readonly password: string;
@@ -26,9 +25,20 @@ export interface StreamAnalyticsOutputMssqlTimeouts {
   readonly update?: string;
 }
 
+function streamAnalyticsOutputMssqlTimeoutsToTerraform(struct?: StreamAnalyticsOutputMssqlTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class StreamAnalyticsOutputMssql extends TerraformResource {
+export class StreamAnalyticsOutputMssql extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -191,15 +201,15 @@ export class StreamAnalyticsOutputMssql extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      database: this._database,
-      name: this._name,
-      password: this._password,
-      resource_group_name: this._resourceGroupName,
-      server: this._server,
-      stream_analytics_job_name: this._streamAnalyticsJobName,
-      table: this._table,
-      user: this._user,
-      timeouts: this._timeouts,
+      database: cdktf.stringToTerraform(this._database),
+      name: cdktf.stringToTerraform(this._name),
+      password: cdktf.stringToTerraform(this._password),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      server: cdktf.stringToTerraform(this._server),
+      stream_analytics_job_name: cdktf.stringToTerraform(this._streamAnalyticsJobName),
+      table: cdktf.stringToTerraform(this._table),
+      user: cdktf.stringToTerraform(this._user),
+      timeouts: streamAnalyticsOutputMssqlTimeoutsToTerraform(this._timeouts),
     };
   }
 }

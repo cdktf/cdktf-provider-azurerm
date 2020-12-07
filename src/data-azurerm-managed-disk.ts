@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformDataSource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataAzurermManagedDiskConfig extends TerraformMetaArguments {
+export interface DataAzurermManagedDiskConfig extends cdktf.TerraformMetaArguments {
   readonly name: string;
   readonly resourceGroupName: string;
   readonly tags?: { [key: string]: string };
@@ -19,9 +18,17 @@ export interface DataAzurermManagedDiskTimeouts {
   readonly read?: string;
 }
 
+function dataAzurermManagedDiskTimeoutsToTerraform(struct?: DataAzurermManagedDiskTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    read: cdktf.stringToTerraform(struct!.read),
+  }
+}
+
+
 // Resource
 
-export class DataAzurermManagedDisk extends TerraformDataSource {
+export class DataAzurermManagedDisk extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
@@ -189,11 +196,11 @@ export class DataAzurermManagedDisk extends TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      tags: this._tags,
-      zones: this._zones,
-      timeouts: this._timeouts,
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      zones: cdktf.listMapper(cdktf.stringToTerraform)(this._zones),
+      timeouts: dataAzurermManagedDiskTimeoutsToTerraform(this._timeouts),
     };
   }
 }

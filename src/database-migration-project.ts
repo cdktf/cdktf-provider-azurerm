@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DatabaseMigrationProjectConfig extends TerraformMetaArguments {
+export interface DatabaseMigrationProjectConfig extends cdktf.TerraformMetaArguments {
   readonly location: string;
   readonly name: string;
   readonly resourceGroupName: string;
@@ -25,9 +24,20 @@ export interface DatabaseMigrationProjectTimeouts {
   readonly update?: string;
 }
 
+function databaseMigrationProjectTimeoutsToTerraform(struct?: DatabaseMigrationProjectTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class DatabaseMigrationProject extends TerraformResource {
+export class DatabaseMigrationProject extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -179,14 +189,14 @@ export class DatabaseMigrationProject extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      location: this._location,
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      service_name: this._serviceName,
-      source_platform: this._sourcePlatform,
-      tags: this._tags,
-      target_platform: this._targetPlatform,
-      timeouts: this._timeouts,
+      location: cdktf.stringToTerraform(this._location),
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      service_name: cdktf.stringToTerraform(this._serviceName),
+      source_platform: cdktf.stringToTerraform(this._sourcePlatform),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      target_platform: cdktf.stringToTerraform(this._targetPlatform),
+      timeouts: databaseMigrationProjectTimeoutsToTerraform(this._timeouts),
     };
   }
 }

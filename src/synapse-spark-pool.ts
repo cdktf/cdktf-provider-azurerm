@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface SynapseSparkPoolConfig extends TerraformMetaArguments {
+export interface SynapseSparkPoolConfig extends cdktf.TerraformMetaArguments {
   readonly name: string;
   readonly nodeCount?: number;
   readonly nodeSize: string;
@@ -29,14 +28,40 @@ export interface SynapseSparkPoolConfig extends TerraformMetaArguments {
 export interface SynapseSparkPoolAutoPause {
   readonly delayInMinutes: number;
 }
+
+function synapseSparkPoolAutoPauseToTerraform(struct?: SynapseSparkPoolAutoPause): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    delay_in_minutes: cdktf.numberToTerraform(struct!.delayInMinutes),
+  }
+}
+
 export interface SynapseSparkPoolAutoScale {
   readonly maxNodeCount: number;
   readonly minNodeCount: number;
 }
+
+function synapseSparkPoolAutoScaleToTerraform(struct?: SynapseSparkPoolAutoScale): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    max_node_count: cdktf.numberToTerraform(struct!.maxNodeCount),
+    min_node_count: cdktf.numberToTerraform(struct!.minNodeCount),
+  }
+}
+
 export interface SynapseSparkPoolLibraryRequirement {
   readonly content: string;
   readonly filename: string;
 }
+
+function synapseSparkPoolLibraryRequirementToTerraform(struct?: SynapseSparkPoolLibraryRequirement): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    content: cdktf.stringToTerraform(struct!.content),
+    filename: cdktf.stringToTerraform(struct!.filename),
+  }
+}
+
 export interface SynapseSparkPoolTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -44,9 +69,20 @@ export interface SynapseSparkPoolTimeouts {
   readonly update?: string;
 }
 
+function synapseSparkPoolTimeoutsToTerraform(struct?: SynapseSparkPoolTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class SynapseSparkPool extends TerraformResource {
+export class SynapseSparkPool extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -289,19 +325,19 @@ export class SynapseSparkPool extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      name: this._name,
-      node_count: this._nodeCount,
-      node_size: this._nodeSize,
-      node_size_family: this._nodeSizeFamily,
-      spark_events_folder: this._sparkEventsFolder,
-      spark_log_folder: this._sparkLogFolder,
-      spark_version: this._sparkVersion,
-      synapse_workspace_id: this._synapseWorkspaceId,
-      tags: this._tags,
-      auto_pause: this._autoPause,
-      auto_scale: this._autoScale,
-      library_requirement: this._libraryRequirement,
-      timeouts: this._timeouts,
+      name: cdktf.stringToTerraform(this._name),
+      node_count: cdktf.numberToTerraform(this._nodeCount),
+      node_size: cdktf.stringToTerraform(this._nodeSize),
+      node_size_family: cdktf.stringToTerraform(this._nodeSizeFamily),
+      spark_events_folder: cdktf.stringToTerraform(this._sparkEventsFolder),
+      spark_log_folder: cdktf.stringToTerraform(this._sparkLogFolder),
+      spark_version: cdktf.stringToTerraform(this._sparkVersion),
+      synapse_workspace_id: cdktf.stringToTerraform(this._synapseWorkspaceId),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      auto_pause: cdktf.listMapper(synapseSparkPoolAutoPauseToTerraform)(this._autoPause),
+      auto_scale: cdktf.listMapper(synapseSparkPoolAutoScaleToTerraform)(this._autoScale),
+      library_requirement: cdktf.listMapper(synapseSparkPoolLibraryRequirementToTerraform)(this._libraryRequirement),
+      timeouts: synapseSparkPoolTimeoutsToTerraform(this._timeouts),
     };
   }
 }

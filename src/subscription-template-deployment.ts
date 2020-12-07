@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface SubscriptionTemplateDeploymentConfig extends TerraformMetaArguments {
+export interface SubscriptionTemplateDeploymentConfig extends cdktf.TerraformMetaArguments {
   readonly debugLevel?: string;
   readonly location: string;
   readonly name: string;
@@ -24,9 +23,20 @@ export interface SubscriptionTemplateDeploymentTimeouts {
   readonly update?: string;
 }
 
+function subscriptionTemplateDeploymentTimeoutsToTerraform(struct?: SubscriptionTemplateDeploymentTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class SubscriptionTemplateDeployment extends TerraformResource {
+export class SubscriptionTemplateDeployment extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -175,13 +185,13 @@ export class SubscriptionTemplateDeployment extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      debug_level: this._debugLevel,
-      location: this._location,
-      name: this._name,
-      parameters_content: this._parametersContent,
-      tags: this._tags,
-      template_content: this._templateContent,
-      timeouts: this._timeouts,
+      debug_level: cdktf.stringToTerraform(this._debugLevel),
+      location: cdktf.stringToTerraform(this._location),
+      name: cdktf.stringToTerraform(this._name),
+      parameters_content: cdktf.stringToTerraform(this._parametersContent),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      template_content: cdktf.stringToTerraform(this._templateContent),
+      timeouts: subscriptionTemplateDeploymentTimeoutsToTerraform(this._timeouts),
     };
   }
 }

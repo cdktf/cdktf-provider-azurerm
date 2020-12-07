@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface IotcentralApplicationConfig extends TerraformMetaArguments {
+export interface IotcentralApplicationConfig extends cdktf.TerraformMetaArguments {
   readonly displayName?: string;
   readonly location: string;
   readonly name: string;
@@ -26,9 +25,20 @@ export interface IotcentralApplicationTimeouts {
   readonly update?: string;
 }
 
+function iotcentralApplicationTimeoutsToTerraform(struct?: IotcentralApplicationTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class IotcentralApplication extends TerraformResource {
+export class IotcentralApplication extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -203,15 +213,15 @@ export class IotcentralApplication extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      display_name: this._displayName,
-      location: this._location,
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      sku: this._sku,
-      sub_domain: this._subDomain,
-      tags: this._tags,
-      template: this._template,
-      timeouts: this._timeouts,
+      display_name: cdktf.stringToTerraform(this._displayName),
+      location: cdktf.stringToTerraform(this._location),
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      sku: cdktf.stringToTerraform(this._sku),
+      sub_domain: cdktf.stringToTerraform(this._subDomain),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      template: cdktf.stringToTerraform(this._template),
+      timeouts: iotcentralApplicationTimeoutsToTerraform(this._timeouts),
     };
   }
 }

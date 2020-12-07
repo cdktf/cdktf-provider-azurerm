@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface ApplicationInsightsAnalyticsItemConfig extends TerraformMetaArguments {
+export interface ApplicationInsightsAnalyticsItemConfig extends cdktf.TerraformMetaArguments {
   readonly applicationInsightsId: string;
   readonly content: string;
   readonly functionAlias?: string;
@@ -24,9 +23,20 @@ export interface ApplicationInsightsAnalyticsItemTimeouts {
   readonly update?: string;
 }
 
+function applicationInsightsAnalyticsItemTimeoutsToTerraform(struct?: ApplicationInsightsAnalyticsItemTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class ApplicationInsightsAnalyticsItem extends TerraformResource {
+export class ApplicationInsightsAnalyticsItem extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -179,13 +189,13 @@ export class ApplicationInsightsAnalyticsItem extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      application_insights_id: this._applicationInsightsId,
-      content: this._content,
-      function_alias: this._functionAlias,
-      name: this._name,
-      scope: this._scope,
-      type: this._type,
-      timeouts: this._timeouts,
+      application_insights_id: cdktf.stringToTerraform(this._applicationInsightsId),
+      content: cdktf.stringToTerraform(this._content),
+      function_alias: cdktf.stringToTerraform(this._functionAlias),
+      name: cdktf.stringToTerraform(this._name),
+      scope: cdktf.stringToTerraform(this._scope),
+      type: cdktf.stringToTerraform(this._type),
+      timeouts: applicationInsightsAnalyticsItemTimeoutsToTerraform(this._timeouts),
     };
   }
 }

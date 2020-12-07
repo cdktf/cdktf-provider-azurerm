@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface LbNatRuleConfig extends TerraformMetaArguments {
+export interface LbNatRuleConfig extends cdktf.TerraformMetaArguments {
   readonly backendPort: number;
   readonly enableFloatingIp?: boolean;
   readonly enableTcpReset?: boolean;
@@ -28,9 +27,20 @@ export interface LbNatRuleTimeouts {
   readonly update?: string;
 }
 
+function lbNatRuleTimeoutsToTerraform(struct?: LbNatRuleTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class LbNatRule extends TerraformResource {
+export class LbNatRule extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -240,17 +250,17 @@ export class LbNatRule extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      backend_port: this._backendPort,
-      enable_floating_ip: this._enableFloatingIp,
-      enable_tcp_reset: this._enableTcpReset,
-      frontend_ip_configuration_name: this._frontendIpConfigurationName,
-      frontend_port: this._frontendPort,
-      idle_timeout_in_minutes: this._idleTimeoutInMinutes,
-      loadbalancer_id: this._loadbalancerId,
-      name: this._name,
-      protocol: this._protocol,
-      resource_group_name: this._resourceGroupName,
-      timeouts: this._timeouts,
+      backend_port: cdktf.numberToTerraform(this._backendPort),
+      enable_floating_ip: cdktf.booleanToTerraform(this._enableFloatingIp),
+      enable_tcp_reset: cdktf.booleanToTerraform(this._enableTcpReset),
+      frontend_ip_configuration_name: cdktf.stringToTerraform(this._frontendIpConfigurationName),
+      frontend_port: cdktf.numberToTerraform(this._frontendPort),
+      idle_timeout_in_minutes: cdktf.numberToTerraform(this._idleTimeoutInMinutes),
+      loadbalancer_id: cdktf.stringToTerraform(this._loadbalancerId),
+      name: cdktf.stringToTerraform(this._name),
+      protocol: cdktf.stringToTerraform(this._protocol),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      timeouts: lbNatRuleTimeoutsToTerraform(this._timeouts),
     };
   }
 }

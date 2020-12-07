@@ -2,20 +2,17 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformDataSource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
-import { StringMap } from "cdktf";
-import { ComplexComputedList } from "cdktf";
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataAzurermAppServiceConfig extends TerraformMetaArguments {
+export interface DataAzurermAppServiceConfig extends cdktf.TerraformMetaArguments {
   readonly name: string;
   readonly resourceGroupName: string;
   /** timeouts block */
   readonly timeouts?: DataAzurermAppServiceTimeouts;
 }
-export class DataAzurermAppServiceConnectionString extends ComplexComputedList {
+export class DataAzurermAppServiceConnectionString extends cdktf.ComplexComputedList {
 
   // name - computed: true, optional: false, required: false
   public get name() {
@@ -32,7 +29,7 @@ export class DataAzurermAppServiceConnectionString extends ComplexComputedList {
     return this.getStringAttribute('value');
   }
 }
-export class DataAzurermAppServiceSiteConfigCors extends ComplexComputedList {
+export class DataAzurermAppServiceSiteConfigCors extends cdktf.ComplexComputedList {
 
   // allowed_origins - computed: true, optional: false, required: false
   public get allowedOrigins() {
@@ -44,7 +41,7 @@ export class DataAzurermAppServiceSiteConfigCors extends ComplexComputedList {
     return this.getBooleanAttribute('support_credentials');
   }
 }
-export class DataAzurermAppServiceSiteConfigIpRestriction extends ComplexComputedList {
+export class DataAzurermAppServiceSiteConfigIpRestriction extends cdktf.ComplexComputedList {
 
   // action - computed: true, optional: false, required: false
   public get action() {
@@ -76,7 +73,7 @@ export class DataAzurermAppServiceSiteConfigIpRestriction extends ComplexCompute
     return this.getStringAttribute('virtual_network_subnet_id');
   }
 }
-export class DataAzurermAppServiceSiteConfigScmIpRestriction extends ComplexComputedList {
+export class DataAzurermAppServiceSiteConfigScmIpRestriction extends cdktf.ComplexComputedList {
 
   // action - computed: true, optional: false, required: false
   public get action() {
@@ -108,7 +105,7 @@ export class DataAzurermAppServiceSiteConfigScmIpRestriction extends ComplexComp
     return this.getStringAttribute('virtual_network_subnet_id');
   }
 }
-export class DataAzurermAppServiceSiteConfig extends ComplexComputedList {
+export class DataAzurermAppServiceSiteConfig extends cdktf.ComplexComputedList {
 
   // always_on - computed: true, optional: false, required: false
   public get alwaysOn() {
@@ -240,7 +237,7 @@ export class DataAzurermAppServiceSiteConfig extends ComplexComputedList {
     return this.getStringAttribute('windows_fx_version');
   }
 }
-export class DataAzurermAppServiceSiteCredential extends ComplexComputedList {
+export class DataAzurermAppServiceSiteCredential extends cdktf.ComplexComputedList {
 
   // password - computed: true, optional: false, required: false
   public get password() {
@@ -252,7 +249,7 @@ export class DataAzurermAppServiceSiteCredential extends ComplexComputedList {
     return this.getStringAttribute('username');
   }
 }
-export class DataAzurermAppServiceSourceControl extends ComplexComputedList {
+export class DataAzurermAppServiceSourceControl extends cdktf.ComplexComputedList {
 
   // branch - computed: true, optional: false, required: false
   public get branch() {
@@ -283,9 +280,17 @@ export interface DataAzurermAppServiceTimeouts {
   readonly read?: string;
 }
 
+function dataAzurermAppServiceTimeoutsToTerraform(struct?: DataAzurermAppServiceTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    read: cdktf.stringToTerraform(struct!.read),
+  }
+}
+
+
 // Resource
 
-export class DataAzurermAppService extends TerraformDataSource {
+export class DataAzurermAppService extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
@@ -318,7 +323,7 @@ export class DataAzurermAppService extends TerraformDataSource {
 
   // app_settings - computed: true, optional: false, required: false
   public appSettings(key: string): string {
-    return new StringMap(this, 'app_settings').lookup(key);
+    return new cdktf.StringMap(this, 'app_settings').lookup(key);
   }
 
   // client_affinity_enabled - computed: true, optional: false, required: false
@@ -419,7 +424,7 @@ export class DataAzurermAppService extends TerraformDataSource {
 
   // tags - computed: true, optional: false, required: false
   public tags(key: string): string {
-    return new StringMap(this, 'tags').lookup(key);
+    return new cdktf.StringMap(this, 'tags').lookup(key);
   }
 
   // timeouts - computed: false, optional: true, required: false
@@ -444,9 +449,9 @@ export class DataAzurermAppService extends TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      timeouts: this._timeouts,
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      timeouts: dataAzurermAppServiceTimeoutsToTerraform(this._timeouts),
     };
   }
 }

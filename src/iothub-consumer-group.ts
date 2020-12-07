@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface IothubConsumerGroupConfig extends TerraformMetaArguments {
+export interface IothubConsumerGroupConfig extends cdktf.TerraformMetaArguments {
   readonly eventhubEndpointName: string;
   readonly iothubName: string;
   readonly name: string;
@@ -22,9 +21,20 @@ export interface IothubConsumerGroupTimeouts {
   readonly update?: string;
 }
 
+function iothubConsumerGroupTimeoutsToTerraform(struct?: IothubConsumerGroupTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class IothubConsumerGroup extends TerraformResource {
+export class IothubConsumerGroup extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -131,11 +141,11 @@ export class IothubConsumerGroup extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      eventhub_endpoint_name: this._eventhubEndpointName,
-      iothub_name: this._iothubName,
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      timeouts: this._timeouts,
+      eventhub_endpoint_name: cdktf.stringToTerraform(this._eventhubEndpointName),
+      iothub_name: cdktf.stringToTerraform(this._iothubName),
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      timeouts: iothubConsumerGroupTimeoutsToTerraform(this._timeouts),
     };
   }
 }

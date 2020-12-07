@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface VirtualHubBgpConnectionConfig extends TerraformMetaArguments {
+export interface VirtualHubBgpConnectionConfig extends cdktf.TerraformMetaArguments {
   readonly name: string;
   readonly peerAsn: number;
   readonly peerIp: string;
@@ -21,9 +20,19 @@ export interface VirtualHubBgpConnectionTimeouts {
   readonly read?: string;
 }
 
+function virtualHubBgpConnectionTimeoutsToTerraform(struct?: VirtualHubBgpConnectionTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+  }
+}
+
+
 // Resource
 
-export class VirtualHubBgpConnection extends TerraformResource {
+export class VirtualHubBgpConnection extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -130,11 +139,11 @@ export class VirtualHubBgpConnection extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      name: this._name,
-      peer_asn: this._peerAsn,
-      peer_ip: this._peerIp,
-      virtual_hub_id: this._virtualHubId,
-      timeouts: this._timeouts,
+      name: cdktf.stringToTerraform(this._name),
+      peer_asn: cdktf.numberToTerraform(this._peerAsn),
+      peer_ip: cdktf.stringToTerraform(this._peerIp),
+      virtual_hub_id: cdktf.stringToTerraform(this._virtualHubId),
+      timeouts: virtualHubBgpConnectionTimeoutsToTerraform(this._timeouts),
     };
   }
 }

@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface EventgridEventSubscriptionConfig extends TerraformMetaArguments {
+export interface EventgridEventSubscriptionConfig extends cdktf.TerraformMetaArguments {
   readonly eventDeliverySchema?: string;
   readonly eventhubEndpointId?: string;
   readonly expirationTimeUtc?: string;
@@ -44,50 +43,158 @@ export interface EventgridEventSubscriptionAdvancedFilterBoolEquals {
   readonly key: string;
   readonly value: boolean;
 }
+
+function eventgridEventSubscriptionAdvancedFilterBoolEqualsToTerraform(struct?: EventgridEventSubscriptionAdvancedFilterBoolEquals): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    key: cdktf.stringToTerraform(struct!.key),
+    value: cdktf.booleanToTerraform(struct!.value),
+  }
+}
+
 export interface EventgridEventSubscriptionAdvancedFilterNumberGreaterThan {
   readonly key: string;
   readonly value: number;
 }
+
+function eventgridEventSubscriptionAdvancedFilterNumberGreaterThanToTerraform(struct?: EventgridEventSubscriptionAdvancedFilterNumberGreaterThan): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    key: cdktf.stringToTerraform(struct!.key),
+    value: cdktf.numberToTerraform(struct!.value),
+  }
+}
+
 export interface EventgridEventSubscriptionAdvancedFilterNumberGreaterThanOrEquals {
   readonly key: string;
   readonly value: number;
 }
+
+function eventgridEventSubscriptionAdvancedFilterNumberGreaterThanOrEqualsToTerraform(struct?: EventgridEventSubscriptionAdvancedFilterNumberGreaterThanOrEquals): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    key: cdktf.stringToTerraform(struct!.key),
+    value: cdktf.numberToTerraform(struct!.value),
+  }
+}
+
 export interface EventgridEventSubscriptionAdvancedFilterNumberIn {
   readonly key: string;
   readonly values: number[];
 }
+
+function eventgridEventSubscriptionAdvancedFilterNumberInToTerraform(struct?: EventgridEventSubscriptionAdvancedFilterNumberIn): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    key: cdktf.stringToTerraform(struct!.key),
+    values: cdktf.listMapper(cdktf.numberToTerraform)(struct!.values),
+  }
+}
+
 export interface EventgridEventSubscriptionAdvancedFilterNumberLessThan {
   readonly key: string;
   readonly value: number;
 }
+
+function eventgridEventSubscriptionAdvancedFilterNumberLessThanToTerraform(struct?: EventgridEventSubscriptionAdvancedFilterNumberLessThan): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    key: cdktf.stringToTerraform(struct!.key),
+    value: cdktf.numberToTerraform(struct!.value),
+  }
+}
+
 export interface EventgridEventSubscriptionAdvancedFilterNumberLessThanOrEquals {
   readonly key: string;
   readonly value: number;
 }
+
+function eventgridEventSubscriptionAdvancedFilterNumberLessThanOrEqualsToTerraform(struct?: EventgridEventSubscriptionAdvancedFilterNumberLessThanOrEquals): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    key: cdktf.stringToTerraform(struct!.key),
+    value: cdktf.numberToTerraform(struct!.value),
+  }
+}
+
 export interface EventgridEventSubscriptionAdvancedFilterNumberNotIn {
   readonly key: string;
   readonly values: number[];
 }
+
+function eventgridEventSubscriptionAdvancedFilterNumberNotInToTerraform(struct?: EventgridEventSubscriptionAdvancedFilterNumberNotIn): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    key: cdktf.stringToTerraform(struct!.key),
+    values: cdktf.listMapper(cdktf.numberToTerraform)(struct!.values),
+  }
+}
+
 export interface EventgridEventSubscriptionAdvancedFilterStringBeginsWith {
   readonly key: string;
   readonly values: string[];
 }
+
+function eventgridEventSubscriptionAdvancedFilterStringBeginsWithToTerraform(struct?: EventgridEventSubscriptionAdvancedFilterStringBeginsWith): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    key: cdktf.stringToTerraform(struct!.key),
+    values: cdktf.listMapper(cdktf.stringToTerraform)(struct!.values),
+  }
+}
+
 export interface EventgridEventSubscriptionAdvancedFilterStringContains {
   readonly key: string;
   readonly values: string[];
 }
+
+function eventgridEventSubscriptionAdvancedFilterStringContainsToTerraform(struct?: EventgridEventSubscriptionAdvancedFilterStringContains): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    key: cdktf.stringToTerraform(struct!.key),
+    values: cdktf.listMapper(cdktf.stringToTerraform)(struct!.values),
+  }
+}
+
 export interface EventgridEventSubscriptionAdvancedFilterStringEndsWith {
   readonly key: string;
   readonly values: string[];
 }
+
+function eventgridEventSubscriptionAdvancedFilterStringEndsWithToTerraform(struct?: EventgridEventSubscriptionAdvancedFilterStringEndsWith): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    key: cdktf.stringToTerraform(struct!.key),
+    values: cdktf.listMapper(cdktf.stringToTerraform)(struct!.values),
+  }
+}
+
 export interface EventgridEventSubscriptionAdvancedFilterStringIn {
   readonly key: string;
   readonly values: string[];
 }
+
+function eventgridEventSubscriptionAdvancedFilterStringInToTerraform(struct?: EventgridEventSubscriptionAdvancedFilterStringIn): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    key: cdktf.stringToTerraform(struct!.key),
+    values: cdktf.listMapper(cdktf.stringToTerraform)(struct!.values),
+  }
+}
+
 export interface EventgridEventSubscriptionAdvancedFilterStringNotIn {
   readonly key: string;
   readonly values: string[];
 }
+
+function eventgridEventSubscriptionAdvancedFilterStringNotInToTerraform(struct?: EventgridEventSubscriptionAdvancedFilterStringNotIn): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    key: cdktf.stringToTerraform(struct!.key),
+    values: cdktf.listMapper(cdktf.stringToTerraform)(struct!.values),
+  }
+}
+
 export interface EventgridEventSubscriptionAdvancedFilter {
   /** bool_equals block */
   readonly boolEquals?: EventgridEventSubscriptionAdvancedFilterBoolEquals[];
@@ -114,40 +221,133 @@ export interface EventgridEventSubscriptionAdvancedFilter {
   /** string_not_in block */
   readonly stringNotIn?: EventgridEventSubscriptionAdvancedFilterStringNotIn[];
 }
+
+function eventgridEventSubscriptionAdvancedFilterToTerraform(struct?: EventgridEventSubscriptionAdvancedFilter): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    bool_equals: cdktf.listMapper(eventgridEventSubscriptionAdvancedFilterBoolEqualsToTerraform)(struct!.boolEquals),
+    number_greater_than: cdktf.listMapper(eventgridEventSubscriptionAdvancedFilterNumberGreaterThanToTerraform)(struct!.numberGreaterThan),
+    number_greater_than_or_equals: cdktf.listMapper(eventgridEventSubscriptionAdvancedFilterNumberGreaterThanOrEqualsToTerraform)(struct!.numberGreaterThanOrEquals),
+    number_in: cdktf.listMapper(eventgridEventSubscriptionAdvancedFilterNumberInToTerraform)(struct!.numberIn),
+    number_less_than: cdktf.listMapper(eventgridEventSubscriptionAdvancedFilterNumberLessThanToTerraform)(struct!.numberLessThan),
+    number_less_than_or_equals: cdktf.listMapper(eventgridEventSubscriptionAdvancedFilterNumberLessThanOrEqualsToTerraform)(struct!.numberLessThanOrEquals),
+    number_not_in: cdktf.listMapper(eventgridEventSubscriptionAdvancedFilterNumberNotInToTerraform)(struct!.numberNotIn),
+    string_begins_with: cdktf.listMapper(eventgridEventSubscriptionAdvancedFilterStringBeginsWithToTerraform)(struct!.stringBeginsWith),
+    string_contains: cdktf.listMapper(eventgridEventSubscriptionAdvancedFilterStringContainsToTerraform)(struct!.stringContains),
+    string_ends_with: cdktf.listMapper(eventgridEventSubscriptionAdvancedFilterStringEndsWithToTerraform)(struct!.stringEndsWith),
+    string_in: cdktf.listMapper(eventgridEventSubscriptionAdvancedFilterStringInToTerraform)(struct!.stringIn),
+    string_not_in: cdktf.listMapper(eventgridEventSubscriptionAdvancedFilterStringNotInToTerraform)(struct!.stringNotIn),
+  }
+}
+
 export interface EventgridEventSubscriptionAzureFunctionEndpoint {
   readonly functionId: string;
   readonly maxEventsPerBatch?: number;
   readonly preferredBatchSizeInKilobytes?: number;
 }
+
+function eventgridEventSubscriptionAzureFunctionEndpointToTerraform(struct?: EventgridEventSubscriptionAzureFunctionEndpoint): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    function_id: cdktf.stringToTerraform(struct!.functionId),
+    max_events_per_batch: cdktf.numberToTerraform(struct!.maxEventsPerBatch),
+    preferred_batch_size_in_kilobytes: cdktf.numberToTerraform(struct!.preferredBatchSizeInKilobytes),
+  }
+}
+
 export interface EventgridEventSubscriptionEventhubEndpoint {
   readonly eventhubId?: string;
 }
+
+function eventgridEventSubscriptionEventhubEndpointToTerraform(struct?: EventgridEventSubscriptionEventhubEndpoint): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    eventhub_id: cdktf.stringToTerraform(struct!.eventhubId),
+  }
+}
+
 export interface EventgridEventSubscriptionHybridConnectionEndpoint {
   readonly hybridConnectionId?: string;
 }
+
+function eventgridEventSubscriptionHybridConnectionEndpointToTerraform(struct?: EventgridEventSubscriptionHybridConnectionEndpoint): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    hybrid_connection_id: cdktf.stringToTerraform(struct!.hybridConnectionId),
+  }
+}
+
 export interface EventgridEventSubscriptionRetryPolicy {
   readonly eventTimeToLive: number;
   readonly maxDeliveryAttempts: number;
 }
+
+function eventgridEventSubscriptionRetryPolicyToTerraform(struct?: EventgridEventSubscriptionRetryPolicy): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    event_time_to_live: cdktf.numberToTerraform(struct!.eventTimeToLive),
+    max_delivery_attempts: cdktf.numberToTerraform(struct!.maxDeliveryAttempts),
+  }
+}
+
 export interface EventgridEventSubscriptionStorageBlobDeadLetterDestination {
   readonly storageAccountId: string;
   readonly storageBlobContainerName: string;
 }
+
+function eventgridEventSubscriptionStorageBlobDeadLetterDestinationToTerraform(struct?: EventgridEventSubscriptionStorageBlobDeadLetterDestination): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    storage_account_id: cdktf.stringToTerraform(struct!.storageAccountId),
+    storage_blob_container_name: cdktf.stringToTerraform(struct!.storageBlobContainerName),
+  }
+}
+
 export interface EventgridEventSubscriptionStorageQueueEndpoint {
   readonly queueName: string;
   readonly storageAccountId: string;
 }
+
+function eventgridEventSubscriptionStorageQueueEndpointToTerraform(struct?: EventgridEventSubscriptionStorageQueueEndpoint): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    queue_name: cdktf.stringToTerraform(struct!.queueName),
+    storage_account_id: cdktf.stringToTerraform(struct!.storageAccountId),
+  }
+}
+
 export interface EventgridEventSubscriptionSubjectFilter {
   readonly caseSensitive?: boolean;
   readonly subjectBeginsWith?: string;
   readonly subjectEndsWith?: string;
 }
+
+function eventgridEventSubscriptionSubjectFilterToTerraform(struct?: EventgridEventSubscriptionSubjectFilter): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    case_sensitive: cdktf.booleanToTerraform(struct!.caseSensitive),
+    subject_begins_with: cdktf.stringToTerraform(struct!.subjectBeginsWith),
+    subject_ends_with: cdktf.stringToTerraform(struct!.subjectEndsWith),
+  }
+}
+
 export interface EventgridEventSubscriptionTimeouts {
   readonly create?: string;
   readonly delete?: string;
   readonly read?: string;
   readonly update?: string;
 }
+
+function eventgridEventSubscriptionTimeoutsToTerraform(struct?: EventgridEventSubscriptionTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
 export interface EventgridEventSubscriptionWebhookEndpoint {
   readonly activeDirectoryAppIdOrUri?: string;
   readonly activeDirectoryTenantId?: string;
@@ -156,9 +356,21 @@ export interface EventgridEventSubscriptionWebhookEndpoint {
   readonly url: string;
 }
 
+function eventgridEventSubscriptionWebhookEndpointToTerraform(struct?: EventgridEventSubscriptionWebhookEndpoint): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    active_directory_app_id_or_uri: cdktf.stringToTerraform(struct!.activeDirectoryAppIdOrUri),
+    active_directory_tenant_id: cdktf.stringToTerraform(struct!.activeDirectoryTenantId),
+    max_events_per_batch: cdktf.numberToTerraform(struct!.maxEventsPerBatch),
+    preferred_batch_size_in_kilobytes: cdktf.numberToTerraform(struct!.preferredBatchSizeInKilobytes),
+    url: cdktf.stringToTerraform(struct!.url),
+  }
+}
+
+
 // Resource
 
-export class EventgridEventSubscription extends TerraformResource {
+export class EventgridEventSubscription extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -543,27 +755,27 @@ export class EventgridEventSubscription extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      event_delivery_schema: this._eventDeliverySchema,
-      eventhub_endpoint_id: this._eventhubEndpointId,
-      expiration_time_utc: this._expirationTimeUtc,
-      hybrid_connection_endpoint_id: this._hybridConnectionEndpointId,
-      included_event_types: this._includedEventTypes,
-      labels: this._labels,
-      name: this._name,
-      scope: this._scope,
-      service_bus_queue_endpoint_id: this._serviceBusQueueEndpointId,
-      service_bus_topic_endpoint_id: this._serviceBusTopicEndpointId,
-      topic_name: this._topicName,
-      advanced_filter: this._advancedFilter,
-      azure_function_endpoint: this._azureFunctionEndpoint,
-      eventhub_endpoint: this._eventhubEndpoint,
-      hybrid_connection_endpoint: this._hybridConnectionEndpoint,
-      retry_policy: this._retryPolicy,
-      storage_blob_dead_letter_destination: this._storageBlobDeadLetterDestination,
-      storage_queue_endpoint: this._storageQueueEndpoint,
-      subject_filter: this._subjectFilter,
-      timeouts: this._timeouts,
-      webhook_endpoint: this._webhookEndpoint,
+      event_delivery_schema: cdktf.stringToTerraform(this._eventDeliverySchema),
+      eventhub_endpoint_id: cdktf.stringToTerraform(this._eventhubEndpointId),
+      expiration_time_utc: cdktf.stringToTerraform(this._expirationTimeUtc),
+      hybrid_connection_endpoint_id: cdktf.stringToTerraform(this._hybridConnectionEndpointId),
+      included_event_types: cdktf.listMapper(cdktf.stringToTerraform)(this._includedEventTypes),
+      labels: cdktf.listMapper(cdktf.stringToTerraform)(this._labels),
+      name: cdktf.stringToTerraform(this._name),
+      scope: cdktf.stringToTerraform(this._scope),
+      service_bus_queue_endpoint_id: cdktf.stringToTerraform(this._serviceBusQueueEndpointId),
+      service_bus_topic_endpoint_id: cdktf.stringToTerraform(this._serviceBusTopicEndpointId),
+      topic_name: cdktf.stringToTerraform(this._topicName),
+      advanced_filter: cdktf.listMapper(eventgridEventSubscriptionAdvancedFilterToTerraform)(this._advancedFilter),
+      azure_function_endpoint: cdktf.listMapper(eventgridEventSubscriptionAzureFunctionEndpointToTerraform)(this._azureFunctionEndpoint),
+      eventhub_endpoint: cdktf.listMapper(eventgridEventSubscriptionEventhubEndpointToTerraform)(this._eventhubEndpoint),
+      hybrid_connection_endpoint: cdktf.listMapper(eventgridEventSubscriptionHybridConnectionEndpointToTerraform)(this._hybridConnectionEndpoint),
+      retry_policy: cdktf.listMapper(eventgridEventSubscriptionRetryPolicyToTerraform)(this._retryPolicy),
+      storage_blob_dead_letter_destination: cdktf.listMapper(eventgridEventSubscriptionStorageBlobDeadLetterDestinationToTerraform)(this._storageBlobDeadLetterDestination),
+      storage_queue_endpoint: cdktf.listMapper(eventgridEventSubscriptionStorageQueueEndpointToTerraform)(this._storageQueueEndpoint),
+      subject_filter: cdktf.listMapper(eventgridEventSubscriptionSubjectFilterToTerraform)(this._subjectFilter),
+      timeouts: eventgridEventSubscriptionTimeoutsToTerraform(this._timeouts),
+      webhook_endpoint: cdktf.listMapper(eventgridEventSubscriptionWebhookEndpointToTerraform)(this._webhookEndpoint),
     };
   }
 }

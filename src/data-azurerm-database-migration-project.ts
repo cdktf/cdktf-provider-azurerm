@@ -2,13 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformDataSource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
-import { StringMap } from "cdktf";
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataAzurermDatabaseMigrationProjectConfig extends TerraformMetaArguments {
+export interface DataAzurermDatabaseMigrationProjectConfig extends cdktf.TerraformMetaArguments {
   readonly name: string;
   readonly resourceGroupName: string;
   readonly serviceName: string;
@@ -19,9 +17,17 @@ export interface DataAzurermDatabaseMigrationProjectTimeouts {
   readonly read?: string;
 }
 
+function dataAzurermDatabaseMigrationProjectTimeoutsToTerraform(struct?: DataAzurermDatabaseMigrationProjectTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    read: cdktf.stringToTerraform(struct!.read),
+  }
+}
+
+
 // Resource
 
-export class DataAzurermDatabaseMigrationProject extends TerraformDataSource {
+export class DataAzurermDatabaseMigrationProject extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
@@ -104,7 +110,7 @@ export class DataAzurermDatabaseMigrationProject extends TerraformDataSource {
 
   // tags - computed: true, optional: false, required: false
   public tags(key: string): string {
-    return new StringMap(this, 'tags').lookup(key);
+    return new cdktf.StringMap(this, 'tags').lookup(key);
   }
 
   // target_platform - computed: true, optional: false, required: false
@@ -134,10 +140,10 @@ export class DataAzurermDatabaseMigrationProject extends TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      service_name: this._serviceName,
-      timeouts: this._timeouts,
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      service_name: cdktf.stringToTerraform(this._serviceName),
+      timeouts: dataAzurermDatabaseMigrationProjectTimeoutsToTerraform(this._timeouts),
     };
   }
 }

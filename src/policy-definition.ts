@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface PolicyDefinitionConfig extends TerraformMetaArguments {
+export interface PolicyDefinitionConfig extends cdktf.TerraformMetaArguments {
   readonly description?: string;
   readonly displayName: string;
   readonly managementGroupId?: string;
@@ -28,9 +27,20 @@ export interface PolicyDefinitionTimeouts {
   readonly update?: string;
 }
 
+function policyDefinitionTimeoutsToTerraform(struct?: PolicyDefinitionTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class PolicyDefinition extends TerraformResource {
+export class PolicyDefinition extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -239,17 +249,17 @@ export class PolicyDefinition extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      description: this._description,
-      display_name: this._displayName,
-      management_group_id: this._managementGroupId,
-      management_group_name: this._managementGroupName,
-      metadata: this._metadata,
-      mode: this._mode,
-      name: this._name,
-      parameters: this._parameters,
-      policy_rule: this._policyRule,
-      policy_type: this._policyType,
-      timeouts: this._timeouts,
+      description: cdktf.stringToTerraform(this._description),
+      display_name: cdktf.stringToTerraform(this._displayName),
+      management_group_id: cdktf.stringToTerraform(this._managementGroupId),
+      management_group_name: cdktf.stringToTerraform(this._managementGroupName),
+      metadata: cdktf.stringToTerraform(this._metadata),
+      mode: cdktf.stringToTerraform(this._mode),
+      name: cdktf.stringToTerraform(this._name),
+      parameters: cdktf.stringToTerraform(this._parameters),
+      policy_rule: cdktf.stringToTerraform(this._policyRule),
+      policy_type: cdktf.stringToTerraform(this._policyType),
+      timeouts: policyDefinitionTimeoutsToTerraform(this._timeouts),
     };
   }
 }

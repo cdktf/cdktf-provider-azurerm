@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface MssqlServerSecurityAlertPolicyConfig extends TerraformMetaArguments {
+export interface MssqlServerSecurityAlertPolicyConfig extends cdktf.TerraformMetaArguments {
   readonly disabledAlerts?: string[];
   readonly emailAccountAdmins?: boolean;
   readonly emailAddresses?: string[];
@@ -27,9 +26,20 @@ export interface MssqlServerSecurityAlertPolicyTimeouts {
   readonly update?: string;
 }
 
+function mssqlServerSecurityAlertPolicyTimeoutsToTerraform(struct?: MssqlServerSecurityAlertPolicyTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class MssqlServerSecurityAlertPolicy extends TerraformResource {
+export class MssqlServerSecurityAlertPolicy extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -224,16 +234,16 @@ export class MssqlServerSecurityAlertPolicy extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      disabled_alerts: this._disabledAlerts,
-      email_account_admins: this._emailAccountAdmins,
-      email_addresses: this._emailAddresses,
-      resource_group_name: this._resourceGroupName,
-      retention_days: this._retentionDays,
-      server_name: this._serverName,
-      state: this._state,
-      storage_account_access_key: this._storageAccountAccessKey,
-      storage_endpoint: this._storageEndpoint,
-      timeouts: this._timeouts,
+      disabled_alerts: cdktf.listMapper(cdktf.stringToTerraform)(this._disabledAlerts),
+      email_account_admins: cdktf.booleanToTerraform(this._emailAccountAdmins),
+      email_addresses: cdktf.listMapper(cdktf.stringToTerraform)(this._emailAddresses),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      retention_days: cdktf.numberToTerraform(this._retentionDays),
+      server_name: cdktf.stringToTerraform(this._serverName),
+      state: cdktf.stringToTerraform(this._state),
+      storage_account_access_key: cdktf.stringToTerraform(this._storageAccountAccessKey),
+      storage_endpoint: cdktf.stringToTerraform(this._storageEndpoint),
+      timeouts: mssqlServerSecurityAlertPolicyTimeoutsToTerraform(this._timeouts),
     };
   }
 }

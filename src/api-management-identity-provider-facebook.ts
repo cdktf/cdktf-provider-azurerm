@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface ApiManagementIdentityProviderFacebookConfig extends TerraformMetaArguments {
+export interface ApiManagementIdentityProviderFacebookConfig extends cdktf.TerraformMetaArguments {
   readonly apiManagementName: string;
   readonly appId: string;
   readonly appSecret: string;
@@ -22,9 +21,20 @@ export interface ApiManagementIdentityProviderFacebookTimeouts {
   readonly update?: string;
 }
 
+function apiManagementIdentityProviderFacebookTimeoutsToTerraform(struct?: ApiManagementIdentityProviderFacebookTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class ApiManagementIdentityProviderFacebook extends TerraformResource {
+export class ApiManagementIdentityProviderFacebook extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -131,11 +141,11 @@ export class ApiManagementIdentityProviderFacebook extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      api_management_name: this._apiManagementName,
-      app_id: this._appId,
-      app_secret: this._appSecret,
-      resource_group_name: this._resourceGroupName,
-      timeouts: this._timeouts,
+      api_management_name: cdktf.stringToTerraform(this._apiManagementName),
+      app_id: cdktf.stringToTerraform(this._appId),
+      app_secret: cdktf.stringToTerraform(this._appSecret),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      timeouts: apiManagementIdentityProviderFacebookTimeoutsToTerraform(this._timeouts),
     };
   }
 }

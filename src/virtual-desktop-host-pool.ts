@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface VirtualDesktopHostPoolConfig extends TerraformMetaArguments {
+export interface VirtualDesktopHostPoolConfig extends cdktf.TerraformMetaArguments {
   readonly description?: string;
   readonly friendlyName?: string;
   readonly loadBalancerType: string;
@@ -29,6 +28,14 @@ export interface VirtualDesktopHostPoolConfig extends TerraformMetaArguments {
 export interface VirtualDesktopHostPoolRegistrationInfo {
   readonly expirationDate: string;
 }
+
+function virtualDesktopHostPoolRegistrationInfoToTerraform(struct?: VirtualDesktopHostPoolRegistrationInfo): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    expiration_date: cdktf.stringToTerraform(struct!.expirationDate),
+  }
+}
+
 export interface VirtualDesktopHostPoolTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -36,9 +43,20 @@ export interface VirtualDesktopHostPoolTimeouts {
   readonly update?: string;
 }
 
+function virtualDesktopHostPoolTimeoutsToTerraform(struct?: VirtualDesktopHostPoolTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class VirtualDesktopHostPool extends TerraformResource {
+export class VirtualDesktopHostPool extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -295,20 +313,20 @@ export class VirtualDesktopHostPool extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      description: this._description,
-      friendly_name: this._friendlyName,
-      load_balancer_type: this._loadBalancerType,
-      location: this._location,
-      maximum_sessions_allowed: this._maximumSessionsAllowed,
-      name: this._name,
-      personal_desktop_assignment_type: this._personalDesktopAssignmentType,
-      preferred_app_group_type: this._preferredAppGroupType,
-      resource_group_name: this._resourceGroupName,
-      tags: this._tags,
-      type: this._type,
-      validate_environment: this._validateEnvironment,
-      registration_info: this._registrationInfo,
-      timeouts: this._timeouts,
+      description: cdktf.stringToTerraform(this._description),
+      friendly_name: cdktf.stringToTerraform(this._friendlyName),
+      load_balancer_type: cdktf.stringToTerraform(this._loadBalancerType),
+      location: cdktf.stringToTerraform(this._location),
+      maximum_sessions_allowed: cdktf.numberToTerraform(this._maximumSessionsAllowed),
+      name: cdktf.stringToTerraform(this._name),
+      personal_desktop_assignment_type: cdktf.stringToTerraform(this._personalDesktopAssignmentType),
+      preferred_app_group_type: cdktf.stringToTerraform(this._preferredAppGroupType),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      type: cdktf.stringToTerraform(this._type),
+      validate_environment: cdktf.booleanToTerraform(this._validateEnvironment),
+      registration_info: cdktf.listMapper(virtualDesktopHostPoolRegistrationInfoToTerraform)(this._registrationInfo),
+      timeouts: virtualDesktopHostPoolTimeoutsToTerraform(this._timeouts),
     };
   }
 }

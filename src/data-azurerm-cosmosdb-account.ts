@@ -2,27 +2,24 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformDataSource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
-import { ComplexComputedList } from "cdktf";
-import { StringMap } from "cdktf";
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataAzurermCosmosdbAccountConfig extends TerraformMetaArguments {
+export interface DataAzurermCosmosdbAccountConfig extends cdktf.TerraformMetaArguments {
   readonly name: string;
   readonly resourceGroupName: string;
   /** timeouts block */
   readonly timeouts?: DataAzurermCosmosdbAccountTimeouts;
 }
-export class DataAzurermCosmosdbAccountCapabilities extends ComplexComputedList {
+export class DataAzurermCosmosdbAccountCapabilities extends cdktf.ComplexComputedList {
 
   // name - computed: true, optional: false, required: false
   public get name() {
     return this.getStringAttribute('name');
   }
 }
-export class DataAzurermCosmosdbAccountConsistencyPolicy extends ComplexComputedList {
+export class DataAzurermCosmosdbAccountConsistencyPolicy extends cdktf.ComplexComputedList {
 
   // consistency_level - computed: true, optional: false, required: false
   public get consistencyLevel() {
@@ -39,7 +36,7 @@ export class DataAzurermCosmosdbAccountConsistencyPolicy extends ComplexComputed
     return this.getNumberAttribute('max_staleness_prefix');
   }
 }
-export class DataAzurermCosmosdbAccountGeoLocation extends ComplexComputedList {
+export class DataAzurermCosmosdbAccountGeoLocation extends cdktf.ComplexComputedList {
 
   // failover_priority - computed: true, optional: false, required: false
   public get failoverPriority() {
@@ -56,7 +53,7 @@ export class DataAzurermCosmosdbAccountGeoLocation extends ComplexComputedList {
     return this.getStringAttribute('location');
   }
 }
-export class DataAzurermCosmosdbAccountVirtualNetworkRule extends ComplexComputedList {
+export class DataAzurermCosmosdbAccountVirtualNetworkRule extends cdktf.ComplexComputedList {
 
   // id - computed: true, optional: false, required: false
   public get id() {
@@ -67,9 +64,17 @@ export interface DataAzurermCosmosdbAccountTimeouts {
   readonly read?: string;
 }
 
+function dataAzurermCosmosdbAccountTimeoutsToTerraform(struct?: DataAzurermCosmosdbAccountTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    read: cdktf.stringToTerraform(struct!.read),
+  }
+}
+
+
 // Resource
 
-export class DataAzurermCosmosdbAccount extends TerraformDataSource {
+export class DataAzurermCosmosdbAccount extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
@@ -238,7 +243,7 @@ export class DataAzurermCosmosdbAccount extends TerraformDataSource {
 
   // tags - computed: true, optional: false, required: false
   public tags(key: string): string {
-    return new StringMap(this, 'tags').lookup(key);
+    return new cdktf.StringMap(this, 'tags').lookup(key);
   }
 
   // virtual_network_rule - computed: true, optional: false, required: false
@@ -273,9 +278,9 @@ export class DataAzurermCosmosdbAccount extends TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      timeouts: this._timeouts,
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      timeouts: dataAzurermCosmosdbAccountTimeoutsToTerraform(this._timeouts),
     };
   }
 }

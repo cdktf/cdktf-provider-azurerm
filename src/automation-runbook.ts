@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface AutomationRunbookConfig extends TerraformMetaArguments {
+export interface AutomationRunbookConfig extends cdktf.TerraformMetaArguments {
   readonly automationAccountName: string;
   readonly content?: string;
   readonly description?: string;
@@ -30,16 +29,46 @@ export interface AutomationRunbookJobSchedule {
   readonly runOn?: string;
   readonly scheduleName?: string;
 }
+
+function automationRunbookJobScheduleToTerraform(struct?: AutomationRunbookJobSchedule): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    job_schedule_id: cdktf.stringToTerraform(struct!.jobScheduleId),
+    parameters: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.parameters),
+    run_on: cdktf.stringToTerraform(struct!.runOn),
+    schedule_name: cdktf.stringToTerraform(struct!.scheduleName),
+  }
+}
+
 export interface AutomationRunbookPublishContentLinkHash {
   readonly algorithm: string;
   readonly value: string;
 }
+
+function automationRunbookPublishContentLinkHashToTerraform(struct?: AutomationRunbookPublishContentLinkHash): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    algorithm: cdktf.stringToTerraform(struct!.algorithm),
+    value: cdktf.stringToTerraform(struct!.value),
+  }
+}
+
 export interface AutomationRunbookPublishContentLink {
   readonly uri: string;
   readonly version?: string;
   /** hash block */
   readonly hash?: AutomationRunbookPublishContentLinkHash[];
 }
+
+function automationRunbookPublishContentLinkToTerraform(struct?: AutomationRunbookPublishContentLink): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    uri: cdktf.stringToTerraform(struct!.uri),
+    version: cdktf.stringToTerraform(struct!.version),
+    hash: cdktf.listMapper(automationRunbookPublishContentLinkHashToTerraform)(struct!.hash),
+  }
+}
+
 export interface AutomationRunbookTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -47,9 +76,20 @@ export interface AutomationRunbookTimeouts {
   readonly update?: string;
 }
 
+function automationRunbookTimeoutsToTerraform(struct?: AutomationRunbookTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class AutomationRunbook extends TerraformResource {
+export class AutomationRunbook extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -283,19 +323,19 @@ export class AutomationRunbook extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      automation_account_name: this._automationAccountName,
-      content: this._content,
-      description: this._description,
-      job_schedule: this._jobSchedule,
-      location: this._location,
-      log_progress: this._logProgress,
-      log_verbose: this._logVerbose,
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      runbook_type: this._runbookType,
-      tags: this._tags,
-      publish_content_link: this._publishContentLink,
-      timeouts: this._timeouts,
+      automation_account_name: cdktf.stringToTerraform(this._automationAccountName),
+      content: cdktf.stringToTerraform(this._content),
+      description: cdktf.stringToTerraform(this._description),
+      job_schedule: cdktf.listMapper(automationRunbookJobScheduleToTerraform)(this._jobSchedule),
+      location: cdktf.stringToTerraform(this._location),
+      log_progress: cdktf.booleanToTerraform(this._logProgress),
+      log_verbose: cdktf.booleanToTerraform(this._logVerbose),
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      runbook_type: cdktf.stringToTerraform(this._runbookType),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      publish_content_link: cdktf.listMapper(automationRunbookPublishContentLinkToTerraform)(this._publishContentLink),
+      timeouts: automationRunbookTimeoutsToTerraform(this._timeouts),
     };
   }
 }

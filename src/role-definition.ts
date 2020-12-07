@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface RoleDefinitionConfig extends TerraformMetaArguments {
+export interface RoleDefinitionConfig extends cdktf.TerraformMetaArguments {
   readonly assignableScopes?: string[];
   readonly description?: string;
   readonly name: string;
@@ -24,6 +23,17 @@ export interface RoleDefinitionPermissions {
   readonly notActions?: string[];
   readonly notDataActions?: string[];
 }
+
+function roleDefinitionPermissionsToTerraform(struct?: RoleDefinitionPermissions): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    actions: cdktf.listMapper(cdktf.stringToTerraform)(struct!.actions),
+    data_actions: cdktf.listMapper(cdktf.stringToTerraform)(struct!.dataActions),
+    not_actions: cdktf.listMapper(cdktf.stringToTerraform)(struct!.notActions),
+    not_data_actions: cdktf.listMapper(cdktf.stringToTerraform)(struct!.notDataActions),
+  }
+}
+
 export interface RoleDefinitionTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -31,9 +41,20 @@ export interface RoleDefinitionTimeouts {
   readonly update?: string;
 }
 
+function roleDefinitionTimeoutsToTerraform(struct?: RoleDefinitionTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class RoleDefinition extends TerraformResource {
+export class RoleDefinition extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -182,13 +203,13 @@ export class RoleDefinition extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      assignable_scopes: this._assignableScopes,
-      description: this._description,
-      name: this._name,
-      role_definition_id: this._roleDefinitionId,
-      scope: this._scope,
-      permissions: this._permissions,
-      timeouts: this._timeouts,
+      assignable_scopes: cdktf.listMapper(cdktf.stringToTerraform)(this._assignableScopes),
+      description: cdktf.stringToTerraform(this._description),
+      name: cdktf.stringToTerraform(this._name),
+      role_definition_id: cdktf.stringToTerraform(this._roleDefinitionId),
+      scope: cdktf.stringToTerraform(this._scope),
+      permissions: cdktf.listMapper(roleDefinitionPermissionsToTerraform)(this._permissions),
+      timeouts: roleDefinitionTimeoutsToTerraform(this._timeouts),
     };
   }
 }

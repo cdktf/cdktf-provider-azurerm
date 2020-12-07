@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface IothubFallbackRouteAConfig extends TerraformMetaArguments {
+export interface IothubFallbackRouteAConfig extends cdktf.TerraformMetaArguments {
   readonly condition?: string;
   readonly enabled: boolean;
   readonly endpointNames: string[];
@@ -23,9 +22,20 @@ export interface IothubFallbackRouteTimeouts {
   readonly update?: string;
 }
 
+function iothubFallbackRouteTimeoutsToTerraform(struct?: IothubFallbackRouteTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class IothubFallbackRouteA extends TerraformResource {
+export class IothubFallbackRouteA extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -149,12 +159,12 @@ export class IothubFallbackRouteA extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      condition: this._condition,
-      enabled: this._enabled,
-      endpoint_names: this._endpointNames,
-      iothub_name: this._iothubName,
-      resource_group_name: this._resourceGroupName,
-      timeouts: this._timeouts,
+      condition: cdktf.stringToTerraform(this._condition),
+      enabled: cdktf.booleanToTerraform(this._enabled),
+      endpoint_names: cdktf.listMapper(cdktf.stringToTerraform)(this._endpointNames),
+      iothub_name: cdktf.stringToTerraform(this._iothubName),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      timeouts: iothubFallbackRouteTimeoutsToTerraform(this._timeouts),
     };
   }
 }

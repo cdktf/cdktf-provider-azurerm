@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface SecurityCenterAutoProvisioningConfig extends TerraformMetaArguments {
+export interface SecurityCenterAutoProvisioningConfig extends cdktf.TerraformMetaArguments {
   readonly autoProvision: string;
   /** timeouts block */
   readonly timeouts?: SecurityCenterAutoProvisioningTimeouts;
@@ -19,9 +18,20 @@ export interface SecurityCenterAutoProvisioningTimeouts {
   readonly update?: string;
 }
 
+function securityCenterAutoProvisioningTimeoutsToTerraform(struct?: SecurityCenterAutoProvisioningTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class SecurityCenterAutoProvisioning extends TerraformResource {
+export class SecurityCenterAutoProvisioning extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -86,8 +96,8 @@ export class SecurityCenterAutoProvisioning extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      auto_provision: this._autoProvision,
-      timeouts: this._timeouts,
+      auto_provision: cdktf.stringToTerraform(this._autoProvision),
+      timeouts: securityCenterAutoProvisioningTimeoutsToTerraform(this._timeouts),
     };
   }
 }

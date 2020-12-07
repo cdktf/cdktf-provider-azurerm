@@ -2,13 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformDataSource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
-import { StringMap } from "cdktf";
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataAzurermKubernetesClusterNodePoolConfig extends TerraformMetaArguments {
+export interface DataAzurermKubernetesClusterNodePoolConfig extends cdktf.TerraformMetaArguments {
   readonly kubernetesClusterName: string;
   readonly name: string;
   readonly resourceGroupName: string;
@@ -19,9 +17,17 @@ export interface DataAzurermKubernetesClusterNodePoolTimeouts {
   readonly read?: string;
 }
 
+function dataAzurermKubernetesClusterNodePoolTimeoutsToTerraform(struct?: DataAzurermKubernetesClusterNodePoolTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    read: cdktf.stringToTerraform(struct!.read),
+  }
+}
+
+
 // Resource
 
-export class DataAzurermKubernetesClusterNodePool extends TerraformDataSource {
+export class DataAzurermKubernetesClusterNodePool extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
@@ -126,7 +132,7 @@ export class DataAzurermKubernetesClusterNodePool extends TerraformDataSource {
 
   // node_labels - computed: true, optional: false, required: false
   public nodeLabels(key: string): string {
-    return new StringMap(this, 'node_labels').lookup(key);
+    return new cdktf.StringMap(this, 'node_labels').lookup(key);
   }
 
   // node_taints - computed: true, optional: false, required: false
@@ -184,7 +190,7 @@ export class DataAzurermKubernetesClusterNodePool extends TerraformDataSource {
 
   // tags - computed: true, optional: false, required: false
   public tags(key: string): string {
-    return new StringMap(this, 'tags').lookup(key);
+    return new cdktf.StringMap(this, 'tags').lookup(key);
   }
 
   // vm_size - computed: true, optional: false, required: false
@@ -219,10 +225,10 @@ export class DataAzurermKubernetesClusterNodePool extends TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      kubernetes_cluster_name: this._kubernetesClusterName,
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      timeouts: this._timeouts,
+      kubernetes_cluster_name: cdktf.stringToTerraform(this._kubernetesClusterName),
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      timeouts: dataAzurermKubernetesClusterNodePoolTimeoutsToTerraform(this._timeouts),
     };
   }
 }

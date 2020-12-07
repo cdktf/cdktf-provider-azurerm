@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface StorageManagementPolicyConfig extends TerraformMetaArguments {
+export interface StorageManagementPolicyConfig extends cdktf.TerraformMetaArguments {
   readonly storageAccountId: string;
   /** rule block */
   readonly rule?: StorageManagementPolicyRule[];
@@ -19,19 +18,55 @@ export interface StorageManagementPolicyRuleActionsBaseBlob {
   readonly tierToArchiveAfterDaysSinceModificationGreaterThan?: number;
   readonly tierToCoolAfterDaysSinceModificationGreaterThan?: number;
 }
+
+function storageManagementPolicyRuleActionsBaseBlobToTerraform(struct?: StorageManagementPolicyRuleActionsBaseBlob): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    delete_after_days_since_modification_greater_than: cdktf.numberToTerraform(struct!.deleteAfterDaysSinceModificationGreaterThan),
+    tier_to_archive_after_days_since_modification_greater_than: cdktf.numberToTerraform(struct!.tierToArchiveAfterDaysSinceModificationGreaterThan),
+    tier_to_cool_after_days_since_modification_greater_than: cdktf.numberToTerraform(struct!.tierToCoolAfterDaysSinceModificationGreaterThan),
+  }
+}
+
 export interface StorageManagementPolicyRuleActionsSnapshot {
   readonly deleteAfterDaysSinceCreationGreaterThan?: number;
 }
+
+function storageManagementPolicyRuleActionsSnapshotToTerraform(struct?: StorageManagementPolicyRuleActionsSnapshot): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    delete_after_days_since_creation_greater_than: cdktf.numberToTerraform(struct!.deleteAfterDaysSinceCreationGreaterThan),
+  }
+}
+
 export interface StorageManagementPolicyRuleActions {
   /** base_blob block */
   readonly baseBlob?: StorageManagementPolicyRuleActionsBaseBlob[];
   /** snapshot block */
   readonly snapshot?: StorageManagementPolicyRuleActionsSnapshot[];
 }
+
+function storageManagementPolicyRuleActionsToTerraform(struct?: StorageManagementPolicyRuleActions): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    base_blob: cdktf.listMapper(storageManagementPolicyRuleActionsBaseBlobToTerraform)(struct!.baseBlob),
+    snapshot: cdktf.listMapper(storageManagementPolicyRuleActionsSnapshotToTerraform)(struct!.snapshot),
+  }
+}
+
 export interface StorageManagementPolicyRuleFilters {
   readonly blobTypes?: string[];
   readonly prefixMatch?: string[];
 }
+
+function storageManagementPolicyRuleFiltersToTerraform(struct?: StorageManagementPolicyRuleFilters): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    blob_types: cdktf.listMapper(cdktf.stringToTerraform)(struct!.blobTypes),
+    prefix_match: cdktf.listMapper(cdktf.stringToTerraform)(struct!.prefixMatch),
+  }
+}
+
 export interface StorageManagementPolicyRule {
   readonly enabled: boolean;
   readonly name: string;
@@ -40,6 +75,17 @@ export interface StorageManagementPolicyRule {
   /** filters block */
   readonly filters?: StorageManagementPolicyRuleFilters[];
 }
+
+function storageManagementPolicyRuleToTerraform(struct?: StorageManagementPolicyRule): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    enabled: cdktf.booleanToTerraform(struct!.enabled),
+    name: cdktf.stringToTerraform(struct!.name),
+    actions: cdktf.listMapper(storageManagementPolicyRuleActionsToTerraform)(struct!.actions),
+    filters: cdktf.listMapper(storageManagementPolicyRuleFiltersToTerraform)(struct!.filters),
+  }
+}
+
 export interface StorageManagementPolicyTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -47,9 +93,20 @@ export interface StorageManagementPolicyTimeouts {
   readonly update?: string;
 }
 
+function storageManagementPolicyTimeoutsToTerraform(struct?: StorageManagementPolicyTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class StorageManagementPolicy extends TerraformResource {
+export class StorageManagementPolicy extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -131,9 +188,9 @@ export class StorageManagementPolicy extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      storage_account_id: this._storageAccountId,
-      rule: this._rule,
-      timeouts: this._timeouts,
+      storage_account_id: cdktf.stringToTerraform(this._storageAccountId),
+      rule: cdktf.listMapper(storageManagementPolicyRuleToTerraform)(this._rule),
+      timeouts: storageManagementPolicyTimeoutsToTerraform(this._timeouts),
     };
   }
 }

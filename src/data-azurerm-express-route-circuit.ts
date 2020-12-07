@@ -2,19 +2,17 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformDataSource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
-import { ComplexComputedList } from "cdktf";
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataAzurermExpressRouteCircuitConfig extends TerraformMetaArguments {
+export interface DataAzurermExpressRouteCircuitConfig extends cdktf.TerraformMetaArguments {
   readonly name: string;
   readonly resourceGroupName: string;
   /** timeouts block */
   readonly timeouts?: DataAzurermExpressRouteCircuitTimeouts;
 }
-export class DataAzurermExpressRouteCircuitPeerings extends ComplexComputedList {
+export class DataAzurermExpressRouteCircuitPeerings extends cdktf.ComplexComputedList {
 
   // azure_asn - computed: true, optional: false, required: false
   public get azureAsn() {
@@ -51,7 +49,7 @@ export class DataAzurermExpressRouteCircuitPeerings extends ComplexComputedList 
     return this.getNumberAttribute('vlan_id');
   }
 }
-export class DataAzurermExpressRouteCircuitServiceProviderProperties extends ComplexComputedList {
+export class DataAzurermExpressRouteCircuitServiceProviderProperties extends cdktf.ComplexComputedList {
 
   // bandwidth_in_mbps - computed: true, optional: false, required: false
   public get bandwidthInMbps() {
@@ -68,7 +66,7 @@ export class DataAzurermExpressRouteCircuitServiceProviderProperties extends Com
     return this.getStringAttribute('service_provider_name');
   }
 }
-export class DataAzurermExpressRouteCircuitSku extends ComplexComputedList {
+export class DataAzurermExpressRouteCircuitSku extends cdktf.ComplexComputedList {
 
   // family - computed: true, optional: false, required: false
   public get family() {
@@ -84,9 +82,17 @@ export interface DataAzurermExpressRouteCircuitTimeouts {
   readonly read?: string;
 }
 
+function dataAzurermExpressRouteCircuitTimeoutsToTerraform(struct?: DataAzurermExpressRouteCircuitTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    read: cdktf.stringToTerraform(struct!.read),
+  }
+}
+
+
 // Resource
 
-export class DataAzurermExpressRouteCircuit extends TerraformDataSource {
+export class DataAzurermExpressRouteCircuit extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
@@ -195,9 +201,9 @@ export class DataAzurermExpressRouteCircuit extends TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      timeouts: this._timeouts,
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      timeouts: dataAzurermExpressRouteCircuitTimeoutsToTerraform(this._timeouts),
     };
   }
 }

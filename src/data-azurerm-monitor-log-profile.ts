@@ -2,18 +2,16 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformDataSource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
-import { ComplexComputedList } from "cdktf";
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataAzurermMonitorLogProfileConfig extends TerraformMetaArguments {
+export interface DataAzurermMonitorLogProfileConfig extends cdktf.TerraformMetaArguments {
   readonly name: string;
   /** timeouts block */
   readonly timeouts?: DataAzurermMonitorLogProfileTimeouts;
 }
-export class DataAzurermMonitorLogProfileRetentionPolicy extends ComplexComputedList {
+export class DataAzurermMonitorLogProfileRetentionPolicy extends cdktf.ComplexComputedList {
 
   // days - computed: true, optional: false, required: false
   public get days() {
@@ -29,9 +27,17 @@ export interface DataAzurermMonitorLogProfileTimeouts {
   readonly read?: string;
 }
 
+function dataAzurermMonitorLogProfileTimeoutsToTerraform(struct?: DataAzurermMonitorLogProfileTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    read: cdktf.stringToTerraform(struct!.read),
+  }
+}
+
+
 // Resource
 
-export class DataAzurermMonitorLogProfile extends TerraformDataSource {
+export class DataAzurermMonitorLogProfile extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
@@ -121,8 +127,8 @@ export class DataAzurermMonitorLogProfile extends TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      name: this._name,
-      timeouts: this._timeouts,
+      name: cdktf.stringToTerraform(this._name),
+      timeouts: dataAzurermMonitorLogProfileTimeoutsToTerraform(this._timeouts),
     };
   }
 }

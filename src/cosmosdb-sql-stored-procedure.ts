@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface CosmosdbSqlStoredProcedureConfig extends TerraformMetaArguments {
+export interface CosmosdbSqlStoredProcedureConfig extends cdktf.TerraformMetaArguments {
   readonly accountName: string;
   readonly body: string;
   readonly containerName: string;
@@ -24,9 +23,20 @@ export interface CosmosdbSqlStoredProcedureTimeouts {
   readonly update?: string;
 }
 
+function cosmosdbSqlStoredProcedureTimeoutsToTerraform(struct?: CosmosdbSqlStoredProcedureTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class CosmosdbSqlStoredProcedure extends TerraformResource {
+export class CosmosdbSqlStoredProcedure extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -161,13 +171,13 @@ export class CosmosdbSqlStoredProcedure extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      account_name: this._accountName,
-      body: this._body,
-      container_name: this._containerName,
-      database_name: this._databaseName,
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      timeouts: this._timeouts,
+      account_name: cdktf.stringToTerraform(this._accountName),
+      body: cdktf.stringToTerraform(this._body),
+      container_name: cdktf.stringToTerraform(this._containerName),
+      database_name: cdktf.stringToTerraform(this._databaseName),
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      timeouts: cosmosdbSqlStoredProcedureTimeoutsToTerraform(this._timeouts),
     };
   }
 }

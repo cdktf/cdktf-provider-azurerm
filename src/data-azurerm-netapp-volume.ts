@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformDataSource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataAzurermNetappVolumeConfig extends TerraformMetaArguments {
+export interface DataAzurermNetappVolumeConfig extends cdktf.TerraformMetaArguments {
   readonly accountName: string;
   readonly name: string;
   readonly poolName: string;
@@ -19,9 +18,17 @@ export interface DataAzurermNetappVolumeTimeouts {
   readonly read?: string;
 }
 
+function dataAzurermNetappVolumeTimeoutsToTerraform(struct?: DataAzurermNetappVolumeTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    read: cdktf.stringToTerraform(struct!.read),
+  }
+}
+
+
 // Resource
 
-export class DataAzurermNetappVolume extends TerraformDataSource {
+export class DataAzurermNetappVolume extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
@@ -163,11 +170,11 @@ export class DataAzurermNetappVolume extends TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      account_name: this._accountName,
-      name: this._name,
-      pool_name: this._poolName,
-      resource_group_name: this._resourceGroupName,
-      timeouts: this._timeouts,
+      account_name: cdktf.stringToTerraform(this._accountName),
+      name: cdktf.stringToTerraform(this._name),
+      pool_name: cdktf.stringToTerraform(this._poolName),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      timeouts: dataAzurermNetappVolumeTimeoutsToTerraform(this._timeouts),
     };
   }
 }

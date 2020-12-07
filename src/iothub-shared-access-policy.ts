@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface IothubSharedAccessPolicyAConfig extends TerraformMetaArguments {
+export interface IothubSharedAccessPolicyAConfig extends cdktf.TerraformMetaArguments {
   readonly deviceConnect?: boolean;
   readonly iothubName: string;
   readonly name: string;
@@ -25,9 +24,20 @@ export interface IothubSharedAccessPolicyTimeouts {
   readonly update?: string;
 }
 
+function iothubSharedAccessPolicyTimeoutsToTerraform(struct?: IothubSharedAccessPolicyTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class IothubSharedAccessPolicyA extends TerraformResource {
+export class IothubSharedAccessPolicyA extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -208,14 +218,14 @@ export class IothubSharedAccessPolicyA extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      device_connect: this._deviceConnect,
-      iothub_name: this._iothubName,
-      name: this._name,
-      registry_read: this._registryRead,
-      registry_write: this._registryWrite,
-      resource_group_name: this._resourceGroupName,
-      service_connect: this._serviceConnect,
-      timeouts: this._timeouts,
+      device_connect: cdktf.booleanToTerraform(this._deviceConnect),
+      iothub_name: cdktf.stringToTerraform(this._iothubName),
+      name: cdktf.stringToTerraform(this._name),
+      registry_read: cdktf.booleanToTerraform(this._registryRead),
+      registry_write: cdktf.booleanToTerraform(this._registryWrite),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      service_connect: cdktf.booleanToTerraform(this._serviceConnect),
+      timeouts: iothubSharedAccessPolicyTimeoutsToTerraform(this._timeouts),
     };
   }
 }

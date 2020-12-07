@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface StreamAnalyticsReferenceInputBlobConfig extends TerraformMetaArguments {
+export interface StreamAnalyticsReferenceInputBlobConfig extends cdktf.TerraformMetaArguments {
   readonly dateFormat: string;
   readonly name: string;
   readonly pathPattern: string;
@@ -27,6 +26,16 @@ export interface StreamAnalyticsReferenceInputBlobSerialization {
   readonly fieldDelimiter?: string;
   readonly type: string;
 }
+
+function streamAnalyticsReferenceInputBlobSerializationToTerraform(struct?: StreamAnalyticsReferenceInputBlobSerialization): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    encoding: cdktf.stringToTerraform(struct!.encoding),
+    field_delimiter: cdktf.stringToTerraform(struct!.fieldDelimiter),
+    type: cdktf.stringToTerraform(struct!.type),
+  }
+}
+
 export interface StreamAnalyticsReferenceInputBlobTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -34,9 +43,20 @@ export interface StreamAnalyticsReferenceInputBlobTimeouts {
   readonly update?: string;
 }
 
+function streamAnalyticsReferenceInputBlobTimeoutsToTerraform(struct?: StreamAnalyticsReferenceInputBlobTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class StreamAnalyticsReferenceInputBlob extends TerraformResource {
+export class StreamAnalyticsReferenceInputBlob extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -227,17 +247,17 @@ export class StreamAnalyticsReferenceInputBlob extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      date_format: this._dateFormat,
-      name: this._name,
-      path_pattern: this._pathPattern,
-      resource_group_name: this._resourceGroupName,
-      storage_account_key: this._storageAccountKey,
-      storage_account_name: this._storageAccountName,
-      storage_container_name: this._storageContainerName,
-      stream_analytics_job_name: this._streamAnalyticsJobName,
-      time_format: this._timeFormat,
-      serialization: this._serialization,
-      timeouts: this._timeouts,
+      date_format: cdktf.stringToTerraform(this._dateFormat),
+      name: cdktf.stringToTerraform(this._name),
+      path_pattern: cdktf.stringToTerraform(this._pathPattern),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      storage_account_key: cdktf.stringToTerraform(this._storageAccountKey),
+      storage_account_name: cdktf.stringToTerraform(this._storageAccountName),
+      storage_container_name: cdktf.stringToTerraform(this._storageContainerName),
+      stream_analytics_job_name: cdktf.stringToTerraform(this._streamAnalyticsJobName),
+      time_format: cdktf.stringToTerraform(this._timeFormat),
+      serialization: cdktf.listMapper(streamAnalyticsReferenceInputBlobSerializationToTerraform)(this._serialization),
+      timeouts: streamAnalyticsReferenceInputBlobTimeoutsToTerraform(this._timeouts),
     };
   }
 }

@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface RedisLinkedServerConfig extends TerraformMetaArguments {
+export interface RedisLinkedServerConfig extends cdktf.TerraformMetaArguments {
   readonly linkedRedisCacheId: string;
   readonly linkedRedisCacheLocation: string;
   readonly resourceGroupName: string;
@@ -23,9 +22,20 @@ export interface RedisLinkedServerTimeouts {
   readonly update?: string;
 }
 
+function redisLinkedServerTimeoutsToTerraform(struct?: RedisLinkedServerTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class RedisLinkedServer extends TerraformResource {
+export class RedisLinkedServer extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -151,12 +161,12 @@ export class RedisLinkedServer extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      linked_redis_cache_id: this._linkedRedisCacheId,
-      linked_redis_cache_location: this._linkedRedisCacheLocation,
-      resource_group_name: this._resourceGroupName,
-      server_role: this._serverRole,
-      target_redis_cache_name: this._targetRedisCacheName,
-      timeouts: this._timeouts,
+      linked_redis_cache_id: cdktf.stringToTerraform(this._linkedRedisCacheId),
+      linked_redis_cache_location: cdktf.stringToTerraform(this._linkedRedisCacheLocation),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      server_role: cdktf.stringToTerraform(this._serverRole),
+      target_redis_cache_name: cdktf.stringToTerraform(this._targetRedisCacheName),
+      timeouts: redisLinkedServerTimeoutsToTerraform(this._timeouts),
     };
   }
 }

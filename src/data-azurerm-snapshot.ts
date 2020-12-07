@@ -2,19 +2,17 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformDataSource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
-import { ComplexComputedList } from "cdktf";
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataAzurermSnapshotConfig extends TerraformMetaArguments {
+export interface DataAzurermSnapshotConfig extends cdktf.TerraformMetaArguments {
   readonly name: string;
   readonly resourceGroupName: string;
   /** timeouts block */
   readonly timeouts?: DataAzurermSnapshotTimeouts;
 }
-export class DataAzurermSnapshotEncryptionSettingsDiskEncryptionKey extends ComplexComputedList {
+export class DataAzurermSnapshotEncryptionSettingsDiskEncryptionKey extends cdktf.ComplexComputedList {
 
   // secret_url - computed: true, optional: false, required: false
   public get secretUrl() {
@@ -26,7 +24,7 @@ export class DataAzurermSnapshotEncryptionSettingsDiskEncryptionKey extends Comp
     return this.getStringAttribute('source_vault_id');
   }
 }
-export class DataAzurermSnapshotEncryptionSettingsKeyEncryptionKey extends ComplexComputedList {
+export class DataAzurermSnapshotEncryptionSettingsKeyEncryptionKey extends cdktf.ComplexComputedList {
 
   // key_url - computed: true, optional: false, required: false
   public get keyUrl() {
@@ -38,7 +36,7 @@ export class DataAzurermSnapshotEncryptionSettingsKeyEncryptionKey extends Compl
     return this.getStringAttribute('source_vault_id');
   }
 }
-export class DataAzurermSnapshotEncryptionSettings extends ComplexComputedList {
+export class DataAzurermSnapshotEncryptionSettings extends cdktf.ComplexComputedList {
 
   // disk_encryption_key - computed: true, optional: false, required: false
   public get diskEncryptionKey() {
@@ -59,9 +57,17 @@ export interface DataAzurermSnapshotTimeouts {
   readonly read?: string;
 }
 
+function dataAzurermSnapshotTimeoutsToTerraform(struct?: DataAzurermSnapshotTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    read: cdktf.stringToTerraform(struct!.read),
+  }
+}
+
+
 // Resource
 
-export class DataAzurermSnapshot extends TerraformDataSource {
+export class DataAzurermSnapshot extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
@@ -180,9 +186,9 @@ export class DataAzurermSnapshot extends TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      timeouts: this._timeouts,
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      timeouts: dataAzurermSnapshotTimeoutsToTerraform(this._timeouts),
     };
   }
 }

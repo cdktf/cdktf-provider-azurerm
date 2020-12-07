@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface VirtualMachineDataDiskAttachmentConfig extends TerraformMetaArguments {
+export interface VirtualMachineDataDiskAttachmentConfig extends cdktf.TerraformMetaArguments {
   readonly caching: string;
   readonly createOption?: string;
   readonly lun: number;
@@ -24,9 +23,20 @@ export interface VirtualMachineDataDiskAttachmentTimeouts {
   readonly update?: string;
 }
 
+function virtualMachineDataDiskAttachmentTimeoutsToTerraform(struct?: VirtualMachineDataDiskAttachmentTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class VirtualMachineDataDiskAttachment extends TerraformResource {
+export class VirtualMachineDataDiskAttachment extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -167,13 +177,13 @@ export class VirtualMachineDataDiskAttachment extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      caching: this._caching,
-      create_option: this._createOption,
-      lun: this._lun,
-      managed_disk_id: this._managedDiskId,
-      virtual_machine_id: this._virtualMachineId,
-      write_accelerator_enabled: this._writeAcceleratorEnabled,
-      timeouts: this._timeouts,
+      caching: cdktf.stringToTerraform(this._caching),
+      create_option: cdktf.stringToTerraform(this._createOption),
+      lun: cdktf.numberToTerraform(this._lun),
+      managed_disk_id: cdktf.stringToTerraform(this._managedDiskId),
+      virtual_machine_id: cdktf.stringToTerraform(this._virtualMachineId),
+      write_accelerator_enabled: cdktf.booleanToTerraform(this._writeAcceleratorEnabled),
+      timeouts: virtualMachineDataDiskAttachmentTimeoutsToTerraform(this._timeouts),
     };
   }
 }

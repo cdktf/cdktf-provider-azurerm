@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface RedisFirewallRuleConfig extends TerraformMetaArguments {
+export interface RedisFirewallRuleConfig extends cdktf.TerraformMetaArguments {
   readonly endIp: string;
   readonly name: string;
   readonly redisCacheName: string;
@@ -23,9 +22,20 @@ export interface RedisFirewallRuleTimeouts {
   readonly update?: string;
 }
 
+function redisFirewallRuleTimeoutsToTerraform(struct?: RedisFirewallRuleTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class RedisFirewallRule extends TerraformResource {
+export class RedisFirewallRule extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -146,12 +156,12 @@ export class RedisFirewallRule extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      end_ip: this._endIp,
-      name: this._name,
-      redis_cache_name: this._redisCacheName,
-      resource_group_name: this._resourceGroupName,
-      start_ip: this._startIp,
-      timeouts: this._timeouts,
+      end_ip: cdktf.stringToTerraform(this._endIp),
+      name: cdktf.stringToTerraform(this._name),
+      redis_cache_name: cdktf.stringToTerraform(this._redisCacheName),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      start_ip: cdktf.stringToTerraform(this._startIp),
+      timeouts: redisFirewallRuleTimeoutsToTerraform(this._timeouts),
     };
   }
 }

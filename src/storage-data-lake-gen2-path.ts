@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface StorageDataLakeGen2PathConfig extends TerraformMetaArguments {
+export interface StorageDataLakeGen2PathConfig extends cdktf.TerraformMetaArguments {
   readonly filesystemName: string;
   readonly group?: string;
   readonly owner?: string;
@@ -25,6 +24,17 @@ export interface StorageDataLakeGen2PathAce {
   readonly scope?: string;
   readonly type: string;
 }
+
+function storageDataLakeGen2PathAceToTerraform(struct?: StorageDataLakeGen2PathAce): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    id: cdktf.stringToTerraform(struct!.id),
+    permissions: cdktf.stringToTerraform(struct!.permissions),
+    scope: cdktf.stringToTerraform(struct!.scope),
+    type: cdktf.stringToTerraform(struct!.type),
+  }
+}
+
 export interface StorageDataLakeGen2PathTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -32,9 +42,20 @@ export interface StorageDataLakeGen2PathTimeouts {
   readonly update?: string;
 }
 
+function storageDataLakeGen2PathTimeoutsToTerraform(struct?: StorageDataLakeGen2PathTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class StorageDataLakeGen2Path extends TerraformResource {
+export class StorageDataLakeGen2Path extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -192,14 +213,14 @@ export class StorageDataLakeGen2Path extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      filesystem_name: this._filesystemName,
-      group: this._group,
-      owner: this._owner,
-      path: this._path,
-      resource: this._resource,
-      storage_account_id: this._storageAccountId,
-      ace: this._ace,
-      timeouts: this._timeouts,
+      filesystem_name: cdktf.stringToTerraform(this._filesystemName),
+      group: cdktf.stringToTerraform(this._group),
+      owner: cdktf.stringToTerraform(this._owner),
+      path: cdktf.stringToTerraform(this._path),
+      resource: cdktf.stringToTerraform(this._resource),
+      storage_account_id: cdktf.stringToTerraform(this._storageAccountId),
+      ace: cdktf.listMapper(storageDataLakeGen2PathAceToTerraform)(this._ace),
+      timeouts: storageDataLakeGen2PathTimeoutsToTerraform(this._timeouts),
     };
   }
 }

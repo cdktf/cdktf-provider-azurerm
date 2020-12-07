@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface ApiManagementAuthorizationServerConfig extends TerraformMetaArguments {
+export interface ApiManagementAuthorizationServerConfig extends cdktf.TerraformMetaArguments {
   readonly apiManagementName: string;
   readonly authorizationEndpoint: string;
   readonly authorizationMethods: string[];
@@ -37,14 +36,34 @@ export interface ApiManagementAuthorizationServerTimeouts {
   readonly read?: string;
   readonly update?: string;
 }
+
+function apiManagementAuthorizationServerTimeoutsToTerraform(struct?: ApiManagementAuthorizationServerTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
 export interface ApiManagementAuthorizationServerTokenBodyParameter {
   readonly name: string;
   readonly value: string;
 }
 
+function apiManagementAuthorizationServerTokenBodyParameterToTerraform(struct?: ApiManagementAuthorizationServerTokenBodyParameter): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    name: cdktf.stringToTerraform(struct!.name),
+    value: cdktf.stringToTerraform(struct!.value),
+  }
+}
+
+
 // Resource
 
-export class ApiManagementAuthorizationServer extends TerraformResource {
+export class ApiManagementAuthorizationServer extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -391,26 +410,26 @@ export class ApiManagementAuthorizationServer extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      api_management_name: this._apiManagementName,
-      authorization_endpoint: this._authorizationEndpoint,
-      authorization_methods: this._authorizationMethods,
-      bearer_token_sending_methods: this._bearerTokenSendingMethods,
-      client_authentication_method: this._clientAuthenticationMethod,
-      client_id: this._clientId,
-      client_registration_endpoint: this._clientRegistrationEndpoint,
-      client_secret: this._clientSecret,
-      default_scope: this._defaultScope,
-      description: this._description,
-      display_name: this._displayName,
-      grant_types: this._grantTypes,
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      resource_owner_password: this._resourceOwnerPassword,
-      resource_owner_username: this._resourceOwnerUsername,
-      support_state: this._supportState,
-      token_endpoint: this._tokenEndpoint,
-      timeouts: this._timeouts,
-      token_body_parameter: this._tokenBodyParameter,
+      api_management_name: cdktf.stringToTerraform(this._apiManagementName),
+      authorization_endpoint: cdktf.stringToTerraform(this._authorizationEndpoint),
+      authorization_methods: cdktf.listMapper(cdktf.stringToTerraform)(this._authorizationMethods),
+      bearer_token_sending_methods: cdktf.listMapper(cdktf.stringToTerraform)(this._bearerTokenSendingMethods),
+      client_authentication_method: cdktf.listMapper(cdktf.stringToTerraform)(this._clientAuthenticationMethod),
+      client_id: cdktf.stringToTerraform(this._clientId),
+      client_registration_endpoint: cdktf.stringToTerraform(this._clientRegistrationEndpoint),
+      client_secret: cdktf.stringToTerraform(this._clientSecret),
+      default_scope: cdktf.stringToTerraform(this._defaultScope),
+      description: cdktf.stringToTerraform(this._description),
+      display_name: cdktf.stringToTerraform(this._displayName),
+      grant_types: cdktf.listMapper(cdktf.stringToTerraform)(this._grantTypes),
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      resource_owner_password: cdktf.stringToTerraform(this._resourceOwnerPassword),
+      resource_owner_username: cdktf.stringToTerraform(this._resourceOwnerUsername),
+      support_state: cdktf.booleanToTerraform(this._supportState),
+      token_endpoint: cdktf.stringToTerraform(this._tokenEndpoint),
+      timeouts: apiManagementAuthorizationServerTimeoutsToTerraform(this._timeouts),
+      token_body_parameter: cdktf.listMapper(apiManagementAuthorizationServerTokenBodyParameterToTerraform)(this._tokenBodyParameter),
     };
   }
 }

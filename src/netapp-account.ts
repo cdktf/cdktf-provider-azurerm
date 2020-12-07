@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface NetappAccountConfig extends TerraformMetaArguments {
+export interface NetappAccountConfig extends cdktf.TerraformMetaArguments {
   readonly location: string;
   readonly name: string;
   readonly resourceGroupName: string;
@@ -25,6 +24,19 @@ export interface NetappAccountActiveDirectory {
   readonly smbServerName: string;
   readonly username: string;
 }
+
+function netappAccountActiveDirectoryToTerraform(struct?: NetappAccountActiveDirectory): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    dns_servers: cdktf.listMapper(cdktf.stringToTerraform)(struct!.dnsServers),
+    domain: cdktf.stringToTerraform(struct!.domain),
+    organizational_unit: cdktf.stringToTerraform(struct!.organizationalUnit),
+    password: cdktf.stringToTerraform(struct!.password),
+    smb_server_name: cdktf.stringToTerraform(struct!.smbServerName),
+    username: cdktf.stringToTerraform(struct!.username),
+  }
+}
+
 export interface NetappAccountTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -32,9 +44,20 @@ export interface NetappAccountTimeouts {
   readonly update?: string;
 }
 
+function netappAccountTimeoutsToTerraform(struct?: NetappAccountTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class NetappAccount extends TerraformResource {
+export class NetappAccount extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -161,12 +184,12 @@ export class NetappAccount extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      location: this._location,
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      tags: this._tags,
-      active_directory: this._activeDirectory,
-      timeouts: this._timeouts,
+      location: cdktf.stringToTerraform(this._location),
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      active_directory: cdktf.listMapper(netappAccountActiveDirectoryToTerraform)(this._activeDirectory),
+      timeouts: netappAccountTimeoutsToTerraform(this._timeouts),
     };
   }
 }

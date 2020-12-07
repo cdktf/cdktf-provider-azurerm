@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformDataSource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataAzurermManagementGroupConfig extends TerraformMetaArguments {
+export interface DataAzurermManagementGroupConfig extends cdktf.TerraformMetaArguments {
   readonly displayName?: string;
   readonly groupId?: string;
   readonly name?: string;
@@ -18,9 +17,17 @@ export interface DataAzurermManagementGroupTimeouts {
   readonly read?: string;
 }
 
+function dataAzurermManagementGroupTimeoutsToTerraform(struct?: DataAzurermManagementGroupTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    read: cdktf.stringToTerraform(struct!.read),
+  }
+}
+
+
 // Resource
 
-export class DataAzurermManagementGroup extends TerraformDataSource {
+export class DataAzurermManagementGroup extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
@@ -132,10 +139,10 @@ export class DataAzurermManagementGroup extends TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      display_name: this._displayName,
-      group_id: this._groupId,
-      name: this._name,
-      timeouts: this._timeouts,
+      display_name: cdktf.stringToTerraform(this._displayName),
+      group_id: cdktf.stringToTerraform(this._groupId),
+      name: cdktf.stringToTerraform(this._name),
+      timeouts: dataAzurermManagementGroupTimeoutsToTerraform(this._timeouts),
     };
   }
 }

@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface ResourceGroupTemplateDeploymentConfig extends TerraformMetaArguments {
+export interface ResourceGroupTemplateDeploymentConfig extends cdktf.TerraformMetaArguments {
   readonly debugLevel?: string;
   readonly deploymentMode: string;
   readonly name: string;
@@ -25,9 +24,20 @@ export interface ResourceGroupTemplateDeploymentTimeouts {
   readonly update?: string;
 }
 
+function resourceGroupTemplateDeploymentTimeoutsToTerraform(struct?: ResourceGroupTemplateDeploymentTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class ResourceGroupTemplateDeployment extends TerraformResource {
+export class ResourceGroupTemplateDeployment extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -190,14 +200,14 @@ export class ResourceGroupTemplateDeployment extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      debug_level: this._debugLevel,
-      deployment_mode: this._deploymentMode,
-      name: this._name,
-      parameters_content: this._parametersContent,
-      resource_group_name: this._resourceGroupName,
-      tags: this._tags,
-      template_content: this._templateContent,
-      timeouts: this._timeouts,
+      debug_level: cdktf.stringToTerraform(this._debugLevel),
+      deployment_mode: cdktf.stringToTerraform(this._deploymentMode),
+      name: cdktf.stringToTerraform(this._name),
+      parameters_content: cdktf.stringToTerraform(this._parametersContent),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      template_content: cdktf.stringToTerraform(this._templateContent),
+      timeouts: resourceGroupTemplateDeploymentTimeoutsToTerraform(this._timeouts),
     };
   }
 }

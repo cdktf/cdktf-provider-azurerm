@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface ExpressRouteCircuitPeeringConfig extends TerraformMetaArguments {
+export interface ExpressRouteCircuitPeeringConfig extends cdktf.TerraformMetaArguments {
   readonly expressRouteCircuitName: string;
   readonly peerAsn?: number;
   readonly peeringType: string;
@@ -29,6 +28,16 @@ export interface ExpressRouteCircuitPeeringIpv6MicrosoftPeering {
   readonly customerAsn?: number;
   readonly routingRegistryName?: string;
 }
+
+function expressRouteCircuitPeeringIpv6MicrosoftPeeringToTerraform(struct?: ExpressRouteCircuitPeeringIpv6MicrosoftPeering): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    advertised_public_prefixes: cdktf.listMapper(cdktf.stringToTerraform)(struct!.advertisedPublicPrefixes),
+    customer_asn: cdktf.numberToTerraform(struct!.customerAsn),
+    routing_registry_name: cdktf.stringToTerraform(struct!.routingRegistryName),
+  }
+}
+
 export interface ExpressRouteCircuitPeeringIpv6 {
   readonly primaryPeerAddressPrefix: string;
   readonly routeFilterId?: string;
@@ -36,11 +45,32 @@ export interface ExpressRouteCircuitPeeringIpv6 {
   /** microsoft_peering block */
   readonly microsoftPeering: ExpressRouteCircuitPeeringIpv6MicrosoftPeering[];
 }
+
+function expressRouteCircuitPeeringIpv6ToTerraform(struct?: ExpressRouteCircuitPeeringIpv6): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    primary_peer_address_prefix: cdktf.stringToTerraform(struct!.primaryPeerAddressPrefix),
+    route_filter_id: cdktf.stringToTerraform(struct!.routeFilterId),
+    secondary_peer_address_prefix: cdktf.stringToTerraform(struct!.secondaryPeerAddressPrefix),
+    microsoft_peering: cdktf.listMapper(expressRouteCircuitPeeringIpv6MicrosoftPeeringToTerraform)(struct!.microsoftPeering),
+  }
+}
+
 export interface ExpressRouteCircuitPeeringMicrosoftPeeringConfig {
   readonly advertisedPublicPrefixes: string[];
   readonly customerAsn?: number;
   readonly routingRegistryName?: string;
 }
+
+function expressRouteCircuitPeeringMicrosoftPeeringConfigToTerraform(struct?: ExpressRouteCircuitPeeringMicrosoftPeeringConfig): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    advertised_public_prefixes: cdktf.listMapper(cdktf.stringToTerraform)(struct!.advertisedPublicPrefixes),
+    customer_asn: cdktf.numberToTerraform(struct!.customerAsn),
+    routing_registry_name: cdktf.stringToTerraform(struct!.routingRegistryName),
+  }
+}
+
 export interface ExpressRouteCircuitPeeringTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -48,9 +78,20 @@ export interface ExpressRouteCircuitPeeringTimeouts {
   readonly update?: string;
 }
 
+function expressRouteCircuitPeeringTimeoutsToTerraform(struct?: ExpressRouteCircuitPeeringTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class ExpressRouteCircuitPeering extends TerraformResource {
+export class ExpressRouteCircuitPeering extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -285,18 +326,18 @@ export class ExpressRouteCircuitPeering extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      express_route_circuit_name: this._expressRouteCircuitName,
-      peer_asn: this._peerAsn,
-      peering_type: this._peeringType,
-      primary_peer_address_prefix: this._primaryPeerAddressPrefix,
-      resource_group_name: this._resourceGroupName,
-      route_filter_id: this._routeFilterId,
-      secondary_peer_address_prefix: this._secondaryPeerAddressPrefix,
-      shared_key: this._sharedKey,
-      vlan_id: this._vlanId,
-      ipv6: this._ipv6,
-      microsoft_peering_config: this._microsoftPeeringConfig,
-      timeouts: this._timeouts,
+      express_route_circuit_name: cdktf.stringToTerraform(this._expressRouteCircuitName),
+      peer_asn: cdktf.numberToTerraform(this._peerAsn),
+      peering_type: cdktf.stringToTerraform(this._peeringType),
+      primary_peer_address_prefix: cdktf.stringToTerraform(this._primaryPeerAddressPrefix),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      route_filter_id: cdktf.stringToTerraform(this._routeFilterId),
+      secondary_peer_address_prefix: cdktf.stringToTerraform(this._secondaryPeerAddressPrefix),
+      shared_key: cdktf.stringToTerraform(this._sharedKey),
+      vlan_id: cdktf.numberToTerraform(this._vlanId),
+      ipv6: cdktf.listMapper(expressRouteCircuitPeeringIpv6ToTerraform)(this._ipv6),
+      microsoft_peering_config: cdktf.listMapper(expressRouteCircuitPeeringMicrosoftPeeringConfigToTerraform)(this._microsoftPeeringConfig),
+      timeouts: expressRouteCircuitPeeringTimeoutsToTerraform(this._timeouts),
     };
   }
 }

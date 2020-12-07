@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface AutomationModuleConfig extends TerraformMetaArguments {
+export interface AutomationModuleConfig extends cdktf.TerraformMetaArguments {
   readonly automationAccountName: string;
   readonly name: string;
   readonly resourceGroupName: string;
@@ -20,11 +19,29 @@ export interface AutomationModuleModuleLinkHash {
   readonly algorithm: string;
   readonly value: string;
 }
+
+function automationModuleModuleLinkHashToTerraform(struct?: AutomationModuleModuleLinkHash): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    algorithm: cdktf.stringToTerraform(struct!.algorithm),
+    value: cdktf.stringToTerraform(struct!.value),
+  }
+}
+
 export interface AutomationModuleModuleLink {
   readonly uri: string;
   /** hash block */
   readonly hash?: AutomationModuleModuleLinkHash[];
 }
+
+function automationModuleModuleLinkToTerraform(struct?: AutomationModuleModuleLink): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    uri: cdktf.stringToTerraform(struct!.uri),
+    hash: cdktf.listMapper(automationModuleModuleLinkHashToTerraform)(struct!.hash),
+  }
+}
+
 export interface AutomationModuleTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -32,9 +49,20 @@ export interface AutomationModuleTimeouts {
   readonly update?: string;
 }
 
+function automationModuleTimeoutsToTerraform(struct?: AutomationModuleTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class AutomationModule extends TerraformResource {
+export class AutomationModule extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -141,11 +169,11 @@ export class AutomationModule extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      automation_account_name: this._automationAccountName,
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      module_link: this._moduleLink,
-      timeouts: this._timeouts,
+      automation_account_name: cdktf.stringToTerraform(this._automationAccountName),
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      module_link: cdktf.listMapper(automationModuleModuleLinkToTerraform)(this._moduleLink),
+      timeouts: automationModuleTimeoutsToTerraform(this._timeouts),
     };
   }
 }

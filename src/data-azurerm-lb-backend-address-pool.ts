@@ -2,19 +2,17 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformDataSource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
-import { ComplexComputedList } from "cdktf";
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataAzurermLbBackendAddressPoolConfig extends TerraformMetaArguments {
+export interface DataAzurermLbBackendAddressPoolConfig extends cdktf.TerraformMetaArguments {
   readonly loadbalancerId: string;
   readonly name: string;
   /** timeouts block */
   readonly timeouts?: DataAzurermLbBackendAddressPoolTimeouts;
 }
-export class DataAzurermLbBackendAddressPoolBackendIpConfigurations extends ComplexComputedList {
+export class DataAzurermLbBackendAddressPoolBackendIpConfigurations extends cdktf.ComplexComputedList {
 
   // id - computed: true, optional: false, required: false
   public get id() {
@@ -25,9 +23,17 @@ export interface DataAzurermLbBackendAddressPoolTimeouts {
   readonly read?: string;
 }
 
+function dataAzurermLbBackendAddressPoolTimeoutsToTerraform(struct?: DataAzurermLbBackendAddressPoolTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    read: cdktf.stringToTerraform(struct!.read),
+  }
+}
+
+
 // Resource
 
-export class DataAzurermLbBackendAddressPool extends TerraformDataSource {
+export class DataAzurermLbBackendAddressPool extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
@@ -111,9 +117,9 @@ export class DataAzurermLbBackendAddressPool extends TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      loadbalancer_id: this._loadbalancerId,
-      name: this._name,
-      timeouts: this._timeouts,
+      loadbalancer_id: cdktf.stringToTerraform(this._loadbalancerId),
+      name: cdktf.stringToTerraform(this._name),
+      timeouts: dataAzurermLbBackendAddressPoolTimeoutsToTerraform(this._timeouts),
     };
   }
 }

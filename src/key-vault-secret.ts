@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface KeyVaultSecretConfig extends TerraformMetaArguments {
+export interface KeyVaultSecretConfig extends cdktf.TerraformMetaArguments {
   readonly contentType?: string;
   readonly expirationDate?: string;
   readonly keyVaultId: string;
@@ -25,9 +24,20 @@ export interface KeyVaultSecretTimeouts {
   readonly update?: string;
 }
 
+function keyVaultSecretTimeoutsToTerraform(struct?: KeyVaultSecretTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class KeyVaultSecret extends TerraformResource {
+export class KeyVaultSecret extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -193,14 +203,14 @@ export class KeyVaultSecret extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      content_type: this._contentType,
-      expiration_date: this._expirationDate,
-      key_vault_id: this._keyVaultId,
-      name: this._name,
-      not_before_date: this._notBeforeDate,
-      tags: this._tags,
-      value: this._value,
-      timeouts: this._timeouts,
+      content_type: cdktf.stringToTerraform(this._contentType),
+      expiration_date: cdktf.stringToTerraform(this._expirationDate),
+      key_vault_id: cdktf.stringToTerraform(this._keyVaultId),
+      name: cdktf.stringToTerraform(this._name),
+      not_before_date: cdktf.stringToTerraform(this._notBeforeDate),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      value: cdktf.stringToTerraform(this._value),
+      timeouts: keyVaultSecretTimeoutsToTerraform(this._timeouts),
     };
   }
 }

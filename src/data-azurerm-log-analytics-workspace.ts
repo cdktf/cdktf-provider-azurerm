@@ -2,13 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformDataSource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
-import { StringMap } from "cdktf";
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataAzurermLogAnalyticsWorkspaceConfig extends TerraformMetaArguments {
+export interface DataAzurermLogAnalyticsWorkspaceConfig extends cdktf.TerraformMetaArguments {
   readonly name: string;
   readonly resourceGroupName: string;
   /** timeouts block */
@@ -18,9 +16,17 @@ export interface DataAzurermLogAnalyticsWorkspaceTimeouts {
   readonly read?: string;
 }
 
+function dataAzurermLogAnalyticsWorkspaceTimeoutsToTerraform(struct?: DataAzurermLogAnalyticsWorkspaceTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    read: cdktf.stringToTerraform(struct!.read),
+  }
+}
+
+
 // Resource
 
-export class DataAzurermLogAnalyticsWorkspace extends TerraformDataSource {
+export class DataAzurermLogAnalyticsWorkspace extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
@@ -114,7 +120,7 @@ export class DataAzurermLogAnalyticsWorkspace extends TerraformDataSource {
 
   // tags - computed: true, optional: false, required: false
   public tags(key: string): string {
-    return new StringMap(this, 'tags').lookup(key);
+    return new cdktf.StringMap(this, 'tags').lookup(key);
   }
 
   // workspace_id - computed: true, optional: false, required: false
@@ -144,9 +150,9 @@ export class DataAzurermLogAnalyticsWorkspace extends TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      timeouts: this._timeouts,
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      timeouts: dataAzurermLogAnalyticsWorkspaceTimeoutsToTerraform(this._timeouts),
     };
   }
 }

@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface VirtualHubSecurityPartnerProviderConfig extends TerraformMetaArguments {
+export interface VirtualHubSecurityPartnerProviderConfig extends cdktf.TerraformMetaArguments {
   readonly location: string;
   readonly name: string;
   readonly resourceGroupName: string;
@@ -24,9 +23,20 @@ export interface VirtualHubSecurityPartnerProviderTimeouts {
   readonly update?: string;
 }
 
+function virtualHubSecurityPartnerProviderTimeoutsToTerraform(struct?: VirtualHubSecurityPartnerProviderTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class VirtualHubSecurityPartnerProvider extends TerraformResource {
+export class VirtualHubSecurityPartnerProvider extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -167,13 +177,13 @@ export class VirtualHubSecurityPartnerProvider extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      location: this._location,
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      security_provider_name: this._securityProviderName,
-      tags: this._tags,
-      virtual_hub_id: this._virtualHubId,
-      timeouts: this._timeouts,
+      location: cdktf.stringToTerraform(this._location),
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      security_provider_name: cdktf.stringToTerraform(this._securityProviderName),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      virtual_hub_id: cdktf.stringToTerraform(this._virtualHubId),
+      timeouts: virtualHubSecurityPartnerProviderTimeoutsToTerraform(this._timeouts),
     };
   }
 }

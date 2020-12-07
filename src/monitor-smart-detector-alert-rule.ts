@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface MonitorSmartDetectorAlertRuleConfig extends TerraformMetaArguments {
+export interface MonitorSmartDetectorAlertRuleConfig extends cdktf.TerraformMetaArguments {
   readonly description?: string;
   readonly detectorType: string;
   readonly enabled?: boolean;
@@ -27,6 +26,16 @@ export interface MonitorSmartDetectorAlertRuleActionGroup {
   readonly ids: string[];
   readonly webhookPayload?: string;
 }
+
+function monitorSmartDetectorAlertRuleActionGroupToTerraform(struct?: MonitorSmartDetectorAlertRuleActionGroup): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    email_subject: cdktf.stringToTerraform(struct!.emailSubject),
+    ids: cdktf.listMapper(cdktf.stringToTerraform)(struct!.ids),
+    webhook_payload: cdktf.stringToTerraform(struct!.webhookPayload),
+  }
+}
+
 export interface MonitorSmartDetectorAlertRuleTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -34,9 +43,20 @@ export interface MonitorSmartDetectorAlertRuleTimeouts {
   readonly update?: string;
 }
 
+function monitorSmartDetectorAlertRuleTimeoutsToTerraform(struct?: MonitorSmartDetectorAlertRuleTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class MonitorSmartDetectorAlertRule extends TerraformResource {
+export class MonitorSmartDetectorAlertRule extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -236,17 +256,17 @@ export class MonitorSmartDetectorAlertRule extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      description: this._description,
-      detector_type: this._detectorType,
-      enabled: this._enabled,
-      frequency: this._frequency,
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      scope_resource_ids: this._scopeResourceIds,
-      severity: this._severity,
-      throttling_duration: this._throttlingDuration,
-      action_group: this._actionGroup,
-      timeouts: this._timeouts,
+      description: cdktf.stringToTerraform(this._description),
+      detector_type: cdktf.stringToTerraform(this._detectorType),
+      enabled: cdktf.booleanToTerraform(this._enabled),
+      frequency: cdktf.stringToTerraform(this._frequency),
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      scope_resource_ids: cdktf.listMapper(cdktf.stringToTerraform)(this._scopeResourceIds),
+      severity: cdktf.stringToTerraform(this._severity),
+      throttling_duration: cdktf.stringToTerraform(this._throttlingDuration),
+      action_group: cdktf.listMapper(monitorSmartDetectorAlertRuleActionGroupToTerraform)(this._actionGroup),
+      timeouts: monitorSmartDetectorAlertRuleTimeoutsToTerraform(this._timeouts),
     };
   }
 }

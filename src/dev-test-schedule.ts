@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DevTestScheduleConfig extends TerraformMetaArguments {
+export interface DevTestScheduleConfig extends cdktf.TerraformMetaArguments {
   readonly labName: string;
   readonly location: string;
   readonly name: string;
@@ -30,28 +29,74 @@ export interface DevTestScheduleConfig extends TerraformMetaArguments {
 export interface DevTestScheduleDailyRecurrence {
   readonly time: string;
 }
+
+function devTestScheduleDailyRecurrenceToTerraform(struct?: DevTestScheduleDailyRecurrence): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    time: cdktf.stringToTerraform(struct!.time),
+  }
+}
+
 export interface DevTestScheduleHourlyRecurrence {
   readonly minute: number;
 }
+
+function devTestScheduleHourlyRecurrenceToTerraform(struct?: DevTestScheduleHourlyRecurrence): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    minute: cdktf.numberToTerraform(struct!.minute),
+  }
+}
+
 export interface DevTestScheduleNotificationSettings {
   readonly status?: string;
   readonly timeInMinutes?: number;
   readonly webhookUrl?: string;
 }
+
+function devTestScheduleNotificationSettingsToTerraform(struct?: DevTestScheduleNotificationSettings): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    status: cdktf.stringToTerraform(struct!.status),
+    time_in_minutes: cdktf.numberToTerraform(struct!.timeInMinutes),
+    webhook_url: cdktf.stringToTerraform(struct!.webhookUrl),
+  }
+}
+
 export interface DevTestScheduleTimeouts {
   readonly create?: string;
   readonly delete?: string;
   readonly read?: string;
   readonly update?: string;
 }
+
+function devTestScheduleTimeoutsToTerraform(struct?: DevTestScheduleTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
 export interface DevTestScheduleWeeklyRecurrence {
   readonly time: string;
   readonly weekDays?: string[];
 }
 
+function devTestScheduleWeeklyRecurrenceToTerraform(struct?: DevTestScheduleWeeklyRecurrence): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    time: cdktf.stringToTerraform(struct!.time),
+    week_days: cdktf.listMapper(cdktf.stringToTerraform)(struct!.weekDays),
+  }
+}
+
+
 // Resource
 
-export class DevTestSchedule extends TerraformResource {
+export class DevTestSchedule extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -285,19 +330,19 @@ export class DevTestSchedule extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      lab_name: this._labName,
-      location: this._location,
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      status: this._status,
-      tags: this._tags,
-      task_type: this._taskType,
-      time_zone_id: this._timeZoneId,
-      daily_recurrence: this._dailyRecurrence,
-      hourly_recurrence: this._hourlyRecurrence,
-      notification_settings: this._notificationSettings,
-      timeouts: this._timeouts,
-      weekly_recurrence: this._weeklyRecurrence,
+      lab_name: cdktf.stringToTerraform(this._labName),
+      location: cdktf.stringToTerraform(this._location),
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      status: cdktf.stringToTerraform(this._status),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      task_type: cdktf.stringToTerraform(this._taskType),
+      time_zone_id: cdktf.stringToTerraform(this._timeZoneId),
+      daily_recurrence: cdktf.listMapper(devTestScheduleDailyRecurrenceToTerraform)(this._dailyRecurrence),
+      hourly_recurrence: cdktf.listMapper(devTestScheduleHourlyRecurrenceToTerraform)(this._hourlyRecurrence),
+      notification_settings: cdktf.listMapper(devTestScheduleNotificationSettingsToTerraform)(this._notificationSettings),
+      timeouts: devTestScheduleTimeoutsToTerraform(this._timeouts),
+      weekly_recurrence: cdktf.listMapper(devTestScheduleWeeklyRecurrenceToTerraform)(this._weeklyRecurrence),
     };
   }
 }

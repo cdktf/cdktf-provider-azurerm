@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface SynapseSqlPoolConfig extends TerraformMetaArguments {
+export interface SynapseSqlPoolConfig extends cdktf.TerraformMetaArguments {
   readonly collation?: string;
   readonly createMode?: string;
   readonly dataEncrypted?: boolean;
@@ -25,6 +24,15 @@ export interface SynapseSqlPoolRestore {
   readonly pointInTime: string;
   readonly sourceDatabaseId: string;
 }
+
+function synapseSqlPoolRestoreToTerraform(struct?: SynapseSqlPoolRestore): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    point_in_time: cdktf.stringToTerraform(struct!.pointInTime),
+    source_database_id: cdktf.stringToTerraform(struct!.sourceDatabaseId),
+  }
+}
+
 export interface SynapseSqlPoolTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -32,9 +40,20 @@ export interface SynapseSqlPoolTimeouts {
   readonly update?: string;
 }
 
+function synapseSqlPoolTimeoutsToTerraform(struct?: SynapseSqlPoolTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class SynapseSqlPool extends TerraformResource {
+export class SynapseSqlPool extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -229,16 +248,16 @@ export class SynapseSqlPool extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      collation: this._collation,
-      create_mode: this._createMode,
-      data_encrypted: this._dataEncrypted,
-      name: this._name,
-      recovery_database_id: this._recoveryDatabaseId,
-      sku_name: this._skuName,
-      synapse_workspace_id: this._synapseWorkspaceId,
-      tags: this._tags,
-      restore: this._restore,
-      timeouts: this._timeouts,
+      collation: cdktf.stringToTerraform(this._collation),
+      create_mode: cdktf.stringToTerraform(this._createMode),
+      data_encrypted: cdktf.booleanToTerraform(this._dataEncrypted),
+      name: cdktf.stringToTerraform(this._name),
+      recovery_database_id: cdktf.stringToTerraform(this._recoveryDatabaseId),
+      sku_name: cdktf.stringToTerraform(this._skuName),
+      synapse_workspace_id: cdktf.stringToTerraform(this._synapseWorkspaceId),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      restore: cdktf.listMapper(synapseSqlPoolRestoreToTerraform)(this._restore),
+      timeouts: synapseSqlPoolTimeoutsToTerraform(this._timeouts),
     };
   }
 }

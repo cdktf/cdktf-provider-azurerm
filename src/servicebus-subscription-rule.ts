@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface ServicebusSubscriptionRuleConfig extends TerraformMetaArguments {
+export interface ServicebusSubscriptionRuleConfig extends cdktf.TerraformMetaArguments {
   readonly action?: string;
   readonly filterType: string;
   readonly name: string;
@@ -32,6 +31,22 @@ export interface ServicebusSubscriptionRuleCorrelationFilter {
   readonly sessionId?: string;
   readonly to?: string;
 }
+
+function servicebusSubscriptionRuleCorrelationFilterToTerraform(struct?: ServicebusSubscriptionRuleCorrelationFilter): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    content_type: cdktf.stringToTerraform(struct!.contentType),
+    correlation_id: cdktf.stringToTerraform(struct!.correlationId),
+    label: cdktf.stringToTerraform(struct!.label),
+    message_id: cdktf.stringToTerraform(struct!.messageId),
+    properties: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.properties),
+    reply_to: cdktf.stringToTerraform(struct!.replyTo),
+    reply_to_session_id: cdktf.stringToTerraform(struct!.replyToSessionId),
+    session_id: cdktf.stringToTerraform(struct!.sessionId),
+    to: cdktf.stringToTerraform(struct!.to),
+  }
+}
+
 export interface ServicebusSubscriptionRuleTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -39,9 +54,20 @@ export interface ServicebusSubscriptionRuleTimeouts {
   readonly update?: string;
 }
 
+function servicebusSubscriptionRuleTimeoutsToTerraform(struct?: ServicebusSubscriptionRuleTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class ServicebusSubscriptionRule extends TerraformResource {
+export class ServicebusSubscriptionRule extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -227,16 +253,16 @@ export class ServicebusSubscriptionRule extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      action: this._action,
-      filter_type: this._filterType,
-      name: this._name,
-      namespace_name: this._namespaceName,
-      resource_group_name: this._resourceGroupName,
-      sql_filter: this._sqlFilter,
-      subscription_name: this._subscriptionName,
-      topic_name: this._topicName,
-      correlation_filter: this._correlationFilter,
-      timeouts: this._timeouts,
+      action: cdktf.stringToTerraform(this._action),
+      filter_type: cdktf.stringToTerraform(this._filterType),
+      name: cdktf.stringToTerraform(this._name),
+      namespace_name: cdktf.stringToTerraform(this._namespaceName),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      sql_filter: cdktf.stringToTerraform(this._sqlFilter),
+      subscription_name: cdktf.stringToTerraform(this._subscriptionName),
+      topic_name: cdktf.stringToTerraform(this._topicName),
+      correlation_filter: cdktf.listMapper(servicebusSubscriptionRuleCorrelationFilterToTerraform)(this._correlationFilter),
+      timeouts: servicebusSubscriptionRuleTimeoutsToTerraform(this._timeouts),
     };
   }
 }

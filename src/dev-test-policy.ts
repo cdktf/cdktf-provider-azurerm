@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DevTestPolicyConfig extends TerraformMetaArguments {
+export interface DevTestPolicyConfig extends cdktf.TerraformMetaArguments {
   readonly description?: string;
   readonly evaluatorType: string;
   readonly factData?: string;
@@ -27,9 +26,20 @@ export interface DevTestPolicyTimeouts {
   readonly update?: string;
 }
 
+function devTestPolicyTimeoutsToTerraform(struct?: DevTestPolicyTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class DevTestPolicy extends TerraformResource {
+export class DevTestPolicy extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -215,16 +225,16 @@ export class DevTestPolicy extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      description: this._description,
-      evaluator_type: this._evaluatorType,
-      fact_data: this._factData,
-      lab_name: this._labName,
-      name: this._name,
-      policy_set_name: this._policySetName,
-      resource_group_name: this._resourceGroupName,
-      tags: this._tags,
-      threshold: this._threshold,
-      timeouts: this._timeouts,
+      description: cdktf.stringToTerraform(this._description),
+      evaluator_type: cdktf.stringToTerraform(this._evaluatorType),
+      fact_data: cdktf.stringToTerraform(this._factData),
+      lab_name: cdktf.stringToTerraform(this._labName),
+      name: cdktf.stringToTerraform(this._name),
+      policy_set_name: cdktf.stringToTerraform(this._policySetName),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      threshold: cdktf.stringToTerraform(this._threshold),
+      timeouts: devTestPolicyTimeoutsToTerraform(this._timeouts),
     };
   }
 }

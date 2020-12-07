@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface VirtualNetworkPeeringConfig extends TerraformMetaArguments {
+export interface VirtualNetworkPeeringConfig extends cdktf.TerraformMetaArguments {
   readonly allowForwardedTraffic?: boolean;
   readonly allowGatewayTransit?: boolean;
   readonly allowVirtualNetworkAccess?: boolean;
@@ -26,9 +25,20 @@ export interface VirtualNetworkPeeringTimeouts {
   readonly update?: string;
 }
 
+function virtualNetworkPeeringTimeoutsToTerraform(struct?: VirtualNetworkPeeringTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class VirtualNetworkPeering extends TerraformResource {
+export class VirtualNetworkPeering extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -203,15 +213,15 @@ export class VirtualNetworkPeering extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      allow_forwarded_traffic: this._allowForwardedTraffic,
-      allow_gateway_transit: this._allowGatewayTransit,
-      allow_virtual_network_access: this._allowVirtualNetworkAccess,
-      name: this._name,
-      remote_virtual_network_id: this._remoteVirtualNetworkId,
-      resource_group_name: this._resourceGroupName,
-      use_remote_gateways: this._useRemoteGateways,
-      virtual_network_name: this._virtualNetworkName,
-      timeouts: this._timeouts,
+      allow_forwarded_traffic: cdktf.booleanToTerraform(this._allowForwardedTraffic),
+      allow_gateway_transit: cdktf.booleanToTerraform(this._allowGatewayTransit),
+      allow_virtual_network_access: cdktf.booleanToTerraform(this._allowVirtualNetworkAccess),
+      name: cdktf.stringToTerraform(this._name),
+      remote_virtual_network_id: cdktf.stringToTerraform(this._remoteVirtualNetworkId),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      use_remote_gateways: cdktf.booleanToTerraform(this._useRemoteGateways),
+      virtual_network_name: cdktf.stringToTerraform(this._virtualNetworkName),
+      timeouts: virtualNetworkPeeringTimeoutsToTerraform(this._timeouts),
     };
   }
 }

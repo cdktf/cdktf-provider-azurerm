@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface PacketCaptureConfig extends TerraformMetaArguments {
+export interface PacketCaptureConfig extends cdktf.TerraformMetaArguments {
   readonly maximumBytesPerPacket?: number;
   readonly maximumBytesPerSession?: number;
   readonly maximumCaptureDuration?: number;
@@ -29,10 +28,31 @@ export interface PacketCaptureFilter {
   readonly remoteIpAddress?: string;
   readonly remotePort?: string;
 }
+
+function packetCaptureFilterToTerraform(struct?: PacketCaptureFilter): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    local_ip_address: cdktf.stringToTerraform(struct!.localIpAddress),
+    local_port: cdktf.stringToTerraform(struct!.localPort),
+    protocol: cdktf.stringToTerraform(struct!.protocol),
+    remote_ip_address: cdktf.stringToTerraform(struct!.remoteIpAddress),
+    remote_port: cdktf.stringToTerraform(struct!.remotePort),
+  }
+}
+
 export interface PacketCaptureStorageLocation {
   readonly filePath?: string;
   readonly storageAccountId?: string;
 }
+
+function packetCaptureStorageLocationToTerraform(struct?: PacketCaptureStorageLocation): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    file_path: cdktf.stringToTerraform(struct!.filePath),
+    storage_account_id: cdktf.stringToTerraform(struct!.storageAccountId),
+  }
+}
+
 export interface PacketCaptureTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -40,9 +60,20 @@ export interface PacketCaptureTimeouts {
   readonly update?: string;
 }
 
+function packetCaptureTimeoutsToTerraform(struct?: PacketCaptureTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class PacketCapture extends TerraformResource {
+export class PacketCapture extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -231,16 +262,16 @@ export class PacketCapture extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      maximum_bytes_per_packet: this._maximumBytesPerPacket,
-      maximum_bytes_per_session: this._maximumBytesPerSession,
-      maximum_capture_duration: this._maximumCaptureDuration,
-      name: this._name,
-      network_watcher_name: this._networkWatcherName,
-      resource_group_name: this._resourceGroupName,
-      target_resource_id: this._targetResourceId,
-      filter: this._filter,
-      storage_location: this._storageLocation,
-      timeouts: this._timeouts,
+      maximum_bytes_per_packet: cdktf.numberToTerraform(this._maximumBytesPerPacket),
+      maximum_bytes_per_session: cdktf.numberToTerraform(this._maximumBytesPerSession),
+      maximum_capture_duration: cdktf.numberToTerraform(this._maximumCaptureDuration),
+      name: cdktf.stringToTerraform(this._name),
+      network_watcher_name: cdktf.stringToTerraform(this._networkWatcherName),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      target_resource_id: cdktf.stringToTerraform(this._targetResourceId),
+      filter: cdktf.listMapper(packetCaptureFilterToTerraform)(this._filter),
+      storage_location: cdktf.listMapper(packetCaptureStorageLocationToTerraform)(this._storageLocation),
+      timeouts: packetCaptureTimeoutsToTerraform(this._timeouts),
     };
   }
 }

@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface BotWebAppConfig extends TerraformMetaArguments {
+export interface BotWebAppConfig extends cdktf.TerraformMetaArguments {
   readonly developerAppInsightsApiKey?: string;
   readonly developerAppInsightsApplicationId?: string;
   readonly developerAppInsightsKey?: string;
@@ -31,9 +30,20 @@ export interface BotWebAppTimeouts {
   readonly update?: string;
 }
 
+function botWebAppTimeoutsToTerraform(struct?: BotWebAppTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class BotWebApp extends TerraformResource {
+export class BotWebApp extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -290,20 +300,20 @@ export class BotWebApp extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      developer_app_insights_api_key: this._developerAppInsightsApiKey,
-      developer_app_insights_application_id: this._developerAppInsightsApplicationId,
-      developer_app_insights_key: this._developerAppInsightsKey,
-      display_name: this._displayName,
-      endpoint: this._endpoint,
-      location: this._location,
-      luis_app_ids: this._luisAppIds,
-      luis_key: this._luisKey,
-      microsoft_app_id: this._microsoftAppId,
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      sku: this._sku,
-      tags: this._tags,
-      timeouts: this._timeouts,
+      developer_app_insights_api_key: cdktf.stringToTerraform(this._developerAppInsightsApiKey),
+      developer_app_insights_application_id: cdktf.stringToTerraform(this._developerAppInsightsApplicationId),
+      developer_app_insights_key: cdktf.stringToTerraform(this._developerAppInsightsKey),
+      display_name: cdktf.stringToTerraform(this._displayName),
+      endpoint: cdktf.stringToTerraform(this._endpoint),
+      location: cdktf.stringToTerraform(this._location),
+      luis_app_ids: cdktf.listMapper(cdktf.stringToTerraform)(this._luisAppIds),
+      luis_key: cdktf.stringToTerraform(this._luisKey),
+      microsoft_app_id: cdktf.stringToTerraform(this._microsoftAppId),
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      sku: cdktf.stringToTerraform(this._sku),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      timeouts: botWebAppTimeoutsToTerraform(this._timeouts),
     };
   }
 }

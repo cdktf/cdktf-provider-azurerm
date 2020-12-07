@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface FirewallPolicyRuleCollectionGroupConfig extends TerraformMetaArguments {
+export interface FirewallPolicyRuleCollectionGroupConfig extends cdktf.TerraformMetaArguments {
   readonly firewallPolicyId: string;
   readonly name: string;
   readonly priority: number;
@@ -24,6 +23,15 @@ export interface FirewallPolicyRuleCollectionGroupApplicationRuleCollectionRuleP
   readonly port: number;
   readonly type: string;
 }
+
+function firewallPolicyRuleCollectionGroupApplicationRuleCollectionRuleProtocolsToTerraform(struct?: FirewallPolicyRuleCollectionGroupApplicationRuleCollectionRuleProtocols): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    port: cdktf.numberToTerraform(struct!.port),
+    type: cdktf.stringToTerraform(struct!.type),
+  }
+}
+
 export interface FirewallPolicyRuleCollectionGroupApplicationRuleCollectionRule {
   readonly destinationFqdnTags?: string[];
   readonly destinationFqdns?: string[];
@@ -33,6 +41,19 @@ export interface FirewallPolicyRuleCollectionGroupApplicationRuleCollectionRule 
   /** protocols block */
   readonly protocols: FirewallPolicyRuleCollectionGroupApplicationRuleCollectionRuleProtocols[];
 }
+
+function firewallPolicyRuleCollectionGroupApplicationRuleCollectionRuleToTerraform(struct?: FirewallPolicyRuleCollectionGroupApplicationRuleCollectionRule): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    destination_fqdn_tags: cdktf.listMapper(cdktf.stringToTerraform)(struct!.destinationFqdnTags),
+    destination_fqdns: cdktf.listMapper(cdktf.stringToTerraform)(struct!.destinationFqdns),
+    name: cdktf.stringToTerraform(struct!.name),
+    source_addresses: cdktf.listMapper(cdktf.stringToTerraform)(struct!.sourceAddresses),
+    source_ip_groups: cdktf.listMapper(cdktf.stringToTerraform)(struct!.sourceIpGroups),
+    protocols: cdktf.listMapper(firewallPolicyRuleCollectionGroupApplicationRuleCollectionRuleProtocolsToTerraform)(struct!.protocols),
+  }
+}
+
 export interface FirewallPolicyRuleCollectionGroupApplicationRuleCollection {
   readonly action: string;
   readonly name: string;
@@ -40,6 +61,17 @@ export interface FirewallPolicyRuleCollectionGroupApplicationRuleCollection {
   /** rule block */
   readonly rule: FirewallPolicyRuleCollectionGroupApplicationRuleCollectionRule[];
 }
+
+function firewallPolicyRuleCollectionGroupApplicationRuleCollectionToTerraform(struct?: FirewallPolicyRuleCollectionGroupApplicationRuleCollection): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    action: cdktf.stringToTerraform(struct!.action),
+    name: cdktf.stringToTerraform(struct!.name),
+    priority: cdktf.numberToTerraform(struct!.priority),
+    rule: cdktf.listMapper(firewallPolicyRuleCollectionGroupApplicationRuleCollectionRuleToTerraform)(struct!.rule),
+  }
+}
+
 export interface FirewallPolicyRuleCollectionGroupNatRuleCollectionRule {
   readonly destinationAddress?: string;
   readonly destinationPorts?: string[];
@@ -50,6 +82,21 @@ export interface FirewallPolicyRuleCollectionGroupNatRuleCollectionRule {
   readonly translatedAddress: string;
   readonly translatedPort: number;
 }
+
+function firewallPolicyRuleCollectionGroupNatRuleCollectionRuleToTerraform(struct?: FirewallPolicyRuleCollectionGroupNatRuleCollectionRule): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    destination_address: cdktf.stringToTerraform(struct!.destinationAddress),
+    destination_ports: cdktf.listMapper(cdktf.stringToTerraform)(struct!.destinationPorts),
+    name: cdktf.stringToTerraform(struct!.name),
+    protocols: cdktf.listMapper(cdktf.stringToTerraform)(struct!.protocols),
+    source_addresses: cdktf.listMapper(cdktf.stringToTerraform)(struct!.sourceAddresses),
+    source_ip_groups: cdktf.listMapper(cdktf.stringToTerraform)(struct!.sourceIpGroups),
+    translated_address: cdktf.stringToTerraform(struct!.translatedAddress),
+    translated_port: cdktf.numberToTerraform(struct!.translatedPort),
+  }
+}
+
 export interface FirewallPolicyRuleCollectionGroupNatRuleCollection {
   readonly action: string;
   readonly name: string;
@@ -57,6 +104,17 @@ export interface FirewallPolicyRuleCollectionGroupNatRuleCollection {
   /** rule block */
   readonly rule: FirewallPolicyRuleCollectionGroupNatRuleCollectionRule[];
 }
+
+function firewallPolicyRuleCollectionGroupNatRuleCollectionToTerraform(struct?: FirewallPolicyRuleCollectionGroupNatRuleCollection): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    action: cdktf.stringToTerraform(struct!.action),
+    name: cdktf.stringToTerraform(struct!.name),
+    priority: cdktf.numberToTerraform(struct!.priority),
+    rule: cdktf.listMapper(firewallPolicyRuleCollectionGroupNatRuleCollectionRuleToTerraform)(struct!.rule),
+  }
+}
+
 export interface FirewallPolicyRuleCollectionGroupNetworkRuleCollectionRule {
   readonly destinationAddresses?: string[];
   readonly destinationFqdns?: string[];
@@ -67,6 +125,21 @@ export interface FirewallPolicyRuleCollectionGroupNetworkRuleCollectionRule {
   readonly sourceAddresses?: string[];
   readonly sourceIpGroups?: string[];
 }
+
+function firewallPolicyRuleCollectionGroupNetworkRuleCollectionRuleToTerraform(struct?: FirewallPolicyRuleCollectionGroupNetworkRuleCollectionRule): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    destination_addresses: cdktf.listMapper(cdktf.stringToTerraform)(struct!.destinationAddresses),
+    destination_fqdns: cdktf.listMapper(cdktf.stringToTerraform)(struct!.destinationFqdns),
+    destination_ip_groups: cdktf.listMapper(cdktf.stringToTerraform)(struct!.destinationIpGroups),
+    destination_ports: cdktf.listMapper(cdktf.stringToTerraform)(struct!.destinationPorts),
+    name: cdktf.stringToTerraform(struct!.name),
+    protocols: cdktf.listMapper(cdktf.stringToTerraform)(struct!.protocols),
+    source_addresses: cdktf.listMapper(cdktf.stringToTerraform)(struct!.sourceAddresses),
+    source_ip_groups: cdktf.listMapper(cdktf.stringToTerraform)(struct!.sourceIpGroups),
+  }
+}
+
 export interface FirewallPolicyRuleCollectionGroupNetworkRuleCollection {
   readonly action: string;
   readonly name: string;
@@ -74,6 +147,17 @@ export interface FirewallPolicyRuleCollectionGroupNetworkRuleCollection {
   /** rule block */
   readonly rule: FirewallPolicyRuleCollectionGroupNetworkRuleCollectionRule[];
 }
+
+function firewallPolicyRuleCollectionGroupNetworkRuleCollectionToTerraform(struct?: FirewallPolicyRuleCollectionGroupNetworkRuleCollection): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    action: cdktf.stringToTerraform(struct!.action),
+    name: cdktf.stringToTerraform(struct!.name),
+    priority: cdktf.numberToTerraform(struct!.priority),
+    rule: cdktf.listMapper(firewallPolicyRuleCollectionGroupNetworkRuleCollectionRuleToTerraform)(struct!.rule),
+  }
+}
+
 export interface FirewallPolicyRuleCollectionGroupTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -81,9 +165,20 @@ export interface FirewallPolicyRuleCollectionGroupTimeouts {
   readonly update?: string;
 }
 
+function firewallPolicyRuleCollectionGroupTimeoutsToTerraform(struct?: FirewallPolicyRuleCollectionGroupTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class FirewallPolicyRuleCollectionGroup extends TerraformResource {
+export class FirewallPolicyRuleCollectionGroup extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -227,13 +322,13 @@ export class FirewallPolicyRuleCollectionGroup extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      firewall_policy_id: this._firewallPolicyId,
-      name: this._name,
-      priority: this._priority,
-      application_rule_collection: this._applicationRuleCollection,
-      nat_rule_collection: this._natRuleCollection,
-      network_rule_collection: this._networkRuleCollection,
-      timeouts: this._timeouts,
+      firewall_policy_id: cdktf.stringToTerraform(this._firewallPolicyId),
+      name: cdktf.stringToTerraform(this._name),
+      priority: cdktf.numberToTerraform(this._priority),
+      application_rule_collection: cdktf.listMapper(firewallPolicyRuleCollectionGroupApplicationRuleCollectionToTerraform)(this._applicationRuleCollection),
+      nat_rule_collection: cdktf.listMapper(firewallPolicyRuleCollectionGroupNatRuleCollectionToTerraform)(this._natRuleCollection),
+      network_rule_collection: cdktf.listMapper(firewallPolicyRuleCollectionGroupNetworkRuleCollectionToTerraform)(this._networkRuleCollection),
+      timeouts: firewallPolicyRuleCollectionGroupTimeoutsToTerraform(this._timeouts),
     };
   }
 }

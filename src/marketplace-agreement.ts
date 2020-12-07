@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface MarketplaceAgreementConfig extends TerraformMetaArguments {
+export interface MarketplaceAgreementConfig extends cdktf.TerraformMetaArguments {
   readonly offer: string;
   readonly plan: string;
   readonly publisher: string;
@@ -21,9 +20,20 @@ export interface MarketplaceAgreementTimeouts {
   readonly update?: string;
 }
 
+function marketplaceAgreementTimeoutsToTerraform(struct?: MarketplaceAgreementTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class MarketplaceAgreement extends TerraformResource {
+export class MarketplaceAgreement extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -126,10 +136,10 @@ export class MarketplaceAgreement extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      offer: this._offer,
-      plan: this._plan,
-      publisher: this._publisher,
-      timeouts: this._timeouts,
+      offer: cdktf.stringToTerraform(this._offer),
+      plan: cdktf.stringToTerraform(this._plan),
+      publisher: cdktf.stringToTerraform(this._publisher),
+      timeouts: marketplaceAgreementTimeoutsToTerraform(this._timeouts),
     };
   }
 }

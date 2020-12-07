@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface MachineLearningWorkspaceConfig extends TerraformMetaArguments {
+export interface MachineLearningWorkspaceConfig extends cdktf.TerraformMetaArguments {
   readonly applicationInsightsId: string;
   readonly containerRegistryId?: string;
   readonly description?: string;
@@ -28,6 +27,14 @@ export interface MachineLearningWorkspaceConfig extends TerraformMetaArguments {
 export interface MachineLearningWorkspaceIdentity {
   readonly type: string;
 }
+
+function machineLearningWorkspaceIdentityToTerraform(struct?: MachineLearningWorkspaceIdentity): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    type: cdktf.stringToTerraform(struct!.type),
+  }
+}
+
 export interface MachineLearningWorkspaceTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -35,9 +42,20 @@ export interface MachineLearningWorkspaceTimeouts {
   readonly update?: string;
 }
 
+function machineLearningWorkspaceTimeoutsToTerraform(struct?: MachineLearningWorkspaceTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class MachineLearningWorkspace extends TerraformResource {
+export class MachineLearningWorkspace extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -288,20 +306,20 @@ export class MachineLearningWorkspace extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      application_insights_id: this._applicationInsightsId,
-      container_registry_id: this._containerRegistryId,
-      description: this._description,
-      friendly_name: this._friendlyName,
-      high_business_impact: this._highBusinessImpact,
-      key_vault_id: this._keyVaultId,
-      location: this._location,
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      sku_name: this._skuName,
-      storage_account_id: this._storageAccountId,
-      tags: this._tags,
-      identity: this._identity,
-      timeouts: this._timeouts,
+      application_insights_id: cdktf.stringToTerraform(this._applicationInsightsId),
+      container_registry_id: cdktf.stringToTerraform(this._containerRegistryId),
+      description: cdktf.stringToTerraform(this._description),
+      friendly_name: cdktf.stringToTerraform(this._friendlyName),
+      high_business_impact: cdktf.booleanToTerraform(this._highBusinessImpact),
+      key_vault_id: cdktf.stringToTerraform(this._keyVaultId),
+      location: cdktf.stringToTerraform(this._location),
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      sku_name: cdktf.stringToTerraform(this._skuName),
+      storage_account_id: cdktf.stringToTerraform(this._storageAccountId),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      identity: cdktf.listMapper(machineLearningWorkspaceIdentityToTerraform)(this._identity),
+      timeouts: machineLearningWorkspaceTimeoutsToTerraform(this._timeouts),
     };
   }
 }

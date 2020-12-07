@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface MonitorMetricAlertConfig extends TerraformMetaArguments {
+export interface MonitorMetricAlertConfig extends cdktf.TerraformMetaArguments {
   readonly autoMitigate?: boolean;
   readonly description?: string;
   readonly enabled?: boolean;
@@ -37,16 +36,45 @@ export interface MonitorMetricAlertAction {
   readonly actionGroupId: string;
   readonly webhookProperties?: { [key: string]: string };
 }
+
+function monitorMetricAlertActionToTerraform(struct?: MonitorMetricAlertAction): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    action_group_id: cdktf.stringToTerraform(struct!.actionGroupId),
+    webhook_properties: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.webhookProperties),
+  }
+}
+
 export interface MonitorMetricAlertApplicationInsightsWebTestLocationAvailabilityCriteria {
   readonly componentId: string;
   readonly failedLocationCount: number;
   readonly webTestId: string;
 }
+
+function monitorMetricAlertApplicationInsightsWebTestLocationAvailabilityCriteriaToTerraform(struct?: MonitorMetricAlertApplicationInsightsWebTestLocationAvailabilityCriteria): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    component_id: cdktf.stringToTerraform(struct!.componentId),
+    failed_location_count: cdktf.numberToTerraform(struct!.failedLocationCount),
+    web_test_id: cdktf.stringToTerraform(struct!.webTestId),
+  }
+}
+
 export interface MonitorMetricAlertCriteriaDimension {
   readonly name: string;
   readonly operator: string;
   readonly values: string[];
 }
+
+function monitorMetricAlertCriteriaDimensionToTerraform(struct?: MonitorMetricAlertCriteriaDimension): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    name: cdktf.stringToTerraform(struct!.name),
+    operator: cdktf.stringToTerraform(struct!.operator),
+    values: cdktf.listMapper(cdktf.stringToTerraform)(struct!.values),
+  }
+}
+
 export interface MonitorMetricAlertCriteria {
   readonly aggregation: string;
   readonly metricName: string;
@@ -56,11 +84,34 @@ export interface MonitorMetricAlertCriteria {
   /** dimension block */
   readonly dimension?: MonitorMetricAlertCriteriaDimension[];
 }
+
+function monitorMetricAlertCriteriaToTerraform(struct?: MonitorMetricAlertCriteria): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    aggregation: cdktf.stringToTerraform(struct!.aggregation),
+    metric_name: cdktf.stringToTerraform(struct!.metricName),
+    metric_namespace: cdktf.stringToTerraform(struct!.metricNamespace),
+    operator: cdktf.stringToTerraform(struct!.operator),
+    threshold: cdktf.numberToTerraform(struct!.threshold),
+    dimension: cdktf.listMapper(monitorMetricAlertCriteriaDimensionToTerraform)(struct!.dimension),
+  }
+}
+
 export interface MonitorMetricAlertDynamicCriteriaDimension {
   readonly name: string;
   readonly operator: string;
   readonly values: string[];
 }
+
+function monitorMetricAlertDynamicCriteriaDimensionToTerraform(struct?: MonitorMetricAlertDynamicCriteriaDimension): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    name: cdktf.stringToTerraform(struct!.name),
+    operator: cdktf.stringToTerraform(struct!.operator),
+    values: cdktf.listMapper(cdktf.stringToTerraform)(struct!.values),
+  }
+}
+
 export interface MonitorMetricAlertDynamicCriteria {
   readonly aggregation: string;
   readonly alertSensitivity: string;
@@ -73,6 +124,22 @@ export interface MonitorMetricAlertDynamicCriteria {
   /** dimension block */
   readonly dimension?: MonitorMetricAlertDynamicCriteriaDimension[];
 }
+
+function monitorMetricAlertDynamicCriteriaToTerraform(struct?: MonitorMetricAlertDynamicCriteria): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    aggregation: cdktf.stringToTerraform(struct!.aggregation),
+    alert_sensitivity: cdktf.stringToTerraform(struct!.alertSensitivity),
+    evaluation_failure_count: cdktf.numberToTerraform(struct!.evaluationFailureCount),
+    evaluation_total_count: cdktf.numberToTerraform(struct!.evaluationTotalCount),
+    ignore_data_before: cdktf.stringToTerraform(struct!.ignoreDataBefore),
+    metric_name: cdktf.stringToTerraform(struct!.metricName),
+    metric_namespace: cdktf.stringToTerraform(struct!.metricNamespace),
+    operator: cdktf.stringToTerraform(struct!.operator),
+    dimension: cdktf.listMapper(monitorMetricAlertDynamicCriteriaDimensionToTerraform)(struct!.dimension),
+  }
+}
+
 export interface MonitorMetricAlertTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -80,9 +147,20 @@ export interface MonitorMetricAlertTimeouts {
   readonly update?: string;
 }
 
+function monitorMetricAlertTimeoutsToTerraform(struct?: MonitorMetricAlertTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class MonitorMetricAlert extends TerraformResource {
+export class MonitorMetricAlert extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -396,23 +474,23 @@ export class MonitorMetricAlert extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      auto_mitigate: this._autoMitigate,
-      description: this._description,
-      enabled: this._enabled,
-      frequency: this._frequency,
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      scopes: this._scopes,
-      severity: this._severity,
-      tags: this._tags,
-      target_resource_location: this._targetResourceLocation,
-      target_resource_type: this._targetResourceType,
-      window_size: this._windowSize,
-      action: this._action,
-      application_insights_web_test_location_availability_criteria: this._applicationInsightsWebTestLocationAvailabilityCriteria,
-      criteria: this._criteria,
-      dynamic_criteria: this._dynamicCriteria,
-      timeouts: this._timeouts,
+      auto_mitigate: cdktf.booleanToTerraform(this._autoMitigate),
+      description: cdktf.stringToTerraform(this._description),
+      enabled: cdktf.booleanToTerraform(this._enabled),
+      frequency: cdktf.stringToTerraform(this._frequency),
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      scopes: cdktf.listMapper(cdktf.stringToTerraform)(this._scopes),
+      severity: cdktf.numberToTerraform(this._severity),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      target_resource_location: cdktf.stringToTerraform(this._targetResourceLocation),
+      target_resource_type: cdktf.stringToTerraform(this._targetResourceType),
+      window_size: cdktf.stringToTerraform(this._windowSize),
+      action: cdktf.listMapper(monitorMetricAlertActionToTerraform)(this._action),
+      application_insights_web_test_location_availability_criteria: cdktf.listMapper(monitorMetricAlertApplicationInsightsWebTestLocationAvailabilityCriteriaToTerraform)(this._applicationInsightsWebTestLocationAvailabilityCriteria),
+      criteria: cdktf.listMapper(monitorMetricAlertCriteriaToTerraform)(this._criteria),
+      dynamic_criteria: cdktf.listMapper(monitorMetricAlertDynamicCriteriaToTerraform)(this._dynamicCriteria),
+      timeouts: monitorMetricAlertTimeoutsToTerraform(this._timeouts),
     };
   }
 }

@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface WindowsVirtualMachineConfig extends TerraformMetaArguments {
+export interface WindowsVirtualMachineConfig extends cdktf.TerraformMetaArguments {
   readonly adminPassword: string;
   readonly adminUsername: string;
   readonly allowExtensionOperations?: boolean;
@@ -59,20 +58,62 @@ export interface WindowsVirtualMachineConfig extends TerraformMetaArguments {
 export interface WindowsVirtualMachineAdditionalCapabilities {
   readonly ultraSsdEnabled?: boolean;
 }
+
+function windowsVirtualMachineAdditionalCapabilitiesToTerraform(struct?: WindowsVirtualMachineAdditionalCapabilities): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    ultra_ssd_enabled: cdktf.booleanToTerraform(struct!.ultraSsdEnabled),
+  }
+}
+
 export interface WindowsVirtualMachineAdditionalUnattendContent {
   readonly content: string;
   readonly setting: string;
 }
+
+function windowsVirtualMachineAdditionalUnattendContentToTerraform(struct?: WindowsVirtualMachineAdditionalUnattendContent): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    content: cdktf.stringToTerraform(struct!.content),
+    setting: cdktf.stringToTerraform(struct!.setting),
+  }
+}
+
 export interface WindowsVirtualMachineBootDiagnostics {
   readonly storageAccountUri?: string;
 }
+
+function windowsVirtualMachineBootDiagnosticsToTerraform(struct?: WindowsVirtualMachineBootDiagnostics): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    storage_account_uri: cdktf.stringToTerraform(struct!.storageAccountUri),
+  }
+}
+
 export interface WindowsVirtualMachineIdentity {
   readonly identityIds?: string[];
   readonly type: string;
 }
+
+function windowsVirtualMachineIdentityToTerraform(struct?: WindowsVirtualMachineIdentity): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    identity_ids: cdktf.listMapper(cdktf.stringToTerraform)(struct!.identityIds),
+    type: cdktf.stringToTerraform(struct!.type),
+  }
+}
+
 export interface WindowsVirtualMachineOsDiskDiffDiskSettings {
   readonly option: string;
 }
+
+function windowsVirtualMachineOsDiskDiffDiskSettingsToTerraform(struct?: WindowsVirtualMachineOsDiskDiffDiskSettings): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    option: cdktf.stringToTerraform(struct!.option),
+  }
+}
+
 export interface WindowsVirtualMachineOsDisk {
   readonly caching: string;
   readonly diskEncryptionSetId?: string;
@@ -83,40 +124,113 @@ export interface WindowsVirtualMachineOsDisk {
   /** diff_disk_settings block */
   readonly diffDiskSettings?: WindowsVirtualMachineOsDiskDiffDiskSettings[];
 }
+
+function windowsVirtualMachineOsDiskToTerraform(struct?: WindowsVirtualMachineOsDisk): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    caching: cdktf.stringToTerraform(struct!.caching),
+    disk_encryption_set_id: cdktf.stringToTerraform(struct!.diskEncryptionSetId),
+    disk_size_gb: cdktf.numberToTerraform(struct!.diskSizeGb),
+    name: cdktf.stringToTerraform(struct!.name),
+    storage_account_type: cdktf.stringToTerraform(struct!.storageAccountType),
+    write_accelerator_enabled: cdktf.booleanToTerraform(struct!.writeAcceleratorEnabled),
+    diff_disk_settings: cdktf.listMapper(windowsVirtualMachineOsDiskDiffDiskSettingsToTerraform)(struct!.diffDiskSettings),
+  }
+}
+
 export interface WindowsVirtualMachinePlan {
   readonly name: string;
   readonly product: string;
   readonly publisher: string;
 }
+
+function windowsVirtualMachinePlanToTerraform(struct?: WindowsVirtualMachinePlan): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    name: cdktf.stringToTerraform(struct!.name),
+    product: cdktf.stringToTerraform(struct!.product),
+    publisher: cdktf.stringToTerraform(struct!.publisher),
+  }
+}
+
 export interface WindowsVirtualMachineSecretCertificate {
   readonly store: string;
   readonly url: string;
 }
+
+function windowsVirtualMachineSecretCertificateToTerraform(struct?: WindowsVirtualMachineSecretCertificate): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    store: cdktf.stringToTerraform(struct!.store),
+    url: cdktf.stringToTerraform(struct!.url),
+  }
+}
+
 export interface WindowsVirtualMachineSecret {
   readonly keyVaultId: string;
   /** certificate block */
   readonly certificate: WindowsVirtualMachineSecretCertificate[];
 }
+
+function windowsVirtualMachineSecretToTerraform(struct?: WindowsVirtualMachineSecret): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    key_vault_id: cdktf.stringToTerraform(struct!.keyVaultId),
+    certificate: cdktf.listMapper(windowsVirtualMachineSecretCertificateToTerraform)(struct!.certificate),
+  }
+}
+
 export interface WindowsVirtualMachineSourceImageReference {
   readonly offer: string;
   readonly publisher: string;
   readonly sku: string;
   readonly version: string;
 }
+
+function windowsVirtualMachineSourceImageReferenceToTerraform(struct?: WindowsVirtualMachineSourceImageReference): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    offer: cdktf.stringToTerraform(struct!.offer),
+    publisher: cdktf.stringToTerraform(struct!.publisher),
+    sku: cdktf.stringToTerraform(struct!.sku),
+    version: cdktf.stringToTerraform(struct!.version),
+  }
+}
+
 export interface WindowsVirtualMachineTimeouts {
   readonly create?: string;
   readonly delete?: string;
   readonly read?: string;
   readonly update?: string;
 }
+
+function windowsVirtualMachineTimeoutsToTerraform(struct?: WindowsVirtualMachineTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
 export interface WindowsVirtualMachineWinrmListener {
   readonly certificateUrl?: string;
   readonly protocol: string;
 }
 
+function windowsVirtualMachineWinrmListenerToTerraform(struct?: WindowsVirtualMachineWinrmListener): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    certificate_url: cdktf.stringToTerraform(struct!.certificateUrl),
+    protocol: cdktf.stringToTerraform(struct!.protocol),
+  }
+}
+
+
 // Resource
 
-export class WindowsVirtualMachine extends TerraformResource {
+export class WindowsVirtualMachine extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -780,43 +894,43 @@ export class WindowsVirtualMachine extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      admin_password: this._adminPassword,
-      admin_username: this._adminUsername,
-      allow_extension_operations: this._allowExtensionOperations,
-      availability_set_id: this._availabilitySetId,
-      computer_name: this._computerName,
-      custom_data: this._customData,
-      dedicated_host_id: this._dedicatedHostId,
-      enable_automatic_updates: this._enableAutomaticUpdates,
-      encryption_at_host_enabled: this._encryptionAtHostEnabled,
-      eviction_policy: this._evictionPolicy,
-      extensions_time_budget: this._extensionsTimeBudget,
-      license_type: this._licenseType,
-      location: this._location,
-      max_bid_price: this._maxBidPrice,
-      name: this._name,
-      network_interface_ids: this._networkInterfaceIds,
-      patch_mode: this._patchMode,
-      priority: this._priority,
-      provision_vm_agent: this._provisionVmAgent,
-      proximity_placement_group_id: this._proximityPlacementGroupId,
-      resource_group_name: this._resourceGroupName,
-      size: this._size,
-      source_image_id: this._sourceImageId,
-      tags: this._tags,
-      timezone: this._timezone,
-      virtual_machine_scale_set_id: this._virtualMachineScaleSetId,
-      zone: this._zone,
-      additional_capabilities: this._additionalCapabilities,
-      additional_unattend_content: this._additionalUnattendContent,
-      boot_diagnostics: this._bootDiagnostics,
-      identity: this._identity,
-      os_disk: this._osDisk,
-      plan: this._plan,
-      secret: this._secret,
-      source_image_reference: this._sourceImageReference,
-      timeouts: this._timeouts,
-      winrm_listener: this._winrmListener,
+      admin_password: cdktf.stringToTerraform(this._adminPassword),
+      admin_username: cdktf.stringToTerraform(this._adminUsername),
+      allow_extension_operations: cdktf.booleanToTerraform(this._allowExtensionOperations),
+      availability_set_id: cdktf.stringToTerraform(this._availabilitySetId),
+      computer_name: cdktf.stringToTerraform(this._computerName),
+      custom_data: cdktf.stringToTerraform(this._customData),
+      dedicated_host_id: cdktf.stringToTerraform(this._dedicatedHostId),
+      enable_automatic_updates: cdktf.booleanToTerraform(this._enableAutomaticUpdates),
+      encryption_at_host_enabled: cdktf.booleanToTerraform(this._encryptionAtHostEnabled),
+      eviction_policy: cdktf.stringToTerraform(this._evictionPolicy),
+      extensions_time_budget: cdktf.stringToTerraform(this._extensionsTimeBudget),
+      license_type: cdktf.stringToTerraform(this._licenseType),
+      location: cdktf.stringToTerraform(this._location),
+      max_bid_price: cdktf.numberToTerraform(this._maxBidPrice),
+      name: cdktf.stringToTerraform(this._name),
+      network_interface_ids: cdktf.listMapper(cdktf.stringToTerraform)(this._networkInterfaceIds),
+      patch_mode: cdktf.stringToTerraform(this._patchMode),
+      priority: cdktf.stringToTerraform(this._priority),
+      provision_vm_agent: cdktf.booleanToTerraform(this._provisionVmAgent),
+      proximity_placement_group_id: cdktf.stringToTerraform(this._proximityPlacementGroupId),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      size: cdktf.stringToTerraform(this._size),
+      source_image_id: cdktf.stringToTerraform(this._sourceImageId),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      timezone: cdktf.stringToTerraform(this._timezone),
+      virtual_machine_scale_set_id: cdktf.stringToTerraform(this._virtualMachineScaleSetId),
+      zone: cdktf.stringToTerraform(this._zone),
+      additional_capabilities: cdktf.listMapper(windowsVirtualMachineAdditionalCapabilitiesToTerraform)(this._additionalCapabilities),
+      additional_unattend_content: cdktf.listMapper(windowsVirtualMachineAdditionalUnattendContentToTerraform)(this._additionalUnattendContent),
+      boot_diagnostics: cdktf.listMapper(windowsVirtualMachineBootDiagnosticsToTerraform)(this._bootDiagnostics),
+      identity: cdktf.listMapper(windowsVirtualMachineIdentityToTerraform)(this._identity),
+      os_disk: cdktf.listMapper(windowsVirtualMachineOsDiskToTerraform)(this._osDisk),
+      plan: cdktf.listMapper(windowsVirtualMachinePlanToTerraform)(this._plan),
+      secret: cdktf.listMapper(windowsVirtualMachineSecretToTerraform)(this._secret),
+      source_image_reference: cdktf.listMapper(windowsVirtualMachineSourceImageReferenceToTerraform)(this._sourceImageReference),
+      timeouts: windowsVirtualMachineTimeoutsToTerraform(this._timeouts),
+      winrm_listener: cdktf.listMapper(windowsVirtualMachineWinrmListenerToTerraform)(this._winrmListener),
     };
   }
 }

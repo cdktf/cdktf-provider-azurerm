@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface RouteConfig extends TerraformMetaArguments {
+export interface RouteConfig extends cdktf.TerraformMetaArguments {
   readonly addressPrefix: string;
   readonly name: string;
   readonly nextHopInIpAddress?: string;
@@ -24,9 +23,20 @@ export interface RouteTimeouts {
   readonly update?: string;
 }
 
+function routeTimeoutsToTerraform(struct?: RouteTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class Route extends TerraformResource {
+export class Route extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -164,13 +174,13 @@ export class Route extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      address_prefix: this._addressPrefix,
-      name: this._name,
-      next_hop_in_ip_address: this._nextHopInIpAddress,
-      next_hop_type: this._nextHopType,
-      resource_group_name: this._resourceGroupName,
-      route_table_name: this._routeTableName,
-      timeouts: this._timeouts,
+      address_prefix: cdktf.stringToTerraform(this._addressPrefix),
+      name: cdktf.stringToTerraform(this._name),
+      next_hop_in_ip_address: cdktf.stringToTerraform(this._nextHopInIpAddress),
+      next_hop_type: cdktf.stringToTerraform(this._nextHopType),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      route_table_name: cdktf.stringToTerraform(this._routeTableName),
+      timeouts: routeTimeoutsToTerraform(this._timeouts),
     };
   }
 }

@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface HdinsightHadoopClusterConfig extends TerraformMetaArguments {
+export interface HdinsightHadoopClusterConfig extends cdktf.TerraformMetaArguments {
   readonly clusterVersion: string;
   readonly location: string;
   readonly name: string;
@@ -35,29 +34,80 @@ export interface HdinsightHadoopClusterConfig extends TerraformMetaArguments {
 export interface HdinsightHadoopClusterComponentVersion {
   readonly hadoop: string;
 }
+
+function hdinsightHadoopClusterComponentVersionToTerraform(struct?: HdinsightHadoopClusterComponentVersion): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    hadoop: cdktf.stringToTerraform(struct!.hadoop),
+  }
+}
+
 export interface HdinsightHadoopClusterGateway {
   readonly enabled?: boolean;
   readonly password: string;
   readonly username: string;
 }
+
+function hdinsightHadoopClusterGatewayToTerraform(struct?: HdinsightHadoopClusterGateway): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    enabled: cdktf.booleanToTerraform(struct!.enabled),
+    password: cdktf.stringToTerraform(struct!.password),
+    username: cdktf.stringToTerraform(struct!.username),
+  }
+}
+
 export interface HdinsightHadoopClusterMetastoresAmbari {
   readonly databaseName: string;
   readonly password: string;
   readonly server: string;
   readonly username: string;
 }
+
+function hdinsightHadoopClusterMetastoresAmbariToTerraform(struct?: HdinsightHadoopClusterMetastoresAmbari): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    database_name: cdktf.stringToTerraform(struct!.databaseName),
+    password: cdktf.stringToTerraform(struct!.password),
+    server: cdktf.stringToTerraform(struct!.server),
+    username: cdktf.stringToTerraform(struct!.username),
+  }
+}
+
 export interface HdinsightHadoopClusterMetastoresHive {
   readonly databaseName: string;
   readonly password: string;
   readonly server: string;
   readonly username: string;
 }
+
+function hdinsightHadoopClusterMetastoresHiveToTerraform(struct?: HdinsightHadoopClusterMetastoresHive): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    database_name: cdktf.stringToTerraform(struct!.databaseName),
+    password: cdktf.stringToTerraform(struct!.password),
+    server: cdktf.stringToTerraform(struct!.server),
+    username: cdktf.stringToTerraform(struct!.username),
+  }
+}
+
 export interface HdinsightHadoopClusterMetastoresOozie {
   readonly databaseName: string;
   readonly password: string;
   readonly server: string;
   readonly username: string;
 }
+
+function hdinsightHadoopClusterMetastoresOozieToTerraform(struct?: HdinsightHadoopClusterMetastoresOozie): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    database_name: cdktf.stringToTerraform(struct!.databaseName),
+    password: cdktf.stringToTerraform(struct!.password),
+    server: cdktf.stringToTerraform(struct!.server),
+    username: cdktf.stringToTerraform(struct!.username),
+  }
+}
+
 export interface HdinsightHadoopClusterMetastores {
   /** ambari block */
   readonly ambari?: HdinsightHadoopClusterMetastoresAmbari[];
@@ -66,20 +116,58 @@ export interface HdinsightHadoopClusterMetastores {
   /** oozie block */
   readonly oozie?: HdinsightHadoopClusterMetastoresOozie[];
 }
+
+function hdinsightHadoopClusterMetastoresToTerraform(struct?: HdinsightHadoopClusterMetastores): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    ambari: cdktf.listMapper(hdinsightHadoopClusterMetastoresAmbariToTerraform)(struct!.ambari),
+    hive: cdktf.listMapper(hdinsightHadoopClusterMetastoresHiveToTerraform)(struct!.hive),
+    oozie: cdktf.listMapper(hdinsightHadoopClusterMetastoresOozieToTerraform)(struct!.oozie),
+  }
+}
+
 export interface HdinsightHadoopClusterMonitor {
   readonly logAnalyticsWorkspaceId: string;
   readonly primaryKey: string;
 }
+
+function hdinsightHadoopClusterMonitorToTerraform(struct?: HdinsightHadoopClusterMonitor): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    log_analytics_workspace_id: cdktf.stringToTerraform(struct!.logAnalyticsWorkspaceId),
+    primary_key: cdktf.stringToTerraform(struct!.primaryKey),
+  }
+}
+
 export interface HdinsightHadoopClusterRolesEdgeNodeInstallScriptAction {
   readonly name: string;
   readonly uri: string;
 }
+
+function hdinsightHadoopClusterRolesEdgeNodeInstallScriptActionToTerraform(struct?: HdinsightHadoopClusterRolesEdgeNodeInstallScriptAction): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    name: cdktf.stringToTerraform(struct!.name),
+    uri: cdktf.stringToTerraform(struct!.uri),
+  }
+}
+
 export interface HdinsightHadoopClusterRolesEdgeNode {
   readonly targetInstanceCount: number;
   readonly vmSize: string;
   /** install_script_action block */
   readonly installScriptAction: HdinsightHadoopClusterRolesEdgeNodeInstallScriptAction[];
 }
+
+function hdinsightHadoopClusterRolesEdgeNodeToTerraform(struct?: HdinsightHadoopClusterRolesEdgeNode): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    target_instance_count: cdktf.numberToTerraform(struct!.targetInstanceCount),
+    vm_size: cdktf.stringToTerraform(struct!.vmSize),
+    install_script_action: cdktf.listMapper(hdinsightHadoopClusterRolesEdgeNodeInstallScriptActionToTerraform)(struct!.installScriptAction),
+  }
+}
+
 export interface HdinsightHadoopClusterRolesHeadNode {
   readonly password?: string;
   readonly sshKeys?: string[];
@@ -88,6 +176,19 @@ export interface HdinsightHadoopClusterRolesHeadNode {
   readonly virtualNetworkId?: string;
   readonly vmSize: string;
 }
+
+function hdinsightHadoopClusterRolesHeadNodeToTerraform(struct?: HdinsightHadoopClusterRolesHeadNode): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    password: cdktf.stringToTerraform(struct!.password),
+    ssh_keys: cdktf.listMapper(cdktf.stringToTerraform)(struct!.sshKeys),
+    subnet_id: cdktf.stringToTerraform(struct!.subnetId),
+    username: cdktf.stringToTerraform(struct!.username),
+    virtual_network_id: cdktf.stringToTerraform(struct!.virtualNetworkId),
+    vm_size: cdktf.stringToTerraform(struct!.vmSize),
+  }
+}
+
 export interface HdinsightHadoopClusterRolesWorkerNode {
   readonly minInstanceCount?: number;
   readonly password?: string;
@@ -98,6 +199,21 @@ export interface HdinsightHadoopClusterRolesWorkerNode {
   readonly virtualNetworkId?: string;
   readonly vmSize: string;
 }
+
+function hdinsightHadoopClusterRolesWorkerNodeToTerraform(struct?: HdinsightHadoopClusterRolesWorkerNode): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    min_instance_count: cdktf.numberToTerraform(struct!.minInstanceCount),
+    password: cdktf.stringToTerraform(struct!.password),
+    ssh_keys: cdktf.listMapper(cdktf.stringToTerraform)(struct!.sshKeys),
+    subnet_id: cdktf.stringToTerraform(struct!.subnetId),
+    target_instance_count: cdktf.numberToTerraform(struct!.targetInstanceCount),
+    username: cdktf.stringToTerraform(struct!.username),
+    virtual_network_id: cdktf.stringToTerraform(struct!.virtualNetworkId),
+    vm_size: cdktf.stringToTerraform(struct!.vmSize),
+  }
+}
+
 export interface HdinsightHadoopClusterRolesZookeeperNode {
   readonly password?: string;
   readonly sshKeys?: string[];
@@ -106,6 +222,19 @@ export interface HdinsightHadoopClusterRolesZookeeperNode {
   readonly virtualNetworkId?: string;
   readonly vmSize: string;
 }
+
+function hdinsightHadoopClusterRolesZookeeperNodeToTerraform(struct?: HdinsightHadoopClusterRolesZookeeperNode): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    password: cdktf.stringToTerraform(struct!.password),
+    ssh_keys: cdktf.listMapper(cdktf.stringToTerraform)(struct!.sshKeys),
+    subnet_id: cdktf.stringToTerraform(struct!.subnetId),
+    username: cdktf.stringToTerraform(struct!.username),
+    virtual_network_id: cdktf.stringToTerraform(struct!.virtualNetworkId),
+    vm_size: cdktf.stringToTerraform(struct!.vmSize),
+  }
+}
+
 export interface HdinsightHadoopClusterRoles {
   /** edge_node block */
   readonly edgeNode?: HdinsightHadoopClusterRolesEdgeNode[];
@@ -116,17 +245,49 @@ export interface HdinsightHadoopClusterRoles {
   /** zookeeper_node block */
   readonly zookeeperNode: HdinsightHadoopClusterRolesZookeeperNode[];
 }
+
+function hdinsightHadoopClusterRolesToTerraform(struct?: HdinsightHadoopClusterRoles): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    edge_node: cdktf.listMapper(hdinsightHadoopClusterRolesEdgeNodeToTerraform)(struct!.edgeNode),
+    head_node: cdktf.listMapper(hdinsightHadoopClusterRolesHeadNodeToTerraform)(struct!.headNode),
+    worker_node: cdktf.listMapper(hdinsightHadoopClusterRolesWorkerNodeToTerraform)(struct!.workerNode),
+    zookeeper_node: cdktf.listMapper(hdinsightHadoopClusterRolesZookeeperNodeToTerraform)(struct!.zookeeperNode),
+  }
+}
+
 export interface HdinsightHadoopClusterStorageAccount {
   readonly isDefault: boolean;
   readonly storageAccountKey: string;
   readonly storageContainerId: string;
 }
+
+function hdinsightHadoopClusterStorageAccountToTerraform(struct?: HdinsightHadoopClusterStorageAccount): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    is_default: cdktf.booleanToTerraform(struct!.isDefault),
+    storage_account_key: cdktf.stringToTerraform(struct!.storageAccountKey),
+    storage_container_id: cdktf.stringToTerraform(struct!.storageContainerId),
+  }
+}
+
 export interface HdinsightHadoopClusterStorageAccountGen2 {
   readonly filesystemId: string;
   readonly isDefault: boolean;
   readonly managedIdentityResourceId: string;
   readonly storageResourceId: string;
 }
+
+function hdinsightHadoopClusterStorageAccountGen2ToTerraform(struct?: HdinsightHadoopClusterStorageAccountGen2): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    filesystem_id: cdktf.stringToTerraform(struct!.filesystemId),
+    is_default: cdktf.booleanToTerraform(struct!.isDefault),
+    managed_identity_resource_id: cdktf.stringToTerraform(struct!.managedIdentityResourceId),
+    storage_resource_id: cdktf.stringToTerraform(struct!.storageResourceId),
+  }
+}
+
 export interface HdinsightHadoopClusterTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -134,9 +295,20 @@ export interface HdinsightHadoopClusterTimeouts {
   readonly update?: string;
 }
 
+function hdinsightHadoopClusterTimeoutsToTerraform(struct?: HdinsightHadoopClusterTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class HdinsightHadoopCluster extends TerraformResource {
+export class HdinsightHadoopCluster extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -411,21 +583,21 @@ export class HdinsightHadoopCluster extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      cluster_version: this._clusterVersion,
-      location: this._location,
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      tags: this._tags,
-      tier: this._tier,
-      tls_min_version: this._tlsMinVersion,
-      component_version: this._componentVersion,
-      gateway: this._gateway,
-      metastores: this._metastores,
-      monitor: this._monitor,
-      roles: this._roles,
-      storage_account: this._storageAccount,
-      storage_account_gen2: this._storageAccountGen2,
-      timeouts: this._timeouts,
+      cluster_version: cdktf.stringToTerraform(this._clusterVersion),
+      location: cdktf.stringToTerraform(this._location),
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      tier: cdktf.stringToTerraform(this._tier),
+      tls_min_version: cdktf.stringToTerraform(this._tlsMinVersion),
+      component_version: cdktf.listMapper(hdinsightHadoopClusterComponentVersionToTerraform)(this._componentVersion),
+      gateway: cdktf.listMapper(hdinsightHadoopClusterGatewayToTerraform)(this._gateway),
+      metastores: cdktf.listMapper(hdinsightHadoopClusterMetastoresToTerraform)(this._metastores),
+      monitor: cdktf.listMapper(hdinsightHadoopClusterMonitorToTerraform)(this._monitor),
+      roles: cdktf.listMapper(hdinsightHadoopClusterRolesToTerraform)(this._roles),
+      storage_account: cdktf.listMapper(hdinsightHadoopClusterStorageAccountToTerraform)(this._storageAccount),
+      storage_account_gen2: cdktf.listMapper(hdinsightHadoopClusterStorageAccountGen2ToTerraform)(this._storageAccountGen2),
+      timeouts: hdinsightHadoopClusterTimeoutsToTerraform(this._timeouts),
     };
   }
 }

@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface BackupProtectedFileShareConfig extends TerraformMetaArguments {
+export interface BackupProtectedFileShareConfig extends cdktf.TerraformMetaArguments {
   readonly backupPolicyId: string;
   readonly recoveryVaultName: string;
   readonly resourceGroupName: string;
@@ -23,9 +22,20 @@ export interface BackupProtectedFileShareTimeouts {
   readonly update?: string;
 }
 
+function backupProtectedFileShareTimeoutsToTerraform(struct?: BackupProtectedFileShareTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class BackupProtectedFileShare extends TerraformResource {
+export class BackupProtectedFileShare extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -146,12 +156,12 @@ export class BackupProtectedFileShare extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      backup_policy_id: this._backupPolicyId,
-      recovery_vault_name: this._recoveryVaultName,
-      resource_group_name: this._resourceGroupName,
-      source_file_share_name: this._sourceFileShareName,
-      source_storage_account_id: this._sourceStorageAccountId,
-      timeouts: this._timeouts,
+      backup_policy_id: cdktf.stringToTerraform(this._backupPolicyId),
+      recovery_vault_name: cdktf.stringToTerraform(this._recoveryVaultName),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      source_file_share_name: cdktf.stringToTerraform(this._sourceFileShareName),
+      source_storage_account_id: cdktf.stringToTerraform(this._sourceStorageAccountId),
+      timeouts: backupProtectedFileShareTimeoutsToTerraform(this._timeouts),
     };
   }
 }

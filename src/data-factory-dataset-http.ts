@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataFactoryDatasetHttpConfig extends TerraformMetaArguments {
+export interface DataFactoryDatasetHttpConfig extends cdktf.TerraformMetaArguments {
   readonly additionalProperties?: { [key: string]: string };
   readonly annotations?: string[];
   readonly dataFactoryName: string;
@@ -30,6 +29,16 @@ export interface DataFactoryDatasetHttpSchemaColumn {
   readonly name: string;
   readonly type?: string;
 }
+
+function dataFactoryDatasetHttpSchemaColumnToTerraform(struct?: DataFactoryDatasetHttpSchemaColumn): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    description: cdktf.stringToTerraform(struct!.description),
+    name: cdktf.stringToTerraform(struct!.name),
+    type: cdktf.stringToTerraform(struct!.type),
+  }
+}
+
 export interface DataFactoryDatasetHttpTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -37,9 +46,20 @@ export interface DataFactoryDatasetHttpTimeouts {
   readonly update?: string;
 }
 
+function dataFactoryDatasetHttpTimeoutsToTerraform(struct?: DataFactoryDatasetHttpTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class DataFactoryDatasetHttp extends TerraformResource {
+export class DataFactoryDatasetHttp extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -299,20 +319,20 @@ export class DataFactoryDatasetHttp extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      additional_properties: this._additionalProperties,
-      annotations: this._annotations,
-      data_factory_name: this._dataFactoryName,
-      description: this._description,
-      folder: this._folder,
-      linked_service_name: this._linkedServiceName,
-      name: this._name,
-      parameters: this._parameters,
-      relative_url: this._relativeUrl,
-      request_body: this._requestBody,
-      request_method: this._requestMethod,
-      resource_group_name: this._resourceGroupName,
-      schema_column: this._schemaColumn,
-      timeouts: this._timeouts,
+      additional_properties: cdktf.hashMapper(cdktf.anyToTerraform)(this._additionalProperties),
+      annotations: cdktf.listMapper(cdktf.stringToTerraform)(this._annotations),
+      data_factory_name: cdktf.stringToTerraform(this._dataFactoryName),
+      description: cdktf.stringToTerraform(this._description),
+      folder: cdktf.stringToTerraform(this._folder),
+      linked_service_name: cdktf.stringToTerraform(this._linkedServiceName),
+      name: cdktf.stringToTerraform(this._name),
+      parameters: cdktf.hashMapper(cdktf.anyToTerraform)(this._parameters),
+      relative_url: cdktf.stringToTerraform(this._relativeUrl),
+      request_body: cdktf.stringToTerraform(this._requestBody),
+      request_method: cdktf.stringToTerraform(this._requestMethod),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      schema_column: cdktf.listMapper(dataFactoryDatasetHttpSchemaColumnToTerraform)(this._schemaColumn),
+      timeouts: dataFactoryDatasetHttpTimeoutsToTerraform(this._timeouts),
     };
   }
 }

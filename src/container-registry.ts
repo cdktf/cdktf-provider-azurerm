@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface ContainerRegistryConfig extends TerraformMetaArguments {
+export interface ContainerRegistryConfig extends cdktf.TerraformMetaArguments {
   readonly adminEnabled?: boolean;
   readonly georeplicationLocations?: string[];
   readonly location: string;
@@ -26,22 +25,67 @@ export interface ContainerRegistryNetworkRuleSetIpRule {
   readonly action?: string;
   readonly ipRange?: string;
 }
+
+function containerRegistryNetworkRuleSetIpRuleToTerraform(struct?: ContainerRegistryNetworkRuleSetIpRule): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    action: cdktf.stringToTerraform(struct!.action),
+    ip_range: cdktf.stringToTerraform(struct!.ipRange),
+  }
+}
+
 export interface ContainerRegistryNetworkRuleSetVirtualNetwork {
   readonly action?: string;
   readonly subnetId?: string;
 }
+
+function containerRegistryNetworkRuleSetVirtualNetworkToTerraform(struct?: ContainerRegistryNetworkRuleSetVirtualNetwork): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    action: cdktf.stringToTerraform(struct!.action),
+    subnet_id: cdktf.stringToTerraform(struct!.subnetId),
+  }
+}
+
 export interface ContainerRegistryNetworkRuleSet {
   readonly defaultAction?: string;
   readonly ipRule?: ContainerRegistryNetworkRuleSetIpRule[];
   readonly virtualNetwork?: ContainerRegistryNetworkRuleSetVirtualNetwork[];
 }
+
+function containerRegistryNetworkRuleSetToTerraform(struct?: ContainerRegistryNetworkRuleSet): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    default_action: cdktf.stringToTerraform(struct!.defaultAction),
+    ip_rule: cdktf.listMapper(containerRegistryNetworkRuleSetIpRuleToTerraform)(struct!.ipRule),
+    virtual_network: cdktf.listMapper(containerRegistryNetworkRuleSetVirtualNetworkToTerraform)(struct!.virtualNetwork),
+  }
+}
+
 export interface ContainerRegistryRetentionPolicy {
   readonly days?: number;
   readonly enabled?: boolean;
 }
+
+function containerRegistryRetentionPolicyToTerraform(struct?: ContainerRegistryRetentionPolicy): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    days: cdktf.numberToTerraform(struct!.days),
+    enabled: cdktf.booleanToTerraform(struct!.enabled),
+  }
+}
+
 export interface ContainerRegistryTrustPolicy {
   readonly enabled?: boolean;
 }
+
+function containerRegistryTrustPolicyToTerraform(struct?: ContainerRegistryTrustPolicy): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    enabled: cdktf.booleanToTerraform(struct!.enabled),
+  }
+}
+
 export interface ContainerRegistryTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -49,9 +93,20 @@ export interface ContainerRegistryTimeouts {
   readonly update?: string;
 }
 
+function containerRegistryTimeoutsToTerraform(struct?: ContainerRegistryTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class ContainerRegistry extends TerraformResource {
+export class ContainerRegistry extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -295,18 +350,18 @@ export class ContainerRegistry extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      admin_enabled: this._adminEnabled,
-      georeplication_locations: this._georeplicationLocations,
-      location: this._location,
-      name: this._name,
-      network_rule_set: this._networkRuleSet,
-      resource_group_name: this._resourceGroupName,
-      retention_policy: this._retentionPolicy,
-      sku: this._sku,
-      storage_account_id: this._storageAccountId,
-      tags: this._tags,
-      trust_policy: this._trustPolicy,
-      timeouts: this._timeouts,
+      admin_enabled: cdktf.booleanToTerraform(this._adminEnabled),
+      georeplication_locations: cdktf.listMapper(cdktf.stringToTerraform)(this._georeplicationLocations),
+      location: cdktf.stringToTerraform(this._location),
+      name: cdktf.stringToTerraform(this._name),
+      network_rule_set: cdktf.listMapper(containerRegistryNetworkRuleSetToTerraform)(this._networkRuleSet),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      retention_policy: cdktf.listMapper(containerRegistryRetentionPolicyToTerraform)(this._retentionPolicy),
+      sku: cdktf.stringToTerraform(this._sku),
+      storage_account_id: cdktf.stringToTerraform(this._storageAccountId),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      trust_policy: cdktf.listMapper(containerRegistryTrustPolicyToTerraform)(this._trustPolicy),
+      timeouts: containerRegistryTimeoutsToTerraform(this._timeouts),
     };
   }
 }

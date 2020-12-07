@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface MariadbDatabaseConfig extends TerraformMetaArguments {
+export interface MariadbDatabaseConfig extends cdktf.TerraformMetaArguments {
   readonly charset: string;
   readonly collation: string;
   readonly name: string;
@@ -23,9 +22,20 @@ export interface MariadbDatabaseTimeouts {
   readonly update?: string;
 }
 
+function mariadbDatabaseTimeoutsToTerraform(struct?: MariadbDatabaseTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class MariadbDatabase extends TerraformResource {
+export class MariadbDatabase extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -146,12 +156,12 @@ export class MariadbDatabase extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      charset: this._charset,
-      collation: this._collation,
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      server_name: this._serverName,
-      timeouts: this._timeouts,
+      charset: cdktf.stringToTerraform(this._charset),
+      collation: cdktf.stringToTerraform(this._collation),
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      server_name: cdktf.stringToTerraform(this._serverName),
+      timeouts: mariadbDatabaseTimeoutsToTerraform(this._timeouts),
     };
   }
 }

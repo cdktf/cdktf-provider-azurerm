@@ -2,21 +2,18 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformDataSource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
-import { ComplexComputedList } from "cdktf";
-import { StringMap } from "cdktf";
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataAzurermSharedImageConfig extends TerraformMetaArguments {
+export interface DataAzurermSharedImageConfig extends cdktf.TerraformMetaArguments {
   readonly galleryName: string;
   readonly name: string;
   readonly resourceGroupName: string;
   /** timeouts block */
   readonly timeouts?: DataAzurermSharedImageTimeouts;
 }
-export class DataAzurermSharedImageIdentifier extends ComplexComputedList {
+export class DataAzurermSharedImageIdentifier extends cdktf.ComplexComputedList {
 
   // offer - computed: true, optional: false, required: false
   public get offer() {
@@ -37,9 +34,17 @@ export interface DataAzurermSharedImageTimeouts {
   readonly read?: string;
 }
 
+function dataAzurermSharedImageTimeoutsToTerraform(struct?: DataAzurermSharedImageTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    read: cdktf.stringToTerraform(struct!.read),
+  }
+}
+
+
 // Resource
 
-export class DataAzurermSharedImage extends TerraformDataSource {
+export class DataAzurermSharedImage extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
@@ -157,7 +162,7 @@ export class DataAzurermSharedImage extends TerraformDataSource {
 
   // tags - computed: true, optional: false, required: false
   public tags(key: string): string {
-    return new StringMap(this, 'tags').lookup(key);
+    return new cdktf.StringMap(this, 'tags').lookup(key);
   }
 
   // timeouts - computed: false, optional: true, required: false
@@ -182,10 +187,10 @@ export class DataAzurermSharedImage extends TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      gallery_name: this._galleryName,
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      timeouts: this._timeouts,
+      gallery_name: cdktf.stringToTerraform(this._galleryName),
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      timeouts: dataAzurermSharedImageTimeoutsToTerraform(this._timeouts),
     };
   }
 }

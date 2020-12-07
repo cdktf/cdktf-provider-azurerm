@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface MonitorActionGroupConfig extends TerraformMetaArguments {
+export interface MonitorActionGroupConfig extends cdktf.TerraformMetaArguments {
   readonly enabled?: boolean;
   readonly name: string;
   readonly resourceGroupName: string;
@@ -41,6 +40,16 @@ export interface MonitorActionGroupArmRoleReceiver {
   readonly roleId: string;
   readonly useCommonAlertSchema?: boolean;
 }
+
+function monitorActionGroupArmRoleReceiverToTerraform(struct?: MonitorActionGroupArmRoleReceiver): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    name: cdktf.stringToTerraform(struct!.name),
+    role_id: cdktf.stringToTerraform(struct!.roleId),
+    use_common_alert_schema: cdktf.booleanToTerraform(struct!.useCommonAlertSchema),
+  }
+}
+
 export interface MonitorActionGroupAutomationRunbookReceiver {
   readonly automationAccountId: string;
   readonly isGlobalRunbook: boolean;
@@ -50,10 +59,33 @@ export interface MonitorActionGroupAutomationRunbookReceiver {
   readonly useCommonAlertSchema?: boolean;
   readonly webhookResourceId: string;
 }
+
+function monitorActionGroupAutomationRunbookReceiverToTerraform(struct?: MonitorActionGroupAutomationRunbookReceiver): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    automation_account_id: cdktf.stringToTerraform(struct!.automationAccountId),
+    is_global_runbook: cdktf.booleanToTerraform(struct!.isGlobalRunbook),
+    name: cdktf.stringToTerraform(struct!.name),
+    runbook_name: cdktf.stringToTerraform(struct!.runbookName),
+    service_uri: cdktf.stringToTerraform(struct!.serviceUri),
+    use_common_alert_schema: cdktf.booleanToTerraform(struct!.useCommonAlertSchema),
+    webhook_resource_id: cdktf.stringToTerraform(struct!.webhookResourceId),
+  }
+}
+
 export interface MonitorActionGroupAzureAppPushReceiver {
   readonly emailAddress: string;
   readonly name: string;
 }
+
+function monitorActionGroupAzureAppPushReceiverToTerraform(struct?: MonitorActionGroupAzureAppPushReceiver): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    email_address: cdktf.stringToTerraform(struct!.emailAddress),
+    name: cdktf.stringToTerraform(struct!.name),
+  }
+}
+
 export interface MonitorActionGroupAzureFunctionReceiver {
   readonly functionAppResourceId: string;
   readonly functionName: string;
@@ -61,11 +93,33 @@ export interface MonitorActionGroupAzureFunctionReceiver {
   readonly name: string;
   readonly useCommonAlertSchema?: boolean;
 }
+
+function monitorActionGroupAzureFunctionReceiverToTerraform(struct?: MonitorActionGroupAzureFunctionReceiver): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    function_app_resource_id: cdktf.stringToTerraform(struct!.functionAppResourceId),
+    function_name: cdktf.stringToTerraform(struct!.functionName),
+    http_trigger_url: cdktf.stringToTerraform(struct!.httpTriggerUrl),
+    name: cdktf.stringToTerraform(struct!.name),
+    use_common_alert_schema: cdktf.booleanToTerraform(struct!.useCommonAlertSchema),
+  }
+}
+
 export interface MonitorActionGroupEmailReceiver {
   readonly emailAddress: string;
   readonly name: string;
   readonly useCommonAlertSchema?: boolean;
 }
+
+function monitorActionGroupEmailReceiverToTerraform(struct?: MonitorActionGroupEmailReceiver): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    email_address: cdktf.stringToTerraform(struct!.emailAddress),
+    name: cdktf.stringToTerraform(struct!.name),
+    use_common_alert_schema: cdktf.booleanToTerraform(struct!.useCommonAlertSchema),
+  }
+}
+
 export interface MonitorActionGroupItsmReceiver {
   readonly connectionId: string;
   readonly name: string;
@@ -73,37 +127,101 @@ export interface MonitorActionGroupItsmReceiver {
   readonly ticketConfiguration: string;
   readonly workspaceId: string;
 }
+
+function monitorActionGroupItsmReceiverToTerraform(struct?: MonitorActionGroupItsmReceiver): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    connection_id: cdktf.stringToTerraform(struct!.connectionId),
+    name: cdktf.stringToTerraform(struct!.name),
+    region: cdktf.stringToTerraform(struct!.region),
+    ticket_configuration: cdktf.stringToTerraform(struct!.ticketConfiguration),
+    workspace_id: cdktf.stringToTerraform(struct!.workspaceId),
+  }
+}
+
 export interface MonitorActionGroupLogicAppReceiver {
   readonly callbackUrl: string;
   readonly name: string;
   readonly resourceId: string;
   readonly useCommonAlertSchema?: boolean;
 }
+
+function monitorActionGroupLogicAppReceiverToTerraform(struct?: MonitorActionGroupLogicAppReceiver): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    callback_url: cdktf.stringToTerraform(struct!.callbackUrl),
+    name: cdktf.stringToTerraform(struct!.name),
+    resource_id: cdktf.stringToTerraform(struct!.resourceId),
+    use_common_alert_schema: cdktf.booleanToTerraform(struct!.useCommonAlertSchema),
+  }
+}
+
 export interface MonitorActionGroupSmsReceiver {
   readonly countryCode: string;
   readonly name: string;
   readonly phoneNumber: string;
 }
+
+function monitorActionGroupSmsReceiverToTerraform(struct?: MonitorActionGroupSmsReceiver): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    country_code: cdktf.stringToTerraform(struct!.countryCode),
+    name: cdktf.stringToTerraform(struct!.name),
+    phone_number: cdktf.stringToTerraform(struct!.phoneNumber),
+  }
+}
+
 export interface MonitorActionGroupTimeouts {
   readonly create?: string;
   readonly delete?: string;
   readonly read?: string;
   readonly update?: string;
 }
+
+function monitorActionGroupTimeoutsToTerraform(struct?: MonitorActionGroupTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
 export interface MonitorActionGroupVoiceReceiver {
   readonly countryCode: string;
   readonly name: string;
   readonly phoneNumber: string;
 }
+
+function monitorActionGroupVoiceReceiverToTerraform(struct?: MonitorActionGroupVoiceReceiver): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    country_code: cdktf.stringToTerraform(struct!.countryCode),
+    name: cdktf.stringToTerraform(struct!.name),
+    phone_number: cdktf.stringToTerraform(struct!.phoneNumber),
+  }
+}
+
 export interface MonitorActionGroupWebhookReceiver {
   readonly name: string;
   readonly serviceUri: string;
   readonly useCommonAlertSchema?: boolean;
 }
 
+function monitorActionGroupWebhookReceiverToTerraform(struct?: MonitorActionGroupWebhookReceiver): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    name: cdktf.stringToTerraform(struct!.name),
+    service_uri: cdktf.stringToTerraform(struct!.serviceUri),
+    use_common_alert_schema: cdktf.booleanToTerraform(struct!.useCommonAlertSchema),
+  }
+}
+
+
 // Resource
 
-export class MonitorActionGroup extends TerraformResource {
+export class MonitorActionGroup extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -400,22 +518,22 @@ export class MonitorActionGroup extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      enabled: this._enabled,
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      short_name: this._shortName,
-      tags: this._tags,
-      arm_role_receiver: this._armRoleReceiver,
-      automation_runbook_receiver: this._automationRunbookReceiver,
-      azure_app_push_receiver: this._azureAppPushReceiver,
-      azure_function_receiver: this._azureFunctionReceiver,
-      email_receiver: this._emailReceiver,
-      itsm_receiver: this._itsmReceiver,
-      logic_app_receiver: this._logicAppReceiver,
-      sms_receiver: this._smsReceiver,
-      timeouts: this._timeouts,
-      voice_receiver: this._voiceReceiver,
-      webhook_receiver: this._webhookReceiver,
+      enabled: cdktf.booleanToTerraform(this._enabled),
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      short_name: cdktf.stringToTerraform(this._shortName),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      arm_role_receiver: cdktf.listMapper(monitorActionGroupArmRoleReceiverToTerraform)(this._armRoleReceiver),
+      automation_runbook_receiver: cdktf.listMapper(monitorActionGroupAutomationRunbookReceiverToTerraform)(this._automationRunbookReceiver),
+      azure_app_push_receiver: cdktf.listMapper(monitorActionGroupAzureAppPushReceiverToTerraform)(this._azureAppPushReceiver),
+      azure_function_receiver: cdktf.listMapper(monitorActionGroupAzureFunctionReceiverToTerraform)(this._azureFunctionReceiver),
+      email_receiver: cdktf.listMapper(monitorActionGroupEmailReceiverToTerraform)(this._emailReceiver),
+      itsm_receiver: cdktf.listMapper(monitorActionGroupItsmReceiverToTerraform)(this._itsmReceiver),
+      logic_app_receiver: cdktf.listMapper(monitorActionGroupLogicAppReceiverToTerraform)(this._logicAppReceiver),
+      sms_receiver: cdktf.listMapper(monitorActionGroupSmsReceiverToTerraform)(this._smsReceiver),
+      timeouts: monitorActionGroupTimeoutsToTerraform(this._timeouts),
+      voice_receiver: cdktf.listMapper(monitorActionGroupVoiceReceiverToTerraform)(this._voiceReceiver),
+      webhook_receiver: cdktf.listMapper(monitorActionGroupWebhookReceiverToTerraform)(this._webhookReceiver),
     };
   }
 }

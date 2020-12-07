@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface MonitorActionRuleActionGroupConfig extends TerraformMetaArguments {
+export interface MonitorActionRuleActionGroupConfig extends cdktf.TerraformMetaArguments {
   readonly actionGroupId: string;
   readonly description?: string;
   readonly enabled?: boolean;
@@ -25,30 +24,93 @@ export interface MonitorActionRuleActionGroupConditionAlertContext {
   readonly operator: string;
   readonly values: string[];
 }
+
+function monitorActionRuleActionGroupConditionAlertContextToTerraform(struct?: MonitorActionRuleActionGroupConditionAlertContext): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    operator: cdktf.stringToTerraform(struct!.operator),
+    values: cdktf.listMapper(cdktf.stringToTerraform)(struct!.values),
+  }
+}
+
 export interface MonitorActionRuleActionGroupConditionAlertRuleId {
   readonly operator: string;
   readonly values: string[];
 }
+
+function monitorActionRuleActionGroupConditionAlertRuleIdToTerraform(struct?: MonitorActionRuleActionGroupConditionAlertRuleId): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    operator: cdktf.stringToTerraform(struct!.operator),
+    values: cdktf.listMapper(cdktf.stringToTerraform)(struct!.values),
+  }
+}
+
 export interface MonitorActionRuleActionGroupConditionDescription {
   readonly operator: string;
   readonly values: string[];
 }
+
+function monitorActionRuleActionGroupConditionDescriptionToTerraform(struct?: MonitorActionRuleActionGroupConditionDescription): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    operator: cdktf.stringToTerraform(struct!.operator),
+    values: cdktf.listMapper(cdktf.stringToTerraform)(struct!.values),
+  }
+}
+
 export interface MonitorActionRuleActionGroupConditionMonitor {
   readonly operator: string;
   readonly values: string[];
 }
+
+function monitorActionRuleActionGroupConditionMonitorToTerraform(struct?: MonitorActionRuleActionGroupConditionMonitor): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    operator: cdktf.stringToTerraform(struct!.operator),
+    values: cdktf.listMapper(cdktf.stringToTerraform)(struct!.values),
+  }
+}
+
 export interface MonitorActionRuleActionGroupConditionMonitorService {
   readonly operator: string;
   readonly values: string[];
 }
+
+function monitorActionRuleActionGroupConditionMonitorServiceToTerraform(struct?: MonitorActionRuleActionGroupConditionMonitorService): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    operator: cdktf.stringToTerraform(struct!.operator),
+    values: cdktf.listMapper(cdktf.stringToTerraform)(struct!.values),
+  }
+}
+
 export interface MonitorActionRuleActionGroupConditionSeverity {
   readonly operator: string;
   readonly values: string[];
 }
+
+function monitorActionRuleActionGroupConditionSeverityToTerraform(struct?: MonitorActionRuleActionGroupConditionSeverity): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    operator: cdktf.stringToTerraform(struct!.operator),
+    values: cdktf.listMapper(cdktf.stringToTerraform)(struct!.values),
+  }
+}
+
 export interface MonitorActionRuleActionGroupConditionTargetResourceType {
   readonly operator: string;
   readonly values: string[];
 }
+
+function monitorActionRuleActionGroupConditionTargetResourceTypeToTerraform(struct?: MonitorActionRuleActionGroupConditionTargetResourceType): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    operator: cdktf.stringToTerraform(struct!.operator),
+    values: cdktf.listMapper(cdktf.stringToTerraform)(struct!.values),
+  }
+}
+
 export interface MonitorActionRuleActionGroupCondition {
   /** alert_context block */
   readonly alertContext?: MonitorActionRuleActionGroupConditionAlertContext[];
@@ -65,10 +127,33 @@ export interface MonitorActionRuleActionGroupCondition {
   /** target_resource_type block */
   readonly targetResourceType?: MonitorActionRuleActionGroupConditionTargetResourceType[];
 }
+
+function monitorActionRuleActionGroupConditionToTerraform(struct?: MonitorActionRuleActionGroupCondition): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    alert_context: cdktf.listMapper(monitorActionRuleActionGroupConditionAlertContextToTerraform)(struct!.alertContext),
+    alert_rule_id: cdktf.listMapper(monitorActionRuleActionGroupConditionAlertRuleIdToTerraform)(struct!.alertRuleId),
+    description: cdktf.listMapper(monitorActionRuleActionGroupConditionDescriptionToTerraform)(struct!.description),
+    monitor: cdktf.listMapper(monitorActionRuleActionGroupConditionMonitorToTerraform)(struct!.monitor),
+    monitor_service: cdktf.listMapper(monitorActionRuleActionGroupConditionMonitorServiceToTerraform)(struct!.monitorService),
+    severity: cdktf.listMapper(monitorActionRuleActionGroupConditionSeverityToTerraform)(struct!.severity),
+    target_resource_type: cdktf.listMapper(monitorActionRuleActionGroupConditionTargetResourceTypeToTerraform)(struct!.targetResourceType),
+  }
+}
+
 export interface MonitorActionRuleActionGroupScope {
   readonly resourceIds: string[];
   readonly type: string;
 }
+
+function monitorActionRuleActionGroupScopeToTerraform(struct?: MonitorActionRuleActionGroupScope): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    resource_ids: cdktf.listMapper(cdktf.stringToTerraform)(struct!.resourceIds),
+    type: cdktf.stringToTerraform(struct!.type),
+  }
+}
+
 export interface MonitorActionRuleActionGroupTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -76,9 +161,20 @@ export interface MonitorActionRuleActionGroupTimeouts {
   readonly update?: string;
 }
 
+function monitorActionRuleActionGroupTimeoutsToTerraform(struct?: MonitorActionRuleActionGroupTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class MonitorActionRuleActionGroup extends TerraformResource {
+export class MonitorActionRuleActionGroup extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -256,15 +352,15 @@ export class MonitorActionRuleActionGroup extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      action_group_id: this._actionGroupId,
-      description: this._description,
-      enabled: this._enabled,
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      tags: this._tags,
-      condition: this._condition,
-      scope: this._scope,
-      timeouts: this._timeouts,
+      action_group_id: cdktf.stringToTerraform(this._actionGroupId),
+      description: cdktf.stringToTerraform(this._description),
+      enabled: cdktf.booleanToTerraform(this._enabled),
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      condition: cdktf.listMapper(monitorActionRuleActionGroupConditionToTerraform)(this._condition),
+      scope: cdktf.listMapper(monitorActionRuleActionGroupScopeToTerraform)(this._scope),
+      timeouts: monitorActionRuleActionGroupTimeoutsToTerraform(this._timeouts),
     };
   }
 }

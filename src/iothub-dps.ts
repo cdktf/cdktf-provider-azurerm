@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface IothubDpsConfig extends TerraformMetaArguments {
+export interface IothubDpsConfig extends cdktf.TerraformMetaArguments {
   readonly location: string;
   readonly name: string;
   readonly resourceGroupName: string;
@@ -25,10 +24,30 @@ export interface IothubDpsLinkedHub {
   readonly connectionString: string;
   readonly location: string;
 }
+
+function iothubDpsLinkedHubToTerraform(struct?: IothubDpsLinkedHub): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    allocation_weight: cdktf.numberToTerraform(struct!.allocationWeight),
+    apply_allocation_policy: cdktf.booleanToTerraform(struct!.applyAllocationPolicy),
+    connection_string: cdktf.stringToTerraform(struct!.connectionString),
+    location: cdktf.stringToTerraform(struct!.location),
+  }
+}
+
 export interface IothubDpsSku {
   readonly capacity: number;
   readonly name: string;
 }
+
+function iothubDpsSkuToTerraform(struct?: IothubDpsSku): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    capacity: cdktf.numberToTerraform(struct!.capacity),
+    name: cdktf.stringToTerraform(struct!.name),
+  }
+}
+
 export interface IothubDpsTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -36,9 +55,20 @@ export interface IothubDpsTimeouts {
   readonly update?: string;
 }
 
+function iothubDpsTimeoutsToTerraform(struct?: IothubDpsTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class IothubDps extends TerraformResource {
+export class IothubDps extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -199,13 +229,13 @@ export class IothubDps extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      location: this._location,
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      tags: this._tags,
-      linked_hub: this._linkedHub,
-      sku: this._sku,
-      timeouts: this._timeouts,
+      location: cdktf.stringToTerraform(this._location),
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      linked_hub: cdktf.listMapper(iothubDpsLinkedHubToTerraform)(this._linkedHub),
+      sku: cdktf.listMapper(iothubDpsSkuToTerraform)(this._sku),
+      timeouts: iothubDpsTimeoutsToTerraform(this._timeouts),
     };
   }
 }

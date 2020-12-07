@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface AdvancedThreatProtectionConfig extends TerraformMetaArguments {
+export interface AdvancedThreatProtectionConfig extends cdktf.TerraformMetaArguments {
   readonly enabled: boolean;
   readonly targetResourceId: string;
   /** timeouts block */
@@ -20,9 +19,20 @@ export interface AdvancedThreatProtectionTimeouts {
   readonly update?: string;
 }
 
+function advancedThreatProtectionTimeoutsToTerraform(struct?: AdvancedThreatProtectionTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class AdvancedThreatProtection extends TerraformResource {
+export class AdvancedThreatProtection extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -101,9 +111,9 @@ export class AdvancedThreatProtection extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      enabled: this._enabled,
-      target_resource_id: this._targetResourceId,
-      timeouts: this._timeouts,
+      enabled: cdktf.booleanToTerraform(this._enabled),
+      target_resource_id: cdktf.stringToTerraform(this._targetResourceId),
+      timeouts: advancedThreatProtectionTimeoutsToTerraform(this._timeouts),
     };
   }
 }

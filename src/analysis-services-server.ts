@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface AnalysisServicesServerConfig extends TerraformMetaArguments {
+export interface AnalysisServicesServerConfig extends cdktf.TerraformMetaArguments {
   readonly adminUsers?: string[];
   readonly backupBlobContainerUri?: string;
   readonly enablePowerBiService?: boolean;
@@ -27,6 +26,16 @@ export interface AnalysisServicesServerIpv4FirewallRule {
   readonly rangeEnd: string;
   readonly rangeStart: string;
 }
+
+function analysisServicesServerIpv4FirewallRuleToTerraform(struct?: AnalysisServicesServerIpv4FirewallRule): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    name: cdktf.stringToTerraform(struct!.name),
+    range_end: cdktf.stringToTerraform(struct!.rangeEnd),
+    range_start: cdktf.stringToTerraform(struct!.rangeStart),
+  }
+}
+
 export interface AnalysisServicesServerTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -34,9 +43,20 @@ export interface AnalysisServicesServerTimeouts {
   readonly update?: string;
 }
 
+function analysisServicesServerTimeoutsToTerraform(struct?: AnalysisServicesServerTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class AnalysisServicesServer extends TerraformResource {
+export class AnalysisServicesServer extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -250,17 +270,17 @@ export class AnalysisServicesServer extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      admin_users: this._adminUsers,
-      backup_blob_container_uri: this._backupBlobContainerUri,
-      enable_power_bi_service: this._enablePowerBiService,
-      location: this._location,
-      name: this._name,
-      querypool_connection_mode: this._querypoolConnectionMode,
-      resource_group_name: this._resourceGroupName,
-      sku: this._sku,
-      tags: this._tags,
-      ipv4_firewall_rule: this._ipv4FirewallRule,
-      timeouts: this._timeouts,
+      admin_users: cdktf.listMapper(cdktf.stringToTerraform)(this._adminUsers),
+      backup_blob_container_uri: cdktf.stringToTerraform(this._backupBlobContainerUri),
+      enable_power_bi_service: cdktf.booleanToTerraform(this._enablePowerBiService),
+      location: cdktf.stringToTerraform(this._location),
+      name: cdktf.stringToTerraform(this._name),
+      querypool_connection_mode: cdktf.stringToTerraform(this._querypoolConnectionMode),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      sku: cdktf.stringToTerraform(this._sku),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      ipv4_firewall_rule: cdktf.listMapper(analysisServicesServerIpv4FirewallRuleToTerraform)(this._ipv4FirewallRule),
+      timeouts: analysisServicesServerTimeoutsToTerraform(this._timeouts),
     };
   }
 }

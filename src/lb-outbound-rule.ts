@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface LbOutboundRuleConfig extends TerraformMetaArguments {
+export interface LbOutboundRuleConfig extends cdktf.TerraformMetaArguments {
   readonly allocatedOutboundPorts?: number;
   readonly backendAddressPoolId: string;
   readonly enableTcpReset?: boolean;
@@ -24,6 +23,14 @@ export interface LbOutboundRuleConfig extends TerraformMetaArguments {
 export interface LbOutboundRuleFrontendIpConfiguration {
   readonly name: string;
 }
+
+function lbOutboundRuleFrontendIpConfigurationToTerraform(struct?: LbOutboundRuleFrontendIpConfiguration): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    name: cdktf.stringToTerraform(struct!.name),
+  }
+}
+
 export interface LbOutboundRuleTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -31,9 +38,20 @@ export interface LbOutboundRuleTimeouts {
   readonly update?: string;
 }
 
+function lbOutboundRuleTimeoutsToTerraform(struct?: LbOutboundRuleTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class LbOutboundRule extends TerraformResource {
+export class LbOutboundRule extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -222,16 +240,16 @@ export class LbOutboundRule extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      allocated_outbound_ports: this._allocatedOutboundPorts,
-      backend_address_pool_id: this._backendAddressPoolId,
-      enable_tcp_reset: this._enableTcpReset,
-      idle_timeout_in_minutes: this._idleTimeoutInMinutes,
-      loadbalancer_id: this._loadbalancerId,
-      name: this._name,
-      protocol: this._protocol,
-      resource_group_name: this._resourceGroupName,
-      frontend_ip_configuration: this._frontendIpConfiguration,
-      timeouts: this._timeouts,
+      allocated_outbound_ports: cdktf.numberToTerraform(this._allocatedOutboundPorts),
+      backend_address_pool_id: cdktf.stringToTerraform(this._backendAddressPoolId),
+      enable_tcp_reset: cdktf.booleanToTerraform(this._enableTcpReset),
+      idle_timeout_in_minutes: cdktf.numberToTerraform(this._idleTimeoutInMinutes),
+      loadbalancer_id: cdktf.stringToTerraform(this._loadbalancerId),
+      name: cdktf.stringToTerraform(this._name),
+      protocol: cdktf.stringToTerraform(this._protocol),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      frontend_ip_configuration: cdktf.listMapper(lbOutboundRuleFrontendIpConfigurationToTerraform)(this._frontendIpConfiguration),
+      timeouts: lbOutboundRuleTimeoutsToTerraform(this._timeouts),
     };
   }
 }

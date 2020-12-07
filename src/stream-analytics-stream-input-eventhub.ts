@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface StreamAnalyticsStreamInputEventhubConfig extends TerraformMetaArguments {
+export interface StreamAnalyticsStreamInputEventhubConfig extends cdktf.TerraformMetaArguments {
   readonly eventhubConsumerGroupName: string;
   readonly eventhubName: string;
   readonly name: string;
@@ -26,6 +25,16 @@ export interface StreamAnalyticsStreamInputEventhubSerialization {
   readonly fieldDelimiter?: string;
   readonly type: string;
 }
+
+function streamAnalyticsStreamInputEventhubSerializationToTerraform(struct?: StreamAnalyticsStreamInputEventhubSerialization): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    encoding: cdktf.stringToTerraform(struct!.encoding),
+    field_delimiter: cdktf.stringToTerraform(struct!.fieldDelimiter),
+    type: cdktf.stringToTerraform(struct!.type),
+  }
+}
+
 export interface StreamAnalyticsStreamInputEventhubTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -33,9 +42,20 @@ export interface StreamAnalyticsStreamInputEventhubTimeouts {
   readonly update?: string;
 }
 
+function streamAnalyticsStreamInputEventhubTimeoutsToTerraform(struct?: StreamAnalyticsStreamInputEventhubTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class StreamAnalyticsStreamInputEventhub extends TerraformResource {
+export class StreamAnalyticsStreamInputEventhub extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -212,16 +232,16 @@ export class StreamAnalyticsStreamInputEventhub extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      eventhub_consumer_group_name: this._eventhubConsumerGroupName,
-      eventhub_name: this._eventhubName,
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      servicebus_namespace: this._servicebusNamespace,
-      shared_access_policy_key: this._sharedAccessPolicyKey,
-      shared_access_policy_name: this._sharedAccessPolicyName,
-      stream_analytics_job_name: this._streamAnalyticsJobName,
-      serialization: this._serialization,
-      timeouts: this._timeouts,
+      eventhub_consumer_group_name: cdktf.stringToTerraform(this._eventhubConsumerGroupName),
+      eventhub_name: cdktf.stringToTerraform(this._eventhubName),
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      servicebus_namespace: cdktf.stringToTerraform(this._servicebusNamespace),
+      shared_access_policy_key: cdktf.stringToTerraform(this._sharedAccessPolicyKey),
+      shared_access_policy_name: cdktf.stringToTerraform(this._sharedAccessPolicyName),
+      stream_analytics_job_name: cdktf.stringToTerraform(this._streamAnalyticsJobName),
+      serialization: cdktf.listMapper(streamAnalyticsStreamInputEventhubSerializationToTerraform)(this._serialization),
+      timeouts: streamAnalyticsStreamInputEventhubTimeoutsToTerraform(this._timeouts),
     };
   }
 }

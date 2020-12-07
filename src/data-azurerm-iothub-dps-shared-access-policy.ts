@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformDataSource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataAzurermIothubDpsSharedAccessPolicyConfig extends TerraformMetaArguments {
+export interface DataAzurermIothubDpsSharedAccessPolicyConfig extends cdktf.TerraformMetaArguments {
   readonly iothubDpsName: string;
   readonly name: string;
   readonly resourceGroupName: string;
@@ -18,9 +17,17 @@ export interface DataAzurermIothubDpsSharedAccessPolicyTimeouts {
   readonly read?: string;
 }
 
+function dataAzurermIothubDpsSharedAccessPolicyTimeoutsToTerraform(struct?: DataAzurermIothubDpsSharedAccessPolicyTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    read: cdktf.stringToTerraform(struct!.read),
+  }
+}
+
+
 // Resource
 
-export class DataAzurermIothubDpsSharedAccessPolicy extends TerraformDataSource {
+export class DataAzurermIothubDpsSharedAccessPolicy extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
@@ -133,10 +140,10 @@ export class DataAzurermIothubDpsSharedAccessPolicy extends TerraformDataSource 
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      iothub_dps_name: this._iothubDpsName,
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      timeouts: this._timeouts,
+      iothub_dps_name: cdktf.stringToTerraform(this._iothubDpsName),
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      timeouts: dataAzurermIothubDpsSharedAccessPolicyTimeoutsToTerraform(this._timeouts),
     };
   }
 }

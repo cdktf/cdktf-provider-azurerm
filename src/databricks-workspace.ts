@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DatabricksWorkspaceConfig extends TerraformMetaArguments {
+export interface DatabricksWorkspaceConfig extends cdktf.TerraformMetaArguments {
   readonly location: string;
   readonly managedResourceGroupName?: string;
   readonly name: string;
@@ -25,6 +24,17 @@ export interface DatabricksWorkspaceCustomParameters {
   readonly publicSubnetName?: string;
   readonly virtualNetworkId?: string;
 }
+
+function databricksWorkspaceCustomParametersToTerraform(struct?: DatabricksWorkspaceCustomParameters): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    no_public_ip: cdktf.booleanToTerraform(struct!.noPublicIp),
+    private_subnet_name: cdktf.stringToTerraform(struct!.privateSubnetName),
+    public_subnet_name: cdktf.stringToTerraform(struct!.publicSubnetName),
+    virtual_network_id: cdktf.stringToTerraform(struct!.virtualNetworkId),
+  }
+}
+
 export interface DatabricksWorkspaceTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -32,9 +42,20 @@ export interface DatabricksWorkspaceTimeouts {
   readonly update?: string;
 }
 
+function databricksWorkspaceTimeoutsToTerraform(struct?: DatabricksWorkspaceTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class DatabricksWorkspace extends TerraformResource {
+export class DatabricksWorkspace extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -207,14 +228,14 @@ export class DatabricksWorkspace extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      location: this._location,
-      managed_resource_group_name: this._managedResourceGroupName,
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      sku: this._sku,
-      tags: this._tags,
-      custom_parameters: this._customParameters,
-      timeouts: this._timeouts,
+      location: cdktf.stringToTerraform(this._location),
+      managed_resource_group_name: cdktf.stringToTerraform(this._managedResourceGroupName),
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      sku: cdktf.stringToTerraform(this._sku),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      custom_parameters: cdktf.listMapper(databricksWorkspaceCustomParametersToTerraform)(this._customParameters),
+      timeouts: databricksWorkspaceTimeoutsToTerraform(this._timeouts),
     };
   }
 }

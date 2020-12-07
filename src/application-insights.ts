@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface ApplicationInsightsConfig extends TerraformMetaArguments {
+export interface ApplicationInsightsConfig extends cdktf.TerraformMetaArguments {
   readonly applicationType: string;
   readonly dailyDataCapInGb?: number;
   readonly dailyDataCapNotificationsDisabled?: boolean;
@@ -28,9 +27,20 @@ export interface ApplicationInsightsTimeouts {
   readonly update?: string;
 }
 
+function applicationInsightsTimeoutsToTerraform(struct?: ApplicationInsightsTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class ApplicationInsights extends TerraformResource {
+export class ApplicationInsights extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -254,17 +264,17 @@ export class ApplicationInsights extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      application_type: this._applicationType,
-      daily_data_cap_in_gb: this._dailyDataCapInGb,
-      daily_data_cap_notifications_disabled: this._dailyDataCapNotificationsDisabled,
-      disable_ip_masking: this._disableIpMasking,
-      location: this._location,
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      retention_in_days: this._retentionInDays,
-      sampling_percentage: this._samplingPercentage,
-      tags: this._tags,
-      timeouts: this._timeouts,
+      application_type: cdktf.stringToTerraform(this._applicationType),
+      daily_data_cap_in_gb: cdktf.numberToTerraform(this._dailyDataCapInGb),
+      daily_data_cap_notifications_disabled: cdktf.booleanToTerraform(this._dailyDataCapNotificationsDisabled),
+      disable_ip_masking: cdktf.booleanToTerraform(this._disableIpMasking),
+      location: cdktf.stringToTerraform(this._location),
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      retention_in_days: cdktf.numberToTerraform(this._retentionInDays),
+      sampling_percentage: cdktf.numberToTerraform(this._samplingPercentage),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      timeouts: applicationInsightsTimeoutsToTerraform(this._timeouts),
     };
   }
 }

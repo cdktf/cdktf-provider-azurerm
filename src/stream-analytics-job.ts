@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface StreamAnalyticsJobConfig extends TerraformMetaArguments {
+export interface StreamAnalyticsJobConfig extends cdktf.TerraformMetaArguments {
   readonly compatibilityLevel?: string;
   readonly dataLocale?: string;
   readonly eventsLateArrivalMaxDelayInSeconds?: number;
@@ -30,9 +29,20 @@ export interface StreamAnalyticsJobTimeouts {
   readonly update?: string;
 }
 
+function streamAnalyticsJobTimeoutsToTerraform(struct?: StreamAnalyticsJobTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class StreamAnalyticsJob extends TerraformResource {
+export class StreamAnalyticsJob extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -277,19 +287,19 @@ export class StreamAnalyticsJob extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      compatibility_level: this._compatibilityLevel,
-      data_locale: this._dataLocale,
-      events_late_arrival_max_delay_in_seconds: this._eventsLateArrivalMaxDelayInSeconds,
-      events_out_of_order_max_delay_in_seconds: this._eventsOutOfOrderMaxDelayInSeconds,
-      events_out_of_order_policy: this._eventsOutOfOrderPolicy,
-      location: this._location,
-      name: this._name,
-      output_error_policy: this._outputErrorPolicy,
-      resource_group_name: this._resourceGroupName,
-      streaming_units: this._streamingUnits,
-      tags: this._tags,
-      transformation_query: this._transformationQuery,
-      timeouts: this._timeouts,
+      compatibility_level: cdktf.stringToTerraform(this._compatibilityLevel),
+      data_locale: cdktf.stringToTerraform(this._dataLocale),
+      events_late_arrival_max_delay_in_seconds: cdktf.numberToTerraform(this._eventsLateArrivalMaxDelayInSeconds),
+      events_out_of_order_max_delay_in_seconds: cdktf.numberToTerraform(this._eventsOutOfOrderMaxDelayInSeconds),
+      events_out_of_order_policy: cdktf.stringToTerraform(this._eventsOutOfOrderPolicy),
+      location: cdktf.stringToTerraform(this._location),
+      name: cdktf.stringToTerraform(this._name),
+      output_error_policy: cdktf.stringToTerraform(this._outputErrorPolicy),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      streaming_units: cdktf.numberToTerraform(this._streamingUnits),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      transformation_query: cdktf.stringToTerraform(this._transformationQuery),
+      timeouts: streamAnalyticsJobTimeoutsToTerraform(this._timeouts),
     };
   }
 }

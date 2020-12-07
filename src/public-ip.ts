@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface PublicIpConfig extends TerraformMetaArguments {
+export interface PublicIpConfig extends cdktf.TerraformMetaArguments {
   readonly allocationMethod: string;
   readonly domainNameLabel?: string;
   readonly idleTimeoutInMinutes?: number;
@@ -30,9 +29,20 @@ export interface PublicIpTimeouts {
   readonly update?: string;
 }
 
+function publicIpTimeoutsToTerraform(struct?: PublicIpTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class PublicIp extends TerraformResource {
+export class PublicIp extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -285,19 +295,19 @@ export class PublicIp extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      allocation_method: this._allocationMethod,
-      domain_name_label: this._domainNameLabel,
-      idle_timeout_in_minutes: this._idleTimeoutInMinutes,
-      ip_version: this._ipVersion,
-      location: this._location,
-      name: this._name,
-      public_ip_prefix_id: this._publicIpPrefixId,
-      resource_group_name: this._resourceGroupName,
-      reverse_fqdn: this._reverseFqdn,
-      sku: this._sku,
-      tags: this._tags,
-      zones: this._zones,
-      timeouts: this._timeouts,
+      allocation_method: cdktf.stringToTerraform(this._allocationMethod),
+      domain_name_label: cdktf.stringToTerraform(this._domainNameLabel),
+      idle_timeout_in_minutes: cdktf.numberToTerraform(this._idleTimeoutInMinutes),
+      ip_version: cdktf.stringToTerraform(this._ipVersion),
+      location: cdktf.stringToTerraform(this._location),
+      name: cdktf.stringToTerraform(this._name),
+      public_ip_prefix_id: cdktf.stringToTerraform(this._publicIpPrefixId),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      reverse_fqdn: cdktf.stringToTerraform(this._reverseFqdn),
+      sku: cdktf.stringToTerraform(this._sku),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      zones: cdktf.listMapper(cdktf.stringToTerraform)(this._zones),
+      timeouts: publicIpTimeoutsToTerraform(this._timeouts),
     };
   }
 }

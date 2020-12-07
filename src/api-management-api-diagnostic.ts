@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface ApiManagementApiDiagnosticConfig extends TerraformMetaArguments {
+export interface ApiManagementApiDiagnosticConfig extends cdktf.TerraformMetaArguments {
   readonly alwaysLogErrors?: boolean;
   readonly apiManagementLoggerId: string;
   readonly apiManagementName: string;
@@ -32,18 +31,54 @@ export interface ApiManagementApiDiagnosticBackendRequest {
   readonly bodyBytes?: number;
   readonly headersToLog?: string[];
 }
+
+function apiManagementApiDiagnosticBackendRequestToTerraform(struct?: ApiManagementApiDiagnosticBackendRequest): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    body_bytes: cdktf.numberToTerraform(struct!.bodyBytes),
+    headers_to_log: cdktf.listMapper(cdktf.stringToTerraform)(struct!.headersToLog),
+  }
+}
+
 export interface ApiManagementApiDiagnosticBackendResponse {
   readonly bodyBytes?: number;
   readonly headersToLog?: string[];
 }
+
+function apiManagementApiDiagnosticBackendResponseToTerraform(struct?: ApiManagementApiDiagnosticBackendResponse): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    body_bytes: cdktf.numberToTerraform(struct!.bodyBytes),
+    headers_to_log: cdktf.listMapper(cdktf.stringToTerraform)(struct!.headersToLog),
+  }
+}
+
 export interface ApiManagementApiDiagnosticFrontendRequest {
   readonly bodyBytes?: number;
   readonly headersToLog?: string[];
 }
+
+function apiManagementApiDiagnosticFrontendRequestToTerraform(struct?: ApiManagementApiDiagnosticFrontendRequest): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    body_bytes: cdktf.numberToTerraform(struct!.bodyBytes),
+    headers_to_log: cdktf.listMapper(cdktf.stringToTerraform)(struct!.headersToLog),
+  }
+}
+
 export interface ApiManagementApiDiagnosticFrontendResponse {
   readonly bodyBytes?: number;
   readonly headersToLog?: string[];
 }
+
+function apiManagementApiDiagnosticFrontendResponseToTerraform(struct?: ApiManagementApiDiagnosticFrontendResponse): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    body_bytes: cdktf.numberToTerraform(struct!.bodyBytes),
+    headers_to_log: cdktf.listMapper(cdktf.stringToTerraform)(struct!.headersToLog),
+  }
+}
+
 export interface ApiManagementApiDiagnosticTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -51,9 +86,20 @@ export interface ApiManagementApiDiagnosticTimeouts {
   readonly update?: string;
 }
 
+function apiManagementApiDiagnosticTimeoutsToTerraform(struct?: ApiManagementApiDiagnosticTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class ApiManagementApiDiagnostic extends TerraformResource {
+export class ApiManagementApiDiagnostic extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -310,20 +356,20 @@ export class ApiManagementApiDiagnostic extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      always_log_errors: this._alwaysLogErrors,
-      api_management_logger_id: this._apiManagementLoggerId,
-      api_management_name: this._apiManagementName,
-      api_name: this._apiName,
-      http_correlation_protocol: this._httpCorrelationProtocol,
-      identifier: this._identifier,
-      log_client_ip: this._logClientIp,
-      resource_group_name: this._resourceGroupName,
-      verbosity: this._verbosity,
-      backend_request: this._backendRequest,
-      backend_response: this._backendResponse,
-      frontend_request: this._frontendRequest,
-      frontend_response: this._frontendResponse,
-      timeouts: this._timeouts,
+      always_log_errors: cdktf.booleanToTerraform(this._alwaysLogErrors),
+      api_management_logger_id: cdktf.stringToTerraform(this._apiManagementLoggerId),
+      api_management_name: cdktf.stringToTerraform(this._apiManagementName),
+      api_name: cdktf.stringToTerraform(this._apiName),
+      http_correlation_protocol: cdktf.stringToTerraform(this._httpCorrelationProtocol),
+      identifier: cdktf.stringToTerraform(this._identifier),
+      log_client_ip: cdktf.booleanToTerraform(this._logClientIp),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      verbosity: cdktf.stringToTerraform(this._verbosity),
+      backend_request: cdktf.listMapper(apiManagementApiDiagnosticBackendRequestToTerraform)(this._backendRequest),
+      backend_response: cdktf.listMapper(apiManagementApiDiagnosticBackendResponseToTerraform)(this._backendResponse),
+      frontend_request: cdktf.listMapper(apiManagementApiDiagnosticFrontendRequestToTerraform)(this._frontendRequest),
+      frontend_response: cdktf.listMapper(apiManagementApiDiagnosticFrontendResponseToTerraform)(this._frontendResponse),
+      timeouts: apiManagementApiDiagnosticTimeoutsToTerraform(this._timeouts),
     };
   }
 }

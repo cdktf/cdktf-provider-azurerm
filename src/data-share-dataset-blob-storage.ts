@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataShareDatasetBlobStorageConfig extends TerraformMetaArguments {
+export interface DataShareDatasetBlobStorageConfig extends cdktf.TerraformMetaArguments {
   readonly containerName: string;
   readonly dataShareId: string;
   readonly filePath?: string;
@@ -23,15 +22,35 @@ export interface DataShareDatasetBlobStorageStorageAccount {
   readonly resourceGroupName: string;
   readonly subscriptionId: string;
 }
+
+function dataShareDatasetBlobStorageStorageAccountToTerraform(struct?: DataShareDatasetBlobStorageStorageAccount): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    name: cdktf.stringToTerraform(struct!.name),
+    resource_group_name: cdktf.stringToTerraform(struct!.resourceGroupName),
+    subscription_id: cdktf.stringToTerraform(struct!.subscriptionId),
+  }
+}
+
 export interface DataShareDatasetBlobStorageTimeouts {
   readonly create?: string;
   readonly delete?: string;
   readonly read?: string;
 }
 
+function dataShareDatasetBlobStorageTimeoutsToTerraform(struct?: DataShareDatasetBlobStorageTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+  }
+}
+
+
 // Resource
 
-export class DataShareDatasetBlobStorage extends TerraformResource {
+export class DataShareDatasetBlobStorage extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -177,13 +196,13 @@ export class DataShareDatasetBlobStorage extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      container_name: this._containerName,
-      data_share_id: this._dataShareId,
-      file_path: this._filePath,
-      folder_path: this._folderPath,
-      name: this._name,
-      storage_account: this._storageAccount,
-      timeouts: this._timeouts,
+      container_name: cdktf.stringToTerraform(this._containerName),
+      data_share_id: cdktf.stringToTerraform(this._dataShareId),
+      file_path: cdktf.stringToTerraform(this._filePath),
+      folder_path: cdktf.stringToTerraform(this._folderPath),
+      name: cdktf.stringToTerraform(this._name),
+      storage_account: cdktf.listMapper(dataShareDatasetBlobStorageStorageAccountToTerraform)(this._storageAccount),
+      timeouts: dataShareDatasetBlobStorageTimeoutsToTerraform(this._timeouts),
     };
   }
 }

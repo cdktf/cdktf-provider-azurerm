@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface BotChannelSlackConfig extends TerraformMetaArguments {
+export interface BotChannelSlackConfig extends cdktf.TerraformMetaArguments {
   readonly botName: string;
   readonly clientId: string;
   readonly clientSecret: string;
@@ -25,9 +24,20 @@ export interface BotChannelSlackTimeouts {
   readonly update?: string;
 }
 
+function botChannelSlackTimeoutsToTerraform(struct?: BotChannelSlackTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class BotChannelSlack extends TerraformResource {
+export class BotChannelSlack extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -179,14 +189,14 @@ export class BotChannelSlack extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      bot_name: this._botName,
-      client_id: this._clientId,
-      client_secret: this._clientSecret,
-      landing_page_url: this._landingPageUrl,
-      location: this._location,
-      resource_group_name: this._resourceGroupName,
-      verification_token: this._verificationToken,
-      timeouts: this._timeouts,
+      bot_name: cdktf.stringToTerraform(this._botName),
+      client_id: cdktf.stringToTerraform(this._clientId),
+      client_secret: cdktf.stringToTerraform(this._clientSecret),
+      landing_page_url: cdktf.stringToTerraform(this._landingPageUrl),
+      location: cdktf.stringToTerraform(this._location),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      verification_token: cdktf.stringToTerraform(this._verificationToken),
+      timeouts: botChannelSlackTimeoutsToTerraform(this._timeouts),
     };
   }
 }

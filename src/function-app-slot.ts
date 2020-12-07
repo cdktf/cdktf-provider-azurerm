@@ -2,13 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
-import { ComplexComputedList } from "cdktf";
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface FunctionAppSlotConfig extends TerraformMetaArguments {
+export interface FunctionAppSlotConfig extends cdktf.TerraformMetaArguments {
   readonly appServicePlanId: string;
   readonly appSettings?: { [key: string]: string };
   readonly clientAffinityEnabled?: boolean;
@@ -36,7 +34,7 @@ export interface FunctionAppSlotConfig extends TerraformMetaArguments {
   /** timeouts block */
   readonly timeouts?: FunctionAppSlotTimeouts;
 }
-export class FunctionAppSlotSiteCredential extends ComplexComputedList {
+export class FunctionAppSlotSiteCredential extends cdktf.ComplexComputedList {
 
   // password - computed: true, optional: false, required: false
   public get password() {
@@ -53,25 +51,74 @@ export interface FunctionAppSlotAuthSettingsActiveDirectory {
   readonly clientId: string;
   readonly clientSecret?: string;
 }
+
+function functionAppSlotAuthSettingsActiveDirectoryToTerraform(struct?: FunctionAppSlotAuthSettingsActiveDirectory): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    allowed_audiences: cdktf.listMapper(cdktf.stringToTerraform)(struct!.allowedAudiences),
+    client_id: cdktf.stringToTerraform(struct!.clientId),
+    client_secret: cdktf.stringToTerraform(struct!.clientSecret),
+  }
+}
+
 export interface FunctionAppSlotAuthSettingsFacebook {
   readonly appId: string;
   readonly appSecret: string;
   readonly oauthScopes?: string[];
 }
+
+function functionAppSlotAuthSettingsFacebookToTerraform(struct?: FunctionAppSlotAuthSettingsFacebook): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    app_id: cdktf.stringToTerraform(struct!.appId),
+    app_secret: cdktf.stringToTerraform(struct!.appSecret),
+    oauth_scopes: cdktf.listMapper(cdktf.stringToTerraform)(struct!.oauthScopes),
+  }
+}
+
 export interface FunctionAppSlotAuthSettingsGoogle {
   readonly clientId: string;
   readonly clientSecret: string;
   readonly oauthScopes?: string[];
 }
+
+function functionAppSlotAuthSettingsGoogleToTerraform(struct?: FunctionAppSlotAuthSettingsGoogle): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    client_id: cdktf.stringToTerraform(struct!.clientId),
+    client_secret: cdktf.stringToTerraform(struct!.clientSecret),
+    oauth_scopes: cdktf.listMapper(cdktf.stringToTerraform)(struct!.oauthScopes),
+  }
+}
+
 export interface FunctionAppSlotAuthSettingsMicrosoft {
   readonly clientId: string;
   readonly clientSecret: string;
   readonly oauthScopes?: string[];
 }
+
+function functionAppSlotAuthSettingsMicrosoftToTerraform(struct?: FunctionAppSlotAuthSettingsMicrosoft): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    client_id: cdktf.stringToTerraform(struct!.clientId),
+    client_secret: cdktf.stringToTerraform(struct!.clientSecret),
+    oauth_scopes: cdktf.listMapper(cdktf.stringToTerraform)(struct!.oauthScopes),
+  }
+}
+
 export interface FunctionAppSlotAuthSettingsTwitter {
   readonly consumerKey: string;
   readonly consumerSecret: string;
 }
+
+function functionAppSlotAuthSettingsTwitterToTerraform(struct?: FunctionAppSlotAuthSettingsTwitter): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    consumer_key: cdktf.stringToTerraform(struct!.consumerKey),
+    consumer_secret: cdktf.stringToTerraform(struct!.consumerSecret),
+  }
+}
+
 export interface FunctionAppSlotAuthSettings {
   readonly additionalLoginParams?: { [key: string]: string };
   readonly allowedExternalRedirectUrls?: string[];
@@ -93,15 +140,55 @@ export interface FunctionAppSlotAuthSettings {
   /** twitter block */
   readonly twitter?: FunctionAppSlotAuthSettingsTwitter[];
 }
+
+function functionAppSlotAuthSettingsToTerraform(struct?: FunctionAppSlotAuthSettings): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    additional_login_params: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.additionalLoginParams),
+    allowed_external_redirect_urls: cdktf.listMapper(cdktf.stringToTerraform)(struct!.allowedExternalRedirectUrls),
+    default_provider: cdktf.stringToTerraform(struct!.defaultProvider),
+    enabled: cdktf.booleanToTerraform(struct!.enabled),
+    issuer: cdktf.stringToTerraform(struct!.issuer),
+    runtime_version: cdktf.stringToTerraform(struct!.runtimeVersion),
+    token_refresh_extension_hours: cdktf.numberToTerraform(struct!.tokenRefreshExtensionHours),
+    token_store_enabled: cdktf.booleanToTerraform(struct!.tokenStoreEnabled),
+    unauthenticated_client_action: cdktf.stringToTerraform(struct!.unauthenticatedClientAction),
+    active_directory: cdktf.listMapper(functionAppSlotAuthSettingsActiveDirectoryToTerraform)(struct!.activeDirectory),
+    facebook: cdktf.listMapper(functionAppSlotAuthSettingsFacebookToTerraform)(struct!.facebook),
+    google: cdktf.listMapper(functionAppSlotAuthSettingsGoogleToTerraform)(struct!.google),
+    microsoft: cdktf.listMapper(functionAppSlotAuthSettingsMicrosoftToTerraform)(struct!.microsoft),
+    twitter: cdktf.listMapper(functionAppSlotAuthSettingsTwitterToTerraform)(struct!.twitter),
+  }
+}
+
 export interface FunctionAppSlotConnectionString {
   readonly name: string;
   readonly type: string;
   readonly value: string;
 }
+
+function functionAppSlotConnectionStringToTerraform(struct?: FunctionAppSlotConnectionString): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    name: cdktf.stringToTerraform(struct!.name),
+    type: cdktf.stringToTerraform(struct!.type),
+    value: cdktf.stringToTerraform(struct!.value),
+  }
+}
+
 export interface FunctionAppSlotIdentity {
   readonly identityIds?: string[];
   readonly type: string;
 }
+
+function functionAppSlotIdentityToTerraform(struct?: FunctionAppSlotIdentity): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    identity_ids: cdktf.listMapper(cdktf.stringToTerraform)(struct!.identityIds),
+    type: cdktf.stringToTerraform(struct!.type),
+  }
+}
+
 export interface FunctionAppSlotSiteConfigIpRestriction {
   readonly action?: string;
   readonly ipAddress?: string;
@@ -110,6 +197,19 @@ export interface FunctionAppSlotSiteConfigIpRestriction {
   readonly subnetId?: string;
   readonly virtualNetworkSubnetId?: string;
 }
+
+function functionAppSlotSiteConfigIpRestrictionToTerraform(struct?: FunctionAppSlotSiteConfigIpRestriction): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    action: cdktf.stringToTerraform(struct!.action),
+    ip_address: cdktf.stringToTerraform(struct!.ipAddress),
+    name: cdktf.stringToTerraform(struct!.name),
+    priority: cdktf.numberToTerraform(struct!.priority),
+    subnet_id: cdktf.stringToTerraform(struct!.subnetId),
+    virtual_network_subnet_id: cdktf.stringToTerraform(struct!.virtualNetworkSubnetId),
+  }
+}
+
 export interface FunctionAppSlotSiteConfigScmIpRestriction {
   readonly action?: string;
   readonly ipAddress?: string;
@@ -118,10 +218,32 @@ export interface FunctionAppSlotSiteConfigScmIpRestriction {
   readonly subnetId?: string;
   readonly virtualNetworkSubnetId?: string;
 }
+
+function functionAppSlotSiteConfigScmIpRestrictionToTerraform(struct?: FunctionAppSlotSiteConfigScmIpRestriction): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    action: cdktf.stringToTerraform(struct!.action),
+    ip_address: cdktf.stringToTerraform(struct!.ipAddress),
+    name: cdktf.stringToTerraform(struct!.name),
+    priority: cdktf.numberToTerraform(struct!.priority),
+    subnet_id: cdktf.stringToTerraform(struct!.subnetId),
+    virtual_network_subnet_id: cdktf.stringToTerraform(struct!.virtualNetworkSubnetId),
+  }
+}
+
 export interface FunctionAppSlotSiteConfigCors {
   readonly allowedOrigins: string[];
   readonly supportCredentials?: boolean;
 }
+
+function functionAppSlotSiteConfigCorsToTerraform(struct?: FunctionAppSlotSiteConfigCors): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    allowed_origins: cdktf.listMapper(cdktf.stringToTerraform)(struct!.allowedOrigins),
+    support_credentials: cdktf.booleanToTerraform(struct!.supportCredentials),
+  }
+}
+
 export interface FunctionAppSlotSiteConfig {
   readonly alwaysOn?: boolean;
   readonly autoSwapSlotName?: string;
@@ -140,6 +262,28 @@ export interface FunctionAppSlotSiteConfig {
   /** cors block */
   readonly cors?: FunctionAppSlotSiteConfigCors[];
 }
+
+function functionAppSlotSiteConfigToTerraform(struct?: FunctionAppSlotSiteConfig): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    always_on: cdktf.booleanToTerraform(struct!.alwaysOn),
+    auto_swap_slot_name: cdktf.stringToTerraform(struct!.autoSwapSlotName),
+    ftps_state: cdktf.stringToTerraform(struct!.ftpsState),
+    health_check_path: cdktf.stringToTerraform(struct!.healthCheckPath),
+    http2_enabled: cdktf.booleanToTerraform(struct!.http2Enabled),
+    ip_restriction: cdktf.listMapper(functionAppSlotSiteConfigIpRestrictionToTerraform)(struct!.ipRestriction),
+    linux_fx_version: cdktf.stringToTerraform(struct!.linuxFxVersion),
+    min_tls_version: cdktf.stringToTerraform(struct!.minTlsVersion),
+    pre_warmed_instance_count: cdktf.numberToTerraform(struct!.preWarmedInstanceCount),
+    scm_ip_restriction: cdktf.listMapper(functionAppSlotSiteConfigScmIpRestrictionToTerraform)(struct!.scmIpRestriction),
+    scm_type: cdktf.stringToTerraform(struct!.scmType),
+    scm_use_main_ip_restriction: cdktf.booleanToTerraform(struct!.scmUseMainIpRestriction),
+    use_32_bit_worker_process: cdktf.booleanToTerraform(struct!.use32BitWorkerProcess),
+    websockets_enabled: cdktf.booleanToTerraform(struct!.websocketsEnabled),
+    cors: cdktf.listMapper(functionAppSlotSiteConfigCorsToTerraform)(struct!.cors),
+  }
+}
+
 export interface FunctionAppSlotTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -147,9 +291,20 @@ export interface FunctionAppSlotTimeouts {
   readonly update?: string;
 }
 
+function functionAppSlotTimeoutsToTerraform(struct?: FunctionAppSlotTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class FunctionAppSlot extends TerraformResource {
+export class FunctionAppSlot extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -544,27 +699,27 @@ export class FunctionAppSlot extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      app_service_plan_id: this._appServicePlanId,
-      app_settings: this._appSettings,
-      client_affinity_enabled: this._clientAffinityEnabled,
-      daily_memory_time_quota: this._dailyMemoryTimeQuota,
-      enable_builtin_logging: this._enableBuiltinLogging,
-      enabled: this._enabled,
-      function_app_name: this._functionAppName,
-      https_only: this._httpsOnly,
-      location: this._location,
-      name: this._name,
-      os_type: this._osType,
-      resource_group_name: this._resourceGroupName,
-      storage_account_access_key: this._storageAccountAccessKey,
-      storage_account_name: this._storageAccountName,
-      tags: this._tags,
-      version: this._version,
-      auth_settings: this._authSettings,
-      connection_string: this._connectionString,
-      identity: this._identity,
-      site_config: this._siteConfig,
-      timeouts: this._timeouts,
+      app_service_plan_id: cdktf.stringToTerraform(this._appServicePlanId),
+      app_settings: cdktf.hashMapper(cdktf.anyToTerraform)(this._appSettings),
+      client_affinity_enabled: cdktf.booleanToTerraform(this._clientAffinityEnabled),
+      daily_memory_time_quota: cdktf.numberToTerraform(this._dailyMemoryTimeQuota),
+      enable_builtin_logging: cdktf.booleanToTerraform(this._enableBuiltinLogging),
+      enabled: cdktf.booleanToTerraform(this._enabled),
+      function_app_name: cdktf.stringToTerraform(this._functionAppName),
+      https_only: cdktf.booleanToTerraform(this._httpsOnly),
+      location: cdktf.stringToTerraform(this._location),
+      name: cdktf.stringToTerraform(this._name),
+      os_type: cdktf.stringToTerraform(this._osType),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      storage_account_access_key: cdktf.stringToTerraform(this._storageAccountAccessKey),
+      storage_account_name: cdktf.stringToTerraform(this._storageAccountName),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      version: cdktf.stringToTerraform(this._version),
+      auth_settings: cdktf.listMapper(functionAppSlotAuthSettingsToTerraform)(this._authSettings),
+      connection_string: cdktf.listMapper(functionAppSlotConnectionStringToTerraform)(this._connectionString),
+      identity: cdktf.listMapper(functionAppSlotIdentityToTerraform)(this._identity),
+      site_config: cdktf.listMapper(functionAppSlotSiteConfigToTerraform)(this._siteConfig),
+      timeouts: functionAppSlotTimeoutsToTerraform(this._timeouts),
     };
   }
 }

@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface LogAnalyticsLinkedStorageAccountConfig extends TerraformMetaArguments {
+export interface LogAnalyticsLinkedStorageAccountConfig extends cdktf.TerraformMetaArguments {
   readonly dataSourceType: string;
   readonly resourceGroupName: string;
   readonly storageAccountIds: string[];
@@ -22,9 +21,20 @@ export interface LogAnalyticsLinkedStorageAccountTimeouts {
   readonly update?: string;
 }
 
+function logAnalyticsLinkedStorageAccountTimeoutsToTerraform(struct?: LogAnalyticsLinkedStorageAccountTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class LogAnalyticsLinkedStorageAccount extends TerraformResource {
+export class LogAnalyticsLinkedStorageAccount extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -131,11 +141,11 @@ export class LogAnalyticsLinkedStorageAccount extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      data_source_type: this._dataSourceType,
-      resource_group_name: this._resourceGroupName,
-      storage_account_ids: this._storageAccountIds,
-      workspace_resource_id: this._workspaceResourceId,
-      timeouts: this._timeouts,
+      data_source_type: cdktf.stringToTerraform(this._dataSourceType),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      storage_account_ids: cdktf.listMapper(cdktf.stringToTerraform)(this._storageAccountIds),
+      workspace_resource_id: cdktf.stringToTerraform(this._workspaceResourceId),
+      timeouts: logAnalyticsLinkedStorageAccountTimeoutsToTerraform(this._timeouts),
     };
   }
 }

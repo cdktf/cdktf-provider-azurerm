@@ -2,13 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
-import { StringMap } from "cdktf";
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface ManagedApplicationConfig extends TerraformMetaArguments {
+export interface ManagedApplicationConfig extends cdktf.TerraformMetaArguments {
   readonly applicationDefinitionId?: string;
   readonly kind: string;
   readonly location: string;
@@ -29,6 +27,18 @@ export interface ManagedApplicationPlan {
   readonly publisher: string;
   readonly version: string;
 }
+
+function managedApplicationPlanToTerraform(struct?: ManagedApplicationPlan): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    name: cdktf.stringToTerraform(struct!.name),
+    product: cdktf.stringToTerraform(struct!.product),
+    promotion_code: cdktf.stringToTerraform(struct!.promotionCode),
+    publisher: cdktf.stringToTerraform(struct!.publisher),
+    version: cdktf.stringToTerraform(struct!.version),
+  }
+}
+
 export interface ManagedApplicationTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -36,9 +46,20 @@ export interface ManagedApplicationTimeouts {
   readonly update?: string;
 }
 
+function managedApplicationTimeoutsToTerraform(struct?: ManagedApplicationTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class ManagedApplication extends TerraformResource {
+export class ManagedApplication extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -146,7 +167,7 @@ export class ManagedApplication extends TerraformResource {
 
   // outputs - computed: true, optional: false, required: false
   public outputs(key: string): string {
-    return new StringMap(this, 'outputs').lookup(key);
+    return new cdktf.StringMap(this, 'outputs').lookup(key);
   }
 
   // parameters - computed: false, optional: true, required: false
@@ -232,16 +253,16 @@ export class ManagedApplication extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      application_definition_id: this._applicationDefinitionId,
-      kind: this._kind,
-      location: this._location,
-      managed_resource_group_name: this._managedResourceGroupName,
-      name: this._name,
-      parameters: this._parameters,
-      resource_group_name: this._resourceGroupName,
-      tags: this._tags,
-      plan: this._plan,
-      timeouts: this._timeouts,
+      application_definition_id: cdktf.stringToTerraform(this._applicationDefinitionId),
+      kind: cdktf.stringToTerraform(this._kind),
+      location: cdktf.stringToTerraform(this._location),
+      managed_resource_group_name: cdktf.stringToTerraform(this._managedResourceGroupName),
+      name: cdktf.stringToTerraform(this._name),
+      parameters: cdktf.hashMapper(cdktf.anyToTerraform)(this._parameters),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      plan: cdktf.listMapper(managedApplicationPlanToTerraform)(this._plan),
+      timeouts: managedApplicationTimeoutsToTerraform(this._timeouts),
     };
   }
 }

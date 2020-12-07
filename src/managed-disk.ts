@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface ManagedDiskConfig extends TerraformMetaArguments {
+export interface ManagedDiskConfig extends cdktf.TerraformMetaArguments {
   readonly createOption: string;
   readonly diskEncryptionSetId?: string;
   readonly diskIopsReadWrite?: number;
@@ -33,10 +32,28 @@ export interface ManagedDiskEncryptionSettingsDiskEncryptionKey {
   readonly secretUrl: string;
   readonly sourceVaultId: string;
 }
+
+function managedDiskEncryptionSettingsDiskEncryptionKeyToTerraform(struct?: ManagedDiskEncryptionSettingsDiskEncryptionKey): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    secret_url: cdktf.stringToTerraform(struct!.secretUrl),
+    source_vault_id: cdktf.stringToTerraform(struct!.sourceVaultId),
+  }
+}
+
 export interface ManagedDiskEncryptionSettingsKeyEncryptionKey {
   readonly keyUrl: string;
   readonly sourceVaultId: string;
 }
+
+function managedDiskEncryptionSettingsKeyEncryptionKeyToTerraform(struct?: ManagedDiskEncryptionSettingsKeyEncryptionKey): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    key_url: cdktf.stringToTerraform(struct!.keyUrl),
+    source_vault_id: cdktf.stringToTerraform(struct!.sourceVaultId),
+  }
+}
+
 export interface ManagedDiskEncryptionSettings {
   readonly enabled: boolean;
   /** disk_encryption_key block */
@@ -44,6 +61,16 @@ export interface ManagedDiskEncryptionSettings {
   /** key_encryption_key block */
   readonly keyEncryptionKey?: ManagedDiskEncryptionSettingsKeyEncryptionKey[];
 }
+
+function managedDiskEncryptionSettingsToTerraform(struct?: ManagedDiskEncryptionSettings): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    enabled: cdktf.booleanToTerraform(struct!.enabled),
+    disk_encryption_key: cdktf.listMapper(managedDiskEncryptionSettingsDiskEncryptionKeyToTerraform)(struct!.diskEncryptionKey),
+    key_encryption_key: cdktf.listMapper(managedDiskEncryptionSettingsKeyEncryptionKeyToTerraform)(struct!.keyEncryptionKey),
+  }
+}
+
 export interface ManagedDiskTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -51,9 +78,20 @@ export interface ManagedDiskTimeouts {
   readonly update?: string;
 }
 
+function managedDiskTimeoutsToTerraform(struct?: ManagedDiskTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class ManagedDisk extends TerraformResource {
+export class ManagedDisk extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -378,24 +416,24 @@ export class ManagedDisk extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      create_option: this._createOption,
-      disk_encryption_set_id: this._diskEncryptionSetId,
-      disk_iops_read_write: this._diskIopsReadWrite,
-      disk_mbps_read_write: this._diskMbpsReadWrite,
-      disk_size_gb: this._diskSizeGb,
-      image_reference_id: this._imageReferenceId,
-      location: this._location,
-      name: this._name,
-      os_type: this._osType,
-      resource_group_name: this._resourceGroupName,
-      source_resource_id: this._sourceResourceId,
-      source_uri: this._sourceUri,
-      storage_account_id: this._storageAccountId,
-      storage_account_type: this._storageAccountType,
-      tags: this._tags,
-      zones: this._zones,
-      encryption_settings: this._encryptionSettings,
-      timeouts: this._timeouts,
+      create_option: cdktf.stringToTerraform(this._createOption),
+      disk_encryption_set_id: cdktf.stringToTerraform(this._diskEncryptionSetId),
+      disk_iops_read_write: cdktf.numberToTerraform(this._diskIopsReadWrite),
+      disk_mbps_read_write: cdktf.numberToTerraform(this._diskMbpsReadWrite),
+      disk_size_gb: cdktf.numberToTerraform(this._diskSizeGb),
+      image_reference_id: cdktf.stringToTerraform(this._imageReferenceId),
+      location: cdktf.stringToTerraform(this._location),
+      name: cdktf.stringToTerraform(this._name),
+      os_type: cdktf.stringToTerraform(this._osType),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      source_resource_id: cdktf.stringToTerraform(this._sourceResourceId),
+      source_uri: cdktf.stringToTerraform(this._sourceUri),
+      storage_account_id: cdktf.stringToTerraform(this._storageAccountId),
+      storage_account_type: cdktf.stringToTerraform(this._storageAccountType),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      zones: cdktf.listMapper(cdktf.stringToTerraform)(this._zones),
+      encryption_settings: cdktf.listMapper(managedDiskEncryptionSettingsToTerraform)(this._encryptionSettings),
+      timeouts: managedDiskTimeoutsToTerraform(this._timeouts),
     };
   }
 }

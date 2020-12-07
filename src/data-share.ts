@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataShareConfig extends TerraformMetaArguments {
+export interface DataShareConfig extends cdktf.TerraformMetaArguments {
   readonly accountId: string;
   readonly description?: string;
   readonly kind: string;
@@ -23,6 +22,16 @@ export interface DataShareSnapshotSchedule {
   readonly recurrence: string;
   readonly startTime: string;
 }
+
+function dataShareSnapshotScheduleToTerraform(struct?: DataShareSnapshotSchedule): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    name: cdktf.stringToTerraform(struct!.name),
+    recurrence: cdktf.stringToTerraform(struct!.recurrence),
+    start_time: cdktf.stringToTerraform(struct!.startTime),
+  }
+}
+
 export interface DataShareTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -30,9 +39,20 @@ export interface DataShareTimeouts {
   readonly update?: string;
 }
 
+function dataShareTimeoutsToTerraform(struct?: DataShareTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class DataShare extends TerraformResource {
+export class DataShare extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -176,13 +196,13 @@ export class DataShare extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      account_id: this._accountId,
-      description: this._description,
-      kind: this._kind,
-      name: this._name,
-      terms: this._terms,
-      snapshot_schedule: this._snapshotSchedule,
-      timeouts: this._timeouts,
+      account_id: cdktf.stringToTerraform(this._accountId),
+      description: cdktf.stringToTerraform(this._description),
+      kind: cdktf.stringToTerraform(this._kind),
+      name: cdktf.stringToTerraform(this._name),
+      terms: cdktf.stringToTerraform(this._terms),
+      snapshot_schedule: cdktf.listMapper(dataShareSnapshotScheduleToTerraform)(this._snapshotSchedule),
+      timeouts: dataShareTimeoutsToTerraform(this._timeouts),
     };
   }
 }

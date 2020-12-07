@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface SecurityCenterAutomationConfig extends TerraformMetaArguments {
+export interface SecurityCenterAutomationConfig extends cdktf.TerraformMetaArguments {
   readonly enabled?: boolean;
   readonly location: string;
   readonly name: string;
@@ -26,21 +25,60 @@ export interface SecurityCenterAutomationAction {
   readonly triggerUrl?: string;
   readonly type: string;
 }
+
+function securityCenterAutomationActionToTerraform(struct?: SecurityCenterAutomationAction): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    connection_string: cdktf.stringToTerraform(struct!.connectionString),
+    resource_id: cdktf.stringToTerraform(struct!.resourceId),
+    trigger_url: cdktf.stringToTerraform(struct!.triggerUrl),
+    type: cdktf.stringToTerraform(struct!.type),
+  }
+}
+
 export interface SecurityCenterAutomationSourceRuleSetRule {
   readonly expectedValue: string;
   readonly operator: string;
   readonly propertyPath: string;
   readonly propertyType: string;
 }
+
+function securityCenterAutomationSourceRuleSetRuleToTerraform(struct?: SecurityCenterAutomationSourceRuleSetRule): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    expected_value: cdktf.stringToTerraform(struct!.expectedValue),
+    operator: cdktf.stringToTerraform(struct!.operator),
+    property_path: cdktf.stringToTerraform(struct!.propertyPath),
+    property_type: cdktf.stringToTerraform(struct!.propertyType),
+  }
+}
+
 export interface SecurityCenterAutomationSourceRuleSet {
   /** rule block */
   readonly rule: SecurityCenterAutomationSourceRuleSetRule[];
 }
+
+function securityCenterAutomationSourceRuleSetToTerraform(struct?: SecurityCenterAutomationSourceRuleSet): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    rule: cdktf.listMapper(securityCenterAutomationSourceRuleSetRuleToTerraform)(struct!.rule),
+  }
+}
+
 export interface SecurityCenterAutomationSource {
   readonly eventSource: string;
   /** rule_set block */
   readonly ruleSet?: SecurityCenterAutomationSourceRuleSet[];
 }
+
+function securityCenterAutomationSourceToTerraform(struct?: SecurityCenterAutomationSource): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    event_source: cdktf.stringToTerraform(struct!.eventSource),
+    rule_set: cdktf.listMapper(securityCenterAutomationSourceRuleSetToTerraform)(struct!.ruleSet),
+  }
+}
+
 export interface SecurityCenterAutomationTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -48,9 +86,20 @@ export interface SecurityCenterAutomationTimeouts {
   readonly update?: string;
 }
 
+function securityCenterAutomationTimeoutsToTerraform(struct?: SecurityCenterAutomationTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class SecurityCenterAutomation extends TerraformResource {
+export class SecurityCenterAutomation extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -202,14 +251,14 @@ export class SecurityCenterAutomation extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      enabled: this._enabled,
-      location: this._location,
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      scopes: this._scopes,
-      action: this._action,
-      source: this._source,
-      timeouts: this._timeouts,
+      enabled: cdktf.booleanToTerraform(this._enabled),
+      location: cdktf.stringToTerraform(this._location),
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      scopes: cdktf.listMapper(cdktf.stringToTerraform)(this._scopes),
+      action: cdktf.listMapper(securityCenterAutomationActionToTerraform)(this._action),
+      source: cdktf.listMapper(securityCenterAutomationSourceToTerraform)(this._source),
+      timeouts: securityCenterAutomationTimeoutsToTerraform(this._timeouts),
     };
   }
 }

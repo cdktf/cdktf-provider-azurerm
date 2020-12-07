@@ -2,19 +2,17 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformDataSource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
-import { ComplexComputedList } from "cdktf";
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataAzurermVirtualMachineConfig extends TerraformMetaArguments {
+export interface DataAzurermVirtualMachineConfig extends cdktf.TerraformMetaArguments {
   readonly name: string;
   readonly resourceGroupName: string;
   /** timeouts block */
   readonly timeouts?: DataAzurermVirtualMachineTimeouts;
 }
-export class DataAzurermVirtualMachineIdentity extends ComplexComputedList {
+export class DataAzurermVirtualMachineIdentity extends cdktf.ComplexComputedList {
 
   // identity_ids - computed: true, optional: false, required: false
   public get identityIds() {
@@ -40,9 +38,17 @@ export interface DataAzurermVirtualMachineTimeouts {
   readonly read?: string;
 }
 
+function dataAzurermVirtualMachineTimeoutsToTerraform(struct?: DataAzurermVirtualMachineTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    read: cdktf.stringToTerraform(struct!.read),
+  }
+}
+
+
 // Resource
 
-export class DataAzurermVirtualMachine extends TerraformDataSource {
+export class DataAzurermVirtualMachine extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
@@ -131,9 +137,9 @@ export class DataAzurermVirtualMachine extends TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      timeouts: this._timeouts,
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      timeouts: dataAzurermVirtualMachineTimeoutsToTerraform(this._timeouts),
     };
   }
 }

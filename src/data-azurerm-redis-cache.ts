@@ -2,21 +2,18 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformDataSource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
-import { ComplexComputedList } from "cdktf";
-import { StringMap } from "cdktf";
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataAzurermRedisCacheConfig extends TerraformMetaArguments {
+export interface DataAzurermRedisCacheConfig extends cdktf.TerraformMetaArguments {
   readonly name: string;
   readonly resourceGroupName: string;
   readonly zones?: string[];
   /** timeouts block */
   readonly timeouts?: DataAzurermRedisCacheTimeouts;
 }
-export class DataAzurermRedisCachePatchSchedule extends ComplexComputedList {
+export class DataAzurermRedisCachePatchSchedule extends cdktf.ComplexComputedList {
 
   // day_of_week - computed: true, optional: false, required: false
   public get dayOfWeek() {
@@ -28,7 +25,7 @@ export class DataAzurermRedisCachePatchSchedule extends ComplexComputedList {
     return this.getNumberAttribute('start_hour_utc');
   }
 }
-export class DataAzurermRedisCacheRedisConfiguration extends ComplexComputedList {
+export class DataAzurermRedisCacheRedisConfiguration extends cdktf.ComplexComputedList {
 
   // aof_backup_enabled - computed: true, optional: false, required: false
   public get aofBackupEnabled() {
@@ -104,9 +101,17 @@ export interface DataAzurermRedisCacheTimeouts {
   readonly read?: string;
 }
 
+function dataAzurermRedisCacheTimeoutsToTerraform(struct?: DataAzurermRedisCacheTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    read: cdktf.stringToTerraform(struct!.read),
+  }
+}
+
+
 // Resource
 
-export class DataAzurermRedisCache extends TerraformDataSource {
+export class DataAzurermRedisCache extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
@@ -256,7 +261,7 @@ export class DataAzurermRedisCache extends TerraformDataSource {
 
   // tags - computed: true, optional: false, required: false
   public tags(key: string): string {
-    return new StringMap(this, 'tags').lookup(key);
+    return new cdktf.StringMap(this, 'tags').lookup(key);
   }
 
   // zones - computed: true, optional: true, required: false
@@ -297,10 +302,10 @@ export class DataAzurermRedisCache extends TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      zones: this._zones,
-      timeouts: this._timeouts,
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      zones: cdktf.listMapper(cdktf.stringToTerraform)(this._zones),
+      timeouts: dataAzurermRedisCacheTimeoutsToTerraform(this._timeouts),
     };
   }
 }

@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface HpcCacheNfsTargetConfig extends TerraformMetaArguments {
+export interface HpcCacheNfsTargetConfig extends cdktf.TerraformMetaArguments {
   readonly cacheName: string;
   readonly name: string;
   readonly resourceGroupName: string;
@@ -23,6 +22,16 @@ export interface HpcCacheNfsTargetNamespaceJunction {
   readonly nfsExport: string;
   readonly targetPath?: string;
 }
+
+function hpcCacheNfsTargetNamespaceJunctionToTerraform(struct?: HpcCacheNfsTargetNamespaceJunction): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    namespace_path: cdktf.stringToTerraform(struct!.namespacePath),
+    nfs_export: cdktf.stringToTerraform(struct!.nfsExport),
+    target_path: cdktf.stringToTerraform(struct!.targetPath),
+  }
+}
+
 export interface HpcCacheNfsTargetTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -30,9 +39,20 @@ export interface HpcCacheNfsTargetTimeouts {
   readonly update?: string;
 }
 
+function hpcCacheNfsTargetTimeoutsToTerraform(struct?: HpcCacheNfsTargetTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class HpcCacheNfsTarget extends TerraformResource {
+export class HpcCacheNfsTarget extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -167,13 +187,13 @@ export class HpcCacheNfsTarget extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      cache_name: this._cacheName,
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      target_host_name: this._targetHostName,
-      usage_model: this._usageModel,
-      namespace_junction: this._namespaceJunction,
-      timeouts: this._timeouts,
+      cache_name: cdktf.stringToTerraform(this._cacheName),
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      target_host_name: cdktf.stringToTerraform(this._targetHostName),
+      usage_model: cdktf.stringToTerraform(this._usageModel),
+      namespace_junction: cdktf.listMapper(hpcCacheNfsTargetNamespaceJunctionToTerraform)(this._namespaceJunction),
+      timeouts: hpcCacheNfsTargetTimeoutsToTerraform(this._timeouts),
     };
   }
 }

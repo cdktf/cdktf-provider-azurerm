@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface LogAnalyticsStorageInsightsConfig extends TerraformMetaArguments {
+export interface LogAnalyticsStorageInsightsConfig extends cdktf.TerraformMetaArguments {
   readonly blobContainerNames?: string[];
   readonly name: string;
   readonly resourceGroupName: string;
@@ -26,9 +25,20 @@ export interface LogAnalyticsStorageInsightsTimeouts {
   readonly update?: string;
 }
 
+function logAnalyticsStorageInsightsTimeoutsToTerraform(struct?: LogAnalyticsStorageInsightsTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class LogAnalyticsStorageInsights extends TerraformResource {
+export class LogAnalyticsStorageInsights extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -200,15 +210,15 @@ export class LogAnalyticsStorageInsights extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      blob_container_names: this._blobContainerNames,
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      storage_account_id: this._storageAccountId,
-      storage_account_key: this._storageAccountKey,
-      table_names: this._tableNames,
-      tags: this._tags,
-      workspace_id: this._workspaceId,
-      timeouts: this._timeouts,
+      blob_container_names: cdktf.listMapper(cdktf.stringToTerraform)(this._blobContainerNames),
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      storage_account_id: cdktf.stringToTerraform(this._storageAccountId),
+      storage_account_key: cdktf.stringToTerraform(this._storageAccountKey),
+      table_names: cdktf.listMapper(cdktf.stringToTerraform)(this._tableNames),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      workspace_id: cdktf.stringToTerraform(this._workspaceId),
+      timeouts: logAnalyticsStorageInsightsTimeoutsToTerraform(this._timeouts),
     };
   }
 }

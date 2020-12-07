@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface LogAnalyticsDataExportRuleConfig extends TerraformMetaArguments {
+export interface LogAnalyticsDataExportRuleConfig extends cdktf.TerraformMetaArguments {
   readonly destinationResourceId: string;
   readonly enabled?: boolean;
   readonly name: string;
@@ -24,9 +23,20 @@ export interface LogAnalyticsDataExportRuleTimeouts {
   readonly update?: string;
 }
 
+function logAnalyticsDataExportRuleTimeoutsToTerraform(struct?: LogAnalyticsDataExportRuleTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class LogAnalyticsDataExportRule extends TerraformResource {
+export class LogAnalyticsDataExportRule extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -169,13 +179,13 @@ export class LogAnalyticsDataExportRule extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      destination_resource_id: this._destinationResourceId,
-      enabled: this._enabled,
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      table_names: this._tableNames,
-      workspace_resource_id: this._workspaceResourceId,
-      timeouts: this._timeouts,
+      destination_resource_id: cdktf.stringToTerraform(this._destinationResourceId),
+      enabled: cdktf.booleanToTerraform(this._enabled),
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      table_names: cdktf.listMapper(cdktf.stringToTerraform)(this._tableNames),
+      workspace_resource_id: cdktf.stringToTerraform(this._workspaceResourceId),
+      timeouts: logAnalyticsDataExportRuleTimeoutsToTerraform(this._timeouts),
     };
   }
 }

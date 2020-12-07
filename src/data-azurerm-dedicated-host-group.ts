@@ -2,13 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformDataSource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
-import { StringMap } from "cdktf";
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataAzurermDedicatedHostGroupConfig extends TerraformMetaArguments {
+export interface DataAzurermDedicatedHostGroupConfig extends cdktf.TerraformMetaArguments {
   readonly name: string;
   readonly resourceGroupName: string;
   /** timeouts block */
@@ -18,9 +16,17 @@ export interface DataAzurermDedicatedHostGroupTimeouts {
   readonly read?: string;
 }
 
+function dataAzurermDedicatedHostGroupTimeoutsToTerraform(struct?: DataAzurermDedicatedHostGroupTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    read: cdktf.stringToTerraform(struct!.read),
+  }
+}
+
+
 // Resource
 
-export class DataAzurermDedicatedHostGroup extends TerraformDataSource {
+export class DataAzurermDedicatedHostGroup extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
@@ -89,7 +95,7 @@ export class DataAzurermDedicatedHostGroup extends TerraformDataSource {
 
   // tags - computed: true, optional: false, required: false
   public tags(key: string): string {
-    return new StringMap(this, 'tags').lookup(key);
+    return new cdktf.StringMap(this, 'tags').lookup(key);
   }
 
   // zones - computed: true, optional: false, required: false
@@ -119,9 +125,9 @@ export class DataAzurermDedicatedHostGroup extends TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      timeouts: this._timeouts,
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      timeouts: dataAzurermDedicatedHostGroupTimeoutsToTerraform(this._timeouts),
     };
   }
 }

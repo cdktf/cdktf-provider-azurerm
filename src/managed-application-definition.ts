@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface ManagedApplicationDefinitionConfig extends TerraformMetaArguments {
+export interface ManagedApplicationDefinitionConfig extends cdktf.TerraformMetaArguments {
   readonly createUiDefinition?: string;
   readonly description?: string;
   readonly displayName: string;
@@ -28,6 +27,15 @@ export interface ManagedApplicationDefinitionAuthorization {
   readonly roleDefinitionId: string;
   readonly servicePrincipalId: string;
 }
+
+function managedApplicationDefinitionAuthorizationToTerraform(struct?: ManagedApplicationDefinitionAuthorization): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    role_definition_id: cdktf.stringToTerraform(struct!.roleDefinitionId),
+    service_principal_id: cdktf.stringToTerraform(struct!.servicePrincipalId),
+  }
+}
+
 export interface ManagedApplicationDefinitionTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -35,9 +43,20 @@ export interface ManagedApplicationDefinitionTimeouts {
   readonly update?: string;
 }
 
+function managedApplicationDefinitionTimeoutsToTerraform(struct?: ManagedApplicationDefinitionTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class ManagedApplicationDefinition extends TerraformResource {
+export class ManagedApplicationDefinition extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -277,19 +296,19 @@ export class ManagedApplicationDefinition extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      create_ui_definition: this._createUiDefinition,
-      description: this._description,
-      display_name: this._displayName,
-      location: this._location,
-      lock_level: this._lockLevel,
-      main_template: this._mainTemplate,
-      name: this._name,
-      package_enabled: this._packageEnabled,
-      package_file_uri: this._packageFileUri,
-      resource_group_name: this._resourceGroupName,
-      tags: this._tags,
-      authorization: this._authorization,
-      timeouts: this._timeouts,
+      create_ui_definition: cdktf.stringToTerraform(this._createUiDefinition),
+      description: cdktf.stringToTerraform(this._description),
+      display_name: cdktf.stringToTerraform(this._displayName),
+      location: cdktf.stringToTerraform(this._location),
+      lock_level: cdktf.stringToTerraform(this._lockLevel),
+      main_template: cdktf.stringToTerraform(this._mainTemplate),
+      name: cdktf.stringToTerraform(this._name),
+      package_enabled: cdktf.booleanToTerraform(this._packageEnabled),
+      package_file_uri: cdktf.stringToTerraform(this._packageFileUri),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      authorization: cdktf.listMapper(managedApplicationDefinitionAuthorizationToTerraform)(this._authorization),
+      timeouts: managedApplicationDefinitionTimeoutsToTerraform(this._timeouts),
     };
   }
 }

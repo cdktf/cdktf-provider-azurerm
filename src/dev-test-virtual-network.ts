@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DevTestVirtualNetworkConfig extends TerraformMetaArguments {
+export interface DevTestVirtualNetworkConfig extends cdktf.TerraformMetaArguments {
   readonly description?: string;
   readonly labName: string;
   readonly name: string;
@@ -22,6 +21,15 @@ export interface DevTestVirtualNetworkSubnet {
   readonly useInVirtualMachineCreation?: string;
   readonly usePublicIpAddress?: string;
 }
+
+function devTestVirtualNetworkSubnetToTerraform(struct?: DevTestVirtualNetworkSubnet): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    use_in_virtual_machine_creation: cdktf.stringToTerraform(struct!.useInVirtualMachineCreation),
+    use_public_ip_address: cdktf.stringToTerraform(struct!.usePublicIpAddress),
+  }
+}
+
 export interface DevTestVirtualNetworkTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -29,9 +37,20 @@ export interface DevTestVirtualNetworkTimeouts {
   readonly update?: string;
 }
 
+function devTestVirtualNetworkTimeoutsToTerraform(struct?: DevTestVirtualNetworkTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class DevTestVirtualNetwork extends TerraformResource {
+export class DevTestVirtualNetwork extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -180,13 +199,13 @@ export class DevTestVirtualNetwork extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      description: this._description,
-      lab_name: this._labName,
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      tags: this._tags,
-      subnet: this._subnet,
-      timeouts: this._timeouts,
+      description: cdktf.stringToTerraform(this._description),
+      lab_name: cdktf.stringToTerraform(this._labName),
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      subnet: cdktf.listMapper(devTestVirtualNetworkSubnetToTerraform)(this._subnet),
+      timeouts: devTestVirtualNetworkTimeoutsToTerraform(this._timeouts),
     };
   }
 }

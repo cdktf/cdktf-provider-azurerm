@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface StorageEncryptionScopeConfig extends TerraformMetaArguments {
+export interface StorageEncryptionScopeConfig extends cdktf.TerraformMetaArguments {
   readonly keyVaultKeyId?: string;
   readonly name: string;
   readonly source: string;
@@ -22,9 +21,20 @@ export interface StorageEncryptionScopeTimeouts {
   readonly update?: string;
 }
 
+function storageEncryptionScopeTimeoutsToTerraform(struct?: StorageEncryptionScopeTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class StorageEncryptionScope extends TerraformResource {
+export class StorageEncryptionScope extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -134,11 +144,11 @@ export class StorageEncryptionScope extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      key_vault_key_id: this._keyVaultKeyId,
-      name: this._name,
-      source: this._source,
-      storage_account_id: this._storageAccountId,
-      timeouts: this._timeouts,
+      key_vault_key_id: cdktf.stringToTerraform(this._keyVaultKeyId),
+      name: cdktf.stringToTerraform(this._name),
+      source: cdktf.stringToTerraform(this._source),
+      storage_account_id: cdktf.stringToTerraform(this._storageAccountId),
+      timeouts: storageEncryptionScopeTimeoutsToTerraform(this._timeouts),
     };
   }
 }

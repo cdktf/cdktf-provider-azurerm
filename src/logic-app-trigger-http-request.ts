@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface LogicAppTriggerHttpRequestConfig extends TerraformMetaArguments {
+export interface LogicAppTriggerHttpRequestConfig extends cdktf.TerraformMetaArguments {
   readonly logicAppId: string;
   readonly method?: string;
   readonly name: string;
@@ -23,9 +22,20 @@ export interface LogicAppTriggerHttpRequestTimeouts {
   readonly update?: string;
 }
 
+function logicAppTriggerHttpRequestTimeoutsToTerraform(struct?: LogicAppTriggerHttpRequestTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class LogicAppTriggerHttpRequest extends TerraformResource {
+export class LogicAppTriggerHttpRequest extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -152,12 +162,12 @@ export class LogicAppTriggerHttpRequest extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      logic_app_id: this._logicAppId,
-      method: this._method,
-      name: this._name,
-      relative_path: this._relativePath,
-      schema: this._schema,
-      timeouts: this._timeouts,
+      logic_app_id: cdktf.stringToTerraform(this._logicAppId),
+      method: cdktf.stringToTerraform(this._method),
+      name: cdktf.stringToTerraform(this._name),
+      relative_path: cdktf.stringToTerraform(this._relativePath),
+      schema: cdktf.stringToTerraform(this._schema),
+      timeouts: logicAppTriggerHttpRequestTimeoutsToTerraform(this._timeouts),
     };
   }
 }

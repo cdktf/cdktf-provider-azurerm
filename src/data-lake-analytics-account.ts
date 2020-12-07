@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataLakeAnalyticsAccountConfig extends TerraformMetaArguments {
+export interface DataLakeAnalyticsAccountConfig extends cdktf.TerraformMetaArguments {
   readonly defaultStoreAccountName: string;
   readonly location: string;
   readonly name: string;
@@ -24,9 +23,20 @@ export interface DataLakeAnalyticsAccountTimeouts {
   readonly update?: string;
 }
 
+function dataLakeAnalyticsAccountTimeoutsToTerraform(struct?: DataLakeAnalyticsAccountTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class DataLakeAnalyticsAccount extends TerraformResource {
+export class DataLakeAnalyticsAccount extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -167,13 +177,13 @@ export class DataLakeAnalyticsAccount extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      default_store_account_name: this._defaultStoreAccountName,
-      location: this._location,
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      tags: this._tags,
-      tier: this._tier,
-      timeouts: this._timeouts,
+      default_store_account_name: cdktf.stringToTerraform(this._defaultStoreAccountName),
+      location: cdktf.stringToTerraform(this._location),
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      tier: cdktf.stringToTerraform(this._tier),
+      timeouts: dataLakeAnalyticsAccountTimeoutsToTerraform(this._timeouts),
     };
   }
 }

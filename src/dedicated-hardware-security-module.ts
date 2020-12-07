@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DedicatedHardwareSecurityModuleConfig extends TerraformMetaArguments {
+export interface DedicatedHardwareSecurityModuleConfig extends cdktf.TerraformMetaArguments {
   readonly location: string;
   readonly name: string;
   readonly resourceGroupName: string;
@@ -24,6 +23,15 @@ export interface DedicatedHardwareSecurityModuleNetworkProfile {
   readonly networkInterfacePrivateIpAddresses: string[];
   readonly subnetId: string;
 }
+
+function dedicatedHardwareSecurityModuleNetworkProfileToTerraform(struct?: DedicatedHardwareSecurityModuleNetworkProfile): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    network_interface_private_ip_addresses: cdktf.listMapper(cdktf.stringToTerraform)(struct!.networkInterfacePrivateIpAddresses),
+    subnet_id: cdktf.stringToTerraform(struct!.subnetId),
+  }
+}
+
 export interface DedicatedHardwareSecurityModuleTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -31,9 +39,20 @@ export interface DedicatedHardwareSecurityModuleTimeouts {
   readonly update?: string;
 }
 
+function dedicatedHardwareSecurityModuleTimeoutsToTerraform(struct?: DedicatedHardwareSecurityModuleTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class DedicatedHardwareSecurityModule extends TerraformResource {
+export class DedicatedHardwareSecurityModule extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -205,15 +224,15 @@ export class DedicatedHardwareSecurityModule extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      location: this._location,
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      sku_name: this._skuName,
-      stamp_id: this._stampId,
-      tags: this._tags,
-      zones: this._zones,
-      network_profile: this._networkProfile,
-      timeouts: this._timeouts,
+      location: cdktf.stringToTerraform(this._location),
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      sku_name: cdktf.stringToTerraform(this._skuName),
+      stamp_id: cdktf.stringToTerraform(this._stampId),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      zones: cdktf.listMapper(cdktf.stringToTerraform)(this._zones),
+      network_profile: cdktf.listMapper(dedicatedHardwareSecurityModuleNetworkProfileToTerraform)(this._networkProfile),
+      timeouts: dedicatedHardwareSecurityModuleTimeoutsToTerraform(this._timeouts),
     };
   }
 }

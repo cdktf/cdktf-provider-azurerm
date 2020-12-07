@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface EventhubNamespaceDisasterRecoveryConfigConfig extends TerraformMetaArguments {
+export interface EventhubNamespaceDisasterRecoveryConfigConfig extends cdktf.TerraformMetaArguments {
   readonly alternateName?: string;
   readonly name: string;
   readonly namespaceName: string;
@@ -23,9 +22,20 @@ export interface EventhubNamespaceDisasterRecoveryConfigTimeouts {
   readonly update?: string;
 }
 
+function eventhubNamespaceDisasterRecoveryConfigTimeoutsToTerraform(struct?: EventhubNamespaceDisasterRecoveryConfigTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class EventhubNamespaceDisasterRecoveryConfig extends TerraformResource {
+export class EventhubNamespaceDisasterRecoveryConfig extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -149,12 +159,12 @@ export class EventhubNamespaceDisasterRecoveryConfig extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      alternate_name: this._alternateName,
-      name: this._name,
-      namespace_name: this._namespaceName,
-      partner_namespace_id: this._partnerNamespaceId,
-      resource_group_name: this._resourceGroupName,
-      timeouts: this._timeouts,
+      alternate_name: cdktf.stringToTerraform(this._alternateName),
+      name: cdktf.stringToTerraform(this._name),
+      namespace_name: cdktf.stringToTerraform(this._namespaceName),
+      partner_namespace_id: cdktf.stringToTerraform(this._partnerNamespaceId),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      timeouts: eventhubNamespaceDisasterRecoveryConfigTimeoutsToTerraform(this._timeouts),
     };
   }
 }

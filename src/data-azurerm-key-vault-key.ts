@@ -2,13 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformDataSource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
-import { StringMap } from "cdktf";
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataAzurermKeyVaultKeyConfig extends TerraformMetaArguments {
+export interface DataAzurermKeyVaultKeyConfig extends cdktf.TerraformMetaArguments {
   readonly keyVaultId: string;
   readonly name: string;
   /** timeouts block */
@@ -18,9 +16,17 @@ export interface DataAzurermKeyVaultKeyTimeouts {
   readonly read?: string;
 }
 
+function dataAzurermKeyVaultKeyTimeoutsToTerraform(struct?: DataAzurermKeyVaultKeyTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    read: cdktf.stringToTerraform(struct!.read),
+  }
+}
+
+
 // Resource
 
-export class DataAzurermKeyVaultKey extends TerraformDataSource {
+export class DataAzurermKeyVaultKey extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
@@ -104,7 +110,7 @@ export class DataAzurermKeyVaultKey extends TerraformDataSource {
 
   // tags - computed: true, optional: false, required: false
   public tags(key: string): string {
-    return new StringMap(this, 'tags').lookup(key);
+    return new cdktf.StringMap(this, 'tags').lookup(key);
   }
 
   // version - computed: true, optional: false, required: false
@@ -134,9 +140,9 @@ export class DataAzurermKeyVaultKey extends TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      key_vault_id: this._keyVaultId,
-      name: this._name,
-      timeouts: this._timeouts,
+      key_vault_id: cdktf.stringToTerraform(this._keyVaultId),
+      name: cdktf.stringToTerraform(this._name),
+      timeouts: dataAzurermKeyVaultKeyTimeoutsToTerraform(this._timeouts),
     };
   }
 }

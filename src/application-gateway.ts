@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface ApplicationGatewayConfig extends TerraformMetaArguments {
+export interface ApplicationGatewayConfig extends cdktf.TerraformMetaArguments {
   readonly enableHttp2?: boolean;
   readonly firewallPolicyId?: string;
   readonly location: string;
@@ -62,22 +61,67 @@ export interface ApplicationGatewayAuthenticationCertificate {
   readonly data: string;
   readonly name: string;
 }
+
+function applicationGatewayAuthenticationCertificateToTerraform(struct?: ApplicationGatewayAuthenticationCertificate): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    data: cdktf.stringToTerraform(struct!.data),
+    name: cdktf.stringToTerraform(struct!.name),
+  }
+}
+
 export interface ApplicationGatewayAutoscaleConfiguration {
   readonly maxCapacity?: number;
   readonly minCapacity: number;
 }
+
+function applicationGatewayAutoscaleConfigurationToTerraform(struct?: ApplicationGatewayAutoscaleConfiguration): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    max_capacity: cdktf.numberToTerraform(struct!.maxCapacity),
+    min_capacity: cdktf.numberToTerraform(struct!.minCapacity),
+  }
+}
+
 export interface ApplicationGatewayBackendAddressPool {
   readonly fqdns?: string[];
   readonly ipAddresses?: string[];
   readonly name: string;
 }
+
+function applicationGatewayBackendAddressPoolToTerraform(struct?: ApplicationGatewayBackendAddressPool): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    fqdns: cdktf.listMapper(cdktf.stringToTerraform)(struct!.fqdns),
+    ip_addresses: cdktf.listMapper(cdktf.stringToTerraform)(struct!.ipAddresses),
+    name: cdktf.stringToTerraform(struct!.name),
+  }
+}
+
 export interface ApplicationGatewayBackendHttpSettingsAuthenticationCertificate {
   readonly name: string;
 }
+
+function applicationGatewayBackendHttpSettingsAuthenticationCertificateToTerraform(struct?: ApplicationGatewayBackendHttpSettingsAuthenticationCertificate): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    name: cdktf.stringToTerraform(struct!.name),
+  }
+}
+
 export interface ApplicationGatewayBackendHttpSettingsConnectionDraining {
   readonly drainTimeoutSec: number;
   readonly enabled: boolean;
 }
+
+function applicationGatewayBackendHttpSettingsConnectionDrainingToTerraform(struct?: ApplicationGatewayBackendHttpSettingsConnectionDraining): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    drain_timeout_sec: cdktf.numberToTerraform(struct!.drainTimeoutSec),
+    enabled: cdktf.booleanToTerraform(struct!.enabled),
+  }
+}
+
 export interface ApplicationGatewayBackendHttpSettings {
   readonly affinityCookieName?: string;
   readonly cookieBasedAffinity: string;
@@ -95,10 +139,39 @@ export interface ApplicationGatewayBackendHttpSettings {
   /** connection_draining block */
   readonly connectionDraining?: ApplicationGatewayBackendHttpSettingsConnectionDraining[];
 }
+
+function applicationGatewayBackendHttpSettingsToTerraform(struct?: ApplicationGatewayBackendHttpSettings): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    affinity_cookie_name: cdktf.stringToTerraform(struct!.affinityCookieName),
+    cookie_based_affinity: cdktf.stringToTerraform(struct!.cookieBasedAffinity),
+    host_name: cdktf.stringToTerraform(struct!.hostName),
+    name: cdktf.stringToTerraform(struct!.name),
+    path: cdktf.stringToTerraform(struct!.path),
+    pick_host_name_from_backend_address: cdktf.booleanToTerraform(struct!.pickHostNameFromBackendAddress),
+    port: cdktf.numberToTerraform(struct!.port),
+    probe_name: cdktf.stringToTerraform(struct!.probeName),
+    protocol: cdktf.stringToTerraform(struct!.protocol),
+    request_timeout: cdktf.numberToTerraform(struct!.requestTimeout),
+    trusted_root_certificate_names: cdktf.listMapper(cdktf.stringToTerraform)(struct!.trustedRootCertificateNames),
+    authentication_certificate: cdktf.listMapper(applicationGatewayBackendHttpSettingsAuthenticationCertificateToTerraform)(struct!.authenticationCertificate),
+    connection_draining: cdktf.listMapper(applicationGatewayBackendHttpSettingsConnectionDrainingToTerraform)(struct!.connectionDraining),
+  }
+}
+
 export interface ApplicationGatewayCustomErrorConfiguration {
   readonly customErrorPageUrl: string;
   readonly statusCode: string;
 }
+
+function applicationGatewayCustomErrorConfigurationToTerraform(struct?: ApplicationGatewayCustomErrorConfiguration): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    custom_error_page_url: cdktf.stringToTerraform(struct!.customErrorPageUrl),
+    status_code: cdktf.stringToTerraform(struct!.statusCode),
+  }
+}
+
 export interface ApplicationGatewayFrontendIpConfiguration {
   readonly name: string;
   readonly privateIpAddress?: string;
@@ -106,18 +179,57 @@ export interface ApplicationGatewayFrontendIpConfiguration {
   readonly publicIpAddressId?: string;
   readonly subnetId?: string;
 }
+
+function applicationGatewayFrontendIpConfigurationToTerraform(struct?: ApplicationGatewayFrontendIpConfiguration): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    name: cdktf.stringToTerraform(struct!.name),
+    private_ip_address: cdktf.stringToTerraform(struct!.privateIpAddress),
+    private_ip_address_allocation: cdktf.stringToTerraform(struct!.privateIpAddressAllocation),
+    public_ip_address_id: cdktf.stringToTerraform(struct!.publicIpAddressId),
+    subnet_id: cdktf.stringToTerraform(struct!.subnetId),
+  }
+}
+
 export interface ApplicationGatewayFrontendPort {
   readonly name: string;
   readonly port: number;
 }
+
+function applicationGatewayFrontendPortToTerraform(struct?: ApplicationGatewayFrontendPort): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    name: cdktf.stringToTerraform(struct!.name),
+    port: cdktf.numberToTerraform(struct!.port),
+  }
+}
+
 export interface ApplicationGatewayGatewayIpConfiguration {
   readonly name: string;
   readonly subnetId: string;
 }
+
+function applicationGatewayGatewayIpConfigurationToTerraform(struct?: ApplicationGatewayGatewayIpConfiguration): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    name: cdktf.stringToTerraform(struct!.name),
+    subnet_id: cdktf.stringToTerraform(struct!.subnetId),
+  }
+}
+
 export interface ApplicationGatewayHttpListenerCustomErrorConfiguration {
   readonly customErrorPageUrl: string;
   readonly statusCode: string;
 }
+
+function applicationGatewayHttpListenerCustomErrorConfigurationToTerraform(struct?: ApplicationGatewayHttpListenerCustomErrorConfiguration): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    custom_error_page_url: cdktf.stringToTerraform(struct!.customErrorPageUrl),
+    status_code: cdktf.stringToTerraform(struct!.statusCode),
+  }
+}
+
 export interface ApplicationGatewayHttpListener {
   readonly firewallPolicyId?: string;
   readonly frontendIpConfigurationName: string;
@@ -131,14 +243,49 @@ export interface ApplicationGatewayHttpListener {
   /** custom_error_configuration block */
   readonly customErrorConfiguration?: ApplicationGatewayHttpListenerCustomErrorConfiguration[];
 }
+
+function applicationGatewayHttpListenerToTerraform(struct?: ApplicationGatewayHttpListener): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    firewall_policy_id: cdktf.stringToTerraform(struct!.firewallPolicyId),
+    frontend_ip_configuration_name: cdktf.stringToTerraform(struct!.frontendIpConfigurationName),
+    frontend_port_name: cdktf.stringToTerraform(struct!.frontendPortName),
+    host_name: cdktf.stringToTerraform(struct!.hostName),
+    host_names: cdktf.listMapper(cdktf.stringToTerraform)(struct!.hostNames),
+    name: cdktf.stringToTerraform(struct!.name),
+    protocol: cdktf.stringToTerraform(struct!.protocol),
+    require_sni: cdktf.booleanToTerraform(struct!.requireSni),
+    ssl_certificate_name: cdktf.stringToTerraform(struct!.sslCertificateName),
+    custom_error_configuration: cdktf.listMapper(applicationGatewayHttpListenerCustomErrorConfigurationToTerraform)(struct!.customErrorConfiguration),
+  }
+}
+
 export interface ApplicationGatewayIdentity {
   readonly identityIds: string[];
   readonly type?: string;
 }
+
+function applicationGatewayIdentityToTerraform(struct?: ApplicationGatewayIdentity): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    identity_ids: cdktf.listMapper(cdktf.stringToTerraform)(struct!.identityIds),
+    type: cdktf.stringToTerraform(struct!.type),
+  }
+}
+
 export interface ApplicationGatewayProbeMatch {
   readonly body?: string;
   readonly statusCode?: string[];
 }
+
+function applicationGatewayProbeMatchToTerraform(struct?: ApplicationGatewayProbeMatch): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    body: cdktf.stringToTerraform(struct!.body),
+    status_code: cdktf.listMapper(cdktf.stringToTerraform)(struct!.statusCode),
+  }
+}
+
 export interface ApplicationGatewayProbe {
   readonly host?: string;
   readonly interval: number;
@@ -153,6 +300,24 @@ export interface ApplicationGatewayProbe {
   /** match block */
   readonly match?: ApplicationGatewayProbeMatch[];
 }
+
+function applicationGatewayProbeToTerraform(struct?: ApplicationGatewayProbe): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    host: cdktf.stringToTerraform(struct!.host),
+    interval: cdktf.numberToTerraform(struct!.interval),
+    minimum_servers: cdktf.numberToTerraform(struct!.minimumServers),
+    name: cdktf.stringToTerraform(struct!.name),
+    path: cdktf.stringToTerraform(struct!.path),
+    pick_host_name_from_backend_http_settings: cdktf.booleanToTerraform(struct!.pickHostNameFromBackendHttpSettings),
+    port: cdktf.numberToTerraform(struct!.port),
+    protocol: cdktf.stringToTerraform(struct!.protocol),
+    timeout: cdktf.numberToTerraform(struct!.timeout),
+    unhealthy_threshold: cdktf.numberToTerraform(struct!.unhealthyThreshold),
+    match: cdktf.listMapper(applicationGatewayProbeMatchToTerraform)(struct!.match),
+  }
+}
+
 export interface ApplicationGatewayRedirectConfiguration {
   readonly includePath?: boolean;
   readonly includeQueryString?: boolean;
@@ -161,6 +326,19 @@ export interface ApplicationGatewayRedirectConfiguration {
   readonly targetListenerName?: string;
   readonly targetUrl?: string;
 }
+
+function applicationGatewayRedirectConfigurationToTerraform(struct?: ApplicationGatewayRedirectConfiguration): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    include_path: cdktf.booleanToTerraform(struct!.includePath),
+    include_query_string: cdktf.booleanToTerraform(struct!.includeQueryString),
+    name: cdktf.stringToTerraform(struct!.name),
+    redirect_type: cdktf.stringToTerraform(struct!.redirectType),
+    target_listener_name: cdktf.stringToTerraform(struct!.targetListenerName),
+    target_url: cdktf.stringToTerraform(struct!.targetUrl),
+  }
+}
+
 export interface ApplicationGatewayRequestRoutingRule {
   readonly backendAddressPoolName?: string;
   readonly backendHttpSettingsName?: string;
@@ -171,20 +349,64 @@ export interface ApplicationGatewayRequestRoutingRule {
   readonly ruleType: string;
   readonly urlPathMapName?: string;
 }
+
+function applicationGatewayRequestRoutingRuleToTerraform(struct?: ApplicationGatewayRequestRoutingRule): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    backend_address_pool_name: cdktf.stringToTerraform(struct!.backendAddressPoolName),
+    backend_http_settings_name: cdktf.stringToTerraform(struct!.backendHttpSettingsName),
+    http_listener_name: cdktf.stringToTerraform(struct!.httpListenerName),
+    name: cdktf.stringToTerraform(struct!.name),
+    redirect_configuration_name: cdktf.stringToTerraform(struct!.redirectConfigurationName),
+    rewrite_rule_set_name: cdktf.stringToTerraform(struct!.rewriteRuleSetName),
+    rule_type: cdktf.stringToTerraform(struct!.ruleType),
+    url_path_map_name: cdktf.stringToTerraform(struct!.urlPathMapName),
+  }
+}
+
 export interface ApplicationGatewayRewriteRuleSetRewriteRuleCondition {
   readonly ignoreCase?: boolean;
   readonly negate?: boolean;
   readonly pattern: string;
   readonly variable: string;
 }
+
+function applicationGatewayRewriteRuleSetRewriteRuleConditionToTerraform(struct?: ApplicationGatewayRewriteRuleSetRewriteRuleCondition): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    ignore_case: cdktf.booleanToTerraform(struct!.ignoreCase),
+    negate: cdktf.booleanToTerraform(struct!.negate),
+    pattern: cdktf.stringToTerraform(struct!.pattern),
+    variable: cdktf.stringToTerraform(struct!.variable),
+  }
+}
+
 export interface ApplicationGatewayRewriteRuleSetRewriteRuleRequestHeaderConfiguration {
   readonly headerName: string;
   readonly headerValue: string;
 }
+
+function applicationGatewayRewriteRuleSetRewriteRuleRequestHeaderConfigurationToTerraform(struct?: ApplicationGatewayRewriteRuleSetRewriteRuleRequestHeaderConfiguration): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    header_name: cdktf.stringToTerraform(struct!.headerName),
+    header_value: cdktf.stringToTerraform(struct!.headerValue),
+  }
+}
+
 export interface ApplicationGatewayRewriteRuleSetRewriteRuleResponseHeaderConfiguration {
   readonly headerName: string;
   readonly headerValue: string;
 }
+
+function applicationGatewayRewriteRuleSetRewriteRuleResponseHeaderConfigurationToTerraform(struct?: ApplicationGatewayRewriteRuleSetRewriteRuleResponseHeaderConfiguration): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    header_name: cdktf.stringToTerraform(struct!.headerName),
+    header_value: cdktf.stringToTerraform(struct!.headerValue),
+  }
+}
+
 export interface ApplicationGatewayRewriteRuleSetRewriteRule {
   readonly name: string;
   readonly ruleSequence: number;
@@ -195,22 +417,64 @@ export interface ApplicationGatewayRewriteRuleSetRewriteRule {
   /** response_header_configuration block */
   readonly responseHeaderConfiguration?: ApplicationGatewayRewriteRuleSetRewriteRuleResponseHeaderConfiguration[];
 }
+
+function applicationGatewayRewriteRuleSetRewriteRuleToTerraform(struct?: ApplicationGatewayRewriteRuleSetRewriteRule): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    name: cdktf.stringToTerraform(struct!.name),
+    rule_sequence: cdktf.numberToTerraform(struct!.ruleSequence),
+    condition: cdktf.listMapper(applicationGatewayRewriteRuleSetRewriteRuleConditionToTerraform)(struct!.condition),
+    request_header_configuration: cdktf.listMapper(applicationGatewayRewriteRuleSetRewriteRuleRequestHeaderConfigurationToTerraform)(struct!.requestHeaderConfiguration),
+    response_header_configuration: cdktf.listMapper(applicationGatewayRewriteRuleSetRewriteRuleResponseHeaderConfigurationToTerraform)(struct!.responseHeaderConfiguration),
+  }
+}
+
 export interface ApplicationGatewayRewriteRuleSet {
   readonly name: string;
   /** rewrite_rule block */
   readonly rewriteRule?: ApplicationGatewayRewriteRuleSetRewriteRule[];
 }
+
+function applicationGatewayRewriteRuleSetToTerraform(struct?: ApplicationGatewayRewriteRuleSet): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    name: cdktf.stringToTerraform(struct!.name),
+    rewrite_rule: cdktf.listMapper(applicationGatewayRewriteRuleSetRewriteRuleToTerraform)(struct!.rewriteRule),
+  }
+}
+
 export interface ApplicationGatewaySku {
   readonly capacity?: number;
   readonly name: string;
   readonly tier: string;
 }
+
+function applicationGatewaySkuToTerraform(struct?: ApplicationGatewaySku): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    capacity: cdktf.numberToTerraform(struct!.capacity),
+    name: cdktf.stringToTerraform(struct!.name),
+    tier: cdktf.stringToTerraform(struct!.tier),
+  }
+}
+
 export interface ApplicationGatewaySslCertificate {
   readonly data?: string;
   readonly keyVaultSecretId?: string;
   readonly name: string;
   readonly password?: string;
 }
+
+function applicationGatewaySslCertificateToTerraform(struct?: ApplicationGatewaySslCertificate): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    data: cdktf.stringToTerraform(struct!.data),
+    key_vault_secret_id: cdktf.stringToTerraform(struct!.keyVaultSecretId),
+    name: cdktf.stringToTerraform(struct!.name),
+    password: cdktf.stringToTerraform(struct!.password),
+  }
+}
+
 export interface ApplicationGatewaySslPolicy {
   readonly cipherSuites?: string[];
   readonly disabledProtocols?: string[];
@@ -218,16 +482,48 @@ export interface ApplicationGatewaySslPolicy {
   readonly policyName?: string;
   readonly policyType?: string;
 }
+
+function applicationGatewaySslPolicyToTerraform(struct?: ApplicationGatewaySslPolicy): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    cipher_suites: cdktf.listMapper(cdktf.stringToTerraform)(struct!.cipherSuites),
+    disabled_protocols: cdktf.listMapper(cdktf.stringToTerraform)(struct!.disabledProtocols),
+    min_protocol_version: cdktf.stringToTerraform(struct!.minProtocolVersion),
+    policy_name: cdktf.stringToTerraform(struct!.policyName),
+    policy_type: cdktf.stringToTerraform(struct!.policyType),
+  }
+}
+
 export interface ApplicationGatewayTimeouts {
   readonly create?: string;
   readonly delete?: string;
   readonly read?: string;
   readonly update?: string;
 }
+
+function applicationGatewayTimeoutsToTerraform(struct?: ApplicationGatewayTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
 export interface ApplicationGatewayTrustedRootCertificate {
   readonly data: string;
   readonly name: string;
 }
+
+function applicationGatewayTrustedRootCertificateToTerraform(struct?: ApplicationGatewayTrustedRootCertificate): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    data: cdktf.stringToTerraform(struct!.data),
+    name: cdktf.stringToTerraform(struct!.name),
+  }
+}
+
 export interface ApplicationGatewayUrlPathMapPathRule {
   readonly backendAddressPoolName?: string;
   readonly backendHttpSettingsName?: string;
@@ -236,6 +532,19 @@ export interface ApplicationGatewayUrlPathMapPathRule {
   readonly redirectConfigurationName?: string;
   readonly rewriteRuleSetName?: string;
 }
+
+function applicationGatewayUrlPathMapPathRuleToTerraform(struct?: ApplicationGatewayUrlPathMapPathRule): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    backend_address_pool_name: cdktf.stringToTerraform(struct!.backendAddressPoolName),
+    backend_http_settings_name: cdktf.stringToTerraform(struct!.backendHttpSettingsName),
+    name: cdktf.stringToTerraform(struct!.name),
+    paths: cdktf.listMapper(cdktf.stringToTerraform)(struct!.paths),
+    redirect_configuration_name: cdktf.stringToTerraform(struct!.redirectConfigurationName),
+    rewrite_rule_set_name: cdktf.stringToTerraform(struct!.rewriteRuleSetName),
+  }
+}
+
 export interface ApplicationGatewayUrlPathMap {
   readonly defaultBackendAddressPoolName?: string;
   readonly defaultBackendHttpSettingsName?: string;
@@ -245,15 +554,47 @@ export interface ApplicationGatewayUrlPathMap {
   /** path_rule block */
   readonly pathRule: ApplicationGatewayUrlPathMapPathRule[];
 }
+
+function applicationGatewayUrlPathMapToTerraform(struct?: ApplicationGatewayUrlPathMap): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    default_backend_address_pool_name: cdktf.stringToTerraform(struct!.defaultBackendAddressPoolName),
+    default_backend_http_settings_name: cdktf.stringToTerraform(struct!.defaultBackendHttpSettingsName),
+    default_redirect_configuration_name: cdktf.stringToTerraform(struct!.defaultRedirectConfigurationName),
+    default_rewrite_rule_set_name: cdktf.stringToTerraform(struct!.defaultRewriteRuleSetName),
+    name: cdktf.stringToTerraform(struct!.name),
+    path_rule: cdktf.listMapper(applicationGatewayUrlPathMapPathRuleToTerraform)(struct!.pathRule),
+  }
+}
+
 export interface ApplicationGatewayWafConfigurationDisabledRuleGroup {
   readonly ruleGroupName: string;
   readonly rules?: number[];
 }
+
+function applicationGatewayWafConfigurationDisabledRuleGroupToTerraform(struct?: ApplicationGatewayWafConfigurationDisabledRuleGroup): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    rule_group_name: cdktf.stringToTerraform(struct!.ruleGroupName),
+    rules: cdktf.listMapper(cdktf.numberToTerraform)(struct!.rules),
+  }
+}
+
 export interface ApplicationGatewayWafConfigurationExclusion {
   readonly matchVariable: string;
   readonly selector?: string;
   readonly selectorMatchOperator?: string;
 }
+
+function applicationGatewayWafConfigurationExclusionToTerraform(struct?: ApplicationGatewayWafConfigurationExclusion): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    match_variable: cdktf.stringToTerraform(struct!.matchVariable),
+    selector: cdktf.stringToTerraform(struct!.selector),
+    selector_match_operator: cdktf.stringToTerraform(struct!.selectorMatchOperator),
+  }
+}
+
 export interface ApplicationGatewayWafConfiguration {
   readonly enabled: boolean;
   readonly fileUploadLimitMb?: number;
@@ -268,9 +609,25 @@ export interface ApplicationGatewayWafConfiguration {
   readonly exclusion?: ApplicationGatewayWafConfigurationExclusion[];
 }
 
+function applicationGatewayWafConfigurationToTerraform(struct?: ApplicationGatewayWafConfiguration): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    enabled: cdktf.booleanToTerraform(struct!.enabled),
+    file_upload_limit_mb: cdktf.numberToTerraform(struct!.fileUploadLimitMb),
+    firewall_mode: cdktf.stringToTerraform(struct!.firewallMode),
+    max_request_body_size_kb: cdktf.numberToTerraform(struct!.maxRequestBodySizeKb),
+    request_body_check: cdktf.booleanToTerraform(struct!.requestBodyCheck),
+    rule_set_type: cdktf.stringToTerraform(struct!.ruleSetType),
+    rule_set_version: cdktf.stringToTerraform(struct!.ruleSetVersion),
+    disabled_rule_group: cdktf.listMapper(applicationGatewayWafConfigurationDisabledRuleGroupToTerraform)(struct!.disabledRuleGroup),
+    exclusion: cdktf.listMapper(applicationGatewayWafConfigurationExclusionToTerraform)(struct!.exclusion),
+  }
+}
+
+
 // Resource
 
-export class ApplicationGateway extends TerraformResource {
+export class ApplicationGateway extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -747,34 +1104,34 @@ export class ApplicationGateway extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      enable_http2: this._enableHttp2,
-      firewall_policy_id: this._firewallPolicyId,
-      location: this._location,
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      tags: this._tags,
-      zones: this._zones,
-      authentication_certificate: this._authenticationCertificate,
-      autoscale_configuration: this._autoscaleConfiguration,
-      backend_address_pool: this._backendAddressPool,
-      backend_http_settings: this._backendHttpSettings,
-      custom_error_configuration: this._customErrorConfiguration,
-      frontend_ip_configuration: this._frontendIpConfiguration,
-      frontend_port: this._frontendPort,
-      gateway_ip_configuration: this._gatewayIpConfiguration,
-      http_listener: this._httpListener,
-      identity: this._identity,
-      probe: this._probe,
-      redirect_configuration: this._redirectConfiguration,
-      request_routing_rule: this._requestRoutingRule,
-      rewrite_rule_set: this._rewriteRuleSet,
-      sku: this._sku,
-      ssl_certificate: this._sslCertificate,
-      ssl_policy: this._sslPolicy,
-      timeouts: this._timeouts,
-      trusted_root_certificate: this._trustedRootCertificate,
-      url_path_map: this._urlPathMap,
-      waf_configuration: this._wafConfiguration,
+      enable_http2: cdktf.booleanToTerraform(this._enableHttp2),
+      firewall_policy_id: cdktf.stringToTerraform(this._firewallPolicyId),
+      location: cdktf.stringToTerraform(this._location),
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      zones: cdktf.listMapper(cdktf.stringToTerraform)(this._zones),
+      authentication_certificate: cdktf.listMapper(applicationGatewayAuthenticationCertificateToTerraform)(this._authenticationCertificate),
+      autoscale_configuration: cdktf.listMapper(applicationGatewayAutoscaleConfigurationToTerraform)(this._autoscaleConfiguration),
+      backend_address_pool: cdktf.listMapper(applicationGatewayBackendAddressPoolToTerraform)(this._backendAddressPool),
+      backend_http_settings: cdktf.listMapper(applicationGatewayBackendHttpSettingsToTerraform)(this._backendHttpSettings),
+      custom_error_configuration: cdktf.listMapper(applicationGatewayCustomErrorConfigurationToTerraform)(this._customErrorConfiguration),
+      frontend_ip_configuration: cdktf.listMapper(applicationGatewayFrontendIpConfigurationToTerraform)(this._frontendIpConfiguration),
+      frontend_port: cdktf.listMapper(applicationGatewayFrontendPortToTerraform)(this._frontendPort),
+      gateway_ip_configuration: cdktf.listMapper(applicationGatewayGatewayIpConfigurationToTerraform)(this._gatewayIpConfiguration),
+      http_listener: cdktf.listMapper(applicationGatewayHttpListenerToTerraform)(this._httpListener),
+      identity: cdktf.listMapper(applicationGatewayIdentityToTerraform)(this._identity),
+      probe: cdktf.listMapper(applicationGatewayProbeToTerraform)(this._probe),
+      redirect_configuration: cdktf.listMapper(applicationGatewayRedirectConfigurationToTerraform)(this._redirectConfiguration),
+      request_routing_rule: cdktf.listMapper(applicationGatewayRequestRoutingRuleToTerraform)(this._requestRoutingRule),
+      rewrite_rule_set: cdktf.listMapper(applicationGatewayRewriteRuleSetToTerraform)(this._rewriteRuleSet),
+      sku: cdktf.listMapper(applicationGatewaySkuToTerraform)(this._sku),
+      ssl_certificate: cdktf.listMapper(applicationGatewaySslCertificateToTerraform)(this._sslCertificate),
+      ssl_policy: cdktf.listMapper(applicationGatewaySslPolicyToTerraform)(this._sslPolicy),
+      timeouts: applicationGatewayTimeoutsToTerraform(this._timeouts),
+      trusted_root_certificate: cdktf.listMapper(applicationGatewayTrustedRootCertificateToTerraform)(this._trustedRootCertificate),
+      url_path_map: cdktf.listMapper(applicationGatewayUrlPathMapToTerraform)(this._urlPathMap),
+      waf_configuration: cdktf.listMapper(applicationGatewayWafConfigurationToTerraform)(this._wafConfiguration),
     };
   }
 }

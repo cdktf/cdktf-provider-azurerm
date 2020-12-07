@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformDataSource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataAzurermBlueprintPublishedVersionConfig extends TerraformMetaArguments {
+export interface DataAzurermBlueprintPublishedVersionConfig extends cdktf.TerraformMetaArguments {
   readonly blueprintName: string;
   readonly scopeId: string;
   readonly version: string;
@@ -18,9 +17,17 @@ export interface DataAzurermBlueprintPublishedVersionTimeouts {
   readonly read?: string;
 }
 
+function dataAzurermBlueprintPublishedVersionTimeoutsToTerraform(struct?: DataAzurermBlueprintPublishedVersionTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    read: cdktf.stringToTerraform(struct!.read),
+  }
+}
+
+
 // Resource
 
-export class DataAzurermBlueprintPublishedVersion extends TerraformDataSource {
+export class DataAzurermBlueprintPublishedVersion extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
@@ -143,10 +150,10 @@ export class DataAzurermBlueprintPublishedVersion extends TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      blueprint_name: this._blueprintName,
-      scope_id: this._scopeId,
-      version: this._version,
-      timeouts: this._timeouts,
+      blueprint_name: cdktf.stringToTerraform(this._blueprintName),
+      scope_id: cdktf.stringToTerraform(this._scopeId),
+      version: cdktf.stringToTerraform(this._version),
+      timeouts: dataAzurermBlueprintPublishedVersionTimeoutsToTerraform(this._timeouts),
     };
   }
 }

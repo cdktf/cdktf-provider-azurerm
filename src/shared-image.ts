@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface SharedImageConfig extends TerraformMetaArguments {
+export interface SharedImageConfig extends cdktf.TerraformMetaArguments {
   readonly description?: string;
   readonly eula?: string;
   readonly galleryName: string;
@@ -32,11 +31,31 @@ export interface SharedImageIdentifier {
   readonly publisher: string;
   readonly sku: string;
 }
+
+function sharedImageIdentifierToTerraform(struct?: SharedImageIdentifier): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    offer: cdktf.stringToTerraform(struct!.offer),
+    publisher: cdktf.stringToTerraform(struct!.publisher),
+    sku: cdktf.stringToTerraform(struct!.sku),
+  }
+}
+
 export interface SharedImagePurchasePlan {
   readonly name: string;
   readonly product?: string;
   readonly publisher?: string;
 }
+
+function sharedImagePurchasePlanToTerraform(struct?: SharedImagePurchasePlan): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    name: cdktf.stringToTerraform(struct!.name),
+    product: cdktf.stringToTerraform(struct!.product),
+    publisher: cdktf.stringToTerraform(struct!.publisher),
+  }
+}
+
 export interface SharedImageTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -44,9 +63,20 @@ export interface SharedImageTimeouts {
   readonly update?: string;
 }
 
+function sharedImageTimeoutsToTerraform(struct?: SharedImageTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class SharedImage extends TerraformResource {
+export class SharedImage extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -317,21 +347,21 @@ export class SharedImage extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      description: this._description,
-      eula: this._eula,
-      gallery_name: this._galleryName,
-      hyper_v_generation: this._hyperVGeneration,
-      location: this._location,
-      name: this._name,
-      os_type: this._osType,
-      privacy_statement_uri: this._privacyStatementUri,
-      release_note_uri: this._releaseNoteUri,
-      resource_group_name: this._resourceGroupName,
-      specialized: this._specialized,
-      tags: this._tags,
-      identifier: this._identifier,
-      purchase_plan: this._purchasePlan,
-      timeouts: this._timeouts,
+      description: cdktf.stringToTerraform(this._description),
+      eula: cdktf.stringToTerraform(this._eula),
+      gallery_name: cdktf.stringToTerraform(this._galleryName),
+      hyper_v_generation: cdktf.stringToTerraform(this._hyperVGeneration),
+      location: cdktf.stringToTerraform(this._location),
+      name: cdktf.stringToTerraform(this._name),
+      os_type: cdktf.stringToTerraform(this._osType),
+      privacy_statement_uri: cdktf.stringToTerraform(this._privacyStatementUri),
+      release_note_uri: cdktf.stringToTerraform(this._releaseNoteUri),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      specialized: cdktf.booleanToTerraform(this._specialized),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      identifier: cdktf.listMapper(sharedImageIdentifierToTerraform)(this._identifier),
+      purchase_plan: cdktf.listMapper(sharedImagePurchasePlanToTerraform)(this._purchasePlan),
+      timeouts: sharedImageTimeoutsToTerraform(this._timeouts),
     };
   }
 }

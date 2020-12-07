@@ -2,13 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformDataSource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
-import { StringMap } from "cdktf";
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataAzurermNatGatewayConfig extends TerraformMetaArguments {
+export interface DataAzurermNatGatewayConfig extends cdktf.TerraformMetaArguments {
   readonly name: string;
   readonly publicIpAddressIds?: string[];
   readonly publicIpPrefixIds?: string[];
@@ -20,9 +18,17 @@ export interface DataAzurermNatGatewayTimeouts {
   readonly read?: string;
 }
 
+function dataAzurermNatGatewayTimeoutsToTerraform(struct?: DataAzurermNatGatewayTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    read: cdktf.stringToTerraform(struct!.read),
+  }
+}
+
+
 // Resource
 
-export class DataAzurermNatGateway extends TerraformDataSource {
+export class DataAzurermNatGateway extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
@@ -135,7 +141,7 @@ export class DataAzurermNatGateway extends TerraformDataSource {
 
   // tags - computed: true, optional: false, required: false
   public tags(key: string): string {
-    return new StringMap(this, 'tags').lookup(key);
+    return new cdktf.StringMap(this, 'tags').lookup(key);
   }
 
   // zones - computed: true, optional: false, required: false
@@ -165,11 +171,11 @@ export class DataAzurermNatGateway extends TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      name: this._name,
-      public_ip_address_ids: this._publicIpAddressIds,
-      public_ip_prefix_ids: this._publicIpPrefixIds,
-      resource_group_name: this._resourceGroupName,
-      timeouts: this._timeouts,
+      name: cdktf.stringToTerraform(this._name),
+      public_ip_address_ids: cdktf.listMapper(cdktf.stringToTerraform)(this._publicIpAddressIds),
+      public_ip_prefix_ids: cdktf.listMapper(cdktf.stringToTerraform)(this._publicIpPrefixIds),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      timeouts: dataAzurermNatGatewayTimeoutsToTerraform(this._timeouts),
     };
   }
 }

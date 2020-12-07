@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface CostManagementExportResourceGroupConfig extends TerraformMetaArguments {
+export interface CostManagementExportResourceGroupConfig extends cdktf.TerraformMetaArguments {
   readonly active?: boolean;
   readonly name: string;
   readonly recurrencePeriodEnd: string;
@@ -26,10 +25,29 @@ export interface CostManagementExportResourceGroupDeliveryInfo {
   readonly rootFolderPath: string;
   readonly storageAccountId: string;
 }
+
+function costManagementExportResourceGroupDeliveryInfoToTerraform(struct?: CostManagementExportResourceGroupDeliveryInfo): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    container_name: cdktf.stringToTerraform(struct!.containerName),
+    root_folder_path: cdktf.stringToTerraform(struct!.rootFolderPath),
+    storage_account_id: cdktf.stringToTerraform(struct!.storageAccountId),
+  }
+}
+
 export interface CostManagementExportResourceGroupQuery {
   readonly timeFrame: string;
   readonly type: string;
 }
+
+function costManagementExportResourceGroupQueryToTerraform(struct?: CostManagementExportResourceGroupQuery): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    time_frame: cdktf.stringToTerraform(struct!.timeFrame),
+    type: cdktf.stringToTerraform(struct!.type),
+  }
+}
+
 export interface CostManagementExportResourceGroupTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -37,9 +55,20 @@ export interface CostManagementExportResourceGroupTimeouts {
   readonly update?: string;
 }
 
+function costManagementExportResourceGroupTimeoutsToTerraform(struct?: CostManagementExportResourceGroupTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class CostManagementExportResourceGroup extends TerraformResource {
+export class CostManagementExportResourceGroup extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -205,15 +234,15 @@ export class CostManagementExportResourceGroup extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      active: this._active,
-      name: this._name,
-      recurrence_period_end: this._recurrencePeriodEnd,
-      recurrence_period_start: this._recurrencePeriodStart,
-      recurrence_type: this._recurrenceType,
-      resource_group_id: this._resourceGroupId,
-      delivery_info: this._deliveryInfo,
-      query: this._query,
-      timeouts: this._timeouts,
+      active: cdktf.booleanToTerraform(this._active),
+      name: cdktf.stringToTerraform(this._name),
+      recurrence_period_end: cdktf.stringToTerraform(this._recurrencePeriodEnd),
+      recurrence_period_start: cdktf.stringToTerraform(this._recurrencePeriodStart),
+      recurrence_type: cdktf.stringToTerraform(this._recurrenceType),
+      resource_group_id: cdktf.stringToTerraform(this._resourceGroupId),
+      delivery_info: cdktf.listMapper(costManagementExportResourceGroupDeliveryInfoToTerraform)(this._deliveryInfo),
+      query: cdktf.listMapper(costManagementExportResourceGroupQueryToTerraform)(this._query),
+      timeouts: costManagementExportResourceGroupTimeoutsToTerraform(this._timeouts),
     };
   }
 }

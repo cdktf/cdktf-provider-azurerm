@@ -2,19 +2,17 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformDataSource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
-import { ComplexComputedList } from "cdktf";
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataAzurermKeyVaultCertificateIssuerConfig extends TerraformMetaArguments {
+export interface DataAzurermKeyVaultCertificateIssuerConfig extends cdktf.TerraformMetaArguments {
   readonly keyVaultId: string;
   readonly name: string;
   /** timeouts block */
   readonly timeouts?: DataAzurermKeyVaultCertificateIssuerTimeouts;
 }
-export class DataAzurermKeyVaultCertificateIssuerAdmin extends ComplexComputedList {
+export class DataAzurermKeyVaultCertificateIssuerAdmin extends cdktf.ComplexComputedList {
 
   // email_address - computed: true, optional: false, required: false
   public get emailAddress() {
@@ -40,9 +38,17 @@ export interface DataAzurermKeyVaultCertificateIssuerTimeouts {
   readonly read?: string;
 }
 
+function dataAzurermKeyVaultCertificateIssuerTimeoutsToTerraform(struct?: DataAzurermKeyVaultCertificateIssuerTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    read: cdktf.stringToTerraform(struct!.read),
+  }
+}
+
+
 // Resource
 
-export class DataAzurermKeyVaultCertificateIssuer extends TerraformDataSource {
+export class DataAzurermKeyVaultCertificateIssuer extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
@@ -141,9 +147,9 @@ export class DataAzurermKeyVaultCertificateIssuer extends TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      key_vault_id: this._keyVaultId,
-      name: this._name,
-      timeouts: this._timeouts,
+      key_vault_id: cdktf.stringToTerraform(this._keyVaultId),
+      name: cdktf.stringToTerraform(this._name),
+      timeouts: dataAzurermKeyVaultCertificateIssuerTimeoutsToTerraform(this._timeouts),
     };
   }
 }

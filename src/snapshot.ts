@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface SnapshotConfig extends TerraformMetaArguments {
+export interface SnapshotConfig extends cdktf.TerraformMetaArguments {
   readonly createOption: string;
   readonly diskSizeGb?: number;
   readonly location: string;
@@ -26,10 +25,28 @@ export interface SnapshotEncryptionSettingsDiskEncryptionKey {
   readonly secretUrl: string;
   readonly sourceVaultId: string;
 }
+
+function snapshotEncryptionSettingsDiskEncryptionKeyToTerraform(struct?: SnapshotEncryptionSettingsDiskEncryptionKey): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    secret_url: cdktf.stringToTerraform(struct!.secretUrl),
+    source_vault_id: cdktf.stringToTerraform(struct!.sourceVaultId),
+  }
+}
+
 export interface SnapshotEncryptionSettingsKeyEncryptionKey {
   readonly keyUrl: string;
   readonly sourceVaultId: string;
 }
+
+function snapshotEncryptionSettingsKeyEncryptionKeyToTerraform(struct?: SnapshotEncryptionSettingsKeyEncryptionKey): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    key_url: cdktf.stringToTerraform(struct!.keyUrl),
+    source_vault_id: cdktf.stringToTerraform(struct!.sourceVaultId),
+  }
+}
+
 export interface SnapshotEncryptionSettings {
   readonly enabled: boolean;
   /** disk_encryption_key block */
@@ -37,6 +54,16 @@ export interface SnapshotEncryptionSettings {
   /** key_encryption_key block */
   readonly keyEncryptionKey?: SnapshotEncryptionSettingsKeyEncryptionKey[];
 }
+
+function snapshotEncryptionSettingsToTerraform(struct?: SnapshotEncryptionSettings): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    enabled: cdktf.booleanToTerraform(struct!.enabled),
+    disk_encryption_key: cdktf.listMapper(snapshotEncryptionSettingsDiskEncryptionKeyToTerraform)(struct!.diskEncryptionKey),
+    key_encryption_key: cdktf.listMapper(snapshotEncryptionSettingsKeyEncryptionKeyToTerraform)(struct!.keyEncryptionKey),
+  }
+}
+
 export interface SnapshotTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -44,9 +71,20 @@ export interface SnapshotTimeouts {
   readonly update?: string;
 }
 
+function snapshotTimeoutsToTerraform(struct?: SnapshotTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class Snapshot extends TerraformResource {
+export class Snapshot extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -255,17 +293,17 @@ export class Snapshot extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      create_option: this._createOption,
-      disk_size_gb: this._diskSizeGb,
-      location: this._location,
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      source_resource_id: this._sourceResourceId,
-      source_uri: this._sourceUri,
-      storage_account_id: this._storageAccountId,
-      tags: this._tags,
-      encryption_settings: this._encryptionSettings,
-      timeouts: this._timeouts,
+      create_option: cdktf.stringToTerraform(this._createOption),
+      disk_size_gb: cdktf.numberToTerraform(this._diskSizeGb),
+      location: cdktf.stringToTerraform(this._location),
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      source_resource_id: cdktf.stringToTerraform(this._sourceResourceId),
+      source_uri: cdktf.stringToTerraform(this._sourceUri),
+      storage_account_id: cdktf.stringToTerraform(this._storageAccountId),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      encryption_settings: cdktf.listMapper(snapshotEncryptionSettingsToTerraform)(this._encryptionSettings),
+      timeouts: snapshotTimeoutsToTerraform(this._timeouts),
     };
   }
 }

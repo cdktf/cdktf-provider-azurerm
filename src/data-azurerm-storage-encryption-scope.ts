@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformDataSource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataAzurermStorageEncryptionScopeConfig extends TerraformMetaArguments {
+export interface DataAzurermStorageEncryptionScopeConfig extends cdktf.TerraformMetaArguments {
   readonly name: string;
   readonly storageAccountId: string;
   /** timeouts block */
@@ -17,9 +16,17 @@ export interface DataAzurermStorageEncryptionScopeTimeouts {
   readonly read?: string;
 }
 
+function dataAzurermStorageEncryptionScopeTimeoutsToTerraform(struct?: DataAzurermStorageEncryptionScopeTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    read: cdktf.stringToTerraform(struct!.read),
+  }
+}
+
+
 // Resource
 
-export class DataAzurermStorageEncryptionScope extends TerraformDataSource {
+export class DataAzurermStorageEncryptionScope extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
@@ -108,9 +115,9 @@ export class DataAzurermStorageEncryptionScope extends TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      name: this._name,
-      storage_account_id: this._storageAccountId,
-      timeouts: this._timeouts,
+      name: cdktf.stringToTerraform(this._name),
+      storage_account_id: cdktf.stringToTerraform(this._storageAccountId),
+      timeouts: dataAzurermStorageEncryptionScopeTimeoutsToTerraform(this._timeouts),
     };
   }
 }

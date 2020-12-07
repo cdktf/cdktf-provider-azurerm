@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface AppServiceSourceControlTokenConfig extends TerraformMetaArguments {
+export interface AppServiceSourceControlTokenConfig extends cdktf.TerraformMetaArguments {
   readonly token: string;
   readonly tokenSecret?: string;
   readonly type: string;
@@ -21,9 +20,20 @@ export interface AppServiceSourceControlTokenTimeouts {
   readonly update?: string;
 }
 
+function appServiceSourceControlTokenTimeoutsToTerraform(struct?: AppServiceSourceControlTokenTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class AppServiceSourceControlToken extends TerraformResource {
+export class AppServiceSourceControlToken extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -119,10 +129,10 @@ export class AppServiceSourceControlToken extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      token: this._token,
-      token_secret: this._tokenSecret,
-      type: this._type,
-      timeouts: this._timeouts,
+      token: cdktf.stringToTerraform(this._token),
+      token_secret: cdktf.stringToTerraform(this._tokenSecret),
+      type: cdktf.stringToTerraform(this._type),
+      timeouts: appServiceSourceControlTokenTimeoutsToTerraform(this._timeouts),
     };
   }
 }

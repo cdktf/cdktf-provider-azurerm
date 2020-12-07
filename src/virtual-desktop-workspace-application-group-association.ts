@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface VirtualDesktopWorkspaceApplicationGroupAssociationConfig extends TerraformMetaArguments {
+export interface VirtualDesktopWorkspaceApplicationGroupAssociationConfig extends cdktf.TerraformMetaArguments {
   readonly applicationGroupId: string;
   readonly workspaceId: string;
   /** timeouts block */
@@ -20,9 +19,20 @@ export interface VirtualDesktopWorkspaceApplicationGroupAssociationTimeouts {
   readonly update?: string;
 }
 
+function virtualDesktopWorkspaceApplicationGroupAssociationTimeoutsToTerraform(struct?: VirtualDesktopWorkspaceApplicationGroupAssociationTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class VirtualDesktopWorkspaceApplicationGroupAssociation extends TerraformResource {
+export class VirtualDesktopWorkspaceApplicationGroupAssociation extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -101,9 +111,9 @@ export class VirtualDesktopWorkspaceApplicationGroupAssociation extends Terrafor
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      application_group_id: this._applicationGroupId,
-      workspace_id: this._workspaceId,
-      timeouts: this._timeouts,
+      application_group_id: cdktf.stringToTerraform(this._applicationGroupId),
+      workspace_id: cdktf.stringToTerraform(this._workspaceId),
+      timeouts: virtualDesktopWorkspaceApplicationGroupAssociationTimeoutsToTerraform(this._timeouts),
     };
   }
 }

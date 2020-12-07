@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface ApiManagementApiConfig extends TerraformMetaArguments {
+export interface ApiManagementApiConfig extends cdktf.TerraformMetaArguments {
   readonly apiManagementName: string;
   readonly description?: string;
   readonly displayName: string;
@@ -36,24 +35,70 @@ export interface ApiManagementApiImportWsdlSelector {
   readonly endpointName: string;
   readonly serviceName: string;
 }
+
+function apiManagementApiImportWsdlSelectorToTerraform(struct?: ApiManagementApiImportWsdlSelector): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    endpoint_name: cdktf.stringToTerraform(struct!.endpointName),
+    service_name: cdktf.stringToTerraform(struct!.serviceName),
+  }
+}
+
 export interface ApiManagementApiImport {
   readonly contentFormat: string;
   readonly contentValue: string;
   /** wsdl_selector block */
   readonly wsdlSelector?: ApiManagementApiImportWsdlSelector[];
 }
+
+function apiManagementApiImportToTerraform(struct?: ApiManagementApiImport): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    content_format: cdktf.stringToTerraform(struct!.contentFormat),
+    content_value: cdktf.stringToTerraform(struct!.contentValue),
+    wsdl_selector: cdktf.listMapper(apiManagementApiImportWsdlSelectorToTerraform)(struct!.wsdlSelector),
+  }
+}
+
 export interface ApiManagementApiOauth2Authorization {
   readonly authorizationServerName: string;
   readonly scope?: string;
 }
+
+function apiManagementApiOauth2AuthorizationToTerraform(struct?: ApiManagementApiOauth2Authorization): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    authorization_server_name: cdktf.stringToTerraform(struct!.authorizationServerName),
+    scope: cdktf.stringToTerraform(struct!.scope),
+  }
+}
+
 export interface ApiManagementApiOpenidAuthentication {
   readonly bearerTokenSendingMethods?: string[];
   readonly openidProviderName: string;
 }
+
+function apiManagementApiOpenidAuthenticationToTerraform(struct?: ApiManagementApiOpenidAuthentication): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    bearer_token_sending_methods: cdktf.listMapper(cdktf.stringToTerraform)(struct!.bearerTokenSendingMethods),
+    openid_provider_name: cdktf.stringToTerraform(struct!.openidProviderName),
+  }
+}
+
 export interface ApiManagementApiSubscriptionKeyParameterNames {
   readonly header: string;
   readonly query: string;
 }
+
+function apiManagementApiSubscriptionKeyParameterNamesToTerraform(struct?: ApiManagementApiSubscriptionKeyParameterNames): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    header: cdktf.stringToTerraform(struct!.header),
+    query: cdktf.stringToTerraform(struct!.query),
+  }
+}
+
 export interface ApiManagementApiTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -61,9 +106,20 @@ export interface ApiManagementApiTimeouts {
   readonly update?: string;
 }
 
+function apiManagementApiTimeoutsToTerraform(struct?: ApiManagementApiTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class ApiManagementApi extends TerraformResource {
+export class ApiManagementApi extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -392,24 +448,24 @@ export class ApiManagementApi extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      api_management_name: this._apiManagementName,
-      description: this._description,
-      display_name: this._displayName,
-      name: this._name,
-      path: this._path,
-      protocols: this._protocols,
-      resource_group_name: this._resourceGroupName,
-      revision: this._revision,
-      service_url: this._serviceUrl,
-      soap_pass_through: this._soapPassThrough,
-      subscription_required: this._subscriptionRequired,
-      version: this._version,
-      version_set_id: this._versionSetId,
-      import: this._import,
-      oauth2_authorization: this._oauth2Authorization,
-      openid_authentication: this._openidAuthentication,
-      subscription_key_parameter_names: this._subscriptionKeyParameterNames,
-      timeouts: this._timeouts,
+      api_management_name: cdktf.stringToTerraform(this._apiManagementName),
+      description: cdktf.stringToTerraform(this._description),
+      display_name: cdktf.stringToTerraform(this._displayName),
+      name: cdktf.stringToTerraform(this._name),
+      path: cdktf.stringToTerraform(this._path),
+      protocols: cdktf.listMapper(cdktf.stringToTerraform)(this._protocols),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      revision: cdktf.stringToTerraform(this._revision),
+      service_url: cdktf.stringToTerraform(this._serviceUrl),
+      soap_pass_through: cdktf.booleanToTerraform(this._soapPassThrough),
+      subscription_required: cdktf.booleanToTerraform(this._subscriptionRequired),
+      version: cdktf.stringToTerraform(this._version),
+      version_set_id: cdktf.stringToTerraform(this._versionSetId),
+      import: cdktf.listMapper(apiManagementApiImportToTerraform)(this._import),
+      oauth2_authorization: cdktf.listMapper(apiManagementApiOauth2AuthorizationToTerraform)(this._oauth2Authorization),
+      openid_authentication: cdktf.listMapper(apiManagementApiOpenidAuthenticationToTerraform)(this._openidAuthentication),
+      subscription_key_parameter_names: cdktf.listMapper(apiManagementApiSubscriptionKeyParameterNamesToTerraform)(this._subscriptionKeyParameterNames),
+      timeouts: apiManagementApiTimeoutsToTerraform(this._timeouts),
     };
   }
 }

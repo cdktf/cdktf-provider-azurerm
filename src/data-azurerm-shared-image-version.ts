@@ -2,14 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformDataSource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
-import { StringMap } from "cdktf";
-import { ComplexComputedList } from "cdktf";
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataAzurermSharedImageVersionConfig extends TerraformMetaArguments {
+export interface DataAzurermSharedImageVersionConfig extends cdktf.TerraformMetaArguments {
   readonly galleryName: string;
   readonly imageName: string;
   readonly name: string;
@@ -17,7 +14,7 @@ export interface DataAzurermSharedImageVersionConfig extends TerraformMetaArgume
   /** timeouts block */
   readonly timeouts?: DataAzurermSharedImageVersionTimeouts;
 }
-export class DataAzurermSharedImageVersionTargetRegion extends ComplexComputedList {
+export class DataAzurermSharedImageVersionTargetRegion extends cdktf.ComplexComputedList {
 
   // name - computed: true, optional: false, required: false
   public get name() {
@@ -38,9 +35,17 @@ export interface DataAzurermSharedImageVersionTimeouts {
   readonly read?: string;
 }
 
+function dataAzurermSharedImageVersionTimeoutsToTerraform(struct?: DataAzurermSharedImageVersionTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    read: cdktf.stringToTerraform(struct!.read),
+  }
+}
+
+
 // Resource
 
-export class DataAzurermSharedImageVersion extends TerraformDataSource {
+export class DataAzurermSharedImageVersion extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
@@ -152,7 +157,7 @@ export class DataAzurermSharedImageVersion extends TerraformDataSource {
 
   // tags - computed: true, optional: false, required: false
   public tags(key: string): string {
-    return new StringMap(this, 'tags').lookup(key);
+    return new cdktf.StringMap(this, 'tags').lookup(key);
   }
 
   // target_region - computed: true, optional: false, required: false
@@ -182,11 +187,11 @@ export class DataAzurermSharedImageVersion extends TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      gallery_name: this._galleryName,
-      image_name: this._imageName,
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      timeouts: this._timeouts,
+      gallery_name: cdktf.stringToTerraform(this._galleryName),
+      image_name: cdktf.stringToTerraform(this._imageName),
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      timeouts: dataAzurermSharedImageVersionTimeoutsToTerraform(this._timeouts),
     };
   }
 }

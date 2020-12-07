@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface VirtualDesktopApplicationGroupConfig extends TerraformMetaArguments {
+export interface VirtualDesktopApplicationGroupConfig extends cdktf.TerraformMetaArguments {
   readonly description?: string;
   readonly friendlyName?: string;
   readonly hostPoolId: string;
@@ -26,9 +25,20 @@ export interface VirtualDesktopApplicationGroupTimeouts {
   readonly update?: string;
 }
 
+function virtualDesktopApplicationGroupTimeoutsToTerraform(struct?: VirtualDesktopApplicationGroupTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class VirtualDesktopApplicationGroup extends TerraformResource {
+export class VirtualDesktopApplicationGroup extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -200,15 +210,15 @@ export class VirtualDesktopApplicationGroup extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      description: this._description,
-      friendly_name: this._friendlyName,
-      host_pool_id: this._hostPoolId,
-      location: this._location,
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      tags: this._tags,
-      type: this._type,
-      timeouts: this._timeouts,
+      description: cdktf.stringToTerraform(this._description),
+      friendly_name: cdktf.stringToTerraform(this._friendlyName),
+      host_pool_id: cdktf.stringToTerraform(this._hostPoolId),
+      location: cdktf.stringToTerraform(this._location),
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      type: cdktf.stringToTerraform(this._type),
+      timeouts: virtualDesktopApplicationGroupTimeoutsToTerraform(this._timeouts),
     };
   }
 }

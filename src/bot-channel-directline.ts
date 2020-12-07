@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface BotChannelDirectlineConfig extends TerraformMetaArguments {
+export interface BotChannelDirectlineConfig extends cdktf.TerraformMetaArguments {
   readonly botName: string;
   readonly location: string;
   readonly resourceGroupName: string;
@@ -24,6 +23,19 @@ export interface BotChannelDirectlineSite {
   readonly v1Allowed?: boolean;
   readonly v3Allowed?: boolean;
 }
+
+function botChannelDirectlineSiteToTerraform(struct?: BotChannelDirectlineSite): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    enabled: cdktf.booleanToTerraform(struct!.enabled),
+    enhanced_authentication_enabled: cdktf.booleanToTerraform(struct!.enhancedAuthenticationEnabled),
+    name: cdktf.stringToTerraform(struct!.name),
+    trusted_origins: cdktf.listMapper(cdktf.stringToTerraform)(struct!.trustedOrigins),
+    v1_allowed: cdktf.booleanToTerraform(struct!.v1Allowed),
+    v3_allowed: cdktf.booleanToTerraform(struct!.v3Allowed),
+  }
+}
+
 export interface BotChannelDirectlineTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -31,9 +43,20 @@ export interface BotChannelDirectlineTimeouts {
   readonly update?: string;
 }
 
+function botChannelDirectlineTimeoutsToTerraform(struct?: BotChannelDirectlineTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class BotChannelDirectline extends TerraformResource {
+export class BotChannelDirectline extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -140,11 +163,11 @@ export class BotChannelDirectline extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      bot_name: this._botName,
-      location: this._location,
-      resource_group_name: this._resourceGroupName,
-      site: this._site,
-      timeouts: this._timeouts,
+      bot_name: cdktf.stringToTerraform(this._botName),
+      location: cdktf.stringToTerraform(this._location),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      site: cdktf.listMapper(botChannelDirectlineSiteToTerraform)(this._site),
+      timeouts: botChannelDirectlineTimeoutsToTerraform(this._timeouts),
     };
   }
 }

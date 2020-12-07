@@ -2,14 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformDataSource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
-import { ComplexComputedList } from "cdktf";
-import { StringMap } from "cdktf";
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataAzurermImageConfig extends TerraformMetaArguments {
+export interface DataAzurermImageConfig extends cdktf.TerraformMetaArguments {
   readonly name?: string;
   readonly nameRegex?: string;
   readonly resourceGroupName: string;
@@ -17,7 +14,7 @@ export interface DataAzurermImageConfig extends TerraformMetaArguments {
   /** timeouts block */
   readonly timeouts?: DataAzurermImageTimeouts;
 }
-export class DataAzurermImageDataDisk extends ComplexComputedList {
+export class DataAzurermImageDataDisk extends cdktf.ComplexComputedList {
 
   // blob_uri - computed: true, optional: false, required: false
   public get blobUri() {
@@ -44,7 +41,7 @@ export class DataAzurermImageDataDisk extends ComplexComputedList {
     return this.getNumberAttribute('size_gb');
   }
 }
-export class DataAzurermImageOsDisk extends ComplexComputedList {
+export class DataAzurermImageOsDisk extends cdktf.ComplexComputedList {
 
   // blob_uri - computed: true, optional: false, required: false
   public get blobUri() {
@@ -80,9 +77,17 @@ export interface DataAzurermImageTimeouts {
   readonly read?: string;
 }
 
+function dataAzurermImageTimeoutsToTerraform(struct?: DataAzurermImageTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    read: cdktf.stringToTerraform(struct!.read),
+  }
+}
+
+
 // Resource
 
-export class DataAzurermImage extends TerraformDataSource {
+export class DataAzurermImage extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
@@ -193,7 +198,7 @@ export class DataAzurermImage extends TerraformDataSource {
 
   // tags - computed: true, optional: false, required: false
   public tags(key: string): string {
-    return new StringMap(this, 'tags').lookup(key);
+    return new cdktf.StringMap(this, 'tags').lookup(key);
   }
 
   // zone_resilient - computed: true, optional: false, required: false
@@ -223,11 +228,11 @@ export class DataAzurermImage extends TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      name: this._name,
-      name_regex: this._nameRegex,
-      resource_group_name: this._resourceGroupName,
-      sort_descending: this._sortDescending,
-      timeouts: this._timeouts,
+      name: cdktf.stringToTerraform(this._name),
+      name_regex: cdktf.stringToTerraform(this._nameRegex),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      sort_descending: cdktf.booleanToTerraform(this._sortDescending),
+      timeouts: dataAzurermImageTimeoutsToTerraform(this._timeouts),
     };
   }
 }

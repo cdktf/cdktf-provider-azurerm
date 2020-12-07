@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface HpcCacheBlobTargetConfig extends TerraformMetaArguments {
+export interface HpcCacheBlobTargetConfig extends cdktf.TerraformMetaArguments {
   readonly cacheName: string;
   readonly name: string;
   readonly namespacePath: string;
@@ -23,9 +22,20 @@ export interface HpcCacheBlobTargetTimeouts {
   readonly update?: string;
 }
 
+function hpcCacheBlobTargetTimeoutsToTerraform(struct?: HpcCacheBlobTargetTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class HpcCacheBlobTarget extends TerraformResource {
+export class HpcCacheBlobTarget extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -146,12 +156,12 @@ export class HpcCacheBlobTarget extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      cache_name: this._cacheName,
-      name: this._name,
-      namespace_path: this._namespacePath,
-      resource_group_name: this._resourceGroupName,
-      storage_container_id: this._storageContainerId,
-      timeouts: this._timeouts,
+      cache_name: cdktf.stringToTerraform(this._cacheName),
+      name: cdktf.stringToTerraform(this._name),
+      namespace_path: cdktf.stringToTerraform(this._namespacePath),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      storage_container_id: cdktf.stringToTerraform(this._storageContainerId),
+      timeouts: hpcCacheBlobTargetTimeoutsToTerraform(this._timeouts),
     };
   }
 }

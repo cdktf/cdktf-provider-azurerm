@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface ServiceFabricClusterConfig extends TerraformMetaArguments {
+export interface ServiceFabricClusterConfig extends cdktf.TerraformMetaArguments {
   readonly addOnFeatures?: string[];
   readonly clusterCodeVersion?: string;
   readonly location: string;
@@ -44,29 +43,86 @@ export interface ServiceFabricClusterAzureActiveDirectory {
   readonly clusterApplicationId: string;
   readonly tenantId: string;
 }
+
+function serviceFabricClusterAzureActiveDirectoryToTerraform(struct?: ServiceFabricClusterAzureActiveDirectory): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    client_application_id: cdktf.stringToTerraform(struct!.clientApplicationId),
+    cluster_application_id: cdktf.stringToTerraform(struct!.clusterApplicationId),
+    tenant_id: cdktf.stringToTerraform(struct!.tenantId),
+  }
+}
+
 export interface ServiceFabricClusterCertificate {
   readonly thumbprint: string;
   readonly thumbprintSecondary?: string;
   readonly x509StoreName: string;
 }
+
+function serviceFabricClusterCertificateToTerraform(struct?: ServiceFabricClusterCertificate): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    thumbprint: cdktf.stringToTerraform(struct!.thumbprint),
+    thumbprint_secondary: cdktf.stringToTerraform(struct!.thumbprintSecondary),
+    x509_store_name: cdktf.stringToTerraform(struct!.x509StoreName),
+  }
+}
+
 export interface ServiceFabricClusterCertificateCommonNamesCommonNames {
   readonly certificateCommonName: string;
   readonly certificateIssuerThumbprint?: string;
 }
+
+function serviceFabricClusterCertificateCommonNamesCommonNamesToTerraform(struct?: ServiceFabricClusterCertificateCommonNamesCommonNames): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    certificate_common_name: cdktf.stringToTerraform(struct!.certificateCommonName),
+    certificate_issuer_thumbprint: cdktf.stringToTerraform(struct!.certificateIssuerThumbprint),
+  }
+}
+
 export interface ServiceFabricClusterCertificateCommonNames {
   readonly x509StoreName: string;
   /** common_names block */
   readonly commonNames: ServiceFabricClusterCertificateCommonNamesCommonNames[];
 }
+
+function serviceFabricClusterCertificateCommonNamesToTerraform(struct?: ServiceFabricClusterCertificateCommonNames): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    x509_store_name: cdktf.stringToTerraform(struct!.x509StoreName),
+    common_names: cdktf.listMapper(serviceFabricClusterCertificateCommonNamesCommonNamesToTerraform)(struct!.commonNames),
+  }
+}
+
 export interface ServiceFabricClusterClientCertificateCommonName {
   readonly commonName: string;
   readonly isAdmin: boolean;
   readonly issuerThumbprint?: string;
 }
+
+function serviceFabricClusterClientCertificateCommonNameToTerraform(struct?: ServiceFabricClusterClientCertificateCommonName): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    common_name: cdktf.stringToTerraform(struct!.commonName),
+    is_admin: cdktf.booleanToTerraform(struct!.isAdmin),
+    issuer_thumbprint: cdktf.stringToTerraform(struct!.issuerThumbprint),
+  }
+}
+
 export interface ServiceFabricClusterClientCertificateThumbprint {
   readonly isAdmin: boolean;
   readonly thumbprint: string;
 }
+
+function serviceFabricClusterClientCertificateThumbprintToTerraform(struct?: ServiceFabricClusterClientCertificateThumbprint): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    is_admin: cdktf.booleanToTerraform(struct!.isAdmin),
+    thumbprint: cdktf.stringToTerraform(struct!.thumbprint),
+  }
+}
+
 export interface ServiceFabricClusterDiagnosticsConfig {
   readonly blobEndpoint: string;
   readonly protectedAccountKeyName: string;
@@ -74,18 +130,57 @@ export interface ServiceFabricClusterDiagnosticsConfig {
   readonly storageAccountName: string;
   readonly tableEndpoint: string;
 }
+
+function serviceFabricClusterDiagnosticsConfigToTerraform(struct?: ServiceFabricClusterDiagnosticsConfig): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    blob_endpoint: cdktf.stringToTerraform(struct!.blobEndpoint),
+    protected_account_key_name: cdktf.stringToTerraform(struct!.protectedAccountKeyName),
+    queue_endpoint: cdktf.stringToTerraform(struct!.queueEndpoint),
+    storage_account_name: cdktf.stringToTerraform(struct!.storageAccountName),
+    table_endpoint: cdktf.stringToTerraform(struct!.tableEndpoint),
+  }
+}
+
 export interface ServiceFabricClusterFabricSettings {
   readonly name: string;
   readonly parameters?: { [key: string]: string };
 }
+
+function serviceFabricClusterFabricSettingsToTerraform(struct?: ServiceFabricClusterFabricSettings): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    name: cdktf.stringToTerraform(struct!.name),
+    parameters: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.parameters),
+  }
+}
+
 export interface ServiceFabricClusterNodeTypeApplicationPorts {
   readonly endPort: number;
   readonly startPort: number;
 }
+
+function serviceFabricClusterNodeTypeApplicationPortsToTerraform(struct?: ServiceFabricClusterNodeTypeApplicationPorts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    end_port: cdktf.numberToTerraform(struct!.endPort),
+    start_port: cdktf.numberToTerraform(struct!.startPort),
+  }
+}
+
 export interface ServiceFabricClusterNodeTypeEphemeralPorts {
   readonly endPort: number;
   readonly startPort: number;
 }
+
+function serviceFabricClusterNodeTypeEphemeralPortsToTerraform(struct?: ServiceFabricClusterNodeTypeEphemeralPorts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    end_port: cdktf.numberToTerraform(struct!.endPort),
+    start_port: cdktf.numberToTerraform(struct!.startPort),
+  }
+}
+
 export interface ServiceFabricClusterNodeType {
   readonly capacities?: { [key: string]: string };
   readonly clientEndpointPort: number;
@@ -101,11 +196,39 @@ export interface ServiceFabricClusterNodeType {
   /** ephemeral_ports block */
   readonly ephemeralPorts?: ServiceFabricClusterNodeTypeEphemeralPorts[];
 }
+
+function serviceFabricClusterNodeTypeToTerraform(struct?: ServiceFabricClusterNodeType): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    capacities: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.capacities),
+    client_endpoint_port: cdktf.numberToTerraform(struct!.clientEndpointPort),
+    durability_level: cdktf.stringToTerraform(struct!.durabilityLevel),
+    http_endpoint_port: cdktf.numberToTerraform(struct!.httpEndpointPort),
+    instance_count: cdktf.numberToTerraform(struct!.instanceCount),
+    is_primary: cdktf.booleanToTerraform(struct!.isPrimary),
+    name: cdktf.stringToTerraform(struct!.name),
+    placement_properties: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.placementProperties),
+    reverse_proxy_endpoint_port: cdktf.numberToTerraform(struct!.reverseProxyEndpointPort),
+    application_ports: cdktf.listMapper(serviceFabricClusterNodeTypeApplicationPortsToTerraform)(struct!.applicationPorts),
+    ephemeral_ports: cdktf.listMapper(serviceFabricClusterNodeTypeEphemeralPortsToTerraform)(struct!.ephemeralPorts),
+  }
+}
+
 export interface ServiceFabricClusterReverseProxyCertificate {
   readonly thumbprint: string;
   readonly thumbprintSecondary?: string;
   readonly x509StoreName: string;
 }
+
+function serviceFabricClusterReverseProxyCertificateToTerraform(struct?: ServiceFabricClusterReverseProxyCertificate): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    thumbprint: cdktf.stringToTerraform(struct!.thumbprint),
+    thumbprint_secondary: cdktf.stringToTerraform(struct!.thumbprintSecondary),
+    x509_store_name: cdktf.stringToTerraform(struct!.x509StoreName),
+  }
+}
+
 export interface ServiceFabricClusterTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -113,9 +236,20 @@ export interface ServiceFabricClusterTimeouts {
   readonly update?: string;
 }
 
+function serviceFabricClusterTimeoutsToTerraform(struct?: ServiceFabricClusterTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class ServiceFabricCluster extends TerraformResource {
+export class ServiceFabricCluster extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -470,26 +604,26 @@ export class ServiceFabricCluster extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      add_on_features: this._addOnFeatures,
-      cluster_code_version: this._clusterCodeVersion,
-      location: this._location,
-      management_endpoint: this._managementEndpoint,
-      name: this._name,
-      reliability_level: this._reliabilityLevel,
-      resource_group_name: this._resourceGroupName,
-      tags: this._tags,
-      upgrade_mode: this._upgradeMode,
-      vm_image: this._vmImage,
-      azure_active_directory: this._azureActiveDirectory,
-      certificate: this._certificate,
-      certificate_common_names: this._certificateCommonNames,
-      client_certificate_common_name: this._clientCertificateCommonName,
-      client_certificate_thumbprint: this._clientCertificateThumbprint,
-      diagnostics_config: this._diagnosticsConfig,
-      fabric_settings: this._fabricSettings,
-      node_type: this._nodeType,
-      reverse_proxy_certificate: this._reverseProxyCertificate,
-      timeouts: this._timeouts,
+      add_on_features: cdktf.listMapper(cdktf.stringToTerraform)(this._addOnFeatures),
+      cluster_code_version: cdktf.stringToTerraform(this._clusterCodeVersion),
+      location: cdktf.stringToTerraform(this._location),
+      management_endpoint: cdktf.stringToTerraform(this._managementEndpoint),
+      name: cdktf.stringToTerraform(this._name),
+      reliability_level: cdktf.stringToTerraform(this._reliabilityLevel),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      upgrade_mode: cdktf.stringToTerraform(this._upgradeMode),
+      vm_image: cdktf.stringToTerraform(this._vmImage),
+      azure_active_directory: cdktf.listMapper(serviceFabricClusterAzureActiveDirectoryToTerraform)(this._azureActiveDirectory),
+      certificate: cdktf.listMapper(serviceFabricClusterCertificateToTerraform)(this._certificate),
+      certificate_common_names: cdktf.listMapper(serviceFabricClusterCertificateCommonNamesToTerraform)(this._certificateCommonNames),
+      client_certificate_common_name: cdktf.listMapper(serviceFabricClusterClientCertificateCommonNameToTerraform)(this._clientCertificateCommonName),
+      client_certificate_thumbprint: cdktf.listMapper(serviceFabricClusterClientCertificateThumbprintToTerraform)(this._clientCertificateThumbprint),
+      diagnostics_config: cdktf.listMapper(serviceFabricClusterDiagnosticsConfigToTerraform)(this._diagnosticsConfig),
+      fabric_settings: cdktf.listMapper(serviceFabricClusterFabricSettingsToTerraform)(this._fabricSettings),
+      node_type: cdktf.listMapper(serviceFabricClusterNodeTypeToTerraform)(this._nodeType),
+      reverse_proxy_certificate: cdktf.listMapper(serviceFabricClusterReverseProxyCertificateToTerraform)(this._reverseProxyCertificate),
+      timeouts: serviceFabricClusterTimeoutsToTerraform(this._timeouts),
     };
   }
 }

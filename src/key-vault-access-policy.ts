@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface KeyVaultAccessPolicyAConfig extends TerraformMetaArguments {
+export interface KeyVaultAccessPolicyAConfig extends cdktf.TerraformMetaArguments {
   readonly applicationId?: string;
   readonly certificatePermissions?: string[];
   readonly keyPermissions?: string[];
@@ -26,9 +25,20 @@ export interface KeyVaultAccessPolicyTimeouts {
   readonly update?: string;
 }
 
+function keyVaultAccessPolicyTimeoutsToTerraform(struct?: KeyVaultAccessPolicyTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class KeyVaultAccessPolicyA extends TerraformResource {
+export class KeyVaultAccessPolicyA extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -206,15 +216,15 @@ export class KeyVaultAccessPolicyA extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      application_id: this._applicationId,
-      certificate_permissions: this._certificatePermissions,
-      key_permissions: this._keyPermissions,
-      key_vault_id: this._keyVaultId,
-      object_id: this._objectId,
-      secret_permissions: this._secretPermissions,
-      storage_permissions: this._storagePermissions,
-      tenant_id: this._tenantId,
-      timeouts: this._timeouts,
+      application_id: cdktf.stringToTerraform(this._applicationId),
+      certificate_permissions: cdktf.listMapper(cdktf.stringToTerraform)(this._certificatePermissions),
+      key_permissions: cdktf.listMapper(cdktf.stringToTerraform)(this._keyPermissions),
+      key_vault_id: cdktf.stringToTerraform(this._keyVaultId),
+      object_id: cdktf.stringToTerraform(this._objectId),
+      secret_permissions: cdktf.listMapper(cdktf.stringToTerraform)(this._secretPermissions),
+      storage_permissions: cdktf.listMapper(cdktf.stringToTerraform)(this._storagePermissions),
+      tenant_id: cdktf.stringToTerraform(this._tenantId),
+      timeouts: keyVaultAccessPolicyTimeoutsToTerraform(this._timeouts),
     };
   }
 }

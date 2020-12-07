@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface MssqlElasticpoolConfig extends TerraformMetaArguments {
+export interface MssqlElasticpoolConfig extends cdktf.TerraformMetaArguments {
   readonly licenseType?: string;
   readonly location: string;
   readonly maxSizeBytes?: number;
@@ -28,12 +27,32 @@ export interface MssqlElasticpoolPerDatabaseSettings {
   readonly maxCapacity: number;
   readonly minCapacity: number;
 }
+
+function mssqlElasticpoolPerDatabaseSettingsToTerraform(struct?: MssqlElasticpoolPerDatabaseSettings): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    max_capacity: cdktf.numberToTerraform(struct!.maxCapacity),
+    min_capacity: cdktf.numberToTerraform(struct!.minCapacity),
+  }
+}
+
 export interface MssqlElasticpoolSku {
   readonly capacity: number;
   readonly family?: string;
   readonly name: string;
   readonly tier: string;
 }
+
+function mssqlElasticpoolSkuToTerraform(struct?: MssqlElasticpoolSku): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    capacity: cdktf.numberToTerraform(struct!.capacity),
+    family: cdktf.stringToTerraform(struct!.family),
+    name: cdktf.stringToTerraform(struct!.name),
+    tier: cdktf.stringToTerraform(struct!.tier),
+  }
+}
+
 export interface MssqlElasticpoolTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -41,9 +60,20 @@ export interface MssqlElasticpoolTimeouts {
   readonly update?: string;
 }
 
+function mssqlElasticpoolTimeoutsToTerraform(struct?: MssqlElasticpoolTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class MssqlElasticpool extends TerraformResource {
+export class MssqlElasticpool extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -263,18 +293,18 @@ export class MssqlElasticpool extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      license_type: this._licenseType,
-      location: this._location,
-      max_size_bytes: this._maxSizeBytes,
-      max_size_gb: this._maxSizeGb,
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      server_name: this._serverName,
-      tags: this._tags,
-      zone_redundant: this._zoneRedundant,
-      per_database_settings: this._perDatabaseSettings,
-      sku: this._sku,
-      timeouts: this._timeouts,
+      license_type: cdktf.stringToTerraform(this._licenseType),
+      location: cdktf.stringToTerraform(this._location),
+      max_size_bytes: cdktf.numberToTerraform(this._maxSizeBytes),
+      max_size_gb: cdktf.numberToTerraform(this._maxSizeGb),
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      server_name: cdktf.stringToTerraform(this._serverName),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      zone_redundant: cdktf.booleanToTerraform(this._zoneRedundant),
+      per_database_settings: cdktf.listMapper(mssqlElasticpoolPerDatabaseSettingsToTerraform)(this._perDatabaseSettings),
+      sku: cdktf.listMapper(mssqlElasticpoolSkuToTerraform)(this._sku),
+      timeouts: mssqlElasticpoolTimeoutsToTerraform(this._timeouts),
     };
   }
 }

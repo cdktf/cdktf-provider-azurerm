@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface NetworkProfileConfig extends TerraformMetaArguments {
+export interface NetworkProfileConfig extends cdktf.TerraformMetaArguments {
   readonly location: string;
   readonly name: string;
   readonly resourceGroupName: string;
@@ -21,11 +20,29 @@ export interface NetworkProfileContainerNetworkInterfaceIpConfiguration {
   readonly name: string;
   readonly subnetId: string;
 }
+
+function networkProfileContainerNetworkInterfaceIpConfigurationToTerraform(struct?: NetworkProfileContainerNetworkInterfaceIpConfiguration): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    name: cdktf.stringToTerraform(struct!.name),
+    subnet_id: cdktf.stringToTerraform(struct!.subnetId),
+  }
+}
+
 export interface NetworkProfileContainerNetworkInterface {
   readonly name: string;
   /** ip_configuration block */
   readonly ipConfiguration: NetworkProfileContainerNetworkInterfaceIpConfiguration[];
 }
+
+function networkProfileContainerNetworkInterfaceToTerraform(struct?: NetworkProfileContainerNetworkInterface): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    name: cdktf.stringToTerraform(struct!.name),
+    ip_configuration: cdktf.listMapper(networkProfileContainerNetworkInterfaceIpConfigurationToTerraform)(struct!.ipConfiguration),
+  }
+}
+
 export interface NetworkProfileTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -33,9 +50,20 @@ export interface NetworkProfileTimeouts {
   readonly update?: string;
 }
 
+function networkProfileTimeoutsToTerraform(struct?: NetworkProfileTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class NetworkProfile extends TerraformResource {
+export class NetworkProfile extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -164,12 +192,12 @@ export class NetworkProfile extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      location: this._location,
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      tags: this._tags,
-      container_network_interface: this._containerNetworkInterface,
-      timeouts: this._timeouts,
+      location: cdktf.stringToTerraform(this._location),
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      container_network_interface: cdktf.listMapper(networkProfileContainerNetworkInterfaceToTerraform)(this._containerNetworkInterface),
+      timeouts: networkProfileTimeoutsToTerraform(this._timeouts),
     };
   }
 }

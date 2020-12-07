@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataFactoryLinkedServiceDataLakeStorageGen2Config extends TerraformMetaArguments {
+export interface DataFactoryLinkedServiceDataLakeStorageGen2Config extends cdktf.TerraformMetaArguments {
   readonly additionalProperties?: { [key: string]: string };
   readonly annotations?: string[];
   readonly dataFactoryName: string;
@@ -31,9 +30,20 @@ export interface DataFactoryLinkedServiceDataLakeStorageGen2Timeouts {
   readonly update?: string;
 }
 
+function dataFactoryLinkedServiceDataLakeStorageGen2TimeoutsToTerraform(struct?: DataFactoryLinkedServiceDataLakeStorageGen2Timeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class DataFactoryLinkedServiceDataLakeStorageGen2 extends TerraformResource {
+export class DataFactoryLinkedServiceDataLakeStorageGen2 extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -293,20 +303,20 @@ export class DataFactoryLinkedServiceDataLakeStorageGen2 extends TerraformResour
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      additional_properties: this._additionalProperties,
-      annotations: this._annotations,
-      data_factory_name: this._dataFactoryName,
-      description: this._description,
-      integration_runtime_name: this._integrationRuntimeName,
-      name: this._name,
-      parameters: this._parameters,
-      resource_group_name: this._resourceGroupName,
-      service_principal_id: this._servicePrincipalId,
-      service_principal_key: this._servicePrincipalKey,
-      tenant: this._tenant,
-      url: this._url,
-      use_managed_identity: this._useManagedIdentity,
-      timeouts: this._timeouts,
+      additional_properties: cdktf.hashMapper(cdktf.anyToTerraform)(this._additionalProperties),
+      annotations: cdktf.listMapper(cdktf.stringToTerraform)(this._annotations),
+      data_factory_name: cdktf.stringToTerraform(this._dataFactoryName),
+      description: cdktf.stringToTerraform(this._description),
+      integration_runtime_name: cdktf.stringToTerraform(this._integrationRuntimeName),
+      name: cdktf.stringToTerraform(this._name),
+      parameters: cdktf.hashMapper(cdktf.anyToTerraform)(this._parameters),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      service_principal_id: cdktf.stringToTerraform(this._servicePrincipalId),
+      service_principal_key: cdktf.stringToTerraform(this._servicePrincipalKey),
+      tenant: cdktf.stringToTerraform(this._tenant),
+      url: cdktf.stringToTerraform(this._url),
+      use_managed_identity: cdktf.booleanToTerraform(this._useManagedIdentity),
+      timeouts: dataFactoryLinkedServiceDataLakeStorageGen2TimeoutsToTerraform(this._timeouts),
     };
   }
 }

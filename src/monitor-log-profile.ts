@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface MonitorLogProfileConfig extends TerraformMetaArguments {
+export interface MonitorLogProfileConfig extends cdktf.TerraformMetaArguments {
   readonly categories: string[];
   readonly locations: string[];
   readonly name: string;
@@ -22,6 +21,15 @@ export interface MonitorLogProfileRetentionPolicy {
   readonly days?: number;
   readonly enabled: boolean;
 }
+
+function monitorLogProfileRetentionPolicyToTerraform(struct?: MonitorLogProfileRetentionPolicy): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    days: cdktf.numberToTerraform(struct!.days),
+    enabled: cdktf.booleanToTerraform(struct!.enabled),
+  }
+}
+
 export interface MonitorLogProfileTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -29,9 +37,20 @@ export interface MonitorLogProfileTimeouts {
   readonly update?: string;
 }
 
+function monitorLogProfileTimeoutsToTerraform(struct?: MonitorLogProfileTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class MonitorLogProfile extends TerraformResource {
+export class MonitorLogProfile extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -172,13 +191,13 @@ export class MonitorLogProfile extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      categories: this._categories,
-      locations: this._locations,
-      name: this._name,
-      servicebus_rule_id: this._servicebusRuleId,
-      storage_account_id: this._storageAccountId,
-      retention_policy: this._retentionPolicy,
-      timeouts: this._timeouts,
+      categories: cdktf.listMapper(cdktf.stringToTerraform)(this._categories),
+      locations: cdktf.listMapper(cdktf.stringToTerraform)(this._locations),
+      name: cdktf.stringToTerraform(this._name),
+      servicebus_rule_id: cdktf.stringToTerraform(this._servicebusRuleId),
+      storage_account_id: cdktf.stringToTerraform(this._storageAccountId),
+      retention_policy: cdktf.listMapper(monitorLogProfileRetentionPolicyToTerraform)(this._retentionPolicy),
+      timeouts: monitorLogProfileTimeoutsToTerraform(this._timeouts),
     };
   }
 }

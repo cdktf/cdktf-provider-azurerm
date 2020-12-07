@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface EventgridDomainTopicConfig extends TerraformMetaArguments {
+export interface EventgridDomainTopicConfig extends cdktf.TerraformMetaArguments {
   readonly domainName: string;
   readonly name: string;
   readonly resourceGroupName: string;
@@ -20,9 +19,19 @@ export interface EventgridDomainTopicTimeouts {
   readonly read?: string;
 }
 
+function eventgridDomainTopicTimeoutsToTerraform(struct?: EventgridDomainTopicTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+  }
+}
+
+
 // Resource
 
-export class EventgridDomainTopic extends TerraformResource {
+export class EventgridDomainTopic extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -115,10 +124,10 @@ export class EventgridDomainTopic extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      domain_name: this._domainName,
-      name: this._name,
-      resource_group_name: this._resourceGroupName,
-      timeouts: this._timeouts,
+      domain_name: cdktf.stringToTerraform(this._domainName),
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      timeouts: eventgridDomainTopicTimeoutsToTerraform(this._timeouts),
     };
   }
 }

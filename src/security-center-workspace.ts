@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformResource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface SecurityCenterWorkspaceConfig extends TerraformMetaArguments {
+export interface SecurityCenterWorkspaceConfig extends cdktf.TerraformMetaArguments {
   readonly scope: string;
   readonly workspaceId: string;
   /** timeouts block */
@@ -20,9 +19,20 @@ export interface SecurityCenterWorkspaceTimeouts {
   readonly update?: string;
 }
 
+function securityCenterWorkspaceTimeoutsToTerraform(struct?: SecurityCenterWorkspaceTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
 // Resource
 
-export class SecurityCenterWorkspace extends TerraformResource {
+export class SecurityCenterWorkspace extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
@@ -101,9 +111,9 @@ export class SecurityCenterWorkspace extends TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      scope: this._scope,
-      workspace_id: this._workspaceId,
-      timeouts: this._timeouts,
+      scope: cdktf.stringToTerraform(this._scope),
+      workspace_id: cdktf.stringToTerraform(this._workspaceId),
+      timeouts: securityCenterWorkspaceTimeoutsToTerraform(this._timeouts),
     };
   }
 }

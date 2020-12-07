@@ -2,12 +2,11 @@
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
-import { TerraformDataSource } from 'cdktf';
-import { TerraformMetaArguments } from 'cdktf';
+import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataAzurermSentinelAlertRuleConfig extends TerraformMetaArguments {
+export interface DataAzurermSentinelAlertRuleConfig extends cdktf.TerraformMetaArguments {
   readonly logAnalyticsWorkspaceId: string;
   readonly name: string;
   /** timeouts block */
@@ -17,9 +16,17 @@ export interface DataAzurermSentinelAlertRuleTimeouts {
   readonly read?: string;
 }
 
+function dataAzurermSentinelAlertRuleTimeoutsToTerraform(struct?: DataAzurermSentinelAlertRuleTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    read: cdktf.stringToTerraform(struct!.read),
+  }
+}
+
+
 // Resource
 
-export class DataAzurermSentinelAlertRule extends TerraformDataSource {
+export class DataAzurermSentinelAlertRule extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
@@ -98,9 +105,9 @@ export class DataAzurermSentinelAlertRule extends TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      log_analytics_workspace_id: this._logAnalyticsWorkspaceId,
-      name: this._name,
-      timeouts: this._timeouts,
+      log_analytics_workspace_id: cdktf.stringToTerraform(this._logAnalyticsWorkspaceId),
+      name: cdktf.stringToTerraform(this._name),
+      timeouts: dataAzurermSentinelAlertRuleTimeoutsToTerraform(this._timeouts),
     };
   }
 }
