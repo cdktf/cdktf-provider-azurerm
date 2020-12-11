@@ -12,6 +12,7 @@ export interface CosmosdbSqlContainerConfig extends cdktf.TerraformMetaArguments
   readonly defaultTtl?: number;
   readonly name: string;
   readonly partitionKeyPath?: string;
+  readonly partitionKeyVersion?: number;
   readonly resourceGroupName: string;
   readonly throughput?: number;
   /** autoscale_settings block */
@@ -154,6 +155,7 @@ export class CosmosdbSqlContainer extends cdktf.TerraformResource {
     this._defaultTtl = config.defaultTtl;
     this._name = config.name;
     this._partitionKeyPath = config.partitionKeyPath;
+    this._partitionKeyVersion = config.partitionKeyVersion;
     this._resourceGroupName = config.resourceGroupName;
     this._throughput = config.throughput;
     this._autoscaleSettings = config.autoscaleSettings;
@@ -240,6 +242,22 @@ export class CosmosdbSqlContainer extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get partitionKeyPathInput() {
     return this._partitionKeyPath
+  }
+
+  // partition_key_version - computed: false, optional: true, required: false
+  private _partitionKeyVersion?: number;
+  public get partitionKeyVersion() {
+    return this.getNumberAttribute('partition_key_version');
+  }
+  public set partitionKeyVersion(value: number ) {
+    this._partitionKeyVersion = value;
+  }
+  public resetPartitionKeyVersion() {
+    this._partitionKeyVersion = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get partitionKeyVersionInput() {
+    return this._partitionKeyVersion
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -346,6 +364,7 @@ export class CosmosdbSqlContainer extends cdktf.TerraformResource {
       default_ttl: cdktf.numberToTerraform(this._defaultTtl),
       name: cdktf.stringToTerraform(this._name),
       partition_key_path: cdktf.stringToTerraform(this._partitionKeyPath),
+      partition_key_version: cdktf.numberToTerraform(this._partitionKeyVersion),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       throughput: cdktf.numberToTerraform(this._throughput),
       autoscale_settings: cdktf.listMapper(cosmosdbSqlContainerAutoscaleSettingsToTerraform)(this._autoscaleSettings),

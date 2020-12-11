@@ -8,6 +8,7 @@ import * as cdktf from 'cdktf';
 
 export interface KustoEventhubDataConnectionConfig extends cdktf.TerraformMetaArguments {
   readonly clusterName: string;
+  readonly compression?: string;
   readonly consumerGroup: string;
   readonly dataFormat?: string;
   readonly databaseName: string;
@@ -58,6 +59,7 @@ export class KustoEventhubDataConnection extends cdktf.TerraformResource {
       lifecycle: config.lifecycle
     });
     this._clusterName = config.clusterName;
+    this._compression = config.compression;
     this._consumerGroup = config.consumerGroup;
     this._dataFormat = config.dataFormat;
     this._databaseName = config.databaseName;
@@ -85,6 +87,22 @@ export class KustoEventhubDataConnection extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get clusterNameInput() {
     return this._clusterName
+  }
+
+  // compression - computed: false, optional: true, required: false
+  private _compression?: string;
+  public get compression() {
+    return this.getStringAttribute('compression');
+  }
+  public set compression(value: string ) {
+    this._compression = value;
+  }
+  public resetCompression() {
+    this._compression = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get compressionInput() {
+    return this._compression
   }
 
   // consumer_group - computed: false, optional: false, required: true
@@ -241,6 +259,7 @@ export class KustoEventhubDataConnection extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       cluster_name: cdktf.stringToTerraform(this._clusterName),
+      compression: cdktf.stringToTerraform(this._compression),
       consumer_group: cdktf.stringToTerraform(this._consumerGroup),
       data_format: cdktf.stringToTerraform(this._dataFormat),
       database_name: cdktf.stringToTerraform(this._databaseName),

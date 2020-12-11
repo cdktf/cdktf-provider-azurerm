@@ -10,6 +10,7 @@ export interface KustoClusterConfig extends cdktf.TerraformMetaArguments {
   readonly enableDiskEncryption?: boolean;
   readonly enablePurge?: boolean;
   readonly enableStreamingIngest?: boolean;
+  readonly engine?: string;
   readonly languageExtensions?: string[];
   readonly location: string;
   readonly name: string;
@@ -120,6 +121,7 @@ export class KustoCluster extends cdktf.TerraformResource {
     this._enableDiskEncryption = config.enableDiskEncryption;
     this._enablePurge = config.enablePurge;
     this._enableStreamingIngest = config.enableStreamingIngest;
+    this._engine = config.engine;
     this._languageExtensions = config.languageExtensions;
     this._location = config.location;
     this._name = config.name;
@@ -189,6 +191,22 @@ export class KustoCluster extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get enableStreamingIngestInput() {
     return this._enableStreamingIngest
+  }
+
+  // engine - computed: false, optional: true, required: false
+  private _engine?: string;
+  public get engine() {
+    return this.getStringAttribute('engine');
+  }
+  public set engine(value: string ) {
+    this._engine = value;
+  }
+  public resetEngine() {
+    this._engine = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get engineInput() {
+    return this._engine
   }
 
   // id - computed: true, optional: true, required: false
@@ -390,6 +408,7 @@ export class KustoCluster extends cdktf.TerraformResource {
       enable_disk_encryption: cdktf.booleanToTerraform(this._enableDiskEncryption),
       enable_purge: cdktf.booleanToTerraform(this._enablePurge),
       enable_streaming_ingest: cdktf.booleanToTerraform(this._enableStreamingIngest),
+      engine: cdktf.stringToTerraform(this._engine),
       language_extensions: cdktf.listMapper(cdktf.stringToTerraform)(this._languageExtensions),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),

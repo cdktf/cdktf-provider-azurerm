@@ -11,6 +11,7 @@ export interface IothubConfig extends cdktf.TerraformMetaArguments {
   readonly eventHubPartitionCount?: number;
   readonly eventHubRetentionInDays?: number;
   readonly location: string;
+  readonly minTlsVersion?: string;
   readonly name: string;
   readonly publicNetworkAccessEnabled?: boolean;
   readonly resourceGroupName: string;
@@ -204,6 +205,7 @@ export class Iothub extends cdktf.TerraformResource {
     this._eventHubPartitionCount = config.eventHubPartitionCount;
     this._eventHubRetentionInDays = config.eventHubRetentionInDays;
     this._location = config.location;
+    this._minTlsVersion = config.minTlsVersion;
     this._name = config.name;
     this._publicNetworkAccessEnabled = config.publicNetworkAccessEnabled;
     this._resourceGroupName = config.resourceGroupName;
@@ -309,6 +311,22 @@ export class Iothub extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get locationInput() {
     return this._location
+  }
+
+  // min_tls_version - computed: false, optional: true, required: false
+  private _minTlsVersion?: string;
+  public get minTlsVersion() {
+    return this.getStringAttribute('min_tls_version');
+  }
+  public set minTlsVersion(value: string ) {
+    this._minTlsVersion = value;
+  }
+  public resetMinTlsVersion() {
+    this._minTlsVersion = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get minTlsVersionInput() {
+    return this._minTlsVersion
   }
 
   // name - computed: false, optional: false, required: true
@@ -482,6 +500,7 @@ export class Iothub extends cdktf.TerraformResource {
       event_hub_partition_count: cdktf.numberToTerraform(this._eventHubPartitionCount),
       event_hub_retention_in_days: cdktf.numberToTerraform(this._eventHubRetentionInDays),
       location: cdktf.stringToTerraform(this._location),
+      min_tls_version: cdktf.stringToTerraform(this._minTlsVersion),
       name: cdktf.stringToTerraform(this._name),
       public_network_access_enabled: cdktf.booleanToTerraform(this._publicNetworkAccessEnabled),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),

@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/recovery_services_vault.html
+// https://www.terraform.io/docs/providers/azurerm/r/stack_hci_cluster.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -6,37 +6,24 @@ import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface RecoveryServicesVaultConfig extends cdktf.TerraformMetaArguments {
+export interface StackHciClusterConfig extends cdktf.TerraformMetaArguments {
+  readonly clientId: string;
   readonly location: string;
   readonly name: string;
   readonly resourceGroupName: string;
-  readonly sku: string;
-  readonly softDeleteEnabled?: boolean;
   readonly tags?: { [key: string]: string };
-  /** identity block */
-  readonly identity?: RecoveryServicesVaultIdentity[];
+  readonly tenantId?: string;
   /** timeouts block */
-  readonly timeouts?: RecoveryServicesVaultTimeouts;
+  readonly timeouts?: StackHciClusterTimeouts;
 }
-export interface RecoveryServicesVaultIdentity {
-  readonly type: string;
-}
-
-function recoveryServicesVaultIdentityToTerraform(struct?: RecoveryServicesVaultIdentity): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
-  return {
-    type: cdktf.stringToTerraform(struct!.type),
-  }
-}
-
-export interface RecoveryServicesVaultTimeouts {
+export interface StackHciClusterTimeouts {
   readonly create?: string;
   readonly delete?: string;
   readonly read?: string;
   readonly update?: string;
 }
 
-function recoveryServicesVaultTimeoutsToTerraform(struct?: RecoveryServicesVaultTimeouts): any {
+function stackHciClusterTimeoutsToTerraform(struct?: StackHciClusterTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   return {
     create: cdktf.stringToTerraform(struct!.create),
@@ -49,15 +36,15 @@ function recoveryServicesVaultTimeoutsToTerraform(struct?: RecoveryServicesVault
 
 // Resource
 
-export class RecoveryServicesVault extends cdktf.TerraformResource {
+export class StackHciCluster extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
-  public constructor(scope: Construct, id: string, config: RecoveryServicesVaultConfig) {
+  public constructor(scope: Construct, id: string, config: StackHciClusterConfig) {
     super(scope, id, {
-      terraformResourceType: 'azurerm_recovery_services_vault',
+      terraformResourceType: 'azurerm_stack_hci_cluster',
       terraformGeneratorMetadata: {
         providerName: 'azurerm'
       },
@@ -66,19 +53,31 @@ export class RecoveryServicesVault extends cdktf.TerraformResource {
       count: config.count,
       lifecycle: config.lifecycle
     });
+    this._clientId = config.clientId;
     this._location = config.location;
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
-    this._sku = config.sku;
-    this._softDeleteEnabled = config.softDeleteEnabled;
     this._tags = config.tags;
-    this._identity = config.identity;
+    this._tenantId = config.tenantId;
     this._timeouts = config.timeouts;
   }
 
   // ==========
   // ATTRIBUTES
   // ==========
+
+  // client_id - computed: false, optional: false, required: true
+  private _clientId: string;
+  public get clientId() {
+    return this.getStringAttribute('client_id');
+  }
+  public set clientId(value: string) {
+    this._clientId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get clientIdInput() {
+    return this._clientId
+  }
 
   // id - computed: true, optional: true, required: false
   public get id() {
@@ -124,35 +123,6 @@ export class RecoveryServicesVault extends cdktf.TerraformResource {
     return this._resourceGroupName
   }
 
-  // sku - computed: false, optional: false, required: true
-  private _sku: string;
-  public get sku() {
-    return this.getStringAttribute('sku');
-  }
-  public set sku(value: string) {
-    this._sku = value;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get skuInput() {
-    return this._sku
-  }
-
-  // soft_delete_enabled - computed: false, optional: true, required: false
-  private _softDeleteEnabled?: boolean;
-  public get softDeleteEnabled() {
-    return this.getBooleanAttribute('soft_delete_enabled');
-  }
-  public set softDeleteEnabled(value: boolean ) {
-    this._softDeleteEnabled = value;
-  }
-  public resetSoftDeleteEnabled() {
-    this._softDeleteEnabled = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get softDeleteEnabledInput() {
-    return this._softDeleteEnabled
-  }
-
   // tags - computed: false, optional: true, required: false
   private _tags?: { [key: string]: string };
   public get tags() {
@@ -169,28 +139,28 @@ export class RecoveryServicesVault extends cdktf.TerraformResource {
     return this._tags
   }
 
-  // identity - computed: false, optional: true, required: false
-  private _identity?: RecoveryServicesVaultIdentity[];
-  public get identity() {
-    return this.interpolationForAttribute('identity') as any;
+  // tenant_id - computed: true, optional: true, required: false
+  private _tenantId?: string;
+  public get tenantId() {
+    return this.getStringAttribute('tenant_id');
   }
-  public set identity(value: RecoveryServicesVaultIdentity[] ) {
-    this._identity = value;
+  public set tenantId(value: string) {
+    this._tenantId = value;
   }
-  public resetIdentity() {
-    this._identity = undefined;
+  public resetTenantId() {
+    this._tenantId = undefined;
   }
   // Temporarily expose input value. Use with caution.
-  public get identityInput() {
-    return this._identity
+  public get tenantIdInput() {
+    return this._tenantId
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: RecoveryServicesVaultTimeouts;
+  private _timeouts?: StackHciClusterTimeouts;
   public get timeouts() {
     return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: RecoveryServicesVaultTimeouts ) {
+  public set timeouts(value: StackHciClusterTimeouts ) {
     this._timeouts = value;
   }
   public resetTimeouts() {
@@ -207,14 +177,13 @@ export class RecoveryServicesVault extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      client_id: cdktf.stringToTerraform(this._clientId),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
-      sku: cdktf.stringToTerraform(this._sku),
-      soft_delete_enabled: cdktf.booleanToTerraform(this._softDeleteEnabled),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
-      identity: cdktf.listMapper(recoveryServicesVaultIdentityToTerraform)(this._identity),
-      timeouts: recoveryServicesVaultTimeoutsToTerraform(this._timeouts),
+      tenant_id: cdktf.stringToTerraform(this._tenantId),
+      timeouts: stackHciClusterTimeoutsToTerraform(this._timeouts),
     };
   }
 }

@@ -108,12 +108,12 @@ export class AppServiceCustomHostnameBinding extends cdktf.TerraformResource {
     return this._resourceGroupName
   }
 
-  // ssl_state - computed: false, optional: true, required: false
+  // ssl_state - computed: true, optional: true, required: false
   private _sslState?: string;
   public get sslState() {
     return this.getStringAttribute('ssl_state');
   }
-  public set sslState(value: string ) {
+  public set sslState(value: string) {
     this._sslState = value;
   }
   public resetSslState() {
@@ -124,12 +124,12 @@ export class AppServiceCustomHostnameBinding extends cdktf.TerraformResource {
     return this._sslState
   }
 
-  // thumbprint - computed: false, optional: true, required: false
+  // thumbprint - computed: true, optional: true, required: false
   private _thumbprint?: string;
   public get thumbprint() {
     return this.getStringAttribute('thumbprint');
   }
-  public set thumbprint(value: string ) {
+  public set thumbprint(value: string) {
     this._thumbprint = value;
   }
   public resetThumbprint() {

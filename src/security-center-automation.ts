@@ -7,11 +7,13 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface SecurityCenterAutomationConfig extends cdktf.TerraformMetaArguments {
+  readonly description?: string;
   readonly enabled?: boolean;
   readonly location: string;
   readonly name: string;
   readonly resourceGroupName: string;
   readonly scopes: string[];
+  readonly tags?: { [key: string]: string };
   /** action block */
   readonly action: SecurityCenterAutomationAction[];
   /** source block */
@@ -116,11 +118,13 @@ export class SecurityCenterAutomation extends cdktf.TerraformResource {
       count: config.count,
       lifecycle: config.lifecycle
     });
+    this._description = config.description;
     this._enabled = config.enabled;
     this._location = config.location;
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
     this._scopes = config.scopes;
+    this._tags = config.tags;
     this._action = config.action;
     this._source = config.source;
     this._timeouts = config.timeouts;
@@ -129,6 +133,22 @@ export class SecurityCenterAutomation extends cdktf.TerraformResource {
   // ==========
   // ATTRIBUTES
   // ==========
+
+  // description - computed: false, optional: true, required: false
+  private _description?: string;
+  public get description() {
+    return this.getStringAttribute('description');
+  }
+  public set description(value: string ) {
+    this._description = value;
+  }
+  public resetDescription() {
+    this._description = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get descriptionInput() {
+    return this._description
+  }
 
   // enabled - computed: false, optional: true, required: false
   private _enabled?: boolean;
@@ -203,6 +223,22 @@ export class SecurityCenterAutomation extends cdktf.TerraformResource {
     return this._scopes
   }
 
+  // tags - computed: false, optional: true, required: false
+  private _tags?: { [key: string]: string };
+  public get tags() {
+    return this.interpolationForAttribute('tags') as any;
+  }
+  public set tags(value: { [key: string]: string } ) {
+    this._tags = value;
+  }
+  public resetTags() {
+    this._tags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsInput() {
+    return this._tags
+  }
+
   // action - computed: false, optional: false, required: true
   private _action: SecurityCenterAutomationAction[];
   public get action() {
@@ -251,11 +287,13 @@ export class SecurityCenterAutomation extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      description: cdktf.stringToTerraform(this._description),
       enabled: cdktf.booleanToTerraform(this._enabled),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       scopes: cdktf.listMapper(cdktf.stringToTerraform)(this._scopes),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
       action: cdktf.listMapper(securityCenterAutomationActionToTerraform)(this._action),
       source: cdktf.listMapper(securityCenterAutomationSourceToTerraform)(this._source),
       timeouts: securityCenterAutomationTimeoutsToTerraform(this._timeouts),
