@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/iot_time_series_insights_gen2_environment.html
+// https://www.terraform.io/docs/providers/azurerm/r/subnet_service_endpoint_storage_policy.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -6,40 +6,39 @@ import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface IotTimeSeriesInsightsGen2EnvironmentConfig extends cdktf.TerraformMetaArguments {
-  readonly idProperties: string[];
+export interface SubnetServiceEndpointStoragePolicyConfig extends cdktf.TerraformMetaArguments {
   readonly location: string;
   readonly name: string;
   readonly resourceGroupName: string;
-  readonly skuName: string;
   readonly tags?: { [key: string]: string };
-  readonly warmStoreDataRetentionTime?: string;
-  /** storage block */
-  readonly storage: IotTimeSeriesInsightsGen2EnvironmentStorage[];
+  /** definition block */
+  readonly definition?: SubnetServiceEndpointStoragePolicyDefinition[];
   /** timeouts block */
-  readonly timeouts?: IotTimeSeriesInsightsGen2EnvironmentTimeouts;
+  readonly timeouts?: SubnetServiceEndpointStoragePolicyTimeouts;
 }
-export interface IotTimeSeriesInsightsGen2EnvironmentStorage {
-  readonly key: string;
+export interface SubnetServiceEndpointStoragePolicyDefinition {
+  readonly description?: string;
   readonly name: string;
+  readonly serviceResources: string[];
 }
 
-function iotTimeSeriesInsightsGen2EnvironmentStorageToTerraform(struct?: IotTimeSeriesInsightsGen2EnvironmentStorage): any {
+function subnetServiceEndpointStoragePolicyDefinitionToTerraform(struct?: SubnetServiceEndpointStoragePolicyDefinition): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   return {
-    key: cdktf.stringToTerraform(struct!.key),
+    description: cdktf.stringToTerraform(struct!.description),
     name: cdktf.stringToTerraform(struct!.name),
+    service_resources: cdktf.listMapper(cdktf.stringToTerraform)(struct!.serviceResources),
   }
 }
 
-export interface IotTimeSeriesInsightsGen2EnvironmentTimeouts {
+export interface SubnetServiceEndpointStoragePolicyTimeouts {
   readonly create?: string;
   readonly delete?: string;
   readonly read?: string;
   readonly update?: string;
 }
 
-function iotTimeSeriesInsightsGen2EnvironmentTimeoutsToTerraform(struct?: IotTimeSeriesInsightsGen2EnvironmentTimeouts): any {
+function subnetServiceEndpointStoragePolicyTimeoutsToTerraform(struct?: SubnetServiceEndpointStoragePolicyTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   return {
     create: cdktf.stringToTerraform(struct!.create),
@@ -52,15 +51,15 @@ function iotTimeSeriesInsightsGen2EnvironmentTimeoutsToTerraform(struct?: IotTim
 
 // Resource
 
-export class IotTimeSeriesInsightsGen2Environment extends cdktf.TerraformResource {
+export class SubnetServiceEndpointStoragePolicy extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
-  public constructor(scope: Construct, id: string, config: IotTimeSeriesInsightsGen2EnvironmentConfig) {
+  public constructor(scope: Construct, id: string, config: SubnetServiceEndpointStoragePolicyConfig) {
     super(scope, id, {
-      terraformResourceType: 'azurerm_iot_time_series_insights_gen2_environment',
+      terraformResourceType: 'azurerm_subnet_service_endpoint_storage_policy',
       terraformGeneratorMetadata: {
         providerName: 'azurerm'
       },
@@ -69,14 +68,11 @@ export class IotTimeSeriesInsightsGen2Environment extends cdktf.TerraformResourc
       count: config.count,
       lifecycle: config.lifecycle
     });
-    this._idProperties = config.idProperties;
     this._location = config.location;
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
-    this._skuName = config.skuName;
     this._tags = config.tags;
-    this._warmStoreDataRetentionTime = config.warmStoreDataRetentionTime;
-    this._storage = config.storage;
+    this._definition = config.definition;
     this._timeouts = config.timeouts;
   }
 
@@ -84,27 +80,9 @@ export class IotTimeSeriesInsightsGen2Environment extends cdktf.TerraformResourc
   // ATTRIBUTES
   // ==========
 
-  // data_access_fqdn - computed: true, optional: false, required: false
-  public get dataAccessFqdn() {
-    return this.getStringAttribute('data_access_fqdn');
-  }
-
   // id - computed: true, optional: true, required: false
   public get id() {
     return this.getStringAttribute('id');
-  }
-
-  // id_properties - computed: false, optional: false, required: true
-  private _idProperties: string[];
-  public get idProperties() {
-    return this.getListAttribute('id_properties');
-  }
-  public set idProperties(value: string[]) {
-    this._idProperties = value;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get idPropertiesInput() {
-    return this._idProperties
   }
 
   // location - computed: false, optional: false, required: true
@@ -146,19 +124,6 @@ export class IotTimeSeriesInsightsGen2Environment extends cdktf.TerraformResourc
     return this._resourceGroupName
   }
 
-  // sku_name - computed: false, optional: false, required: true
-  private _skuName: string;
-  public get skuName() {
-    return this.getStringAttribute('sku_name');
-  }
-  public set skuName(value: string) {
-    this._skuName = value;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get skuNameInput() {
-    return this._skuName
-  }
-
   // tags - computed: false, optional: true, required: false
   private _tags?: { [key: string]: string };
   public get tags() {
@@ -175,41 +140,28 @@ export class IotTimeSeriesInsightsGen2Environment extends cdktf.TerraformResourc
     return this._tags
   }
 
-  // warm_store_data_retention_time - computed: false, optional: true, required: false
-  private _warmStoreDataRetentionTime?: string;
-  public get warmStoreDataRetentionTime() {
-    return this.getStringAttribute('warm_store_data_retention_time');
+  // definition - computed: false, optional: true, required: false
+  private _definition?: SubnetServiceEndpointStoragePolicyDefinition[];
+  public get definition() {
+    return this.interpolationForAttribute('definition') as any;
   }
-  public set warmStoreDataRetentionTime(value: string ) {
-    this._warmStoreDataRetentionTime = value;
+  public set definition(value: SubnetServiceEndpointStoragePolicyDefinition[] ) {
+    this._definition = value;
   }
-  public resetWarmStoreDataRetentionTime() {
-    this._warmStoreDataRetentionTime = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get warmStoreDataRetentionTimeInput() {
-    return this._warmStoreDataRetentionTime
-  }
-
-  // storage - computed: false, optional: false, required: true
-  private _storage: IotTimeSeriesInsightsGen2EnvironmentStorage[];
-  public get storage() {
-    return this.interpolationForAttribute('storage') as any;
-  }
-  public set storage(value: IotTimeSeriesInsightsGen2EnvironmentStorage[]) {
-    this._storage = value;
+  public resetDefinition() {
+    this._definition = undefined;
   }
   // Temporarily expose input value. Use with caution.
-  public get storageInput() {
-    return this._storage
+  public get definitionInput() {
+    return this._definition
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: IotTimeSeriesInsightsGen2EnvironmentTimeouts;
+  private _timeouts?: SubnetServiceEndpointStoragePolicyTimeouts;
   public get timeouts() {
     return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: IotTimeSeriesInsightsGen2EnvironmentTimeouts ) {
+  public set timeouts(value: SubnetServiceEndpointStoragePolicyTimeouts ) {
     this._timeouts = value;
   }
   public resetTimeouts() {
@@ -226,15 +178,12 @@ export class IotTimeSeriesInsightsGen2Environment extends cdktf.TerraformResourc
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      id_properties: cdktf.listMapper(cdktf.stringToTerraform)(this._idProperties),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
-      sku_name: cdktf.stringToTerraform(this._skuName),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
-      warm_store_data_retention_time: cdktf.stringToTerraform(this._warmStoreDataRetentionTime),
-      storage: cdktf.listMapper(iotTimeSeriesInsightsGen2EnvironmentStorageToTerraform)(this._storage),
-      timeouts: iotTimeSeriesInsightsGen2EnvironmentTimeoutsToTerraform(this._timeouts),
+      definition: cdktf.listMapper(subnetServiceEndpointStoragePolicyDefinitionToTerraform)(this._definition),
+      timeouts: subnetServiceEndpointStoragePolicyTimeoutsToTerraform(this._timeouts),
     };
   }
 }

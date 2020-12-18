@@ -13,6 +13,7 @@ export interface SubnetConfig extends cdktf.TerraformMetaArguments {
   readonly enforcePrivateLinkServiceNetworkPolicies?: boolean;
   readonly name: string;
   readonly resourceGroupName: string;
+  readonly serviceEndpointPolicyIds?: string[];
   readonly serviceEndpoints?: string[];
   readonly virtualNetworkName: string;
   /** delegation block */
@@ -90,6 +91,7 @@ export class Subnet extends cdktf.TerraformResource {
     this._enforcePrivateLinkServiceNetworkPolicies = config.enforcePrivateLinkServiceNetworkPolicies;
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
+    this._serviceEndpointPolicyIds = config.serviceEndpointPolicyIds;
     this._serviceEndpoints = config.serviceEndpoints;
     this._virtualNetworkName = config.virtualNetworkName;
     this._delegation = config.delegation;
@@ -195,6 +197,22 @@ export class Subnet extends cdktf.TerraformResource {
     return this._resourceGroupName
   }
 
+  // service_endpoint_policy_ids - computed: false, optional: true, required: false
+  private _serviceEndpointPolicyIds?: string[];
+  public get serviceEndpointPolicyIds() {
+    return this.getListAttribute('service_endpoint_policy_ids');
+  }
+  public set serviceEndpointPolicyIds(value: string[] ) {
+    this._serviceEndpointPolicyIds = value;
+  }
+  public resetServiceEndpointPolicyIds() {
+    this._serviceEndpointPolicyIds = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get serviceEndpointPolicyIdsInput() {
+    return this._serviceEndpointPolicyIds
+  }
+
   // service_endpoints - computed: false, optional: true, required: false
   private _serviceEndpoints?: string[];
   public get serviceEndpoints() {
@@ -268,6 +286,7 @@ export class Subnet extends cdktf.TerraformResource {
       enforce_private_link_service_network_policies: cdktf.booleanToTerraform(this._enforcePrivateLinkServiceNetworkPolicies),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      service_endpoint_policy_ids: cdktf.listMapper(cdktf.stringToTerraform)(this._serviceEndpointPolicyIds),
       service_endpoints: cdktf.listMapper(cdktf.stringToTerraform)(this._serviceEndpoints),
       virtual_network_name: cdktf.stringToTerraform(this._virtualNetworkName),
       delegation: cdktf.listMapper(subnetDelegationToTerraform)(this._delegation),

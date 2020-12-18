@@ -668,9 +668,19 @@ export class AppService extends cdktf.TerraformResource {
     return this._name
   }
 
+  // outbound_ip_address_list - computed: true, optional: false, required: false
+  public get outboundIpAddressList() {
+    return this.getListAttribute('outbound_ip_address_list');
+  }
+
   // outbound_ip_addresses - computed: true, optional: false, required: false
   public get outboundIpAddresses() {
     return this.getStringAttribute('outbound_ip_addresses');
+  }
+
+  // possible_outbound_ip_address_list - computed: true, optional: false, required: false
+  public get possibleOutboundIpAddressList() {
+    return this.getListAttribute('possible_outbound_ip_address_list');
   }
 
   // possible_outbound_ip_addresses - computed: true, optional: false, required: false

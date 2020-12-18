@@ -8,10 +8,13 @@ import * as cdktf from 'cdktf';
 
 export interface LogAnalyticsLinkedServiceConfig extends cdktf.TerraformMetaArguments {
   readonly linkedServiceName?: string;
+  readonly readAccessId?: string;
   readonly resourceGroupName: string;
-  readonly resourceId: string;
+  readonly resourceId?: string;
   readonly tags?: { [key: string]: string };
-  readonly workspaceName: string;
+  readonly workspaceId?: string;
+  readonly workspaceName?: string;
+  readonly writeAccessId?: string;
   /** timeouts block */
   readonly timeouts?: LogAnalyticsLinkedServiceTimeouts;
 }
@@ -53,10 +56,13 @@ export class LogAnalyticsLinkedService extends cdktf.TerraformResource {
       lifecycle: config.lifecycle
     });
     this._linkedServiceName = config.linkedServiceName;
+    this._readAccessId = config.readAccessId;
     this._resourceGroupName = config.resourceGroupName;
     this._resourceId = config.resourceId;
     this._tags = config.tags;
+    this._workspaceId = config.workspaceId;
     this._workspaceName = config.workspaceName;
+    this._writeAccessId = config.writeAccessId;
     this._timeouts = config.timeouts;
   }
 
@@ -69,12 +75,12 @@ export class LogAnalyticsLinkedService extends cdktf.TerraformResource {
     return this.getStringAttribute('id');
   }
 
-  // linked_service_name - computed: false, optional: true, required: false
+  // linked_service_name - computed: true, optional: true, required: false
   private _linkedServiceName?: string;
   public get linkedServiceName() {
     return this.getStringAttribute('linked_service_name');
   }
-  public set linkedServiceName(value: string ) {
+  public set linkedServiceName(value: string) {
     this._linkedServiceName = value;
   }
   public resetLinkedServiceName() {
@@ -90,6 +96,22 @@ export class LogAnalyticsLinkedService extends cdktf.TerraformResource {
     return this.getStringAttribute('name');
   }
 
+  // read_access_id - computed: true, optional: true, required: false
+  private _readAccessId?: string;
+  public get readAccessId() {
+    return this.getStringAttribute('read_access_id');
+  }
+  public set readAccessId(value: string) {
+    this._readAccessId = value;
+  }
+  public resetReadAccessId() {
+    this._readAccessId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readAccessIdInput() {
+    return this._readAccessId
+  }
+
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
@@ -103,13 +125,16 @@ export class LogAnalyticsLinkedService extends cdktf.TerraformResource {
     return this._resourceGroupName
   }
 
-  // resource_id - computed: false, optional: false, required: true
-  private _resourceId: string;
+  // resource_id - computed: true, optional: true, required: false
+  private _resourceId?: string;
   public get resourceId() {
     return this.getStringAttribute('resource_id');
   }
   public set resourceId(value: string) {
     this._resourceId = value;
+  }
+  public resetResourceId() {
+    this._resourceId = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get resourceIdInput() {
@@ -132,17 +157,52 @@ export class LogAnalyticsLinkedService extends cdktf.TerraformResource {
     return this._tags
   }
 
-  // workspace_name - computed: false, optional: false, required: true
-  private _workspaceName: string;
+  // workspace_id - computed: true, optional: true, required: false
+  private _workspaceId?: string;
+  public get workspaceId() {
+    return this.getStringAttribute('workspace_id');
+  }
+  public set workspaceId(value: string) {
+    this._workspaceId = value;
+  }
+  public resetWorkspaceId() {
+    this._workspaceId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get workspaceIdInput() {
+    return this._workspaceId
+  }
+
+  // workspace_name - computed: true, optional: true, required: false
+  private _workspaceName?: string;
   public get workspaceName() {
     return this.getStringAttribute('workspace_name');
   }
   public set workspaceName(value: string) {
     this._workspaceName = value;
   }
+  public resetWorkspaceName() {
+    this._workspaceName = undefined;
+  }
   // Temporarily expose input value. Use with caution.
   public get workspaceNameInput() {
     return this._workspaceName
+  }
+
+  // write_access_id - computed: false, optional: true, required: false
+  private _writeAccessId?: string;
+  public get writeAccessId() {
+    return this.getStringAttribute('write_access_id');
+  }
+  public set writeAccessId(value: string ) {
+    this._writeAccessId = value;
+  }
+  public resetWriteAccessId() {
+    this._writeAccessId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get writeAccessIdInput() {
+    return this._writeAccessId
   }
 
   // timeouts - computed: false, optional: true, required: false
@@ -168,10 +228,13 @@ export class LogAnalyticsLinkedService extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       linked_service_name: cdktf.stringToTerraform(this._linkedServiceName),
+      read_access_id: cdktf.stringToTerraform(this._readAccessId),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       resource_id: cdktf.stringToTerraform(this._resourceId),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      workspace_id: cdktf.stringToTerraform(this._workspaceId),
       workspace_name: cdktf.stringToTerraform(this._workspaceName),
+      write_access_id: cdktf.stringToTerraform(this._writeAccessId),
       timeouts: logAnalyticsLinkedServiceTimeoutsToTerraform(this._timeouts),
     };
   }

@@ -7,6 +7,7 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface TrafficManagerProfileConfig extends cdktf.TerraformMetaArguments {
+  readonly maxReturn?: number;
   readonly name: string;
   readonly profileStatus?: string;
   readonly resourceGroupName: string;
@@ -108,6 +109,7 @@ export class TrafficManagerProfile extends cdktf.TerraformResource {
       count: config.count,
       lifecycle: config.lifecycle
     });
+    this._maxReturn = config.maxReturn;
     this._name = config.name;
     this._profileStatus = config.profileStatus;
     this._resourceGroupName = config.resourceGroupName;
@@ -130,6 +132,22 @@ export class TrafficManagerProfile extends cdktf.TerraformResource {
   // id - computed: true, optional: true, required: false
   public get id() {
     return this.getStringAttribute('id');
+  }
+
+  // max_return - computed: false, optional: true, required: false
+  private _maxReturn?: number;
+  public get maxReturn() {
+    return this.getNumberAttribute('max_return');
+  }
+  public set maxReturn(value: number ) {
+    this._maxReturn = value;
+  }
+  public resetMaxReturn() {
+    this._maxReturn = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get maxReturnInput() {
+    return this._maxReturn
   }
 
   // name - computed: false, optional: false, required: true
@@ -251,6 +269,7 @@ export class TrafficManagerProfile extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      max_return: cdktf.numberToTerraform(this._maxReturn),
       name: cdktf.stringToTerraform(this._name),
       profile_status: cdktf.stringToTerraform(this._profileStatus),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
