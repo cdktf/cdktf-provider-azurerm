@@ -44,6 +44,11 @@ export class DataAzurermSubscriptionsSubscriptions extends cdktf.ComplexComputed
     return this.getStringAttribute('subscription_id');
   }
 
+  // tags - computed: true, optional: false, required: false
+  public get tags() {
+    return this.interpolationForAttribute('tags') as any;
+  }
+
   // tenant_id - computed: true, optional: false, required: false
   public get tenantId() {
     return this.getStringAttribute('tenant_id');

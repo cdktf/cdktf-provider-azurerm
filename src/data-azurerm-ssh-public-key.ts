@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/data_azurerm_databricks_workspace.html
+// https://www.terraform.io/docs/providers/azurerm/r/data_azurerm_ssh_public_key.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -6,18 +6,18 @@ import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataAzurermDatabricksWorkspaceConfig extends cdktf.TerraformMetaArguments {
+export interface DataAzurermSshPublicKeyConfig extends cdktf.TerraformMetaArguments {
   readonly name: string;
   readonly resourceGroupName: string;
   readonly tags?: { [key: string]: string };
   /** timeouts block */
-  readonly timeouts?: DataAzurermDatabricksWorkspaceTimeouts;
+  readonly timeouts?: DataAzurermSshPublicKeyTimeouts;
 }
-export interface DataAzurermDatabricksWorkspaceTimeouts {
+export interface DataAzurermSshPublicKeyTimeouts {
   readonly read?: string;
 }
 
-function dataAzurermDatabricksWorkspaceTimeoutsToTerraform(struct?: DataAzurermDatabricksWorkspaceTimeouts): any {
+function dataAzurermSshPublicKeyTimeoutsToTerraform(struct?: DataAzurermSshPublicKeyTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   return {
     read: cdktf.stringToTerraform(struct!.read),
@@ -27,15 +27,15 @@ function dataAzurermDatabricksWorkspaceTimeoutsToTerraform(struct?: DataAzurermD
 
 // Resource
 
-export class DataAzurermDatabricksWorkspace extends cdktf.TerraformDataSource {
+export class DataAzurermSshPublicKey extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
-  public constructor(scope: Construct, id: string, config: DataAzurermDatabricksWorkspaceConfig) {
+  public constructor(scope: Construct, id: string, config: DataAzurermSshPublicKeyConfig) {
     super(scope, id, {
-      terraformResourceType: 'azurerm_databricks_workspace',
+      terraformResourceType: 'azurerm_ssh_public_key',
       terraformGeneratorMetadata: {
         providerName: 'azurerm'
       },
@@ -72,6 +72,11 @@ export class DataAzurermDatabricksWorkspace extends cdktf.TerraformDataSource {
     return this._name
   }
 
+  // public_key - computed: true, optional: false, required: false
+  public get publicKey() {
+    return this.getStringAttribute('public_key');
+  }
+
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
@@ -83,11 +88,6 @@ export class DataAzurermDatabricksWorkspace extends cdktf.TerraformDataSource {
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
     return this._resourceGroupName
-  }
-
-  // sku - computed: true, optional: false, required: false
-  public get sku() {
-    return this.getStringAttribute('sku');
   }
 
   // tags - computed: false, optional: true, required: false
@@ -106,22 +106,12 @@ export class DataAzurermDatabricksWorkspace extends cdktf.TerraformDataSource {
     return this._tags
   }
 
-  // workspace_id - computed: true, optional: false, required: false
-  public get workspaceId() {
-    return this.getStringAttribute('workspace_id');
-  }
-
-  // workspace_url - computed: true, optional: false, required: false
-  public get workspaceUrl() {
-    return this.getStringAttribute('workspace_url');
-  }
-
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: DataAzurermDatabricksWorkspaceTimeouts;
+  private _timeouts?: DataAzurermSshPublicKeyTimeouts;
   public get timeouts() {
     return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: DataAzurermDatabricksWorkspaceTimeouts ) {
+  public set timeouts(value: DataAzurermSshPublicKeyTimeouts ) {
     this._timeouts = value;
   }
   public resetTimeouts() {
@@ -141,7 +131,7 @@ export class DataAzurermDatabricksWorkspace extends cdktf.TerraformDataSource {
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
-      timeouts: dataAzurermDatabricksWorkspaceTimeoutsToTerraform(this._timeouts),
+      timeouts: dataAzurermSshPublicKeyTimeoutsToTerraform(this._timeouts),
     };
   }
 }

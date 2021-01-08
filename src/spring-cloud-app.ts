@@ -7,11 +7,15 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface SpringCloudAppConfig extends cdktf.TerraformMetaArguments {
+  readonly httpsOnly?: boolean;
+  readonly isPublic?: boolean;
   readonly name: string;
   readonly resourceGroupName: string;
   readonly serviceName: string;
   /** identity block */
   readonly identity?: SpringCloudAppIdentity[];
+  /** persistent_disk block */
+  readonly persistentDisk?: SpringCloudAppPersistentDisk[];
   /** timeouts block */
   readonly timeouts?: SpringCloudAppTimeouts;
 }
@@ -23,6 +27,19 @@ function springCloudAppIdentityToTerraform(struct?: SpringCloudAppIdentity): any
   if (!cdktf.canInspect(struct)) { return struct; }
   return {
     type: cdktf.stringToTerraform(struct!.type),
+  }
+}
+
+export interface SpringCloudAppPersistentDisk {
+  readonly mountPath?: string;
+  readonly sizeInGb: number;
+}
+
+function springCloudAppPersistentDiskToTerraform(struct?: SpringCloudAppPersistentDisk): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    mount_path: cdktf.stringToTerraform(struct!.mountPath),
+    size_in_gb: cdktf.numberToTerraform(struct!.sizeInGb),
   }
 }
 
@@ -63,10 +80,13 @@ export class SpringCloudApp extends cdktf.TerraformResource {
       count: config.count,
       lifecycle: config.lifecycle
     });
+    this._httpsOnly = config.httpsOnly;
+    this._isPublic = config.isPublic;
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
     this._serviceName = config.serviceName;
     this._identity = config.identity;
+    this._persistentDisk = config.persistentDisk;
     this._timeouts = config.timeouts;
   }
 
@@ -74,9 +94,41 @@ export class SpringCloudApp extends cdktf.TerraformResource {
   // ATTRIBUTES
   // ==========
 
+  // https_only - computed: false, optional: true, required: false
+  private _httpsOnly?: boolean;
+  public get httpsOnly() {
+    return this.getBooleanAttribute('https_only');
+  }
+  public set httpsOnly(value: boolean ) {
+    this._httpsOnly = value;
+  }
+  public resetHttpsOnly() {
+    this._httpsOnly = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get httpsOnlyInput() {
+    return this._httpsOnly
+  }
+
   // id - computed: true, optional: true, required: false
   public get id() {
     return this.getStringAttribute('id');
+  }
+
+  // is_public - computed: false, optional: true, required: false
+  private _isPublic?: boolean;
+  public get isPublic() {
+    return this.getBooleanAttribute('is_public');
+  }
+  public set isPublic(value: boolean ) {
+    this._isPublic = value;
+  }
+  public resetIsPublic() {
+    this._isPublic = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get isPublicInput() {
+    return this._isPublic
   }
 
   // name - computed: false, optional: false, required: true
@@ -118,6 +170,11 @@ export class SpringCloudApp extends cdktf.TerraformResource {
     return this._serviceName
   }
 
+  // url - computed: true, optional: false, required: false
+  public get url() {
+    return this.getStringAttribute('url');
+  }
+
   // identity - computed: false, optional: true, required: false
   private _identity?: SpringCloudAppIdentity[];
   public get identity() {
@@ -132,6 +189,22 @@ export class SpringCloudApp extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get identityInput() {
     return this._identity
+  }
+
+  // persistent_disk - computed: false, optional: true, required: false
+  private _persistentDisk?: SpringCloudAppPersistentDisk[];
+  public get persistentDisk() {
+    return this.interpolationForAttribute('persistent_disk') as any;
+  }
+  public set persistentDisk(value: SpringCloudAppPersistentDisk[] ) {
+    this._persistentDisk = value;
+  }
+  public resetPersistentDisk() {
+    this._persistentDisk = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get persistentDiskInput() {
+    return this._persistentDisk
   }
 
   // timeouts - computed: false, optional: true, required: false
@@ -156,10 +229,13 @@ export class SpringCloudApp extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      https_only: cdktf.booleanToTerraform(this._httpsOnly),
+      is_public: cdktf.booleanToTerraform(this._isPublic),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       service_name: cdktf.stringToTerraform(this._serviceName),
       identity: cdktf.listMapper(springCloudAppIdentityToTerraform)(this._identity),
+      persistent_disk: cdktf.listMapper(springCloudAppPersistentDiskToTerraform)(this._persistentDisk),
       timeouts: springCloudAppTimeoutsToTerraform(this._timeouts),
     };
   }

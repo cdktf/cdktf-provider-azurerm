@@ -81,6 +81,11 @@ export class DataAzurermFunctionAppSiteConfigIpRestriction extends cdktf.Complex
     return this.getNumberAttribute('priority');
   }
 
+  // service_tag - computed: true, optional: false, required: false
+  public get serviceTag() {
+    return this.getStringAttribute('service_tag');
+  }
+
   // subnet_id - computed: true, optional: false, required: false
   public get subnetId() {
     return this.getStringAttribute('subnet_id');
@@ -111,6 +116,11 @@ export class DataAzurermFunctionAppSiteConfigScmIpRestriction extends cdktf.Comp
   // priority - computed: true, optional: false, required: false
   public get priority() {
     return this.getNumberAttribute('priority');
+  }
+
+  // service_tag - computed: true, optional: false, required: false
+  public get serviceTag() {
+    return this.getStringAttribute('service_tag');
   }
 
   // subnet_id - computed: true, optional: false, required: false

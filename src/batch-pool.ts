@@ -144,6 +144,7 @@ function batchPoolNetworkConfigurationEndpointConfigurationToTerraform(struct?: 
 }
 
 export interface BatchPoolNetworkConfiguration {
+  readonly publicAddressProvisioningType?: string;
   readonly publicIps?: string[];
   readonly subnetId: string;
   /** endpoint_configuration block */
@@ -153,6 +154,7 @@ export interface BatchPoolNetworkConfiguration {
 function batchPoolNetworkConfigurationToTerraform(struct?: BatchPoolNetworkConfiguration): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   return {
+    public_address_provisioning_type: cdktf.stringToTerraform(struct!.publicAddressProvisioningType),
     public_ips: cdktf.listMapper(cdktf.stringToTerraform)(struct!.publicIps),
     subnet_id: cdktf.stringToTerraform(struct!.subnetId),
     endpoint_configuration: cdktf.listMapper(batchPoolNetworkConfigurationEndpointConfigurationToTerraform)(struct!.endpointConfiguration),

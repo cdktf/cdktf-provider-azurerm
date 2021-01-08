@@ -296,12 +296,12 @@ export class KeyVault extends cdktf.TerraformResource {
     return this._skuName
   }
 
-  // soft_delete_enabled - computed: false, optional: true, required: false
+  // soft_delete_enabled - computed: true, optional: true, required: false
   private _softDeleteEnabled?: boolean;
   public get softDeleteEnabled() {
     return this.getBooleanAttribute('soft_delete_enabled');
   }
-  public set softDeleteEnabled(value: boolean ) {
+  public set softDeleteEnabled(value: boolean) {
     this._softDeleteEnabled = value;
   }
   public resetSoftDeleteEnabled() {

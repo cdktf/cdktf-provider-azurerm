@@ -99,6 +99,11 @@ export class DataAzurermHdinsightCluster extends cdktf.TerraformDataSource {
     return this.getStringAttribute('id');
   }
 
+  // kafka_rest_proxy_endpoint - computed: true, optional: false, required: false
+  public get kafkaRestProxyEndpoint() {
+    return this.getStringAttribute('kafka_rest_proxy_endpoint');
+  }
+
   // kind - computed: true, optional: false, required: false
   public get kind() {
     return this.getStringAttribute('kind');

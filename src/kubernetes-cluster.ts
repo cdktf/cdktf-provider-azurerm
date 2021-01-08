@@ -336,6 +336,7 @@ export interface KubernetesClusterNetworkProfile {
   readonly dnsServiceIp?: string;
   readonly dockerBridgeCidr?: string;
   readonly loadBalancerSku?: string;
+  readonly networkMode?: string;
   readonly networkPlugin: string;
   readonly networkPolicy?: string;
   readonly outboundType?: string;
@@ -351,6 +352,7 @@ function kubernetesClusterNetworkProfileToTerraform(struct?: KubernetesClusterNe
     dns_service_ip: cdktf.stringToTerraform(struct!.dnsServiceIp),
     docker_bridge_cidr: cdktf.stringToTerraform(struct!.dockerBridgeCidr),
     load_balancer_sku: cdktf.stringToTerraform(struct!.loadBalancerSku),
+    network_mode: cdktf.stringToTerraform(struct!.networkMode),
     network_plugin: cdktf.stringToTerraform(struct!.networkPlugin),
     network_policy: cdktf.stringToTerraform(struct!.networkPolicy),
     outbound_type: cdktf.stringToTerraform(struct!.outboundType),

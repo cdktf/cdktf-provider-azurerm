@@ -96,6 +96,11 @@ export class DataAzurermSubscription extends cdktf.TerraformDataSource {
     return this._subscriptionId
   }
 
+  // tags - computed: true, optional: false, required: false
+  public tags(key: string): string {
+    return new cdktf.StringMap(this, 'tags').lookup(key);
+  }
+
   // tenant_id - computed: true, optional: false, required: false
   public get tenantId() {
     return this.getStringAttribute('tenant_id');
