@@ -7,6 +7,7 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface SentinelAlertRuleScheduledConfig extends cdktf.TerraformMetaArguments {
+  readonly alertRuleTemplateGuid?: string;
   readonly description?: string;
   readonly displayName: string;
   readonly enabled?: boolean;
@@ -21,9 +22,44 @@ export interface SentinelAlertRuleScheduledConfig extends cdktf.TerraformMetaArg
   readonly tactics?: string[];
   readonly triggerOperator?: string;
   readonly triggerThreshold?: number;
+  /** incident_configuration block */
+  readonly incidentConfiguration?: SentinelAlertRuleScheduledIncidentConfiguration[];
   /** timeouts block */
   readonly timeouts?: SentinelAlertRuleScheduledTimeouts;
 }
+export interface SentinelAlertRuleScheduledIncidentConfigurationGrouping {
+  readonly enabled?: boolean;
+  readonly entityMatchingMethod?: string;
+  readonly groupBy?: string[];
+  readonly lookbackDuration?: string;
+  readonly reopenClosedIncidents?: boolean;
+}
+
+function sentinelAlertRuleScheduledIncidentConfigurationGroupingToTerraform(struct?: SentinelAlertRuleScheduledIncidentConfigurationGrouping): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    enabled: cdktf.booleanToTerraform(struct!.enabled),
+    entity_matching_method: cdktf.stringToTerraform(struct!.entityMatchingMethod),
+    group_by: cdktf.listMapper(cdktf.stringToTerraform)(struct!.groupBy),
+    lookback_duration: cdktf.stringToTerraform(struct!.lookbackDuration),
+    reopen_closed_incidents: cdktf.booleanToTerraform(struct!.reopenClosedIncidents),
+  }
+}
+
+export interface SentinelAlertRuleScheduledIncidentConfiguration {
+  readonly createIncident: boolean;
+  /** grouping block */
+  readonly grouping: SentinelAlertRuleScheduledIncidentConfigurationGrouping[];
+}
+
+function sentinelAlertRuleScheduledIncidentConfigurationToTerraform(struct?: SentinelAlertRuleScheduledIncidentConfiguration): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create_incident: cdktf.booleanToTerraform(struct!.createIncident),
+    grouping: cdktf.listMapper(sentinelAlertRuleScheduledIncidentConfigurationGroupingToTerraform)(struct!.grouping),
+  }
+}
+
 export interface SentinelAlertRuleScheduledTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -61,6 +97,7 @@ export class SentinelAlertRuleScheduled extends cdktf.TerraformResource {
       count: config.count,
       lifecycle: config.lifecycle
     });
+    this._alertRuleTemplateGuid = config.alertRuleTemplateGuid;
     this._description = config.description;
     this._displayName = config.displayName;
     this._enabled = config.enabled;
@@ -75,12 +112,29 @@ export class SentinelAlertRuleScheduled extends cdktf.TerraformResource {
     this._tactics = config.tactics;
     this._triggerOperator = config.triggerOperator;
     this._triggerThreshold = config.triggerThreshold;
+    this._incidentConfiguration = config.incidentConfiguration;
     this._timeouts = config.timeouts;
   }
 
   // ==========
   // ATTRIBUTES
   // ==========
+
+  // alert_rule_template_guid - computed: false, optional: true, required: false
+  private _alertRuleTemplateGuid?: string;
+  public get alertRuleTemplateGuid() {
+    return this.getStringAttribute('alert_rule_template_guid');
+  }
+  public set alertRuleTemplateGuid(value: string ) {
+    this._alertRuleTemplateGuid = value;
+  }
+  public resetAlertRuleTemplateGuid() {
+    this._alertRuleTemplateGuid = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get alertRuleTemplateGuidInput() {
+    return this._alertRuleTemplateGuid
+  }
 
   // description - computed: false, optional: true, required: false
   private _description?: string;
@@ -296,6 +350,22 @@ export class SentinelAlertRuleScheduled extends cdktf.TerraformResource {
     return this._triggerThreshold
   }
 
+  // incident_configuration - computed: false, optional: true, required: false
+  private _incidentConfiguration?: SentinelAlertRuleScheduledIncidentConfiguration[];
+  public get incidentConfiguration() {
+    return this.interpolationForAttribute('incident_configuration') as any;
+  }
+  public set incidentConfiguration(value: SentinelAlertRuleScheduledIncidentConfiguration[] ) {
+    this._incidentConfiguration = value;
+  }
+  public resetIncidentConfiguration() {
+    this._incidentConfiguration = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get incidentConfigurationInput() {
+    return this._incidentConfiguration
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: SentinelAlertRuleScheduledTimeouts;
   public get timeouts() {
@@ -318,6 +388,7 @@ export class SentinelAlertRuleScheduled extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      alert_rule_template_guid: cdktf.stringToTerraform(this._alertRuleTemplateGuid),
       description: cdktf.stringToTerraform(this._description),
       display_name: cdktf.stringToTerraform(this._displayName),
       enabled: cdktf.booleanToTerraform(this._enabled),
@@ -332,6 +403,7 @@ export class SentinelAlertRuleScheduled extends cdktf.TerraformResource {
       tactics: cdktf.listMapper(cdktf.stringToTerraform)(this._tactics),
       trigger_operator: cdktf.stringToTerraform(this._triggerOperator),
       trigger_threshold: cdktf.numberToTerraform(this._triggerThreshold),
+      incident_configuration: cdktf.listMapper(sentinelAlertRuleScheduledIncidentConfigurationToTerraform)(this._incidentConfiguration),
       timeouts: sentinelAlertRuleScheduledTimeoutsToTerraform(this._timeouts),
     };
   }

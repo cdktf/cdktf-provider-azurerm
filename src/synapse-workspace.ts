@@ -9,6 +9,7 @@ import * as cdktf from 'cdktf';
 export interface SynapseWorkspaceConfig extends cdktf.TerraformMetaArguments {
   readonly aadAdmin?: SynapseWorkspaceAadAdmin[];
   readonly location: string;
+  readonly managedResourceGroupName?: string;
   readonly managedVirtualNetworkEnabled?: boolean;
   readonly name: string;
   readonly resourceGroupName: string;
@@ -90,6 +91,7 @@ export class SynapseWorkspace extends cdktf.TerraformResource {
     });
     this._aadAdmin = config.aadAdmin;
     this._location = config.location;
+    this._managedResourceGroupName = config.managedResourceGroupName;
     this._managedVirtualNetworkEnabled = config.managedVirtualNetworkEnabled;
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
@@ -148,9 +150,20 @@ export class SynapseWorkspace extends cdktf.TerraformResource {
     return this._location
   }
 
-  // managed_resource_group_name - computed: true, optional: false, required: false
+  // managed_resource_group_name - computed: true, optional: true, required: false
+  private _managedResourceGroupName?: string;
   public get managedResourceGroupName() {
     return this.getStringAttribute('managed_resource_group_name');
+  }
+  public set managedResourceGroupName(value: string) {
+    this._managedResourceGroupName = value;
+  }
+  public resetManagedResourceGroupName() {
+    this._managedResourceGroupName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get managedResourceGroupNameInput() {
+    return this._managedResourceGroupName
   }
 
   // managed_virtual_network_enabled - computed: false, optional: true, required: false
@@ -274,6 +287,7 @@ export class SynapseWorkspace extends cdktf.TerraformResource {
     return {
       aad_admin: cdktf.listMapper(synapseWorkspaceAadAdminToTerraform)(this._aadAdmin),
       location: cdktf.stringToTerraform(this._location),
+      managed_resource_group_name: cdktf.stringToTerraform(this._managedResourceGroupName),
       managed_virtual_network_enabled: cdktf.booleanToTerraform(this._managedVirtualNetworkEnabled),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),

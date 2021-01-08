@@ -299,6 +299,8 @@ function appServiceLogsHttpLogsToTerraform(struct?: AppServiceLogsHttpLogs): any
 }
 
 export interface AppServiceLogs {
+  readonly detailedErrorMessagesEnabled?: boolean;
+  readonly failedRequestTracingEnabled?: boolean;
   /** application_logs block */
   readonly applicationLogs?: AppServiceLogsApplicationLogs[];
   /** http_logs block */
@@ -308,6 +310,8 @@ export interface AppServiceLogs {
 function appServiceLogsToTerraform(struct?: AppServiceLogs): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   return {
+    detailed_error_messages_enabled: cdktf.booleanToTerraform(struct!.detailedErrorMessagesEnabled),
+    failed_request_tracing_enabled: cdktf.booleanToTerraform(struct!.failedRequestTracingEnabled),
     application_logs: cdktf.listMapper(appServiceLogsApplicationLogsToTerraform)(struct!.applicationLogs),
     http_logs: cdktf.listMapper(appServiceLogsHttpLogsToTerraform)(struct!.httpLogs),
   }
@@ -318,6 +322,7 @@ export interface AppServiceSiteConfigIpRestriction {
   readonly ipAddress?: string;
   readonly name?: string;
   readonly priority?: number;
+  readonly serviceTag?: string;
   readonly subnetId?: string;
   readonly virtualNetworkSubnetId?: string;
 }
@@ -329,6 +334,7 @@ function appServiceSiteConfigIpRestrictionToTerraform(struct?: AppServiceSiteCon
     ip_address: cdktf.stringToTerraform(struct!.ipAddress),
     name: cdktf.stringToTerraform(struct!.name),
     priority: cdktf.numberToTerraform(struct!.priority),
+    service_tag: cdktf.stringToTerraform(struct!.serviceTag),
     subnet_id: cdktf.stringToTerraform(struct!.subnetId),
     virtual_network_subnet_id: cdktf.stringToTerraform(struct!.virtualNetworkSubnetId),
   }
@@ -339,6 +345,7 @@ export interface AppServiceSiteConfigScmIpRestriction {
   readonly ipAddress?: string;
   readonly name?: string;
   readonly priority?: number;
+  readonly serviceTag?: string;
   readonly subnetId?: string;
   readonly virtualNetworkSubnetId?: string;
 }
@@ -350,6 +357,7 @@ function appServiceSiteConfigScmIpRestrictionToTerraform(struct?: AppServiceSite
     ip_address: cdktf.stringToTerraform(struct!.ipAddress),
     name: cdktf.stringToTerraform(struct!.name),
     priority: cdktf.numberToTerraform(struct!.priority),
+    service_tag: cdktf.stringToTerraform(struct!.serviceTag),
     subnet_id: cdktf.stringToTerraform(struct!.subnetId),
     virtual_network_subnet_id: cdktf.stringToTerraform(struct!.virtualNetworkSubnetId),
   }

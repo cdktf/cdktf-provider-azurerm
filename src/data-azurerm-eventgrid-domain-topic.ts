@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/data_azurerm_databricks_workspace.html
+// https://www.terraform.io/docs/providers/azurerm/r/data_azurerm_eventgrid_domain_topic.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -6,18 +6,18 @@ import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataAzurermDatabricksWorkspaceConfig extends cdktf.TerraformMetaArguments {
+export interface DataAzurermEventgridDomainTopicConfig extends cdktf.TerraformMetaArguments {
+  readonly domainName: string;
   readonly name: string;
   readonly resourceGroupName: string;
-  readonly tags?: { [key: string]: string };
   /** timeouts block */
-  readonly timeouts?: DataAzurermDatabricksWorkspaceTimeouts;
+  readonly timeouts?: DataAzurermEventgridDomainTopicTimeouts;
 }
-export interface DataAzurermDatabricksWorkspaceTimeouts {
+export interface DataAzurermEventgridDomainTopicTimeouts {
   readonly read?: string;
 }
 
-function dataAzurermDatabricksWorkspaceTimeoutsToTerraform(struct?: DataAzurermDatabricksWorkspaceTimeouts): any {
+function dataAzurermEventgridDomainTopicTimeoutsToTerraform(struct?: DataAzurermEventgridDomainTopicTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   return {
     read: cdktf.stringToTerraform(struct!.read),
@@ -27,15 +27,15 @@ function dataAzurermDatabricksWorkspaceTimeoutsToTerraform(struct?: DataAzurermD
 
 // Resource
 
-export class DataAzurermDatabricksWorkspace extends cdktf.TerraformDataSource {
+export class DataAzurermEventgridDomainTopic extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
-  public constructor(scope: Construct, id: string, config: DataAzurermDatabricksWorkspaceConfig) {
+  public constructor(scope: Construct, id: string, config: DataAzurermEventgridDomainTopicConfig) {
     super(scope, id, {
-      terraformResourceType: 'azurerm_databricks_workspace',
+      terraformResourceType: 'azurerm_eventgrid_domain_topic',
       terraformGeneratorMetadata: {
         providerName: 'azurerm'
       },
@@ -44,15 +44,28 @@ export class DataAzurermDatabricksWorkspace extends cdktf.TerraformDataSource {
       count: config.count,
       lifecycle: config.lifecycle
     });
+    this._domainName = config.domainName;
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
-    this._tags = config.tags;
     this._timeouts = config.timeouts;
   }
 
   // ==========
   // ATTRIBUTES
   // ==========
+
+  // domain_name - computed: false, optional: false, required: true
+  private _domainName: string;
+  public get domainName() {
+    return this.getStringAttribute('domain_name');
+  }
+  public set domainName(value: string) {
+    this._domainName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get domainNameInput() {
+    return this._domainName
+  }
 
   // id - computed: true, optional: true, required: false
   public get id() {
@@ -85,43 +98,12 @@ export class DataAzurermDatabricksWorkspace extends cdktf.TerraformDataSource {
     return this._resourceGroupName
   }
 
-  // sku - computed: true, optional: false, required: false
-  public get sku() {
-    return this.getStringAttribute('sku');
-  }
-
-  // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string };
-  public get tags() {
-    return this.interpolationForAttribute('tags') as any;
-  }
-  public set tags(value: { [key: string]: string } ) {
-    this._tags = value;
-  }
-  public resetTags() {
-    this._tags = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get tagsInput() {
-    return this._tags
-  }
-
-  // workspace_id - computed: true, optional: false, required: false
-  public get workspaceId() {
-    return this.getStringAttribute('workspace_id');
-  }
-
-  // workspace_url - computed: true, optional: false, required: false
-  public get workspaceUrl() {
-    return this.getStringAttribute('workspace_url');
-  }
-
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: DataAzurermDatabricksWorkspaceTimeouts;
+  private _timeouts?: DataAzurermEventgridDomainTopicTimeouts;
   public get timeouts() {
     return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: DataAzurermDatabricksWorkspaceTimeouts ) {
+  public set timeouts(value: DataAzurermEventgridDomainTopicTimeouts ) {
     this._timeouts = value;
   }
   public resetTimeouts() {
@@ -138,10 +120,10 @@ export class DataAzurermDatabricksWorkspace extends cdktf.TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      domain_name: cdktf.stringToTerraform(this._domainName),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
-      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
-      timeouts: dataAzurermDatabricksWorkspaceTimeoutsToTerraform(this._timeouts),
+      timeouts: dataAzurermEventgridDomainTopicTimeoutsToTerraform(this._timeouts),
     };
   }
 }

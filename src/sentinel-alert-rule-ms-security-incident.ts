@@ -7,8 +7,10 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface SentinelAlertRuleMsSecurityIncidentConfig extends cdktf.TerraformMetaArguments {
+  readonly alertRuleTemplateGuid?: string;
   readonly description?: string;
   readonly displayName: string;
+  readonly displayNameExcludeFilter?: string[];
   readonly displayNameFilter?: string[];
   readonly enabled?: boolean;
   readonly logAnalyticsWorkspaceId: string;
@@ -56,8 +58,10 @@ export class SentinelAlertRuleMsSecurityIncident extends cdktf.TerraformResource
       count: config.count,
       lifecycle: config.lifecycle
     });
+    this._alertRuleTemplateGuid = config.alertRuleTemplateGuid;
     this._description = config.description;
     this._displayName = config.displayName;
+    this._displayNameExcludeFilter = config.displayNameExcludeFilter;
     this._displayNameFilter = config.displayNameFilter;
     this._enabled = config.enabled;
     this._logAnalyticsWorkspaceId = config.logAnalyticsWorkspaceId;
@@ -71,6 +75,22 @@ export class SentinelAlertRuleMsSecurityIncident extends cdktf.TerraformResource
   // ==========
   // ATTRIBUTES
   // ==========
+
+  // alert_rule_template_guid - computed: false, optional: true, required: false
+  private _alertRuleTemplateGuid?: string;
+  public get alertRuleTemplateGuid() {
+    return this.getStringAttribute('alert_rule_template_guid');
+  }
+  public set alertRuleTemplateGuid(value: string ) {
+    this._alertRuleTemplateGuid = value;
+  }
+  public resetAlertRuleTemplateGuid() {
+    this._alertRuleTemplateGuid = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get alertRuleTemplateGuidInput() {
+    return this._alertRuleTemplateGuid
+  }
 
   // description - computed: false, optional: true, required: false
   private _description?: string;
@@ -99,6 +119,22 @@ export class SentinelAlertRuleMsSecurityIncident extends cdktf.TerraformResource
   // Temporarily expose input value. Use with caution.
   public get displayNameInput() {
     return this._displayName
+  }
+
+  // display_name_exclude_filter - computed: false, optional: true, required: false
+  private _displayNameExcludeFilter?: string[];
+  public get displayNameExcludeFilter() {
+    return this.getListAttribute('display_name_exclude_filter');
+  }
+  public set displayNameExcludeFilter(value: string[] ) {
+    this._displayNameExcludeFilter = value;
+  }
+  public resetDisplayNameExcludeFilter() {
+    this._displayNameExcludeFilter = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get displayNameExcludeFilterInput() {
+    return this._displayNameExcludeFilter
   }
 
   // display_name_filter - computed: true, optional: true, required: false
@@ -228,8 +264,10 @@ export class SentinelAlertRuleMsSecurityIncident extends cdktf.TerraformResource
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      alert_rule_template_guid: cdktf.stringToTerraform(this._alertRuleTemplateGuid),
       description: cdktf.stringToTerraform(this._description),
       display_name: cdktf.stringToTerraform(this._displayName),
+      display_name_exclude_filter: cdktf.listMapper(cdktf.stringToTerraform)(this._displayNameExcludeFilter),
       display_name_filter: cdktf.listMapper(cdktf.stringToTerraform)(this._displayNameFilter),
       enabled: cdktf.booleanToTerraform(this._enabled),
       log_analytics_workspace_id: cdktf.stringToTerraform(this._logAnalyticsWorkspaceId),

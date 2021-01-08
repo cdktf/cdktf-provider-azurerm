@@ -59,7 +59,7 @@ function cdnEndpointDeliveryRuleCacheKeyQueryStringActionToTerraform(struct?: Cd
 }
 
 export interface CdnEndpointDeliveryRuleCookiesCondition {
-  readonly matchValues: string[];
+  readonly matchValues?: string[];
   readonly negateCondition?: boolean;
   readonly operator: string;
   readonly selector: string;
@@ -138,7 +138,7 @@ function cdnEndpointDeliveryRuleModifyResponseHeaderActionToTerraform(struct?: C
 }
 
 export interface CdnEndpointDeliveryRulePostArgCondition {
-  readonly matchValues: string[];
+  readonly matchValues?: string[];
   readonly negateCondition?: boolean;
   readonly operator: string;
   readonly selector: string;
@@ -157,7 +157,7 @@ function cdnEndpointDeliveryRulePostArgConditionToTerraform(struct?: CdnEndpoint
 }
 
 export interface CdnEndpointDeliveryRuleQueryStringCondition {
-  readonly matchValues: string[];
+  readonly matchValues?: string[];
   readonly negateCondition?: boolean;
   readonly operator: string;
   readonly transforms?: string[];
@@ -174,7 +174,7 @@ function cdnEndpointDeliveryRuleQueryStringConditionToTerraform(struct?: CdnEndp
 }
 
 export interface CdnEndpointDeliveryRuleRemoteAddressCondition {
-  readonly matchValues: string[];
+  readonly matchValues?: string[];
   readonly negateCondition?: boolean;
   readonly operator: string;
 }
@@ -189,7 +189,7 @@ function cdnEndpointDeliveryRuleRemoteAddressConditionToTerraform(struct?: CdnEn
 }
 
 export interface CdnEndpointDeliveryRuleRequestBodyCondition {
-  readonly matchValues: string[];
+  readonly matchValues?: string[];
   readonly negateCondition?: boolean;
   readonly operator: string;
   readonly transforms?: string[];
@@ -206,7 +206,7 @@ function cdnEndpointDeliveryRuleRequestBodyConditionToTerraform(struct?: CdnEndp
 }
 
 export interface CdnEndpointDeliveryRuleRequestHeaderCondition {
-  readonly matchValues: string[];
+  readonly matchValues?: string[];
   readonly negateCondition?: boolean;
   readonly operator: string;
   readonly selector: string;
@@ -255,7 +255,7 @@ function cdnEndpointDeliveryRuleRequestSchemeConditionToTerraform(struct?: CdnEn
 }
 
 export interface CdnEndpointDeliveryRuleRequestUriCondition {
-  readonly matchValues: string[];
+  readonly matchValues?: string[];
   readonly negateCondition?: boolean;
   readonly operator: string;
   readonly transforms?: string[];
@@ -272,7 +272,7 @@ function cdnEndpointDeliveryRuleRequestUriConditionToTerraform(struct?: CdnEndpo
 }
 
 export interface CdnEndpointDeliveryRuleUrlFileExtensionCondition {
-  readonly matchValues: string[];
+  readonly matchValues?: string[];
   readonly negateCondition?: boolean;
   readonly operator: string;
   readonly transforms?: string[];
@@ -289,7 +289,7 @@ function cdnEndpointDeliveryRuleUrlFileExtensionConditionToTerraform(struct?: Cd
 }
 
 export interface CdnEndpointDeliveryRuleUrlFileNameCondition {
-  readonly matchValues: string[];
+  readonly matchValues?: string[];
   readonly negateCondition?: boolean;
   readonly operator: string;
   readonly transforms?: string[];
@@ -306,7 +306,7 @@ function cdnEndpointDeliveryRuleUrlFileNameConditionToTerraform(struct?: CdnEndp
 }
 
 export interface CdnEndpointDeliveryRuleUrlPathCondition {
-  readonly matchValues: string[];
+  readonly matchValues?: string[];
   readonly negateCondition?: boolean;
   readonly operator: string;
   readonly transforms?: string[];

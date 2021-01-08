@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/data_azurerm_databricks_workspace.html
+// https://www.terraform.io/docs/providers/azurerm/r/ssh_public_key.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -6,36 +6,44 @@ import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataAzurermDatabricksWorkspaceConfig extends cdktf.TerraformMetaArguments {
+export interface SshPublicKeyConfig extends cdktf.TerraformMetaArguments {
+  readonly location: string;
   readonly name: string;
+  readonly publicKey: string;
   readonly resourceGroupName: string;
   readonly tags?: { [key: string]: string };
   /** timeouts block */
-  readonly timeouts?: DataAzurermDatabricksWorkspaceTimeouts;
+  readonly timeouts?: SshPublicKeyTimeouts;
 }
-export interface DataAzurermDatabricksWorkspaceTimeouts {
+export interface SshPublicKeyTimeouts {
+  readonly create?: string;
+  readonly delete?: string;
   readonly read?: string;
+  readonly update?: string;
 }
 
-function dataAzurermDatabricksWorkspaceTimeoutsToTerraform(struct?: DataAzurermDatabricksWorkspaceTimeouts): any {
+function sshPublicKeyTimeoutsToTerraform(struct?: SshPublicKeyTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
     read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
   }
 }
 
 
 // Resource
 
-export class DataAzurermDatabricksWorkspace extends cdktf.TerraformDataSource {
+export class SshPublicKey extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
-  public constructor(scope: Construct, id: string, config: DataAzurermDatabricksWorkspaceConfig) {
+  public constructor(scope: Construct, id: string, config: SshPublicKeyConfig) {
     super(scope, id, {
-      terraformResourceType: 'azurerm_databricks_workspace',
+      terraformResourceType: 'azurerm_ssh_public_key',
       terraformGeneratorMetadata: {
         providerName: 'azurerm'
       },
@@ -44,7 +52,9 @@ export class DataAzurermDatabricksWorkspace extends cdktf.TerraformDataSource {
       count: config.count,
       lifecycle: config.lifecycle
     });
+    this._location = config.location;
     this._name = config.name;
+    this._publicKey = config.publicKey;
     this._resourceGroupName = config.resourceGroupName;
     this._tags = config.tags;
     this._timeouts = config.timeouts;
@@ -57,6 +67,19 @@ export class DataAzurermDatabricksWorkspace extends cdktf.TerraformDataSource {
   // id - computed: true, optional: true, required: false
   public get id() {
     return this.getStringAttribute('id');
+  }
+
+  // location - computed: false, optional: false, required: true
+  private _location: string;
+  public get location() {
+    return this.getStringAttribute('location');
+  }
+  public set location(value: string) {
+    this._location = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get locationInput() {
+    return this._location
   }
 
   // name - computed: false, optional: false, required: true
@@ -72,6 +95,19 @@ export class DataAzurermDatabricksWorkspace extends cdktf.TerraformDataSource {
     return this._name
   }
 
+  // public_key - computed: false, optional: false, required: true
+  private _publicKey: string;
+  public get publicKey() {
+    return this.getStringAttribute('public_key');
+  }
+  public set publicKey(value: string) {
+    this._publicKey = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get publicKeyInput() {
+    return this._publicKey
+  }
+
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
@@ -83,11 +119,6 @@ export class DataAzurermDatabricksWorkspace extends cdktf.TerraformDataSource {
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
     return this._resourceGroupName
-  }
-
-  // sku - computed: true, optional: false, required: false
-  public get sku() {
-    return this.getStringAttribute('sku');
   }
 
   // tags - computed: false, optional: true, required: false
@@ -106,22 +137,12 @@ export class DataAzurermDatabricksWorkspace extends cdktf.TerraformDataSource {
     return this._tags
   }
 
-  // workspace_id - computed: true, optional: false, required: false
-  public get workspaceId() {
-    return this.getStringAttribute('workspace_id');
-  }
-
-  // workspace_url - computed: true, optional: false, required: false
-  public get workspaceUrl() {
-    return this.getStringAttribute('workspace_url');
-  }
-
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: DataAzurermDatabricksWorkspaceTimeouts;
+  private _timeouts?: SshPublicKeyTimeouts;
   public get timeouts() {
     return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: DataAzurermDatabricksWorkspaceTimeouts ) {
+  public set timeouts(value: SshPublicKeyTimeouts ) {
     this._timeouts = value;
   }
   public resetTimeouts() {
@@ -138,10 +159,12 @@ export class DataAzurermDatabricksWorkspace extends cdktf.TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
+      public_key: cdktf.stringToTerraform(this._publicKey),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
-      timeouts: dataAzurermDatabricksWorkspaceTimeoutsToTerraform(this._timeouts),
+      timeouts: sshPublicKeyTimeoutsToTerraform(this._timeouts),
     };
   }
 }

@@ -149,6 +149,7 @@ function containerGroupContainerVolumeGitRepoToTerraform(struct?: ContainerGroup
 }
 
 export interface ContainerGroupContainerVolume {
+  readonly emptyDir?: boolean;
   readonly mountPath: string;
   readonly name: string;
   readonly readOnly?: boolean;
@@ -163,6 +164,7 @@ export interface ContainerGroupContainerVolume {
 function containerGroupContainerVolumeToTerraform(struct?: ContainerGroupContainerVolume): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   return {
+    empty_dir: cdktf.booleanToTerraform(struct!.emptyDir),
     mount_path: cdktf.stringToTerraform(struct!.mountPath),
     name: cdktf.stringToTerraform(struct!.name),
     read_only: cdktf.booleanToTerraform(struct!.readOnly),

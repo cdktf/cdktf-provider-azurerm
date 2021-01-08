@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/data_azurerm_databricks_workspace.html
+// https://www.terraform.io/docs/providers/azurerm/r/data_azurerm_disk_access.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -6,18 +6,18 @@ import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataAzurermDatabricksWorkspaceConfig extends cdktf.TerraformMetaArguments {
+export interface DataAzurermDiskAccessConfig extends cdktf.TerraformMetaArguments {
   readonly name: string;
   readonly resourceGroupName: string;
   readonly tags?: { [key: string]: string };
   /** timeouts block */
-  readonly timeouts?: DataAzurermDatabricksWorkspaceTimeouts;
+  readonly timeouts?: DataAzurermDiskAccessTimeouts;
 }
-export interface DataAzurermDatabricksWorkspaceTimeouts {
+export interface DataAzurermDiskAccessTimeouts {
   readonly read?: string;
 }
 
-function dataAzurermDatabricksWorkspaceTimeoutsToTerraform(struct?: DataAzurermDatabricksWorkspaceTimeouts): any {
+function dataAzurermDiskAccessTimeoutsToTerraform(struct?: DataAzurermDiskAccessTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   return {
     read: cdktf.stringToTerraform(struct!.read),
@@ -27,15 +27,15 @@ function dataAzurermDatabricksWorkspaceTimeoutsToTerraform(struct?: DataAzurermD
 
 // Resource
 
-export class DataAzurermDatabricksWorkspace extends cdktf.TerraformDataSource {
+export class DataAzurermDiskAccess extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
-  public constructor(scope: Construct, id: string, config: DataAzurermDatabricksWorkspaceConfig) {
+  public constructor(scope: Construct, id: string, config: DataAzurermDiskAccessConfig) {
     super(scope, id, {
-      terraformResourceType: 'azurerm_databricks_workspace',
+      terraformResourceType: 'azurerm_disk_access',
       terraformGeneratorMetadata: {
         providerName: 'azurerm'
       },
@@ -85,11 +85,6 @@ export class DataAzurermDatabricksWorkspace extends cdktf.TerraformDataSource {
     return this._resourceGroupName
   }
 
-  // sku - computed: true, optional: false, required: false
-  public get sku() {
-    return this.getStringAttribute('sku');
-  }
-
   // tags - computed: false, optional: true, required: false
   private _tags?: { [key: string]: string };
   public get tags() {
@@ -106,22 +101,12 @@ export class DataAzurermDatabricksWorkspace extends cdktf.TerraformDataSource {
     return this._tags
   }
 
-  // workspace_id - computed: true, optional: false, required: false
-  public get workspaceId() {
-    return this.getStringAttribute('workspace_id');
-  }
-
-  // workspace_url - computed: true, optional: false, required: false
-  public get workspaceUrl() {
-    return this.getStringAttribute('workspace_url');
-  }
-
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: DataAzurermDatabricksWorkspaceTimeouts;
+  private _timeouts?: DataAzurermDiskAccessTimeouts;
   public get timeouts() {
     return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: DataAzurermDatabricksWorkspaceTimeouts ) {
+  public set timeouts(value: DataAzurermDiskAccessTimeouts ) {
     this._timeouts = value;
   }
   public resetTimeouts() {
@@ -141,7 +126,7 @@ export class DataAzurermDatabricksWorkspace extends cdktf.TerraformDataSource {
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
-      timeouts: dataAzurermDatabricksWorkspaceTimeoutsToTerraform(this._timeouts),
+      timeouts: dataAzurermDiskAccessTimeoutsToTerraform(this._timeouts),
     };
   }
 }

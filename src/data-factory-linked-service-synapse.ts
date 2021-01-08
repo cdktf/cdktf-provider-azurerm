@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_file_storage.html
+// https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_synapse.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -6,31 +6,42 @@ import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DataFactoryLinkedServiceAzureFileStorageConfig extends cdktf.TerraformMetaArguments {
+export interface DataFactoryLinkedServiceSynapseConfig extends cdktf.TerraformMetaArguments {
   readonly additionalProperties?: { [key: string]: string };
   readonly annotations?: string[];
   readonly connectionString: string;
   readonly dataFactoryName: string;
   readonly description?: string;
-  readonly fileShare?: string;
-  readonly host?: string;
   readonly integrationRuntimeName?: string;
   readonly name: string;
   readonly parameters?: { [key: string]: string };
-  readonly password?: string;
   readonly resourceGroupName: string;
-  readonly userId?: string;
+  /** key_vault_password block */
+  readonly keyVaultPassword?: DataFactoryLinkedServiceSynapseKeyVaultPassword[];
   /** timeouts block */
-  readonly timeouts?: DataFactoryLinkedServiceAzureFileStorageTimeouts;
+  readonly timeouts?: DataFactoryLinkedServiceSynapseTimeouts;
 }
-export interface DataFactoryLinkedServiceAzureFileStorageTimeouts {
+export interface DataFactoryLinkedServiceSynapseKeyVaultPassword {
+  readonly linkedServiceName: string;
+  readonly secretName: string;
+}
+
+function dataFactoryLinkedServiceSynapseKeyVaultPasswordToTerraform(struct?: DataFactoryLinkedServiceSynapseKeyVaultPassword): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    linked_service_name: cdktf.stringToTerraform(struct!.linkedServiceName),
+    secret_name: cdktf.stringToTerraform(struct!.secretName),
+  }
+}
+
+export interface DataFactoryLinkedServiceSynapseTimeouts {
   readonly create?: string;
   readonly delete?: string;
   readonly read?: string;
   readonly update?: string;
 }
 
-function dataFactoryLinkedServiceAzureFileStorageTimeoutsToTerraform(struct?: DataFactoryLinkedServiceAzureFileStorageTimeouts): any {
+function dataFactoryLinkedServiceSynapseTimeoutsToTerraform(struct?: DataFactoryLinkedServiceSynapseTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   return {
     create: cdktf.stringToTerraform(struct!.create),
@@ -43,15 +54,15 @@ function dataFactoryLinkedServiceAzureFileStorageTimeoutsToTerraform(struct?: Da
 
 // Resource
 
-export class DataFactoryLinkedServiceAzureFileStorage extends cdktf.TerraformResource {
+export class DataFactoryLinkedServiceSynapse extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
-  public constructor(scope: Construct, id: string, config: DataFactoryLinkedServiceAzureFileStorageConfig) {
+  public constructor(scope: Construct, id: string, config: DataFactoryLinkedServiceSynapseConfig) {
     super(scope, id, {
-      terraformResourceType: 'azurerm_data_factory_linked_service_azure_file_storage',
+      terraformResourceType: 'azurerm_data_factory_linked_service_synapse',
       terraformGeneratorMetadata: {
         providerName: 'azurerm'
       },
@@ -65,14 +76,11 @@ export class DataFactoryLinkedServiceAzureFileStorage extends cdktf.TerraformRes
     this._connectionString = config.connectionString;
     this._dataFactoryName = config.dataFactoryName;
     this._description = config.description;
-    this._fileShare = config.fileShare;
-    this._host = config.host;
     this._integrationRuntimeName = config.integrationRuntimeName;
     this._name = config.name;
     this._parameters = config.parameters;
-    this._password = config.password;
     this._resourceGroupName = config.resourceGroupName;
-    this._userId = config.userId;
+    this._keyVaultPassword = config.keyVaultPassword;
     this._timeouts = config.timeouts;
   }
 
@@ -154,38 +162,6 @@ export class DataFactoryLinkedServiceAzureFileStorage extends cdktf.TerraformRes
     return this._description
   }
 
-  // file_share - computed: false, optional: true, required: false
-  private _fileShare?: string;
-  public get fileShare() {
-    return this.getStringAttribute('file_share');
-  }
-  public set fileShare(value: string ) {
-    this._fileShare = value;
-  }
-  public resetFileShare() {
-    this._fileShare = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get fileShareInput() {
-    return this._fileShare
-  }
-
-  // host - computed: false, optional: true, required: false
-  private _host?: string;
-  public get host() {
-    return this.getStringAttribute('host');
-  }
-  public set host(value: string ) {
-    this._host = value;
-  }
-  public resetHost() {
-    this._host = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get hostInput() {
-    return this._host
-  }
-
   // id - computed: true, optional: true, required: false
   public get id() {
     return this.getStringAttribute('id');
@@ -236,22 +212,6 @@ export class DataFactoryLinkedServiceAzureFileStorage extends cdktf.TerraformRes
     return this._parameters
   }
 
-  // password - computed: false, optional: true, required: false
-  private _password?: string;
-  public get password() {
-    return this.getStringAttribute('password');
-  }
-  public set password(value: string ) {
-    this._password = value;
-  }
-  public resetPassword() {
-    this._password = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get passwordInput() {
-    return this._password
-  }
-
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
@@ -265,28 +225,28 @@ export class DataFactoryLinkedServiceAzureFileStorage extends cdktf.TerraformRes
     return this._resourceGroupName
   }
 
-  // user_id - computed: false, optional: true, required: false
-  private _userId?: string;
-  public get userId() {
-    return this.getStringAttribute('user_id');
+  // key_vault_password - computed: false, optional: true, required: false
+  private _keyVaultPassword?: DataFactoryLinkedServiceSynapseKeyVaultPassword[];
+  public get keyVaultPassword() {
+    return this.interpolationForAttribute('key_vault_password') as any;
   }
-  public set userId(value: string ) {
-    this._userId = value;
+  public set keyVaultPassword(value: DataFactoryLinkedServiceSynapseKeyVaultPassword[] ) {
+    this._keyVaultPassword = value;
   }
-  public resetUserId() {
-    this._userId = undefined;
+  public resetKeyVaultPassword() {
+    this._keyVaultPassword = undefined;
   }
   // Temporarily expose input value. Use with caution.
-  public get userIdInput() {
-    return this._userId
+  public get keyVaultPasswordInput() {
+    return this._keyVaultPassword
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: DataFactoryLinkedServiceAzureFileStorageTimeouts;
+  private _timeouts?: DataFactoryLinkedServiceSynapseTimeouts;
   public get timeouts() {
     return this.interpolationForAttribute('timeouts') as any;
   }
-  public set timeouts(value: DataFactoryLinkedServiceAzureFileStorageTimeouts ) {
+  public set timeouts(value: DataFactoryLinkedServiceSynapseTimeouts ) {
     this._timeouts = value;
   }
   public resetTimeouts() {
@@ -308,15 +268,12 @@ export class DataFactoryLinkedServiceAzureFileStorage extends cdktf.TerraformRes
       connection_string: cdktf.stringToTerraform(this._connectionString),
       data_factory_name: cdktf.stringToTerraform(this._dataFactoryName),
       description: cdktf.stringToTerraform(this._description),
-      file_share: cdktf.stringToTerraform(this._fileShare),
-      host: cdktf.stringToTerraform(this._host),
       integration_runtime_name: cdktf.stringToTerraform(this._integrationRuntimeName),
       name: cdktf.stringToTerraform(this._name),
       parameters: cdktf.hashMapper(cdktf.anyToTerraform)(this._parameters),
-      password: cdktf.stringToTerraform(this._password),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
-      user_id: cdktf.stringToTerraform(this._userId),
-      timeouts: dataFactoryLinkedServiceAzureFileStorageTimeoutsToTerraform(this._timeouts),
+      key_vault_password: cdktf.listMapper(dataFactoryLinkedServiceSynapseKeyVaultPasswordToTerraform)(this._keyVaultPassword),
+      timeouts: dataFactoryLinkedServiceSynapseTimeoutsToTerraform(this._timeouts),
     };
   }
 }

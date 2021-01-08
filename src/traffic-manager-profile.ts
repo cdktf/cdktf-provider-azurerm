@@ -13,6 +13,7 @@ export interface TrafficManagerProfileConfig extends cdktf.TerraformMetaArgument
   readonly resourceGroupName: string;
   readonly tags?: { [key: string]: string };
   readonly trafficRoutingMethod: string;
+  readonly trafficViewEnabled?: boolean;
   /** dns_config block */
   readonly dnsConfig: TrafficManagerProfileDnsConfig[];
   /** monitor_config block */
@@ -115,6 +116,7 @@ export class TrafficManagerProfile extends cdktf.TerraformResource {
     this._resourceGroupName = config.resourceGroupName;
     this._tags = config.tags;
     this._trafficRoutingMethod = config.trafficRoutingMethod;
+    this._trafficViewEnabled = config.trafficViewEnabled;
     this._dnsConfig = config.dnsConfig;
     this._monitorConfig = config.monitorConfig;
     this._timeouts = config.timeouts;
@@ -221,6 +223,22 @@ export class TrafficManagerProfile extends cdktf.TerraformResource {
     return this._trafficRoutingMethod
   }
 
+  // traffic_view_enabled - computed: false, optional: true, required: false
+  private _trafficViewEnabled?: boolean;
+  public get trafficViewEnabled() {
+    return this.getBooleanAttribute('traffic_view_enabled');
+  }
+  public set trafficViewEnabled(value: boolean ) {
+    this._trafficViewEnabled = value;
+  }
+  public resetTrafficViewEnabled() {
+    this._trafficViewEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get trafficViewEnabledInput() {
+    return this._trafficViewEnabled
+  }
+
   // dns_config - computed: false, optional: false, required: true
   private _dnsConfig: TrafficManagerProfileDnsConfig[];
   public get dnsConfig() {
@@ -275,6 +293,7 @@ export class TrafficManagerProfile extends cdktf.TerraformResource {
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
       traffic_routing_method: cdktf.stringToTerraform(this._trafficRoutingMethod),
+      traffic_view_enabled: cdktf.booleanToTerraform(this._trafficViewEnabled),
       dns_config: cdktf.listMapper(trafficManagerProfileDnsConfigToTerraform)(this._dnsConfig),
       monitor_config: cdktf.listMapper(trafficManagerProfileMonitorConfigToTerraform)(this._monitorConfig),
       timeouts: trafficManagerProfileTimeoutsToTerraform(this._timeouts),

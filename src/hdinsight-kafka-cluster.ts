@@ -22,6 +22,8 @@ export interface HdinsightKafkaClusterConfig extends cdktf.TerraformMetaArgument
   readonly metastores?: HdinsightKafkaClusterMetastores[];
   /** monitor block */
   readonly monitor?: HdinsightKafkaClusterMonitor[];
+  /** rest_proxy block */
+  readonly restProxy?: HdinsightKafkaClusterRestProxy[];
   /** roles block */
   readonly roles: HdinsightKafkaClusterRoles[];
   /** storage_account block */
@@ -139,6 +141,17 @@ function hdinsightKafkaClusterMonitorToTerraform(struct?: HdinsightKafkaClusterM
   }
 }
 
+export interface HdinsightKafkaClusterRestProxy {
+  readonly securityGroupId: string;
+}
+
+function hdinsightKafkaClusterRestProxyToTerraform(struct?: HdinsightKafkaClusterRestProxy): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    security_group_id: cdktf.stringToTerraform(struct!.securityGroupId),
+  }
+}
+
 export interface HdinsightKafkaClusterRolesHeadNode {
   readonly password?: string;
   readonly sshKeys?: string[];
@@ -149,6 +162,27 @@ export interface HdinsightKafkaClusterRolesHeadNode {
 }
 
 function hdinsightKafkaClusterRolesHeadNodeToTerraform(struct?: HdinsightKafkaClusterRolesHeadNode): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    password: cdktf.stringToTerraform(struct!.password),
+    ssh_keys: cdktf.listMapper(cdktf.stringToTerraform)(struct!.sshKeys),
+    subnet_id: cdktf.stringToTerraform(struct!.subnetId),
+    username: cdktf.stringToTerraform(struct!.username),
+    virtual_network_id: cdktf.stringToTerraform(struct!.virtualNetworkId),
+    vm_size: cdktf.stringToTerraform(struct!.vmSize),
+  }
+}
+
+export interface HdinsightKafkaClusterRolesKafkaManagementNode {
+  readonly password?: string;
+  readonly sshKeys?: string[];
+  readonly subnetId?: string;
+  readonly username: string;
+  readonly virtualNetworkId?: string;
+  readonly vmSize: string;
+}
+
+function hdinsightKafkaClusterRolesKafkaManagementNodeToTerraform(struct?: HdinsightKafkaClusterRolesKafkaManagementNode): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   return {
     password: cdktf.stringToTerraform(struct!.password),
@@ -211,6 +245,8 @@ function hdinsightKafkaClusterRolesZookeeperNodeToTerraform(struct?: HdinsightKa
 export interface HdinsightKafkaClusterRoles {
   /** head_node block */
   readonly headNode: HdinsightKafkaClusterRolesHeadNode[];
+  /** kafka_management_node block */
+  readonly kafkaManagementNode?: HdinsightKafkaClusterRolesKafkaManagementNode[];
   /** worker_node block */
   readonly workerNode: HdinsightKafkaClusterRolesWorkerNode[];
   /** zookeeper_node block */
@@ -221,6 +257,7 @@ function hdinsightKafkaClusterRolesToTerraform(struct?: HdinsightKafkaClusterRol
   if (!cdktf.canInspect(struct)) { return struct; }
   return {
     head_node: cdktf.listMapper(hdinsightKafkaClusterRolesHeadNodeToTerraform)(struct!.headNode),
+    kafka_management_node: cdktf.listMapper(hdinsightKafkaClusterRolesKafkaManagementNodeToTerraform)(struct!.kafkaManagementNode),
     worker_node: cdktf.listMapper(hdinsightKafkaClusterRolesWorkerNodeToTerraform)(struct!.workerNode),
     zookeeper_node: cdktf.listMapper(hdinsightKafkaClusterRolesZookeeperNodeToTerraform)(struct!.zookeeperNode),
   }
@@ -306,6 +343,7 @@ export class HdinsightKafkaCluster extends cdktf.TerraformResource {
     this._gateway = config.gateway;
     this._metastores = config.metastores;
     this._monitor = config.monitor;
+    this._restProxy = config.restProxy;
     this._roles = config.roles;
     this._storageAccount = config.storageAccount;
     this._storageAccountGen2 = config.storageAccountGen2;
@@ -337,6 +375,11 @@ export class HdinsightKafkaCluster extends cdktf.TerraformResource {
   // id - computed: true, optional: true, required: false
   public get id() {
     return this.getStringAttribute('id');
+  }
+
+  // kafka_rest_proxy_endpoint - computed: true, optional: false, required: false
+  public get kafkaRestProxyEndpoint() {
+    return this.getStringAttribute('kafka_rest_proxy_endpoint');
   }
 
   // location - computed: false, optional: false, required: true
@@ -486,6 +529,22 @@ export class HdinsightKafkaCluster extends cdktf.TerraformResource {
     return this._monitor
   }
 
+  // rest_proxy - computed: false, optional: true, required: false
+  private _restProxy?: HdinsightKafkaClusterRestProxy[];
+  public get restProxy() {
+    return this.interpolationForAttribute('rest_proxy') as any;
+  }
+  public set restProxy(value: HdinsightKafkaClusterRestProxy[] ) {
+    this._restProxy = value;
+  }
+  public resetRestProxy() {
+    this._restProxy = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get restProxyInput() {
+    return this._restProxy
+  }
+
   // roles - computed: false, optional: false, required: true
   private _roles: HdinsightKafkaClusterRoles[];
   public get roles() {
@@ -564,6 +623,7 @@ export class HdinsightKafkaCluster extends cdktf.TerraformResource {
       gateway: cdktf.listMapper(hdinsightKafkaClusterGatewayToTerraform)(this._gateway),
       metastores: cdktf.listMapper(hdinsightKafkaClusterMetastoresToTerraform)(this._metastores),
       monitor: cdktf.listMapper(hdinsightKafkaClusterMonitorToTerraform)(this._monitor),
+      rest_proxy: cdktf.listMapper(hdinsightKafkaClusterRestProxyToTerraform)(this._restProxy),
       roles: cdktf.listMapper(hdinsightKafkaClusterRolesToTerraform)(this._roles),
       storage_account: cdktf.listMapper(hdinsightKafkaClusterStorageAccountToTerraform)(this._storageAccount),
       storage_account_gen2: cdktf.listMapper(hdinsightKafkaClusterStorageAccountGen2ToTerraform)(this._storageAccountGen2),

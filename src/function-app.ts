@@ -196,6 +196,7 @@ export interface FunctionAppSiteConfigIpRestriction {
   readonly ipAddress?: string;
   readonly name?: string;
   readonly priority?: number;
+  readonly serviceTag?: string;
   readonly subnetId?: string;
   readonly virtualNetworkSubnetId?: string;
 }
@@ -207,6 +208,7 @@ function functionAppSiteConfigIpRestrictionToTerraform(struct?: FunctionAppSiteC
     ip_address: cdktf.stringToTerraform(struct!.ipAddress),
     name: cdktf.stringToTerraform(struct!.name),
     priority: cdktf.numberToTerraform(struct!.priority),
+    service_tag: cdktf.stringToTerraform(struct!.serviceTag),
     subnet_id: cdktf.stringToTerraform(struct!.subnetId),
     virtual_network_subnet_id: cdktf.stringToTerraform(struct!.virtualNetworkSubnetId),
   }
@@ -217,6 +219,7 @@ export interface FunctionAppSiteConfigScmIpRestriction {
   readonly ipAddress?: string;
   readonly name?: string;
   readonly priority?: number;
+  readonly serviceTag?: string;
   readonly subnetId?: string;
   readonly virtualNetworkSubnetId?: string;
 }
@@ -228,6 +231,7 @@ function functionAppSiteConfigScmIpRestrictionToTerraform(struct?: FunctionAppSi
     ip_address: cdktf.stringToTerraform(struct!.ipAddress),
     name: cdktf.stringToTerraform(struct!.name),
     priority: cdktf.numberToTerraform(struct!.priority),
+    service_tag: cdktf.stringToTerraform(struct!.serviceTag),
     subnet_id: cdktf.stringToTerraform(struct!.subnetId),
     virtual_network_subnet_id: cdktf.stringToTerraform(struct!.virtualNetworkSubnetId),
   }

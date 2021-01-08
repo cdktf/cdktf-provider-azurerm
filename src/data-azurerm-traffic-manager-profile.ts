@@ -10,6 +10,7 @@ export interface DataAzurermTrafficManagerProfileConfig extends cdktf.TerraformM
   readonly name: string;
   readonly resourceGroupName: string;
   readonly tags?: { [key: string]: string };
+  readonly trafficViewEnabled?: boolean;
   /** timeouts block */
   readonly timeouts?: DataAzurermTrafficManagerProfileTimeouts;
 }
@@ -113,6 +114,7 @@ export class DataAzurermTrafficManagerProfile extends cdktf.TerraformDataSource 
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
     this._tags = config.tags;
+    this._trafficViewEnabled = config.trafficViewEnabled;
     this._timeouts = config.timeouts;
   }
 
@@ -192,6 +194,22 @@ export class DataAzurermTrafficManagerProfile extends cdktf.TerraformDataSource 
     return this.getStringAttribute('traffic_routing_method');
   }
 
+  // traffic_view_enabled - computed: false, optional: true, required: false
+  private _trafficViewEnabled?: boolean;
+  public get trafficViewEnabled() {
+    return this.getBooleanAttribute('traffic_view_enabled');
+  }
+  public set trafficViewEnabled(value: boolean ) {
+    this._trafficViewEnabled = value;
+  }
+  public resetTrafficViewEnabled() {
+    this._trafficViewEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get trafficViewEnabledInput() {
+    return this._trafficViewEnabled
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: DataAzurermTrafficManagerProfileTimeouts;
   public get timeouts() {
@@ -217,6 +235,7 @@ export class DataAzurermTrafficManagerProfile extends cdktf.TerraformDataSource 
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      traffic_view_enabled: cdktf.booleanToTerraform(this._trafficViewEnabled),
       timeouts: dataAzurermTrafficManagerProfileTimeoutsToTerraform(this._timeouts),
     };
   }
