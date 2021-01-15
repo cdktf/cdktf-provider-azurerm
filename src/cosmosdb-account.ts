@@ -7,6 +7,7 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface CosmosdbAccountConfig extends cdktf.TerraformMetaArguments {
+  readonly analyticalStorageEnabled?: boolean;
   readonly enableAutomaticFailover?: boolean;
   readonly enableFreeTier?: boolean;
   readonly enableMultipleWriteLocations?: boolean;
@@ -124,6 +125,7 @@ export class CosmosdbAccount extends cdktf.TerraformResource {
       count: config.count,
       lifecycle: config.lifecycle
     });
+    this._analyticalStorageEnabled = config.analyticalStorageEnabled;
     this._enableAutomaticFailover = config.enableAutomaticFailover;
     this._enableFreeTier = config.enableFreeTier;
     this._enableMultipleWriteLocations = config.enableMultipleWriteLocations;
@@ -147,6 +149,22 @@ export class CosmosdbAccount extends cdktf.TerraformResource {
   // ==========
   // ATTRIBUTES
   // ==========
+
+  // analytical_storage_enabled - computed: false, optional: true, required: false
+  private _analyticalStorageEnabled?: boolean;
+  public get analyticalStorageEnabled() {
+    return this.getBooleanAttribute('analytical_storage_enabled');
+  }
+  public set analyticalStorageEnabled(value: boolean ) {
+    this._analyticalStorageEnabled = value;
+  }
+  public resetAnalyticalStorageEnabled() {
+    this._analyticalStorageEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get analyticalStorageEnabledInput() {
+    return this._analyticalStorageEnabled
+  }
 
   // connection_strings - computed: true, optional: false, required: false
   public get connectionStrings() {
@@ -489,6 +507,7 @@ export class CosmosdbAccount extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      analytical_storage_enabled: cdktf.booleanToTerraform(this._analyticalStorageEnabled),
       enable_automatic_failover: cdktf.booleanToTerraform(this._enableAutomaticFailover),
       enable_free_tier: cdktf.booleanToTerraform(this._enableFreeTier),
       enable_multiple_write_locations: cdktf.booleanToTerraform(this._enableMultipleWriteLocations),

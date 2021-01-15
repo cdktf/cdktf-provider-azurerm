@@ -9,6 +9,7 @@ import * as cdktf from 'cdktf';
 export interface CosmosdbGremlinGraphConfig extends cdktf.TerraformMetaArguments {
   readonly accountName: string;
   readonly databaseName: string;
+  readonly defaultTtl?: number;
   readonly name: string;
   readonly partitionKeyPath?: string;
   readonly resourceGroupName: string;
@@ -117,6 +118,7 @@ export class CosmosdbGremlinGraph extends cdktf.TerraformResource {
     });
     this._accountName = config.accountName;
     this._databaseName = config.databaseName;
+    this._defaultTtl = config.defaultTtl;
     this._name = config.name;
     this._partitionKeyPath = config.partitionKeyPath;
     this._resourceGroupName = config.resourceGroupName;
@@ -156,6 +158,22 @@ export class CosmosdbGremlinGraph extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get databaseNameInput() {
     return this._databaseName
+  }
+
+  // default_ttl - computed: true, optional: true, required: false
+  private _defaultTtl?: number;
+  public get defaultTtl() {
+    return this.getNumberAttribute('default_ttl');
+  }
+  public set defaultTtl(value: number) {
+    this._defaultTtl = value;
+  }
+  public resetDefaultTtl() {
+    this._defaultTtl = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get defaultTtlInput() {
+    return this._defaultTtl
   }
 
   // id - computed: true, optional: true, required: false
@@ -303,6 +321,7 @@ export class CosmosdbGremlinGraph extends cdktf.TerraformResource {
     return {
       account_name: cdktf.stringToTerraform(this._accountName),
       database_name: cdktf.stringToTerraform(this._databaseName),
+      default_ttl: cdktf.numberToTerraform(this._defaultTtl),
       name: cdktf.stringToTerraform(this._name),
       partition_key_path: cdktf.stringToTerraform(this._partitionKeyPath),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),

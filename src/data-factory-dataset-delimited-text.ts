@@ -10,6 +10,7 @@ export interface DataFactoryDatasetDelimitedTextConfig extends cdktf.TerraformMe
   readonly additionalProperties?: { [key: string]: string };
   readonly annotations?: string[];
   readonly columnDelimiter?: string;
+  readonly compressionLevel?: string;
   readonly dataFactoryName: string;
   readonly description?: string;
   readonly encoding?: string;
@@ -117,6 +118,7 @@ export class DataFactoryDatasetDelimitedText extends cdktf.TerraformResource {
     this._additionalProperties = config.additionalProperties;
     this._annotations = config.annotations;
     this._columnDelimiter = config.columnDelimiter;
+    this._compressionLevel = config.compressionLevel;
     this._dataFactoryName = config.dataFactoryName;
     this._description = config.description;
     this._encoding = config.encoding;
@@ -186,6 +188,22 @@ export class DataFactoryDatasetDelimitedText extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get columnDelimiterInput() {
     return this._columnDelimiter
+  }
+
+  // compression_level - computed: false, optional: true, required: false
+  private _compressionLevel?: string;
+  public get compressionLevel() {
+    return this.getStringAttribute('compression_level');
+  }
+  public set compressionLevel(value: string ) {
+    this._compressionLevel = value;
+  }
+  public resetCompressionLevel() {
+    this._compressionLevel = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get compressionLevelInput() {
+    return this._compressionLevel
   }
 
   // data_factory_name - computed: false, optional: false, required: true
@@ -462,6 +480,7 @@ export class DataFactoryDatasetDelimitedText extends cdktf.TerraformResource {
       additional_properties: cdktf.hashMapper(cdktf.anyToTerraform)(this._additionalProperties),
       annotations: cdktf.listMapper(cdktf.stringToTerraform)(this._annotations),
       column_delimiter: cdktf.stringToTerraform(this._columnDelimiter),
+      compression_level: cdktf.stringToTerraform(this._compressionLevel),
       data_factory_name: cdktf.stringToTerraform(this._dataFactoryName),
       description: cdktf.stringToTerraform(this._description),
       encoding: cdktf.stringToTerraform(this._encoding),

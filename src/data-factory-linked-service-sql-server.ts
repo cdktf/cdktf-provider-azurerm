@@ -16,9 +16,24 @@ export interface DataFactoryLinkedServiceSqlServerConfig extends cdktf.Terraform
   readonly name: string;
   readonly parameters?: { [key: string]: string };
   readonly resourceGroupName: string;
+  /** key_vault_password block */
+  readonly keyVaultPassword?: DataFactoryLinkedServiceSqlServerKeyVaultPassword[];
   /** timeouts block */
   readonly timeouts?: DataFactoryLinkedServiceSqlServerTimeouts;
 }
+export interface DataFactoryLinkedServiceSqlServerKeyVaultPassword {
+  readonly linkedServiceName: string;
+  readonly secretName: string;
+}
+
+function dataFactoryLinkedServiceSqlServerKeyVaultPasswordToTerraform(struct?: DataFactoryLinkedServiceSqlServerKeyVaultPassword): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    linked_service_name: cdktf.stringToTerraform(struct!.linkedServiceName),
+    secret_name: cdktf.stringToTerraform(struct!.secretName),
+  }
+}
+
 export interface DataFactoryLinkedServiceSqlServerTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -65,6 +80,7 @@ export class DataFactoryLinkedServiceSqlServer extends cdktf.TerraformResource {
     this._name = config.name;
     this._parameters = config.parameters;
     this._resourceGroupName = config.resourceGroupName;
+    this._keyVaultPassword = config.keyVaultPassword;
     this._timeouts = config.timeouts;
   }
 
@@ -209,6 +225,22 @@ export class DataFactoryLinkedServiceSqlServer extends cdktf.TerraformResource {
     return this._resourceGroupName
   }
 
+  // key_vault_password - computed: false, optional: true, required: false
+  private _keyVaultPassword?: DataFactoryLinkedServiceSqlServerKeyVaultPassword[];
+  public get keyVaultPassword() {
+    return this.interpolationForAttribute('key_vault_password') as any;
+  }
+  public set keyVaultPassword(value: DataFactoryLinkedServiceSqlServerKeyVaultPassword[] ) {
+    this._keyVaultPassword = value;
+  }
+  public resetKeyVaultPassword() {
+    this._keyVaultPassword = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keyVaultPasswordInput() {
+    return this._keyVaultPassword
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: DataFactoryLinkedServiceSqlServerTimeouts;
   public get timeouts() {
@@ -240,6 +272,7 @@ export class DataFactoryLinkedServiceSqlServer extends cdktf.TerraformResource {
       name: cdktf.stringToTerraform(this._name),
       parameters: cdktf.hashMapper(cdktf.anyToTerraform)(this._parameters),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      key_vault_password: cdktf.listMapper(dataFactoryLinkedServiceSqlServerKeyVaultPasswordToTerraform)(this._keyVaultPassword),
       timeouts: dataFactoryLinkedServiceSqlServerTimeoutsToTerraform(this._timeouts),
     };
   }
