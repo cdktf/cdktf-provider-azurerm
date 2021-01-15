@@ -15,6 +15,7 @@ export interface SynapseWorkspaceConfig extends cdktf.TerraformMetaArguments {
   readonly resourceGroupName: string;
   readonly sqlAdministratorLogin: string;
   readonly sqlAdministratorLoginPassword: string;
+  readonly sqlIdentityControlEnabled?: boolean;
   readonly storageDataLakeGen2FilesystemId: string;
   readonly tags?: { [key: string]: string };
   /** timeouts block */
@@ -97,6 +98,7 @@ export class SynapseWorkspace extends cdktf.TerraformResource {
     this._resourceGroupName = config.resourceGroupName;
     this._sqlAdministratorLogin = config.sqlAdministratorLogin;
     this._sqlAdministratorLoginPassword = config.sqlAdministratorLoginPassword;
+    this._sqlIdentityControlEnabled = config.sqlIdentityControlEnabled;
     this._storageDataLakeGen2FilesystemId = config.storageDataLakeGen2FilesystemId;
     this._tags = config.tags;
     this._timeouts = config.timeouts;
@@ -234,6 +236,22 @@ export class SynapseWorkspace extends cdktf.TerraformResource {
     return this._sqlAdministratorLoginPassword
   }
 
+  // sql_identity_control_enabled - computed: false, optional: true, required: false
+  private _sqlIdentityControlEnabled?: boolean;
+  public get sqlIdentityControlEnabled() {
+    return this.getBooleanAttribute('sql_identity_control_enabled');
+  }
+  public set sqlIdentityControlEnabled(value: boolean ) {
+    this._sqlIdentityControlEnabled = value;
+  }
+  public resetSqlIdentityControlEnabled() {
+    this._sqlIdentityControlEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sqlIdentityControlEnabledInput() {
+    return this._sqlIdentityControlEnabled
+  }
+
   // storage_data_lake_gen2_filesystem_id - computed: false, optional: false, required: true
   private _storageDataLakeGen2FilesystemId: string;
   public get storageDataLakeGen2FilesystemId() {
@@ -293,6 +311,7 @@ export class SynapseWorkspace extends cdktf.TerraformResource {
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       sql_administrator_login: cdktf.stringToTerraform(this._sqlAdministratorLogin),
       sql_administrator_login_password: cdktf.stringToTerraform(this._sqlAdministratorLoginPassword),
+      sql_identity_control_enabled: cdktf.booleanToTerraform(this._sqlIdentityControlEnabled),
       storage_data_lake_gen2_filesystem_id: cdktf.stringToTerraform(this._storageDataLakeGen2FilesystemId),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
       timeouts: synapseWorkspaceTimeoutsToTerraform(this._timeouts),

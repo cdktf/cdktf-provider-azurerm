@@ -52,6 +52,7 @@ function eventhubNamespaceNetworkRulesetsVirtualNetworkRuleToTerraform(struct?: 
 export interface EventhubNamespaceNetworkRulesets {
   readonly defaultAction?: string;
   readonly ipRule?: EventhubNamespaceNetworkRulesetsIpRule[];
+  readonly trustedServiceAccessEnabled?: boolean;
   readonly virtualNetworkRule?: EventhubNamespaceNetworkRulesetsVirtualNetworkRule[];
 }
 
@@ -60,6 +61,7 @@ function eventhubNamespaceNetworkRulesetsToTerraform(struct?: EventhubNamespaceN
   return {
     default_action: cdktf.stringToTerraform(struct!.defaultAction),
     ip_rule: cdktf.listMapper(eventhubNamespaceNetworkRulesetsIpRuleToTerraform)(struct!.ipRule),
+    trusted_service_access_enabled: cdktf.booleanToTerraform(struct!.trustedServiceAccessEnabled),
     virtual_network_rule: cdktf.listMapper(eventhubNamespaceNetworkRulesetsVirtualNetworkRuleToTerraform)(struct!.virtualNetworkRule),
   }
 }

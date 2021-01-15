@@ -9,6 +9,7 @@ import * as cdktf from 'cdktf';
 export interface DataFactoryConfig extends cdktf.TerraformMetaArguments {
   readonly location: string;
   readonly name: string;
+  readonly publicNetworkEnabled?: boolean;
   readonly resourceGroupName: string;
   readonly tags?: { [key: string]: string };
   /** github_configuration block */
@@ -110,6 +111,7 @@ export class DataFactory extends cdktf.TerraformResource {
     });
     this._location = config.location;
     this._name = config.name;
+    this._publicNetworkEnabled = config.publicNetworkEnabled;
     this._resourceGroupName = config.resourceGroupName;
     this._tags = config.tags;
     this._githubConfiguration = config.githubConfiguration;
@@ -151,6 +153,22 @@ export class DataFactory extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
     return this._name
+  }
+
+  // public_network_enabled - computed: false, optional: true, required: false
+  private _publicNetworkEnabled?: boolean;
+  public get publicNetworkEnabled() {
+    return this.getBooleanAttribute('public_network_enabled');
+  }
+  public set publicNetworkEnabled(value: boolean ) {
+    this._publicNetworkEnabled = value;
+  }
+  public resetPublicNetworkEnabled() {
+    this._publicNetworkEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get publicNetworkEnabledInput() {
+    return this._publicNetworkEnabled
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -254,6 +272,7 @@ export class DataFactory extends cdktf.TerraformResource {
     return {
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
+      public_network_enabled: cdktf.booleanToTerraform(this._publicNetworkEnabled),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
       github_configuration: cdktf.listMapper(dataFactoryGithubConfigurationToTerraform)(this._githubConfiguration),

@@ -7,9 +7,11 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface EventgridDomainConfig extends cdktf.TerraformMetaArguments {
+  readonly inboundIpRule?: EventgridDomainInboundIpRule[];
   readonly inputSchema?: string;
   readonly location: string;
   readonly name: string;
+  readonly publicNetworkAccessEnabled?: boolean;
   readonly resourceGroupName: string;
   readonly tags?: { [key: string]: string };
   /** input_mapping_default_values block */
@@ -19,6 +21,19 @@ export interface EventgridDomainConfig extends cdktf.TerraformMetaArguments {
   /** timeouts block */
   readonly timeouts?: EventgridDomainTimeouts;
 }
+export interface EventgridDomainInboundIpRule {
+  readonly action?: string;
+  readonly ipMask?: string;
+}
+
+function eventgridDomainInboundIpRuleToTerraform(struct?: EventgridDomainInboundIpRule): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    action: cdktf.stringToTerraform(struct!.action),
+    ip_mask: cdktf.stringToTerraform(struct!.ipMask),
+  }
+}
+
 export interface EventgridDomainInputMappingDefaultValues {
   readonly dataVersion?: string;
   readonly eventType?: string;
@@ -92,9 +107,11 @@ export class EventgridDomain extends cdktf.TerraformResource {
       count: config.count,
       lifecycle: config.lifecycle
     });
+    this._inboundIpRule = config.inboundIpRule;
     this._inputSchema = config.inputSchema;
     this._location = config.location;
     this._name = config.name;
+    this._publicNetworkAccessEnabled = config.publicNetworkAccessEnabled;
     this._resourceGroupName = config.resourceGroupName;
     this._tags = config.tags;
     this._inputMappingDefaultValues = config.inputMappingDefaultValues;
@@ -114,6 +131,22 @@ export class EventgridDomain extends cdktf.TerraformResource {
   // id - computed: true, optional: true, required: false
   public get id() {
     return this.getStringAttribute('id');
+  }
+
+  // inbound_ip_rule - computed: false, optional: true, required: false
+  private _inboundIpRule?: EventgridDomainInboundIpRule[];
+  public get inboundIpRule() {
+    return this.interpolationForAttribute('inbound_ip_rule') as any;
+  }
+  public set inboundIpRule(value: EventgridDomainInboundIpRule[] ) {
+    this._inboundIpRule = value;
+  }
+  public resetInboundIpRule() {
+    this._inboundIpRule = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get inboundIpRuleInput() {
+    return this._inboundIpRule
   }
 
   // input_schema - computed: false, optional: true, required: false
@@ -161,6 +194,22 @@ export class EventgridDomain extends cdktf.TerraformResource {
   // primary_access_key - computed: true, optional: false, required: false
   public get primaryAccessKey() {
     return this.getStringAttribute('primary_access_key');
+  }
+
+  // public_network_access_enabled - computed: false, optional: true, required: false
+  private _publicNetworkAccessEnabled?: boolean;
+  public get publicNetworkAccessEnabled() {
+    return this.getBooleanAttribute('public_network_access_enabled');
+  }
+  public set publicNetworkAccessEnabled(value: boolean ) {
+    this._publicNetworkAccessEnabled = value;
+  }
+  public resetPublicNetworkAccessEnabled() {
+    this._publicNetworkAccessEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get publicNetworkAccessEnabledInput() {
+    return this._publicNetworkAccessEnabled
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -251,9 +300,11 @@ export class EventgridDomain extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      inbound_ip_rule: cdktf.listMapper(eventgridDomainInboundIpRuleToTerraform)(this._inboundIpRule),
       input_schema: cdktf.stringToTerraform(this._inputSchema),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
+      public_network_access_enabled: cdktf.booleanToTerraform(this._publicNetworkAccessEnabled),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
       input_mapping_default_values: cdktf.listMapper(eventgridDomainInputMappingDefaultValuesToTerraform)(this._inputMappingDefaultValues),

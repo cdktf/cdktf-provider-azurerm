@@ -655,6 +655,7 @@ export * from './data-azurerm-role-definition';
 export * from './data-azurerm-route-filter';
 export * from './data-azurerm-route-table';
 export * from './data-azurerm-sentinel-alert-rule';
+export * from './data-azurerm-sentinel-alert-rule-template';
 export * from './data-azurerm-servicebus-namespace';
 export * from './data-azurerm-servicebus-namespace-authorization-rule';
 export * from './data-azurerm-servicebus-queue-authorization-rule';
