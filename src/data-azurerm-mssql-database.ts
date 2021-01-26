@@ -118,6 +118,11 @@ export class DataAzurermMssqlDatabase extends cdktf.TerraformDataSource {
     return this.getStringAttribute('sku_name');
   }
 
+  // storage_account_type - computed: true, optional: false, required: false
+  public get storageAccountType() {
+    return this.getStringAttribute('storage_account_type');
+  }
+
   // tags - computed: true, optional: false, required: false
   public tags(key: string): string {
     return new cdktf.StringMap(this, 'tags').lookup(key);

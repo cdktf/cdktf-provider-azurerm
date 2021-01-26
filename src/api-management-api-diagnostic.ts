@@ -15,6 +15,7 @@ export interface ApiManagementApiDiagnosticConfig extends cdktf.TerraformMetaArg
   readonly identifier: string;
   readonly logClientIp?: boolean;
   readonly resourceGroupName: string;
+  readonly samplingPercentage?: number;
   readonly verbosity?: string;
   /** backend_request block */
   readonly backendRequest?: ApiManagementApiDiagnosticBackendRequest[];
@@ -124,6 +125,7 @@ export class ApiManagementApiDiagnostic extends cdktf.TerraformResource {
     this._identifier = config.identifier;
     this._logClientIp = config.logClientIp;
     this._resourceGroupName = config.resourceGroupName;
+    this._samplingPercentage = config.samplingPercentage;
     this._verbosity = config.verbosity;
     this._backendRequest = config.backendRequest;
     this._backendResponse = config.backendResponse;
@@ -254,6 +256,22 @@ export class ApiManagementApiDiagnostic extends cdktf.TerraformResource {
     return this._resourceGroupName
   }
 
+  // sampling_percentage - computed: true, optional: true, required: false
+  private _samplingPercentage?: number;
+  public get samplingPercentage() {
+    return this.getNumberAttribute('sampling_percentage');
+  }
+  public set samplingPercentage(value: number) {
+    this._samplingPercentage = value;
+  }
+  public resetSamplingPercentage() {
+    this._samplingPercentage = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get samplingPercentageInput() {
+    return this._samplingPercentage
+  }
+
   // verbosity - computed: true, optional: true, required: false
   private _verbosity?: string;
   public get verbosity() {
@@ -364,6 +382,7 @@ export class ApiManagementApiDiagnostic extends cdktf.TerraformResource {
       identifier: cdktf.stringToTerraform(this._identifier),
       log_client_ip: cdktf.booleanToTerraform(this._logClientIp),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      sampling_percentage: cdktf.numberToTerraform(this._samplingPercentage),
       verbosity: cdktf.stringToTerraform(this._verbosity),
       backend_request: cdktf.listMapper(apiManagementApiDiagnosticBackendRequestToTerraform)(this._backendRequest),
       backend_response: cdktf.listMapper(apiManagementApiDiagnosticBackendResponseToTerraform)(this._backendResponse),

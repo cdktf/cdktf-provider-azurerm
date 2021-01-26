@@ -110,8 +110,24 @@ function monitorAutoscaleSettingProfileRecurrenceToTerraform(struct?: MonitorAut
   }
 }
 
+export interface MonitorAutoscaleSettingProfileRuleMetricTriggerDimensions {
+  readonly name: string;
+  readonly operator: string;
+  readonly values: string[];
+}
+
+function monitorAutoscaleSettingProfileRuleMetricTriggerDimensionsToTerraform(struct?: MonitorAutoscaleSettingProfileRuleMetricTriggerDimensions): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    name: cdktf.stringToTerraform(struct!.name),
+    operator: cdktf.stringToTerraform(struct!.operator),
+    values: cdktf.listMapper(cdktf.stringToTerraform)(struct!.values),
+  }
+}
+
 export interface MonitorAutoscaleSettingProfileRuleMetricTrigger {
   readonly metricName: string;
+  readonly metricNamespace?: string;
   readonly metricResourceId: string;
   readonly operator: string;
   readonly statistic: string;
@@ -119,12 +135,15 @@ export interface MonitorAutoscaleSettingProfileRuleMetricTrigger {
   readonly timeAggregation: string;
   readonly timeGrain: string;
   readonly timeWindow: string;
+  /** dimensions block */
+  readonly dimensions?: MonitorAutoscaleSettingProfileRuleMetricTriggerDimensions[];
 }
 
 function monitorAutoscaleSettingProfileRuleMetricTriggerToTerraform(struct?: MonitorAutoscaleSettingProfileRuleMetricTrigger): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   return {
     metric_name: cdktf.stringToTerraform(struct!.metricName),
+    metric_namespace: cdktf.stringToTerraform(struct!.metricNamespace),
     metric_resource_id: cdktf.stringToTerraform(struct!.metricResourceId),
     operator: cdktf.stringToTerraform(struct!.operator),
     statistic: cdktf.stringToTerraform(struct!.statistic),
@@ -132,6 +151,7 @@ function monitorAutoscaleSettingProfileRuleMetricTriggerToTerraform(struct?: Mon
     time_aggregation: cdktf.stringToTerraform(struct!.timeAggregation),
     time_grain: cdktf.stringToTerraform(struct!.timeGrain),
     time_window: cdktf.stringToTerraform(struct!.timeWindow),
+    dimensions: cdktf.listMapper(monitorAutoscaleSettingProfileRuleMetricTriggerDimensionsToTerraform)(struct!.dimensions),
   }
 }
 

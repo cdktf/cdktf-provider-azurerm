@@ -197,6 +197,11 @@ export class DataAzurermKubernetesClusterIdentity extends cdktf.ComplexComputedL
   public get type() {
     return this.getStringAttribute('type');
   }
+
+  // user_assigned_identity_id - computed: true, optional: false, required: false
+  public get userAssignedIdentityId() {
+    return this.getStringAttribute('user_assigned_identity_id');
+  }
 }
 export class DataAzurermKubernetesClusterKubeAdminConfig extends cdktf.ComplexComputedList {
 

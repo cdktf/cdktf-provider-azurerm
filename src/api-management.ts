@@ -244,6 +244,16 @@ export interface ApiManagementSecurity {
   readonly enableFrontendTls10?: boolean;
   readonly enableFrontendTls11?: boolean;
   readonly enableTripleDesCiphers?: boolean;
+  readonly tlsEcdheEcdsaWithAes128CbcShaCiphersEnabled?: boolean;
+  readonly tlsEcdheEcdsaWithAes256CbcShaCiphersEnabled?: boolean;
+  readonly tlsEcdheRsaWithAes128CbcShaCiphersEnabled?: boolean;
+  readonly tlsEcdheRsaWithAes256CbcShaCiphersEnabled?: boolean;
+  readonly tlsRsaWithAes128CbcSha256CiphersEnabled?: boolean;
+  readonly tlsRsaWithAes128CbcShaCiphersEnabled?: boolean;
+  readonly tlsRsaWithAes128GcmSha256CiphersEnabled?: boolean;
+  readonly tlsRsaWithAes256CbcSha256CiphersEnabled?: boolean;
+  readonly tlsRsaWithAes256CbcShaCiphersEnabled?: boolean;
+  readonly tripleDesCiphersEnabled?: boolean;
 }
 
 function apiManagementSecurityToTerraform(struct?: ApiManagementSecurity): any {
@@ -256,6 +266,16 @@ function apiManagementSecurityToTerraform(struct?: ApiManagementSecurity): any {
     enable_frontend_tls10: cdktf.booleanToTerraform(struct!.enableFrontendTls10),
     enable_frontend_tls11: cdktf.booleanToTerraform(struct!.enableFrontendTls11),
     enable_triple_des_ciphers: cdktf.booleanToTerraform(struct!.enableTripleDesCiphers),
+    tls_ecdhe_ecdsa_with_aes128_cbc_sha_ciphers_enabled: cdktf.booleanToTerraform(struct!.tlsEcdheEcdsaWithAes128CbcShaCiphersEnabled),
+    tls_ecdhe_ecdsa_with_aes256_cbc_sha_ciphers_enabled: cdktf.booleanToTerraform(struct!.tlsEcdheEcdsaWithAes256CbcShaCiphersEnabled),
+    tls_ecdhe_rsa_with_aes128_cbc_sha_ciphers_enabled: cdktf.booleanToTerraform(struct!.tlsEcdheRsaWithAes128CbcShaCiphersEnabled),
+    tls_ecdhe_rsa_with_aes256_cbc_sha_ciphers_enabled: cdktf.booleanToTerraform(struct!.tlsEcdheRsaWithAes256CbcShaCiphersEnabled),
+    tls_rsa_with_aes128_cbc_sha256_ciphers_enabled: cdktf.booleanToTerraform(struct!.tlsRsaWithAes128CbcSha256CiphersEnabled),
+    tls_rsa_with_aes128_cbc_sha_ciphers_enabled: cdktf.booleanToTerraform(struct!.tlsRsaWithAes128CbcShaCiphersEnabled),
+    tls_rsa_with_aes128_gcm_sha256_ciphers_enabled: cdktf.booleanToTerraform(struct!.tlsRsaWithAes128GcmSha256CiphersEnabled),
+    tls_rsa_with_aes256_cbc_sha256_ciphers_enabled: cdktf.booleanToTerraform(struct!.tlsRsaWithAes256CbcSha256CiphersEnabled),
+    tls_rsa_with_aes256_cbc_sha_ciphers_enabled: cdktf.booleanToTerraform(struct!.tlsRsaWithAes256CbcShaCiphersEnabled),
+    triple_des_ciphers_enabled: cdktf.booleanToTerraform(struct!.tripleDesCiphersEnabled),
   }
 }
 

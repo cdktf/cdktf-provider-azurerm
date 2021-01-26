@@ -25,6 +25,7 @@ export interface MssqlDatabaseConfig extends cdktf.TerraformMetaArguments {
   readonly sampleName?: string;
   readonly serverId: string;
   readonly skuName?: string;
+  readonly storageAccountType?: string;
   readonly tags?: { [key: string]: string };
   readonly zoneRedundant?: boolean;
   /** long_term_retention_policy block */
@@ -161,6 +162,7 @@ export class MssqlDatabase extends cdktf.TerraformResource {
     this._sampleName = config.sampleName;
     this._serverId = config.serverId;
     this._skuName = config.skuName;
+    this._storageAccountType = config.storageAccountType;
     this._tags = config.tags;
     this._zoneRedundant = config.zoneRedundant;
     this._longTermRetentionPolicy = config.longTermRetentionPolicy;
@@ -460,6 +462,22 @@ export class MssqlDatabase extends cdktf.TerraformResource {
     return this._skuName
   }
 
+  // storage_account_type - computed: false, optional: true, required: false
+  private _storageAccountType?: string;
+  public get storageAccountType() {
+    return this.getStringAttribute('storage_account_type');
+  }
+  public set storageAccountType(value: string ) {
+    this._storageAccountType = value;
+  }
+  public resetStorageAccountType() {
+    this._storageAccountType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get storageAccountTypeInput() {
+    return this._storageAccountType
+  }
+
   // tags - computed: false, optional: true, required: false
   private _tags?: { [key: string]: string };
   public get tags() {
@@ -580,6 +598,7 @@ export class MssqlDatabase extends cdktf.TerraformResource {
       sample_name: cdktf.stringToTerraform(this._sampleName),
       server_id: cdktf.stringToTerraform(this._serverId),
       sku_name: cdktf.stringToTerraform(this._skuName),
+      storage_account_type: cdktf.stringToTerraform(this._storageAccountType),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
       zone_redundant: cdktf.booleanToTerraform(this._zoneRedundant),
       long_term_retention_policy: cdktf.listMapper(mssqlDatabaseLongTermRetentionPolicyToTerraform)(this._longTermRetentionPolicy),

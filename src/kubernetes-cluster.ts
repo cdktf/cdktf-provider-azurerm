@@ -208,6 +208,7 @@ function kubernetesClusterAddonProfileToTerraform(struct?: KubernetesClusterAddo
 export interface KubernetesClusterAutoScalerProfile {
   readonly balanceSimilarNodeGroups?: boolean;
   readonly maxGracefulTerminationSec?: string;
+  readonly newPodScaleUpDelay?: string;
   readonly scaleDownDelayAfterAdd?: string;
   readonly scaleDownDelayAfterDelete?: string;
   readonly scaleDownDelayAfterFailure?: string;
@@ -222,6 +223,7 @@ function kubernetesClusterAutoScalerProfileToTerraform(struct?: KubernetesCluste
   return {
     balance_similar_node_groups: cdktf.booleanToTerraform(struct!.balanceSimilarNodeGroups),
     max_graceful_termination_sec: cdktf.stringToTerraform(struct!.maxGracefulTerminationSec),
+    new_pod_scale_up_delay: cdktf.stringToTerraform(struct!.newPodScaleUpDelay),
     scale_down_delay_after_add: cdktf.stringToTerraform(struct!.scaleDownDelayAfterAdd),
     scale_down_delay_after_delete: cdktf.stringToTerraform(struct!.scaleDownDelayAfterDelete),
     scale_down_delay_after_failure: cdktf.stringToTerraform(struct!.scaleDownDelayAfterFailure),
@@ -279,12 +281,14 @@ function kubernetesClusterDefaultNodePoolToTerraform(struct?: KubernetesClusterD
 
 export interface KubernetesClusterIdentity {
   readonly type: string;
+  readonly userAssignedIdentityId?: string;
 }
 
 function kubernetesClusterIdentityToTerraform(struct?: KubernetesClusterIdentity): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   return {
     type: cdktf.stringToTerraform(struct!.type),
+    user_assigned_identity_id: cdktf.stringToTerraform(struct!.userAssignedIdentityId),
   }
 }
 

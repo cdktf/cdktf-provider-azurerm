@@ -22,11 +22,24 @@ export interface SentinelAlertRuleScheduledConfig extends cdktf.TerraformMetaArg
   readonly tactics?: string[];
   readonly triggerOperator?: string;
   readonly triggerThreshold?: number;
+  /** event_grouping block */
+  readonly eventGrouping?: SentinelAlertRuleScheduledEventGrouping[];
   /** incident_configuration block */
   readonly incidentConfiguration?: SentinelAlertRuleScheduledIncidentConfiguration[];
   /** timeouts block */
   readonly timeouts?: SentinelAlertRuleScheduledTimeouts;
 }
+export interface SentinelAlertRuleScheduledEventGrouping {
+  readonly aggregationMethod: string;
+}
+
+function sentinelAlertRuleScheduledEventGroupingToTerraform(struct?: SentinelAlertRuleScheduledEventGrouping): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    aggregation_method: cdktf.stringToTerraform(struct!.aggregationMethod),
+  }
+}
+
 export interface SentinelAlertRuleScheduledIncidentConfigurationGrouping {
   readonly enabled?: boolean;
   readonly entityMatchingMethod?: string;
@@ -112,6 +125,7 @@ export class SentinelAlertRuleScheduled extends cdktf.TerraformResource {
     this._tactics = config.tactics;
     this._triggerOperator = config.triggerOperator;
     this._triggerThreshold = config.triggerThreshold;
+    this._eventGrouping = config.eventGrouping;
     this._incidentConfiguration = config.incidentConfiguration;
     this._timeouts = config.timeouts;
   }
@@ -350,6 +364,22 @@ export class SentinelAlertRuleScheduled extends cdktf.TerraformResource {
     return this._triggerThreshold
   }
 
+  // event_grouping - computed: false, optional: true, required: false
+  private _eventGrouping?: SentinelAlertRuleScheduledEventGrouping[];
+  public get eventGrouping() {
+    return this.interpolationForAttribute('event_grouping') as any;
+  }
+  public set eventGrouping(value: SentinelAlertRuleScheduledEventGrouping[] ) {
+    this._eventGrouping = value;
+  }
+  public resetEventGrouping() {
+    this._eventGrouping = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get eventGroupingInput() {
+    return this._eventGrouping
+  }
+
   // incident_configuration - computed: false, optional: true, required: false
   private _incidentConfiguration?: SentinelAlertRuleScheduledIncidentConfiguration[];
   public get incidentConfiguration() {
@@ -403,6 +433,7 @@ export class SentinelAlertRuleScheduled extends cdktf.TerraformResource {
       tactics: cdktf.listMapper(cdktf.stringToTerraform)(this._tactics),
       trigger_operator: cdktf.stringToTerraform(this._triggerOperator),
       trigger_threshold: cdktf.numberToTerraform(this._triggerThreshold),
+      event_grouping: cdktf.listMapper(sentinelAlertRuleScheduledEventGroupingToTerraform)(this._eventGrouping),
       incident_configuration: cdktf.listMapper(sentinelAlertRuleScheduledIncidentConfigurationToTerraform)(this._incidentConfiguration),
       timeouts: sentinelAlertRuleScheduledTimeoutsToTerraform(this._timeouts),
     };
