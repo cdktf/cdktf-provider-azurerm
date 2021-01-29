@@ -8,6 +8,7 @@ import * as cdktf from 'cdktf';
 
 export interface IothubConfig extends cdktf.TerraformMetaArguments {
   readonly endpoint?: IothubEndpoint[];
+  readonly enrichment?: IothubEnrichment[];
   readonly eventHubPartitionCount?: number;
   readonly eventHubRetentionInDays?: number;
   readonly location: string;
@@ -52,6 +53,21 @@ function iothubEndpointToTerraform(struct?: IothubEndpoint): any {
     name: cdktf.stringToTerraform(struct!.name),
     resource_group_name: cdktf.stringToTerraform(struct!.resourceGroupName),
     type: cdktf.stringToTerraform(struct!.type),
+  }
+}
+
+export interface IothubEnrichment {
+  readonly endpointNames?: string[];
+  readonly key?: string;
+  readonly value?: string;
+}
+
+function iothubEnrichmentToTerraform(struct?: IothubEnrichment): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    endpoint_names: cdktf.listMapper(cdktf.stringToTerraform)(struct!.endpointNames),
+    key: cdktf.stringToTerraform(struct!.key),
+    value: cdktf.stringToTerraform(struct!.value),
   }
 }
 
@@ -202,6 +218,7 @@ export class Iothub extends cdktf.TerraformResource {
       lifecycle: config.lifecycle
     });
     this._endpoint = config.endpoint;
+    this._enrichment = config.enrichment;
     this._eventHubPartitionCount = config.eventHubPartitionCount;
     this._eventHubRetentionInDays = config.eventHubRetentionInDays;
     this._location = config.location;
@@ -236,6 +253,22 @@ export class Iothub extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get endpointInput() {
     return this._endpoint
+  }
+
+  // enrichment - computed: true, optional: true, required: false
+  private _enrichment?: IothubEnrichment[]
+  public get enrichment(): IothubEnrichment[] {
+    return this.interpolationForAttribute('enrichment') as any; // Getting the computed value is not yet implemented
+  }
+  public set enrichment(value: IothubEnrichment[]) {
+    this._enrichment = value;
+  }
+  public resetEnrichment() {
+    this._enrichment = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enrichmentInput() {
+    return this._enrichment
   }
 
   // event_hub_events_endpoint - computed: true, optional: false, required: false
@@ -497,6 +530,7 @@ export class Iothub extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       endpoint: cdktf.listMapper(iothubEndpointToTerraform)(this._endpoint),
+      enrichment: cdktf.listMapper(iothubEnrichmentToTerraform)(this._enrichment),
       event_hub_partition_count: cdktf.numberToTerraform(this._eventHubPartitionCount),
       event_hub_retention_in_days: cdktf.numberToTerraform(this._eventHubRetentionInDays),
       location: cdktf.stringToTerraform(this._location),

@@ -197,6 +197,11 @@ export class DataAzurermAppServiceSiteConfig extends cdktf.ComplexComputedList {
     return this.getStringAttribute('min_tls_version');
   }
 
+  // number_of_workers - computed: true, optional: false, required: false
+  public get numberOfWorkers() {
+    return this.getNumberAttribute('number_of_workers');
+  }
+
   // php_version - computed: true, optional: false, required: false
   public get phpVersion() {
     return this.getStringAttribute('php_version');

@@ -10,9 +10,28 @@ export interface StorageDataLakeGen2FilesystemConfig extends cdktf.TerraformMeta
   readonly name: string;
   readonly properties?: { [key: string]: string };
   readonly storageAccountId: string;
+  /** ace block */
+  readonly ace?: StorageDataLakeGen2FilesystemAce[];
   /** timeouts block */
   readonly timeouts?: StorageDataLakeGen2FilesystemTimeouts;
 }
+export interface StorageDataLakeGen2FilesystemAce {
+  readonly id?: string;
+  readonly permissions: string;
+  readonly scope?: string;
+  readonly type: string;
+}
+
+function storageDataLakeGen2FilesystemAceToTerraform(struct?: StorageDataLakeGen2FilesystemAce): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    id: cdktf.stringToTerraform(struct!.id),
+    permissions: cdktf.stringToTerraform(struct!.permissions),
+    scope: cdktf.stringToTerraform(struct!.scope),
+    type: cdktf.stringToTerraform(struct!.type),
+  }
+}
+
 export interface StorageDataLakeGen2FilesystemTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -53,6 +72,7 @@ export class StorageDataLakeGen2Filesystem extends cdktf.TerraformResource {
     this._name = config.name;
     this._properties = config.properties;
     this._storageAccountId = config.storageAccountId;
+    this._ace = config.ace;
     this._timeouts = config.timeouts;
   }
 
@@ -107,6 +127,22 @@ export class StorageDataLakeGen2Filesystem extends cdktf.TerraformResource {
     return this._storageAccountId
   }
 
+  // ace - computed: false, optional: true, required: false
+  private _ace?: StorageDataLakeGen2FilesystemAce[];
+  public get ace() {
+    return this.interpolationForAttribute('ace') as any;
+  }
+  public set ace(value: StorageDataLakeGen2FilesystemAce[] ) {
+    this._ace = value;
+  }
+  public resetAce() {
+    this._ace = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get aceInput() {
+    return this._ace
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: StorageDataLakeGen2FilesystemTimeouts;
   public get timeouts() {
@@ -132,6 +168,7 @@ export class StorageDataLakeGen2Filesystem extends cdktf.TerraformResource {
       name: cdktf.stringToTerraform(this._name),
       properties: cdktf.hashMapper(cdktf.anyToTerraform)(this._properties),
       storage_account_id: cdktf.stringToTerraform(this._storageAccountId),
+      ace: cdktf.listMapper(storageDataLakeGen2FilesystemAceToTerraform)(this._ace),
       timeouts: storageDataLakeGen2FilesystemTimeoutsToTerraform(this._timeouts),
     };
   }

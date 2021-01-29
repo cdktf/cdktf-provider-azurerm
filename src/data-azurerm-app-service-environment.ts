@@ -12,6 +12,18 @@ export interface DataAzurermAppServiceEnvironmentConfig extends cdktf.TerraformM
   /** timeouts block */
   readonly timeouts?: DataAzurermAppServiceEnvironmentTimeouts;
 }
+export class DataAzurermAppServiceEnvironmentClusterSetting extends cdktf.ComplexComputedList {
+
+  // name - computed: true, optional: false, required: false
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+
+  // value - computed: true, optional: false, required: false
+  public get value() {
+    return this.getStringAttribute('value');
+  }
+}
 export interface DataAzurermAppServiceEnvironmentTimeouts {
   readonly read?: string;
 }
@@ -51,6 +63,11 @@ export class DataAzurermAppServiceEnvironment extends cdktf.TerraformDataSource 
   // ==========
   // ATTRIBUTES
   // ==========
+
+  // cluster_setting - computed: true, optional: false, required: false
+  public clusterSetting(index: string) {
+    return new DataAzurermAppServiceEnvironmentClusterSetting(this, 'cluster_setting', index);
+  }
 
   // front_end_scale_factor - computed: true, optional: false, required: false
   public get frontEndScaleFactor() {

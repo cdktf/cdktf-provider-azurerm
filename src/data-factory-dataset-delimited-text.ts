@@ -10,6 +10,7 @@ export interface DataFactoryDatasetDelimitedTextConfig extends cdktf.TerraformMe
   readonly additionalProperties?: { [key: string]: string };
   readonly annotations?: string[];
   readonly columnDelimiter?: string;
+  readonly compressionCodec?: string;
   readonly compressionLevel?: string;
   readonly dataFactoryName: string;
   readonly description?: string;
@@ -118,6 +119,7 @@ export class DataFactoryDatasetDelimitedText extends cdktf.TerraformResource {
     this._additionalProperties = config.additionalProperties;
     this._annotations = config.annotations;
     this._columnDelimiter = config.columnDelimiter;
+    this._compressionCodec = config.compressionCodec;
     this._compressionLevel = config.compressionLevel;
     this._dataFactoryName = config.dataFactoryName;
     this._description = config.description;
@@ -188,6 +190,22 @@ export class DataFactoryDatasetDelimitedText extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get columnDelimiterInput() {
     return this._columnDelimiter
+  }
+
+  // compression_codec - computed: false, optional: true, required: false
+  private _compressionCodec?: string;
+  public get compressionCodec() {
+    return this.getStringAttribute('compression_codec');
+  }
+  public set compressionCodec(value: string ) {
+    this._compressionCodec = value;
+  }
+  public resetCompressionCodec() {
+    this._compressionCodec = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get compressionCodecInput() {
+    return this._compressionCodec
   }
 
   // compression_level - computed: false, optional: true, required: false
@@ -480,6 +498,7 @@ export class DataFactoryDatasetDelimitedText extends cdktf.TerraformResource {
       additional_properties: cdktf.hashMapper(cdktf.anyToTerraform)(this._additionalProperties),
       annotations: cdktf.listMapper(cdktf.stringToTerraform)(this._annotations),
       column_delimiter: cdktf.stringToTerraform(this._columnDelimiter),
+      compression_codec: cdktf.stringToTerraform(this._compressionCodec),
       compression_level: cdktf.stringToTerraform(this._compressionLevel),
       data_factory_name: cdktf.stringToTerraform(this._dataFactoryName),
       description: cdktf.stringToTerraform(this._description),

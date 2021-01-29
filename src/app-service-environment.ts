@@ -16,9 +16,24 @@ export interface AppServiceEnvironmentConfig extends cdktf.TerraformMetaArgument
   readonly subnetId: string;
   readonly tags?: { [key: string]: string };
   readonly userWhitelistedIpRanges?: string[];
+  /** cluster_setting block */
+  readonly clusterSetting?: AppServiceEnvironmentClusterSetting[];
   /** timeouts block */
   readonly timeouts?: AppServiceEnvironmentTimeouts;
 }
+export interface AppServiceEnvironmentClusterSetting {
+  readonly name: string;
+  readonly value: string;
+}
+
+function appServiceEnvironmentClusterSettingToTerraform(struct?: AppServiceEnvironmentClusterSetting): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    name: cdktf.stringToTerraform(struct!.name),
+    value: cdktf.stringToTerraform(struct!.value),
+  }
+}
+
 export interface AppServiceEnvironmentTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -65,6 +80,7 @@ export class AppServiceEnvironment extends cdktf.TerraformResource {
     this._subnetId = config.subnetId;
     this._tags = config.tags;
     this._userWhitelistedIpRanges = config.userWhitelistedIpRanges;
+    this._clusterSetting = config.clusterSetting;
     this._timeouts = config.timeouts;
   }
 
@@ -220,6 +236,22 @@ export class AppServiceEnvironment extends cdktf.TerraformResource {
     return this._userWhitelistedIpRanges
   }
 
+  // cluster_setting - computed: false, optional: true, required: false
+  private _clusterSetting?: AppServiceEnvironmentClusterSetting[];
+  public get clusterSetting() {
+    return this.interpolationForAttribute('cluster_setting') as any;
+  }
+  public set clusterSetting(value: AppServiceEnvironmentClusterSetting[] ) {
+    this._clusterSetting = value;
+  }
+  public resetClusterSetting() {
+    this._clusterSetting = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get clusterSettingInput() {
+    return this._clusterSetting
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: AppServiceEnvironmentTimeouts;
   public get timeouts() {
@@ -251,6 +283,7 @@ export class AppServiceEnvironment extends cdktf.TerraformResource {
       subnet_id: cdktf.stringToTerraform(this._subnetId),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
       user_whitelisted_ip_ranges: cdktf.listMapper(cdktf.stringToTerraform)(this._userWhitelistedIpRanges),
+      cluster_setting: cdktf.listMapper(appServiceEnvironmentClusterSettingToTerraform)(this._clusterSetting),
       timeouts: appServiceEnvironmentTimeoutsToTerraform(this._timeouts),
     };
   }

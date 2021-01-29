@@ -11,6 +11,7 @@ export interface FirewallPolicyConfig extends cdktf.TerraformMetaArguments {
   readonly location: string;
   readonly name: string;
   readonly resourceGroupName: string;
+  readonly sku?: string;
   readonly tags?: { [key: string]: string };
   readonly threatIntelligenceMode?: string;
   /** dns block */
@@ -89,6 +90,7 @@ export class FirewallPolicy extends cdktf.TerraformResource {
     this._location = config.location;
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
+    this._sku = config.sku;
     this._tags = config.tags;
     this._threatIntelligenceMode = config.threatIntelligenceMode;
     this._dns = config.dns;
@@ -173,6 +175,22 @@ export class FirewallPolicy extends cdktf.TerraformResource {
   // rule_collection_groups - computed: true, optional: false, required: false
   public get ruleCollectionGroups() {
     return this.getListAttribute('rule_collection_groups');
+  }
+
+  // sku - computed: true, optional: true, required: false
+  private _sku?: string;
+  public get sku() {
+    return this.getStringAttribute('sku');
+  }
+  public set sku(value: string) {
+    this._sku = value;
+  }
+  public resetSku() {
+    this._sku = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get skuInput() {
+    return this._sku
   }
 
   // tags - computed: false, optional: true, required: false
@@ -265,6 +283,7 @@ export class FirewallPolicy extends cdktf.TerraformResource {
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      sku: cdktf.stringToTerraform(this._sku),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
       threat_intelligence_mode: cdktf.stringToTerraform(this._threatIntelligenceMode),
       dns: cdktf.listMapper(firewallPolicyDnsToTerraform)(this._dns),

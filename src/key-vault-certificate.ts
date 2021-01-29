@@ -256,6 +256,11 @@ export class KeyVaultCertificate extends cdktf.TerraformResource {
     return this.getStringAttribute('certificate_data');
   }
 
+  // certificate_data_base64 - computed: true, optional: false, required: false
+  public get certificateDataBase64() {
+    return this.getStringAttribute('certificate_data_base64');
+  }
+
   // id - computed: true, optional: true, required: false
   public get id() {
     return this.getStringAttribute('id');

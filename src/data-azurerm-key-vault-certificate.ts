@@ -197,6 +197,11 @@ export class DataAzurermKeyVaultCertificate extends cdktf.TerraformDataSource {
     return this.getStringAttribute('certificate_data');
   }
 
+  // certificate_data_base64 - computed: true, optional: false, required: false
+  public get certificateDataBase64() {
+    return this.getStringAttribute('certificate_data_base64');
+  }
+
   // certificate_policy - computed: true, optional: false, required: false
   public certificatePolicy(index: string) {
     return new DataAzurermKeyVaultCertificateCertificatePolicy(this, 'certificate_policy', index);
