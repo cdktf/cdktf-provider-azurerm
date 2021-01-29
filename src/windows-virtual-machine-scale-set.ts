@@ -15,6 +15,7 @@ export interface WindowsVirtualMachineScaleSetConfig extends cdktf.TerraformMeta
   readonly enableAutomaticUpdates?: boolean;
   readonly encryptionAtHostEnabled?: boolean;
   readonly evictionPolicy?: string;
+  readonly extensionsTimeBudget?: string;
   readonly healthProbeId?: string;
   readonly instances: number;
   readonly licenseType?: string;
@@ -464,6 +465,7 @@ export class WindowsVirtualMachineScaleSet extends cdktf.TerraformResource {
     this._enableAutomaticUpdates = config.enableAutomaticUpdates;
     this._encryptionAtHostEnabled = config.encryptionAtHostEnabled;
     this._evictionPolicy = config.evictionPolicy;
+    this._extensionsTimeBudget = config.extensionsTimeBudget;
     this._healthProbeId = config.healthProbeId;
     this._instances = config.instances;
     this._licenseType = config.licenseType;
@@ -628,6 +630,22 @@ export class WindowsVirtualMachineScaleSet extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get evictionPolicyInput() {
     return this._evictionPolicy
+  }
+
+  // extensions_time_budget - computed: false, optional: true, required: false
+  private _extensionsTimeBudget?: string;
+  public get extensionsTimeBudget() {
+    return this.getStringAttribute('extensions_time_budget');
+  }
+  public set extensionsTimeBudget(value: string ) {
+    this._extensionsTimeBudget = value;
+  }
+  public resetExtensionsTimeBudget() {
+    this._extensionsTimeBudget = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get extensionsTimeBudgetInput() {
+    return this._extensionsTimeBudget
   }
 
   // health_probe_id - computed: false, optional: true, required: false
@@ -1241,6 +1259,7 @@ export class WindowsVirtualMachineScaleSet extends cdktf.TerraformResource {
       enable_automatic_updates: cdktf.booleanToTerraform(this._enableAutomaticUpdates),
       encryption_at_host_enabled: cdktf.booleanToTerraform(this._encryptionAtHostEnabled),
       eviction_policy: cdktf.stringToTerraform(this._evictionPolicy),
+      extensions_time_budget: cdktf.stringToTerraform(this._extensionsTimeBudget),
       health_probe_id: cdktf.stringToTerraform(this._healthProbeId),
       instances: cdktf.numberToTerraform(this._instances),
       license_type: cdktf.stringToTerraform(this._licenseType),

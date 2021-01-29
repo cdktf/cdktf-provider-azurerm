@@ -20,7 +20,7 @@ export interface SpringCloudAppConfig extends cdktf.TerraformMetaArguments {
   readonly timeouts?: SpringCloudAppTimeouts;
 }
 export interface SpringCloudAppIdentity {
-  readonly type: string;
+  readonly type?: string;
 }
 
 function springCloudAppIdentityToTerraform(struct?: SpringCloudAppIdentity): any {

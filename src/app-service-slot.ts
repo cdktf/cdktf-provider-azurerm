@@ -350,6 +350,7 @@ export interface AppServiceSlotSiteConfig {
   readonly localMysqlEnabled?: boolean;
   readonly managedPipelineMode?: string;
   readonly minTlsVersion?: string;
+  readonly numberOfWorkers?: number;
   readonly phpVersion?: string;
   readonly pythonVersion?: string;
   readonly remoteDebuggingEnabled?: boolean;
@@ -383,6 +384,7 @@ function appServiceSlotSiteConfigToTerraform(struct?: AppServiceSlotSiteConfig):
     local_mysql_enabled: cdktf.booleanToTerraform(struct!.localMysqlEnabled),
     managed_pipeline_mode: cdktf.stringToTerraform(struct!.managedPipelineMode),
     min_tls_version: cdktf.stringToTerraform(struct!.minTlsVersion),
+    number_of_workers: cdktf.numberToTerraform(struct!.numberOfWorkers),
     php_version: cdktf.stringToTerraform(struct!.phpVersion),
     python_version: cdktf.stringToTerraform(struct!.pythonVersion),
     remote_debugging_enabled: cdktf.booleanToTerraform(struct!.remoteDebuggingEnabled),
