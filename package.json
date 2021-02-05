@@ -33,7 +33,7 @@
     "organization": true
   },
   "devDependencies": {
-    "@cdktf/provider-project": "^0.1.7",
+    "@cdktf/provider-project": "^0.1.9",
     "@types/jest": "^26.0.7",
     "@types/node": "^10.17.0",
     "cdktf": "0.1.0",
@@ -120,6 +120,10 @@
       "python": {
         "distName": "cdktf-cdktf-provider-azurerm",
         "module": "cdktf_cdktf_provider_azurerm"
+      },
+      "dotnet": {
+        "namespace": "HashiCorp.Cdktf.Providers.Azurerm",
+        "packageId": "HashiCorp.Cdktf.Providers.Azurerm"
       }
     },
     "tsc": {
