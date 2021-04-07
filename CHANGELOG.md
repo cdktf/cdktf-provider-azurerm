@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.42](https://github.com/terraform-cdk-providers/cdktf-provider-azurerm/compare/v0.1.41...v0.1.42) (2021-04-07)
+
 ### [0.1.41](https://github.com/terraform-cdk-providers/cdktf-provider-azurerm/compare/v0.1.40...v0.1.41) (2021-03-29)
 
 ### [0.1.40](https://github.com/terraform-cdk-providers/cdktf-provider-azurerm/compare/v0.1.39...v0.1.40) (2021-03-26)
