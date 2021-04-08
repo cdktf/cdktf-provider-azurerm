@@ -103,6 +103,11 @@ export class DataAzurermKeyVaultSecret extends cdktf.TerraformDataSource {
     return this.getStringAttribute('version');
   }
 
+  // versionless_id - computed: true, optional: false, required: false
+  public get versionlessId() {
+    return this.getStringAttribute('versionless_id');
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: DataAzurermKeyVaultSecretTimeouts;
   public get timeouts() {

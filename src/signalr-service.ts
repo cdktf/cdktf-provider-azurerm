@@ -19,6 +19,8 @@ export interface SignalrServiceConfig extends cdktf.TerraformMetaArguments {
   readonly sku: SignalrServiceSku[];
   /** timeouts block */
   readonly timeouts?: SignalrServiceTimeouts;
+  /** upstream_endpoint block */
+  readonly upstreamEndpoint?: SignalrServiceUpstreamEndpoint[];
 }
 export interface SignalrServiceCors {
   readonly allowedOrigins: string[];
@@ -74,6 +76,23 @@ function signalrServiceTimeoutsToTerraform(struct?: SignalrServiceTimeouts): any
   }
 }
 
+export interface SignalrServiceUpstreamEndpoint {
+  readonly categoryPattern: string[];
+  readonly eventPattern: string[];
+  readonly hubPattern: string[];
+  readonly urlTemplate: string;
+}
+
+function signalrServiceUpstreamEndpointToTerraform(struct?: SignalrServiceUpstreamEndpoint): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    category_pattern: cdktf.listMapper(cdktf.stringToTerraform)(struct!.categoryPattern),
+    event_pattern: cdktf.listMapper(cdktf.stringToTerraform)(struct!.eventPattern),
+    hub_pattern: cdktf.listMapper(cdktf.stringToTerraform)(struct!.hubPattern),
+    url_template: cdktf.stringToTerraform(struct!.urlTemplate),
+  }
+}
+
 
 // Resource
 
@@ -102,6 +121,7 @@ export class SignalrService extends cdktf.TerraformResource {
     this._features = config.features;
     this._sku = config.sku;
     this._timeouts = config.timeouts;
+    this._upstreamEndpoint = config.upstreamEndpoint;
   }
 
   // ==========
@@ -269,6 +289,22 @@ export class SignalrService extends cdktf.TerraformResource {
     return this._timeouts
   }
 
+  // upstream_endpoint - computed: false, optional: true, required: false
+  private _upstreamEndpoint?: SignalrServiceUpstreamEndpoint[];
+  public get upstreamEndpoint() {
+    return this.interpolationForAttribute('upstream_endpoint') as any;
+  }
+  public set upstreamEndpoint(value: SignalrServiceUpstreamEndpoint[] ) {
+    this._upstreamEndpoint = value;
+  }
+  public resetUpstreamEndpoint() {
+    this._upstreamEndpoint = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get upstreamEndpointInput() {
+    return this._upstreamEndpoint
+  }
+
   // =========
   // SYNTHESIS
   // =========
@@ -283,6 +319,7 @@ export class SignalrService extends cdktf.TerraformResource {
       features: cdktf.listMapper(signalrServiceFeaturesToTerraform)(this._features),
       sku: cdktf.listMapper(signalrServiceSkuToTerraform)(this._sku),
       timeouts: signalrServiceTimeoutsToTerraform(this._timeouts),
+      upstream_endpoint: cdktf.listMapper(signalrServiceUpstreamEndpointToTerraform)(this._upstreamEndpoint),
     };
   }
 }

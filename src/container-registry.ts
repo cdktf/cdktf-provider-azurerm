@@ -12,6 +12,8 @@ export interface ContainerRegistryConfig extends cdktf.TerraformMetaArguments {
   readonly location: string;
   readonly name: string;
   readonly networkRuleSet?: ContainerRegistryNetworkRuleSet[];
+  readonly publicNetworkAccessEnabled?: boolean;
+  readonly quarantinePolicyEnabled?: boolean;
   readonly resourceGroupName: string;
   readonly retentionPolicy?: ContainerRegistryRetentionPolicy[];
   readonly sku?: string;
@@ -29,8 +31,8 @@ export interface ContainerRegistryNetworkRuleSetIpRule {
 function containerRegistryNetworkRuleSetIpRuleToTerraform(struct?: ContainerRegistryNetworkRuleSetIpRule): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   return {
-    action: cdktf.stringToTerraform(struct!.action),
-    ip_range: cdktf.stringToTerraform(struct!.ipRange),
+    action: struct!.action === undefined ? null : cdktf.stringToTerraform(struct!.action),
+    ip_range: struct!.ipRange === undefined ? null : cdktf.stringToTerraform(struct!.ipRange),
   }
 }
 
@@ -42,8 +44,8 @@ export interface ContainerRegistryNetworkRuleSetVirtualNetwork {
 function containerRegistryNetworkRuleSetVirtualNetworkToTerraform(struct?: ContainerRegistryNetworkRuleSetVirtualNetwork): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   return {
-    action: cdktf.stringToTerraform(struct!.action),
-    subnet_id: cdktf.stringToTerraform(struct!.subnetId),
+    action: struct!.action === undefined ? null : cdktf.stringToTerraform(struct!.action),
+    subnet_id: struct!.subnetId === undefined ? null : cdktf.stringToTerraform(struct!.subnetId),
   }
 }
 
@@ -56,9 +58,9 @@ export interface ContainerRegistryNetworkRuleSet {
 function containerRegistryNetworkRuleSetToTerraform(struct?: ContainerRegistryNetworkRuleSet): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   return {
-    default_action: cdktf.stringToTerraform(struct!.defaultAction),
-    ip_rule: cdktf.listMapper(containerRegistryNetworkRuleSetIpRuleToTerraform)(struct!.ipRule),
-    virtual_network: cdktf.listMapper(containerRegistryNetworkRuleSetVirtualNetworkToTerraform)(struct!.virtualNetwork),
+    default_action: struct!.defaultAction === undefined ? null : cdktf.stringToTerraform(struct!.defaultAction),
+    ip_rule: struct!.ipRule === undefined ? null : cdktf.listMapper(containerRegistryNetworkRuleSetIpRuleToTerraform)(struct!.ipRule),
+    virtual_network: struct!.virtualNetwork === undefined ? null : cdktf.listMapper(containerRegistryNetworkRuleSetVirtualNetworkToTerraform)(struct!.virtualNetwork),
   }
 }
 
@@ -70,8 +72,8 @@ export interface ContainerRegistryRetentionPolicy {
 function containerRegistryRetentionPolicyToTerraform(struct?: ContainerRegistryRetentionPolicy): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   return {
-    days: cdktf.numberToTerraform(struct!.days),
-    enabled: cdktf.booleanToTerraform(struct!.enabled),
+    days: struct!.days === undefined ? null : cdktf.numberToTerraform(struct!.days),
+    enabled: struct!.enabled === undefined ? null : cdktf.booleanToTerraform(struct!.enabled),
   }
 }
 
@@ -82,7 +84,7 @@ export interface ContainerRegistryTrustPolicy {
 function containerRegistryTrustPolicyToTerraform(struct?: ContainerRegistryTrustPolicy): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   return {
-    enabled: cdktf.booleanToTerraform(struct!.enabled),
+    enabled: struct!.enabled === undefined ? null : cdktf.booleanToTerraform(struct!.enabled),
   }
 }
 
@@ -128,6 +130,8 @@ export class ContainerRegistry extends cdktf.TerraformResource {
     this._location = config.location;
     this._name = config.name;
     this._networkRuleSet = config.networkRuleSet;
+    this._publicNetworkAccessEnabled = config.publicNetworkAccessEnabled;
+    this._quarantinePolicyEnabled = config.quarantinePolicyEnabled;
     this._resourceGroupName = config.resourceGroupName;
     this._retentionPolicy = config.retentionPolicy;
     this._sku = config.sku;
@@ -233,6 +237,38 @@ export class ContainerRegistry extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get networkRuleSetInput() {
     return this._networkRuleSet
+  }
+
+  // public_network_access_enabled - computed: false, optional: true, required: false
+  private _publicNetworkAccessEnabled?: boolean;
+  public get publicNetworkAccessEnabled() {
+    return this.getBooleanAttribute('public_network_access_enabled');
+  }
+  public set publicNetworkAccessEnabled(value: boolean ) {
+    this._publicNetworkAccessEnabled = value;
+  }
+  public resetPublicNetworkAccessEnabled() {
+    this._publicNetworkAccessEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get publicNetworkAccessEnabledInput() {
+    return this._publicNetworkAccessEnabled
+  }
+
+  // quarantine_policy_enabled - computed: false, optional: true, required: false
+  private _quarantinePolicyEnabled?: boolean;
+  public get quarantinePolicyEnabled() {
+    return this.getBooleanAttribute('quarantine_policy_enabled');
+  }
+  public set quarantinePolicyEnabled(value: boolean ) {
+    this._quarantinePolicyEnabled = value;
+  }
+  public resetQuarantinePolicyEnabled() {
+    this._quarantinePolicyEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get quarantinePolicyEnabledInput() {
+    return this._quarantinePolicyEnabled
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -355,6 +391,8 @@ export class ContainerRegistry extends cdktf.TerraformResource {
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
       network_rule_set: cdktf.listMapper(containerRegistryNetworkRuleSetToTerraform)(this._networkRuleSet),
+      public_network_access_enabled: cdktf.booleanToTerraform(this._publicNetworkAccessEnabled),
+      quarantine_policy_enabled: cdktf.booleanToTerraform(this._quarantinePolicyEnabled),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       retention_policy: cdktf.listMapper(containerRegistryRetentionPolicyToTerraform)(this._retentionPolicy),
       sku: cdktf.stringToTerraform(this._sku),

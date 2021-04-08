@@ -407,6 +407,21 @@ function applicationGatewayRewriteRuleSetRewriteRuleResponseHeaderConfigurationT
   }
 }
 
+export interface ApplicationGatewayRewriteRuleSetRewriteRuleUrl {
+  readonly path?: string;
+  readonly queryString?: string;
+  readonly reroute?: boolean;
+}
+
+function applicationGatewayRewriteRuleSetRewriteRuleUrlToTerraform(struct?: ApplicationGatewayRewriteRuleSetRewriteRuleUrl): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    path: cdktf.stringToTerraform(struct!.path),
+    query_string: cdktf.stringToTerraform(struct!.queryString),
+    reroute: cdktf.booleanToTerraform(struct!.reroute),
+  }
+}
+
 export interface ApplicationGatewayRewriteRuleSetRewriteRule {
   readonly name: string;
   readonly ruleSequence: number;
@@ -416,6 +431,8 @@ export interface ApplicationGatewayRewriteRuleSetRewriteRule {
   readonly requestHeaderConfiguration?: ApplicationGatewayRewriteRuleSetRewriteRuleRequestHeaderConfiguration[];
   /** response_header_configuration block */
   readonly responseHeaderConfiguration?: ApplicationGatewayRewriteRuleSetRewriteRuleResponseHeaderConfiguration[];
+  /** url block */
+  readonly url?: ApplicationGatewayRewriteRuleSetRewriteRuleUrl[];
 }
 
 function applicationGatewayRewriteRuleSetRewriteRuleToTerraform(struct?: ApplicationGatewayRewriteRuleSetRewriteRule): any {
@@ -426,6 +443,7 @@ function applicationGatewayRewriteRuleSetRewriteRuleToTerraform(struct?: Applica
     condition: cdktf.listMapper(applicationGatewayRewriteRuleSetRewriteRuleConditionToTerraform)(struct!.condition),
     request_header_configuration: cdktf.listMapper(applicationGatewayRewriteRuleSetRewriteRuleRequestHeaderConfigurationToTerraform)(struct!.requestHeaderConfiguration),
     response_header_configuration: cdktf.listMapper(applicationGatewayRewriteRuleSetRewriteRuleResponseHeaderConfigurationToTerraform)(struct!.responseHeaderConfiguration),
+    url: cdktf.listMapper(applicationGatewayRewriteRuleSetRewriteRuleUrlToTerraform)(struct!.url),
   }
 }
 

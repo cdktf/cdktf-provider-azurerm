@@ -16,7 +16,7 @@ export interface ApiManagementSubscriptionConfig extends cdktf.TerraformMetaArgu
   readonly secondaryKey?: string;
   readonly state?: string;
   readonly subscriptionId?: string;
-  readonly userId: string;
+  readonly userId?: string;
   /** timeouts block */
   readonly timeouts?: ApiManagementSubscriptionTimeouts;
 }
@@ -214,13 +214,16 @@ export class ApiManagementSubscription extends cdktf.TerraformResource {
     return this._subscriptionId
   }
 
-  // user_id - computed: false, optional: false, required: true
-  private _userId: string;
+  // user_id - computed: false, optional: true, required: false
+  private _userId?: string;
   public get userId() {
     return this.getStringAttribute('user_id');
   }
-  public set userId(value: string) {
+  public set userId(value: string ) {
     this._userId = value;
+  }
+  public resetUserId() {
+    this._userId = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get userIdInput() {

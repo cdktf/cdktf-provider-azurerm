@@ -80,6 +80,7 @@ export interface MonitorMetricAlertCriteria {
   readonly metricName: string;
   readonly metricNamespace: string;
   readonly operator: string;
+  readonly skipMetricValidation?: boolean;
   readonly threshold: number;
   /** dimension block */
   readonly dimension?: MonitorMetricAlertCriteriaDimension[];
@@ -92,6 +93,7 @@ function monitorMetricAlertCriteriaToTerraform(struct?: MonitorMetricAlertCriter
     metric_name: cdktf.stringToTerraform(struct!.metricName),
     metric_namespace: cdktf.stringToTerraform(struct!.metricNamespace),
     operator: cdktf.stringToTerraform(struct!.operator),
+    skip_metric_validation: cdktf.booleanToTerraform(struct!.skipMetricValidation),
     threshold: cdktf.numberToTerraform(struct!.threshold),
     dimension: cdktf.listMapper(monitorMetricAlertCriteriaDimensionToTerraform)(struct!.dimension),
   }
@@ -121,6 +123,7 @@ export interface MonitorMetricAlertDynamicCriteria {
   readonly metricName: string;
   readonly metricNamespace: string;
   readonly operator: string;
+  readonly skipMetricValidation?: boolean;
   /** dimension block */
   readonly dimension?: MonitorMetricAlertDynamicCriteriaDimension[];
 }
@@ -136,6 +139,7 @@ function monitorMetricAlertDynamicCriteriaToTerraform(struct?: MonitorMetricAler
     metric_name: cdktf.stringToTerraform(struct!.metricName),
     metric_namespace: cdktf.stringToTerraform(struct!.metricNamespace),
     operator: cdktf.stringToTerraform(struct!.operator),
+    skip_metric_validation: cdktf.booleanToTerraform(struct!.skipMetricValidation),
     dimension: cdktf.listMapper(monitorMetricAlertDynamicCriteriaDimensionToTerraform)(struct!.dimension),
   }
 }

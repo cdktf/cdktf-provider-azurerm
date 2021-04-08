@@ -33,6 +33,8 @@ export interface ApiManagementConfig extends cdktf.TerraformMetaArguments {
   readonly signIn?: ApiManagementSignIn[];
   /** sign_up block */
   readonly signUp?: ApiManagementSignUp[];
+  /** tenant_access block */
+  readonly tenantAccess?: ApiManagementTenantAccess[];
   /** timeouts block */
   readonly timeouts?: ApiManagementTimeouts;
   /** virtual_network_configuration block */
@@ -46,8 +48,8 @@ export interface ApiManagementPolicy {
 function apiManagementPolicyToTerraform(struct?: ApiManagementPolicy): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   return {
-    xml_content: cdktf.stringToTerraform(struct!.xmlContent),
-    xml_link: cdktf.stringToTerraform(struct!.xmlLink),
+    xml_content: struct!.xmlContent === undefined ? null : cdktf.stringToTerraform(struct!.xmlContent),
+    xml_link: struct!.xmlLink === undefined ? null : cdktf.stringToTerraform(struct!.xmlLink),
   }
 }
 
@@ -77,7 +79,7 @@ function apiManagementAdditionalLocationToTerraform(struct?: ApiManagementAdditi
 }
 
 export interface ApiManagementCertificate {
-  readonly certificatePassword: string;
+  readonly certificatePassword?: string;
   readonly encodedCertificate: string;
   readonly storeName: string;
 }
@@ -319,6 +321,17 @@ function apiManagementSignUpToTerraform(struct?: ApiManagementSignUp): any {
   }
 }
 
+export interface ApiManagementTenantAccess {
+  readonly enabled: boolean;
+}
+
+function apiManagementTenantAccessToTerraform(struct?: ApiManagementTenantAccess): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    enabled: cdktf.booleanToTerraform(struct!.enabled),
+  }
+}
+
 export interface ApiManagementTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -385,6 +398,7 @@ export class ApiManagement extends cdktf.TerraformResource {
     this._security = config.security;
     this._signIn = config.signIn;
     this._signUp = config.signUp;
+    this._tenantAccess = config.tenantAccess;
     this._timeouts = config.timeouts;
     this._virtualNetworkConfiguration = config.virtualNetworkConfiguration;
   }
@@ -708,6 +722,22 @@ export class ApiManagement extends cdktf.TerraformResource {
     return this._signUp
   }
 
+  // tenant_access - computed: false, optional: true, required: false
+  private _tenantAccess?: ApiManagementTenantAccess[];
+  public get tenantAccess() {
+    return this.interpolationForAttribute('tenant_access') as any;
+  }
+  public set tenantAccess(value: ApiManagementTenantAccess[] ) {
+    this._tenantAccess = value;
+  }
+  public resetTenantAccess() {
+    this._tenantAccess = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tenantAccessInput() {
+    return this._tenantAccess
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: ApiManagementTimeouts;
   public get timeouts() {
@@ -764,6 +794,7 @@ export class ApiManagement extends cdktf.TerraformResource {
       security: cdktf.listMapper(apiManagementSecurityToTerraform)(this._security),
       sign_in: cdktf.listMapper(apiManagementSignInToTerraform)(this._signIn),
       sign_up: cdktf.listMapper(apiManagementSignUpToTerraform)(this._signUp),
+      tenant_access: cdktf.listMapper(apiManagementTenantAccessToTerraform)(this._tenantAccess),
       timeouts: apiManagementTimeoutsToTerraform(this._timeouts),
       virtual_network_configuration: cdktf.listMapper(apiManagementVirtualNetworkConfigurationToTerraform)(this._virtualNetworkConfiguration),
     };

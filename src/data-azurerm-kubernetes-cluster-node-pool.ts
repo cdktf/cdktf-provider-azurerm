@@ -13,6 +13,13 @@ export interface DataAzurermKubernetesClusterNodePoolConfig extends cdktf.Terraf
   /** timeouts block */
   readonly timeouts?: DataAzurermKubernetesClusterNodePoolTimeouts;
 }
+export class DataAzurermKubernetesClusterNodePoolUpgradeSettings extends cdktf.ComplexComputedList {
+
+  // max_surge - computed: true, optional: false, required: false
+  public get maxSurge() {
+    return this.getStringAttribute('max_surge');
+  }
+}
 export interface DataAzurermKubernetesClusterNodePoolTimeouts {
   readonly read?: string;
 }
@@ -191,6 +198,11 @@ export class DataAzurermKubernetesClusterNodePool extends cdktf.TerraformDataSou
   // tags - computed: true, optional: false, required: false
   public tags(key: string): string {
     return new cdktf.StringMap(this, 'tags').lookup(key);
+  }
+
+  // upgrade_settings - computed: true, optional: false, required: false
+  public upgradeSettings(index: string) {
+    return new DataAzurermKubernetesClusterNodePoolUpgradeSettings(this, 'upgrade_settings', index);
   }
 
   // vm_size - computed: true, optional: false, required: false

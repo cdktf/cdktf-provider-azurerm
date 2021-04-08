@@ -1,0 +1,193 @@
+// https://www.terraform.io/docs/providers/azurerm/r/data_azurerm_spring_cloud_app.html
+// generated from terraform resource schema
+
+import { Construct } from 'constructs';
+import * as cdktf from 'cdktf';
+
+// Configuration
+
+export interface DataAzurermSpringCloudAppConfig extends cdktf.TerraformMetaArguments {
+  readonly name: string;
+  readonly resourceGroupName: string;
+  readonly serviceName: string;
+  /** timeouts block */
+  readonly timeouts?: DataAzurermSpringCloudAppTimeouts;
+}
+export class DataAzurermSpringCloudAppIdentity extends cdktf.ComplexComputedList {
+
+  // principal_id - computed: true, optional: false, required: false
+  public get principalId() {
+    return this.getStringAttribute('principal_id');
+  }
+
+  // tenant_id - computed: true, optional: false, required: false
+  public get tenantId() {
+    return this.getStringAttribute('tenant_id');
+  }
+
+  // type - computed: true, optional: false, required: false
+  public get type() {
+    return this.getStringAttribute('type');
+  }
+}
+export class DataAzurermSpringCloudAppPersistentDisk extends cdktf.ComplexComputedList {
+
+  // mount_path - computed: true, optional: false, required: false
+  public get mountPath() {
+    return this.getStringAttribute('mount_path');
+  }
+
+  // size_in_gb - computed: true, optional: false, required: false
+  public get sizeInGb() {
+    return this.getNumberAttribute('size_in_gb');
+  }
+}
+export interface DataAzurermSpringCloudAppTimeouts {
+  readonly read?: string;
+}
+
+function dataAzurermSpringCloudAppTimeoutsToTerraform(struct?: DataAzurermSpringCloudAppTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    read: cdktf.stringToTerraform(struct!.read),
+  }
+}
+
+
+// Resource
+
+export class DataAzurermSpringCloudApp extends cdktf.TerraformDataSource {
+
+  // ===========
+  // INITIALIZER
+  // ===========
+
+  public constructor(scope: Construct, id: string, config: DataAzurermSpringCloudAppConfig) {
+    super(scope, id, {
+      terraformResourceType: 'azurerm_spring_cloud_app',
+      terraformGeneratorMetadata: {
+        providerName: 'azurerm'
+      },
+      provider: config.provider,
+      dependsOn: config.dependsOn,
+      count: config.count,
+      lifecycle: config.lifecycle
+    });
+    this._name = config.name;
+    this._resourceGroupName = config.resourceGroupName;
+    this._serviceName = config.serviceName;
+    this._timeouts = config.timeouts;
+  }
+
+  // ==========
+  // ATTRIBUTES
+  // ==========
+
+  // fqdn - computed: true, optional: false, required: false
+  public get fqdn() {
+    return this.getStringAttribute('fqdn');
+  }
+
+  // https_only - computed: true, optional: false, required: false
+  public get httpsOnly() {
+    return this.getBooleanAttribute('https_only');
+  }
+
+  // id - computed: true, optional: true, required: false
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+
+  // identity - computed: true, optional: false, required: false
+  public identity(index: string) {
+    return new DataAzurermSpringCloudAppIdentity(this, 'identity', index);
+  }
+
+  // is_public - computed: true, optional: false, required: false
+  public get isPublic() {
+    return this.getBooleanAttribute('is_public');
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name: string;
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
+  }
+
+  // persistent_disk - computed: true, optional: false, required: false
+  public persistentDisk(index: string) {
+    return new DataAzurermSpringCloudAppPersistentDisk(this, 'persistent_disk', index);
+  }
+
+  // resource_group_name - computed: false, optional: false, required: true
+  private _resourceGroupName: string;
+  public get resourceGroupName() {
+    return this.getStringAttribute('resource_group_name');
+  }
+  public set resourceGroupName(value: string) {
+    this._resourceGroupName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
+  }
+
+  // service_name - computed: false, optional: false, required: true
+  private _serviceName: string;
+  public get serviceName() {
+    return this.getStringAttribute('service_name');
+  }
+  public set serviceName(value: string) {
+    this._serviceName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get serviceNameInput() {
+    return this._serviceName
+  }
+
+  // tls_enabled - computed: true, optional: false, required: false
+  public get tlsEnabled() {
+    return this.getBooleanAttribute('tls_enabled');
+  }
+
+  // url - computed: true, optional: false, required: false
+  public get url() {
+    return this.getStringAttribute('url');
+  }
+
+  // timeouts - computed: false, optional: true, required: false
+  private _timeouts?: DataAzurermSpringCloudAppTimeouts;
+  public get timeouts() {
+    return this.interpolationForAttribute('timeouts') as any;
+  }
+  public set timeouts(value: DataAzurermSpringCloudAppTimeouts ) {
+    this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
+  }
+
+  // =========
+  // SYNTHESIS
+  // =========
+
+  protected synthesizeAttributes(): { [name: string]: any } {
+    return {
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      service_name: cdktf.stringToTerraform(this._serviceName),
+      timeouts: dataAzurermSpringCloudAppTimeoutsToTerraform(this._timeouts),
+    };
+  }
+}

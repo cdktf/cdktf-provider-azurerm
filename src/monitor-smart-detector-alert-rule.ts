@@ -15,6 +15,7 @@ export interface MonitorSmartDetectorAlertRuleConfig extends cdktf.TerraformMeta
   readonly resourceGroupName: string;
   readonly scopeResourceIds: string[];
   readonly severity: string;
+  readonly tags?: { [key: string]: string };
   readonly throttlingDuration?: string;
   /** action_group block */
   readonly actionGroup: MonitorSmartDetectorAlertRuleActionGroup[];
@@ -81,6 +82,7 @@ export class MonitorSmartDetectorAlertRule extends cdktf.TerraformResource {
     this._resourceGroupName = config.resourceGroupName;
     this._scopeResourceIds = config.scopeResourceIds;
     this._severity = config.severity;
+    this._tags = config.tags;
     this._throttlingDuration = config.throttlingDuration;
     this._actionGroup = config.actionGroup;
     this._timeouts = config.timeouts;
@@ -205,6 +207,22 @@ export class MonitorSmartDetectorAlertRule extends cdktf.TerraformResource {
     return this._severity
   }
 
+  // tags - computed: false, optional: true, required: false
+  private _tags?: { [key: string]: string };
+  public get tags() {
+    return this.interpolationForAttribute('tags') as any;
+  }
+  public set tags(value: { [key: string]: string } ) {
+    this._tags = value;
+  }
+  public resetTags() {
+    this._tags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsInput() {
+    return this._tags
+  }
+
   // throttling_duration - computed: false, optional: true, required: false
   private _throttlingDuration?: string;
   public get throttlingDuration() {
@@ -264,6 +282,7 @@ export class MonitorSmartDetectorAlertRule extends cdktf.TerraformResource {
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       scope_resource_ids: cdktf.listMapper(cdktf.stringToTerraform)(this._scopeResourceIds),
       severity: cdktf.stringToTerraform(this._severity),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
       throttling_duration: cdktf.stringToTerraform(this._throttlingDuration),
       action_group: cdktf.listMapper(monitorSmartDetectorAlertRuleActionGroupToTerraform)(this._actionGroup),
       timeouts: monitorSmartDetectorAlertRuleTimeoutsToTerraform(this._timeouts),

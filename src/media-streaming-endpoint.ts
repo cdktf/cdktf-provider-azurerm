@@ -240,6 +240,11 @@ export class MediaStreamingEndpoint extends cdktf.TerraformResource {
     return this._description
   }
 
+  // host_name - computed: true, optional: false, required: false
+  public get hostName() {
+    return this.getStringAttribute('host_name');
+  }
+
   // id - computed: true, optional: true, required: false
   public get id() {
     return this.getStringAttribute('id');

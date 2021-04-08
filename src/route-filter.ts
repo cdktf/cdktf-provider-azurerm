@@ -25,10 +25,10 @@ export interface RouteFilterRule {
 function routeFilterRuleToTerraform(struct?: RouteFilterRule): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   return {
-    access: cdktf.stringToTerraform(struct!.access),
-    communities: cdktf.listMapper(cdktf.stringToTerraform)(struct!.communities),
-    name: cdktf.stringToTerraform(struct!.name),
-    rule_type: cdktf.stringToTerraform(struct!.ruleType),
+    access: struct!.access === undefined ? null : cdktf.stringToTerraform(struct!.access),
+    communities: struct!.communities === undefined ? null : cdktf.listMapper(cdktf.stringToTerraform)(struct!.communities),
+    name: struct!.name === undefined ? null : cdktf.stringToTerraform(struct!.name),
+    rule_type: struct!.ruleType === undefined ? null : cdktf.stringToTerraform(struct!.ruleType),
   }
 }
 

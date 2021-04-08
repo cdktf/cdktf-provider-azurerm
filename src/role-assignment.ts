@@ -7,6 +7,9 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface RoleAssignmentConfig extends cdktf.TerraformMetaArguments {
+  readonly condition?: string;
+  readonly conditionVersion?: string;
+  readonly description?: string;
   readonly name?: string;
   readonly principalId: string;
   readonly roleDefinitionId?: string;
@@ -53,6 +56,9 @@ export class RoleAssignment extends cdktf.TerraformResource {
       count: config.count,
       lifecycle: config.lifecycle
     });
+    this._condition = config.condition;
+    this._conditionVersion = config.conditionVersion;
+    this._description = config.description;
     this._name = config.name;
     this._principalId = config.principalId;
     this._roleDefinitionId = config.roleDefinitionId;
@@ -65,6 +71,54 @@ export class RoleAssignment extends cdktf.TerraformResource {
   // ==========
   // ATTRIBUTES
   // ==========
+
+  // condition - computed: false, optional: true, required: false
+  private _condition?: string;
+  public get condition() {
+    return this.getStringAttribute('condition');
+  }
+  public set condition(value: string ) {
+    this._condition = value;
+  }
+  public resetCondition() {
+    this._condition = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get conditionInput() {
+    return this._condition
+  }
+
+  // condition_version - computed: false, optional: true, required: false
+  private _conditionVersion?: string;
+  public get conditionVersion() {
+    return this.getStringAttribute('condition_version');
+  }
+  public set conditionVersion(value: string ) {
+    this._conditionVersion = value;
+  }
+  public resetConditionVersion() {
+    this._conditionVersion = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get conditionVersionInput() {
+    return this._conditionVersion
+  }
+
+  // description - computed: false, optional: true, required: false
+  private _description?: string;
+  public get description() {
+    return this.getStringAttribute('description');
+  }
+  public set description(value: string ) {
+    this._description = value;
+  }
+  public resetDescription() {
+    this._description = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get descriptionInput() {
+    return this._description
+  }
 
   // id - computed: true, optional: true, required: false
   public get id() {
@@ -188,6 +242,9 @@ export class RoleAssignment extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      condition: cdktf.stringToTerraform(this._condition),
+      condition_version: cdktf.stringToTerraform(this._conditionVersion),
+      description: cdktf.stringToTerraform(this._description),
       name: cdktf.stringToTerraform(this._name),
       principal_id: cdktf.stringToTerraform(this._principalId),
       role_definition_id: cdktf.stringToTerraform(this._roleDefinitionId),

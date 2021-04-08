@@ -35,8 +35,12 @@ export interface ServiceFabricClusterConfig extends cdktf.TerraformMetaArguments
   readonly nodeType: ServiceFabricClusterNodeType[];
   /** reverse_proxy_certificate block */
   readonly reverseProxyCertificate?: ServiceFabricClusterReverseProxyCertificate[];
+  /** reverse_proxy_certificate_common_names block */
+  readonly reverseProxyCertificateCommonNames?: ServiceFabricClusterReverseProxyCertificateCommonNames[];
   /** timeouts block */
   readonly timeouts?: ServiceFabricClusterTimeouts;
+  /** upgrade_policy block */
+  readonly upgradePolicy?: ServiceFabricClusterUpgradePolicy[];
 }
 export interface ServiceFabricClusterAzureActiveDirectory {
   readonly clientApplicationId: string;
@@ -229,6 +233,33 @@ function serviceFabricClusterReverseProxyCertificateToTerraform(struct?: Service
   }
 }
 
+export interface ServiceFabricClusterReverseProxyCertificateCommonNamesCommonNames {
+  readonly certificateCommonName: string;
+  readonly certificateIssuerThumbprint?: string;
+}
+
+function serviceFabricClusterReverseProxyCertificateCommonNamesCommonNamesToTerraform(struct?: ServiceFabricClusterReverseProxyCertificateCommonNamesCommonNames): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    certificate_common_name: cdktf.stringToTerraform(struct!.certificateCommonName),
+    certificate_issuer_thumbprint: cdktf.stringToTerraform(struct!.certificateIssuerThumbprint),
+  }
+}
+
+export interface ServiceFabricClusterReverseProxyCertificateCommonNames {
+  readonly x509StoreName: string;
+  /** common_names block */
+  readonly commonNames: ServiceFabricClusterReverseProxyCertificateCommonNamesCommonNames[];
+}
+
+function serviceFabricClusterReverseProxyCertificateCommonNamesToTerraform(struct?: ServiceFabricClusterReverseProxyCertificateCommonNames): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    x509_store_name: cdktf.stringToTerraform(struct!.x509StoreName),
+    common_names: cdktf.listMapper(serviceFabricClusterReverseProxyCertificateCommonNamesCommonNamesToTerraform)(struct!.commonNames),
+  }
+}
+
 export interface ServiceFabricClusterTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -243,6 +274,63 @@ function serviceFabricClusterTimeoutsToTerraform(struct?: ServiceFabricClusterTi
     delete: cdktf.stringToTerraform(struct!.delete),
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+export interface ServiceFabricClusterUpgradePolicyDeltaHealthPolicy {
+  readonly maxDeltaUnhealthyApplicationsPercent?: number;
+  readonly maxDeltaUnhealthyNodesPercent?: number;
+  readonly maxUpgradeDomainDeltaUnhealthyNodesPercent?: number;
+}
+
+function serviceFabricClusterUpgradePolicyDeltaHealthPolicyToTerraform(struct?: ServiceFabricClusterUpgradePolicyDeltaHealthPolicy): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    max_delta_unhealthy_applications_percent: cdktf.numberToTerraform(struct!.maxDeltaUnhealthyApplicationsPercent),
+    max_delta_unhealthy_nodes_percent: cdktf.numberToTerraform(struct!.maxDeltaUnhealthyNodesPercent),
+    max_upgrade_domain_delta_unhealthy_nodes_percent: cdktf.numberToTerraform(struct!.maxUpgradeDomainDeltaUnhealthyNodesPercent),
+  }
+}
+
+export interface ServiceFabricClusterUpgradePolicyHealthPolicy {
+  readonly maxUnhealthyApplicationsPercent?: number;
+  readonly maxUnhealthyNodesPercent?: number;
+}
+
+function serviceFabricClusterUpgradePolicyHealthPolicyToTerraform(struct?: ServiceFabricClusterUpgradePolicyHealthPolicy): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    max_unhealthy_applications_percent: cdktf.numberToTerraform(struct!.maxUnhealthyApplicationsPercent),
+    max_unhealthy_nodes_percent: cdktf.numberToTerraform(struct!.maxUnhealthyNodesPercent),
+  }
+}
+
+export interface ServiceFabricClusterUpgradePolicy {
+  readonly forceRestartEnabled?: boolean;
+  readonly healthCheckRetryTimeout?: string;
+  readonly healthCheckStableDuration?: string;
+  readonly healthCheckWaitDuration?: string;
+  readonly upgradeDomainTimeout?: string;
+  readonly upgradeReplicaSetCheckTimeout?: string;
+  readonly upgradeTimeout?: string;
+  /** delta_health_policy block */
+  readonly deltaHealthPolicy?: ServiceFabricClusterUpgradePolicyDeltaHealthPolicy[];
+  /** health_policy block */
+  readonly healthPolicy?: ServiceFabricClusterUpgradePolicyHealthPolicy[];
+}
+
+function serviceFabricClusterUpgradePolicyToTerraform(struct?: ServiceFabricClusterUpgradePolicy): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    force_restart_enabled: cdktf.booleanToTerraform(struct!.forceRestartEnabled),
+    health_check_retry_timeout: cdktf.stringToTerraform(struct!.healthCheckRetryTimeout),
+    health_check_stable_duration: cdktf.stringToTerraform(struct!.healthCheckStableDuration),
+    health_check_wait_duration: cdktf.stringToTerraform(struct!.healthCheckWaitDuration),
+    upgrade_domain_timeout: cdktf.stringToTerraform(struct!.upgradeDomainTimeout),
+    upgrade_replica_set_check_timeout: cdktf.stringToTerraform(struct!.upgradeReplicaSetCheckTimeout),
+    upgrade_timeout: cdktf.stringToTerraform(struct!.upgradeTimeout),
+    delta_health_policy: cdktf.listMapper(serviceFabricClusterUpgradePolicyDeltaHealthPolicyToTerraform)(struct!.deltaHealthPolicy),
+    health_policy: cdktf.listMapper(serviceFabricClusterUpgradePolicyHealthPolicyToTerraform)(struct!.healthPolicy),
   }
 }
 
@@ -285,7 +373,9 @@ export class ServiceFabricCluster extends cdktf.TerraformResource {
     this._fabricSettings = config.fabricSettings;
     this._nodeType = config.nodeType;
     this._reverseProxyCertificate = config.reverseProxyCertificate;
+    this._reverseProxyCertificateCommonNames = config.reverseProxyCertificateCommonNames;
     this._timeouts = config.timeouts;
+    this._upgradePolicy = config.upgradePolicy;
   }
 
   // ==========
@@ -582,6 +672,22 @@ export class ServiceFabricCluster extends cdktf.TerraformResource {
     return this._reverseProxyCertificate
   }
 
+  // reverse_proxy_certificate_common_names - computed: false, optional: true, required: false
+  private _reverseProxyCertificateCommonNames?: ServiceFabricClusterReverseProxyCertificateCommonNames[];
+  public get reverseProxyCertificateCommonNames() {
+    return this.interpolationForAttribute('reverse_proxy_certificate_common_names') as any;
+  }
+  public set reverseProxyCertificateCommonNames(value: ServiceFabricClusterReverseProxyCertificateCommonNames[] ) {
+    this._reverseProxyCertificateCommonNames = value;
+  }
+  public resetReverseProxyCertificateCommonNames() {
+    this._reverseProxyCertificateCommonNames = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get reverseProxyCertificateCommonNamesInput() {
+    return this._reverseProxyCertificateCommonNames
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: ServiceFabricClusterTimeouts;
   public get timeouts() {
@@ -596,6 +702,22 @@ export class ServiceFabricCluster extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
     return this._timeouts
+  }
+
+  // upgrade_policy - computed: false, optional: true, required: false
+  private _upgradePolicy?: ServiceFabricClusterUpgradePolicy[];
+  public get upgradePolicy() {
+    return this.interpolationForAttribute('upgrade_policy') as any;
+  }
+  public set upgradePolicy(value: ServiceFabricClusterUpgradePolicy[] ) {
+    this._upgradePolicy = value;
+  }
+  public resetUpgradePolicy() {
+    this._upgradePolicy = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get upgradePolicyInput() {
+    return this._upgradePolicy
   }
 
   // =========
@@ -623,7 +745,9 @@ export class ServiceFabricCluster extends cdktf.TerraformResource {
       fabric_settings: cdktf.listMapper(serviceFabricClusterFabricSettingsToTerraform)(this._fabricSettings),
       node_type: cdktf.listMapper(serviceFabricClusterNodeTypeToTerraform)(this._nodeType),
       reverse_proxy_certificate: cdktf.listMapper(serviceFabricClusterReverseProxyCertificateToTerraform)(this._reverseProxyCertificate),
+      reverse_proxy_certificate_common_names: cdktf.listMapper(serviceFabricClusterReverseProxyCertificateCommonNamesToTerraform)(this._reverseProxyCertificateCommonNames),
       timeouts: serviceFabricClusterTimeoutsToTerraform(this._timeouts),
+      upgrade_policy: cdktf.listMapper(serviceFabricClusterUpgradePolicyToTerraform)(this._upgradePolicy),
     };
   }
 }

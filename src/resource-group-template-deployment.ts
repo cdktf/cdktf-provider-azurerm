@@ -13,7 +13,8 @@ export interface ResourceGroupTemplateDeploymentConfig extends cdktf.TerraformMe
   readonly parametersContent?: string;
   readonly resourceGroupName: string;
   readonly tags?: { [key: string]: string };
-  readonly templateContent: string;
+  readonly templateContent?: string;
+  readonly templateSpecVersionId?: string;
   /** timeouts block */
   readonly timeouts?: ResourceGroupTemplateDeploymentTimeouts;
 }
@@ -61,6 +62,7 @@ export class ResourceGroupTemplateDeployment extends cdktf.TerraformResource {
     this._resourceGroupName = config.resourceGroupName;
     this._tags = config.tags;
     this._templateContent = config.templateContent;
+    this._templateSpecVersionId = config.templateSpecVersionId;
     this._timeouts = config.timeouts;
   }
 
@@ -165,17 +167,36 @@ export class ResourceGroupTemplateDeployment extends cdktf.TerraformResource {
     return this._tags
   }
 
-  // template_content - computed: false, optional: false, required: true
-  private _templateContent: string;
+  // template_content - computed: true, optional: true, required: false
+  private _templateContent?: string;
   public get templateContent() {
     return this.getStringAttribute('template_content');
   }
   public set templateContent(value: string) {
     this._templateContent = value;
   }
+  public resetTemplateContent() {
+    this._templateContent = undefined;
+  }
   // Temporarily expose input value. Use with caution.
   public get templateContentInput() {
     return this._templateContent
+  }
+
+  // template_spec_version_id - computed: false, optional: true, required: false
+  private _templateSpecVersionId?: string;
+  public get templateSpecVersionId() {
+    return this.getStringAttribute('template_spec_version_id');
+  }
+  public set templateSpecVersionId(value: string ) {
+    this._templateSpecVersionId = value;
+  }
+  public resetTemplateSpecVersionId() {
+    this._templateSpecVersionId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get templateSpecVersionIdInput() {
+    return this._templateSpecVersionId
   }
 
   // timeouts - computed: false, optional: true, required: false
@@ -207,6 +228,7 @@ export class ResourceGroupTemplateDeployment extends cdktf.TerraformResource {
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
       template_content: cdktf.stringToTerraform(this._templateContent),
+      template_spec_version_id: cdktf.stringToTerraform(this._templateSpecVersionId),
       timeouts: resourceGroupTemplateDeploymentTimeoutsToTerraform(this._timeouts),
     };
   }

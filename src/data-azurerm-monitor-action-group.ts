@@ -205,7 +205,29 @@ export class DataAzurermMonitorActionGroupVoiceReceiver extends cdktf.ComplexCom
     return this.getStringAttribute('phone_number');
   }
 }
+export class DataAzurermMonitorActionGroupWebhookReceiverAadAuth extends cdktf.ComplexComputedList {
+
+  // identifier_uri - computed: true, optional: false, required: false
+  public get identifierUri() {
+    return this.getStringAttribute('identifier_uri');
+  }
+
+  // object_id - computed: true, optional: false, required: false
+  public get objectId() {
+    return this.getStringAttribute('object_id');
+  }
+
+  // tenant_id - computed: true, optional: false, required: false
+  public get tenantId() {
+    return this.getStringAttribute('tenant_id');
+  }
+}
 export class DataAzurermMonitorActionGroupWebhookReceiver extends cdktf.ComplexComputedList {
+
+  // aad_auth - computed: true, optional: false, required: false
+  public get aadAuth() {
+    return this.interpolationForAttribute('aad_auth') as any;
+  }
 
   // name - computed: true, optional: false, required: false
   public get name() {

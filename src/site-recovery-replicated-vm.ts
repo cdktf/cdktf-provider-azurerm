@@ -35,15 +35,16 @@ export interface SiteRecoveryReplicatedVmManagedDisk {
 function siteRecoveryReplicatedVmManagedDiskToTerraform(struct?: SiteRecoveryReplicatedVmManagedDisk): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   return {
-    disk_id: cdktf.stringToTerraform(struct!.diskId),
-    staging_storage_account_id: cdktf.stringToTerraform(struct!.stagingStorageAccountId),
-    target_disk_type: cdktf.stringToTerraform(struct!.targetDiskType),
-    target_replica_disk_type: cdktf.stringToTerraform(struct!.targetReplicaDiskType),
-    target_resource_group_id: cdktf.stringToTerraform(struct!.targetResourceGroupId),
+    disk_id: struct!.diskId === undefined ? null : cdktf.stringToTerraform(struct!.diskId),
+    staging_storage_account_id: struct!.stagingStorageAccountId === undefined ? null : cdktf.stringToTerraform(struct!.stagingStorageAccountId),
+    target_disk_type: struct!.targetDiskType === undefined ? null : cdktf.stringToTerraform(struct!.targetDiskType),
+    target_replica_disk_type: struct!.targetReplicaDiskType === undefined ? null : cdktf.stringToTerraform(struct!.targetReplicaDiskType),
+    target_resource_group_id: struct!.targetResourceGroupId === undefined ? null : cdktf.stringToTerraform(struct!.targetResourceGroupId),
   }
 }
 
 export interface SiteRecoveryReplicatedVmNetworkInterface {
+  readonly recoveryPublicIpAddressId?: string;
   readonly sourceNetworkInterfaceId?: string;
   readonly targetStaticIp?: string;
   readonly targetSubnetName?: string;
@@ -52,9 +53,10 @@ export interface SiteRecoveryReplicatedVmNetworkInterface {
 function siteRecoveryReplicatedVmNetworkInterfaceToTerraform(struct?: SiteRecoveryReplicatedVmNetworkInterface): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   return {
-    source_network_interface_id: cdktf.stringToTerraform(struct!.sourceNetworkInterfaceId),
-    target_static_ip: cdktf.stringToTerraform(struct!.targetStaticIp),
-    target_subnet_name: cdktf.stringToTerraform(struct!.targetSubnetName),
+    recovery_public_ip_address_id: cdktf.stringToTerraform(struct!.recoveryPublicIpAddressId),
+    source_network_interface_id: struct!.sourceNetworkInterfaceId === undefined ? null : cdktf.stringToTerraform(struct!.sourceNetworkInterfaceId),
+    target_static_ip: struct!.targetStaticIp === undefined ? null : cdktf.stringToTerraform(struct!.targetStaticIp),
+    target_subnet_name: struct!.targetSubnetName === undefined ? null : cdktf.stringToTerraform(struct!.targetSubnetName),
   }
 }
 

@@ -31,8 +31,8 @@ export interface EventhubNamespaceNetworkRulesetsIpRule {
 function eventhubNamespaceNetworkRulesetsIpRuleToTerraform(struct?: EventhubNamespaceNetworkRulesetsIpRule): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   return {
-    action: cdktf.stringToTerraform(struct!.action),
-    ip_mask: cdktf.stringToTerraform(struct!.ipMask),
+    action: struct!.action === undefined ? null : cdktf.stringToTerraform(struct!.action),
+    ip_mask: struct!.ipMask === undefined ? null : cdktf.stringToTerraform(struct!.ipMask),
   }
 }
 
@@ -44,8 +44,8 @@ export interface EventhubNamespaceNetworkRulesetsVirtualNetworkRule {
 function eventhubNamespaceNetworkRulesetsVirtualNetworkRuleToTerraform(struct?: EventhubNamespaceNetworkRulesetsVirtualNetworkRule): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   return {
-    ignore_missing_virtual_network_service_endpoint: cdktf.booleanToTerraform(struct!.ignoreMissingVirtualNetworkServiceEndpoint),
-    subnet_id: cdktf.stringToTerraform(struct!.subnetId),
+    ignore_missing_virtual_network_service_endpoint: struct!.ignoreMissingVirtualNetworkServiceEndpoint === undefined ? null : cdktf.booleanToTerraform(struct!.ignoreMissingVirtualNetworkServiceEndpoint),
+    subnet_id: struct!.subnetId === undefined ? null : cdktf.stringToTerraform(struct!.subnetId),
   }
 }
 
@@ -59,10 +59,10 @@ export interface EventhubNamespaceNetworkRulesets {
 function eventhubNamespaceNetworkRulesetsToTerraform(struct?: EventhubNamespaceNetworkRulesets): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   return {
-    default_action: cdktf.stringToTerraform(struct!.defaultAction),
-    ip_rule: cdktf.listMapper(eventhubNamespaceNetworkRulesetsIpRuleToTerraform)(struct!.ipRule),
-    trusted_service_access_enabled: cdktf.booleanToTerraform(struct!.trustedServiceAccessEnabled),
-    virtual_network_rule: cdktf.listMapper(eventhubNamespaceNetworkRulesetsVirtualNetworkRuleToTerraform)(struct!.virtualNetworkRule),
+    default_action: struct!.defaultAction === undefined ? null : cdktf.stringToTerraform(struct!.defaultAction),
+    ip_rule: struct!.ipRule === undefined ? null : cdktf.listMapper(eventhubNamespaceNetworkRulesetsIpRuleToTerraform)(struct!.ipRule),
+    trusted_service_access_enabled: struct!.trustedServiceAccessEnabled === undefined ? null : cdktf.booleanToTerraform(struct!.trustedServiceAccessEnabled),
+    virtual_network_rule: struct!.virtualNetworkRule === undefined ? null : cdktf.listMapper(eventhubNamespaceNetworkRulesetsVirtualNetworkRuleToTerraform)(struct!.virtualNetworkRule),
   }
 }
 

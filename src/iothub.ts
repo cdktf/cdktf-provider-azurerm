@@ -44,15 +44,15 @@ export interface IothubEndpoint {
 function iothubEndpointToTerraform(struct?: IothubEndpoint): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   return {
-    batch_frequency_in_seconds: cdktf.numberToTerraform(struct!.batchFrequencyInSeconds),
-    connection_string: cdktf.stringToTerraform(struct!.connectionString),
-    container_name: cdktf.stringToTerraform(struct!.containerName),
-    encoding: cdktf.stringToTerraform(struct!.encoding),
-    file_name_format: cdktf.stringToTerraform(struct!.fileNameFormat),
-    max_chunk_size_in_bytes: cdktf.numberToTerraform(struct!.maxChunkSizeInBytes),
-    name: cdktf.stringToTerraform(struct!.name),
-    resource_group_name: cdktf.stringToTerraform(struct!.resourceGroupName),
-    type: cdktf.stringToTerraform(struct!.type),
+    batch_frequency_in_seconds: struct!.batchFrequencyInSeconds === undefined ? null : cdktf.numberToTerraform(struct!.batchFrequencyInSeconds),
+    connection_string: struct!.connectionString === undefined ? null : cdktf.stringToTerraform(struct!.connectionString),
+    container_name: struct!.containerName === undefined ? null : cdktf.stringToTerraform(struct!.containerName),
+    encoding: struct!.encoding === undefined ? null : cdktf.stringToTerraform(struct!.encoding),
+    file_name_format: struct!.fileNameFormat === undefined ? null : cdktf.stringToTerraform(struct!.fileNameFormat),
+    max_chunk_size_in_bytes: struct!.maxChunkSizeInBytes === undefined ? null : cdktf.numberToTerraform(struct!.maxChunkSizeInBytes),
+    name: struct!.name === undefined ? null : cdktf.stringToTerraform(struct!.name),
+    resource_group_name: struct!.resourceGroupName === undefined ? null : cdktf.stringToTerraform(struct!.resourceGroupName),
+    type: struct!.type === undefined ? null : cdktf.stringToTerraform(struct!.type),
   }
 }
 
@@ -65,9 +65,9 @@ export interface IothubEnrichment {
 function iothubEnrichmentToTerraform(struct?: IothubEnrichment): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   return {
-    endpoint_names: cdktf.listMapper(cdktf.stringToTerraform)(struct!.endpointNames),
-    key: cdktf.stringToTerraform(struct!.key),
-    value: cdktf.stringToTerraform(struct!.value),
+    endpoint_names: struct!.endpointNames === undefined ? null : cdktf.listMapper(cdktf.stringToTerraform)(struct!.endpointNames),
+    key: struct!.key === undefined ? null : cdktf.stringToTerraform(struct!.key),
+    value: struct!.value === undefined ? null : cdktf.stringToTerraform(struct!.value),
   }
 }
 
@@ -82,11 +82,11 @@ export interface IothubRoute {
 function iothubRouteToTerraform(struct?: IothubRoute): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   return {
-    condition: cdktf.stringToTerraform(struct!.condition),
-    enabled: cdktf.booleanToTerraform(struct!.enabled),
-    endpoint_names: cdktf.listMapper(cdktf.stringToTerraform)(struct!.endpointNames),
-    name: cdktf.stringToTerraform(struct!.name),
-    source: cdktf.stringToTerraform(struct!.source),
+    condition: struct!.condition === undefined ? null : cdktf.stringToTerraform(struct!.condition),
+    enabled: struct!.enabled === undefined ? null : cdktf.booleanToTerraform(struct!.enabled),
+    endpoint_names: struct!.endpointNames === undefined ? null : cdktf.listMapper(cdktf.stringToTerraform)(struct!.endpointNames),
+    name: struct!.name === undefined ? null : cdktf.stringToTerraform(struct!.name),
+    source: struct!.source === undefined ? null : cdktf.stringToTerraform(struct!.source),
   }
 }
 

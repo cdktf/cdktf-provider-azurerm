@@ -37,22 +37,22 @@ export interface NetworkSecurityGroupSecurityRule {
 function networkSecurityGroupSecurityRuleToTerraform(struct?: NetworkSecurityGroupSecurityRule): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   return {
-    access: cdktf.stringToTerraform(struct!.access),
-    description: cdktf.stringToTerraform(struct!.description),
-    destination_address_prefix: cdktf.stringToTerraform(struct!.destinationAddressPrefix),
-    destination_address_prefixes: cdktf.listMapper(cdktf.stringToTerraform)(struct!.destinationAddressPrefixes),
-    destination_application_security_group_ids: cdktf.listMapper(cdktf.stringToTerraform)(struct!.destinationApplicationSecurityGroupIds),
-    destination_port_range: cdktf.stringToTerraform(struct!.destinationPortRange),
-    destination_port_ranges: cdktf.listMapper(cdktf.stringToTerraform)(struct!.destinationPortRanges),
-    direction: cdktf.stringToTerraform(struct!.direction),
-    name: cdktf.stringToTerraform(struct!.name),
-    priority: cdktf.numberToTerraform(struct!.priority),
-    protocol: cdktf.stringToTerraform(struct!.protocol),
-    source_address_prefix: cdktf.stringToTerraform(struct!.sourceAddressPrefix),
-    source_address_prefixes: cdktf.listMapper(cdktf.stringToTerraform)(struct!.sourceAddressPrefixes),
-    source_application_security_group_ids: cdktf.listMapper(cdktf.stringToTerraform)(struct!.sourceApplicationSecurityGroupIds),
-    source_port_range: cdktf.stringToTerraform(struct!.sourcePortRange),
-    source_port_ranges: cdktf.listMapper(cdktf.stringToTerraform)(struct!.sourcePortRanges),
+    access: struct!.access === undefined ? null : cdktf.stringToTerraform(struct!.access),
+    description: struct!.description === undefined ? null : cdktf.stringToTerraform(struct!.description),
+    destination_address_prefix: struct!.destinationAddressPrefix === undefined ? null : cdktf.stringToTerraform(struct!.destinationAddressPrefix),
+    destination_address_prefixes: struct!.destinationAddressPrefixes === undefined ? null : cdktf.listMapper(cdktf.stringToTerraform)(struct!.destinationAddressPrefixes),
+    destination_application_security_group_ids: struct!.destinationApplicationSecurityGroupIds === undefined ? null : cdktf.listMapper(cdktf.stringToTerraform)(struct!.destinationApplicationSecurityGroupIds),
+    destination_port_range: struct!.destinationPortRange === undefined ? null : cdktf.stringToTerraform(struct!.destinationPortRange),
+    destination_port_ranges: struct!.destinationPortRanges === undefined ? null : cdktf.listMapper(cdktf.stringToTerraform)(struct!.destinationPortRanges),
+    direction: struct!.direction === undefined ? null : cdktf.stringToTerraform(struct!.direction),
+    name: struct!.name === undefined ? null : cdktf.stringToTerraform(struct!.name),
+    priority: struct!.priority === undefined ? null : cdktf.numberToTerraform(struct!.priority),
+    protocol: struct!.protocol === undefined ? null : cdktf.stringToTerraform(struct!.protocol),
+    source_address_prefix: struct!.sourceAddressPrefix === undefined ? null : cdktf.stringToTerraform(struct!.sourceAddressPrefix),
+    source_address_prefixes: struct!.sourceAddressPrefixes === undefined ? null : cdktf.listMapper(cdktf.stringToTerraform)(struct!.sourceAddressPrefixes),
+    source_application_security_group_ids: struct!.sourceApplicationSecurityGroupIds === undefined ? null : cdktf.listMapper(cdktf.stringToTerraform)(struct!.sourceApplicationSecurityGroupIds),
+    source_port_range: struct!.sourcePortRange === undefined ? null : cdktf.stringToTerraform(struct!.sourcePortRange),
+    source_port_ranges: struct!.sourcePortRanges === undefined ? null : cdktf.listMapper(cdktf.stringToTerraform)(struct!.sourcePortRanges),
   }
 }
 
