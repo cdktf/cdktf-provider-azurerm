@@ -26,6 +26,7 @@ export interface MssqlServerConfig extends cdktf.TerraformMetaArguments {
   readonly timeouts?: MssqlServerTimeouts;
 }
 export interface MssqlServerExtendedAuditingPolicy {
+  readonly logMonitoringEnabled?: boolean;
   readonly retentionInDays?: number;
   readonly storageAccountAccessKey?: string;
   readonly storageAccountAccessKeyIsSecondary?: boolean;
@@ -35,6 +36,7 @@ export interface MssqlServerExtendedAuditingPolicy {
 function mssqlServerExtendedAuditingPolicyToTerraform(struct?: MssqlServerExtendedAuditingPolicy): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   return {
+    log_monitoring_enabled: cdktf.booleanToTerraform(struct!.logMonitoringEnabled),
     retention_in_days: cdktf.numberToTerraform(struct!.retentionInDays),
     storage_account_access_key: cdktf.stringToTerraform(struct!.storageAccountAccessKey),
     storage_account_access_key_is_secondary: cdktf.booleanToTerraform(struct!.storageAccountAccessKeyIsSecondary),

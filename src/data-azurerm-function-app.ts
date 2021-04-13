@@ -300,6 +300,11 @@ export class DataAzurermFunctionApp extends cdktf.TerraformDataSource {
     return new cdktf.StringMap(this, 'app_settings').lookup(key);
   }
 
+  // client_cert_mode - computed: true, optional: false, required: false
+  public get clientCertMode() {
+    return this.getStringAttribute('client_cert_mode');
+  }
+
   // connection_string - computed: true, optional: false, required: false
   public connectionString(index: string) {
     return new DataAzurermFunctionAppConnectionString(this, 'connection_string', index);

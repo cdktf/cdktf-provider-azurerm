@@ -117,6 +117,11 @@ export class SpringCloudCertificate extends cdktf.TerraformResource {
     return this._serviceName
   }
 
+  // thumbprint - computed: true, optional: false, required: false
+  public get thumbprint() {
+    return this.getStringAttribute('thumbprint');
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: SpringCloudCertificateTimeouts;
   public get timeouts() {

@@ -7,6 +7,7 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface CognitiveAccountConfig extends cdktf.TerraformMetaArguments {
+  readonly customSubdomainName?: string;
   readonly kind: string;
   readonly location: string;
   readonly name: string;
@@ -14,9 +15,26 @@ export interface CognitiveAccountConfig extends cdktf.TerraformMetaArguments {
   readonly resourceGroupName: string;
   readonly skuName: string;
   readonly tags?: { [key: string]: string };
+  /** network_acls block */
+  readonly networkAcls?: CognitiveAccountNetworkAcls[];
   /** timeouts block */
   readonly timeouts?: CognitiveAccountTimeouts;
 }
+export interface CognitiveAccountNetworkAcls {
+  readonly defaultAction: string;
+  readonly ipRules?: string[];
+  readonly virtualNetworkSubnetIds?: string[];
+}
+
+function cognitiveAccountNetworkAclsToTerraform(struct?: CognitiveAccountNetworkAcls): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    default_action: cdktf.stringToTerraform(struct!.defaultAction),
+    ip_rules: cdktf.listMapper(cdktf.stringToTerraform)(struct!.ipRules),
+    virtual_network_subnet_ids: cdktf.listMapper(cdktf.stringToTerraform)(struct!.virtualNetworkSubnetIds),
+  }
+}
+
 export interface CognitiveAccountTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -54,6 +72,7 @@ export class CognitiveAccount extends cdktf.TerraformResource {
       count: config.count,
       lifecycle: config.lifecycle
     });
+    this._customSubdomainName = config.customSubdomainName;
     this._kind = config.kind;
     this._location = config.location;
     this._name = config.name;
@@ -61,12 +80,29 @@ export class CognitiveAccount extends cdktf.TerraformResource {
     this._resourceGroupName = config.resourceGroupName;
     this._skuName = config.skuName;
     this._tags = config.tags;
+    this._networkAcls = config.networkAcls;
     this._timeouts = config.timeouts;
   }
 
   // ==========
   // ATTRIBUTES
   // ==========
+
+  // custom_subdomain_name - computed: false, optional: true, required: false
+  private _customSubdomainName?: string;
+  public get customSubdomainName() {
+    return this.getStringAttribute('custom_subdomain_name');
+  }
+  public set customSubdomainName(value: string ) {
+    this._customSubdomainName = value;
+  }
+  public resetCustomSubdomainName() {
+    this._customSubdomainName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get customSubdomainNameInput() {
+    return this._customSubdomainName
+  }
 
   // endpoint - computed: true, optional: false, required: false
   public get endpoint() {
@@ -185,6 +221,22 @@ export class CognitiveAccount extends cdktf.TerraformResource {
     return this._tags
   }
 
+  // network_acls - computed: false, optional: true, required: false
+  private _networkAcls?: CognitiveAccountNetworkAcls[];
+  public get networkAcls() {
+    return this.interpolationForAttribute('network_acls') as any;
+  }
+  public set networkAcls(value: CognitiveAccountNetworkAcls[] ) {
+    this._networkAcls = value;
+  }
+  public resetNetworkAcls() {
+    this._networkAcls = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get networkAclsInput() {
+    return this._networkAcls
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: CognitiveAccountTimeouts;
   public get timeouts() {
@@ -207,6 +259,7 @@ export class CognitiveAccount extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      custom_subdomain_name: cdktf.stringToTerraform(this._customSubdomainName),
       kind: cdktf.stringToTerraform(this._kind),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
@@ -214,6 +267,7 @@ export class CognitiveAccount extends cdktf.TerraformResource {
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       sku_name: cdktf.stringToTerraform(this._skuName),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      network_acls: cdktf.listMapper(cognitiveAccountNetworkAclsToTerraform)(this._networkAcls),
       timeouts: cognitiveAccountTimeoutsToTerraform(this._timeouts),
     };
   }

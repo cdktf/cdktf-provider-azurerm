@@ -18,6 +18,7 @@ export interface HpcCacheNfsTargetConfig extends cdktf.TerraformMetaArguments {
   readonly timeouts?: HpcCacheNfsTargetTimeouts;
 }
 export interface HpcCacheNfsTargetNamespaceJunction {
+  readonly accessPolicyName?: string;
   readonly namespacePath: string;
   readonly nfsExport: string;
   readonly targetPath?: string;
@@ -26,6 +27,7 @@ export interface HpcCacheNfsTargetNamespaceJunction {
 function hpcCacheNfsTargetNamespaceJunctionToTerraform(struct?: HpcCacheNfsTargetNamespaceJunction): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   return {
+    access_policy_name: cdktf.stringToTerraform(struct!.accessPolicyName),
     namespace_path: cdktf.stringToTerraform(struct!.namespacePath),
     nfs_export: cdktf.stringToTerraform(struct!.nfsExport),
     target_path: cdktf.stringToTerraform(struct!.targetPath),

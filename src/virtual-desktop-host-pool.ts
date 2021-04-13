@@ -7,6 +7,7 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface VirtualDesktopHostPoolConfig extends cdktf.TerraformMetaArguments {
+  readonly customRdpProperties?: string;
   readonly description?: string;
   readonly friendlyName?: string;
   readonly loadBalancerType: string;
@@ -73,6 +74,7 @@ export class VirtualDesktopHostPool extends cdktf.TerraformResource {
       count: config.count,
       lifecycle: config.lifecycle
     });
+    this._customRdpProperties = config.customRdpProperties;
     this._description = config.description;
     this._friendlyName = config.friendlyName;
     this._loadBalancerType = config.loadBalancerType;
@@ -92,6 +94,22 @@ export class VirtualDesktopHostPool extends cdktf.TerraformResource {
   // ==========
   // ATTRIBUTES
   // ==========
+
+  // custom_rdp_properties - computed: false, optional: true, required: false
+  private _customRdpProperties?: string;
+  public get customRdpProperties() {
+    return this.getStringAttribute('custom_rdp_properties');
+  }
+  public set customRdpProperties(value: string ) {
+    this._customRdpProperties = value;
+  }
+  public resetCustomRdpProperties() {
+    this._customRdpProperties = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get customRdpPropertiesInput() {
+    return this._customRdpProperties
+  }
 
   // description - computed: false, optional: true, required: false
   private _description?: string;
@@ -313,6 +331,7 @@ export class VirtualDesktopHostPool extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      custom_rdp_properties: cdktf.stringToTerraform(this._customRdpProperties),
       description: cdktf.stringToTerraform(this._description),
       friendly_name: cdktf.stringToTerraform(this._friendlyName),
       load_balancer_type: cdktf.stringToTerraform(this._loadBalancerType),

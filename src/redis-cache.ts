@@ -14,6 +14,7 @@ export interface RedisCacheConfig extends cdktf.TerraformMetaArguments {
   readonly minimumTlsVersion?: string;
   readonly name: string;
   readonly privateStaticIpAddress?: string;
+  readonly publicNetworkAccessEnabled?: boolean;
   readonly resourceGroupName: string;
   readonly shardCount?: number;
   readonly skuName: string;
@@ -119,6 +120,7 @@ export class RedisCache extends cdktf.TerraformResource {
     this._minimumTlsVersion = config.minimumTlsVersion;
     this._name = config.name;
     this._privateStaticIpAddress = config.privateStaticIpAddress;
+    this._publicNetworkAccessEnabled = config.publicNetworkAccessEnabled;
     this._resourceGroupName = config.resourceGroupName;
     this._shardCount = config.shardCount;
     this._skuName = config.skuName;
@@ -257,6 +259,22 @@ export class RedisCache extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get privateStaticIpAddressInput() {
     return this._privateStaticIpAddress
+  }
+
+  // public_network_access_enabled - computed: false, optional: true, required: false
+  private _publicNetworkAccessEnabled?: boolean;
+  public get publicNetworkAccessEnabled() {
+    return this.getBooleanAttribute('public_network_access_enabled');
+  }
+  public set publicNetworkAccessEnabled(value: boolean ) {
+    this._publicNetworkAccessEnabled = value;
+  }
+  public resetPublicNetworkAccessEnabled() {
+    this._publicNetworkAccessEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get publicNetworkAccessEnabledInput() {
+    return this._publicNetworkAccessEnabled
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -425,6 +443,7 @@ export class RedisCache extends cdktf.TerraformResource {
       minimum_tls_version: cdktf.stringToTerraform(this._minimumTlsVersion),
       name: cdktf.stringToTerraform(this._name),
       private_static_ip_address: cdktf.stringToTerraform(this._privateStaticIpAddress),
+      public_network_access_enabled: cdktf.booleanToTerraform(this._publicNetworkAccessEnabled),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       shard_count: cdktf.numberToTerraform(this._shardCount),
       sku_name: cdktf.stringToTerraform(this._skuName),

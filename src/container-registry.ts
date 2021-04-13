@@ -12,6 +12,8 @@ export interface ContainerRegistryConfig extends cdktf.TerraformMetaArguments {
   readonly location: string;
   readonly name: string;
   readonly networkRuleSet?: ContainerRegistryNetworkRuleSet[];
+  readonly publicNetworkAccessEnabled?: boolean;
+  readonly quarantinePolicyEnabled?: boolean;
   readonly resourceGroupName: string;
   readonly retentionPolicy?: ContainerRegistryRetentionPolicy[];
   readonly sku?: string;
@@ -128,6 +130,8 @@ export class ContainerRegistry extends cdktf.TerraformResource {
     this._location = config.location;
     this._name = config.name;
     this._networkRuleSet = config.networkRuleSet;
+    this._publicNetworkAccessEnabled = config.publicNetworkAccessEnabled;
+    this._quarantinePolicyEnabled = config.quarantinePolicyEnabled;
     this._resourceGroupName = config.resourceGroupName;
     this._retentionPolicy = config.retentionPolicy;
     this._sku = config.sku;
@@ -233,6 +237,38 @@ export class ContainerRegistry extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get networkRuleSetInput() {
     return this._networkRuleSet
+  }
+
+  // public_network_access_enabled - computed: false, optional: true, required: false
+  private _publicNetworkAccessEnabled?: boolean;
+  public get publicNetworkAccessEnabled() {
+    return this.getBooleanAttribute('public_network_access_enabled');
+  }
+  public set publicNetworkAccessEnabled(value: boolean ) {
+    this._publicNetworkAccessEnabled = value;
+  }
+  public resetPublicNetworkAccessEnabled() {
+    this._publicNetworkAccessEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get publicNetworkAccessEnabledInput() {
+    return this._publicNetworkAccessEnabled
+  }
+
+  // quarantine_policy_enabled - computed: false, optional: true, required: false
+  private _quarantinePolicyEnabled?: boolean;
+  public get quarantinePolicyEnabled() {
+    return this.getBooleanAttribute('quarantine_policy_enabled');
+  }
+  public set quarantinePolicyEnabled(value: boolean ) {
+    this._quarantinePolicyEnabled = value;
+  }
+  public resetQuarantinePolicyEnabled() {
+    this._quarantinePolicyEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get quarantinePolicyEnabledInput() {
+    return this._quarantinePolicyEnabled
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -355,6 +391,8 @@ export class ContainerRegistry extends cdktf.TerraformResource {
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
       network_rule_set: cdktf.listMapper(containerRegistryNetworkRuleSetToTerraform)(this._networkRuleSet),
+      public_network_access_enabled: cdktf.booleanToTerraform(this._publicNetworkAccessEnabled),
+      quarantine_policy_enabled: cdktf.booleanToTerraform(this._quarantinePolicyEnabled),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       retention_policy: cdktf.listMapper(containerRegistryRetentionPolicyToTerraform)(this._retentionPolicy),
       sku: cdktf.stringToTerraform(this._sku),

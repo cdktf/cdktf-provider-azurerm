@@ -8,6 +8,7 @@ import * as cdktf from 'cdktf';
 
 export interface KubernetesClusterConfig extends cdktf.TerraformMetaArguments {
   readonly apiServerAuthorizedIpRanges?: string[];
+  readonly automaticChannelUpgrade?: string;
   readonly diskEncryptionSetId?: string;
   readonly dnsPrefix: string;
   readonly enablePodSecurityPolicy?: boolean;
@@ -16,6 +17,7 @@ export interface KubernetesClusterConfig extends cdktf.TerraformMetaArguments {
   readonly name: string;
   readonly nodeResourceGroup?: string;
   readonly privateClusterEnabled?: boolean;
+  readonly privateDnsZoneId?: string;
   readonly privateLinkEnabled?: boolean;
   readonly resourceGroupName: string;
   readonly skuTier?: string;
@@ -207,6 +209,7 @@ function kubernetesClusterAddonProfileToTerraform(struct?: KubernetesClusterAddo
 
 export interface KubernetesClusterAutoScalerProfile {
   readonly balanceSimilarNodeGroups?: boolean;
+  readonly expander?: string;
   readonly maxGracefulTerminationSec?: string;
   readonly newPodScaleUpDelay?: string;
   readonly scaleDownDelayAfterAdd?: string;
@@ -216,12 +219,15 @@ export interface KubernetesClusterAutoScalerProfile {
   readonly scaleDownUnready?: string;
   readonly scaleDownUtilizationThreshold?: string;
   readonly scanInterval?: string;
+  readonly skipNodesWithLocalStorage?: boolean;
+  readonly skipNodesWithSystemPods?: boolean;
 }
 
 function kubernetesClusterAutoScalerProfileToTerraform(struct?: KubernetesClusterAutoScalerProfile): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   return {
     balance_similar_node_groups: cdktf.booleanToTerraform(struct!.balanceSimilarNodeGroups),
+    expander: cdktf.stringToTerraform(struct!.expander),
     max_graceful_termination_sec: cdktf.stringToTerraform(struct!.maxGracefulTerminationSec),
     new_pod_scale_up_delay: cdktf.stringToTerraform(struct!.newPodScaleUpDelay),
     scale_down_delay_after_add: cdktf.stringToTerraform(struct!.scaleDownDelayAfterAdd),
@@ -231,12 +237,26 @@ function kubernetesClusterAutoScalerProfileToTerraform(struct?: KubernetesCluste
     scale_down_unready: cdktf.stringToTerraform(struct!.scaleDownUnready),
     scale_down_utilization_threshold: cdktf.stringToTerraform(struct!.scaleDownUtilizationThreshold),
     scan_interval: cdktf.stringToTerraform(struct!.scanInterval),
+    skip_nodes_with_local_storage: cdktf.booleanToTerraform(struct!.skipNodesWithLocalStorage),
+    skip_nodes_with_system_pods: cdktf.booleanToTerraform(struct!.skipNodesWithSystemPods),
+  }
+}
+
+export interface KubernetesClusterDefaultNodePoolUpgradeSettings {
+  readonly maxSurge: string;
+}
+
+function kubernetesClusterDefaultNodePoolUpgradeSettingsToTerraform(struct?: KubernetesClusterDefaultNodePoolUpgradeSettings): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    max_surge: cdktf.stringToTerraform(struct!.maxSurge),
   }
 }
 
 export interface KubernetesClusterDefaultNodePool {
   readonly availabilityZones?: string[];
   readonly enableAutoScaling?: boolean;
+  readonly enableHostEncryption?: boolean;
   readonly enableNodePublicIp?: boolean;
   readonly maxCount?: number;
   readonly maxPods?: number;
@@ -245,6 +265,7 @@ export interface KubernetesClusterDefaultNodePool {
   readonly nodeCount?: number;
   readonly nodeLabels?: { [key: string]: string };
   readonly nodeTaints?: string[];
+  readonly onlyCriticalAddonsEnabled?: boolean;
   readonly orchestratorVersion?: string;
   readonly osDiskSizeGb?: number;
   readonly osDiskType?: string;
@@ -253,6 +274,8 @@ export interface KubernetesClusterDefaultNodePool {
   readonly type?: string;
   readonly vmSize: string;
   readonly vnetSubnetId?: string;
+  /** upgrade_settings block */
+  readonly upgradeSettings?: KubernetesClusterDefaultNodePoolUpgradeSettings[];
 }
 
 function kubernetesClusterDefaultNodePoolToTerraform(struct?: KubernetesClusterDefaultNodePool): any {
@@ -260,6 +283,7 @@ function kubernetesClusterDefaultNodePoolToTerraform(struct?: KubernetesClusterD
   return {
     availability_zones: cdktf.listMapper(cdktf.stringToTerraform)(struct!.availabilityZones),
     enable_auto_scaling: cdktf.booleanToTerraform(struct!.enableAutoScaling),
+    enable_host_encryption: cdktf.booleanToTerraform(struct!.enableHostEncryption),
     enable_node_public_ip: cdktf.booleanToTerraform(struct!.enableNodePublicIp),
     max_count: cdktf.numberToTerraform(struct!.maxCount),
     max_pods: cdktf.numberToTerraform(struct!.maxPods),
@@ -268,6 +292,7 @@ function kubernetesClusterDefaultNodePoolToTerraform(struct?: KubernetesClusterD
     node_count: cdktf.numberToTerraform(struct!.nodeCount),
     node_labels: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.nodeLabels),
     node_taints: cdktf.listMapper(cdktf.stringToTerraform)(struct!.nodeTaints),
+    only_critical_addons_enabled: cdktf.booleanToTerraform(struct!.onlyCriticalAddonsEnabled),
     orchestrator_version: cdktf.stringToTerraform(struct!.orchestratorVersion),
     os_disk_size_gb: cdktf.numberToTerraform(struct!.osDiskSizeGb),
     os_disk_type: cdktf.stringToTerraform(struct!.osDiskType),
@@ -276,6 +301,7 @@ function kubernetesClusterDefaultNodePoolToTerraform(struct?: KubernetesClusterD
     type: cdktf.stringToTerraform(struct!.type),
     vm_size: cdktf.stringToTerraform(struct!.vmSize),
     vnet_subnet_id: cdktf.stringToTerraform(struct!.vnetSubnetId),
+    upgrade_settings: cdktf.listMapper(kubernetesClusterDefaultNodePoolUpgradeSettingsToTerraform)(struct!.upgradeSettings),
   }
 }
 
@@ -465,6 +491,7 @@ export class KubernetesCluster extends cdktf.TerraformResource {
       lifecycle: config.lifecycle
     });
     this._apiServerAuthorizedIpRanges = config.apiServerAuthorizedIpRanges;
+    this._automaticChannelUpgrade = config.automaticChannelUpgrade;
     this._diskEncryptionSetId = config.diskEncryptionSetId;
     this._dnsPrefix = config.dnsPrefix;
     this._enablePodSecurityPolicy = config.enablePodSecurityPolicy;
@@ -473,6 +500,7 @@ export class KubernetesCluster extends cdktf.TerraformResource {
     this._name = config.name;
     this._nodeResourceGroup = config.nodeResourceGroup;
     this._privateClusterEnabled = config.privateClusterEnabled;
+    this._privateDnsZoneId = config.privateDnsZoneId;
     this._privateLinkEnabled = config.privateLinkEnabled;
     this._resourceGroupName = config.resourceGroupName;
     this._skuTier = config.skuTier;
@@ -507,6 +535,22 @@ export class KubernetesCluster extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get apiServerAuthorizedIpRangesInput() {
     return this._apiServerAuthorizedIpRanges
+  }
+
+  // automatic_channel_upgrade - computed: false, optional: true, required: false
+  private _automaticChannelUpgrade?: string;
+  public get automaticChannelUpgrade() {
+    return this.getStringAttribute('automatic_channel_upgrade');
+  }
+  public set automaticChannelUpgrade(value: string ) {
+    this._automaticChannelUpgrade = value;
+  }
+  public resetAutomaticChannelUpgrade() {
+    this._automaticChannelUpgrade = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get automaticChannelUpgradeInput() {
+    return this._automaticChannelUpgrade
   }
 
   // disk_encryption_set_id - computed: false, optional: true, required: false
@@ -661,6 +705,22 @@ export class KubernetesCluster extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get privateClusterEnabledInput() {
     return this._privateClusterEnabled
+  }
+
+  // private_dns_zone_id - computed: true, optional: true, required: false
+  private _privateDnsZoneId?: string;
+  public get privateDnsZoneId() {
+    return this.getStringAttribute('private_dns_zone_id');
+  }
+  public set privateDnsZoneId(value: string) {
+    this._privateDnsZoneId = value;
+  }
+  public resetPrivateDnsZoneId() {
+    this._privateDnsZoneId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get privateDnsZoneIdInput() {
+    return this._privateDnsZoneId
   }
 
   // private_fqdn - computed: true, optional: false, required: false
@@ -893,6 +953,7 @@ export class KubernetesCluster extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       api_server_authorized_ip_ranges: cdktf.listMapper(cdktf.stringToTerraform)(this._apiServerAuthorizedIpRanges),
+      automatic_channel_upgrade: cdktf.stringToTerraform(this._automaticChannelUpgrade),
       disk_encryption_set_id: cdktf.stringToTerraform(this._diskEncryptionSetId),
       dns_prefix: cdktf.stringToTerraform(this._dnsPrefix),
       enable_pod_security_policy: cdktf.booleanToTerraform(this._enablePodSecurityPolicy),
@@ -901,6 +962,7 @@ export class KubernetesCluster extends cdktf.TerraformResource {
       name: cdktf.stringToTerraform(this._name),
       node_resource_group: cdktf.stringToTerraform(this._nodeResourceGroup),
       private_cluster_enabled: cdktf.booleanToTerraform(this._privateClusterEnabled),
+      private_dns_zone_id: cdktf.stringToTerraform(this._privateDnsZoneId),
       private_link_enabled: cdktf.booleanToTerraform(this._privateLinkEnabled),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       sku_tier: cdktf.stringToTerraform(this._skuTier),

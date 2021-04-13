@@ -96,7 +96,8 @@ function privateEndpointPrivateDnsZoneGroupToTerraform(struct?: PrivateEndpointP
 export interface PrivateEndpointPrivateServiceConnection {
   readonly isManualConnection: boolean;
   readonly name: string;
-  readonly privateConnectionResourceId: string;
+  readonly privateConnectionResourceAlias?: string;
+  readonly privateConnectionResourceId?: string;
   readonly requestMessage?: string;
   readonly subresourceNames?: string[];
 }
@@ -106,6 +107,7 @@ function privateEndpointPrivateServiceConnectionToTerraform(struct?: PrivateEndp
   return {
     is_manual_connection: cdktf.booleanToTerraform(struct!.isManualConnection),
     name: cdktf.stringToTerraform(struct!.name),
+    private_connection_resource_alias: cdktf.stringToTerraform(struct!.privateConnectionResourceAlias),
     private_connection_resource_id: cdktf.stringToTerraform(struct!.privateConnectionResourceId),
     request_message: cdktf.stringToTerraform(struct!.requestMessage),
     subresource_names: cdktf.listMapper(cdktf.stringToTerraform)(struct!.subresourceNames),

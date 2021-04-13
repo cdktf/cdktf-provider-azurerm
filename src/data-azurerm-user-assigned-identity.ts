@@ -103,6 +103,11 @@ export class DataAzurermUserAssignedIdentity extends cdktf.TerraformDataSource {
     return new cdktf.StringMap(this, 'tags').lookup(key);
   }
 
+  // tenant_id - computed: true, optional: false, required: false
+  public get tenantId() {
+    return this.getStringAttribute('tenant_id');
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: DataAzurermUserAssignedIdentityTimeouts;
   public get timeouts() {

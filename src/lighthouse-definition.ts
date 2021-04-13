@@ -18,6 +18,7 @@ export interface LighthouseDefinitionConfig extends cdktf.TerraformMetaArguments
   readonly timeouts?: LighthouseDefinitionTimeouts;
 }
 export interface LighthouseDefinitionAuthorization {
+  readonly principalDisplayName?: string;
   readonly principalId: string;
   readonly roleDefinitionId: string;
 }
@@ -25,6 +26,7 @@ export interface LighthouseDefinitionAuthorization {
 function lighthouseDefinitionAuthorizationToTerraform(struct?: LighthouseDefinitionAuthorization): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   return {
+    principal_display_name: cdktf.stringToTerraform(struct!.principalDisplayName),
     principal_id: cdktf.stringToTerraform(struct!.principalId),
     role_definition_id: cdktf.stringToTerraform(struct!.roleDefinitionId),
   }

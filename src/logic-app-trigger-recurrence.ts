@@ -13,9 +13,26 @@ export interface LogicAppTriggerRecurrenceConfig extends cdktf.TerraformMetaArgu
   readonly name: string;
   readonly startTime?: string;
   readonly timeZone?: string;
+  /** schedule block */
+  readonly schedule?: LogicAppTriggerRecurrenceSchedule[];
   /** timeouts block */
   readonly timeouts?: LogicAppTriggerRecurrenceTimeouts;
 }
+export interface LogicAppTriggerRecurrenceSchedule {
+  readonly atTheseHours?: number[];
+  readonly atTheseMinutes?: number[];
+  readonly onTheseDays?: string[];
+}
+
+function logicAppTriggerRecurrenceScheduleToTerraform(struct?: LogicAppTriggerRecurrenceSchedule): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    at_these_hours: cdktf.listMapper(cdktf.numberToTerraform)(struct!.atTheseHours),
+    at_these_minutes: cdktf.listMapper(cdktf.numberToTerraform)(struct!.atTheseMinutes),
+    on_these_days: cdktf.listMapper(cdktf.stringToTerraform)(struct!.onTheseDays),
+  }
+}
+
 export interface LogicAppTriggerRecurrenceTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -59,6 +76,7 @@ export class LogicAppTriggerRecurrence extends cdktf.TerraformResource {
     this._name = config.name;
     this._startTime = config.startTime;
     this._timeZone = config.timeZone;
+    this._schedule = config.schedule;
     this._timeouts = config.timeouts;
   }
 
@@ -155,6 +173,22 @@ export class LogicAppTriggerRecurrence extends cdktf.TerraformResource {
     return this._timeZone
   }
 
+  // schedule - computed: false, optional: true, required: false
+  private _schedule?: LogicAppTriggerRecurrenceSchedule[];
+  public get schedule() {
+    return this.interpolationForAttribute('schedule') as any;
+  }
+  public set schedule(value: LogicAppTriggerRecurrenceSchedule[] ) {
+    this._schedule = value;
+  }
+  public resetSchedule() {
+    this._schedule = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get scheduleInput() {
+    return this._schedule
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: LogicAppTriggerRecurrenceTimeouts;
   public get timeouts() {
@@ -183,6 +217,7 @@ export class LogicAppTriggerRecurrence extends cdktf.TerraformResource {
       name: cdktf.stringToTerraform(this._name),
       start_time: cdktf.stringToTerraform(this._startTime),
       time_zone: cdktf.stringToTerraform(this._timeZone),
+      schedule: cdktf.listMapper(logicAppTriggerRecurrenceScheduleToTerraform)(this._schedule),
       timeouts: logicAppTriggerRecurrenceTimeoutsToTerraform(this._timeouts),
     };
   }

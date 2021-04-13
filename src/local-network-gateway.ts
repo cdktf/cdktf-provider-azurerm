@@ -7,7 +7,7 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface LocalNetworkGatewayConfig extends cdktf.TerraformMetaArguments {
-  readonly addressSpace: string[];
+  readonly addressSpace?: string[];
   readonly gatewayAddress?: string;
   readonly gatewayFqdn?: string;
   readonly location: string;
@@ -86,13 +86,16 @@ export class LocalNetworkGateway extends cdktf.TerraformResource {
   // ATTRIBUTES
   // ==========
 
-  // address_space - computed: false, optional: false, required: true
-  private _addressSpace: string[];
+  // address_space - computed: false, optional: true, required: false
+  private _addressSpace?: string[];
   public get addressSpace() {
     return this.getListAttribute('address_space');
   }
-  public set addressSpace(value: string[]) {
+  public set addressSpace(value: string[] ) {
     this._addressSpace = value;
+  }
+  public resetAddressSpace() {
+    this._addressSpace = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get addressSpaceInput() {

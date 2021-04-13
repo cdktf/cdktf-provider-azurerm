@@ -44,6 +44,7 @@ function siteRecoveryReplicatedVmManagedDiskToTerraform(struct?: SiteRecoveryRep
 }
 
 export interface SiteRecoveryReplicatedVmNetworkInterface {
+  readonly recoveryPublicIpAddressId?: string;
   readonly sourceNetworkInterfaceId?: string;
   readonly targetStaticIp?: string;
   readonly targetSubnetName?: string;
@@ -52,6 +53,7 @@ export interface SiteRecoveryReplicatedVmNetworkInterface {
 function siteRecoveryReplicatedVmNetworkInterfaceToTerraform(struct?: SiteRecoveryReplicatedVmNetworkInterface): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   return {
+    recovery_public_ip_address_id: cdktf.stringToTerraform(struct!.recoveryPublicIpAddressId),
     source_network_interface_id: cdktf.stringToTerraform(struct!.sourceNetworkInterfaceId),
     target_static_ip: cdktf.stringToTerraform(struct!.targetStaticIp),
     target_subnet_name: cdktf.stringToTerraform(struct!.targetSubnetName),

@@ -202,6 +202,11 @@ export class WebApplicationFirewallPolicy extends cdktf.TerraformResource {
   // ATTRIBUTES
   // ==========
 
+  // http_listener_ids - computed: true, optional: false, required: false
+  public get httpListenerIds() {
+    return this.getListAttribute('http_listener_ids');
+  }
+
   // id - computed: true, optional: true, required: false
   public get id() {
     return this.getStringAttribute('id');
@@ -231,6 +236,11 @@ export class WebApplicationFirewallPolicy extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
     return this._name
+  }
+
+  // path_based_rule_ids - computed: true, optional: false, required: false
+  public get pathBasedRuleIds() {
+    return this.getListAttribute('path_based_rule_ids');
   }
 
   // resource_group_name - computed: false, optional: false, required: true

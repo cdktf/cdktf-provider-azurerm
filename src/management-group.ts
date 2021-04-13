@@ -133,12 +133,12 @@ export class ManagementGroup extends cdktf.TerraformResource {
     return this._parentManagementGroupId
   }
 
-  // subscription_ids - computed: false, optional: true, required: false
+  // subscription_ids - computed: true, optional: true, required: false
   private _subscriptionIds?: string[];
   public get subscriptionIds() {
     return this.getListAttribute('subscription_ids');
   }
-  public set subscriptionIds(value: string[] ) {
+  public set subscriptionIds(value: string[]) {
     this._subscriptionIds = value;
   }
   public resetSubscriptionIds() {

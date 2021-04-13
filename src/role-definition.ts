@@ -13,7 +13,7 @@ export interface RoleDefinitionConfig extends cdktf.TerraformMetaArguments {
   readonly roleDefinitionId?: string;
   readonly scope: string;
   /** permissions block */
-  readonly permissions: RoleDefinitionPermissions[];
+  readonly permissions?: RoleDefinitionPermissions[];
   /** timeouts block */
   readonly timeouts?: RoleDefinitionTimeouts;
 }
@@ -168,13 +168,16 @@ export class RoleDefinition extends cdktf.TerraformResource {
     return this._scope
   }
 
-  // permissions - computed: false, optional: false, required: true
-  private _permissions: RoleDefinitionPermissions[];
+  // permissions - computed: false, optional: true, required: false
+  private _permissions?: RoleDefinitionPermissions[];
   public get permissions() {
     return this.interpolationForAttribute('permissions') as any;
   }
-  public set permissions(value: RoleDefinitionPermissions[]) {
+  public set permissions(value: RoleDefinitionPermissions[] ) {
     this._permissions = value;
+  }
+  public resetPermissions() {
+    this._permissions = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get permissionsInput() {

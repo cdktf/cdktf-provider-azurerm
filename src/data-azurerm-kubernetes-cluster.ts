@@ -94,6 +94,13 @@ export class DataAzurermKubernetesClusterAddonProfile extends cdktf.ComplexCompu
     return this.interpolationForAttribute('oms_agent') as any;
   }
 }
+export class DataAzurermKubernetesClusterAgentPoolProfileUpgradeSettings extends cdktf.ComplexComputedList {
+
+  // max_surge - computed: true, optional: false, required: false
+  public get maxSurge() {
+    return this.getStringAttribute('max_surge');
+  }
+}
 export class DataAzurermKubernetesClusterAgentPoolProfile extends cdktf.ComplexComputedList {
 
   // availability_zones - computed: true, optional: false, required: false
@@ -169,6 +176,11 @@ export class DataAzurermKubernetesClusterAgentPoolProfile extends cdktf.ComplexC
   // type - computed: true, optional: false, required: false
   public get type() {
     return this.getStringAttribute('type');
+  }
+
+  // upgrade_settings - computed: true, optional: false, required: false
+  public get upgradeSettings() {
+    return this.interpolationForAttribute('upgrade_settings') as any;
   }
 
   // vm_size - computed: true, optional: false, required: false

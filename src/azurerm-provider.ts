@@ -30,7 +30,7 @@ export interface AzurermProviderConfig {
   readonly msiEndpoint?: string;
   /** A GUID/UUID that is registered with Microsoft to facilitate partner resource usage attribution. */
   readonly partnerId?: string;
-  /** This will cause the AzureRM Provider to skip verifying the credentials being used are valid. */
+  /** [DEPRECATED] This will cause the AzureRM Provider to skip verifying the credentials being used are valid. */
   readonly skipCredentialsValidation?: boolean;
   /** Should the AzureRM Provider skip registering all of the Resource Providers that it supports, if they're not already registered? */
   readonly skipProviderRegistration?: boolean;
@@ -57,6 +57,17 @@ function azurermProviderFeaturesKeyVaultToTerraform(struct?: AzurermProviderFeat
   return {
     purge_soft_delete_on_destroy: cdktf.booleanToTerraform(struct!.purgeSoftDeleteOnDestroy),
     recover_soft_deleted_key_vaults: cdktf.booleanToTerraform(struct!.recoverSoftDeletedKeyVaults),
+  }
+}
+
+export interface AzurermProviderFeaturesLogAnalyticsWorkspace {
+  readonly permanentlyDeleteOnDestroy: boolean;
+}
+
+function azurermProviderFeaturesLogAnalyticsWorkspaceToTerraform(struct?: AzurermProviderFeaturesLogAnalyticsWorkspace): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    permanently_delete_on_destroy: cdktf.booleanToTerraform(struct!.permanentlyDeleteOnDestroy),
   }
 }
 
@@ -109,6 +120,8 @@ function azurermProviderFeaturesVirtualMachineScaleSetToTerraform(struct?: Azure
 export interface AzurermProviderFeatures {
   /** key_vault block */
   readonly keyVault?: AzurermProviderFeaturesKeyVault[];
+  /** log_analytics_workspace block */
+  readonly logAnalyticsWorkspace?: AzurermProviderFeaturesLogAnalyticsWorkspace[];
   /** network block */
   readonly network?: AzurermProviderFeaturesNetwork[];
   /** template_deployment block */
@@ -123,6 +136,7 @@ function azurermProviderFeaturesToTerraform(struct?: AzurermProviderFeatures): a
   if (!cdktf.canInspect(struct)) { return struct; }
   return {
     key_vault: cdktf.listMapper(azurermProviderFeaturesKeyVaultToTerraform)(struct!.keyVault),
+    log_analytics_workspace: cdktf.listMapper(azurermProviderFeaturesLogAnalyticsWorkspaceToTerraform)(struct!.logAnalyticsWorkspace),
     network: cdktf.listMapper(azurermProviderFeaturesNetworkToTerraform)(struct!.network),
     template_deployment: cdktf.listMapper(azurermProviderFeaturesTemplateDeploymentToTerraform)(struct!.templateDeployment),
     virtual_machine: cdktf.listMapper(azurermProviderFeaturesVirtualMachineToTerraform)(struct!.virtualMachine),

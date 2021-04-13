@@ -8,10 +8,11 @@ import * as cdktf from 'cdktf';
 
 export interface MssqlDatabaseExtendedAuditingPolicyAConfig extends cdktf.TerraformMetaArguments {
   readonly databaseId: string;
+  readonly logMonitoringEnabled?: boolean;
   readonly retentionInDays?: number;
   readonly storageAccountAccessKey?: string;
   readonly storageAccountAccessKeyIsSecondary?: boolean;
-  readonly storageEndpoint: string;
+  readonly storageEndpoint?: string;
   /** timeouts block */
   readonly timeouts?: MssqlDatabaseExtendedAuditingPolicyTimeouts;
 }
@@ -53,6 +54,7 @@ export class MssqlDatabaseExtendedAuditingPolicyA extends cdktf.TerraformResourc
       lifecycle: config.lifecycle
     });
     this._databaseId = config.databaseId;
+    this._logMonitoringEnabled = config.logMonitoringEnabled;
     this._retentionInDays = config.retentionInDays;
     this._storageAccountAccessKey = config.storageAccountAccessKey;
     this._storageAccountAccessKeyIsSecondary = config.storageAccountAccessKeyIsSecondary;
@@ -80,6 +82,22 @@ export class MssqlDatabaseExtendedAuditingPolicyA extends cdktf.TerraformResourc
   // id - computed: true, optional: true, required: false
   public get id() {
     return this.getStringAttribute('id');
+  }
+
+  // log_monitoring_enabled - computed: false, optional: true, required: false
+  private _logMonitoringEnabled?: boolean;
+  public get logMonitoringEnabled() {
+    return this.getBooleanAttribute('log_monitoring_enabled');
+  }
+  public set logMonitoringEnabled(value: boolean ) {
+    this._logMonitoringEnabled = value;
+  }
+  public resetLogMonitoringEnabled() {
+    this._logMonitoringEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get logMonitoringEnabledInput() {
+    return this._logMonitoringEnabled
   }
 
   // retention_in_days - computed: false, optional: true, required: false
@@ -130,13 +148,16 @@ export class MssqlDatabaseExtendedAuditingPolicyA extends cdktf.TerraformResourc
     return this._storageAccountAccessKeyIsSecondary
   }
 
-  // storage_endpoint - computed: false, optional: false, required: true
-  private _storageEndpoint: string;
+  // storage_endpoint - computed: false, optional: true, required: false
+  private _storageEndpoint?: string;
   public get storageEndpoint() {
     return this.getStringAttribute('storage_endpoint');
   }
-  public set storageEndpoint(value: string) {
+  public set storageEndpoint(value: string ) {
     this._storageEndpoint = value;
+  }
+  public resetStorageEndpoint() {
+    this._storageEndpoint = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get storageEndpointInput() {
@@ -166,6 +187,7 @@ export class MssqlDatabaseExtendedAuditingPolicyA extends cdktf.TerraformResourc
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       database_id: cdktf.stringToTerraform(this._databaseId),
+      log_monitoring_enabled: cdktf.booleanToTerraform(this._logMonitoringEnabled),
       retention_in_days: cdktf.numberToTerraform(this._retentionInDays),
       storage_account_access_key: cdktf.stringToTerraform(this._storageAccountAccessKey),
       storage_account_access_key_is_secondary: cdktf.booleanToTerraform(this._storageAccountAccessKeyIsSecondary),

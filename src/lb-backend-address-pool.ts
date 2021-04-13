@@ -9,10 +9,27 @@ import * as cdktf from 'cdktf';
 export interface LbBackendAddressPoolConfig extends cdktf.TerraformMetaArguments {
   readonly loadbalancerId: string;
   readonly name: string;
-  readonly resourceGroupName: string;
+  readonly resourceGroupName?: string;
+  /** backend_address block */
+  readonly backendAddress?: LbBackendAddressPoolBackendAddress[];
   /** timeouts block */
   readonly timeouts?: LbBackendAddressPoolTimeouts;
 }
+export interface LbBackendAddressPoolBackendAddress {
+  readonly ipAddress: string;
+  readonly name: string;
+  readonly virtualNetworkId: string;
+}
+
+function lbBackendAddressPoolBackendAddressToTerraform(struct?: LbBackendAddressPoolBackendAddress): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    ip_address: cdktf.stringToTerraform(struct!.ipAddress),
+    name: cdktf.stringToTerraform(struct!.name),
+    virtual_network_id: cdktf.stringToTerraform(struct!.virtualNetworkId),
+  }
+}
+
 export interface LbBackendAddressPoolTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -53,6 +70,7 @@ export class LbBackendAddressPool extends cdktf.TerraformResource {
     this._loadbalancerId = config.loadbalancerId;
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
+    this._backendAddress = config.backendAddress;
     this._timeouts = config.timeouts;
   }
 
@@ -101,17 +119,41 @@ export class LbBackendAddressPool extends cdktf.TerraformResource {
     return this._name
   }
 
-  // resource_group_name - computed: false, optional: false, required: true
-  private _resourceGroupName: string;
+  // outbound_rules - computed: true, optional: false, required: false
+  public get outboundRules() {
+    return this.getListAttribute('outbound_rules');
+  }
+
+  // resource_group_name - computed: true, optional: true, required: false
+  private _resourceGroupName?: string;
   public get resourceGroupName() {
     return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
   }
+  public resetResourceGroupName() {
+    this._resourceGroupName = undefined;
+  }
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
     return this._resourceGroupName
+  }
+
+  // backend_address - computed: false, optional: true, required: false
+  private _backendAddress?: LbBackendAddressPoolBackendAddress[];
+  public get backendAddress() {
+    return this.interpolationForAttribute('backend_address') as any;
+  }
+  public set backendAddress(value: LbBackendAddressPoolBackendAddress[] ) {
+    this._backendAddress = value;
+  }
+  public resetBackendAddress() {
+    this._backendAddress = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get backendAddressInput() {
+    return this._backendAddress
   }
 
   // timeouts - computed: false, optional: true, required: false
@@ -139,6 +181,7 @@ export class LbBackendAddressPool extends cdktf.TerraformResource {
       loadbalancer_id: cdktf.stringToTerraform(this._loadbalancerId),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      backend_address: cdktf.listMapper(lbBackendAddressPoolBackendAddressToTerraform)(this._backendAddress),
       timeouts: lbBackendAddressPoolTimeoutsToTerraform(this._timeouts),
     };
   }

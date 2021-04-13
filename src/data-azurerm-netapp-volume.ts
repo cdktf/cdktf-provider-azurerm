@@ -14,6 +14,28 @@ export interface DataAzurermNetappVolumeConfig extends cdktf.TerraformMetaArgume
   /** timeouts block */
   readonly timeouts?: DataAzurermNetappVolumeTimeouts;
 }
+export class DataAzurermNetappVolumeDataProtectionReplication extends cdktf.ComplexComputedList {
+
+  // endpoint_type - computed: true, optional: false, required: false
+  public get endpointType() {
+    return this.getStringAttribute('endpoint_type');
+  }
+
+  // remote_volume_location - computed: true, optional: false, required: false
+  public get remoteVolumeLocation() {
+    return this.getStringAttribute('remote_volume_location');
+  }
+
+  // remote_volume_resource_id - computed: true, optional: false, required: false
+  public get remoteVolumeResourceId() {
+    return this.getStringAttribute('remote_volume_resource_id');
+  }
+
+  // replication_schedule - computed: true, optional: false, required: false
+  public get replicationSchedule() {
+    return this.getStringAttribute('replication_schedule');
+  }
+}
 export interface DataAzurermNetappVolumeTimeouts {
   readonly read?: string;
 }
@@ -67,6 +89,11 @@ export class DataAzurermNetappVolume extends cdktf.TerraformDataSource {
   // Temporarily expose input value. Use with caution.
   public get accountNameInput() {
     return this._accountName
+  }
+
+  // data_protection_replication - computed: true, optional: false, required: false
+  public dataProtectionReplication(index: string) {
+    return new DataAzurermNetappVolumeDataProtectionReplication(this, 'data_protection_replication', index);
   }
 
   // id - computed: true, optional: true, required: false

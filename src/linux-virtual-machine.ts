@@ -18,10 +18,12 @@ export interface LinuxVirtualMachineConfig extends cdktf.TerraformMetaArguments 
   readonly encryptionAtHostEnabled?: boolean;
   readonly evictionPolicy?: string;
   readonly extensionsTimeBudget?: string;
+  readonly licenseType?: string;
   readonly location: string;
   readonly maxBidPrice?: number;
   readonly name: string;
   readonly networkInterfaceIds: string[];
+  readonly platformFaultDomain?: number;
   readonly priority?: string;
   readonly provisionVmAgent?: boolean;
   readonly proximityPlacementGroupId?: string;
@@ -238,10 +240,12 @@ export class LinuxVirtualMachine extends cdktf.TerraformResource {
     this._encryptionAtHostEnabled = config.encryptionAtHostEnabled;
     this._evictionPolicy = config.evictionPolicy;
     this._extensionsTimeBudget = config.extensionsTimeBudget;
+    this._licenseType = config.licenseType;
     this._location = config.location;
     this._maxBidPrice = config.maxBidPrice;
     this._name = config.name;
     this._networkInterfaceIds = config.networkInterfaceIds;
+    this._platformFaultDomain = config.platformFaultDomain;
     this._priority = config.priority;
     this._provisionVmAgent = config.provisionVmAgent;
     this._proximityPlacementGroupId = config.proximityPlacementGroupId;
@@ -444,6 +448,22 @@ export class LinuxVirtualMachine extends cdktf.TerraformResource {
     return this.getStringAttribute('id');
   }
 
+  // license_type - computed: false, optional: true, required: false
+  private _licenseType?: string;
+  public get licenseType() {
+    return this.getStringAttribute('license_type');
+  }
+  public set licenseType(value: string ) {
+    this._licenseType = value;
+  }
+  public resetLicenseType() {
+    this._licenseType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get licenseTypeInput() {
+    return this._licenseType
+  }
+
   // location - computed: false, optional: false, required: true
   private _location: string;
   public get location() {
@@ -497,6 +517,22 @@ export class LinuxVirtualMachine extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get networkInterfaceIdsInput() {
     return this._networkInterfaceIds
+  }
+
+  // platform_fault_domain - computed: false, optional: true, required: false
+  private _platformFaultDomain?: number;
+  public get platformFaultDomain() {
+    return this.getNumberAttribute('platform_fault_domain');
+  }
+  public set platformFaultDomain(value: number ) {
+    this._platformFaultDomain = value;
+  }
+  public resetPlatformFaultDomain() {
+    this._platformFaultDomain = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get platformFaultDomainInput() {
+    return this._platformFaultDomain
   }
 
   // priority - computed: false, optional: true, required: false
@@ -820,10 +856,12 @@ export class LinuxVirtualMachine extends cdktf.TerraformResource {
       encryption_at_host_enabled: cdktf.booleanToTerraform(this._encryptionAtHostEnabled),
       eviction_policy: cdktf.stringToTerraform(this._evictionPolicy),
       extensions_time_budget: cdktf.stringToTerraform(this._extensionsTimeBudget),
+      license_type: cdktf.stringToTerraform(this._licenseType),
       location: cdktf.stringToTerraform(this._location),
       max_bid_price: cdktf.numberToTerraform(this._maxBidPrice),
       name: cdktf.stringToTerraform(this._name),
       network_interface_ids: cdktf.listMapper(cdktf.stringToTerraform)(this._networkInterfaceIds),
+      platform_fault_domain: cdktf.numberToTerraform(this._platformFaultDomain),
       priority: cdktf.stringToTerraform(this._priority),
       provision_vm_agent: cdktf.booleanToTerraform(this._provisionVmAgent),
       proximity_placement_group_id: cdktf.stringToTerraform(this._proximityPlacementGroupId),

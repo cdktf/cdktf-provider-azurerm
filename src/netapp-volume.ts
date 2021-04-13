@@ -8,6 +8,7 @@ import * as cdktf from 'cdktf';
 
 export interface NetappVolumeConfig extends cdktf.TerraformMetaArguments {
   readonly accountName: string;
+  readonly createFromSnapshotResourceId?: string;
   readonly location: string;
   readonly name: string;
   readonly poolName: string;
@@ -18,17 +19,37 @@ export interface NetappVolumeConfig extends cdktf.TerraformMetaArguments {
   readonly subnetId: string;
   readonly tags?: { [key: string]: string };
   readonly volumePath: string;
+  /** data_protection_replication block */
+  readonly dataProtectionReplication?: NetappVolumeDataProtectionReplication[];
   /** export_policy_rule block */
   readonly exportPolicyRule?: NetappVolumeExportPolicyRule[];
   /** timeouts block */
   readonly timeouts?: NetappVolumeTimeouts;
 }
+export interface NetappVolumeDataProtectionReplication {
+  readonly endpointType?: string;
+  readonly remoteVolumeLocation: string;
+  readonly remoteVolumeResourceId: string;
+  readonly replicationFrequency: string;
+}
+
+function netappVolumeDataProtectionReplicationToTerraform(struct?: NetappVolumeDataProtectionReplication): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    endpoint_type: cdktf.stringToTerraform(struct!.endpointType),
+    remote_volume_location: cdktf.stringToTerraform(struct!.remoteVolumeLocation),
+    remote_volume_resource_id: cdktf.stringToTerraform(struct!.remoteVolumeResourceId),
+    replication_frequency: cdktf.stringToTerraform(struct!.replicationFrequency),
+  }
+}
+
 export interface NetappVolumeExportPolicyRule {
   readonly allowedClients: string[];
   readonly cifsEnabled?: boolean;
   readonly nfsv3Enabled?: boolean;
   readonly nfsv4Enabled?: boolean;
   readonly protocolsEnabled?: string[];
+  readonly rootAccessEnabled?: boolean;
   readonly ruleIndex: number;
   readonly unixReadOnly?: boolean;
   readonly unixReadWrite?: boolean;
@@ -42,6 +63,7 @@ function netappVolumeExportPolicyRuleToTerraform(struct?: NetappVolumeExportPoli
     nfsv3_enabled: cdktf.booleanToTerraform(struct!.nfsv3Enabled),
     nfsv4_enabled: cdktf.booleanToTerraform(struct!.nfsv4Enabled),
     protocols_enabled: cdktf.listMapper(cdktf.stringToTerraform)(struct!.protocolsEnabled),
+    root_access_enabled: cdktf.booleanToTerraform(struct!.rootAccessEnabled),
     rule_index: cdktf.numberToTerraform(struct!.ruleIndex),
     unix_read_only: cdktf.booleanToTerraform(struct!.unixReadOnly),
     unix_read_write: cdktf.booleanToTerraform(struct!.unixReadWrite),
@@ -86,6 +108,7 @@ export class NetappVolume extends cdktf.TerraformResource {
       lifecycle: config.lifecycle
     });
     this._accountName = config.accountName;
+    this._createFromSnapshotResourceId = config.createFromSnapshotResourceId;
     this._location = config.location;
     this._name = config.name;
     this._poolName = config.poolName;
@@ -96,6 +119,7 @@ export class NetappVolume extends cdktf.TerraformResource {
     this._subnetId = config.subnetId;
     this._tags = config.tags;
     this._volumePath = config.volumePath;
+    this._dataProtectionReplication = config.dataProtectionReplication;
     this._exportPolicyRule = config.exportPolicyRule;
     this._timeouts = config.timeouts;
   }
@@ -115,6 +139,22 @@ export class NetappVolume extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get accountNameInput() {
     return this._accountName
+  }
+
+  // create_from_snapshot_resource_id - computed: true, optional: true, required: false
+  private _createFromSnapshotResourceId?: string;
+  public get createFromSnapshotResourceId() {
+    return this.getStringAttribute('create_from_snapshot_resource_id');
+  }
+  public set createFromSnapshotResourceId(value: string) {
+    this._createFromSnapshotResourceId = value;
+  }
+  public resetCreateFromSnapshotResourceId() {
+    this._createFromSnapshotResourceId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createFromSnapshotResourceIdInput() {
+    return this._createFromSnapshotResourceId
   }
 
   // id - computed: true, optional: true, required: false
@@ -263,6 +303,22 @@ export class NetappVolume extends cdktf.TerraformResource {
     return this._volumePath
   }
 
+  // data_protection_replication - computed: false, optional: true, required: false
+  private _dataProtectionReplication?: NetappVolumeDataProtectionReplication[];
+  public get dataProtectionReplication() {
+    return this.interpolationForAttribute('data_protection_replication') as any;
+  }
+  public set dataProtectionReplication(value: NetappVolumeDataProtectionReplication[] ) {
+    this._dataProtectionReplication = value;
+  }
+  public resetDataProtectionReplication() {
+    this._dataProtectionReplication = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dataProtectionReplicationInput() {
+    return this._dataProtectionReplication
+  }
+
   // export_policy_rule - computed: false, optional: true, required: false
   private _exportPolicyRule?: NetappVolumeExportPolicyRule[];
   public get exportPolicyRule() {
@@ -302,6 +358,7 @@ export class NetappVolume extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       account_name: cdktf.stringToTerraform(this._accountName),
+      create_from_snapshot_resource_id: cdktf.stringToTerraform(this._createFromSnapshotResourceId),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
       pool_name: cdktf.stringToTerraform(this._poolName),
@@ -312,6 +369,7 @@ export class NetappVolume extends cdktf.TerraformResource {
       subnet_id: cdktf.stringToTerraform(this._subnetId),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
       volume_path: cdktf.stringToTerraform(this._volumePath),
+      data_protection_replication: cdktf.listMapper(netappVolumeDataProtectionReplicationToTerraform)(this._dataProtectionReplication),
       export_policy_rule: cdktf.listMapper(netappVolumeExportPolicyRuleToTerraform)(this._exportPolicyRule),
       timeouts: netappVolumeTimeoutsToTerraform(this._timeouts),
     };
