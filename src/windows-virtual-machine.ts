@@ -24,6 +24,7 @@ export interface WindowsVirtualMachineConfig extends cdktf.TerraformMetaArgument
   readonly name: string;
   readonly networkInterfaceIds: string[];
   readonly patchMode?: string;
+  readonly platformFaultDomain?: number;
   readonly priority?: string;
   readonly provisionVmAgent?: boolean;
   readonly proximityPlacementGroupId?: string;
@@ -264,6 +265,7 @@ export class WindowsVirtualMachine extends cdktf.TerraformResource {
     this._name = config.name;
     this._networkInterfaceIds = config.networkInterfaceIds;
     this._patchMode = config.patchMode;
+    this._platformFaultDomain = config.platformFaultDomain;
     this._priority = config.priority;
     this._provisionVmAgent = config.provisionVmAgent;
     this._proximityPlacementGroupId = config.proximityPlacementGroupId;
@@ -550,6 +552,22 @@ export class WindowsVirtualMachine extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get patchModeInput() {
     return this._patchMode
+  }
+
+  // platform_fault_domain - computed: false, optional: true, required: false
+  private _platformFaultDomain?: number;
+  public get platformFaultDomain() {
+    return this.getNumberAttribute('platform_fault_domain');
+  }
+  public set platformFaultDomain(value: number ) {
+    this._platformFaultDomain = value;
+  }
+  public resetPlatformFaultDomain() {
+    this._platformFaultDomain = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get platformFaultDomainInput() {
+    return this._platformFaultDomain
   }
 
   // priority - computed: false, optional: true, required: false
@@ -911,6 +929,7 @@ export class WindowsVirtualMachine extends cdktf.TerraformResource {
       name: cdktf.stringToTerraform(this._name),
       network_interface_ids: cdktf.listMapper(cdktf.stringToTerraform)(this._networkInterfaceIds),
       patch_mode: cdktf.stringToTerraform(this._patchMode),
+      platform_fault_domain: cdktf.numberToTerraform(this._platformFaultDomain),
       priority: cdktf.stringToTerraform(this._priority),
       provision_vm_agent: cdktf.booleanToTerraform(this._provisionVmAgent),
       proximity_placement_group_id: cdktf.stringToTerraform(this._proximityPlacementGroupId),

@@ -12,6 +12,7 @@ export interface SpringCloudAppConfig extends cdktf.TerraformMetaArguments {
   readonly name: string;
   readonly resourceGroupName: string;
   readonly serviceName: string;
+  readonly tlsEnabled?: boolean;
   /** identity block */
   readonly identity?: SpringCloudAppIdentity[];
   /** persistent_disk block */
@@ -85,6 +86,7 @@ export class SpringCloudApp extends cdktf.TerraformResource {
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
     this._serviceName = config.serviceName;
+    this._tlsEnabled = config.tlsEnabled;
     this._identity = config.identity;
     this._persistentDisk = config.persistentDisk;
     this._timeouts = config.timeouts;
@@ -93,6 +95,11 @@ export class SpringCloudApp extends cdktf.TerraformResource {
   // ==========
   // ATTRIBUTES
   // ==========
+
+  // fqdn - computed: true, optional: false, required: false
+  public get fqdn() {
+    return this.getStringAttribute('fqdn');
+  }
 
   // https_only - computed: false, optional: true, required: false
   private _httpsOnly?: boolean;
@@ -170,6 +177,22 @@ export class SpringCloudApp extends cdktf.TerraformResource {
     return this._serviceName
   }
 
+  // tls_enabled - computed: false, optional: true, required: false
+  private _tlsEnabled?: boolean;
+  public get tlsEnabled() {
+    return this.getBooleanAttribute('tls_enabled');
+  }
+  public set tlsEnabled(value: boolean ) {
+    this._tlsEnabled = value;
+  }
+  public resetTlsEnabled() {
+    this._tlsEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tlsEnabledInput() {
+    return this._tlsEnabled
+  }
+
   // url - computed: true, optional: false, required: false
   public get url() {
     return this.getStringAttribute('url');
@@ -234,6 +257,7 @@ export class SpringCloudApp extends cdktf.TerraformResource {
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       service_name: cdktf.stringToTerraform(this._serviceName),
+      tls_enabled: cdktf.booleanToTerraform(this._tlsEnabled),
       identity: cdktf.listMapper(springCloudAppIdentityToTerraform)(this._identity),
       persistent_disk: cdktf.listMapper(springCloudAppPersistentDiskToTerraform)(this._persistentDisk),
       timeouts: springCloudAppTimeoutsToTerraform(this._timeouts),

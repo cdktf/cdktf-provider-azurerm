@@ -11,6 +11,7 @@ export interface FirewallConfig extends cdktf.TerraformMetaArguments {
   readonly firewallPolicyId?: string;
   readonly location: string;
   readonly name: string;
+  readonly privateIpRanges?: string[];
   readonly resourceGroupName: string;
   readonly skuName?: string;
   readonly skuTier?: string;
@@ -110,6 +111,7 @@ export class Firewall extends cdktf.TerraformResource {
     this._firewallPolicyId = config.firewallPolicyId;
     this._location = config.location;
     this._name = config.name;
+    this._privateIpRanges = config.privateIpRanges;
     this._resourceGroupName = config.resourceGroupName;
     this._skuName = config.skuName;
     this._skuTier = config.skuTier;
@@ -187,6 +189,22 @@ export class Firewall extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
     return this._name
+  }
+
+  // private_ip_ranges - computed: false, optional: true, required: false
+  private _privateIpRanges?: string[];
+  public get privateIpRanges() {
+    return this.getListAttribute('private_ip_ranges');
+  }
+  public set privateIpRanges(value: string[] ) {
+    this._privateIpRanges = value;
+  }
+  public resetPrivateIpRanges() {
+    this._privateIpRanges = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get privateIpRangesInput() {
+    return this._privateIpRanges
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -356,6 +374,7 @@ export class Firewall extends cdktf.TerraformResource {
       firewall_policy_id: cdktf.stringToTerraform(this._firewallPolicyId),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
+      private_ip_ranges: cdktf.listMapper(cdktf.stringToTerraform)(this._privateIpRanges),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       sku_name: cdktf.stringToTerraform(this._skuName),
       sku_tier: cdktf.stringToTerraform(this._skuTier),

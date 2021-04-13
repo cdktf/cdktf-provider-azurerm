@@ -57,6 +57,11 @@ export class DataAzurermFunctionAppHostKeys extends cdktf.TerraformDataSource {
     return this.getStringAttribute('default_function_key');
   }
 
+  // event_grid_extension_config_key - computed: true, optional: false, required: false
+  public get eventGridExtensionConfigKey() {
+    return this.getStringAttribute('event_grid_extension_config_key');
+  }
+
   // id - computed: true, optional: true, required: false
   public get id() {
     return this.getStringAttribute('id');

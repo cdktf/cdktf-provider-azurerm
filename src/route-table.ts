@@ -26,10 +26,10 @@ export interface RouteTableRoute {
 function routeTableRouteToTerraform(struct?: RouteTableRoute): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   return {
-    address_prefix: cdktf.stringToTerraform(struct!.addressPrefix),
-    name: cdktf.stringToTerraform(struct!.name),
-    next_hop_in_ip_address: cdktf.stringToTerraform(struct!.nextHopInIpAddress),
-    next_hop_type: cdktf.stringToTerraform(struct!.nextHopType),
+    address_prefix: struct!.addressPrefix === undefined ? null : cdktf.stringToTerraform(struct!.addressPrefix),
+    name: struct!.name === undefined ? null : cdktf.stringToTerraform(struct!.name),
+    next_hop_in_ip_address: struct!.nextHopInIpAddress === undefined ? null : cdktf.stringToTerraform(struct!.nextHopInIpAddress),
+    next_hop_type: struct!.nextHopType === undefined ? null : cdktf.stringToTerraform(struct!.nextHopType),
   }
 }
 

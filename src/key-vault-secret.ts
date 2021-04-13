@@ -181,6 +181,11 @@ export class KeyVaultSecret extends cdktf.TerraformResource {
     return this.getStringAttribute('version');
   }
 
+  // versionless_id - computed: true, optional: false, required: false
+  public get versionlessId() {
+    return this.getStringAttribute('versionless_id');
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: KeyVaultSecretTimeouts;
   public get timeouts() {

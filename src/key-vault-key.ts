@@ -224,6 +224,11 @@ export class KeyVaultKey extends cdktf.TerraformResource {
     return this.getStringAttribute('version');
   }
 
+  // versionless_id - computed: true, optional: false, required: false
+  public get versionlessId() {
+    return this.getStringAttribute('versionless_id');
+  }
+
   // x - computed: true, optional: false, required: false
   public get x() {
     return this.getStringAttribute('x');

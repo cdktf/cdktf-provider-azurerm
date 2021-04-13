@@ -27,8 +27,8 @@ export interface DataFactoryIntegrationRuntimeManagedConfig extends cdktf.Terraf
   readonly vnetIntegration?: DataFactoryIntegrationRuntimeManagedVnetIntegration[];
 }
 export interface DataFactoryIntegrationRuntimeManagedCatalogInfo {
-  readonly administratorLogin: string;
-  readonly administratorPassword: string;
+  readonly administratorLogin?: string;
+  readonly administratorPassword?: string;
   readonly pricingTier?: string;
   readonly serverEndpoint: string;
 }

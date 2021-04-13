@@ -29,8 +29,8 @@ export interface EventgridTopicInboundIpRule {
 function eventgridTopicInboundIpRuleToTerraform(struct?: EventgridTopicInboundIpRule): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   return {
-    action: cdktf.stringToTerraform(struct!.action),
-    ip_mask: cdktf.stringToTerraform(struct!.ipMask),
+    action: struct!.action === undefined ? null : cdktf.stringToTerraform(struct!.action),
+    ip_mask: struct!.ipMask === undefined ? null : cdktf.stringToTerraform(struct!.ipMask),
   }
 }
 

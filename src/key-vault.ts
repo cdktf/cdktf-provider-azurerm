@@ -41,13 +41,13 @@ export interface KeyVaultAccessPolicy {
 function keyVaultAccessPolicyToTerraform(struct?: KeyVaultAccessPolicy): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   return {
-    application_id: cdktf.stringToTerraform(struct!.applicationId),
-    certificate_permissions: cdktf.listMapper(cdktf.stringToTerraform)(struct!.certificatePermissions),
-    key_permissions: cdktf.listMapper(cdktf.stringToTerraform)(struct!.keyPermissions),
-    object_id: cdktf.stringToTerraform(struct!.objectId),
-    secret_permissions: cdktf.listMapper(cdktf.stringToTerraform)(struct!.secretPermissions),
-    storage_permissions: cdktf.listMapper(cdktf.stringToTerraform)(struct!.storagePermissions),
-    tenant_id: cdktf.stringToTerraform(struct!.tenantId),
+    application_id: struct!.applicationId === undefined ? null : cdktf.stringToTerraform(struct!.applicationId),
+    certificate_permissions: struct!.certificatePermissions === undefined ? null : cdktf.listMapper(cdktf.stringToTerraform)(struct!.certificatePermissions),
+    key_permissions: struct!.keyPermissions === undefined ? null : cdktf.listMapper(cdktf.stringToTerraform)(struct!.keyPermissions),
+    object_id: struct!.objectId === undefined ? null : cdktf.stringToTerraform(struct!.objectId),
+    secret_permissions: struct!.secretPermissions === undefined ? null : cdktf.listMapper(cdktf.stringToTerraform)(struct!.secretPermissions),
+    storage_permissions: struct!.storagePermissions === undefined ? null : cdktf.listMapper(cdktf.stringToTerraform)(struct!.storagePermissions),
+    tenant_id: struct!.tenantId === undefined ? null : cdktf.stringToTerraform(struct!.tenantId),
   }
 }
 

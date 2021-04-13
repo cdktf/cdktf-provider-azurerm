@@ -168,12 +168,14 @@ function springCloudServiceTimeoutsToTerraform(struct?: SpringCloudServiceTimeou
 
 export interface SpringCloudServiceTrace {
   readonly instrumentationKey: string;
+  readonly sampleRate?: number;
 }
 
 function springCloudServiceTraceToTerraform(struct?: SpringCloudServiceTrace): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   return {
     instrumentation_key: cdktf.stringToTerraform(struct!.instrumentationKey),
+    sample_rate: cdktf.numberToTerraform(struct!.sampleRate),
   }
 }
 

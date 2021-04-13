@@ -7,6 +7,7 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface KustoClusterConfig extends cdktf.TerraformMetaArguments {
+  readonly doubleEncryptionEnabled?: boolean;
   readonly enableDiskEncryption?: boolean;
   readonly enablePurge?: boolean;
   readonly enableStreamingIngest?: boolean;
@@ -30,12 +31,14 @@ export interface KustoClusterConfig extends cdktf.TerraformMetaArguments {
   readonly virtualNetworkConfiguration?: KustoClusterVirtualNetworkConfiguration[];
 }
 export interface KustoClusterIdentity {
+  readonly identityIds?: string[];
   readonly type: string;
 }
 
 function kustoClusterIdentityToTerraform(struct?: KustoClusterIdentity): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   return {
+    identity_ids: cdktf.listMapper(cdktf.stringToTerraform)(struct!.identityIds),
     type: cdktf.stringToTerraform(struct!.type),
   }
 }
@@ -118,6 +121,7 @@ export class KustoCluster extends cdktf.TerraformResource {
       count: config.count,
       lifecycle: config.lifecycle
     });
+    this._doubleEncryptionEnabled = config.doubleEncryptionEnabled;
     this._enableDiskEncryption = config.enableDiskEncryption;
     this._enablePurge = config.enablePurge;
     this._enableStreamingIngest = config.enableStreamingIngest;
@@ -143,6 +147,22 @@ export class KustoCluster extends cdktf.TerraformResource {
   // data_ingestion_uri - computed: true, optional: false, required: false
   public get dataIngestionUri() {
     return this.getStringAttribute('data_ingestion_uri');
+  }
+
+  // double_encryption_enabled - computed: false, optional: true, required: false
+  private _doubleEncryptionEnabled?: boolean;
+  public get doubleEncryptionEnabled() {
+    return this.getBooleanAttribute('double_encryption_enabled');
+  }
+  public set doubleEncryptionEnabled(value: boolean ) {
+    this._doubleEncryptionEnabled = value;
+  }
+  public resetDoubleEncryptionEnabled() {
+    this._doubleEncryptionEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get doubleEncryptionEnabledInput() {
+    return this._doubleEncryptionEnabled
   }
 
   // enable_disk_encryption - computed: false, optional: true, required: false
@@ -405,6 +425,7 @@ export class KustoCluster extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      double_encryption_enabled: cdktf.booleanToTerraform(this._doubleEncryptionEnabled),
       enable_disk_encryption: cdktf.booleanToTerraform(this._enableDiskEncryption),
       enable_purge: cdktf.booleanToTerraform(this._enablePurge),
       enable_streaming_ingest: cdktf.booleanToTerraform(this._enableStreamingIngest),

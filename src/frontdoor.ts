@@ -272,6 +272,21 @@ export class Frontdoor extends cdktf.TerraformResource {
   // ATTRIBUTES
   // ==========
 
+  // backend_pool_health_probes - computed: true, optional: false, required: false
+  public backendPoolHealthProbes(key: string): string {
+    return new cdktf.StringMap(this, 'backend_pool_health_probes').lookup(key);
+  }
+
+  // backend_pool_load_balancing_settings - computed: true, optional: false, required: false
+  public backendPoolLoadBalancingSettings(key: string): string {
+    return new cdktf.StringMap(this, 'backend_pool_load_balancing_settings').lookup(key);
+  }
+
+  // backend_pools - computed: true, optional: false, required: false
+  public backendPools(key: string): string {
+    return new cdktf.StringMap(this, 'backend_pools').lookup(key);
+  }
+
   // backend_pools_send_receive_timeout_seconds - computed: false, optional: true, required: false
   private _backendPoolsSendReceiveTimeoutSeconds?: number;
   public get backendPoolsSendReceiveTimeoutSeconds() {
@@ -320,6 +335,11 @@ export class Frontdoor extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get friendlyNameInput() {
     return this._friendlyName
+  }
+
+  // frontend_endpoints - computed: true, optional: false, required: false
+  public frontendEndpoints(key: string): string {
+    return new cdktf.StringMap(this, 'frontend_endpoints').lookup(key);
   }
 
   // header_frontdoor_id - computed: true, optional: false, required: false
@@ -388,6 +408,11 @@ export class Frontdoor extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
     return this._resourceGroupName
+  }
+
+  // routing_rules - computed: true, optional: false, required: false
+  public routingRules(key: string): string {
+    return new cdktf.StringMap(this, 'routing_rules').lookup(key);
   }
 
   // tags - computed: false, optional: true, required: false

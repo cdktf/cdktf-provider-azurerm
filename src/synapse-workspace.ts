@@ -18,6 +18,10 @@ export interface SynapseWorkspaceConfig extends cdktf.TerraformMetaArguments {
   readonly sqlIdentityControlEnabled?: boolean;
   readonly storageDataLakeGen2FilesystemId: string;
   readonly tags?: { [key: string]: string };
+  /** azure_devops_repo block */
+  readonly azureDevopsRepo?: SynapseWorkspaceAzureDevopsRepo[];
+  /** github_repo block */
+  readonly githubRepo?: SynapseWorkspaceGithubRepo[];
   /** timeouts block */
   readonly timeouts?: SynapseWorkspaceTimeouts;
 }
@@ -30,9 +34,9 @@ export interface SynapseWorkspaceAadAdmin {
 function synapseWorkspaceAadAdminToTerraform(struct?: SynapseWorkspaceAadAdmin): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   return {
-    login: cdktf.stringToTerraform(struct!.login),
-    object_id: cdktf.stringToTerraform(struct!.objectId),
-    tenant_id: cdktf.stringToTerraform(struct!.tenantId),
+    login: struct!.login === undefined ? null : cdktf.stringToTerraform(struct!.login),
+    object_id: struct!.objectId === undefined ? null : cdktf.stringToTerraform(struct!.objectId),
+    tenant_id: struct!.tenantId === undefined ? null : cdktf.stringToTerraform(struct!.tenantId),
   }
 }
 
@@ -53,6 +57,44 @@ export class SynapseWorkspaceIdentity extends cdktf.ComplexComputedList {
     return this.getStringAttribute('type');
   }
 }
+export interface SynapseWorkspaceAzureDevopsRepo {
+  readonly accountName: string;
+  readonly branchName: string;
+  readonly projectName: string;
+  readonly repositoryName: string;
+  readonly rootFolder: string;
+}
+
+function synapseWorkspaceAzureDevopsRepoToTerraform(struct?: SynapseWorkspaceAzureDevopsRepo): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    account_name: cdktf.stringToTerraform(struct!.accountName),
+    branch_name: cdktf.stringToTerraform(struct!.branchName),
+    project_name: cdktf.stringToTerraform(struct!.projectName),
+    repository_name: cdktf.stringToTerraform(struct!.repositoryName),
+    root_folder: cdktf.stringToTerraform(struct!.rootFolder),
+  }
+}
+
+export interface SynapseWorkspaceGithubRepo {
+  readonly accountName: string;
+  readonly branchName: string;
+  readonly gitUrl?: string;
+  readonly repositoryName: string;
+  readonly rootFolder: string;
+}
+
+function synapseWorkspaceGithubRepoToTerraform(struct?: SynapseWorkspaceGithubRepo): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    account_name: cdktf.stringToTerraform(struct!.accountName),
+    branch_name: cdktf.stringToTerraform(struct!.branchName),
+    git_url: cdktf.stringToTerraform(struct!.gitUrl),
+    repository_name: cdktf.stringToTerraform(struct!.repositoryName),
+    root_folder: cdktf.stringToTerraform(struct!.rootFolder),
+  }
+}
+
 export interface SynapseWorkspaceTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -101,6 +143,8 @@ export class SynapseWorkspace extends cdktf.TerraformResource {
     this._sqlIdentityControlEnabled = config.sqlIdentityControlEnabled;
     this._storageDataLakeGen2FilesystemId = config.storageDataLakeGen2FilesystemId;
     this._tags = config.tags;
+    this._azureDevopsRepo = config.azureDevopsRepo;
+    this._githubRepo = config.githubRepo;
     this._timeouts = config.timeouts;
   }
 
@@ -281,6 +325,38 @@ export class SynapseWorkspace extends cdktf.TerraformResource {
     return this._tags
   }
 
+  // azure_devops_repo - computed: false, optional: true, required: false
+  private _azureDevopsRepo?: SynapseWorkspaceAzureDevopsRepo[];
+  public get azureDevopsRepo() {
+    return this.interpolationForAttribute('azure_devops_repo') as any;
+  }
+  public set azureDevopsRepo(value: SynapseWorkspaceAzureDevopsRepo[] ) {
+    this._azureDevopsRepo = value;
+  }
+  public resetAzureDevopsRepo() {
+    this._azureDevopsRepo = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get azureDevopsRepoInput() {
+    return this._azureDevopsRepo
+  }
+
+  // github_repo - computed: false, optional: true, required: false
+  private _githubRepo?: SynapseWorkspaceGithubRepo[];
+  public get githubRepo() {
+    return this.interpolationForAttribute('github_repo') as any;
+  }
+  public set githubRepo(value: SynapseWorkspaceGithubRepo[] ) {
+    this._githubRepo = value;
+  }
+  public resetGithubRepo() {
+    this._githubRepo = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get githubRepoInput() {
+    return this._githubRepo
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: SynapseWorkspaceTimeouts;
   public get timeouts() {
@@ -314,6 +390,8 @@ export class SynapseWorkspace extends cdktf.TerraformResource {
       sql_identity_control_enabled: cdktf.booleanToTerraform(this._sqlIdentityControlEnabled),
       storage_data_lake_gen2_filesystem_id: cdktf.stringToTerraform(this._storageDataLakeGen2FilesystemId),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      azure_devops_repo: cdktf.listMapper(synapseWorkspaceAzureDevopsRepoToTerraform)(this._azureDevopsRepo),
+      github_repo: cdktf.listMapper(synapseWorkspaceGithubRepoToTerraform)(this._githubRepo),
       timeouts: synapseWorkspaceTimeoutsToTerraform(this._timeouts),
     };
   }

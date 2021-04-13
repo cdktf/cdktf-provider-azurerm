@@ -7,6 +7,7 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface HpcCacheBlobTargetConfig extends cdktf.TerraformMetaArguments {
+  readonly accessPolicyName?: string;
   readonly cacheName: string;
   readonly name: string;
   readonly namespacePath: string;
@@ -52,6 +53,7 @@ export class HpcCacheBlobTarget extends cdktf.TerraformResource {
       count: config.count,
       lifecycle: config.lifecycle
     });
+    this._accessPolicyName = config.accessPolicyName;
     this._cacheName = config.cacheName;
     this._name = config.name;
     this._namespacePath = config.namespacePath;
@@ -63,6 +65,22 @@ export class HpcCacheBlobTarget extends cdktf.TerraformResource {
   // ==========
   // ATTRIBUTES
   // ==========
+
+  // access_policy_name - computed: true, optional: true, required: false
+  private _accessPolicyName?: string;
+  public get accessPolicyName() {
+    return this.getStringAttribute('access_policy_name');
+  }
+  public set accessPolicyName(value: string) {
+    this._accessPolicyName = value;
+  }
+  public resetAccessPolicyName() {
+    this._accessPolicyName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get accessPolicyNameInput() {
+    return this._accessPolicyName
+  }
 
   // cache_name - computed: false, optional: false, required: true
   private _cacheName: string;
@@ -156,6 +174,7 @@ export class HpcCacheBlobTarget extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      access_policy_name: cdktf.stringToTerraform(this._accessPolicyName),
       cache_name: cdktf.stringToTerraform(this._cacheName),
       name: cdktf.stringToTerraform(this._name),
       namespace_path: cdktf.stringToTerraform(this._namespacePath),

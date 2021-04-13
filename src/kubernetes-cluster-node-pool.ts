@@ -9,6 +9,7 @@ import * as cdktf from 'cdktf';
 export interface KubernetesClusterNodePoolConfig extends cdktf.TerraformMetaArguments {
   readonly availabilityZones?: string[];
   readonly enableAutoScaling?: boolean;
+  readonly enableHostEncryption?: boolean;
   readonly enableNodePublicIp?: boolean;
   readonly evictionPolicy?: string;
   readonly kubernetesClusterId: string;
@@ -32,6 +33,8 @@ export interface KubernetesClusterNodePoolConfig extends cdktf.TerraformMetaArgu
   readonly vnetSubnetId?: string;
   /** timeouts block */
   readonly timeouts?: KubernetesClusterNodePoolTimeouts;
+  /** upgrade_settings block */
+  readonly upgradeSettings?: KubernetesClusterNodePoolUpgradeSettings[];
 }
 export interface KubernetesClusterNodePoolTimeouts {
   readonly create?: string;
@@ -47,6 +50,17 @@ function kubernetesClusterNodePoolTimeoutsToTerraform(struct?: KubernetesCluster
     delete: cdktf.stringToTerraform(struct!.delete),
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+export interface KubernetesClusterNodePoolUpgradeSettings {
+  readonly maxSurge: string;
+}
+
+function kubernetesClusterNodePoolUpgradeSettingsToTerraform(struct?: KubernetesClusterNodePoolUpgradeSettings): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    max_surge: cdktf.stringToTerraform(struct!.maxSurge),
   }
 }
 
@@ -72,6 +86,7 @@ export class KubernetesClusterNodePool extends cdktf.TerraformResource {
     });
     this._availabilityZones = config.availabilityZones;
     this._enableAutoScaling = config.enableAutoScaling;
+    this._enableHostEncryption = config.enableHostEncryption;
     this._enableNodePublicIp = config.enableNodePublicIp;
     this._evictionPolicy = config.evictionPolicy;
     this._kubernetesClusterId = config.kubernetesClusterId;
@@ -94,6 +109,7 @@ export class KubernetesClusterNodePool extends cdktf.TerraformResource {
     this._vmSize = config.vmSize;
     this._vnetSubnetId = config.vnetSubnetId;
     this._timeouts = config.timeouts;
+    this._upgradeSettings = config.upgradeSettings;
   }
 
   // ==========
@@ -130,6 +146,22 @@ export class KubernetesClusterNodePool extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get enableAutoScalingInput() {
     return this._enableAutoScaling
+  }
+
+  // enable_host_encryption - computed: false, optional: true, required: false
+  private _enableHostEncryption?: boolean;
+  public get enableHostEncryption() {
+    return this.getBooleanAttribute('enable_host_encryption');
+  }
+  public set enableHostEncryption(value: boolean ) {
+    this._enableHostEncryption = value;
+  }
+  public resetEnableHostEncryption() {
+    this._enableHostEncryption = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enableHostEncryptionInput() {
+    return this._enableHostEncryption
   }
 
   // enable_node_public_ip - computed: false, optional: true, required: false
@@ -480,6 +512,22 @@ export class KubernetesClusterNodePool extends cdktf.TerraformResource {
     return this._timeouts
   }
 
+  // upgrade_settings - computed: false, optional: true, required: false
+  private _upgradeSettings?: KubernetesClusterNodePoolUpgradeSettings[];
+  public get upgradeSettings() {
+    return this.interpolationForAttribute('upgrade_settings') as any;
+  }
+  public set upgradeSettings(value: KubernetesClusterNodePoolUpgradeSettings[] ) {
+    this._upgradeSettings = value;
+  }
+  public resetUpgradeSettings() {
+    this._upgradeSettings = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get upgradeSettingsInput() {
+    return this._upgradeSettings
+  }
+
   // =========
   // SYNTHESIS
   // =========
@@ -488,6 +536,7 @@ export class KubernetesClusterNodePool extends cdktf.TerraformResource {
     return {
       availability_zones: cdktf.listMapper(cdktf.stringToTerraform)(this._availabilityZones),
       enable_auto_scaling: cdktf.booleanToTerraform(this._enableAutoScaling),
+      enable_host_encryption: cdktf.booleanToTerraform(this._enableHostEncryption),
       enable_node_public_ip: cdktf.booleanToTerraform(this._enableNodePublicIp),
       eviction_policy: cdktf.stringToTerraform(this._evictionPolicy),
       kubernetes_cluster_id: cdktf.stringToTerraform(this._kubernetesClusterId),
@@ -510,6 +559,7 @@ export class KubernetesClusterNodePool extends cdktf.TerraformResource {
       vm_size: cdktf.stringToTerraform(this._vmSize),
       vnet_subnet_id: cdktf.stringToTerraform(this._vnetSubnetId),
       timeouts: kubernetesClusterNodePoolTimeoutsToTerraform(this._timeouts),
+      upgrade_settings: cdktf.listMapper(kubernetesClusterNodePoolUpgradeSettingsToTerraform)(this._upgradeSettings),
     };
   }
 }

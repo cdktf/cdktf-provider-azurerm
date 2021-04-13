@@ -19,6 +19,11 @@ export class DataAzurermSubscriptionsSubscriptions extends cdktf.ComplexComputed
     return this.getStringAttribute('display_name');
   }
 
+  // id - computed: true, optional: false, required: false
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+
   // location_placement_id - computed: true, optional: false, required: false
   public get locationPlacementId() {
     return this.getStringAttribute('location_placement_id');

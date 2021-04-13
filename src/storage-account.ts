@@ -35,6 +35,17 @@ export interface StorageAccountConfig extends cdktf.TerraformMetaArguments {
   /** timeouts block */
   readonly timeouts?: StorageAccountTimeouts;
 }
+export interface StorageAccountBlobPropertiesContainerDeleteRetentionPolicy {
+  readonly days?: number;
+}
+
+function storageAccountBlobPropertiesContainerDeleteRetentionPolicyToTerraform(struct?: StorageAccountBlobPropertiesContainerDeleteRetentionPolicy): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    days: cdktf.numberToTerraform(struct!.days),
+  }
+}
+
 export interface StorageAccountBlobPropertiesCorsRule {
   readonly allowedHeaders: string[];
   readonly allowedMethods: string[];
@@ -66,6 +77,8 @@ function storageAccountBlobPropertiesDeleteRetentionPolicyToTerraform(struct?: S
 }
 
 export interface StorageAccountBlobProperties {
+  /** container_delete_retention_policy block */
+  readonly containerDeleteRetentionPolicy?: StorageAccountBlobPropertiesContainerDeleteRetentionPolicy[];
   /** cors_rule block */
   readonly corsRule?: StorageAccountBlobPropertiesCorsRule[];
   /** delete_retention_policy block */
@@ -75,6 +88,7 @@ export interface StorageAccountBlobProperties {
 function storageAccountBlobPropertiesToTerraform(struct?: StorageAccountBlobProperties): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   return {
+    container_delete_retention_policy: cdktf.listMapper(storageAccountBlobPropertiesContainerDeleteRetentionPolicyToTerraform)(struct!.containerDeleteRetentionPolicy),
     cors_rule: cdktf.listMapper(storageAccountBlobPropertiesCorsRuleToTerraform)(struct!.corsRule),
     delete_retention_policy: cdktf.listMapper(storageAccountBlobPropertiesDeleteRetentionPolicyToTerraform)(struct!.deleteRetentionPolicy),
   }

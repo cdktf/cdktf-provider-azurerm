@@ -15,6 +15,8 @@ export interface MssqlVirtualMachineConfig extends cdktf.TerraformMetaArguments 
   readonly sqlLicenseType: string;
   readonly tags?: { [key: string]: string };
   readonly virtualMachineId: string;
+  /** auto_backup block */
+  readonly autoBackup?: MssqlVirtualMachineAutoBackup[];
   /** auto_patching block */
   readonly autoPatching?: MssqlVirtualMachineAutoPatching[];
   /** key_vault_credential block */
@@ -24,6 +26,47 @@ export interface MssqlVirtualMachineConfig extends cdktf.TerraformMetaArguments 
   /** timeouts block */
   readonly timeouts?: MssqlVirtualMachineTimeouts;
 }
+export interface MssqlVirtualMachineAutoBackupManualSchedule {
+  readonly fullBackupFrequency: string;
+  readonly fullBackupStartHour: number;
+  readonly fullBackupWindowInHours: number;
+  readonly logBackupFrequencyInMinutes: number;
+}
+
+function mssqlVirtualMachineAutoBackupManualScheduleToTerraform(struct?: MssqlVirtualMachineAutoBackupManualSchedule): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    full_backup_frequency: cdktf.stringToTerraform(struct!.fullBackupFrequency),
+    full_backup_start_hour: cdktf.numberToTerraform(struct!.fullBackupStartHour),
+    full_backup_window_in_hours: cdktf.numberToTerraform(struct!.fullBackupWindowInHours),
+    log_backup_frequency_in_minutes: cdktf.numberToTerraform(struct!.logBackupFrequencyInMinutes),
+  }
+}
+
+export interface MssqlVirtualMachineAutoBackup {
+  readonly encryptionEnabled?: boolean;
+  readonly encryptionPassword?: string;
+  readonly retentionPeriodInDays: number;
+  readonly storageAccountAccessKey: string;
+  readonly storageBlobEndpoint: string;
+  readonly systemDatabasesBackupEnabled?: boolean;
+  /** manual_schedule block */
+  readonly manualSchedule?: MssqlVirtualMachineAutoBackupManualSchedule[];
+}
+
+function mssqlVirtualMachineAutoBackupToTerraform(struct?: MssqlVirtualMachineAutoBackup): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    encryption_enabled: cdktf.booleanToTerraform(struct!.encryptionEnabled),
+    encryption_password: cdktf.stringToTerraform(struct!.encryptionPassword),
+    retention_period_in_days: cdktf.numberToTerraform(struct!.retentionPeriodInDays),
+    storage_account_access_key: cdktf.stringToTerraform(struct!.storageAccountAccessKey),
+    storage_blob_endpoint: cdktf.stringToTerraform(struct!.storageBlobEndpoint),
+    system_databases_backup_enabled: cdktf.booleanToTerraform(struct!.systemDatabasesBackupEnabled),
+    manual_schedule: cdktf.listMapper(mssqlVirtualMachineAutoBackupManualScheduleToTerraform)(struct!.manualSchedule),
+  }
+}
+
 export interface MssqlVirtualMachineAutoPatching {
   readonly dayOfWeek: string;
   readonly maintenanceWindowDurationInMinutes: number;
@@ -162,6 +205,7 @@ export class MssqlVirtualMachine extends cdktf.TerraformResource {
     this._sqlLicenseType = config.sqlLicenseType;
     this._tags = config.tags;
     this._virtualMachineId = config.virtualMachineId;
+    this._autoBackup = config.autoBackup;
     this._autoPatching = config.autoPatching;
     this._keyVaultCredential = config.keyVaultCredential;
     this._storageConfiguration = config.storageConfiguration;
@@ -299,6 +343,22 @@ export class MssqlVirtualMachine extends cdktf.TerraformResource {
     return this._virtualMachineId
   }
 
+  // auto_backup - computed: false, optional: true, required: false
+  private _autoBackup?: MssqlVirtualMachineAutoBackup[];
+  public get autoBackup() {
+    return this.interpolationForAttribute('auto_backup') as any;
+  }
+  public set autoBackup(value: MssqlVirtualMachineAutoBackup[] ) {
+    this._autoBackup = value;
+  }
+  public resetAutoBackup() {
+    this._autoBackup = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get autoBackupInput() {
+    return this._autoBackup
+  }
+
   // auto_patching - computed: false, optional: true, required: false
   private _autoPatching?: MssqlVirtualMachineAutoPatching[];
   public get autoPatching() {
@@ -377,6 +437,7 @@ export class MssqlVirtualMachine extends cdktf.TerraformResource {
       sql_license_type: cdktf.stringToTerraform(this._sqlLicenseType),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
       virtual_machine_id: cdktf.stringToTerraform(this._virtualMachineId),
+      auto_backup: cdktf.listMapper(mssqlVirtualMachineAutoBackupToTerraform)(this._autoBackup),
       auto_patching: cdktf.listMapper(mssqlVirtualMachineAutoPatchingToTerraform)(this._autoPatching),
       key_vault_credential: cdktf.listMapper(mssqlVirtualMachineKeyVaultCredentialToTerraform)(this._keyVaultCredential),
       storage_configuration: cdktf.listMapper(mssqlVirtualMachineStorageConfigurationToTerraform)(this._storageConfiguration),

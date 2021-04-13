@@ -12,6 +12,7 @@ export interface ApiManagementLoggerConfig extends cdktf.TerraformMetaArguments 
   readonly description?: string;
   readonly name: string;
   readonly resourceGroupName: string;
+  readonly resourceId?: string;
   /** application_insights block */
   readonly applicationInsights?: ApiManagementLoggerApplicationInsights[];
   /** eventhub block */
@@ -85,6 +86,7 @@ export class ApiManagementLogger extends cdktf.TerraformResource {
     this._description = config.description;
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
+    this._resourceId = config.resourceId;
     this._applicationInsights = config.applicationInsights;
     this._eventhub = config.eventhub;
     this._timeouts = config.timeouts;
@@ -170,6 +172,22 @@ export class ApiManagementLogger extends cdktf.TerraformResource {
     return this._resourceGroupName
   }
 
+  // resource_id - computed: false, optional: true, required: false
+  private _resourceId?: string;
+  public get resourceId() {
+    return this.getStringAttribute('resource_id');
+  }
+  public set resourceId(value: string ) {
+    this._resourceId = value;
+  }
+  public resetResourceId() {
+    this._resourceId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resourceIdInput() {
+    return this._resourceId
+  }
+
   // application_insights - computed: false, optional: true, required: false
   private _applicationInsights?: ApiManagementLoggerApplicationInsights[];
   public get applicationInsights() {
@@ -229,6 +247,7 @@ export class ApiManagementLogger extends cdktf.TerraformResource {
       description: cdktf.stringToTerraform(this._description),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      resource_id: cdktf.stringToTerraform(this._resourceId),
       application_insights: cdktf.listMapper(apiManagementLoggerApplicationInsightsToTerraform)(this._applicationInsights),
       eventhub: cdktf.listMapper(apiManagementLoggerEventhubToTerraform)(this._eventhub),
       timeouts: apiManagementLoggerTimeoutsToTerraform(this._timeouts),

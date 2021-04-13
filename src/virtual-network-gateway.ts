@@ -30,10 +30,25 @@ export interface VirtualNetworkGatewayConfig extends cdktf.TerraformMetaArgument
   /** vpn_client_configuration block */
   readonly vpnClientConfiguration?: VirtualNetworkGatewayVpnClientConfiguration[];
 }
+export interface VirtualNetworkGatewayBgpSettingsPeeringAddresses {
+  readonly apipaAddresses?: string[];
+  readonly ipConfigurationName?: string;
+}
+
+function virtualNetworkGatewayBgpSettingsPeeringAddressesToTerraform(struct?: VirtualNetworkGatewayBgpSettingsPeeringAddresses): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    apipa_addresses: cdktf.listMapper(cdktf.stringToTerraform)(struct!.apipaAddresses),
+    ip_configuration_name: cdktf.stringToTerraform(struct!.ipConfigurationName),
+  }
+}
+
 export interface VirtualNetworkGatewayBgpSettings {
   readonly asn?: number;
   readonly peerWeight?: number;
   readonly peeringAddress?: string;
+  /** peering_addresses block */
+  readonly peeringAddresses?: VirtualNetworkGatewayBgpSettingsPeeringAddresses[];
 }
 
 function virtualNetworkGatewayBgpSettingsToTerraform(struct?: VirtualNetworkGatewayBgpSettings): any {
@@ -42,6 +57,7 @@ function virtualNetworkGatewayBgpSettingsToTerraform(struct?: VirtualNetworkGate
     asn: cdktf.numberToTerraform(struct!.asn),
     peer_weight: cdktf.numberToTerraform(struct!.peerWeight),
     peering_address: cdktf.stringToTerraform(struct!.peeringAddress),
+    peering_addresses: cdktf.listMapper(virtualNetworkGatewayBgpSettingsPeeringAddressesToTerraform)(struct!.peeringAddresses),
   }
 }
 

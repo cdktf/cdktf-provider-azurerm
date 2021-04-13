@@ -203,10 +203,27 @@ function monitorActionGroupVoiceReceiverToTerraform(struct?: MonitorActionGroupV
   }
 }
 
+export interface MonitorActionGroupWebhookReceiverAadAuth {
+  readonly identifierUri?: string;
+  readonly objectId: string;
+  readonly tenantId?: string;
+}
+
+function monitorActionGroupWebhookReceiverAadAuthToTerraform(struct?: MonitorActionGroupWebhookReceiverAadAuth): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    identifier_uri: cdktf.stringToTerraform(struct!.identifierUri),
+    object_id: cdktf.stringToTerraform(struct!.objectId),
+    tenant_id: cdktf.stringToTerraform(struct!.tenantId),
+  }
+}
+
 export interface MonitorActionGroupWebhookReceiver {
   readonly name: string;
   readonly serviceUri: string;
   readonly useCommonAlertSchema?: boolean;
+  /** aad_auth block */
+  readonly aadAuth?: MonitorActionGroupWebhookReceiverAadAuth[];
 }
 
 function monitorActionGroupWebhookReceiverToTerraform(struct?: MonitorActionGroupWebhookReceiver): any {
@@ -215,6 +232,7 @@ function monitorActionGroupWebhookReceiverToTerraform(struct?: MonitorActionGrou
     name: cdktf.stringToTerraform(struct!.name),
     service_uri: cdktf.stringToTerraform(struct!.serviceUri),
     use_common_alert_schema: cdktf.booleanToTerraform(struct!.useCommonAlertSchema),
+    aad_auth: cdktf.listMapper(monitorActionGroupWebhookReceiverAadAuthToTerraform)(struct!.aadAuth),
   }
 }
 

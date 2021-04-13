@@ -9,13 +9,19 @@ import * as cdktf from 'cdktf';
 export interface DataFactoryLinkedServiceAzureBlobStorageConfig extends cdktf.TerraformMetaArguments {
   readonly additionalProperties?: { [key: string]: string };
   readonly annotations?: string[];
-  readonly connectionString: string;
+  readonly connectionString?: string;
   readonly dataFactoryName: string;
   readonly description?: string;
   readonly integrationRuntimeName?: string;
   readonly name: string;
   readonly parameters?: { [key: string]: string };
   readonly resourceGroupName: string;
+  readonly sasUri?: string;
+  readonly serviceEndpoint?: string;
+  readonly servicePrincipalId?: string;
+  readonly servicePrincipalKey?: string;
+  readonly tenantId?: string;
+  readonly useManagedIdentity?: boolean;
   /** timeouts block */
   readonly timeouts?: DataFactoryLinkedServiceAzureBlobStorageTimeouts;
 }
@@ -65,6 +71,12 @@ export class DataFactoryLinkedServiceAzureBlobStorage extends cdktf.TerraformRes
     this._name = config.name;
     this._parameters = config.parameters;
     this._resourceGroupName = config.resourceGroupName;
+    this._sasUri = config.sasUri;
+    this._serviceEndpoint = config.serviceEndpoint;
+    this._servicePrincipalId = config.servicePrincipalId;
+    this._servicePrincipalKey = config.servicePrincipalKey;
+    this._tenantId = config.tenantId;
+    this._useManagedIdentity = config.useManagedIdentity;
     this._timeouts = config.timeouts;
   }
 
@@ -104,13 +116,16 @@ export class DataFactoryLinkedServiceAzureBlobStorage extends cdktf.TerraformRes
     return this._annotations
   }
 
-  // connection_string - computed: false, optional: false, required: true
-  private _connectionString: string;
+  // connection_string - computed: false, optional: true, required: false
+  private _connectionString?: string;
   public get connectionString() {
     return this.getStringAttribute('connection_string');
   }
-  public set connectionString(value: string) {
+  public set connectionString(value: string ) {
     this._connectionString = value;
+  }
+  public resetConnectionString() {
+    this._connectionString = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get connectionStringInput() {
@@ -209,6 +224,102 @@ export class DataFactoryLinkedServiceAzureBlobStorage extends cdktf.TerraformRes
     return this._resourceGroupName
   }
 
+  // sas_uri - computed: false, optional: true, required: false
+  private _sasUri?: string;
+  public get sasUri() {
+    return this.getStringAttribute('sas_uri');
+  }
+  public set sasUri(value: string ) {
+    this._sasUri = value;
+  }
+  public resetSasUri() {
+    this._sasUri = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sasUriInput() {
+    return this._sasUri
+  }
+
+  // service_endpoint - computed: false, optional: true, required: false
+  private _serviceEndpoint?: string;
+  public get serviceEndpoint() {
+    return this.getStringAttribute('service_endpoint');
+  }
+  public set serviceEndpoint(value: string ) {
+    this._serviceEndpoint = value;
+  }
+  public resetServiceEndpoint() {
+    this._serviceEndpoint = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get serviceEndpointInput() {
+    return this._serviceEndpoint
+  }
+
+  // service_principal_id - computed: false, optional: true, required: false
+  private _servicePrincipalId?: string;
+  public get servicePrincipalId() {
+    return this.getStringAttribute('service_principal_id');
+  }
+  public set servicePrincipalId(value: string ) {
+    this._servicePrincipalId = value;
+  }
+  public resetServicePrincipalId() {
+    this._servicePrincipalId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get servicePrincipalIdInput() {
+    return this._servicePrincipalId
+  }
+
+  // service_principal_key - computed: false, optional: true, required: false
+  private _servicePrincipalKey?: string;
+  public get servicePrincipalKey() {
+    return this.getStringAttribute('service_principal_key');
+  }
+  public set servicePrincipalKey(value: string ) {
+    this._servicePrincipalKey = value;
+  }
+  public resetServicePrincipalKey() {
+    this._servicePrincipalKey = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get servicePrincipalKeyInput() {
+    return this._servicePrincipalKey
+  }
+
+  // tenant_id - computed: false, optional: true, required: false
+  private _tenantId?: string;
+  public get tenantId() {
+    return this.getStringAttribute('tenant_id');
+  }
+  public set tenantId(value: string ) {
+    this._tenantId = value;
+  }
+  public resetTenantId() {
+    this._tenantId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tenantIdInput() {
+    return this._tenantId
+  }
+
+  // use_managed_identity - computed: false, optional: true, required: false
+  private _useManagedIdentity?: boolean;
+  public get useManagedIdentity() {
+    return this.getBooleanAttribute('use_managed_identity');
+  }
+  public set useManagedIdentity(value: boolean ) {
+    this._useManagedIdentity = value;
+  }
+  public resetUseManagedIdentity() {
+    this._useManagedIdentity = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get useManagedIdentityInput() {
+    return this._useManagedIdentity
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: DataFactoryLinkedServiceAzureBlobStorageTimeouts;
   public get timeouts() {
@@ -240,6 +351,12 @@ export class DataFactoryLinkedServiceAzureBlobStorage extends cdktf.TerraformRes
       name: cdktf.stringToTerraform(this._name),
       parameters: cdktf.hashMapper(cdktf.anyToTerraform)(this._parameters),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      sas_uri: cdktf.stringToTerraform(this._sasUri),
+      service_endpoint: cdktf.stringToTerraform(this._serviceEndpoint),
+      service_principal_id: cdktf.stringToTerraform(this._servicePrincipalId),
+      service_principal_key: cdktf.stringToTerraform(this._servicePrincipalKey),
+      tenant_id: cdktf.stringToTerraform(this._tenantId),
+      use_managed_identity: cdktf.booleanToTerraform(this._useManagedIdentity),
       timeouts: dataFactoryLinkedServiceAzureBlobStorageTimeoutsToTerraform(this._timeouts),
     };
   }

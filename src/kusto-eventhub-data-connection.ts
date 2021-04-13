@@ -12,6 +12,7 @@ export interface KustoEventhubDataConnectionConfig extends cdktf.TerraformMetaAr
   readonly consumerGroup: string;
   readonly dataFormat?: string;
   readonly databaseName: string;
+  readonly eventSystemProperties?: string[];
   readonly eventhubId: string;
   readonly location: string;
   readonly mappingRuleName?: string;
@@ -63,6 +64,7 @@ export class KustoEventhubDataConnection extends cdktf.TerraformResource {
     this._consumerGroup = config.consumerGroup;
     this._dataFormat = config.dataFormat;
     this._databaseName = config.databaseName;
+    this._eventSystemProperties = config.eventSystemProperties;
     this._eventhubId = config.eventhubId;
     this._location = config.location;
     this._mappingRuleName = config.mappingRuleName;
@@ -145,6 +147,22 @@ export class KustoEventhubDataConnection extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get databaseNameInput() {
     return this._databaseName
+  }
+
+  // event_system_properties - computed: true, optional: true, required: false
+  private _eventSystemProperties?: string[];
+  public get eventSystemProperties() {
+    return this.getListAttribute('event_system_properties');
+  }
+  public set eventSystemProperties(value: string[]) {
+    this._eventSystemProperties = value;
+  }
+  public resetEventSystemProperties() {
+    this._eventSystemProperties = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get eventSystemPropertiesInput() {
+    return this._eventSystemProperties
   }
 
   // eventhub_id - computed: false, optional: false, required: true
@@ -263,6 +281,7 @@ export class KustoEventhubDataConnection extends cdktf.TerraformResource {
       consumer_group: cdktf.stringToTerraform(this._consumerGroup),
       data_format: cdktf.stringToTerraform(this._dataFormat),
       database_name: cdktf.stringToTerraform(this._databaseName),
+      event_system_properties: cdktf.listMapper(cdktf.stringToTerraform)(this._eventSystemProperties),
       eventhub_id: cdktf.stringToTerraform(this._eventhubId),
       location: cdktf.stringToTerraform(this._location),
       mapping_rule_name: cdktf.stringToTerraform(this._mappingRuleName),

@@ -33,10 +33,10 @@ export interface AutomationRunbookJobSchedule {
 function automationRunbookJobScheduleToTerraform(struct?: AutomationRunbookJobSchedule): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   return {
-    job_schedule_id: cdktf.stringToTerraform(struct!.jobScheduleId),
-    parameters: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.parameters),
-    run_on: cdktf.stringToTerraform(struct!.runOn),
-    schedule_name: cdktf.stringToTerraform(struct!.scheduleName),
+    job_schedule_id: struct!.jobScheduleId === undefined ? null : cdktf.stringToTerraform(struct!.jobScheduleId),
+    parameters: struct!.parameters === undefined ? null : cdktf.hashMapper(cdktf.anyToTerraform)(struct!.parameters),
+    run_on: struct!.runOn === undefined ? null : cdktf.stringToTerraform(struct!.runOn),
+    schedule_name: struct!.scheduleName === undefined ? null : cdktf.stringToTerraform(struct!.scheduleName),
   }
 }
 

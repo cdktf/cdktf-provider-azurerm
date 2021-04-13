@@ -12,6 +12,7 @@ export interface LogAnalyticsWorkspaceConfig extends cdktf.TerraformMetaArgument
   readonly internetQueryEnabled?: boolean;
   readonly location: string;
   readonly name: string;
+  readonly reservationCapcityInGbPerDay?: number;
   readonly resourceGroupName: string;
   readonly retentionInDays?: number;
   readonly sku?: string;
@@ -61,6 +62,7 @@ export class LogAnalyticsWorkspace extends cdktf.TerraformResource {
     this._internetQueryEnabled = config.internetQueryEnabled;
     this._location = config.location;
     this._name = config.name;
+    this._reservationCapcityInGbPerDay = config.reservationCapcityInGbPerDay;
     this._resourceGroupName = config.resourceGroupName;
     this._retentionInDays = config.retentionInDays;
     this._sku = config.sku;
@@ -161,6 +163,22 @@ export class LogAnalyticsWorkspace extends cdktf.TerraformResource {
     return this.getStringAttribute('primary_shared_key');
   }
 
+  // reservation_capcity_in_gb_per_day - computed: false, optional: true, required: false
+  private _reservationCapcityInGbPerDay?: number;
+  public get reservationCapcityInGbPerDay() {
+    return this.getNumberAttribute('reservation_capcity_in_gb_per_day');
+  }
+  public set reservationCapcityInGbPerDay(value: number ) {
+    this._reservationCapcityInGbPerDay = value;
+  }
+  public resetReservationCapcityInGbPerDay() {
+    this._reservationCapcityInGbPerDay = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get reservationCapcityInGbPerDayInput() {
+    return this._reservationCapcityInGbPerDay
+  }
+
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
@@ -259,6 +277,7 @@ export class LogAnalyticsWorkspace extends cdktf.TerraformResource {
       internet_query_enabled: cdktf.booleanToTerraform(this._internetQueryEnabled),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
+      reservation_capcity_in_gb_per_day: cdktf.numberToTerraform(this._reservationCapcityInGbPerDay),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       retention_in_days: cdktf.numberToTerraform(this._retentionInDays),
       sku: cdktf.stringToTerraform(this._sku),
