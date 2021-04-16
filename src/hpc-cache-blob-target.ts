@@ -66,12 +66,12 @@ export class HpcCacheBlobTarget extends cdktf.TerraformResource {
   // ATTRIBUTES
   // ==========
 
-  // access_policy_name - computed: true, optional: true, required: false
+  // access_policy_name - computed: false, optional: true, required: false
   private _accessPolicyName?: string;
   public get accessPolicyName() {
     return this.getStringAttribute('access_policy_name');
   }
-  public set accessPolicyName(value: string) {
+  public set accessPolicyName(value: string ) {
     this._accessPolicyName = value;
   }
   public resetAccessPolicyName() {

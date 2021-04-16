@@ -49,6 +49,7 @@ export interface NetappVolumeExportPolicyRule {
   readonly nfsv3Enabled?: boolean;
   readonly nfsv4Enabled?: boolean;
   readonly protocolsEnabled?: string[];
+  readonly rootAccessEnabled?: boolean;
   readonly ruleIndex: number;
   readonly unixReadOnly?: boolean;
   readonly unixReadWrite?: boolean;
@@ -62,6 +63,7 @@ function netappVolumeExportPolicyRuleToTerraform(struct?: NetappVolumeExportPoli
     nfsv3_enabled: cdktf.booleanToTerraform(struct!.nfsv3Enabled),
     nfsv4_enabled: cdktf.booleanToTerraform(struct!.nfsv4Enabled),
     protocols_enabled: cdktf.listMapper(cdktf.stringToTerraform)(struct!.protocolsEnabled),
+    root_access_enabled: cdktf.booleanToTerraform(struct!.rootAccessEnabled),
     rule_index: cdktf.numberToTerraform(struct!.ruleIndex),
     unix_read_only: cdktf.booleanToTerraform(struct!.unixReadOnly),
     unix_read_write: cdktf.booleanToTerraform(struct!.unixReadWrite),

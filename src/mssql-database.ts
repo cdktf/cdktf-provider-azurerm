@@ -13,6 +13,7 @@ export interface MssqlDatabaseConfig extends cdktf.TerraformMetaArguments {
   readonly creationSourceDatabaseId?: string;
   readonly elasticPoolId?: string;
   readonly extendedAuditingPolicy?: MssqlDatabaseExtendedAuditingPolicy[];
+  readonly geoBackupEnabled?: boolean;
   readonly licenseType?: string;
   readonly maxSizeGb?: number;
   readonly minCapacity?: number;
@@ -152,6 +153,7 @@ export class MssqlDatabase extends cdktf.TerraformResource {
     this._creationSourceDatabaseId = config.creationSourceDatabaseId;
     this._elasticPoolId = config.elasticPoolId;
     this._extendedAuditingPolicy = config.extendedAuditingPolicy;
+    this._geoBackupEnabled = config.geoBackupEnabled;
     this._licenseType = config.licenseType;
     this._maxSizeGb = config.maxSizeGb;
     this._minCapacity = config.minCapacity;
@@ -271,6 +273,22 @@ export class MssqlDatabase extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get extendedAuditingPolicyInput() {
     return this._extendedAuditingPolicy
+  }
+
+  // geo_backup_enabled - computed: false, optional: true, required: false
+  private _geoBackupEnabled?: boolean;
+  public get geoBackupEnabled() {
+    return this.getBooleanAttribute('geo_backup_enabled');
+  }
+  public set geoBackupEnabled(value: boolean ) {
+    this._geoBackupEnabled = value;
+  }
+  public resetGeoBackupEnabled() {
+    this._geoBackupEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get geoBackupEnabledInput() {
+    return this._geoBackupEnabled
   }
 
   // id - computed: true, optional: true, required: false
@@ -588,6 +606,7 @@ export class MssqlDatabase extends cdktf.TerraformResource {
       creation_source_database_id: cdktf.stringToTerraform(this._creationSourceDatabaseId),
       elastic_pool_id: cdktf.stringToTerraform(this._elasticPoolId),
       extended_auditing_policy: cdktf.listMapper(mssqlDatabaseExtendedAuditingPolicyToTerraform)(this._extendedAuditingPolicy),
+      geo_backup_enabled: cdktf.booleanToTerraform(this._geoBackupEnabled),
       license_type: cdktf.stringToTerraform(this._licenseType),
       max_size_gb: cdktf.numberToTerraform(this._maxSizeGb),
       min_capacity: cdktf.numberToTerraform(this._minCapacity),

@@ -33,6 +33,21 @@ function monitorActivityLogAlertActionToTerraform(struct?: MonitorActivityLogAle
   }
 }
 
+export interface MonitorActivityLogAlertCriteriaServiceHealth {
+  readonly events?: string[];
+  readonly locations?: string[];
+  readonly services?: string[];
+}
+
+function monitorActivityLogAlertCriteriaServiceHealthToTerraform(struct?: MonitorActivityLogAlertCriteriaServiceHealth): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    events: cdktf.listMapper(cdktf.stringToTerraform)(struct!.events),
+    locations: cdktf.listMapper(cdktf.stringToTerraform)(struct!.locations),
+    services: cdktf.listMapper(cdktf.stringToTerraform)(struct!.services),
+  }
+}
+
 export interface MonitorActivityLogAlertCriteria {
   readonly caller?: string;
   readonly category: string;
@@ -47,6 +62,8 @@ export interface MonitorActivityLogAlertCriteria {
   readonly resourceType?: string;
   readonly status?: string;
   readonly subStatus?: string;
+  /** service_health block */
+  readonly serviceHealth?: MonitorActivityLogAlertCriteriaServiceHealth[];
 }
 
 function monitorActivityLogAlertCriteriaToTerraform(struct?: MonitorActivityLogAlertCriteria): any {
@@ -65,6 +82,7 @@ function monitorActivityLogAlertCriteriaToTerraform(struct?: MonitorActivityLogA
     resource_type: cdktf.stringToTerraform(struct!.resourceType),
     status: cdktf.stringToTerraform(struct!.status),
     sub_status: cdktf.stringToTerraform(struct!.subStatus),
+    service_health: cdktf.listMapper(monitorActivityLogAlertCriteriaServiceHealthToTerraform)(struct!.serviceHealth),
   }
 }
 

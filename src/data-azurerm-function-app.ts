@@ -86,11 +86,6 @@ export class DataAzurermFunctionAppSiteConfigIpRestriction extends cdktf.Complex
     return this.getStringAttribute('service_tag');
   }
 
-  // subnet_id - computed: true, optional: false, required: false
-  public get subnetId() {
-    return this.getStringAttribute('subnet_id');
-  }
-
   // virtual_network_subnet_id - computed: true, optional: false, required: false
   public get virtualNetworkSubnetId() {
     return this.getStringAttribute('virtual_network_subnet_id');
@@ -121,11 +116,6 @@ export class DataAzurermFunctionAppSiteConfigScmIpRestriction extends cdktf.Comp
   // service_tag - computed: true, optional: false, required: false
   public get serviceTag() {
     return this.getStringAttribute('service_tag');
-  }
-
-  // subnet_id - computed: true, optional: false, required: false
-  public get subnetId() {
-    return this.getStringAttribute('subnet_id');
   }
 
   // virtual_network_subnet_id - computed: true, optional: false, required: false
@@ -298,6 +288,11 @@ export class DataAzurermFunctionApp extends cdktf.TerraformDataSource {
   // app_settings - computed: true, optional: false, required: false
   public appSettings(key: string): string {
     return new cdktf.StringMap(this, 'app_settings').lookup(key);
+  }
+
+  // client_cert_mode - computed: true, optional: false, required: false
+  public get clientCertMode() {
+    return this.getStringAttribute('client_cert_mode');
   }
 
   // connection_string - computed: true, optional: false, required: false

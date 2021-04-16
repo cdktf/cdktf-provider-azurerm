@@ -9,14 +9,17 @@ import * as cdktf from 'cdktf';
 export interface KustoEventgridDataConnectionConfig extends cdktf.TerraformMetaArguments {
   readonly blobStorageEventType?: string;
   readonly clusterName: string;
+  readonly dataFormat?: string;
   readonly databaseName: string;
   readonly eventhubConsumerGroupName: string;
   readonly eventhubId: string;
   readonly location: string;
+  readonly mappingRuleName?: string;
   readonly name: string;
   readonly resourceGroupName: string;
   readonly skipFirstRecord?: boolean;
   readonly storageAccountId: string;
+  readonly tableName?: string;
   /** timeouts block */
   readonly timeouts?: KustoEventgridDataConnectionTimeouts;
 }
@@ -59,14 +62,17 @@ export class KustoEventgridDataConnection extends cdktf.TerraformResource {
     });
     this._blobStorageEventType = config.blobStorageEventType;
     this._clusterName = config.clusterName;
+    this._dataFormat = config.dataFormat;
     this._databaseName = config.databaseName;
     this._eventhubConsumerGroupName = config.eventhubConsumerGroupName;
     this._eventhubId = config.eventhubId;
     this._location = config.location;
+    this._mappingRuleName = config.mappingRuleName;
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
     this._skipFirstRecord = config.skipFirstRecord;
     this._storageAccountId = config.storageAccountId;
+    this._tableName = config.tableName;
     this._timeouts = config.timeouts;
   }
 
@@ -101,6 +107,22 @@ export class KustoEventgridDataConnection extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get clusterNameInput() {
     return this._clusterName
+  }
+
+  // data_format - computed: false, optional: true, required: false
+  private _dataFormat?: string;
+  public get dataFormat() {
+    return this.getStringAttribute('data_format');
+  }
+  public set dataFormat(value: string ) {
+    this._dataFormat = value;
+  }
+  public resetDataFormat() {
+    this._dataFormat = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dataFormatInput() {
+    return this._dataFormat
   }
 
   // database_name - computed: false, optional: false, required: true
@@ -160,6 +182,22 @@ export class KustoEventgridDataConnection extends cdktf.TerraformResource {
     return this._location
   }
 
+  // mapping_rule_name - computed: false, optional: true, required: false
+  private _mappingRuleName?: string;
+  public get mappingRuleName() {
+    return this.getStringAttribute('mapping_rule_name');
+  }
+  public set mappingRuleName(value: string ) {
+    this._mappingRuleName = value;
+  }
+  public resetMappingRuleName() {
+    this._mappingRuleName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get mappingRuleNameInput() {
+    return this._mappingRuleName
+  }
+
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
@@ -215,6 +253,22 @@ export class KustoEventgridDataConnection extends cdktf.TerraformResource {
     return this._storageAccountId
   }
 
+  // table_name - computed: false, optional: true, required: false
+  private _tableName?: string;
+  public get tableName() {
+    return this.getStringAttribute('table_name');
+  }
+  public set tableName(value: string ) {
+    this._tableName = value;
+  }
+  public resetTableName() {
+    this._tableName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tableNameInput() {
+    return this._tableName
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: KustoEventgridDataConnectionTimeouts;
   public get timeouts() {
@@ -239,14 +293,17 @@ export class KustoEventgridDataConnection extends cdktf.TerraformResource {
     return {
       blob_storage_event_type: cdktf.stringToTerraform(this._blobStorageEventType),
       cluster_name: cdktf.stringToTerraform(this._clusterName),
+      data_format: cdktf.stringToTerraform(this._dataFormat),
       database_name: cdktf.stringToTerraform(this._databaseName),
       eventhub_consumer_group_name: cdktf.stringToTerraform(this._eventhubConsumerGroupName),
       eventhub_id: cdktf.stringToTerraform(this._eventhubId),
       location: cdktf.stringToTerraform(this._location),
+      mapping_rule_name: cdktf.stringToTerraform(this._mappingRuleName),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       skip_first_record: cdktf.booleanToTerraform(this._skipFirstRecord),
       storage_account_id: cdktf.stringToTerraform(this._storageAccountId),
+      table_name: cdktf.stringToTerraform(this._tableName),
       timeouts: kustoEventgridDataConnectionTimeoutsToTerraform(this._timeouts),
     };
   }

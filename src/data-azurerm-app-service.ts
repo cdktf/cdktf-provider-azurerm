@@ -68,11 +68,6 @@ export class DataAzurermAppServiceSiteConfigIpRestriction extends cdktf.ComplexC
     return this.getStringAttribute('service_tag');
   }
 
-  // subnet_id - computed: true, optional: false, required: false
-  public get subnetId() {
-    return this.getStringAttribute('subnet_id');
-  }
-
   // virtual_network_subnet_id - computed: true, optional: false, required: false
   public get virtualNetworkSubnetId() {
     return this.getStringAttribute('virtual_network_subnet_id');
@@ -103,11 +98,6 @@ export class DataAzurermAppServiceSiteConfigScmIpRestriction extends cdktf.Compl
   // service_tag - computed: true, optional: false, required: false
   public get serviceTag() {
     return this.getStringAttribute('service_tag');
-  }
-
-  // subnet_id - computed: true, optional: false, required: false
-  public get subnetId() {
-    return this.getStringAttribute('subnet_id');
   }
 
   // virtual_network_subnet_id - computed: true, optional: false, required: false
