@@ -132,6 +132,11 @@ export class UserAssignedIdentity extends cdktf.TerraformResource {
     return this._tags
   }
 
+  // tenant_id - computed: true, optional: false, required: false
+  public get tenantId() {
+    return this.getStringAttribute('tenant_id');
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: UserAssignedIdentityTimeouts;
   public get timeouts() {

@@ -7,10 +7,8 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface WebApplicationFirewallPolicyConfig extends cdktf.TerraformMetaArguments {
-  readonly httpListenerIds?: string[];
   readonly location: string;
   readonly name: string;
-  readonly pathBasedRuleIds?: string[];
   readonly resourceGroupName: string;
   readonly tags?: { [key: string]: string };
   /** custom_rules block */
@@ -190,10 +188,8 @@ export class WebApplicationFirewallPolicy extends cdktf.TerraformResource {
       count: config.count,
       lifecycle: config.lifecycle
     });
-    this._httpListenerIds = config.httpListenerIds;
     this._location = config.location;
     this._name = config.name;
-    this._pathBasedRuleIds = config.pathBasedRuleIds;
     this._resourceGroupName = config.resourceGroupName;
     this._tags = config.tags;
     this._customRules = config.customRules;
@@ -206,20 +202,9 @@ export class WebApplicationFirewallPolicy extends cdktf.TerraformResource {
   // ATTRIBUTES
   // ==========
 
-  // http_listener_ids - computed: false, optional: true, required: false
-  private _httpListenerIds?: string[];
+  // http_listener_ids - computed: true, optional: false, required: false
   public get httpListenerIds() {
     return this.getListAttribute('http_listener_ids');
-  }
-  public set httpListenerIds(value: string[] ) {
-    this._httpListenerIds = value;
-  }
-  public resetHttpListenerIds() {
-    this._httpListenerIds = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get httpListenerIdsInput() {
-    return this._httpListenerIds
   }
 
   // id - computed: true, optional: true, required: false
@@ -253,20 +238,9 @@ export class WebApplicationFirewallPolicy extends cdktf.TerraformResource {
     return this._name
   }
 
-  // path_based_rule_ids - computed: false, optional: true, required: false
-  private _pathBasedRuleIds?: string[];
+  // path_based_rule_ids - computed: true, optional: false, required: false
   public get pathBasedRuleIds() {
     return this.getListAttribute('path_based_rule_ids');
-  }
-  public set pathBasedRuleIds(value: string[] ) {
-    this._pathBasedRuleIds = value;
-  }
-  public resetPathBasedRuleIds() {
-    this._pathBasedRuleIds = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get pathBasedRuleIdsInput() {
-    return this._pathBasedRuleIds
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -365,10 +339,8 @@ export class WebApplicationFirewallPolicy extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
-      http_listener_ids: cdktf.listMapper(cdktf.stringToTerraform)(this._httpListenerIds),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
-      path_based_rule_ids: cdktf.listMapper(cdktf.stringToTerraform)(this._pathBasedRuleIds),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
       custom_rules: cdktf.listMapper(webApplicationFirewallPolicyCustomRulesToTerraform)(this._customRules),

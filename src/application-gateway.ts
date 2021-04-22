@@ -545,6 +545,7 @@ function applicationGatewayTrustedRootCertificateToTerraform(struct?: Applicatio
 export interface ApplicationGatewayUrlPathMapPathRule {
   readonly backendAddressPoolName?: string;
   readonly backendHttpSettingsName?: string;
+  readonly firewallPolicyId?: string;
   readonly name: string;
   readonly paths: string[];
   readonly redirectConfigurationName?: string;
@@ -556,6 +557,7 @@ function applicationGatewayUrlPathMapPathRuleToTerraform(struct?: ApplicationGat
   return {
     backend_address_pool_name: cdktf.stringToTerraform(struct!.backendAddressPoolName),
     backend_http_settings_name: cdktf.stringToTerraform(struct!.backendHttpSettingsName),
+    firewall_policy_id: cdktf.stringToTerraform(struct!.firewallPolicyId),
     name: cdktf.stringToTerraform(struct!.name),
     paths: cdktf.listMapper(cdktf.stringToTerraform)(struct!.paths),
     redirect_configuration_name: cdktf.stringToTerraform(struct!.redirectConfigurationName),

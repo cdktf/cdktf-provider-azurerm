@@ -10,6 +10,7 @@ export interface FunctionAppConfig extends cdktf.TerraformMetaArguments {
   readonly appServicePlanId: string;
   readonly appSettings?: { [key: string]: string };
   readonly clientAffinityEnabled?: boolean;
+  readonly clientCertMode?: string;
   readonly dailyMemoryTimeQuota?: number;
   readonly enableBuiltinLogging?: boolean;
   readonly enabled?: boolean;
@@ -197,7 +198,6 @@ export interface FunctionAppSiteConfigIpRestriction {
   readonly name?: string;
   readonly priority?: number;
   readonly serviceTag?: string;
-  readonly subnetId?: string;
   readonly virtualNetworkSubnetId?: string;
 }
 
@@ -209,7 +209,6 @@ function functionAppSiteConfigIpRestrictionToTerraform(struct?: FunctionAppSiteC
     name: cdktf.stringToTerraform(struct!.name),
     priority: cdktf.numberToTerraform(struct!.priority),
     service_tag: cdktf.stringToTerraform(struct!.serviceTag),
-    subnet_id: cdktf.stringToTerraform(struct!.subnetId),
     virtual_network_subnet_id: cdktf.stringToTerraform(struct!.virtualNetworkSubnetId),
   }
 }
@@ -220,7 +219,6 @@ export interface FunctionAppSiteConfigScmIpRestriction {
   readonly name?: string;
   readonly priority?: number;
   readonly serviceTag?: string;
-  readonly subnetId?: string;
   readonly virtualNetworkSubnetId?: string;
 }
 
@@ -232,7 +230,6 @@ function functionAppSiteConfigScmIpRestrictionToTerraform(struct?: FunctionAppSi
     name: cdktf.stringToTerraform(struct!.name),
     priority: cdktf.numberToTerraform(struct!.priority),
     service_tag: cdktf.stringToTerraform(struct!.serviceTag),
-    subnet_id: cdktf.stringToTerraform(struct!.subnetId),
     virtual_network_subnet_id: cdktf.stringToTerraform(struct!.virtualNetworkSubnetId),
   }
 }
@@ -349,6 +346,7 @@ export class FunctionApp extends cdktf.TerraformResource {
     this._appServicePlanId = config.appServicePlanId;
     this._appSettings = config.appSettings;
     this._clientAffinityEnabled = config.clientAffinityEnabled;
+    this._clientCertMode = config.clientCertMode;
     this._dailyMemoryTimeQuota = config.dailyMemoryTimeQuota;
     this._enableBuiltinLogging = config.enableBuiltinLogging;
     this._enabled = config.enabled;
@@ -417,6 +415,22 @@ export class FunctionApp extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get clientAffinityEnabledInput() {
     return this._clientAffinityEnabled
+  }
+
+  // client_cert_mode - computed: false, optional: true, required: false
+  private _clientCertMode?: string;
+  public get clientCertMode() {
+    return this.getStringAttribute('client_cert_mode');
+  }
+  public set clientCertMode(value: string ) {
+    this._clientCertMode = value;
+  }
+  public resetClientCertMode() {
+    this._clientCertMode = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get clientCertModeInput() {
+    return this._clientCertMode
   }
 
   // custom_domain_verification_id - computed: true, optional: false, required: false
@@ -758,6 +772,7 @@ export class FunctionApp extends cdktf.TerraformResource {
       app_service_plan_id: cdktf.stringToTerraform(this._appServicePlanId),
       app_settings: cdktf.hashMapper(cdktf.anyToTerraform)(this._appSettings),
       client_affinity_enabled: cdktf.booleanToTerraform(this._clientAffinityEnabled),
+      client_cert_mode: cdktf.stringToTerraform(this._clientCertMode),
       daily_memory_time_quota: cdktf.numberToTerraform(this._dailyMemoryTimeQuota),
       enable_builtin_logging: cdktf.booleanToTerraform(this._enableBuiltinLogging),
       enabled: cdktf.booleanToTerraform(this._enabled),

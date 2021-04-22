@@ -10,6 +10,7 @@ export interface PublicIpConfig extends cdktf.TerraformMetaArguments {
   readonly allocationMethod: string;
   readonly domainNameLabel?: string;
   readonly idleTimeoutInMinutes?: number;
+  readonly ipTags?: { [key: string]: string };
   readonly ipVersion?: string;
   readonly location: string;
   readonly name: string;
@@ -62,6 +63,7 @@ export class PublicIp extends cdktf.TerraformResource {
     this._allocationMethod = config.allocationMethod;
     this._domainNameLabel = config.domainNameLabel;
     this._idleTimeoutInMinutes = config.idleTimeoutInMinutes;
+    this._ipTags = config.ipTags;
     this._ipVersion = config.ipVersion;
     this._location = config.location;
     this._name = config.name;
@@ -136,6 +138,22 @@ export class PublicIp extends cdktf.TerraformResource {
   // ip_address - computed: true, optional: false, required: false
   public get ipAddress() {
     return this.getStringAttribute('ip_address');
+  }
+
+  // ip_tags - computed: false, optional: true, required: false
+  private _ipTags?: { [key: string]: string };
+  public get ipTags() {
+    return this.interpolationForAttribute('ip_tags') as any;
+  }
+  public set ipTags(value: { [key: string]: string } ) {
+    this._ipTags = value;
+  }
+  public resetIpTags() {
+    this._ipTags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ipTagsInput() {
+    return this._ipTags
   }
 
   // ip_version - computed: false, optional: true, required: false
@@ -298,6 +316,7 @@ export class PublicIp extends cdktf.TerraformResource {
       allocation_method: cdktf.stringToTerraform(this._allocationMethod),
       domain_name_label: cdktf.stringToTerraform(this._domainNameLabel),
       idle_timeout_in_minutes: cdktf.numberToTerraform(this._idleTimeoutInMinutes),
+      ip_tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._ipTags),
       ip_version: cdktf.stringToTerraform(this._ipVersion),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
