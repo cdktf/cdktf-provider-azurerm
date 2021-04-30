@@ -274,8 +274,26 @@ function appServiceSlotLogsToTerraform(struct?: AppServiceSlotLogs): any {
   }
 }
 
+export interface AppServiceSlotSiteConfigIpRestrictionHeaders {
+  readonly xAzureFdid?: string[];
+  readonly xFdHealthProbe?: string[];
+  readonly xForwardedFor?: string[];
+  readonly xForwardedHost?: string[];
+}
+
+function appServiceSlotSiteConfigIpRestrictionHeadersToTerraform(struct?: AppServiceSlotSiteConfigIpRestrictionHeaders): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    x_azure_fdid: cdktf.listMapper(cdktf.stringToTerraform)(struct!.xAzureFdid),
+    x_fd_health_probe: cdktf.listMapper(cdktf.stringToTerraform)(struct!.xFdHealthProbe),
+    x_forwarded_for: cdktf.listMapper(cdktf.stringToTerraform)(struct!.xForwardedFor),
+    x_forwarded_host: cdktf.listMapper(cdktf.stringToTerraform)(struct!.xForwardedHost),
+  }
+}
+
 export interface AppServiceSlotSiteConfigIpRestriction {
   readonly action?: string;
+  readonly headers?: AppServiceSlotSiteConfigIpRestrictionHeaders[];
   readonly ipAddress?: string;
   readonly name?: string;
   readonly priority?: number;
@@ -287,6 +305,7 @@ function appServiceSlotSiteConfigIpRestrictionToTerraform(struct?: AppServiceSlo
   if (!cdktf.canInspect(struct)) { return struct; }
   return {
     action: cdktf.stringToTerraform(struct!.action),
+    headers: cdktf.listMapper(appServiceSlotSiteConfigIpRestrictionHeadersToTerraform)(struct!.headers),
     ip_address: cdktf.stringToTerraform(struct!.ipAddress),
     name: cdktf.stringToTerraform(struct!.name),
     priority: cdktf.numberToTerraform(struct!.priority),
@@ -295,8 +314,26 @@ function appServiceSlotSiteConfigIpRestrictionToTerraform(struct?: AppServiceSlo
   }
 }
 
+export interface AppServiceSlotSiteConfigScmIpRestrictionHeaders {
+  readonly xAzureFdid?: string[];
+  readonly xFdHealthProbe?: string[];
+  readonly xForwardedFor?: string[];
+  readonly xForwardedHost?: string[];
+}
+
+function appServiceSlotSiteConfigScmIpRestrictionHeadersToTerraform(struct?: AppServiceSlotSiteConfigScmIpRestrictionHeaders): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    x_azure_fdid: cdktf.listMapper(cdktf.stringToTerraform)(struct!.xAzureFdid),
+    x_fd_health_probe: cdktf.listMapper(cdktf.stringToTerraform)(struct!.xFdHealthProbe),
+    x_forwarded_for: cdktf.listMapper(cdktf.stringToTerraform)(struct!.xForwardedFor),
+    x_forwarded_host: cdktf.listMapper(cdktf.stringToTerraform)(struct!.xForwardedHost),
+  }
+}
+
 export interface AppServiceSlotSiteConfigScmIpRestriction {
   readonly action?: string;
+  readonly headers?: AppServiceSlotSiteConfigScmIpRestrictionHeaders[];
   readonly ipAddress?: string;
   readonly name?: string;
   readonly priority?: number;
@@ -308,6 +345,7 @@ function appServiceSlotSiteConfigScmIpRestrictionToTerraform(struct?: AppService
   if (!cdktf.canInspect(struct)) { return struct; }
   return {
     action: cdktf.stringToTerraform(struct!.action),
+    headers: cdktf.listMapper(appServiceSlotSiteConfigScmIpRestrictionHeadersToTerraform)(struct!.headers),
     ip_address: cdktf.stringToTerraform(struct!.ipAddress),
     name: cdktf.stringToTerraform(struct!.name),
     priority: cdktf.numberToTerraform(struct!.priority),

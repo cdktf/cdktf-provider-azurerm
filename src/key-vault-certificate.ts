@@ -74,8 +74,9 @@ function keyVaultCertificateCertificatePolicyIssuerParametersToTerraform(struct?
 }
 
 export interface KeyVaultCertificateCertificatePolicyKeyProperties {
+  readonly curve?: string;
   readonly exportable: boolean;
-  readonly keySize: number;
+  readonly keySize?: number;
   readonly keyType: string;
   readonly reuseKey: boolean;
 }
@@ -83,6 +84,7 @@ export interface KeyVaultCertificateCertificatePolicyKeyProperties {
 function keyVaultCertificateCertificatePolicyKeyPropertiesToTerraform(struct?: KeyVaultCertificateCertificatePolicyKeyProperties): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   return {
+    curve: cdktf.stringToTerraform(struct!.curve),
     exportable: cdktf.booleanToTerraform(struct!.exportable),
     key_size: cdktf.numberToTerraform(struct!.keySize),
     key_type: cdktf.stringToTerraform(struct!.keyType),

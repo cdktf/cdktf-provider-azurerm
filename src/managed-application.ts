@@ -12,6 +12,7 @@ export interface ManagedApplicationConfig extends cdktf.TerraformMetaArguments {
   readonly location: string;
   readonly managedResourceGroupName: string;
   readonly name: string;
+  readonly parameterValues?: string;
   readonly parameters?: { [key: string]: string };
   readonly resourceGroupName: string;
   readonly tags?: { [key: string]: string };
@@ -81,6 +82,7 @@ export class ManagedApplication extends cdktf.TerraformResource {
     this._location = config.location;
     this._managedResourceGroupName = config.managedResourceGroupName;
     this._name = config.name;
+    this._parameterValues = config.parameterValues;
     this._parameters = config.parameters;
     this._resourceGroupName = config.resourceGroupName;
     this._tags = config.tags;
@@ -170,12 +172,28 @@ export class ManagedApplication extends cdktf.TerraformResource {
     return new cdktf.StringMap(this, 'outputs').lookup(key);
   }
 
-  // parameters - computed: false, optional: true, required: false
-  private _parameters?: { [key: string]: string };
-  public get parameters() {
-    return this.interpolationForAttribute('parameters') as any;
+  // parameter_values - computed: true, optional: true, required: false
+  private _parameterValues?: string;
+  public get parameterValues() {
+    return this.getStringAttribute('parameter_values');
   }
-  public set parameters(value: { [key: string]: string } ) {
+  public set parameterValues(value: string) {
+    this._parameterValues = value;
+  }
+  public resetParameterValues() {
+    this._parameterValues = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get parameterValuesInput() {
+    return this._parameterValues
+  }
+
+  // parameters - computed: true, optional: true, required: false
+  private _parameters?: { [key: string]: string }
+  public get parameters(): { [key: string]: string } {
+    return this.interpolationForAttribute('parameters') as any; // Getting the computed value is not yet implemented
+  }
+  public set parameters(value: { [key: string]: string }) {
     this._parameters = value;
   }
   public resetParameters() {
@@ -258,6 +276,7 @@ export class ManagedApplication extends cdktf.TerraformResource {
       location: cdktf.stringToTerraform(this._location),
       managed_resource_group_name: cdktf.stringToTerraform(this._managedResourceGroupName),
       name: cdktf.stringToTerraform(this._name),
+      parameter_values: cdktf.stringToTerraform(this._parameterValues),
       parameters: cdktf.hashMapper(cdktf.anyToTerraform)(this._parameters),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),

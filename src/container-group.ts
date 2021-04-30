@@ -8,6 +8,7 @@ import * as cdktf from 'cdktf';
 
 export interface ContainerGroupConfig extends cdktf.TerraformMetaArguments {
   readonly dnsNameLabel?: string;
+  readonly exposedPort?: ContainerGroupExposedPort[];
   readonly ipAddressType?: string;
   readonly location: string;
   readonly name: string;
@@ -29,6 +30,19 @@ export interface ContainerGroupConfig extends cdktf.TerraformMetaArguments {
   /** timeouts block */
   readonly timeouts?: ContainerGroupTimeouts;
 }
+export interface ContainerGroupExposedPort {
+  readonly port?: number;
+  readonly protocol?: string;
+}
+
+function containerGroupExposedPortToTerraform(struct?: ContainerGroupExposedPort): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    port: cdktf.numberToTerraform(struct!.port),
+    protocol: cdktf.stringToTerraform(struct!.protocol),
+  }
+}
+
 export interface ContainerGroupContainerGpu {
   readonly count?: number;
   readonly sku?: string;
@@ -324,6 +338,7 @@ export class ContainerGroup extends cdktf.TerraformResource {
       lifecycle: config.lifecycle
     });
     this._dnsNameLabel = config.dnsNameLabel;
+    this._exposedPort = config.exposedPort;
     this._ipAddressType = config.ipAddressType;
     this._location = config.location;
     this._name = config.name;
@@ -358,6 +373,22 @@ export class ContainerGroup extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get dnsNameLabelInput() {
     return this._dnsNameLabel
+  }
+
+  // exposed_port - computed: true, optional: true, required: false
+  private _exposedPort?: ContainerGroupExposedPort[]
+  public get exposedPort(): ContainerGroupExposedPort[] {
+    return this.interpolationForAttribute('exposed_port') as any; // Getting the computed value is not yet implemented
+  }
+  public set exposedPort(value: ContainerGroupExposedPort[]) {
+    this._exposedPort = value;
+  }
+  public resetExposedPort() {
+    this._exposedPort = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get exposedPortInput() {
+    return this._exposedPort
   }
 
   // fqdn - computed: true, optional: false, required: false
@@ -591,6 +622,7 @@ export class ContainerGroup extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       dns_name_label: cdktf.stringToTerraform(this._dnsNameLabel),
+      exposed_port: cdktf.listMapper(containerGroupExposedPortToTerraform)(this._exposedPort),
       ip_address_type: cdktf.stringToTerraform(this._ipAddressType),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),

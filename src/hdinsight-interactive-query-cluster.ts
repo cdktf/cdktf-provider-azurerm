@@ -22,6 +22,8 @@ export interface HdinsightInteractiveQueryClusterConfig extends cdktf.TerraformM
   readonly metastores?: HdinsightInteractiveQueryClusterMetastores[];
   /** monitor block */
   readonly monitor?: HdinsightInteractiveQueryClusterMonitor[];
+  /** network block */
+  readonly network?: HdinsightInteractiveQueryClusterNetwork[];
   /** roles block */
   readonly roles: HdinsightInteractiveQueryClusterRoles[];
   /** storage_account block */
@@ -136,6 +138,19 @@ function hdinsightInteractiveQueryClusterMonitorToTerraform(struct?: HdinsightIn
   return {
     log_analytics_workspace_id: cdktf.stringToTerraform(struct!.logAnalyticsWorkspaceId),
     primary_key: cdktf.stringToTerraform(struct!.primaryKey),
+  }
+}
+
+export interface HdinsightInteractiveQueryClusterNetwork {
+  readonly connectionDirection?: string;
+  readonly privateLinkEnabled?: boolean;
+}
+
+function hdinsightInteractiveQueryClusterNetworkToTerraform(struct?: HdinsightInteractiveQueryClusterNetwork): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    connection_direction: cdktf.stringToTerraform(struct!.connectionDirection),
+    private_link_enabled: cdktf.booleanToTerraform(struct!.privateLinkEnabled),
   }
 }
 
@@ -304,6 +319,7 @@ export class HdinsightInteractiveQueryCluster extends cdktf.TerraformResource {
     this._gateway = config.gateway;
     this._metastores = config.metastores;
     this._monitor = config.monitor;
+    this._network = config.network;
     this._roles = config.roles;
     this._storageAccount = config.storageAccount;
     this._storageAccountGen2 = config.storageAccountGen2;
@@ -484,6 +500,22 @@ export class HdinsightInteractiveQueryCluster extends cdktf.TerraformResource {
     return this._monitor
   }
 
+  // network - computed: false, optional: true, required: false
+  private _network?: HdinsightInteractiveQueryClusterNetwork[];
+  public get network() {
+    return this.interpolationForAttribute('network') as any;
+  }
+  public set network(value: HdinsightInteractiveQueryClusterNetwork[] ) {
+    this._network = value;
+  }
+  public resetNetwork() {
+    this._network = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get networkInput() {
+    return this._network
+  }
+
   // roles - computed: false, optional: false, required: true
   private _roles: HdinsightInteractiveQueryClusterRoles[];
   public get roles() {
@@ -562,6 +594,7 @@ export class HdinsightInteractiveQueryCluster extends cdktf.TerraformResource {
       gateway: cdktf.listMapper(hdinsightInteractiveQueryClusterGatewayToTerraform)(this._gateway),
       metastores: cdktf.listMapper(hdinsightInteractiveQueryClusterMetastoresToTerraform)(this._metastores),
       monitor: cdktf.listMapper(hdinsightInteractiveQueryClusterMonitorToTerraform)(this._monitor),
+      network: cdktf.listMapper(hdinsightInteractiveQueryClusterNetworkToTerraform)(this._network),
       roles: cdktf.listMapper(hdinsightInteractiveQueryClusterRolesToTerraform)(this._roles),
       storage_account: cdktf.listMapper(hdinsightInteractiveQueryClusterStorageAccountToTerraform)(this._storageAccount),
       storage_account_gen2: cdktf.listMapper(hdinsightInteractiveQueryClusterStorageAccountGen2ToTerraform)(this._storageAccountGen2),

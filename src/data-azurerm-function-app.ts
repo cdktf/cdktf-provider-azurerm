@@ -160,6 +160,11 @@ export class DataAzurermFunctionAppSiteConfig extends cdktf.ComplexComputedList 
     return this.interpolationForAttribute('ip_restriction') as any;
   }
 
+  // java_version - computed: true, optional: false, required: false
+  public get javaVersion() {
+    return this.getStringAttribute('java_version');
+  }
+
   // linux_fx_version - computed: true, optional: false, required: false
   public get linuxFxVersion() {
     return this.getStringAttribute('linux_fx_version');

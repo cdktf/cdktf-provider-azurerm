@@ -31,6 +31,11 @@ export class DataAzurermNetappVolumeDataProtectionReplication extends cdktf.Comp
     return this.getStringAttribute('remote_volume_resource_id');
   }
 
+  // replication_frequency - computed: true, optional: false, required: false
+  public get replicationFrequency() {
+    return this.getStringAttribute('replication_frequency');
+  }
+
   // replication_schedule - computed: true, optional: false, required: false
   public get replicationSchedule() {
     return this.getStringAttribute('replication_schedule');

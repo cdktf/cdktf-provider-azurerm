@@ -9,6 +9,7 @@ import * as cdktf from 'cdktf';
 export interface ContainerRegistryConfig extends cdktf.TerraformMetaArguments {
   readonly adminEnabled?: boolean;
   readonly georeplicationLocations?: string[];
+  readonly georeplications?: ContainerRegistryGeoreplications[];
   readonly location: string;
   readonly name: string;
   readonly networkRuleSet?: ContainerRegistryNetworkRuleSet[];
@@ -23,6 +24,19 @@ export interface ContainerRegistryConfig extends cdktf.TerraformMetaArguments {
   /** timeouts block */
   readonly timeouts?: ContainerRegistryTimeouts;
 }
+export interface ContainerRegistryGeoreplications {
+  readonly location?: string;
+  readonly tags?: { [key: string]: string };
+}
+
+function containerRegistryGeoreplicationsToTerraform(struct?: ContainerRegistryGeoreplications): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    location: cdktf.stringToTerraform(struct!.location),
+    tags: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.tags),
+  }
+}
+
 export interface ContainerRegistryNetworkRuleSetIpRule {
   readonly action?: string;
   readonly ipRange?: string;
@@ -127,6 +141,7 @@ export class ContainerRegistry extends cdktf.TerraformResource {
     });
     this._adminEnabled = config.adminEnabled;
     this._georeplicationLocations = config.georeplicationLocations;
+    this._georeplications = config.georeplications;
     this._location = config.location;
     this._name = config.name;
     this._networkRuleSet = config.networkRuleSet;
@@ -171,12 +186,12 @@ export class ContainerRegistry extends cdktf.TerraformResource {
     return this.getStringAttribute('admin_username');
   }
 
-  // georeplication_locations - computed: false, optional: true, required: false
+  // georeplication_locations - computed: true, optional: true, required: false
   private _georeplicationLocations?: string[];
   public get georeplicationLocations() {
     return this.getListAttribute('georeplication_locations');
   }
-  public set georeplicationLocations(value: string[] ) {
+  public set georeplicationLocations(value: string[]) {
     this._georeplicationLocations = value;
   }
   public resetGeoreplicationLocations() {
@@ -185,6 +200,22 @@ export class ContainerRegistry extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get georeplicationLocationsInput() {
     return this._georeplicationLocations
+  }
+
+  // georeplications - computed: true, optional: true, required: false
+  private _georeplications?: ContainerRegistryGeoreplications[]
+  public get georeplications(): ContainerRegistryGeoreplications[] {
+    return this.interpolationForAttribute('georeplications') as any; // Getting the computed value is not yet implemented
+  }
+  public set georeplications(value: ContainerRegistryGeoreplications[]) {
+    this._georeplications = value;
+  }
+  public resetGeoreplications() {
+    this._georeplications = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get georeplicationsInput() {
+    return this._georeplications
   }
 
   // id - computed: true, optional: true, required: false
@@ -388,6 +419,7 @@ export class ContainerRegistry extends cdktf.TerraformResource {
     return {
       admin_enabled: cdktf.booleanToTerraform(this._adminEnabled),
       georeplication_locations: cdktf.listMapper(cdktf.stringToTerraform)(this._georeplicationLocations),
+      georeplications: cdktf.listMapper(containerRegistryGeoreplicationsToTerraform)(this._georeplications),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
       network_rule_set: cdktf.listMapper(containerRegistryNetworkRuleSetToTerraform)(this._networkRuleSet),

@@ -22,6 +22,11 @@ export class DataAzurermKeyVaultCertificateCertificatePolicyIssuerParameters ext
 }
 export class DataAzurermKeyVaultCertificateCertificatePolicyKeyProperties extends cdktf.ComplexComputedList {
 
+  // curve - computed: true, optional: false, required: false
+  public get curve() {
+    return this.getStringAttribute('curve');
+  }
+
   // exportable - computed: true, optional: false, required: false
   public get exportable() {
     return this.getBooleanAttribute('exportable');

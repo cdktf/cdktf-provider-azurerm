@@ -20,9 +20,24 @@ export interface DataFactoryLinkedServiceAzureFileStorageConfig extends cdktf.Te
   readonly password?: string;
   readonly resourceGroupName: string;
   readonly userId?: string;
+  /** key_vault_password block */
+  readonly keyVaultPassword?: DataFactoryLinkedServiceAzureFileStorageKeyVaultPassword[];
   /** timeouts block */
   readonly timeouts?: DataFactoryLinkedServiceAzureFileStorageTimeouts;
 }
+export interface DataFactoryLinkedServiceAzureFileStorageKeyVaultPassword {
+  readonly linkedServiceName: string;
+  readonly secretName: string;
+}
+
+function dataFactoryLinkedServiceAzureFileStorageKeyVaultPasswordToTerraform(struct?: DataFactoryLinkedServiceAzureFileStorageKeyVaultPassword): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    linked_service_name: cdktf.stringToTerraform(struct!.linkedServiceName),
+    secret_name: cdktf.stringToTerraform(struct!.secretName),
+  }
+}
+
 export interface DataFactoryLinkedServiceAzureFileStorageTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -73,6 +88,7 @@ export class DataFactoryLinkedServiceAzureFileStorage extends cdktf.TerraformRes
     this._password = config.password;
     this._resourceGroupName = config.resourceGroupName;
     this._userId = config.userId;
+    this._keyVaultPassword = config.keyVaultPassword;
     this._timeouts = config.timeouts;
   }
 
@@ -281,6 +297,22 @@ export class DataFactoryLinkedServiceAzureFileStorage extends cdktf.TerraformRes
     return this._userId
   }
 
+  // key_vault_password - computed: false, optional: true, required: false
+  private _keyVaultPassword?: DataFactoryLinkedServiceAzureFileStorageKeyVaultPassword[];
+  public get keyVaultPassword() {
+    return this.interpolationForAttribute('key_vault_password') as any;
+  }
+  public set keyVaultPassword(value: DataFactoryLinkedServiceAzureFileStorageKeyVaultPassword[] ) {
+    this._keyVaultPassword = value;
+  }
+  public resetKeyVaultPassword() {
+    this._keyVaultPassword = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keyVaultPasswordInput() {
+    return this._keyVaultPassword
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: DataFactoryLinkedServiceAzureFileStorageTimeouts;
   public get timeouts() {
@@ -316,6 +348,7 @@ export class DataFactoryLinkedServiceAzureFileStorage extends cdktf.TerraformRes
       password: cdktf.stringToTerraform(this._password),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       user_id: cdktf.stringToTerraform(this._userId),
+      key_vault_password: cdktf.listMapper(dataFactoryLinkedServiceAzureFileStorageKeyVaultPasswordToTerraform)(this._keyVaultPassword),
       timeouts: dataFactoryLinkedServiceAzureFileStorageTimeoutsToTerraform(this._timeouts),
     };
   }

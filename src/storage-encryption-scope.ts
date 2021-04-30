@@ -7,6 +7,7 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface StorageEncryptionScopeConfig extends cdktf.TerraformMetaArguments {
+  readonly infrastructureEncryptionRequired?: boolean;
   readonly keyVaultKeyId?: string;
   readonly name: string;
   readonly source: string;
@@ -51,6 +52,7 @@ export class StorageEncryptionScope extends cdktf.TerraformResource {
       count: config.count,
       lifecycle: config.lifecycle
     });
+    this._infrastructureEncryptionRequired = config.infrastructureEncryptionRequired;
     this._keyVaultKeyId = config.keyVaultKeyId;
     this._name = config.name;
     this._source = config.source;
@@ -65,6 +67,22 @@ export class StorageEncryptionScope extends cdktf.TerraformResource {
   // id - computed: true, optional: true, required: false
   public get id() {
     return this.getStringAttribute('id');
+  }
+
+  // infrastructure_encryption_required - computed: false, optional: true, required: false
+  private _infrastructureEncryptionRequired?: boolean;
+  public get infrastructureEncryptionRequired() {
+    return this.getBooleanAttribute('infrastructure_encryption_required');
+  }
+  public set infrastructureEncryptionRequired(value: boolean ) {
+    this._infrastructureEncryptionRequired = value;
+  }
+  public resetInfrastructureEncryptionRequired() {
+    this._infrastructureEncryptionRequired = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get infrastructureEncryptionRequiredInput() {
+    return this._infrastructureEncryptionRequired
   }
 
   // key_vault_key_id - computed: false, optional: true, required: false
@@ -144,6 +162,7 @@ export class StorageEncryptionScope extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      infrastructure_encryption_required: cdktf.booleanToTerraform(this._infrastructureEncryptionRequired),
       key_vault_key_id: cdktf.stringToTerraform(this._keyVaultKeyId),
       name: cdktf.stringToTerraform(this._name),
       source: cdktf.stringToTerraform(this._source),

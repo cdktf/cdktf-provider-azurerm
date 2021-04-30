@@ -11,13 +11,13 @@ export interface CosmosdbGremlinGraphConfig extends cdktf.TerraformMetaArguments
   readonly databaseName: string;
   readonly defaultTtl?: number;
   readonly name: string;
-  readonly partitionKeyPath?: string;
+  readonly partitionKeyPath: string;
   readonly resourceGroupName: string;
   readonly throughput?: number;
   /** autoscale_settings block */
   readonly autoscaleSettings?: CosmosdbGremlinGraphAutoscaleSettings[];
   /** conflict_resolution_policy block */
-  readonly conflictResolutionPolicy: CosmosdbGremlinGraphConflictResolutionPolicy[];
+  readonly conflictResolutionPolicy?: CosmosdbGremlinGraphConflictResolutionPolicy[];
   /** index_policy block */
   readonly indexPolicy: CosmosdbGremlinGraphIndexPolicy[];
   /** timeouts block */
@@ -194,16 +194,13 @@ export class CosmosdbGremlinGraph extends cdktf.TerraformResource {
     return this._name
   }
 
-  // partition_key_path - computed: false, optional: true, required: false
-  private _partitionKeyPath?: string;
+  // partition_key_path - computed: false, optional: false, required: true
+  private _partitionKeyPath: string;
   public get partitionKeyPath() {
     return this.getStringAttribute('partition_key_path');
   }
-  public set partitionKeyPath(value: string ) {
+  public set partitionKeyPath(value: string) {
     this._partitionKeyPath = value;
-  }
-  public resetPartitionKeyPath() {
-    this._partitionKeyPath = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get partitionKeyPathInput() {
@@ -255,13 +252,16 @@ export class CosmosdbGremlinGraph extends cdktf.TerraformResource {
     return this._autoscaleSettings
   }
 
-  // conflict_resolution_policy - computed: false, optional: false, required: true
-  private _conflictResolutionPolicy: CosmosdbGremlinGraphConflictResolutionPolicy[];
+  // conflict_resolution_policy - computed: false, optional: true, required: false
+  private _conflictResolutionPolicy?: CosmosdbGremlinGraphConflictResolutionPolicy[];
   public get conflictResolutionPolicy() {
     return this.interpolationForAttribute('conflict_resolution_policy') as any;
   }
-  public set conflictResolutionPolicy(value: CosmosdbGremlinGraphConflictResolutionPolicy[]) {
+  public set conflictResolutionPolicy(value: CosmosdbGremlinGraphConflictResolutionPolicy[] ) {
     this._conflictResolutionPolicy = value;
+  }
+  public resetConflictResolutionPolicy() {
+    this._conflictResolutionPolicy = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get conflictResolutionPolicyInput() {

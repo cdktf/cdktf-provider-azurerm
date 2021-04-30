@@ -1,0 +1,168 @@
+// https://www.terraform.io/docs/providers/azurerm/r/data_azurerm_postgresql_flexible_server.html
+// generated from terraform resource schema
+
+import { Construct } from 'constructs';
+import * as cdktf from 'cdktf';
+
+// Configuration
+
+export interface DataAzurermPostgresqlFlexibleServerConfig extends cdktf.TerraformMetaArguments {
+  readonly name: string;
+  readonly resourceGroupName: string;
+  /** timeouts block */
+  readonly timeouts?: DataAzurermPostgresqlFlexibleServerTimeouts;
+}
+export interface DataAzurermPostgresqlFlexibleServerTimeouts {
+  readonly read?: string;
+}
+
+function dataAzurermPostgresqlFlexibleServerTimeoutsToTerraform(struct?: DataAzurermPostgresqlFlexibleServerTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    read: cdktf.stringToTerraform(struct!.read),
+  }
+}
+
+
+// Resource
+
+export class DataAzurermPostgresqlFlexibleServer extends cdktf.TerraformDataSource {
+
+  // ===========
+  // INITIALIZER
+  // ===========
+
+  public constructor(scope: Construct, id: string, config: DataAzurermPostgresqlFlexibleServerConfig) {
+    super(scope, id, {
+      terraformResourceType: 'azurerm_postgresql_flexible_server',
+      terraformGeneratorMetadata: {
+        providerName: 'azurerm'
+      },
+      provider: config.provider,
+      dependsOn: config.dependsOn,
+      count: config.count,
+      lifecycle: config.lifecycle
+    });
+    this._name = config.name;
+    this._resourceGroupName = config.resourceGroupName;
+    this._timeouts = config.timeouts;
+  }
+
+  // ==========
+  // ATTRIBUTES
+  // ==========
+
+  // administrator_login - computed: true, optional: false, required: false
+  public get administratorLogin() {
+    return this.getStringAttribute('administrator_login');
+  }
+
+  // backup_retention_days - computed: true, optional: false, required: false
+  public get backupRetentionDays() {
+    return this.getNumberAttribute('backup_retention_days');
+  }
+
+  // cmk_enabled - computed: true, optional: false, required: false
+  public get cmkEnabled() {
+    return this.getStringAttribute('cmk_enabled');
+  }
+
+  // delegated_subnet_id - computed: true, optional: false, required: false
+  public get delegatedSubnetId() {
+    return this.getStringAttribute('delegated_subnet_id');
+  }
+
+  // fqdn - computed: true, optional: false, required: false
+  public get fqdn() {
+    return this.getStringAttribute('fqdn');
+  }
+
+  // id - computed: true, optional: true, required: false
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+
+  // location - computed: true, optional: false, required: false
+  public get location() {
+    return this.getStringAttribute('location');
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name: string;
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
+  }
+
+  // public_network_access_enabled - computed: true, optional: false, required: false
+  public get publicNetworkAccessEnabled() {
+    return this.getBooleanAttribute('public_network_access_enabled');
+  }
+
+  // resource_group_name - computed: false, optional: false, required: true
+  private _resourceGroupName: string;
+  public get resourceGroupName() {
+    return this.getStringAttribute('resource_group_name');
+  }
+  public set resourceGroupName(value: string) {
+    this._resourceGroupName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
+  }
+
+  // sku_name - computed: true, optional: false, required: false
+  public get skuName() {
+    return this.getStringAttribute('sku_name');
+  }
+
+  // storage_mb - computed: true, optional: false, required: false
+  public get storageMb() {
+    return this.getNumberAttribute('storage_mb');
+  }
+
+  // tags - computed: true, optional: false, required: false
+  public tags(key: string): string {
+    return new cdktf.StringMap(this, 'tags').lookup(key);
+  }
+
+  // version - computed: true, optional: false, required: false
+  public get version() {
+    return this.getStringAttribute('version');
+  }
+
+  // timeouts - computed: false, optional: true, required: false
+  private _timeouts?: DataAzurermPostgresqlFlexibleServerTimeouts;
+  public get timeouts() {
+    return this.interpolationForAttribute('timeouts') as any;
+  }
+  public set timeouts(value: DataAzurermPostgresqlFlexibleServerTimeouts ) {
+    this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
+  }
+
+  // =========
+  // SYNTHESIS
+  // =========
+
+  protected synthesizeAttributes(): { [name: string]: any } {
+    return {
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      timeouts: dataAzurermPostgresqlFlexibleServerTimeoutsToTerraform(this._timeouts),
+    };
+  }
+}

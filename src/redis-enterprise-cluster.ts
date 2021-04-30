@@ -8,6 +8,7 @@ import * as cdktf from 'cdktf';
 
 export interface RedisEnterpriseClusterConfig extends cdktf.TerraformMetaArguments {
   readonly location: string;
+  readonly minimumTlsVersion?: string;
   readonly name: string;
   readonly resourceGroupName: string;
   readonly skuName: string;
@@ -52,6 +53,7 @@ export class RedisEnterpriseCluster extends cdktf.TerraformResource {
       lifecycle: config.lifecycle
     });
     this._location = config.location;
+    this._minimumTlsVersion = config.minimumTlsVersion;
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
     this._skuName = config.skuName;
@@ -85,6 +87,22 @@ export class RedisEnterpriseCluster extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get locationInput() {
     return this._location
+  }
+
+  // minimum_tls_version - computed: false, optional: true, required: false
+  private _minimumTlsVersion?: string;
+  public get minimumTlsVersion() {
+    return this.getStringAttribute('minimum_tls_version');
+  }
+  public set minimumTlsVersion(value: string ) {
+    this._minimumTlsVersion = value;
+  }
+  public resetMinimumTlsVersion() {
+    this._minimumTlsVersion = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get minimumTlsVersionInput() {
+    return this._minimumTlsVersion
   }
 
   // name - computed: false, optional: false, required: true
@@ -186,6 +204,7 @@ export class RedisEnterpriseCluster extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       location: cdktf.stringToTerraform(this._location),
+      minimum_tls_version: cdktf.stringToTerraform(this._minimumTlsVersion),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       sku_name: cdktf.stringToTerraform(this._skuName),

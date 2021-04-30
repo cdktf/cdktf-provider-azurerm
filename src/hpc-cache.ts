@@ -19,6 +19,12 @@ export interface HpcCacheConfig extends cdktf.TerraformMetaArguments {
   readonly tags?: { [key: string]: string };
   /** default_access_policy block */
   readonly defaultAccessPolicy?: HpcCacheDefaultAccessPolicy[];
+  /** directory_active_directory block */
+  readonly directoryActiveDirectory?: HpcCacheDirectoryActiveDirectory[];
+  /** directory_flat_file block */
+  readonly directoryFlatFile?: HpcCacheDirectoryFlatFile[];
+  /** directory_ldap block */
+  readonly directoryLdap?: HpcCacheDirectoryLdap[];
   /** dns block */
   readonly dns?: HpcCacheDns[];
   /** timeouts block */
@@ -58,6 +64,77 @@ function hpcCacheDefaultAccessPolicyToTerraform(struct?: HpcCacheDefaultAccessPo
   if (!cdktf.canInspect(struct)) { return struct; }
   return {
     access_rule: cdktf.listMapper(hpcCacheDefaultAccessPolicyAccessRuleToTerraform)(struct!.accessRule),
+  }
+}
+
+export interface HpcCacheDirectoryActiveDirectory {
+  readonly cacheNetbiosName: string;
+  readonly dnsPrimaryIp: string;
+  readonly dnsSecondaryIp?: string;
+  readonly domainName: string;
+  readonly domainNetbiosName: string;
+  readonly password: string;
+  readonly username: string;
+}
+
+function hpcCacheDirectoryActiveDirectoryToTerraform(struct?: HpcCacheDirectoryActiveDirectory): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    cache_netbios_name: cdktf.stringToTerraform(struct!.cacheNetbiosName),
+    dns_primary_ip: cdktf.stringToTerraform(struct!.dnsPrimaryIp),
+    dns_secondary_ip: cdktf.stringToTerraform(struct!.dnsSecondaryIp),
+    domain_name: cdktf.stringToTerraform(struct!.domainName),
+    domain_netbios_name: cdktf.stringToTerraform(struct!.domainNetbiosName),
+    password: cdktf.stringToTerraform(struct!.password),
+    username: cdktf.stringToTerraform(struct!.username),
+  }
+}
+
+export interface HpcCacheDirectoryFlatFile {
+  readonly groupFileUri: string;
+  readonly passwordFileUri: string;
+}
+
+function hpcCacheDirectoryFlatFileToTerraform(struct?: HpcCacheDirectoryFlatFile): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    group_file_uri: cdktf.stringToTerraform(struct!.groupFileUri),
+    password_file_uri: cdktf.stringToTerraform(struct!.passwordFileUri),
+  }
+}
+
+export interface HpcCacheDirectoryLdapBind {
+  readonly dn: string;
+  readonly password: string;
+}
+
+function hpcCacheDirectoryLdapBindToTerraform(struct?: HpcCacheDirectoryLdapBind): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    dn: cdktf.stringToTerraform(struct!.dn),
+    password: cdktf.stringToTerraform(struct!.password),
+  }
+}
+
+export interface HpcCacheDirectoryLdap {
+  readonly baseDn: string;
+  readonly certificateValidationUri?: string;
+  readonly downloadCertificateAutomatically?: boolean;
+  readonly encrypted?: boolean;
+  readonly server: string;
+  /** bind block */
+  readonly bind?: HpcCacheDirectoryLdapBind[];
+}
+
+function hpcCacheDirectoryLdapToTerraform(struct?: HpcCacheDirectoryLdap): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    base_dn: cdktf.stringToTerraform(struct!.baseDn),
+    certificate_validation_uri: cdktf.stringToTerraform(struct!.certificateValidationUri),
+    download_certificate_automatically: cdktf.booleanToTerraform(struct!.downloadCertificateAutomatically),
+    encrypted: cdktf.booleanToTerraform(struct!.encrypted),
+    server: cdktf.stringToTerraform(struct!.server),
+    bind: cdktf.listMapper(hpcCacheDirectoryLdapBindToTerraform)(struct!.bind),
   }
 }
 
@@ -122,6 +199,9 @@ export class HpcCache extends cdktf.TerraformResource {
     this._subnetId = config.subnetId;
     this._tags = config.tags;
     this._defaultAccessPolicy = config.defaultAccessPolicy;
+    this._directoryActiveDirectory = config.directoryActiveDirectory;
+    this._directoryFlatFile = config.directoryFlatFile;
+    this._directoryLdap = config.directoryLdap;
     this._dns = config.dns;
     this._timeouts = config.timeouts;
   }
@@ -298,6 +378,54 @@ export class HpcCache extends cdktf.TerraformResource {
     return this._defaultAccessPolicy
   }
 
+  // directory_active_directory - computed: false, optional: true, required: false
+  private _directoryActiveDirectory?: HpcCacheDirectoryActiveDirectory[];
+  public get directoryActiveDirectory() {
+    return this.interpolationForAttribute('directory_active_directory') as any;
+  }
+  public set directoryActiveDirectory(value: HpcCacheDirectoryActiveDirectory[] ) {
+    this._directoryActiveDirectory = value;
+  }
+  public resetDirectoryActiveDirectory() {
+    this._directoryActiveDirectory = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get directoryActiveDirectoryInput() {
+    return this._directoryActiveDirectory
+  }
+
+  // directory_flat_file - computed: false, optional: true, required: false
+  private _directoryFlatFile?: HpcCacheDirectoryFlatFile[];
+  public get directoryFlatFile() {
+    return this.interpolationForAttribute('directory_flat_file') as any;
+  }
+  public set directoryFlatFile(value: HpcCacheDirectoryFlatFile[] ) {
+    this._directoryFlatFile = value;
+  }
+  public resetDirectoryFlatFile() {
+    this._directoryFlatFile = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get directoryFlatFileInput() {
+    return this._directoryFlatFile
+  }
+
+  // directory_ldap - computed: false, optional: true, required: false
+  private _directoryLdap?: HpcCacheDirectoryLdap[];
+  public get directoryLdap() {
+    return this.interpolationForAttribute('directory_ldap') as any;
+  }
+  public set directoryLdap(value: HpcCacheDirectoryLdap[] ) {
+    this._directoryLdap = value;
+  }
+  public resetDirectoryLdap() {
+    this._directoryLdap = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get directoryLdapInput() {
+    return this._directoryLdap
+  }
+
   // dns - computed: false, optional: true, required: false
   private _dns?: HpcCacheDns[];
   public get dns() {
@@ -347,6 +475,9 @@ export class HpcCache extends cdktf.TerraformResource {
       subnet_id: cdktf.stringToTerraform(this._subnetId),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
       default_access_policy: cdktf.listMapper(hpcCacheDefaultAccessPolicyToTerraform)(this._defaultAccessPolicy),
+      directory_active_directory: cdktf.listMapper(hpcCacheDirectoryActiveDirectoryToTerraform)(this._directoryActiveDirectory),
+      directory_flat_file: cdktf.listMapper(hpcCacheDirectoryFlatFileToTerraform)(this._directoryFlatFile),
+      directory_ldap: cdktf.listMapper(hpcCacheDirectoryLdapToTerraform)(this._directoryLdap),
       dns: cdktf.listMapper(hpcCacheDnsToTerraform)(this._dns),
       timeouts: hpcCacheTimeoutsToTerraform(this._timeouts),
     };

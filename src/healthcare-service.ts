@@ -8,6 +8,7 @@ import * as cdktf from 'cdktf';
 
 export interface HealthcareServiceConfig extends cdktf.TerraformMetaArguments {
   readonly accessPolicyObjectIds?: string[];
+  readonly cosmosdbKeyVaultKeyVersionlessId?: string;
   readonly cosmosdbThroughput?: number;
   readonly kind?: string;
   readonly location: string;
@@ -93,6 +94,7 @@ export class HealthcareService extends cdktf.TerraformResource {
       lifecycle: config.lifecycle
     });
     this._accessPolicyObjectIds = config.accessPolicyObjectIds;
+    this._cosmosdbKeyVaultKeyVersionlessId = config.cosmosdbKeyVaultKeyVersionlessId;
     this._cosmosdbThroughput = config.cosmosdbThroughput;
     this._kind = config.kind;
     this._location = config.location;
@@ -122,6 +124,22 @@ export class HealthcareService extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get accessPolicyObjectIdsInput() {
     return this._accessPolicyObjectIds
+  }
+
+  // cosmosdb_key_vault_key_versionless_id - computed: false, optional: true, required: false
+  private _cosmosdbKeyVaultKeyVersionlessId?: string;
+  public get cosmosdbKeyVaultKeyVersionlessId() {
+    return this.getStringAttribute('cosmosdb_key_vault_key_versionless_id');
+  }
+  public set cosmosdbKeyVaultKeyVersionlessId(value: string ) {
+    this._cosmosdbKeyVaultKeyVersionlessId = value;
+  }
+  public resetCosmosdbKeyVaultKeyVersionlessId() {
+    this._cosmosdbKeyVaultKeyVersionlessId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get cosmosdbKeyVaultKeyVersionlessIdInput() {
+    return this._cosmosdbKeyVaultKeyVersionlessId
   }
 
   // cosmosdb_throughput - computed: false, optional: true, required: false
@@ -271,6 +289,7 @@ export class HealthcareService extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       access_policy_object_ids: cdktf.listMapper(cdktf.stringToTerraform)(this._accessPolicyObjectIds),
+      cosmosdb_key_vault_key_versionless_id: cdktf.stringToTerraform(this._cosmosdbKeyVaultKeyVersionlessId),
       cosmosdb_throughput: cdktf.numberToTerraform(this._cosmosdbThroughput),
       kind: cdktf.stringToTerraform(this._kind),
       location: cdktf.stringToTerraform(this._location),
