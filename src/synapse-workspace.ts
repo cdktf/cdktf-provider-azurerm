@@ -8,6 +8,7 @@ import * as cdktf from 'cdktf';
 
 export interface SynapseWorkspaceConfig extends cdktf.TerraformMetaArguments {
   readonly aadAdmin?: SynapseWorkspaceAadAdmin[];
+  readonly customerManagedKeyVersionlessId?: string;
   readonly location: string;
   readonly managedResourceGroupName?: string;
   readonly managedVirtualNetworkEnabled?: boolean;
@@ -133,6 +134,7 @@ export class SynapseWorkspace extends cdktf.TerraformResource {
       lifecycle: config.lifecycle
     });
     this._aadAdmin = config.aadAdmin;
+    this._customerManagedKeyVersionlessId = config.customerManagedKeyVersionlessId;
     this._location = config.location;
     this._managedResourceGroupName = config.managedResourceGroupName;
     this._managedVirtualNetworkEnabled = config.managedVirtualNetworkEnabled;
@@ -171,6 +173,22 @@ export class SynapseWorkspace extends cdktf.TerraformResource {
   // connectivity_endpoints - computed: true, optional: false, required: false
   public connectivityEndpoints(key: string): string {
     return new cdktf.StringMap(this, 'connectivity_endpoints').lookup(key);
+  }
+
+  // customer_managed_key_versionless_id - computed: false, optional: true, required: false
+  private _customerManagedKeyVersionlessId?: string;
+  public get customerManagedKeyVersionlessId() {
+    return this.getStringAttribute('customer_managed_key_versionless_id');
+  }
+  public set customerManagedKeyVersionlessId(value: string ) {
+    this._customerManagedKeyVersionlessId = value;
+  }
+  public resetCustomerManagedKeyVersionlessId() {
+    this._customerManagedKeyVersionlessId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get customerManagedKeyVersionlessIdInput() {
+    return this._customerManagedKeyVersionlessId
   }
 
   // id - computed: true, optional: true, required: false
@@ -380,6 +398,7 @@ export class SynapseWorkspace extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       aad_admin: cdktf.listMapper(synapseWorkspaceAadAdminToTerraform)(this._aadAdmin),
+      customer_managed_key_versionless_id: cdktf.stringToTerraform(this._customerManagedKeyVersionlessId),
       location: cdktf.stringToTerraform(this._location),
       managed_resource_group_name: cdktf.stringToTerraform(this._managedResourceGroupName),
       managed_virtual_network_enabled: cdktf.booleanToTerraform(this._managedVirtualNetworkEnabled),

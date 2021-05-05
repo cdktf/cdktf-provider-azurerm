@@ -211,12 +211,12 @@ export class MssqlDatabase extends cdktf.TerraformResource {
     return this._collation
   }
 
-  // create_mode - computed: true, optional: true, required: false
+  // create_mode - computed: false, optional: true, required: false
   private _createMode?: string;
   public get createMode() {
     return this.getStringAttribute('create_mode');
   }
-  public set createMode(value: string) {
+  public set createMode(value: string ) {
     this._createMode = value;
   }
   public resetCreateMode() {

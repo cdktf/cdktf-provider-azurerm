@@ -29,6 +29,129 @@ export class DataAzurermVirtualMachineScaleSetIdentity extends cdktf.ComplexComp
     return this.getStringAttribute('type');
   }
 }
+export class DataAzurermVirtualMachineScaleSetNetworkInterfaceIpConfigurationPublicIpAddressIpTag extends cdktf.ComplexComputedList {
+
+  // tag - computed: true, optional: false, required: false
+  public get tag() {
+    return this.getStringAttribute('tag');
+  }
+
+  // type - computed: true, optional: false, required: false
+  public get type() {
+    return this.getStringAttribute('type');
+  }
+}
+export class DataAzurermVirtualMachineScaleSetNetworkInterfaceIpConfigurationPublicIpAddress extends cdktf.ComplexComputedList {
+
+  // domain_name_label - computed: true, optional: false, required: false
+  public get domainNameLabel() {
+    return this.getStringAttribute('domain_name_label');
+  }
+
+  // idle_timeout_in_minutes - computed: true, optional: false, required: false
+  public get idleTimeoutInMinutes() {
+    return this.getNumberAttribute('idle_timeout_in_minutes');
+  }
+
+  // ip_tag - computed: true, optional: false, required: false
+  public get ipTag() {
+    return this.interpolationForAttribute('ip_tag') as any;
+  }
+
+  // name - computed: true, optional: false, required: false
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+
+  // public_ip_prefix_id - computed: true, optional: false, required: false
+  public get publicIpPrefixId() {
+    return this.getStringAttribute('public_ip_prefix_id');
+  }
+}
+export class DataAzurermVirtualMachineScaleSetNetworkInterfaceIpConfiguration extends cdktf.ComplexComputedList {
+
+  // application_gateway_backend_address_pool_ids - computed: true, optional: false, required: false
+  public get applicationGatewayBackendAddressPoolIds() {
+    return this.getListAttribute('application_gateway_backend_address_pool_ids');
+  }
+
+  // application_security_group_ids - computed: true, optional: false, required: false
+  public get applicationSecurityGroupIds() {
+    return this.getListAttribute('application_security_group_ids');
+  }
+
+  // load_balancer_backend_address_pool_ids - computed: true, optional: false, required: false
+  public get loadBalancerBackendAddressPoolIds() {
+    return this.getListAttribute('load_balancer_backend_address_pool_ids');
+  }
+
+  // load_balancer_inbound_nat_rules_ids - computed: true, optional: false, required: false
+  public get loadBalancerInboundNatRulesIds() {
+    return this.getListAttribute('load_balancer_inbound_nat_rules_ids');
+  }
+
+  // name - computed: true, optional: false, required: false
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+
+  // primary - computed: true, optional: false, required: false
+  public get primary() {
+    return this.getBooleanAttribute('primary');
+  }
+
+  // public_ip_address - computed: true, optional: false, required: false
+  public get publicIpAddress() {
+    return this.interpolationForAttribute('public_ip_address') as any;
+  }
+
+  // subnet_id - computed: true, optional: false, required: false
+  public get subnetId() {
+    return this.getStringAttribute('subnet_id');
+  }
+
+  // version - computed: true, optional: false, required: false
+  public get version() {
+    return this.getStringAttribute('version');
+  }
+}
+export class DataAzurermVirtualMachineScaleSetNetworkInterface extends cdktf.ComplexComputedList {
+
+  // dns_servers - computed: true, optional: false, required: false
+  public get dnsServers() {
+    return this.getListAttribute('dns_servers');
+  }
+
+  // enable_accelerated_networking - computed: true, optional: false, required: false
+  public get enableAcceleratedNetworking() {
+    return this.getBooleanAttribute('enable_accelerated_networking');
+  }
+
+  // enable_ip_forwarding - computed: true, optional: false, required: false
+  public get enableIpForwarding() {
+    return this.getBooleanAttribute('enable_ip_forwarding');
+  }
+
+  // ip_configuration - computed: true, optional: false, required: false
+  public get ipConfiguration() {
+    return this.interpolationForAttribute('ip_configuration') as any;
+  }
+
+  // name - computed: true, optional: false, required: false
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+
+  // network_security_group_id - computed: true, optional: false, required: false
+  public get networkSecurityGroupId() {
+    return this.getStringAttribute('network_security_group_id');
+  }
+
+  // primary - computed: true, optional: false, required: false
+  public get primary() {
+    return this.getBooleanAttribute('primary');
+  }
+}
 export interface DataAzurermVirtualMachineScaleSetTimeouts {
   readonly read?: string;
 }
@@ -95,6 +218,11 @@ export class DataAzurermVirtualMachineScaleSet extends cdktf.TerraformDataSource
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
     return this._name
+  }
+
+  // network_interface - computed: true, optional: false, required: false
+  public networkInterface(index: string) {
+    return new DataAzurermVirtualMachineScaleSetNetworkInterface(this, 'network_interface', index);
   }
 
   // resource_group_name - computed: false, optional: false, required: true

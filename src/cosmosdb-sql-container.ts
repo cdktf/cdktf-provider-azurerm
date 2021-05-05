@@ -11,12 +11,14 @@ export interface CosmosdbSqlContainerConfig extends cdktf.TerraformMetaArguments
   readonly databaseName: string;
   readonly defaultTtl?: number;
   readonly name: string;
-  readonly partitionKeyPath?: string;
+  readonly partitionKeyPath: string;
   readonly partitionKeyVersion?: number;
   readonly resourceGroupName: string;
   readonly throughput?: number;
   /** autoscale_settings block */
   readonly autoscaleSettings?: CosmosdbSqlContainerAutoscaleSettings[];
+  /** conflict_resolution_policy block */
+  readonly conflictResolutionPolicy?: CosmosdbSqlContainerConflictResolutionPolicy[];
   /** indexing_policy block */
   readonly indexingPolicy?: CosmosdbSqlContainerIndexingPolicy[];
   /** timeouts block */
@@ -32,6 +34,21 @@ function cosmosdbSqlContainerAutoscaleSettingsToTerraform(struct?: CosmosdbSqlCo
   if (!cdktf.canInspect(struct)) { return struct; }
   return {
     max_throughput: cdktf.numberToTerraform(struct!.maxThroughput),
+  }
+}
+
+export interface CosmosdbSqlContainerConflictResolutionPolicy {
+  readonly conflictResolutionPath?: string;
+  readonly conflictResolutionProcedure?: string;
+  readonly mode: string;
+}
+
+function cosmosdbSqlContainerConflictResolutionPolicyToTerraform(struct?: CosmosdbSqlContainerConflictResolutionPolicy): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    conflict_resolution_path: cdktf.stringToTerraform(struct!.conflictResolutionPath),
+    conflict_resolution_procedure: cdktf.stringToTerraform(struct!.conflictResolutionProcedure),
+    mode: cdktf.stringToTerraform(struct!.mode),
   }
 }
 
@@ -159,6 +176,7 @@ export class CosmosdbSqlContainer extends cdktf.TerraformResource {
     this._resourceGroupName = config.resourceGroupName;
     this._throughput = config.throughput;
     this._autoscaleSettings = config.autoscaleSettings;
+    this._conflictResolutionPolicy = config.conflictResolutionPolicy;
     this._indexingPolicy = config.indexingPolicy;
     this._timeouts = config.timeouts;
     this._uniqueKey = config.uniqueKey;
@@ -228,16 +246,13 @@ export class CosmosdbSqlContainer extends cdktf.TerraformResource {
     return this._name
   }
 
-  // partition_key_path - computed: false, optional: true, required: false
-  private _partitionKeyPath?: string;
+  // partition_key_path - computed: false, optional: false, required: true
+  private _partitionKeyPath: string;
   public get partitionKeyPath() {
     return this.getStringAttribute('partition_key_path');
   }
-  public set partitionKeyPath(value: string ) {
+  public set partitionKeyPath(value: string) {
     this._partitionKeyPath = value;
-  }
-  public resetPartitionKeyPath() {
-    this._partitionKeyPath = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get partitionKeyPathInput() {
@@ -305,6 +320,22 @@ export class CosmosdbSqlContainer extends cdktf.TerraformResource {
     return this._autoscaleSettings
   }
 
+  // conflict_resolution_policy - computed: false, optional: true, required: false
+  private _conflictResolutionPolicy?: CosmosdbSqlContainerConflictResolutionPolicy[];
+  public get conflictResolutionPolicy() {
+    return this.interpolationForAttribute('conflict_resolution_policy') as any;
+  }
+  public set conflictResolutionPolicy(value: CosmosdbSqlContainerConflictResolutionPolicy[] ) {
+    this._conflictResolutionPolicy = value;
+  }
+  public resetConflictResolutionPolicy() {
+    this._conflictResolutionPolicy = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get conflictResolutionPolicyInput() {
+    return this._conflictResolutionPolicy
+  }
+
   // indexing_policy - computed: false, optional: true, required: false
   private _indexingPolicy?: CosmosdbSqlContainerIndexingPolicy[];
   public get indexingPolicy() {
@@ -368,6 +399,7 @@ export class CosmosdbSqlContainer extends cdktf.TerraformResource {
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       throughput: cdktf.numberToTerraform(this._throughput),
       autoscale_settings: cdktf.listMapper(cosmosdbSqlContainerAutoscaleSettingsToTerraform)(this._autoscaleSettings),
+      conflict_resolution_policy: cdktf.listMapper(cosmosdbSqlContainerConflictResolutionPolicyToTerraform)(this._conflictResolutionPolicy),
       indexing_policy: cdktf.listMapper(cosmosdbSqlContainerIndexingPolicyToTerraform)(this._indexingPolicy),
       timeouts: cosmosdbSqlContainerTimeoutsToTerraform(this._timeouts),
       unique_key: cdktf.listMapper(cosmosdbSqlContainerUniqueKeyToTerraform)(this._uniqueKey),

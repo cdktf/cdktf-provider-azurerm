@@ -18,6 +18,7 @@ export interface StorageAccountConfig extends cdktf.TerraformMetaArguments {
   readonly location: string;
   readonly minTlsVersion?: string;
   readonly name: string;
+  readonly nfsv3Enabled?: boolean;
   readonly resourceGroupName: string;
   readonly tags?: { [key: string]: string };
   /** blob_properties block */
@@ -77,6 +78,9 @@ function storageAccountBlobPropertiesDeleteRetentionPolicyToTerraform(struct?: S
 }
 
 export interface StorageAccountBlobProperties {
+  readonly defaultServiceVersion?: string;
+  readonly lastAccessTimeEnabled?: boolean;
+  readonly versioningEnabled?: boolean;
   /** container_delete_retention_policy block */
   readonly containerDeleteRetentionPolicy?: StorageAccountBlobPropertiesContainerDeleteRetentionPolicy[];
   /** cors_rule block */
@@ -88,6 +92,9 @@ export interface StorageAccountBlobProperties {
 function storageAccountBlobPropertiesToTerraform(struct?: StorageAccountBlobProperties): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   return {
+    default_service_version: cdktf.stringToTerraform(struct!.defaultServiceVersion),
+    last_access_time_enabled: cdktf.booleanToTerraform(struct!.lastAccessTimeEnabled),
+    versioning_enabled: cdktf.booleanToTerraform(struct!.versioningEnabled),
     container_delete_retention_policy: cdktf.listMapper(storageAccountBlobPropertiesContainerDeleteRetentionPolicyToTerraform)(struct!.containerDeleteRetentionPolicy),
     cors_rule: cdktf.listMapper(storageAccountBlobPropertiesCorsRuleToTerraform)(struct!.corsRule),
     delete_retention_policy: cdktf.listMapper(storageAccountBlobPropertiesDeleteRetentionPolicyToTerraform)(struct!.deleteRetentionPolicy),
@@ -289,6 +296,7 @@ export class StorageAccount extends cdktf.TerraformResource {
     this._location = config.location;
     this._minTlsVersion = config.minTlsVersion;
     this._name = config.name;
+    this._nfsv3Enabled = config.nfsv3Enabled;
     this._resourceGroupName = config.resourceGroupName;
     this._tags = config.tags;
     this._blobProperties = config.blobProperties;
@@ -471,6 +479,22 @@ export class StorageAccount extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
     return this._name
+  }
+
+  // nfsv3_enabled - computed: false, optional: true, required: false
+  private _nfsv3Enabled?: boolean;
+  public get nfsv3Enabled() {
+    return this.getBooleanAttribute('nfsv3_enabled');
+  }
+  public set nfsv3Enabled(value: boolean ) {
+    this._nfsv3Enabled = value;
+  }
+  public resetNfsv3Enabled() {
+    this._nfsv3Enabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nfsv3EnabledInput() {
+    return this._nfsv3Enabled
   }
 
   // primary_access_key - computed: true, optional: false, required: false
@@ -791,6 +815,7 @@ export class StorageAccount extends cdktf.TerraformResource {
       location: cdktf.stringToTerraform(this._location),
       min_tls_version: cdktf.stringToTerraform(this._minTlsVersion),
       name: cdktf.stringToTerraform(this._name),
+      nfsv3_enabled: cdktf.booleanToTerraform(this._nfsv3Enabled),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
       blob_properties: cdktf.listMapper(storageAccountBlobPropertiesToTerraform)(this._blobProperties),

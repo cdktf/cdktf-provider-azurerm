@@ -52,6 +52,11 @@ export class DataAzurermDedicatedHostGroup extends cdktf.TerraformDataSource {
   // ATTRIBUTES
   // ==========
 
+  // automatic_placement_enabled - computed: true, optional: false, required: false
+  public get automaticPlacementEnabled() {
+    return this.getBooleanAttribute('automatic_placement_enabled');
+  }
+
   // id - computed: true, optional: true, required: false
   public get id() {
     return this.getStringAttribute('id');

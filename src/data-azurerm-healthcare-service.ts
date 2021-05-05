@@ -113,6 +113,11 @@ export class DataAzurermHealthcareService extends cdktf.TerraformDataSource {
     return new DataAzurermHealthcareServiceCorsConfiguration(this, 'cors_configuration', index);
   }
 
+  // cosmosdb_key_vault_key_versionless_id - computed: true, optional: false, required: false
+  public get cosmosdbKeyVaultKeyVersionlessId() {
+    return this.getStringAttribute('cosmosdb_key_vault_key_versionless_id');
+  }
+
   // cosmosdb_throughput - computed: true, optional: false, required: false
   public get cosmosdbThroughput() {
     return this.getNumberAttribute('cosmosdb_throughput');

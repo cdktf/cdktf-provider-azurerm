@@ -7,6 +7,7 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DedicatedHostGroupConfig extends cdktf.TerraformMetaArguments {
+  readonly automaticPlacementEnabled?: boolean;
   readonly location: string;
   readonly name: string;
   readonly platformFaultDomainCount: number;
@@ -53,6 +54,7 @@ export class DedicatedHostGroup extends cdktf.TerraformResource {
       count: config.count,
       lifecycle: config.lifecycle
     });
+    this._automaticPlacementEnabled = config.automaticPlacementEnabled;
     this._location = config.location;
     this._name = config.name;
     this._platformFaultDomainCount = config.platformFaultDomainCount;
@@ -65,6 +67,22 @@ export class DedicatedHostGroup extends cdktf.TerraformResource {
   // ==========
   // ATTRIBUTES
   // ==========
+
+  // automatic_placement_enabled - computed: false, optional: true, required: false
+  private _automaticPlacementEnabled?: boolean;
+  public get automaticPlacementEnabled() {
+    return this.getBooleanAttribute('automatic_placement_enabled');
+  }
+  public set automaticPlacementEnabled(value: boolean ) {
+    this._automaticPlacementEnabled = value;
+  }
+  public resetAutomaticPlacementEnabled() {
+    this._automaticPlacementEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get automaticPlacementEnabledInput() {
+    return this._automaticPlacementEnabled
+  }
 
   // id - computed: true, optional: true, required: false
   public get id() {
@@ -177,6 +195,7 @@ export class DedicatedHostGroup extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      automatic_placement_enabled: cdktf.booleanToTerraform(this._automaticPlacementEnabled),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
       platform_fault_domain_count: cdktf.numberToTerraform(this._platformFaultDomainCount),

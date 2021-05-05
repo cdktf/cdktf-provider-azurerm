@@ -10,7 +10,8 @@ export interface KubernetesClusterConfig extends cdktf.TerraformMetaArguments {
   readonly apiServerAuthorizedIpRanges?: string[];
   readonly automaticChannelUpgrade?: string;
   readonly diskEncryptionSetId?: string;
-  readonly dnsPrefix: string;
+  readonly dnsPrefix?: string;
+  readonly dnsPrefixPrivateCluster?: string;
   readonly enablePodSecurityPolicy?: boolean;
   readonly kubernetesVersion?: string;
   readonly location: string;
@@ -159,6 +160,23 @@ function kubernetesClusterAddonProfileHttpApplicationRoutingToTerraform(struct?:
   }
 }
 
+export interface KubernetesClusterAddonProfileIngressApplicationGateway {
+  readonly enabled: boolean;
+  readonly gatewayId?: string;
+  readonly subnetCidr?: string;
+  readonly subnetId?: string;
+}
+
+function kubernetesClusterAddonProfileIngressApplicationGatewayToTerraform(struct?: KubernetesClusterAddonProfileIngressApplicationGateway): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    enabled: cdktf.booleanToTerraform(struct!.enabled),
+    gateway_id: cdktf.stringToTerraform(struct!.gatewayId),
+    subnet_cidr: cdktf.stringToTerraform(struct!.subnetCidr),
+    subnet_id: cdktf.stringToTerraform(struct!.subnetId),
+  }
+}
+
 export interface KubernetesClusterAddonProfileKubeDashboard {
   readonly enabled: boolean;
 }
@@ -190,6 +208,8 @@ export interface KubernetesClusterAddonProfile {
   readonly azurePolicy?: KubernetesClusterAddonProfileAzurePolicy[];
   /** http_application_routing block */
   readonly httpApplicationRouting?: KubernetesClusterAddonProfileHttpApplicationRouting[];
+  /** ingress_application_gateway block */
+  readonly ingressApplicationGateway?: KubernetesClusterAddonProfileIngressApplicationGateway[];
   /** kube_dashboard block */
   readonly kubeDashboard?: KubernetesClusterAddonProfileKubeDashboard[];
   /** oms_agent block */
@@ -202,6 +222,7 @@ function kubernetesClusterAddonProfileToTerraform(struct?: KubernetesClusterAddo
     aci_connector_linux: cdktf.listMapper(kubernetesClusterAddonProfileAciConnectorLinuxToTerraform)(struct!.aciConnectorLinux),
     azure_policy: cdktf.listMapper(kubernetesClusterAddonProfileAzurePolicyToTerraform)(struct!.azurePolicy),
     http_application_routing: cdktf.listMapper(kubernetesClusterAddonProfileHttpApplicationRoutingToTerraform)(struct!.httpApplicationRouting),
+    ingress_application_gateway: cdktf.listMapper(kubernetesClusterAddonProfileIngressApplicationGatewayToTerraform)(struct!.ingressApplicationGateway),
     kube_dashboard: cdktf.listMapper(kubernetesClusterAddonProfileKubeDashboardToTerraform)(struct!.kubeDashboard),
     oms_agent: cdktf.listMapper(kubernetesClusterAddonProfileOmsAgentToTerraform)(struct!.omsAgent),
   }
@@ -209,8 +230,12 @@ function kubernetesClusterAddonProfileToTerraform(struct?: KubernetesClusterAddo
 
 export interface KubernetesClusterAutoScalerProfile {
   readonly balanceSimilarNodeGroups?: boolean;
+  readonly emptyBulkDeleteMax?: string;
   readonly expander?: string;
   readonly maxGracefulTerminationSec?: string;
+  readonly maxNodeProvisioningTime?: string;
+  readonly maxUnreadyNodes?: number;
+  readonly maxUnreadyPercentage?: number;
   readonly newPodScaleUpDelay?: string;
   readonly scaleDownDelayAfterAdd?: string;
   readonly scaleDownDelayAfterDelete?: string;
@@ -227,8 +252,12 @@ function kubernetesClusterAutoScalerProfileToTerraform(struct?: KubernetesCluste
   if (!cdktf.canInspect(struct)) { return struct; }
   return {
     balance_similar_node_groups: cdktf.booleanToTerraform(struct!.balanceSimilarNodeGroups),
+    empty_bulk_delete_max: cdktf.stringToTerraform(struct!.emptyBulkDeleteMax),
     expander: cdktf.stringToTerraform(struct!.expander),
     max_graceful_termination_sec: cdktf.stringToTerraform(struct!.maxGracefulTerminationSec),
+    max_node_provisioning_time: cdktf.stringToTerraform(struct!.maxNodeProvisioningTime),
+    max_unready_nodes: cdktf.numberToTerraform(struct!.maxUnreadyNodes),
+    max_unready_percentage: cdktf.numberToTerraform(struct!.maxUnreadyPercentage),
     new_pod_scale_up_delay: cdktf.stringToTerraform(struct!.newPodScaleUpDelay),
     scale_down_delay_after_add: cdktf.stringToTerraform(struct!.scaleDownDelayAfterAdd),
     scale_down_delay_after_delete: cdktf.stringToTerraform(struct!.scaleDownDelayAfterDelete),
@@ -394,6 +423,7 @@ function kubernetesClusterNetworkProfileToTerraform(struct?: KubernetesClusterNe
 
 export interface KubernetesClusterRoleBasedAccessControlAzureActiveDirectory {
   readonly adminGroupObjectIds?: string[];
+  readonly azureRbacEnabled?: boolean;
   readonly clientAppId?: string;
   readonly managed?: boolean;
   readonly serverAppId?: string;
@@ -405,6 +435,7 @@ function kubernetesClusterRoleBasedAccessControlAzureActiveDirectoryToTerraform(
   if (!cdktf.canInspect(struct)) { return struct; }
   return {
     admin_group_object_ids: cdktf.listMapper(cdktf.stringToTerraform)(struct!.adminGroupObjectIds),
+    azure_rbac_enabled: cdktf.booleanToTerraform(struct!.azureRbacEnabled),
     client_app_id: cdktf.stringToTerraform(struct!.clientAppId),
     managed: cdktf.booleanToTerraform(struct!.managed),
     server_app_id: cdktf.stringToTerraform(struct!.serverAppId),
@@ -494,6 +525,7 @@ export class KubernetesCluster extends cdktf.TerraformResource {
     this._automaticChannelUpgrade = config.automaticChannelUpgrade;
     this._diskEncryptionSetId = config.diskEncryptionSetId;
     this._dnsPrefix = config.dnsPrefix;
+    this._dnsPrefixPrivateCluster = config.dnsPrefixPrivateCluster;
     this._enablePodSecurityPolicy = config.enablePodSecurityPolicy;
     this._kubernetesVersion = config.kubernetesVersion;
     this._location = config.location;
@@ -569,17 +601,36 @@ export class KubernetesCluster extends cdktf.TerraformResource {
     return this._diskEncryptionSetId
   }
 
-  // dns_prefix - computed: false, optional: false, required: true
-  private _dnsPrefix: string;
+  // dns_prefix - computed: false, optional: true, required: false
+  private _dnsPrefix?: string;
   public get dnsPrefix() {
     return this.getStringAttribute('dns_prefix');
   }
-  public set dnsPrefix(value: string) {
+  public set dnsPrefix(value: string ) {
     this._dnsPrefix = value;
+  }
+  public resetDnsPrefix() {
+    this._dnsPrefix = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get dnsPrefixInput() {
     return this._dnsPrefix
+  }
+
+  // dns_prefix_private_cluster - computed: false, optional: true, required: false
+  private _dnsPrefixPrivateCluster?: string;
+  public get dnsPrefixPrivateCluster() {
+    return this.getStringAttribute('dns_prefix_private_cluster');
+  }
+  public set dnsPrefixPrivateCluster(value: string ) {
+    this._dnsPrefixPrivateCluster = value;
+  }
+  public resetDnsPrefixPrivateCluster() {
+    this._dnsPrefixPrivateCluster = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dnsPrefixPrivateClusterInput() {
+    return this._dnsPrefixPrivateCluster
   }
 
   // enable_pod_security_policy - computed: false, optional: true, required: false
@@ -956,6 +1007,7 @@ export class KubernetesCluster extends cdktf.TerraformResource {
       automatic_channel_upgrade: cdktf.stringToTerraform(this._automaticChannelUpgrade),
       disk_encryption_set_id: cdktf.stringToTerraform(this._diskEncryptionSetId),
       dns_prefix: cdktf.stringToTerraform(this._dnsPrefix),
+      dns_prefix_private_cluster: cdktf.stringToTerraform(this._dnsPrefixPrivateCluster),
       enable_pod_security_policy: cdktf.booleanToTerraform(this._enablePodSecurityPolicy),
       kubernetes_version: cdktf.stringToTerraform(this._kubernetesVersion),
       location: cdktf.stringToTerraform(this._location),

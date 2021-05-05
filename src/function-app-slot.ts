@@ -189,8 +189,26 @@ function functionAppSlotIdentityToTerraform(struct?: FunctionAppSlotIdentity): a
   }
 }
 
+export interface FunctionAppSlotSiteConfigIpRestrictionHeaders {
+  readonly xAzureFdid?: string[];
+  readonly xFdHealthProbe?: string[];
+  readonly xForwardedFor?: string[];
+  readonly xForwardedHost?: string[];
+}
+
+function functionAppSlotSiteConfigIpRestrictionHeadersToTerraform(struct?: FunctionAppSlotSiteConfigIpRestrictionHeaders): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    x_azure_fdid: cdktf.listMapper(cdktf.stringToTerraform)(struct!.xAzureFdid),
+    x_fd_health_probe: cdktf.listMapper(cdktf.stringToTerraform)(struct!.xFdHealthProbe),
+    x_forwarded_for: cdktf.listMapper(cdktf.stringToTerraform)(struct!.xForwardedFor),
+    x_forwarded_host: cdktf.listMapper(cdktf.stringToTerraform)(struct!.xForwardedHost),
+  }
+}
+
 export interface FunctionAppSlotSiteConfigIpRestriction {
   readonly action?: string;
+  readonly headers?: FunctionAppSlotSiteConfigIpRestrictionHeaders[];
   readonly ipAddress?: string;
   readonly name?: string;
   readonly priority?: number;
@@ -202,6 +220,7 @@ function functionAppSlotSiteConfigIpRestrictionToTerraform(struct?: FunctionAppS
   if (!cdktf.canInspect(struct)) { return struct; }
   return {
     action: cdktf.stringToTerraform(struct!.action),
+    headers: cdktf.listMapper(functionAppSlotSiteConfigIpRestrictionHeadersToTerraform)(struct!.headers),
     ip_address: cdktf.stringToTerraform(struct!.ipAddress),
     name: cdktf.stringToTerraform(struct!.name),
     priority: cdktf.numberToTerraform(struct!.priority),
@@ -210,8 +229,26 @@ function functionAppSlotSiteConfigIpRestrictionToTerraform(struct?: FunctionAppS
   }
 }
 
+export interface FunctionAppSlotSiteConfigScmIpRestrictionHeaders {
+  readonly xAzureFdid?: string[];
+  readonly xFdHealthProbe?: string[];
+  readonly xForwardedFor?: string[];
+  readonly xForwardedHost?: string[];
+}
+
+function functionAppSlotSiteConfigScmIpRestrictionHeadersToTerraform(struct?: FunctionAppSlotSiteConfigScmIpRestrictionHeaders): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    x_azure_fdid: cdktf.listMapper(cdktf.stringToTerraform)(struct!.xAzureFdid),
+    x_fd_health_probe: cdktf.listMapper(cdktf.stringToTerraform)(struct!.xFdHealthProbe),
+    x_forwarded_for: cdktf.listMapper(cdktf.stringToTerraform)(struct!.xForwardedFor),
+    x_forwarded_host: cdktf.listMapper(cdktf.stringToTerraform)(struct!.xForwardedHost),
+  }
+}
+
 export interface FunctionAppSlotSiteConfigScmIpRestriction {
   readonly action?: string;
+  readonly headers?: FunctionAppSlotSiteConfigScmIpRestrictionHeaders[];
   readonly ipAddress?: string;
   readonly name?: string;
   readonly priority?: number;
@@ -223,6 +260,7 @@ function functionAppSlotSiteConfigScmIpRestrictionToTerraform(struct?: FunctionA
   if (!cdktf.canInspect(struct)) { return struct; }
   return {
     action: cdktf.stringToTerraform(struct!.action),
+    headers: cdktf.listMapper(functionAppSlotSiteConfigScmIpRestrictionHeadersToTerraform)(struct!.headers),
     ip_address: cdktf.stringToTerraform(struct!.ipAddress),
     name: cdktf.stringToTerraform(struct!.name),
     priority: cdktf.numberToTerraform(struct!.priority),
@@ -251,6 +289,7 @@ export interface FunctionAppSlotSiteConfig {
   readonly healthCheckPath?: string;
   readonly http2Enabled?: boolean;
   readonly ipRestriction?: FunctionAppSlotSiteConfigIpRestriction[];
+  readonly javaVersion?: string;
   readonly linuxFxVersion?: string;
   readonly minTlsVersion?: string;
   readonly preWarmedInstanceCount?: number;
@@ -272,6 +311,7 @@ function functionAppSlotSiteConfigToTerraform(struct?: FunctionAppSlotSiteConfig
     health_check_path: cdktf.stringToTerraform(struct!.healthCheckPath),
     http2_enabled: cdktf.booleanToTerraform(struct!.http2Enabled),
     ip_restriction: cdktf.listMapper(functionAppSlotSiteConfigIpRestrictionToTerraform)(struct!.ipRestriction),
+    java_version: cdktf.stringToTerraform(struct!.javaVersion),
     linux_fx_version: cdktf.stringToTerraform(struct!.linuxFxVersion),
     min_tls_version: cdktf.stringToTerraform(struct!.minTlsVersion),
     pre_warmed_instance_count: cdktf.numberToTerraform(struct!.preWarmedInstanceCount),

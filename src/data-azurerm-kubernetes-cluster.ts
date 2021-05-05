@@ -31,6 +31,33 @@ export class DataAzurermKubernetesClusterAddonProfileHttpApplicationRouting exte
     return this.getStringAttribute('http_application_routing_zone_name');
   }
 }
+export class DataAzurermKubernetesClusterAddonProfileIngressApplicationGateway extends cdktf.ComplexComputedList {
+
+  // effective_gateway_id - computed: true, optional: false, required: false
+  public get effectiveGatewayId() {
+    return this.getStringAttribute('effective_gateway_id');
+  }
+
+  // enabled - computed: true, optional: false, required: false
+  public get enabled() {
+    return this.getBooleanAttribute('enabled');
+  }
+
+  // gateway_id - computed: true, optional: false, required: false
+  public get gatewayId() {
+    return this.getStringAttribute('gateway_id');
+  }
+
+  // subnet_cidr - computed: true, optional: false, required: false
+  public get subnetCidr() {
+    return this.getStringAttribute('subnet_cidr');
+  }
+
+  // subnet_id - computed: true, optional: false, required: false
+  public get subnetId() {
+    return this.getStringAttribute('subnet_id');
+  }
+}
 export class DataAzurermKubernetesClusterAddonProfileKubeDashboard extends cdktf.ComplexComputedList {
 
   // enabled - computed: true, optional: false, required: false
@@ -82,6 +109,11 @@ export class DataAzurermKubernetesClusterAddonProfile extends cdktf.ComplexCompu
   // http_application_routing - computed: true, optional: false, required: false
   public get httpApplicationRouting() {
     return this.interpolationForAttribute('http_application_routing') as any;
+  }
+
+  // ingress_application_gateway - computed: true, optional: false, required: false
+  public get ingressApplicationGateway() {
+    return this.interpolationForAttribute('ingress_application_gateway') as any;
   }
 
   // kube_dashboard - computed: true, optional: false, required: false

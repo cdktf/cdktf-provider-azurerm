@@ -8,6 +8,7 @@ import * as cdktf from 'cdktf';
 
 export interface ManagedDiskConfig extends cdktf.TerraformMetaArguments {
   readonly createOption: string;
+  readonly diskAccessId?: string;
   readonly diskEncryptionSetId?: string;
   readonly diskIopsReadWrite?: number;
   readonly diskMbpsReadWrite?: number;
@@ -15,6 +16,7 @@ export interface ManagedDiskConfig extends cdktf.TerraformMetaArguments {
   readonly imageReferenceId?: string;
   readonly location: string;
   readonly name: string;
+  readonly networkAccessPolicy?: string;
   readonly osType?: string;
   readonly resourceGroupName: string;
   readonly sourceResourceId?: string;
@@ -109,6 +111,7 @@ export class ManagedDisk extends cdktf.TerraformResource {
       lifecycle: config.lifecycle
     });
     this._createOption = config.createOption;
+    this._diskAccessId = config.diskAccessId;
     this._diskEncryptionSetId = config.diskEncryptionSetId;
     this._diskIopsReadWrite = config.diskIopsReadWrite;
     this._diskMbpsReadWrite = config.diskMbpsReadWrite;
@@ -116,6 +119,7 @@ export class ManagedDisk extends cdktf.TerraformResource {
     this._imageReferenceId = config.imageReferenceId;
     this._location = config.location;
     this._name = config.name;
+    this._networkAccessPolicy = config.networkAccessPolicy;
     this._osType = config.osType;
     this._resourceGroupName = config.resourceGroupName;
     this._sourceResourceId = config.sourceResourceId;
@@ -143,6 +147,22 @@ export class ManagedDisk extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get createOptionInput() {
     return this._createOption
+  }
+
+  // disk_access_id - computed: false, optional: true, required: false
+  private _diskAccessId?: string;
+  public get diskAccessId() {
+    return this.getStringAttribute('disk_access_id');
+  }
+  public set diskAccessId(value: string ) {
+    this._diskAccessId = value;
+  }
+  public resetDiskAccessId() {
+    this._diskAccessId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get diskAccessIdInput() {
+    return this._diskAccessId
   }
 
   // disk_encryption_set_id - computed: false, optional: true, required: false
@@ -254,6 +274,22 @@ export class ManagedDisk extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
     return this._name
+  }
+
+  // network_access_policy - computed: false, optional: true, required: false
+  private _networkAccessPolicy?: string;
+  public get networkAccessPolicy() {
+    return this.getStringAttribute('network_access_policy');
+  }
+  public set networkAccessPolicy(value: string ) {
+    this._networkAccessPolicy = value;
+  }
+  public resetNetworkAccessPolicy() {
+    this._networkAccessPolicy = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get networkAccessPolicyInput() {
+    return this._networkAccessPolicy
   }
 
   // os_type - computed: false, optional: true, required: false
@@ -417,6 +453,7 @@ export class ManagedDisk extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       create_option: cdktf.stringToTerraform(this._createOption),
+      disk_access_id: cdktf.stringToTerraform(this._diskAccessId),
       disk_encryption_set_id: cdktf.stringToTerraform(this._diskEncryptionSetId),
       disk_iops_read_write: cdktf.numberToTerraform(this._diskIopsReadWrite),
       disk_mbps_read_write: cdktf.numberToTerraform(this._diskMbpsReadWrite),
@@ -424,6 +461,7 @@ export class ManagedDisk extends cdktf.TerraformResource {
       image_reference_id: cdktf.stringToTerraform(this._imageReferenceId),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
+      network_access_policy: cdktf.stringToTerraform(this._networkAccessPolicy),
       os_type: cdktf.stringToTerraform(this._osType),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       source_resource_id: cdktf.stringToTerraform(this._sourceResourceId),

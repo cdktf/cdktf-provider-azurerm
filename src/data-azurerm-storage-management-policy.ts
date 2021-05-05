@@ -30,9 +30,36 @@ export class DataAzurermStorageManagementPolicyRuleActionsBaseBlob extends cdktf
 }
 export class DataAzurermStorageManagementPolicyRuleActionsSnapshot extends cdktf.ComplexComputedList {
 
+  // change_tier_to_archive_after_days_since_creation - computed: true, optional: false, required: false
+  public get changeTierToArchiveAfterDaysSinceCreation() {
+    return this.getNumberAttribute('change_tier_to_archive_after_days_since_creation');
+  }
+
+  // change_tier_to_cool_after_days_since_creation - computed: true, optional: false, required: false
+  public get changeTierToCoolAfterDaysSinceCreation() {
+    return this.getNumberAttribute('change_tier_to_cool_after_days_since_creation');
+  }
+
   // delete_after_days_since_creation_greater_than - computed: true, optional: false, required: false
   public get deleteAfterDaysSinceCreationGreaterThan() {
     return this.getNumberAttribute('delete_after_days_since_creation_greater_than');
+  }
+}
+export class DataAzurermStorageManagementPolicyRuleActionsVersion extends cdktf.ComplexComputedList {
+
+  // change_tier_to_archive_after_days_since_creation - computed: true, optional: false, required: false
+  public get changeTierToArchiveAfterDaysSinceCreation() {
+    return this.getNumberAttribute('change_tier_to_archive_after_days_since_creation');
+  }
+
+  // change_tier_to_cool_after_days_since_creation - computed: true, optional: false, required: false
+  public get changeTierToCoolAfterDaysSinceCreation() {
+    return this.getNumberAttribute('change_tier_to_cool_after_days_since_creation');
+  }
+
+  // delete_after_days_since_creation - computed: true, optional: false, required: false
+  public get deleteAfterDaysSinceCreation() {
+    return this.getNumberAttribute('delete_after_days_since_creation');
   }
 }
 export class DataAzurermStorageManagementPolicyRuleActions extends cdktf.ComplexComputedList {
@@ -46,12 +73,39 @@ export class DataAzurermStorageManagementPolicyRuleActions extends cdktf.Complex
   public get snapshot() {
     return this.interpolationForAttribute('snapshot') as any;
   }
+
+  // version - computed: true, optional: false, required: false
+  public get version() {
+    return this.interpolationForAttribute('version') as any;
+  }
+}
+export class DataAzurermStorageManagementPolicyRuleFiltersMatchBlobIndexTag extends cdktf.ComplexComputedList {
+
+  // name - computed: true, optional: false, required: false
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+
+  // operation - computed: true, optional: false, required: false
+  public get operation() {
+    return this.getStringAttribute('operation');
+  }
+
+  // value - computed: true, optional: false, required: false
+  public get value() {
+    return this.getStringAttribute('value');
+  }
 }
 export class DataAzurermStorageManagementPolicyRuleFilters extends cdktf.ComplexComputedList {
 
   // blob_types - computed: true, optional: false, required: false
   public get blobTypes() {
     return this.getListAttribute('blob_types');
+  }
+
+  // match_blob_index_tag - computed: true, optional: false, required: false
+  public get matchBlobIndexTag() {
+    return this.interpolationForAttribute('match_blob_index_tag') as any;
   }
 
   // prefix_match - computed: true, optional: false, required: false

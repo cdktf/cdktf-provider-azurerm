@@ -12,8 +12,6 @@ export interface DataAzurermBatchPoolConfig extends cdktf.TerraformMetaArguments
   readonly resourceGroupName: string;
   /** certificate block */
   readonly certificate?: DataAzurermBatchPoolCertificate[];
-  /** network_configuration block */
-  readonly networkConfiguration?: DataAzurermBatchPoolNetworkConfiguration[];
   /** start_task block */
   readonly startTask?: DataAzurermBatchPoolStartTask[];
   /** timeouts block */
@@ -82,6 +80,62 @@ export class DataAzurermBatchPoolFixedScale extends cdktf.ComplexComputedList {
     return this.getNumberAttribute('target_low_priority_nodes');
   }
 }
+export class DataAzurermBatchPoolNetworkConfigurationEndpointConfigurationNetworkSecurityGroupRules extends cdktf.ComplexComputedList {
+
+  // access - computed: true, optional: false, required: false
+  public get access() {
+    return this.getStringAttribute('access');
+  }
+
+  // priority - computed: true, optional: false, required: false
+  public get priority() {
+    return this.getNumberAttribute('priority');
+  }
+
+  // source_address_prefix - computed: true, optional: false, required: false
+  public get sourceAddressPrefix() {
+    return this.getStringAttribute('source_address_prefix');
+  }
+}
+export class DataAzurermBatchPoolNetworkConfigurationEndpointConfiguration extends cdktf.ComplexComputedList {
+
+  // backend_port - computed: true, optional: false, required: false
+  public get backendPort() {
+    return this.getNumberAttribute('backend_port');
+  }
+
+  // frontend_port_range - computed: true, optional: false, required: false
+  public get frontendPortRange() {
+    return this.getStringAttribute('frontend_port_range');
+  }
+
+  // name - computed: true, optional: false, required: false
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+
+  // network_security_group_rules - computed: true, optional: false, required: false
+  public get networkSecurityGroupRules() {
+    return this.interpolationForAttribute('network_security_group_rules') as any;
+  }
+
+  // protocol - computed: true, optional: false, required: false
+  public get protocol() {
+    return this.getStringAttribute('protocol');
+  }
+}
+export class DataAzurermBatchPoolNetworkConfiguration extends cdktf.ComplexComputedList {
+
+  // endpoint_configuration - computed: true, optional: false, required: false
+  public get endpointConfiguration() {
+    return this.interpolationForAttribute('endpoint_configuration') as any;
+  }
+
+  // subnet_id - computed: true, optional: false, required: false
+  public get subnetId() {
+    return this.getStringAttribute('subnet_id');
+  }
+}
 export class DataAzurermBatchPoolStorageImageReference extends cdktf.ComplexComputedList {
 
   // id - computed: true, optional: false, required: false
@@ -123,41 +177,6 @@ function dataAzurermBatchPoolCertificateToTerraform(struct?: DataAzurermBatchPoo
     store_location: cdktf.stringToTerraform(struct!.storeLocation),
     store_name: cdktf.stringToTerraform(struct!.storeName),
     visibility: cdktf.listMapper(cdktf.stringToTerraform)(struct!.visibility),
-  }
-}
-
-export interface DataAzurermBatchPoolNetworkConfigurationEndpointConfigurationNetworkSecurityGroupRules {
-}
-
-function dataAzurermBatchPoolNetworkConfigurationEndpointConfigurationNetworkSecurityGroupRulesToTerraform(struct?: DataAzurermBatchPoolNetworkConfigurationEndpointConfigurationNetworkSecurityGroupRules): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
-  return {
-  }
-}
-
-export interface DataAzurermBatchPoolNetworkConfigurationEndpointConfiguration {
-  /** network_security_group_rules block */
-  readonly networkSecurityGroupRules?: DataAzurermBatchPoolNetworkConfigurationEndpointConfigurationNetworkSecurityGroupRules[];
-}
-
-function dataAzurermBatchPoolNetworkConfigurationEndpointConfigurationToTerraform(struct?: DataAzurermBatchPoolNetworkConfigurationEndpointConfiguration): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
-  return {
-    network_security_group_rules: cdktf.listMapper(dataAzurermBatchPoolNetworkConfigurationEndpointConfigurationNetworkSecurityGroupRulesToTerraform)(struct!.networkSecurityGroupRules),
-  }
-}
-
-export interface DataAzurermBatchPoolNetworkConfiguration {
-  readonly subnetId?: string;
-  /** endpoint_configuration block */
-  readonly endpointConfiguration?: DataAzurermBatchPoolNetworkConfigurationEndpointConfiguration[];
-}
-
-function dataAzurermBatchPoolNetworkConfigurationToTerraform(struct?: DataAzurermBatchPoolNetworkConfiguration): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
-  return {
-    subnet_id: cdktf.stringToTerraform(struct!.subnetId),
-    endpoint_configuration: cdktf.listMapper(dataAzurermBatchPoolNetworkConfigurationEndpointConfigurationToTerraform)(struct!.endpointConfiguration),
   }
 }
 
@@ -213,7 +232,6 @@ export class DataAzurermBatchPool extends cdktf.TerraformDataSource {
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
     this._certificate = config.certificate;
-    this._networkConfiguration = config.networkConfiguration;
     this._startTask = config.startTask;
     this._timeouts = config.timeouts;
   }
@@ -283,6 +301,11 @@ export class DataAzurermBatchPool extends cdktf.TerraformDataSource {
     return this._name
   }
 
+  // network_configuration - computed: true, optional: false, required: false
+  public networkConfiguration(index: string) {
+    return new DataAzurermBatchPoolNetworkConfiguration(this, 'network_configuration', index);
+  }
+
   // node_agent_sku_id - computed: true, optional: false, required: false
   public get nodeAgentSkuId() {
     return this.getStringAttribute('node_agent_sku_id');
@@ -327,22 +350,6 @@ export class DataAzurermBatchPool extends cdktf.TerraformDataSource {
     return this._certificate
   }
 
-  // network_configuration - computed: false, optional: true, required: false
-  private _networkConfiguration?: DataAzurermBatchPoolNetworkConfiguration[];
-  public get networkConfiguration() {
-    return this.interpolationForAttribute('network_configuration') as any;
-  }
-  public set networkConfiguration(value: DataAzurermBatchPoolNetworkConfiguration[] ) {
-    this._networkConfiguration = value;
-  }
-  public resetNetworkConfiguration() {
-    this._networkConfiguration = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get networkConfigurationInput() {
-    return this._networkConfiguration
-  }
-
   // start_task - computed: false, optional: true, required: false
   private _startTask?: DataAzurermBatchPoolStartTask[];
   public get startTask() {
@@ -385,7 +392,6 @@ export class DataAzurermBatchPool extends cdktf.TerraformDataSource {
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       certificate: cdktf.listMapper(dataAzurermBatchPoolCertificateToTerraform)(this._certificate),
-      network_configuration: cdktf.listMapper(dataAzurermBatchPoolNetworkConfigurationToTerraform)(this._networkConfiguration),
       start_task: cdktf.listMapper(dataAzurermBatchPoolStartTaskToTerraform)(this._startTask),
       timeouts: dataAzurermBatchPoolTimeoutsToTerraform(this._timeouts),
     };

@@ -29,13 +29,32 @@ function storageManagementPolicyRuleActionsBaseBlobToTerraform(struct?: StorageM
 }
 
 export interface StorageManagementPolicyRuleActionsSnapshot {
+  readonly changeTierToArchiveAfterDaysSinceCreation?: number;
+  readonly changeTierToCoolAfterDaysSinceCreation?: number;
   readonly deleteAfterDaysSinceCreationGreaterThan?: number;
 }
 
 function storageManagementPolicyRuleActionsSnapshotToTerraform(struct?: StorageManagementPolicyRuleActionsSnapshot): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   return {
+    change_tier_to_archive_after_days_since_creation: cdktf.numberToTerraform(struct!.changeTierToArchiveAfterDaysSinceCreation),
+    change_tier_to_cool_after_days_since_creation: cdktf.numberToTerraform(struct!.changeTierToCoolAfterDaysSinceCreation),
     delete_after_days_since_creation_greater_than: cdktf.numberToTerraform(struct!.deleteAfterDaysSinceCreationGreaterThan),
+  }
+}
+
+export interface StorageManagementPolicyRuleActionsVersion {
+  readonly changeTierToArchiveAfterDaysSinceCreation?: number;
+  readonly changeTierToCoolAfterDaysSinceCreation?: number;
+  readonly deleteAfterDaysSinceCreation?: number;
+}
+
+function storageManagementPolicyRuleActionsVersionToTerraform(struct?: StorageManagementPolicyRuleActionsVersion): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    change_tier_to_archive_after_days_since_creation: cdktf.numberToTerraform(struct!.changeTierToArchiveAfterDaysSinceCreation),
+    change_tier_to_cool_after_days_since_creation: cdktf.numberToTerraform(struct!.changeTierToCoolAfterDaysSinceCreation),
+    delete_after_days_since_creation: cdktf.numberToTerraform(struct!.deleteAfterDaysSinceCreation),
   }
 }
 
@@ -44,6 +63,8 @@ export interface StorageManagementPolicyRuleActions {
   readonly baseBlob?: StorageManagementPolicyRuleActionsBaseBlob[];
   /** snapshot block */
   readonly snapshot?: StorageManagementPolicyRuleActionsSnapshot[];
+  /** version block */
+  readonly version?: StorageManagementPolicyRuleActionsVersion[];
 }
 
 function storageManagementPolicyRuleActionsToTerraform(struct?: StorageManagementPolicyRuleActions): any {
@@ -51,12 +72,30 @@ function storageManagementPolicyRuleActionsToTerraform(struct?: StorageManagemen
   return {
     base_blob: cdktf.listMapper(storageManagementPolicyRuleActionsBaseBlobToTerraform)(struct!.baseBlob),
     snapshot: cdktf.listMapper(storageManagementPolicyRuleActionsSnapshotToTerraform)(struct!.snapshot),
+    version: cdktf.listMapper(storageManagementPolicyRuleActionsVersionToTerraform)(struct!.version),
+  }
+}
+
+export interface StorageManagementPolicyRuleFiltersMatchBlobIndexTag {
+  readonly name: string;
+  readonly operation?: string;
+  readonly value: string;
+}
+
+function storageManagementPolicyRuleFiltersMatchBlobIndexTagToTerraform(struct?: StorageManagementPolicyRuleFiltersMatchBlobIndexTag): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    name: cdktf.stringToTerraform(struct!.name),
+    operation: cdktf.stringToTerraform(struct!.operation),
+    value: cdktf.stringToTerraform(struct!.value),
   }
 }
 
 export interface StorageManagementPolicyRuleFilters {
   readonly blobTypes?: string[];
   readonly prefixMatch?: string[];
+  /** match_blob_index_tag block */
+  readonly matchBlobIndexTag?: StorageManagementPolicyRuleFiltersMatchBlobIndexTag[];
 }
 
 function storageManagementPolicyRuleFiltersToTerraform(struct?: StorageManagementPolicyRuleFilters): any {
@@ -64,6 +103,7 @@ function storageManagementPolicyRuleFiltersToTerraform(struct?: StorageManagemen
   return {
     blob_types: cdktf.listMapper(cdktf.stringToTerraform)(struct!.blobTypes),
     prefix_match: cdktf.listMapper(cdktf.stringToTerraform)(struct!.prefixMatch),
+    match_blob_index_tag: cdktf.listMapper(storageManagementPolicyRuleFiltersMatchBlobIndexTagToTerraform)(struct!.matchBlobIndexTag),
   }
 }
 
