@@ -14,6 +14,7 @@ export interface NetappVolumeConfig extends cdktf.TerraformMetaArguments {
   readonly poolName: string;
   readonly protocols?: string[];
   readonly resourceGroupName: string;
+  readonly securityStyle?: string;
   readonly serviceLevel: string;
   readonly storageQuotaInGb: number;
   readonly subnetId: string;
@@ -114,6 +115,7 @@ export class NetappVolume extends cdktf.TerraformResource {
     this._poolName = config.poolName;
     this._protocols = config.protocols;
     this._resourceGroupName = config.resourceGroupName;
+    this._securityStyle = config.securityStyle;
     this._serviceLevel = config.serviceLevel;
     this._storageQuotaInGb = config.storageQuotaInGb;
     this._subnetId = config.subnetId;
@@ -233,6 +235,22 @@ export class NetappVolume extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
     return this._resourceGroupName
+  }
+
+  // security_style - computed: true, optional: true, required: false
+  private _securityStyle?: string;
+  public get securityStyle() {
+    return this.getStringAttribute('security_style');
+  }
+  public set securityStyle(value: string) {
+    this._securityStyle = value;
+  }
+  public resetSecurityStyle() {
+    this._securityStyle = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get securityStyleInput() {
+    return this._securityStyle
   }
 
   // service_level - computed: false, optional: false, required: true
@@ -364,6 +382,7 @@ export class NetappVolume extends cdktf.TerraformResource {
       pool_name: cdktf.stringToTerraform(this._poolName),
       protocols: cdktf.listMapper(cdktf.stringToTerraform)(this._protocols),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      security_style: cdktf.stringToTerraform(this._securityStyle),
       service_level: cdktf.stringToTerraform(this._serviceLevel),
       storage_quota_in_gb: cdktf.numberToTerraform(this._storageQuotaInGb),
       subnet_id: cdktf.stringToTerraform(this._subnetId),

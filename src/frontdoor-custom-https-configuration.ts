@@ -9,7 +9,6 @@ import * as cdktf from 'cdktf';
 export interface FrontdoorCustomHttpsConfigurationConfig extends cdktf.TerraformMetaArguments {
   readonly customHttpsProvisioningEnabled: boolean;
   readonly frontendEndpointId: string;
-  readonly resourceGroupName?: string;
   /** custom_https_configuration block */
   readonly customHttpsConfiguration?: FrontdoorCustomHttpsConfigurationCustomHttpsConfiguration[];
   /** timeouts block */
@@ -71,7 +70,6 @@ export class FrontdoorCustomHttpsConfiguration extends cdktf.TerraformResource {
     });
     this._customHttpsProvisioningEnabled = config.customHttpsProvisioningEnabled;
     this._frontendEndpointId = config.frontendEndpointId;
-    this._resourceGroupName = config.resourceGroupName;
     this._customHttpsConfiguration = config.customHttpsConfiguration;
     this._timeouts = config.timeouts;
   }
@@ -109,22 +107,6 @@ export class FrontdoorCustomHttpsConfiguration extends cdktf.TerraformResource {
   // id - computed: true, optional: true, required: false
   public get id() {
     return this.getStringAttribute('id');
-  }
-
-  // resource_group_name - computed: false, optional: true, required: false
-  private _resourceGroupName?: string;
-  public get resourceGroupName() {
-    return this.getStringAttribute('resource_group_name');
-  }
-  public set resourceGroupName(value: string ) {
-    this._resourceGroupName = value;
-  }
-  public resetResourceGroupName() {
-    this._resourceGroupName = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get resourceGroupNameInput() {
-    return this._resourceGroupName
   }
 
   // custom_https_configuration - computed: false, optional: true, required: false
@@ -167,7 +149,6 @@ export class FrontdoorCustomHttpsConfiguration extends cdktf.TerraformResource {
     return {
       custom_https_provisioning_enabled: cdktf.booleanToTerraform(this._customHttpsProvisioningEnabled),
       frontend_endpoint_id: cdktf.stringToTerraform(this._frontendEndpointId),
-      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       custom_https_configuration: cdktf.listMapper(frontdoorCustomHttpsConfigurationCustomHttpsConfigurationToTerraform)(this._customHttpsConfiguration),
       timeouts: frontdoorCustomHttpsConfigurationTimeoutsToTerraform(this._timeouts),
     };

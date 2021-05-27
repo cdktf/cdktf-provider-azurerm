@@ -62,6 +62,16 @@ export class SpatialAnchorsAccount extends cdktf.TerraformResource {
   // ATTRIBUTES
   // ==========
 
+  // account_domain - computed: true, optional: false, required: false
+  public get accountDomain() {
+    return this.getStringAttribute('account_domain');
+  }
+
+  // account_id - computed: true, optional: false, required: false
+  public get accountId() {
+    return this.getStringAttribute('account_id');
+  }
+
   // id - computed: true, optional: true, required: false
   public get id() {
     return this.getStringAttribute('id');

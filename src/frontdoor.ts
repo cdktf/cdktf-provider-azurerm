@@ -28,6 +28,33 @@ export interface FrontdoorConfig extends cdktf.TerraformMetaArguments {
   /** timeouts block */
   readonly timeouts?: FrontdoorTimeouts;
 }
+export class FrontdoorExplicitResourceOrder extends cdktf.ComplexComputedList {
+
+  // backend_pool_health_probe_ids - computed: true, optional: false, required: false
+  public get backendPoolHealthProbeIds() {
+    return this.getListAttribute('backend_pool_health_probe_ids');
+  }
+
+  // backend_pool_ids - computed: true, optional: false, required: false
+  public get backendPoolIds() {
+    return this.getListAttribute('backend_pool_ids');
+  }
+
+  // backend_pool_load_balancing_ids - computed: true, optional: false, required: false
+  public get backendPoolLoadBalancingIds() {
+    return this.getListAttribute('backend_pool_load_balancing_ids');
+  }
+
+  // frontend_endpoint_ids - computed: true, optional: false, required: false
+  public get frontendEndpointIds() {
+    return this.getListAttribute('frontend_endpoint_ids');
+  }
+
+  // routing_rule_ids - computed: true, optional: false, required: false
+  public get routingRuleIds() {
+    return this.getListAttribute('routing_rule_ids');
+  }
+}
 export interface FrontdoorBackendPoolBackend {
   readonly address: string;
   readonly enabled?: boolean;
@@ -107,44 +134,22 @@ function frontdoorBackendPoolLoadBalancingToTerraform(struct?: FrontdoorBackendP
   }
 }
 
-export interface FrontdoorFrontendEndpointCustomHttpsConfiguration {
-  readonly azureKeyVaultCertificateSecretName?: string;
-  readonly azureKeyVaultCertificateSecretVersion?: string;
-  readonly azureKeyVaultCertificateVaultId?: string;
-  readonly certificateSource?: string;
-}
-
-function frontdoorFrontendEndpointCustomHttpsConfigurationToTerraform(struct?: FrontdoorFrontendEndpointCustomHttpsConfiguration): any {
-  if (!cdktf.canInspect(struct)) { return struct; }
-  return {
-    azure_key_vault_certificate_secret_name: cdktf.stringToTerraform(struct!.azureKeyVaultCertificateSecretName),
-    azure_key_vault_certificate_secret_version: cdktf.stringToTerraform(struct!.azureKeyVaultCertificateSecretVersion),
-    azure_key_vault_certificate_vault_id: cdktf.stringToTerraform(struct!.azureKeyVaultCertificateVaultId),
-    certificate_source: cdktf.stringToTerraform(struct!.certificateSource),
-  }
-}
-
 export interface FrontdoorFrontendEndpoint {
-  readonly customHttpsProvisioningEnabled?: boolean;
   readonly hostName: string;
   readonly name: string;
   readonly sessionAffinityEnabled?: boolean;
   readonly sessionAffinityTtlSeconds?: number;
   readonly webApplicationFirewallPolicyLinkId?: string;
-  /** custom_https_configuration block */
-  readonly customHttpsConfiguration?: FrontdoorFrontendEndpointCustomHttpsConfiguration[];
 }
 
 function frontdoorFrontendEndpointToTerraform(struct?: FrontdoorFrontendEndpoint): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   return {
-    custom_https_provisioning_enabled: cdktf.booleanToTerraform(struct!.customHttpsProvisioningEnabled),
     host_name: cdktf.stringToTerraform(struct!.hostName),
     name: cdktf.stringToTerraform(struct!.name),
     session_affinity_enabled: cdktf.booleanToTerraform(struct!.sessionAffinityEnabled),
     session_affinity_ttl_seconds: cdktf.numberToTerraform(struct!.sessionAffinityTtlSeconds),
     web_application_firewall_policy_link_id: cdktf.stringToTerraform(struct!.webApplicationFirewallPolicyLinkId),
-    custom_https_configuration: cdktf.listMapper(frontdoorFrontendEndpointCustomHttpsConfigurationToTerraform)(struct!.customHttpsConfiguration),
   }
 }
 
@@ -319,6 +324,11 @@ export class Frontdoor extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get enforceBackendPoolsCertificateNameCheckInput() {
     return this._enforceBackendPoolsCertificateNameCheck
+  }
+
+  // explicit_resource_order - computed: true, optional: false, required: false
+  public explicitResourceOrder(index: string) {
+    return new FrontdoorExplicitResourceOrder(this, 'explicit_resource_order', index);
   }
 
   // friendly_name - computed: false, optional: true, required: false

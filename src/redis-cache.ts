@@ -15,6 +15,7 @@ export interface RedisCacheConfig extends cdktf.TerraformMetaArguments {
   readonly name: string;
   readonly privateStaticIpAddress?: string;
   readonly publicNetworkAccessEnabled?: boolean;
+  readonly replicasPerMaster?: number;
   readonly resourceGroupName: string;
   readonly shardCount?: number;
   readonly skuName: string;
@@ -121,6 +122,7 @@ export class RedisCache extends cdktf.TerraformResource {
     this._name = config.name;
     this._privateStaticIpAddress = config.privateStaticIpAddress;
     this._publicNetworkAccessEnabled = config.publicNetworkAccessEnabled;
+    this._replicasPerMaster = config.replicasPerMaster;
     this._resourceGroupName = config.resourceGroupName;
     this._shardCount = config.shardCount;
     this._skuName = config.skuName;
@@ -275,6 +277,22 @@ export class RedisCache extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get publicNetworkAccessEnabledInput() {
     return this._publicNetworkAccessEnabled
+  }
+
+  // replicas_per_master - computed: false, optional: true, required: false
+  private _replicasPerMaster?: number;
+  public get replicasPerMaster() {
+    return this.getNumberAttribute('replicas_per_master');
+  }
+  public set replicasPerMaster(value: number ) {
+    this._replicasPerMaster = value;
+  }
+  public resetReplicasPerMaster() {
+    this._replicasPerMaster = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get replicasPerMasterInput() {
+    return this._replicasPerMaster
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -444,6 +462,7 @@ export class RedisCache extends cdktf.TerraformResource {
       name: cdktf.stringToTerraform(this._name),
       private_static_ip_address: cdktf.stringToTerraform(this._privateStaticIpAddress),
       public_network_access_enabled: cdktf.booleanToTerraform(this._publicNetworkAccessEnabled),
+      replicas_per_master: cdktf.numberToTerraform(this._replicasPerMaster),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       shard_count: cdktf.numberToTerraform(this._shardCount),
       sku_name: cdktf.stringToTerraform(this._skuName),

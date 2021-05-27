@@ -180,6 +180,11 @@ export class RedisEnterpriseDatabase extends cdktf.TerraformResource {
     return this._port
   }
 
+  // primary_access_key - computed: true, optional: false, required: false
+  public get primaryAccessKey() {
+    return this.getStringAttribute('primary_access_key');
+  }
+
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
@@ -191,6 +196,11 @@ export class RedisEnterpriseDatabase extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
     return this._resourceGroupName
+  }
+
+  // secondary_access_key - computed: true, optional: false, required: false
+  public get secondaryAccessKey() {
+    return this.getStringAttribute('secondary_access_key');
   }
 
   // module - computed: false, optional: true, required: false

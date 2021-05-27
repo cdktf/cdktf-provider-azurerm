@@ -7,6 +7,7 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface CosmosdbCassandraTableConfig extends cdktf.TerraformMetaArguments {
+  readonly analyticalStorageTtl?: number;
   readonly cassandraKeyspaceId: string;
   readonly defaultTtl?: number;
   readonly name: string;
@@ -121,6 +122,7 @@ export class CosmosdbCassandraTable extends cdktf.TerraformResource {
       count: config.count,
       lifecycle: config.lifecycle
     });
+    this._analyticalStorageTtl = config.analyticalStorageTtl;
     this._cassandraKeyspaceId = config.cassandraKeyspaceId;
     this._defaultTtl = config.defaultTtl;
     this._name = config.name;
@@ -133,6 +135,22 @@ export class CosmosdbCassandraTable extends cdktf.TerraformResource {
   // ==========
   // ATTRIBUTES
   // ==========
+
+  // analytical_storage_ttl - computed: false, optional: true, required: false
+  private _analyticalStorageTtl?: number;
+  public get analyticalStorageTtl() {
+    return this.getNumberAttribute('analytical_storage_ttl');
+  }
+  public set analyticalStorageTtl(value: number ) {
+    this._analyticalStorageTtl = value;
+  }
+  public resetAnalyticalStorageTtl() {
+    this._analyticalStorageTtl = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get analyticalStorageTtlInput() {
+    return this._analyticalStorageTtl
+  }
 
   // cassandra_keyspace_id - computed: false, optional: false, required: true
   private _cassandraKeyspaceId: string;
@@ -248,6 +266,7 @@ export class CosmosdbCassandraTable extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      analytical_storage_ttl: cdktf.numberToTerraform(this._analyticalStorageTtl),
       cassandra_keyspace_id: cdktf.stringToTerraform(this._cassandraKeyspaceId),
       default_ttl: cdktf.numberToTerraform(this._defaultTtl),
       name: cdktf.stringToTerraform(this._name),

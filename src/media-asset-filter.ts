@@ -72,7 +72,7 @@ function mediaAssetFilterTrackSelectionConditionToTerraform(struct?: MediaAssetF
 
 export interface MediaAssetFilterTrackSelection {
   /** condition block */
-  readonly condition?: MediaAssetFilterTrackSelectionCondition[];
+  readonly condition: MediaAssetFilterTrackSelectionCondition[];
 }
 
 function mediaAssetFilterTrackSelectionToTerraform(struct?: MediaAssetFilterTrackSelection): any {

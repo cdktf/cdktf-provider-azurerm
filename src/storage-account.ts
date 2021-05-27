@@ -21,6 +21,8 @@ export interface StorageAccountConfig extends cdktf.TerraformMetaArguments {
   readonly nfsv3Enabled?: boolean;
   readonly resourceGroupName: string;
   readonly tags?: { [key: string]: string };
+  /** azure_files_authentication block */
+  readonly azureFilesAuthentication?: StorageAccountAzureFilesAuthentication[];
   /** blob_properties block */
   readonly blobProperties?: StorageAccountBlobProperties[];
   /** custom_domain block */
@@ -31,11 +33,48 @@ export interface StorageAccountConfig extends cdktf.TerraformMetaArguments {
   readonly networkRules?: StorageAccountNetworkRules[];
   /** queue_properties block */
   readonly queueProperties?: StorageAccountQueueProperties[];
+  /** routing block */
+  readonly routing?: StorageAccountRouting[];
   /** static_website block */
   readonly staticWebsite?: StorageAccountStaticWebsite[];
   /** timeouts block */
   readonly timeouts?: StorageAccountTimeouts;
 }
+export interface StorageAccountAzureFilesAuthenticationActiveDirectory {
+  readonly domainGuid: string;
+  readonly domainName: string;
+  readonly domainSid: string;
+  readonly forestName: string;
+  readonly netbiosDomainName: string;
+  readonly storageSid: string;
+}
+
+function storageAccountAzureFilesAuthenticationActiveDirectoryToTerraform(struct?: StorageAccountAzureFilesAuthenticationActiveDirectory): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    domain_guid: cdktf.stringToTerraform(struct!.domainGuid),
+    domain_name: cdktf.stringToTerraform(struct!.domainName),
+    domain_sid: cdktf.stringToTerraform(struct!.domainSid),
+    forest_name: cdktf.stringToTerraform(struct!.forestName),
+    netbios_domain_name: cdktf.stringToTerraform(struct!.netbiosDomainName),
+    storage_sid: cdktf.stringToTerraform(struct!.storageSid),
+  }
+}
+
+export interface StorageAccountAzureFilesAuthentication {
+  readonly directoryType: string;
+  /** active_directory block */
+  readonly activeDirectory?: StorageAccountAzureFilesAuthenticationActiveDirectory[];
+}
+
+function storageAccountAzureFilesAuthenticationToTerraform(struct?: StorageAccountAzureFilesAuthentication): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    directory_type: cdktf.stringToTerraform(struct!.directoryType),
+    active_directory: cdktf.listMapper(storageAccountAzureFilesAuthenticationActiveDirectoryToTerraform)(struct!.activeDirectory),
+  }
+}
+
 export interface StorageAccountBlobPropertiesContainerDeleteRetentionPolicy {
   readonly days?: number;
 }
@@ -78,6 +117,7 @@ function storageAccountBlobPropertiesDeleteRetentionPolicyToTerraform(struct?: S
 }
 
 export interface StorageAccountBlobProperties {
+  readonly changeFeedEnabled?: boolean;
   readonly defaultServiceVersion?: string;
   readonly lastAccessTimeEnabled?: boolean;
   readonly versioningEnabled?: boolean;
@@ -92,6 +132,7 @@ export interface StorageAccountBlobProperties {
 function storageAccountBlobPropertiesToTerraform(struct?: StorageAccountBlobProperties): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   return {
+    change_feed_enabled: cdktf.booleanToTerraform(struct!.changeFeedEnabled),
     default_service_version: cdktf.stringToTerraform(struct!.defaultServiceVersion),
     last_access_time_enabled: cdktf.booleanToTerraform(struct!.lastAccessTimeEnabled),
     versioning_enabled: cdktf.booleanToTerraform(struct!.versioningEnabled),
@@ -125,11 +166,26 @@ function storageAccountIdentityToTerraform(struct?: StorageAccountIdentity): any
   }
 }
 
+export interface StorageAccountNetworkRulesPrivateLinkAccess {
+  readonly endpointResourceId: string;
+  readonly endpointTenantId?: string;
+}
+
+function storageAccountNetworkRulesPrivateLinkAccessToTerraform(struct?: StorageAccountNetworkRulesPrivateLinkAccess): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    endpoint_resource_id: cdktf.stringToTerraform(struct!.endpointResourceId),
+    endpoint_tenant_id: cdktf.stringToTerraform(struct!.endpointTenantId),
+  }
+}
+
 export interface StorageAccountNetworkRules {
   readonly bypass?: string[];
   readonly defaultAction: string;
   readonly ipRules?: string[];
   readonly virtualNetworkSubnetIds?: string[];
+  /** private_link_access block */
+  readonly privateLinkAccess?: StorageAccountNetworkRulesPrivateLinkAccess[];
 }
 
 function storageAccountNetworkRulesToTerraform(struct?: StorageAccountNetworkRules): any {
@@ -139,6 +195,7 @@ function storageAccountNetworkRulesToTerraform(struct?: StorageAccountNetworkRul
     default_action: cdktf.stringToTerraform(struct!.defaultAction),
     ip_rules: cdktf.listMapper(cdktf.stringToTerraform)(struct!.ipRules),
     virtual_network_subnet_ids: cdktf.listMapper(cdktf.stringToTerraform)(struct!.virtualNetworkSubnetIds),
+    private_link_access: cdktf.listMapper(storageAccountNetworkRulesPrivateLinkAccessToTerraform)(struct!.privateLinkAccess),
   }
 }
 
@@ -235,6 +292,21 @@ function storageAccountQueuePropertiesToTerraform(struct?: StorageAccountQueuePr
   }
 }
 
+export interface StorageAccountRouting {
+  readonly choice?: string;
+  readonly publishInternetEndpoints?: boolean;
+  readonly publishMicrosoftEndpoints?: boolean;
+}
+
+function storageAccountRoutingToTerraform(struct?: StorageAccountRouting): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    choice: cdktf.stringToTerraform(struct!.choice),
+    publish_internet_endpoints: cdktf.booleanToTerraform(struct!.publishInternetEndpoints),
+    publish_microsoft_endpoints: cdktf.booleanToTerraform(struct!.publishMicrosoftEndpoints),
+  }
+}
+
 export interface StorageAccountStaticWebsite {
   readonly error404Document?: string;
   readonly indexDocument?: string;
@@ -299,11 +371,13 @@ export class StorageAccount extends cdktf.TerraformResource {
     this._nfsv3Enabled = config.nfsv3Enabled;
     this._resourceGroupName = config.resourceGroupName;
     this._tags = config.tags;
+    this._azureFilesAuthentication = config.azureFilesAuthentication;
     this._blobProperties = config.blobProperties;
     this._customDomain = config.customDomain;
     this._identity = config.identity;
     this._networkRules = config.networkRules;
     this._queueProperties = config.queueProperties;
+    this._routing = config.routing;
     this._staticWebsite = config.staticWebsite;
     this._timeouts = config.timeouts;
   }
@@ -686,6 +760,22 @@ export class StorageAccount extends cdktf.TerraformResource {
     return this._tags
   }
 
+  // azure_files_authentication - computed: false, optional: true, required: false
+  private _azureFilesAuthentication?: StorageAccountAzureFilesAuthentication[];
+  public get azureFilesAuthentication() {
+    return this.interpolationForAttribute('azure_files_authentication') as any;
+  }
+  public set azureFilesAuthentication(value: StorageAccountAzureFilesAuthentication[] ) {
+    this._azureFilesAuthentication = value;
+  }
+  public resetAzureFilesAuthentication() {
+    this._azureFilesAuthentication = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get azureFilesAuthenticationInput() {
+    return this._azureFilesAuthentication
+  }
+
   // blob_properties - computed: false, optional: true, required: false
   private _blobProperties?: StorageAccountBlobProperties[];
   public get blobProperties() {
@@ -766,6 +856,22 @@ export class StorageAccount extends cdktf.TerraformResource {
     return this._queueProperties
   }
 
+  // routing - computed: false, optional: true, required: false
+  private _routing?: StorageAccountRouting[];
+  public get routing() {
+    return this.interpolationForAttribute('routing') as any;
+  }
+  public set routing(value: StorageAccountRouting[] ) {
+    this._routing = value;
+  }
+  public resetRouting() {
+    this._routing = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get routingInput() {
+    return this._routing
+  }
+
   // static_website - computed: false, optional: true, required: false
   private _staticWebsite?: StorageAccountStaticWebsite[];
   public get staticWebsite() {
@@ -818,11 +924,13 @@ export class StorageAccount extends cdktf.TerraformResource {
       nfsv3_enabled: cdktf.booleanToTerraform(this._nfsv3Enabled),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      azure_files_authentication: cdktf.listMapper(storageAccountAzureFilesAuthenticationToTerraform)(this._azureFilesAuthentication),
       blob_properties: cdktf.listMapper(storageAccountBlobPropertiesToTerraform)(this._blobProperties),
       custom_domain: cdktf.listMapper(storageAccountCustomDomainToTerraform)(this._customDomain),
       identity: cdktf.listMapper(storageAccountIdentityToTerraform)(this._identity),
       network_rules: cdktf.listMapper(storageAccountNetworkRulesToTerraform)(this._networkRules),
       queue_properties: cdktf.listMapper(storageAccountQueuePropertiesToTerraform)(this._queueProperties),
+      routing: cdktf.listMapper(storageAccountRoutingToTerraform)(this._routing),
       static_website: cdktf.listMapper(storageAccountStaticWebsiteToTerraform)(this._staticWebsite),
       timeouts: storageAccountTimeoutsToTerraform(this._timeouts),
     };
