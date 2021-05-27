@@ -7,21 +7,59 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface SynapseSqlPoolConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_sql_pool.html#collation SynapseSqlPool#collation}
+  */
   readonly collation?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_sql_pool.html#create_mode SynapseSqlPool#create_mode}
+  */
   readonly createMode?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_sql_pool.html#data_encrypted SynapseSqlPool#data_encrypted}
+  */
   readonly dataEncrypted?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_sql_pool.html#name SynapseSqlPool#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_sql_pool.html#recovery_database_id SynapseSqlPool#recovery_database_id}
+  */
   readonly recoveryDatabaseId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_sql_pool.html#sku_name SynapseSqlPool#sku_name}
+  */
   readonly skuName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_sql_pool.html#synapse_workspace_id SynapseSqlPool#synapse_workspace_id}
+  */
   readonly synapseWorkspaceId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_sql_pool.html#tags SynapseSqlPool#tags}
+  */
   readonly tags?: { [key: string]: string };
-  /** restore block */
+  /**
+  * restore block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_sql_pool.html#restore SynapseSqlPool#restore}
+  */
   readonly restore?: SynapseSqlPoolRestore[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_sql_pool.html#timeouts SynapseSqlPool#timeouts}
+  */
   readonly timeouts?: SynapseSqlPoolTimeouts;
 }
 export interface SynapseSqlPoolRestore {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_sql_pool.html#point_in_time SynapseSqlPool#point_in_time}
+  */
   readonly pointInTime: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_sql_pool.html#source_database_id SynapseSqlPool#source_database_id}
+  */
   readonly sourceDatabaseId: string;
 }
 
@@ -34,9 +72,21 @@ function synapseSqlPoolRestoreToTerraform(struct?: SynapseSqlPoolRestore): any {
 }
 
 export interface SynapseSqlPoolTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_sql_pool.html#create SynapseSqlPool#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_sql_pool.html#delete SynapseSqlPool#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_sql_pool.html#read SynapseSqlPool#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_sql_pool.html#update SynapseSqlPool#update}
+  */
   readonly update?: string;
 }
 
@@ -51,14 +101,22 @@ function synapseSqlPoolTimeoutsToTerraform(struct?: SynapseSqlPoolTimeouts): any
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_sql_pool.html azurerm_synapse_sql_pool}
+*/
 export class SynapseSqlPool extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_sql_pool.html azurerm_synapse_sql_pool} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options SynapseSqlPoolConfig
+  */
   public constructor(scope: Construct, id: string, config: SynapseSqlPoolConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_synapse_sql_pool',

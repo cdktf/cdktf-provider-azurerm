@@ -7,21 +7,61 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface ResourceGroupTemplateDeploymentConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/resource_group_template_deployment.html#debug_level ResourceGroupTemplateDeployment#debug_level}
+  */
   readonly debugLevel?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/resource_group_template_deployment.html#deployment_mode ResourceGroupTemplateDeployment#deployment_mode}
+  */
   readonly deploymentMode: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/resource_group_template_deployment.html#name ResourceGroupTemplateDeployment#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/resource_group_template_deployment.html#parameters_content ResourceGroupTemplateDeployment#parameters_content}
+  */
   readonly parametersContent?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/resource_group_template_deployment.html#resource_group_name ResourceGroupTemplateDeployment#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/resource_group_template_deployment.html#tags ResourceGroupTemplateDeployment#tags}
+  */
   readonly tags?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/resource_group_template_deployment.html#template_content ResourceGroupTemplateDeployment#template_content}
+  */
   readonly templateContent?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/resource_group_template_deployment.html#template_spec_version_id ResourceGroupTemplateDeployment#template_spec_version_id}
+  */
   readonly templateSpecVersionId?: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/resource_group_template_deployment.html#timeouts ResourceGroupTemplateDeployment#timeouts}
+  */
   readonly timeouts?: ResourceGroupTemplateDeploymentTimeouts;
 }
 export interface ResourceGroupTemplateDeploymentTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/resource_group_template_deployment.html#create ResourceGroupTemplateDeployment#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/resource_group_template_deployment.html#delete ResourceGroupTemplateDeployment#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/resource_group_template_deployment.html#read ResourceGroupTemplateDeployment#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/resource_group_template_deployment.html#update ResourceGroupTemplateDeployment#update}
+  */
   readonly update?: string;
 }
 
@@ -36,14 +76,22 @@ function resourceGroupTemplateDeploymentTimeoutsToTerraform(struct?: ResourceGro
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/resource_group_template_deployment.html azurerm_resource_group_template_deployment}
+*/
 export class ResourceGroupTemplateDeployment extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/resource_group_template_deployment.html azurerm_resource_group_template_deployment} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options ResourceGroupTemplateDeploymentConfig
+  */
   public constructor(scope: Construct, id: string, config: ResourceGroupTemplateDeploymentConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_resource_group_template_deployment',

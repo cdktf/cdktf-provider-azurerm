@@ -7,16 +7,41 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface AppServiceActiveSlotConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_active_slot.html#app_service_name AppServiceActiveSlot#app_service_name}
+  */
   readonly appServiceName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_active_slot.html#app_service_slot_name AppServiceActiveSlot#app_service_slot_name}
+  */
   readonly appServiceSlotName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_active_slot.html#resource_group_name AppServiceActiveSlot#resource_group_name}
+  */
   readonly resourceGroupName: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_active_slot.html#timeouts AppServiceActiveSlot#timeouts}
+  */
   readonly timeouts?: AppServiceActiveSlotTimeouts;
 }
 export interface AppServiceActiveSlotTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_active_slot.html#create AppServiceActiveSlot#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_active_slot.html#delete AppServiceActiveSlot#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_active_slot.html#read AppServiceActiveSlot#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_active_slot.html#update AppServiceActiveSlot#update}
+  */
   readonly update?: string;
 }
 
@@ -31,14 +56,22 @@ function appServiceActiveSlotTimeoutsToTerraform(struct?: AppServiceActiveSlotTi
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_active_slot.html azurerm_app_service_active_slot}
+*/
 export class AppServiceActiveSlot extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_active_slot.html azurerm_app_service_active_slot} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options AppServiceActiveSlotConfig
+  */
   public constructor(scope: Construct, id: string, config: AppServiceActiveSlotConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_app_service_active_slot',

@@ -7,20 +7,57 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface NetappPoolConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/netapp_pool.html#account_name NetappPool#account_name}
+  */
   readonly accountName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/netapp_pool.html#location NetappPool#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/netapp_pool.html#name NetappPool#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/netapp_pool.html#resource_group_name NetappPool#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/netapp_pool.html#service_level NetappPool#service_level}
+  */
   readonly serviceLevel: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/netapp_pool.html#size_in_tb NetappPool#size_in_tb}
+  */
   readonly sizeInTb: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/netapp_pool.html#tags NetappPool#tags}
+  */
   readonly tags?: { [key: string]: string };
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/netapp_pool.html#timeouts NetappPool#timeouts}
+  */
   readonly timeouts?: NetappPoolTimeouts;
 }
 export interface NetappPoolTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/netapp_pool.html#create NetappPool#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/netapp_pool.html#delete NetappPool#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/netapp_pool.html#read NetappPool#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/netapp_pool.html#update NetappPool#update}
+  */
   readonly update?: string;
 }
 
@@ -35,14 +72,22 @@ function netappPoolTimeoutsToTerraform(struct?: NetappPoolTimeouts): any {
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/netapp_pool.html azurerm_netapp_pool}
+*/
 export class NetappPool extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/netapp_pool.html azurerm_netapp_pool} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options NetappPoolConfig
+  */
   public constructor(scope: Construct, id: string, config: NetappPoolConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_netapp_pool',

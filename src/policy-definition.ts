@@ -7,23 +7,69 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface PolicyDefinitionConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/policy_definition.html#description PolicyDefinition#description}
+  */
   readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/policy_definition.html#display_name PolicyDefinition#display_name}
+  */
   readonly displayName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/policy_definition.html#management_group_id PolicyDefinition#management_group_id}
+  */
   readonly managementGroupId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/policy_definition.html#management_group_name PolicyDefinition#management_group_name}
+  */
   readonly managementGroupName?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/policy_definition.html#metadata PolicyDefinition#metadata}
+  */
   readonly metadata?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/policy_definition.html#mode PolicyDefinition#mode}
+  */
   readonly mode: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/policy_definition.html#name PolicyDefinition#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/policy_definition.html#parameters PolicyDefinition#parameters}
+  */
   readonly parameters?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/policy_definition.html#policy_rule PolicyDefinition#policy_rule}
+  */
   readonly policyRule?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/policy_definition.html#policy_type PolicyDefinition#policy_type}
+  */
   readonly policyType: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/policy_definition.html#timeouts PolicyDefinition#timeouts}
+  */
   readonly timeouts?: PolicyDefinitionTimeouts;
 }
 export interface PolicyDefinitionTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/policy_definition.html#create PolicyDefinition#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/policy_definition.html#delete PolicyDefinition#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/policy_definition.html#read PolicyDefinition#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/policy_definition.html#update PolicyDefinition#update}
+  */
   readonly update?: string;
 }
 
@@ -38,14 +84,22 @@ function policyDefinitionTimeoutsToTerraform(struct?: PolicyDefinitionTimeouts):
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/policy_definition.html azurerm_policy_definition}
+*/
 export class PolicyDefinition extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/policy_definition.html azurerm_policy_definition} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options PolicyDefinitionConfig
+  */
   public constructor(scope: Construct, id: string, config: PolicyDefinitionConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_policy_definition',

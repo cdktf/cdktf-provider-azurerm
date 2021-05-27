@@ -7,21 +7,61 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface VirtualDesktopApplicationGroupConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_desktop_application_group.html#description VirtualDesktopApplicationGroup#description}
+  */
   readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_desktop_application_group.html#friendly_name VirtualDesktopApplicationGroup#friendly_name}
+  */
   readonly friendlyName?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_desktop_application_group.html#host_pool_id VirtualDesktopApplicationGroup#host_pool_id}
+  */
   readonly hostPoolId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_desktop_application_group.html#location VirtualDesktopApplicationGroup#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_desktop_application_group.html#name VirtualDesktopApplicationGroup#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_desktop_application_group.html#resource_group_name VirtualDesktopApplicationGroup#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_desktop_application_group.html#tags VirtualDesktopApplicationGroup#tags}
+  */
   readonly tags?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_desktop_application_group.html#type VirtualDesktopApplicationGroup#type}
+  */
   readonly type: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_desktop_application_group.html#timeouts VirtualDesktopApplicationGroup#timeouts}
+  */
   readonly timeouts?: VirtualDesktopApplicationGroupTimeouts;
 }
 export interface VirtualDesktopApplicationGroupTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_desktop_application_group.html#create VirtualDesktopApplicationGroup#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_desktop_application_group.html#delete VirtualDesktopApplicationGroup#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_desktop_application_group.html#read VirtualDesktopApplicationGroup#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_desktop_application_group.html#update VirtualDesktopApplicationGroup#update}
+  */
   readonly update?: string;
 }
 
@@ -36,14 +76,22 @@ function virtualDesktopApplicationGroupTimeoutsToTerraform(struct?: VirtualDeskt
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_desktop_application_group.html azurerm_virtual_desktop_application_group}
+*/
 export class VirtualDesktopApplicationGroup extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_desktop_application_group.html azurerm_virtual_desktop_application_group} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options VirtualDesktopApplicationGroupConfig
+  */
   public constructor(scope: Construct, id: string, config: VirtualDesktopApplicationGroupConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_virtual_desktop_application_group',

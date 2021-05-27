@@ -7,16 +7,41 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface NetworkInterfaceNatRuleAssociationConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_interface_nat_rule_association.html#ip_configuration_name NetworkInterfaceNatRuleAssociation#ip_configuration_name}
+  */
   readonly ipConfigurationName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_interface_nat_rule_association.html#nat_rule_id NetworkInterfaceNatRuleAssociation#nat_rule_id}
+  */
   readonly natRuleId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_interface_nat_rule_association.html#network_interface_id NetworkInterfaceNatRuleAssociation#network_interface_id}
+  */
   readonly networkInterfaceId: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_interface_nat_rule_association.html#timeouts NetworkInterfaceNatRuleAssociation#timeouts}
+  */
   readonly timeouts?: NetworkInterfaceNatRuleAssociationTimeouts;
 }
 export interface NetworkInterfaceNatRuleAssociationTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_interface_nat_rule_association.html#create NetworkInterfaceNatRuleAssociation#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_interface_nat_rule_association.html#delete NetworkInterfaceNatRuleAssociation#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_interface_nat_rule_association.html#read NetworkInterfaceNatRuleAssociation#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_interface_nat_rule_association.html#update NetworkInterfaceNatRuleAssociation#update}
+  */
   readonly update?: string;
 }
 
@@ -31,14 +56,22 @@ function networkInterfaceNatRuleAssociationTimeoutsToTerraform(struct?: NetworkI
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/network_interface_nat_rule_association.html azurerm_network_interface_nat_rule_association}
+*/
 export class NetworkInterfaceNatRuleAssociation extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/network_interface_nat_rule_association.html azurerm_network_interface_nat_rule_association} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options NetworkInterfaceNatRuleAssociationConfig
+  */
   public constructor(scope: Construct, id: string, config: NetworkInterfaceNatRuleAssociationConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_network_interface_nat_rule_association',

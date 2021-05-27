@@ -7,15 +7,37 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface SentinelDataConnectorAzureSecurityCenterConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_data_connector_azure_security_center.html#log_analytics_workspace_id SentinelDataConnectorAzureSecurityCenter#log_analytics_workspace_id}
+  */
   readonly logAnalyticsWorkspaceId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_data_connector_azure_security_center.html#name SentinelDataConnectorAzureSecurityCenter#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_data_connector_azure_security_center.html#subscription_id SentinelDataConnectorAzureSecurityCenter#subscription_id}
+  */
   readonly subscriptionId?: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_data_connector_azure_security_center.html#timeouts SentinelDataConnectorAzureSecurityCenter#timeouts}
+  */
   readonly timeouts?: SentinelDataConnectorAzureSecurityCenterTimeouts;
 }
 export interface SentinelDataConnectorAzureSecurityCenterTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_data_connector_azure_security_center.html#create SentinelDataConnectorAzureSecurityCenter#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_data_connector_azure_security_center.html#delete SentinelDataConnectorAzureSecurityCenter#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_data_connector_azure_security_center.html#read SentinelDataConnectorAzureSecurityCenter#read}
+  */
   readonly read?: string;
 }
 
@@ -29,14 +51,22 @@ function sentinelDataConnectorAzureSecurityCenterTimeoutsToTerraform(struct?: Se
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_data_connector_azure_security_center.html azurerm_sentinel_data_connector_azure_security_center}
+*/
 export class SentinelDataConnectorAzureSecurityCenter extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_data_connector_azure_security_center.html azurerm_sentinel_data_connector_azure_security_center} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options SentinelDataConnectorAzureSecurityCenterConfig
+  */
   public constructor(scope: Construct, id: string, config: SentinelDataConnectorAzureSecurityCenterConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_sentinel_data_connector_azure_security_center',

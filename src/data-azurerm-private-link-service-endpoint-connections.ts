@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/data_azurerm_private_link_service_endpoint_connections.html
+// https://www.terraform.io/docs/providers/azurerm/d/private_link_service_endpoint_connections.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,9 +7,19 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataAzurermPrivateLinkServiceEndpointConnectionsConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/private_link_service_endpoint_connections.html#resource_group_name DataAzurermPrivateLinkServiceEndpointConnections#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/private_link_service_endpoint_connections.html#service_id DataAzurermPrivateLinkServiceEndpointConnections#service_id}
+  */
   readonly serviceId: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/private_link_service_endpoint_connections.html#timeouts DataAzurermPrivateLinkServiceEndpointConnections#timeouts}
+  */
   readonly timeouts?: DataAzurermPrivateLinkServiceEndpointConnectionsTimeouts;
 }
 export class DataAzurermPrivateLinkServiceEndpointConnectionsPrivateEndpointConnections extends cdktf.ComplexComputedList {
@@ -50,6 +60,9 @@ export class DataAzurermPrivateLinkServiceEndpointConnectionsPrivateEndpointConn
   }
 }
 export interface DataAzurermPrivateLinkServiceEndpointConnectionsTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/private_link_service_endpoint_connections.html#read DataAzurermPrivateLinkServiceEndpointConnections#read}
+  */
   readonly read?: string;
 }
 
@@ -61,14 +74,22 @@ function dataAzurermPrivateLinkServiceEndpointConnectionsTimeoutsToTerraform(str
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/private_link_service_endpoint_connections.html azurerm_private_link_service_endpoint_connections}
+*/
 export class DataAzurermPrivateLinkServiceEndpointConnections extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/private_link_service_endpoint_connections.html azurerm_private_link_service_endpoint_connections} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataAzurermPrivateLinkServiceEndpointConnectionsConfig
+  */
   public constructor(scope: Construct, id: string, config: DataAzurermPrivateLinkServiceEndpointConnectionsConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_private_link_service_endpoint_connections',

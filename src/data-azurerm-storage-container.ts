@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/data_azurerm_storage_container.html
+// https://www.terraform.io/docs/providers/azurerm/d/storage_container.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,13 +7,29 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataAzurermStorageContainerConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_container.html#metadata DataAzurermStorageContainer#metadata}
+  */
   readonly metadata?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_container.html#name DataAzurermStorageContainer#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_container.html#storage_account_name DataAzurermStorageContainer#storage_account_name}
+  */
   readonly storageAccountName: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_container.html#timeouts DataAzurermStorageContainer#timeouts}
+  */
   readonly timeouts?: DataAzurermStorageContainerTimeouts;
 }
 export interface DataAzurermStorageContainerTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_container.html#read DataAzurermStorageContainer#read}
+  */
   readonly read?: string;
 }
 
@@ -25,14 +41,22 @@ function dataAzurermStorageContainerTimeoutsToTerraform(struct?: DataAzurermStor
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/storage_container.html azurerm_storage_container}
+*/
 export class DataAzurermStorageContainer extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/storage_container.html azurerm_storage_container} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataAzurermStorageContainerConfig
+  */
   public constructor(scope: Construct, id: string, config: DataAzurermStorageContainerConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_storage_container',

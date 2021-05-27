@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/data_azurerm_log_analytics_workspace.html
+// https://www.terraform.io/docs/providers/azurerm/d/log_analytics_workspace.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,12 +7,25 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataAzurermLogAnalyticsWorkspaceConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/log_analytics_workspace.html#name DataAzurermLogAnalyticsWorkspace#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/log_analytics_workspace.html#resource_group_name DataAzurermLogAnalyticsWorkspace#resource_group_name}
+  */
   readonly resourceGroupName: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/log_analytics_workspace.html#timeouts DataAzurermLogAnalyticsWorkspace#timeouts}
+  */
   readonly timeouts?: DataAzurermLogAnalyticsWorkspaceTimeouts;
 }
 export interface DataAzurermLogAnalyticsWorkspaceTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/log_analytics_workspace.html#read DataAzurermLogAnalyticsWorkspace#read}
+  */
   readonly read?: string;
 }
 
@@ -24,14 +37,22 @@ function dataAzurermLogAnalyticsWorkspaceTimeoutsToTerraform(struct?: DataAzurer
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/log_analytics_workspace.html azurerm_log_analytics_workspace}
+*/
 export class DataAzurermLogAnalyticsWorkspace extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/log_analytics_workspace.html azurerm_log_analytics_workspace} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataAzurermLogAnalyticsWorkspaceConfig
+  */
   public constructor(scope: Construct, id: string, config: DataAzurermLogAnalyticsWorkspaceConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_log_analytics_workspace',

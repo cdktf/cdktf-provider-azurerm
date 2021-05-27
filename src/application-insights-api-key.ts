@@ -7,17 +7,45 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface ApplicationInsightsApiKeyConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights_api_key.html#application_insights_id ApplicationInsightsApiKey#application_insights_id}
+  */
   readonly applicationInsightsId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights_api_key.html#name ApplicationInsightsApiKey#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights_api_key.html#read_permissions ApplicationInsightsApiKey#read_permissions}
+  */
   readonly readPermissions?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights_api_key.html#write_permissions ApplicationInsightsApiKey#write_permissions}
+  */
   readonly writePermissions?: string[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights_api_key.html#timeouts ApplicationInsightsApiKey#timeouts}
+  */
   readonly timeouts?: ApplicationInsightsApiKeyTimeouts;
 }
 export interface ApplicationInsightsApiKeyTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights_api_key.html#create ApplicationInsightsApiKey#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights_api_key.html#delete ApplicationInsightsApiKey#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights_api_key.html#read ApplicationInsightsApiKey#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights_api_key.html#update ApplicationInsightsApiKey#update}
+  */
   readonly update?: string;
 }
 
@@ -32,14 +60,22 @@ function applicationInsightsApiKeyTimeoutsToTerraform(struct?: ApplicationInsigh
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights_api_key.html azurerm_application_insights_api_key}
+*/
 export class ApplicationInsightsApiKey extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights_api_key.html azurerm_application_insights_api_key} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options ApplicationInsightsApiKeyConfig
+  */
   public constructor(scope: Construct, id: string, config: ApplicationInsightsApiKeyConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_application_insights_api_key',

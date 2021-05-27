@@ -7,18 +7,47 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DevTestVirtualNetworkConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_virtual_network.html#description DevTestVirtualNetwork#description}
+  */
   readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_virtual_network.html#lab_name DevTestVirtualNetwork#lab_name}
+  */
   readonly labName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_virtual_network.html#name DevTestVirtualNetwork#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_virtual_network.html#resource_group_name DevTestVirtualNetwork#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_virtual_network.html#tags DevTestVirtualNetwork#tags}
+  */
   readonly tags?: { [key: string]: string };
-  /** subnet block */
+  /**
+  * subnet block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_virtual_network.html#subnet DevTestVirtualNetwork#subnet}
+  */
   readonly subnet?: DevTestVirtualNetworkSubnet[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_virtual_network.html#timeouts DevTestVirtualNetwork#timeouts}
+  */
   readonly timeouts?: DevTestVirtualNetworkTimeouts;
 }
 export interface DevTestVirtualNetworkSubnet {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_virtual_network.html#use_in_virtual_machine_creation DevTestVirtualNetwork#use_in_virtual_machine_creation}
+  */
   readonly useInVirtualMachineCreation?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_virtual_network.html#use_public_ip_address DevTestVirtualNetwork#use_public_ip_address}
+  */
   readonly usePublicIpAddress?: string;
 }
 
@@ -31,9 +60,21 @@ function devTestVirtualNetworkSubnetToTerraform(struct?: DevTestVirtualNetworkSu
 }
 
 export interface DevTestVirtualNetworkTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_virtual_network.html#create DevTestVirtualNetwork#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_virtual_network.html#delete DevTestVirtualNetwork#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_virtual_network.html#read DevTestVirtualNetwork#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_virtual_network.html#update DevTestVirtualNetwork#update}
+  */
   readonly update?: string;
 }
 
@@ -48,14 +89,22 @@ function devTestVirtualNetworkTimeoutsToTerraform(struct?: DevTestVirtualNetwork
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_virtual_network.html azurerm_dev_test_virtual_network}
+*/
 export class DevTestVirtualNetwork extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_virtual_network.html azurerm_dev_test_virtual_network} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DevTestVirtualNetworkConfig
+  */
   public constructor(scope: Construct, id: string, config: DevTestVirtualNetworkConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_dev_test_virtual_network',

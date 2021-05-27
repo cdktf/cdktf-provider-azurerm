@@ -7,37 +7,115 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface HpcCacheConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hpc_cache.html#cache_size_in_gb HpcCache#cache_size_in_gb}
+  */
   readonly cacheSizeInGb: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hpc_cache.html#location HpcCache#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hpc_cache.html#mtu HpcCache#mtu}
+  */
   readonly mtu?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hpc_cache.html#name HpcCache#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hpc_cache.html#ntp_server HpcCache#ntp_server}
+  */
   readonly ntpServer?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hpc_cache.html#resource_group_name HpcCache#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hpc_cache.html#root_squash_enabled HpcCache#root_squash_enabled}
+  */
   readonly rootSquashEnabled?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hpc_cache.html#sku_name HpcCache#sku_name}
+  */
   readonly skuName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hpc_cache.html#subnet_id HpcCache#subnet_id}
+  */
   readonly subnetId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hpc_cache.html#tags HpcCache#tags}
+  */
   readonly tags?: { [key: string]: string };
-  /** default_access_policy block */
+  /**
+  * default_access_policy block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hpc_cache.html#default_access_policy HpcCache#default_access_policy}
+  */
   readonly defaultAccessPolicy?: HpcCacheDefaultAccessPolicy[];
-  /** directory_active_directory block */
+  /**
+  * directory_active_directory block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hpc_cache.html#directory_active_directory HpcCache#directory_active_directory}
+  */
   readonly directoryActiveDirectory?: HpcCacheDirectoryActiveDirectory[];
-  /** directory_flat_file block */
+  /**
+  * directory_flat_file block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hpc_cache.html#directory_flat_file HpcCache#directory_flat_file}
+  */
   readonly directoryFlatFile?: HpcCacheDirectoryFlatFile[];
-  /** directory_ldap block */
+  /**
+  * directory_ldap block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hpc_cache.html#directory_ldap HpcCache#directory_ldap}
+  */
   readonly directoryLdap?: HpcCacheDirectoryLdap[];
-  /** dns block */
+  /**
+  * dns block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hpc_cache.html#dns HpcCache#dns}
+  */
   readonly dns?: HpcCacheDns[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hpc_cache.html#timeouts HpcCache#timeouts}
+  */
   readonly timeouts?: HpcCacheTimeouts;
 }
 export interface HpcCacheDefaultAccessPolicyAccessRule {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hpc_cache.html#access HpcCache#access}
+  */
   readonly access: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hpc_cache.html#anonymous_gid HpcCache#anonymous_gid}
+  */
   readonly anonymousGid?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hpc_cache.html#anonymous_uid HpcCache#anonymous_uid}
+  */
   readonly anonymousUid?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hpc_cache.html#filter HpcCache#filter}
+  */
   readonly filter?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hpc_cache.html#root_squash_enabled HpcCache#root_squash_enabled}
+  */
   readonly rootSquashEnabled?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hpc_cache.html#scope HpcCache#scope}
+  */
   readonly scope: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hpc_cache.html#submount_access_enabled HpcCache#submount_access_enabled}
+  */
   readonly submountAccessEnabled?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hpc_cache.html#suid_enabled HpcCache#suid_enabled}
+  */
   readonly suidEnabled?: boolean;
 }
 
@@ -56,7 +134,11 @@ function hpcCacheDefaultAccessPolicyAccessRuleToTerraform(struct?: HpcCacheDefau
 }
 
 export interface HpcCacheDefaultAccessPolicy {
-  /** access_rule block */
+  /**
+  * access_rule block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hpc_cache.html#access_rule HpcCache#access_rule}
+  */
   readonly accessRule: HpcCacheDefaultAccessPolicyAccessRule[];
 }
 
@@ -68,12 +150,33 @@ function hpcCacheDefaultAccessPolicyToTerraform(struct?: HpcCacheDefaultAccessPo
 }
 
 export interface HpcCacheDirectoryActiveDirectory {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hpc_cache.html#cache_netbios_name HpcCache#cache_netbios_name}
+  */
   readonly cacheNetbiosName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hpc_cache.html#dns_primary_ip HpcCache#dns_primary_ip}
+  */
   readonly dnsPrimaryIp: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hpc_cache.html#dns_secondary_ip HpcCache#dns_secondary_ip}
+  */
   readonly dnsSecondaryIp?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hpc_cache.html#domain_name HpcCache#domain_name}
+  */
   readonly domainName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hpc_cache.html#domain_netbios_name HpcCache#domain_netbios_name}
+  */
   readonly domainNetbiosName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hpc_cache.html#password HpcCache#password}
+  */
   readonly password: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hpc_cache.html#username HpcCache#username}
+  */
   readonly username: string;
 }
 
@@ -91,7 +194,13 @@ function hpcCacheDirectoryActiveDirectoryToTerraform(struct?: HpcCacheDirectoryA
 }
 
 export interface HpcCacheDirectoryFlatFile {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hpc_cache.html#group_file_uri HpcCache#group_file_uri}
+  */
   readonly groupFileUri: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hpc_cache.html#password_file_uri HpcCache#password_file_uri}
+  */
   readonly passwordFileUri: string;
 }
 
@@ -104,7 +213,13 @@ function hpcCacheDirectoryFlatFileToTerraform(struct?: HpcCacheDirectoryFlatFile
 }
 
 export interface HpcCacheDirectoryLdapBind {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hpc_cache.html#dn HpcCache#dn}
+  */
   readonly dn: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hpc_cache.html#password HpcCache#password}
+  */
   readonly password: string;
 }
 
@@ -117,12 +232,31 @@ function hpcCacheDirectoryLdapBindToTerraform(struct?: HpcCacheDirectoryLdapBind
 }
 
 export interface HpcCacheDirectoryLdap {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hpc_cache.html#base_dn HpcCache#base_dn}
+  */
   readonly baseDn: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hpc_cache.html#certificate_validation_uri HpcCache#certificate_validation_uri}
+  */
   readonly certificateValidationUri?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hpc_cache.html#download_certificate_automatically HpcCache#download_certificate_automatically}
+  */
   readonly downloadCertificateAutomatically?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hpc_cache.html#encrypted HpcCache#encrypted}
+  */
   readonly encrypted?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hpc_cache.html#server HpcCache#server}
+  */
   readonly server: string;
-  /** bind block */
+  /**
+  * bind block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hpc_cache.html#bind HpcCache#bind}
+  */
   readonly bind?: HpcCacheDirectoryLdapBind[];
 }
 
@@ -139,7 +273,13 @@ function hpcCacheDirectoryLdapToTerraform(struct?: HpcCacheDirectoryLdap): any {
 }
 
 export interface HpcCacheDns {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hpc_cache.html#search_domain HpcCache#search_domain}
+  */
   readonly searchDomain?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hpc_cache.html#servers HpcCache#servers}
+  */
   readonly servers: string[];
 }
 
@@ -152,9 +292,21 @@ function hpcCacheDnsToTerraform(struct?: HpcCacheDns): any {
 }
 
 export interface HpcCacheTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hpc_cache.html#create HpcCache#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hpc_cache.html#delete HpcCache#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hpc_cache.html#read HpcCache#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hpc_cache.html#update HpcCache#update}
+  */
   readonly update?: string;
 }
 
@@ -169,14 +321,22 @@ function hpcCacheTimeoutsToTerraform(struct?: HpcCacheTimeouts): any {
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/hpc_cache.html azurerm_hpc_cache}
+*/
 export class HpcCache extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/hpc_cache.html azurerm_hpc_cache} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options HpcCacheConfig
+  */
   public constructor(scope: Construct, id: string, config: HpcCacheConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_hpc_cache',

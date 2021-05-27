@@ -7,18 +7,49 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DashboardConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dashboard.html#dashboard_properties Dashboard#dashboard_properties}
+  */
   readonly dashboardProperties?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dashboard.html#location Dashboard#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dashboard.html#name Dashboard#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dashboard.html#resource_group_name Dashboard#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dashboard.html#tags Dashboard#tags}
+  */
   readonly tags?: { [key: string]: string };
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dashboard.html#timeouts Dashboard#timeouts}
+  */
   readonly timeouts?: DashboardTimeouts;
 }
 export interface DashboardTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dashboard.html#create Dashboard#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dashboard.html#delete Dashboard#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dashboard.html#read Dashboard#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dashboard.html#update Dashboard#update}
+  */
   readonly update?: string;
 }
 
@@ -33,14 +64,22 @@ function dashboardTimeoutsToTerraform(struct?: DashboardTimeouts): any {
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/dashboard.html azurerm_dashboard}
+*/
 export class Dashboard extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/dashboard.html azurerm_dashboard} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DashboardConfig
+  */
   public constructor(scope: Construct, id: string, config: DashboardConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_dashboard',

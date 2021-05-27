@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/data_azurerm_mysql_server.html
+// https://www.terraform.io/docs/providers/azurerm/d/mysql_server.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,9 +7,19 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataAzurermMysqlServerConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/mysql_server.html#name DataAzurermMysqlServer#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/mysql_server.html#resource_group_name DataAzurermMysqlServer#resource_group_name}
+  */
   readonly resourceGroupName: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/mysql_server.html#timeouts DataAzurermMysqlServer#timeouts}
+  */
   readonly timeouts?: DataAzurermMysqlServerTimeouts;
 }
 export class DataAzurermMysqlServerIdentity extends cdktf.ComplexComputedList {
@@ -67,6 +77,9 @@ export class DataAzurermMysqlServerThreatDetectionPolicy extends cdktf.ComplexCo
   }
 }
 export interface DataAzurermMysqlServerTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/mysql_server.html#read DataAzurermMysqlServer#read}
+  */
   readonly read?: string;
 }
 
@@ -78,14 +91,22 @@ function dataAzurermMysqlServerTimeoutsToTerraform(struct?: DataAzurermMysqlServ
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/mysql_server.html azurerm_mysql_server}
+*/
 export class DataAzurermMysqlServer extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/mysql_server.html azurerm_mysql_server} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataAzurermMysqlServerConfig
+  */
   public constructor(scope: Construct, id: string, config: DataAzurermMysqlServerConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_mysql_server',

@@ -7,18 +7,49 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface SentinelDataConnectorMicrosoftCloudAppSecurityConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_data_connector_microsoft_cloud_app_security.html#alerts_enabled SentinelDataConnectorMicrosoftCloudAppSecurity#alerts_enabled}
+  */
   readonly alertsEnabled?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_data_connector_microsoft_cloud_app_security.html#discovery_logs_enabled SentinelDataConnectorMicrosoftCloudAppSecurity#discovery_logs_enabled}
+  */
   readonly discoveryLogsEnabled?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_data_connector_microsoft_cloud_app_security.html#log_analytics_workspace_id SentinelDataConnectorMicrosoftCloudAppSecurity#log_analytics_workspace_id}
+  */
   readonly logAnalyticsWorkspaceId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_data_connector_microsoft_cloud_app_security.html#name SentinelDataConnectorMicrosoftCloudAppSecurity#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_data_connector_microsoft_cloud_app_security.html#tenant_id SentinelDataConnectorMicrosoftCloudAppSecurity#tenant_id}
+  */
   readonly tenantId?: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_data_connector_microsoft_cloud_app_security.html#timeouts SentinelDataConnectorMicrosoftCloudAppSecurity#timeouts}
+  */
   readonly timeouts?: SentinelDataConnectorMicrosoftCloudAppSecurityTimeouts;
 }
 export interface SentinelDataConnectorMicrosoftCloudAppSecurityTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_data_connector_microsoft_cloud_app_security.html#create SentinelDataConnectorMicrosoftCloudAppSecurity#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_data_connector_microsoft_cloud_app_security.html#delete SentinelDataConnectorMicrosoftCloudAppSecurity#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_data_connector_microsoft_cloud_app_security.html#read SentinelDataConnectorMicrosoftCloudAppSecurity#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_data_connector_microsoft_cloud_app_security.html#update SentinelDataConnectorMicrosoftCloudAppSecurity#update}
+  */
   readonly update?: string;
 }
 
@@ -33,14 +64,22 @@ function sentinelDataConnectorMicrosoftCloudAppSecurityTimeoutsToTerraform(struc
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_data_connector_microsoft_cloud_app_security.html azurerm_sentinel_data_connector_microsoft_cloud_app_security}
+*/
 export class SentinelDataConnectorMicrosoftCloudAppSecurity extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_data_connector_microsoft_cloud_app_security.html azurerm_sentinel_data_connector_microsoft_cloud_app_security} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options SentinelDataConnectorMicrosoftCloudAppSecurityConfig
+  */
   public constructor(scope: Construct, id: string, config: SentinelDataConnectorMicrosoftCloudAppSecurityConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_sentinel_data_connector_microsoft_cloud_app_security',

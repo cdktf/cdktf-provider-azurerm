@@ -7,24 +7,71 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface PrivateLinkServiceConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/private_link_service.html#auto_approval_subscription_ids PrivateLinkService#auto_approval_subscription_ids}
+  */
   readonly autoApprovalSubscriptionIds?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/private_link_service.html#enable_proxy_protocol PrivateLinkService#enable_proxy_protocol}
+  */
   readonly enableProxyProtocol?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/private_link_service.html#load_balancer_frontend_ip_configuration_ids PrivateLinkService#load_balancer_frontend_ip_configuration_ids}
+  */
   readonly loadBalancerFrontendIpConfigurationIds: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/private_link_service.html#location PrivateLinkService#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/private_link_service.html#name PrivateLinkService#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/private_link_service.html#resource_group_name PrivateLinkService#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/private_link_service.html#tags PrivateLinkService#tags}
+  */
   readonly tags?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/private_link_service.html#visibility_subscription_ids PrivateLinkService#visibility_subscription_ids}
+  */
   readonly visibilitySubscriptionIds?: string[];
-  /** nat_ip_configuration block */
+  /**
+  * nat_ip_configuration block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/private_link_service.html#nat_ip_configuration PrivateLinkService#nat_ip_configuration}
+  */
   readonly natIpConfiguration: PrivateLinkServiceNatIpConfiguration[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/private_link_service.html#timeouts PrivateLinkService#timeouts}
+  */
   readonly timeouts?: PrivateLinkServiceTimeouts;
 }
 export interface PrivateLinkServiceNatIpConfiguration {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/private_link_service.html#name PrivateLinkService#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/private_link_service.html#primary PrivateLinkService#primary}
+  */
   readonly primary: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/private_link_service.html#private_ip_address PrivateLinkService#private_ip_address}
+  */
   readonly privateIpAddress?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/private_link_service.html#private_ip_address_version PrivateLinkService#private_ip_address_version}
+  */
   readonly privateIpAddressVersion?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/private_link_service.html#subnet_id PrivateLinkService#subnet_id}
+  */
   readonly subnetId: string;
 }
 
@@ -40,9 +87,21 @@ function privateLinkServiceNatIpConfigurationToTerraform(struct?: PrivateLinkSer
 }
 
 export interface PrivateLinkServiceTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/private_link_service.html#create PrivateLinkService#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/private_link_service.html#delete PrivateLinkService#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/private_link_service.html#read PrivateLinkService#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/private_link_service.html#update PrivateLinkService#update}
+  */
   readonly update?: string;
 }
 
@@ -57,14 +116,22 @@ function privateLinkServiceTimeoutsToTerraform(struct?: PrivateLinkServiceTimeou
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/private_link_service.html azurerm_private_link_service}
+*/
 export class PrivateLinkService extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/private_link_service.html azurerm_private_link_service} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options PrivateLinkServiceConfig
+  */
   public constructor(scope: Construct, id: string, config: PrivateLinkServiceConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_private_link_service',

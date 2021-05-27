@@ -7,19 +7,53 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface RedisEnterpriseClusterConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_enterprise_cluster.html#location RedisEnterpriseCluster#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_enterprise_cluster.html#minimum_tls_version RedisEnterpriseCluster#minimum_tls_version}
+  */
   readonly minimumTlsVersion?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_enterprise_cluster.html#name RedisEnterpriseCluster#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_enterprise_cluster.html#resource_group_name RedisEnterpriseCluster#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_enterprise_cluster.html#sku_name RedisEnterpriseCluster#sku_name}
+  */
   readonly skuName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_enterprise_cluster.html#tags RedisEnterpriseCluster#tags}
+  */
   readonly tags?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_enterprise_cluster.html#zones RedisEnterpriseCluster#zones}
+  */
   readonly zones?: string[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_enterprise_cluster.html#timeouts RedisEnterpriseCluster#timeouts}
+  */
   readonly timeouts?: RedisEnterpriseClusterTimeouts;
 }
 export interface RedisEnterpriseClusterTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_enterprise_cluster.html#create RedisEnterpriseCluster#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_enterprise_cluster.html#delete RedisEnterpriseCluster#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_enterprise_cluster.html#read RedisEnterpriseCluster#read}
+  */
   readonly read?: string;
 }
 
@@ -33,14 +67,22 @@ function redisEnterpriseClusterTimeoutsToTerraform(struct?: RedisEnterpriseClust
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/redis_enterprise_cluster.html azurerm_redis_enterprise_cluster}
+*/
 export class RedisEnterpriseCluster extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/redis_enterprise_cluster.html azurerm_redis_enterprise_cluster} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options RedisEnterpriseClusterConfig
+  */
   public constructor(scope: Construct, id: string, config: RedisEnterpriseClusterConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_redis_enterprise_cluster',

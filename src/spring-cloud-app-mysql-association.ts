@@ -7,19 +7,53 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface SpringCloudAppMysqlAssociationConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_app_mysql_association.html#database_name SpringCloudAppMysqlAssociation#database_name}
+  */
   readonly databaseName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_app_mysql_association.html#mysql_server_id SpringCloudAppMysqlAssociation#mysql_server_id}
+  */
   readonly mysqlServerId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_app_mysql_association.html#name SpringCloudAppMysqlAssociation#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_app_mysql_association.html#password SpringCloudAppMysqlAssociation#password}
+  */
   readonly password: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_app_mysql_association.html#spring_cloud_app_id SpringCloudAppMysqlAssociation#spring_cloud_app_id}
+  */
   readonly springCloudAppId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_app_mysql_association.html#username SpringCloudAppMysqlAssociation#username}
+  */
   readonly username: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_app_mysql_association.html#timeouts SpringCloudAppMysqlAssociation#timeouts}
+  */
   readonly timeouts?: SpringCloudAppMysqlAssociationTimeouts;
 }
 export interface SpringCloudAppMysqlAssociationTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_app_mysql_association.html#create SpringCloudAppMysqlAssociation#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_app_mysql_association.html#delete SpringCloudAppMysqlAssociation#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_app_mysql_association.html#read SpringCloudAppMysqlAssociation#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_app_mysql_association.html#update SpringCloudAppMysqlAssociation#update}
+  */
   readonly update?: string;
 }
 
@@ -34,14 +68,22 @@ function springCloudAppMysqlAssociationTimeoutsToTerraform(struct?: SpringCloudA
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_app_mysql_association.html azurerm_spring_cloud_app_mysql_association}
+*/
 export class SpringCloudAppMysqlAssociation extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_app_mysql_association.html azurerm_spring_cloud_app_mysql_association} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options SpringCloudAppMysqlAssociationConfig
+  */
   public constructor(scope: Construct, id: string, config: SpringCloudAppMysqlAssociationConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_spring_cloud_app_mysql_association',

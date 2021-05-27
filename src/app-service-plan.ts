@@ -7,24 +7,71 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface AppServicePlanConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_plan.html#app_service_environment_id AppServicePlan#app_service_environment_id}
+  */
   readonly appServiceEnvironmentId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_plan.html#is_xenon AppServicePlan#is_xenon}
+  */
   readonly isXenon?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_plan.html#kind AppServicePlan#kind}
+  */
   readonly kind?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_plan.html#location AppServicePlan#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_plan.html#maximum_elastic_worker_count AppServicePlan#maximum_elastic_worker_count}
+  */
   readonly maximumElasticWorkerCount?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_plan.html#name AppServicePlan#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_plan.html#per_site_scaling AppServicePlan#per_site_scaling}
+  */
   readonly perSiteScaling?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_plan.html#reserved AppServicePlan#reserved}
+  */
   readonly reserved?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_plan.html#resource_group_name AppServicePlan#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_plan.html#tags AppServicePlan#tags}
+  */
   readonly tags?: { [key: string]: string };
-  /** sku block */
+  /**
+  * sku block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_plan.html#sku AppServicePlan#sku}
+  */
   readonly sku: AppServicePlanSku[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_plan.html#timeouts AppServicePlan#timeouts}
+  */
   readonly timeouts?: AppServicePlanTimeouts;
 }
 export interface AppServicePlanSku {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_plan.html#capacity AppServicePlan#capacity}
+  */
   readonly capacity?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_plan.html#size AppServicePlan#size}
+  */
   readonly size: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_plan.html#tier AppServicePlan#tier}
+  */
   readonly tier: string;
 }
 
@@ -38,9 +85,21 @@ function appServicePlanSkuToTerraform(struct?: AppServicePlanSku): any {
 }
 
 export interface AppServicePlanTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_plan.html#create AppServicePlan#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_plan.html#delete AppServicePlan#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_plan.html#read AppServicePlan#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_plan.html#update AppServicePlan#update}
+  */
   readonly update?: string;
 }
 
@@ -55,14 +114,22 @@ function appServicePlanTimeoutsToTerraform(struct?: AppServicePlanTimeouts): any
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_plan.html azurerm_app_service_plan}
+*/
 export class AppServicePlan extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_plan.html azurerm_app_service_plan} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options AppServicePlanConfig
+  */
   public constructor(scope: Construct, id: string, config: AppServicePlanConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_app_service_plan',

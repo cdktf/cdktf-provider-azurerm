@@ -7,21 +7,55 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface MediaServicesAccountConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_services_account.html#location MediaServicesAccount#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_services_account.html#name MediaServicesAccount#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_services_account.html#resource_group_name MediaServicesAccount#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_services_account.html#storage_authentication_type MediaServicesAccount#storage_authentication_type}
+  */
   readonly storageAuthenticationType?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_services_account.html#tags MediaServicesAccount#tags}
+  */
   readonly tags?: { [key: string]: string };
-  /** identity block */
+  /**
+  * identity block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_services_account.html#identity MediaServicesAccount#identity}
+  */
   readonly identity?: MediaServicesAccountIdentity[];
-  /** key_delivery_access_control block */
+  /**
+  * key_delivery_access_control block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_services_account.html#key_delivery_access_control MediaServicesAccount#key_delivery_access_control}
+  */
   readonly keyDeliveryAccessControl?: MediaServicesAccountKeyDeliveryAccessControl[];
-  /** storage_account block */
+  /**
+  * storage_account block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_services_account.html#storage_account MediaServicesAccount#storage_account}
+  */
   readonly storageAccount: MediaServicesAccountStorageAccount[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_services_account.html#timeouts MediaServicesAccount#timeouts}
+  */
   readonly timeouts?: MediaServicesAccountTimeouts;
 }
 export interface MediaServicesAccountIdentity {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_services_account.html#type MediaServicesAccount#type}
+  */
   readonly type?: string;
 }
 
@@ -33,7 +67,13 @@ function mediaServicesAccountIdentityToTerraform(struct?: MediaServicesAccountId
 }
 
 export interface MediaServicesAccountKeyDeliveryAccessControl {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_services_account.html#default_action MediaServicesAccount#default_action}
+  */
   readonly defaultAction?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_services_account.html#ip_allow_list MediaServicesAccount#ip_allow_list}
+  */
   readonly ipAllowList?: string[];
 }
 
@@ -46,7 +86,13 @@ function mediaServicesAccountKeyDeliveryAccessControlToTerraform(struct?: MediaS
 }
 
 export interface MediaServicesAccountStorageAccount {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_services_account.html#id MediaServicesAccount#id}
+  */
   readonly id: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_services_account.html#is_primary MediaServicesAccount#is_primary}
+  */
   readonly isPrimary?: boolean;
 }
 
@@ -59,9 +105,21 @@ function mediaServicesAccountStorageAccountToTerraform(struct?: MediaServicesAcc
 }
 
 export interface MediaServicesAccountTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_services_account.html#create MediaServicesAccount#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_services_account.html#delete MediaServicesAccount#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_services_account.html#read MediaServicesAccount#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_services_account.html#update MediaServicesAccount#update}
+  */
   readonly update?: string;
 }
 
@@ -76,14 +134,22 @@ function mediaServicesAccountTimeoutsToTerraform(struct?: MediaServicesAccountTi
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/media_services_account.html azurerm_media_services_account}
+*/
 export class MediaServicesAccount extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/media_services_account.html azurerm_media_services_account} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options MediaServicesAccountConfig
+  */
   public constructor(scope: Construct, id: string, config: MediaServicesAccountConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_media_services_account',

@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/data_azurerm_network_service_tags.html
+// https://www.terraform.io/docs/providers/azurerm/d/network_service_tags.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,13 +7,29 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataAzurermNetworkServiceTagsConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/network_service_tags.html#location DataAzurermNetworkServiceTags#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/network_service_tags.html#location_filter DataAzurermNetworkServiceTags#location_filter}
+  */
   readonly locationFilter?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/network_service_tags.html#service DataAzurermNetworkServiceTags#service}
+  */
   readonly service: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/network_service_tags.html#timeouts DataAzurermNetworkServiceTags#timeouts}
+  */
   readonly timeouts?: DataAzurermNetworkServiceTagsTimeouts;
 }
 export interface DataAzurermNetworkServiceTagsTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/network_service_tags.html#read DataAzurermNetworkServiceTags#read}
+  */
   readonly read?: string;
 }
 
@@ -25,14 +41,22 @@ function dataAzurermNetworkServiceTagsTimeoutsToTerraform(struct?: DataAzurermNe
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/network_service_tags.html azurerm_network_service_tags}
+*/
 export class DataAzurermNetworkServiceTags extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/network_service_tags.html azurerm_network_service_tags} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataAzurermNetworkServiceTagsConfig
+  */
   public constructor(scope: Construct, id: string, config: DataAzurermNetworkServiceTagsConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_network_service_tags',

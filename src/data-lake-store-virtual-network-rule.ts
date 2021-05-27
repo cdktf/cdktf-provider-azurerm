@@ -7,17 +7,45 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataLakeStoreVirtualNetworkRuleConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_lake_store_virtual_network_rule.html#account_name DataLakeStoreVirtualNetworkRule#account_name}
+  */
   readonly accountName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_lake_store_virtual_network_rule.html#name DataLakeStoreVirtualNetworkRule#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_lake_store_virtual_network_rule.html#resource_group_name DataLakeStoreVirtualNetworkRule#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_lake_store_virtual_network_rule.html#subnet_id DataLakeStoreVirtualNetworkRule#subnet_id}
+  */
   readonly subnetId: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_lake_store_virtual_network_rule.html#timeouts DataLakeStoreVirtualNetworkRule#timeouts}
+  */
   readonly timeouts?: DataLakeStoreVirtualNetworkRuleTimeouts;
 }
 export interface DataLakeStoreVirtualNetworkRuleTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_lake_store_virtual_network_rule.html#create DataLakeStoreVirtualNetworkRule#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_lake_store_virtual_network_rule.html#delete DataLakeStoreVirtualNetworkRule#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_lake_store_virtual_network_rule.html#read DataLakeStoreVirtualNetworkRule#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_lake_store_virtual_network_rule.html#update DataLakeStoreVirtualNetworkRule#update}
+  */
   readonly update?: string;
 }
 
@@ -32,14 +60,22 @@ function dataLakeStoreVirtualNetworkRuleTimeoutsToTerraform(struct?: DataLakeSto
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/data_lake_store_virtual_network_rule.html azurerm_data_lake_store_virtual_network_rule}
+*/
 export class DataLakeStoreVirtualNetworkRule extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/data_lake_store_virtual_network_rule.html azurerm_data_lake_store_virtual_network_rule} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataLakeStoreVirtualNetworkRuleConfig
+  */
   public constructor(scope: Construct, id: string, config: DataLakeStoreVirtualNetworkRuleConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_data_lake_store_virtual_network_rule',

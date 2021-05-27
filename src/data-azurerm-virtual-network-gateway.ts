@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/data_azurerm_virtual_network_gateway.html
+// https://www.terraform.io/docs/providers/azurerm/d/virtual_network_gateway.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,9 +7,19 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataAzurermVirtualNetworkGatewayConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/virtual_network_gateway.html#name DataAzurermVirtualNetworkGateway#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/virtual_network_gateway.html#resource_group_name DataAzurermVirtualNetworkGateway#resource_group_name}
+  */
   readonly resourceGroupName: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/virtual_network_gateway.html#timeouts DataAzurermVirtualNetworkGateway#timeouts}
+  */
   readonly timeouts?: DataAzurermVirtualNetworkGatewayTimeouts;
 }
 export class DataAzurermVirtualNetworkGatewayBgpSettings extends cdktf.ComplexComputedList {
@@ -130,6 +140,9 @@ export class DataAzurermVirtualNetworkGatewayVpnClientConfiguration extends cdkt
   }
 }
 export interface DataAzurermVirtualNetworkGatewayTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/virtual_network_gateway.html#read DataAzurermVirtualNetworkGateway#read}
+  */
   readonly read?: string;
 }
 
@@ -141,14 +154,22 @@ function dataAzurermVirtualNetworkGatewayTimeoutsToTerraform(struct?: DataAzurer
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/virtual_network_gateway.html azurerm_virtual_network_gateway}
+*/
 export class DataAzurermVirtualNetworkGateway extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/virtual_network_gateway.html azurerm_virtual_network_gateway} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataAzurermVirtualNetworkGatewayConfig
+  */
   public constructor(scope: Construct, id: string, config: DataAzurermVirtualNetworkGatewayConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_virtual_network_gateway',

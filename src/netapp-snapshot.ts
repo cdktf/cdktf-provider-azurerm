@@ -7,20 +7,57 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface NetappSnapshotConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/netapp_snapshot.html#account_name NetappSnapshot#account_name}
+  */
   readonly accountName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/netapp_snapshot.html#location NetappSnapshot#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/netapp_snapshot.html#name NetappSnapshot#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/netapp_snapshot.html#pool_name NetappSnapshot#pool_name}
+  */
   readonly poolName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/netapp_snapshot.html#resource_group_name NetappSnapshot#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/netapp_snapshot.html#tags NetappSnapshot#tags}
+  */
   readonly tags?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/netapp_snapshot.html#volume_name NetappSnapshot#volume_name}
+  */
   readonly volumeName: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/netapp_snapshot.html#timeouts NetappSnapshot#timeouts}
+  */
   readonly timeouts?: NetappSnapshotTimeouts;
 }
 export interface NetappSnapshotTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/netapp_snapshot.html#create NetappSnapshot#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/netapp_snapshot.html#delete NetappSnapshot#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/netapp_snapshot.html#read NetappSnapshot#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/netapp_snapshot.html#update NetappSnapshot#update}
+  */
   readonly update?: string;
 }
 
@@ -35,14 +72,22 @@ function netappSnapshotTimeoutsToTerraform(struct?: NetappSnapshotTimeouts): any
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/netapp_snapshot.html azurerm_netapp_snapshot}
+*/
 export class NetappSnapshot extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/netapp_snapshot.html azurerm_netapp_snapshot} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options NetappSnapshotConfig
+  */
   public constructor(scope: Construct, id: string, config: NetappSnapshotConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_netapp_snapshot',

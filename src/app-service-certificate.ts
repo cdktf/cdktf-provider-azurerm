@@ -7,21 +7,61 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface AppServiceCertificateConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_certificate.html#hosting_environment_profile_id AppServiceCertificate#hosting_environment_profile_id}
+  */
   readonly hostingEnvironmentProfileId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_certificate.html#key_vault_secret_id AppServiceCertificate#key_vault_secret_id}
+  */
   readonly keyVaultSecretId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_certificate.html#location AppServiceCertificate#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_certificate.html#name AppServiceCertificate#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_certificate.html#password AppServiceCertificate#password}
+  */
   readonly password?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_certificate.html#pfx_blob AppServiceCertificate#pfx_blob}
+  */
   readonly pfxBlob?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_certificate.html#resource_group_name AppServiceCertificate#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_certificate.html#tags AppServiceCertificate#tags}
+  */
   readonly tags?: { [key: string]: string };
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_certificate.html#timeouts AppServiceCertificate#timeouts}
+  */
   readonly timeouts?: AppServiceCertificateTimeouts;
 }
 export interface AppServiceCertificateTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_certificate.html#create AppServiceCertificate#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_certificate.html#delete AppServiceCertificate#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_certificate.html#read AppServiceCertificate#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_certificate.html#update AppServiceCertificate#update}
+  */
   readonly update?: string;
 }
 
@@ -36,14 +76,22 @@ function appServiceCertificateTimeoutsToTerraform(struct?: AppServiceCertificate
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_certificate.html azurerm_app_service_certificate}
+*/
 export class AppServiceCertificate extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_certificate.html azurerm_app_service_certificate} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options AppServiceCertificateConfig
+  */
   public constructor(scope: Construct, id: string, config: AppServiceCertificateConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_app_service_certificate',

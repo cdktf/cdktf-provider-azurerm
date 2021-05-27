@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/data_azurerm_private_link_service.html
+// https://www.terraform.io/docs/providers/azurerm/d/private_link_service.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,9 +7,19 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataAzurermPrivateLinkServiceConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/private_link_service.html#name DataAzurermPrivateLinkService#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/private_link_service.html#resource_group_name DataAzurermPrivateLinkService#resource_group_name}
+  */
   readonly resourceGroupName: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/private_link_service.html#timeouts DataAzurermPrivateLinkService#timeouts}
+  */
   readonly timeouts?: DataAzurermPrivateLinkServiceTimeouts;
 }
 export class DataAzurermPrivateLinkServiceNatIpConfiguration extends cdktf.ComplexComputedList {
@@ -40,6 +50,9 @@ export class DataAzurermPrivateLinkServiceNatIpConfiguration extends cdktf.Compl
   }
 }
 export interface DataAzurermPrivateLinkServiceTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/private_link_service.html#read DataAzurermPrivateLinkService#read}
+  */
   readonly read?: string;
 }
 
@@ -51,14 +64,22 @@ function dataAzurermPrivateLinkServiceTimeoutsToTerraform(struct?: DataAzurermPr
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/private_link_service.html azurerm_private_link_service}
+*/
 export class DataAzurermPrivateLinkService extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/private_link_service.html azurerm_private_link_service} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataAzurermPrivateLinkServiceConfig
+  */
   public constructor(scope: Construct, id: string, config: DataAzurermPrivateLinkServiceConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_private_link_service',

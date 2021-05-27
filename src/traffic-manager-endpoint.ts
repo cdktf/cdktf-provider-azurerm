@@ -7,27 +7,81 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface TrafficManagerEndpointConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/traffic_manager_endpoint.html#endpoint_location TrafficManagerEndpoint#endpoint_location}
+  */
   readonly endpointLocation?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/traffic_manager_endpoint.html#endpoint_status TrafficManagerEndpoint#endpoint_status}
+  */
   readonly endpointStatus?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/traffic_manager_endpoint.html#geo_mappings TrafficManagerEndpoint#geo_mappings}
+  */
   readonly geoMappings?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/traffic_manager_endpoint.html#min_child_endpoints TrafficManagerEndpoint#min_child_endpoints}
+  */
   readonly minChildEndpoints?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/traffic_manager_endpoint.html#name TrafficManagerEndpoint#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/traffic_manager_endpoint.html#priority TrafficManagerEndpoint#priority}
+  */
   readonly priority?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/traffic_manager_endpoint.html#profile_name TrafficManagerEndpoint#profile_name}
+  */
   readonly profileName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/traffic_manager_endpoint.html#resource_group_name TrafficManagerEndpoint#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/traffic_manager_endpoint.html#target TrafficManagerEndpoint#target}
+  */
   readonly target?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/traffic_manager_endpoint.html#target_resource_id TrafficManagerEndpoint#target_resource_id}
+  */
   readonly targetResourceId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/traffic_manager_endpoint.html#type TrafficManagerEndpoint#type}
+  */
   readonly type: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/traffic_manager_endpoint.html#weight TrafficManagerEndpoint#weight}
+  */
   readonly weight?: number;
-  /** custom_header block */
+  /**
+  * custom_header block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/traffic_manager_endpoint.html#custom_header TrafficManagerEndpoint#custom_header}
+  */
   readonly customHeader?: TrafficManagerEndpointCustomHeader[];
-  /** subnet block */
+  /**
+  * subnet block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/traffic_manager_endpoint.html#subnet TrafficManagerEndpoint#subnet}
+  */
   readonly subnet?: TrafficManagerEndpointSubnet[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/traffic_manager_endpoint.html#timeouts TrafficManagerEndpoint#timeouts}
+  */
   readonly timeouts?: TrafficManagerEndpointTimeouts;
 }
 export interface TrafficManagerEndpointCustomHeader {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/traffic_manager_endpoint.html#name TrafficManagerEndpoint#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/traffic_manager_endpoint.html#value TrafficManagerEndpoint#value}
+  */
   readonly value: string;
 }
 
@@ -40,8 +94,17 @@ function trafficManagerEndpointCustomHeaderToTerraform(struct?: TrafficManagerEn
 }
 
 export interface TrafficManagerEndpointSubnet {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/traffic_manager_endpoint.html#first TrafficManagerEndpoint#first}
+  */
   readonly first: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/traffic_manager_endpoint.html#last TrafficManagerEndpoint#last}
+  */
   readonly last?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/traffic_manager_endpoint.html#scope TrafficManagerEndpoint#scope}
+  */
   readonly scope?: number;
 }
 
@@ -55,9 +118,21 @@ function trafficManagerEndpointSubnetToTerraform(struct?: TrafficManagerEndpoint
 }
 
 export interface TrafficManagerEndpointTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/traffic_manager_endpoint.html#create TrafficManagerEndpoint#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/traffic_manager_endpoint.html#delete TrafficManagerEndpoint#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/traffic_manager_endpoint.html#read TrafficManagerEndpoint#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/traffic_manager_endpoint.html#update TrafficManagerEndpoint#update}
+  */
   readonly update?: string;
 }
 
@@ -72,14 +147,22 @@ function trafficManagerEndpointTimeoutsToTerraform(struct?: TrafficManagerEndpoi
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/traffic_manager_endpoint.html azurerm_traffic_manager_endpoint}
+*/
 export class TrafficManagerEndpoint extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/traffic_manager_endpoint.html azurerm_traffic_manager_endpoint} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options TrafficManagerEndpointConfig
+  */
   public constructor(scope: Construct, id: string, config: TrafficManagerEndpointConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_traffic_manager_endpoint',

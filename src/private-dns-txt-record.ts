@@ -7,17 +7,43 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface PrivateDnsTxtRecordConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/private_dns_txt_record.html#name PrivateDnsTxtRecord#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/private_dns_txt_record.html#resource_group_name PrivateDnsTxtRecord#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/private_dns_txt_record.html#tags PrivateDnsTxtRecord#tags}
+  */
   readonly tags?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/private_dns_txt_record.html#ttl PrivateDnsTxtRecord#ttl}
+  */
   readonly ttl: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/private_dns_txt_record.html#zone_name PrivateDnsTxtRecord#zone_name}
+  */
   readonly zoneName: string;
-  /** record block */
+  /**
+  * record block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/private_dns_txt_record.html#record PrivateDnsTxtRecord#record}
+  */
   readonly record: PrivateDnsTxtRecordRecord[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/private_dns_txt_record.html#timeouts PrivateDnsTxtRecord#timeouts}
+  */
   readonly timeouts?: PrivateDnsTxtRecordTimeouts;
 }
 export interface PrivateDnsTxtRecordRecord {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/private_dns_txt_record.html#value PrivateDnsTxtRecord#value}
+  */
   readonly value: string;
 }
 
@@ -29,9 +55,21 @@ function privateDnsTxtRecordRecordToTerraform(struct?: PrivateDnsTxtRecordRecord
 }
 
 export interface PrivateDnsTxtRecordTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/private_dns_txt_record.html#create PrivateDnsTxtRecord#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/private_dns_txt_record.html#delete PrivateDnsTxtRecord#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/private_dns_txt_record.html#read PrivateDnsTxtRecord#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/private_dns_txt_record.html#update PrivateDnsTxtRecord#update}
+  */
   readonly update?: string;
 }
 
@@ -46,14 +84,22 @@ function privateDnsTxtRecordTimeoutsToTerraform(struct?: PrivateDnsTxtRecordTime
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/private_dns_txt_record.html azurerm_private_dns_txt_record}
+*/
 export class PrivateDnsTxtRecord extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/private_dns_txt_record.html azurerm_private_dns_txt_record} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options PrivateDnsTxtRecordConfig
+  */
   public constructor(scope: Construct, id: string, config: PrivateDnsTxtRecordConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_private_dns_txt_record',

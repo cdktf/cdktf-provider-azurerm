@@ -7,17 +7,45 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface SentinelAlertRuleMachineLearningBehaviorAnalyticsConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_alert_rule_machine_learning_behavior_analytics.html#alert_rule_template_guid SentinelAlertRuleMachineLearningBehaviorAnalytics#alert_rule_template_guid}
+  */
   readonly alertRuleTemplateGuid: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_alert_rule_machine_learning_behavior_analytics.html#enabled SentinelAlertRuleMachineLearningBehaviorAnalytics#enabled}
+  */
   readonly enabled?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_alert_rule_machine_learning_behavior_analytics.html#log_analytics_workspace_id SentinelAlertRuleMachineLearningBehaviorAnalytics#log_analytics_workspace_id}
+  */
   readonly logAnalyticsWorkspaceId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_alert_rule_machine_learning_behavior_analytics.html#name SentinelAlertRuleMachineLearningBehaviorAnalytics#name}
+  */
   readonly name: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_alert_rule_machine_learning_behavior_analytics.html#timeouts SentinelAlertRuleMachineLearningBehaviorAnalytics#timeouts}
+  */
   readonly timeouts?: SentinelAlertRuleMachineLearningBehaviorAnalyticsTimeouts;
 }
 export interface SentinelAlertRuleMachineLearningBehaviorAnalyticsTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_alert_rule_machine_learning_behavior_analytics.html#create SentinelAlertRuleMachineLearningBehaviorAnalytics#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_alert_rule_machine_learning_behavior_analytics.html#delete SentinelAlertRuleMachineLearningBehaviorAnalytics#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_alert_rule_machine_learning_behavior_analytics.html#read SentinelAlertRuleMachineLearningBehaviorAnalytics#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_alert_rule_machine_learning_behavior_analytics.html#update SentinelAlertRuleMachineLearningBehaviorAnalytics#update}
+  */
   readonly update?: string;
 }
 
@@ -32,14 +60,22 @@ function sentinelAlertRuleMachineLearningBehaviorAnalyticsTimeoutsToTerraform(st
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_alert_rule_machine_learning_behavior_analytics.html azurerm_sentinel_alert_rule_machine_learning_behavior_analytics}
+*/
 export class SentinelAlertRuleMachineLearningBehaviorAnalytics extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_alert_rule_machine_learning_behavior_analytics.html azurerm_sentinel_alert_rule_machine_learning_behavior_analytics} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options SentinelAlertRuleMachineLearningBehaviorAnalyticsConfig
+  */
   public constructor(scope: Construct, id: string, config: SentinelAlertRuleMachineLearningBehaviorAnalyticsConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_sentinel_alert_rule_machine_learning_behavior_analytics',

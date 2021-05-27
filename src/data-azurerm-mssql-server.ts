@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/data_azurerm_mssql_server.html
+// https://www.terraform.io/docs/providers/azurerm/d/mssql_server.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,9 +7,19 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataAzurermMssqlServerConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/mssql_server.html#name DataAzurermMssqlServer#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/mssql_server.html#resource_group_name DataAzurermMssqlServer#resource_group_name}
+  */
   readonly resourceGroupName: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/mssql_server.html#timeouts DataAzurermMssqlServer#timeouts}
+  */
   readonly timeouts?: DataAzurermMssqlServerTimeouts;
 }
 export class DataAzurermMssqlServerIdentity extends cdktf.ComplexComputedList {
@@ -30,6 +40,9 @@ export class DataAzurermMssqlServerIdentity extends cdktf.ComplexComputedList {
   }
 }
 export interface DataAzurermMssqlServerTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/mssql_server.html#read DataAzurermMssqlServer#read}
+  */
   readonly read?: string;
 }
 
@@ -41,14 +54,22 @@ function dataAzurermMssqlServerTimeoutsToTerraform(struct?: DataAzurermMssqlServ
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/mssql_server.html azurerm_mssql_server}
+*/
 export class DataAzurermMssqlServer extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/mssql_server.html azurerm_mssql_server} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataAzurermMssqlServerConfig
+  */
   public constructor(scope: Construct, id: string, config: DataAzurermMssqlServerConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_mssql_server',

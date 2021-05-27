@@ -7,19 +7,51 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataShareConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_share.html#account_id DataShare#account_id}
+  */
   readonly accountId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_share.html#description DataShare#description}
+  */
   readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_share.html#kind DataShare#kind}
+  */
   readonly kind: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_share.html#name DataShare#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_share.html#terms DataShare#terms}
+  */
   readonly terms?: string;
-  /** snapshot_schedule block */
+  /**
+  * snapshot_schedule block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_share.html#snapshot_schedule DataShare#snapshot_schedule}
+  */
   readonly snapshotSchedule?: DataShareSnapshotSchedule[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_share.html#timeouts DataShare#timeouts}
+  */
   readonly timeouts?: DataShareTimeouts;
 }
 export interface DataShareSnapshotSchedule {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_share.html#name DataShare#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_share.html#recurrence DataShare#recurrence}
+  */
   readonly recurrence: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_share.html#start_time DataShare#start_time}
+  */
   readonly startTime: string;
 }
 
@@ -33,9 +65,21 @@ function dataShareSnapshotScheduleToTerraform(struct?: DataShareSnapshotSchedule
 }
 
 export interface DataShareTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_share.html#create DataShare#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_share.html#delete DataShare#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_share.html#read DataShare#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_share.html#update DataShare#update}
+  */
   readonly update?: string;
 }
 
@@ -50,14 +94,22 @@ function dataShareTimeoutsToTerraform(struct?: DataShareTimeouts): any {
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/data_share.html azurerm_data_share}
+*/
 export class DataShare extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/data_share.html azurerm_data_share} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataShareConfig
+  */
   public constructor(scope: Construct, id: string, config: DataShareConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_data_share',

@@ -7,18 +7,49 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface LogAnalyticsDatasourceWindowsEventConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_datasource_windows_event.html#event_log_name LogAnalyticsDatasourceWindowsEvent#event_log_name}
+  */
   readonly eventLogName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_datasource_windows_event.html#event_types LogAnalyticsDatasourceWindowsEvent#event_types}
+  */
   readonly eventTypes: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_datasource_windows_event.html#name LogAnalyticsDatasourceWindowsEvent#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_datasource_windows_event.html#resource_group_name LogAnalyticsDatasourceWindowsEvent#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_datasource_windows_event.html#workspace_name LogAnalyticsDatasourceWindowsEvent#workspace_name}
+  */
   readonly workspaceName: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_datasource_windows_event.html#timeouts LogAnalyticsDatasourceWindowsEvent#timeouts}
+  */
   readonly timeouts?: LogAnalyticsDatasourceWindowsEventTimeouts;
 }
 export interface LogAnalyticsDatasourceWindowsEventTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_datasource_windows_event.html#create LogAnalyticsDatasourceWindowsEvent#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_datasource_windows_event.html#delete LogAnalyticsDatasourceWindowsEvent#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_datasource_windows_event.html#read LogAnalyticsDatasourceWindowsEvent#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_datasource_windows_event.html#update LogAnalyticsDatasourceWindowsEvent#update}
+  */
   readonly update?: string;
 }
 
@@ -33,14 +64,22 @@ function logAnalyticsDatasourceWindowsEventTimeoutsToTerraform(struct?: LogAnaly
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_datasource_windows_event.html azurerm_log_analytics_datasource_windows_event}
+*/
 export class LogAnalyticsDatasourceWindowsEvent extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_datasource_windows_event.html azurerm_log_analytics_datasource_windows_event} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options LogAnalyticsDatasourceWindowsEventConfig
+  */
   public constructor(scope: Construct, id: string, config: LogAnalyticsDatasourceWindowsEventConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_log_analytics_datasource_windows_event',

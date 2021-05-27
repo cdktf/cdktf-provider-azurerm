@@ -7,20 +7,57 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface KeyVaultSecretConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_secret.html#content_type KeyVaultSecret#content_type}
+  */
   readonly contentType?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_secret.html#expiration_date KeyVaultSecret#expiration_date}
+  */
   readonly expirationDate?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_secret.html#key_vault_id KeyVaultSecret#key_vault_id}
+  */
   readonly keyVaultId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_secret.html#name KeyVaultSecret#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_secret.html#not_before_date KeyVaultSecret#not_before_date}
+  */
   readonly notBeforeDate?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_secret.html#tags KeyVaultSecret#tags}
+  */
   readonly tags?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_secret.html#value KeyVaultSecret#value}
+  */
   readonly value: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_secret.html#timeouts KeyVaultSecret#timeouts}
+  */
   readonly timeouts?: KeyVaultSecretTimeouts;
 }
 export interface KeyVaultSecretTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_secret.html#create KeyVaultSecret#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_secret.html#delete KeyVaultSecret#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_secret.html#read KeyVaultSecret#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_secret.html#update KeyVaultSecret#update}
+  */
   readonly update?: string;
 }
 
@@ -35,14 +72,22 @@ function keyVaultSecretTimeoutsToTerraform(struct?: KeyVaultSecretTimeouts): any
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_secret.html azurerm_key_vault_secret}
+*/
 export class KeyVaultSecret extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_secret.html azurerm_key_vault_secret} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options KeyVaultSecretConfig
+  */
   public constructor(scope: Construct, id: string, config: KeyVaultSecretConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_key_vault_secret',

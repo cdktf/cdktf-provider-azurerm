@@ -7,22 +7,65 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataFactoryLinkedServicePostgresqlConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_postgresql.html#additional_properties DataFactoryLinkedServicePostgresql#additional_properties}
+  */
   readonly additionalProperties?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_postgresql.html#annotations DataFactoryLinkedServicePostgresql#annotations}
+  */
   readonly annotations?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_postgresql.html#connection_string DataFactoryLinkedServicePostgresql#connection_string}
+  */
   readonly connectionString: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_postgresql.html#data_factory_name DataFactoryLinkedServicePostgresql#data_factory_name}
+  */
   readonly dataFactoryName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_postgresql.html#description DataFactoryLinkedServicePostgresql#description}
+  */
   readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_postgresql.html#integration_runtime_name DataFactoryLinkedServicePostgresql#integration_runtime_name}
+  */
   readonly integrationRuntimeName?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_postgresql.html#name DataFactoryLinkedServicePostgresql#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_postgresql.html#parameters DataFactoryLinkedServicePostgresql#parameters}
+  */
   readonly parameters?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_postgresql.html#resource_group_name DataFactoryLinkedServicePostgresql#resource_group_name}
+  */
   readonly resourceGroupName: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_postgresql.html#timeouts DataFactoryLinkedServicePostgresql#timeouts}
+  */
   readonly timeouts?: DataFactoryLinkedServicePostgresqlTimeouts;
 }
 export interface DataFactoryLinkedServicePostgresqlTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_postgresql.html#create DataFactoryLinkedServicePostgresql#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_postgresql.html#delete DataFactoryLinkedServicePostgresql#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_postgresql.html#read DataFactoryLinkedServicePostgresql#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_postgresql.html#update DataFactoryLinkedServicePostgresql#update}
+  */
   readonly update?: string;
 }
 
@@ -37,14 +80,22 @@ function dataFactoryLinkedServicePostgresqlTimeoutsToTerraform(struct?: DataFact
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_postgresql.html azurerm_data_factory_linked_service_postgresql}
+*/
 export class DataFactoryLinkedServicePostgresql extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_postgresql.html azurerm_data_factory_linked_service_postgresql} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataFactoryLinkedServicePostgresqlConfig
+  */
   public constructor(scope: Construct, id: string, config: DataFactoryLinkedServicePostgresqlConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_data_factory_linked_service_postgresql',

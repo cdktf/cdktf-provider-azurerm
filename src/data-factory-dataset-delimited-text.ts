@@ -7,36 +7,115 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataFactoryDatasetDelimitedTextConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_delimited_text.html#additional_properties DataFactoryDatasetDelimitedText#additional_properties}
+  */
   readonly additionalProperties?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_delimited_text.html#annotations DataFactoryDatasetDelimitedText#annotations}
+  */
   readonly annotations?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_delimited_text.html#column_delimiter DataFactoryDatasetDelimitedText#column_delimiter}
+  */
   readonly columnDelimiter?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_delimited_text.html#compression_codec DataFactoryDatasetDelimitedText#compression_codec}
+  */
   readonly compressionCodec?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_delimited_text.html#compression_level DataFactoryDatasetDelimitedText#compression_level}
+  */
   readonly compressionLevel?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_delimited_text.html#data_factory_name DataFactoryDatasetDelimitedText#data_factory_name}
+  */
   readonly dataFactoryName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_delimited_text.html#description DataFactoryDatasetDelimitedText#description}
+  */
   readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_delimited_text.html#encoding DataFactoryDatasetDelimitedText#encoding}
+  */
   readonly encoding?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_delimited_text.html#escape_character DataFactoryDatasetDelimitedText#escape_character}
+  */
   readonly escapeCharacter?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_delimited_text.html#first_row_as_header DataFactoryDatasetDelimitedText#first_row_as_header}
+  */
   readonly firstRowAsHeader?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_delimited_text.html#folder DataFactoryDatasetDelimitedText#folder}
+  */
   readonly folder?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_delimited_text.html#linked_service_name DataFactoryDatasetDelimitedText#linked_service_name}
+  */
   readonly linkedServiceName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_delimited_text.html#name DataFactoryDatasetDelimitedText#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_delimited_text.html#null_value DataFactoryDatasetDelimitedText#null_value}
+  */
   readonly nullValue?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_delimited_text.html#parameters DataFactoryDatasetDelimitedText#parameters}
+  */
   readonly parameters?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_delimited_text.html#quote_character DataFactoryDatasetDelimitedText#quote_character}
+  */
   readonly quoteCharacter?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_delimited_text.html#resource_group_name DataFactoryDatasetDelimitedText#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_delimited_text.html#row_delimiter DataFactoryDatasetDelimitedText#row_delimiter}
+  */
   readonly rowDelimiter?: string;
-  /** azure_blob_storage_location block */
+  /**
+  * azure_blob_storage_location block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_delimited_text.html#azure_blob_storage_location DataFactoryDatasetDelimitedText#azure_blob_storage_location}
+  */
   readonly azureBlobStorageLocation?: DataFactoryDatasetDelimitedTextAzureBlobStorageLocation[];
-  /** http_server_location block */
+  /**
+  * http_server_location block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_delimited_text.html#http_server_location DataFactoryDatasetDelimitedText#http_server_location}
+  */
   readonly httpServerLocation?: DataFactoryDatasetDelimitedTextHttpServerLocation[];
-  /** schema_column block */
+  /**
+  * schema_column block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_delimited_text.html#schema_column DataFactoryDatasetDelimitedText#schema_column}
+  */
   readonly schemaColumn?: DataFactoryDatasetDelimitedTextSchemaColumn[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_delimited_text.html#timeouts DataFactoryDatasetDelimitedText#timeouts}
+  */
   readonly timeouts?: DataFactoryDatasetDelimitedTextTimeouts;
 }
 export interface DataFactoryDatasetDelimitedTextAzureBlobStorageLocation {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_delimited_text.html#container DataFactoryDatasetDelimitedText#container}
+  */
   readonly container: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_delimited_text.html#filename DataFactoryDatasetDelimitedText#filename}
+  */
   readonly filename: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_delimited_text.html#path DataFactoryDatasetDelimitedText#path}
+  */
   readonly path: string;
 }
 
@@ -50,8 +129,17 @@ function dataFactoryDatasetDelimitedTextAzureBlobStorageLocationToTerraform(stru
 }
 
 export interface DataFactoryDatasetDelimitedTextHttpServerLocation {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_delimited_text.html#filename DataFactoryDatasetDelimitedText#filename}
+  */
   readonly filename: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_delimited_text.html#path DataFactoryDatasetDelimitedText#path}
+  */
   readonly path: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_delimited_text.html#relative_url DataFactoryDatasetDelimitedText#relative_url}
+  */
   readonly relativeUrl: string;
 }
 
@@ -65,8 +153,17 @@ function dataFactoryDatasetDelimitedTextHttpServerLocationToTerraform(struct?: D
 }
 
 export interface DataFactoryDatasetDelimitedTextSchemaColumn {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_delimited_text.html#description DataFactoryDatasetDelimitedText#description}
+  */
   readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_delimited_text.html#name DataFactoryDatasetDelimitedText#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_delimited_text.html#type DataFactoryDatasetDelimitedText#type}
+  */
   readonly type?: string;
 }
 
@@ -80,9 +177,21 @@ function dataFactoryDatasetDelimitedTextSchemaColumnToTerraform(struct?: DataFac
 }
 
 export interface DataFactoryDatasetDelimitedTextTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_delimited_text.html#create DataFactoryDatasetDelimitedText#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_delimited_text.html#delete DataFactoryDatasetDelimitedText#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_delimited_text.html#read DataFactoryDatasetDelimitedText#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_delimited_text.html#update DataFactoryDatasetDelimitedText#update}
+  */
   readonly update?: string;
 }
 
@@ -97,14 +206,22 @@ function dataFactoryDatasetDelimitedTextTimeoutsToTerraform(struct?: DataFactory
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_delimited_text.html azurerm_data_factory_dataset_delimited_text}
+*/
 export class DataFactoryDatasetDelimitedText extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_delimited_text.html azurerm_data_factory_dataset_delimited_text} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataFactoryDatasetDelimitedTextConfig
+  */
   public constructor(scope: Construct, id: string, config: DataFactoryDatasetDelimitedTextConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_data_factory_dataset_delimited_text',

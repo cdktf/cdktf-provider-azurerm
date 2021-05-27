@@ -7,44 +7,131 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface ServiceFabricClusterConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_cluster.html#add_on_features ServiceFabricCluster#add_on_features}
+  */
   readonly addOnFeatures?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_cluster.html#cluster_code_version ServiceFabricCluster#cluster_code_version}
+  */
   readonly clusterCodeVersion?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_cluster.html#location ServiceFabricCluster#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_cluster.html#management_endpoint ServiceFabricCluster#management_endpoint}
+  */
   readonly managementEndpoint: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_cluster.html#name ServiceFabricCluster#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_cluster.html#reliability_level ServiceFabricCluster#reliability_level}
+  */
   readonly reliabilityLevel: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_cluster.html#resource_group_name ServiceFabricCluster#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_cluster.html#tags ServiceFabricCluster#tags}
+  */
   readonly tags?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_cluster.html#upgrade_mode ServiceFabricCluster#upgrade_mode}
+  */
   readonly upgradeMode: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_cluster.html#vm_image ServiceFabricCluster#vm_image}
+  */
   readonly vmImage: string;
-  /** azure_active_directory block */
+  /**
+  * azure_active_directory block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_cluster.html#azure_active_directory ServiceFabricCluster#azure_active_directory}
+  */
   readonly azureActiveDirectory?: ServiceFabricClusterAzureActiveDirectory[];
-  /** certificate block */
+  /**
+  * certificate block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_cluster.html#certificate ServiceFabricCluster#certificate}
+  */
   readonly certificate?: ServiceFabricClusterCertificate[];
-  /** certificate_common_names block */
+  /**
+  * certificate_common_names block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_cluster.html#certificate_common_names ServiceFabricCluster#certificate_common_names}
+  */
   readonly certificateCommonNames?: ServiceFabricClusterCertificateCommonNames[];
-  /** client_certificate_common_name block */
+  /**
+  * client_certificate_common_name block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_cluster.html#client_certificate_common_name ServiceFabricCluster#client_certificate_common_name}
+  */
   readonly clientCertificateCommonName?: ServiceFabricClusterClientCertificateCommonName[];
-  /** client_certificate_thumbprint block */
+  /**
+  * client_certificate_thumbprint block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_cluster.html#client_certificate_thumbprint ServiceFabricCluster#client_certificate_thumbprint}
+  */
   readonly clientCertificateThumbprint?: ServiceFabricClusterClientCertificateThumbprint[];
-  /** diagnostics_config block */
+  /**
+  * diagnostics_config block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_cluster.html#diagnostics_config ServiceFabricCluster#diagnostics_config}
+  */
   readonly diagnosticsConfig?: ServiceFabricClusterDiagnosticsConfig[];
-  /** fabric_settings block */
+  /**
+  * fabric_settings block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_cluster.html#fabric_settings ServiceFabricCluster#fabric_settings}
+  */
   readonly fabricSettings?: ServiceFabricClusterFabricSettings[];
-  /** node_type block */
+  /**
+  * node_type block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_cluster.html#node_type ServiceFabricCluster#node_type}
+  */
   readonly nodeType: ServiceFabricClusterNodeType[];
-  /** reverse_proxy_certificate block */
+  /**
+  * reverse_proxy_certificate block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_cluster.html#reverse_proxy_certificate ServiceFabricCluster#reverse_proxy_certificate}
+  */
   readonly reverseProxyCertificate?: ServiceFabricClusterReverseProxyCertificate[];
-  /** reverse_proxy_certificate_common_names block */
+  /**
+  * reverse_proxy_certificate_common_names block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_cluster.html#reverse_proxy_certificate_common_names ServiceFabricCluster#reverse_proxy_certificate_common_names}
+  */
   readonly reverseProxyCertificateCommonNames?: ServiceFabricClusterReverseProxyCertificateCommonNames[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_cluster.html#timeouts ServiceFabricCluster#timeouts}
+  */
   readonly timeouts?: ServiceFabricClusterTimeouts;
-  /** upgrade_policy block */
+  /**
+  * upgrade_policy block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_cluster.html#upgrade_policy ServiceFabricCluster#upgrade_policy}
+  */
   readonly upgradePolicy?: ServiceFabricClusterUpgradePolicy[];
 }
 export interface ServiceFabricClusterAzureActiveDirectory {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_cluster.html#client_application_id ServiceFabricCluster#client_application_id}
+  */
   readonly clientApplicationId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_cluster.html#cluster_application_id ServiceFabricCluster#cluster_application_id}
+  */
   readonly clusterApplicationId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_cluster.html#tenant_id ServiceFabricCluster#tenant_id}
+  */
   readonly tenantId: string;
 }
 
@@ -58,8 +145,17 @@ function serviceFabricClusterAzureActiveDirectoryToTerraform(struct?: ServiceFab
 }
 
 export interface ServiceFabricClusterCertificate {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_cluster.html#thumbprint ServiceFabricCluster#thumbprint}
+  */
   readonly thumbprint: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_cluster.html#thumbprint_secondary ServiceFabricCluster#thumbprint_secondary}
+  */
   readonly thumbprintSecondary?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_cluster.html#x509_store_name ServiceFabricCluster#x509_store_name}
+  */
   readonly x509StoreName: string;
 }
 
@@ -73,7 +169,13 @@ function serviceFabricClusterCertificateToTerraform(struct?: ServiceFabricCluste
 }
 
 export interface ServiceFabricClusterCertificateCommonNamesCommonNames {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_cluster.html#certificate_common_name ServiceFabricCluster#certificate_common_name}
+  */
   readonly certificateCommonName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_cluster.html#certificate_issuer_thumbprint ServiceFabricCluster#certificate_issuer_thumbprint}
+  */
   readonly certificateIssuerThumbprint?: string;
 }
 
@@ -86,8 +188,15 @@ function serviceFabricClusterCertificateCommonNamesCommonNamesToTerraform(struct
 }
 
 export interface ServiceFabricClusterCertificateCommonNames {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_cluster.html#x509_store_name ServiceFabricCluster#x509_store_name}
+  */
   readonly x509StoreName: string;
-  /** common_names block */
+  /**
+  * common_names block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_cluster.html#common_names ServiceFabricCluster#common_names}
+  */
   readonly commonNames: ServiceFabricClusterCertificateCommonNamesCommonNames[];
 }
 
@@ -100,8 +209,17 @@ function serviceFabricClusterCertificateCommonNamesToTerraform(struct?: ServiceF
 }
 
 export interface ServiceFabricClusterClientCertificateCommonName {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_cluster.html#common_name ServiceFabricCluster#common_name}
+  */
   readonly commonName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_cluster.html#is_admin ServiceFabricCluster#is_admin}
+  */
   readonly isAdmin: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_cluster.html#issuer_thumbprint ServiceFabricCluster#issuer_thumbprint}
+  */
   readonly issuerThumbprint?: string;
 }
 
@@ -115,7 +233,13 @@ function serviceFabricClusterClientCertificateCommonNameToTerraform(struct?: Ser
 }
 
 export interface ServiceFabricClusterClientCertificateThumbprint {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_cluster.html#is_admin ServiceFabricCluster#is_admin}
+  */
   readonly isAdmin: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_cluster.html#thumbprint ServiceFabricCluster#thumbprint}
+  */
   readonly thumbprint: string;
 }
 
@@ -128,10 +252,25 @@ function serviceFabricClusterClientCertificateThumbprintToTerraform(struct?: Ser
 }
 
 export interface ServiceFabricClusterDiagnosticsConfig {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_cluster.html#blob_endpoint ServiceFabricCluster#blob_endpoint}
+  */
   readonly blobEndpoint: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_cluster.html#protected_account_key_name ServiceFabricCluster#protected_account_key_name}
+  */
   readonly protectedAccountKeyName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_cluster.html#queue_endpoint ServiceFabricCluster#queue_endpoint}
+  */
   readonly queueEndpoint: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_cluster.html#storage_account_name ServiceFabricCluster#storage_account_name}
+  */
   readonly storageAccountName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_cluster.html#table_endpoint ServiceFabricCluster#table_endpoint}
+  */
   readonly tableEndpoint: string;
 }
 
@@ -147,7 +286,13 @@ function serviceFabricClusterDiagnosticsConfigToTerraform(struct?: ServiceFabric
 }
 
 export interface ServiceFabricClusterFabricSettings {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_cluster.html#name ServiceFabricCluster#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_cluster.html#parameters ServiceFabricCluster#parameters}
+  */
   readonly parameters?: { [key: string]: string };
 }
 
@@ -160,7 +305,13 @@ function serviceFabricClusterFabricSettingsToTerraform(struct?: ServiceFabricClu
 }
 
 export interface ServiceFabricClusterNodeTypeApplicationPorts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_cluster.html#end_port ServiceFabricCluster#end_port}
+  */
   readonly endPort: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_cluster.html#start_port ServiceFabricCluster#start_port}
+  */
   readonly startPort: number;
 }
 
@@ -173,7 +324,13 @@ function serviceFabricClusterNodeTypeApplicationPortsToTerraform(struct?: Servic
 }
 
 export interface ServiceFabricClusterNodeTypeEphemeralPorts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_cluster.html#end_port ServiceFabricCluster#end_port}
+  */
   readonly endPort: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_cluster.html#start_port ServiceFabricCluster#start_port}
+  */
   readonly startPort: number;
 }
 
@@ -186,18 +343,53 @@ function serviceFabricClusterNodeTypeEphemeralPortsToTerraform(struct?: ServiceF
 }
 
 export interface ServiceFabricClusterNodeType {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_cluster.html#capacities ServiceFabricCluster#capacities}
+  */
   readonly capacities?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_cluster.html#client_endpoint_port ServiceFabricCluster#client_endpoint_port}
+  */
   readonly clientEndpointPort: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_cluster.html#durability_level ServiceFabricCluster#durability_level}
+  */
   readonly durabilityLevel?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_cluster.html#http_endpoint_port ServiceFabricCluster#http_endpoint_port}
+  */
   readonly httpEndpointPort: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_cluster.html#instance_count ServiceFabricCluster#instance_count}
+  */
   readonly instanceCount: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_cluster.html#is_primary ServiceFabricCluster#is_primary}
+  */
   readonly isPrimary: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_cluster.html#name ServiceFabricCluster#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_cluster.html#placement_properties ServiceFabricCluster#placement_properties}
+  */
   readonly placementProperties?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_cluster.html#reverse_proxy_endpoint_port ServiceFabricCluster#reverse_proxy_endpoint_port}
+  */
   readonly reverseProxyEndpointPort?: number;
-  /** application_ports block */
+  /**
+  * application_ports block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_cluster.html#application_ports ServiceFabricCluster#application_ports}
+  */
   readonly applicationPorts?: ServiceFabricClusterNodeTypeApplicationPorts[];
-  /** ephemeral_ports block */
+  /**
+  * ephemeral_ports block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_cluster.html#ephemeral_ports ServiceFabricCluster#ephemeral_ports}
+  */
   readonly ephemeralPorts?: ServiceFabricClusterNodeTypeEphemeralPorts[];
 }
 
@@ -219,8 +411,17 @@ function serviceFabricClusterNodeTypeToTerraform(struct?: ServiceFabricClusterNo
 }
 
 export interface ServiceFabricClusterReverseProxyCertificate {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_cluster.html#thumbprint ServiceFabricCluster#thumbprint}
+  */
   readonly thumbprint: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_cluster.html#thumbprint_secondary ServiceFabricCluster#thumbprint_secondary}
+  */
   readonly thumbprintSecondary?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_cluster.html#x509_store_name ServiceFabricCluster#x509_store_name}
+  */
   readonly x509StoreName: string;
 }
 
@@ -234,7 +435,13 @@ function serviceFabricClusterReverseProxyCertificateToTerraform(struct?: Service
 }
 
 export interface ServiceFabricClusterReverseProxyCertificateCommonNamesCommonNames {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_cluster.html#certificate_common_name ServiceFabricCluster#certificate_common_name}
+  */
   readonly certificateCommonName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_cluster.html#certificate_issuer_thumbprint ServiceFabricCluster#certificate_issuer_thumbprint}
+  */
   readonly certificateIssuerThumbprint?: string;
 }
 
@@ -247,8 +454,15 @@ function serviceFabricClusterReverseProxyCertificateCommonNamesCommonNamesToTerr
 }
 
 export interface ServiceFabricClusterReverseProxyCertificateCommonNames {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_cluster.html#x509_store_name ServiceFabricCluster#x509_store_name}
+  */
   readonly x509StoreName: string;
-  /** common_names block */
+  /**
+  * common_names block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_cluster.html#common_names ServiceFabricCluster#common_names}
+  */
   readonly commonNames: ServiceFabricClusterReverseProxyCertificateCommonNamesCommonNames[];
 }
 
@@ -261,9 +475,21 @@ function serviceFabricClusterReverseProxyCertificateCommonNamesToTerraform(struc
 }
 
 export interface ServiceFabricClusterTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_cluster.html#create ServiceFabricCluster#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_cluster.html#delete ServiceFabricCluster#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_cluster.html#read ServiceFabricCluster#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_cluster.html#update ServiceFabricCluster#update}
+  */
   readonly update?: string;
 }
 
@@ -278,8 +504,17 @@ function serviceFabricClusterTimeoutsToTerraform(struct?: ServiceFabricClusterTi
 }
 
 export interface ServiceFabricClusterUpgradePolicyDeltaHealthPolicy {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_cluster.html#max_delta_unhealthy_applications_percent ServiceFabricCluster#max_delta_unhealthy_applications_percent}
+  */
   readonly maxDeltaUnhealthyApplicationsPercent?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_cluster.html#max_delta_unhealthy_nodes_percent ServiceFabricCluster#max_delta_unhealthy_nodes_percent}
+  */
   readonly maxDeltaUnhealthyNodesPercent?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_cluster.html#max_upgrade_domain_delta_unhealthy_nodes_percent ServiceFabricCluster#max_upgrade_domain_delta_unhealthy_nodes_percent}
+  */
   readonly maxUpgradeDomainDeltaUnhealthyNodesPercent?: number;
 }
 
@@ -293,7 +528,13 @@ function serviceFabricClusterUpgradePolicyDeltaHealthPolicyToTerraform(struct?: 
 }
 
 export interface ServiceFabricClusterUpgradePolicyHealthPolicy {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_cluster.html#max_unhealthy_applications_percent ServiceFabricCluster#max_unhealthy_applications_percent}
+  */
   readonly maxUnhealthyApplicationsPercent?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_cluster.html#max_unhealthy_nodes_percent ServiceFabricCluster#max_unhealthy_nodes_percent}
+  */
   readonly maxUnhealthyNodesPercent?: number;
 }
 
@@ -306,16 +547,45 @@ function serviceFabricClusterUpgradePolicyHealthPolicyToTerraform(struct?: Servi
 }
 
 export interface ServiceFabricClusterUpgradePolicy {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_cluster.html#force_restart_enabled ServiceFabricCluster#force_restart_enabled}
+  */
   readonly forceRestartEnabled?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_cluster.html#health_check_retry_timeout ServiceFabricCluster#health_check_retry_timeout}
+  */
   readonly healthCheckRetryTimeout?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_cluster.html#health_check_stable_duration ServiceFabricCluster#health_check_stable_duration}
+  */
   readonly healthCheckStableDuration?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_cluster.html#health_check_wait_duration ServiceFabricCluster#health_check_wait_duration}
+  */
   readonly healthCheckWaitDuration?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_cluster.html#upgrade_domain_timeout ServiceFabricCluster#upgrade_domain_timeout}
+  */
   readonly upgradeDomainTimeout?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_cluster.html#upgrade_replica_set_check_timeout ServiceFabricCluster#upgrade_replica_set_check_timeout}
+  */
   readonly upgradeReplicaSetCheckTimeout?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_cluster.html#upgrade_timeout ServiceFabricCluster#upgrade_timeout}
+  */
   readonly upgradeTimeout?: string;
-  /** delta_health_policy block */
+  /**
+  * delta_health_policy block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_cluster.html#delta_health_policy ServiceFabricCluster#delta_health_policy}
+  */
   readonly deltaHealthPolicy?: ServiceFabricClusterUpgradePolicyDeltaHealthPolicy[];
-  /** health_policy block */
+  /**
+  * health_policy block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_cluster.html#health_policy ServiceFabricCluster#health_policy}
+  */
   readonly healthPolicy?: ServiceFabricClusterUpgradePolicyHealthPolicy[];
 }
 
@@ -335,14 +605,22 @@ function serviceFabricClusterUpgradePolicyToTerraform(struct?: ServiceFabricClus
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_cluster.html azurerm_service_fabric_cluster}
+*/
 export class ServiceFabricCluster extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_cluster.html azurerm_service_fabric_cluster} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options ServiceFabricClusterConfig
+  */
   public constructor(scope: Construct, id: string, config: ServiceFabricClusterConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_service_fabric_cluster',

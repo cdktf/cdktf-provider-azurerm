@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/data_azurerm_dev_test_lab.html
+// https://www.terraform.io/docs/providers/azurerm/d/dev_test_lab.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,12 +7,25 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataAzurermDevTestLabConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/dev_test_lab.html#name DataAzurermDevTestLab#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/dev_test_lab.html#resource_group_name DataAzurermDevTestLab#resource_group_name}
+  */
   readonly resourceGroupName: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/dev_test_lab.html#timeouts DataAzurermDevTestLab#timeouts}
+  */
   readonly timeouts?: DataAzurermDevTestLabTimeouts;
 }
 export interface DataAzurermDevTestLabTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/dev_test_lab.html#read DataAzurermDevTestLab#read}
+  */
   readonly read?: string;
 }
 
@@ -24,14 +37,22 @@ function dataAzurermDevTestLabTimeoutsToTerraform(struct?: DataAzurermDevTestLab
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/dev_test_lab.html azurerm_dev_test_lab}
+*/
 export class DataAzurermDevTestLab extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/dev_test_lab.html azurerm_dev_test_lab} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataAzurermDevTestLabConfig
+  */
   public constructor(scope: Construct, id: string, config: DataAzurermDevTestLabConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_dev_test_lab',

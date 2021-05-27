@@ -7,18 +7,49 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DevTestLabConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_lab.html#location DevTestLab#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_lab.html#name DevTestLab#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_lab.html#resource_group_name DevTestLab#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_lab.html#storage_type DevTestLab#storage_type}
+  */
   readonly storageType?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_lab.html#tags DevTestLab#tags}
+  */
   readonly tags?: { [key: string]: string };
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_lab.html#timeouts DevTestLab#timeouts}
+  */
   readonly timeouts?: DevTestLabTimeouts;
 }
 export interface DevTestLabTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_lab.html#create DevTestLab#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_lab.html#delete DevTestLab#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_lab.html#read DevTestLab#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_lab.html#update DevTestLab#update}
+  */
   readonly update?: string;
 }
 
@@ -33,14 +64,22 @@ function devTestLabTimeoutsToTerraform(struct?: DevTestLabTimeouts): any {
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_lab.html azurerm_dev_test_lab}
+*/
 export class DevTestLab extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_lab.html azurerm_dev_test_lab} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DevTestLabConfig
+  */
   public constructor(scope: Construct, id: string, config: DevTestLabConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_dev_test_lab',

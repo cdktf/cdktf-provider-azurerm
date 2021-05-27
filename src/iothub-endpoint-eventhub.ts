@@ -7,17 +7,45 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface IothubEndpointEventhubConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_endpoint_eventhub.html#connection_string IothubEndpointEventhub#connection_string}
+  */
   readonly connectionString: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_endpoint_eventhub.html#iothub_name IothubEndpointEventhub#iothub_name}
+  */
   readonly iothubName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_endpoint_eventhub.html#name IothubEndpointEventhub#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_endpoint_eventhub.html#resource_group_name IothubEndpointEventhub#resource_group_name}
+  */
   readonly resourceGroupName: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_endpoint_eventhub.html#timeouts IothubEndpointEventhub#timeouts}
+  */
   readonly timeouts?: IothubEndpointEventhubTimeouts;
 }
 export interface IothubEndpointEventhubTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_endpoint_eventhub.html#create IothubEndpointEventhub#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_endpoint_eventhub.html#delete IothubEndpointEventhub#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_endpoint_eventhub.html#read IothubEndpointEventhub#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_endpoint_eventhub.html#update IothubEndpointEventhub#update}
+  */
   readonly update?: string;
 }
 
@@ -32,14 +60,22 @@ function iothubEndpointEventhubTimeoutsToTerraform(struct?: IothubEndpointEventh
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_endpoint_eventhub.html azurerm_iothub_endpoint_eventhub}
+*/
 export class IothubEndpointEventhub extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_endpoint_eventhub.html azurerm_iothub_endpoint_eventhub} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options IothubEndpointEventhubConfig
+  */
   public constructor(scope: Construct, id: string, config: IothubEndpointEventhubConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_iothub_endpoint_eventhub',

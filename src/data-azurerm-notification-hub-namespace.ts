@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/data_azurerm_notification_hub_namespace.html
+// https://www.terraform.io/docs/providers/azurerm/d/notification_hub_namespace.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,9 +7,19 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataAzurermNotificationHubNamespaceConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/notification_hub_namespace.html#name DataAzurermNotificationHubNamespace#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/notification_hub_namespace.html#resource_group_name DataAzurermNotificationHubNamespace#resource_group_name}
+  */
   readonly resourceGroupName: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/notification_hub_namespace.html#timeouts DataAzurermNotificationHubNamespace#timeouts}
+  */
   readonly timeouts?: DataAzurermNotificationHubNamespaceTimeouts;
 }
 export class DataAzurermNotificationHubNamespaceSku extends cdktf.ComplexComputedList {
@@ -20,6 +30,9 @@ export class DataAzurermNotificationHubNamespaceSku extends cdktf.ComplexCompute
   }
 }
 export interface DataAzurermNotificationHubNamespaceTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/notification_hub_namespace.html#read DataAzurermNotificationHubNamespace#read}
+  */
   readonly read?: string;
 }
 
@@ -31,14 +44,22 @@ function dataAzurermNotificationHubNamespaceTimeoutsToTerraform(struct?: DataAzu
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/notification_hub_namespace.html azurerm_notification_hub_namespace}
+*/
 export class DataAzurermNotificationHubNamespace extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/notification_hub_namespace.html azurerm_notification_hub_namespace} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataAzurermNotificationHubNamespaceConfig
+  */
   public constructor(scope: Construct, id: string, config: DataAzurermNotificationHubNamespaceConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_notification_hub_namespace',

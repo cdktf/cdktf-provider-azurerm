@@ -7,20 +7,55 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface LogAnalyticsSolutionConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_solution.html#location LogAnalyticsSolution#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_solution.html#resource_group_name LogAnalyticsSolution#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_solution.html#solution_name LogAnalyticsSolution#solution_name}
+  */
   readonly solutionName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_solution.html#tags LogAnalyticsSolution#tags}
+  */
   readonly tags?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_solution.html#workspace_name LogAnalyticsSolution#workspace_name}
+  */
   readonly workspaceName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_solution.html#workspace_resource_id LogAnalyticsSolution#workspace_resource_id}
+  */
   readonly workspaceResourceId: string;
-  /** plan block */
+  /**
+  * plan block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_solution.html#plan LogAnalyticsSolution#plan}
+  */
   readonly plan: LogAnalyticsSolutionPlan[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_solution.html#timeouts LogAnalyticsSolution#timeouts}
+  */
   readonly timeouts?: LogAnalyticsSolutionTimeouts;
 }
 export interface LogAnalyticsSolutionPlan {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_solution.html#product LogAnalyticsSolution#product}
+  */
   readonly product: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_solution.html#promotion_code LogAnalyticsSolution#promotion_code}
+  */
   readonly promotionCode?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_solution.html#publisher LogAnalyticsSolution#publisher}
+  */
   readonly publisher: string;
 }
 
@@ -34,9 +69,21 @@ function logAnalyticsSolutionPlanToTerraform(struct?: LogAnalyticsSolutionPlan):
 }
 
 export interface LogAnalyticsSolutionTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_solution.html#create LogAnalyticsSolution#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_solution.html#delete LogAnalyticsSolution#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_solution.html#read LogAnalyticsSolution#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_solution.html#update LogAnalyticsSolution#update}
+  */
   readonly update?: string;
 }
 
@@ -51,14 +98,22 @@ function logAnalyticsSolutionTimeoutsToTerraform(struct?: LogAnalyticsSolutionTi
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_solution.html azurerm_log_analytics_solution}
+*/
 export class LogAnalyticsSolution extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_solution.html azurerm_log_analytics_solution} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options LogAnalyticsSolutionConfig
+  */
   public constructor(scope: Construct, id: string, config: LogAnalyticsSolutionConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_log_analytics_solution',

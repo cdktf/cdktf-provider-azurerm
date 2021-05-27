@@ -7,18 +7,49 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface PostgresqlActiveDirectoryAdministratorConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_active_directory_administrator.html#login PostgresqlActiveDirectoryAdministrator#login}
+  */
   readonly login: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_active_directory_administrator.html#object_id PostgresqlActiveDirectoryAdministrator#object_id}
+  */
   readonly objectId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_active_directory_administrator.html#resource_group_name PostgresqlActiveDirectoryAdministrator#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_active_directory_administrator.html#server_name PostgresqlActiveDirectoryAdministrator#server_name}
+  */
   readonly serverName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_active_directory_administrator.html#tenant_id PostgresqlActiveDirectoryAdministrator#tenant_id}
+  */
   readonly tenantId: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_active_directory_administrator.html#timeouts PostgresqlActiveDirectoryAdministrator#timeouts}
+  */
   readonly timeouts?: PostgresqlActiveDirectoryAdministratorTimeouts;
 }
 export interface PostgresqlActiveDirectoryAdministratorTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_active_directory_administrator.html#create PostgresqlActiveDirectoryAdministrator#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_active_directory_administrator.html#delete PostgresqlActiveDirectoryAdministrator#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_active_directory_administrator.html#read PostgresqlActiveDirectoryAdministrator#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_active_directory_administrator.html#update PostgresqlActiveDirectoryAdministrator#update}
+  */
   readonly update?: string;
 }
 
@@ -33,14 +64,22 @@ function postgresqlActiveDirectoryAdministratorTimeoutsToTerraform(struct?: Post
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_active_directory_administrator.html azurerm_postgresql_active_directory_administrator}
+*/
 export class PostgresqlActiveDirectoryAdministrator extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_active_directory_administrator.html azurerm_postgresql_active_directory_administrator} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options PostgresqlActiveDirectoryAdministratorConfig
+  */
   public constructor(scope: Construct, id: string, config: PostgresqlActiveDirectoryAdministratorConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_postgresql_active_directory_administrator',

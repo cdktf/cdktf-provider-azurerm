@@ -7,22 +7,61 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface EventgridTopicConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_topic.html#inbound_ip_rule EventgridTopic#inbound_ip_rule}
+  */
   readonly inboundIpRule?: EventgridTopicInboundIpRule[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_topic.html#input_schema EventgridTopic#input_schema}
+  */
   readonly inputSchema?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_topic.html#location EventgridTopic#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_topic.html#name EventgridTopic#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_topic.html#public_network_access_enabled EventgridTopic#public_network_access_enabled}
+  */
   readonly publicNetworkAccessEnabled?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_topic.html#resource_group_name EventgridTopic#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_topic.html#tags EventgridTopic#tags}
+  */
   readonly tags?: { [key: string]: string };
-  /** input_mapping_default_values block */
+  /**
+  * input_mapping_default_values block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_topic.html#input_mapping_default_values EventgridTopic#input_mapping_default_values}
+  */
   readonly inputMappingDefaultValues?: EventgridTopicInputMappingDefaultValues[];
-  /** input_mapping_fields block */
+  /**
+  * input_mapping_fields block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_topic.html#input_mapping_fields EventgridTopic#input_mapping_fields}
+  */
   readonly inputMappingFields?: EventgridTopicInputMappingFields[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_topic.html#timeouts EventgridTopic#timeouts}
+  */
   readonly timeouts?: EventgridTopicTimeouts;
 }
 export interface EventgridTopicInboundIpRule {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_topic.html#action EventgridTopic#action}
+  */
   readonly action?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_topic.html#ip_mask EventgridTopic#ip_mask}
+  */
   readonly ipMask?: string;
 }
 
@@ -35,8 +74,17 @@ function eventgridTopicInboundIpRuleToTerraform(struct?: EventgridTopicInboundIp
 }
 
 export interface EventgridTopicInputMappingDefaultValues {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_topic.html#data_version EventgridTopic#data_version}
+  */
   readonly dataVersion?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_topic.html#event_type EventgridTopic#event_type}
+  */
   readonly eventType?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_topic.html#subject EventgridTopic#subject}
+  */
   readonly subject?: string;
 }
 
@@ -50,11 +98,29 @@ function eventgridTopicInputMappingDefaultValuesToTerraform(struct?: EventgridTo
 }
 
 export interface EventgridTopicInputMappingFields {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_topic.html#data_version EventgridTopic#data_version}
+  */
   readonly dataVersion?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_topic.html#event_time EventgridTopic#event_time}
+  */
   readonly eventTime?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_topic.html#event_type EventgridTopic#event_type}
+  */
   readonly eventType?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_topic.html#id EventgridTopic#id}
+  */
   readonly id?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_topic.html#subject EventgridTopic#subject}
+  */
   readonly subject?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_topic.html#topic EventgridTopic#topic}
+  */
   readonly topic?: string;
 }
 
@@ -71,9 +137,21 @@ function eventgridTopicInputMappingFieldsToTerraform(struct?: EventgridTopicInpu
 }
 
 export interface EventgridTopicTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_topic.html#create EventgridTopic#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_topic.html#delete EventgridTopic#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_topic.html#read EventgridTopic#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_topic.html#update EventgridTopic#update}
+  */
   readonly update?: string;
 }
 
@@ -88,14 +166,22 @@ function eventgridTopicTimeoutsToTerraform(struct?: EventgridTopicTimeouts): any
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_topic.html azurerm_eventgrid_topic}
+*/
 export class EventgridTopic extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_topic.html azurerm_eventgrid_topic} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options EventgridTopicConfig
+  */
   public constructor(scope: Construct, id: string, config: EventgridTopicConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_eventgrid_topic',

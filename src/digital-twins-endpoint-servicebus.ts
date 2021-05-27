@@ -7,18 +7,49 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DigitalTwinsEndpointServicebusConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/digital_twins_endpoint_servicebus.html#dead_letter_storage_secret DigitalTwinsEndpointServicebus#dead_letter_storage_secret}
+  */
   readonly deadLetterStorageSecret?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/digital_twins_endpoint_servicebus.html#digital_twins_id DigitalTwinsEndpointServicebus#digital_twins_id}
+  */
   readonly digitalTwinsId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/digital_twins_endpoint_servicebus.html#name DigitalTwinsEndpointServicebus#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/digital_twins_endpoint_servicebus.html#servicebus_primary_connection_string DigitalTwinsEndpointServicebus#servicebus_primary_connection_string}
+  */
   readonly servicebusPrimaryConnectionString: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/digital_twins_endpoint_servicebus.html#servicebus_secondary_connection_string DigitalTwinsEndpointServicebus#servicebus_secondary_connection_string}
+  */
   readonly servicebusSecondaryConnectionString: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/digital_twins_endpoint_servicebus.html#timeouts DigitalTwinsEndpointServicebus#timeouts}
+  */
   readonly timeouts?: DigitalTwinsEndpointServicebusTimeouts;
 }
 export interface DigitalTwinsEndpointServicebusTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/digital_twins_endpoint_servicebus.html#create DigitalTwinsEndpointServicebus#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/digital_twins_endpoint_servicebus.html#delete DigitalTwinsEndpointServicebus#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/digital_twins_endpoint_servicebus.html#read DigitalTwinsEndpointServicebus#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/digital_twins_endpoint_servicebus.html#update DigitalTwinsEndpointServicebus#update}
+  */
   readonly update?: string;
 }
 
@@ -33,14 +64,22 @@ function digitalTwinsEndpointServicebusTimeoutsToTerraform(struct?: DigitalTwins
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/digital_twins_endpoint_servicebus.html azurerm_digital_twins_endpoint_servicebus}
+*/
 export class DigitalTwinsEndpointServicebus extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/digital_twins_endpoint_servicebus.html azurerm_digital_twins_endpoint_servicebus} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DigitalTwinsEndpointServicebusConfig
+  */
   public constructor(scope: Construct, id: string, config: DigitalTwinsEndpointServicebusConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_digital_twins_endpoint_servicebus',

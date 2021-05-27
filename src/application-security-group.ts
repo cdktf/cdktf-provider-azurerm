@@ -7,17 +7,45 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface ApplicationSecurityGroupConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_security_group.html#location ApplicationSecurityGroup#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_security_group.html#name ApplicationSecurityGroup#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_security_group.html#resource_group_name ApplicationSecurityGroup#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_security_group.html#tags ApplicationSecurityGroup#tags}
+  */
   readonly tags?: { [key: string]: string };
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_security_group.html#timeouts ApplicationSecurityGroup#timeouts}
+  */
   readonly timeouts?: ApplicationSecurityGroupTimeouts;
 }
 export interface ApplicationSecurityGroupTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_security_group.html#create ApplicationSecurityGroup#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_security_group.html#delete ApplicationSecurityGroup#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_security_group.html#read ApplicationSecurityGroup#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_security_group.html#update ApplicationSecurityGroup#update}
+  */
   readonly update?: string;
 }
 
@@ -32,14 +60,22 @@ function applicationSecurityGroupTimeoutsToTerraform(struct?: ApplicationSecurit
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/application_security_group.html azurerm_application_security_group}
+*/
 export class ApplicationSecurityGroup extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/application_security_group.html azurerm_application_security_group} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options ApplicationSecurityGroupConfig
+  */
   public constructor(scope: Construct, id: string, config: ApplicationSecurityGroupConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_application_security_group',

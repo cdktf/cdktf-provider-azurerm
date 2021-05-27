@@ -7,29 +7,87 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface FirewallConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall.html#dns_servers Firewall#dns_servers}
+  */
   readonly dnsServers?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall.html#firewall_policy_id Firewall#firewall_policy_id}
+  */
   readonly firewallPolicyId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall.html#location Firewall#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall.html#name Firewall#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall.html#private_ip_ranges Firewall#private_ip_ranges}
+  */
   readonly privateIpRanges?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall.html#resource_group_name Firewall#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall.html#sku_name Firewall#sku_name}
+  */
   readonly skuName?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall.html#sku_tier Firewall#sku_tier}
+  */
   readonly skuTier?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall.html#tags Firewall#tags}
+  */
   readonly tags?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall.html#threat_intel_mode Firewall#threat_intel_mode}
+  */
   readonly threatIntelMode?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall.html#zones Firewall#zones}
+  */
   readonly zones?: string[];
-  /** ip_configuration block */
+  /**
+  * ip_configuration block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall.html#ip_configuration Firewall#ip_configuration}
+  */
   readonly ipConfiguration?: FirewallIpConfiguration[];
-  /** management_ip_configuration block */
+  /**
+  * management_ip_configuration block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall.html#management_ip_configuration Firewall#management_ip_configuration}
+  */
   readonly managementIpConfiguration?: FirewallManagementIpConfiguration[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall.html#timeouts Firewall#timeouts}
+  */
   readonly timeouts?: FirewallTimeouts;
-  /** virtual_hub block */
+  /**
+  * virtual_hub block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall.html#virtual_hub Firewall#virtual_hub}
+  */
   readonly virtualHub?: FirewallVirtualHub[];
 }
 export interface FirewallIpConfiguration {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall.html#name Firewall#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall.html#public_ip_address_id Firewall#public_ip_address_id}
+  */
   readonly publicIpAddressId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall.html#subnet_id Firewall#subnet_id}
+  */
   readonly subnetId?: string;
 }
 
@@ -43,8 +101,17 @@ function firewallIpConfigurationToTerraform(struct?: FirewallIpConfiguration): a
 }
 
 export interface FirewallManagementIpConfiguration {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall.html#name Firewall#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall.html#public_ip_address_id Firewall#public_ip_address_id}
+  */
   readonly publicIpAddressId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall.html#subnet_id Firewall#subnet_id}
+  */
   readonly subnetId: string;
 }
 
@@ -58,9 +125,21 @@ function firewallManagementIpConfigurationToTerraform(struct?: FirewallManagemen
 }
 
 export interface FirewallTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall.html#create Firewall#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall.html#delete Firewall#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall.html#read Firewall#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall.html#update Firewall#update}
+  */
   readonly update?: string;
 }
 
@@ -75,7 +154,13 @@ function firewallTimeoutsToTerraform(struct?: FirewallTimeouts): any {
 }
 
 export interface FirewallVirtualHub {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall.html#public_ip_count Firewall#public_ip_count}
+  */
   readonly publicIpCount?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall.html#virtual_hub_id Firewall#virtual_hub_id}
+  */
   readonly virtualHubId: string;
 }
 
@@ -88,14 +173,22 @@ function firewallVirtualHubToTerraform(struct?: FirewallVirtualHub): any {
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/firewall.html azurerm_firewall}
+*/
 export class Firewall extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/firewall.html azurerm_firewall} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options FirewallConfig
+  */
   public constructor(scope: Construct, id: string, config: FirewallConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_firewall',

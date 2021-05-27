@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/data_azurerm_images.html
+// https://www.terraform.io/docs/providers/azurerm/d/images.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,9 +7,19 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataAzurermImagesConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/images.html#resource_group_name DataAzurermImages#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/images.html#tags_filter DataAzurermImages#tags_filter}
+  */
   readonly tagsFilter?: { [key: string]: string };
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/images.html#timeouts DataAzurermImages#timeouts}
+  */
   readonly timeouts?: DataAzurermImagesTimeouts;
 }
 export class DataAzurermImagesImagesDataDisk extends cdktf.ComplexComputedList {
@@ -104,6 +114,9 @@ export class DataAzurermImagesImages extends cdktf.ComplexComputedList {
   }
 }
 export interface DataAzurermImagesTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/images.html#read DataAzurermImages#read}
+  */
   readonly read?: string;
 }
 
@@ -115,14 +128,22 @@ function dataAzurermImagesTimeoutsToTerraform(struct?: DataAzurermImagesTimeouts
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/images.html azurerm_images}
+*/
 export class DataAzurermImages extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/images.html azurerm_images} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataAzurermImagesConfig
+  */
   public constructor(scope: Construct, id: string, config: DataAzurermImagesConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_images',

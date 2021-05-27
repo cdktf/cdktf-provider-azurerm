@@ -7,21 +7,55 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface WebApplicationFirewallPolicyConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/web_application_firewall_policy.html#location WebApplicationFirewallPolicy#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/web_application_firewall_policy.html#name WebApplicationFirewallPolicy#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/web_application_firewall_policy.html#resource_group_name WebApplicationFirewallPolicy#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/web_application_firewall_policy.html#tags WebApplicationFirewallPolicy#tags}
+  */
   readonly tags?: { [key: string]: string };
-  /** custom_rules block */
+  /**
+  * custom_rules block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/web_application_firewall_policy.html#custom_rules WebApplicationFirewallPolicy#custom_rules}
+  */
   readonly customRules?: WebApplicationFirewallPolicyCustomRules[];
-  /** managed_rules block */
+  /**
+  * managed_rules block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/web_application_firewall_policy.html#managed_rules WebApplicationFirewallPolicy#managed_rules}
+  */
   readonly managedRules: WebApplicationFirewallPolicyManagedRules[];
-  /** policy_settings block */
+  /**
+  * policy_settings block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/web_application_firewall_policy.html#policy_settings WebApplicationFirewallPolicy#policy_settings}
+  */
   readonly policySettings?: WebApplicationFirewallPolicyPolicySettings[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/web_application_firewall_policy.html#timeouts WebApplicationFirewallPolicy#timeouts}
+  */
   readonly timeouts?: WebApplicationFirewallPolicyTimeouts;
 }
 export interface WebApplicationFirewallPolicyCustomRulesMatchConditionsMatchVariables {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/web_application_firewall_policy.html#selector WebApplicationFirewallPolicy#selector}
+  */
   readonly selector?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/web_application_firewall_policy.html#variable_name WebApplicationFirewallPolicy#variable_name}
+  */
   readonly variableName: string;
 }
 
@@ -34,11 +68,27 @@ function webApplicationFirewallPolicyCustomRulesMatchConditionsMatchVariablesToT
 }
 
 export interface WebApplicationFirewallPolicyCustomRulesMatchConditions {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/web_application_firewall_policy.html#match_values WebApplicationFirewallPolicy#match_values}
+  */
   readonly matchValues: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/web_application_firewall_policy.html#negation_condition WebApplicationFirewallPolicy#negation_condition}
+  */
   readonly negationCondition?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/web_application_firewall_policy.html#operator WebApplicationFirewallPolicy#operator}
+  */
   readonly operator: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/web_application_firewall_policy.html#transforms WebApplicationFirewallPolicy#transforms}
+  */
   readonly transforms?: string[];
-  /** match_variables block */
+  /**
+  * match_variables block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/web_application_firewall_policy.html#match_variables WebApplicationFirewallPolicy#match_variables}
+  */
   readonly matchVariables: WebApplicationFirewallPolicyCustomRulesMatchConditionsMatchVariables[];
 }
 
@@ -54,11 +104,27 @@ function webApplicationFirewallPolicyCustomRulesMatchConditionsToTerraform(struc
 }
 
 export interface WebApplicationFirewallPolicyCustomRules {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/web_application_firewall_policy.html#action WebApplicationFirewallPolicy#action}
+  */
   readonly action: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/web_application_firewall_policy.html#name WebApplicationFirewallPolicy#name}
+  */
   readonly name?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/web_application_firewall_policy.html#priority WebApplicationFirewallPolicy#priority}
+  */
   readonly priority: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/web_application_firewall_policy.html#rule_type WebApplicationFirewallPolicy#rule_type}
+  */
   readonly ruleType: string;
-  /** match_conditions block */
+  /**
+  * match_conditions block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/web_application_firewall_policy.html#match_conditions WebApplicationFirewallPolicy#match_conditions}
+  */
   readonly matchConditions: WebApplicationFirewallPolicyCustomRulesMatchConditions[];
 }
 
@@ -74,8 +140,17 @@ function webApplicationFirewallPolicyCustomRulesToTerraform(struct?: WebApplicat
 }
 
 export interface WebApplicationFirewallPolicyManagedRulesExclusion {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/web_application_firewall_policy.html#match_variable WebApplicationFirewallPolicy#match_variable}
+  */
   readonly matchVariable: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/web_application_firewall_policy.html#selector WebApplicationFirewallPolicy#selector}
+  */
   readonly selector: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/web_application_firewall_policy.html#selector_match_operator WebApplicationFirewallPolicy#selector_match_operator}
+  */
   readonly selectorMatchOperator: string;
 }
 
@@ -89,7 +164,13 @@ function webApplicationFirewallPolicyManagedRulesExclusionToTerraform(struct?: W
 }
 
 export interface WebApplicationFirewallPolicyManagedRulesManagedRuleSetRuleGroupOverride {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/web_application_firewall_policy.html#disabled_rules WebApplicationFirewallPolicy#disabled_rules}
+  */
   readonly disabledRules: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/web_application_firewall_policy.html#rule_group_name WebApplicationFirewallPolicy#rule_group_name}
+  */
   readonly ruleGroupName: string;
 }
 
@@ -102,9 +183,19 @@ function webApplicationFirewallPolicyManagedRulesManagedRuleSetRuleGroupOverride
 }
 
 export interface WebApplicationFirewallPolicyManagedRulesManagedRuleSet {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/web_application_firewall_policy.html#type WebApplicationFirewallPolicy#type}
+  */
   readonly type?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/web_application_firewall_policy.html#version WebApplicationFirewallPolicy#version}
+  */
   readonly version: string;
-  /** rule_group_override block */
+  /**
+  * rule_group_override block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/web_application_firewall_policy.html#rule_group_override WebApplicationFirewallPolicy#rule_group_override}
+  */
   readonly ruleGroupOverride?: WebApplicationFirewallPolicyManagedRulesManagedRuleSetRuleGroupOverride[];
 }
 
@@ -118,9 +209,17 @@ function webApplicationFirewallPolicyManagedRulesManagedRuleSetToTerraform(struc
 }
 
 export interface WebApplicationFirewallPolicyManagedRules {
-  /** exclusion block */
+  /**
+  * exclusion block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/web_application_firewall_policy.html#exclusion WebApplicationFirewallPolicy#exclusion}
+  */
   readonly exclusion?: WebApplicationFirewallPolicyManagedRulesExclusion[];
-  /** managed_rule_set block */
+  /**
+  * managed_rule_set block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/web_application_firewall_policy.html#managed_rule_set WebApplicationFirewallPolicy#managed_rule_set}
+  */
   readonly managedRuleSet: WebApplicationFirewallPolicyManagedRulesManagedRuleSet[];
 }
 
@@ -133,10 +232,25 @@ function webApplicationFirewallPolicyManagedRulesToTerraform(struct?: WebApplica
 }
 
 export interface WebApplicationFirewallPolicyPolicySettings {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/web_application_firewall_policy.html#enabled WebApplicationFirewallPolicy#enabled}
+  */
   readonly enabled?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/web_application_firewall_policy.html#file_upload_limit_in_mb WebApplicationFirewallPolicy#file_upload_limit_in_mb}
+  */
   readonly fileUploadLimitInMb?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/web_application_firewall_policy.html#max_request_body_size_in_kb WebApplicationFirewallPolicy#max_request_body_size_in_kb}
+  */
   readonly maxRequestBodySizeInKb?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/web_application_firewall_policy.html#mode WebApplicationFirewallPolicy#mode}
+  */
   readonly mode?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/web_application_firewall_policy.html#request_body_check WebApplicationFirewallPolicy#request_body_check}
+  */
   readonly requestBodyCheck?: boolean;
 }
 
@@ -152,9 +266,21 @@ function webApplicationFirewallPolicyPolicySettingsToTerraform(struct?: WebAppli
 }
 
 export interface WebApplicationFirewallPolicyTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/web_application_firewall_policy.html#create WebApplicationFirewallPolicy#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/web_application_firewall_policy.html#delete WebApplicationFirewallPolicy#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/web_application_firewall_policy.html#read WebApplicationFirewallPolicy#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/web_application_firewall_policy.html#update WebApplicationFirewallPolicy#update}
+  */
   readonly update?: string;
 }
 
@@ -169,14 +295,22 @@ function webApplicationFirewallPolicyTimeoutsToTerraform(struct?: WebApplication
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/web_application_firewall_policy.html azurerm_web_application_firewall_policy}
+*/
 export class WebApplicationFirewallPolicy extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/web_application_firewall_policy.html azurerm_web_application_firewall_policy} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options WebApplicationFirewallPolicyConfig
+  */
   public constructor(scope: Construct, id: string, config: WebApplicationFirewallPolicyConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_web_application_firewall_policy',

@@ -7,18 +7,49 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface SiteRecoveryReplicationPolicyConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/site_recovery_replication_policy.html#application_consistent_snapshot_frequency_in_minutes SiteRecoveryReplicationPolicy#application_consistent_snapshot_frequency_in_minutes}
+  */
   readonly applicationConsistentSnapshotFrequencyInMinutes: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/site_recovery_replication_policy.html#name SiteRecoveryReplicationPolicy#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/site_recovery_replication_policy.html#recovery_point_retention_in_minutes SiteRecoveryReplicationPolicy#recovery_point_retention_in_minutes}
+  */
   readonly recoveryPointRetentionInMinutes: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/site_recovery_replication_policy.html#recovery_vault_name SiteRecoveryReplicationPolicy#recovery_vault_name}
+  */
   readonly recoveryVaultName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/site_recovery_replication_policy.html#resource_group_name SiteRecoveryReplicationPolicy#resource_group_name}
+  */
   readonly resourceGroupName: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/site_recovery_replication_policy.html#timeouts SiteRecoveryReplicationPolicy#timeouts}
+  */
   readonly timeouts?: SiteRecoveryReplicationPolicyTimeouts;
 }
 export interface SiteRecoveryReplicationPolicyTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/site_recovery_replication_policy.html#create SiteRecoveryReplicationPolicy#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/site_recovery_replication_policy.html#delete SiteRecoveryReplicationPolicy#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/site_recovery_replication_policy.html#read SiteRecoveryReplicationPolicy#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/site_recovery_replication_policy.html#update SiteRecoveryReplicationPolicy#update}
+  */
   readonly update?: string;
 }
 
@@ -33,14 +64,22 @@ function siteRecoveryReplicationPolicyTimeoutsToTerraform(struct?: SiteRecoveryR
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/site_recovery_replication_policy.html azurerm_site_recovery_replication_policy}
+*/
 export class SiteRecoveryReplicationPolicy extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/site_recovery_replication_policy.html azurerm_site_recovery_replication_policy} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options SiteRecoveryReplicationPolicyConfig
+  */
   public constructor(scope: Construct, id: string, config: SiteRecoveryReplicationPolicyConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_site_recovery_replication_policy',

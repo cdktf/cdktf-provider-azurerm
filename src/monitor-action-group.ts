@@ -7,37 +7,105 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface MonitorActionGroupConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_action_group.html#enabled MonitorActionGroup#enabled}
+  */
   readonly enabled?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_action_group.html#name MonitorActionGroup#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_action_group.html#resource_group_name MonitorActionGroup#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_action_group.html#short_name MonitorActionGroup#short_name}
+  */
   readonly shortName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_action_group.html#tags MonitorActionGroup#tags}
+  */
   readonly tags?: { [key: string]: string };
-  /** arm_role_receiver block */
+  /**
+  * arm_role_receiver block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_action_group.html#arm_role_receiver MonitorActionGroup#arm_role_receiver}
+  */
   readonly armRoleReceiver?: MonitorActionGroupArmRoleReceiver[];
-  /** automation_runbook_receiver block */
+  /**
+  * automation_runbook_receiver block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_action_group.html#automation_runbook_receiver MonitorActionGroup#automation_runbook_receiver}
+  */
   readonly automationRunbookReceiver?: MonitorActionGroupAutomationRunbookReceiver[];
-  /** azure_app_push_receiver block */
+  /**
+  * azure_app_push_receiver block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_action_group.html#azure_app_push_receiver MonitorActionGroup#azure_app_push_receiver}
+  */
   readonly azureAppPushReceiver?: MonitorActionGroupAzureAppPushReceiver[];
-  /** azure_function_receiver block */
+  /**
+  * azure_function_receiver block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_action_group.html#azure_function_receiver MonitorActionGroup#azure_function_receiver}
+  */
   readonly azureFunctionReceiver?: MonitorActionGroupAzureFunctionReceiver[];
-  /** email_receiver block */
+  /**
+  * email_receiver block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_action_group.html#email_receiver MonitorActionGroup#email_receiver}
+  */
   readonly emailReceiver?: MonitorActionGroupEmailReceiver[];
-  /** itsm_receiver block */
+  /**
+  * itsm_receiver block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_action_group.html#itsm_receiver MonitorActionGroup#itsm_receiver}
+  */
   readonly itsmReceiver?: MonitorActionGroupItsmReceiver[];
-  /** logic_app_receiver block */
+  /**
+  * logic_app_receiver block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_action_group.html#logic_app_receiver MonitorActionGroup#logic_app_receiver}
+  */
   readonly logicAppReceiver?: MonitorActionGroupLogicAppReceiver[];
-  /** sms_receiver block */
+  /**
+  * sms_receiver block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_action_group.html#sms_receiver MonitorActionGroup#sms_receiver}
+  */
   readonly smsReceiver?: MonitorActionGroupSmsReceiver[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_action_group.html#timeouts MonitorActionGroup#timeouts}
+  */
   readonly timeouts?: MonitorActionGroupTimeouts;
-  /** voice_receiver block */
+  /**
+  * voice_receiver block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_action_group.html#voice_receiver MonitorActionGroup#voice_receiver}
+  */
   readonly voiceReceiver?: MonitorActionGroupVoiceReceiver[];
-  /** webhook_receiver block */
+  /**
+  * webhook_receiver block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_action_group.html#webhook_receiver MonitorActionGroup#webhook_receiver}
+  */
   readonly webhookReceiver?: MonitorActionGroupWebhookReceiver[];
 }
 export interface MonitorActionGroupArmRoleReceiver {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_action_group.html#name MonitorActionGroup#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_action_group.html#role_id MonitorActionGroup#role_id}
+  */
   readonly roleId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_action_group.html#use_common_alert_schema MonitorActionGroup#use_common_alert_schema}
+  */
   readonly useCommonAlertSchema?: boolean;
 }
 
@@ -51,12 +119,33 @@ function monitorActionGroupArmRoleReceiverToTerraform(struct?: MonitorActionGrou
 }
 
 export interface MonitorActionGroupAutomationRunbookReceiver {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_action_group.html#automation_account_id MonitorActionGroup#automation_account_id}
+  */
   readonly automationAccountId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_action_group.html#is_global_runbook MonitorActionGroup#is_global_runbook}
+  */
   readonly isGlobalRunbook: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_action_group.html#name MonitorActionGroup#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_action_group.html#runbook_name MonitorActionGroup#runbook_name}
+  */
   readonly runbookName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_action_group.html#service_uri MonitorActionGroup#service_uri}
+  */
   readonly serviceUri: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_action_group.html#use_common_alert_schema MonitorActionGroup#use_common_alert_schema}
+  */
   readonly useCommonAlertSchema?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_action_group.html#webhook_resource_id MonitorActionGroup#webhook_resource_id}
+  */
   readonly webhookResourceId: string;
 }
 
@@ -74,7 +163,13 @@ function monitorActionGroupAutomationRunbookReceiverToTerraform(struct?: Monitor
 }
 
 export interface MonitorActionGroupAzureAppPushReceiver {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_action_group.html#email_address MonitorActionGroup#email_address}
+  */
   readonly emailAddress: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_action_group.html#name MonitorActionGroup#name}
+  */
   readonly name: string;
 }
 
@@ -87,10 +182,25 @@ function monitorActionGroupAzureAppPushReceiverToTerraform(struct?: MonitorActio
 }
 
 export interface MonitorActionGroupAzureFunctionReceiver {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_action_group.html#function_app_resource_id MonitorActionGroup#function_app_resource_id}
+  */
   readonly functionAppResourceId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_action_group.html#function_name MonitorActionGroup#function_name}
+  */
   readonly functionName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_action_group.html#http_trigger_url MonitorActionGroup#http_trigger_url}
+  */
   readonly httpTriggerUrl: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_action_group.html#name MonitorActionGroup#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_action_group.html#use_common_alert_schema MonitorActionGroup#use_common_alert_schema}
+  */
   readonly useCommonAlertSchema?: boolean;
 }
 
@@ -106,8 +216,17 @@ function monitorActionGroupAzureFunctionReceiverToTerraform(struct?: MonitorActi
 }
 
 export interface MonitorActionGroupEmailReceiver {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_action_group.html#email_address MonitorActionGroup#email_address}
+  */
   readonly emailAddress: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_action_group.html#name MonitorActionGroup#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_action_group.html#use_common_alert_schema MonitorActionGroup#use_common_alert_schema}
+  */
   readonly useCommonAlertSchema?: boolean;
 }
 
@@ -121,10 +240,25 @@ function monitorActionGroupEmailReceiverToTerraform(struct?: MonitorActionGroupE
 }
 
 export interface MonitorActionGroupItsmReceiver {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_action_group.html#connection_id MonitorActionGroup#connection_id}
+  */
   readonly connectionId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_action_group.html#name MonitorActionGroup#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_action_group.html#region MonitorActionGroup#region}
+  */
   readonly region: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_action_group.html#ticket_configuration MonitorActionGroup#ticket_configuration}
+  */
   readonly ticketConfiguration: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_action_group.html#workspace_id MonitorActionGroup#workspace_id}
+  */
   readonly workspaceId: string;
 }
 
@@ -140,9 +274,21 @@ function monitorActionGroupItsmReceiverToTerraform(struct?: MonitorActionGroupIt
 }
 
 export interface MonitorActionGroupLogicAppReceiver {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_action_group.html#callback_url MonitorActionGroup#callback_url}
+  */
   readonly callbackUrl: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_action_group.html#name MonitorActionGroup#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_action_group.html#resource_id MonitorActionGroup#resource_id}
+  */
   readonly resourceId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_action_group.html#use_common_alert_schema MonitorActionGroup#use_common_alert_schema}
+  */
   readonly useCommonAlertSchema?: boolean;
 }
 
@@ -157,8 +303,17 @@ function monitorActionGroupLogicAppReceiverToTerraform(struct?: MonitorActionGro
 }
 
 export interface MonitorActionGroupSmsReceiver {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_action_group.html#country_code MonitorActionGroup#country_code}
+  */
   readonly countryCode: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_action_group.html#name MonitorActionGroup#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_action_group.html#phone_number MonitorActionGroup#phone_number}
+  */
   readonly phoneNumber: string;
 }
 
@@ -172,9 +327,21 @@ function monitorActionGroupSmsReceiverToTerraform(struct?: MonitorActionGroupSms
 }
 
 export interface MonitorActionGroupTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_action_group.html#create MonitorActionGroup#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_action_group.html#delete MonitorActionGroup#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_action_group.html#read MonitorActionGroup#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_action_group.html#update MonitorActionGroup#update}
+  */
   readonly update?: string;
 }
 
@@ -189,8 +356,17 @@ function monitorActionGroupTimeoutsToTerraform(struct?: MonitorActionGroupTimeou
 }
 
 export interface MonitorActionGroupVoiceReceiver {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_action_group.html#country_code MonitorActionGroup#country_code}
+  */
   readonly countryCode: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_action_group.html#name MonitorActionGroup#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_action_group.html#phone_number MonitorActionGroup#phone_number}
+  */
   readonly phoneNumber: string;
 }
 
@@ -204,8 +380,17 @@ function monitorActionGroupVoiceReceiverToTerraform(struct?: MonitorActionGroupV
 }
 
 export interface MonitorActionGroupWebhookReceiverAadAuth {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_action_group.html#identifier_uri MonitorActionGroup#identifier_uri}
+  */
   readonly identifierUri?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_action_group.html#object_id MonitorActionGroup#object_id}
+  */
   readonly objectId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_action_group.html#tenant_id MonitorActionGroup#tenant_id}
+  */
   readonly tenantId?: string;
 }
 
@@ -219,10 +404,23 @@ function monitorActionGroupWebhookReceiverAadAuthToTerraform(struct?: MonitorAct
 }
 
 export interface MonitorActionGroupWebhookReceiver {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_action_group.html#name MonitorActionGroup#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_action_group.html#service_uri MonitorActionGroup#service_uri}
+  */
   readonly serviceUri: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_action_group.html#use_common_alert_schema MonitorActionGroup#use_common_alert_schema}
+  */
   readonly useCommonAlertSchema?: boolean;
-  /** aad_auth block */
+  /**
+  * aad_auth block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_action_group.html#aad_auth MonitorActionGroup#aad_auth}
+  */
   readonly aadAuth?: MonitorActionGroupWebhookReceiverAadAuth[];
 }
 
@@ -237,14 +435,22 @@ function monitorActionGroupWebhookReceiverToTerraform(struct?: MonitorActionGrou
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_action_group.html azurerm_monitor_action_group}
+*/
 export class MonitorActionGroup extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_action_group.html azurerm_monitor_action_group} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options MonitorActionGroupConfig
+  */
   public constructor(scope: Construct, id: string, config: MonitorActionGroupConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_monitor_action_group',

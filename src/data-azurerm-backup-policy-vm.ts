@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/data_azurerm_backup_policy_vm.html
+// https://www.terraform.io/docs/providers/azurerm/d/backup_policy_vm.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,13 +7,29 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataAzurermBackupPolicyVmConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/backup_policy_vm.html#name DataAzurermBackupPolicyVm#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/backup_policy_vm.html#recovery_vault_name DataAzurermBackupPolicyVm#recovery_vault_name}
+  */
   readonly recoveryVaultName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/backup_policy_vm.html#resource_group_name DataAzurermBackupPolicyVm#resource_group_name}
+  */
   readonly resourceGroupName: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/backup_policy_vm.html#timeouts DataAzurermBackupPolicyVm#timeouts}
+  */
   readonly timeouts?: DataAzurermBackupPolicyVmTimeouts;
 }
 export interface DataAzurermBackupPolicyVmTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/backup_policy_vm.html#read DataAzurermBackupPolicyVm#read}
+  */
   readonly read?: string;
 }
 
@@ -25,14 +41,22 @@ function dataAzurermBackupPolicyVmTimeoutsToTerraform(struct?: DataAzurermBackup
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/backup_policy_vm.html azurerm_backup_policy_vm}
+*/
 export class DataAzurermBackupPolicyVm extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/backup_policy_vm.html azurerm_backup_policy_vm} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataAzurermBackupPolicyVmConfig
+  */
   public constructor(scope: Construct, id: string, config: DataAzurermBackupPolicyVmConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_backup_policy_vm',

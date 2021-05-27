@@ -7,20 +7,57 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface NotificationHubAuthorizationRuleConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/notification_hub_authorization_rule.html#listen NotificationHubAuthorizationRule#listen}
+  */
   readonly listen?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/notification_hub_authorization_rule.html#manage NotificationHubAuthorizationRule#manage}
+  */
   readonly manage?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/notification_hub_authorization_rule.html#name NotificationHubAuthorizationRule#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/notification_hub_authorization_rule.html#namespace_name NotificationHubAuthorizationRule#namespace_name}
+  */
   readonly namespaceName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/notification_hub_authorization_rule.html#notification_hub_name NotificationHubAuthorizationRule#notification_hub_name}
+  */
   readonly notificationHubName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/notification_hub_authorization_rule.html#resource_group_name NotificationHubAuthorizationRule#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/notification_hub_authorization_rule.html#send NotificationHubAuthorizationRule#send}
+  */
   readonly send?: boolean;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/notification_hub_authorization_rule.html#timeouts NotificationHubAuthorizationRule#timeouts}
+  */
   readonly timeouts?: NotificationHubAuthorizationRuleTimeouts;
 }
 export interface NotificationHubAuthorizationRuleTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/notification_hub_authorization_rule.html#create NotificationHubAuthorizationRule#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/notification_hub_authorization_rule.html#delete NotificationHubAuthorizationRule#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/notification_hub_authorization_rule.html#read NotificationHubAuthorizationRule#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/notification_hub_authorization_rule.html#update NotificationHubAuthorizationRule#update}
+  */
   readonly update?: string;
 }
 
@@ -35,14 +72,22 @@ function notificationHubAuthorizationRuleTimeoutsToTerraform(struct?: Notificati
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/notification_hub_authorization_rule.html azurerm_notification_hub_authorization_rule}
+*/
 export class NotificationHubAuthorizationRule extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/notification_hub_authorization_rule.html azurerm_notification_hub_authorization_rule} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options NotificationHubAuthorizationRuleConfig
+  */
   public constructor(scope: Construct, id: string, config: NotificationHubAuthorizationRuleConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_notification_hub_authorization_rule',

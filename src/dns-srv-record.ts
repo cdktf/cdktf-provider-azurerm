@@ -7,20 +7,55 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DnsSrvRecordConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_srv_record.html#name DnsSrvRecord#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_srv_record.html#resource_group_name DnsSrvRecord#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_srv_record.html#tags DnsSrvRecord#tags}
+  */
   readonly tags?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_srv_record.html#ttl DnsSrvRecord#ttl}
+  */
   readonly ttl: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_srv_record.html#zone_name DnsSrvRecord#zone_name}
+  */
   readonly zoneName: string;
-  /** record block */
+  /**
+  * record block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_srv_record.html#record DnsSrvRecord#record}
+  */
   readonly record: DnsSrvRecordRecord[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_srv_record.html#timeouts DnsSrvRecord#timeouts}
+  */
   readonly timeouts?: DnsSrvRecordTimeouts;
 }
 export interface DnsSrvRecordRecord {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_srv_record.html#port DnsSrvRecord#port}
+  */
   readonly port: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_srv_record.html#priority DnsSrvRecord#priority}
+  */
   readonly priority: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_srv_record.html#target DnsSrvRecord#target}
+  */
   readonly target: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_srv_record.html#weight DnsSrvRecord#weight}
+  */
   readonly weight: number;
 }
 
@@ -35,9 +70,21 @@ function dnsSrvRecordRecordToTerraform(struct?: DnsSrvRecordRecord): any {
 }
 
 export interface DnsSrvRecordTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_srv_record.html#create DnsSrvRecord#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_srv_record.html#delete DnsSrvRecord#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_srv_record.html#read DnsSrvRecord#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_srv_record.html#update DnsSrvRecord#update}
+  */
   readonly update?: string;
 }
 
@@ -52,14 +99,22 @@ function dnsSrvRecordTimeoutsToTerraform(struct?: DnsSrvRecordTimeouts): any {
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/dns_srv_record.html azurerm_dns_srv_record}
+*/
 export class DnsSrvRecord extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/dns_srv_record.html azurerm_dns_srv_record} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DnsSrvRecordConfig
+  */
   public constructor(scope: Construct, id: string, config: DnsSrvRecordConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_dns_srv_record',

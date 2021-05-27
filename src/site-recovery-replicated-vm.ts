@@ -7,28 +7,89 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface SiteRecoveryReplicatedVmConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/site_recovery_replicated_vm.html#managed_disk SiteRecoveryReplicatedVm#managed_disk}
+  */
   readonly managedDisk?: SiteRecoveryReplicatedVmManagedDisk[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/site_recovery_replicated_vm.html#name SiteRecoveryReplicatedVm#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/site_recovery_replicated_vm.html#network_interface SiteRecoveryReplicatedVm#network_interface}
+  */
   readonly networkInterface?: SiteRecoveryReplicatedVmNetworkInterface[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/site_recovery_replicated_vm.html#recovery_replication_policy_id SiteRecoveryReplicatedVm#recovery_replication_policy_id}
+  */
   readonly recoveryReplicationPolicyId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/site_recovery_replicated_vm.html#recovery_vault_name SiteRecoveryReplicatedVm#recovery_vault_name}
+  */
   readonly recoveryVaultName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/site_recovery_replicated_vm.html#resource_group_name SiteRecoveryReplicatedVm#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/site_recovery_replicated_vm.html#source_recovery_fabric_name SiteRecoveryReplicatedVm#source_recovery_fabric_name}
+  */
   readonly sourceRecoveryFabricName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/site_recovery_replicated_vm.html#source_recovery_protection_container_name SiteRecoveryReplicatedVm#source_recovery_protection_container_name}
+  */
   readonly sourceRecoveryProtectionContainerName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/site_recovery_replicated_vm.html#source_vm_id SiteRecoveryReplicatedVm#source_vm_id}
+  */
   readonly sourceVmId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/site_recovery_replicated_vm.html#target_availability_set_id SiteRecoveryReplicatedVm#target_availability_set_id}
+  */
   readonly targetAvailabilitySetId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/site_recovery_replicated_vm.html#target_network_id SiteRecoveryReplicatedVm#target_network_id}
+  */
   readonly targetNetworkId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/site_recovery_replicated_vm.html#target_recovery_fabric_id SiteRecoveryReplicatedVm#target_recovery_fabric_id}
+  */
   readonly targetRecoveryFabricId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/site_recovery_replicated_vm.html#target_recovery_protection_container_id SiteRecoveryReplicatedVm#target_recovery_protection_container_id}
+  */
   readonly targetRecoveryProtectionContainerId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/site_recovery_replicated_vm.html#target_resource_group_id SiteRecoveryReplicatedVm#target_resource_group_id}
+  */
   readonly targetResourceGroupId: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/site_recovery_replicated_vm.html#timeouts SiteRecoveryReplicatedVm#timeouts}
+  */
   readonly timeouts?: SiteRecoveryReplicatedVmTimeouts;
 }
 export interface SiteRecoveryReplicatedVmManagedDisk {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/site_recovery_replicated_vm.html#disk_id SiteRecoveryReplicatedVm#disk_id}
+  */
   readonly diskId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/site_recovery_replicated_vm.html#staging_storage_account_id SiteRecoveryReplicatedVm#staging_storage_account_id}
+  */
   readonly stagingStorageAccountId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/site_recovery_replicated_vm.html#target_disk_type SiteRecoveryReplicatedVm#target_disk_type}
+  */
   readonly targetDiskType?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/site_recovery_replicated_vm.html#target_replica_disk_type SiteRecoveryReplicatedVm#target_replica_disk_type}
+  */
   readonly targetReplicaDiskType?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/site_recovery_replicated_vm.html#target_resource_group_id SiteRecoveryReplicatedVm#target_resource_group_id}
+  */
   readonly targetResourceGroupId?: string;
 }
 
@@ -44,9 +105,21 @@ function siteRecoveryReplicatedVmManagedDiskToTerraform(struct?: SiteRecoveryRep
 }
 
 export interface SiteRecoveryReplicatedVmNetworkInterface {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/site_recovery_replicated_vm.html#recovery_public_ip_address_id SiteRecoveryReplicatedVm#recovery_public_ip_address_id}
+  */
   readonly recoveryPublicIpAddressId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/site_recovery_replicated_vm.html#source_network_interface_id SiteRecoveryReplicatedVm#source_network_interface_id}
+  */
   readonly sourceNetworkInterfaceId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/site_recovery_replicated_vm.html#target_static_ip SiteRecoveryReplicatedVm#target_static_ip}
+  */
   readonly targetStaticIp?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/site_recovery_replicated_vm.html#target_subnet_name SiteRecoveryReplicatedVm#target_subnet_name}
+  */
   readonly targetSubnetName?: string;
 }
 
@@ -61,9 +134,21 @@ function siteRecoveryReplicatedVmNetworkInterfaceToTerraform(struct?: SiteRecove
 }
 
 export interface SiteRecoveryReplicatedVmTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/site_recovery_replicated_vm.html#create SiteRecoveryReplicatedVm#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/site_recovery_replicated_vm.html#delete SiteRecoveryReplicatedVm#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/site_recovery_replicated_vm.html#read SiteRecoveryReplicatedVm#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/site_recovery_replicated_vm.html#update SiteRecoveryReplicatedVm#update}
+  */
   readonly update?: string;
 }
 
@@ -78,14 +163,22 @@ function siteRecoveryReplicatedVmTimeoutsToTerraform(struct?: SiteRecoveryReplic
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/site_recovery_replicated_vm.html azurerm_site_recovery_replicated_vm}
+*/
 export class SiteRecoveryReplicatedVm extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/site_recovery_replicated_vm.html azurerm_site_recovery_replicated_vm} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options SiteRecoveryReplicatedVmConfig
+  */
   public constructor(scope: Construct, id: string, config: SiteRecoveryReplicatedVmConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_site_recovery_replicated_vm',

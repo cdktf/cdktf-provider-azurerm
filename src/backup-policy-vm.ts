@@ -7,28 +7,79 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface BackupPolicyVmConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_policy_vm.html#instant_restore_retention_days BackupPolicyVm#instant_restore_retention_days}
+  */
   readonly instantRestoreRetentionDays?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_policy_vm.html#name BackupPolicyVm#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_policy_vm.html#recovery_vault_name BackupPolicyVm#recovery_vault_name}
+  */
   readonly recoveryVaultName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_policy_vm.html#resource_group_name BackupPolicyVm#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_policy_vm.html#tags BackupPolicyVm#tags}
+  */
   readonly tags?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_policy_vm.html#timezone BackupPolicyVm#timezone}
+  */
   readonly timezone?: string;
-  /** backup block */
+  /**
+  * backup block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_policy_vm.html#backup BackupPolicyVm#backup}
+  */
   readonly backup: BackupPolicyVmBackup[];
-  /** retention_daily block */
+  /**
+  * retention_daily block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_policy_vm.html#retention_daily BackupPolicyVm#retention_daily}
+  */
   readonly retentionDaily?: BackupPolicyVmRetentionDaily[];
-  /** retention_monthly block */
+  /**
+  * retention_monthly block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_policy_vm.html#retention_monthly BackupPolicyVm#retention_monthly}
+  */
   readonly retentionMonthly?: BackupPolicyVmRetentionMonthly[];
-  /** retention_weekly block */
+  /**
+  * retention_weekly block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_policy_vm.html#retention_weekly BackupPolicyVm#retention_weekly}
+  */
   readonly retentionWeekly?: BackupPolicyVmRetentionWeekly[];
-  /** retention_yearly block */
+  /**
+  * retention_yearly block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_policy_vm.html#retention_yearly BackupPolicyVm#retention_yearly}
+  */
   readonly retentionYearly?: BackupPolicyVmRetentionYearly[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_policy_vm.html#timeouts BackupPolicyVm#timeouts}
+  */
   readonly timeouts?: BackupPolicyVmTimeouts;
 }
 export interface BackupPolicyVmBackup {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_policy_vm.html#frequency BackupPolicyVm#frequency}
+  */
   readonly frequency: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_policy_vm.html#time BackupPolicyVm#time}
+  */
   readonly time: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_policy_vm.html#weekdays BackupPolicyVm#weekdays}
+  */
   readonly weekdays?: string[];
 }
 
@@ -42,6 +93,9 @@ function backupPolicyVmBackupToTerraform(struct?: BackupPolicyVmBackup): any {
 }
 
 export interface BackupPolicyVmRetentionDaily {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_policy_vm.html#count BackupPolicyVm#count}
+  */
   readonly count: number;
 }
 
@@ -53,8 +107,17 @@ function backupPolicyVmRetentionDailyToTerraform(struct?: BackupPolicyVmRetentio
 }
 
 export interface BackupPolicyVmRetentionMonthly {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_policy_vm.html#count BackupPolicyVm#count}
+  */
   readonly count: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_policy_vm.html#weekdays BackupPolicyVm#weekdays}
+  */
   readonly weekdays: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_policy_vm.html#weeks BackupPolicyVm#weeks}
+  */
   readonly weeks: string[];
 }
 
@@ -68,7 +131,13 @@ function backupPolicyVmRetentionMonthlyToTerraform(struct?: BackupPolicyVmRetent
 }
 
 export interface BackupPolicyVmRetentionWeekly {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_policy_vm.html#count BackupPolicyVm#count}
+  */
   readonly count: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_policy_vm.html#weekdays BackupPolicyVm#weekdays}
+  */
   readonly weekdays: string[];
 }
 
@@ -81,9 +150,21 @@ function backupPolicyVmRetentionWeeklyToTerraform(struct?: BackupPolicyVmRetenti
 }
 
 export interface BackupPolicyVmRetentionYearly {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_policy_vm.html#count BackupPolicyVm#count}
+  */
   readonly count: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_policy_vm.html#months BackupPolicyVm#months}
+  */
   readonly months: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_policy_vm.html#weekdays BackupPolicyVm#weekdays}
+  */
   readonly weekdays: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_policy_vm.html#weeks BackupPolicyVm#weeks}
+  */
   readonly weeks: string[];
 }
 
@@ -98,9 +179,21 @@ function backupPolicyVmRetentionYearlyToTerraform(struct?: BackupPolicyVmRetenti
 }
 
 export interface BackupPolicyVmTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_policy_vm.html#create BackupPolicyVm#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_policy_vm.html#delete BackupPolicyVm#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_policy_vm.html#read BackupPolicyVm#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_policy_vm.html#update BackupPolicyVm#update}
+  */
   readonly update?: string;
 }
 
@@ -115,14 +208,22 @@ function backupPolicyVmTimeoutsToTerraform(struct?: BackupPolicyVmTimeouts): any
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/backup_policy_vm.html azurerm_backup_policy_vm}
+*/
 export class BackupPolicyVm extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/backup_policy_vm.html azurerm_backup_policy_vm} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options BackupPolicyVmConfig
+  */
   public constructor(scope: Construct, id: string, config: BackupPolicyVmConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_backup_policy_vm',

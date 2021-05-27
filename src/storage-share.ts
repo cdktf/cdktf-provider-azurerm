@@ -7,18 +7,47 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface StorageShareConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_share.html#metadata StorageShare#metadata}
+  */
   readonly metadata?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_share.html#name StorageShare#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_share.html#quota StorageShare#quota}
+  */
   readonly quota?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_share.html#storage_account_name StorageShare#storage_account_name}
+  */
   readonly storageAccountName: string;
-  /** acl block */
+  /**
+  * acl block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_share.html#acl StorageShare#acl}
+  */
   readonly acl?: StorageShareAcl[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_share.html#timeouts StorageShare#timeouts}
+  */
   readonly timeouts?: StorageShareTimeouts;
 }
 export interface StorageShareAclAccessPolicy {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_share.html#expiry StorageShare#expiry}
+  */
   readonly expiry?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_share.html#permissions StorageShare#permissions}
+  */
   readonly permissions: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_share.html#start StorageShare#start}
+  */
   readonly start?: string;
 }
 
@@ -32,8 +61,15 @@ function storageShareAclAccessPolicyToTerraform(struct?: StorageShareAclAccessPo
 }
 
 export interface StorageShareAcl {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_share.html#id StorageShare#id}
+  */
   readonly id: string;
-  /** access_policy block */
+  /**
+  * access_policy block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_share.html#access_policy StorageShare#access_policy}
+  */
   readonly accessPolicy?: StorageShareAclAccessPolicy[];
 }
 
@@ -46,9 +82,21 @@ function storageShareAclToTerraform(struct?: StorageShareAcl): any {
 }
 
 export interface StorageShareTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_share.html#create StorageShare#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_share.html#delete StorageShare#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_share.html#read StorageShare#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_share.html#update StorageShare#update}
+  */
   readonly update?: string;
 }
 
@@ -63,14 +111,22 @@ function storageShareTimeoutsToTerraform(struct?: StorageShareTimeouts): any {
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/storage_share.html azurerm_storage_share}
+*/
 export class StorageShare extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/storage_share.html azurerm_storage_share} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options StorageShareConfig
+  */
   public constructor(scope: Construct, id: string, config: StorageShareConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_storage_share',

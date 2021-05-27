@@ -7,19 +7,53 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface ExpressRouteGatewayConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_gateway.html#location ExpressRouteGateway#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_gateway.html#name ExpressRouteGateway#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_gateway.html#resource_group_name ExpressRouteGateway#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_gateway.html#scale_units ExpressRouteGateway#scale_units}
+  */
   readonly scaleUnits: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_gateway.html#tags ExpressRouteGateway#tags}
+  */
   readonly tags?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_gateway.html#virtual_hub_id ExpressRouteGateway#virtual_hub_id}
+  */
   readonly virtualHubId: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_gateway.html#timeouts ExpressRouteGateway#timeouts}
+  */
   readonly timeouts?: ExpressRouteGatewayTimeouts;
 }
 export interface ExpressRouteGatewayTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_gateway.html#create ExpressRouteGateway#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_gateway.html#delete ExpressRouteGateway#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_gateway.html#read ExpressRouteGateway#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_gateway.html#update ExpressRouteGateway#update}
+  */
   readonly update?: string;
 }
 
@@ -34,14 +68,22 @@ function expressRouteGatewayTimeoutsToTerraform(struct?: ExpressRouteGatewayTime
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_gateway.html azurerm_express_route_gateway}
+*/
 export class ExpressRouteGateway extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_gateway.html azurerm_express_route_gateway} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options ExpressRouteGatewayConfig
+  */
   public constructor(scope: Construct, id: string, config: ExpressRouteGatewayConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_express_route_gateway',

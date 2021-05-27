@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/data_azurerm_public_ips.html
+// https://www.terraform.io/docs/providers/azurerm/d/public_ips.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,11 +7,27 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataAzurermPublicIpsConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/public_ips.html#allocation_type DataAzurermPublicIps#allocation_type}
+  */
   readonly allocationType?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/public_ips.html#attached DataAzurermPublicIps#attached}
+  */
   readonly attached?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/public_ips.html#name_prefix DataAzurermPublicIps#name_prefix}
+  */
   readonly namePrefix?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/public_ips.html#resource_group_name DataAzurermPublicIps#resource_group_name}
+  */
   readonly resourceGroupName: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/public_ips.html#timeouts DataAzurermPublicIps#timeouts}
+  */
   readonly timeouts?: DataAzurermPublicIpsTimeouts;
 }
 export class DataAzurermPublicIpsPublicIps extends cdktf.ComplexComputedList {
@@ -42,6 +58,9 @@ export class DataAzurermPublicIpsPublicIps extends cdktf.ComplexComputedList {
   }
 }
 export interface DataAzurermPublicIpsTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/public_ips.html#read DataAzurermPublicIps#read}
+  */
   readonly read?: string;
 }
 
@@ -53,14 +72,22 @@ function dataAzurermPublicIpsTimeoutsToTerraform(struct?: DataAzurermPublicIpsTi
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/public_ips.html azurerm_public_ips}
+*/
 export class DataAzurermPublicIps extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/public_ips.html azurerm_public_ips} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataAzurermPublicIpsConfig
+  */
   public constructor(scope: Construct, id: string, config: DataAzurermPublicIpsConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_public_ips',

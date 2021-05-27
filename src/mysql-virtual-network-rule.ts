@@ -7,17 +7,45 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface MysqlVirtualNetworkRuleConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_virtual_network_rule.html#name MysqlVirtualNetworkRule#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_virtual_network_rule.html#resource_group_name MysqlVirtualNetworkRule#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_virtual_network_rule.html#server_name MysqlVirtualNetworkRule#server_name}
+  */
   readonly serverName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_virtual_network_rule.html#subnet_id MysqlVirtualNetworkRule#subnet_id}
+  */
   readonly subnetId: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_virtual_network_rule.html#timeouts MysqlVirtualNetworkRule#timeouts}
+  */
   readonly timeouts?: MysqlVirtualNetworkRuleTimeouts;
 }
 export interface MysqlVirtualNetworkRuleTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_virtual_network_rule.html#create MysqlVirtualNetworkRule#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_virtual_network_rule.html#delete MysqlVirtualNetworkRule#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_virtual_network_rule.html#read MysqlVirtualNetworkRule#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_virtual_network_rule.html#update MysqlVirtualNetworkRule#update}
+  */
   readonly update?: string;
 }
 
@@ -32,14 +60,22 @@ function mysqlVirtualNetworkRuleTimeoutsToTerraform(struct?: MysqlVirtualNetwork
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_virtual_network_rule.html azurerm_mysql_virtual_network_rule}
+*/
 export class MysqlVirtualNetworkRule extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_virtual_network_rule.html azurerm_mysql_virtual_network_rule} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options MysqlVirtualNetworkRuleConfig
+  */
   public constructor(scope: Construct, id: string, config: MysqlVirtualNetworkRuleConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_mysql_virtual_network_rule',

@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/data_azurerm_cdn_profile.html
+// https://www.terraform.io/docs/providers/azurerm/d/cdn_profile.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,12 +7,25 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataAzurermCdnProfileConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/cdn_profile.html#name DataAzurermCdnProfile#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/cdn_profile.html#resource_group_name DataAzurermCdnProfile#resource_group_name}
+  */
   readonly resourceGroupName: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/cdn_profile.html#timeouts DataAzurermCdnProfile#timeouts}
+  */
   readonly timeouts?: DataAzurermCdnProfileTimeouts;
 }
 export interface DataAzurermCdnProfileTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/cdn_profile.html#read DataAzurermCdnProfile#read}
+  */
   readonly read?: string;
 }
 
@@ -24,14 +37,22 @@ function dataAzurermCdnProfileTimeoutsToTerraform(struct?: DataAzurermCdnProfile
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/cdn_profile.html azurerm_cdn_profile}
+*/
 export class DataAzurermCdnProfile extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/cdn_profile.html azurerm_cdn_profile} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataAzurermCdnProfileConfig
+  */
   public constructor(scope: Construct, id: string, config: DataAzurermCdnProfileConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_cdn_profile',

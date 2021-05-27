@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/data_azurerm_netapp_pool.html
+// https://www.terraform.io/docs/providers/azurerm/d/netapp_pool.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,13 +7,29 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataAzurermNetappPoolConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/netapp_pool.html#account_name DataAzurermNetappPool#account_name}
+  */
   readonly accountName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/netapp_pool.html#name DataAzurermNetappPool#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/netapp_pool.html#resource_group_name DataAzurermNetappPool#resource_group_name}
+  */
   readonly resourceGroupName: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/netapp_pool.html#timeouts DataAzurermNetappPool#timeouts}
+  */
   readonly timeouts?: DataAzurermNetappPoolTimeouts;
 }
 export interface DataAzurermNetappPoolTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/netapp_pool.html#read DataAzurermNetappPool#read}
+  */
   readonly read?: string;
 }
 
@@ -25,14 +41,22 @@ function dataAzurermNetappPoolTimeoutsToTerraform(struct?: DataAzurermNetappPool
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/netapp_pool.html azurerm_netapp_pool}
+*/
 export class DataAzurermNetappPool extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/netapp_pool.html azurerm_netapp_pool} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataAzurermNetappPoolConfig
+  */
   public constructor(scope: Construct, id: string, config: DataAzurermNetappPoolConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_netapp_pool',

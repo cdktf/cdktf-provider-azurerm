@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/data_azurerm_template_spec_version.html
+// https://www.terraform.io/docs/providers/azurerm/d/template_spec_version.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,13 +7,29 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataAzurermTemplateSpecVersionConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/template_spec_version.html#name DataAzurermTemplateSpecVersion#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/template_spec_version.html#resource_group_name DataAzurermTemplateSpecVersion#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/template_spec_version.html#version DataAzurermTemplateSpecVersion#version}
+  */
   readonly version: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/template_spec_version.html#timeouts DataAzurermTemplateSpecVersion#timeouts}
+  */
   readonly timeouts?: DataAzurermTemplateSpecVersionTimeouts;
 }
 export interface DataAzurermTemplateSpecVersionTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/template_spec_version.html#read DataAzurermTemplateSpecVersion#read}
+  */
   readonly read?: string;
 }
 
@@ -25,14 +41,22 @@ function dataAzurermTemplateSpecVersionTimeoutsToTerraform(struct?: DataAzurermT
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/template_spec_version.html azurerm_template_spec_version}
+*/
 export class DataAzurermTemplateSpecVersion extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/template_spec_version.html azurerm_template_spec_version} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataAzurermTemplateSpecVersionConfig
+  */
   public constructor(scope: Construct, id: string, config: DataAzurermTemplateSpecVersionConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_template_spec_version',

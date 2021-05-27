@@ -7,18 +7,47 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface StorageDataLakeGen2FilesystemConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_data_lake_gen2_filesystem.html#name StorageDataLakeGen2Filesystem#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_data_lake_gen2_filesystem.html#properties StorageDataLakeGen2Filesystem#properties}
+  */
   readonly properties?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_data_lake_gen2_filesystem.html#storage_account_id StorageDataLakeGen2Filesystem#storage_account_id}
+  */
   readonly storageAccountId: string;
-  /** ace block */
+  /**
+  * ace block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_data_lake_gen2_filesystem.html#ace StorageDataLakeGen2Filesystem#ace}
+  */
   readonly ace?: StorageDataLakeGen2FilesystemAce[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_data_lake_gen2_filesystem.html#timeouts StorageDataLakeGen2Filesystem#timeouts}
+  */
   readonly timeouts?: StorageDataLakeGen2FilesystemTimeouts;
 }
 export interface StorageDataLakeGen2FilesystemAce {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_data_lake_gen2_filesystem.html#id StorageDataLakeGen2Filesystem#id}
+  */
   readonly id?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_data_lake_gen2_filesystem.html#permissions StorageDataLakeGen2Filesystem#permissions}
+  */
   readonly permissions: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_data_lake_gen2_filesystem.html#scope StorageDataLakeGen2Filesystem#scope}
+  */
   readonly scope?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_data_lake_gen2_filesystem.html#type StorageDataLakeGen2Filesystem#type}
+  */
   readonly type: string;
 }
 
@@ -33,9 +62,21 @@ function storageDataLakeGen2FilesystemAceToTerraform(struct?: StorageDataLakeGen
 }
 
 export interface StorageDataLakeGen2FilesystemTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_data_lake_gen2_filesystem.html#create StorageDataLakeGen2Filesystem#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_data_lake_gen2_filesystem.html#delete StorageDataLakeGen2Filesystem#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_data_lake_gen2_filesystem.html#read StorageDataLakeGen2Filesystem#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_data_lake_gen2_filesystem.html#update StorageDataLakeGen2Filesystem#update}
+  */
   readonly update?: string;
 }
 
@@ -50,14 +91,22 @@ function storageDataLakeGen2FilesystemTimeoutsToTerraform(struct?: StorageDataLa
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/storage_data_lake_gen2_filesystem.html azurerm_storage_data_lake_gen2_filesystem}
+*/
 export class StorageDataLakeGen2Filesystem extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/storage_data_lake_gen2_filesystem.html azurerm_storage_data_lake_gen2_filesystem} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options StorageDataLakeGen2FilesystemConfig
+  */
   public constructor(scope: Construct, id: string, config: StorageDataLakeGen2FilesystemConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_storage_data_lake_gen2_filesystem',

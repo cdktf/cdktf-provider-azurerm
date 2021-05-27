@@ -7,15 +7,37 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface SecurityCenterSettingConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_setting.html#enabled SecurityCenterSetting#enabled}
+  */
   readonly enabled: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_setting.html#setting_name SecurityCenterSetting#setting_name}
+  */
   readonly settingName: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_setting.html#timeouts SecurityCenterSetting#timeouts}
+  */
   readonly timeouts?: SecurityCenterSettingTimeouts;
 }
 export interface SecurityCenterSettingTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_setting.html#create SecurityCenterSetting#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_setting.html#delete SecurityCenterSetting#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_setting.html#read SecurityCenterSetting#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_setting.html#update SecurityCenterSetting#update}
+  */
   readonly update?: string;
 }
 
@@ -30,14 +52,22 @@ function securityCenterSettingTimeoutsToTerraform(struct?: SecurityCenterSetting
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_setting.html azurerm_security_center_setting}
+*/
 export class SecurityCenterSetting extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_setting.html azurerm_security_center_setting} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options SecurityCenterSettingConfig
+  */
   public constructor(scope: Construct, id: string, config: SecurityCenterSettingConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_security_center_setting',

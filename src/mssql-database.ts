@@ -7,42 +7,139 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface MssqlDatabaseConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_database.html#auto_pause_delay_in_minutes MssqlDatabase#auto_pause_delay_in_minutes}
+  */
   readonly autoPauseDelayInMinutes?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_database.html#collation MssqlDatabase#collation}
+  */
   readonly collation?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_database.html#create_mode MssqlDatabase#create_mode}
+  */
   readonly createMode?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_database.html#creation_source_database_id MssqlDatabase#creation_source_database_id}
+  */
   readonly creationSourceDatabaseId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_database.html#elastic_pool_id MssqlDatabase#elastic_pool_id}
+  */
   readonly elasticPoolId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_database.html#extended_auditing_policy MssqlDatabase#extended_auditing_policy}
+  */
   readonly extendedAuditingPolicy?: MssqlDatabaseExtendedAuditingPolicy[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_database.html#geo_backup_enabled MssqlDatabase#geo_backup_enabled}
+  */
   readonly geoBackupEnabled?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_database.html#license_type MssqlDatabase#license_type}
+  */
   readonly licenseType?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_database.html#max_size_gb MssqlDatabase#max_size_gb}
+  */
   readonly maxSizeGb?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_database.html#min_capacity MssqlDatabase#min_capacity}
+  */
   readonly minCapacity?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_database.html#name MssqlDatabase#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_database.html#read_replica_count MssqlDatabase#read_replica_count}
+  */
   readonly readReplicaCount?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_database.html#read_scale MssqlDatabase#read_scale}
+  */
   readonly readScale?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_database.html#recover_database_id MssqlDatabase#recover_database_id}
+  */
   readonly recoverDatabaseId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_database.html#restore_dropped_database_id MssqlDatabase#restore_dropped_database_id}
+  */
   readonly restoreDroppedDatabaseId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_database.html#restore_point_in_time MssqlDatabase#restore_point_in_time}
+  */
   readonly restorePointInTime?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_database.html#sample_name MssqlDatabase#sample_name}
+  */
   readonly sampleName?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_database.html#server_id MssqlDatabase#server_id}
+  */
   readonly serverId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_database.html#sku_name MssqlDatabase#sku_name}
+  */
   readonly skuName?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_database.html#storage_account_type MssqlDatabase#storage_account_type}
+  */
   readonly storageAccountType?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_database.html#tags MssqlDatabase#tags}
+  */
   readonly tags?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_database.html#zone_redundant MssqlDatabase#zone_redundant}
+  */
   readonly zoneRedundant?: boolean;
-  /** long_term_retention_policy block */
+  /**
+  * long_term_retention_policy block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_database.html#long_term_retention_policy MssqlDatabase#long_term_retention_policy}
+  */
   readonly longTermRetentionPolicy?: MssqlDatabaseLongTermRetentionPolicy[];
-  /** short_term_retention_policy block */
+  /**
+  * short_term_retention_policy block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_database.html#short_term_retention_policy MssqlDatabase#short_term_retention_policy}
+  */
   readonly shortTermRetentionPolicy?: MssqlDatabaseShortTermRetentionPolicy[];
-  /** threat_detection_policy block */
+  /**
+  * threat_detection_policy block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_database.html#threat_detection_policy MssqlDatabase#threat_detection_policy}
+  */
   readonly threatDetectionPolicy?: MssqlDatabaseThreatDetectionPolicy[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_database.html#timeouts MssqlDatabase#timeouts}
+  */
   readonly timeouts?: MssqlDatabaseTimeouts;
 }
 export interface MssqlDatabaseExtendedAuditingPolicy {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_database.html#log_monitoring_enabled MssqlDatabase#log_monitoring_enabled}
+  */
   readonly logMonitoringEnabled?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_database.html#retention_in_days MssqlDatabase#retention_in_days}
+  */
   readonly retentionInDays?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_database.html#storage_account_access_key MssqlDatabase#storage_account_access_key}
+  */
   readonly storageAccountAccessKey?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_database.html#storage_account_access_key_is_secondary MssqlDatabase#storage_account_access_key_is_secondary}
+  */
   readonly storageAccountAccessKeyIsSecondary?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_database.html#storage_endpoint MssqlDatabase#storage_endpoint}
+  */
   readonly storageEndpoint?: string;
 }
 
@@ -58,9 +155,21 @@ function mssqlDatabaseExtendedAuditingPolicyToTerraform(struct?: MssqlDatabaseEx
 }
 
 export interface MssqlDatabaseLongTermRetentionPolicy {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_database.html#monthly_retention MssqlDatabase#monthly_retention}
+  */
   readonly monthlyRetention?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_database.html#week_of_year MssqlDatabase#week_of_year}
+  */
   readonly weekOfYear?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_database.html#weekly_retention MssqlDatabase#weekly_retention}
+  */
   readonly weeklyRetention?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_database.html#yearly_retention MssqlDatabase#yearly_retention}
+  */
   readonly yearlyRetention?: string;
 }
 
@@ -75,6 +184,9 @@ function mssqlDatabaseLongTermRetentionPolicyToTerraform(struct?: MssqlDatabaseL
 }
 
 export interface MssqlDatabaseShortTermRetentionPolicy {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_database.html#retention_days MssqlDatabase#retention_days}
+  */
   readonly retentionDays: number;
 }
 
@@ -86,13 +198,37 @@ function mssqlDatabaseShortTermRetentionPolicyToTerraform(struct?: MssqlDatabase
 }
 
 export interface MssqlDatabaseThreatDetectionPolicy {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_database.html#disabled_alerts MssqlDatabase#disabled_alerts}
+  */
   readonly disabledAlerts?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_database.html#email_account_admins MssqlDatabase#email_account_admins}
+  */
   readonly emailAccountAdmins?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_database.html#email_addresses MssqlDatabase#email_addresses}
+  */
   readonly emailAddresses?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_database.html#retention_days MssqlDatabase#retention_days}
+  */
   readonly retentionDays?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_database.html#state MssqlDatabase#state}
+  */
   readonly state?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_database.html#storage_account_access_key MssqlDatabase#storage_account_access_key}
+  */
   readonly storageAccountAccessKey?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_database.html#storage_endpoint MssqlDatabase#storage_endpoint}
+  */
   readonly storageEndpoint?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_database.html#use_server_default MssqlDatabase#use_server_default}
+  */
   readonly useServerDefault?: string;
 }
 
@@ -111,9 +247,21 @@ function mssqlDatabaseThreatDetectionPolicyToTerraform(struct?: MssqlDatabaseThr
 }
 
 export interface MssqlDatabaseTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_database.html#create MssqlDatabase#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_database.html#delete MssqlDatabase#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_database.html#read MssqlDatabase#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_database.html#update MssqlDatabase#update}
+  */
   readonly update?: string;
 }
 
@@ -128,14 +276,22 @@ function mssqlDatabaseTimeoutsToTerraform(struct?: MssqlDatabaseTimeouts): any {
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_database.html azurerm_mssql_database}
+*/
 export class MssqlDatabase extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_database.html azurerm_mssql_database} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options MssqlDatabaseConfig
+  */
   public constructor(scope: Construct, id: string, config: MssqlDatabaseConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_mssql_database',

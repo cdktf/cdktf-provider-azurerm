@@ -7,22 +7,65 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataFactoryLinkedServiceAzureTableStorageConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_table_storage.html#additional_properties DataFactoryLinkedServiceAzureTableStorage#additional_properties}
+  */
   readonly additionalProperties?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_table_storage.html#annotations DataFactoryLinkedServiceAzureTableStorage#annotations}
+  */
   readonly annotations?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_table_storage.html#connection_string DataFactoryLinkedServiceAzureTableStorage#connection_string}
+  */
   readonly connectionString: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_table_storage.html#data_factory_name DataFactoryLinkedServiceAzureTableStorage#data_factory_name}
+  */
   readonly dataFactoryName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_table_storage.html#description DataFactoryLinkedServiceAzureTableStorage#description}
+  */
   readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_table_storage.html#integration_runtime_name DataFactoryLinkedServiceAzureTableStorage#integration_runtime_name}
+  */
   readonly integrationRuntimeName?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_table_storage.html#name DataFactoryLinkedServiceAzureTableStorage#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_table_storage.html#parameters DataFactoryLinkedServiceAzureTableStorage#parameters}
+  */
   readonly parameters?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_table_storage.html#resource_group_name DataFactoryLinkedServiceAzureTableStorage#resource_group_name}
+  */
   readonly resourceGroupName: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_table_storage.html#timeouts DataFactoryLinkedServiceAzureTableStorage#timeouts}
+  */
   readonly timeouts?: DataFactoryLinkedServiceAzureTableStorageTimeouts;
 }
 export interface DataFactoryLinkedServiceAzureTableStorageTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_table_storage.html#create DataFactoryLinkedServiceAzureTableStorage#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_table_storage.html#delete DataFactoryLinkedServiceAzureTableStorage#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_table_storage.html#read DataFactoryLinkedServiceAzureTableStorage#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_table_storage.html#update DataFactoryLinkedServiceAzureTableStorage#update}
+  */
   readonly update?: string;
 }
 
@@ -37,14 +80,22 @@ function dataFactoryLinkedServiceAzureTableStorageTimeoutsToTerraform(struct?: D
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_table_storage.html azurerm_data_factory_linked_service_azure_table_storage}
+*/
 export class DataFactoryLinkedServiceAzureTableStorage extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_table_storage.html azurerm_data_factory_linked_service_azure_table_storage} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataFactoryLinkedServiceAzureTableStorageConfig
+  */
   public constructor(scope: Construct, id: string, config: DataFactoryLinkedServiceAzureTableStorageConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_data_factory_linked_service_azure_table_storage',

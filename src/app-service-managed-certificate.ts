@@ -7,15 +7,37 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface AppServiceManagedCertificateConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_managed_certificate.html#custom_hostname_binding_id AppServiceManagedCertificate#custom_hostname_binding_id}
+  */
   readonly customHostnameBindingId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_managed_certificate.html#tags AppServiceManagedCertificate#tags}
+  */
   readonly tags?: { [key: string]: string };
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_managed_certificate.html#timeouts AppServiceManagedCertificate#timeouts}
+  */
   readonly timeouts?: AppServiceManagedCertificateTimeouts;
 }
 export interface AppServiceManagedCertificateTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_managed_certificate.html#create AppServiceManagedCertificate#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_managed_certificate.html#delete AppServiceManagedCertificate#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_managed_certificate.html#read AppServiceManagedCertificate#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_managed_certificate.html#update AppServiceManagedCertificate#update}
+  */
   readonly update?: string;
 }
 
@@ -30,14 +52,22 @@ function appServiceManagedCertificateTimeoutsToTerraform(struct?: AppServiceMana
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_managed_certificate.html azurerm_app_service_managed_certificate}
+*/
 export class AppServiceManagedCertificate extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_managed_certificate.html azurerm_app_service_managed_certificate} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options AppServiceManagedCertificateConfig
+  */
   public constructor(scope: Construct, id: string, config: AppServiceManagedCertificateConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_app_service_managed_certificate',

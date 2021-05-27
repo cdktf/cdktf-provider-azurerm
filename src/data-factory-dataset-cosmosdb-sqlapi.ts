@@ -7,24 +7,71 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataFactoryDatasetCosmosdbSqlapiConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_cosmosdb_sqlapi.html#additional_properties DataFactoryDatasetCosmosdbSqlapi#additional_properties}
+  */
   readonly additionalProperties?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_cosmosdb_sqlapi.html#annotations DataFactoryDatasetCosmosdbSqlapi#annotations}
+  */
   readonly annotations?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_cosmosdb_sqlapi.html#collection_name DataFactoryDatasetCosmosdbSqlapi#collection_name}
+  */
   readonly collectionName?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_cosmosdb_sqlapi.html#data_factory_name DataFactoryDatasetCosmosdbSqlapi#data_factory_name}
+  */
   readonly dataFactoryName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_cosmosdb_sqlapi.html#description DataFactoryDatasetCosmosdbSqlapi#description}
+  */
   readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_cosmosdb_sqlapi.html#folder DataFactoryDatasetCosmosdbSqlapi#folder}
+  */
   readonly folder?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_cosmosdb_sqlapi.html#linked_service_name DataFactoryDatasetCosmosdbSqlapi#linked_service_name}
+  */
   readonly linkedServiceName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_cosmosdb_sqlapi.html#name DataFactoryDatasetCosmosdbSqlapi#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_cosmosdb_sqlapi.html#parameters DataFactoryDatasetCosmosdbSqlapi#parameters}
+  */
   readonly parameters?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_cosmosdb_sqlapi.html#resource_group_name DataFactoryDatasetCosmosdbSqlapi#resource_group_name}
+  */
   readonly resourceGroupName: string;
-  /** schema_column block */
+  /**
+  * schema_column block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_cosmosdb_sqlapi.html#schema_column DataFactoryDatasetCosmosdbSqlapi#schema_column}
+  */
   readonly schemaColumn?: DataFactoryDatasetCosmosdbSqlapiSchemaColumn[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_cosmosdb_sqlapi.html#timeouts DataFactoryDatasetCosmosdbSqlapi#timeouts}
+  */
   readonly timeouts?: DataFactoryDatasetCosmosdbSqlapiTimeouts;
 }
 export interface DataFactoryDatasetCosmosdbSqlapiSchemaColumn {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_cosmosdb_sqlapi.html#description DataFactoryDatasetCosmosdbSqlapi#description}
+  */
   readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_cosmosdb_sqlapi.html#name DataFactoryDatasetCosmosdbSqlapi#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_cosmosdb_sqlapi.html#type DataFactoryDatasetCosmosdbSqlapi#type}
+  */
   readonly type?: string;
 }
 
@@ -38,9 +85,21 @@ function dataFactoryDatasetCosmosdbSqlapiSchemaColumnToTerraform(struct?: DataFa
 }
 
 export interface DataFactoryDatasetCosmosdbSqlapiTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_cosmosdb_sqlapi.html#create DataFactoryDatasetCosmosdbSqlapi#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_cosmosdb_sqlapi.html#delete DataFactoryDatasetCosmosdbSqlapi#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_cosmosdb_sqlapi.html#read DataFactoryDatasetCosmosdbSqlapi#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_cosmosdb_sqlapi.html#update DataFactoryDatasetCosmosdbSqlapi#update}
+  */
   readonly update?: string;
 }
 
@@ -55,14 +114,22 @@ function dataFactoryDatasetCosmosdbSqlapiTimeoutsToTerraform(struct?: DataFactor
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_cosmosdb_sqlapi.html azurerm_data_factory_dataset_cosmosdb_sqlapi}
+*/
 export class DataFactoryDatasetCosmosdbSqlapi extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_cosmosdb_sqlapi.html azurerm_data_factory_dataset_cosmosdb_sqlapi} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataFactoryDatasetCosmosdbSqlapiConfig
+  */
   public constructor(scope: Construct, id: string, config: DataFactoryDatasetCosmosdbSqlapiConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_data_factory_dataset_cosmosdb_sqlapi',

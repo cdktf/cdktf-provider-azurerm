@@ -7,21 +7,61 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface IotcentralApplicationConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iotcentral_application.html#display_name IotcentralApplication#display_name}
+  */
   readonly displayName?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iotcentral_application.html#location IotcentralApplication#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iotcentral_application.html#name IotcentralApplication#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iotcentral_application.html#resource_group_name IotcentralApplication#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iotcentral_application.html#sku IotcentralApplication#sku}
+  */
   readonly sku?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iotcentral_application.html#sub_domain IotcentralApplication#sub_domain}
+  */
   readonly subDomain: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iotcentral_application.html#tags IotcentralApplication#tags}
+  */
   readonly tags?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iotcentral_application.html#template IotcentralApplication#template}
+  */
   readonly template?: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iotcentral_application.html#timeouts IotcentralApplication#timeouts}
+  */
   readonly timeouts?: IotcentralApplicationTimeouts;
 }
 export interface IotcentralApplicationTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iotcentral_application.html#create IotcentralApplication#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iotcentral_application.html#delete IotcentralApplication#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iotcentral_application.html#read IotcentralApplication#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iotcentral_application.html#update IotcentralApplication#update}
+  */
   readonly update?: string;
 }
 
@@ -36,14 +76,22 @@ function iotcentralApplicationTimeoutsToTerraform(struct?: IotcentralApplication
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/iotcentral_application.html azurerm_iotcentral_application}
+*/
 export class IotcentralApplication extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/iotcentral_application.html azurerm_iotcentral_application} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options IotcentralApplicationConfig
+  */
   public constructor(scope: Construct, id: string, config: IotcentralApplicationConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_iotcentral_application',

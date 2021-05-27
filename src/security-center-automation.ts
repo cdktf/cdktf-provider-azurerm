@@ -7,24 +7,69 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface SecurityCenterAutomationConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_automation.html#description SecurityCenterAutomation#description}
+  */
   readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_automation.html#enabled SecurityCenterAutomation#enabled}
+  */
   readonly enabled?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_automation.html#location SecurityCenterAutomation#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_automation.html#name SecurityCenterAutomation#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_automation.html#resource_group_name SecurityCenterAutomation#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_automation.html#scopes SecurityCenterAutomation#scopes}
+  */
   readonly scopes: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_automation.html#tags SecurityCenterAutomation#tags}
+  */
   readonly tags?: { [key: string]: string };
-  /** action block */
+  /**
+  * action block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_automation.html#action SecurityCenterAutomation#action}
+  */
   readonly action: SecurityCenterAutomationAction[];
-  /** source block */
+  /**
+  * source block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_automation.html#source SecurityCenterAutomation#source}
+  */
   readonly source: SecurityCenterAutomationSource[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_automation.html#timeouts SecurityCenterAutomation#timeouts}
+  */
   readonly timeouts?: SecurityCenterAutomationTimeouts;
 }
 export interface SecurityCenterAutomationAction {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_automation.html#connection_string SecurityCenterAutomation#connection_string}
+  */
   readonly connectionString?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_automation.html#resource_id SecurityCenterAutomation#resource_id}
+  */
   readonly resourceId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_automation.html#trigger_url SecurityCenterAutomation#trigger_url}
+  */
   readonly triggerUrl?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_automation.html#type SecurityCenterAutomation#type}
+  */
   readonly type: string;
 }
 
@@ -39,9 +84,21 @@ function securityCenterAutomationActionToTerraform(struct?: SecurityCenterAutoma
 }
 
 export interface SecurityCenterAutomationSourceRuleSetRule {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_automation.html#expected_value SecurityCenterAutomation#expected_value}
+  */
   readonly expectedValue: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_automation.html#operator SecurityCenterAutomation#operator}
+  */
   readonly operator: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_automation.html#property_path SecurityCenterAutomation#property_path}
+  */
   readonly propertyPath: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_automation.html#property_type SecurityCenterAutomation#property_type}
+  */
   readonly propertyType: string;
 }
 
@@ -56,7 +113,11 @@ function securityCenterAutomationSourceRuleSetRuleToTerraform(struct?: SecurityC
 }
 
 export interface SecurityCenterAutomationSourceRuleSet {
-  /** rule block */
+  /**
+  * rule block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_automation.html#rule SecurityCenterAutomation#rule}
+  */
   readonly rule: SecurityCenterAutomationSourceRuleSetRule[];
 }
 
@@ -68,8 +129,15 @@ function securityCenterAutomationSourceRuleSetToTerraform(struct?: SecurityCente
 }
 
 export interface SecurityCenterAutomationSource {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_automation.html#event_source SecurityCenterAutomation#event_source}
+  */
   readonly eventSource: string;
-  /** rule_set block */
+  /**
+  * rule_set block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_automation.html#rule_set SecurityCenterAutomation#rule_set}
+  */
   readonly ruleSet?: SecurityCenterAutomationSourceRuleSet[];
 }
 
@@ -82,9 +150,21 @@ function securityCenterAutomationSourceToTerraform(struct?: SecurityCenterAutoma
 }
 
 export interface SecurityCenterAutomationTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_automation.html#create SecurityCenterAutomation#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_automation.html#delete SecurityCenterAutomation#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_automation.html#read SecurityCenterAutomation#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_automation.html#update SecurityCenterAutomation#update}
+  */
   readonly update?: string;
 }
 
@@ -99,14 +179,22 @@ function securityCenterAutomationTimeoutsToTerraform(struct?: SecurityCenterAuto
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_automation.html azurerm_security_center_automation}
+*/
 export class SecurityCenterAutomation extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_automation.html azurerm_security_center_automation} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options SecurityCenterAutomationConfig
+  */
   public constructor(scope: Construct, id: string, config: SecurityCenterAutomationConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_security_center_automation',

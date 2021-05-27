@@ -7,18 +7,49 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface EventhubConsumerGroupConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_consumer_group.html#eventhub_name EventhubConsumerGroup#eventhub_name}
+  */
   readonly eventhubName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_consumer_group.html#name EventhubConsumerGroup#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_consumer_group.html#namespace_name EventhubConsumerGroup#namespace_name}
+  */
   readonly namespaceName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_consumer_group.html#resource_group_name EventhubConsumerGroup#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_consumer_group.html#user_metadata EventhubConsumerGroup#user_metadata}
+  */
   readonly userMetadata?: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_consumer_group.html#timeouts EventhubConsumerGroup#timeouts}
+  */
   readonly timeouts?: EventhubConsumerGroupTimeouts;
 }
 export interface EventhubConsumerGroupTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_consumer_group.html#create EventhubConsumerGroup#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_consumer_group.html#delete EventhubConsumerGroup#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_consumer_group.html#read EventhubConsumerGroup#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_consumer_group.html#update EventhubConsumerGroup#update}
+  */
   readonly update?: string;
 }
 
@@ -33,14 +64,22 @@ function eventhubConsumerGroupTimeoutsToTerraform(struct?: EventhubConsumerGroup
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_consumer_group.html azurerm_eventhub_consumer_group}
+*/
 export class EventhubConsumerGroup extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_consumer_group.html azurerm_eventhub_consumer_group} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options EventhubConsumerGroupConfig
+  */
   public constructor(scope: Construct, id: string, config: EventhubConsumerGroupConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_eventhub_consumer_group',

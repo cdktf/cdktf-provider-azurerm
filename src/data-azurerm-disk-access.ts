@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/data_azurerm_disk_access.html
+// https://www.terraform.io/docs/providers/azurerm/d/disk_access.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,13 +7,29 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataAzurermDiskAccessConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/disk_access.html#name DataAzurermDiskAccess#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/disk_access.html#resource_group_name DataAzurermDiskAccess#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/disk_access.html#tags DataAzurermDiskAccess#tags}
+  */
   readonly tags?: { [key: string]: string };
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/disk_access.html#timeouts DataAzurermDiskAccess#timeouts}
+  */
   readonly timeouts?: DataAzurermDiskAccessTimeouts;
 }
 export interface DataAzurermDiskAccessTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/disk_access.html#read DataAzurermDiskAccess#read}
+  */
   readonly read?: string;
 }
 
@@ -25,14 +41,22 @@ function dataAzurermDiskAccessTimeoutsToTerraform(struct?: DataAzurermDiskAccess
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/disk_access.html azurerm_disk_access}
+*/
 export class DataAzurermDiskAccess extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/disk_access.html azurerm_disk_access} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataAzurermDiskAccessConfig
+  */
   public constructor(scope: Construct, id: string, config: DataAzurermDiskAccessConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_disk_access',

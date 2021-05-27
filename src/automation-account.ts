@@ -7,18 +7,49 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface AutomationAccountConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_account.html#location AutomationAccount#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_account.html#name AutomationAccount#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_account.html#resource_group_name AutomationAccount#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_account.html#sku_name AutomationAccount#sku_name}
+  */
   readonly skuName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_account.html#tags AutomationAccount#tags}
+  */
   readonly tags?: { [key: string]: string };
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_account.html#timeouts AutomationAccount#timeouts}
+  */
   readonly timeouts?: AutomationAccountTimeouts;
 }
 export interface AutomationAccountTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_account.html#create AutomationAccount#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_account.html#delete AutomationAccount#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_account.html#read AutomationAccount#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_account.html#update AutomationAccount#update}
+  */
   readonly update?: string;
 }
 
@@ -33,14 +64,22 @@ function automationAccountTimeoutsToTerraform(struct?: AutomationAccountTimeouts
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/automation_account.html azurerm_automation_account}
+*/
 export class AutomationAccount extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/automation_account.html azurerm_automation_account} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options AutomationAccountConfig
+  */
   public constructor(scope: Construct, id: string, config: AutomationAccountConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_automation_account',

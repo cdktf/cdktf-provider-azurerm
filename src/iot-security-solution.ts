@@ -7,39 +7,131 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface IotSecuritySolutionConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_security_solution.html#display_name IotSecuritySolution#display_name}
+  */
   readonly displayName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_security_solution.html#enabled IotSecuritySolution#enabled}
+  */
   readonly enabled?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_security_solution.html#events_to_export IotSecuritySolution#events_to_export}
+  */
   readonly eventsToExport?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_security_solution.html#iothub_ids IotSecuritySolution#iothub_ids}
+  */
   readonly iothubIds: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_security_solution.html#location IotSecuritySolution#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_security_solution.html#log_analytics_workspace_id IotSecuritySolution#log_analytics_workspace_id}
+  */
   readonly logAnalyticsWorkspaceId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_security_solution.html#log_unmasked_ips_enabled IotSecuritySolution#log_unmasked_ips_enabled}
+  */
   readonly logUnmaskedIpsEnabled?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_security_solution.html#name IotSecuritySolution#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_security_solution.html#query_for_resources IotSecuritySolution#query_for_resources}
+  */
   readonly queryForResources?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_security_solution.html#query_subscription_ids IotSecuritySolution#query_subscription_ids}
+  */
   readonly querySubscriptionIds?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_security_solution.html#resource_group_name IotSecuritySolution#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_security_solution.html#tags IotSecuritySolution#tags}
+  */
   readonly tags?: { [key: string]: string };
-  /** recommendations_enabled block */
+  /**
+  * recommendations_enabled block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_security_solution.html#recommendations_enabled IotSecuritySolution#recommendations_enabled}
+  */
   readonly recommendationsEnabled?: IotSecuritySolutionRecommendationsEnabled[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_security_solution.html#timeouts IotSecuritySolution#timeouts}
+  */
   readonly timeouts?: IotSecuritySolutionTimeouts;
 }
 export interface IotSecuritySolutionRecommendationsEnabled {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_security_solution.html#acr_authentication IotSecuritySolution#acr_authentication}
+  */
   readonly acrAuthentication?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_security_solution.html#agent_send_unutilized_msg IotSecuritySolution#agent_send_unutilized_msg}
+  */
   readonly agentSendUnutilizedMsg?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_security_solution.html#baseline IotSecuritySolution#baseline}
+  */
   readonly baseline?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_security_solution.html#edge_hub_mem_optimize IotSecuritySolution#edge_hub_mem_optimize}
+  */
   readonly edgeHubMemOptimize?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_security_solution.html#edge_logging_option IotSecuritySolution#edge_logging_option}
+  */
   readonly edgeLoggingOption?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_security_solution.html#inconsistent_module_settings IotSecuritySolution#inconsistent_module_settings}
+  */
   readonly inconsistentModuleSettings?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_security_solution.html#install_agent IotSecuritySolution#install_agent}
+  */
   readonly installAgent?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_security_solution.html#ip_filter_deny_all IotSecuritySolution#ip_filter_deny_all}
+  */
   readonly ipFilterDenyAll?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_security_solution.html#ip_filter_permissive_rule IotSecuritySolution#ip_filter_permissive_rule}
+  */
   readonly ipFilterPermissiveRule?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_security_solution.html#open_ports IotSecuritySolution#open_ports}
+  */
   readonly openPorts?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_security_solution.html#permissive_firewall_policy IotSecuritySolution#permissive_firewall_policy}
+  */
   readonly permissiveFirewallPolicy?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_security_solution.html#permissive_input_firewall_rules IotSecuritySolution#permissive_input_firewall_rules}
+  */
   readonly permissiveInputFirewallRules?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_security_solution.html#permissive_output_firewall_rules IotSecuritySolution#permissive_output_firewall_rules}
+  */
   readonly permissiveOutputFirewallRules?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_security_solution.html#privileged_docker_options IotSecuritySolution#privileged_docker_options}
+  */
   readonly privilegedDockerOptions?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_security_solution.html#shared_credentials IotSecuritySolution#shared_credentials}
+  */
   readonly sharedCredentials?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_security_solution.html#vulnerable_tls_cipher_suite IotSecuritySolution#vulnerable_tls_cipher_suite}
+  */
   readonly vulnerableTlsCipherSuite?: boolean;
 }
 
@@ -66,9 +158,21 @@ function iotSecuritySolutionRecommendationsEnabledToTerraform(struct?: IotSecuri
 }
 
 export interface IotSecuritySolutionTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_security_solution.html#create IotSecuritySolution#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_security_solution.html#delete IotSecuritySolution#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_security_solution.html#read IotSecuritySolution#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_security_solution.html#update IotSecuritySolution#update}
+  */
   readonly update?: string;
 }
 
@@ -83,14 +187,22 @@ function iotSecuritySolutionTimeoutsToTerraform(struct?: IotSecuritySolutionTime
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/iot_security_solution.html azurerm_iot_security_solution}
+*/
 export class IotSecuritySolution extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/iot_security_solution.html azurerm_iot_security_solution} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options IotSecuritySolutionConfig
+  */
   public constructor(scope: Construct, id: string, config: IotSecuritySolutionConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_iot_security_solution',

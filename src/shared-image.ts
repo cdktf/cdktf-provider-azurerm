@@ -7,28 +7,85 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface SharedImageConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/shared_image.html#description SharedImage#description}
+  */
   readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/shared_image.html#eula SharedImage#eula}
+  */
   readonly eula?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/shared_image.html#gallery_name SharedImage#gallery_name}
+  */
   readonly galleryName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/shared_image.html#hyper_v_generation SharedImage#hyper_v_generation}
+  */
   readonly hyperVGeneration?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/shared_image.html#location SharedImage#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/shared_image.html#name SharedImage#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/shared_image.html#os_type SharedImage#os_type}
+  */
   readonly osType: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/shared_image.html#privacy_statement_uri SharedImage#privacy_statement_uri}
+  */
   readonly privacyStatementUri?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/shared_image.html#release_note_uri SharedImage#release_note_uri}
+  */
   readonly releaseNoteUri?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/shared_image.html#resource_group_name SharedImage#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/shared_image.html#specialized SharedImage#specialized}
+  */
   readonly specialized?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/shared_image.html#tags SharedImage#tags}
+  */
   readonly tags?: { [key: string]: string };
-  /** identifier block */
+  /**
+  * identifier block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/shared_image.html#identifier SharedImage#identifier}
+  */
   readonly identifier: SharedImageIdentifier[];
-  /** purchase_plan block */
+  /**
+  * purchase_plan block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/shared_image.html#purchase_plan SharedImage#purchase_plan}
+  */
   readonly purchasePlan?: SharedImagePurchasePlan[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/shared_image.html#timeouts SharedImage#timeouts}
+  */
   readonly timeouts?: SharedImageTimeouts;
 }
 export interface SharedImageIdentifier {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/shared_image.html#offer SharedImage#offer}
+  */
   readonly offer: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/shared_image.html#publisher SharedImage#publisher}
+  */
   readonly publisher: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/shared_image.html#sku SharedImage#sku}
+  */
   readonly sku: string;
 }
 
@@ -42,8 +99,17 @@ function sharedImageIdentifierToTerraform(struct?: SharedImageIdentifier): any {
 }
 
 export interface SharedImagePurchasePlan {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/shared_image.html#name SharedImage#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/shared_image.html#product SharedImage#product}
+  */
   readonly product?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/shared_image.html#publisher SharedImage#publisher}
+  */
   readonly publisher?: string;
 }
 
@@ -57,9 +123,21 @@ function sharedImagePurchasePlanToTerraform(struct?: SharedImagePurchasePlan): a
 }
 
 export interface SharedImageTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/shared_image.html#create SharedImage#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/shared_image.html#delete SharedImage#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/shared_image.html#read SharedImage#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/shared_image.html#update SharedImage#update}
+  */
   readonly update?: string;
 }
 
@@ -74,14 +152,22 @@ function sharedImageTimeoutsToTerraform(struct?: SharedImageTimeouts): any {
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/shared_image.html azurerm_shared_image}
+*/
 export class SharedImage extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/shared_image.html azurerm_shared_image} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options SharedImageConfig
+  */
   public constructor(scope: Construct, id: string, config: SharedImageConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_shared_image',

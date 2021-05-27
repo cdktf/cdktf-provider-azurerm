@@ -7,18 +7,49 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface ApplicationInsightsSmartDetectionRuleConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights_smart_detection_rule.html#additional_email_recipients ApplicationInsightsSmartDetectionRule#additional_email_recipients}
+  */
   readonly additionalEmailRecipients?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights_smart_detection_rule.html#application_insights_id ApplicationInsightsSmartDetectionRule#application_insights_id}
+  */
   readonly applicationInsightsId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights_smart_detection_rule.html#enabled ApplicationInsightsSmartDetectionRule#enabled}
+  */
   readonly enabled?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights_smart_detection_rule.html#name ApplicationInsightsSmartDetectionRule#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights_smart_detection_rule.html#send_emails_to_subscription_owners ApplicationInsightsSmartDetectionRule#send_emails_to_subscription_owners}
+  */
   readonly sendEmailsToSubscriptionOwners?: boolean;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights_smart_detection_rule.html#timeouts ApplicationInsightsSmartDetectionRule#timeouts}
+  */
   readonly timeouts?: ApplicationInsightsSmartDetectionRuleTimeouts;
 }
 export interface ApplicationInsightsSmartDetectionRuleTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights_smart_detection_rule.html#create ApplicationInsightsSmartDetectionRule#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights_smart_detection_rule.html#delete ApplicationInsightsSmartDetectionRule#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights_smart_detection_rule.html#read ApplicationInsightsSmartDetectionRule#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights_smart_detection_rule.html#update ApplicationInsightsSmartDetectionRule#update}
+  */
   readonly update?: string;
 }
 
@@ -33,14 +64,22 @@ function applicationInsightsSmartDetectionRuleTimeoutsToTerraform(struct?: Appli
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights_smart_detection_rule.html azurerm_application_insights_smart_detection_rule}
+*/
 export class ApplicationInsightsSmartDetectionRule extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights_smart_detection_rule.html azurerm_application_insights_smart_detection_rule} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options ApplicationInsightsSmartDetectionRuleConfig
+  */
   public constructor(scope: Construct, id: string, config: ApplicationInsightsSmartDetectionRuleConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_application_insights_smart_detection_rule',

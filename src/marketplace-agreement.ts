@@ -7,16 +7,41 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface MarketplaceAgreementConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/marketplace_agreement.html#offer MarketplaceAgreement#offer}
+  */
   readonly offer: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/marketplace_agreement.html#plan MarketplaceAgreement#plan}
+  */
   readonly plan: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/marketplace_agreement.html#publisher MarketplaceAgreement#publisher}
+  */
   readonly publisher: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/marketplace_agreement.html#timeouts MarketplaceAgreement#timeouts}
+  */
   readonly timeouts?: MarketplaceAgreementTimeouts;
 }
 export interface MarketplaceAgreementTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/marketplace_agreement.html#create MarketplaceAgreement#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/marketplace_agreement.html#delete MarketplaceAgreement#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/marketplace_agreement.html#read MarketplaceAgreement#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/marketplace_agreement.html#update MarketplaceAgreement#update}
+  */
   readonly update?: string;
 }
 
@@ -31,14 +56,22 @@ function marketplaceAgreementTimeoutsToTerraform(struct?: MarketplaceAgreementTi
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/marketplace_agreement.html azurerm_marketplace_agreement}
+*/
 export class MarketplaceAgreement extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/marketplace_agreement.html azurerm_marketplace_agreement} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options MarketplaceAgreementConfig
+  */
   public constructor(scope: Construct, id: string, config: MarketplaceAgreementConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_marketplace_agreement',

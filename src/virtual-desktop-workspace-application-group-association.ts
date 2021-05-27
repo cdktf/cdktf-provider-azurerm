@@ -7,15 +7,37 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface VirtualDesktopWorkspaceApplicationGroupAssociationConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_desktop_workspace_application_group_association.html#application_group_id VirtualDesktopWorkspaceApplicationGroupAssociation#application_group_id}
+  */
   readonly applicationGroupId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_desktop_workspace_application_group_association.html#workspace_id VirtualDesktopWorkspaceApplicationGroupAssociation#workspace_id}
+  */
   readonly workspaceId: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_desktop_workspace_application_group_association.html#timeouts VirtualDesktopWorkspaceApplicationGroupAssociation#timeouts}
+  */
   readonly timeouts?: VirtualDesktopWorkspaceApplicationGroupAssociationTimeouts;
 }
 export interface VirtualDesktopWorkspaceApplicationGroupAssociationTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_desktop_workspace_application_group_association.html#create VirtualDesktopWorkspaceApplicationGroupAssociation#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_desktop_workspace_application_group_association.html#delete VirtualDesktopWorkspaceApplicationGroupAssociation#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_desktop_workspace_application_group_association.html#read VirtualDesktopWorkspaceApplicationGroupAssociation#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_desktop_workspace_application_group_association.html#update VirtualDesktopWorkspaceApplicationGroupAssociation#update}
+  */
   readonly update?: string;
 }
 
@@ -30,14 +52,22 @@ function virtualDesktopWorkspaceApplicationGroupAssociationTimeoutsToTerraform(s
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_desktop_workspace_application_group_association.html azurerm_virtual_desktop_workspace_application_group_association}
+*/
 export class VirtualDesktopWorkspaceApplicationGroupAssociation extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_desktop_workspace_application_group_association.html azurerm_virtual_desktop_workspace_application_group_association} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options VirtualDesktopWorkspaceApplicationGroupAssociationConfig
+  */
   public constructor(scope: Construct, id: string, config: VirtualDesktopWorkspaceApplicationGroupAssociationConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_virtual_desktop_workspace_application_group_association',

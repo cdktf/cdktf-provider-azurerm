@@ -7,21 +7,59 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DatabricksWorkspaceConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/databricks_workspace.html#location DatabricksWorkspace#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/databricks_workspace.html#managed_resource_group_name DatabricksWorkspace#managed_resource_group_name}
+  */
   readonly managedResourceGroupName?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/databricks_workspace.html#name DatabricksWorkspace#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/databricks_workspace.html#resource_group_name DatabricksWorkspace#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/databricks_workspace.html#sku DatabricksWorkspace#sku}
+  */
   readonly sku: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/databricks_workspace.html#tags DatabricksWorkspace#tags}
+  */
   readonly tags?: { [key: string]: string };
-  /** custom_parameters block */
+  /**
+  * custom_parameters block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/databricks_workspace.html#custom_parameters DatabricksWorkspace#custom_parameters}
+  */
   readonly customParameters?: DatabricksWorkspaceCustomParameters[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/databricks_workspace.html#timeouts DatabricksWorkspace#timeouts}
+  */
   readonly timeouts?: DatabricksWorkspaceTimeouts;
 }
 export interface DatabricksWorkspaceCustomParameters {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/databricks_workspace.html#no_public_ip DatabricksWorkspace#no_public_ip}
+  */
   readonly noPublicIp?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/databricks_workspace.html#private_subnet_name DatabricksWorkspace#private_subnet_name}
+  */
   readonly privateSubnetName?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/databricks_workspace.html#public_subnet_name DatabricksWorkspace#public_subnet_name}
+  */
   readonly publicSubnetName?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/databricks_workspace.html#virtual_network_id DatabricksWorkspace#virtual_network_id}
+  */
   readonly virtualNetworkId?: string;
 }
 
@@ -36,9 +74,21 @@ function databricksWorkspaceCustomParametersToTerraform(struct?: DatabricksWorks
 }
 
 export interface DatabricksWorkspaceTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/databricks_workspace.html#create DatabricksWorkspace#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/databricks_workspace.html#delete DatabricksWorkspace#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/databricks_workspace.html#read DatabricksWorkspace#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/databricks_workspace.html#update DatabricksWorkspace#update}
+  */
   readonly update?: string;
 }
 
@@ -53,14 +103,22 @@ function databricksWorkspaceTimeoutsToTerraform(struct?: DatabricksWorkspaceTime
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/databricks_workspace.html azurerm_databricks_workspace}
+*/
 export class DatabricksWorkspace extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/databricks_workspace.html azurerm_databricks_workspace} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DatabricksWorkspaceConfig
+  */
   public constructor(scope: Construct, id: string, config: DatabricksWorkspaceConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_databricks_workspace',

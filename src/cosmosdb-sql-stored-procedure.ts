@@ -7,19 +7,53 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface CosmosdbSqlStoredProcedureConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_sql_stored_procedure.html#account_name CosmosdbSqlStoredProcedure#account_name}
+  */
   readonly accountName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_sql_stored_procedure.html#body CosmosdbSqlStoredProcedure#body}
+  */
   readonly body: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_sql_stored_procedure.html#container_name CosmosdbSqlStoredProcedure#container_name}
+  */
   readonly containerName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_sql_stored_procedure.html#database_name CosmosdbSqlStoredProcedure#database_name}
+  */
   readonly databaseName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_sql_stored_procedure.html#name CosmosdbSqlStoredProcedure#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_sql_stored_procedure.html#resource_group_name CosmosdbSqlStoredProcedure#resource_group_name}
+  */
   readonly resourceGroupName: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_sql_stored_procedure.html#timeouts CosmosdbSqlStoredProcedure#timeouts}
+  */
   readonly timeouts?: CosmosdbSqlStoredProcedureTimeouts;
 }
 export interface CosmosdbSqlStoredProcedureTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_sql_stored_procedure.html#create CosmosdbSqlStoredProcedure#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_sql_stored_procedure.html#delete CosmosdbSqlStoredProcedure#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_sql_stored_procedure.html#read CosmosdbSqlStoredProcedure#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_sql_stored_procedure.html#update CosmosdbSqlStoredProcedure#update}
+  */
   readonly update?: string;
 }
 
@@ -34,14 +68,22 @@ function cosmosdbSqlStoredProcedureTimeoutsToTerraform(struct?: CosmosdbSqlStore
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_sql_stored_procedure.html azurerm_cosmosdb_sql_stored_procedure}
+*/
 export class CosmosdbSqlStoredProcedure extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_sql_stored_procedure.html azurerm_cosmosdb_sql_stored_procedure} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options CosmosdbSqlStoredProcedureConfig
+  */
   public constructor(scope: Construct, id: string, config: CosmosdbSqlStoredProcedureConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_cosmosdb_sql_stored_procedure',

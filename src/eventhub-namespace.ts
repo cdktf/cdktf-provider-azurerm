@@ -7,24 +7,71 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface EventhubNamespaceConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_namespace.html#auto_inflate_enabled EventhubNamespace#auto_inflate_enabled}
+  */
   readonly autoInflateEnabled?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_namespace.html#capacity EventhubNamespace#capacity}
+  */
   readonly capacity?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_namespace.html#dedicated_cluster_id EventhubNamespace#dedicated_cluster_id}
+  */
   readonly dedicatedClusterId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_namespace.html#location EventhubNamespace#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_namespace.html#maximum_throughput_units EventhubNamespace#maximum_throughput_units}
+  */
   readonly maximumThroughputUnits?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_namespace.html#name EventhubNamespace#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_namespace.html#network_rulesets EventhubNamespace#network_rulesets}
+  */
   readonly networkRulesets?: EventhubNamespaceNetworkRulesets[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_namespace.html#resource_group_name EventhubNamespace#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_namespace.html#sku EventhubNamespace#sku}
+  */
   readonly sku: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_namespace.html#tags EventhubNamespace#tags}
+  */
   readonly tags?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_namespace.html#zone_redundant EventhubNamespace#zone_redundant}
+  */
   readonly zoneRedundant?: boolean;
-  /** identity block */
+  /**
+  * identity block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_namespace.html#identity EventhubNamespace#identity}
+  */
   readonly identity?: EventhubNamespaceIdentity[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_namespace.html#timeouts EventhubNamespace#timeouts}
+  */
   readonly timeouts?: EventhubNamespaceTimeouts;
 }
 export interface EventhubNamespaceNetworkRulesetsIpRule {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_namespace.html#action EventhubNamespace#action}
+  */
   readonly action?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_namespace.html#ip_mask EventhubNamespace#ip_mask}
+  */
   readonly ipMask?: string;
 }
 
@@ -37,7 +84,13 @@ function eventhubNamespaceNetworkRulesetsIpRuleToTerraform(struct?: EventhubName
 }
 
 export interface EventhubNamespaceNetworkRulesetsVirtualNetworkRule {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_namespace.html#ignore_missing_virtual_network_service_endpoint EventhubNamespace#ignore_missing_virtual_network_service_endpoint}
+  */
   readonly ignoreMissingVirtualNetworkServiceEndpoint?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_namespace.html#subnet_id EventhubNamespace#subnet_id}
+  */
   readonly subnetId?: string;
 }
 
@@ -50,9 +103,21 @@ function eventhubNamespaceNetworkRulesetsVirtualNetworkRuleToTerraform(struct?: 
 }
 
 export interface EventhubNamespaceNetworkRulesets {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_namespace.html#default_action EventhubNamespace#default_action}
+  */
   readonly defaultAction?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_namespace.html#ip_rule EventhubNamespace#ip_rule}
+  */
   readonly ipRule?: EventhubNamespaceNetworkRulesetsIpRule[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_namespace.html#trusted_service_access_enabled EventhubNamespace#trusted_service_access_enabled}
+  */
   readonly trustedServiceAccessEnabled?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_namespace.html#virtual_network_rule EventhubNamespace#virtual_network_rule}
+  */
   readonly virtualNetworkRule?: EventhubNamespaceNetworkRulesetsVirtualNetworkRule[];
 }
 
@@ -67,6 +132,9 @@ function eventhubNamespaceNetworkRulesetsToTerraform(struct?: EventhubNamespaceN
 }
 
 export interface EventhubNamespaceIdentity {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_namespace.html#type EventhubNamespace#type}
+  */
   readonly type: string;
 }
 
@@ -78,9 +146,21 @@ function eventhubNamespaceIdentityToTerraform(struct?: EventhubNamespaceIdentity
 }
 
 export interface EventhubNamespaceTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_namespace.html#create EventhubNamespace#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_namespace.html#delete EventhubNamespace#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_namespace.html#read EventhubNamespace#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_namespace.html#update EventhubNamespace#update}
+  */
   readonly update?: string;
 }
 
@@ -95,14 +175,22 @@ function eventhubNamespaceTimeoutsToTerraform(struct?: EventhubNamespaceTimeouts
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_namespace.html azurerm_eventhub_namespace}
+*/
 export class EventhubNamespace extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_namespace.html azurerm_eventhub_namespace} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options EventhubNamespaceConfig
+  */
   public constructor(scope: Construct, id: string, config: EventhubNamespaceConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_eventhub_namespace',

@@ -7,22 +7,65 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataFactoryLinkedServiceKeyVaultConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_key_vault.html#additional_properties DataFactoryLinkedServiceKeyVault#additional_properties}
+  */
   readonly additionalProperties?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_key_vault.html#annotations DataFactoryLinkedServiceKeyVault#annotations}
+  */
   readonly annotations?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_key_vault.html#data_factory_name DataFactoryLinkedServiceKeyVault#data_factory_name}
+  */
   readonly dataFactoryName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_key_vault.html#description DataFactoryLinkedServiceKeyVault#description}
+  */
   readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_key_vault.html#integration_runtime_name DataFactoryLinkedServiceKeyVault#integration_runtime_name}
+  */
   readonly integrationRuntimeName?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_key_vault.html#key_vault_id DataFactoryLinkedServiceKeyVault#key_vault_id}
+  */
   readonly keyVaultId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_key_vault.html#name DataFactoryLinkedServiceKeyVault#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_key_vault.html#parameters DataFactoryLinkedServiceKeyVault#parameters}
+  */
   readonly parameters?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_key_vault.html#resource_group_name DataFactoryLinkedServiceKeyVault#resource_group_name}
+  */
   readonly resourceGroupName: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_key_vault.html#timeouts DataFactoryLinkedServiceKeyVault#timeouts}
+  */
   readonly timeouts?: DataFactoryLinkedServiceKeyVaultTimeouts;
 }
 export interface DataFactoryLinkedServiceKeyVaultTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_key_vault.html#create DataFactoryLinkedServiceKeyVault#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_key_vault.html#delete DataFactoryLinkedServiceKeyVault#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_key_vault.html#read DataFactoryLinkedServiceKeyVault#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_key_vault.html#update DataFactoryLinkedServiceKeyVault#update}
+  */
   readonly update?: string;
 }
 
@@ -37,14 +80,22 @@ function dataFactoryLinkedServiceKeyVaultTimeoutsToTerraform(struct?: DataFactor
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_key_vault.html azurerm_data_factory_linked_service_key_vault}
+*/
 export class DataFactoryLinkedServiceKeyVault extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_key_vault.html azurerm_data_factory_linked_service_key_vault} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataFactoryLinkedServiceKeyVaultConfig
+  */
   public constructor(scope: Construct, id: string, config: DataFactoryLinkedServiceKeyVaultConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_data_factory_linked_service_key_vault',

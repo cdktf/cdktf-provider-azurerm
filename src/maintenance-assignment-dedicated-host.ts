@@ -7,15 +7,37 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface MaintenanceAssignmentDedicatedHostConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/maintenance_assignment_dedicated_host.html#dedicated_host_id MaintenanceAssignmentDedicatedHost#dedicated_host_id}
+  */
   readonly dedicatedHostId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/maintenance_assignment_dedicated_host.html#location MaintenanceAssignmentDedicatedHost#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/maintenance_assignment_dedicated_host.html#maintenance_configuration_id MaintenanceAssignmentDedicatedHost#maintenance_configuration_id}
+  */
   readonly maintenanceConfigurationId: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/maintenance_assignment_dedicated_host.html#timeouts MaintenanceAssignmentDedicatedHost#timeouts}
+  */
   readonly timeouts?: MaintenanceAssignmentDedicatedHostTimeouts;
 }
 export interface MaintenanceAssignmentDedicatedHostTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/maintenance_assignment_dedicated_host.html#create MaintenanceAssignmentDedicatedHost#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/maintenance_assignment_dedicated_host.html#delete MaintenanceAssignmentDedicatedHost#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/maintenance_assignment_dedicated_host.html#read MaintenanceAssignmentDedicatedHost#read}
+  */
   readonly read?: string;
 }
 
@@ -29,14 +51,22 @@ function maintenanceAssignmentDedicatedHostTimeoutsToTerraform(struct?: Maintena
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/maintenance_assignment_dedicated_host.html azurerm_maintenance_assignment_dedicated_host}
+*/
 export class MaintenanceAssignmentDedicatedHost extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/maintenance_assignment_dedicated_host.html azurerm_maintenance_assignment_dedicated_host} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options MaintenanceAssignmentDedicatedHostConfig
+  */
   public constructor(scope: Construct, id: string, config: MaintenanceAssignmentDedicatedHostConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_maintenance_assignment_dedicated_host',

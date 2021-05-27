@@ -7,18 +7,49 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface EventhubNamespaceDisasterRecoveryConfigConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_namespace_disaster_recovery_config.html#alternate_name EventhubNamespaceDisasterRecoveryConfig#alternate_name}
+  */
   readonly alternateName?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_namespace_disaster_recovery_config.html#name EventhubNamespaceDisasterRecoveryConfig#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_namespace_disaster_recovery_config.html#namespace_name EventhubNamespaceDisasterRecoveryConfig#namespace_name}
+  */
   readonly namespaceName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_namespace_disaster_recovery_config.html#partner_namespace_id EventhubNamespaceDisasterRecoveryConfig#partner_namespace_id}
+  */
   readonly partnerNamespaceId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_namespace_disaster_recovery_config.html#resource_group_name EventhubNamespaceDisasterRecoveryConfig#resource_group_name}
+  */
   readonly resourceGroupName: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_namespace_disaster_recovery_config.html#timeouts EventhubNamespaceDisasterRecoveryConfig#timeouts}
+  */
   readonly timeouts?: EventhubNamespaceDisasterRecoveryConfigTimeouts;
 }
 export interface EventhubNamespaceDisasterRecoveryConfigTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_namespace_disaster_recovery_config.html#create EventhubNamespaceDisasterRecoveryConfig#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_namespace_disaster_recovery_config.html#delete EventhubNamespaceDisasterRecoveryConfig#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_namespace_disaster_recovery_config.html#read EventhubNamespaceDisasterRecoveryConfig#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_namespace_disaster_recovery_config.html#update EventhubNamespaceDisasterRecoveryConfig#update}
+  */
   readonly update?: string;
 }
 
@@ -33,14 +64,22 @@ function eventhubNamespaceDisasterRecoveryConfigTimeoutsToTerraform(struct?: Eve
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_namespace_disaster_recovery_config.html azurerm_eventhub_namespace_disaster_recovery_config}
+*/
 export class EventhubNamespaceDisasterRecoveryConfig extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_namespace_disaster_recovery_config.html azurerm_eventhub_namespace_disaster_recovery_config} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options EventhubNamespaceDisasterRecoveryConfigConfig
+  */
   public constructor(scope: Construct, id: string, config: EventhubNamespaceDisasterRecoveryConfigConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_eventhub_namespace_disaster_recovery_config',

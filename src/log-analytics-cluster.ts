@@ -7,17 +7,43 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface LogAnalyticsClusterConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_cluster.html#location LogAnalyticsCluster#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_cluster.html#name LogAnalyticsCluster#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_cluster.html#resource_group_name LogAnalyticsCluster#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_cluster.html#size_gb LogAnalyticsCluster#size_gb}
+  */
   readonly sizeGb?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_cluster.html#tags LogAnalyticsCluster#tags}
+  */
   readonly tags?: { [key: string]: string };
-  /** identity block */
+  /**
+  * identity block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_cluster.html#identity LogAnalyticsCluster#identity}
+  */
   readonly identity: LogAnalyticsClusterIdentity[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_cluster.html#timeouts LogAnalyticsCluster#timeouts}
+  */
   readonly timeouts?: LogAnalyticsClusterTimeouts;
 }
 export interface LogAnalyticsClusterIdentity {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_cluster.html#type LogAnalyticsCluster#type}
+  */
   readonly type: string;
 }
 
@@ -29,9 +55,21 @@ function logAnalyticsClusterIdentityToTerraform(struct?: LogAnalyticsClusterIden
 }
 
 export interface LogAnalyticsClusterTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_cluster.html#create LogAnalyticsCluster#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_cluster.html#delete LogAnalyticsCluster#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_cluster.html#read LogAnalyticsCluster#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_cluster.html#update LogAnalyticsCluster#update}
+  */
   readonly update?: string;
 }
 
@@ -46,14 +84,22 @@ function logAnalyticsClusterTimeoutsToTerraform(struct?: LogAnalyticsClusterTime
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_cluster.html azurerm_log_analytics_cluster}
+*/
 export class LogAnalyticsCluster extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_cluster.html azurerm_log_analytics_cluster} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options LogAnalyticsClusterConfig
+  */
   public constructor(scope: Construct, id: string, config: LogAnalyticsClusterConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_log_analytics_cluster',

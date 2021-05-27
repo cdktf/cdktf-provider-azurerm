@@ -7,19 +7,51 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface LogicAppActionHttpConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_action_http.html#body LogicAppActionHttp#body}
+  */
   readonly body?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_action_http.html#headers LogicAppActionHttp#headers}
+  */
   readonly headers?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_action_http.html#logic_app_id LogicAppActionHttp#logic_app_id}
+  */
   readonly logicAppId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_action_http.html#method LogicAppActionHttp#method}
+  */
   readonly method: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_action_http.html#name LogicAppActionHttp#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_action_http.html#uri LogicAppActionHttp#uri}
+  */
   readonly uri: string;
-  /** run_after block */
+  /**
+  * run_after block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_action_http.html#run_after LogicAppActionHttp#run_after}
+  */
   readonly runAfter?: LogicAppActionHttpRunAfter[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_action_http.html#timeouts LogicAppActionHttp#timeouts}
+  */
   readonly timeouts?: LogicAppActionHttpTimeouts;
 }
 export interface LogicAppActionHttpRunAfter {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_action_http.html#action_name LogicAppActionHttp#action_name}
+  */
   readonly actionName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_action_http.html#action_result LogicAppActionHttp#action_result}
+  */
   readonly actionResult: string;
 }
 
@@ -32,9 +64,21 @@ function logicAppActionHttpRunAfterToTerraform(struct?: LogicAppActionHttpRunAft
 }
 
 export interface LogicAppActionHttpTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_action_http.html#create LogicAppActionHttp#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_action_http.html#delete LogicAppActionHttp#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_action_http.html#read LogicAppActionHttp#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_action_http.html#update LogicAppActionHttp#update}
+  */
   readonly update?: string;
 }
 
@@ -49,14 +93,22 @@ function logicAppActionHttpTimeoutsToTerraform(struct?: LogicAppActionHttpTimeou
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_action_http.html azurerm_logic_app_action_http}
+*/
 export class LogicAppActionHttp extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_action_http.html azurerm_logic_app_action_http} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options LogicAppActionHttpConfig
+  */
   public constructor(scope: Construct, id: string, config: LogicAppActionHttpConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_logic_app_action_http',

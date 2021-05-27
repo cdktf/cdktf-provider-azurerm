@@ -7,18 +7,49 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataLakeStoreFirewallRuleConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_lake_store_firewall_rule.html#account_name DataLakeStoreFirewallRule#account_name}
+  */
   readonly accountName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_lake_store_firewall_rule.html#end_ip_address DataLakeStoreFirewallRule#end_ip_address}
+  */
   readonly endIpAddress: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_lake_store_firewall_rule.html#name DataLakeStoreFirewallRule#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_lake_store_firewall_rule.html#resource_group_name DataLakeStoreFirewallRule#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_lake_store_firewall_rule.html#start_ip_address DataLakeStoreFirewallRule#start_ip_address}
+  */
   readonly startIpAddress: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_lake_store_firewall_rule.html#timeouts DataLakeStoreFirewallRule#timeouts}
+  */
   readonly timeouts?: DataLakeStoreFirewallRuleTimeouts;
 }
 export interface DataLakeStoreFirewallRuleTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_lake_store_firewall_rule.html#create DataLakeStoreFirewallRule#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_lake_store_firewall_rule.html#delete DataLakeStoreFirewallRule#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_lake_store_firewall_rule.html#read DataLakeStoreFirewallRule#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_lake_store_firewall_rule.html#update DataLakeStoreFirewallRule#update}
+  */
   readonly update?: string;
 }
 
@@ -33,14 +64,22 @@ function dataLakeStoreFirewallRuleTimeoutsToTerraform(struct?: DataLakeStoreFire
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/data_lake_store_firewall_rule.html azurerm_data_lake_store_firewall_rule}
+*/
 export class DataLakeStoreFirewallRule extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/data_lake_store_firewall_rule.html azurerm_data_lake_store_firewall_rule} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataLakeStoreFirewallRuleConfig
+  */
   public constructor(scope: Construct, id: string, config: DataLakeStoreFirewallRuleConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_data_lake_store_firewall_rule',

@@ -7,24 +7,71 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface MonitorSmartDetectorAlertRuleConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_smart_detector_alert_rule.html#description MonitorSmartDetectorAlertRule#description}
+  */
   readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_smart_detector_alert_rule.html#detector_type MonitorSmartDetectorAlertRule#detector_type}
+  */
   readonly detectorType: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_smart_detector_alert_rule.html#enabled MonitorSmartDetectorAlertRule#enabled}
+  */
   readonly enabled?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_smart_detector_alert_rule.html#frequency MonitorSmartDetectorAlertRule#frequency}
+  */
   readonly frequency: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_smart_detector_alert_rule.html#name MonitorSmartDetectorAlertRule#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_smart_detector_alert_rule.html#resource_group_name MonitorSmartDetectorAlertRule#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_smart_detector_alert_rule.html#scope_resource_ids MonitorSmartDetectorAlertRule#scope_resource_ids}
+  */
   readonly scopeResourceIds: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_smart_detector_alert_rule.html#severity MonitorSmartDetectorAlertRule#severity}
+  */
   readonly severity: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_smart_detector_alert_rule.html#tags MonitorSmartDetectorAlertRule#tags}
+  */
   readonly tags?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_smart_detector_alert_rule.html#throttling_duration MonitorSmartDetectorAlertRule#throttling_duration}
+  */
   readonly throttlingDuration?: string;
-  /** action_group block */
+  /**
+  * action_group block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_smart_detector_alert_rule.html#action_group MonitorSmartDetectorAlertRule#action_group}
+  */
   readonly actionGroup: MonitorSmartDetectorAlertRuleActionGroup[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_smart_detector_alert_rule.html#timeouts MonitorSmartDetectorAlertRule#timeouts}
+  */
   readonly timeouts?: MonitorSmartDetectorAlertRuleTimeouts;
 }
 export interface MonitorSmartDetectorAlertRuleActionGroup {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_smart_detector_alert_rule.html#email_subject MonitorSmartDetectorAlertRule#email_subject}
+  */
   readonly emailSubject?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_smart_detector_alert_rule.html#ids MonitorSmartDetectorAlertRule#ids}
+  */
   readonly ids: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_smart_detector_alert_rule.html#webhook_payload MonitorSmartDetectorAlertRule#webhook_payload}
+  */
   readonly webhookPayload?: string;
 }
 
@@ -38,9 +85,21 @@ function monitorSmartDetectorAlertRuleActionGroupToTerraform(struct?: MonitorSma
 }
 
 export interface MonitorSmartDetectorAlertRuleTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_smart_detector_alert_rule.html#create MonitorSmartDetectorAlertRule#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_smart_detector_alert_rule.html#delete MonitorSmartDetectorAlertRule#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_smart_detector_alert_rule.html#read MonitorSmartDetectorAlertRule#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_smart_detector_alert_rule.html#update MonitorSmartDetectorAlertRule#update}
+  */
   readonly update?: string;
 }
 
@@ -55,14 +114,22 @@ function monitorSmartDetectorAlertRuleTimeoutsToTerraform(struct?: MonitorSmartD
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_smart_detector_alert_rule.html azurerm_monitor_smart_detector_alert_rule}
+*/
 export class MonitorSmartDetectorAlertRule extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_smart_detector_alert_rule.html azurerm_monitor_smart_detector_alert_rule} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options MonitorSmartDetectorAlertRuleConfig
+  */
   public constructor(scope: Construct, id: string, config: MonitorSmartDetectorAlertRuleConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_monitor_smart_detector_alert_rule',

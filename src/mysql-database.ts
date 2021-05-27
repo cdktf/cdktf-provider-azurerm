@@ -7,18 +7,49 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface MysqlDatabaseConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_database.html#charset MysqlDatabase#charset}
+  */
   readonly charset: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_database.html#collation MysqlDatabase#collation}
+  */
   readonly collation: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_database.html#name MysqlDatabase#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_database.html#resource_group_name MysqlDatabase#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_database.html#server_name MysqlDatabase#server_name}
+  */
   readonly serverName: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_database.html#timeouts MysqlDatabase#timeouts}
+  */
   readonly timeouts?: MysqlDatabaseTimeouts;
 }
 export interface MysqlDatabaseTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_database.html#create MysqlDatabase#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_database.html#delete MysqlDatabase#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_database.html#read MysqlDatabase#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_database.html#update MysqlDatabase#update}
+  */
   readonly update?: string;
 }
 
@@ -33,14 +64,22 @@ function mysqlDatabaseTimeoutsToTerraform(struct?: MysqlDatabaseTimeouts): any {
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_database.html azurerm_mysql_database}
+*/
 export class MysqlDatabase extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_database.html azurerm_mysql_database} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options MysqlDatabaseConfig
+  */
   public constructor(scope: Construct, id: string, config: MysqlDatabaseConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_mysql_database',

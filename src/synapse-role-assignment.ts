@@ -7,15 +7,37 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface SynapseRoleAssignmentConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_role_assignment.html#principal_id SynapseRoleAssignment#principal_id}
+  */
   readonly principalId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_role_assignment.html#role_name SynapseRoleAssignment#role_name}
+  */
   readonly roleName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_role_assignment.html#synapse_workspace_id SynapseRoleAssignment#synapse_workspace_id}
+  */
   readonly synapseWorkspaceId: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_role_assignment.html#timeouts SynapseRoleAssignment#timeouts}
+  */
   readonly timeouts?: SynapseRoleAssignmentTimeouts;
 }
 export interface SynapseRoleAssignmentTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_role_assignment.html#create SynapseRoleAssignment#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_role_assignment.html#delete SynapseRoleAssignment#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_role_assignment.html#read SynapseRoleAssignment#read}
+  */
   readonly read?: string;
 }
 
@@ -29,14 +51,22 @@ function synapseRoleAssignmentTimeoutsToTerraform(struct?: SynapseRoleAssignment
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_role_assignment.html azurerm_synapse_role_assignment}
+*/
 export class SynapseRoleAssignment extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_role_assignment.html azurerm_synapse_role_assignment} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options SynapseRoleAssignmentConfig
+  */
   public constructor(scope: Construct, id: string, config: SynapseRoleAssignmentConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_synapse_role_assignment',

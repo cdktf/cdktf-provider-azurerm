@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/data_azurerm_batch_account.html
+// https://www.terraform.io/docs/providers/azurerm/d/batch_account.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,9 +7,19 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataAzurermBatchAccountConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/batch_account.html#name DataAzurermBatchAccount#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/batch_account.html#resource_group_name DataAzurermBatchAccount#resource_group_name}
+  */
   readonly resourceGroupName: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/batch_account.html#timeouts DataAzurermBatchAccount#timeouts}
+  */
   readonly timeouts?: DataAzurermBatchAccountTimeouts;
 }
 export class DataAzurermBatchAccountKeyVaultReference extends cdktf.ComplexComputedList {
@@ -25,6 +35,9 @@ export class DataAzurermBatchAccountKeyVaultReference extends cdktf.ComplexCompu
   }
 }
 export interface DataAzurermBatchAccountTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/batch_account.html#read DataAzurermBatchAccount#read}
+  */
   readonly read?: string;
 }
 
@@ -36,14 +49,22 @@ function dataAzurermBatchAccountTimeoutsToTerraform(struct?: DataAzurermBatchAcc
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/batch_account.html azurerm_batch_account}
+*/
 export class DataAzurermBatchAccount extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/batch_account.html azurerm_batch_account} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataAzurermBatchAccountConfig
+  */
   public constructor(scope: Construct, id: string, config: DataAzurermBatchAccountConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_batch_account',

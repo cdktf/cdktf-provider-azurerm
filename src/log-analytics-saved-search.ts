@@ -7,21 +7,61 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface LogAnalyticsSavedSearchConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_saved_search.html#category LogAnalyticsSavedSearch#category}
+  */
   readonly category: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_saved_search.html#display_name LogAnalyticsSavedSearch#display_name}
+  */
   readonly displayName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_saved_search.html#function_alias LogAnalyticsSavedSearch#function_alias}
+  */
   readonly functionAlias?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_saved_search.html#function_parameters LogAnalyticsSavedSearch#function_parameters}
+  */
   readonly functionParameters?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_saved_search.html#log_analytics_workspace_id LogAnalyticsSavedSearch#log_analytics_workspace_id}
+  */
   readonly logAnalyticsWorkspaceId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_saved_search.html#name LogAnalyticsSavedSearch#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_saved_search.html#query LogAnalyticsSavedSearch#query}
+  */
   readonly query: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_saved_search.html#tags LogAnalyticsSavedSearch#tags}
+  */
   readonly tags?: { [key: string]: string };
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_saved_search.html#timeouts LogAnalyticsSavedSearch#timeouts}
+  */
   readonly timeouts?: LogAnalyticsSavedSearchTimeouts;
 }
 export interface LogAnalyticsSavedSearchTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_saved_search.html#create LogAnalyticsSavedSearch#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_saved_search.html#delete LogAnalyticsSavedSearch#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_saved_search.html#read LogAnalyticsSavedSearch#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_saved_search.html#update LogAnalyticsSavedSearch#update}
+  */
   readonly update?: string;
 }
 
@@ -36,14 +76,22 @@ function logAnalyticsSavedSearchTimeoutsToTerraform(struct?: LogAnalyticsSavedSe
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_saved_search.html azurerm_log_analytics_saved_search}
+*/
 export class LogAnalyticsSavedSearch extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_saved_search.html azurerm_log_analytics_saved_search} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options LogAnalyticsSavedSearchConfig
+  */
   public constructor(scope: Construct, id: string, config: LogAnalyticsSavedSearchConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_log_analytics_saved_search',

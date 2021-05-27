@@ -7,18 +7,49 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DigitalTwinsEndpointEventhubConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/digital_twins_endpoint_eventhub.html#dead_letter_storage_secret DigitalTwinsEndpointEventhub#dead_letter_storage_secret}
+  */
   readonly deadLetterStorageSecret?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/digital_twins_endpoint_eventhub.html#digital_twins_id DigitalTwinsEndpointEventhub#digital_twins_id}
+  */
   readonly digitalTwinsId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/digital_twins_endpoint_eventhub.html#eventhub_primary_connection_string DigitalTwinsEndpointEventhub#eventhub_primary_connection_string}
+  */
   readonly eventhubPrimaryConnectionString: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/digital_twins_endpoint_eventhub.html#eventhub_secondary_connection_string DigitalTwinsEndpointEventhub#eventhub_secondary_connection_string}
+  */
   readonly eventhubSecondaryConnectionString: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/digital_twins_endpoint_eventhub.html#name DigitalTwinsEndpointEventhub#name}
+  */
   readonly name: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/digital_twins_endpoint_eventhub.html#timeouts DigitalTwinsEndpointEventhub#timeouts}
+  */
   readonly timeouts?: DigitalTwinsEndpointEventhubTimeouts;
 }
 export interface DigitalTwinsEndpointEventhubTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/digital_twins_endpoint_eventhub.html#create DigitalTwinsEndpointEventhub#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/digital_twins_endpoint_eventhub.html#delete DigitalTwinsEndpointEventhub#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/digital_twins_endpoint_eventhub.html#read DigitalTwinsEndpointEventhub#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/digital_twins_endpoint_eventhub.html#update DigitalTwinsEndpointEventhub#update}
+  */
   readonly update?: string;
 }
 
@@ -33,14 +64,22 @@ function digitalTwinsEndpointEventhubTimeoutsToTerraform(struct?: DigitalTwinsEn
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/digital_twins_endpoint_eventhub.html azurerm_digital_twins_endpoint_eventhub}
+*/
 export class DigitalTwinsEndpointEventhub extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/digital_twins_endpoint_eventhub.html azurerm_digital_twins_endpoint_eventhub} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DigitalTwinsEndpointEventhubConfig
+  */
   public constructor(scope: Construct, id: string, config: DigitalTwinsEndpointEventhubConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_digital_twins_endpoint_eventhub',

@@ -7,19 +7,53 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface ServiceFabricMeshLocalNetworkConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_mesh_local_network.html#description ServiceFabricMeshLocalNetwork#description}
+  */
   readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_mesh_local_network.html#location ServiceFabricMeshLocalNetwork#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_mesh_local_network.html#name ServiceFabricMeshLocalNetwork#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_mesh_local_network.html#network_address_prefix ServiceFabricMeshLocalNetwork#network_address_prefix}
+  */
   readonly networkAddressPrefix: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_mesh_local_network.html#resource_group_name ServiceFabricMeshLocalNetwork#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_mesh_local_network.html#tags ServiceFabricMeshLocalNetwork#tags}
+  */
   readonly tags?: { [key: string]: string };
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_mesh_local_network.html#timeouts ServiceFabricMeshLocalNetwork#timeouts}
+  */
   readonly timeouts?: ServiceFabricMeshLocalNetworkTimeouts;
 }
 export interface ServiceFabricMeshLocalNetworkTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_mesh_local_network.html#create ServiceFabricMeshLocalNetwork#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_mesh_local_network.html#delete ServiceFabricMeshLocalNetwork#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_mesh_local_network.html#read ServiceFabricMeshLocalNetwork#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_mesh_local_network.html#update ServiceFabricMeshLocalNetwork#update}
+  */
   readonly update?: string;
 }
 
@@ -34,14 +68,22 @@ function serviceFabricMeshLocalNetworkTimeoutsToTerraform(struct?: ServiceFabric
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_mesh_local_network.html azurerm_service_fabric_mesh_local_network}
+*/
 export class ServiceFabricMeshLocalNetwork extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_mesh_local_network.html azurerm_service_fabric_mesh_local_network} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options ServiceFabricMeshLocalNetworkConfig
+  */
   public constructor(scope: Construct, id: string, config: ServiceFabricMeshLocalNetworkConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_service_fabric_mesh_local_network',

@@ -7,18 +7,49 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface ContainerRegistryTokenConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry_token.html#container_registry_name ContainerRegistryToken#container_registry_name}
+  */
   readonly containerRegistryName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry_token.html#enabled ContainerRegistryToken#enabled}
+  */
   readonly enabled?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry_token.html#name ContainerRegistryToken#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry_token.html#resource_group_name ContainerRegistryToken#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry_token.html#scope_map_id ContainerRegistryToken#scope_map_id}
+  */
   readonly scopeMapId: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry_token.html#timeouts ContainerRegistryToken#timeouts}
+  */
   readonly timeouts?: ContainerRegistryTokenTimeouts;
 }
 export interface ContainerRegistryTokenTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry_token.html#create ContainerRegistryToken#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry_token.html#delete ContainerRegistryToken#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry_token.html#read ContainerRegistryToken#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry_token.html#update ContainerRegistryToken#update}
+  */
   readonly update?: string;
 }
 
@@ -33,14 +64,22 @@ function containerRegistryTokenTimeoutsToTerraform(struct?: ContainerRegistryTok
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry_token.html azurerm_container_registry_token}
+*/
 export class ContainerRegistryToken extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry_token.html azurerm_container_registry_token} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options ContainerRegistryTokenConfig
+  */
   public constructor(scope: Construct, id: string, config: ContainerRegistryTokenConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_container_registry_token',

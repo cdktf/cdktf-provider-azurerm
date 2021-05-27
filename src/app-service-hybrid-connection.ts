@@ -7,19 +7,53 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface AppServiceHybridConnectionConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_hybrid_connection.html#app_service_name AppServiceHybridConnection#app_service_name}
+  */
   readonly appServiceName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_hybrid_connection.html#hostname AppServiceHybridConnection#hostname}
+  */
   readonly hostname: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_hybrid_connection.html#port AppServiceHybridConnection#port}
+  */
   readonly port: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_hybrid_connection.html#relay_id AppServiceHybridConnection#relay_id}
+  */
   readonly relayId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_hybrid_connection.html#resource_group_name AppServiceHybridConnection#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_hybrid_connection.html#send_key_name AppServiceHybridConnection#send_key_name}
+  */
   readonly sendKeyName?: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_hybrid_connection.html#timeouts AppServiceHybridConnection#timeouts}
+  */
   readonly timeouts?: AppServiceHybridConnectionTimeouts;
 }
 export interface AppServiceHybridConnectionTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_hybrid_connection.html#create AppServiceHybridConnection#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_hybrid_connection.html#delete AppServiceHybridConnection#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_hybrid_connection.html#read AppServiceHybridConnection#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_hybrid_connection.html#update AppServiceHybridConnection#update}
+  */
   readonly update?: string;
 }
 
@@ -34,14 +68,22 @@ function appServiceHybridConnectionTimeoutsToTerraform(struct?: AppServiceHybrid
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_hybrid_connection.html azurerm_app_service_hybrid_connection}
+*/
 export class AppServiceHybridConnection extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_hybrid_connection.html azurerm_app_service_hybrid_connection} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options AppServiceHybridConnectionConfig
+  */
   public constructor(scope: Construct, id: string, config: AppServiceHybridConnectionConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_app_service_hybrid_connection',

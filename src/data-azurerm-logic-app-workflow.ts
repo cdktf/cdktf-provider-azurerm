@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/data_azurerm_logic_app_workflow.html
+// https://www.terraform.io/docs/providers/azurerm/d/logic_app_workflow.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,12 +7,25 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataAzurermLogicAppWorkflowConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/logic_app_workflow.html#name DataAzurermLogicAppWorkflow#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/logic_app_workflow.html#resource_group_name DataAzurermLogicAppWorkflow#resource_group_name}
+  */
   readonly resourceGroupName: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/logic_app_workflow.html#timeouts DataAzurermLogicAppWorkflow#timeouts}
+  */
   readonly timeouts?: DataAzurermLogicAppWorkflowTimeouts;
 }
 export interface DataAzurermLogicAppWorkflowTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/logic_app_workflow.html#read DataAzurermLogicAppWorkflow#read}
+  */
   readonly read?: string;
 }
 
@@ -24,14 +37,22 @@ function dataAzurermLogicAppWorkflowTimeoutsToTerraform(struct?: DataAzurermLogi
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/logic_app_workflow.html azurerm_logic_app_workflow}
+*/
 export class DataAzurermLogicAppWorkflow extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/logic_app_workflow.html azurerm_logic_app_workflow} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataAzurermLogicAppWorkflowConfig
+  */
   public constructor(scope: Construct, id: string, config: DataAzurermLogicAppWorkflowConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_logic_app_workflow',

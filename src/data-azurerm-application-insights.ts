@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/data_azurerm_application_insights.html
+// https://www.terraform.io/docs/providers/azurerm/d/application_insights.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,12 +7,25 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataAzurermApplicationInsightsConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/application_insights.html#name DataAzurermApplicationInsights#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/application_insights.html#resource_group_name DataAzurermApplicationInsights#resource_group_name}
+  */
   readonly resourceGroupName: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/application_insights.html#timeouts DataAzurermApplicationInsights#timeouts}
+  */
   readonly timeouts?: DataAzurermApplicationInsightsTimeouts;
 }
 export interface DataAzurermApplicationInsightsTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/application_insights.html#read DataAzurermApplicationInsights#read}
+  */
   readonly read?: string;
 }
 
@@ -24,14 +37,22 @@ function dataAzurermApplicationInsightsTimeoutsToTerraform(struct?: DataAzurermA
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/application_insights.html azurerm_application_insights}
+*/
 export class DataAzurermApplicationInsights extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/application_insights.html azurerm_application_insights} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataAzurermApplicationInsightsConfig
+  */
   public constructor(scope: Construct, id: string, config: DataAzurermApplicationInsightsConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_application_insights',

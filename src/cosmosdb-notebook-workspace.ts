@@ -7,15 +7,37 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface CosmosdbNotebookWorkspaceConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_notebook_workspace.html#account_name CosmosdbNotebookWorkspace#account_name}
+  */
   readonly accountName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_notebook_workspace.html#name CosmosdbNotebookWorkspace#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_notebook_workspace.html#resource_group_name CosmosdbNotebookWorkspace#resource_group_name}
+  */
   readonly resourceGroupName: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_notebook_workspace.html#timeouts CosmosdbNotebookWorkspace#timeouts}
+  */
   readonly timeouts?: CosmosdbNotebookWorkspaceTimeouts;
 }
 export interface CosmosdbNotebookWorkspaceTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_notebook_workspace.html#create CosmosdbNotebookWorkspace#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_notebook_workspace.html#delete CosmosdbNotebookWorkspace#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_notebook_workspace.html#read CosmosdbNotebookWorkspace#read}
+  */
   readonly read?: string;
 }
 
@@ -29,14 +51,22 @@ function cosmosdbNotebookWorkspaceTimeoutsToTerraform(struct?: CosmosdbNotebookW
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_notebook_workspace.html azurerm_cosmosdb_notebook_workspace}
+*/
 export class CosmosdbNotebookWorkspace extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_notebook_workspace.html azurerm_cosmosdb_notebook_workspace} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options CosmosdbNotebookWorkspaceConfig
+  */
   public constructor(scope: Construct, id: string, config: CosmosdbNotebookWorkspaceConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_cosmosdb_notebook_workspace',

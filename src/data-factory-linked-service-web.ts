@@ -7,25 +7,77 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataFactoryLinkedServiceWebConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_web.html#additional_properties DataFactoryLinkedServiceWeb#additional_properties}
+  */
   readonly additionalProperties?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_web.html#annotations DataFactoryLinkedServiceWeb#annotations}
+  */
   readonly annotations?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_web.html#authentication_type DataFactoryLinkedServiceWeb#authentication_type}
+  */
   readonly authenticationType: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_web.html#data_factory_name DataFactoryLinkedServiceWeb#data_factory_name}
+  */
   readonly dataFactoryName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_web.html#description DataFactoryLinkedServiceWeb#description}
+  */
   readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_web.html#integration_runtime_name DataFactoryLinkedServiceWeb#integration_runtime_name}
+  */
   readonly integrationRuntimeName?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_web.html#name DataFactoryLinkedServiceWeb#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_web.html#parameters DataFactoryLinkedServiceWeb#parameters}
+  */
   readonly parameters?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_web.html#password DataFactoryLinkedServiceWeb#password}
+  */
   readonly password?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_web.html#resource_group_name DataFactoryLinkedServiceWeb#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_web.html#url DataFactoryLinkedServiceWeb#url}
+  */
   readonly url: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_web.html#username DataFactoryLinkedServiceWeb#username}
+  */
   readonly username?: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_web.html#timeouts DataFactoryLinkedServiceWeb#timeouts}
+  */
   readonly timeouts?: DataFactoryLinkedServiceWebTimeouts;
 }
 export interface DataFactoryLinkedServiceWebTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_web.html#create DataFactoryLinkedServiceWeb#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_web.html#delete DataFactoryLinkedServiceWeb#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_web.html#read DataFactoryLinkedServiceWeb#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_web.html#update DataFactoryLinkedServiceWeb#update}
+  */
   readonly update?: string;
 }
 
@@ -40,14 +92,22 @@ function dataFactoryLinkedServiceWebTimeoutsToTerraform(struct?: DataFactoryLink
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_web.html azurerm_data_factory_linked_service_web}
+*/
 export class DataFactoryLinkedServiceWeb extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_web.html azurerm_data_factory_linked_service_web} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataFactoryLinkedServiceWebConfig
+  */
   public constructor(scope: Construct, id: string, config: DataFactoryLinkedServiceWebConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_data_factory_linked_service_web',

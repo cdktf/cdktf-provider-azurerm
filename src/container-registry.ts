@@ -7,29 +7,91 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface ContainerRegistryConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry.html#admin_enabled ContainerRegistry#admin_enabled}
+  */
   readonly adminEnabled?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry.html#encryption ContainerRegistry#encryption}
+  */
   readonly encryption?: ContainerRegistryEncryption[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry.html#georeplication_locations ContainerRegistry#georeplication_locations}
+  */
   readonly georeplicationLocations?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry.html#georeplications ContainerRegistry#georeplications}
+  */
   readonly georeplications?: ContainerRegistryGeoreplications[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry.html#location ContainerRegistry#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry.html#name ContainerRegistry#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry.html#network_rule_set ContainerRegistry#network_rule_set}
+  */
   readonly networkRuleSet?: ContainerRegistryNetworkRuleSet[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry.html#public_network_access_enabled ContainerRegistry#public_network_access_enabled}
+  */
   readonly publicNetworkAccessEnabled?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry.html#quarantine_policy_enabled ContainerRegistry#quarantine_policy_enabled}
+  */
   readonly quarantinePolicyEnabled?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry.html#resource_group_name ContainerRegistry#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry.html#retention_policy ContainerRegistry#retention_policy}
+  */
   readonly retentionPolicy?: ContainerRegistryRetentionPolicy[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry.html#sku ContainerRegistry#sku}
+  */
   readonly sku?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry.html#storage_account_id ContainerRegistry#storage_account_id}
+  */
   readonly storageAccountId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry.html#tags ContainerRegistry#tags}
+  */
   readonly tags?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry.html#trust_policy ContainerRegistry#trust_policy}
+  */
   readonly trustPolicy?: ContainerRegistryTrustPolicy[];
-  /** identity block */
+  /**
+  * identity block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry.html#identity ContainerRegistry#identity}
+  */
   readonly identity?: ContainerRegistryIdentity[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry.html#timeouts ContainerRegistry#timeouts}
+  */
   readonly timeouts?: ContainerRegistryTimeouts;
 }
 export interface ContainerRegistryEncryption {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry.html#enabled ContainerRegistry#enabled}
+  */
   readonly enabled?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry.html#identity_client_id ContainerRegistry#identity_client_id}
+  */
   readonly identityClientId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry.html#key_vault_key_id ContainerRegistry#key_vault_key_id}
+  */
   readonly keyVaultKeyId?: string;
 }
 
@@ -43,7 +105,13 @@ function containerRegistryEncryptionToTerraform(struct?: ContainerRegistryEncryp
 }
 
 export interface ContainerRegistryGeoreplications {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry.html#location ContainerRegistry#location}
+  */
   readonly location?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry.html#tags ContainerRegistry#tags}
+  */
   readonly tags?: { [key: string]: string };
 }
 
@@ -56,7 +124,13 @@ function containerRegistryGeoreplicationsToTerraform(struct?: ContainerRegistryG
 }
 
 export interface ContainerRegistryNetworkRuleSetIpRule {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry.html#action ContainerRegistry#action}
+  */
   readonly action?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry.html#ip_range ContainerRegistry#ip_range}
+  */
   readonly ipRange?: string;
 }
 
@@ -69,7 +143,13 @@ function containerRegistryNetworkRuleSetIpRuleToTerraform(struct?: ContainerRegi
 }
 
 export interface ContainerRegistryNetworkRuleSetVirtualNetwork {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry.html#action ContainerRegistry#action}
+  */
   readonly action?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry.html#subnet_id ContainerRegistry#subnet_id}
+  */
   readonly subnetId?: string;
 }
 
@@ -82,8 +162,17 @@ function containerRegistryNetworkRuleSetVirtualNetworkToTerraform(struct?: Conta
 }
 
 export interface ContainerRegistryNetworkRuleSet {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry.html#default_action ContainerRegistry#default_action}
+  */
   readonly defaultAction?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry.html#ip_rule ContainerRegistry#ip_rule}
+  */
   readonly ipRule?: ContainerRegistryNetworkRuleSetIpRule[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry.html#virtual_network ContainerRegistry#virtual_network}
+  */
   readonly virtualNetwork?: ContainerRegistryNetworkRuleSetVirtualNetwork[];
 }
 
@@ -97,7 +186,13 @@ function containerRegistryNetworkRuleSetToTerraform(struct?: ContainerRegistryNe
 }
 
 export interface ContainerRegistryRetentionPolicy {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry.html#days ContainerRegistry#days}
+  */
   readonly days?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry.html#enabled ContainerRegistry#enabled}
+  */
   readonly enabled?: boolean;
 }
 
@@ -110,6 +205,9 @@ function containerRegistryRetentionPolicyToTerraform(struct?: ContainerRegistryR
 }
 
 export interface ContainerRegistryTrustPolicy {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry.html#enabled ContainerRegistry#enabled}
+  */
   readonly enabled?: boolean;
 }
 
@@ -121,7 +219,13 @@ function containerRegistryTrustPolicyToTerraform(struct?: ContainerRegistryTrust
 }
 
 export interface ContainerRegistryIdentity {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry.html#identity_ids ContainerRegistry#identity_ids}
+  */
   readonly identityIds?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry.html#type ContainerRegistry#type}
+  */
   readonly type: string;
 }
 
@@ -134,9 +238,21 @@ function containerRegistryIdentityToTerraform(struct?: ContainerRegistryIdentity
 }
 
 export interface ContainerRegistryTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry.html#create ContainerRegistry#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry.html#delete ContainerRegistry#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry.html#read ContainerRegistry#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry.html#update ContainerRegistry#update}
+  */
   readonly update?: string;
 }
 
@@ -151,14 +267,22 @@ function containerRegistryTimeoutsToTerraform(struct?: ContainerRegistryTimeouts
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry.html azurerm_container_registry}
+*/
 export class ContainerRegistry extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry.html azurerm_container_registry} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options ContainerRegistryConfig
+  */
   public constructor(scope: Construct, id: string, config: ContainerRegistryConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_container_registry',

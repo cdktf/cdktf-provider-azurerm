@@ -7,24 +7,71 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface AutomationScheduleConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_schedule.html#automation_account_name AutomationSchedule#automation_account_name}
+  */
   readonly automationAccountName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_schedule.html#description AutomationSchedule#description}
+  */
   readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_schedule.html#expiry_time AutomationSchedule#expiry_time}
+  */
   readonly expiryTime?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_schedule.html#frequency AutomationSchedule#frequency}
+  */
   readonly frequency: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_schedule.html#interval AutomationSchedule#interval}
+  */
   readonly interval?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_schedule.html#month_days AutomationSchedule#month_days}
+  */
   readonly monthDays?: number[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_schedule.html#name AutomationSchedule#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_schedule.html#resource_group_name AutomationSchedule#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_schedule.html#start_time AutomationSchedule#start_time}
+  */
   readonly startTime?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_schedule.html#timezone AutomationSchedule#timezone}
+  */
   readonly timezone?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_schedule.html#week_days AutomationSchedule#week_days}
+  */
   readonly weekDays?: string[];
-  /** monthly_occurrence block */
+  /**
+  * monthly_occurrence block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_schedule.html#monthly_occurrence AutomationSchedule#monthly_occurrence}
+  */
   readonly monthlyOccurrence?: AutomationScheduleMonthlyOccurrence[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_schedule.html#timeouts AutomationSchedule#timeouts}
+  */
   readonly timeouts?: AutomationScheduleTimeouts;
 }
 export interface AutomationScheduleMonthlyOccurrence {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_schedule.html#day AutomationSchedule#day}
+  */
   readonly day: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_schedule.html#occurrence AutomationSchedule#occurrence}
+  */
   readonly occurrence: number;
 }
 
@@ -37,9 +84,21 @@ function automationScheduleMonthlyOccurrenceToTerraform(struct?: AutomationSched
 }
 
 export interface AutomationScheduleTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_schedule.html#create AutomationSchedule#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_schedule.html#delete AutomationSchedule#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_schedule.html#read AutomationSchedule#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_schedule.html#update AutomationSchedule#update}
+  */
   readonly update?: string;
 }
 
@@ -54,14 +113,22 @@ function automationScheduleTimeoutsToTerraform(struct?: AutomationScheduleTimeou
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/automation_schedule.html azurerm_automation_schedule}
+*/
 export class AutomationSchedule extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/automation_schedule.html azurerm_automation_schedule} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options AutomationScheduleConfig
+  */
   public constructor(scope: Construct, id: string, config: AutomationScheduleConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_automation_schedule',

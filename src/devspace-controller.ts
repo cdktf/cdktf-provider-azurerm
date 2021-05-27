@@ -7,20 +7,57 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DevspaceControllerConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/devspace_controller.html#location DevspaceController#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/devspace_controller.html#name DevspaceController#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/devspace_controller.html#resource_group_name DevspaceController#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/devspace_controller.html#sku_name DevspaceController#sku_name}
+  */
   readonly skuName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/devspace_controller.html#tags DevspaceController#tags}
+  */
   readonly tags?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/devspace_controller.html#target_container_host_credentials_base64 DevspaceController#target_container_host_credentials_base64}
+  */
   readonly targetContainerHostCredentialsBase64: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/devspace_controller.html#target_container_host_resource_id DevspaceController#target_container_host_resource_id}
+  */
   readonly targetContainerHostResourceId: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/devspace_controller.html#timeouts DevspaceController#timeouts}
+  */
   readonly timeouts?: DevspaceControllerTimeouts;
 }
 export interface DevspaceControllerTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/devspace_controller.html#create DevspaceController#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/devspace_controller.html#delete DevspaceController#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/devspace_controller.html#read DevspaceController#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/devspace_controller.html#update DevspaceController#update}
+  */
   readonly update?: string;
 }
 
@@ -35,14 +72,22 @@ function devspaceControllerTimeoutsToTerraform(struct?: DevspaceControllerTimeou
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/devspace_controller.html azurerm_devspace_controller}
+*/
 export class DevspaceController extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/devspace_controller.html azurerm_devspace_controller} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DevspaceControllerConfig
+  */
   public constructor(scope: Construct, id: string, config: DevspaceControllerConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_devspace_controller',

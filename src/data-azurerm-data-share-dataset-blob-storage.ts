@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/data_azurerm_data_share_dataset_blob_storage.html
+// https://www.terraform.io/docs/providers/azurerm/d/data_share_dataset_blob_storage.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,9 +7,19 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataAzurermDataShareDatasetBlobStorageConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/data_share_dataset_blob_storage.html#data_share_id DataAzurermDataShareDatasetBlobStorage#data_share_id}
+  */
   readonly dataShareId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/data_share_dataset_blob_storage.html#name DataAzurermDataShareDatasetBlobStorage#name}
+  */
   readonly name: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/data_share_dataset_blob_storage.html#timeouts DataAzurermDataShareDatasetBlobStorage#timeouts}
+  */
   readonly timeouts?: DataAzurermDataShareDatasetBlobStorageTimeouts;
 }
 export class DataAzurermDataShareDatasetBlobStorageStorageAccount extends cdktf.ComplexComputedList {
@@ -30,6 +40,9 @@ export class DataAzurermDataShareDatasetBlobStorageStorageAccount extends cdktf.
   }
 }
 export interface DataAzurermDataShareDatasetBlobStorageTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/data_share_dataset_blob_storage.html#read DataAzurermDataShareDatasetBlobStorage#read}
+  */
   readonly read?: string;
 }
 
@@ -41,14 +54,22 @@ function dataAzurermDataShareDatasetBlobStorageTimeoutsToTerraform(struct?: Data
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/data_share_dataset_blob_storage.html azurerm_data_share_dataset_blob_storage}
+*/
 export class DataAzurermDataShareDatasetBlobStorage extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/data_share_dataset_blob_storage.html azurerm_data_share_dataset_blob_storage} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataAzurermDataShareDatasetBlobStorageConfig
+  */
   public constructor(scope: Construct, id: string, config: DataAzurermDataShareDatasetBlobStorageConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_data_share_dataset_blob_storage',

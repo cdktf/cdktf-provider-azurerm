@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/iothub_enrichment_a.html
+// https://www.terraform.io/docs/providers/azurerm/r/iothub_enrichment.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,18 +7,49 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface IothubEnrichmentAConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_enrichment.html#endpoint_names IothubEnrichmentA#endpoint_names}
+  */
   readonly endpointNames: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_enrichment.html#iothub_name IothubEnrichmentA#iothub_name}
+  */
   readonly iothubName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_enrichment.html#key IothubEnrichmentA#key}
+  */
   readonly key: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_enrichment.html#resource_group_name IothubEnrichmentA#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_enrichment.html#value IothubEnrichmentA#value}
+  */
   readonly value: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_enrichment.html#timeouts IothubEnrichmentA#timeouts}
+  */
   readonly timeouts?: IothubEnrichmentTimeouts;
 }
 export interface IothubEnrichmentTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_enrichment.html#create IothubEnrichmentA#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_enrichment.html#delete IothubEnrichmentA#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_enrichment.html#read IothubEnrichmentA#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_enrichment.html#update IothubEnrichmentA#update}
+  */
   readonly update?: string;
 }
 
@@ -33,14 +64,22 @@ function iothubEnrichmentTimeoutsToTerraform(struct?: IothubEnrichmentTimeouts):
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_enrichment.html azurerm_iothub_enrichment}
+*/
 export class IothubEnrichmentA extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_enrichment.html azurerm_iothub_enrichment} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options IothubEnrichmentAConfig
+  */
   public constructor(scope: Construct, id: string, config: IothubEnrichmentAConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_iothub_enrichment',

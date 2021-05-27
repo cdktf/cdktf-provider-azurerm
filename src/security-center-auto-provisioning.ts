@@ -7,14 +7,33 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface SecurityCenterAutoProvisioningConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_auto_provisioning.html#auto_provision SecurityCenterAutoProvisioning#auto_provision}
+  */
   readonly autoProvision: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_auto_provisioning.html#timeouts SecurityCenterAutoProvisioning#timeouts}
+  */
   readonly timeouts?: SecurityCenterAutoProvisioningTimeouts;
 }
 export interface SecurityCenterAutoProvisioningTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_auto_provisioning.html#create SecurityCenterAutoProvisioning#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_auto_provisioning.html#delete SecurityCenterAutoProvisioning#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_auto_provisioning.html#read SecurityCenterAutoProvisioning#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_auto_provisioning.html#update SecurityCenterAutoProvisioning#update}
+  */
   readonly update?: string;
 }
 
@@ -29,14 +48,22 @@ function securityCenterAutoProvisioningTimeoutsToTerraform(struct?: SecurityCent
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_auto_provisioning.html azurerm_security_center_auto_provisioning}
+*/
 export class SecurityCenterAutoProvisioning extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_auto_provisioning.html azurerm_security_center_auto_provisioning} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options SecurityCenterAutoProvisioningConfig
+  */
   public constructor(scope: Construct, id: string, config: SecurityCenterAutoProvisioningConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_security_center_auto_provisioning',

@@ -7,18 +7,49 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface CdnProfileConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_profile.html#location CdnProfile#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_profile.html#name CdnProfile#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_profile.html#resource_group_name CdnProfile#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_profile.html#sku CdnProfile#sku}
+  */
   readonly sku: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_profile.html#tags CdnProfile#tags}
+  */
   readonly tags?: { [key: string]: string };
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_profile.html#timeouts CdnProfile#timeouts}
+  */
   readonly timeouts?: CdnProfileTimeouts;
 }
 export interface CdnProfileTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_profile.html#create CdnProfile#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_profile.html#delete CdnProfile#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_profile.html#read CdnProfile#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_profile.html#update CdnProfile#update}
+  */
   readonly update?: string;
 }
 
@@ -33,14 +64,22 @@ function cdnProfileTimeoutsToTerraform(struct?: CdnProfileTimeouts): any {
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_profile.html azurerm_cdn_profile}
+*/
 export class CdnProfile extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_profile.html azurerm_cdn_profile} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options CdnProfileConfig
+  */
   public constructor(scope: Construct, id: string, config: CdnProfileConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_cdn_profile',

@@ -7,21 +7,61 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface ApiManagementOpenidConnectProviderConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_openid_connect_provider.html#api_management_name ApiManagementOpenidConnectProvider#api_management_name}
+  */
   readonly apiManagementName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_openid_connect_provider.html#client_id ApiManagementOpenidConnectProvider#client_id}
+  */
   readonly clientId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_openid_connect_provider.html#client_secret ApiManagementOpenidConnectProvider#client_secret}
+  */
   readonly clientSecret: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_openid_connect_provider.html#description ApiManagementOpenidConnectProvider#description}
+  */
   readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_openid_connect_provider.html#display_name ApiManagementOpenidConnectProvider#display_name}
+  */
   readonly displayName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_openid_connect_provider.html#metadata_endpoint ApiManagementOpenidConnectProvider#metadata_endpoint}
+  */
   readonly metadataEndpoint: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_openid_connect_provider.html#name ApiManagementOpenidConnectProvider#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_openid_connect_provider.html#resource_group_name ApiManagementOpenidConnectProvider#resource_group_name}
+  */
   readonly resourceGroupName: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_openid_connect_provider.html#timeouts ApiManagementOpenidConnectProvider#timeouts}
+  */
   readonly timeouts?: ApiManagementOpenidConnectProviderTimeouts;
 }
 export interface ApiManagementOpenidConnectProviderTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_openid_connect_provider.html#create ApiManagementOpenidConnectProvider#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_openid_connect_provider.html#delete ApiManagementOpenidConnectProvider#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_openid_connect_provider.html#read ApiManagementOpenidConnectProvider#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_openid_connect_provider.html#update ApiManagementOpenidConnectProvider#update}
+  */
   readonly update?: string;
 }
 
@@ -36,14 +76,22 @@ function apiManagementOpenidConnectProviderTimeoutsToTerraform(struct?: ApiManag
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_openid_connect_provider.html azurerm_api_management_openid_connect_provider}
+*/
 export class ApiManagementOpenidConnectProvider extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_openid_connect_provider.html azurerm_api_management_openid_connect_provider} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options ApiManagementOpenidConnectProviderConfig
+  */
   public constructor(scope: Construct, id: string, config: ApiManagementOpenidConnectProviderConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_api_management_openid_connect_provider',

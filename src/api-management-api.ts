@@ -7,32 +7,97 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface ApiManagementApiConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api.html#api_management_name ApiManagementApi#api_management_name}
+  */
   readonly apiManagementName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api.html#description ApiManagementApi#description}
+  */
   readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api.html#display_name ApiManagementApi#display_name}
+  */
   readonly displayName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api.html#name ApiManagementApi#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api.html#path ApiManagementApi#path}
+  */
   readonly path: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api.html#protocols ApiManagementApi#protocols}
+  */
   readonly protocols: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api.html#resource_group_name ApiManagementApi#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api.html#revision ApiManagementApi#revision}
+  */
   readonly revision: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api.html#service_url ApiManagementApi#service_url}
+  */
   readonly serviceUrl?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api.html#soap_pass_through ApiManagementApi#soap_pass_through}
+  */
   readonly soapPassThrough?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api.html#subscription_required ApiManagementApi#subscription_required}
+  */
   readonly subscriptionRequired?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api.html#version ApiManagementApi#version}
+  */
   readonly version?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api.html#version_set_id ApiManagementApi#version_set_id}
+  */
   readonly versionSetId?: string;
-  /** import block */
+  /**
+  * import block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api.html#import ApiManagementApi#import}
+  */
   readonly import?: ApiManagementApiImport[];
-  /** oauth2_authorization block */
+  /**
+  * oauth2_authorization block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api.html#oauth2_authorization ApiManagementApi#oauth2_authorization}
+  */
   readonly oauth2Authorization?: ApiManagementApiOauth2Authorization[];
-  /** openid_authentication block */
+  /**
+  * openid_authentication block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api.html#openid_authentication ApiManagementApi#openid_authentication}
+  */
   readonly openidAuthentication?: ApiManagementApiOpenidAuthentication[];
-  /** subscription_key_parameter_names block */
+  /**
+  * subscription_key_parameter_names block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api.html#subscription_key_parameter_names ApiManagementApi#subscription_key_parameter_names}
+  */
   readonly subscriptionKeyParameterNames?: ApiManagementApiSubscriptionKeyParameterNames[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api.html#timeouts ApiManagementApi#timeouts}
+  */
   readonly timeouts?: ApiManagementApiTimeouts;
 }
 export interface ApiManagementApiImportWsdlSelector {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api.html#endpoint_name ApiManagementApi#endpoint_name}
+  */
   readonly endpointName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api.html#service_name ApiManagementApi#service_name}
+  */
   readonly serviceName: string;
 }
 
@@ -45,9 +110,19 @@ function apiManagementApiImportWsdlSelectorToTerraform(struct?: ApiManagementApi
 }
 
 export interface ApiManagementApiImport {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api.html#content_format ApiManagementApi#content_format}
+  */
   readonly contentFormat: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api.html#content_value ApiManagementApi#content_value}
+  */
   readonly contentValue: string;
-  /** wsdl_selector block */
+  /**
+  * wsdl_selector block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api.html#wsdl_selector ApiManagementApi#wsdl_selector}
+  */
   readonly wsdlSelector?: ApiManagementApiImportWsdlSelector[];
 }
 
@@ -61,7 +136,13 @@ function apiManagementApiImportToTerraform(struct?: ApiManagementApiImport): any
 }
 
 export interface ApiManagementApiOauth2Authorization {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api.html#authorization_server_name ApiManagementApi#authorization_server_name}
+  */
   readonly authorizationServerName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api.html#scope ApiManagementApi#scope}
+  */
   readonly scope?: string;
 }
 
@@ -74,7 +155,13 @@ function apiManagementApiOauth2AuthorizationToTerraform(struct?: ApiManagementAp
 }
 
 export interface ApiManagementApiOpenidAuthentication {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api.html#bearer_token_sending_methods ApiManagementApi#bearer_token_sending_methods}
+  */
   readonly bearerTokenSendingMethods?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api.html#openid_provider_name ApiManagementApi#openid_provider_name}
+  */
   readonly openidProviderName: string;
 }
 
@@ -87,7 +174,13 @@ function apiManagementApiOpenidAuthenticationToTerraform(struct?: ApiManagementA
 }
 
 export interface ApiManagementApiSubscriptionKeyParameterNames {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api.html#header ApiManagementApi#header}
+  */
   readonly header: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api.html#query ApiManagementApi#query}
+  */
   readonly query: string;
 }
 
@@ -100,9 +193,21 @@ function apiManagementApiSubscriptionKeyParameterNamesToTerraform(struct?: ApiMa
 }
 
 export interface ApiManagementApiTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api.html#create ApiManagementApi#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api.html#delete ApiManagementApi#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api.html#read ApiManagementApi#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api.html#update ApiManagementApi#update}
+  */
   readonly update?: string;
 }
 
@@ -117,14 +222,22 @@ function apiManagementApiTimeoutsToTerraform(struct?: ApiManagementApiTimeouts):
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api.html azurerm_api_management_api}
+*/
 export class ApiManagementApi extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api.html azurerm_api_management_api} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options ApiManagementApiConfig
+  */
   public constructor(scope: Construct, id: string, config: ApiManagementApiConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_api_management_api',

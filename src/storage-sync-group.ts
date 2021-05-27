@@ -7,14 +7,33 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface StorageSyncGroupConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_sync_group.html#name StorageSyncGroup#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_sync_group.html#storage_sync_id StorageSyncGroup#storage_sync_id}
+  */
   readonly storageSyncId: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_sync_group.html#timeouts StorageSyncGroup#timeouts}
+  */
   readonly timeouts?: StorageSyncGroupTimeouts;
 }
 export interface StorageSyncGroupTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_sync_group.html#create StorageSyncGroup#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_sync_group.html#delete StorageSyncGroup#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_sync_group.html#read StorageSyncGroup#read}
+  */
   readonly read?: string;
 }
 
@@ -28,14 +47,22 @@ function storageSyncGroupTimeoutsToTerraform(struct?: StorageSyncGroupTimeouts):
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/storage_sync_group.html azurerm_storage_sync_group}
+*/
 export class StorageSyncGroup extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/storage_sync_group.html azurerm_storage_sync_group} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options StorageSyncGroupConfig
+  */
   public constructor(scope: Construct, id: string, config: StorageSyncGroupConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_storage_sync_group',

@@ -7,21 +7,61 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface StreamAnalyticsOutputMssqlConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_mssql.html#database StreamAnalyticsOutputMssql#database}
+  */
   readonly database: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_mssql.html#name StreamAnalyticsOutputMssql#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_mssql.html#password StreamAnalyticsOutputMssql#password}
+  */
   readonly password: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_mssql.html#resource_group_name StreamAnalyticsOutputMssql#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_mssql.html#server StreamAnalyticsOutputMssql#server}
+  */
   readonly server: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_mssql.html#stream_analytics_job_name StreamAnalyticsOutputMssql#stream_analytics_job_name}
+  */
   readonly streamAnalyticsJobName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_mssql.html#table StreamAnalyticsOutputMssql#table}
+  */
   readonly table: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_mssql.html#user StreamAnalyticsOutputMssql#user}
+  */
   readonly user: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_mssql.html#timeouts StreamAnalyticsOutputMssql#timeouts}
+  */
   readonly timeouts?: StreamAnalyticsOutputMssqlTimeouts;
 }
 export interface StreamAnalyticsOutputMssqlTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_mssql.html#create StreamAnalyticsOutputMssql#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_mssql.html#delete StreamAnalyticsOutputMssql#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_mssql.html#read StreamAnalyticsOutputMssql#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_mssql.html#update StreamAnalyticsOutputMssql#update}
+  */
   readonly update?: string;
 }
 
@@ -36,14 +76,22 @@ function streamAnalyticsOutputMssqlTimeoutsToTerraform(struct?: StreamAnalyticsO
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_mssql.html azurerm_stream_analytics_output_mssql}
+*/
 export class StreamAnalyticsOutputMssql extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_mssql.html azurerm_stream_analytics_output_mssql} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options StreamAnalyticsOutputMssqlConfig
+  */
   public constructor(scope: Construct, id: string, config: StreamAnalyticsOutputMssqlConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_stream_analytics_output_mssql',

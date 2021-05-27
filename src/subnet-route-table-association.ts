@@ -7,15 +7,37 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface SubnetRouteTableAssociationConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/subnet_route_table_association.html#route_table_id SubnetRouteTableAssociation#route_table_id}
+  */
   readonly routeTableId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/subnet_route_table_association.html#subnet_id SubnetRouteTableAssociation#subnet_id}
+  */
   readonly subnetId: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/subnet_route_table_association.html#timeouts SubnetRouteTableAssociation#timeouts}
+  */
   readonly timeouts?: SubnetRouteTableAssociationTimeouts;
 }
 export interface SubnetRouteTableAssociationTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/subnet_route_table_association.html#create SubnetRouteTableAssociation#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/subnet_route_table_association.html#delete SubnetRouteTableAssociation#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/subnet_route_table_association.html#read SubnetRouteTableAssociation#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/subnet_route_table_association.html#update SubnetRouteTableAssociation#update}
+  */
   readonly update?: string;
 }
 
@@ -30,14 +52,22 @@ function subnetRouteTableAssociationTimeoutsToTerraform(struct?: SubnetRouteTabl
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/subnet_route_table_association.html azurerm_subnet_route_table_association}
+*/
 export class SubnetRouteTableAssociation extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/subnet_route_table_association.html azurerm_subnet_route_table_association} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options SubnetRouteTableAssociationConfig
+  */
   public constructor(scope: Construct, id: string, config: SubnetRouteTableAssociationConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_subnet_route_table_association',

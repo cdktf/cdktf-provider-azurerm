@@ -7,18 +7,49 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface AppServiceCustomHostnameBindingConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_custom_hostname_binding.html#app_service_name AppServiceCustomHostnameBinding#app_service_name}
+  */
   readonly appServiceName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_custom_hostname_binding.html#hostname AppServiceCustomHostnameBinding#hostname}
+  */
   readonly hostname: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_custom_hostname_binding.html#resource_group_name AppServiceCustomHostnameBinding#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_custom_hostname_binding.html#ssl_state AppServiceCustomHostnameBinding#ssl_state}
+  */
   readonly sslState?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_custom_hostname_binding.html#thumbprint AppServiceCustomHostnameBinding#thumbprint}
+  */
   readonly thumbprint?: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_custom_hostname_binding.html#timeouts AppServiceCustomHostnameBinding#timeouts}
+  */
   readonly timeouts?: AppServiceCustomHostnameBindingTimeouts;
 }
 export interface AppServiceCustomHostnameBindingTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_custom_hostname_binding.html#create AppServiceCustomHostnameBinding#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_custom_hostname_binding.html#delete AppServiceCustomHostnameBinding#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_custom_hostname_binding.html#read AppServiceCustomHostnameBinding#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_custom_hostname_binding.html#update AppServiceCustomHostnameBinding#update}
+  */
   readonly update?: string;
 }
 
@@ -33,14 +64,22 @@ function appServiceCustomHostnameBindingTimeoutsToTerraform(struct?: AppServiceC
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_custom_hostname_binding.html azurerm_app_service_custom_hostname_binding}
+*/
 export class AppServiceCustomHostnameBinding extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_custom_hostname_binding.html azurerm_app_service_custom_hostname_binding} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options AppServiceCustomHostnameBindingConfig
+  */
   public constructor(scope: Construct, id: string, config: AppServiceCustomHostnameBindingConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_app_service_custom_hostname_binding',

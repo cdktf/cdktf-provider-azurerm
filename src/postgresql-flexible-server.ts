@@ -7,29 +7,91 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface PostgresqlFlexibleServerConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_flexible_server.html#administrator_login PostgresqlFlexibleServer#administrator_login}
+  */
   readonly administratorLogin?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_flexible_server.html#administrator_password PostgresqlFlexibleServer#administrator_password}
+  */
   readonly administratorPassword?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_flexible_server.html#backup_retention_days PostgresqlFlexibleServer#backup_retention_days}
+  */
   readonly backupRetentionDays?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_flexible_server.html#create_mode PostgresqlFlexibleServer#create_mode}
+  */
   readonly createMode?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_flexible_server.html#delegated_subnet_id PostgresqlFlexibleServer#delegated_subnet_id}
+  */
   readonly delegatedSubnetId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_flexible_server.html#location PostgresqlFlexibleServer#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_flexible_server.html#name PostgresqlFlexibleServer#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_flexible_server.html#point_in_time_restore_time_in_utc PostgresqlFlexibleServer#point_in_time_restore_time_in_utc}
+  */
   readonly pointInTimeRestoreTimeInUtc?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_flexible_server.html#resource_group_name PostgresqlFlexibleServer#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_flexible_server.html#sku_name PostgresqlFlexibleServer#sku_name}
+  */
   readonly skuName?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_flexible_server.html#source_server_id PostgresqlFlexibleServer#source_server_id}
+  */
   readonly sourceServerId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_flexible_server.html#storage_mb PostgresqlFlexibleServer#storage_mb}
+  */
   readonly storageMb?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_flexible_server.html#tags PostgresqlFlexibleServer#tags}
+  */
   readonly tags?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_flexible_server.html#version PostgresqlFlexibleServer#version}
+  */
   readonly version?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_flexible_server.html#zone PostgresqlFlexibleServer#zone}
+  */
   readonly zone?: string;
-  /** maintenance_window block */
+  /**
+  * maintenance_window block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_flexible_server.html#maintenance_window PostgresqlFlexibleServer#maintenance_window}
+  */
   readonly maintenanceWindow?: PostgresqlFlexibleServerMaintenanceWindow[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_flexible_server.html#timeouts PostgresqlFlexibleServer#timeouts}
+  */
   readonly timeouts?: PostgresqlFlexibleServerTimeouts;
 }
 export interface PostgresqlFlexibleServerMaintenanceWindow {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_flexible_server.html#day_of_week PostgresqlFlexibleServer#day_of_week}
+  */
   readonly dayOfWeek?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_flexible_server.html#start_hour PostgresqlFlexibleServer#start_hour}
+  */
   readonly startHour?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_flexible_server.html#start_minute PostgresqlFlexibleServer#start_minute}
+  */
   readonly startMinute?: number;
 }
 
@@ -43,9 +105,21 @@ function postgresqlFlexibleServerMaintenanceWindowToTerraform(struct?: Postgresq
 }
 
 export interface PostgresqlFlexibleServerTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_flexible_server.html#create PostgresqlFlexibleServer#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_flexible_server.html#delete PostgresqlFlexibleServer#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_flexible_server.html#read PostgresqlFlexibleServer#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_flexible_server.html#update PostgresqlFlexibleServer#update}
+  */
   readonly update?: string;
 }
 
@@ -60,14 +134,22 @@ function postgresqlFlexibleServerTimeoutsToTerraform(struct?: PostgresqlFlexible
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_flexible_server.html azurerm_postgresql_flexible_server}
+*/
 export class PostgresqlFlexibleServer extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_flexible_server.html azurerm_postgresql_flexible_server} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options PostgresqlFlexibleServerConfig
+  */
   public constructor(scope: Construct, id: string, config: PostgresqlFlexibleServerConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_postgresql_flexible_server',

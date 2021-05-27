@@ -7,17 +7,45 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface PostgresqlConfigurationConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_configuration.html#name PostgresqlConfiguration#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_configuration.html#resource_group_name PostgresqlConfiguration#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_configuration.html#server_name PostgresqlConfiguration#server_name}
+  */
   readonly serverName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_configuration.html#value PostgresqlConfiguration#value}
+  */
   readonly value: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_configuration.html#timeouts PostgresqlConfiguration#timeouts}
+  */
   readonly timeouts?: PostgresqlConfigurationTimeouts;
 }
 export interface PostgresqlConfigurationTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_configuration.html#create PostgresqlConfiguration#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_configuration.html#delete PostgresqlConfiguration#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_configuration.html#read PostgresqlConfiguration#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_configuration.html#update PostgresqlConfiguration#update}
+  */
   readonly update?: string;
 }
 
@@ -32,14 +60,22 @@ function postgresqlConfigurationTimeoutsToTerraform(struct?: PostgresqlConfigura
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_configuration.html azurerm_postgresql_configuration}
+*/
 export class PostgresqlConfiguration extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_configuration.html azurerm_postgresql_configuration} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options PostgresqlConfigurationConfig
+  */
   public constructor(scope: Construct, id: string, config: PostgresqlConfigurationConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_postgresql_configuration',

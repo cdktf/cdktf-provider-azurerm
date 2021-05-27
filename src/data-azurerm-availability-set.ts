@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/data_azurerm_availability_set.html
+// https://www.terraform.io/docs/providers/azurerm/d/availability_set.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,12 +7,25 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataAzurermAvailabilitySetConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/availability_set.html#name DataAzurermAvailabilitySet#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/availability_set.html#resource_group_name DataAzurermAvailabilitySet#resource_group_name}
+  */
   readonly resourceGroupName: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/availability_set.html#timeouts DataAzurermAvailabilitySet#timeouts}
+  */
   readonly timeouts?: DataAzurermAvailabilitySetTimeouts;
 }
 export interface DataAzurermAvailabilitySetTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/availability_set.html#read DataAzurermAvailabilitySet#read}
+  */
   readonly read?: string;
 }
 
@@ -24,14 +37,22 @@ function dataAzurermAvailabilitySetTimeoutsToTerraform(struct?: DataAzurermAvail
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/availability_set.html azurerm_availability_set}
+*/
 export class DataAzurermAvailabilitySet extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/availability_set.html azurerm_availability_set} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataAzurermAvailabilitySetConfig
+  */
   public constructor(scope: Construct, id: string, config: DataAzurermAvailabilitySetConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_availability_set',

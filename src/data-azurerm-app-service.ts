@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/data_azurerm_app_service.html
+// https://www.terraform.io/docs/providers/azurerm/d/app_service.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,9 +7,19 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataAzurermAppServiceConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/app_service.html#name DataAzurermAppService#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/app_service.html#resource_group_name DataAzurermAppService#resource_group_name}
+  */
   readonly resourceGroupName: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/app_service.html#timeouts DataAzurermAppService#timeouts}
+  */
   readonly timeouts?: DataAzurermAppServiceTimeouts;
 }
 export class DataAzurermAppServiceConnectionString extends cdktf.ComplexComputedList {
@@ -282,6 +292,9 @@ export class DataAzurermAppServiceSourceControl extends cdktf.ComplexComputedLis
   }
 }
 export interface DataAzurermAppServiceTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/app_service.html#read DataAzurermAppService#read}
+  */
   readonly read?: string;
 }
 
@@ -293,14 +306,22 @@ function dataAzurermAppServiceTimeoutsToTerraform(struct?: DataAzurermAppService
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/app_service.html azurerm_app_service}
+*/
 export class DataAzurermAppService extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/app_service.html azurerm_app_service} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataAzurermAppServiceConfig
+  */
   public constructor(scope: Construct, id: string, config: DataAzurermAppServiceConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_app_service',

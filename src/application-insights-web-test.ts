@@ -7,26 +7,81 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface ApplicationInsightsWebTestConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights_web_test.html#application_insights_id ApplicationInsightsWebTest#application_insights_id}
+  */
   readonly applicationInsightsId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights_web_test.html#configuration ApplicationInsightsWebTest#configuration}
+  */
   readonly configuration: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights_web_test.html#description ApplicationInsightsWebTest#description}
+  */
   readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights_web_test.html#enabled ApplicationInsightsWebTest#enabled}
+  */
   readonly enabled?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights_web_test.html#frequency ApplicationInsightsWebTest#frequency}
+  */
   readonly frequency?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights_web_test.html#geo_locations ApplicationInsightsWebTest#geo_locations}
+  */
   readonly geoLocations: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights_web_test.html#kind ApplicationInsightsWebTest#kind}
+  */
   readonly kind: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights_web_test.html#location ApplicationInsightsWebTest#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights_web_test.html#name ApplicationInsightsWebTest#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights_web_test.html#resource_group_name ApplicationInsightsWebTest#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights_web_test.html#retry_enabled ApplicationInsightsWebTest#retry_enabled}
+  */
   readonly retryEnabled?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights_web_test.html#tags ApplicationInsightsWebTest#tags}
+  */
   readonly tags?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights_web_test.html#timeout ApplicationInsightsWebTest#timeout}
+  */
   readonly timeout?: number;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights_web_test.html#timeouts ApplicationInsightsWebTest#timeouts}
+  */
   readonly timeouts?: ApplicationInsightsWebTestTimeouts;
 }
 export interface ApplicationInsightsWebTestTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights_web_test.html#create ApplicationInsightsWebTest#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights_web_test.html#delete ApplicationInsightsWebTest#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights_web_test.html#read ApplicationInsightsWebTest#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights_web_test.html#update ApplicationInsightsWebTest#update}
+  */
   readonly update?: string;
 }
 
@@ -41,14 +96,22 @@ function applicationInsightsWebTestTimeoutsToTerraform(struct?: ApplicationInsig
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights_web_test.html azurerm_application_insights_web_test}
+*/
 export class ApplicationInsightsWebTest extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights_web_test.html azurerm_application_insights_web_test} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options ApplicationInsightsWebTestConfig
+  */
   public constructor(scope: Construct, id: string, config: ApplicationInsightsWebTestConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_application_insights_web_test',

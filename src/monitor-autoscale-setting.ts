@@ -7,22 +7,61 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface MonitorAutoscaleSettingConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_autoscale_setting.html#enabled MonitorAutoscaleSetting#enabled}
+  */
   readonly enabled?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_autoscale_setting.html#location MonitorAutoscaleSetting#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_autoscale_setting.html#name MonitorAutoscaleSetting#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_autoscale_setting.html#resource_group_name MonitorAutoscaleSetting#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_autoscale_setting.html#tags MonitorAutoscaleSetting#tags}
+  */
   readonly tags?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_autoscale_setting.html#target_resource_id MonitorAutoscaleSetting#target_resource_id}
+  */
   readonly targetResourceId: string;
-  /** notification block */
+  /**
+  * notification block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_autoscale_setting.html#notification MonitorAutoscaleSetting#notification}
+  */
   readonly notification?: MonitorAutoscaleSettingNotification[];
-  /** profile block */
+  /**
+  * profile block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_autoscale_setting.html#profile MonitorAutoscaleSetting#profile}
+  */
   readonly profile: MonitorAutoscaleSettingProfile[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_autoscale_setting.html#timeouts MonitorAutoscaleSetting#timeouts}
+  */
   readonly timeouts?: MonitorAutoscaleSettingTimeouts;
 }
 export interface MonitorAutoscaleSettingNotificationEmail {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_autoscale_setting.html#custom_emails MonitorAutoscaleSetting#custom_emails}
+  */
   readonly customEmails?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_autoscale_setting.html#send_to_subscription_administrator MonitorAutoscaleSetting#send_to_subscription_administrator}
+  */
   readonly sendToSubscriptionAdministrator?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_autoscale_setting.html#send_to_subscription_co_administrator MonitorAutoscaleSetting#send_to_subscription_co_administrator}
+  */
   readonly sendToSubscriptionCoAdministrator?: boolean;
 }
 
@@ -36,7 +75,13 @@ function monitorAutoscaleSettingNotificationEmailToTerraform(struct?: MonitorAut
 }
 
 export interface MonitorAutoscaleSettingNotificationWebhook {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_autoscale_setting.html#properties MonitorAutoscaleSetting#properties}
+  */
   readonly properties?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_autoscale_setting.html#service_uri MonitorAutoscaleSetting#service_uri}
+  */
   readonly serviceUri: string;
 }
 
@@ -49,9 +94,17 @@ function monitorAutoscaleSettingNotificationWebhookToTerraform(struct?: MonitorA
 }
 
 export interface MonitorAutoscaleSettingNotification {
-  /** email block */
+  /**
+  * email block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_autoscale_setting.html#email MonitorAutoscaleSetting#email}
+  */
   readonly email?: MonitorAutoscaleSettingNotificationEmail[];
-  /** webhook block */
+  /**
+  * webhook block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_autoscale_setting.html#webhook MonitorAutoscaleSetting#webhook}
+  */
   readonly webhook?: MonitorAutoscaleSettingNotificationWebhook[];
 }
 
@@ -64,8 +117,17 @@ function monitorAutoscaleSettingNotificationToTerraform(struct?: MonitorAutoscal
 }
 
 export interface MonitorAutoscaleSettingProfileCapacity {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_autoscale_setting.html#default MonitorAutoscaleSetting#default}
+  */
   readonly default: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_autoscale_setting.html#maximum MonitorAutoscaleSetting#maximum}
+  */
   readonly maximum: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_autoscale_setting.html#minimum MonitorAutoscaleSetting#minimum}
+  */
   readonly minimum: number;
 }
 
@@ -79,8 +141,17 @@ function monitorAutoscaleSettingProfileCapacityToTerraform(struct?: MonitorAutos
 }
 
 export interface MonitorAutoscaleSettingProfileFixedDate {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_autoscale_setting.html#end MonitorAutoscaleSetting#end}
+  */
   readonly end: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_autoscale_setting.html#start MonitorAutoscaleSetting#start}
+  */
   readonly start: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_autoscale_setting.html#timezone MonitorAutoscaleSetting#timezone}
+  */
   readonly timezone?: string;
 }
 
@@ -94,9 +165,21 @@ function monitorAutoscaleSettingProfileFixedDateToTerraform(struct?: MonitorAuto
 }
 
 export interface MonitorAutoscaleSettingProfileRecurrence {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_autoscale_setting.html#days MonitorAutoscaleSetting#days}
+  */
   readonly days: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_autoscale_setting.html#hours MonitorAutoscaleSetting#hours}
+  */
   readonly hours: number[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_autoscale_setting.html#minutes MonitorAutoscaleSetting#minutes}
+  */
   readonly minutes: number[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_autoscale_setting.html#timezone MonitorAutoscaleSetting#timezone}
+  */
   readonly timezone?: string;
 }
 
@@ -111,8 +194,17 @@ function monitorAutoscaleSettingProfileRecurrenceToTerraform(struct?: MonitorAut
 }
 
 export interface MonitorAutoscaleSettingProfileRuleMetricTriggerDimensions {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_autoscale_setting.html#name MonitorAutoscaleSetting#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_autoscale_setting.html#operator MonitorAutoscaleSetting#operator}
+  */
   readonly operator: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_autoscale_setting.html#values MonitorAutoscaleSetting#values}
+  */
   readonly values: string[];
 }
 
@@ -126,16 +218,47 @@ function monitorAutoscaleSettingProfileRuleMetricTriggerDimensionsToTerraform(st
 }
 
 export interface MonitorAutoscaleSettingProfileRuleMetricTrigger {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_autoscale_setting.html#metric_name MonitorAutoscaleSetting#metric_name}
+  */
   readonly metricName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_autoscale_setting.html#metric_namespace MonitorAutoscaleSetting#metric_namespace}
+  */
   readonly metricNamespace?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_autoscale_setting.html#metric_resource_id MonitorAutoscaleSetting#metric_resource_id}
+  */
   readonly metricResourceId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_autoscale_setting.html#operator MonitorAutoscaleSetting#operator}
+  */
   readonly operator: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_autoscale_setting.html#statistic MonitorAutoscaleSetting#statistic}
+  */
   readonly statistic: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_autoscale_setting.html#threshold MonitorAutoscaleSetting#threshold}
+  */
   readonly threshold: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_autoscale_setting.html#time_aggregation MonitorAutoscaleSetting#time_aggregation}
+  */
   readonly timeAggregation: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_autoscale_setting.html#time_grain MonitorAutoscaleSetting#time_grain}
+  */
   readonly timeGrain: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_autoscale_setting.html#time_window MonitorAutoscaleSetting#time_window}
+  */
   readonly timeWindow: string;
-  /** dimensions block */
+  /**
+  * dimensions block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_autoscale_setting.html#dimensions MonitorAutoscaleSetting#dimensions}
+  */
   readonly dimensions?: MonitorAutoscaleSettingProfileRuleMetricTriggerDimensions[];
 }
 
@@ -156,9 +279,21 @@ function monitorAutoscaleSettingProfileRuleMetricTriggerToTerraform(struct?: Mon
 }
 
 export interface MonitorAutoscaleSettingProfileRuleScaleAction {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_autoscale_setting.html#cooldown MonitorAutoscaleSetting#cooldown}
+  */
   readonly cooldown: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_autoscale_setting.html#direction MonitorAutoscaleSetting#direction}
+  */
   readonly direction: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_autoscale_setting.html#type MonitorAutoscaleSetting#type}
+  */
   readonly type: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_autoscale_setting.html#value MonitorAutoscaleSetting#value}
+  */
   readonly value: number;
 }
 
@@ -173,9 +308,17 @@ function monitorAutoscaleSettingProfileRuleScaleActionToTerraform(struct?: Monit
 }
 
 export interface MonitorAutoscaleSettingProfileRule {
-  /** metric_trigger block */
+  /**
+  * metric_trigger block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_autoscale_setting.html#metric_trigger MonitorAutoscaleSetting#metric_trigger}
+  */
   readonly metricTrigger: MonitorAutoscaleSettingProfileRuleMetricTrigger[];
-  /** scale_action block */
+  /**
+  * scale_action block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_autoscale_setting.html#scale_action MonitorAutoscaleSetting#scale_action}
+  */
   readonly scaleAction: MonitorAutoscaleSettingProfileRuleScaleAction[];
 }
 
@@ -188,14 +331,33 @@ function monitorAutoscaleSettingProfileRuleToTerraform(struct?: MonitorAutoscale
 }
 
 export interface MonitorAutoscaleSettingProfile {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_autoscale_setting.html#name MonitorAutoscaleSetting#name}
+  */
   readonly name: string;
-  /** capacity block */
+  /**
+  * capacity block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_autoscale_setting.html#capacity MonitorAutoscaleSetting#capacity}
+  */
   readonly capacity: MonitorAutoscaleSettingProfileCapacity[];
-  /** fixed_date block */
+  /**
+  * fixed_date block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_autoscale_setting.html#fixed_date MonitorAutoscaleSetting#fixed_date}
+  */
   readonly fixedDate?: MonitorAutoscaleSettingProfileFixedDate[];
-  /** recurrence block */
+  /**
+  * recurrence block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_autoscale_setting.html#recurrence MonitorAutoscaleSetting#recurrence}
+  */
   readonly recurrence?: MonitorAutoscaleSettingProfileRecurrence[];
-  /** rule block */
+  /**
+  * rule block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_autoscale_setting.html#rule MonitorAutoscaleSetting#rule}
+  */
   readonly rule?: MonitorAutoscaleSettingProfileRule[];
 }
 
@@ -211,9 +373,21 @@ function monitorAutoscaleSettingProfileToTerraform(struct?: MonitorAutoscaleSett
 }
 
 export interface MonitorAutoscaleSettingTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_autoscale_setting.html#create MonitorAutoscaleSetting#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_autoscale_setting.html#delete MonitorAutoscaleSetting#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_autoscale_setting.html#read MonitorAutoscaleSetting#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_autoscale_setting.html#update MonitorAutoscaleSetting#update}
+  */
   readonly update?: string;
 }
 
@@ -228,14 +402,22 @@ function monitorAutoscaleSettingTimeoutsToTerraform(struct?: MonitorAutoscaleSet
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_autoscale_setting.html azurerm_monitor_autoscale_setting}
+*/
 export class MonitorAutoscaleSetting extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_autoscale_setting.html azurerm_monitor_autoscale_setting} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options MonitorAutoscaleSettingConfig
+  */
   public constructor(scope: Construct, id: string, config: MonitorAutoscaleSettingConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_monitor_autoscale_setting',

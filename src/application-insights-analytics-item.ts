@@ -7,19 +7,53 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface ApplicationInsightsAnalyticsItemConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights_analytics_item.html#application_insights_id ApplicationInsightsAnalyticsItem#application_insights_id}
+  */
   readonly applicationInsightsId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights_analytics_item.html#content ApplicationInsightsAnalyticsItem#content}
+  */
   readonly content: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights_analytics_item.html#function_alias ApplicationInsightsAnalyticsItem#function_alias}
+  */
   readonly functionAlias?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights_analytics_item.html#name ApplicationInsightsAnalyticsItem#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights_analytics_item.html#scope ApplicationInsightsAnalyticsItem#scope}
+  */
   readonly scope: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights_analytics_item.html#type ApplicationInsightsAnalyticsItem#type}
+  */
   readonly type: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights_analytics_item.html#timeouts ApplicationInsightsAnalyticsItem#timeouts}
+  */
   readonly timeouts?: ApplicationInsightsAnalyticsItemTimeouts;
 }
 export interface ApplicationInsightsAnalyticsItemTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights_analytics_item.html#create ApplicationInsightsAnalyticsItem#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights_analytics_item.html#delete ApplicationInsightsAnalyticsItem#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights_analytics_item.html#read ApplicationInsightsAnalyticsItem#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights_analytics_item.html#update ApplicationInsightsAnalyticsItem#update}
+  */
   readonly update?: string;
 }
 
@@ -34,14 +68,22 @@ function applicationInsightsAnalyticsItemTimeoutsToTerraform(struct?: Applicatio
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights_analytics_item.html azurerm_application_insights_analytics_item}
+*/
 export class ApplicationInsightsAnalyticsItem extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights_analytics_item.html azurerm_application_insights_analytics_item} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options ApplicationInsightsAnalyticsItemConfig
+  */
   public constructor(scope: Construct, id: string, config: ApplicationInsightsAnalyticsItemConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_application_insights_analytics_item',

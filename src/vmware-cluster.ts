@@ -7,17 +7,45 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface VmwareClusterConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vmware_cluster.html#cluster_node_count VmwareCluster#cluster_node_count}
+  */
   readonly clusterNodeCount: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vmware_cluster.html#name VmwareCluster#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vmware_cluster.html#sku_name VmwareCluster#sku_name}
+  */
   readonly skuName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vmware_cluster.html#vmware_cloud_id VmwareCluster#vmware_cloud_id}
+  */
   readonly vmwareCloudId: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vmware_cluster.html#timeouts VmwareCluster#timeouts}
+  */
   readonly timeouts?: VmwareClusterTimeouts;
 }
 export interface VmwareClusterTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vmware_cluster.html#create VmwareCluster#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vmware_cluster.html#delete VmwareCluster#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vmware_cluster.html#read VmwareCluster#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vmware_cluster.html#update VmwareCluster#update}
+  */
   readonly update?: string;
 }
 
@@ -32,14 +60,22 @@ function vmwareClusterTimeoutsToTerraform(struct?: VmwareClusterTimeouts): any {
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/vmware_cluster.html azurerm_vmware_cluster}
+*/
 export class VmwareCluster extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/vmware_cluster.html azurerm_vmware_cluster} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options VmwareClusterConfig
+  */
   public constructor(scope: Construct, id: string, config: VmwareClusterConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_vmware_cluster',

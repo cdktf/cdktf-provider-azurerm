@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/data_azurerm_data_lake_store.html
+// https://www.terraform.io/docs/providers/azurerm/d/data_lake_store.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,12 +7,25 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataAzurermDataLakeStoreConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/data_lake_store.html#name DataAzurermDataLakeStore#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/data_lake_store.html#resource_group_name DataAzurermDataLakeStore#resource_group_name}
+  */
   readonly resourceGroupName: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/data_lake_store.html#timeouts DataAzurermDataLakeStore#timeouts}
+  */
   readonly timeouts?: DataAzurermDataLakeStoreTimeouts;
 }
 export interface DataAzurermDataLakeStoreTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/data_lake_store.html#read DataAzurermDataLakeStore#read}
+  */
   readonly read?: string;
 }
 
@@ -24,14 +37,22 @@ function dataAzurermDataLakeStoreTimeoutsToTerraform(struct?: DataAzurermDataLak
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/data_lake_store.html azurerm_data_lake_store}
+*/
 export class DataAzurermDataLakeStore extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/data_lake_store.html azurerm_data_lake_store} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataAzurermDataLakeStoreConfig
+  */
   public constructor(scope: Construct, id: string, config: DataAzurermDataLakeStoreConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_data_lake_store',

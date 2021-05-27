@@ -7,21 +7,61 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface ManagementGroupTemplateDeploymentConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/management_group_template_deployment.html#debug_level ManagementGroupTemplateDeployment#debug_level}
+  */
   readonly debugLevel?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/management_group_template_deployment.html#location ManagementGroupTemplateDeployment#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/management_group_template_deployment.html#management_group_id ManagementGroupTemplateDeployment#management_group_id}
+  */
   readonly managementGroupId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/management_group_template_deployment.html#name ManagementGroupTemplateDeployment#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/management_group_template_deployment.html#parameters_content ManagementGroupTemplateDeployment#parameters_content}
+  */
   readonly parametersContent?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/management_group_template_deployment.html#tags ManagementGroupTemplateDeployment#tags}
+  */
   readonly tags?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/management_group_template_deployment.html#template_content ManagementGroupTemplateDeployment#template_content}
+  */
   readonly templateContent?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/management_group_template_deployment.html#template_spec_version_id ManagementGroupTemplateDeployment#template_spec_version_id}
+  */
   readonly templateSpecVersionId?: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/management_group_template_deployment.html#timeouts ManagementGroupTemplateDeployment#timeouts}
+  */
   readonly timeouts?: ManagementGroupTemplateDeploymentTimeouts;
 }
 export interface ManagementGroupTemplateDeploymentTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/management_group_template_deployment.html#create ManagementGroupTemplateDeployment#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/management_group_template_deployment.html#delete ManagementGroupTemplateDeployment#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/management_group_template_deployment.html#read ManagementGroupTemplateDeployment#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/management_group_template_deployment.html#update ManagementGroupTemplateDeployment#update}
+  */
   readonly update?: string;
 }
 
@@ -36,14 +76,22 @@ function managementGroupTemplateDeploymentTimeoutsToTerraform(struct?: Managemen
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/management_group_template_deployment.html azurerm_management_group_template_deployment}
+*/
 export class ManagementGroupTemplateDeployment extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/management_group_template_deployment.html azurerm_management_group_template_deployment} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options ManagementGroupTemplateDeploymentConfig
+  */
   public constructor(scope: Construct, id: string, config: ManagementGroupTemplateDeploymentConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_management_group_template_deployment',

@@ -7,18 +7,49 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface LogicAppTriggerHttpRequestConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_trigger_http_request.html#logic_app_id LogicAppTriggerHttpRequest#logic_app_id}
+  */
   readonly logicAppId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_trigger_http_request.html#method LogicAppTriggerHttpRequest#method}
+  */
   readonly method?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_trigger_http_request.html#name LogicAppTriggerHttpRequest#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_trigger_http_request.html#relative_path LogicAppTriggerHttpRequest#relative_path}
+  */
   readonly relativePath?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_trigger_http_request.html#schema LogicAppTriggerHttpRequest#schema}
+  */
   readonly schema: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_trigger_http_request.html#timeouts LogicAppTriggerHttpRequest#timeouts}
+  */
   readonly timeouts?: LogicAppTriggerHttpRequestTimeouts;
 }
 export interface LogicAppTriggerHttpRequestTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_trigger_http_request.html#create LogicAppTriggerHttpRequest#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_trigger_http_request.html#delete LogicAppTriggerHttpRequest#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_trigger_http_request.html#read LogicAppTriggerHttpRequest#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_trigger_http_request.html#update LogicAppTriggerHttpRequest#update}
+  */
   readonly update?: string;
 }
 
@@ -33,14 +64,22 @@ function logicAppTriggerHttpRequestTimeoutsToTerraform(struct?: LogicAppTriggerH
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_trigger_http_request.html azurerm_logic_app_trigger_http_request}
+*/
 export class LogicAppTriggerHttpRequest extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_trigger_http_request.html azurerm_logic_app_trigger_http_request} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options LogicAppTriggerHttpRequestConfig
+  */
   public constructor(scope: Construct, id: string, config: LogicAppTriggerHttpRequestConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_logic_app_trigger_http_request',

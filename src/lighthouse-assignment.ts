@@ -7,15 +7,37 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface LighthouseAssignmentConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lighthouse_assignment.html#lighthouse_definition_id LighthouseAssignment#lighthouse_definition_id}
+  */
   readonly lighthouseDefinitionId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lighthouse_assignment.html#name LighthouseAssignment#name}
+  */
   readonly name?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lighthouse_assignment.html#scope LighthouseAssignment#scope}
+  */
   readonly scope: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lighthouse_assignment.html#timeouts LighthouseAssignment#timeouts}
+  */
   readonly timeouts?: LighthouseAssignmentTimeouts;
 }
 export interface LighthouseAssignmentTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lighthouse_assignment.html#create LighthouseAssignment#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lighthouse_assignment.html#delete LighthouseAssignment#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lighthouse_assignment.html#read LighthouseAssignment#read}
+  */
   readonly read?: string;
 }
 
@@ -29,14 +51,22 @@ function lighthouseAssignmentTimeoutsToTerraform(struct?: LighthouseAssignmentTi
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/lighthouse_assignment.html azurerm_lighthouse_assignment}
+*/
 export class LighthouseAssignment extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/lighthouse_assignment.html azurerm_lighthouse_assignment} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options LighthouseAssignmentConfig
+  */
   public constructor(scope: Construct, id: string, config: LighthouseAssignmentConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_lighthouse_assignment',

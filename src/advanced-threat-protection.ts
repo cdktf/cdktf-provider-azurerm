@@ -7,15 +7,37 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface AdvancedThreatProtectionConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/advanced_threat_protection.html#enabled AdvancedThreatProtection#enabled}
+  */
   readonly enabled: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/advanced_threat_protection.html#target_resource_id AdvancedThreatProtection#target_resource_id}
+  */
   readonly targetResourceId: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/advanced_threat_protection.html#timeouts AdvancedThreatProtection#timeouts}
+  */
   readonly timeouts?: AdvancedThreatProtectionTimeouts;
 }
 export interface AdvancedThreatProtectionTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/advanced_threat_protection.html#create AdvancedThreatProtection#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/advanced_threat_protection.html#delete AdvancedThreatProtection#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/advanced_threat_protection.html#read AdvancedThreatProtection#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/advanced_threat_protection.html#update AdvancedThreatProtection#update}
+  */
   readonly update?: string;
 }
 
@@ -30,14 +52,22 @@ function advancedThreatProtectionTimeoutsToTerraform(struct?: AdvancedThreatProt
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/advanced_threat_protection.html azurerm_advanced_threat_protection}
+*/
 export class AdvancedThreatProtection extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/advanced_threat_protection.html azurerm_advanced_threat_protection} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options AdvancedThreatProtectionConfig
+  */
   public constructor(scope: Construct, id: string, config: AdvancedThreatProtectionConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_advanced_threat_protection',

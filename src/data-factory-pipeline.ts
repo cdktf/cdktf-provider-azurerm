@@ -7,22 +7,65 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataFactoryPipelineConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_pipeline.html#activities_json DataFactoryPipeline#activities_json}
+  */
   readonly activitiesJson?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_pipeline.html#annotations DataFactoryPipeline#annotations}
+  */
   readonly annotations?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_pipeline.html#data_factory_name DataFactoryPipeline#data_factory_name}
+  */
   readonly dataFactoryName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_pipeline.html#description DataFactoryPipeline#description}
+  */
   readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_pipeline.html#folder DataFactoryPipeline#folder}
+  */
   readonly folder?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_pipeline.html#name DataFactoryPipeline#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_pipeline.html#parameters DataFactoryPipeline#parameters}
+  */
   readonly parameters?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_pipeline.html#resource_group_name DataFactoryPipeline#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_pipeline.html#variables DataFactoryPipeline#variables}
+  */
   readonly variables?: { [key: string]: string };
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_pipeline.html#timeouts DataFactoryPipeline#timeouts}
+  */
   readonly timeouts?: DataFactoryPipelineTimeouts;
 }
 export interface DataFactoryPipelineTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_pipeline.html#create DataFactoryPipeline#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_pipeline.html#delete DataFactoryPipeline#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_pipeline.html#read DataFactoryPipeline#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_pipeline.html#update DataFactoryPipeline#update}
+  */
   readonly update?: string;
 }
 
@@ -37,14 +80,22 @@ function dataFactoryPipelineTimeoutsToTerraform(struct?: DataFactoryPipelineTime
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_pipeline.html azurerm_data_factory_pipeline}
+*/
 export class DataFactoryPipeline extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_pipeline.html azurerm_data_factory_pipeline} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataFactoryPipelineConfig
+  */
   public constructor(scope: Construct, id: string, config: DataFactoryPipelineConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_data_factory_pipeline',

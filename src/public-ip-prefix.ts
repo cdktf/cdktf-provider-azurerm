@@ -7,20 +7,57 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface PublicIpPrefixConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/public_ip_prefix.html#location PublicIpPrefix#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/public_ip_prefix.html#name PublicIpPrefix#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/public_ip_prefix.html#prefix_length PublicIpPrefix#prefix_length}
+  */
   readonly prefixLength?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/public_ip_prefix.html#resource_group_name PublicIpPrefix#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/public_ip_prefix.html#sku PublicIpPrefix#sku}
+  */
   readonly sku?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/public_ip_prefix.html#tags PublicIpPrefix#tags}
+  */
   readonly tags?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/public_ip_prefix.html#zones PublicIpPrefix#zones}
+  */
   readonly zones?: string[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/public_ip_prefix.html#timeouts PublicIpPrefix#timeouts}
+  */
   readonly timeouts?: PublicIpPrefixTimeouts;
 }
 export interface PublicIpPrefixTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/public_ip_prefix.html#create PublicIpPrefix#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/public_ip_prefix.html#delete PublicIpPrefix#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/public_ip_prefix.html#read PublicIpPrefix#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/public_ip_prefix.html#update PublicIpPrefix#update}
+  */
   readonly update?: string;
 }
 
@@ -35,14 +72,22 @@ function publicIpPrefixTimeoutsToTerraform(struct?: PublicIpPrefixTimeouts): any
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/public_ip_prefix.html azurerm_public_ip_prefix}
+*/
 export class PublicIpPrefix extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/public_ip_prefix.html azurerm_public_ip_prefix} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options PublicIpPrefixConfig
+  */
   public constructor(scope: Construct, id: string, config: PublicIpPrefixConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_public_ip_prefix',

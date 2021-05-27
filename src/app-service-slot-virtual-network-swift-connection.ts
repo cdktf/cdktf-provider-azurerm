@@ -7,16 +7,41 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface AppServiceSlotVirtualNetworkSwiftConnectionConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot_virtual_network_swift_connection.html#app_service_id AppServiceSlotVirtualNetworkSwiftConnection#app_service_id}
+  */
   readonly appServiceId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot_virtual_network_swift_connection.html#slot_name AppServiceSlotVirtualNetworkSwiftConnection#slot_name}
+  */
   readonly slotName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot_virtual_network_swift_connection.html#subnet_id AppServiceSlotVirtualNetworkSwiftConnection#subnet_id}
+  */
   readonly subnetId: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot_virtual_network_swift_connection.html#timeouts AppServiceSlotVirtualNetworkSwiftConnection#timeouts}
+  */
   readonly timeouts?: AppServiceSlotVirtualNetworkSwiftConnectionTimeouts;
 }
 export interface AppServiceSlotVirtualNetworkSwiftConnectionTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot_virtual_network_swift_connection.html#create AppServiceSlotVirtualNetworkSwiftConnection#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot_virtual_network_swift_connection.html#delete AppServiceSlotVirtualNetworkSwiftConnection#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot_virtual_network_swift_connection.html#read AppServiceSlotVirtualNetworkSwiftConnection#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot_virtual_network_swift_connection.html#update AppServiceSlotVirtualNetworkSwiftConnection#update}
+  */
   readonly update?: string;
 }
 
@@ -31,14 +56,22 @@ function appServiceSlotVirtualNetworkSwiftConnectionTimeoutsToTerraform(struct?:
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot_virtual_network_swift_connection.html azurerm_app_service_slot_virtual_network_swift_connection}
+*/
 export class AppServiceSlotVirtualNetworkSwiftConnection extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot_virtual_network_swift_connection.html azurerm_app_service_slot_virtual_network_swift_connection} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options AppServiceSlotVirtualNetworkSwiftConnectionConfig
+  */
   public constructor(scope: Construct, id: string, config: AppServiceSlotVirtualNetworkSwiftConnectionConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_app_service_slot_virtual_network_swift_connection',

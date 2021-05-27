@@ -7,18 +7,49 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface RedisLinkedServerConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_linked_server.html#linked_redis_cache_id RedisLinkedServer#linked_redis_cache_id}
+  */
   readonly linkedRedisCacheId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_linked_server.html#linked_redis_cache_location RedisLinkedServer#linked_redis_cache_location}
+  */
   readonly linkedRedisCacheLocation: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_linked_server.html#resource_group_name RedisLinkedServer#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_linked_server.html#server_role RedisLinkedServer#server_role}
+  */
   readonly serverRole: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_linked_server.html#target_redis_cache_name RedisLinkedServer#target_redis_cache_name}
+  */
   readonly targetRedisCacheName: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_linked_server.html#timeouts RedisLinkedServer#timeouts}
+  */
   readonly timeouts?: RedisLinkedServerTimeouts;
 }
 export interface RedisLinkedServerTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_linked_server.html#create RedisLinkedServer#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_linked_server.html#delete RedisLinkedServer#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_linked_server.html#read RedisLinkedServer#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_linked_server.html#update RedisLinkedServer#update}
+  */
   readonly update?: string;
 }
 
@@ -33,14 +64,22 @@ function redisLinkedServerTimeoutsToTerraform(struct?: RedisLinkedServerTimeouts
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/redis_linked_server.html azurerm_redis_linked_server}
+*/
 export class RedisLinkedServer extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/redis_linked_server.html azurerm_redis_linked_server} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options RedisLinkedServerConfig
+  */
   public constructor(scope: Construct, id: string, config: RedisLinkedServerConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_redis_linked_server',

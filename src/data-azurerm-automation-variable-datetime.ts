@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/data_azurerm_automation_variable_datetime.html
+// https://www.terraform.io/docs/providers/azurerm/d/automation_variable_datetime.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,13 +7,29 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataAzurermAutomationVariableDatetimeConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/automation_variable_datetime.html#automation_account_name DataAzurermAutomationVariableDatetime#automation_account_name}
+  */
   readonly automationAccountName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/automation_variable_datetime.html#name DataAzurermAutomationVariableDatetime#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/automation_variable_datetime.html#resource_group_name DataAzurermAutomationVariableDatetime#resource_group_name}
+  */
   readonly resourceGroupName: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/automation_variable_datetime.html#timeouts DataAzurermAutomationVariableDatetime#timeouts}
+  */
   readonly timeouts?: DataAzurermAutomationVariableDatetimeTimeouts;
 }
 export interface DataAzurermAutomationVariableDatetimeTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/automation_variable_datetime.html#read DataAzurermAutomationVariableDatetime#read}
+  */
   readonly read?: string;
 }
 
@@ -25,14 +41,22 @@ function dataAzurermAutomationVariableDatetimeTimeoutsToTerraform(struct?: DataA
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/automation_variable_datetime.html azurerm_automation_variable_datetime}
+*/
 export class DataAzurermAutomationVariableDatetime extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/automation_variable_datetime.html azurerm_automation_variable_datetime} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataAzurermAutomationVariableDatetimeConfig
+  */
   public constructor(scope: Construct, id: string, config: DataAzurermAutomationVariableDatetimeConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_automation_variable_datetime',

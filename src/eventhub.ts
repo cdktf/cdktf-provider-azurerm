@@ -7,20 +7,55 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface EventhubConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub.html#message_retention Eventhub#message_retention}
+  */
   readonly messageRetention: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub.html#name Eventhub#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub.html#namespace_name Eventhub#namespace_name}
+  */
   readonly namespaceName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub.html#partition_count Eventhub#partition_count}
+  */
   readonly partitionCount: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub.html#resource_group_name Eventhub#resource_group_name}
+  */
   readonly resourceGroupName: string;
-  /** capture_description block */
+  /**
+  * capture_description block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub.html#capture_description Eventhub#capture_description}
+  */
   readonly captureDescription?: EventhubCaptureDescription[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub.html#timeouts Eventhub#timeouts}
+  */
   readonly timeouts?: EventhubTimeouts;
 }
 export interface EventhubCaptureDescriptionDestination {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub.html#archive_name_format Eventhub#archive_name_format}
+  */
   readonly archiveNameFormat: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub.html#blob_container_name Eventhub#blob_container_name}
+  */
   readonly blobContainerName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub.html#name Eventhub#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub.html#storage_account_id Eventhub#storage_account_id}
+  */
   readonly storageAccountId: string;
 }
 
@@ -35,12 +70,31 @@ function eventhubCaptureDescriptionDestinationToTerraform(struct?: EventhubCaptu
 }
 
 export interface EventhubCaptureDescription {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub.html#enabled Eventhub#enabled}
+  */
   readonly enabled: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub.html#encoding Eventhub#encoding}
+  */
   readonly encoding: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub.html#interval_in_seconds Eventhub#interval_in_seconds}
+  */
   readonly intervalInSeconds?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub.html#size_limit_in_bytes Eventhub#size_limit_in_bytes}
+  */
   readonly sizeLimitInBytes?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub.html#skip_empty_archives Eventhub#skip_empty_archives}
+  */
   readonly skipEmptyArchives?: boolean;
-  /** destination block */
+  /**
+  * destination block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub.html#destination Eventhub#destination}
+  */
   readonly destination: EventhubCaptureDescriptionDestination[];
 }
 
@@ -57,9 +111,21 @@ function eventhubCaptureDescriptionToTerraform(struct?: EventhubCaptureDescripti
 }
 
 export interface EventhubTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub.html#create Eventhub#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub.html#delete Eventhub#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub.html#read Eventhub#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub.html#update Eventhub#update}
+  */
   readonly update?: string;
 }
 
@@ -74,14 +140,22 @@ function eventhubTimeoutsToTerraform(struct?: EventhubTimeouts): any {
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub.html azurerm_eventhub}
+*/
 export class Eventhub extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub.html azurerm_eventhub} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options EventhubConfig
+  */
   public constructor(scope: Construct, id: string, config: EventhubConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_eventhub',

@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set_extension_a.html
+// https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set_extension.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,23 +7,69 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface VirtualMachineScaleSetExtensionAConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set_extension.html#auto_upgrade_minor_version VirtualMachineScaleSetExtensionA#auto_upgrade_minor_version}
+  */
   readonly autoUpgradeMinorVersion?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set_extension.html#force_update_tag VirtualMachineScaleSetExtensionA#force_update_tag}
+  */
   readonly forceUpdateTag?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set_extension.html#name VirtualMachineScaleSetExtensionA#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set_extension.html#protected_settings VirtualMachineScaleSetExtensionA#protected_settings}
+  */
   readonly protectedSettings?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set_extension.html#provision_after_extensions VirtualMachineScaleSetExtensionA#provision_after_extensions}
+  */
   readonly provisionAfterExtensions?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set_extension.html#publisher VirtualMachineScaleSetExtensionA#publisher}
+  */
   readonly publisher: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set_extension.html#settings VirtualMachineScaleSetExtensionA#settings}
+  */
   readonly settings?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set_extension.html#type VirtualMachineScaleSetExtensionA#type}
+  */
   readonly type: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set_extension.html#type_handler_version VirtualMachineScaleSetExtensionA#type_handler_version}
+  */
   readonly typeHandlerVersion: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set_extension.html#virtual_machine_scale_set_id VirtualMachineScaleSetExtensionA#virtual_machine_scale_set_id}
+  */
   readonly virtualMachineScaleSetId: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set_extension.html#timeouts VirtualMachineScaleSetExtensionA#timeouts}
+  */
   readonly timeouts?: VirtualMachineScaleSetExtensionTimeouts;
 }
 export interface VirtualMachineScaleSetExtensionTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set_extension.html#create VirtualMachineScaleSetExtensionA#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set_extension.html#delete VirtualMachineScaleSetExtensionA#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set_extension.html#read VirtualMachineScaleSetExtensionA#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set_extension.html#update VirtualMachineScaleSetExtensionA#update}
+  */
   readonly update?: string;
 }
 
@@ -38,14 +84,22 @@ function virtualMachineScaleSetExtensionTimeoutsToTerraform(struct?: VirtualMach
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set_extension.html azurerm_virtual_machine_scale_set_extension}
+*/
 export class VirtualMachineScaleSetExtensionA extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set_extension.html azurerm_virtual_machine_scale_set_extension} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options VirtualMachineScaleSetExtensionAConfig
+  */
   public constructor(scope: Construct, id: string, config: VirtualMachineScaleSetExtensionAConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_virtual_machine_scale_set_extension',

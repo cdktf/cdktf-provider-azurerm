@@ -7,29 +7,87 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataFactoryIntegrationRuntimeAzureSsisConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_azure_ssis.html#data_factory_name DataFactoryIntegrationRuntimeAzureSsis#data_factory_name}
+  */
   readonly dataFactoryName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_azure_ssis.html#description DataFactoryIntegrationRuntimeAzureSsis#description}
+  */
   readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_azure_ssis.html#edition DataFactoryIntegrationRuntimeAzureSsis#edition}
+  */
   readonly edition?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_azure_ssis.html#license_type DataFactoryIntegrationRuntimeAzureSsis#license_type}
+  */
   readonly licenseType?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_azure_ssis.html#location DataFactoryIntegrationRuntimeAzureSsis#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_azure_ssis.html#max_parallel_executions_per_node DataFactoryIntegrationRuntimeAzureSsis#max_parallel_executions_per_node}
+  */
   readonly maxParallelExecutionsPerNode?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_azure_ssis.html#name DataFactoryIntegrationRuntimeAzureSsis#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_azure_ssis.html#node_size DataFactoryIntegrationRuntimeAzureSsis#node_size}
+  */
   readonly nodeSize: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_azure_ssis.html#number_of_nodes DataFactoryIntegrationRuntimeAzureSsis#number_of_nodes}
+  */
   readonly numberOfNodes?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_azure_ssis.html#resource_group_name DataFactoryIntegrationRuntimeAzureSsis#resource_group_name}
+  */
   readonly resourceGroupName: string;
-  /** catalog_info block */
+  /**
+  * catalog_info block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_azure_ssis.html#catalog_info DataFactoryIntegrationRuntimeAzureSsis#catalog_info}
+  */
   readonly catalogInfo?: DataFactoryIntegrationRuntimeAzureSsisCatalogInfo[];
-  /** custom_setup_script block */
+  /**
+  * custom_setup_script block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_azure_ssis.html#custom_setup_script DataFactoryIntegrationRuntimeAzureSsis#custom_setup_script}
+  */
   readonly customSetupScript?: DataFactoryIntegrationRuntimeAzureSsisCustomSetupScript[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_azure_ssis.html#timeouts DataFactoryIntegrationRuntimeAzureSsis#timeouts}
+  */
   readonly timeouts?: DataFactoryIntegrationRuntimeAzureSsisTimeouts;
-  /** vnet_integration block */
+  /**
+  * vnet_integration block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_azure_ssis.html#vnet_integration DataFactoryIntegrationRuntimeAzureSsis#vnet_integration}
+  */
   readonly vnetIntegration?: DataFactoryIntegrationRuntimeAzureSsisVnetIntegration[];
 }
 export interface DataFactoryIntegrationRuntimeAzureSsisCatalogInfo {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_azure_ssis.html#administrator_login DataFactoryIntegrationRuntimeAzureSsis#administrator_login}
+  */
   readonly administratorLogin?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_azure_ssis.html#administrator_password DataFactoryIntegrationRuntimeAzureSsis#administrator_password}
+  */
   readonly administratorPassword?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_azure_ssis.html#pricing_tier DataFactoryIntegrationRuntimeAzureSsis#pricing_tier}
+  */
   readonly pricingTier?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_azure_ssis.html#server_endpoint DataFactoryIntegrationRuntimeAzureSsis#server_endpoint}
+  */
   readonly serverEndpoint: string;
 }
 
@@ -44,7 +102,13 @@ function dataFactoryIntegrationRuntimeAzureSsisCatalogInfoToTerraform(struct?: D
 }
 
 export interface DataFactoryIntegrationRuntimeAzureSsisCustomSetupScript {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_azure_ssis.html#blob_container_uri DataFactoryIntegrationRuntimeAzureSsis#blob_container_uri}
+  */
   readonly blobContainerUri: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_azure_ssis.html#sas_token DataFactoryIntegrationRuntimeAzureSsis#sas_token}
+  */
   readonly sasToken: string;
 }
 
@@ -57,9 +121,21 @@ function dataFactoryIntegrationRuntimeAzureSsisCustomSetupScriptToTerraform(stru
 }
 
 export interface DataFactoryIntegrationRuntimeAzureSsisTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_azure_ssis.html#create DataFactoryIntegrationRuntimeAzureSsis#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_azure_ssis.html#delete DataFactoryIntegrationRuntimeAzureSsis#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_azure_ssis.html#read DataFactoryIntegrationRuntimeAzureSsis#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_azure_ssis.html#update DataFactoryIntegrationRuntimeAzureSsis#update}
+  */
   readonly update?: string;
 }
 
@@ -74,7 +150,13 @@ function dataFactoryIntegrationRuntimeAzureSsisTimeoutsToTerraform(struct?: Data
 }
 
 export interface DataFactoryIntegrationRuntimeAzureSsisVnetIntegration {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_azure_ssis.html#subnet_name DataFactoryIntegrationRuntimeAzureSsis#subnet_name}
+  */
   readonly subnetName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_azure_ssis.html#vnet_id DataFactoryIntegrationRuntimeAzureSsis#vnet_id}
+  */
   readonly vnetId: string;
 }
 
@@ -87,14 +169,22 @@ function dataFactoryIntegrationRuntimeAzureSsisVnetIntegrationToTerraform(struct
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_azure_ssis.html azurerm_data_factory_integration_runtime_azure_ssis}
+*/
 export class DataFactoryIntegrationRuntimeAzureSsis extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_azure_ssis.html azurerm_data_factory_integration_runtime_azure_ssis} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataFactoryIntegrationRuntimeAzureSsisConfig
+  */
   public constructor(scope: Construct, id: string, config: DataFactoryIntegrationRuntimeAzureSsisConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_data_factory_integration_runtime_azure_ssis',

@@ -7,24 +7,71 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataFactoryDatasetMysqlConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_mysql.html#additional_properties DataFactoryDatasetMysql#additional_properties}
+  */
   readonly additionalProperties?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_mysql.html#annotations DataFactoryDatasetMysql#annotations}
+  */
   readonly annotations?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_mysql.html#data_factory_name DataFactoryDatasetMysql#data_factory_name}
+  */
   readonly dataFactoryName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_mysql.html#description DataFactoryDatasetMysql#description}
+  */
   readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_mysql.html#folder DataFactoryDatasetMysql#folder}
+  */
   readonly folder?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_mysql.html#linked_service_name DataFactoryDatasetMysql#linked_service_name}
+  */
   readonly linkedServiceName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_mysql.html#name DataFactoryDatasetMysql#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_mysql.html#parameters DataFactoryDatasetMysql#parameters}
+  */
   readonly parameters?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_mysql.html#resource_group_name DataFactoryDatasetMysql#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_mysql.html#table_name DataFactoryDatasetMysql#table_name}
+  */
   readonly tableName?: string;
-  /** schema_column block */
+  /**
+  * schema_column block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_mysql.html#schema_column DataFactoryDatasetMysql#schema_column}
+  */
   readonly schemaColumn?: DataFactoryDatasetMysqlSchemaColumn[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_mysql.html#timeouts DataFactoryDatasetMysql#timeouts}
+  */
   readonly timeouts?: DataFactoryDatasetMysqlTimeouts;
 }
 export interface DataFactoryDatasetMysqlSchemaColumn {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_mysql.html#description DataFactoryDatasetMysql#description}
+  */
   readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_mysql.html#name DataFactoryDatasetMysql#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_mysql.html#type DataFactoryDatasetMysql#type}
+  */
   readonly type?: string;
 }
 
@@ -38,9 +85,21 @@ function dataFactoryDatasetMysqlSchemaColumnToTerraform(struct?: DataFactoryData
 }
 
 export interface DataFactoryDatasetMysqlTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_mysql.html#create DataFactoryDatasetMysql#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_mysql.html#delete DataFactoryDatasetMysql#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_mysql.html#read DataFactoryDatasetMysql#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_mysql.html#update DataFactoryDatasetMysql#update}
+  */
   readonly update?: string;
 }
 
@@ -55,14 +114,22 @@ function dataFactoryDatasetMysqlTimeoutsToTerraform(struct?: DataFactoryDatasetM
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_mysql.html azurerm_data_factory_dataset_mysql}
+*/
 export class DataFactoryDatasetMysql extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_mysql.html azurerm_data_factory_dataset_mysql} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataFactoryDatasetMysqlConfig
+  */
   public constructor(scope: Construct, id: string, config: DataFactoryDatasetMysqlConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_data_factory_dataset_mysql',

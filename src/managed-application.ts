@@ -7,25 +7,75 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface ManagedApplicationConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/managed_application.html#application_definition_id ManagedApplication#application_definition_id}
+  */
   readonly applicationDefinitionId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/managed_application.html#kind ManagedApplication#kind}
+  */
   readonly kind: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/managed_application.html#location ManagedApplication#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/managed_application.html#managed_resource_group_name ManagedApplication#managed_resource_group_name}
+  */
   readonly managedResourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/managed_application.html#name ManagedApplication#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/managed_application.html#parameter_values ManagedApplication#parameter_values}
+  */
   readonly parameterValues?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/managed_application.html#parameters ManagedApplication#parameters}
+  */
   readonly parameters?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/managed_application.html#resource_group_name ManagedApplication#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/managed_application.html#tags ManagedApplication#tags}
+  */
   readonly tags?: { [key: string]: string };
-  /** plan block */
+  /**
+  * plan block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/managed_application.html#plan ManagedApplication#plan}
+  */
   readonly plan?: ManagedApplicationPlan[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/managed_application.html#timeouts ManagedApplication#timeouts}
+  */
   readonly timeouts?: ManagedApplicationTimeouts;
 }
 export interface ManagedApplicationPlan {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/managed_application.html#name ManagedApplication#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/managed_application.html#product ManagedApplication#product}
+  */
   readonly product: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/managed_application.html#promotion_code ManagedApplication#promotion_code}
+  */
   readonly promotionCode?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/managed_application.html#publisher ManagedApplication#publisher}
+  */
   readonly publisher: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/managed_application.html#version ManagedApplication#version}
+  */
   readonly version: string;
 }
 
@@ -41,9 +91,21 @@ function managedApplicationPlanToTerraform(struct?: ManagedApplicationPlan): any
 }
 
 export interface ManagedApplicationTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/managed_application.html#create ManagedApplication#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/managed_application.html#delete ManagedApplication#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/managed_application.html#read ManagedApplication#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/managed_application.html#update ManagedApplication#update}
+  */
   readonly update?: string;
 }
 
@@ -58,14 +120,22 @@ function managedApplicationTimeoutsToTerraform(struct?: ManagedApplicationTimeou
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/managed_application.html azurerm_managed_application}
+*/
 export class ManagedApplication extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/managed_application.html azurerm_managed_application} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options ManagedApplicationConfig
+  */
   public constructor(scope: Construct, id: string, config: ManagedApplicationConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_managed_application',

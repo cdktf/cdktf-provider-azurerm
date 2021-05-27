@@ -7,21 +7,59 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface LocalNetworkGatewayConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/local_network_gateway.html#address_space LocalNetworkGateway#address_space}
+  */
   readonly addressSpace?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/local_network_gateway.html#gateway_address LocalNetworkGateway#gateway_address}
+  */
   readonly gatewayAddress?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/local_network_gateway.html#gateway_fqdn LocalNetworkGateway#gateway_fqdn}
+  */
   readonly gatewayFqdn?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/local_network_gateway.html#location LocalNetworkGateway#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/local_network_gateway.html#name LocalNetworkGateway#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/local_network_gateway.html#resource_group_name LocalNetworkGateway#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/local_network_gateway.html#tags LocalNetworkGateway#tags}
+  */
   readonly tags?: { [key: string]: string };
-  /** bgp_settings block */
+  /**
+  * bgp_settings block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/local_network_gateway.html#bgp_settings LocalNetworkGateway#bgp_settings}
+  */
   readonly bgpSettings?: LocalNetworkGatewayBgpSettings[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/local_network_gateway.html#timeouts LocalNetworkGateway#timeouts}
+  */
   readonly timeouts?: LocalNetworkGatewayTimeouts;
 }
 export interface LocalNetworkGatewayBgpSettings {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/local_network_gateway.html#asn LocalNetworkGateway#asn}
+  */
   readonly asn: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/local_network_gateway.html#bgp_peering_address LocalNetworkGateway#bgp_peering_address}
+  */
   readonly bgpPeeringAddress: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/local_network_gateway.html#peer_weight LocalNetworkGateway#peer_weight}
+  */
   readonly peerWeight?: number;
 }
 
@@ -35,9 +73,21 @@ function localNetworkGatewayBgpSettingsToTerraform(struct?: LocalNetworkGatewayB
 }
 
 export interface LocalNetworkGatewayTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/local_network_gateway.html#create LocalNetworkGateway#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/local_network_gateway.html#delete LocalNetworkGateway#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/local_network_gateway.html#read LocalNetworkGateway#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/local_network_gateway.html#update LocalNetworkGateway#update}
+  */
   readonly update?: string;
 }
 
@@ -52,14 +102,22 @@ function localNetworkGatewayTimeoutsToTerraform(struct?: LocalNetworkGatewayTime
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/local_network_gateway.html azurerm_local_network_gateway}
+*/
 export class LocalNetworkGateway extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/local_network_gateway.html azurerm_local_network_gateway} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options LocalNetworkGatewayConfig
+  */
   public constructor(scope: Construct, id: string, config: LocalNetworkGatewayConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_local_network_gateway',

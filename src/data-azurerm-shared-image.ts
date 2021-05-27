@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/data_azurerm_shared_image.html
+// https://www.terraform.io/docs/providers/azurerm/d/shared_image.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,10 +7,23 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataAzurermSharedImageConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/shared_image.html#gallery_name DataAzurermSharedImage#gallery_name}
+  */
   readonly galleryName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/shared_image.html#name DataAzurermSharedImage#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/shared_image.html#resource_group_name DataAzurermSharedImage#resource_group_name}
+  */
   readonly resourceGroupName: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/shared_image.html#timeouts DataAzurermSharedImage#timeouts}
+  */
   readonly timeouts?: DataAzurermSharedImageTimeouts;
 }
 export class DataAzurermSharedImageIdentifier extends cdktf.ComplexComputedList {
@@ -31,6 +44,9 @@ export class DataAzurermSharedImageIdentifier extends cdktf.ComplexComputedList 
   }
 }
 export interface DataAzurermSharedImageTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/shared_image.html#read DataAzurermSharedImage#read}
+  */
   readonly read?: string;
 }
 
@@ -42,14 +58,22 @@ function dataAzurermSharedImageTimeoutsToTerraform(struct?: DataAzurermSharedIma
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/shared_image.html azurerm_shared_image}
+*/
 export class DataAzurermSharedImage extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/shared_image.html azurerm_shared_image} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataAzurermSharedImageConfig
+  */
   public constructor(scope: Construct, id: string, config: DataAzurermSharedImageConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_shared_image',

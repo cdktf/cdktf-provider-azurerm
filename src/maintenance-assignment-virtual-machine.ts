@@ -7,15 +7,37 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface MaintenanceAssignmentVirtualMachineConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/maintenance_assignment_virtual_machine.html#location MaintenanceAssignmentVirtualMachine#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/maintenance_assignment_virtual_machine.html#maintenance_configuration_id MaintenanceAssignmentVirtualMachine#maintenance_configuration_id}
+  */
   readonly maintenanceConfigurationId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/maintenance_assignment_virtual_machine.html#virtual_machine_id MaintenanceAssignmentVirtualMachine#virtual_machine_id}
+  */
   readonly virtualMachineId: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/maintenance_assignment_virtual_machine.html#timeouts MaintenanceAssignmentVirtualMachine#timeouts}
+  */
   readonly timeouts?: MaintenanceAssignmentVirtualMachineTimeouts;
 }
 export interface MaintenanceAssignmentVirtualMachineTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/maintenance_assignment_virtual_machine.html#create MaintenanceAssignmentVirtualMachine#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/maintenance_assignment_virtual_machine.html#delete MaintenanceAssignmentVirtualMachine#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/maintenance_assignment_virtual_machine.html#read MaintenanceAssignmentVirtualMachine#read}
+  */
   readonly read?: string;
 }
 
@@ -29,14 +51,22 @@ function maintenanceAssignmentVirtualMachineTimeoutsToTerraform(struct?: Mainten
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/maintenance_assignment_virtual_machine.html azurerm_maintenance_assignment_virtual_machine}
+*/
 export class MaintenanceAssignmentVirtualMachine extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/maintenance_assignment_virtual_machine.html azurerm_maintenance_assignment_virtual_machine} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options MaintenanceAssignmentVirtualMachineConfig
+  */
   public constructor(scope: Construct, id: string, config: MaintenanceAssignmentVirtualMachineConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_maintenance_assignment_virtual_machine',

@@ -7,15 +7,37 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface LogAnalyticsClusterCustomerManagedKeyConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_cluster_customer_managed_key.html#key_vault_key_id LogAnalyticsClusterCustomerManagedKey#key_vault_key_id}
+  */
   readonly keyVaultKeyId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_cluster_customer_managed_key.html#log_analytics_cluster_id LogAnalyticsClusterCustomerManagedKey#log_analytics_cluster_id}
+  */
   readonly logAnalyticsClusterId: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_cluster_customer_managed_key.html#timeouts LogAnalyticsClusterCustomerManagedKey#timeouts}
+  */
   readonly timeouts?: LogAnalyticsClusterCustomerManagedKeyTimeouts;
 }
 export interface LogAnalyticsClusterCustomerManagedKeyTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_cluster_customer_managed_key.html#create LogAnalyticsClusterCustomerManagedKey#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_cluster_customer_managed_key.html#delete LogAnalyticsClusterCustomerManagedKey#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_cluster_customer_managed_key.html#read LogAnalyticsClusterCustomerManagedKey#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_cluster_customer_managed_key.html#update LogAnalyticsClusterCustomerManagedKey#update}
+  */
   readonly update?: string;
 }
 
@@ -30,14 +52,22 @@ function logAnalyticsClusterCustomerManagedKeyTimeoutsToTerraform(struct?: LogAn
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_cluster_customer_managed_key.html azurerm_log_analytics_cluster_customer_managed_key}
+*/
 export class LogAnalyticsClusterCustomerManagedKey extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_cluster_customer_managed_key.html azurerm_log_analytics_cluster_customer_managed_key} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options LogAnalyticsClusterCustomerManagedKeyConfig
+  */
   public constructor(scope: Construct, id: string, config: LogAnalyticsClusterCustomerManagedKeyConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_log_analytics_cluster_customer_managed_key',

@@ -7,17 +7,43 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface LbBackendAddressPoolConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb_backend_address_pool.html#loadbalancer_id LbBackendAddressPool#loadbalancer_id}
+  */
   readonly loadbalancerId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb_backend_address_pool.html#name LbBackendAddressPool#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb_backend_address_pool.html#resource_group_name LbBackendAddressPool#resource_group_name}
+  */
   readonly resourceGroupName?: string;
-  /** backend_address block */
+  /**
+  * backend_address block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb_backend_address_pool.html#backend_address LbBackendAddressPool#backend_address}
+  */
   readonly backendAddress?: LbBackendAddressPoolBackendAddress[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb_backend_address_pool.html#timeouts LbBackendAddressPool#timeouts}
+  */
   readonly timeouts?: LbBackendAddressPoolTimeouts;
 }
 export interface LbBackendAddressPoolBackendAddress {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb_backend_address_pool.html#ip_address LbBackendAddressPool#ip_address}
+  */
   readonly ipAddress: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb_backend_address_pool.html#name LbBackendAddressPool#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb_backend_address_pool.html#virtual_network_id LbBackendAddressPool#virtual_network_id}
+  */
   readonly virtualNetworkId: string;
 }
 
@@ -31,9 +57,21 @@ function lbBackendAddressPoolBackendAddressToTerraform(struct?: LbBackendAddress
 }
 
 export interface LbBackendAddressPoolTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb_backend_address_pool.html#create LbBackendAddressPool#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb_backend_address_pool.html#delete LbBackendAddressPool#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb_backend_address_pool.html#read LbBackendAddressPool#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb_backend_address_pool.html#update LbBackendAddressPool#update}
+  */
   readonly update?: string;
 }
 
@@ -48,14 +86,22 @@ function lbBackendAddressPoolTimeoutsToTerraform(struct?: LbBackendAddressPoolTi
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/lb_backend_address_pool.html azurerm_lb_backend_address_pool}
+*/
 export class LbBackendAddressPool extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/lb_backend_address_pool.html azurerm_lb_backend_address_pool} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options LbBackendAddressPoolConfig
+  */
   public constructor(scope: Construct, id: string, config: LbBackendAddressPoolConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_lb_backend_address_pool',

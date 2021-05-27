@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/data_azurerm_healthcare_service.html
+// https://www.terraform.io/docs/providers/azurerm/d/healthcare_service.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,10 +7,23 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataAzurermHealthcareServiceConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/healthcare_service.html#location DataAzurermHealthcareService#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/healthcare_service.html#name DataAzurermHealthcareService#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/healthcare_service.html#resource_group_name DataAzurermHealthcareService#resource_group_name}
+  */
   readonly resourceGroupName: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/healthcare_service.html#timeouts DataAzurermHealthcareService#timeouts}
+  */
   readonly timeouts?: DataAzurermHealthcareServiceTimeouts;
 }
 export class DataAzurermHealthcareServiceAuthenticationConfiguration extends cdktf.ComplexComputedList {
@@ -58,6 +71,9 @@ export class DataAzurermHealthcareServiceCorsConfiguration extends cdktf.Complex
   }
 }
 export interface DataAzurermHealthcareServiceTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/healthcare_service.html#read DataAzurermHealthcareService#read}
+  */
   readonly read?: string;
 }
 
@@ -69,14 +85,22 @@ function dataAzurermHealthcareServiceTimeoutsToTerraform(struct?: DataAzurermHea
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/healthcare_service.html azurerm_healthcare_service}
+*/
 export class DataAzurermHealthcareService extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/healthcare_service.html azurerm_healthcare_service} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataAzurermHealthcareServiceConfig
+  */
   public constructor(scope: Construct, id: string, config: DataAzurermHealthcareServiceConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_healthcare_service',

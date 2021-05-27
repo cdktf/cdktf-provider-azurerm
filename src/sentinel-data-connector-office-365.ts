@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/sentinel_data_connector_office365.html
+// https://www.terraform.io/docs/providers/azurerm/r/sentinel_data_connector_office_365.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,19 +7,53 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface SentinelDataConnectorOffice365Config extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_data_connector_office_365.html#exchange_enabled SentinelDataConnectorOffice365#exchange_enabled}
+  */
   readonly exchangeEnabled?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_data_connector_office_365.html#log_analytics_workspace_id SentinelDataConnectorOffice365#log_analytics_workspace_id}
+  */
   readonly logAnalyticsWorkspaceId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_data_connector_office_365.html#name SentinelDataConnectorOffice365#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_data_connector_office_365.html#sharepoint_enabled SentinelDataConnectorOffice365#sharepoint_enabled}
+  */
   readonly sharepointEnabled?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_data_connector_office_365.html#teams_enabled SentinelDataConnectorOffice365#teams_enabled}
+  */
   readonly teamsEnabled?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_data_connector_office_365.html#tenant_id SentinelDataConnectorOffice365#tenant_id}
+  */
   readonly tenantId?: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_data_connector_office_365.html#timeouts SentinelDataConnectorOffice365#timeouts}
+  */
   readonly timeouts?: SentinelDataConnectorOffice365Timeouts;
 }
 export interface SentinelDataConnectorOffice365Timeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_data_connector_office_365.html#create SentinelDataConnectorOffice365#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_data_connector_office_365.html#delete SentinelDataConnectorOffice365#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_data_connector_office_365.html#read SentinelDataConnectorOffice365#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_data_connector_office_365.html#update SentinelDataConnectorOffice365#update}
+  */
   readonly update?: string;
 }
 
@@ -34,14 +68,22 @@ function sentinelDataConnectorOffice365TimeoutsToTerraform(struct?: SentinelData
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_data_connector_office_365.html azurerm_sentinel_data_connector_office_365}
+*/
 export class SentinelDataConnectorOffice365 extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_data_connector_office_365.html azurerm_sentinel_data_connector_office_365} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options SentinelDataConnectorOffice365Config
+  */
   public constructor(scope: Construct, id: string, config: SentinelDataConnectorOffice365Config) {
     super(scope, id, {
       terraformResourceType: 'azurerm_sentinel_data_connector_office_365',

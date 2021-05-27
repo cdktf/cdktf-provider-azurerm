@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/data_azurerm_maps_account.html
+// https://www.terraform.io/docs/providers/azurerm/d/maps_account.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,13 +7,29 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataAzurermMapsAccountConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/maps_account.html#name DataAzurermMapsAccount#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/maps_account.html#resource_group_name DataAzurermMapsAccount#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/maps_account.html#tags DataAzurermMapsAccount#tags}
+  */
   readonly tags?: { [key: string]: string };
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/maps_account.html#timeouts DataAzurermMapsAccount#timeouts}
+  */
   readonly timeouts?: DataAzurermMapsAccountTimeouts;
 }
 export interface DataAzurermMapsAccountTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/maps_account.html#read DataAzurermMapsAccount#read}
+  */
   readonly read?: string;
 }
 
@@ -25,14 +41,22 @@ function dataAzurermMapsAccountTimeoutsToTerraform(struct?: DataAzurermMapsAccou
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/maps_account.html azurerm_maps_account}
+*/
 export class DataAzurermMapsAccount extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/maps_account.html azurerm_maps_account} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataAzurermMapsAccountConfig
+  */
   public constructor(scope: Construct, id: string, config: DataAzurermMapsAccountConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_maps_account',

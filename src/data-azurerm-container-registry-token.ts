@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/data_azurerm_container_registry_token.html
+// https://www.terraform.io/docs/providers/azurerm/d/container_registry_token.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,13 +7,29 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataAzurermContainerRegistryTokenConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/container_registry_token.html#container_registry_name DataAzurermContainerRegistryToken#container_registry_name}
+  */
   readonly containerRegistryName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/container_registry_token.html#name DataAzurermContainerRegistryToken#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/container_registry_token.html#resource_group_name DataAzurermContainerRegistryToken#resource_group_name}
+  */
   readonly resourceGroupName: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/container_registry_token.html#timeouts DataAzurermContainerRegistryToken#timeouts}
+  */
   readonly timeouts?: DataAzurermContainerRegistryTokenTimeouts;
 }
 export interface DataAzurermContainerRegistryTokenTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/container_registry_token.html#read DataAzurermContainerRegistryToken#read}
+  */
   readonly read?: string;
 }
 
@@ -25,14 +41,22 @@ function dataAzurermContainerRegistryTokenTimeoutsToTerraform(struct?: DataAzure
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/container_registry_token.html azurerm_container_registry_token}
+*/
 export class DataAzurermContainerRegistryToken extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/container_registry_token.html azurerm_container_registry_token} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataAzurermContainerRegistryTokenConfig
+  */
   public constructor(scope: Construct, id: string, config: DataAzurermContainerRegistryTokenConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_container_registry_token',

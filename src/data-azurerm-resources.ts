@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/data_azurerm_resources.html
+// https://www.terraform.io/docs/providers/azurerm/d/resources.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,11 +7,27 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataAzurermResourcesConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/resources.html#name DataAzurermResources#name}
+  */
   readonly name?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/resources.html#required_tags DataAzurermResources#required_tags}
+  */
   readonly requiredTags?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/resources.html#resource_group_name DataAzurermResources#resource_group_name}
+  */
   readonly resourceGroupName?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/resources.html#type DataAzurermResources#type}
+  */
   readonly type?: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/resources.html#timeouts DataAzurermResources#timeouts}
+  */
   readonly timeouts?: DataAzurermResourcesTimeouts;
 }
 export class DataAzurermResourcesResources extends cdktf.ComplexComputedList {
@@ -42,6 +58,9 @@ export class DataAzurermResourcesResources extends cdktf.ComplexComputedList {
   }
 }
 export interface DataAzurermResourcesTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/resources.html#read DataAzurermResources#read}
+  */
   readonly read?: string;
 }
 
@@ -53,14 +72,22 @@ function dataAzurermResourcesTimeoutsToTerraform(struct?: DataAzurermResourcesTi
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/resources.html azurerm_resources}
+*/
 export class DataAzurermResources extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/resources.html azurerm_resources} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataAzurermResourcesConfig = {}
+  */
   public constructor(scope: Construct, id: string, config: DataAzurermResourcesConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'azurerm_resources',

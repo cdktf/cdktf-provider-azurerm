@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/data_azurerm_key_vault_access_policy_a.html
+// https://www.terraform.io/docs/providers/azurerm/d/key_vault_access_policy.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,11 +7,21 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataAzurermKeyVaultAccessPolicyAConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/key_vault_access_policy.html#name DataAzurermKeyVaultAccessPolicyA#name}
+  */
   readonly name: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/key_vault_access_policy.html#timeouts DataAzurermKeyVaultAccessPolicyA#timeouts}
+  */
   readonly timeouts?: DataAzurermKeyVaultAccessPolicyTimeouts;
 }
 export interface DataAzurermKeyVaultAccessPolicyTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/key_vault_access_policy.html#read DataAzurermKeyVaultAccessPolicyA#read}
+  */
   readonly read?: string;
 }
 
@@ -23,14 +33,22 @@ function dataAzurermKeyVaultAccessPolicyTimeoutsToTerraform(struct?: DataAzurerm
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/key_vault_access_policy.html azurerm_key_vault_access_policy}
+*/
 export class DataAzurermKeyVaultAccessPolicyA extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/key_vault_access_policy.html azurerm_key_vault_access_policy} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataAzurermKeyVaultAccessPolicyAConfig
+  */
   public constructor(scope: Construct, id: string, config: DataAzurermKeyVaultAccessPolicyAConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_key_vault_access_policy',

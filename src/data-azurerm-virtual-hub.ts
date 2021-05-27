@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/data_azurerm_virtual_hub.html
+// https://www.terraform.io/docs/providers/azurerm/d/virtual_hub.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,12 +7,25 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataAzurermVirtualHubConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/virtual_hub.html#name DataAzurermVirtualHub#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/virtual_hub.html#resource_group_name DataAzurermVirtualHub#resource_group_name}
+  */
   readonly resourceGroupName: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/virtual_hub.html#timeouts DataAzurermVirtualHub#timeouts}
+  */
   readonly timeouts?: DataAzurermVirtualHubTimeouts;
 }
 export interface DataAzurermVirtualHubTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/virtual_hub.html#read DataAzurermVirtualHub#read}
+  */
   readonly read?: string;
 }
 
@@ -24,14 +37,22 @@ function dataAzurermVirtualHubTimeoutsToTerraform(struct?: DataAzurermVirtualHub
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/virtual_hub.html azurerm_virtual_hub}
+*/
 export class DataAzurermVirtualHub extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/virtual_hub.html azurerm_virtual_hub} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataAzurermVirtualHubConfig
+  */
   public constructor(scope: Construct, id: string, config: DataAzurermVirtualHubConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_virtual_hub',

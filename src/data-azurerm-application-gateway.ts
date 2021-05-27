@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/data_azurerm_application_gateway.html
+// https://www.terraform.io/docs/providers/azurerm/d/application_gateway.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,9 +7,19 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataAzurermApplicationGatewayConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/application_gateway.html#name DataAzurermApplicationGateway#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/application_gateway.html#resource_group_name DataAzurermApplicationGateway#resource_group_name}
+  */
   readonly resourceGroupName: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/application_gateway.html#timeouts DataAzurermApplicationGateway#timeouts}
+  */
   readonly timeouts?: DataAzurermApplicationGatewayTimeouts;
 }
 export class DataAzurermApplicationGatewayIdentity extends cdktf.ComplexComputedList {
@@ -25,6 +35,9 @@ export class DataAzurermApplicationGatewayIdentity extends cdktf.ComplexComputed
   }
 }
 export interface DataAzurermApplicationGatewayTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/application_gateway.html#read DataAzurermApplicationGateway#read}
+  */
   readonly read?: string;
 }
 
@@ -36,14 +49,22 @@ function dataAzurermApplicationGatewayTimeoutsToTerraform(struct?: DataAzurermAp
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/application_gateway.html azurerm_application_gateway}
+*/
 export class DataAzurermApplicationGateway extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/application_gateway.html azurerm_application_gateway} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataAzurermApplicationGatewayConfig
+  */
   public constructor(scope: Construct, id: string, config: DataAzurermApplicationGatewayConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_application_gateway',

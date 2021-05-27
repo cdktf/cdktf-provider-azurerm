@@ -7,18 +7,47 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface FirewallApplicationRuleCollectionConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_application_rule_collection.html#action FirewallApplicationRuleCollection#action}
+  */
   readonly action: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_application_rule_collection.html#azure_firewall_name FirewallApplicationRuleCollection#azure_firewall_name}
+  */
   readonly azureFirewallName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_application_rule_collection.html#name FirewallApplicationRuleCollection#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_application_rule_collection.html#priority FirewallApplicationRuleCollection#priority}
+  */
   readonly priority: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_application_rule_collection.html#resource_group_name FirewallApplicationRuleCollection#resource_group_name}
+  */
   readonly resourceGroupName: string;
-  /** rule block */
+  /**
+  * rule block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_application_rule_collection.html#rule FirewallApplicationRuleCollection#rule}
+  */
   readonly rule: FirewallApplicationRuleCollectionRule[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_application_rule_collection.html#timeouts FirewallApplicationRuleCollection#timeouts}
+  */
   readonly timeouts?: FirewallApplicationRuleCollectionTimeouts;
 }
 export interface FirewallApplicationRuleCollectionRuleProtocol {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_application_rule_collection.html#port FirewallApplicationRuleCollection#port}
+  */
   readonly port?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_application_rule_collection.html#type FirewallApplicationRuleCollection#type}
+  */
   readonly type: string;
 }
 
@@ -31,13 +60,35 @@ function firewallApplicationRuleCollectionRuleProtocolToTerraform(struct?: Firew
 }
 
 export interface FirewallApplicationRuleCollectionRule {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_application_rule_collection.html#description FirewallApplicationRuleCollection#description}
+  */
   readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_application_rule_collection.html#fqdn_tags FirewallApplicationRuleCollection#fqdn_tags}
+  */
   readonly fqdnTags?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_application_rule_collection.html#name FirewallApplicationRuleCollection#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_application_rule_collection.html#source_addresses FirewallApplicationRuleCollection#source_addresses}
+  */
   readonly sourceAddresses?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_application_rule_collection.html#source_ip_groups FirewallApplicationRuleCollection#source_ip_groups}
+  */
   readonly sourceIpGroups?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_application_rule_collection.html#target_fqdns FirewallApplicationRuleCollection#target_fqdns}
+  */
   readonly targetFqdns?: string[];
-  /** protocol block */
+  /**
+  * protocol block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_application_rule_collection.html#protocol FirewallApplicationRuleCollection#protocol}
+  */
   readonly protocol?: FirewallApplicationRuleCollectionRuleProtocol[];
 }
 
@@ -55,9 +106,21 @@ function firewallApplicationRuleCollectionRuleToTerraform(struct?: FirewallAppli
 }
 
 export interface FirewallApplicationRuleCollectionTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_application_rule_collection.html#create FirewallApplicationRuleCollection#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_application_rule_collection.html#delete FirewallApplicationRuleCollection#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_application_rule_collection.html#read FirewallApplicationRuleCollection#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_application_rule_collection.html#update FirewallApplicationRuleCollection#update}
+  */
   readonly update?: string;
 }
 
@@ -72,14 +135,22 @@ function firewallApplicationRuleCollectionTimeoutsToTerraform(struct?: FirewallA
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_application_rule_collection.html azurerm_firewall_application_rule_collection}
+*/
 export class FirewallApplicationRuleCollection extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_application_rule_collection.html azurerm_firewall_application_rule_collection} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options FirewallApplicationRuleCollectionConfig
+  */
   public constructor(scope: Construct, id: string, config: FirewallApplicationRuleCollectionConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_firewall_application_rule_collection',

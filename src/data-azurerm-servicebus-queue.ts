@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/data_azurerm_servicebus_queue.html
+// https://www.terraform.io/docs/providers/azurerm/d/servicebus_queue.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,13 +7,29 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataAzurermServicebusQueueConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/servicebus_queue.html#name DataAzurermServicebusQueue#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/servicebus_queue.html#namespace_name DataAzurermServicebusQueue#namespace_name}
+  */
   readonly namespaceName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/servicebus_queue.html#resource_group_name DataAzurermServicebusQueue#resource_group_name}
+  */
   readonly resourceGroupName: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/servicebus_queue.html#timeouts DataAzurermServicebusQueue#timeouts}
+  */
   readonly timeouts?: DataAzurermServicebusQueueTimeouts;
 }
 export interface DataAzurermServicebusQueueTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/servicebus_queue.html#read DataAzurermServicebusQueue#read}
+  */
   readonly read?: string;
 }
 
@@ -25,14 +41,22 @@ function dataAzurermServicebusQueueTimeoutsToTerraform(struct?: DataAzurermServi
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/servicebus_queue.html azurerm_servicebus_queue}
+*/
 export class DataAzurermServicebusQueue extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/servicebus_queue.html azurerm_servicebus_queue} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataAzurermServicebusQueueConfig
+  */
   public constructor(scope: Construct, id: string, config: DataAzurermServicebusQueueConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_servicebus_queue',

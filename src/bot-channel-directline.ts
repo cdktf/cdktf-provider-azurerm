@@ -7,20 +7,55 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface BotChannelDirectlineConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_directline.html#bot_name BotChannelDirectline#bot_name}
+  */
   readonly botName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_directline.html#location BotChannelDirectline#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_directline.html#resource_group_name BotChannelDirectline#resource_group_name}
+  */
   readonly resourceGroupName: string;
-  /** site block */
+  /**
+  * site block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_directline.html#site BotChannelDirectline#site}
+  */
   readonly site: BotChannelDirectlineSite[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_directline.html#timeouts BotChannelDirectline#timeouts}
+  */
   readonly timeouts?: BotChannelDirectlineTimeouts;
 }
 export interface BotChannelDirectlineSite {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_directline.html#enabled BotChannelDirectline#enabled}
+  */
   readonly enabled?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_directline.html#enhanced_authentication_enabled BotChannelDirectline#enhanced_authentication_enabled}
+  */
   readonly enhancedAuthenticationEnabled?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_directline.html#name BotChannelDirectline#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_directline.html#trusted_origins BotChannelDirectline#trusted_origins}
+  */
   readonly trustedOrigins?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_directline.html#v1_allowed BotChannelDirectline#v1_allowed}
+  */
   readonly v1Allowed?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_directline.html#v3_allowed BotChannelDirectline#v3_allowed}
+  */
   readonly v3Allowed?: boolean;
 }
 
@@ -37,9 +72,21 @@ function botChannelDirectlineSiteToTerraform(struct?: BotChannelDirectlineSite):
 }
 
 export interface BotChannelDirectlineTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_directline.html#create BotChannelDirectline#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_directline.html#delete BotChannelDirectline#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_directline.html#read BotChannelDirectline#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_directline.html#update BotChannelDirectline#update}
+  */
   readonly update?: string;
 }
 
@@ -54,14 +101,22 @@ function botChannelDirectlineTimeoutsToTerraform(struct?: BotChannelDirectlineTi
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_directline.html azurerm_bot_channel_directline}
+*/
 export class BotChannelDirectline extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_directline.html azurerm_bot_channel_directline} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options BotChannelDirectlineConfig
+  */
   public constructor(scope: Construct, id: string, config: BotChannelDirectlineConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_bot_channel_directline',

@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/data_azurerm_netapp_account.html
+// https://www.terraform.io/docs/providers/azurerm/d/netapp_account.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,12 +7,25 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataAzurermNetappAccountConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/netapp_account.html#name DataAzurermNetappAccount#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/netapp_account.html#resource_group_name DataAzurermNetappAccount#resource_group_name}
+  */
   readonly resourceGroupName: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/netapp_account.html#timeouts DataAzurermNetappAccount#timeouts}
+  */
   readonly timeouts?: DataAzurermNetappAccountTimeouts;
 }
 export interface DataAzurermNetappAccountTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/netapp_account.html#read DataAzurermNetappAccount#read}
+  */
   readonly read?: string;
 }
 
@@ -24,14 +37,22 @@ function dataAzurermNetappAccountTimeoutsToTerraform(struct?: DataAzurermNetappA
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/netapp_account.html azurerm_netapp_account}
+*/
 export class DataAzurermNetappAccount extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/netapp_account.html azurerm_netapp_account} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataAzurermNetappAccountConfig
+  */
   public constructor(scope: Construct, id: string, config: DataAzurermNetappAccountConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_netapp_account',

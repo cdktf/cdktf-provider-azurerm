@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/data_azurerm_subscriptions.html
+// https://www.terraform.io/docs/providers/azurerm/d/subscriptions.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,9 +7,19 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataAzurermSubscriptionsConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/subscriptions.html#display_name_contains DataAzurermSubscriptions#display_name_contains}
+  */
   readonly displayNameContains?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/subscriptions.html#display_name_prefix DataAzurermSubscriptions#display_name_prefix}
+  */
   readonly displayNamePrefix?: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/subscriptions.html#timeouts DataAzurermSubscriptions#timeouts}
+  */
   readonly timeouts?: DataAzurermSubscriptionsTimeouts;
 }
 export class DataAzurermSubscriptionsSubscriptions extends cdktf.ComplexComputedList {
@@ -60,6 +70,9 @@ export class DataAzurermSubscriptionsSubscriptions extends cdktf.ComplexComputed
   }
 }
 export interface DataAzurermSubscriptionsTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/subscriptions.html#read DataAzurermSubscriptions#read}
+  */
   readonly read?: string;
 }
 
@@ -71,14 +84,22 @@ function dataAzurermSubscriptionsTimeoutsToTerraform(struct?: DataAzurermSubscri
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/subscriptions.html azurerm_subscriptions}
+*/
 export class DataAzurermSubscriptions extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/subscriptions.html azurerm_subscriptions} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataAzurermSubscriptionsConfig = {}
+  */
   public constructor(scope: Construct, id: string, config: DataAzurermSubscriptionsConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'azurerm_subscriptions',

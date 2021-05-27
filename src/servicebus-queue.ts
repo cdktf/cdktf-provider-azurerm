@@ -7,31 +7,101 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface ServicebusQueueConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_queue.html#auto_delete_on_idle ServicebusQueue#auto_delete_on_idle}
+  */
   readonly autoDeleteOnIdle?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_queue.html#dead_lettering_on_message_expiration ServicebusQueue#dead_lettering_on_message_expiration}
+  */
   readonly deadLetteringOnMessageExpiration?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_queue.html#default_message_ttl ServicebusQueue#default_message_ttl}
+  */
   readonly defaultMessageTtl?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_queue.html#duplicate_detection_history_time_window ServicebusQueue#duplicate_detection_history_time_window}
+  */
   readonly duplicateDetectionHistoryTimeWindow?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_queue.html#enable_batched_operations ServicebusQueue#enable_batched_operations}
+  */
   readonly enableBatchedOperations?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_queue.html#enable_express ServicebusQueue#enable_express}
+  */
   readonly enableExpress?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_queue.html#enable_partitioning ServicebusQueue#enable_partitioning}
+  */
   readonly enablePartitioning?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_queue.html#forward_dead_lettered_messages_to ServicebusQueue#forward_dead_lettered_messages_to}
+  */
   readonly forwardDeadLetteredMessagesTo?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_queue.html#forward_to ServicebusQueue#forward_to}
+  */
   readonly forwardTo?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_queue.html#lock_duration ServicebusQueue#lock_duration}
+  */
   readonly lockDuration?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_queue.html#max_delivery_count ServicebusQueue#max_delivery_count}
+  */
   readonly maxDeliveryCount?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_queue.html#max_size_in_megabytes ServicebusQueue#max_size_in_megabytes}
+  */
   readonly maxSizeInMegabytes?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_queue.html#name ServicebusQueue#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_queue.html#namespace_name ServicebusQueue#namespace_name}
+  */
   readonly namespaceName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_queue.html#requires_duplicate_detection ServicebusQueue#requires_duplicate_detection}
+  */
   readonly requiresDuplicateDetection?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_queue.html#requires_session ServicebusQueue#requires_session}
+  */
   readonly requiresSession?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_queue.html#resource_group_name ServicebusQueue#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_queue.html#status ServicebusQueue#status}
+  */
   readonly status?: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_queue.html#timeouts ServicebusQueue#timeouts}
+  */
   readonly timeouts?: ServicebusQueueTimeouts;
 }
 export interface ServicebusQueueTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_queue.html#create ServicebusQueue#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_queue.html#delete ServicebusQueue#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_queue.html#read ServicebusQueue#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_queue.html#update ServicebusQueue#update}
+  */
   readonly update?: string;
 }
 
@@ -46,14 +116,22 @@ function servicebusQueueTimeoutsToTerraform(struct?: ServicebusQueueTimeouts): a
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_queue.html azurerm_servicebus_queue}
+*/
 export class ServicebusQueue extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_queue.html azurerm_servicebus_queue} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options ServicebusQueueConfig
+  */
   public constructor(scope: Construct, id: string, config: ServicebusQueueConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_servicebus_queue',

@@ -7,14 +7,35 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface KeyVaultCertificateConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_certificate.html#key_vault_id KeyVaultCertificate#key_vault_id}
+  */
   readonly keyVaultId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_certificate.html#name KeyVaultCertificate#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_certificate.html#tags KeyVaultCertificate#tags}
+  */
   readonly tags?: { [key: string]: string };
-  /** certificate block */
+  /**
+  * certificate block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_certificate.html#certificate KeyVaultCertificate#certificate}
+  */
   readonly certificate?: KeyVaultCertificateCertificate[];
-  /** certificate_policy block */
+  /**
+  * certificate_policy block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_certificate.html#certificate_policy KeyVaultCertificate#certificate_policy}
+  */
   readonly certificatePolicy: KeyVaultCertificateCertificatePolicy[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_certificate.html#timeouts KeyVaultCertificate#timeouts}
+  */
   readonly timeouts?: KeyVaultCertificateTimeouts;
 }
 export class KeyVaultCertificateCertificateAttribute extends cdktf.ComplexComputedList {
@@ -50,7 +71,13 @@ export class KeyVaultCertificateCertificateAttribute extends cdktf.ComplexComput
   }
 }
 export interface KeyVaultCertificateCertificate {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_certificate.html#contents KeyVaultCertificate#contents}
+  */
   readonly contents: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_certificate.html#password KeyVaultCertificate#password}
+  */
   readonly password?: string;
 }
 
@@ -63,6 +90,9 @@ function keyVaultCertificateCertificateToTerraform(struct?: KeyVaultCertificateC
 }
 
 export interface KeyVaultCertificateCertificatePolicyIssuerParameters {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_certificate.html#name KeyVaultCertificate#name}
+  */
   readonly name: string;
 }
 
@@ -74,10 +104,25 @@ function keyVaultCertificateCertificatePolicyIssuerParametersToTerraform(struct?
 }
 
 export interface KeyVaultCertificateCertificatePolicyKeyProperties {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_certificate.html#curve KeyVaultCertificate#curve}
+  */
   readonly curve?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_certificate.html#exportable KeyVaultCertificate#exportable}
+  */
   readonly exportable: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_certificate.html#key_size KeyVaultCertificate#key_size}
+  */
   readonly keySize?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_certificate.html#key_type KeyVaultCertificate#key_type}
+  */
   readonly keyType: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_certificate.html#reuse_key KeyVaultCertificate#reuse_key}
+  */
   readonly reuseKey: boolean;
 }
 
@@ -93,6 +138,9 @@ function keyVaultCertificateCertificatePolicyKeyPropertiesToTerraform(struct?: K
 }
 
 export interface KeyVaultCertificateCertificatePolicyLifetimeActionAction {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_certificate.html#action_type KeyVaultCertificate#action_type}
+  */
   readonly actionType: string;
 }
 
@@ -104,7 +152,13 @@ function keyVaultCertificateCertificatePolicyLifetimeActionActionToTerraform(str
 }
 
 export interface KeyVaultCertificateCertificatePolicyLifetimeActionTrigger {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_certificate.html#days_before_expiry KeyVaultCertificate#days_before_expiry}
+  */
   readonly daysBeforeExpiry?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_certificate.html#lifetime_percentage KeyVaultCertificate#lifetime_percentage}
+  */
   readonly lifetimePercentage?: number;
 }
 
@@ -117,9 +171,17 @@ function keyVaultCertificateCertificatePolicyLifetimeActionTriggerToTerraform(st
 }
 
 export interface KeyVaultCertificateCertificatePolicyLifetimeAction {
-  /** action block */
+  /**
+  * action block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_certificate.html#action KeyVaultCertificate#action}
+  */
   readonly action: KeyVaultCertificateCertificatePolicyLifetimeActionAction[];
-  /** trigger block */
+  /**
+  * trigger block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_certificate.html#trigger KeyVaultCertificate#trigger}
+  */
   readonly trigger: KeyVaultCertificateCertificatePolicyLifetimeActionTrigger[];
 }
 
@@ -132,6 +194,9 @@ function keyVaultCertificateCertificatePolicyLifetimeActionToTerraform(struct?: 
 }
 
 export interface KeyVaultCertificateCertificatePolicySecretProperties {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_certificate.html#content_type KeyVaultCertificate#content_type}
+  */
   readonly contentType: string;
 }
 
@@ -143,8 +208,17 @@ function keyVaultCertificateCertificatePolicySecretPropertiesToTerraform(struct?
 }
 
 export interface KeyVaultCertificateCertificatePolicyX509CertificatePropertiesSubjectAlternativeNames {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_certificate.html#dns_names KeyVaultCertificate#dns_names}
+  */
   readonly dnsNames?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_certificate.html#emails KeyVaultCertificate#emails}
+  */
   readonly emails?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_certificate.html#upns KeyVaultCertificate#upns}
+  */
   readonly upns?: string[];
 }
 
@@ -158,11 +232,27 @@ function keyVaultCertificateCertificatePolicyX509CertificatePropertiesSubjectAlt
 }
 
 export interface KeyVaultCertificateCertificatePolicyX509CertificateProperties {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_certificate.html#extended_key_usage KeyVaultCertificate#extended_key_usage}
+  */
   readonly extendedKeyUsage?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_certificate.html#key_usage KeyVaultCertificate#key_usage}
+  */
   readonly keyUsage: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_certificate.html#subject KeyVaultCertificate#subject}
+  */
   readonly subject: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_certificate.html#validity_in_months KeyVaultCertificate#validity_in_months}
+  */
   readonly validityInMonths: number;
-  /** subject_alternative_names block */
+  /**
+  * subject_alternative_names block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_certificate.html#subject_alternative_names KeyVaultCertificate#subject_alternative_names}
+  */
   readonly subjectAlternativeNames?: KeyVaultCertificateCertificatePolicyX509CertificatePropertiesSubjectAlternativeNames[];
 }
 
@@ -178,15 +268,35 @@ function keyVaultCertificateCertificatePolicyX509CertificatePropertiesToTerrafor
 }
 
 export interface KeyVaultCertificateCertificatePolicy {
-  /** issuer_parameters block */
+  /**
+  * issuer_parameters block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_certificate.html#issuer_parameters KeyVaultCertificate#issuer_parameters}
+  */
   readonly issuerParameters: KeyVaultCertificateCertificatePolicyIssuerParameters[];
-  /** key_properties block */
+  /**
+  * key_properties block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_certificate.html#key_properties KeyVaultCertificate#key_properties}
+  */
   readonly keyProperties: KeyVaultCertificateCertificatePolicyKeyProperties[];
-  /** lifetime_action block */
+  /**
+  * lifetime_action block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_certificate.html#lifetime_action KeyVaultCertificate#lifetime_action}
+  */
   readonly lifetimeAction?: KeyVaultCertificateCertificatePolicyLifetimeAction[];
-  /** secret_properties block */
+  /**
+  * secret_properties block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_certificate.html#secret_properties KeyVaultCertificate#secret_properties}
+  */
   readonly secretProperties: KeyVaultCertificateCertificatePolicySecretProperties[];
-  /** x509_certificate_properties block */
+  /**
+  * x509_certificate_properties block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_certificate.html#x509_certificate_properties KeyVaultCertificate#x509_certificate_properties}
+  */
   readonly x509CertificateProperties?: KeyVaultCertificateCertificatePolicyX509CertificateProperties[];
 }
 
@@ -202,8 +312,17 @@ function keyVaultCertificateCertificatePolicyToTerraform(struct?: KeyVaultCertif
 }
 
 export interface KeyVaultCertificateTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_certificate.html#create KeyVaultCertificate#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_certificate.html#delete KeyVaultCertificate#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_certificate.html#read KeyVaultCertificate#read}
+  */
   readonly read?: string;
 }
 
@@ -217,14 +336,22 @@ function keyVaultCertificateTimeoutsToTerraform(struct?: KeyVaultCertificateTime
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_certificate.html azurerm_key_vault_certificate}
+*/
 export class KeyVaultCertificate extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_certificate.html azurerm_key_vault_certificate} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options KeyVaultCertificateConfig
+  */
   public constructor(scope: Construct, id: string, config: KeyVaultCertificateConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_key_vault_certificate',

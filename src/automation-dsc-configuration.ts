@@ -7,21 +7,61 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface AutomationDscConfigurationConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_dsc_configuration.html#automation_account_name AutomationDscConfiguration#automation_account_name}
+  */
   readonly automationAccountName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_dsc_configuration.html#content_embedded AutomationDscConfiguration#content_embedded}
+  */
   readonly contentEmbedded: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_dsc_configuration.html#description AutomationDscConfiguration#description}
+  */
   readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_dsc_configuration.html#location AutomationDscConfiguration#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_dsc_configuration.html#log_verbose AutomationDscConfiguration#log_verbose}
+  */
   readonly logVerbose?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_dsc_configuration.html#name AutomationDscConfiguration#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_dsc_configuration.html#resource_group_name AutomationDscConfiguration#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_dsc_configuration.html#tags AutomationDscConfiguration#tags}
+  */
   readonly tags?: { [key: string]: string };
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_dsc_configuration.html#timeouts AutomationDscConfiguration#timeouts}
+  */
   readonly timeouts?: AutomationDscConfigurationTimeouts;
 }
 export interface AutomationDscConfigurationTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_dsc_configuration.html#create AutomationDscConfiguration#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_dsc_configuration.html#delete AutomationDscConfiguration#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_dsc_configuration.html#read AutomationDscConfiguration#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_dsc_configuration.html#update AutomationDscConfiguration#update}
+  */
   readonly update?: string;
 }
 
@@ -36,14 +76,22 @@ function automationDscConfigurationTimeoutsToTerraform(struct?: AutomationDscCon
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/automation_dsc_configuration.html azurerm_automation_dsc_configuration}
+*/
 export class AutomationDscConfiguration extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/automation_dsc_configuration.html azurerm_automation_dsc_configuration} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options AutomationDscConfigurationConfig
+  */
   public constructor(scope: Construct, id: string, config: AutomationDscConfigurationConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_automation_dsc_configuration',

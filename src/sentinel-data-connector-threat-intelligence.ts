@@ -7,15 +7,37 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface SentinelDataConnectorThreatIntelligenceConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_data_connector_threat_intelligence.html#log_analytics_workspace_id SentinelDataConnectorThreatIntelligence#log_analytics_workspace_id}
+  */
   readonly logAnalyticsWorkspaceId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_data_connector_threat_intelligence.html#name SentinelDataConnectorThreatIntelligence#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_data_connector_threat_intelligence.html#tenant_id SentinelDataConnectorThreatIntelligence#tenant_id}
+  */
   readonly tenantId?: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_data_connector_threat_intelligence.html#timeouts SentinelDataConnectorThreatIntelligence#timeouts}
+  */
   readonly timeouts?: SentinelDataConnectorThreatIntelligenceTimeouts;
 }
 export interface SentinelDataConnectorThreatIntelligenceTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_data_connector_threat_intelligence.html#create SentinelDataConnectorThreatIntelligence#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_data_connector_threat_intelligence.html#delete SentinelDataConnectorThreatIntelligence#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_data_connector_threat_intelligence.html#read SentinelDataConnectorThreatIntelligence#read}
+  */
   readonly read?: string;
 }
 
@@ -29,14 +51,22 @@ function sentinelDataConnectorThreatIntelligenceTimeoutsToTerraform(struct?: Sen
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_data_connector_threat_intelligence.html azurerm_sentinel_data_connector_threat_intelligence}
+*/
 export class SentinelDataConnectorThreatIntelligence extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_data_connector_threat_intelligence.html azurerm_sentinel_data_connector_threat_intelligence} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options SentinelDataConnectorThreatIntelligenceConfig
+  */
   public constructor(scope: Construct, id: string, config: SentinelDataConnectorThreatIntelligenceConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_sentinel_data_connector_threat_intelligence',

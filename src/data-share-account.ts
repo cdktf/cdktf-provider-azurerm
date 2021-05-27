@@ -7,16 +7,39 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataShareAccountConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_share_account.html#location DataShareAccount#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_share_account.html#name DataShareAccount#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_share_account.html#resource_group_name DataShareAccount#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_share_account.html#tags DataShareAccount#tags}
+  */
   readonly tags?: { [key: string]: string };
-  /** identity block */
+  /**
+  * identity block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_share_account.html#identity DataShareAccount#identity}
+  */
   readonly identity: DataShareAccountIdentity[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_share_account.html#timeouts DataShareAccount#timeouts}
+  */
   readonly timeouts?: DataShareAccountTimeouts;
 }
 export interface DataShareAccountIdentity {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_share_account.html#type DataShareAccount#type}
+  */
   readonly type: string;
 }
 
@@ -28,9 +51,21 @@ function dataShareAccountIdentityToTerraform(struct?: DataShareAccountIdentity):
 }
 
 export interface DataShareAccountTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_share_account.html#create DataShareAccount#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_share_account.html#delete DataShareAccount#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_share_account.html#read DataShareAccount#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_share_account.html#update DataShareAccount#update}
+  */
   readonly update?: string;
 }
 
@@ -45,14 +80,22 @@ function dataShareAccountTimeoutsToTerraform(struct?: DataShareAccountTimeouts):
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/data_share_account.html azurerm_data_share_account}
+*/
 export class DataShareAccount extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/data_share_account.html azurerm_data_share_account} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataShareAccountConfig
+  */
   public constructor(scope: Construct, id: string, config: DataShareAccountConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_data_share_account',

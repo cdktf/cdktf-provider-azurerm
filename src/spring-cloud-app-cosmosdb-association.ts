@@ -7,23 +7,69 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface SpringCloudAppCosmosdbAssociationConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_app_cosmosdb_association.html#api_type SpringCloudAppCosmosdbAssociation#api_type}
+  */
   readonly apiType: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_app_cosmosdb_association.html#cosmosdb_access_key SpringCloudAppCosmosdbAssociation#cosmosdb_access_key}
+  */
   readonly cosmosdbAccessKey: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_app_cosmosdb_association.html#cosmosdb_account_id SpringCloudAppCosmosdbAssociation#cosmosdb_account_id}
+  */
   readonly cosmosdbAccountId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_app_cosmosdb_association.html#cosmosdb_cassandra_keyspace_name SpringCloudAppCosmosdbAssociation#cosmosdb_cassandra_keyspace_name}
+  */
   readonly cosmosdbCassandraKeyspaceName?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_app_cosmosdb_association.html#cosmosdb_gremlin_database_name SpringCloudAppCosmosdbAssociation#cosmosdb_gremlin_database_name}
+  */
   readonly cosmosdbGremlinDatabaseName?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_app_cosmosdb_association.html#cosmosdb_gremlin_graph_name SpringCloudAppCosmosdbAssociation#cosmosdb_gremlin_graph_name}
+  */
   readonly cosmosdbGremlinGraphName?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_app_cosmosdb_association.html#cosmosdb_mongo_database_name SpringCloudAppCosmosdbAssociation#cosmosdb_mongo_database_name}
+  */
   readonly cosmosdbMongoDatabaseName?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_app_cosmosdb_association.html#cosmosdb_sql_database_name SpringCloudAppCosmosdbAssociation#cosmosdb_sql_database_name}
+  */
   readonly cosmosdbSqlDatabaseName?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_app_cosmosdb_association.html#name SpringCloudAppCosmosdbAssociation#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_app_cosmosdb_association.html#spring_cloud_app_id SpringCloudAppCosmosdbAssociation#spring_cloud_app_id}
+  */
   readonly springCloudAppId: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_app_cosmosdb_association.html#timeouts SpringCloudAppCosmosdbAssociation#timeouts}
+  */
   readonly timeouts?: SpringCloudAppCosmosdbAssociationTimeouts;
 }
 export interface SpringCloudAppCosmosdbAssociationTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_app_cosmosdb_association.html#create SpringCloudAppCosmosdbAssociation#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_app_cosmosdb_association.html#delete SpringCloudAppCosmosdbAssociation#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_app_cosmosdb_association.html#read SpringCloudAppCosmosdbAssociation#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_app_cosmosdb_association.html#update SpringCloudAppCosmosdbAssociation#update}
+  */
   readonly update?: string;
 }
 
@@ -38,14 +84,22 @@ function springCloudAppCosmosdbAssociationTimeoutsToTerraform(struct?: SpringClo
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_app_cosmosdb_association.html azurerm_spring_cloud_app_cosmosdb_association}
+*/
 export class SpringCloudAppCosmosdbAssociation extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_app_cosmosdb_association.html azurerm_spring_cloud_app_cosmosdb_association} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options SpringCloudAppCosmosdbAssociationConfig
+  */
   public constructor(scope: Construct, id: string, config: SpringCloudAppCosmosdbAssociationConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_spring_cloud_app_cosmosdb_association',

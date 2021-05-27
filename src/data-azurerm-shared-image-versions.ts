@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/data_azurerm_shared_image_versions.html
+// https://www.terraform.io/docs/providers/azurerm/d/shared_image_versions.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,11 +7,27 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataAzurermSharedImageVersionsConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/shared_image_versions.html#gallery_name DataAzurermSharedImageVersions#gallery_name}
+  */
   readonly galleryName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/shared_image_versions.html#image_name DataAzurermSharedImageVersions#image_name}
+  */
   readonly imageName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/shared_image_versions.html#resource_group_name DataAzurermSharedImageVersions#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/shared_image_versions.html#tags_filter DataAzurermSharedImageVersions#tags_filter}
+  */
   readonly tagsFilter?: { [key: string]: string };
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/shared_image_versions.html#timeouts DataAzurermSharedImageVersions#timeouts}
+  */
   readonly timeouts?: DataAzurermSharedImageVersionsTimeouts;
 }
 export class DataAzurermSharedImageVersionsImagesTargetRegion extends cdktf.ComplexComputedList {
@@ -64,6 +80,9 @@ export class DataAzurermSharedImageVersionsImages extends cdktf.ComplexComputedL
   }
 }
 export interface DataAzurermSharedImageVersionsTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/shared_image_versions.html#read DataAzurermSharedImageVersions#read}
+  */
   readonly read?: string;
 }
 
@@ -75,14 +94,22 @@ function dataAzurermSharedImageVersionsTimeoutsToTerraform(struct?: DataAzurermS
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/shared_image_versions.html azurerm_shared_image_versions}
+*/
 export class DataAzurermSharedImageVersions extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/shared_image_versions.html azurerm_shared_image_versions} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataAzurermSharedImageVersionsConfig
+  */
   public constructor(scope: Construct, id: string, config: DataAzurermSharedImageVersionsConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_shared_image_versions',

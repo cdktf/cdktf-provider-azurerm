@@ -7,29 +7,87 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataFactoryDatasetParquetConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_parquet.html#additional_properties DataFactoryDatasetParquet#additional_properties}
+  */
   readonly additionalProperties?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_parquet.html#annotations DataFactoryDatasetParquet#annotations}
+  */
   readonly annotations?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_parquet.html#compression_codec DataFactoryDatasetParquet#compression_codec}
+  */
   readonly compressionCodec?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_parquet.html#compression_level DataFactoryDatasetParquet#compression_level}
+  */
   readonly compressionLevel?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_parquet.html#data_factory_name DataFactoryDatasetParquet#data_factory_name}
+  */
   readonly dataFactoryName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_parquet.html#description DataFactoryDatasetParquet#description}
+  */
   readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_parquet.html#folder DataFactoryDatasetParquet#folder}
+  */
   readonly folder?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_parquet.html#linked_service_name DataFactoryDatasetParquet#linked_service_name}
+  */
   readonly linkedServiceName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_parquet.html#name DataFactoryDatasetParquet#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_parquet.html#parameters DataFactoryDatasetParquet#parameters}
+  */
   readonly parameters?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_parquet.html#resource_group_name DataFactoryDatasetParquet#resource_group_name}
+  */
   readonly resourceGroupName: string;
-  /** azure_blob_storage_location block */
+  /**
+  * azure_blob_storage_location block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_parquet.html#azure_blob_storage_location DataFactoryDatasetParquet#azure_blob_storage_location}
+  */
   readonly azureBlobStorageLocation?: DataFactoryDatasetParquetAzureBlobStorageLocation[];
-  /** http_server_location block */
+  /**
+  * http_server_location block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_parquet.html#http_server_location DataFactoryDatasetParquet#http_server_location}
+  */
   readonly httpServerLocation?: DataFactoryDatasetParquetHttpServerLocation[];
-  /** schema_column block */
+  /**
+  * schema_column block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_parquet.html#schema_column DataFactoryDatasetParquet#schema_column}
+  */
   readonly schemaColumn?: DataFactoryDatasetParquetSchemaColumn[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_parquet.html#timeouts DataFactoryDatasetParquet#timeouts}
+  */
   readonly timeouts?: DataFactoryDatasetParquetTimeouts;
 }
 export interface DataFactoryDatasetParquetAzureBlobStorageLocation {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_parquet.html#container DataFactoryDatasetParquet#container}
+  */
   readonly container: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_parquet.html#filename DataFactoryDatasetParquet#filename}
+  */
   readonly filename: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_parquet.html#path DataFactoryDatasetParquet#path}
+  */
   readonly path: string;
 }
 
@@ -43,8 +101,17 @@ function dataFactoryDatasetParquetAzureBlobStorageLocationToTerraform(struct?: D
 }
 
 export interface DataFactoryDatasetParquetHttpServerLocation {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_parquet.html#filename DataFactoryDatasetParquet#filename}
+  */
   readonly filename: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_parquet.html#path DataFactoryDatasetParquet#path}
+  */
   readonly path: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_parquet.html#relative_url DataFactoryDatasetParquet#relative_url}
+  */
   readonly relativeUrl: string;
 }
 
@@ -58,8 +125,17 @@ function dataFactoryDatasetParquetHttpServerLocationToTerraform(struct?: DataFac
 }
 
 export interface DataFactoryDatasetParquetSchemaColumn {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_parquet.html#description DataFactoryDatasetParquet#description}
+  */
   readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_parquet.html#name DataFactoryDatasetParquet#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_parquet.html#type DataFactoryDatasetParquet#type}
+  */
   readonly type?: string;
 }
 
@@ -73,9 +149,21 @@ function dataFactoryDatasetParquetSchemaColumnToTerraform(struct?: DataFactoryDa
 }
 
 export interface DataFactoryDatasetParquetTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_parquet.html#create DataFactoryDatasetParquet#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_parquet.html#delete DataFactoryDatasetParquet#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_parquet.html#read DataFactoryDatasetParquet#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_parquet.html#update DataFactoryDatasetParquet#update}
+  */
   readonly update?: string;
 }
 
@@ -90,14 +178,22 @@ function dataFactoryDatasetParquetTimeoutsToTerraform(struct?: DataFactoryDatase
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_parquet.html azurerm_data_factory_dataset_parquet}
+*/
 export class DataFactoryDatasetParquet extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_parquet.html azurerm_data_factory_dataset_parquet} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataFactoryDatasetParquetConfig
+  */
   public constructor(scope: Construct, id: string, config: DataFactoryDatasetParquetConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_data_factory_dataset_parquet',

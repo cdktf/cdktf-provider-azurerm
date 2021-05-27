@@ -7,21 +7,61 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface KustoIothubDataConnectionConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_iothub_data_connection.html#cluster_name KustoIothubDataConnection#cluster_name}
+  */
   readonly clusterName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_iothub_data_connection.html#consumer_group KustoIothubDataConnection#consumer_group}
+  */
   readonly consumerGroup: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_iothub_data_connection.html#database_name KustoIothubDataConnection#database_name}
+  */
   readonly databaseName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_iothub_data_connection.html#event_system_properties KustoIothubDataConnection#event_system_properties}
+  */
   readonly eventSystemProperties?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_iothub_data_connection.html#iothub_id KustoIothubDataConnection#iothub_id}
+  */
   readonly iothubId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_iothub_data_connection.html#location KustoIothubDataConnection#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_iothub_data_connection.html#name KustoIothubDataConnection#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_iothub_data_connection.html#resource_group_name KustoIothubDataConnection#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_iothub_data_connection.html#shared_access_policy_name KustoIothubDataConnection#shared_access_policy_name}
+  */
   readonly sharedAccessPolicyName: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_iothub_data_connection.html#timeouts KustoIothubDataConnection#timeouts}
+  */
   readonly timeouts?: KustoIothubDataConnectionTimeouts;
 }
 export interface KustoIothubDataConnectionTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_iothub_data_connection.html#create KustoIothubDataConnection#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_iothub_data_connection.html#delete KustoIothubDataConnection#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_iothub_data_connection.html#read KustoIothubDataConnection#read}
+  */
   readonly read?: string;
 }
 
@@ -35,14 +75,22 @@ function kustoIothubDataConnectionTimeoutsToTerraform(struct?: KustoIothubDataCo
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_iothub_data_connection.html azurerm_kusto_iothub_data_connection}
+*/
 export class KustoIothubDataConnection extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_iothub_data_connection.html azurerm_kusto_iothub_data_connection} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options KustoIothubDataConnectionConfig
+  */
   public constructor(scope: Construct, id: string, config: KustoIothubDataConnectionConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_kusto_iothub_data_connection',

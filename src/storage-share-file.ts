@@ -7,22 +7,65 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface StorageShareFileConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_share_file.html#content_disposition StorageShareFile#content_disposition}
+  */
   readonly contentDisposition?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_share_file.html#content_encoding StorageShareFile#content_encoding}
+  */
   readonly contentEncoding?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_share_file.html#content_md5 StorageShareFile#content_md5}
+  */
   readonly contentMd5?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_share_file.html#content_type StorageShareFile#content_type}
+  */
   readonly contentType?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_share_file.html#metadata StorageShareFile#metadata}
+  */
   readonly metadata?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_share_file.html#name StorageShareFile#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_share_file.html#path StorageShareFile#path}
+  */
   readonly path?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_share_file.html#source StorageShareFile#source}
+  */
   readonly source?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_share_file.html#storage_share_id StorageShareFile#storage_share_id}
+  */
   readonly storageShareId: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_share_file.html#timeouts StorageShareFile#timeouts}
+  */
   readonly timeouts?: StorageShareFileTimeouts;
 }
 export interface StorageShareFileTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_share_file.html#create StorageShareFile#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_share_file.html#delete StorageShareFile#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_share_file.html#read StorageShareFile#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_share_file.html#update StorageShareFile#update}
+  */
   readonly update?: string;
 }
 
@@ -37,14 +80,22 @@ function storageShareFileTimeoutsToTerraform(struct?: StorageShareFileTimeouts):
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/storage_share_file.html azurerm_storage_share_file}
+*/
 export class StorageShareFile extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/storage_share_file.html azurerm_storage_share_file} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options StorageShareFileConfig
+  */
   public constructor(scope: Construct, id: string, config: StorageShareFileConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_storage_share_file',

@@ -7,19 +7,53 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface EventgridSystemTopicConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_system_topic.html#location EventgridSystemTopic#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_system_topic.html#name EventgridSystemTopic#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_system_topic.html#resource_group_name EventgridSystemTopic#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_system_topic.html#source_arm_resource_id EventgridSystemTopic#source_arm_resource_id}
+  */
   readonly sourceArmResourceId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_system_topic.html#tags EventgridSystemTopic#tags}
+  */
   readonly tags?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_system_topic.html#topic_type EventgridSystemTopic#topic_type}
+  */
   readonly topicType: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_system_topic.html#timeouts EventgridSystemTopic#timeouts}
+  */
   readonly timeouts?: EventgridSystemTopicTimeouts;
 }
 export interface EventgridSystemTopicTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_system_topic.html#create EventgridSystemTopic#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_system_topic.html#delete EventgridSystemTopic#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_system_topic.html#read EventgridSystemTopic#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_system_topic.html#update EventgridSystemTopic#update}
+  */
   readonly update?: string;
 }
 
@@ -34,14 +68,22 @@ function eventgridSystemTopicTimeoutsToTerraform(struct?: EventgridSystemTopicTi
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_system_topic.html azurerm_eventgrid_system_topic}
+*/
 export class EventgridSystemTopic extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_system_topic.html azurerm_eventgrid_system_topic} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options EventgridSystemTopicConfig
+  */
   public constructor(scope: Construct, id: string, config: EventgridSystemTopicConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_eventgrid_system_topic',

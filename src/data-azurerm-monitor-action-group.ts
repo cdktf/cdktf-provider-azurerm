@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/data_azurerm_monitor_action_group.html
+// https://www.terraform.io/docs/providers/azurerm/d/monitor_action_group.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,9 +7,19 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataAzurermMonitorActionGroupConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/monitor_action_group.html#name DataAzurermMonitorActionGroup#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/monitor_action_group.html#resource_group_name DataAzurermMonitorActionGroup#resource_group_name}
+  */
   readonly resourceGroupName: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/monitor_action_group.html#timeouts DataAzurermMonitorActionGroup#timeouts}
+  */
   readonly timeouts?: DataAzurermMonitorActionGroupTimeouts;
 }
 export class DataAzurermMonitorActionGroupArmRoleReceiver extends cdktf.ComplexComputedList {
@@ -245,6 +255,9 @@ export class DataAzurermMonitorActionGroupWebhookReceiver extends cdktf.ComplexC
   }
 }
 export interface DataAzurermMonitorActionGroupTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/monitor_action_group.html#read DataAzurermMonitorActionGroup#read}
+  */
   readonly read?: string;
 }
 
@@ -256,14 +269,22 @@ function dataAzurermMonitorActionGroupTimeoutsToTerraform(struct?: DataAzurermMo
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/monitor_action_group.html azurerm_monitor_action_group}
+*/
 export class DataAzurermMonitorActionGroup extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/monitor_action_group.html azurerm_monitor_action_group} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataAzurermMonitorActionGroupConfig
+  */
   public constructor(scope: Construct, id: string, config: DataAzurermMonitorActionGroupConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_monitor_action_group',

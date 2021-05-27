@@ -7,22 +7,63 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface StreamAnalyticsOutputServicebusQueueConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_servicebus_queue.html#name StreamAnalyticsOutputServicebusQueue#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_servicebus_queue.html#queue_name StreamAnalyticsOutputServicebusQueue#queue_name}
+  */
   readonly queueName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_servicebus_queue.html#resource_group_name StreamAnalyticsOutputServicebusQueue#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_servicebus_queue.html#servicebus_namespace StreamAnalyticsOutputServicebusQueue#servicebus_namespace}
+  */
   readonly servicebusNamespace: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_servicebus_queue.html#shared_access_policy_key StreamAnalyticsOutputServicebusQueue#shared_access_policy_key}
+  */
   readonly sharedAccessPolicyKey: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_servicebus_queue.html#shared_access_policy_name StreamAnalyticsOutputServicebusQueue#shared_access_policy_name}
+  */
   readonly sharedAccessPolicyName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_servicebus_queue.html#stream_analytics_job_name StreamAnalyticsOutputServicebusQueue#stream_analytics_job_name}
+  */
   readonly streamAnalyticsJobName: string;
-  /** serialization block */
+  /**
+  * serialization block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_servicebus_queue.html#serialization StreamAnalyticsOutputServicebusQueue#serialization}
+  */
   readonly serialization: StreamAnalyticsOutputServicebusQueueSerialization[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_servicebus_queue.html#timeouts StreamAnalyticsOutputServicebusQueue#timeouts}
+  */
   readonly timeouts?: StreamAnalyticsOutputServicebusQueueTimeouts;
 }
 export interface StreamAnalyticsOutputServicebusQueueSerialization {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_servicebus_queue.html#encoding StreamAnalyticsOutputServicebusQueue#encoding}
+  */
   readonly encoding?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_servicebus_queue.html#field_delimiter StreamAnalyticsOutputServicebusQueue#field_delimiter}
+  */
   readonly fieldDelimiter?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_servicebus_queue.html#format StreamAnalyticsOutputServicebusQueue#format}
+  */
   readonly format?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_servicebus_queue.html#type StreamAnalyticsOutputServicebusQueue#type}
+  */
   readonly type: string;
 }
 
@@ -37,9 +78,21 @@ function streamAnalyticsOutputServicebusQueueSerializationToTerraform(struct?: S
 }
 
 export interface StreamAnalyticsOutputServicebusQueueTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_servicebus_queue.html#create StreamAnalyticsOutputServicebusQueue#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_servicebus_queue.html#delete StreamAnalyticsOutputServicebusQueue#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_servicebus_queue.html#read StreamAnalyticsOutputServicebusQueue#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_servicebus_queue.html#update StreamAnalyticsOutputServicebusQueue#update}
+  */
   readonly update?: string;
 }
 
@@ -54,14 +107,22 @@ function streamAnalyticsOutputServicebusQueueTimeoutsToTerraform(struct?: Stream
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_servicebus_queue.html azurerm_stream_analytics_output_servicebus_queue}
+*/
 export class StreamAnalyticsOutputServicebusQueue extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_servicebus_queue.html azurerm_stream_analytics_output_servicebus_queue} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options StreamAnalyticsOutputServicebusQueueConfig
+  */
   public constructor(scope: Construct, id: string, config: StreamAnalyticsOutputServicebusQueueConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_stream_analytics_output_servicebus_queue',

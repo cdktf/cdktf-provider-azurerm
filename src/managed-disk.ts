@@ -7,32 +7,103 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface ManagedDiskConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/managed_disk.html#create_option ManagedDisk#create_option}
+  */
   readonly createOption: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/managed_disk.html#disk_access_id ManagedDisk#disk_access_id}
+  */
   readonly diskAccessId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/managed_disk.html#disk_encryption_set_id ManagedDisk#disk_encryption_set_id}
+  */
   readonly diskEncryptionSetId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/managed_disk.html#disk_iops_read_write ManagedDisk#disk_iops_read_write}
+  */
   readonly diskIopsReadWrite?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/managed_disk.html#disk_mbps_read_write ManagedDisk#disk_mbps_read_write}
+  */
   readonly diskMbpsReadWrite?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/managed_disk.html#disk_size_gb ManagedDisk#disk_size_gb}
+  */
   readonly diskSizeGb?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/managed_disk.html#image_reference_id ManagedDisk#image_reference_id}
+  */
   readonly imageReferenceId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/managed_disk.html#location ManagedDisk#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/managed_disk.html#name ManagedDisk#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/managed_disk.html#network_access_policy ManagedDisk#network_access_policy}
+  */
   readonly networkAccessPolicy?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/managed_disk.html#os_type ManagedDisk#os_type}
+  */
   readonly osType?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/managed_disk.html#resource_group_name ManagedDisk#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/managed_disk.html#source_resource_id ManagedDisk#source_resource_id}
+  */
   readonly sourceResourceId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/managed_disk.html#source_uri ManagedDisk#source_uri}
+  */
   readonly sourceUri?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/managed_disk.html#storage_account_id ManagedDisk#storage_account_id}
+  */
   readonly storageAccountId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/managed_disk.html#storage_account_type ManagedDisk#storage_account_type}
+  */
   readonly storageAccountType: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/managed_disk.html#tags ManagedDisk#tags}
+  */
   readonly tags?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/managed_disk.html#tier ManagedDisk#tier}
+  */
   readonly tier?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/managed_disk.html#zones ManagedDisk#zones}
+  */
   readonly zones?: string[];
-  /** encryption_settings block */
+  /**
+  * encryption_settings block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/managed_disk.html#encryption_settings ManagedDisk#encryption_settings}
+  */
   readonly encryptionSettings?: ManagedDiskEncryptionSettings[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/managed_disk.html#timeouts ManagedDisk#timeouts}
+  */
   readonly timeouts?: ManagedDiskTimeouts;
 }
 export interface ManagedDiskEncryptionSettingsDiskEncryptionKey {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/managed_disk.html#secret_url ManagedDisk#secret_url}
+  */
   readonly secretUrl: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/managed_disk.html#source_vault_id ManagedDisk#source_vault_id}
+  */
   readonly sourceVaultId: string;
 }
 
@@ -45,7 +116,13 @@ function managedDiskEncryptionSettingsDiskEncryptionKeyToTerraform(struct?: Mana
 }
 
 export interface ManagedDiskEncryptionSettingsKeyEncryptionKey {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/managed_disk.html#key_url ManagedDisk#key_url}
+  */
   readonly keyUrl: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/managed_disk.html#source_vault_id ManagedDisk#source_vault_id}
+  */
   readonly sourceVaultId: string;
 }
 
@@ -58,10 +135,21 @@ function managedDiskEncryptionSettingsKeyEncryptionKeyToTerraform(struct?: Manag
 }
 
 export interface ManagedDiskEncryptionSettings {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/managed_disk.html#enabled ManagedDisk#enabled}
+  */
   readonly enabled: boolean;
-  /** disk_encryption_key block */
+  /**
+  * disk_encryption_key block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/managed_disk.html#disk_encryption_key ManagedDisk#disk_encryption_key}
+  */
   readonly diskEncryptionKey?: ManagedDiskEncryptionSettingsDiskEncryptionKey[];
-  /** key_encryption_key block */
+  /**
+  * key_encryption_key block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/managed_disk.html#key_encryption_key ManagedDisk#key_encryption_key}
+  */
   readonly keyEncryptionKey?: ManagedDiskEncryptionSettingsKeyEncryptionKey[];
 }
 
@@ -75,9 +163,21 @@ function managedDiskEncryptionSettingsToTerraform(struct?: ManagedDiskEncryption
 }
 
 export interface ManagedDiskTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/managed_disk.html#create ManagedDisk#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/managed_disk.html#delete ManagedDisk#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/managed_disk.html#read ManagedDisk#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/managed_disk.html#update ManagedDisk#update}
+  */
   readonly update?: string;
 }
 
@@ -92,14 +192,22 @@ function managedDiskTimeoutsToTerraform(struct?: ManagedDiskTimeouts): any {
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/managed_disk.html azurerm_managed_disk}
+*/
 export class ManagedDisk extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/managed_disk.html azurerm_managed_disk} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options ManagedDiskConfig
+  */
   public constructor(scope: Construct, id: string, config: ManagedDiskConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_managed_disk',

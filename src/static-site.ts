@@ -7,19 +7,53 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface StaticSiteConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/static_site.html#location StaticSite#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/static_site.html#name StaticSite#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/static_site.html#resource_group_name StaticSite#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/static_site.html#sku_size StaticSite#sku_size}
+  */
   readonly skuSize?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/static_site.html#sku_tier StaticSite#sku_tier}
+  */
   readonly skuTier?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/static_site.html#tags StaticSite#tags}
+  */
   readonly tags?: { [key: string]: string };
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/static_site.html#timeouts StaticSite#timeouts}
+  */
   readonly timeouts?: StaticSiteTimeouts;
 }
 export interface StaticSiteTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/static_site.html#create StaticSite#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/static_site.html#delete StaticSite#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/static_site.html#read StaticSite#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/static_site.html#update StaticSite#update}
+  */
   readonly update?: string;
 }
 
@@ -34,14 +68,22 @@ function staticSiteTimeoutsToTerraform(struct?: StaticSiteTimeouts): any {
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/static_site.html azurerm_static_site}
+*/
 export class StaticSite extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/static_site.html azurerm_static_site} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options StaticSiteConfig
+  */
   public constructor(scope: Construct, id: string, config: StaticSiteConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_static_site',

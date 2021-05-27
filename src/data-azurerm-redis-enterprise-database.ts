@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/data_azurerm_redis_enterprise_database.html
+// https://www.terraform.io/docs/providers/azurerm/d/redis_enterprise_database.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,13 +7,29 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataAzurermRedisEnterpriseDatabaseConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/redis_enterprise_database.html#cluster_id DataAzurermRedisEnterpriseDatabase#cluster_id}
+  */
   readonly clusterId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/redis_enterprise_database.html#name DataAzurermRedisEnterpriseDatabase#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/redis_enterprise_database.html#resource_group_name DataAzurermRedisEnterpriseDatabase#resource_group_name}
+  */
   readonly resourceGroupName: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/redis_enterprise_database.html#timeouts DataAzurermRedisEnterpriseDatabase#timeouts}
+  */
   readonly timeouts?: DataAzurermRedisEnterpriseDatabaseTimeouts;
 }
 export interface DataAzurermRedisEnterpriseDatabaseTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/redis_enterprise_database.html#read DataAzurermRedisEnterpriseDatabase#read}
+  */
   readonly read?: string;
 }
 
@@ -25,14 +41,22 @@ function dataAzurermRedisEnterpriseDatabaseTimeoutsToTerraform(struct?: DataAzur
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/redis_enterprise_database.html azurerm_redis_enterprise_database}
+*/
 export class DataAzurermRedisEnterpriseDatabase extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/redis_enterprise_database.html azurerm_redis_enterprise_database} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataAzurermRedisEnterpriseDatabaseConfig
+  */
   public constructor(scope: Construct, id: string, config: DataAzurermRedisEnterpriseDatabaseConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_redis_enterprise_database',

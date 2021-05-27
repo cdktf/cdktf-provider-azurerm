@@ -7,18 +7,47 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface RecoveryServicesVaultConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/recovery_services_vault.html#location RecoveryServicesVault#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/recovery_services_vault.html#name RecoveryServicesVault#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/recovery_services_vault.html#resource_group_name RecoveryServicesVault#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/recovery_services_vault.html#sku RecoveryServicesVault#sku}
+  */
   readonly sku: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/recovery_services_vault.html#soft_delete_enabled RecoveryServicesVault#soft_delete_enabled}
+  */
   readonly softDeleteEnabled?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/recovery_services_vault.html#tags RecoveryServicesVault#tags}
+  */
   readonly tags?: { [key: string]: string };
-  /** identity block */
+  /**
+  * identity block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/recovery_services_vault.html#identity RecoveryServicesVault#identity}
+  */
   readonly identity?: RecoveryServicesVaultIdentity[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/recovery_services_vault.html#timeouts RecoveryServicesVault#timeouts}
+  */
   readonly timeouts?: RecoveryServicesVaultTimeouts;
 }
 export interface RecoveryServicesVaultIdentity {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/recovery_services_vault.html#type RecoveryServicesVault#type}
+  */
   readonly type: string;
 }
 
@@ -30,9 +59,21 @@ function recoveryServicesVaultIdentityToTerraform(struct?: RecoveryServicesVault
 }
 
 export interface RecoveryServicesVaultTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/recovery_services_vault.html#create RecoveryServicesVault#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/recovery_services_vault.html#delete RecoveryServicesVault#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/recovery_services_vault.html#read RecoveryServicesVault#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/recovery_services_vault.html#update RecoveryServicesVault#update}
+  */
   readonly update?: string;
 }
 
@@ -47,14 +88,22 @@ function recoveryServicesVaultTimeoutsToTerraform(struct?: RecoveryServicesVault
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/recovery_services_vault.html azurerm_recovery_services_vault}
+*/
 export class RecoveryServicesVault extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/recovery_services_vault.html azurerm_recovery_services_vault} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options RecoveryServicesVaultConfig
+  */
   public constructor(scope: Construct, id: string, config: RecoveryServicesVaultConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_recovery_services_vault',

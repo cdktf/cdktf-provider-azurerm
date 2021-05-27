@@ -7,17 +7,45 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface LogAnalyticsLinkedStorageAccountConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_linked_storage_account.html#data_source_type LogAnalyticsLinkedStorageAccount#data_source_type}
+  */
   readonly dataSourceType: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_linked_storage_account.html#resource_group_name LogAnalyticsLinkedStorageAccount#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_linked_storage_account.html#storage_account_ids LogAnalyticsLinkedStorageAccount#storage_account_ids}
+  */
   readonly storageAccountIds: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_linked_storage_account.html#workspace_resource_id LogAnalyticsLinkedStorageAccount#workspace_resource_id}
+  */
   readonly workspaceResourceId: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_linked_storage_account.html#timeouts LogAnalyticsLinkedStorageAccount#timeouts}
+  */
   readonly timeouts?: LogAnalyticsLinkedStorageAccountTimeouts;
 }
 export interface LogAnalyticsLinkedStorageAccountTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_linked_storage_account.html#create LogAnalyticsLinkedStorageAccount#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_linked_storage_account.html#delete LogAnalyticsLinkedStorageAccount#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_linked_storage_account.html#read LogAnalyticsLinkedStorageAccount#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_linked_storage_account.html#update LogAnalyticsLinkedStorageAccount#update}
+  */
   readonly update?: string;
 }
 
@@ -32,14 +60,22 @@ function logAnalyticsLinkedStorageAccountTimeoutsToTerraform(struct?: LogAnalyti
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_linked_storage_account.html azurerm_log_analytics_linked_storage_account}
+*/
 export class LogAnalyticsLinkedStorageAccount extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_linked_storage_account.html azurerm_log_analytics_linked_storage_account} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options LogAnalyticsLinkedStorageAccountConfig
+  */
   public constructor(scope: Construct, id: string, config: LogAnalyticsLinkedStorageAccountConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_log_analytics_linked_storage_account',

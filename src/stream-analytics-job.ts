@@ -7,25 +7,77 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface StreamAnalyticsJobConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_job.html#compatibility_level StreamAnalyticsJob#compatibility_level}
+  */
   readonly compatibilityLevel?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_job.html#data_locale StreamAnalyticsJob#data_locale}
+  */
   readonly dataLocale?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_job.html#events_late_arrival_max_delay_in_seconds StreamAnalyticsJob#events_late_arrival_max_delay_in_seconds}
+  */
   readonly eventsLateArrivalMaxDelayInSeconds?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_job.html#events_out_of_order_max_delay_in_seconds StreamAnalyticsJob#events_out_of_order_max_delay_in_seconds}
+  */
   readonly eventsOutOfOrderMaxDelayInSeconds?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_job.html#events_out_of_order_policy StreamAnalyticsJob#events_out_of_order_policy}
+  */
   readonly eventsOutOfOrderPolicy?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_job.html#location StreamAnalyticsJob#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_job.html#name StreamAnalyticsJob#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_job.html#output_error_policy StreamAnalyticsJob#output_error_policy}
+  */
   readonly outputErrorPolicy?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_job.html#resource_group_name StreamAnalyticsJob#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_job.html#streaming_units StreamAnalyticsJob#streaming_units}
+  */
   readonly streamingUnits: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_job.html#tags StreamAnalyticsJob#tags}
+  */
   readonly tags?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_job.html#transformation_query StreamAnalyticsJob#transformation_query}
+  */
   readonly transformationQuery: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_job.html#timeouts StreamAnalyticsJob#timeouts}
+  */
   readonly timeouts?: StreamAnalyticsJobTimeouts;
 }
 export interface StreamAnalyticsJobTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_job.html#create StreamAnalyticsJob#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_job.html#delete StreamAnalyticsJob#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_job.html#read StreamAnalyticsJob#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_job.html#update StreamAnalyticsJob#update}
+  */
   readonly update?: string;
 }
 
@@ -40,14 +92,22 @@ function streamAnalyticsJobTimeoutsToTerraform(struct?: StreamAnalyticsJobTimeou
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_job.html azurerm_stream_analytics_job}
+*/
 export class StreamAnalyticsJob extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_job.html azurerm_stream_analytics_job} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options StreamAnalyticsJobConfig
+  */
   public constructor(scope: Construct, id: string, config: StreamAnalyticsJobConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_stream_analytics_job',

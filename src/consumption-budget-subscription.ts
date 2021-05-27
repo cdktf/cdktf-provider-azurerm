@@ -7,22 +7,59 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface ConsumptionBudgetSubscriptionConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/consumption_budget_subscription.html#amount ConsumptionBudgetSubscription#amount}
+  */
   readonly amount: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/consumption_budget_subscription.html#name ConsumptionBudgetSubscription#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/consumption_budget_subscription.html#subscription_id ConsumptionBudgetSubscription#subscription_id}
+  */
   readonly subscriptionId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/consumption_budget_subscription.html#time_grain ConsumptionBudgetSubscription#time_grain}
+  */
   readonly timeGrain?: string;
-  /** filter block */
+  /**
+  * filter block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/consumption_budget_subscription.html#filter ConsumptionBudgetSubscription#filter}
+  */
   readonly filter?: ConsumptionBudgetSubscriptionFilter[];
-  /** notification block */
+  /**
+  * notification block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/consumption_budget_subscription.html#notification ConsumptionBudgetSubscription#notification}
+  */
   readonly notification: ConsumptionBudgetSubscriptionNotification[];
-  /** time_period block */
+  /**
+  * time_period block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/consumption_budget_subscription.html#time_period ConsumptionBudgetSubscription#time_period}
+  */
   readonly timePeriod: ConsumptionBudgetSubscriptionTimePeriod[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/consumption_budget_subscription.html#timeouts ConsumptionBudgetSubscription#timeouts}
+  */
   readonly timeouts?: ConsumptionBudgetSubscriptionTimeouts;
 }
 export interface ConsumptionBudgetSubscriptionFilterDimension {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/consumption_budget_subscription.html#name ConsumptionBudgetSubscription#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/consumption_budget_subscription.html#operator ConsumptionBudgetSubscription#operator}
+  */
   readonly operator?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/consumption_budget_subscription.html#values ConsumptionBudgetSubscription#values}
+  */
   readonly values: string[];
 }
 
@@ -36,8 +73,17 @@ function consumptionBudgetSubscriptionFilterDimensionToTerraform(struct?: Consum
 }
 
 export interface ConsumptionBudgetSubscriptionFilterNotDimension {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/consumption_budget_subscription.html#name ConsumptionBudgetSubscription#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/consumption_budget_subscription.html#operator ConsumptionBudgetSubscription#operator}
+  */
   readonly operator?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/consumption_budget_subscription.html#values ConsumptionBudgetSubscription#values}
+  */
   readonly values: string[];
 }
 
@@ -51,8 +97,17 @@ function consumptionBudgetSubscriptionFilterNotDimensionToTerraform(struct?: Con
 }
 
 export interface ConsumptionBudgetSubscriptionFilterNotTag {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/consumption_budget_subscription.html#name ConsumptionBudgetSubscription#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/consumption_budget_subscription.html#operator ConsumptionBudgetSubscription#operator}
+  */
   readonly operator?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/consumption_budget_subscription.html#values ConsumptionBudgetSubscription#values}
+  */
   readonly values: string[];
 }
 
@@ -66,9 +121,17 @@ function consumptionBudgetSubscriptionFilterNotTagToTerraform(struct?: Consumpti
 }
 
 export interface ConsumptionBudgetSubscriptionFilterNot {
-  /** dimension block */
+  /**
+  * dimension block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/consumption_budget_subscription.html#dimension ConsumptionBudgetSubscription#dimension}
+  */
   readonly dimension?: ConsumptionBudgetSubscriptionFilterNotDimension[];
-  /** tag block */
+  /**
+  * tag block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/consumption_budget_subscription.html#tag ConsumptionBudgetSubscription#tag}
+  */
   readonly tag?: ConsumptionBudgetSubscriptionFilterNotTag[];
 }
 
@@ -81,8 +144,17 @@ function consumptionBudgetSubscriptionFilterNotToTerraform(struct?: ConsumptionB
 }
 
 export interface ConsumptionBudgetSubscriptionFilterTag {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/consumption_budget_subscription.html#name ConsumptionBudgetSubscription#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/consumption_budget_subscription.html#operator ConsumptionBudgetSubscription#operator}
+  */
   readonly operator?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/consumption_budget_subscription.html#values ConsumptionBudgetSubscription#values}
+  */
   readonly values: string[];
 }
 
@@ -96,11 +168,23 @@ function consumptionBudgetSubscriptionFilterTagToTerraform(struct?: ConsumptionB
 }
 
 export interface ConsumptionBudgetSubscriptionFilter {
-  /** dimension block */
+  /**
+  * dimension block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/consumption_budget_subscription.html#dimension ConsumptionBudgetSubscription#dimension}
+  */
   readonly dimension?: ConsumptionBudgetSubscriptionFilterDimension[];
-  /** not block */
+  /**
+  * not block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/consumption_budget_subscription.html#not ConsumptionBudgetSubscription#not}
+  */
   readonly not?: ConsumptionBudgetSubscriptionFilterNot[];
-  /** tag block */
+  /**
+  * tag block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/consumption_budget_subscription.html#tag ConsumptionBudgetSubscription#tag}
+  */
   readonly tag?: ConsumptionBudgetSubscriptionFilterTag[];
 }
 
@@ -114,11 +198,29 @@ function consumptionBudgetSubscriptionFilterToTerraform(struct?: ConsumptionBudg
 }
 
 export interface ConsumptionBudgetSubscriptionNotification {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/consumption_budget_subscription.html#contact_emails ConsumptionBudgetSubscription#contact_emails}
+  */
   readonly contactEmails?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/consumption_budget_subscription.html#contact_groups ConsumptionBudgetSubscription#contact_groups}
+  */
   readonly contactGroups?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/consumption_budget_subscription.html#contact_roles ConsumptionBudgetSubscription#contact_roles}
+  */
   readonly contactRoles?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/consumption_budget_subscription.html#enabled ConsumptionBudgetSubscription#enabled}
+  */
   readonly enabled?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/consumption_budget_subscription.html#operator ConsumptionBudgetSubscription#operator}
+  */
   readonly operator: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/consumption_budget_subscription.html#threshold ConsumptionBudgetSubscription#threshold}
+  */
   readonly threshold: number;
 }
 
@@ -135,7 +237,13 @@ function consumptionBudgetSubscriptionNotificationToTerraform(struct?: Consumpti
 }
 
 export interface ConsumptionBudgetSubscriptionTimePeriod {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/consumption_budget_subscription.html#end_date ConsumptionBudgetSubscription#end_date}
+  */
   readonly endDate?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/consumption_budget_subscription.html#start_date ConsumptionBudgetSubscription#start_date}
+  */
   readonly startDate: string;
 }
 
@@ -148,9 +256,21 @@ function consumptionBudgetSubscriptionTimePeriodToTerraform(struct?: Consumption
 }
 
 export interface ConsumptionBudgetSubscriptionTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/consumption_budget_subscription.html#create ConsumptionBudgetSubscription#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/consumption_budget_subscription.html#delete ConsumptionBudgetSubscription#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/consumption_budget_subscription.html#read ConsumptionBudgetSubscription#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/consumption_budget_subscription.html#update ConsumptionBudgetSubscription#update}
+  */
   readonly update?: string;
 }
 
@@ -165,14 +285,22 @@ function consumptionBudgetSubscriptionTimeoutsToTerraform(struct?: ConsumptionBu
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/consumption_budget_subscription.html azurerm_consumption_budget_subscription}
+*/
 export class ConsumptionBudgetSubscription extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/consumption_budget_subscription.html azurerm_consumption_budget_subscription} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options ConsumptionBudgetSubscriptionConfig
+  */
   public constructor(scope: Construct, id: string, config: ConsumptionBudgetSubscriptionConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_consumption_budget_subscription',

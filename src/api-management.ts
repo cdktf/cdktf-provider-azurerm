@@ -7,41 +7,121 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface ApiManagementConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management.html#location ApiManagement#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management.html#name ApiManagement#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management.html#notification_sender_email ApiManagement#notification_sender_email}
+  */
   readonly notificationSenderEmail?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management.html#policy ApiManagement#policy}
+  */
   readonly policy?: ApiManagementPolicy[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management.html#publisher_email ApiManagement#publisher_email}
+  */
   readonly publisherEmail: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management.html#publisher_name ApiManagement#publisher_name}
+  */
   readonly publisherName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management.html#resource_group_name ApiManagement#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management.html#sku_name ApiManagement#sku_name}
+  */
   readonly skuName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management.html#tags ApiManagement#tags}
+  */
   readonly tags?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management.html#virtual_network_type ApiManagement#virtual_network_type}
+  */
   readonly virtualNetworkType?: string;
-  /** additional_location block */
+  /**
+  * additional_location block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management.html#additional_location ApiManagement#additional_location}
+  */
   readonly additionalLocation?: ApiManagementAdditionalLocation[];
-  /** certificate block */
+  /**
+  * certificate block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management.html#certificate ApiManagement#certificate}
+  */
   readonly certificate?: ApiManagementCertificate[];
-  /** hostname_configuration block */
+  /**
+  * hostname_configuration block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management.html#hostname_configuration ApiManagement#hostname_configuration}
+  */
   readonly hostnameConfiguration?: ApiManagementHostnameConfiguration[];
-  /** identity block */
+  /**
+  * identity block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management.html#identity ApiManagement#identity}
+  */
   readonly identity?: ApiManagementIdentity[];
-  /** protocols block */
+  /**
+  * protocols block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management.html#protocols ApiManagement#protocols}
+  */
   readonly protocols?: ApiManagementProtocols[];
-  /** security block */
+  /**
+  * security block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management.html#security ApiManagement#security}
+  */
   readonly security?: ApiManagementSecurity[];
-  /** sign_in block */
+  /**
+  * sign_in block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management.html#sign_in ApiManagement#sign_in}
+  */
   readonly signIn?: ApiManagementSignIn[];
-  /** sign_up block */
+  /**
+  * sign_up block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management.html#sign_up ApiManagement#sign_up}
+  */
   readonly signUp?: ApiManagementSignUp[];
-  /** tenant_access block */
+  /**
+  * tenant_access block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management.html#tenant_access ApiManagement#tenant_access}
+  */
   readonly tenantAccess?: ApiManagementTenantAccess[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management.html#timeouts ApiManagement#timeouts}
+  */
   readonly timeouts?: ApiManagementTimeouts;
-  /** virtual_network_configuration block */
+  /**
+  * virtual_network_configuration block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management.html#virtual_network_configuration ApiManagement#virtual_network_configuration}
+  */
   readonly virtualNetworkConfiguration?: ApiManagementVirtualNetworkConfiguration[];
 }
 export interface ApiManagementPolicy {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management.html#xml_content ApiManagement#xml_content}
+  */
   readonly xmlContent?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management.html#xml_link ApiManagement#xml_link}
+  */
   readonly xmlLink?: string;
 }
 
@@ -54,6 +134,9 @@ function apiManagementPolicyToTerraform(struct?: ApiManagementPolicy): any {
 }
 
 export interface ApiManagementAdditionalLocationVirtualNetworkConfiguration {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management.html#subnet_id ApiManagement#subnet_id}
+  */
   readonly subnetId: string;
 }
 
@@ -65,8 +148,15 @@ function apiManagementAdditionalLocationVirtualNetworkConfigurationToTerraform(s
 }
 
 export interface ApiManagementAdditionalLocation {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management.html#location ApiManagement#location}
+  */
   readonly location: string;
-  /** virtual_network_configuration block */
+  /**
+  * virtual_network_configuration block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management.html#virtual_network_configuration ApiManagement#virtual_network_configuration}
+  */
   readonly virtualNetworkConfiguration?: ApiManagementAdditionalLocationVirtualNetworkConfiguration[];
 }
 
@@ -79,8 +169,17 @@ function apiManagementAdditionalLocationToTerraform(struct?: ApiManagementAdditi
 }
 
 export interface ApiManagementCertificate {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management.html#certificate_password ApiManagement#certificate_password}
+  */
   readonly certificatePassword?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management.html#encoded_certificate ApiManagement#encoded_certificate}
+  */
   readonly encodedCertificate: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management.html#store_name ApiManagement#store_name}
+  */
   readonly storeName: string;
 }
 
@@ -94,10 +193,25 @@ function apiManagementCertificateToTerraform(struct?: ApiManagementCertificate):
 }
 
 export interface ApiManagementHostnameConfigurationDeveloperPortal {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management.html#certificate ApiManagement#certificate}
+  */
   readonly certificate?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management.html#certificate_password ApiManagement#certificate_password}
+  */
   readonly certificatePassword?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management.html#host_name ApiManagement#host_name}
+  */
   readonly hostName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management.html#key_vault_id ApiManagement#key_vault_id}
+  */
   readonly keyVaultId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management.html#negotiate_client_certificate ApiManagement#negotiate_client_certificate}
+  */
   readonly negotiateClientCertificate?: boolean;
 }
 
@@ -113,10 +227,25 @@ function apiManagementHostnameConfigurationDeveloperPortalToTerraform(struct?: A
 }
 
 export interface ApiManagementHostnameConfigurationManagement {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management.html#certificate ApiManagement#certificate}
+  */
   readonly certificate?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management.html#certificate_password ApiManagement#certificate_password}
+  */
   readonly certificatePassword?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management.html#host_name ApiManagement#host_name}
+  */
   readonly hostName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management.html#key_vault_id ApiManagement#key_vault_id}
+  */
   readonly keyVaultId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management.html#negotiate_client_certificate ApiManagement#negotiate_client_certificate}
+  */
   readonly negotiateClientCertificate?: boolean;
 }
 
@@ -132,10 +261,25 @@ function apiManagementHostnameConfigurationManagementToTerraform(struct?: ApiMan
 }
 
 export interface ApiManagementHostnameConfigurationPortal {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management.html#certificate ApiManagement#certificate}
+  */
   readonly certificate?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management.html#certificate_password ApiManagement#certificate_password}
+  */
   readonly certificatePassword?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management.html#host_name ApiManagement#host_name}
+  */
   readonly hostName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management.html#key_vault_id ApiManagement#key_vault_id}
+  */
   readonly keyVaultId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management.html#negotiate_client_certificate ApiManagement#negotiate_client_certificate}
+  */
   readonly negotiateClientCertificate?: boolean;
 }
 
@@ -151,11 +295,29 @@ function apiManagementHostnameConfigurationPortalToTerraform(struct?: ApiManagem
 }
 
 export interface ApiManagementHostnameConfigurationProxy {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management.html#certificate ApiManagement#certificate}
+  */
   readonly certificate?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management.html#certificate_password ApiManagement#certificate_password}
+  */
   readonly certificatePassword?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management.html#default_ssl_binding ApiManagement#default_ssl_binding}
+  */
   readonly defaultSslBinding?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management.html#host_name ApiManagement#host_name}
+  */
   readonly hostName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management.html#key_vault_id ApiManagement#key_vault_id}
+  */
   readonly keyVaultId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management.html#negotiate_client_certificate ApiManagement#negotiate_client_certificate}
+  */
   readonly negotiateClientCertificate?: boolean;
 }
 
@@ -172,10 +334,25 @@ function apiManagementHostnameConfigurationProxyToTerraform(struct?: ApiManageme
 }
 
 export interface ApiManagementHostnameConfigurationScm {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management.html#certificate ApiManagement#certificate}
+  */
   readonly certificate?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management.html#certificate_password ApiManagement#certificate_password}
+  */
   readonly certificatePassword?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management.html#host_name ApiManagement#host_name}
+  */
   readonly hostName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management.html#key_vault_id ApiManagement#key_vault_id}
+  */
   readonly keyVaultId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management.html#negotiate_client_certificate ApiManagement#negotiate_client_certificate}
+  */
   readonly negotiateClientCertificate?: boolean;
 }
 
@@ -191,15 +368,35 @@ function apiManagementHostnameConfigurationScmToTerraform(struct?: ApiManagement
 }
 
 export interface ApiManagementHostnameConfiguration {
-  /** developer_portal block */
+  /**
+  * developer_portal block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management.html#developer_portal ApiManagement#developer_portal}
+  */
   readonly developerPortal?: ApiManagementHostnameConfigurationDeveloperPortal[];
-  /** management block */
+  /**
+  * management block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management.html#management ApiManagement#management}
+  */
   readonly management?: ApiManagementHostnameConfigurationManagement[];
-  /** portal block */
+  /**
+  * portal block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management.html#portal ApiManagement#portal}
+  */
   readonly portal?: ApiManagementHostnameConfigurationPortal[];
-  /** proxy block */
+  /**
+  * proxy block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management.html#proxy ApiManagement#proxy}
+  */
   readonly proxy?: ApiManagementHostnameConfigurationProxy[];
-  /** scm block */
+  /**
+  * scm block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management.html#scm ApiManagement#scm}
+  */
   readonly scm?: ApiManagementHostnameConfigurationScm[];
 }
 
@@ -215,7 +412,13 @@ function apiManagementHostnameConfigurationToTerraform(struct?: ApiManagementHos
 }
 
 export interface ApiManagementIdentity {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management.html#identity_ids ApiManagement#identity_ids}
+  */
   readonly identityIds?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management.html#type ApiManagement#type}
+  */
   readonly type?: string;
 }
 
@@ -228,6 +431,9 @@ function apiManagementIdentityToTerraform(struct?: ApiManagementIdentity): any {
 }
 
 export interface ApiManagementProtocols {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management.html#enable_http2 ApiManagement#enable_http2}
+  */
   readonly enableHttp2?: boolean;
 }
 
@@ -239,22 +445,73 @@ function apiManagementProtocolsToTerraform(struct?: ApiManagementProtocols): any
 }
 
 export interface ApiManagementSecurity {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management.html#enable_backend_ssl30 ApiManagement#enable_backend_ssl30}
+  */
   readonly enableBackendSsl30?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management.html#enable_backend_tls10 ApiManagement#enable_backend_tls10}
+  */
   readonly enableBackendTls10?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management.html#enable_backend_tls11 ApiManagement#enable_backend_tls11}
+  */
   readonly enableBackendTls11?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management.html#enable_frontend_ssl30 ApiManagement#enable_frontend_ssl30}
+  */
   readonly enableFrontendSsl30?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management.html#enable_frontend_tls10 ApiManagement#enable_frontend_tls10}
+  */
   readonly enableFrontendTls10?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management.html#enable_frontend_tls11 ApiManagement#enable_frontend_tls11}
+  */
   readonly enableFrontendTls11?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management.html#enable_triple_des_ciphers ApiManagement#enable_triple_des_ciphers}
+  */
   readonly enableTripleDesCiphers?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management.html#tls_ecdhe_ecdsa_with_aes128_cbc_sha_ciphers_enabled ApiManagement#tls_ecdhe_ecdsa_with_aes128_cbc_sha_ciphers_enabled}
+  */
   readonly tlsEcdheEcdsaWithAes128CbcShaCiphersEnabled?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management.html#tls_ecdhe_ecdsa_with_aes256_cbc_sha_ciphers_enabled ApiManagement#tls_ecdhe_ecdsa_with_aes256_cbc_sha_ciphers_enabled}
+  */
   readonly tlsEcdheEcdsaWithAes256CbcShaCiphersEnabled?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management.html#tls_ecdhe_rsa_with_aes128_cbc_sha_ciphers_enabled ApiManagement#tls_ecdhe_rsa_with_aes128_cbc_sha_ciphers_enabled}
+  */
   readonly tlsEcdheRsaWithAes128CbcShaCiphersEnabled?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management.html#tls_ecdhe_rsa_with_aes256_cbc_sha_ciphers_enabled ApiManagement#tls_ecdhe_rsa_with_aes256_cbc_sha_ciphers_enabled}
+  */
   readonly tlsEcdheRsaWithAes256CbcShaCiphersEnabled?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management.html#tls_rsa_with_aes128_cbc_sha256_ciphers_enabled ApiManagement#tls_rsa_with_aes128_cbc_sha256_ciphers_enabled}
+  */
   readonly tlsRsaWithAes128CbcSha256CiphersEnabled?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management.html#tls_rsa_with_aes128_cbc_sha_ciphers_enabled ApiManagement#tls_rsa_with_aes128_cbc_sha_ciphers_enabled}
+  */
   readonly tlsRsaWithAes128CbcShaCiphersEnabled?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management.html#tls_rsa_with_aes128_gcm_sha256_ciphers_enabled ApiManagement#tls_rsa_with_aes128_gcm_sha256_ciphers_enabled}
+  */
   readonly tlsRsaWithAes128GcmSha256CiphersEnabled?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management.html#tls_rsa_with_aes256_cbc_sha256_ciphers_enabled ApiManagement#tls_rsa_with_aes256_cbc_sha256_ciphers_enabled}
+  */
   readonly tlsRsaWithAes256CbcSha256CiphersEnabled?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management.html#tls_rsa_with_aes256_cbc_sha_ciphers_enabled ApiManagement#tls_rsa_with_aes256_cbc_sha_ciphers_enabled}
+  */
   readonly tlsRsaWithAes256CbcShaCiphersEnabled?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management.html#triple_des_ciphers_enabled ApiManagement#triple_des_ciphers_enabled}
+  */
   readonly tripleDesCiphersEnabled?: boolean;
 }
 
@@ -282,6 +539,9 @@ function apiManagementSecurityToTerraform(struct?: ApiManagementSecurity): any {
 }
 
 export interface ApiManagementSignIn {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management.html#enabled ApiManagement#enabled}
+  */
   readonly enabled: boolean;
 }
 
@@ -293,8 +553,17 @@ function apiManagementSignInToTerraform(struct?: ApiManagementSignIn): any {
 }
 
 export interface ApiManagementSignUpTermsOfService {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management.html#consent_required ApiManagement#consent_required}
+  */
   readonly consentRequired: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management.html#enabled ApiManagement#enabled}
+  */
   readonly enabled: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management.html#text ApiManagement#text}
+  */
   readonly text?: string;
 }
 
@@ -308,8 +577,15 @@ function apiManagementSignUpTermsOfServiceToTerraform(struct?: ApiManagementSign
 }
 
 export interface ApiManagementSignUp {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management.html#enabled ApiManagement#enabled}
+  */
   readonly enabled: boolean;
-  /** terms_of_service block */
+  /**
+  * terms_of_service block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management.html#terms_of_service ApiManagement#terms_of_service}
+  */
   readonly termsOfService: ApiManagementSignUpTermsOfService[];
 }
 
@@ -322,6 +598,9 @@ function apiManagementSignUpToTerraform(struct?: ApiManagementSignUp): any {
 }
 
 export interface ApiManagementTenantAccess {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management.html#enabled ApiManagement#enabled}
+  */
   readonly enabled: boolean;
 }
 
@@ -333,9 +612,21 @@ function apiManagementTenantAccessToTerraform(struct?: ApiManagementTenantAccess
 }
 
 export interface ApiManagementTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management.html#create ApiManagement#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management.html#delete ApiManagement#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management.html#read ApiManagement#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management.html#update ApiManagement#update}
+  */
   readonly update?: string;
 }
 
@@ -350,6 +641,9 @@ function apiManagementTimeoutsToTerraform(struct?: ApiManagementTimeouts): any {
 }
 
 export interface ApiManagementVirtualNetworkConfiguration {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management.html#subnet_id ApiManagement#subnet_id}
+  */
   readonly subnetId: string;
 }
 
@@ -361,14 +655,22 @@ function apiManagementVirtualNetworkConfigurationToTerraform(struct?: ApiManagem
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/api_management.html azurerm_api_management}
+*/
 export class ApiManagement extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/api_management.html azurerm_api_management} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options ApiManagementConfig
+  */
   public constructor(scope: Construct, id: string, config: ApiManagementConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_api_management',

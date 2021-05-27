@@ -7,21 +7,61 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface KeyVaultManagedHardwareSecurityModuleConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_managed_hardware_security_module.html#admin_object_ids KeyVaultManagedHardwareSecurityModule#admin_object_ids}
+  */
   readonly adminObjectIds: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_managed_hardware_security_module.html#location KeyVaultManagedHardwareSecurityModule#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_managed_hardware_security_module.html#name KeyVaultManagedHardwareSecurityModule#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_managed_hardware_security_module.html#purge_protection_enabled KeyVaultManagedHardwareSecurityModule#purge_protection_enabled}
+  */
   readonly purgeProtectionEnabled?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_managed_hardware_security_module.html#resource_group_name KeyVaultManagedHardwareSecurityModule#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_managed_hardware_security_module.html#sku_name KeyVaultManagedHardwareSecurityModule#sku_name}
+  */
   readonly skuName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_managed_hardware_security_module.html#soft_delete_retention_days KeyVaultManagedHardwareSecurityModule#soft_delete_retention_days}
+  */
   readonly softDeleteRetentionDays?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_managed_hardware_security_module.html#tags KeyVaultManagedHardwareSecurityModule#tags}
+  */
   readonly tags?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_managed_hardware_security_module.html#tenant_id KeyVaultManagedHardwareSecurityModule#tenant_id}
+  */
   readonly tenantId: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_managed_hardware_security_module.html#timeouts KeyVaultManagedHardwareSecurityModule#timeouts}
+  */
   readonly timeouts?: KeyVaultManagedHardwareSecurityModuleTimeouts;
 }
 export interface KeyVaultManagedHardwareSecurityModuleTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_managed_hardware_security_module.html#create KeyVaultManagedHardwareSecurityModule#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_managed_hardware_security_module.html#delete KeyVaultManagedHardwareSecurityModule#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_managed_hardware_security_module.html#read KeyVaultManagedHardwareSecurityModule#read}
+  */
   readonly read?: string;
 }
 
@@ -35,14 +75,22 @@ function keyVaultManagedHardwareSecurityModuleTimeoutsToTerraform(struct?: KeyVa
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_managed_hardware_security_module.html azurerm_key_vault_managed_hardware_security_module}
+*/
 export class KeyVaultManagedHardwareSecurityModule extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_managed_hardware_security_module.html azurerm_key_vault_managed_hardware_security_module} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options KeyVaultManagedHardwareSecurityModuleConfig
+  */
   public constructor(scope: Construct, id: string, config: KeyVaultManagedHardwareSecurityModuleConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_key_vault_managed_hardware_security_module',

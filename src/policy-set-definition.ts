@@ -7,27 +7,81 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface PolicySetDefinitionConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/policy_set_definition.html#description PolicySetDefinition#description}
+  */
   readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/policy_set_definition.html#display_name PolicySetDefinition#display_name}
+  */
   readonly displayName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/policy_set_definition.html#management_group_id PolicySetDefinition#management_group_id}
+  */
   readonly managementGroupId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/policy_set_definition.html#management_group_name PolicySetDefinition#management_group_name}
+  */
   readonly managementGroupName?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/policy_set_definition.html#metadata PolicySetDefinition#metadata}
+  */
   readonly metadata?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/policy_set_definition.html#name PolicySetDefinition#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/policy_set_definition.html#parameters PolicySetDefinition#parameters}
+  */
   readonly parameters?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/policy_set_definition.html#policy_definitions PolicySetDefinition#policy_definitions}
+  */
   readonly policyDefinitions?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/policy_set_definition.html#policy_type PolicySetDefinition#policy_type}
+  */
   readonly policyType: string;
-  /** policy_definition_group block */
+  /**
+  * policy_definition_group block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/policy_set_definition.html#policy_definition_group PolicySetDefinition#policy_definition_group}
+  */
   readonly policyDefinitionGroup?: PolicySetDefinitionPolicyDefinitionGroup[];
-  /** policy_definition_reference block */
+  /**
+  * policy_definition_reference block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/policy_set_definition.html#policy_definition_reference PolicySetDefinition#policy_definition_reference}
+  */
   readonly policyDefinitionReference?: PolicySetDefinitionPolicyDefinitionReference[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/policy_set_definition.html#timeouts PolicySetDefinition#timeouts}
+  */
   readonly timeouts?: PolicySetDefinitionTimeouts;
 }
 export interface PolicySetDefinitionPolicyDefinitionGroup {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/policy_set_definition.html#additional_metadata_resource_id PolicySetDefinition#additional_metadata_resource_id}
+  */
   readonly additionalMetadataResourceId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/policy_set_definition.html#category PolicySetDefinition#category}
+  */
   readonly category?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/policy_set_definition.html#description PolicySetDefinition#description}
+  */
   readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/policy_set_definition.html#display_name PolicySetDefinition#display_name}
+  */
   readonly displayName?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/policy_set_definition.html#name PolicySetDefinition#name}
+  */
   readonly name: string;
 }
 
@@ -43,10 +97,25 @@ function policySetDefinitionPolicyDefinitionGroupToTerraform(struct?: PolicySetD
 }
 
 export interface PolicySetDefinitionPolicyDefinitionReference {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/policy_set_definition.html#parameter_values PolicySetDefinition#parameter_values}
+  */
   readonly parameterValues?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/policy_set_definition.html#parameters PolicySetDefinition#parameters}
+  */
   readonly parameters?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/policy_set_definition.html#policy_definition_id PolicySetDefinition#policy_definition_id}
+  */
   readonly policyDefinitionId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/policy_set_definition.html#policy_group_names PolicySetDefinition#policy_group_names}
+  */
   readonly policyGroupNames?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/policy_set_definition.html#reference_id PolicySetDefinition#reference_id}
+  */
   readonly referenceId?: string;
 }
 
@@ -62,9 +131,21 @@ function policySetDefinitionPolicyDefinitionReferenceToTerraform(struct?: Policy
 }
 
 export interface PolicySetDefinitionTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/policy_set_definition.html#create PolicySetDefinition#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/policy_set_definition.html#delete PolicySetDefinition#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/policy_set_definition.html#read PolicySetDefinition#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/policy_set_definition.html#update PolicySetDefinition#update}
+  */
   readonly update?: string;
 }
 
@@ -79,14 +160,22 @@ function policySetDefinitionTimeoutsToTerraform(struct?: PolicySetDefinitionTime
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/policy_set_definition.html azurerm_policy_set_definition}
+*/
 export class PolicySetDefinition extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/policy_set_definition.html azurerm_policy_set_definition} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options PolicySetDefinitionConfig
+  */
   public constructor(scope: Construct, id: string, config: PolicySetDefinitionConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_policy_set_definition',

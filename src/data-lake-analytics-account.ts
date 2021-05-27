@@ -7,19 +7,53 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataLakeAnalyticsAccountConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_lake_analytics_account.html#default_store_account_name DataLakeAnalyticsAccount#default_store_account_name}
+  */
   readonly defaultStoreAccountName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_lake_analytics_account.html#location DataLakeAnalyticsAccount#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_lake_analytics_account.html#name DataLakeAnalyticsAccount#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_lake_analytics_account.html#resource_group_name DataLakeAnalyticsAccount#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_lake_analytics_account.html#tags DataLakeAnalyticsAccount#tags}
+  */
   readonly tags?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_lake_analytics_account.html#tier DataLakeAnalyticsAccount#tier}
+  */
   readonly tier?: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_lake_analytics_account.html#timeouts DataLakeAnalyticsAccount#timeouts}
+  */
   readonly timeouts?: DataLakeAnalyticsAccountTimeouts;
 }
 export interface DataLakeAnalyticsAccountTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_lake_analytics_account.html#create DataLakeAnalyticsAccount#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_lake_analytics_account.html#delete DataLakeAnalyticsAccount#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_lake_analytics_account.html#read DataLakeAnalyticsAccount#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_lake_analytics_account.html#update DataLakeAnalyticsAccount#update}
+  */
   readonly update?: string;
 }
 
@@ -34,14 +68,22 @@ function dataLakeAnalyticsAccountTimeoutsToTerraform(struct?: DataLakeAnalyticsA
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/data_lake_analytics_account.html azurerm_data_lake_analytics_account}
+*/
 export class DataLakeAnalyticsAccount extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/data_lake_analytics_account.html azurerm_data_lake_analytics_account} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataLakeAnalyticsAccountConfig
+  */
   public constructor(scope: Construct, id: string, config: DataLakeAnalyticsAccountConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_data_lake_analytics_account',

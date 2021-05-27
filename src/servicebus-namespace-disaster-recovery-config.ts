@@ -7,16 +7,41 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface ServicebusNamespaceDisasterRecoveryConfigConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_namespace_disaster_recovery_config.html#name ServicebusNamespaceDisasterRecoveryConfig#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_namespace_disaster_recovery_config.html#partner_namespace_id ServicebusNamespaceDisasterRecoveryConfig#partner_namespace_id}
+  */
   readonly partnerNamespaceId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_namespace_disaster_recovery_config.html#primary_namespace_id ServicebusNamespaceDisasterRecoveryConfig#primary_namespace_id}
+  */
   readonly primaryNamespaceId: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_namespace_disaster_recovery_config.html#timeouts ServicebusNamespaceDisasterRecoveryConfig#timeouts}
+  */
   readonly timeouts?: ServicebusNamespaceDisasterRecoveryConfigTimeouts;
 }
 export interface ServicebusNamespaceDisasterRecoveryConfigTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_namespace_disaster_recovery_config.html#create ServicebusNamespaceDisasterRecoveryConfig#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_namespace_disaster_recovery_config.html#delete ServicebusNamespaceDisasterRecoveryConfig#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_namespace_disaster_recovery_config.html#read ServicebusNamespaceDisasterRecoveryConfig#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_namespace_disaster_recovery_config.html#update ServicebusNamespaceDisasterRecoveryConfig#update}
+  */
   readonly update?: string;
 }
 
@@ -31,14 +56,22 @@ function servicebusNamespaceDisasterRecoveryConfigTimeoutsToTerraform(struct?: S
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_namespace_disaster_recovery_config.html azurerm_servicebus_namespace_disaster_recovery_config}
+*/
 export class ServicebusNamespaceDisasterRecoveryConfig extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_namespace_disaster_recovery_config.html azurerm_servicebus_namespace_disaster_recovery_config} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options ServicebusNamespaceDisasterRecoveryConfigConfig
+  */
   public constructor(scope: Construct, id: string, config: ServicebusNamespaceDisasterRecoveryConfigConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_servicebus_namespace_disaster_recovery_config',

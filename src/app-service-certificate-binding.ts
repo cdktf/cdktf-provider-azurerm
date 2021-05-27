@@ -7,15 +7,37 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface AppServiceCertificateBindingConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_certificate_binding.html#certificate_id AppServiceCertificateBinding#certificate_id}
+  */
   readonly certificateId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_certificate_binding.html#hostname_binding_id AppServiceCertificateBinding#hostname_binding_id}
+  */
   readonly hostnameBindingId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_certificate_binding.html#ssl_state AppServiceCertificateBinding#ssl_state}
+  */
   readonly sslState: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_certificate_binding.html#timeouts AppServiceCertificateBinding#timeouts}
+  */
   readonly timeouts?: AppServiceCertificateBindingTimeouts;
 }
 export interface AppServiceCertificateBindingTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_certificate_binding.html#create AppServiceCertificateBinding#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_certificate_binding.html#delete AppServiceCertificateBinding#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_certificate_binding.html#read AppServiceCertificateBinding#read}
+  */
   readonly read?: string;
 }
 
@@ -29,14 +51,22 @@ function appServiceCertificateBindingTimeoutsToTerraform(struct?: AppServiceCert
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_certificate_binding.html azurerm_app_service_certificate_binding}
+*/
 export class AppServiceCertificateBinding extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_certificate_binding.html azurerm_app_service_certificate_binding} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options AppServiceCertificateBindingConfig
+  */
   public constructor(scope: Construct, id: string, config: AppServiceCertificateBindingConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_app_service_certificate_binding',

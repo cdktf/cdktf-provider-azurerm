@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/data_azurerm_logic_app_integration_account.html
+// https://www.terraform.io/docs/providers/azurerm/d/logic_app_integration_account.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,12 +7,25 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataAzurermLogicAppIntegrationAccountConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/logic_app_integration_account.html#name DataAzurermLogicAppIntegrationAccount#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/logic_app_integration_account.html#resource_group_name DataAzurermLogicAppIntegrationAccount#resource_group_name}
+  */
   readonly resourceGroupName: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/logic_app_integration_account.html#timeouts DataAzurermLogicAppIntegrationAccount#timeouts}
+  */
   readonly timeouts?: DataAzurermLogicAppIntegrationAccountTimeouts;
 }
 export interface DataAzurermLogicAppIntegrationAccountTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/logic_app_integration_account.html#read DataAzurermLogicAppIntegrationAccount#read}
+  */
   readonly read?: string;
 }
 
@@ -24,14 +37,22 @@ function dataAzurermLogicAppIntegrationAccountTimeoutsToTerraform(struct?: DataA
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/logic_app_integration_account.html azurerm_logic_app_integration_account}
+*/
 export class DataAzurermLogicAppIntegrationAccount extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/logic_app_integration_account.html azurerm_logic_app_integration_account} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataAzurermLogicAppIntegrationAccountConfig
+  */
   public constructor(scope: Construct, id: string, config: DataAzurermLogicAppIntegrationAccountConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_logic_app_integration_account',

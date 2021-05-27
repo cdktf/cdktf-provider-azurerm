@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/data_azurerm_api_management_group.html
+// https://www.terraform.io/docs/providers/azurerm/d/api_management_group.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,13 +7,29 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataAzurermApiManagementGroupConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/api_management_group.html#api_management_name DataAzurermApiManagementGroup#api_management_name}
+  */
   readonly apiManagementName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/api_management_group.html#name DataAzurermApiManagementGroup#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/api_management_group.html#resource_group_name DataAzurermApiManagementGroup#resource_group_name}
+  */
   readonly resourceGroupName: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/api_management_group.html#timeouts DataAzurermApiManagementGroup#timeouts}
+  */
   readonly timeouts?: DataAzurermApiManagementGroupTimeouts;
 }
 export interface DataAzurermApiManagementGroupTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/api_management_group.html#read DataAzurermApiManagementGroup#read}
+  */
   readonly read?: string;
 }
 
@@ -25,14 +41,22 @@ function dataAzurermApiManagementGroupTimeoutsToTerraform(struct?: DataAzurermAp
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/api_management_group.html azurerm_api_management_group}
+*/
 export class DataAzurermApiManagementGroup extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/api_management_group.html azurerm_api_management_group} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataAzurermApiManagementGroupConfig
+  */
   public constructor(scope: Construct, id: string, config: DataAzurermApiManagementGroupConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_api_management_group',

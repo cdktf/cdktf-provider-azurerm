@@ -7,37 +7,117 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface IothubConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub.html#endpoint Iothub#endpoint}
+  */
   readonly endpoint?: IothubEndpoint[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub.html#enrichment Iothub#enrichment}
+  */
   readonly enrichment?: IothubEnrichment[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub.html#event_hub_partition_count Iothub#event_hub_partition_count}
+  */
   readonly eventHubPartitionCount?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub.html#event_hub_retention_in_days Iothub#event_hub_retention_in_days}
+  */
   readonly eventHubRetentionInDays?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub.html#location Iothub#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub.html#min_tls_version Iothub#min_tls_version}
+  */
   readonly minTlsVersion?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub.html#name Iothub#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub.html#public_network_access_enabled Iothub#public_network_access_enabled}
+  */
   readonly publicNetworkAccessEnabled?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub.html#resource_group_name Iothub#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub.html#route Iothub#route}
+  */
   readonly route?: IothubRoute[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub.html#tags Iothub#tags}
+  */
   readonly tags?: { [key: string]: string };
-  /** fallback_route block */
+  /**
+  * fallback_route block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub.html#fallback_route Iothub#fallback_route}
+  */
   readonly fallbackRoute?: IothubFallbackRoute[];
-  /** file_upload block */
+  /**
+  * file_upload block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub.html#file_upload Iothub#file_upload}
+  */
   readonly fileUpload?: IothubFileUpload[];
-  /** ip_filter_rule block */
+  /**
+  * ip_filter_rule block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub.html#ip_filter_rule Iothub#ip_filter_rule}
+  */
   readonly ipFilterRule?: IothubIpFilterRule[];
-  /** sku block */
+  /**
+  * sku block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub.html#sku Iothub#sku}
+  */
   readonly sku: IothubSku[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub.html#timeouts Iothub#timeouts}
+  */
   readonly timeouts?: IothubTimeouts;
 }
 export interface IothubEndpoint {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub.html#batch_frequency_in_seconds Iothub#batch_frequency_in_seconds}
+  */
   readonly batchFrequencyInSeconds?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub.html#connection_string Iothub#connection_string}
+  */
   readonly connectionString?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub.html#container_name Iothub#container_name}
+  */
   readonly containerName?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub.html#encoding Iothub#encoding}
+  */
   readonly encoding?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub.html#file_name_format Iothub#file_name_format}
+  */
   readonly fileNameFormat?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub.html#max_chunk_size_in_bytes Iothub#max_chunk_size_in_bytes}
+  */
   readonly maxChunkSizeInBytes?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub.html#name Iothub#name}
+  */
   readonly name?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub.html#resource_group_name Iothub#resource_group_name}
+  */
   readonly resourceGroupName?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub.html#type Iothub#type}
+  */
   readonly type?: string;
 }
 
@@ -57,8 +137,17 @@ function iothubEndpointToTerraform(struct?: IothubEndpoint): any {
 }
 
 export interface IothubEnrichment {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub.html#endpoint_names Iothub#endpoint_names}
+  */
   readonly endpointNames?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub.html#key Iothub#key}
+  */
   readonly key?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub.html#value Iothub#value}
+  */
   readonly value?: string;
 }
 
@@ -72,10 +161,25 @@ function iothubEnrichmentToTerraform(struct?: IothubEnrichment): any {
 }
 
 export interface IothubRoute {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub.html#condition Iothub#condition}
+  */
   readonly condition?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub.html#enabled Iothub#enabled}
+  */
   readonly enabled?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub.html#endpoint_names Iothub#endpoint_names}
+  */
   readonly endpointNames?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub.html#name Iothub#name}
+  */
   readonly name?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub.html#source Iothub#source}
+  */
   readonly source?: string;
 }
 
@@ -113,9 +217,21 @@ export class IothubSharedAccessPolicy extends cdktf.ComplexComputedList {
   }
 }
 export interface IothubFallbackRoute {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub.html#condition Iothub#condition}
+  */
   readonly condition?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub.html#enabled Iothub#enabled}
+  */
   readonly enabled?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub.html#endpoint_names Iothub#endpoint_names}
+  */
   readonly endpointNames?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub.html#source Iothub#source}
+  */
   readonly source?: string;
 }
 
@@ -130,12 +246,33 @@ function iothubFallbackRouteToTerraform(struct?: IothubFallbackRoute): any {
 }
 
 export interface IothubFileUpload {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub.html#connection_string Iothub#connection_string}
+  */
   readonly connectionString: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub.html#container_name Iothub#container_name}
+  */
   readonly containerName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub.html#default_ttl Iothub#default_ttl}
+  */
   readonly defaultTtl?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub.html#lock_duration Iothub#lock_duration}
+  */
   readonly lockDuration?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub.html#max_delivery_count Iothub#max_delivery_count}
+  */
   readonly maxDeliveryCount?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub.html#notifications Iothub#notifications}
+  */
   readonly notifications?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub.html#sas_ttl Iothub#sas_ttl}
+  */
   readonly sasTtl?: string;
 }
 
@@ -153,8 +290,17 @@ function iothubFileUploadToTerraform(struct?: IothubFileUpload): any {
 }
 
 export interface IothubIpFilterRule {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub.html#action Iothub#action}
+  */
   readonly action: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub.html#ip_mask Iothub#ip_mask}
+  */
   readonly ipMask: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub.html#name Iothub#name}
+  */
   readonly name: string;
 }
 
@@ -168,7 +314,13 @@ function iothubIpFilterRuleToTerraform(struct?: IothubIpFilterRule): any {
 }
 
 export interface IothubSku {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub.html#capacity Iothub#capacity}
+  */
   readonly capacity: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub.html#name Iothub#name}
+  */
   readonly name: string;
 }
 
@@ -181,9 +333,21 @@ function iothubSkuToTerraform(struct?: IothubSku): any {
 }
 
 export interface IothubTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub.html#create Iothub#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub.html#delete Iothub#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub.html#read Iothub#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub.html#update Iothub#update}
+  */
   readonly update?: string;
 }
 
@@ -198,14 +362,22 @@ function iothubTimeoutsToTerraform(struct?: IothubTimeouts): any {
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/iothub.html azurerm_iothub}
+*/
 export class Iothub extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/iothub.html azurerm_iothub} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options IothubConfig
+  */
   public constructor(scope: Construct, id: string, config: IothubConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_iothub',

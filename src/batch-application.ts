@@ -7,19 +7,53 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface BatchApplicationConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_application.html#account_name BatchApplication#account_name}
+  */
   readonly accountName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_application.html#allow_updates BatchApplication#allow_updates}
+  */
   readonly allowUpdates?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_application.html#default_version BatchApplication#default_version}
+  */
   readonly defaultVersion?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_application.html#display_name BatchApplication#display_name}
+  */
   readonly displayName?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_application.html#name BatchApplication#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_application.html#resource_group_name BatchApplication#resource_group_name}
+  */
   readonly resourceGroupName: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_application.html#timeouts BatchApplication#timeouts}
+  */
   readonly timeouts?: BatchApplicationTimeouts;
 }
 export interface BatchApplicationTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_application.html#create BatchApplication#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_application.html#delete BatchApplication#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_application.html#read BatchApplication#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_application.html#update BatchApplication#update}
+  */
   readonly update?: string;
 }
 
@@ -34,14 +68,22 @@ function batchApplicationTimeoutsToTerraform(struct?: BatchApplicationTimeouts):
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/batch_application.html azurerm_batch_application}
+*/
 export class BatchApplication extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/batch_application.html azurerm_batch_application} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options BatchApplicationConfig
+  */
   public constructor(scope: Construct, id: string, config: BatchApplicationConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_batch_application',

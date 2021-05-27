@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/data_azurerm_managed_disk.html
+// https://www.terraform.io/docs/providers/azurerm/d/managed_disk.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,14 +7,33 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataAzurermManagedDiskConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/managed_disk.html#name DataAzurermManagedDisk#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/managed_disk.html#resource_group_name DataAzurermManagedDisk#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/managed_disk.html#tags DataAzurermManagedDisk#tags}
+  */
   readonly tags?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/managed_disk.html#zones DataAzurermManagedDisk#zones}
+  */
   readonly zones?: string[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/managed_disk.html#timeouts DataAzurermManagedDisk#timeouts}
+  */
   readonly timeouts?: DataAzurermManagedDiskTimeouts;
 }
 export interface DataAzurermManagedDiskTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/managed_disk.html#read DataAzurermManagedDisk#read}
+  */
   readonly read?: string;
 }
 
@@ -26,14 +45,22 @@ function dataAzurermManagedDiskTimeoutsToTerraform(struct?: DataAzurermManagedDi
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/managed_disk.html azurerm_managed_disk}
+*/
 export class DataAzurermManagedDisk extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/managed_disk.html azurerm_managed_disk} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataAzurermManagedDiskConfig
+  */
   public constructor(scope: Construct, id: string, config: DataAzurermManagedDiskConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_managed_disk',

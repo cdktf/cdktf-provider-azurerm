@@ -7,28 +7,89 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface ServicebusSubscriptionConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_subscription.html#auto_delete_on_idle ServicebusSubscription#auto_delete_on_idle}
+  */
   readonly autoDeleteOnIdle?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_subscription.html#dead_lettering_on_filter_evaluation_error ServicebusSubscription#dead_lettering_on_filter_evaluation_error}
+  */
   readonly deadLetteringOnFilterEvaluationError?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_subscription.html#dead_lettering_on_message_expiration ServicebusSubscription#dead_lettering_on_message_expiration}
+  */
   readonly deadLetteringOnMessageExpiration?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_subscription.html#default_message_ttl ServicebusSubscription#default_message_ttl}
+  */
   readonly defaultMessageTtl?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_subscription.html#enable_batched_operations ServicebusSubscription#enable_batched_operations}
+  */
   readonly enableBatchedOperations?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_subscription.html#forward_dead_lettered_messages_to ServicebusSubscription#forward_dead_lettered_messages_to}
+  */
   readonly forwardDeadLetteredMessagesTo?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_subscription.html#forward_to ServicebusSubscription#forward_to}
+  */
   readonly forwardTo?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_subscription.html#lock_duration ServicebusSubscription#lock_duration}
+  */
   readonly lockDuration?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_subscription.html#max_delivery_count ServicebusSubscription#max_delivery_count}
+  */
   readonly maxDeliveryCount: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_subscription.html#name ServicebusSubscription#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_subscription.html#namespace_name ServicebusSubscription#namespace_name}
+  */
   readonly namespaceName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_subscription.html#requires_session ServicebusSubscription#requires_session}
+  */
   readonly requiresSession?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_subscription.html#resource_group_name ServicebusSubscription#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_subscription.html#status ServicebusSubscription#status}
+  */
   readonly status?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_subscription.html#topic_name ServicebusSubscription#topic_name}
+  */
   readonly topicName: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_subscription.html#timeouts ServicebusSubscription#timeouts}
+  */
   readonly timeouts?: ServicebusSubscriptionTimeouts;
 }
 export interface ServicebusSubscriptionTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_subscription.html#create ServicebusSubscription#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_subscription.html#delete ServicebusSubscription#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_subscription.html#read ServicebusSubscription#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_subscription.html#update ServicebusSubscription#update}
+  */
   readonly update?: string;
 }
 
@@ -43,14 +104,22 @@ function servicebusSubscriptionTimeoutsToTerraform(struct?: ServicebusSubscripti
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_subscription.html azurerm_servicebus_subscription}
+*/
 export class ServicebusSubscription extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_subscription.html azurerm_servicebus_subscription} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options ServicebusSubscriptionConfig
+  */
   public constructor(scope: Construct, id: string, config: ServicebusSubscriptionConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_servicebus_subscription',

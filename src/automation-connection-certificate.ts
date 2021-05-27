@@ -7,19 +7,53 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface AutomationConnectionCertificateConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_connection_certificate.html#automation_account_name AutomationConnectionCertificate#automation_account_name}
+  */
   readonly automationAccountName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_connection_certificate.html#automation_certificate_name AutomationConnectionCertificate#automation_certificate_name}
+  */
   readonly automationCertificateName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_connection_certificate.html#description AutomationConnectionCertificate#description}
+  */
   readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_connection_certificate.html#name AutomationConnectionCertificate#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_connection_certificate.html#resource_group_name AutomationConnectionCertificate#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_connection_certificate.html#subscription_id AutomationConnectionCertificate#subscription_id}
+  */
   readonly subscriptionId: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_connection_certificate.html#timeouts AutomationConnectionCertificate#timeouts}
+  */
   readonly timeouts?: AutomationConnectionCertificateTimeouts;
 }
 export interface AutomationConnectionCertificateTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_connection_certificate.html#create AutomationConnectionCertificate#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_connection_certificate.html#delete AutomationConnectionCertificate#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_connection_certificate.html#read AutomationConnectionCertificate#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_connection_certificate.html#update AutomationConnectionCertificate#update}
+  */
   readonly update?: string;
 }
 
@@ -34,14 +68,22 @@ function automationConnectionCertificateTimeoutsToTerraform(struct?: AutomationC
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/automation_connection_certificate.html azurerm_automation_connection_certificate}
+*/
 export class AutomationConnectionCertificate extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/automation_connection_certificate.html azurerm_automation_connection_certificate} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options AutomationConnectionCertificateConfig
+  */
   public constructor(scope: Construct, id: string, config: AutomationConnectionCertificateConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_automation_connection_certificate',

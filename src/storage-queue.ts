@@ -7,16 +7,41 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface StorageQueueConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_queue.html#metadata StorageQueue#metadata}
+  */
   readonly metadata?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_queue.html#name StorageQueue#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_queue.html#storage_account_name StorageQueue#storage_account_name}
+  */
   readonly storageAccountName: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_queue.html#timeouts StorageQueue#timeouts}
+  */
   readonly timeouts?: StorageQueueTimeouts;
 }
 export interface StorageQueueTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_queue.html#create StorageQueue#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_queue.html#delete StorageQueue#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_queue.html#read StorageQueue#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_queue.html#update StorageQueue#update}
+  */
   readonly update?: string;
 }
 
@@ -31,14 +56,22 @@ function storageQueueTimeoutsToTerraform(struct?: StorageQueueTimeouts): any {
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/storage_queue.html azurerm_storage_queue}
+*/
 export class StorageQueue extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/storage_queue.html azurerm_storage_queue} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options StorageQueueConfig
+  */
   public constructor(scope: Construct, id: string, config: StorageQueueConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_storage_queue',

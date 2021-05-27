@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/data_azurerm_kubernetes_service_versions.html
+// https://www.terraform.io/docs/providers/azurerm/d/kubernetes_service_versions.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,13 +7,29 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataAzurermKubernetesServiceVersionsConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/kubernetes_service_versions.html#include_preview DataAzurermKubernetesServiceVersions#include_preview}
+  */
   readonly includePreview?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/kubernetes_service_versions.html#location DataAzurermKubernetesServiceVersions#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/kubernetes_service_versions.html#version_prefix DataAzurermKubernetesServiceVersions#version_prefix}
+  */
   readonly versionPrefix?: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/kubernetes_service_versions.html#timeouts DataAzurermKubernetesServiceVersions#timeouts}
+  */
   readonly timeouts?: DataAzurermKubernetesServiceVersionsTimeouts;
 }
 export interface DataAzurermKubernetesServiceVersionsTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/kubernetes_service_versions.html#read DataAzurermKubernetesServiceVersions#read}
+  */
   readonly read?: string;
 }
 
@@ -25,14 +41,22 @@ function dataAzurermKubernetesServiceVersionsTimeoutsToTerraform(struct?: DataAz
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/kubernetes_service_versions.html azurerm_kubernetes_service_versions}
+*/
 export class DataAzurermKubernetesServiceVersions extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/kubernetes_service_versions.html azurerm_kubernetes_service_versions} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataAzurermKubernetesServiceVersionsConfig
+  */
   public constructor(scope: Construct, id: string, config: DataAzurermKubernetesServiceVersionsConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_kubernetes_service_versions',

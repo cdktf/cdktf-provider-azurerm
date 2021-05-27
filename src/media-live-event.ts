@@ -7,29 +7,85 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface MediaLiveEventConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_live_event.html#auto_start_enabled MediaLiveEvent#auto_start_enabled}
+  */
   readonly autoStartEnabled?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_live_event.html#description MediaLiveEvent#description}
+  */
   readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_live_event.html#hostname_prefix MediaLiveEvent#hostname_prefix}
+  */
   readonly hostnamePrefix?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_live_event.html#location MediaLiveEvent#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_live_event.html#media_services_account_name MediaLiveEvent#media_services_account_name}
+  */
   readonly mediaServicesAccountName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_live_event.html#name MediaLiveEvent#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_live_event.html#resource_group_name MediaLiveEvent#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_live_event.html#tags MediaLiveEvent#tags}
+  */
   readonly tags?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_live_event.html#transcription_languages MediaLiveEvent#transcription_languages}
+  */
   readonly transcriptionLanguages?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_live_event.html#use_static_hostname MediaLiveEvent#use_static_hostname}
+  */
   readonly useStaticHostname?: boolean;
-  /** cross_site_access_policy block */
+  /**
+  * cross_site_access_policy block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_live_event.html#cross_site_access_policy MediaLiveEvent#cross_site_access_policy}
+  */
   readonly crossSiteAccessPolicy?: MediaLiveEventCrossSiteAccessPolicy[];
-  /** encoding block */
+  /**
+  * encoding block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_live_event.html#encoding MediaLiveEvent#encoding}
+  */
   readonly encoding?: MediaLiveEventEncoding[];
-  /** input block */
+  /**
+  * input block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_live_event.html#input MediaLiveEvent#input}
+  */
   readonly input: MediaLiveEventInput[];
-  /** preview block */
+  /**
+  * preview block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_live_event.html#preview MediaLiveEvent#preview}
+  */
   readonly preview?: MediaLiveEventPreview[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_live_event.html#timeouts MediaLiveEvent#timeouts}
+  */
   readonly timeouts?: MediaLiveEventTimeouts;
 }
 export interface MediaLiveEventCrossSiteAccessPolicy {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_live_event.html#client_access_policy MediaLiveEvent#client_access_policy}
+  */
   readonly clientAccessPolicy?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_live_event.html#cross_domain_policy MediaLiveEvent#cross_domain_policy}
+  */
   readonly crossDomainPolicy?: string;
 }
 
@@ -42,9 +98,21 @@ function mediaLiveEventCrossSiteAccessPolicyToTerraform(struct?: MediaLiveEventC
 }
 
 export interface MediaLiveEventEncoding {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_live_event.html#key_frame_interval MediaLiveEvent#key_frame_interval}
+  */
   readonly keyFrameInterval?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_live_event.html#preset_name MediaLiveEvent#preset_name}
+  */
   readonly presetName?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_live_event.html#stretch_mode MediaLiveEvent#stretch_mode}
+  */
   readonly stretchMode?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_live_event.html#type MediaLiveEvent#type}
+  */
   readonly type?: string;
 }
 
@@ -59,8 +127,17 @@ function mediaLiveEventEncodingToTerraform(struct?: MediaLiveEventEncoding): any
 }
 
 export interface MediaLiveEventInputIpAccessControlAllow {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_live_event.html#address MediaLiveEvent#address}
+  */
   readonly address?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_live_event.html#name MediaLiveEvent#name}
+  */
   readonly name?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_live_event.html#subnet_prefix_length MediaLiveEvent#subnet_prefix_length}
+  */
   readonly subnetPrefixLength?: number;
 }
 
@@ -74,10 +151,23 @@ function mediaLiveEventInputIpAccessControlAllowToTerraform(struct?: MediaLiveEv
 }
 
 export interface MediaLiveEventInput {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_live_event.html#access_token MediaLiveEvent#access_token}
+  */
   readonly accessToken?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_live_event.html#key_frame_interval_duration MediaLiveEvent#key_frame_interval_duration}
+  */
   readonly keyFrameIntervalDuration?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_live_event.html#streaming_protocol MediaLiveEvent#streaming_protocol}
+  */
   readonly streamingProtocol?: string;
-  /** ip_access_control_allow block */
+  /**
+  * ip_access_control_allow block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_live_event.html#ip_access_control_allow MediaLiveEvent#ip_access_control_allow}
+  */
   readonly ipAccessControlAllow?: MediaLiveEventInputIpAccessControlAllow[];
 }
 
@@ -92,8 +182,17 @@ function mediaLiveEventInputToTerraform(struct?: MediaLiveEventInput): any {
 }
 
 export interface MediaLiveEventPreviewIpAccessControlAllow {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_live_event.html#address MediaLiveEvent#address}
+  */
   readonly address?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_live_event.html#name MediaLiveEvent#name}
+  */
   readonly name?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_live_event.html#subnet_prefix_length MediaLiveEvent#subnet_prefix_length}
+  */
   readonly subnetPrefixLength?: number;
 }
 
@@ -107,10 +206,23 @@ function mediaLiveEventPreviewIpAccessControlAllowToTerraform(struct?: MediaLive
 }
 
 export interface MediaLiveEventPreview {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_live_event.html#alternative_media_id MediaLiveEvent#alternative_media_id}
+  */
   readonly alternativeMediaId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_live_event.html#preview_locator MediaLiveEvent#preview_locator}
+  */
   readonly previewLocator?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_live_event.html#streaming_policy_name MediaLiveEvent#streaming_policy_name}
+  */
   readonly streamingPolicyName?: string;
-  /** ip_access_control_allow block */
+  /**
+  * ip_access_control_allow block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_live_event.html#ip_access_control_allow MediaLiveEvent#ip_access_control_allow}
+  */
   readonly ipAccessControlAllow?: MediaLiveEventPreviewIpAccessControlAllow[];
 }
 
@@ -125,9 +237,21 @@ function mediaLiveEventPreviewToTerraform(struct?: MediaLiveEventPreview): any {
 }
 
 export interface MediaLiveEventTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_live_event.html#create MediaLiveEvent#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_live_event.html#delete MediaLiveEvent#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_live_event.html#read MediaLiveEvent#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_live_event.html#update MediaLiveEvent#update}
+  */
   readonly update?: string;
 }
 
@@ -142,14 +266,22 @@ function mediaLiveEventTimeoutsToTerraform(struct?: MediaLiveEventTimeouts): any
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/media_live_event.html azurerm_media_live_event}
+*/
 export class MediaLiveEvent extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/media_live_event.html azurerm_media_live_event} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options MediaLiveEventConfig
+  */
   public constructor(scope: Construct, id: string, config: MediaLiveEventConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_media_live_event',

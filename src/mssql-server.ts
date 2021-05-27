@@ -7,29 +7,89 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface MssqlServerConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server.html#administrator_login MssqlServer#administrator_login}
+  */
   readonly administratorLogin: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server.html#administrator_login_password MssqlServer#administrator_login_password}
+  */
   readonly administratorLoginPassword: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server.html#connection_policy MssqlServer#connection_policy}
+  */
   readonly connectionPolicy?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server.html#extended_auditing_policy MssqlServer#extended_auditing_policy}
+  */
   readonly extendedAuditingPolicy?: MssqlServerExtendedAuditingPolicy[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server.html#location MssqlServer#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server.html#minimum_tls_version MssqlServer#minimum_tls_version}
+  */
   readonly minimumTlsVersion?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server.html#name MssqlServer#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server.html#public_network_access_enabled MssqlServer#public_network_access_enabled}
+  */
   readonly publicNetworkAccessEnabled?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server.html#resource_group_name MssqlServer#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server.html#tags MssqlServer#tags}
+  */
   readonly tags?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server.html#version MssqlServer#version}
+  */
   readonly version: string;
-  /** azuread_administrator block */
+  /**
+  * azuread_administrator block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server.html#azuread_administrator MssqlServer#azuread_administrator}
+  */
   readonly azureadAdministrator?: MssqlServerAzureadAdministrator[];
-  /** identity block */
+  /**
+  * identity block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server.html#identity MssqlServer#identity}
+  */
   readonly identity?: MssqlServerIdentity[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server.html#timeouts MssqlServer#timeouts}
+  */
   readonly timeouts?: MssqlServerTimeouts;
 }
 export interface MssqlServerExtendedAuditingPolicy {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server.html#log_monitoring_enabled MssqlServer#log_monitoring_enabled}
+  */
   readonly logMonitoringEnabled?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server.html#retention_in_days MssqlServer#retention_in_days}
+  */
   readonly retentionInDays?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server.html#storage_account_access_key MssqlServer#storage_account_access_key}
+  */
   readonly storageAccountAccessKey?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server.html#storage_account_access_key_is_secondary MssqlServer#storage_account_access_key_is_secondary}
+  */
   readonly storageAccountAccessKeyIsSecondary?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server.html#storage_endpoint MssqlServer#storage_endpoint}
+  */
   readonly storageEndpoint?: string;
 }
 
@@ -45,8 +105,17 @@ function mssqlServerExtendedAuditingPolicyToTerraform(struct?: MssqlServerExtend
 }
 
 export interface MssqlServerAzureadAdministrator {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server.html#login_username MssqlServer#login_username}
+  */
   readonly loginUsername: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server.html#object_id MssqlServer#object_id}
+  */
   readonly objectId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server.html#tenant_id MssqlServer#tenant_id}
+  */
   readonly tenantId?: string;
 }
 
@@ -60,6 +129,9 @@ function mssqlServerAzureadAdministratorToTerraform(struct?: MssqlServerAzureadA
 }
 
 export interface MssqlServerIdentity {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server.html#type MssqlServer#type}
+  */
   readonly type: string;
 }
 
@@ -71,9 +143,21 @@ function mssqlServerIdentityToTerraform(struct?: MssqlServerIdentity): any {
 }
 
 export interface MssqlServerTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server.html#create MssqlServer#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server.html#delete MssqlServer#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server.html#read MssqlServer#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server.html#update MssqlServer#update}
+  */
   readonly update?: string;
 }
 
@@ -88,14 +172,22 @@ function mssqlServerTimeoutsToTerraform(struct?: MssqlServerTimeouts): any {
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server.html azurerm_mssql_server}
+*/
 export class MssqlServer extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server.html azurerm_mssql_server} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options MssqlServerConfig
+  */
   public constructor(scope: Construct, id: string, config: MssqlServerConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_mssql_server',

@@ -7,18 +7,49 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface IotTimeSeriesInsightsAccessPolicyConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_time_series_insights_access_policy.html#description IotTimeSeriesInsightsAccessPolicy#description}
+  */
   readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_time_series_insights_access_policy.html#name IotTimeSeriesInsightsAccessPolicy#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_time_series_insights_access_policy.html#principal_object_id IotTimeSeriesInsightsAccessPolicy#principal_object_id}
+  */
   readonly principalObjectId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_time_series_insights_access_policy.html#roles IotTimeSeriesInsightsAccessPolicy#roles}
+  */
   readonly roles: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_time_series_insights_access_policy.html#time_series_insights_environment_id IotTimeSeriesInsightsAccessPolicy#time_series_insights_environment_id}
+  */
   readonly timeSeriesInsightsEnvironmentId: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_time_series_insights_access_policy.html#timeouts IotTimeSeriesInsightsAccessPolicy#timeouts}
+  */
   readonly timeouts?: IotTimeSeriesInsightsAccessPolicyTimeouts;
 }
 export interface IotTimeSeriesInsightsAccessPolicyTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_time_series_insights_access_policy.html#create IotTimeSeriesInsightsAccessPolicy#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_time_series_insights_access_policy.html#delete IotTimeSeriesInsightsAccessPolicy#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_time_series_insights_access_policy.html#read IotTimeSeriesInsightsAccessPolicy#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_time_series_insights_access_policy.html#update IotTimeSeriesInsightsAccessPolicy#update}
+  */
   readonly update?: string;
 }
 
@@ -33,14 +64,22 @@ function iotTimeSeriesInsightsAccessPolicyTimeoutsToTerraform(struct?: IotTimeSe
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/iot_time_series_insights_access_policy.html azurerm_iot_time_series_insights_access_policy}
+*/
 export class IotTimeSeriesInsightsAccessPolicy extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/iot_time_series_insights_access_policy.html azurerm_iot_time_series_insights_access_policy} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options IotTimeSeriesInsightsAccessPolicyConfig
+  */
   public constructor(scope: Construct, id: string, config: IotTimeSeriesInsightsAccessPolicyConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_iot_time_series_insights_access_policy',

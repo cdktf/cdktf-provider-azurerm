@@ -7,24 +7,71 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface MachineLearningWorkspaceConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/machine_learning_workspace.html#application_insights_id MachineLearningWorkspace#application_insights_id}
+  */
   readonly applicationInsightsId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/machine_learning_workspace.html#container_registry_id MachineLearningWorkspace#container_registry_id}
+  */
   readonly containerRegistryId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/machine_learning_workspace.html#description MachineLearningWorkspace#description}
+  */
   readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/machine_learning_workspace.html#friendly_name MachineLearningWorkspace#friendly_name}
+  */
   readonly friendlyName?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/machine_learning_workspace.html#high_business_impact MachineLearningWorkspace#high_business_impact}
+  */
   readonly highBusinessImpact?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/machine_learning_workspace.html#key_vault_id MachineLearningWorkspace#key_vault_id}
+  */
   readonly keyVaultId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/machine_learning_workspace.html#location MachineLearningWorkspace#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/machine_learning_workspace.html#name MachineLearningWorkspace#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/machine_learning_workspace.html#resource_group_name MachineLearningWorkspace#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/machine_learning_workspace.html#sku_name MachineLearningWorkspace#sku_name}
+  */
   readonly skuName?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/machine_learning_workspace.html#storage_account_id MachineLearningWorkspace#storage_account_id}
+  */
   readonly storageAccountId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/machine_learning_workspace.html#tags MachineLearningWorkspace#tags}
+  */
   readonly tags?: { [key: string]: string };
-  /** identity block */
+  /**
+  * identity block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/machine_learning_workspace.html#identity MachineLearningWorkspace#identity}
+  */
   readonly identity: MachineLearningWorkspaceIdentity[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/machine_learning_workspace.html#timeouts MachineLearningWorkspace#timeouts}
+  */
   readonly timeouts?: MachineLearningWorkspaceTimeouts;
 }
 export interface MachineLearningWorkspaceIdentity {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/machine_learning_workspace.html#type MachineLearningWorkspace#type}
+  */
   readonly type: string;
 }
 
@@ -36,9 +83,21 @@ function machineLearningWorkspaceIdentityToTerraform(struct?: MachineLearningWor
 }
 
 export interface MachineLearningWorkspaceTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/machine_learning_workspace.html#create MachineLearningWorkspace#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/machine_learning_workspace.html#delete MachineLearningWorkspace#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/machine_learning_workspace.html#read MachineLearningWorkspace#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/machine_learning_workspace.html#update MachineLearningWorkspace#update}
+  */
   readonly update?: string;
 }
 
@@ -53,14 +112,22 @@ function machineLearningWorkspaceTimeoutsToTerraform(struct?: MachineLearningWor
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/machine_learning_workspace.html azurerm_machine_learning_workspace}
+*/
 export class MachineLearningWorkspace extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/machine_learning_workspace.html azurerm_machine_learning_workspace} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options MachineLearningWorkspaceConfig
+  */
   public constructor(scope: Construct, id: string, config: MachineLearningWorkspaceConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_machine_learning_workspace',

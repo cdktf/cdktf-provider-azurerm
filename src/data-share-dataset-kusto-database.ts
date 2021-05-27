@@ -7,15 +7,37 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataShareDatasetKustoDatabaseConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_share_dataset_kusto_database.html#kusto_database_id DataShareDatasetKustoDatabase#kusto_database_id}
+  */
   readonly kustoDatabaseId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_share_dataset_kusto_database.html#name DataShareDatasetKustoDatabase#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_share_dataset_kusto_database.html#share_id DataShareDatasetKustoDatabase#share_id}
+  */
   readonly shareId: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_share_dataset_kusto_database.html#timeouts DataShareDatasetKustoDatabase#timeouts}
+  */
   readonly timeouts?: DataShareDatasetKustoDatabaseTimeouts;
 }
 export interface DataShareDatasetKustoDatabaseTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_share_dataset_kusto_database.html#create DataShareDatasetKustoDatabase#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_share_dataset_kusto_database.html#delete DataShareDatasetKustoDatabase#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_share_dataset_kusto_database.html#read DataShareDatasetKustoDatabase#read}
+  */
   readonly read?: string;
 }
 
@@ -29,14 +51,22 @@ function dataShareDatasetKustoDatabaseTimeoutsToTerraform(struct?: DataShareData
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/data_share_dataset_kusto_database.html azurerm_data_share_dataset_kusto_database}
+*/
 export class DataShareDatasetKustoDatabase extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/data_share_dataset_kusto_database.html azurerm_data_share_dataset_kusto_database} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataShareDatasetKustoDatabaseConfig
+  */
   public constructor(scope: Construct, id: string, config: DataShareDatasetKustoDatabaseConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_data_share_dataset_kusto_database',

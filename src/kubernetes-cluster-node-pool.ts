@@ -7,39 +7,131 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface KubernetesClusterNodePoolConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster_node_pool.html#availability_zones KubernetesClusterNodePool#availability_zones}
+  */
   readonly availabilityZones?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster_node_pool.html#enable_auto_scaling KubernetesClusterNodePool#enable_auto_scaling}
+  */
   readonly enableAutoScaling?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster_node_pool.html#enable_host_encryption KubernetesClusterNodePool#enable_host_encryption}
+  */
   readonly enableHostEncryption?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster_node_pool.html#enable_node_public_ip KubernetesClusterNodePool#enable_node_public_ip}
+  */
   readonly enableNodePublicIp?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster_node_pool.html#eviction_policy KubernetesClusterNodePool#eviction_policy}
+  */
   readonly evictionPolicy?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster_node_pool.html#kubernetes_cluster_id KubernetesClusterNodePool#kubernetes_cluster_id}
+  */
   readonly kubernetesClusterId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster_node_pool.html#max_count KubernetesClusterNodePool#max_count}
+  */
   readonly maxCount?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster_node_pool.html#max_pods KubernetesClusterNodePool#max_pods}
+  */
   readonly maxPods?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster_node_pool.html#min_count KubernetesClusterNodePool#min_count}
+  */
   readonly minCount?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster_node_pool.html#mode KubernetesClusterNodePool#mode}
+  */
   readonly mode?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster_node_pool.html#name KubernetesClusterNodePool#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster_node_pool.html#node_count KubernetesClusterNodePool#node_count}
+  */
   readonly nodeCount?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster_node_pool.html#node_labels KubernetesClusterNodePool#node_labels}
+  */
   readonly nodeLabels?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster_node_pool.html#node_taints KubernetesClusterNodePool#node_taints}
+  */
   readonly nodeTaints?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster_node_pool.html#orchestrator_version KubernetesClusterNodePool#orchestrator_version}
+  */
   readonly orchestratorVersion?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster_node_pool.html#os_disk_size_gb KubernetesClusterNodePool#os_disk_size_gb}
+  */
   readonly osDiskSizeGb?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster_node_pool.html#os_disk_type KubernetesClusterNodePool#os_disk_type}
+  */
   readonly osDiskType?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster_node_pool.html#os_type KubernetesClusterNodePool#os_type}
+  */
   readonly osType?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster_node_pool.html#priority KubernetesClusterNodePool#priority}
+  */
   readonly priority?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster_node_pool.html#proximity_placement_group_id KubernetesClusterNodePool#proximity_placement_group_id}
+  */
   readonly proximityPlacementGroupId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster_node_pool.html#spot_max_price KubernetesClusterNodePool#spot_max_price}
+  */
   readonly spotMaxPrice?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster_node_pool.html#tags KubernetesClusterNodePool#tags}
+  */
   readonly tags?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster_node_pool.html#vm_size KubernetesClusterNodePool#vm_size}
+  */
   readonly vmSize: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster_node_pool.html#vnet_subnet_id KubernetesClusterNodePool#vnet_subnet_id}
+  */
   readonly vnetSubnetId?: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster_node_pool.html#timeouts KubernetesClusterNodePool#timeouts}
+  */
   readonly timeouts?: KubernetesClusterNodePoolTimeouts;
-  /** upgrade_settings block */
+  /**
+  * upgrade_settings block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster_node_pool.html#upgrade_settings KubernetesClusterNodePool#upgrade_settings}
+  */
   readonly upgradeSettings?: KubernetesClusterNodePoolUpgradeSettings[];
 }
 export interface KubernetesClusterNodePoolTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster_node_pool.html#create KubernetesClusterNodePool#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster_node_pool.html#delete KubernetesClusterNodePool#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster_node_pool.html#read KubernetesClusterNodePool#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster_node_pool.html#update KubernetesClusterNodePool#update}
+  */
   readonly update?: string;
 }
 
@@ -54,6 +146,9 @@ function kubernetesClusterNodePoolTimeoutsToTerraform(struct?: KubernetesCluster
 }
 
 export interface KubernetesClusterNodePoolUpgradeSettings {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster_node_pool.html#max_surge KubernetesClusterNodePool#max_surge}
+  */
   readonly maxSurge: string;
 }
 
@@ -65,14 +160,22 @@ function kubernetesClusterNodePoolUpgradeSettingsToTerraform(struct?: Kubernetes
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster_node_pool.html azurerm_kubernetes_cluster_node_pool}
+*/
 export class KubernetesClusterNodePool extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster_node_pool.html azurerm_kubernetes_cluster_node_pool} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options KubernetesClusterNodePoolConfig
+  */
   public constructor(scope: Construct, id: string, config: KubernetesClusterNodePoolConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_kubernetes_cluster_node_pool',

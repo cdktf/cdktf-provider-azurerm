@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/data_azurerm_storage_account_blob_container_sas.html
+// https://www.terraform.io/docs/providers/azurerm/d/storage_account_blob_container_sas.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,28 +7,87 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataAzurermStorageAccountBlobContainerSasConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account_blob_container_sas.html#cache_control DataAzurermStorageAccountBlobContainerSas#cache_control}
+  */
   readonly cacheControl?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account_blob_container_sas.html#connection_string DataAzurermStorageAccountBlobContainerSas#connection_string}
+  */
   readonly connectionString: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account_blob_container_sas.html#container_name DataAzurermStorageAccountBlobContainerSas#container_name}
+  */
   readonly containerName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account_blob_container_sas.html#content_disposition DataAzurermStorageAccountBlobContainerSas#content_disposition}
+  */
   readonly contentDisposition?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account_blob_container_sas.html#content_encoding DataAzurermStorageAccountBlobContainerSas#content_encoding}
+  */
   readonly contentEncoding?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account_blob_container_sas.html#content_language DataAzurermStorageAccountBlobContainerSas#content_language}
+  */
   readonly contentLanguage?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account_blob_container_sas.html#content_type DataAzurermStorageAccountBlobContainerSas#content_type}
+  */
   readonly contentType?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account_blob_container_sas.html#expiry DataAzurermStorageAccountBlobContainerSas#expiry}
+  */
   readonly expiry: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account_blob_container_sas.html#https_only DataAzurermStorageAccountBlobContainerSas#https_only}
+  */
   readonly httpsOnly?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account_blob_container_sas.html#ip_address DataAzurermStorageAccountBlobContainerSas#ip_address}
+  */
   readonly ipAddress?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account_blob_container_sas.html#start DataAzurermStorageAccountBlobContainerSas#start}
+  */
   readonly start: string;
-  /** permissions block */
+  /**
+  * permissions block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account_blob_container_sas.html#permissions DataAzurermStorageAccountBlobContainerSas#permissions}
+  */
   readonly permissions: DataAzurermStorageAccountBlobContainerSasPermissions[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account_blob_container_sas.html#timeouts DataAzurermStorageAccountBlobContainerSas#timeouts}
+  */
   readonly timeouts?: DataAzurermStorageAccountBlobContainerSasTimeouts;
 }
 export interface DataAzurermStorageAccountBlobContainerSasPermissions {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account_blob_container_sas.html#add DataAzurermStorageAccountBlobContainerSas#add}
+  */
   readonly add: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account_blob_container_sas.html#create DataAzurermStorageAccountBlobContainerSas#create}
+  */
   readonly create: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account_blob_container_sas.html#delete DataAzurermStorageAccountBlobContainerSas#delete}
+  */
   readonly delete: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account_blob_container_sas.html#list DataAzurermStorageAccountBlobContainerSas#list}
+  */
   readonly list: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account_blob_container_sas.html#read DataAzurermStorageAccountBlobContainerSas#read}
+  */
   readonly read: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account_blob_container_sas.html#write DataAzurermStorageAccountBlobContainerSas#write}
+  */
   readonly write: boolean;
 }
 
@@ -45,6 +104,9 @@ function dataAzurermStorageAccountBlobContainerSasPermissionsToTerraform(struct?
 }
 
 export interface DataAzurermStorageAccountBlobContainerSasTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account_blob_container_sas.html#read DataAzurermStorageAccountBlobContainerSas#read}
+  */
   readonly read?: string;
 }
 
@@ -56,14 +118,22 @@ function dataAzurermStorageAccountBlobContainerSasTimeoutsToTerraform(struct?: D
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account_blob_container_sas.html azurerm_storage_account_blob_container_sas}
+*/
 export class DataAzurermStorageAccountBlobContainerSas extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account_blob_container_sas.html azurerm_storage_account_blob_container_sas} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataAzurermStorageAccountBlobContainerSasConfig
+  */
   public constructor(scope: Construct, id: string, config: DataAzurermStorageAccountBlobContainerSasConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_storage_account_blob_container_sas',

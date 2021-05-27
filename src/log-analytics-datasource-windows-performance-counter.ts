@@ -7,20 +7,57 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface LogAnalyticsDatasourceWindowsPerformanceCounterConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_datasource_windows_performance_counter.html#counter_name LogAnalyticsDatasourceWindowsPerformanceCounter#counter_name}
+  */
   readonly counterName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_datasource_windows_performance_counter.html#instance_name LogAnalyticsDatasourceWindowsPerformanceCounter#instance_name}
+  */
   readonly instanceName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_datasource_windows_performance_counter.html#interval_seconds LogAnalyticsDatasourceWindowsPerformanceCounter#interval_seconds}
+  */
   readonly intervalSeconds: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_datasource_windows_performance_counter.html#name LogAnalyticsDatasourceWindowsPerformanceCounter#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_datasource_windows_performance_counter.html#object_name LogAnalyticsDatasourceWindowsPerformanceCounter#object_name}
+  */
   readonly objectName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_datasource_windows_performance_counter.html#resource_group_name LogAnalyticsDatasourceWindowsPerformanceCounter#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_datasource_windows_performance_counter.html#workspace_name LogAnalyticsDatasourceWindowsPerformanceCounter#workspace_name}
+  */
   readonly workspaceName: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_datasource_windows_performance_counter.html#timeouts LogAnalyticsDatasourceWindowsPerformanceCounter#timeouts}
+  */
   readonly timeouts?: LogAnalyticsDatasourceWindowsPerformanceCounterTimeouts;
 }
 export interface LogAnalyticsDatasourceWindowsPerformanceCounterTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_datasource_windows_performance_counter.html#create LogAnalyticsDatasourceWindowsPerformanceCounter#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_datasource_windows_performance_counter.html#delete LogAnalyticsDatasourceWindowsPerformanceCounter#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_datasource_windows_performance_counter.html#read LogAnalyticsDatasourceWindowsPerformanceCounter#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_datasource_windows_performance_counter.html#update LogAnalyticsDatasourceWindowsPerformanceCounter#update}
+  */
   readonly update?: string;
 }
 
@@ -35,14 +72,22 @@ function logAnalyticsDatasourceWindowsPerformanceCounterTimeoutsToTerraform(stru
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_datasource_windows_performance_counter.html azurerm_log_analytics_datasource_windows_performance_counter}
+*/
 export class LogAnalyticsDatasourceWindowsPerformanceCounter extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_datasource_windows_performance_counter.html azurerm_log_analytics_datasource_windows_performance_counter} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options LogAnalyticsDatasourceWindowsPerformanceCounterConfig
+  */
   public constructor(scope: Construct, id: string, config: LogAnalyticsDatasourceWindowsPerformanceCounterConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_log_analytics_datasource_windows_performance_counter',

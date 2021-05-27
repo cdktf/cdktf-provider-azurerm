@@ -7,15 +7,37 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface MysqlServerKeyConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_server_key.html#key_vault_key_id MysqlServerKey#key_vault_key_id}
+  */
   readonly keyVaultKeyId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_server_key.html#server_id MysqlServerKey#server_id}
+  */
   readonly serverId: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_server_key.html#timeouts MysqlServerKey#timeouts}
+  */
   readonly timeouts?: MysqlServerKeyTimeouts;
 }
 export interface MysqlServerKeyTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_server_key.html#create MysqlServerKey#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_server_key.html#delete MysqlServerKey#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_server_key.html#read MysqlServerKey#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_server_key.html#update MysqlServerKey#update}
+  */
   readonly update?: string;
 }
 
@@ -30,14 +52,22 @@ function mysqlServerKeyTimeoutsToTerraform(struct?: MysqlServerKeyTimeouts): any
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_server_key.html azurerm_mysql_server_key}
+*/
 export class MysqlServerKey extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_server_key.html azurerm_mysql_server_key} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options MysqlServerKeyConfig
+  */
   public constructor(scope: Construct, id: string, config: MysqlServerKeyConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_mysql_server_key',

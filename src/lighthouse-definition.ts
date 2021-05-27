@@ -7,20 +7,55 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface LighthouseDefinitionConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lighthouse_definition.html#description LighthouseDefinition#description}
+  */
   readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lighthouse_definition.html#lighthouse_definition_id LighthouseDefinition#lighthouse_definition_id}
+  */
   readonly lighthouseDefinitionId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lighthouse_definition.html#managing_tenant_id LighthouseDefinition#managing_tenant_id}
+  */
   readonly managingTenantId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lighthouse_definition.html#name LighthouseDefinition#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lighthouse_definition.html#scope LighthouseDefinition#scope}
+  */
   readonly scope: string;
-  /** authorization block */
+  /**
+  * authorization block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lighthouse_definition.html#authorization LighthouseDefinition#authorization}
+  */
   readonly authorization: LighthouseDefinitionAuthorization[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lighthouse_definition.html#timeouts LighthouseDefinition#timeouts}
+  */
   readonly timeouts?: LighthouseDefinitionTimeouts;
 }
 export interface LighthouseDefinitionAuthorization {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lighthouse_definition.html#delegated_role_definition_ids LighthouseDefinition#delegated_role_definition_ids}
+  */
   readonly delegatedRoleDefinitionIds?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lighthouse_definition.html#principal_display_name LighthouseDefinition#principal_display_name}
+  */
   readonly principalDisplayName?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lighthouse_definition.html#principal_id LighthouseDefinition#principal_id}
+  */
   readonly principalId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lighthouse_definition.html#role_definition_id LighthouseDefinition#role_definition_id}
+  */
   readonly roleDefinitionId: string;
 }
 
@@ -35,9 +70,21 @@ function lighthouseDefinitionAuthorizationToTerraform(struct?: LighthouseDefinit
 }
 
 export interface LighthouseDefinitionTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lighthouse_definition.html#create LighthouseDefinition#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lighthouse_definition.html#delete LighthouseDefinition#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lighthouse_definition.html#read LighthouseDefinition#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lighthouse_definition.html#update LighthouseDefinition#update}
+  */
   readonly update?: string;
 }
 
@@ -52,14 +99,22 @@ function lighthouseDefinitionTimeoutsToTerraform(struct?: LighthouseDefinitionTi
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/lighthouse_definition.html azurerm_lighthouse_definition}
+*/
 export class LighthouseDefinition extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/lighthouse_definition.html azurerm_lighthouse_definition} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options LighthouseDefinitionConfig
+  */
   public constructor(scope: Construct, id: string, config: LighthouseDefinitionConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_lighthouse_definition',

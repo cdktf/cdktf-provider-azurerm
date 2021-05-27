@@ -7,41 +7,129 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface KubernetesClusterConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#api_server_authorized_ip_ranges KubernetesCluster#api_server_authorized_ip_ranges}
+  */
   readonly apiServerAuthorizedIpRanges?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#automatic_channel_upgrade KubernetesCluster#automatic_channel_upgrade}
+  */
   readonly automaticChannelUpgrade?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#disk_encryption_set_id KubernetesCluster#disk_encryption_set_id}
+  */
   readonly diskEncryptionSetId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#dns_prefix KubernetesCluster#dns_prefix}
+  */
   readonly dnsPrefix?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#dns_prefix_private_cluster KubernetesCluster#dns_prefix_private_cluster}
+  */
   readonly dnsPrefixPrivateCluster?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#enable_pod_security_policy KubernetesCluster#enable_pod_security_policy}
+  */
   readonly enablePodSecurityPolicy?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#kubernetes_version KubernetesCluster#kubernetes_version}
+  */
   readonly kubernetesVersion?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#location KubernetesCluster#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#name KubernetesCluster#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#node_resource_group KubernetesCluster#node_resource_group}
+  */
   readonly nodeResourceGroup?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#private_cluster_enabled KubernetesCluster#private_cluster_enabled}
+  */
   readonly privateClusterEnabled?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#private_dns_zone_id KubernetesCluster#private_dns_zone_id}
+  */
   readonly privateDnsZoneId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#private_link_enabled KubernetesCluster#private_link_enabled}
+  */
   readonly privateLinkEnabled?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#resource_group_name KubernetesCluster#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#sku_tier KubernetesCluster#sku_tier}
+  */
   readonly skuTier?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#tags KubernetesCluster#tags}
+  */
   readonly tags?: { [key: string]: string };
-  /** addon_profile block */
+  /**
+  * addon_profile block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#addon_profile KubernetesCluster#addon_profile}
+  */
   readonly addonProfile?: KubernetesClusterAddonProfile[];
-  /** auto_scaler_profile block */
+  /**
+  * auto_scaler_profile block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#auto_scaler_profile KubernetesCluster#auto_scaler_profile}
+  */
   readonly autoScalerProfile?: KubernetesClusterAutoScalerProfile[];
-  /** default_node_pool block */
+  /**
+  * default_node_pool block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#default_node_pool KubernetesCluster#default_node_pool}
+  */
   readonly defaultNodePool: KubernetesClusterDefaultNodePool[];
-  /** identity block */
+  /**
+  * identity block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#identity KubernetesCluster#identity}
+  */
   readonly identity?: KubernetesClusterIdentity[];
-  /** linux_profile block */
+  /**
+  * linux_profile block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#linux_profile KubernetesCluster#linux_profile}
+  */
   readonly linuxProfile?: KubernetesClusterLinuxProfile[];
-  /** network_profile block */
+  /**
+  * network_profile block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#network_profile KubernetesCluster#network_profile}
+  */
   readonly networkProfile?: KubernetesClusterNetworkProfile[];
-  /** role_based_access_control block */
+  /**
+  * role_based_access_control block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#role_based_access_control KubernetesCluster#role_based_access_control}
+  */
   readonly roleBasedAccessControl?: KubernetesClusterRoleBasedAccessControl[];
-  /** service_principal block */
+  /**
+  * service_principal block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#service_principal KubernetesCluster#service_principal}
+  */
   readonly servicePrincipal?: KubernetesClusterServicePrincipal[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#timeouts KubernetesCluster#timeouts}
+  */
   readonly timeouts?: KubernetesClusterTimeouts;
-  /** windows_profile block */
+  /**
+  * windows_profile block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#windows_profile KubernetesCluster#windows_profile}
+  */
   readonly windowsProfile?: KubernetesClusterWindowsProfile[];
 }
 export class KubernetesClusterKubeAdminConfig extends cdktf.ComplexComputedList {
@@ -126,7 +214,13 @@ export class KubernetesClusterKubeletIdentity extends cdktf.ComplexComputedList 
   }
 }
 export interface KubernetesClusterAddonProfileAciConnectorLinux {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#enabled KubernetesCluster#enabled}
+  */
   readonly enabled: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#subnet_name KubernetesCluster#subnet_name}
+  */
   readonly subnetName?: string;
 }
 
@@ -139,6 +233,9 @@ function kubernetesClusterAddonProfileAciConnectorLinuxToTerraform(struct?: Kube
 }
 
 export interface KubernetesClusterAddonProfileAzurePolicy {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#enabled KubernetesCluster#enabled}
+  */
   readonly enabled: boolean;
 }
 
@@ -150,6 +247,9 @@ function kubernetesClusterAddonProfileAzurePolicyToTerraform(struct?: Kubernetes
 }
 
 export interface KubernetesClusterAddonProfileHttpApplicationRouting {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#enabled KubernetesCluster#enabled}
+  */
   readonly enabled: boolean;
 }
 
@@ -161,9 +261,21 @@ function kubernetesClusterAddonProfileHttpApplicationRoutingToTerraform(struct?:
 }
 
 export interface KubernetesClusterAddonProfileIngressApplicationGateway {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#enabled KubernetesCluster#enabled}
+  */
   readonly enabled: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#gateway_id KubernetesCluster#gateway_id}
+  */
   readonly gatewayId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#subnet_cidr KubernetesCluster#subnet_cidr}
+  */
   readonly subnetCidr?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#subnet_id KubernetesCluster#subnet_id}
+  */
   readonly subnetId?: string;
 }
 
@@ -178,6 +290,9 @@ function kubernetesClusterAddonProfileIngressApplicationGatewayToTerraform(struc
 }
 
 export interface KubernetesClusterAddonProfileKubeDashboard {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#enabled KubernetesCluster#enabled}
+  */
   readonly enabled: boolean;
 }
 
@@ -189,7 +304,13 @@ function kubernetesClusterAddonProfileKubeDashboardToTerraform(struct?: Kubernet
 }
 
 export interface KubernetesClusterAddonProfileOmsAgent {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#enabled KubernetesCluster#enabled}
+  */
   readonly enabled: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#log_analytics_workspace_id KubernetesCluster#log_analytics_workspace_id}
+  */
   readonly logAnalyticsWorkspaceId?: string;
 }
 
@@ -202,17 +323,41 @@ function kubernetesClusterAddonProfileOmsAgentToTerraform(struct?: KubernetesClu
 }
 
 export interface KubernetesClusterAddonProfile {
-  /** aci_connector_linux block */
+  /**
+  * aci_connector_linux block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#aci_connector_linux KubernetesCluster#aci_connector_linux}
+  */
   readonly aciConnectorLinux?: KubernetesClusterAddonProfileAciConnectorLinux[];
-  /** azure_policy block */
+  /**
+  * azure_policy block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#azure_policy KubernetesCluster#azure_policy}
+  */
   readonly azurePolicy?: KubernetesClusterAddonProfileAzurePolicy[];
-  /** http_application_routing block */
+  /**
+  * http_application_routing block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#http_application_routing KubernetesCluster#http_application_routing}
+  */
   readonly httpApplicationRouting?: KubernetesClusterAddonProfileHttpApplicationRouting[];
-  /** ingress_application_gateway block */
+  /**
+  * ingress_application_gateway block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#ingress_application_gateway KubernetesCluster#ingress_application_gateway}
+  */
   readonly ingressApplicationGateway?: KubernetesClusterAddonProfileIngressApplicationGateway[];
-  /** kube_dashboard block */
+  /**
+  * kube_dashboard block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#kube_dashboard KubernetesCluster#kube_dashboard}
+  */
   readonly kubeDashboard?: KubernetesClusterAddonProfileKubeDashboard[];
-  /** oms_agent block */
+  /**
+  * oms_agent block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#oms_agent KubernetesCluster#oms_agent}
+  */
   readonly omsAgent?: KubernetesClusterAddonProfileOmsAgent[];
 }
 
@@ -229,22 +374,73 @@ function kubernetesClusterAddonProfileToTerraform(struct?: KubernetesClusterAddo
 }
 
 export interface KubernetesClusterAutoScalerProfile {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#balance_similar_node_groups KubernetesCluster#balance_similar_node_groups}
+  */
   readonly balanceSimilarNodeGroups?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#empty_bulk_delete_max KubernetesCluster#empty_bulk_delete_max}
+  */
   readonly emptyBulkDeleteMax?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#expander KubernetesCluster#expander}
+  */
   readonly expander?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#max_graceful_termination_sec KubernetesCluster#max_graceful_termination_sec}
+  */
   readonly maxGracefulTerminationSec?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#max_node_provisioning_time KubernetesCluster#max_node_provisioning_time}
+  */
   readonly maxNodeProvisioningTime?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#max_unready_nodes KubernetesCluster#max_unready_nodes}
+  */
   readonly maxUnreadyNodes?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#max_unready_percentage KubernetesCluster#max_unready_percentage}
+  */
   readonly maxUnreadyPercentage?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#new_pod_scale_up_delay KubernetesCluster#new_pod_scale_up_delay}
+  */
   readonly newPodScaleUpDelay?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#scale_down_delay_after_add KubernetesCluster#scale_down_delay_after_add}
+  */
   readonly scaleDownDelayAfterAdd?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#scale_down_delay_after_delete KubernetesCluster#scale_down_delay_after_delete}
+  */
   readonly scaleDownDelayAfterDelete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#scale_down_delay_after_failure KubernetesCluster#scale_down_delay_after_failure}
+  */
   readonly scaleDownDelayAfterFailure?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#scale_down_unneeded KubernetesCluster#scale_down_unneeded}
+  */
   readonly scaleDownUnneeded?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#scale_down_unready KubernetesCluster#scale_down_unready}
+  */
   readonly scaleDownUnready?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#scale_down_utilization_threshold KubernetesCluster#scale_down_utilization_threshold}
+  */
   readonly scaleDownUtilizationThreshold?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#scan_interval KubernetesCluster#scan_interval}
+  */
   readonly scanInterval?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#skip_nodes_with_local_storage KubernetesCluster#skip_nodes_with_local_storage}
+  */
   readonly skipNodesWithLocalStorage?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#skip_nodes_with_system_pods KubernetesCluster#skip_nodes_with_system_pods}
+  */
   readonly skipNodesWithSystemPods?: boolean;
 }
 
@@ -272,6 +468,9 @@ function kubernetesClusterAutoScalerProfileToTerraform(struct?: KubernetesCluste
 }
 
 export interface KubernetesClusterDefaultNodePoolUpgradeSettings {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#max_surge KubernetesCluster#max_surge}
+  */
   readonly maxSurge: string;
 }
 
@@ -283,27 +482,91 @@ function kubernetesClusterDefaultNodePoolUpgradeSettingsToTerraform(struct?: Kub
 }
 
 export interface KubernetesClusterDefaultNodePool {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#availability_zones KubernetesCluster#availability_zones}
+  */
   readonly availabilityZones?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#enable_auto_scaling KubernetesCluster#enable_auto_scaling}
+  */
   readonly enableAutoScaling?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#enable_host_encryption KubernetesCluster#enable_host_encryption}
+  */
   readonly enableHostEncryption?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#enable_node_public_ip KubernetesCluster#enable_node_public_ip}
+  */
   readonly enableNodePublicIp?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#max_count KubernetesCluster#max_count}
+  */
   readonly maxCount?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#max_pods KubernetesCluster#max_pods}
+  */
   readonly maxPods?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#min_count KubernetesCluster#min_count}
+  */
   readonly minCount?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#name KubernetesCluster#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#node_count KubernetesCluster#node_count}
+  */
   readonly nodeCount?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#node_labels KubernetesCluster#node_labels}
+  */
   readonly nodeLabels?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#node_taints KubernetesCluster#node_taints}
+  */
   readonly nodeTaints?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#only_critical_addons_enabled KubernetesCluster#only_critical_addons_enabled}
+  */
   readonly onlyCriticalAddonsEnabled?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#orchestrator_version KubernetesCluster#orchestrator_version}
+  */
   readonly orchestratorVersion?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#os_disk_size_gb KubernetesCluster#os_disk_size_gb}
+  */
   readonly osDiskSizeGb?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#os_disk_type KubernetesCluster#os_disk_type}
+  */
   readonly osDiskType?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#proximity_placement_group_id KubernetesCluster#proximity_placement_group_id}
+  */
   readonly proximityPlacementGroupId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#tags KubernetesCluster#tags}
+  */
   readonly tags?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#type KubernetesCluster#type}
+  */
   readonly type?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#vm_size KubernetesCluster#vm_size}
+  */
   readonly vmSize: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#vnet_subnet_id KubernetesCluster#vnet_subnet_id}
+  */
   readonly vnetSubnetId?: string;
-  /** upgrade_settings block */
+  /**
+  * upgrade_settings block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#upgrade_settings KubernetesCluster#upgrade_settings}
+  */
   readonly upgradeSettings?: KubernetesClusterDefaultNodePoolUpgradeSettings[];
 }
 
@@ -335,7 +598,13 @@ function kubernetesClusterDefaultNodePoolToTerraform(struct?: KubernetesClusterD
 }
 
 export interface KubernetesClusterIdentity {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#type KubernetesCluster#type}
+  */
   readonly type: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#user_assigned_identity_id KubernetesCluster#user_assigned_identity_id}
+  */
   readonly userAssignedIdentityId?: string;
 }
 
@@ -348,6 +617,9 @@ function kubernetesClusterIdentityToTerraform(struct?: KubernetesClusterIdentity
 }
 
 export interface KubernetesClusterLinuxProfileSshKey {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#key_data KubernetesCluster#key_data}
+  */
   readonly keyData: string;
 }
 
@@ -359,8 +631,15 @@ function kubernetesClusterLinuxProfileSshKeyToTerraform(struct?: KubernetesClust
 }
 
 export interface KubernetesClusterLinuxProfile {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#admin_username KubernetesCluster#admin_username}
+  */
   readonly adminUsername: string;
-  /** ssh_key block */
+  /**
+  * ssh_key block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#ssh_key KubernetesCluster#ssh_key}
+  */
   readonly sshKey: KubernetesClusterLinuxProfileSshKey[];
 }
 
@@ -373,10 +652,25 @@ function kubernetesClusterLinuxProfileToTerraform(struct?: KubernetesClusterLinu
 }
 
 export interface KubernetesClusterNetworkProfileLoadBalancerProfile {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#idle_timeout_in_minutes KubernetesCluster#idle_timeout_in_minutes}
+  */
   readonly idleTimeoutInMinutes?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#managed_outbound_ip_count KubernetesCluster#managed_outbound_ip_count}
+  */
   readonly managedOutboundIpCount?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#outbound_ip_address_ids KubernetesCluster#outbound_ip_address_ids}
+  */
   readonly outboundIpAddressIds?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#outbound_ip_prefix_ids KubernetesCluster#outbound_ip_prefix_ids}
+  */
   readonly outboundIpPrefixIds?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#outbound_ports_allocated KubernetesCluster#outbound_ports_allocated}
+  */
   readonly outboundPortsAllocated?: number;
 }
 
@@ -392,16 +686,47 @@ function kubernetesClusterNetworkProfileLoadBalancerProfileToTerraform(struct?: 
 }
 
 export interface KubernetesClusterNetworkProfile {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#dns_service_ip KubernetesCluster#dns_service_ip}
+  */
   readonly dnsServiceIp?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#docker_bridge_cidr KubernetesCluster#docker_bridge_cidr}
+  */
   readonly dockerBridgeCidr?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#load_balancer_sku KubernetesCluster#load_balancer_sku}
+  */
   readonly loadBalancerSku?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#network_mode KubernetesCluster#network_mode}
+  */
   readonly networkMode?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#network_plugin KubernetesCluster#network_plugin}
+  */
   readonly networkPlugin: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#network_policy KubernetesCluster#network_policy}
+  */
   readonly networkPolicy?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#outbound_type KubernetesCluster#outbound_type}
+  */
   readonly outboundType?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#pod_cidr KubernetesCluster#pod_cidr}
+  */
   readonly podCidr?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#service_cidr KubernetesCluster#service_cidr}
+  */
   readonly serviceCidr?: string;
-  /** load_balancer_profile block */
+  /**
+  * load_balancer_profile block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#load_balancer_profile KubernetesCluster#load_balancer_profile}
+  */
   readonly loadBalancerProfile?: KubernetesClusterNetworkProfileLoadBalancerProfile[];
 }
 
@@ -422,12 +747,33 @@ function kubernetesClusterNetworkProfileToTerraform(struct?: KubernetesClusterNe
 }
 
 export interface KubernetesClusterRoleBasedAccessControlAzureActiveDirectory {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#admin_group_object_ids KubernetesCluster#admin_group_object_ids}
+  */
   readonly adminGroupObjectIds?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#azure_rbac_enabled KubernetesCluster#azure_rbac_enabled}
+  */
   readonly azureRbacEnabled?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#client_app_id KubernetesCluster#client_app_id}
+  */
   readonly clientAppId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#managed KubernetesCluster#managed}
+  */
   readonly managed?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#server_app_id KubernetesCluster#server_app_id}
+  */
   readonly serverAppId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#server_app_secret KubernetesCluster#server_app_secret}
+  */
   readonly serverAppSecret?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#tenant_id KubernetesCluster#tenant_id}
+  */
   readonly tenantId?: string;
 }
 
@@ -445,8 +791,15 @@ function kubernetesClusterRoleBasedAccessControlAzureActiveDirectoryToTerraform(
 }
 
 export interface KubernetesClusterRoleBasedAccessControl {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#enabled KubernetesCluster#enabled}
+  */
   readonly enabled: boolean;
-  /** azure_active_directory block */
+  /**
+  * azure_active_directory block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#azure_active_directory KubernetesCluster#azure_active_directory}
+  */
   readonly azureActiveDirectory?: KubernetesClusterRoleBasedAccessControlAzureActiveDirectory[];
 }
 
@@ -459,7 +812,13 @@ function kubernetesClusterRoleBasedAccessControlToTerraform(struct?: KubernetesC
 }
 
 export interface KubernetesClusterServicePrincipal {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#client_id KubernetesCluster#client_id}
+  */
   readonly clientId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#client_secret KubernetesCluster#client_secret}
+  */
   readonly clientSecret: string;
 }
 
@@ -472,9 +831,21 @@ function kubernetesClusterServicePrincipalToTerraform(struct?: KubernetesCluster
 }
 
 export interface KubernetesClusterTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#create KubernetesCluster#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#delete KubernetesCluster#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#read KubernetesCluster#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#update KubernetesCluster#update}
+  */
   readonly update?: string;
 }
 
@@ -489,7 +860,13 @@ function kubernetesClusterTimeoutsToTerraform(struct?: KubernetesClusterTimeouts
 }
 
 export interface KubernetesClusterWindowsProfile {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#admin_password KubernetesCluster#admin_password}
+  */
   readonly adminPassword?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#admin_username KubernetesCluster#admin_username}
+  */
   readonly adminUsername: string;
 }
 
@@ -502,14 +879,22 @@ function kubernetesClusterWindowsProfileToTerraform(struct?: KubernetesClusterWi
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html azurerm_kubernetes_cluster}
+*/
 export class KubernetesCluster extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html azurerm_kubernetes_cluster} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options KubernetesClusterConfig
+  */
   public constructor(scope: Construct, id: string, config: KubernetesClusterConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_kubernetes_cluster',

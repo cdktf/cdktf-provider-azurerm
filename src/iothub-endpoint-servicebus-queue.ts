@@ -7,17 +7,45 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface IothubEndpointServicebusQueueConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_endpoint_servicebus_queue.html#connection_string IothubEndpointServicebusQueue#connection_string}
+  */
   readonly connectionString: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_endpoint_servicebus_queue.html#iothub_name IothubEndpointServicebusQueue#iothub_name}
+  */
   readonly iothubName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_endpoint_servicebus_queue.html#name IothubEndpointServicebusQueue#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_endpoint_servicebus_queue.html#resource_group_name IothubEndpointServicebusQueue#resource_group_name}
+  */
   readonly resourceGroupName: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_endpoint_servicebus_queue.html#timeouts IothubEndpointServicebusQueue#timeouts}
+  */
   readonly timeouts?: IothubEndpointServicebusQueueTimeouts;
 }
 export interface IothubEndpointServicebusQueueTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_endpoint_servicebus_queue.html#create IothubEndpointServicebusQueue#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_endpoint_servicebus_queue.html#delete IothubEndpointServicebusQueue#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_endpoint_servicebus_queue.html#read IothubEndpointServicebusQueue#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_endpoint_servicebus_queue.html#update IothubEndpointServicebusQueue#update}
+  */
   readonly update?: string;
 }
 
@@ -32,14 +60,22 @@ function iothubEndpointServicebusQueueTimeoutsToTerraform(struct?: IothubEndpoin
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_endpoint_servicebus_queue.html azurerm_iothub_endpoint_servicebus_queue}
+*/
 export class IothubEndpointServicebusQueue extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_endpoint_servicebus_queue.html azurerm_iothub_endpoint_servicebus_queue} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options IothubEndpointServicebusQueueConfig
+  */
   public constructor(scope: Construct, id: string, config: IothubEndpointServicebusQueueConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_iothub_endpoint_servicebus_queue',

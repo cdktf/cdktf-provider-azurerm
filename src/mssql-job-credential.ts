@@ -7,17 +7,45 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface MssqlJobCredentialConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_job_credential.html#job_agent_id MssqlJobCredential#job_agent_id}
+  */
   readonly jobAgentId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_job_credential.html#name MssqlJobCredential#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_job_credential.html#password MssqlJobCredential#password}
+  */
   readonly password: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_job_credential.html#username MssqlJobCredential#username}
+  */
   readonly username: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_job_credential.html#timeouts MssqlJobCredential#timeouts}
+  */
   readonly timeouts?: MssqlJobCredentialTimeouts;
 }
 export interface MssqlJobCredentialTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_job_credential.html#create MssqlJobCredential#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_job_credential.html#delete MssqlJobCredential#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_job_credential.html#read MssqlJobCredential#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_job_credential.html#update MssqlJobCredential#update}
+  */
   readonly update?: string;
 }
 
@@ -32,14 +60,22 @@ function mssqlJobCredentialTimeoutsToTerraform(struct?: MssqlJobCredentialTimeou
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_job_credential.html azurerm_mssql_job_credential}
+*/
 export class MssqlJobCredential extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_job_credential.html azurerm_mssql_job_credential} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options MssqlJobCredentialConfig
+  */
   public constructor(scope: Construct, id: string, config: MssqlJobCredentialConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_mssql_job_credential',

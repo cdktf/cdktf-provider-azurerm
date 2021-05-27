@@ -7,53 +7,161 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface VirtualMachineScaleSetConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set.html#automatic_os_upgrade VirtualMachineScaleSet#automatic_os_upgrade}
+  */
   readonly automaticOsUpgrade?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set.html#eviction_policy VirtualMachineScaleSet#eviction_policy}
+  */
   readonly evictionPolicy?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set.html#health_probe_id VirtualMachineScaleSet#health_probe_id}
+  */
   readonly healthProbeId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set.html#license_type VirtualMachineScaleSet#license_type}
+  */
   readonly licenseType?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set.html#location VirtualMachineScaleSet#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set.html#name VirtualMachineScaleSet#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set.html#overprovision VirtualMachineScaleSet#overprovision}
+  */
   readonly overprovision?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set.html#priority VirtualMachineScaleSet#priority}
+  */
   readonly priority?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set.html#proximity_placement_group_id VirtualMachineScaleSet#proximity_placement_group_id}
+  */
   readonly proximityPlacementGroupId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set.html#resource_group_name VirtualMachineScaleSet#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set.html#single_placement_group VirtualMachineScaleSet#single_placement_group}
+  */
   readonly singlePlacementGroup?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set.html#tags VirtualMachineScaleSet#tags}
+  */
   readonly tags?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set.html#upgrade_policy_mode VirtualMachineScaleSet#upgrade_policy_mode}
+  */
   readonly upgradePolicyMode: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set.html#zones VirtualMachineScaleSet#zones}
+  */
   readonly zones?: string[];
-  /** boot_diagnostics block */
+  /**
+  * boot_diagnostics block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set.html#boot_diagnostics VirtualMachineScaleSet#boot_diagnostics}
+  */
   readonly bootDiagnostics?: VirtualMachineScaleSetBootDiagnostics[];
-  /** extension block */
+  /**
+  * extension block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set.html#extension VirtualMachineScaleSet#extension}
+  */
   readonly extension?: VirtualMachineScaleSetExtension[];
-  /** identity block */
+  /**
+  * identity block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set.html#identity VirtualMachineScaleSet#identity}
+  */
   readonly identity?: VirtualMachineScaleSetIdentity[];
-  /** network_profile block */
+  /**
+  * network_profile block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set.html#network_profile VirtualMachineScaleSet#network_profile}
+  */
   readonly networkProfile: VirtualMachineScaleSetNetworkProfile[];
-  /** os_profile block */
+  /**
+  * os_profile block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set.html#os_profile VirtualMachineScaleSet#os_profile}
+  */
   readonly osProfile: VirtualMachineScaleSetOsProfile[];
-  /** os_profile_linux_config block */
+  /**
+  * os_profile_linux_config block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set.html#os_profile_linux_config VirtualMachineScaleSet#os_profile_linux_config}
+  */
   readonly osProfileLinuxConfig?: VirtualMachineScaleSetOsProfileLinuxConfig[];
-  /** os_profile_secrets block */
+  /**
+  * os_profile_secrets block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set.html#os_profile_secrets VirtualMachineScaleSet#os_profile_secrets}
+  */
   readonly osProfileSecrets?: VirtualMachineScaleSetOsProfileSecrets[];
-  /** os_profile_windows_config block */
+  /**
+  * os_profile_windows_config block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set.html#os_profile_windows_config VirtualMachineScaleSet#os_profile_windows_config}
+  */
   readonly osProfileWindowsConfig?: VirtualMachineScaleSetOsProfileWindowsConfig[];
-  /** plan block */
+  /**
+  * plan block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set.html#plan VirtualMachineScaleSet#plan}
+  */
   readonly plan?: VirtualMachineScaleSetPlan[];
-  /** rolling_upgrade_policy block */
+  /**
+  * rolling_upgrade_policy block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set.html#rolling_upgrade_policy VirtualMachineScaleSet#rolling_upgrade_policy}
+  */
   readonly rollingUpgradePolicy?: VirtualMachineScaleSetRollingUpgradePolicy[];
-  /** sku block */
+  /**
+  * sku block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set.html#sku VirtualMachineScaleSet#sku}
+  */
   readonly sku: VirtualMachineScaleSetSku[];
-  /** storage_profile_data_disk block */
+  /**
+  * storage_profile_data_disk block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set.html#storage_profile_data_disk VirtualMachineScaleSet#storage_profile_data_disk}
+  */
   readonly storageProfileDataDisk?: VirtualMachineScaleSetStorageProfileDataDisk[];
-  /** storage_profile_image_reference block */
+  /**
+  * storage_profile_image_reference block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set.html#storage_profile_image_reference VirtualMachineScaleSet#storage_profile_image_reference}
+  */
   readonly storageProfileImageReference?: VirtualMachineScaleSetStorageProfileImageReference[];
-  /** storage_profile_os_disk block */
+  /**
+  * storage_profile_os_disk block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set.html#storage_profile_os_disk VirtualMachineScaleSet#storage_profile_os_disk}
+  */
   readonly storageProfileOsDisk: VirtualMachineScaleSetStorageProfileOsDisk[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set.html#timeouts VirtualMachineScaleSet#timeouts}
+  */
   readonly timeouts?: VirtualMachineScaleSetTimeouts;
 }
 export interface VirtualMachineScaleSetBootDiagnostics {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set.html#enabled VirtualMachineScaleSet#enabled}
+  */
   readonly enabled?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set.html#storage_uri VirtualMachineScaleSet#storage_uri}
+  */
   readonly storageUri: string;
 }
 
@@ -66,13 +174,37 @@ function virtualMachineScaleSetBootDiagnosticsToTerraform(struct?: VirtualMachin
 }
 
 export interface VirtualMachineScaleSetExtension {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set.html#auto_upgrade_minor_version VirtualMachineScaleSet#auto_upgrade_minor_version}
+  */
   readonly autoUpgradeMinorVersion?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set.html#name VirtualMachineScaleSet#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set.html#protected_settings VirtualMachineScaleSet#protected_settings}
+  */
   readonly protectedSettings?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set.html#provision_after_extensions VirtualMachineScaleSet#provision_after_extensions}
+  */
   readonly provisionAfterExtensions?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set.html#publisher VirtualMachineScaleSet#publisher}
+  */
   readonly publisher: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set.html#settings VirtualMachineScaleSet#settings}
+  */
   readonly settings?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set.html#type VirtualMachineScaleSet#type}
+  */
   readonly type: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set.html#type_handler_version VirtualMachineScaleSet#type_handler_version}
+  */
   readonly typeHandlerVersion: string;
 }
 
@@ -91,7 +223,13 @@ function virtualMachineScaleSetExtensionToTerraform(struct?: VirtualMachineScale
 }
 
 export interface VirtualMachineScaleSetIdentity {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set.html#identity_ids VirtualMachineScaleSet#identity_ids}
+  */
   readonly identityIds?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set.html#type VirtualMachineScaleSet#type}
+  */
   readonly type: string;
 }
 
@@ -104,6 +242,9 @@ function virtualMachineScaleSetIdentityToTerraform(struct?: VirtualMachineScaleS
 }
 
 export interface VirtualMachineScaleSetNetworkProfileDnsSettings {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set.html#dns_servers VirtualMachineScaleSet#dns_servers}
+  */
   readonly dnsServers: string[];
 }
 
@@ -115,8 +256,17 @@ function virtualMachineScaleSetNetworkProfileDnsSettingsToTerraform(struct?: Vir
 }
 
 export interface VirtualMachineScaleSetNetworkProfileIpConfigurationPublicIpAddressConfiguration {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set.html#domain_name_label VirtualMachineScaleSet#domain_name_label}
+  */
   readonly domainNameLabel: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set.html#idle_timeout VirtualMachineScaleSet#idle_timeout}
+  */
   readonly idleTimeout: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set.html#name VirtualMachineScaleSet#name}
+  */
   readonly name: string;
 }
 
@@ -130,14 +280,39 @@ function virtualMachineScaleSetNetworkProfileIpConfigurationPublicIpAddressConfi
 }
 
 export interface VirtualMachineScaleSetNetworkProfileIpConfiguration {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set.html#application_gateway_backend_address_pool_ids VirtualMachineScaleSet#application_gateway_backend_address_pool_ids}
+  */
   readonly applicationGatewayBackendAddressPoolIds?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set.html#application_security_group_ids VirtualMachineScaleSet#application_security_group_ids}
+  */
   readonly applicationSecurityGroupIds?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set.html#load_balancer_backend_address_pool_ids VirtualMachineScaleSet#load_balancer_backend_address_pool_ids}
+  */
   readonly loadBalancerBackendAddressPoolIds?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set.html#load_balancer_inbound_nat_rules_ids VirtualMachineScaleSet#load_balancer_inbound_nat_rules_ids}
+  */
   readonly loadBalancerInboundNatRulesIds?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set.html#name VirtualMachineScaleSet#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set.html#primary VirtualMachineScaleSet#primary}
+  */
   readonly primary: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set.html#subnet_id VirtualMachineScaleSet#subnet_id}
+  */
   readonly subnetId: string;
-  /** public_ip_address_configuration block */
+  /**
+  * public_ip_address_configuration block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set.html#public_ip_address_configuration VirtualMachineScaleSet#public_ip_address_configuration}
+  */
   readonly publicIpAddressConfiguration?: VirtualMachineScaleSetNetworkProfileIpConfigurationPublicIpAddressConfiguration[];
 }
 
@@ -156,14 +331,37 @@ function virtualMachineScaleSetNetworkProfileIpConfigurationToTerraform(struct?:
 }
 
 export interface VirtualMachineScaleSetNetworkProfile {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set.html#accelerated_networking VirtualMachineScaleSet#accelerated_networking}
+  */
   readonly acceleratedNetworking?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set.html#ip_forwarding VirtualMachineScaleSet#ip_forwarding}
+  */
   readonly ipForwarding?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set.html#name VirtualMachineScaleSet#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set.html#network_security_group_id VirtualMachineScaleSet#network_security_group_id}
+  */
   readonly networkSecurityGroupId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set.html#primary VirtualMachineScaleSet#primary}
+  */
   readonly primary: boolean;
-  /** dns_settings block */
+  /**
+  * dns_settings block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set.html#dns_settings VirtualMachineScaleSet#dns_settings}
+  */
   readonly dnsSettings?: VirtualMachineScaleSetNetworkProfileDnsSettings[];
-  /** ip_configuration block */
+  /**
+  * ip_configuration block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set.html#ip_configuration VirtualMachineScaleSet#ip_configuration}
+  */
   readonly ipConfiguration: VirtualMachineScaleSetNetworkProfileIpConfiguration[];
 }
 
@@ -181,9 +379,21 @@ function virtualMachineScaleSetNetworkProfileToTerraform(struct?: VirtualMachine
 }
 
 export interface VirtualMachineScaleSetOsProfile {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set.html#admin_password VirtualMachineScaleSet#admin_password}
+  */
   readonly adminPassword?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set.html#admin_username VirtualMachineScaleSet#admin_username}
+  */
   readonly adminUsername: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set.html#computer_name_prefix VirtualMachineScaleSet#computer_name_prefix}
+  */
   readonly computerNamePrefix: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set.html#custom_data VirtualMachineScaleSet#custom_data}
+  */
   readonly customData?: string;
 }
 
@@ -198,7 +408,13 @@ function virtualMachineScaleSetOsProfileToTerraform(struct?: VirtualMachineScale
 }
 
 export interface VirtualMachineScaleSetOsProfileLinuxConfigSshKeys {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set.html#key_data VirtualMachineScaleSet#key_data}
+  */
   readonly keyData?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set.html#path VirtualMachineScaleSet#path}
+  */
   readonly path: string;
 }
 
@@ -211,8 +427,15 @@ function virtualMachineScaleSetOsProfileLinuxConfigSshKeysToTerraform(struct?: V
 }
 
 export interface VirtualMachineScaleSetOsProfileLinuxConfig {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set.html#disable_password_authentication VirtualMachineScaleSet#disable_password_authentication}
+  */
   readonly disablePasswordAuthentication?: boolean;
-  /** ssh_keys block */
+  /**
+  * ssh_keys block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set.html#ssh_keys VirtualMachineScaleSet#ssh_keys}
+  */
   readonly sshKeys?: VirtualMachineScaleSetOsProfileLinuxConfigSshKeys[];
 }
 
@@ -225,7 +448,13 @@ function virtualMachineScaleSetOsProfileLinuxConfigToTerraform(struct?: VirtualM
 }
 
 export interface VirtualMachineScaleSetOsProfileSecretsVaultCertificates {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set.html#certificate_store VirtualMachineScaleSet#certificate_store}
+  */
   readonly certificateStore?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set.html#certificate_url VirtualMachineScaleSet#certificate_url}
+  */
   readonly certificateUrl: string;
 }
 
@@ -238,8 +467,15 @@ function virtualMachineScaleSetOsProfileSecretsVaultCertificatesToTerraform(stru
 }
 
 export interface VirtualMachineScaleSetOsProfileSecrets {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set.html#source_vault_id VirtualMachineScaleSet#source_vault_id}
+  */
   readonly sourceVaultId: string;
-  /** vault_certificates block */
+  /**
+  * vault_certificates block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set.html#vault_certificates VirtualMachineScaleSet#vault_certificates}
+  */
   readonly vaultCertificates?: VirtualMachineScaleSetOsProfileSecretsVaultCertificates[];
 }
 
@@ -252,9 +488,21 @@ function virtualMachineScaleSetOsProfileSecretsToTerraform(struct?: VirtualMachi
 }
 
 export interface VirtualMachineScaleSetOsProfileWindowsConfigAdditionalUnattendConfig {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set.html#component VirtualMachineScaleSet#component}
+  */
   readonly component: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set.html#content VirtualMachineScaleSet#content}
+  */
   readonly content: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set.html#pass VirtualMachineScaleSet#pass}
+  */
   readonly pass: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set.html#setting_name VirtualMachineScaleSet#setting_name}
+  */
   readonly settingName: string;
 }
 
@@ -269,7 +517,13 @@ function virtualMachineScaleSetOsProfileWindowsConfigAdditionalUnattendConfigToT
 }
 
 export interface VirtualMachineScaleSetOsProfileWindowsConfigWinrm {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set.html#certificate_url VirtualMachineScaleSet#certificate_url}
+  */
   readonly certificateUrl?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set.html#protocol VirtualMachineScaleSet#protocol}
+  */
   readonly protocol: string;
 }
 
@@ -282,11 +536,25 @@ function virtualMachineScaleSetOsProfileWindowsConfigWinrmToTerraform(struct?: V
 }
 
 export interface VirtualMachineScaleSetOsProfileWindowsConfig {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set.html#enable_automatic_upgrades VirtualMachineScaleSet#enable_automatic_upgrades}
+  */
   readonly enableAutomaticUpgrades?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set.html#provision_vm_agent VirtualMachineScaleSet#provision_vm_agent}
+  */
   readonly provisionVmAgent?: boolean;
-  /** additional_unattend_config block */
+  /**
+  * additional_unattend_config block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set.html#additional_unattend_config VirtualMachineScaleSet#additional_unattend_config}
+  */
   readonly additionalUnattendConfig?: VirtualMachineScaleSetOsProfileWindowsConfigAdditionalUnattendConfig[];
-  /** winrm block */
+  /**
+  * winrm block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set.html#winrm VirtualMachineScaleSet#winrm}
+  */
   readonly winrm?: VirtualMachineScaleSetOsProfileWindowsConfigWinrm[];
 }
 
@@ -301,8 +569,17 @@ function virtualMachineScaleSetOsProfileWindowsConfigToTerraform(struct?: Virtua
 }
 
 export interface VirtualMachineScaleSetPlan {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set.html#name VirtualMachineScaleSet#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set.html#product VirtualMachineScaleSet#product}
+  */
   readonly product: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set.html#publisher VirtualMachineScaleSet#publisher}
+  */
   readonly publisher: string;
 }
 
@@ -316,9 +593,21 @@ function virtualMachineScaleSetPlanToTerraform(struct?: VirtualMachineScaleSetPl
 }
 
 export interface VirtualMachineScaleSetRollingUpgradePolicy {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set.html#max_batch_instance_percent VirtualMachineScaleSet#max_batch_instance_percent}
+  */
   readonly maxBatchInstancePercent?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set.html#max_unhealthy_instance_percent VirtualMachineScaleSet#max_unhealthy_instance_percent}
+  */
   readonly maxUnhealthyInstancePercent?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set.html#max_unhealthy_upgraded_instance_percent VirtualMachineScaleSet#max_unhealthy_upgraded_instance_percent}
+  */
   readonly maxUnhealthyUpgradedInstancePercent?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set.html#pause_time_between_batches VirtualMachineScaleSet#pause_time_between_batches}
+  */
   readonly pauseTimeBetweenBatches?: string;
 }
 
@@ -333,8 +622,17 @@ function virtualMachineScaleSetRollingUpgradePolicyToTerraform(struct?: VirtualM
 }
 
 export interface VirtualMachineScaleSetSku {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set.html#capacity VirtualMachineScaleSet#capacity}
+  */
   readonly capacity: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set.html#name VirtualMachineScaleSet#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set.html#tier VirtualMachineScaleSet#tier}
+  */
   readonly tier?: string;
 }
 
@@ -348,10 +646,25 @@ function virtualMachineScaleSetSkuToTerraform(struct?: VirtualMachineScaleSetSku
 }
 
 export interface VirtualMachineScaleSetStorageProfileDataDisk {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set.html#caching VirtualMachineScaleSet#caching}
+  */
   readonly caching?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set.html#create_option VirtualMachineScaleSet#create_option}
+  */
   readonly createOption: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set.html#disk_size_gb VirtualMachineScaleSet#disk_size_gb}
+  */
   readonly diskSizeGb?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set.html#lun VirtualMachineScaleSet#lun}
+  */
   readonly lun: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set.html#managed_disk_type VirtualMachineScaleSet#managed_disk_type}
+  */
   readonly managedDiskType?: string;
 }
 
@@ -367,10 +680,25 @@ function virtualMachineScaleSetStorageProfileDataDiskToTerraform(struct?: Virtua
 }
 
 export interface VirtualMachineScaleSetStorageProfileImageReference {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set.html#id VirtualMachineScaleSet#id}
+  */
   readonly id?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set.html#offer VirtualMachineScaleSet#offer}
+  */
   readonly offer?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set.html#publisher VirtualMachineScaleSet#publisher}
+  */
   readonly publisher?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set.html#sku VirtualMachineScaleSet#sku}
+  */
   readonly sku?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set.html#version VirtualMachineScaleSet#version}
+  */
   readonly version?: string;
 }
 
@@ -386,12 +714,33 @@ function virtualMachineScaleSetStorageProfileImageReferenceToTerraform(struct?: 
 }
 
 export interface VirtualMachineScaleSetStorageProfileOsDisk {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set.html#caching VirtualMachineScaleSet#caching}
+  */
   readonly caching?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set.html#create_option VirtualMachineScaleSet#create_option}
+  */
   readonly createOption: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set.html#image VirtualMachineScaleSet#image}
+  */
   readonly image?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set.html#managed_disk_type VirtualMachineScaleSet#managed_disk_type}
+  */
   readonly managedDiskType?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set.html#name VirtualMachineScaleSet#name}
+  */
   readonly name?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set.html#os_type VirtualMachineScaleSet#os_type}
+  */
   readonly osType?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set.html#vhd_containers VirtualMachineScaleSet#vhd_containers}
+  */
   readonly vhdContainers?: string[];
 }
 
@@ -409,9 +758,21 @@ function virtualMachineScaleSetStorageProfileOsDiskToTerraform(struct?: VirtualM
 }
 
 export interface VirtualMachineScaleSetTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set.html#create VirtualMachineScaleSet#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set.html#delete VirtualMachineScaleSet#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set.html#read VirtualMachineScaleSet#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set.html#update VirtualMachineScaleSet#update}
+  */
   readonly update?: string;
 }
 
@@ -426,14 +787,22 @@ function virtualMachineScaleSetTimeoutsToTerraform(struct?: VirtualMachineScaleS
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set.html azurerm_virtual_machine_scale_set}
+*/
 export class VirtualMachineScaleSet extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set.html azurerm_virtual_machine_scale_set} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options VirtualMachineScaleSetConfig
+  */
   public constructor(scope: Construct, id: string, config: VirtualMachineScaleSetConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_virtual_machine_scale_set',

@@ -7,25 +7,75 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface SqlServerConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_server.html#administrator_login SqlServer#administrator_login}
+  */
   readonly administratorLogin: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_server.html#administrator_login_password SqlServer#administrator_login_password}
+  */
   readonly administratorLoginPassword: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_server.html#connection_policy SqlServer#connection_policy}
+  */
   readonly connectionPolicy?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_server.html#extended_auditing_policy SqlServer#extended_auditing_policy}
+  */
   readonly extendedAuditingPolicy?: SqlServerExtendedAuditingPolicy[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_server.html#location SqlServer#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_server.html#name SqlServer#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_server.html#resource_group_name SqlServer#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_server.html#tags SqlServer#tags}
+  */
   readonly tags?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_server.html#version SqlServer#version}
+  */
   readonly version: string;
-  /** identity block */
+  /**
+  * identity block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_server.html#identity SqlServer#identity}
+  */
   readonly identity?: SqlServerIdentity[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_server.html#timeouts SqlServer#timeouts}
+  */
   readonly timeouts?: SqlServerTimeouts;
 }
 export interface SqlServerExtendedAuditingPolicy {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_server.html#log_monitoring_enabled SqlServer#log_monitoring_enabled}
+  */
   readonly logMonitoringEnabled?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_server.html#retention_in_days SqlServer#retention_in_days}
+  */
   readonly retentionInDays?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_server.html#storage_account_access_key SqlServer#storage_account_access_key}
+  */
   readonly storageAccountAccessKey?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_server.html#storage_account_access_key_is_secondary SqlServer#storage_account_access_key_is_secondary}
+  */
   readonly storageAccountAccessKeyIsSecondary?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_server.html#storage_endpoint SqlServer#storage_endpoint}
+  */
   readonly storageEndpoint?: string;
 }
 
@@ -41,6 +91,9 @@ function sqlServerExtendedAuditingPolicyToTerraform(struct?: SqlServerExtendedAu
 }
 
 export interface SqlServerIdentity {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_server.html#type SqlServer#type}
+  */
   readonly type: string;
 }
 
@@ -52,9 +105,21 @@ function sqlServerIdentityToTerraform(struct?: SqlServerIdentity): any {
 }
 
 export interface SqlServerTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_server.html#create SqlServer#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_server.html#delete SqlServer#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_server.html#read SqlServer#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_server.html#update SqlServer#update}
+  */
   readonly update?: string;
 }
 
@@ -69,14 +134,22 @@ function sqlServerTimeoutsToTerraform(struct?: SqlServerTimeouts): any {
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/sql_server.html azurerm_sql_server}
+*/
 export class SqlServer extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/sql_server.html azurerm_sql_server} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options SqlServerConfig
+  */
   public constructor(scope: Construct, id: string, config: SqlServerConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_sql_server',

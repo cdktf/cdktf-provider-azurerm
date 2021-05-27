@@ -7,18 +7,49 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface RelayHybridConnectionConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/relay_hybrid_connection.html#name RelayHybridConnection#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/relay_hybrid_connection.html#relay_namespace_name RelayHybridConnection#relay_namespace_name}
+  */
   readonly relayNamespaceName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/relay_hybrid_connection.html#requires_client_authorization RelayHybridConnection#requires_client_authorization}
+  */
   readonly requiresClientAuthorization?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/relay_hybrid_connection.html#resource_group_name RelayHybridConnection#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/relay_hybrid_connection.html#user_metadata RelayHybridConnection#user_metadata}
+  */
   readonly userMetadata?: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/relay_hybrid_connection.html#timeouts RelayHybridConnection#timeouts}
+  */
   readonly timeouts?: RelayHybridConnectionTimeouts;
 }
 export interface RelayHybridConnectionTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/relay_hybrid_connection.html#create RelayHybridConnection#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/relay_hybrid_connection.html#delete RelayHybridConnection#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/relay_hybrid_connection.html#read RelayHybridConnection#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/relay_hybrid_connection.html#update RelayHybridConnection#update}
+  */
   readonly update?: string;
 }
 
@@ -33,14 +64,22 @@ function relayHybridConnectionTimeoutsToTerraform(struct?: RelayHybridConnection
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/relay_hybrid_connection.html azurerm_relay_hybrid_connection}
+*/
 export class RelayHybridConnection extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/relay_hybrid_connection.html azurerm_relay_hybrid_connection} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options RelayHybridConnectionConfig
+  */
   public constructor(scope: Construct, id: string, config: RelayHybridConnectionConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_relay_hybrid_connection',

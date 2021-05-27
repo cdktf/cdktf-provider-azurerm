@@ -7,32 +7,101 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DevTestLinuxVirtualMachineConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_linux_virtual_machine.html#allow_claim DevTestLinuxVirtualMachine#allow_claim}
+  */
   readonly allowClaim?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_linux_virtual_machine.html#disallow_public_ip_address DevTestLinuxVirtualMachine#disallow_public_ip_address}
+  */
   readonly disallowPublicIpAddress?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_linux_virtual_machine.html#lab_name DevTestLinuxVirtualMachine#lab_name}
+  */
   readonly labName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_linux_virtual_machine.html#lab_subnet_name DevTestLinuxVirtualMachine#lab_subnet_name}
+  */
   readonly labSubnetName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_linux_virtual_machine.html#lab_virtual_network_id DevTestLinuxVirtualMachine#lab_virtual_network_id}
+  */
   readonly labVirtualNetworkId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_linux_virtual_machine.html#location DevTestLinuxVirtualMachine#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_linux_virtual_machine.html#name DevTestLinuxVirtualMachine#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_linux_virtual_machine.html#notes DevTestLinuxVirtualMachine#notes}
+  */
   readonly notes?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_linux_virtual_machine.html#password DevTestLinuxVirtualMachine#password}
+  */
   readonly password?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_linux_virtual_machine.html#resource_group_name DevTestLinuxVirtualMachine#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_linux_virtual_machine.html#size DevTestLinuxVirtualMachine#size}
+  */
   readonly size: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_linux_virtual_machine.html#ssh_key DevTestLinuxVirtualMachine#ssh_key}
+  */
   readonly sshKey?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_linux_virtual_machine.html#storage_type DevTestLinuxVirtualMachine#storage_type}
+  */
   readonly storageType: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_linux_virtual_machine.html#tags DevTestLinuxVirtualMachine#tags}
+  */
   readonly tags?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_linux_virtual_machine.html#username DevTestLinuxVirtualMachine#username}
+  */
   readonly username: string;
-  /** gallery_image_reference block */
+  /**
+  * gallery_image_reference block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_linux_virtual_machine.html#gallery_image_reference DevTestLinuxVirtualMachine#gallery_image_reference}
+  */
   readonly galleryImageReference: DevTestLinuxVirtualMachineGalleryImageReference[];
-  /** inbound_nat_rule block */
+  /**
+  * inbound_nat_rule block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_linux_virtual_machine.html#inbound_nat_rule DevTestLinuxVirtualMachine#inbound_nat_rule}
+  */
   readonly inboundNatRule?: DevTestLinuxVirtualMachineInboundNatRule[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_linux_virtual_machine.html#timeouts DevTestLinuxVirtualMachine#timeouts}
+  */
   readonly timeouts?: DevTestLinuxVirtualMachineTimeouts;
 }
 export interface DevTestLinuxVirtualMachineGalleryImageReference {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_linux_virtual_machine.html#offer DevTestLinuxVirtualMachine#offer}
+  */
   readonly offer: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_linux_virtual_machine.html#publisher DevTestLinuxVirtualMachine#publisher}
+  */
   readonly publisher: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_linux_virtual_machine.html#sku DevTestLinuxVirtualMachine#sku}
+  */
   readonly sku: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_linux_virtual_machine.html#version DevTestLinuxVirtualMachine#version}
+  */
   readonly version: string;
 }
 
@@ -47,7 +116,13 @@ function devTestLinuxVirtualMachineGalleryImageReferenceToTerraform(struct?: Dev
 }
 
 export interface DevTestLinuxVirtualMachineInboundNatRule {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_linux_virtual_machine.html#backend_port DevTestLinuxVirtualMachine#backend_port}
+  */
   readonly backendPort: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_linux_virtual_machine.html#protocol DevTestLinuxVirtualMachine#protocol}
+  */
   readonly protocol: string;
 }
 
@@ -60,9 +135,21 @@ function devTestLinuxVirtualMachineInboundNatRuleToTerraform(struct?: DevTestLin
 }
 
 export interface DevTestLinuxVirtualMachineTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_linux_virtual_machine.html#create DevTestLinuxVirtualMachine#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_linux_virtual_machine.html#delete DevTestLinuxVirtualMachine#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_linux_virtual_machine.html#read DevTestLinuxVirtualMachine#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_linux_virtual_machine.html#update DevTestLinuxVirtualMachine#update}
+  */
   readonly update?: string;
 }
 
@@ -77,14 +164,22 @@ function devTestLinuxVirtualMachineTimeoutsToTerraform(struct?: DevTestLinuxVirt
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_linux_virtual_machine.html azurerm_dev_test_linux_virtual_machine}
+*/
 export class DevTestLinuxVirtualMachine extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_linux_virtual_machine.html azurerm_dev_test_linux_virtual_machine} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DevTestLinuxVirtualMachineConfig
+  */
   public constructor(scope: Construct, id: string, config: DevTestLinuxVirtualMachineConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_dev_test_linux_virtual_machine',

@@ -7,25 +7,71 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface SynapseSparkPoolConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_spark_pool.html#name SynapseSparkPool#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_spark_pool.html#node_count SynapseSparkPool#node_count}
+  */
   readonly nodeCount?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_spark_pool.html#node_size SynapseSparkPool#node_size}
+  */
   readonly nodeSize: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_spark_pool.html#node_size_family SynapseSparkPool#node_size_family}
+  */
   readonly nodeSizeFamily: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_spark_pool.html#spark_events_folder SynapseSparkPool#spark_events_folder}
+  */
   readonly sparkEventsFolder?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_spark_pool.html#spark_log_folder SynapseSparkPool#spark_log_folder}
+  */
   readonly sparkLogFolder?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_spark_pool.html#spark_version SynapseSparkPool#spark_version}
+  */
   readonly sparkVersion?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_spark_pool.html#synapse_workspace_id SynapseSparkPool#synapse_workspace_id}
+  */
   readonly synapseWorkspaceId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_spark_pool.html#tags SynapseSparkPool#tags}
+  */
   readonly tags?: { [key: string]: string };
-  /** auto_pause block */
+  /**
+  * auto_pause block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_spark_pool.html#auto_pause SynapseSparkPool#auto_pause}
+  */
   readonly autoPause?: SynapseSparkPoolAutoPause[];
-  /** auto_scale block */
+  /**
+  * auto_scale block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_spark_pool.html#auto_scale SynapseSparkPool#auto_scale}
+  */
   readonly autoScale?: SynapseSparkPoolAutoScale[];
-  /** library_requirement block */
+  /**
+  * library_requirement block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_spark_pool.html#library_requirement SynapseSparkPool#library_requirement}
+  */
   readonly libraryRequirement?: SynapseSparkPoolLibraryRequirement[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_spark_pool.html#timeouts SynapseSparkPool#timeouts}
+  */
   readonly timeouts?: SynapseSparkPoolTimeouts;
 }
 export interface SynapseSparkPoolAutoPause {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_spark_pool.html#delay_in_minutes SynapseSparkPool#delay_in_minutes}
+  */
   readonly delayInMinutes: number;
 }
 
@@ -37,7 +83,13 @@ function synapseSparkPoolAutoPauseToTerraform(struct?: SynapseSparkPoolAutoPause
 }
 
 export interface SynapseSparkPoolAutoScale {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_spark_pool.html#max_node_count SynapseSparkPool#max_node_count}
+  */
   readonly maxNodeCount: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_spark_pool.html#min_node_count SynapseSparkPool#min_node_count}
+  */
   readonly minNodeCount: number;
 }
 
@@ -50,7 +102,13 @@ function synapseSparkPoolAutoScaleToTerraform(struct?: SynapseSparkPoolAutoScale
 }
 
 export interface SynapseSparkPoolLibraryRequirement {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_spark_pool.html#content SynapseSparkPool#content}
+  */
   readonly content: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_spark_pool.html#filename SynapseSparkPool#filename}
+  */
   readonly filename: string;
 }
 
@@ -63,9 +121,21 @@ function synapseSparkPoolLibraryRequirementToTerraform(struct?: SynapseSparkPool
 }
 
 export interface SynapseSparkPoolTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_spark_pool.html#create SynapseSparkPool#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_spark_pool.html#delete SynapseSparkPool#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_spark_pool.html#read SynapseSparkPool#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_spark_pool.html#update SynapseSparkPool#update}
+  */
   readonly update?: string;
 }
 
@@ -80,14 +150,22 @@ function synapseSparkPoolTimeoutsToTerraform(struct?: SynapseSparkPoolTimeouts):
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_spark_pool.html azurerm_synapse_spark_pool}
+*/
 export class SynapseSparkPool extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_spark_pool.html azurerm_synapse_spark_pool} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options SynapseSparkPoolConfig
+  */
   public constructor(scope: Construct, id: string, config: SynapseSparkPoolConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_synapse_spark_pool',

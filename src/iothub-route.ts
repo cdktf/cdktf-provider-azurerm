@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/iothub_route_a.html
+// https://www.terraform.io/docs/providers/azurerm/r/iothub_route.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,20 +7,57 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface IothubRouteAConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_route.html#condition IothubRouteA#condition}
+  */
   readonly condition?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_route.html#enabled IothubRouteA#enabled}
+  */
   readonly enabled: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_route.html#endpoint_names IothubRouteA#endpoint_names}
+  */
   readonly endpointNames: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_route.html#iothub_name IothubRouteA#iothub_name}
+  */
   readonly iothubName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_route.html#name IothubRouteA#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_route.html#resource_group_name IothubRouteA#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_route.html#source IothubRouteA#source}
+  */
   readonly source: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_route.html#timeouts IothubRouteA#timeouts}
+  */
   readonly timeouts?: IothubRouteTimeouts;
 }
 export interface IothubRouteTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_route.html#create IothubRouteA#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_route.html#delete IothubRouteA#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_route.html#read IothubRouteA#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_route.html#update IothubRouteA#update}
+  */
   readonly update?: string;
 }
 
@@ -35,14 +72,22 @@ function iothubRouteTimeoutsToTerraform(struct?: IothubRouteTimeouts): any {
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_route.html azurerm_iothub_route}
+*/
 export class IothubRouteA extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_route.html azurerm_iothub_route} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options IothubRouteAConfig
+  */
   public constructor(scope: Construct, id: string, config: IothubRouteAConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_iothub_route',

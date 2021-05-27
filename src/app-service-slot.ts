@@ -7,27 +7,81 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface AppServiceSlotConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot.html#app_service_name AppServiceSlot#app_service_name}
+  */
   readonly appServiceName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot.html#app_service_plan_id AppServiceSlot#app_service_plan_id}
+  */
   readonly appServicePlanId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot.html#app_settings AppServiceSlot#app_settings}
+  */
   readonly appSettings?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot.html#client_affinity_enabled AppServiceSlot#client_affinity_enabled}
+  */
   readonly clientAffinityEnabled?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot.html#enabled AppServiceSlot#enabled}
+  */
   readonly enabled?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot.html#https_only AppServiceSlot#https_only}
+  */
   readonly httpsOnly?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot.html#location AppServiceSlot#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot.html#name AppServiceSlot#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot.html#resource_group_name AppServiceSlot#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot.html#tags AppServiceSlot#tags}
+  */
   readonly tags?: { [key: string]: string };
-  /** auth_settings block */
+  /**
+  * auth_settings block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot.html#auth_settings AppServiceSlot#auth_settings}
+  */
   readonly authSettings?: AppServiceSlotAuthSettings[];
-  /** connection_string block */
+  /**
+  * connection_string block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot.html#connection_string AppServiceSlot#connection_string}
+  */
   readonly connectionString?: AppServiceSlotConnectionString[];
-  /** identity block */
+  /**
+  * identity block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot.html#identity AppServiceSlot#identity}
+  */
   readonly identity?: AppServiceSlotIdentity[];
-  /** logs block */
+  /**
+  * logs block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot.html#logs AppServiceSlot#logs}
+  */
   readonly logs?: AppServiceSlotLogs[];
-  /** site_config block */
+  /**
+  * site_config block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot.html#site_config AppServiceSlot#site_config}
+  */
   readonly siteConfig?: AppServiceSlotSiteConfig[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot.html#timeouts AppServiceSlot#timeouts}
+  */
   readonly timeouts?: AppServiceSlotTimeouts;
 }
 export class AppServiceSlotSiteCredential extends cdktf.ComplexComputedList {
@@ -43,8 +97,17 @@ export class AppServiceSlotSiteCredential extends cdktf.ComplexComputedList {
   }
 }
 export interface AppServiceSlotAuthSettingsActiveDirectory {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot.html#allowed_audiences AppServiceSlot#allowed_audiences}
+  */
   readonly allowedAudiences?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot.html#client_id AppServiceSlot#client_id}
+  */
   readonly clientId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot.html#client_secret AppServiceSlot#client_secret}
+  */
   readonly clientSecret?: string;
 }
 
@@ -58,8 +121,17 @@ function appServiceSlotAuthSettingsActiveDirectoryToTerraform(struct?: AppServic
 }
 
 export interface AppServiceSlotAuthSettingsFacebook {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot.html#app_id AppServiceSlot#app_id}
+  */
   readonly appId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot.html#app_secret AppServiceSlot#app_secret}
+  */
   readonly appSecret: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot.html#oauth_scopes AppServiceSlot#oauth_scopes}
+  */
   readonly oauthScopes?: string[];
 }
 
@@ -73,8 +145,17 @@ function appServiceSlotAuthSettingsFacebookToTerraform(struct?: AppServiceSlotAu
 }
 
 export interface AppServiceSlotAuthSettingsGoogle {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot.html#client_id AppServiceSlot#client_id}
+  */
   readonly clientId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot.html#client_secret AppServiceSlot#client_secret}
+  */
   readonly clientSecret: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot.html#oauth_scopes AppServiceSlot#oauth_scopes}
+  */
   readonly oauthScopes?: string[];
 }
 
@@ -88,8 +169,17 @@ function appServiceSlotAuthSettingsGoogleToTerraform(struct?: AppServiceSlotAuth
 }
 
 export interface AppServiceSlotAuthSettingsMicrosoft {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot.html#client_id AppServiceSlot#client_id}
+  */
   readonly clientId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot.html#client_secret AppServiceSlot#client_secret}
+  */
   readonly clientSecret: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot.html#oauth_scopes AppServiceSlot#oauth_scopes}
+  */
   readonly oauthScopes?: string[];
 }
 
@@ -103,7 +193,13 @@ function appServiceSlotAuthSettingsMicrosoftToTerraform(struct?: AppServiceSlotA
 }
 
 export interface AppServiceSlotAuthSettingsTwitter {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot.html#consumer_key AppServiceSlot#consumer_key}
+  */
   readonly consumerKey: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot.html#consumer_secret AppServiceSlot#consumer_secret}
+  */
   readonly consumerSecret: string;
 }
 
@@ -116,24 +212,71 @@ function appServiceSlotAuthSettingsTwitterToTerraform(struct?: AppServiceSlotAut
 }
 
 export interface AppServiceSlotAuthSettings {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot.html#additional_login_params AppServiceSlot#additional_login_params}
+  */
   readonly additionalLoginParams?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot.html#allowed_external_redirect_urls AppServiceSlot#allowed_external_redirect_urls}
+  */
   readonly allowedExternalRedirectUrls?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot.html#default_provider AppServiceSlot#default_provider}
+  */
   readonly defaultProvider?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot.html#enabled AppServiceSlot#enabled}
+  */
   readonly enabled: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot.html#issuer AppServiceSlot#issuer}
+  */
   readonly issuer?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot.html#runtime_version AppServiceSlot#runtime_version}
+  */
   readonly runtimeVersion?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot.html#token_refresh_extension_hours AppServiceSlot#token_refresh_extension_hours}
+  */
   readonly tokenRefreshExtensionHours?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot.html#token_store_enabled AppServiceSlot#token_store_enabled}
+  */
   readonly tokenStoreEnabled?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot.html#unauthenticated_client_action AppServiceSlot#unauthenticated_client_action}
+  */
   readonly unauthenticatedClientAction?: string;
-  /** active_directory block */
+  /**
+  * active_directory block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot.html#active_directory AppServiceSlot#active_directory}
+  */
   readonly activeDirectory?: AppServiceSlotAuthSettingsActiveDirectory[];
-  /** facebook block */
+  /**
+  * facebook block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot.html#facebook AppServiceSlot#facebook}
+  */
   readonly facebook?: AppServiceSlotAuthSettingsFacebook[];
-  /** google block */
+  /**
+  * google block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot.html#google AppServiceSlot#google}
+  */
   readonly google?: AppServiceSlotAuthSettingsGoogle[];
-  /** microsoft block */
+  /**
+  * microsoft block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot.html#microsoft AppServiceSlot#microsoft}
+  */
   readonly microsoft?: AppServiceSlotAuthSettingsMicrosoft[];
-  /** twitter block */
+  /**
+  * twitter block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot.html#twitter AppServiceSlot#twitter}
+  */
   readonly twitter?: AppServiceSlotAuthSettingsTwitter[];
 }
 
@@ -158,8 +301,17 @@ function appServiceSlotAuthSettingsToTerraform(struct?: AppServiceSlotAuthSettin
 }
 
 export interface AppServiceSlotConnectionString {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot.html#name AppServiceSlot#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot.html#type AppServiceSlot#type}
+  */
   readonly type: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot.html#value AppServiceSlot#value}
+  */
   readonly value: string;
 }
 
@@ -173,7 +325,13 @@ function appServiceSlotConnectionStringToTerraform(struct?: AppServiceSlotConnec
 }
 
 export interface AppServiceSlotIdentity {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot.html#identity_ids AppServiceSlot#identity_ids}
+  */
   readonly identityIds?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot.html#type AppServiceSlot#type}
+  */
   readonly type: string;
 }
 
@@ -186,8 +344,17 @@ function appServiceSlotIdentityToTerraform(struct?: AppServiceSlotIdentity): any
 }
 
 export interface AppServiceSlotLogsApplicationLogsAzureBlobStorage {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot.html#level AppServiceSlot#level}
+  */
   readonly level: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot.html#retention_in_days AppServiceSlot#retention_in_days}
+  */
   readonly retentionInDays: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot.html#sas_url AppServiceSlot#sas_url}
+  */
   readonly sasUrl: string;
 }
 
@@ -201,8 +368,15 @@ function appServiceSlotLogsApplicationLogsAzureBlobStorageToTerraform(struct?: A
 }
 
 export interface AppServiceSlotLogsApplicationLogs {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot.html#file_system_level AppServiceSlot#file_system_level}
+  */
   readonly fileSystemLevel?: string;
-  /** azure_blob_storage block */
+  /**
+  * azure_blob_storage block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot.html#azure_blob_storage AppServiceSlot#azure_blob_storage}
+  */
   readonly azureBlobStorage?: AppServiceSlotLogsApplicationLogsAzureBlobStorage[];
 }
 
@@ -215,7 +389,13 @@ function appServiceSlotLogsApplicationLogsToTerraform(struct?: AppServiceSlotLog
 }
 
 export interface AppServiceSlotLogsHttpLogsAzureBlobStorage {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot.html#retention_in_days AppServiceSlot#retention_in_days}
+  */
   readonly retentionInDays: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot.html#sas_url AppServiceSlot#sas_url}
+  */
   readonly sasUrl: string;
 }
 
@@ -228,7 +408,13 @@ function appServiceSlotLogsHttpLogsAzureBlobStorageToTerraform(struct?: AppServi
 }
 
 export interface AppServiceSlotLogsHttpLogsFileSystem {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot.html#retention_in_days AppServiceSlot#retention_in_days}
+  */
   readonly retentionInDays: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot.html#retention_in_mb AppServiceSlot#retention_in_mb}
+  */
   readonly retentionInMb: number;
 }
 
@@ -241,9 +427,17 @@ function appServiceSlotLogsHttpLogsFileSystemToTerraform(struct?: AppServiceSlot
 }
 
 export interface AppServiceSlotLogsHttpLogs {
-  /** azure_blob_storage block */
+  /**
+  * azure_blob_storage block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot.html#azure_blob_storage AppServiceSlot#azure_blob_storage}
+  */
   readonly azureBlobStorage?: AppServiceSlotLogsHttpLogsAzureBlobStorage[];
-  /** file_system block */
+  /**
+  * file_system block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot.html#file_system AppServiceSlot#file_system}
+  */
   readonly fileSystem?: AppServiceSlotLogsHttpLogsFileSystem[];
 }
 
@@ -256,11 +450,25 @@ function appServiceSlotLogsHttpLogsToTerraform(struct?: AppServiceSlotLogsHttpLo
 }
 
 export interface AppServiceSlotLogs {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot.html#detailed_error_messages_enabled AppServiceSlot#detailed_error_messages_enabled}
+  */
   readonly detailedErrorMessagesEnabled?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot.html#failed_request_tracing_enabled AppServiceSlot#failed_request_tracing_enabled}
+  */
   readonly failedRequestTracingEnabled?: boolean;
-  /** application_logs block */
+  /**
+  * application_logs block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot.html#application_logs AppServiceSlot#application_logs}
+  */
   readonly applicationLogs?: AppServiceSlotLogsApplicationLogs[];
-  /** http_logs block */
+  /**
+  * http_logs block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot.html#http_logs AppServiceSlot#http_logs}
+  */
   readonly httpLogs?: AppServiceSlotLogsHttpLogs[];
 }
 
@@ -275,9 +483,21 @@ function appServiceSlotLogsToTerraform(struct?: AppServiceSlotLogs): any {
 }
 
 export interface AppServiceSlotSiteConfigIpRestrictionHeaders {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot.html#x_azure_fdid AppServiceSlot#x_azure_fdid}
+  */
   readonly xAzureFdid?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot.html#x_fd_health_probe AppServiceSlot#x_fd_health_probe}
+  */
   readonly xFdHealthProbe?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot.html#x_forwarded_for AppServiceSlot#x_forwarded_for}
+  */
   readonly xForwardedFor?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot.html#x_forwarded_host AppServiceSlot#x_forwarded_host}
+  */
   readonly xForwardedHost?: string[];
 }
 
@@ -292,12 +512,33 @@ function appServiceSlotSiteConfigIpRestrictionHeadersToTerraform(struct?: AppSer
 }
 
 export interface AppServiceSlotSiteConfigIpRestriction {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot.html#action AppServiceSlot#action}
+  */
   readonly action?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot.html#headers AppServiceSlot#headers}
+  */
   readonly headers?: AppServiceSlotSiteConfigIpRestrictionHeaders[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot.html#ip_address AppServiceSlot#ip_address}
+  */
   readonly ipAddress?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot.html#name AppServiceSlot#name}
+  */
   readonly name?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot.html#priority AppServiceSlot#priority}
+  */
   readonly priority?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot.html#service_tag AppServiceSlot#service_tag}
+  */
   readonly serviceTag?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot.html#virtual_network_subnet_id AppServiceSlot#virtual_network_subnet_id}
+  */
   readonly virtualNetworkSubnetId?: string;
 }
 
@@ -315,9 +556,21 @@ function appServiceSlotSiteConfigIpRestrictionToTerraform(struct?: AppServiceSlo
 }
 
 export interface AppServiceSlotSiteConfigScmIpRestrictionHeaders {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot.html#x_azure_fdid AppServiceSlot#x_azure_fdid}
+  */
   readonly xAzureFdid?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot.html#x_fd_health_probe AppServiceSlot#x_fd_health_probe}
+  */
   readonly xFdHealthProbe?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot.html#x_forwarded_for AppServiceSlot#x_forwarded_for}
+  */
   readonly xForwardedFor?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot.html#x_forwarded_host AppServiceSlot#x_forwarded_host}
+  */
   readonly xForwardedHost?: string[];
 }
 
@@ -332,12 +585,33 @@ function appServiceSlotSiteConfigScmIpRestrictionHeadersToTerraform(struct?: App
 }
 
 export interface AppServiceSlotSiteConfigScmIpRestriction {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot.html#action AppServiceSlot#action}
+  */
   readonly action?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot.html#headers AppServiceSlot#headers}
+  */
   readonly headers?: AppServiceSlotSiteConfigScmIpRestrictionHeaders[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot.html#ip_address AppServiceSlot#ip_address}
+  */
   readonly ipAddress?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot.html#name AppServiceSlot#name}
+  */
   readonly name?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot.html#priority AppServiceSlot#priority}
+  */
   readonly priority?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot.html#service_tag AppServiceSlot#service_tag}
+  */
   readonly serviceTag?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot.html#virtual_network_subnet_id AppServiceSlot#virtual_network_subnet_id}
+  */
   readonly virtualNetworkSubnetId?: string;
 }
 
@@ -355,7 +629,13 @@ function appServiceSlotSiteConfigScmIpRestrictionToTerraform(struct?: AppService
 }
 
 export interface AppServiceSlotSiteConfigCors {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot.html#allowed_origins AppServiceSlot#allowed_origins}
+  */
   readonly allowedOrigins: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot.html#support_credentials AppServiceSlot#support_credentials}
+  */
   readonly supportCredentials?: boolean;
 }
 
@@ -368,34 +648,119 @@ function appServiceSlotSiteConfigCorsToTerraform(struct?: AppServiceSlotSiteConf
 }
 
 export interface AppServiceSlotSiteConfig {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot.html#always_on AppServiceSlot#always_on}
+  */
   readonly alwaysOn?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot.html#app_command_line AppServiceSlot#app_command_line}
+  */
   readonly appCommandLine?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot.html#auto_swap_slot_name AppServiceSlot#auto_swap_slot_name}
+  */
   readonly autoSwapSlotName?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot.html#default_documents AppServiceSlot#default_documents}
+  */
   readonly defaultDocuments?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot.html#dotnet_framework_version AppServiceSlot#dotnet_framework_version}
+  */
   readonly dotnetFrameworkVersion?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot.html#ftps_state AppServiceSlot#ftps_state}
+  */
   readonly ftpsState?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot.html#health_check_path AppServiceSlot#health_check_path}
+  */
   readonly healthCheckPath?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot.html#http2_enabled AppServiceSlot#http2_enabled}
+  */
   readonly http2Enabled?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot.html#ip_restriction AppServiceSlot#ip_restriction}
+  */
   readonly ipRestriction?: AppServiceSlotSiteConfigIpRestriction[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot.html#java_container AppServiceSlot#java_container}
+  */
   readonly javaContainer?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot.html#java_container_version AppServiceSlot#java_container_version}
+  */
   readonly javaContainerVersion?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot.html#java_version AppServiceSlot#java_version}
+  */
   readonly javaVersion?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot.html#linux_fx_version AppServiceSlot#linux_fx_version}
+  */
   readonly linuxFxVersion?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot.html#local_mysql_enabled AppServiceSlot#local_mysql_enabled}
+  */
   readonly localMysqlEnabled?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot.html#managed_pipeline_mode AppServiceSlot#managed_pipeline_mode}
+  */
   readonly managedPipelineMode?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot.html#min_tls_version AppServiceSlot#min_tls_version}
+  */
   readonly minTlsVersion?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot.html#number_of_workers AppServiceSlot#number_of_workers}
+  */
   readonly numberOfWorkers?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot.html#php_version AppServiceSlot#php_version}
+  */
   readonly phpVersion?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot.html#python_version AppServiceSlot#python_version}
+  */
   readonly pythonVersion?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot.html#remote_debugging_enabled AppServiceSlot#remote_debugging_enabled}
+  */
   readonly remoteDebuggingEnabled?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot.html#remote_debugging_version AppServiceSlot#remote_debugging_version}
+  */
   readonly remoteDebuggingVersion?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot.html#scm_ip_restriction AppServiceSlot#scm_ip_restriction}
+  */
   readonly scmIpRestriction?: AppServiceSlotSiteConfigScmIpRestriction[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot.html#scm_type AppServiceSlot#scm_type}
+  */
   readonly scmType?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot.html#scm_use_main_ip_restriction AppServiceSlot#scm_use_main_ip_restriction}
+  */
   readonly scmUseMainIpRestriction?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot.html#use_32_bit_worker_process AppServiceSlot#use_32_bit_worker_process}
+  */
   readonly use32BitWorkerProcess?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot.html#websockets_enabled AppServiceSlot#websockets_enabled}
+  */
   readonly websocketsEnabled?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot.html#windows_fx_version AppServiceSlot#windows_fx_version}
+  */
   readonly windowsFxVersion?: string;
-  /** cors block */
+  /**
+  * cors block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot.html#cors AppServiceSlot#cors}
+  */
   readonly cors?: AppServiceSlotSiteConfigCors[];
 }
 
@@ -434,9 +799,21 @@ function appServiceSlotSiteConfigToTerraform(struct?: AppServiceSlotSiteConfig):
 }
 
 export interface AppServiceSlotTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot.html#create AppServiceSlot#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot.html#delete AppServiceSlot#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot.html#read AppServiceSlot#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot.html#update AppServiceSlot#update}
+  */
   readonly update?: string;
 }
 
@@ -451,14 +828,22 @@ function appServiceSlotTimeoutsToTerraform(struct?: AppServiceSlotTimeouts): any
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot.html azurerm_app_service_slot}
+*/
 export class AppServiceSlot extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot.html azurerm_app_service_slot} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options AppServiceSlotConfig
+  */
   public constructor(scope: Construct, id: string, config: AppServiceSlotConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_app_service_slot',

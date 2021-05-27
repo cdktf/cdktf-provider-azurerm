@@ -7,20 +7,57 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface MediaAssetConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_asset.html#alternate_id MediaAsset#alternate_id}
+  */
   readonly alternateId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_asset.html#container MediaAsset#container}
+  */
   readonly container?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_asset.html#description MediaAsset#description}
+  */
   readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_asset.html#media_services_account_name MediaAsset#media_services_account_name}
+  */
   readonly mediaServicesAccountName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_asset.html#name MediaAsset#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_asset.html#resource_group_name MediaAsset#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_asset.html#storage_account_name MediaAsset#storage_account_name}
+  */
   readonly storageAccountName?: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_asset.html#timeouts MediaAsset#timeouts}
+  */
   readonly timeouts?: MediaAssetTimeouts;
 }
 export interface MediaAssetTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_asset.html#create MediaAsset#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_asset.html#delete MediaAsset#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_asset.html#read MediaAsset#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_asset.html#update MediaAsset#update}
+  */
   readonly update?: string;
 }
 
@@ -35,14 +72,22 @@ function mediaAssetTimeoutsToTerraform(struct?: MediaAssetTimeouts): any {
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/media_asset.html azurerm_media_asset}
+*/
 export class MediaAsset extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/media_asset.html azurerm_media_asset} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options MediaAssetConfig
+  */
   public constructor(scope: Construct, id: string, config: MediaAssetConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_media_asset',

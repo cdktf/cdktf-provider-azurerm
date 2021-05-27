@@ -7,24 +7,71 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface VirtualNetworkConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_network.html#address_space VirtualNetwork#address_space}
+  */
   readonly addressSpace: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_network.html#bgp_community VirtualNetwork#bgp_community}
+  */
   readonly bgpCommunity?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_network.html#dns_servers VirtualNetwork#dns_servers}
+  */
   readonly dnsServers?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_network.html#location VirtualNetwork#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_network.html#name VirtualNetwork#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_network.html#resource_group_name VirtualNetwork#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_network.html#subnet VirtualNetwork#subnet}
+  */
   readonly subnet?: VirtualNetworkSubnet[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_network.html#tags VirtualNetwork#tags}
+  */
   readonly tags?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_network.html#vm_protection_enabled VirtualNetwork#vm_protection_enabled}
+  */
   readonly vmProtectionEnabled?: boolean;
-  /** ddos_protection_plan block */
+  /**
+  * ddos_protection_plan block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_network.html#ddos_protection_plan VirtualNetwork#ddos_protection_plan}
+  */
   readonly ddosProtectionPlan?: VirtualNetworkDdosProtectionPlan[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_network.html#timeouts VirtualNetwork#timeouts}
+  */
   readonly timeouts?: VirtualNetworkTimeouts;
 }
 export interface VirtualNetworkSubnet {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_network.html#address_prefix VirtualNetwork#address_prefix}
+  */
   readonly addressPrefix?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_network.html#id VirtualNetwork#id}
+  */
   readonly id?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_network.html#name VirtualNetwork#name}
+  */
   readonly name?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_network.html#security_group VirtualNetwork#security_group}
+  */
   readonly securityGroup?: string;
 }
 
@@ -39,7 +86,13 @@ function virtualNetworkSubnetToTerraform(struct?: VirtualNetworkSubnet): any {
 }
 
 export interface VirtualNetworkDdosProtectionPlan {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_network.html#enable VirtualNetwork#enable}
+  */
   readonly enable: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_network.html#id VirtualNetwork#id}
+  */
   readonly id: string;
 }
 
@@ -52,9 +105,21 @@ function virtualNetworkDdosProtectionPlanToTerraform(struct?: VirtualNetworkDdos
 }
 
 export interface VirtualNetworkTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_network.html#create VirtualNetwork#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_network.html#delete VirtualNetwork#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_network.html#read VirtualNetwork#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_network.html#update VirtualNetwork#update}
+  */
   readonly update?: string;
 }
 
@@ -69,14 +134,22 @@ function virtualNetworkTimeoutsToTerraform(struct?: VirtualNetworkTimeouts): any
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_network.html azurerm_virtual_network}
+*/
 export class VirtualNetwork extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_network.html azurerm_virtual_network} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options VirtualNetworkConfig
+  */
   public constructor(scope: Construct, id: string, config: VirtualNetworkConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_virtual_network',

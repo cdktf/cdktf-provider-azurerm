@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/data_azurerm_blueprint_published_version.html
+// https://www.terraform.io/docs/providers/azurerm/d/blueprint_published_version.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,13 +7,29 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataAzurermBlueprintPublishedVersionConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/blueprint_published_version.html#blueprint_name DataAzurermBlueprintPublishedVersion#blueprint_name}
+  */
   readonly blueprintName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/blueprint_published_version.html#scope_id DataAzurermBlueprintPublishedVersion#scope_id}
+  */
   readonly scopeId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/blueprint_published_version.html#version DataAzurermBlueprintPublishedVersion#version}
+  */
   readonly version: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/blueprint_published_version.html#timeouts DataAzurermBlueprintPublishedVersion#timeouts}
+  */
   readonly timeouts?: DataAzurermBlueprintPublishedVersionTimeouts;
 }
 export interface DataAzurermBlueprintPublishedVersionTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/blueprint_published_version.html#read DataAzurermBlueprintPublishedVersion#read}
+  */
   readonly read?: string;
 }
 
@@ -25,14 +41,22 @@ function dataAzurermBlueprintPublishedVersionTimeoutsToTerraform(struct?: DataAz
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/blueprint_published_version.html azurerm_blueprint_published_version}
+*/
 export class DataAzurermBlueprintPublishedVersion extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/blueprint_published_version.html azurerm_blueprint_published_version} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataAzurermBlueprintPublishedVersionConfig
+  */
   public constructor(scope: Construct, id: string, config: DataAzurermBlueprintPublishedVersionConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_blueprint_published_version',

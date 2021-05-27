@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/data_azurerm_public_ip_prefix.html
+// https://www.terraform.io/docs/providers/azurerm/d/public_ip_prefix.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,13 +7,29 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataAzurermPublicIpPrefixConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/public_ip_prefix.html#name DataAzurermPublicIpPrefix#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/public_ip_prefix.html#resource_group_name DataAzurermPublicIpPrefix#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/public_ip_prefix.html#zones DataAzurermPublicIpPrefix#zones}
+  */
   readonly zones?: string[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/public_ip_prefix.html#timeouts DataAzurermPublicIpPrefix#timeouts}
+  */
   readonly timeouts?: DataAzurermPublicIpPrefixTimeouts;
 }
 export interface DataAzurermPublicIpPrefixTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/public_ip_prefix.html#read DataAzurermPublicIpPrefix#read}
+  */
   readonly read?: string;
 }
 
@@ -25,14 +41,22 @@ function dataAzurermPublicIpPrefixTimeoutsToTerraform(struct?: DataAzurermPublic
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/public_ip_prefix.html azurerm_public_ip_prefix}
+*/
 export class DataAzurermPublicIpPrefix extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/public_ip_prefix.html azurerm_public_ip_prefix} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataAzurermPublicIpPrefixConfig
+  */
   public constructor(scope: Construct, id: string, config: DataAzurermPublicIpPrefixConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_public_ip_prefix',

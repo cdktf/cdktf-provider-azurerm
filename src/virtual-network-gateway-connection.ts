@@ -7,39 +7,129 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface VirtualNetworkGatewayConnectionConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_network_gateway_connection.html#authorization_key VirtualNetworkGatewayConnection#authorization_key}
+  */
   readonly authorizationKey?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_network_gateway_connection.html#connection_protocol VirtualNetworkGatewayConnection#connection_protocol}
+  */
   readonly connectionProtocol?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_network_gateway_connection.html#dpd_timeout_seconds VirtualNetworkGatewayConnection#dpd_timeout_seconds}
+  */
   readonly dpdTimeoutSeconds?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_network_gateway_connection.html#enable_bgp VirtualNetworkGatewayConnection#enable_bgp}
+  */
   readonly enableBgp?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_network_gateway_connection.html#express_route_circuit_id VirtualNetworkGatewayConnection#express_route_circuit_id}
+  */
   readonly expressRouteCircuitId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_network_gateway_connection.html#express_route_gateway_bypass VirtualNetworkGatewayConnection#express_route_gateway_bypass}
+  */
   readonly expressRouteGatewayBypass?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_network_gateway_connection.html#local_azure_ip_address_enabled VirtualNetworkGatewayConnection#local_azure_ip_address_enabled}
+  */
   readonly localAzureIpAddressEnabled?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_network_gateway_connection.html#local_network_gateway_id VirtualNetworkGatewayConnection#local_network_gateway_id}
+  */
   readonly localNetworkGatewayId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_network_gateway_connection.html#location VirtualNetworkGatewayConnection#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_network_gateway_connection.html#name VirtualNetworkGatewayConnection#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_network_gateway_connection.html#peer_virtual_network_gateway_id VirtualNetworkGatewayConnection#peer_virtual_network_gateway_id}
+  */
   readonly peerVirtualNetworkGatewayId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_network_gateway_connection.html#resource_group_name VirtualNetworkGatewayConnection#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_network_gateway_connection.html#routing_weight VirtualNetworkGatewayConnection#routing_weight}
+  */
   readonly routingWeight?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_network_gateway_connection.html#shared_key VirtualNetworkGatewayConnection#shared_key}
+  */
   readonly sharedKey?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_network_gateway_connection.html#tags VirtualNetworkGatewayConnection#tags}
+  */
   readonly tags?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_network_gateway_connection.html#type VirtualNetworkGatewayConnection#type}
+  */
   readonly type: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_network_gateway_connection.html#use_policy_based_traffic_selectors VirtualNetworkGatewayConnection#use_policy_based_traffic_selectors}
+  */
   readonly usePolicyBasedTrafficSelectors?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_network_gateway_connection.html#virtual_network_gateway_id VirtualNetworkGatewayConnection#virtual_network_gateway_id}
+  */
   readonly virtualNetworkGatewayId: string;
-  /** ipsec_policy block */
+  /**
+  * ipsec_policy block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_network_gateway_connection.html#ipsec_policy VirtualNetworkGatewayConnection#ipsec_policy}
+  */
   readonly ipsecPolicy?: VirtualNetworkGatewayConnectionIpsecPolicy[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_network_gateway_connection.html#timeouts VirtualNetworkGatewayConnection#timeouts}
+  */
   readonly timeouts?: VirtualNetworkGatewayConnectionTimeouts;
-  /** traffic_selector_policy block */
+  /**
+  * traffic_selector_policy block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_network_gateway_connection.html#traffic_selector_policy VirtualNetworkGatewayConnection#traffic_selector_policy}
+  */
   readonly trafficSelectorPolicy?: VirtualNetworkGatewayConnectionTrafficSelectorPolicy[];
 }
 export interface VirtualNetworkGatewayConnectionIpsecPolicy {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_network_gateway_connection.html#dh_group VirtualNetworkGatewayConnection#dh_group}
+  */
   readonly dhGroup: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_network_gateway_connection.html#ike_encryption VirtualNetworkGatewayConnection#ike_encryption}
+  */
   readonly ikeEncryption: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_network_gateway_connection.html#ike_integrity VirtualNetworkGatewayConnection#ike_integrity}
+  */
   readonly ikeIntegrity: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_network_gateway_connection.html#ipsec_encryption VirtualNetworkGatewayConnection#ipsec_encryption}
+  */
   readonly ipsecEncryption: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_network_gateway_connection.html#ipsec_integrity VirtualNetworkGatewayConnection#ipsec_integrity}
+  */
   readonly ipsecIntegrity: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_network_gateway_connection.html#pfs_group VirtualNetworkGatewayConnection#pfs_group}
+  */
   readonly pfsGroup: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_network_gateway_connection.html#sa_datasize VirtualNetworkGatewayConnection#sa_datasize}
+  */
   readonly saDatasize?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_network_gateway_connection.html#sa_lifetime VirtualNetworkGatewayConnection#sa_lifetime}
+  */
   readonly saLifetime?: number;
 }
 
@@ -58,9 +148,21 @@ function virtualNetworkGatewayConnectionIpsecPolicyToTerraform(struct?: VirtualN
 }
 
 export interface VirtualNetworkGatewayConnectionTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_network_gateway_connection.html#create VirtualNetworkGatewayConnection#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_network_gateway_connection.html#delete VirtualNetworkGatewayConnection#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_network_gateway_connection.html#read VirtualNetworkGatewayConnection#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_network_gateway_connection.html#update VirtualNetworkGatewayConnection#update}
+  */
   readonly update?: string;
 }
 
@@ -75,7 +177,13 @@ function virtualNetworkGatewayConnectionTimeoutsToTerraform(struct?: VirtualNetw
 }
 
 export interface VirtualNetworkGatewayConnectionTrafficSelectorPolicy {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_network_gateway_connection.html#local_address_cidrs VirtualNetworkGatewayConnection#local_address_cidrs}
+  */
   readonly localAddressCidrs: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_network_gateway_connection.html#remote_address_cidrs VirtualNetworkGatewayConnection#remote_address_cidrs}
+  */
   readonly remoteAddressCidrs: string[];
 }
 
@@ -88,14 +196,22 @@ function virtualNetworkGatewayConnectionTrafficSelectorPolicyToTerraform(struct?
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_network_gateway_connection.html azurerm_virtual_network_gateway_connection}
+*/
 export class VirtualNetworkGatewayConnection extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_network_gateway_connection.html azurerm_virtual_network_gateway_connection} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options VirtualNetworkGatewayConnectionConfig
+  */
   public constructor(scope: Construct, id: string, config: VirtualNetworkGatewayConnectionConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_virtual_network_gateway_connection',

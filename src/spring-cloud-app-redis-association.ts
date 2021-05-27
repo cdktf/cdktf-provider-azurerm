@@ -7,18 +7,49 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface SpringCloudAppRedisAssociationConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_app_redis_association.html#name SpringCloudAppRedisAssociation#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_app_redis_association.html#redis_access_key SpringCloudAppRedisAssociation#redis_access_key}
+  */
   readonly redisAccessKey: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_app_redis_association.html#redis_cache_id SpringCloudAppRedisAssociation#redis_cache_id}
+  */
   readonly redisCacheId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_app_redis_association.html#spring_cloud_app_id SpringCloudAppRedisAssociation#spring_cloud_app_id}
+  */
   readonly springCloudAppId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_app_redis_association.html#ssl_enabled SpringCloudAppRedisAssociation#ssl_enabled}
+  */
   readonly sslEnabled?: boolean;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_app_redis_association.html#timeouts SpringCloudAppRedisAssociation#timeouts}
+  */
   readonly timeouts?: SpringCloudAppRedisAssociationTimeouts;
 }
 export interface SpringCloudAppRedisAssociationTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_app_redis_association.html#create SpringCloudAppRedisAssociation#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_app_redis_association.html#delete SpringCloudAppRedisAssociation#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_app_redis_association.html#read SpringCloudAppRedisAssociation#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_app_redis_association.html#update SpringCloudAppRedisAssociation#update}
+  */
   readonly update?: string;
 }
 
@@ -33,14 +64,22 @@ function springCloudAppRedisAssociationTimeoutsToTerraform(struct?: SpringCloudA
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_app_redis_association.html azurerm_spring_cloud_app_redis_association}
+*/
 export class SpringCloudAppRedisAssociation extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_app_redis_association.html azurerm_spring_cloud_app_redis_association} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options SpringCloudAppRedisAssociationConfig
+  */
   public constructor(scope: Construct, id: string, config: SpringCloudAppRedisAssociationConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_spring_cloud_app_redis_association',

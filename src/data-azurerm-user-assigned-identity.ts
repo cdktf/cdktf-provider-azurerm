@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/data_azurerm_user_assigned_identity.html
+// https://www.terraform.io/docs/providers/azurerm/d/user_assigned_identity.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,12 +7,25 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataAzurermUserAssignedIdentityConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/user_assigned_identity.html#name DataAzurermUserAssignedIdentity#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/user_assigned_identity.html#resource_group_name DataAzurermUserAssignedIdentity#resource_group_name}
+  */
   readonly resourceGroupName: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/user_assigned_identity.html#timeouts DataAzurermUserAssignedIdentity#timeouts}
+  */
   readonly timeouts?: DataAzurermUserAssignedIdentityTimeouts;
 }
 export interface DataAzurermUserAssignedIdentityTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/user_assigned_identity.html#read DataAzurermUserAssignedIdentity#read}
+  */
   readonly read?: string;
 }
 
@@ -24,14 +37,22 @@ function dataAzurermUserAssignedIdentityTimeoutsToTerraform(struct?: DataAzurerm
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/user_assigned_identity.html azurerm_user_assigned_identity}
+*/
 export class DataAzurermUserAssignedIdentity extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/user_assigned_identity.html azurerm_user_assigned_identity} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataAzurermUserAssignedIdentityConfig
+  */
   public constructor(scope: Construct, id: string, config: DataAzurermUserAssignedIdentityConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_user_assigned_identity',

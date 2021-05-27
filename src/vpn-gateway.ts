@@ -7,18 +7,47 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface VpnGatewayConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway.html#location VpnGateway#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway.html#name VpnGateway#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway.html#resource_group_name VpnGateway#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway.html#scale_unit VpnGateway#scale_unit}
+  */
   readonly scaleUnit?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway.html#tags VpnGateway#tags}
+  */
   readonly tags?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway.html#virtual_hub_id VpnGateway#virtual_hub_id}
+  */
   readonly virtualHubId: string;
-  /** bgp_settings block */
+  /**
+  * bgp_settings block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway.html#bgp_settings VpnGateway#bgp_settings}
+  */
   readonly bgpSettings?: VpnGatewayBgpSettings[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway.html#timeouts VpnGateway#timeouts}
+  */
   readonly timeouts?: VpnGatewayTimeouts;
 }
 export interface VpnGatewayBgpSettingsInstance0BgpPeeringAddress {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway.html#custom_ips VpnGateway#custom_ips}
+  */
   readonly customIps: string[];
 }
 
@@ -30,6 +59,9 @@ function vpnGatewayBgpSettingsInstance0BgpPeeringAddressToTerraform(struct?: Vpn
 }
 
 export interface VpnGatewayBgpSettingsInstance1BgpPeeringAddress {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway.html#custom_ips VpnGateway#custom_ips}
+  */
   readonly customIps: string[];
 }
 
@@ -41,11 +73,25 @@ function vpnGatewayBgpSettingsInstance1BgpPeeringAddressToTerraform(struct?: Vpn
 }
 
 export interface VpnGatewayBgpSettings {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway.html#asn VpnGateway#asn}
+  */
   readonly asn: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway.html#peer_weight VpnGateway#peer_weight}
+  */
   readonly peerWeight: number;
-  /** instance_0_bgp_peering_address block */
+  /**
+  * instance_0_bgp_peering_address block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway.html#instance_0_bgp_peering_address VpnGateway#instance_0_bgp_peering_address}
+  */
   readonly instance0BgpPeeringAddress?: VpnGatewayBgpSettingsInstance0BgpPeeringAddress[];
-  /** instance_1_bgp_peering_address block */
+  /**
+  * instance_1_bgp_peering_address block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway.html#instance_1_bgp_peering_address VpnGateway#instance_1_bgp_peering_address}
+  */
   readonly instance1BgpPeeringAddress?: VpnGatewayBgpSettingsInstance1BgpPeeringAddress[];
 }
 
@@ -60,9 +106,21 @@ function vpnGatewayBgpSettingsToTerraform(struct?: VpnGatewayBgpSettings): any {
 }
 
 export interface VpnGatewayTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway.html#create VpnGateway#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway.html#delete VpnGateway#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway.html#read VpnGateway#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway.html#update VpnGateway#update}
+  */
   readonly update?: string;
 }
 
@@ -77,14 +135,22 @@ function vpnGatewayTimeoutsToTerraform(struct?: VpnGatewayTimeouts): any {
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway.html azurerm_vpn_gateway}
+*/
 export class VpnGateway extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway.html azurerm_vpn_gateway} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options VpnGatewayConfig
+  */
   public constructor(scope: Construct, id: string, config: VpnGatewayConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_vpn_gateway',

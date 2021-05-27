@@ -7,17 +7,45 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface ApiManagementIdentityProviderTwitterConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_identity_provider_twitter.html#api_key ApiManagementIdentityProviderTwitter#api_key}
+  */
   readonly apiKey: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_identity_provider_twitter.html#api_management_name ApiManagementIdentityProviderTwitter#api_management_name}
+  */
   readonly apiManagementName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_identity_provider_twitter.html#api_secret_key ApiManagementIdentityProviderTwitter#api_secret_key}
+  */
   readonly apiSecretKey: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_identity_provider_twitter.html#resource_group_name ApiManagementIdentityProviderTwitter#resource_group_name}
+  */
   readonly resourceGroupName: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_identity_provider_twitter.html#timeouts ApiManagementIdentityProviderTwitter#timeouts}
+  */
   readonly timeouts?: ApiManagementIdentityProviderTwitterTimeouts;
 }
 export interface ApiManagementIdentityProviderTwitterTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_identity_provider_twitter.html#create ApiManagementIdentityProviderTwitter#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_identity_provider_twitter.html#delete ApiManagementIdentityProviderTwitter#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_identity_provider_twitter.html#read ApiManagementIdentityProviderTwitter#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_identity_provider_twitter.html#update ApiManagementIdentityProviderTwitter#update}
+  */
   readonly update?: string;
 }
 
@@ -32,14 +60,22 @@ function apiManagementIdentityProviderTwitterTimeoutsToTerraform(struct?: ApiMan
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_identity_provider_twitter.html azurerm_api_management_identity_provider_twitter}
+*/
 export class ApiManagementIdentityProviderTwitter extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_identity_provider_twitter.html azurerm_api_management_identity_provider_twitter} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options ApiManagementIdentityProviderTwitterConfig
+  */
   public constructor(scope: Construct, id: string, config: ApiManagementIdentityProviderTwitterConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_api_management_identity_provider_twitter',

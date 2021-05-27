@@ -7,21 +7,61 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface IotTimeSeriesInsightsStandardEnvironmentConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_time_series_insights_standard_environment.html#data_retention_time IotTimeSeriesInsightsStandardEnvironment#data_retention_time}
+  */
   readonly dataRetentionTime: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_time_series_insights_standard_environment.html#location IotTimeSeriesInsightsStandardEnvironment#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_time_series_insights_standard_environment.html#name IotTimeSeriesInsightsStandardEnvironment#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_time_series_insights_standard_environment.html#partition_key IotTimeSeriesInsightsStandardEnvironment#partition_key}
+  */
   readonly partitionKey?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_time_series_insights_standard_environment.html#resource_group_name IotTimeSeriesInsightsStandardEnvironment#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_time_series_insights_standard_environment.html#sku_name IotTimeSeriesInsightsStandardEnvironment#sku_name}
+  */
   readonly skuName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_time_series_insights_standard_environment.html#storage_limit_exceeded_behavior IotTimeSeriesInsightsStandardEnvironment#storage_limit_exceeded_behavior}
+  */
   readonly storageLimitExceededBehavior?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_time_series_insights_standard_environment.html#tags IotTimeSeriesInsightsStandardEnvironment#tags}
+  */
   readonly tags?: { [key: string]: string };
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_time_series_insights_standard_environment.html#timeouts IotTimeSeriesInsightsStandardEnvironment#timeouts}
+  */
   readonly timeouts?: IotTimeSeriesInsightsStandardEnvironmentTimeouts;
 }
 export interface IotTimeSeriesInsightsStandardEnvironmentTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_time_series_insights_standard_environment.html#create IotTimeSeriesInsightsStandardEnvironment#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_time_series_insights_standard_environment.html#delete IotTimeSeriesInsightsStandardEnvironment#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_time_series_insights_standard_environment.html#read IotTimeSeriesInsightsStandardEnvironment#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_time_series_insights_standard_environment.html#update IotTimeSeriesInsightsStandardEnvironment#update}
+  */
   readonly update?: string;
 }
 
@@ -36,14 +76,22 @@ function iotTimeSeriesInsightsStandardEnvironmentTimeoutsToTerraform(struct?: Io
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/iot_time_series_insights_standard_environment.html azurerm_iot_time_series_insights_standard_environment}
+*/
 export class IotTimeSeriesInsightsStandardEnvironment extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/iot_time_series_insights_standard_environment.html azurerm_iot_time_series_insights_standard_environment} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options IotTimeSeriesInsightsStandardEnvironmentConfig
+  */
   public constructor(scope: Construct, id: string, config: IotTimeSeriesInsightsStandardEnvironmentConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_iot_time_series_insights_standard_environment',

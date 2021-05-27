@@ -7,18 +7,47 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface MonitorLogProfileConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_log_profile.html#categories MonitorLogProfile#categories}
+  */
   readonly categories: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_log_profile.html#locations MonitorLogProfile#locations}
+  */
   readonly locations: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_log_profile.html#name MonitorLogProfile#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_log_profile.html#servicebus_rule_id MonitorLogProfile#servicebus_rule_id}
+  */
   readonly servicebusRuleId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_log_profile.html#storage_account_id MonitorLogProfile#storage_account_id}
+  */
   readonly storageAccountId?: string;
-  /** retention_policy block */
+  /**
+  * retention_policy block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_log_profile.html#retention_policy MonitorLogProfile#retention_policy}
+  */
   readonly retentionPolicy: MonitorLogProfileRetentionPolicy[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_log_profile.html#timeouts MonitorLogProfile#timeouts}
+  */
   readonly timeouts?: MonitorLogProfileTimeouts;
 }
 export interface MonitorLogProfileRetentionPolicy {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_log_profile.html#days MonitorLogProfile#days}
+  */
   readonly days?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_log_profile.html#enabled MonitorLogProfile#enabled}
+  */
   readonly enabled: boolean;
 }
 
@@ -31,9 +60,21 @@ function monitorLogProfileRetentionPolicyToTerraform(struct?: MonitorLogProfileR
 }
 
 export interface MonitorLogProfileTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_log_profile.html#create MonitorLogProfile#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_log_profile.html#delete MonitorLogProfile#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_log_profile.html#read MonitorLogProfile#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_log_profile.html#update MonitorLogProfile#update}
+  */
   readonly update?: string;
 }
 
@@ -48,14 +89,22 @@ function monitorLogProfileTimeoutsToTerraform(struct?: MonitorLogProfileTimeouts
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_log_profile.html azurerm_monitor_log_profile}
+*/
 export class MonitorLogProfile extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_log_profile.html azurerm_monitor_log_profile} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options MonitorLogProfileConfig
+  */
   public constructor(scope: Construct, id: string, config: MonitorLogProfileConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_monitor_log_profile',

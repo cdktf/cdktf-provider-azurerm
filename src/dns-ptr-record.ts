@@ -7,19 +7,53 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DnsPtrRecordConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_ptr_record.html#name DnsPtrRecord#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_ptr_record.html#records DnsPtrRecord#records}
+  */
   readonly records: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_ptr_record.html#resource_group_name DnsPtrRecord#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_ptr_record.html#tags DnsPtrRecord#tags}
+  */
   readonly tags?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_ptr_record.html#ttl DnsPtrRecord#ttl}
+  */
   readonly ttl: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_ptr_record.html#zone_name DnsPtrRecord#zone_name}
+  */
   readonly zoneName: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_ptr_record.html#timeouts DnsPtrRecord#timeouts}
+  */
   readonly timeouts?: DnsPtrRecordTimeouts;
 }
 export interface DnsPtrRecordTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_ptr_record.html#create DnsPtrRecord#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_ptr_record.html#delete DnsPtrRecord#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_ptr_record.html#read DnsPtrRecord#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_ptr_record.html#update DnsPtrRecord#update}
+  */
   readonly update?: string;
 }
 
@@ -34,14 +68,22 @@ function dnsPtrRecordTimeoutsToTerraform(struct?: DnsPtrRecordTimeouts): any {
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/dns_ptr_record.html azurerm_dns_ptr_record}
+*/
 export class DnsPtrRecord extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/dns_ptr_record.html azurerm_dns_ptr_record} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DnsPtrRecordConfig
+  */
   public constructor(scope: Construct, id: string, config: DnsPtrRecordConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_dns_ptr_record',

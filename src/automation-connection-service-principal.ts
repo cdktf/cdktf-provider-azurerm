@@ -7,21 +7,61 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface AutomationConnectionServicePrincipalConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_connection_service_principal.html#application_id AutomationConnectionServicePrincipal#application_id}
+  */
   readonly applicationId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_connection_service_principal.html#automation_account_name AutomationConnectionServicePrincipal#automation_account_name}
+  */
   readonly automationAccountName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_connection_service_principal.html#certificate_thumbprint AutomationConnectionServicePrincipal#certificate_thumbprint}
+  */
   readonly certificateThumbprint: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_connection_service_principal.html#description AutomationConnectionServicePrincipal#description}
+  */
   readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_connection_service_principal.html#name AutomationConnectionServicePrincipal#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_connection_service_principal.html#resource_group_name AutomationConnectionServicePrincipal#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_connection_service_principal.html#subscription_id AutomationConnectionServicePrincipal#subscription_id}
+  */
   readonly subscriptionId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_connection_service_principal.html#tenant_id AutomationConnectionServicePrincipal#tenant_id}
+  */
   readonly tenantId: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_connection_service_principal.html#timeouts AutomationConnectionServicePrincipal#timeouts}
+  */
   readonly timeouts?: AutomationConnectionServicePrincipalTimeouts;
 }
 export interface AutomationConnectionServicePrincipalTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_connection_service_principal.html#create AutomationConnectionServicePrincipal#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_connection_service_principal.html#delete AutomationConnectionServicePrincipal#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_connection_service_principal.html#read AutomationConnectionServicePrincipal#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_connection_service_principal.html#update AutomationConnectionServicePrincipal#update}
+  */
   readonly update?: string;
 }
 
@@ -36,14 +76,22 @@ function automationConnectionServicePrincipalTimeoutsToTerraform(struct?: Automa
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/automation_connection_service_principal.html azurerm_automation_connection_service_principal}
+*/
 export class AutomationConnectionServicePrincipal extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/automation_connection_service_principal.html azurerm_automation_connection_service_principal} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options AutomationConnectionServicePrincipalConfig
+  */
   public constructor(scope: Construct, id: string, config: AutomationConnectionServicePrincipalConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_automation_connection_service_principal',

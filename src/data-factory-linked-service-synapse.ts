@@ -7,22 +7,63 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataFactoryLinkedServiceSynapseConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_synapse.html#additional_properties DataFactoryLinkedServiceSynapse#additional_properties}
+  */
   readonly additionalProperties?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_synapse.html#annotations DataFactoryLinkedServiceSynapse#annotations}
+  */
   readonly annotations?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_synapse.html#connection_string DataFactoryLinkedServiceSynapse#connection_string}
+  */
   readonly connectionString: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_synapse.html#data_factory_name DataFactoryLinkedServiceSynapse#data_factory_name}
+  */
   readonly dataFactoryName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_synapse.html#description DataFactoryLinkedServiceSynapse#description}
+  */
   readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_synapse.html#integration_runtime_name DataFactoryLinkedServiceSynapse#integration_runtime_name}
+  */
   readonly integrationRuntimeName?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_synapse.html#name DataFactoryLinkedServiceSynapse#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_synapse.html#parameters DataFactoryLinkedServiceSynapse#parameters}
+  */
   readonly parameters?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_synapse.html#resource_group_name DataFactoryLinkedServiceSynapse#resource_group_name}
+  */
   readonly resourceGroupName: string;
-  /** key_vault_password block */
+  /**
+  * key_vault_password block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_synapse.html#key_vault_password DataFactoryLinkedServiceSynapse#key_vault_password}
+  */
   readonly keyVaultPassword?: DataFactoryLinkedServiceSynapseKeyVaultPassword[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_synapse.html#timeouts DataFactoryLinkedServiceSynapse#timeouts}
+  */
   readonly timeouts?: DataFactoryLinkedServiceSynapseTimeouts;
 }
 export interface DataFactoryLinkedServiceSynapseKeyVaultPassword {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_synapse.html#linked_service_name DataFactoryLinkedServiceSynapse#linked_service_name}
+  */
   readonly linkedServiceName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_synapse.html#secret_name DataFactoryLinkedServiceSynapse#secret_name}
+  */
   readonly secretName: string;
 }
 
@@ -35,9 +76,21 @@ function dataFactoryLinkedServiceSynapseKeyVaultPasswordToTerraform(struct?: Dat
 }
 
 export interface DataFactoryLinkedServiceSynapseTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_synapse.html#create DataFactoryLinkedServiceSynapse#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_synapse.html#delete DataFactoryLinkedServiceSynapse#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_synapse.html#read DataFactoryLinkedServiceSynapse#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_synapse.html#update DataFactoryLinkedServiceSynapse#update}
+  */
   readonly update?: string;
 }
 
@@ -52,14 +105,22 @@ function dataFactoryLinkedServiceSynapseTimeoutsToTerraform(struct?: DataFactory
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_synapse.html azurerm_data_factory_linked_service_synapse}
+*/
 export class DataFactoryLinkedServiceSynapse extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_synapse.html azurerm_data_factory_linked_service_synapse} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataFactoryLinkedServiceSynapseConfig
+  */
   public constructor(scope: Construct, id: string, config: DataFactoryLinkedServiceSynapseConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_data_factory_linked_service_synapse',

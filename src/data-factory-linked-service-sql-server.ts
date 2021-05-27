@@ -7,22 +7,63 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataFactoryLinkedServiceSqlServerConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_sql_server.html#additional_properties DataFactoryLinkedServiceSqlServer#additional_properties}
+  */
   readonly additionalProperties?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_sql_server.html#annotations DataFactoryLinkedServiceSqlServer#annotations}
+  */
   readonly annotations?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_sql_server.html#connection_string DataFactoryLinkedServiceSqlServer#connection_string}
+  */
   readonly connectionString: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_sql_server.html#data_factory_name DataFactoryLinkedServiceSqlServer#data_factory_name}
+  */
   readonly dataFactoryName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_sql_server.html#description DataFactoryLinkedServiceSqlServer#description}
+  */
   readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_sql_server.html#integration_runtime_name DataFactoryLinkedServiceSqlServer#integration_runtime_name}
+  */
   readonly integrationRuntimeName?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_sql_server.html#name DataFactoryLinkedServiceSqlServer#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_sql_server.html#parameters DataFactoryLinkedServiceSqlServer#parameters}
+  */
   readonly parameters?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_sql_server.html#resource_group_name DataFactoryLinkedServiceSqlServer#resource_group_name}
+  */
   readonly resourceGroupName: string;
-  /** key_vault_password block */
+  /**
+  * key_vault_password block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_sql_server.html#key_vault_password DataFactoryLinkedServiceSqlServer#key_vault_password}
+  */
   readonly keyVaultPassword?: DataFactoryLinkedServiceSqlServerKeyVaultPassword[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_sql_server.html#timeouts DataFactoryLinkedServiceSqlServer#timeouts}
+  */
   readonly timeouts?: DataFactoryLinkedServiceSqlServerTimeouts;
 }
 export interface DataFactoryLinkedServiceSqlServerKeyVaultPassword {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_sql_server.html#linked_service_name DataFactoryLinkedServiceSqlServer#linked_service_name}
+  */
   readonly linkedServiceName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_sql_server.html#secret_name DataFactoryLinkedServiceSqlServer#secret_name}
+  */
   readonly secretName: string;
 }
 
@@ -35,9 +76,21 @@ function dataFactoryLinkedServiceSqlServerKeyVaultPasswordToTerraform(struct?: D
 }
 
 export interface DataFactoryLinkedServiceSqlServerTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_sql_server.html#create DataFactoryLinkedServiceSqlServer#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_sql_server.html#delete DataFactoryLinkedServiceSqlServer#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_sql_server.html#read DataFactoryLinkedServiceSqlServer#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_sql_server.html#update DataFactoryLinkedServiceSqlServer#update}
+  */
   readonly update?: string;
 }
 
@@ -52,14 +105,22 @@ function dataFactoryLinkedServiceSqlServerTimeoutsToTerraform(struct?: DataFacto
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_sql_server.html azurerm_data_factory_linked_service_sql_server}
+*/
 export class DataFactoryLinkedServiceSqlServer extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_sql_server.html azurerm_data_factory_linked_service_sql_server} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataFactoryLinkedServiceSqlServerConfig
+  */
   public constructor(scope: Construct, id: string, config: DataFactoryLinkedServiceSqlServerConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_data_factory_linked_service_sql_server',

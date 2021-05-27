@@ -7,26 +7,81 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface StorageBlobConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_blob.html#access_tier StorageBlob#access_tier}
+  */
   readonly accessTier?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_blob.html#content_md5 StorageBlob#content_md5}
+  */
   readonly contentMd5?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_blob.html#content_type StorageBlob#content_type}
+  */
   readonly contentType?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_blob.html#metadata StorageBlob#metadata}
+  */
   readonly metadata?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_blob.html#name StorageBlob#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_blob.html#parallelism StorageBlob#parallelism}
+  */
   readonly parallelism?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_blob.html#size StorageBlob#size}
+  */
   readonly size?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_blob.html#source StorageBlob#source}
+  */
   readonly source?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_blob.html#source_content StorageBlob#source_content}
+  */
   readonly sourceContent?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_blob.html#source_uri StorageBlob#source_uri}
+  */
   readonly sourceUri?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_blob.html#storage_account_name StorageBlob#storage_account_name}
+  */
   readonly storageAccountName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_blob.html#storage_container_name StorageBlob#storage_container_name}
+  */
   readonly storageContainerName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_blob.html#type StorageBlob#type}
+  */
   readonly type: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_blob.html#timeouts StorageBlob#timeouts}
+  */
   readonly timeouts?: StorageBlobTimeouts;
 }
 export interface StorageBlobTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_blob.html#create StorageBlob#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_blob.html#delete StorageBlob#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_blob.html#read StorageBlob#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_blob.html#update StorageBlob#update}
+  */
   readonly update?: string;
 }
 
@@ -41,14 +96,22 @@ function storageBlobTimeoutsToTerraform(struct?: StorageBlobTimeouts): any {
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/storage_blob.html azurerm_storage_blob}
+*/
 export class StorageBlob extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/storage_blob.html azurerm_storage_blob} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options StorageBlobConfig
+  */
   public constructor(scope: Construct, id: string, config: StorageBlobConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_storage_blob',

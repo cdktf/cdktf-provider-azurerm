@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/azurerm_provider.html
+// https://www.terraform.io/docs/providers/azurerm
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,48 +7,133 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface AzurermProviderConfig {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm#auxiliary_tenant_ids AzurermProvider#auxiliary_tenant_ids}
+  */
   readonly auxiliaryTenantIds?: string[];
-  /** The password associated with the Client Certificate. For use when authenticating as a Service Principal using a Client Certificate */
+  /**
+  * The password associated with the Client Certificate. For use when authenticating as a Service Principal using a Client Certificate
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm#client_certificate_password AzurermProvider#client_certificate_password}
+  */
   readonly clientCertificatePassword?: string;
-  /** The path to the Client Certificate associated with the Service Principal for use when authenticating as a Service Principal using a Client Certificate. */
+  /**
+  * The path to the Client Certificate associated with the Service Principal for use when authenticating as a Service Principal using a Client Certificate.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm#client_certificate_path AzurermProvider#client_certificate_path}
+  */
   readonly clientCertificatePath?: string;
-  /** The Client ID which should be used. */
+  /**
+  * The Client ID which should be used.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm#client_id AzurermProvider#client_id}
+  */
   readonly clientId?: string;
-  /** The Client Secret which should be used. For use When authenticating as a Service Principal using a Client Secret. */
+  /**
+  * The Client Secret which should be used. For use When authenticating as a Service Principal using a Client Secret.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm#client_secret AzurermProvider#client_secret}
+  */
   readonly clientSecret?: string;
-  /** This will disable the x-ms-correlation-request-id header. */
+  /**
+  * This will disable the x-ms-correlation-request-id header.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm#disable_correlation_request_id AzurermProvider#disable_correlation_request_id}
+  */
   readonly disableCorrelationRequestId?: boolean;
-  /** This will disable the Terraform Partner ID which is used if a custom `partner_id` isn't specified. */
+  /**
+  * This will disable the Terraform Partner ID which is used if a custom `partner_id` isn't specified.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm#disable_terraform_partner_id AzurermProvider#disable_terraform_partner_id}
+  */
   readonly disableTerraformPartnerId?: boolean;
-  /** The Cloud Environment which should be used. Possible values are public, usgovernment, german, and china. Defaults to public. */
+  /**
+  * The Cloud Environment which should be used. Possible values are public, usgovernment, german, and china. Defaults to public.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm#environment AzurermProvider#environment}
+  */
   readonly environment?: string;
-  /** The Hostname which should be used for the Azure Metadata Service. */
+  /**
+  * The Hostname which should be used for the Azure Metadata Service.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm#metadata_host AzurermProvider#metadata_host}
+  */
   readonly metadataHost?: string;
-  /** Deprecated - replaced by `metadata_host`. */
+  /**
+  * Deprecated - replaced by `metadata_host`.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm#metadata_url AzurermProvider#metadata_url}
+  */
   readonly metadataUrl?: string;
-  /** The path to a custom endpoint for Managed Service Identity - in most circumstances this should be detected automatically.  */
+  /**
+  * The path to a custom endpoint for Managed Service Identity - in most circumstances this should be detected automatically. 
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm#msi_endpoint AzurermProvider#msi_endpoint}
+  */
   readonly msiEndpoint?: string;
-  /** A GUID/UUID that is registered with Microsoft to facilitate partner resource usage attribution. */
+  /**
+  * A GUID/UUID that is registered with Microsoft to facilitate partner resource usage attribution.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm#partner_id AzurermProvider#partner_id}
+  */
   readonly partnerId?: string;
-  /** [DEPRECATED] This will cause the AzureRM Provider to skip verifying the credentials being used are valid. */
+  /**
+  * [DEPRECATED] This will cause the AzureRM Provider to skip verifying the credentials being used are valid.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm#skip_credentials_validation AzurermProvider#skip_credentials_validation}
+  */
   readonly skipCredentialsValidation?: boolean;
-  /** Should the AzureRM Provider skip registering all of the Resource Providers that it supports, if they're not already registered? */
+  /**
+  * Should the AzureRM Provider skip registering all of the Resource Providers that it supports, if they're not already registered?
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm#skip_provider_registration AzurermProvider#skip_provider_registration}
+  */
   readonly skipProviderRegistration?: boolean;
-  /** Should the AzureRM Provider use AzureAD to access the Storage Data Plane API's? */
+  /**
+  * Should the AzureRM Provider use AzureAD to access the Storage Data Plane API's?
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm#storage_use_azuread AzurermProvider#storage_use_azuread}
+  */
   readonly storageUseAzuread?: boolean;
-  /** The Subscription ID which should be used. */
+  /**
+  * The Subscription ID which should be used.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm#subscription_id AzurermProvider#subscription_id}
+  */
   readonly subscriptionId?: string;
-  /** The Tenant ID which should be used. */
+  /**
+  * The Tenant ID which should be used.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm#tenant_id AzurermProvider#tenant_id}
+  */
   readonly tenantId?: string;
-  /** Allowed Managed Service Identity be used for Authentication. */
+  /**
+  * Allowed Managed Service Identity be used for Authentication.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm#use_msi AzurermProvider#use_msi}
+  */
   readonly useMsi?: boolean;
-  /** Alias name */
+  /**
+  * Alias name
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm#alias AzurermProvider#alias}
+  */
   readonly alias?: string;
-  /** features block */
+  /**
+  * features block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm#features AzurermProvider#features}
+  */
   readonly features: AzurermProviderFeatures[];
 }
 export interface AzurermProviderFeaturesKeyVault {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm#purge_soft_delete_on_destroy AzurermProvider#purge_soft_delete_on_destroy}
+  */
   readonly purgeSoftDeleteOnDestroy?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm#recover_soft_deleted_key_vaults AzurermProvider#recover_soft_deleted_key_vaults}
+  */
   readonly recoverSoftDeletedKeyVaults?: boolean;
 }
 
@@ -61,6 +146,9 @@ function azurermProviderFeaturesKeyVaultToTerraform(struct?: AzurermProviderFeat
 }
 
 export interface AzurermProviderFeaturesLogAnalyticsWorkspace {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm#permanently_delete_on_destroy AzurermProvider#permanently_delete_on_destroy}
+  */
   readonly permanentlyDeleteOnDestroy: boolean;
 }
 
@@ -72,6 +160,9 @@ function azurermProviderFeaturesLogAnalyticsWorkspaceToTerraform(struct?: Azurer
 }
 
 export interface AzurermProviderFeaturesNetwork {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm#relaxed_locking AzurermProvider#relaxed_locking}
+  */
   readonly relaxedLocking: boolean;
 }
 
@@ -83,6 +174,9 @@ function azurermProviderFeaturesNetworkToTerraform(struct?: AzurermProviderFeatu
 }
 
 export interface AzurermProviderFeaturesTemplateDeployment {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm#delete_nested_items_during_deletion AzurermProvider#delete_nested_items_during_deletion}
+  */
   readonly deleteNestedItemsDuringDeletion: boolean;
 }
 
@@ -94,8 +188,17 @@ function azurermProviderFeaturesTemplateDeploymentToTerraform(struct?: AzurermPr
 }
 
 export interface AzurermProviderFeaturesVirtualMachine {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm#delete_os_disk_on_deletion AzurermProvider#delete_os_disk_on_deletion}
+  */
   readonly deleteOsDiskOnDeletion?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm#graceful_shutdown AzurermProvider#graceful_shutdown}
+  */
   readonly gracefulShutdown?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm#skip_shutdown_and_force_delete AzurermProvider#skip_shutdown_and_force_delete}
+  */
   readonly skipShutdownAndForceDelete?: boolean;
 }
 
@@ -109,7 +212,13 @@ function azurermProviderFeaturesVirtualMachineToTerraform(struct?: AzurermProvid
 }
 
 export interface AzurermProviderFeaturesVirtualMachineScaleSet {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm#force_delete AzurermProvider#force_delete}
+  */
   readonly forceDelete?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm#roll_instances_when_required AzurermProvider#roll_instances_when_required}
+  */
   readonly rollInstancesWhenRequired: boolean;
 }
 
@@ -122,17 +231,41 @@ function azurermProviderFeaturesVirtualMachineScaleSetToTerraform(struct?: Azure
 }
 
 export interface AzurermProviderFeatures {
-  /** key_vault block */
+  /**
+  * key_vault block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm#key_vault AzurermProvider#key_vault}
+  */
   readonly keyVault?: AzurermProviderFeaturesKeyVault[];
-  /** log_analytics_workspace block */
+  /**
+  * log_analytics_workspace block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm#log_analytics_workspace AzurermProvider#log_analytics_workspace}
+  */
   readonly logAnalyticsWorkspace?: AzurermProviderFeaturesLogAnalyticsWorkspace[];
-  /** network block */
+  /**
+  * network block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm#network AzurermProvider#network}
+  */
   readonly network?: AzurermProviderFeaturesNetwork[];
-  /** template_deployment block */
+  /**
+  * template_deployment block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm#template_deployment AzurermProvider#template_deployment}
+  */
   readonly templateDeployment?: AzurermProviderFeaturesTemplateDeployment[];
-  /** virtual_machine block */
+  /**
+  * virtual_machine block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm#virtual_machine AzurermProvider#virtual_machine}
+  */
   readonly virtualMachine?: AzurermProviderFeaturesVirtualMachine[];
-  /** virtual_machine_scale_set block */
+  /**
+  * virtual_machine_scale_set block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm#virtual_machine_scale_set AzurermProvider#virtual_machine_scale_set}
+  */
   readonly virtualMachineScaleSet?: AzurermProviderFeaturesVirtualMachineScaleSet[];
 }
 
@@ -149,14 +282,22 @@ function azurermProviderFeaturesToTerraform(struct?: AzurermProviderFeatures): a
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm azurerm}
+*/
 export class AzurermProvider extends cdktf.TerraformProvider {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm azurerm} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options AzurermProviderConfig
+  */
   public constructor(scope: Construct, id: string, config: AzurermProviderConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm',

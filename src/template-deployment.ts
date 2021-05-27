@@ -7,19 +7,53 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface TemplateDeploymentConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/template_deployment.html#deployment_mode TemplateDeployment#deployment_mode}
+  */
   readonly deploymentMode: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/template_deployment.html#name TemplateDeployment#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/template_deployment.html#parameters TemplateDeployment#parameters}
+  */
   readonly parameters?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/template_deployment.html#parameters_body TemplateDeployment#parameters_body}
+  */
   readonly parametersBody?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/template_deployment.html#resource_group_name TemplateDeployment#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/template_deployment.html#template_body TemplateDeployment#template_body}
+  */
   readonly templateBody?: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/template_deployment.html#timeouts TemplateDeployment#timeouts}
+  */
   readonly timeouts?: TemplateDeploymentTimeouts;
 }
 export interface TemplateDeploymentTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/template_deployment.html#create TemplateDeployment#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/template_deployment.html#delete TemplateDeployment#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/template_deployment.html#read TemplateDeployment#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/template_deployment.html#update TemplateDeployment#update}
+  */
   readonly update?: string;
 }
 
@@ -34,14 +68,22 @@ function templateDeploymentTimeoutsToTerraform(struct?: TemplateDeploymentTimeou
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/template_deployment.html azurerm_template_deployment}
+*/
 export class TemplateDeployment extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/template_deployment.html azurerm_template_deployment} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options TemplateDeploymentConfig
+  */
   public constructor(scope: Construct, id: string, config: TemplateDeploymentConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_template_deployment',

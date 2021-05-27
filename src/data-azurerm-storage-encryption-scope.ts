@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/data_azurerm_storage_encryption_scope.html
+// https://www.terraform.io/docs/providers/azurerm/d/storage_encryption_scope.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,12 +7,25 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataAzurermStorageEncryptionScopeConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_encryption_scope.html#name DataAzurermStorageEncryptionScope#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_encryption_scope.html#storage_account_id DataAzurermStorageEncryptionScope#storage_account_id}
+  */
   readonly storageAccountId: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_encryption_scope.html#timeouts DataAzurermStorageEncryptionScope#timeouts}
+  */
   readonly timeouts?: DataAzurermStorageEncryptionScopeTimeouts;
 }
 export interface DataAzurermStorageEncryptionScopeTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_encryption_scope.html#read DataAzurermStorageEncryptionScope#read}
+  */
   readonly read?: string;
 }
 
@@ -24,14 +37,22 @@ function dataAzurermStorageEncryptionScopeTimeoutsToTerraform(struct?: DataAzure
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/storage_encryption_scope.html azurerm_storage_encryption_scope}
+*/
 export class DataAzurermStorageEncryptionScope extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/storage_encryption_scope.html azurerm_storage_encryption_scope} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataAzurermStorageEncryptionScopeConfig
+  */
   public constructor(scope: Construct, id: string, config: DataAzurermStorageEncryptionScopeConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_storage_encryption_scope',

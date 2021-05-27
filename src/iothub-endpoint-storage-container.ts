@@ -7,22 +7,65 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface IothubEndpointStorageContainerConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_endpoint_storage_container.html#batch_frequency_in_seconds IothubEndpointStorageContainer#batch_frequency_in_seconds}
+  */
   readonly batchFrequencyInSeconds?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_endpoint_storage_container.html#connection_string IothubEndpointStorageContainer#connection_string}
+  */
   readonly connectionString: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_endpoint_storage_container.html#container_name IothubEndpointStorageContainer#container_name}
+  */
   readonly containerName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_endpoint_storage_container.html#encoding IothubEndpointStorageContainer#encoding}
+  */
   readonly encoding?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_endpoint_storage_container.html#file_name_format IothubEndpointStorageContainer#file_name_format}
+  */
   readonly fileNameFormat?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_endpoint_storage_container.html#iothub_name IothubEndpointStorageContainer#iothub_name}
+  */
   readonly iothubName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_endpoint_storage_container.html#max_chunk_size_in_bytes IothubEndpointStorageContainer#max_chunk_size_in_bytes}
+  */
   readonly maxChunkSizeInBytes?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_endpoint_storage_container.html#name IothubEndpointStorageContainer#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_endpoint_storage_container.html#resource_group_name IothubEndpointStorageContainer#resource_group_name}
+  */
   readonly resourceGroupName: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_endpoint_storage_container.html#timeouts IothubEndpointStorageContainer#timeouts}
+  */
   readonly timeouts?: IothubEndpointStorageContainerTimeouts;
 }
 export interface IothubEndpointStorageContainerTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_endpoint_storage_container.html#create IothubEndpointStorageContainer#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_endpoint_storage_container.html#delete IothubEndpointStorageContainer#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_endpoint_storage_container.html#read IothubEndpointStorageContainer#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_endpoint_storage_container.html#update IothubEndpointStorageContainer#update}
+  */
   readonly update?: string;
 }
 
@@ -37,14 +80,22 @@ function iothubEndpointStorageContainerTimeoutsToTerraform(struct?: IothubEndpoi
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_endpoint_storage_container.html azurerm_iothub_endpoint_storage_container}
+*/
 export class IothubEndpointStorageContainer extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_endpoint_storage_container.html azurerm_iothub_endpoint_storage_container} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options IothubEndpointStorageContainerConfig
+  */
   public constructor(scope: Construct, id: string, config: IothubEndpointStorageContainerConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_iothub_endpoint_storage_container',

@@ -7,20 +7,57 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface KustoDatabasePrincipalAssignmentConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_database_principal_assignment.html#cluster_name KustoDatabasePrincipalAssignment#cluster_name}
+  */
   readonly clusterName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_database_principal_assignment.html#database_name KustoDatabasePrincipalAssignment#database_name}
+  */
   readonly databaseName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_database_principal_assignment.html#name KustoDatabasePrincipalAssignment#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_database_principal_assignment.html#principal_id KustoDatabasePrincipalAssignment#principal_id}
+  */
   readonly principalId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_database_principal_assignment.html#principal_type KustoDatabasePrincipalAssignment#principal_type}
+  */
   readonly principalType: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_database_principal_assignment.html#resource_group_name KustoDatabasePrincipalAssignment#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_database_principal_assignment.html#role KustoDatabasePrincipalAssignment#role}
+  */
   readonly role: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_database_principal_assignment.html#tenant_id KustoDatabasePrincipalAssignment#tenant_id}
+  */
   readonly tenantId: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_database_principal_assignment.html#timeouts KustoDatabasePrincipalAssignment#timeouts}
+  */
   readonly timeouts?: KustoDatabasePrincipalAssignmentTimeouts;
 }
 export interface KustoDatabasePrincipalAssignmentTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_database_principal_assignment.html#create KustoDatabasePrincipalAssignment#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_database_principal_assignment.html#delete KustoDatabasePrincipalAssignment#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_database_principal_assignment.html#read KustoDatabasePrincipalAssignment#read}
+  */
   readonly read?: string;
 }
 
@@ -34,14 +71,22 @@ function kustoDatabasePrincipalAssignmentTimeoutsToTerraform(struct?: KustoDatab
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_database_principal_assignment.html azurerm_kusto_database_principal_assignment}
+*/
 export class KustoDatabasePrincipalAssignment extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_database_principal_assignment.html azurerm_kusto_database_principal_assignment} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options KustoDatabasePrincipalAssignmentConfig
+  */
   public constructor(scope: Construct, id: string, config: KustoDatabasePrincipalAssignmentConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_kusto_database_principal_assignment',

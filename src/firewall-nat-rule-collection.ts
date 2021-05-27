@@ -7,25 +7,75 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface FirewallNatRuleCollectionConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_nat_rule_collection.html#action FirewallNatRuleCollection#action}
+  */
   readonly action: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_nat_rule_collection.html#azure_firewall_name FirewallNatRuleCollection#azure_firewall_name}
+  */
   readonly azureFirewallName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_nat_rule_collection.html#name FirewallNatRuleCollection#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_nat_rule_collection.html#priority FirewallNatRuleCollection#priority}
+  */
   readonly priority: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_nat_rule_collection.html#resource_group_name FirewallNatRuleCollection#resource_group_name}
+  */
   readonly resourceGroupName: string;
-  /** rule block */
+  /**
+  * rule block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_nat_rule_collection.html#rule FirewallNatRuleCollection#rule}
+  */
   readonly rule: FirewallNatRuleCollectionRule[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_nat_rule_collection.html#timeouts FirewallNatRuleCollection#timeouts}
+  */
   readonly timeouts?: FirewallNatRuleCollectionTimeouts;
 }
 export interface FirewallNatRuleCollectionRule {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_nat_rule_collection.html#description FirewallNatRuleCollection#description}
+  */
   readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_nat_rule_collection.html#destination_addresses FirewallNatRuleCollection#destination_addresses}
+  */
   readonly destinationAddresses: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_nat_rule_collection.html#destination_ports FirewallNatRuleCollection#destination_ports}
+  */
   readonly destinationPorts: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_nat_rule_collection.html#name FirewallNatRuleCollection#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_nat_rule_collection.html#protocols FirewallNatRuleCollection#protocols}
+  */
   readonly protocols: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_nat_rule_collection.html#source_addresses FirewallNatRuleCollection#source_addresses}
+  */
   readonly sourceAddresses?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_nat_rule_collection.html#source_ip_groups FirewallNatRuleCollection#source_ip_groups}
+  */
   readonly sourceIpGroups?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_nat_rule_collection.html#translated_address FirewallNatRuleCollection#translated_address}
+  */
   readonly translatedAddress: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_nat_rule_collection.html#translated_port FirewallNatRuleCollection#translated_port}
+  */
   readonly translatedPort: string;
 }
 
@@ -45,9 +95,21 @@ function firewallNatRuleCollectionRuleToTerraform(struct?: FirewallNatRuleCollec
 }
 
 export interface FirewallNatRuleCollectionTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_nat_rule_collection.html#create FirewallNatRuleCollection#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_nat_rule_collection.html#delete FirewallNatRuleCollection#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_nat_rule_collection.html#read FirewallNatRuleCollection#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_nat_rule_collection.html#update FirewallNatRuleCollection#update}
+  */
   readonly update?: string;
 }
 
@@ -62,14 +124,22 @@ function firewallNatRuleCollectionTimeoutsToTerraform(struct?: FirewallNatRuleCo
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_nat_rule_collection.html azurerm_firewall_nat_rule_collection}
+*/
 export class FirewallNatRuleCollection extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_nat_rule_collection.html azurerm_firewall_nat_rule_collection} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options FirewallNatRuleCollectionConfig
+  */
   public constructor(scope: Construct, id: string, config: FirewallNatRuleCollectionConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_firewall_nat_rule_collection',

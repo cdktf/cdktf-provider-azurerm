@@ -7,19 +7,53 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface VirtualMachineDataDiskAttachmentConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_data_disk_attachment.html#caching VirtualMachineDataDiskAttachment#caching}
+  */
   readonly caching: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_data_disk_attachment.html#create_option VirtualMachineDataDiskAttachment#create_option}
+  */
   readonly createOption?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_data_disk_attachment.html#lun VirtualMachineDataDiskAttachment#lun}
+  */
   readonly lun: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_data_disk_attachment.html#managed_disk_id VirtualMachineDataDiskAttachment#managed_disk_id}
+  */
   readonly managedDiskId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_data_disk_attachment.html#virtual_machine_id VirtualMachineDataDiskAttachment#virtual_machine_id}
+  */
   readonly virtualMachineId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_data_disk_attachment.html#write_accelerator_enabled VirtualMachineDataDiskAttachment#write_accelerator_enabled}
+  */
   readonly writeAcceleratorEnabled?: boolean;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_data_disk_attachment.html#timeouts VirtualMachineDataDiskAttachment#timeouts}
+  */
   readonly timeouts?: VirtualMachineDataDiskAttachmentTimeouts;
 }
 export interface VirtualMachineDataDiskAttachmentTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_data_disk_attachment.html#create VirtualMachineDataDiskAttachment#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_data_disk_attachment.html#delete VirtualMachineDataDiskAttachment#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_data_disk_attachment.html#read VirtualMachineDataDiskAttachment#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_data_disk_attachment.html#update VirtualMachineDataDiskAttachment#update}
+  */
   readonly update?: string;
 }
 
@@ -34,14 +68,22 @@ function virtualMachineDataDiskAttachmentTimeoutsToTerraform(struct?: VirtualMac
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_data_disk_attachment.html azurerm_virtual_machine_data_disk_attachment}
+*/
 export class VirtualMachineDataDiskAttachment extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_data_disk_attachment.html azurerm_virtual_machine_data_disk_attachment} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options VirtualMachineDataDiskAttachmentConfig
+  */
   public constructor(scope: Construct, id: string, config: VirtualMachineDataDiskAttachmentConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_virtual_machine_data_disk_attachment',

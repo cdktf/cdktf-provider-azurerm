@@ -7,22 +7,65 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataFactoryLinkedServiceMysqlConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_mysql.html#additional_properties DataFactoryLinkedServiceMysql#additional_properties}
+  */
   readonly additionalProperties?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_mysql.html#annotations DataFactoryLinkedServiceMysql#annotations}
+  */
   readonly annotations?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_mysql.html#connection_string DataFactoryLinkedServiceMysql#connection_string}
+  */
   readonly connectionString: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_mysql.html#data_factory_name DataFactoryLinkedServiceMysql#data_factory_name}
+  */
   readonly dataFactoryName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_mysql.html#description DataFactoryLinkedServiceMysql#description}
+  */
   readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_mysql.html#integration_runtime_name DataFactoryLinkedServiceMysql#integration_runtime_name}
+  */
   readonly integrationRuntimeName?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_mysql.html#name DataFactoryLinkedServiceMysql#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_mysql.html#parameters DataFactoryLinkedServiceMysql#parameters}
+  */
   readonly parameters?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_mysql.html#resource_group_name DataFactoryLinkedServiceMysql#resource_group_name}
+  */
   readonly resourceGroupName: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_mysql.html#timeouts DataFactoryLinkedServiceMysql#timeouts}
+  */
   readonly timeouts?: DataFactoryLinkedServiceMysqlTimeouts;
 }
 export interface DataFactoryLinkedServiceMysqlTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_mysql.html#create DataFactoryLinkedServiceMysql#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_mysql.html#delete DataFactoryLinkedServiceMysql#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_mysql.html#read DataFactoryLinkedServiceMysql#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_mysql.html#update DataFactoryLinkedServiceMysql#update}
+  */
   readonly update?: string;
 }
 
@@ -37,14 +80,22 @@ function dataFactoryLinkedServiceMysqlTimeoutsToTerraform(struct?: DataFactoryLi
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_mysql.html azurerm_data_factory_linked_service_mysql}
+*/
 export class DataFactoryLinkedServiceMysql extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_mysql.html azurerm_data_factory_linked_service_mysql} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataFactoryLinkedServiceMysqlConfig
+  */
   public constructor(scope: Construct, id: string, config: DataFactoryLinkedServiceMysqlConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_data_factory_linked_service_mysql',

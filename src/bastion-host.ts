@@ -7,18 +7,47 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface BastionHostConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bastion_host.html#location BastionHost#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bastion_host.html#name BastionHost#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bastion_host.html#resource_group_name BastionHost#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bastion_host.html#tags BastionHost#tags}
+  */
   readonly tags?: { [key: string]: string };
-  /** ip_configuration block */
+  /**
+  * ip_configuration block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bastion_host.html#ip_configuration BastionHost#ip_configuration}
+  */
   readonly ipConfiguration?: BastionHostIpConfiguration[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bastion_host.html#timeouts BastionHost#timeouts}
+  */
   readonly timeouts?: BastionHostTimeouts;
 }
 export interface BastionHostIpConfiguration {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bastion_host.html#name BastionHost#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bastion_host.html#public_ip_address_id BastionHost#public_ip_address_id}
+  */
   readonly publicIpAddressId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bastion_host.html#subnet_id BastionHost#subnet_id}
+  */
   readonly subnetId: string;
 }
 
@@ -32,9 +61,21 @@ function bastionHostIpConfigurationToTerraform(struct?: BastionHostIpConfigurati
 }
 
 export interface BastionHostTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bastion_host.html#create BastionHost#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bastion_host.html#delete BastionHost#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bastion_host.html#read BastionHost#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bastion_host.html#update BastionHost#update}
+  */
   readonly update?: string;
 }
 
@@ -49,14 +90,22 @@ function bastionHostTimeoutsToTerraform(struct?: BastionHostTimeouts): any {
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/bastion_host.html azurerm_bastion_host}
+*/
 export class BastionHost extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/bastion_host.html azurerm_bastion_host} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options BastionHostConfig
+  */
   public constructor(scope: Construct, id: string, config: BastionHostConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_bastion_host',

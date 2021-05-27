@@ -7,22 +7,65 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface MssqlServerSecurityAlertPolicyConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server_security_alert_policy.html#disabled_alerts MssqlServerSecurityAlertPolicy#disabled_alerts}
+  */
   readonly disabledAlerts?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server_security_alert_policy.html#email_account_admins MssqlServerSecurityAlertPolicy#email_account_admins}
+  */
   readonly emailAccountAdmins?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server_security_alert_policy.html#email_addresses MssqlServerSecurityAlertPolicy#email_addresses}
+  */
   readonly emailAddresses?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server_security_alert_policy.html#resource_group_name MssqlServerSecurityAlertPolicy#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server_security_alert_policy.html#retention_days MssqlServerSecurityAlertPolicy#retention_days}
+  */
   readonly retentionDays?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server_security_alert_policy.html#server_name MssqlServerSecurityAlertPolicy#server_name}
+  */
   readonly serverName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server_security_alert_policy.html#state MssqlServerSecurityAlertPolicy#state}
+  */
   readonly state: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server_security_alert_policy.html#storage_account_access_key MssqlServerSecurityAlertPolicy#storage_account_access_key}
+  */
   readonly storageAccountAccessKey?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server_security_alert_policy.html#storage_endpoint MssqlServerSecurityAlertPolicy#storage_endpoint}
+  */
   readonly storageEndpoint?: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server_security_alert_policy.html#timeouts MssqlServerSecurityAlertPolicy#timeouts}
+  */
   readonly timeouts?: MssqlServerSecurityAlertPolicyTimeouts;
 }
 export interface MssqlServerSecurityAlertPolicyTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server_security_alert_policy.html#create MssqlServerSecurityAlertPolicy#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server_security_alert_policy.html#delete MssqlServerSecurityAlertPolicy#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server_security_alert_policy.html#read MssqlServerSecurityAlertPolicy#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server_security_alert_policy.html#update MssqlServerSecurityAlertPolicy#update}
+  */
   readonly update?: string;
 }
 
@@ -37,14 +80,22 @@ function mssqlServerSecurityAlertPolicyTimeoutsToTerraform(struct?: MssqlServerS
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server_security_alert_policy.html azurerm_mssql_server_security_alert_policy}
+*/
 export class MssqlServerSecurityAlertPolicy extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server_security_alert_policy.html azurerm_mssql_server_security_alert_policy} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options MssqlServerSecurityAlertPolicyConfig
+  */
   public constructor(scope: Construct, id: string, config: MssqlServerSecurityAlertPolicyConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_mssql_server_security_alert_policy',

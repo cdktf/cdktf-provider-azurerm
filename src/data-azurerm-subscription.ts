@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/data_azurerm_subscription.html
+// https://www.terraform.io/docs/providers/azurerm/d/subscription.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,11 +7,21 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataAzurermSubscriptionConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/subscription.html#subscription_id DataAzurermSubscription#subscription_id}
+  */
   readonly subscriptionId?: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/subscription.html#timeouts DataAzurermSubscription#timeouts}
+  */
   readonly timeouts?: DataAzurermSubscriptionTimeouts;
 }
 export interface DataAzurermSubscriptionTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/subscription.html#read DataAzurermSubscription#read}
+  */
   readonly read?: string;
 }
 
@@ -23,14 +33,22 @@ function dataAzurermSubscriptionTimeoutsToTerraform(struct?: DataAzurermSubscrip
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/subscription.html azurerm_subscription}
+*/
 export class DataAzurermSubscription extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/subscription.html azurerm_subscription} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataAzurermSubscriptionConfig = {}
+  */
   public constructor(scope: Construct, id: string, config: DataAzurermSubscriptionConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'azurerm_subscription',

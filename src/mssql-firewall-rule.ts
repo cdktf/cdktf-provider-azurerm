@@ -7,17 +7,45 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface MssqlFirewallRuleConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_firewall_rule.html#end_ip_address MssqlFirewallRule#end_ip_address}
+  */
   readonly endIpAddress: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_firewall_rule.html#name MssqlFirewallRule#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_firewall_rule.html#server_id MssqlFirewallRule#server_id}
+  */
   readonly serverId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_firewall_rule.html#start_ip_address MssqlFirewallRule#start_ip_address}
+  */
   readonly startIpAddress: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_firewall_rule.html#timeouts MssqlFirewallRule#timeouts}
+  */
   readonly timeouts?: MssqlFirewallRuleTimeouts;
 }
 export interface MssqlFirewallRuleTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_firewall_rule.html#create MssqlFirewallRule#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_firewall_rule.html#delete MssqlFirewallRule#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_firewall_rule.html#read MssqlFirewallRule#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_firewall_rule.html#update MssqlFirewallRule#update}
+  */
   readonly update?: string;
 }
 
@@ -32,14 +60,22 @@ function mssqlFirewallRuleTimeoutsToTerraform(struct?: MssqlFirewallRuleTimeouts
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_firewall_rule.html azurerm_mssql_firewall_rule}
+*/
 export class MssqlFirewallRule extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_firewall_rule.html azurerm_mssql_firewall_rule} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options MssqlFirewallRuleConfig
+  */
   public constructor(scope: Construct, id: string, config: MssqlFirewallRuleConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_mssql_firewall_rule',

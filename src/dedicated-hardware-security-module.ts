@@ -7,20 +7,55 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DedicatedHardwareSecurityModuleConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dedicated_hardware_security_module.html#location DedicatedHardwareSecurityModule#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dedicated_hardware_security_module.html#name DedicatedHardwareSecurityModule#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dedicated_hardware_security_module.html#resource_group_name DedicatedHardwareSecurityModule#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dedicated_hardware_security_module.html#sku_name DedicatedHardwareSecurityModule#sku_name}
+  */
   readonly skuName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dedicated_hardware_security_module.html#stamp_id DedicatedHardwareSecurityModule#stamp_id}
+  */
   readonly stampId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dedicated_hardware_security_module.html#tags DedicatedHardwareSecurityModule#tags}
+  */
   readonly tags?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dedicated_hardware_security_module.html#zones DedicatedHardwareSecurityModule#zones}
+  */
   readonly zones?: string[];
-  /** network_profile block */
+  /**
+  * network_profile block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dedicated_hardware_security_module.html#network_profile DedicatedHardwareSecurityModule#network_profile}
+  */
   readonly networkProfile: DedicatedHardwareSecurityModuleNetworkProfile[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dedicated_hardware_security_module.html#timeouts DedicatedHardwareSecurityModule#timeouts}
+  */
   readonly timeouts?: DedicatedHardwareSecurityModuleTimeouts;
 }
 export interface DedicatedHardwareSecurityModuleNetworkProfile {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dedicated_hardware_security_module.html#network_interface_private_ip_addresses DedicatedHardwareSecurityModule#network_interface_private_ip_addresses}
+  */
   readonly networkInterfacePrivateIpAddresses: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dedicated_hardware_security_module.html#subnet_id DedicatedHardwareSecurityModule#subnet_id}
+  */
   readonly subnetId: string;
 }
 
@@ -33,9 +68,21 @@ function dedicatedHardwareSecurityModuleNetworkProfileToTerraform(struct?: Dedic
 }
 
 export interface DedicatedHardwareSecurityModuleTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dedicated_hardware_security_module.html#create DedicatedHardwareSecurityModule#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dedicated_hardware_security_module.html#delete DedicatedHardwareSecurityModule#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dedicated_hardware_security_module.html#read DedicatedHardwareSecurityModule#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dedicated_hardware_security_module.html#update DedicatedHardwareSecurityModule#update}
+  */
   readonly update?: string;
 }
 
@@ -50,14 +97,22 @@ function dedicatedHardwareSecurityModuleTimeoutsToTerraform(struct?: DedicatedHa
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/dedicated_hardware_security_module.html azurerm_dedicated_hardware_security_module}
+*/
 export class DedicatedHardwareSecurityModule extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/dedicated_hardware_security_module.html azurerm_dedicated_hardware_security_module} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DedicatedHardwareSecurityModuleConfig
+  */
   public constructor(scope: Construct, id: string, config: DedicatedHardwareSecurityModuleConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_dedicated_hardware_security_module',

@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/data_azurerm_kubernetes_cluster.html
+// https://www.terraform.io/docs/providers/azurerm/d/kubernetes_cluster.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,9 +7,19 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataAzurermKubernetesClusterConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/kubernetes_cluster.html#name DataAzurermKubernetesCluster#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/kubernetes_cluster.html#resource_group_name DataAzurermKubernetesCluster#resource_group_name}
+  */
   readonly resourceGroupName: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/kubernetes_cluster.html#timeouts DataAzurermKubernetesCluster#timeouts}
+  */
   readonly timeouts?: DataAzurermKubernetesClusterTimeouts;
 }
 export class DataAzurermKubernetesClusterAddonProfileAzurePolicy extends cdktf.ComplexComputedList {
@@ -460,6 +470,9 @@ export class DataAzurermKubernetesClusterWindowsProfile extends cdktf.ComplexCom
   }
 }
 export interface DataAzurermKubernetesClusterTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/kubernetes_cluster.html#read DataAzurermKubernetesCluster#read}
+  */
   readonly read?: string;
 }
 
@@ -471,14 +484,22 @@ function dataAzurermKubernetesClusterTimeoutsToTerraform(struct?: DataAzurermKub
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/kubernetes_cluster.html azurerm_kubernetes_cluster}
+*/
 export class DataAzurermKubernetesCluster extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/kubernetes_cluster.html azurerm_kubernetes_cluster} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataAzurermKubernetesClusterConfig
+  */
   public constructor(scope: Construct, id: string, config: DataAzurermKubernetesClusterConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_kubernetes_cluster',

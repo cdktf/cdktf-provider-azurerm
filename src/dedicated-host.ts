@@ -7,21 +7,61 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DedicatedHostConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dedicated_host.html#auto_replace_on_failure DedicatedHost#auto_replace_on_failure}
+  */
   readonly autoReplaceOnFailure?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dedicated_host.html#dedicated_host_group_id DedicatedHost#dedicated_host_group_id}
+  */
   readonly dedicatedHostGroupId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dedicated_host.html#license_type DedicatedHost#license_type}
+  */
   readonly licenseType?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dedicated_host.html#location DedicatedHost#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dedicated_host.html#name DedicatedHost#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dedicated_host.html#platform_fault_domain DedicatedHost#platform_fault_domain}
+  */
   readonly platformFaultDomain: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dedicated_host.html#sku_name DedicatedHost#sku_name}
+  */
   readonly skuName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dedicated_host.html#tags DedicatedHost#tags}
+  */
   readonly tags?: { [key: string]: string };
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dedicated_host.html#timeouts DedicatedHost#timeouts}
+  */
   readonly timeouts?: DedicatedHostTimeouts;
 }
 export interface DedicatedHostTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dedicated_host.html#create DedicatedHost#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dedicated_host.html#delete DedicatedHost#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dedicated_host.html#read DedicatedHost#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dedicated_host.html#update DedicatedHost#update}
+  */
   readonly update?: string;
 }
 
@@ -36,14 +76,22 @@ function dedicatedHostTimeoutsToTerraform(struct?: DedicatedHostTimeouts): any {
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/dedicated_host.html azurerm_dedicated_host}
+*/
 export class DedicatedHost extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/dedicated_host.html azurerm_dedicated_host} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DedicatedHostConfig
+  */
   public constructor(scope: Construct, id: string, config: DedicatedHostConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_dedicated_host',

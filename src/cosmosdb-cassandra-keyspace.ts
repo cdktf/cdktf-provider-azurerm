@@ -7,16 +7,39 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface CosmosdbCassandraKeyspaceConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_cassandra_keyspace.html#account_name CosmosdbCassandraKeyspace#account_name}
+  */
   readonly accountName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_cassandra_keyspace.html#name CosmosdbCassandraKeyspace#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_cassandra_keyspace.html#resource_group_name CosmosdbCassandraKeyspace#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_cassandra_keyspace.html#throughput CosmosdbCassandraKeyspace#throughput}
+  */
   readonly throughput?: number;
-  /** autoscale_settings block */
+  /**
+  * autoscale_settings block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_cassandra_keyspace.html#autoscale_settings CosmosdbCassandraKeyspace#autoscale_settings}
+  */
   readonly autoscaleSettings?: CosmosdbCassandraKeyspaceAutoscaleSettings[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_cassandra_keyspace.html#timeouts CosmosdbCassandraKeyspace#timeouts}
+  */
   readonly timeouts?: CosmosdbCassandraKeyspaceTimeouts;
 }
 export interface CosmosdbCassandraKeyspaceAutoscaleSettings {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_cassandra_keyspace.html#max_throughput CosmosdbCassandraKeyspace#max_throughput}
+  */
   readonly maxThroughput?: number;
 }
 
@@ -28,9 +51,21 @@ function cosmosdbCassandraKeyspaceAutoscaleSettingsToTerraform(struct?: Cosmosdb
 }
 
 export interface CosmosdbCassandraKeyspaceTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_cassandra_keyspace.html#create CosmosdbCassandraKeyspace#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_cassandra_keyspace.html#delete CosmosdbCassandraKeyspace#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_cassandra_keyspace.html#read CosmosdbCassandraKeyspace#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_cassandra_keyspace.html#update CosmosdbCassandraKeyspace#update}
+  */
   readonly update?: string;
 }
 
@@ -45,14 +80,22 @@ function cosmosdbCassandraKeyspaceTimeoutsToTerraform(struct?: CosmosdbCassandra
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_cassandra_keyspace.html azurerm_cosmosdb_cassandra_keyspace}
+*/
 export class CosmosdbCassandraKeyspace extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_cassandra_keyspace.html azurerm_cosmosdb_cassandra_keyspace} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options CosmosdbCassandraKeyspaceConfig
+  */
   public constructor(scope: Construct, id: string, config: CosmosdbCassandraKeyspaceConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_cosmosdb_cassandra_keyspace',

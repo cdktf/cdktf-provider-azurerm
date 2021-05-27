@@ -7,17 +7,43 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface NetworkProfileConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_profile.html#location NetworkProfile#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_profile.html#name NetworkProfile#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_profile.html#resource_group_name NetworkProfile#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_profile.html#tags NetworkProfile#tags}
+  */
   readonly tags?: { [key: string]: string };
-  /** container_network_interface block */
+  /**
+  * container_network_interface block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_profile.html#container_network_interface NetworkProfile#container_network_interface}
+  */
   readonly containerNetworkInterface: NetworkProfileContainerNetworkInterface[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_profile.html#timeouts NetworkProfile#timeouts}
+  */
   readonly timeouts?: NetworkProfileTimeouts;
 }
 export interface NetworkProfileContainerNetworkInterfaceIpConfiguration {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_profile.html#name NetworkProfile#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_profile.html#subnet_id NetworkProfile#subnet_id}
+  */
   readonly subnetId: string;
 }
 
@@ -30,8 +56,15 @@ function networkProfileContainerNetworkInterfaceIpConfigurationToTerraform(struc
 }
 
 export interface NetworkProfileContainerNetworkInterface {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_profile.html#name NetworkProfile#name}
+  */
   readonly name: string;
-  /** ip_configuration block */
+  /**
+  * ip_configuration block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_profile.html#ip_configuration NetworkProfile#ip_configuration}
+  */
   readonly ipConfiguration: NetworkProfileContainerNetworkInterfaceIpConfiguration[];
 }
 
@@ -44,9 +77,21 @@ function networkProfileContainerNetworkInterfaceToTerraform(struct?: NetworkProf
 }
 
 export interface NetworkProfileTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_profile.html#create NetworkProfile#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_profile.html#delete NetworkProfile#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_profile.html#read NetworkProfile#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_profile.html#update NetworkProfile#update}
+  */
   readonly update?: string;
 }
 
@@ -61,14 +106,22 @@ function networkProfileTimeoutsToTerraform(struct?: NetworkProfileTimeouts): any
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/network_profile.html azurerm_network_profile}
+*/
 export class NetworkProfile extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/network_profile.html azurerm_network_profile} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options NetworkProfileConfig
+  */
   public constructor(scope: Construct, id: string, config: NetworkProfileConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_network_profile',

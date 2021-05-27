@@ -7,21 +7,61 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface OrchestratedVirtualMachineScaleSetConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/orchestrated_virtual_machine_scale_set.html#location OrchestratedVirtualMachineScaleSet#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/orchestrated_virtual_machine_scale_set.html#name OrchestratedVirtualMachineScaleSet#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/orchestrated_virtual_machine_scale_set.html#platform_fault_domain_count OrchestratedVirtualMachineScaleSet#platform_fault_domain_count}
+  */
   readonly platformFaultDomainCount: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/orchestrated_virtual_machine_scale_set.html#proximity_placement_group_id OrchestratedVirtualMachineScaleSet#proximity_placement_group_id}
+  */
   readonly proximityPlacementGroupId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/orchestrated_virtual_machine_scale_set.html#resource_group_name OrchestratedVirtualMachineScaleSet#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/orchestrated_virtual_machine_scale_set.html#single_placement_group OrchestratedVirtualMachineScaleSet#single_placement_group}
+  */
   readonly singlePlacementGroup?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/orchestrated_virtual_machine_scale_set.html#tags OrchestratedVirtualMachineScaleSet#tags}
+  */
   readonly tags?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/orchestrated_virtual_machine_scale_set.html#zones OrchestratedVirtualMachineScaleSet#zones}
+  */
   readonly zones?: string[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/orchestrated_virtual_machine_scale_set.html#timeouts OrchestratedVirtualMachineScaleSet#timeouts}
+  */
   readonly timeouts?: OrchestratedVirtualMachineScaleSetTimeouts;
 }
 export interface OrchestratedVirtualMachineScaleSetTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/orchestrated_virtual_machine_scale_set.html#create OrchestratedVirtualMachineScaleSet#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/orchestrated_virtual_machine_scale_set.html#delete OrchestratedVirtualMachineScaleSet#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/orchestrated_virtual_machine_scale_set.html#read OrchestratedVirtualMachineScaleSet#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/orchestrated_virtual_machine_scale_set.html#update OrchestratedVirtualMachineScaleSet#update}
+  */
   readonly update?: string;
 }
 
@@ -36,14 +76,22 @@ function orchestratedVirtualMachineScaleSetTimeoutsToTerraform(struct?: Orchestr
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/orchestrated_virtual_machine_scale_set.html azurerm_orchestrated_virtual_machine_scale_set}
+*/
 export class OrchestratedVirtualMachineScaleSet extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/orchestrated_virtual_machine_scale_set.html azurerm_orchestrated_virtual_machine_scale_set} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options OrchestratedVirtualMachineScaleSetConfig
+  */
   public constructor(scope: Construct, id: string, config: OrchestratedVirtualMachineScaleSetConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_orchestrated_virtual_machine_scale_set',

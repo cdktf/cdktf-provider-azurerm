@@ -7,17 +7,45 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface MssqlJobAgentConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_job_agent.html#database_id MssqlJobAgent#database_id}
+  */
   readonly databaseId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_job_agent.html#location MssqlJobAgent#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_job_agent.html#name MssqlJobAgent#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_job_agent.html#tags MssqlJobAgent#tags}
+  */
   readonly tags?: { [key: string]: string };
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_job_agent.html#timeouts MssqlJobAgent#timeouts}
+  */
   readonly timeouts?: MssqlJobAgentTimeouts;
 }
 export interface MssqlJobAgentTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_job_agent.html#create MssqlJobAgent#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_job_agent.html#delete MssqlJobAgent#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_job_agent.html#read MssqlJobAgent#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_job_agent.html#update MssqlJobAgent#update}
+  */
   readonly update?: string;
 }
 
@@ -32,14 +60,22 @@ function mssqlJobAgentTimeoutsToTerraform(struct?: MssqlJobAgentTimeouts): any {
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_job_agent.html azurerm_mssql_job_agent}
+*/
 export class MssqlJobAgent extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_job_agent.html azurerm_mssql_job_agent} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options MssqlJobAgentConfig
+  */
   public constructor(scope: Construct, id: string, config: MssqlJobAgentConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_mssql_job_agent',

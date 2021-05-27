@@ -7,17 +7,45 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface SecurityCenterContactConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_contact.html#alert_notifications SecurityCenterContact#alert_notifications}
+  */
   readonly alertNotifications: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_contact.html#alerts_to_admins SecurityCenterContact#alerts_to_admins}
+  */
   readonly alertsToAdmins: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_contact.html#email SecurityCenterContact#email}
+  */
   readonly email: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_contact.html#phone SecurityCenterContact#phone}
+  */
   readonly phone?: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_contact.html#timeouts SecurityCenterContact#timeouts}
+  */
   readonly timeouts?: SecurityCenterContactTimeouts;
 }
 export interface SecurityCenterContactTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_contact.html#create SecurityCenterContact#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_contact.html#delete SecurityCenterContact#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_contact.html#read SecurityCenterContact#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_contact.html#update SecurityCenterContact#update}
+  */
   readonly update?: string;
 }
 
@@ -32,14 +60,22 @@ function securityCenterContactTimeoutsToTerraform(struct?: SecurityCenterContact
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_contact.html azurerm_security_center_contact}
+*/
 export class SecurityCenterContact extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_contact.html azurerm_security_center_contact} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options SecurityCenterContactConfig
+  */
   public constructor(scope: Construct, id: string, config: SecurityCenterContactConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_security_center_contact',

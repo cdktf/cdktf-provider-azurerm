@@ -7,29 +7,85 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface MssqlVirtualMachineConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_virtual_machine.html#r_services_enabled MssqlVirtualMachine#r_services_enabled}
+  */
   readonly rServicesEnabled?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_virtual_machine.html#sql_connectivity_port MssqlVirtualMachine#sql_connectivity_port}
+  */
   readonly sqlConnectivityPort?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_virtual_machine.html#sql_connectivity_type MssqlVirtualMachine#sql_connectivity_type}
+  */
   readonly sqlConnectivityType?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_virtual_machine.html#sql_connectivity_update_password MssqlVirtualMachine#sql_connectivity_update_password}
+  */
   readonly sqlConnectivityUpdatePassword?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_virtual_machine.html#sql_connectivity_update_username MssqlVirtualMachine#sql_connectivity_update_username}
+  */
   readonly sqlConnectivityUpdateUsername?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_virtual_machine.html#sql_license_type MssqlVirtualMachine#sql_license_type}
+  */
   readonly sqlLicenseType: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_virtual_machine.html#tags MssqlVirtualMachine#tags}
+  */
   readonly tags?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_virtual_machine.html#virtual_machine_id MssqlVirtualMachine#virtual_machine_id}
+  */
   readonly virtualMachineId: string;
-  /** auto_backup block */
+  /**
+  * auto_backup block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_virtual_machine.html#auto_backup MssqlVirtualMachine#auto_backup}
+  */
   readonly autoBackup?: MssqlVirtualMachineAutoBackup[];
-  /** auto_patching block */
+  /**
+  * auto_patching block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_virtual_machine.html#auto_patching MssqlVirtualMachine#auto_patching}
+  */
   readonly autoPatching?: MssqlVirtualMachineAutoPatching[];
-  /** key_vault_credential block */
+  /**
+  * key_vault_credential block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_virtual_machine.html#key_vault_credential MssqlVirtualMachine#key_vault_credential}
+  */
   readonly keyVaultCredential?: MssqlVirtualMachineKeyVaultCredential[];
-  /** storage_configuration block */
+  /**
+  * storage_configuration block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_virtual_machine.html#storage_configuration MssqlVirtualMachine#storage_configuration}
+  */
   readonly storageConfiguration?: MssqlVirtualMachineStorageConfiguration[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_virtual_machine.html#timeouts MssqlVirtualMachine#timeouts}
+  */
   readonly timeouts?: MssqlVirtualMachineTimeouts;
 }
 export interface MssqlVirtualMachineAutoBackupManualSchedule {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_virtual_machine.html#full_backup_frequency MssqlVirtualMachine#full_backup_frequency}
+  */
   readonly fullBackupFrequency: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_virtual_machine.html#full_backup_start_hour MssqlVirtualMachine#full_backup_start_hour}
+  */
   readonly fullBackupStartHour: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_virtual_machine.html#full_backup_window_in_hours MssqlVirtualMachine#full_backup_window_in_hours}
+  */
   readonly fullBackupWindowInHours: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_virtual_machine.html#log_backup_frequency_in_minutes MssqlVirtualMachine#log_backup_frequency_in_minutes}
+  */
   readonly logBackupFrequencyInMinutes: number;
 }
 
@@ -44,13 +100,35 @@ function mssqlVirtualMachineAutoBackupManualScheduleToTerraform(struct?: MssqlVi
 }
 
 export interface MssqlVirtualMachineAutoBackup {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_virtual_machine.html#encryption_enabled MssqlVirtualMachine#encryption_enabled}
+  */
   readonly encryptionEnabled?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_virtual_machine.html#encryption_password MssqlVirtualMachine#encryption_password}
+  */
   readonly encryptionPassword?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_virtual_machine.html#retention_period_in_days MssqlVirtualMachine#retention_period_in_days}
+  */
   readonly retentionPeriodInDays: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_virtual_machine.html#storage_account_access_key MssqlVirtualMachine#storage_account_access_key}
+  */
   readonly storageAccountAccessKey: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_virtual_machine.html#storage_blob_endpoint MssqlVirtualMachine#storage_blob_endpoint}
+  */
   readonly storageBlobEndpoint: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_virtual_machine.html#system_databases_backup_enabled MssqlVirtualMachine#system_databases_backup_enabled}
+  */
   readonly systemDatabasesBackupEnabled?: boolean;
-  /** manual_schedule block */
+  /**
+  * manual_schedule block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_virtual_machine.html#manual_schedule MssqlVirtualMachine#manual_schedule}
+  */
   readonly manualSchedule?: MssqlVirtualMachineAutoBackupManualSchedule[];
 }
 
@@ -68,8 +146,17 @@ function mssqlVirtualMachineAutoBackupToTerraform(struct?: MssqlVirtualMachineAu
 }
 
 export interface MssqlVirtualMachineAutoPatching {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_virtual_machine.html#day_of_week MssqlVirtualMachine#day_of_week}
+  */
   readonly dayOfWeek: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_virtual_machine.html#maintenance_window_duration_in_minutes MssqlVirtualMachine#maintenance_window_duration_in_minutes}
+  */
   readonly maintenanceWindowDurationInMinutes: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_virtual_machine.html#maintenance_window_starting_hour MssqlVirtualMachine#maintenance_window_starting_hour}
+  */
   readonly maintenanceWindowStartingHour: number;
 }
 
@@ -83,9 +170,21 @@ function mssqlVirtualMachineAutoPatchingToTerraform(struct?: MssqlVirtualMachine
 }
 
 export interface MssqlVirtualMachineKeyVaultCredential {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_virtual_machine.html#key_vault_url MssqlVirtualMachine#key_vault_url}
+  */
   readonly keyVaultUrl: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_virtual_machine.html#name MssqlVirtualMachine#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_virtual_machine.html#service_principal_name MssqlVirtualMachine#service_principal_name}
+  */
   readonly servicePrincipalName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_virtual_machine.html#service_principal_secret MssqlVirtualMachine#service_principal_secret}
+  */
   readonly servicePrincipalSecret: string;
 }
 
@@ -100,7 +199,13 @@ function mssqlVirtualMachineKeyVaultCredentialToTerraform(struct?: MssqlVirtualM
 }
 
 export interface MssqlVirtualMachineStorageConfigurationDataSettings {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_virtual_machine.html#default_file_path MssqlVirtualMachine#default_file_path}
+  */
   readonly defaultFilePath: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_virtual_machine.html#luns MssqlVirtualMachine#luns}
+  */
   readonly luns: number[];
 }
 
@@ -113,7 +218,13 @@ function mssqlVirtualMachineStorageConfigurationDataSettingsToTerraform(struct?:
 }
 
 export interface MssqlVirtualMachineStorageConfigurationLogSettings {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_virtual_machine.html#default_file_path MssqlVirtualMachine#default_file_path}
+  */
   readonly defaultFilePath: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_virtual_machine.html#luns MssqlVirtualMachine#luns}
+  */
   readonly luns: number[];
 }
 
@@ -126,7 +237,13 @@ function mssqlVirtualMachineStorageConfigurationLogSettingsToTerraform(struct?: 
 }
 
 export interface MssqlVirtualMachineStorageConfigurationTempDbSettings {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_virtual_machine.html#default_file_path MssqlVirtualMachine#default_file_path}
+  */
   readonly defaultFilePath: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_virtual_machine.html#luns MssqlVirtualMachine#luns}
+  */
   readonly luns: number[];
 }
 
@@ -139,13 +256,31 @@ function mssqlVirtualMachineStorageConfigurationTempDbSettingsToTerraform(struct
 }
 
 export interface MssqlVirtualMachineStorageConfiguration {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_virtual_machine.html#disk_type MssqlVirtualMachine#disk_type}
+  */
   readonly diskType: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_virtual_machine.html#storage_workload_type MssqlVirtualMachine#storage_workload_type}
+  */
   readonly storageWorkloadType: string;
-  /** data_settings block */
+  /**
+  * data_settings block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_virtual_machine.html#data_settings MssqlVirtualMachine#data_settings}
+  */
   readonly dataSettings?: MssqlVirtualMachineStorageConfigurationDataSettings[];
-  /** log_settings block */
+  /**
+  * log_settings block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_virtual_machine.html#log_settings MssqlVirtualMachine#log_settings}
+  */
   readonly logSettings?: MssqlVirtualMachineStorageConfigurationLogSettings[];
-  /** temp_db_settings block */
+  /**
+  * temp_db_settings block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_virtual_machine.html#temp_db_settings MssqlVirtualMachine#temp_db_settings}
+  */
   readonly tempDbSettings?: MssqlVirtualMachineStorageConfigurationTempDbSettings[];
 }
 
@@ -161,9 +296,21 @@ function mssqlVirtualMachineStorageConfigurationToTerraform(struct?: MssqlVirtua
 }
 
 export interface MssqlVirtualMachineTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_virtual_machine.html#create MssqlVirtualMachine#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_virtual_machine.html#delete MssqlVirtualMachine#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_virtual_machine.html#read MssqlVirtualMachine#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_virtual_machine.html#update MssqlVirtualMachine#update}
+  */
   readonly update?: string;
 }
 
@@ -178,14 +325,22 @@ function mssqlVirtualMachineTimeoutsToTerraform(struct?: MssqlVirtualMachineTime
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_virtual_machine.html azurerm_mssql_virtual_machine}
+*/
 export class MssqlVirtualMachine extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_virtual_machine.html azurerm_mssql_virtual_machine} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options MssqlVirtualMachineConfig
+  */
   public constructor(scope: Construct, id: string, config: MssqlVirtualMachineConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_mssql_virtual_machine',

@@ -7,19 +7,53 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface PowerbiEmbeddedConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/powerbi_embedded.html#administrators PowerbiEmbedded#administrators}
+  */
   readonly administrators: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/powerbi_embedded.html#location PowerbiEmbedded#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/powerbi_embedded.html#name PowerbiEmbedded#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/powerbi_embedded.html#resource_group_name PowerbiEmbedded#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/powerbi_embedded.html#sku_name PowerbiEmbedded#sku_name}
+  */
   readonly skuName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/powerbi_embedded.html#tags PowerbiEmbedded#tags}
+  */
   readonly tags?: { [key: string]: string };
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/powerbi_embedded.html#timeouts PowerbiEmbedded#timeouts}
+  */
   readonly timeouts?: PowerbiEmbeddedTimeouts;
 }
 export interface PowerbiEmbeddedTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/powerbi_embedded.html#create PowerbiEmbedded#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/powerbi_embedded.html#delete PowerbiEmbedded#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/powerbi_embedded.html#read PowerbiEmbedded#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/powerbi_embedded.html#update PowerbiEmbedded#update}
+  */
   readonly update?: string;
 }
 
@@ -34,14 +68,22 @@ function powerbiEmbeddedTimeoutsToTerraform(struct?: PowerbiEmbeddedTimeouts): a
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/powerbi_embedded.html azurerm_powerbi_embedded}
+*/
 export class PowerbiEmbedded extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/powerbi_embedded.html azurerm_powerbi_embedded} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options PowerbiEmbeddedConfig
+  */
   public constructor(scope: Construct, id: string, config: PowerbiEmbeddedConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_powerbi_embedded',

@@ -7,18 +7,47 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface MonitorAadDiagnosticSettingConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_aad_diagnostic_setting.html#eventhub_authorization_rule_id MonitorAadDiagnosticSetting#eventhub_authorization_rule_id}
+  */
   readonly eventhubAuthorizationRuleId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_aad_diagnostic_setting.html#eventhub_name MonitorAadDiagnosticSetting#eventhub_name}
+  */
   readonly eventhubName?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_aad_diagnostic_setting.html#log_analytics_workspace_id MonitorAadDiagnosticSetting#log_analytics_workspace_id}
+  */
   readonly logAnalyticsWorkspaceId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_aad_diagnostic_setting.html#name MonitorAadDiagnosticSetting#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_aad_diagnostic_setting.html#storage_account_id MonitorAadDiagnosticSetting#storage_account_id}
+  */
   readonly storageAccountId?: string;
-  /** log block */
+  /**
+  * log block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_aad_diagnostic_setting.html#log MonitorAadDiagnosticSetting#log}
+  */
   readonly log: MonitorAadDiagnosticSettingLog[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_aad_diagnostic_setting.html#timeouts MonitorAadDiagnosticSetting#timeouts}
+  */
   readonly timeouts?: MonitorAadDiagnosticSettingTimeouts;
 }
 export interface MonitorAadDiagnosticSettingLogRetentionPolicy {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_aad_diagnostic_setting.html#days MonitorAadDiagnosticSetting#days}
+  */
   readonly days?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_aad_diagnostic_setting.html#enabled MonitorAadDiagnosticSetting#enabled}
+  */
   readonly enabled?: boolean;
 }
 
@@ -31,9 +60,19 @@ function monitorAadDiagnosticSettingLogRetentionPolicyToTerraform(struct?: Monit
 }
 
 export interface MonitorAadDiagnosticSettingLog {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_aad_diagnostic_setting.html#category MonitorAadDiagnosticSetting#category}
+  */
   readonly category: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_aad_diagnostic_setting.html#enabled MonitorAadDiagnosticSetting#enabled}
+  */
   readonly enabled?: boolean;
-  /** retention_policy block */
+  /**
+  * retention_policy block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_aad_diagnostic_setting.html#retention_policy MonitorAadDiagnosticSetting#retention_policy}
+  */
   readonly retentionPolicy: MonitorAadDiagnosticSettingLogRetentionPolicy[];
 }
 
@@ -47,9 +86,21 @@ function monitorAadDiagnosticSettingLogToTerraform(struct?: MonitorAadDiagnostic
 }
 
 export interface MonitorAadDiagnosticSettingTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_aad_diagnostic_setting.html#create MonitorAadDiagnosticSetting#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_aad_diagnostic_setting.html#delete MonitorAadDiagnosticSetting#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_aad_diagnostic_setting.html#read MonitorAadDiagnosticSetting#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_aad_diagnostic_setting.html#update MonitorAadDiagnosticSetting#update}
+  */
   readonly update?: string;
 }
 
@@ -64,14 +115,22 @@ function monitorAadDiagnosticSettingTimeoutsToTerraform(struct?: MonitorAadDiagn
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_aad_diagnostic_setting.html azurerm_monitor_aad_diagnostic_setting}
+*/
 export class MonitorAadDiagnosticSetting extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_aad_diagnostic_setting.html azurerm_monitor_aad_diagnostic_setting} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options MonitorAadDiagnosticSettingConfig
+  */
   public constructor(scope: Construct, id: string, config: MonitorAadDiagnosticSettingConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_monitor_aad_diagnostic_setting',

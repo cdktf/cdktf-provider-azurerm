@@ -7,28 +7,89 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataFactoryLinkedServiceSftpConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_sftp.html#additional_properties DataFactoryLinkedServiceSftp#additional_properties}
+  */
   readonly additionalProperties?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_sftp.html#annotations DataFactoryLinkedServiceSftp#annotations}
+  */
   readonly annotations?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_sftp.html#authentication_type DataFactoryLinkedServiceSftp#authentication_type}
+  */
   readonly authenticationType: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_sftp.html#data_factory_name DataFactoryLinkedServiceSftp#data_factory_name}
+  */
   readonly dataFactoryName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_sftp.html#description DataFactoryLinkedServiceSftp#description}
+  */
   readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_sftp.html#host DataFactoryLinkedServiceSftp#host}
+  */
   readonly host: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_sftp.html#host_key_fingerprint DataFactoryLinkedServiceSftp#host_key_fingerprint}
+  */
   readonly hostKeyFingerprint?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_sftp.html#integration_runtime_name DataFactoryLinkedServiceSftp#integration_runtime_name}
+  */
   readonly integrationRuntimeName?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_sftp.html#name DataFactoryLinkedServiceSftp#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_sftp.html#parameters DataFactoryLinkedServiceSftp#parameters}
+  */
   readonly parameters?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_sftp.html#password DataFactoryLinkedServiceSftp#password}
+  */
   readonly password: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_sftp.html#port DataFactoryLinkedServiceSftp#port}
+  */
   readonly port: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_sftp.html#resource_group_name DataFactoryLinkedServiceSftp#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_sftp.html#skip_host_key_validation DataFactoryLinkedServiceSftp#skip_host_key_validation}
+  */
   readonly skipHostKeyValidation?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_sftp.html#username DataFactoryLinkedServiceSftp#username}
+  */
   readonly username: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_sftp.html#timeouts DataFactoryLinkedServiceSftp#timeouts}
+  */
   readonly timeouts?: DataFactoryLinkedServiceSftpTimeouts;
 }
 export interface DataFactoryLinkedServiceSftpTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_sftp.html#create DataFactoryLinkedServiceSftp#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_sftp.html#delete DataFactoryLinkedServiceSftp#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_sftp.html#read DataFactoryLinkedServiceSftp#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_sftp.html#update DataFactoryLinkedServiceSftp#update}
+  */
   readonly update?: string;
 }
 
@@ -43,14 +104,22 @@ function dataFactoryLinkedServiceSftpTimeoutsToTerraform(struct?: DataFactoryLin
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_sftp.html azurerm_data_factory_linked_service_sftp}
+*/
 export class DataFactoryLinkedServiceSftp extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_sftp.html azurerm_data_factory_linked_service_sftp} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataFactoryLinkedServiceSftpConfig
+  */
   public constructor(scope: Construct, id: string, config: DataFactoryLinkedServiceSftpConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_data_factory_linked_service_sftp',

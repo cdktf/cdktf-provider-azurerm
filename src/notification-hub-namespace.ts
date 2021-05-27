@@ -7,20 +7,57 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface NotificationHubNamespaceConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/notification_hub_namespace.html#enabled NotificationHubNamespace#enabled}
+  */
   readonly enabled?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/notification_hub_namespace.html#location NotificationHubNamespace#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/notification_hub_namespace.html#name NotificationHubNamespace#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/notification_hub_namespace.html#namespace_type NotificationHubNamespace#namespace_type}
+  */
   readonly namespaceType: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/notification_hub_namespace.html#resource_group_name NotificationHubNamespace#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/notification_hub_namespace.html#sku_name NotificationHubNamespace#sku_name}
+  */
   readonly skuName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/notification_hub_namespace.html#tags NotificationHubNamespace#tags}
+  */
   readonly tags?: { [key: string]: string };
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/notification_hub_namespace.html#timeouts NotificationHubNamespace#timeouts}
+  */
   readonly timeouts?: NotificationHubNamespaceTimeouts;
 }
 export interface NotificationHubNamespaceTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/notification_hub_namespace.html#create NotificationHubNamespace#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/notification_hub_namespace.html#delete NotificationHubNamespace#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/notification_hub_namespace.html#read NotificationHubNamespace#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/notification_hub_namespace.html#update NotificationHubNamespace#update}
+  */
   readonly update?: string;
 }
 
@@ -35,14 +72,22 @@ function notificationHubNamespaceTimeoutsToTerraform(struct?: NotificationHubNam
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/notification_hub_namespace.html azurerm_notification_hub_namespace}
+*/
 export class NotificationHubNamespace extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/notification_hub_namespace.html azurerm_notification_hub_namespace} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options NotificationHubNamespaceConfig
+  */
   public constructor(scope: Construct, id: string, config: NotificationHubNamespaceConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_notification_hub_namespace',

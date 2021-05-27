@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/data_azurerm_dedicated_host.html
+// https://www.terraform.io/docs/providers/azurerm/d/dedicated_host.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,13 +7,29 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataAzurermDedicatedHostConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/dedicated_host.html#dedicated_host_group_name DataAzurermDedicatedHost#dedicated_host_group_name}
+  */
   readonly dedicatedHostGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/dedicated_host.html#name DataAzurermDedicatedHost#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/dedicated_host.html#resource_group_name DataAzurermDedicatedHost#resource_group_name}
+  */
   readonly resourceGroupName: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/dedicated_host.html#timeouts DataAzurermDedicatedHost#timeouts}
+  */
   readonly timeouts?: DataAzurermDedicatedHostTimeouts;
 }
 export interface DataAzurermDedicatedHostTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/dedicated_host.html#read DataAzurermDedicatedHost#read}
+  */
   readonly read?: string;
 }
 
@@ -25,14 +41,22 @@ function dataAzurermDedicatedHostTimeoutsToTerraform(struct?: DataAzurermDedicat
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/dedicated_host.html azurerm_dedicated_host}
+*/
 export class DataAzurermDedicatedHost extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/dedicated_host.html azurerm_dedicated_host} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataAzurermDedicatedHostConfig
+  */
   public constructor(scope: Construct, id: string, config: DataAzurermDedicatedHostConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_dedicated_host',

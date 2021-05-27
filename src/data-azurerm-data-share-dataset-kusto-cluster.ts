@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/data_azurerm_data_share_dataset_kusto_cluster.html
+// https://www.terraform.io/docs/providers/azurerm/d/data_share_dataset_kusto_cluster.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,12 +7,25 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataAzurermDataShareDatasetKustoClusterConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/data_share_dataset_kusto_cluster.html#name DataAzurermDataShareDatasetKustoCluster#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/data_share_dataset_kusto_cluster.html#share_id DataAzurermDataShareDatasetKustoCluster#share_id}
+  */
   readonly shareId: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/data_share_dataset_kusto_cluster.html#timeouts DataAzurermDataShareDatasetKustoCluster#timeouts}
+  */
   readonly timeouts?: DataAzurermDataShareDatasetKustoClusterTimeouts;
 }
 export interface DataAzurermDataShareDatasetKustoClusterTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/data_share_dataset_kusto_cluster.html#read DataAzurermDataShareDatasetKustoCluster#read}
+  */
   readonly read?: string;
 }
 
@@ -24,14 +37,22 @@ function dataAzurermDataShareDatasetKustoClusterTimeoutsToTerraform(struct?: Dat
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/data_share_dataset_kusto_cluster.html azurerm_data_share_dataset_kusto_cluster}
+*/
 export class DataAzurermDataShareDatasetKustoCluster extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/data_share_dataset_kusto_cluster.html azurerm_data_share_dataset_kusto_cluster} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataAzurermDataShareDatasetKustoClusterConfig
+  */
   public constructor(scope: Construct, id: string, config: DataAzurermDataShareDatasetKustoClusterConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_data_share_dataset_kusto_cluster',

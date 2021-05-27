@@ -7,15 +7,37 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface NetworkInterfaceSecurityGroupAssociationConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_interface_security_group_association.html#network_interface_id NetworkInterfaceSecurityGroupAssociation#network_interface_id}
+  */
   readonly networkInterfaceId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_interface_security_group_association.html#network_security_group_id NetworkInterfaceSecurityGroupAssociation#network_security_group_id}
+  */
   readonly networkSecurityGroupId: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_interface_security_group_association.html#timeouts NetworkInterfaceSecurityGroupAssociation#timeouts}
+  */
   readonly timeouts?: NetworkInterfaceSecurityGroupAssociationTimeouts;
 }
 export interface NetworkInterfaceSecurityGroupAssociationTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_interface_security_group_association.html#create NetworkInterfaceSecurityGroupAssociation#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_interface_security_group_association.html#delete NetworkInterfaceSecurityGroupAssociation#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_interface_security_group_association.html#read NetworkInterfaceSecurityGroupAssociation#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_interface_security_group_association.html#update NetworkInterfaceSecurityGroupAssociation#update}
+  */
   readonly update?: string;
 }
 
@@ -30,14 +52,22 @@ function networkInterfaceSecurityGroupAssociationTimeoutsToTerraform(struct?: Ne
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/network_interface_security_group_association.html azurerm_network_interface_security_group_association}
+*/
 export class NetworkInterfaceSecurityGroupAssociation extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/network_interface_security_group_association.html azurerm_network_interface_security_group_association} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options NetworkInterfaceSecurityGroupAssociationConfig
+  */
   public constructor(scope: Construct, id: string, config: NetworkInterfaceSecurityGroupAssociationConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_network_interface_security_group_association',

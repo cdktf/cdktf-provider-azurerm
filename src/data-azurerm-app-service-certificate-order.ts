@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/data_azurerm_app_service_certificate_order.html
+// https://www.terraform.io/docs/providers/azurerm/d/app_service_certificate_order.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,9 +7,19 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataAzurermAppServiceCertificateOrderConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/app_service_certificate_order.html#name DataAzurermAppServiceCertificateOrder#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/app_service_certificate_order.html#resource_group_name DataAzurermAppServiceCertificateOrder#resource_group_name}
+  */
   readonly resourceGroupName: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/app_service_certificate_order.html#timeouts DataAzurermAppServiceCertificateOrder#timeouts}
+  */
   readonly timeouts?: DataAzurermAppServiceCertificateOrderTimeouts;
 }
 export class DataAzurermAppServiceCertificateOrderCertificates extends cdktf.ComplexComputedList {
@@ -35,6 +45,9 @@ export class DataAzurermAppServiceCertificateOrderCertificates extends cdktf.Com
   }
 }
 export interface DataAzurermAppServiceCertificateOrderTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/app_service_certificate_order.html#read DataAzurermAppServiceCertificateOrder#read}
+  */
   readonly read?: string;
 }
 
@@ -46,14 +59,22 @@ function dataAzurermAppServiceCertificateOrderTimeoutsToTerraform(struct?: DataA
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/app_service_certificate_order.html azurerm_app_service_certificate_order}
+*/
 export class DataAzurermAppServiceCertificateOrder extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/app_service_certificate_order.html azurerm_app_service_certificate_order} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataAzurermAppServiceCertificateOrderConfig
+  */
   public constructor(scope: Construct, id: string, config: DataAzurermAppServiceCertificateOrderConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_app_service_certificate_order',

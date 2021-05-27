@@ -7,28 +7,89 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataFactoryLinkedServiceAzureBlobStorageConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_blob_storage.html#additional_properties DataFactoryLinkedServiceAzureBlobStorage#additional_properties}
+  */
   readonly additionalProperties?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_blob_storage.html#annotations DataFactoryLinkedServiceAzureBlobStorage#annotations}
+  */
   readonly annotations?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_blob_storage.html#connection_string DataFactoryLinkedServiceAzureBlobStorage#connection_string}
+  */
   readonly connectionString?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_blob_storage.html#data_factory_name DataFactoryLinkedServiceAzureBlobStorage#data_factory_name}
+  */
   readonly dataFactoryName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_blob_storage.html#description DataFactoryLinkedServiceAzureBlobStorage#description}
+  */
   readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_blob_storage.html#integration_runtime_name DataFactoryLinkedServiceAzureBlobStorage#integration_runtime_name}
+  */
   readonly integrationRuntimeName?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_blob_storage.html#name DataFactoryLinkedServiceAzureBlobStorage#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_blob_storage.html#parameters DataFactoryLinkedServiceAzureBlobStorage#parameters}
+  */
   readonly parameters?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_blob_storage.html#resource_group_name DataFactoryLinkedServiceAzureBlobStorage#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_blob_storage.html#sas_uri DataFactoryLinkedServiceAzureBlobStorage#sas_uri}
+  */
   readonly sasUri?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_blob_storage.html#service_endpoint DataFactoryLinkedServiceAzureBlobStorage#service_endpoint}
+  */
   readonly serviceEndpoint?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_blob_storage.html#service_principal_id DataFactoryLinkedServiceAzureBlobStorage#service_principal_id}
+  */
   readonly servicePrincipalId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_blob_storage.html#service_principal_key DataFactoryLinkedServiceAzureBlobStorage#service_principal_key}
+  */
   readonly servicePrincipalKey?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_blob_storage.html#tenant_id DataFactoryLinkedServiceAzureBlobStorage#tenant_id}
+  */
   readonly tenantId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_blob_storage.html#use_managed_identity DataFactoryLinkedServiceAzureBlobStorage#use_managed_identity}
+  */
   readonly useManagedIdentity?: boolean;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_blob_storage.html#timeouts DataFactoryLinkedServiceAzureBlobStorage#timeouts}
+  */
   readonly timeouts?: DataFactoryLinkedServiceAzureBlobStorageTimeouts;
 }
 export interface DataFactoryLinkedServiceAzureBlobStorageTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_blob_storage.html#create DataFactoryLinkedServiceAzureBlobStorage#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_blob_storage.html#delete DataFactoryLinkedServiceAzureBlobStorage#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_blob_storage.html#read DataFactoryLinkedServiceAzureBlobStorage#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_blob_storage.html#update DataFactoryLinkedServiceAzureBlobStorage#update}
+  */
   readonly update?: string;
 }
 
@@ -43,14 +104,22 @@ function dataFactoryLinkedServiceAzureBlobStorageTimeoutsToTerraform(struct?: Da
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_blob_storage.html azurerm_data_factory_linked_service_azure_blob_storage}
+*/
 export class DataFactoryLinkedServiceAzureBlobStorage extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_blob_storage.html azurerm_data_factory_linked_service_azure_blob_storage} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataFactoryLinkedServiceAzureBlobStorageConfig
+  */
   public constructor(scope: Construct, id: string, config: DataFactoryLinkedServiceAzureBlobStorageConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_data_factory_linked_service_azure_blob_storage',

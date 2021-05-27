@@ -7,23 +7,69 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface ContainerRegistryWebhookConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry_webhook.html#actions ContainerRegistryWebhook#actions}
+  */
   readonly actions: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry_webhook.html#custom_headers ContainerRegistryWebhook#custom_headers}
+  */
   readonly customHeaders?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry_webhook.html#location ContainerRegistryWebhook#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry_webhook.html#name ContainerRegistryWebhook#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry_webhook.html#registry_name ContainerRegistryWebhook#registry_name}
+  */
   readonly registryName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry_webhook.html#resource_group_name ContainerRegistryWebhook#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry_webhook.html#scope ContainerRegistryWebhook#scope}
+  */
   readonly scope?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry_webhook.html#service_uri ContainerRegistryWebhook#service_uri}
+  */
   readonly serviceUri: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry_webhook.html#status ContainerRegistryWebhook#status}
+  */
   readonly status?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry_webhook.html#tags ContainerRegistryWebhook#tags}
+  */
   readonly tags?: { [key: string]: string };
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry_webhook.html#timeouts ContainerRegistryWebhook#timeouts}
+  */
   readonly timeouts?: ContainerRegistryWebhookTimeouts;
 }
 export interface ContainerRegistryWebhookTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry_webhook.html#create ContainerRegistryWebhook#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry_webhook.html#delete ContainerRegistryWebhook#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry_webhook.html#read ContainerRegistryWebhook#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry_webhook.html#update ContainerRegistryWebhook#update}
+  */
   readonly update?: string;
 }
 
@@ -38,14 +84,22 @@ function containerRegistryWebhookTimeoutsToTerraform(struct?: ContainerRegistryW
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry_webhook.html azurerm_container_registry_webhook}
+*/
 export class ContainerRegistryWebhook extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry_webhook.html azurerm_container_registry_webhook} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options ContainerRegistryWebhookConfig
+  */
   public constructor(scope: Construct, id: string, config: ContainerRegistryWebhookConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_container_registry_webhook',

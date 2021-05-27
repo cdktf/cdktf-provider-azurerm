@@ -7,17 +7,51 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface AppServiceCertificateOrderConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_certificate_order.html#auto_renew AppServiceCertificateOrder#auto_renew}
+  */
   readonly autoRenew?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_certificate_order.html#csr AppServiceCertificateOrder#csr}
+  */
   readonly csr?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_certificate_order.html#distinguished_name AppServiceCertificateOrder#distinguished_name}
+  */
   readonly distinguishedName?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_certificate_order.html#key_size AppServiceCertificateOrder#key_size}
+  */
   readonly keySize?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_certificate_order.html#location AppServiceCertificateOrder#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_certificate_order.html#name AppServiceCertificateOrder#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_certificate_order.html#product_type AppServiceCertificateOrder#product_type}
+  */
   readonly productType?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_certificate_order.html#resource_group_name AppServiceCertificateOrder#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_certificate_order.html#tags AppServiceCertificateOrder#tags}
+  */
   readonly tags?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_certificate_order.html#validity_in_years AppServiceCertificateOrder#validity_in_years}
+  */
   readonly validityInYears?: number;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_certificate_order.html#timeouts AppServiceCertificateOrder#timeouts}
+  */
   readonly timeouts?: AppServiceCertificateOrderTimeouts;
 }
 export class AppServiceCertificateOrderCertificates extends cdktf.ComplexComputedList {
@@ -43,9 +77,21 @@ export class AppServiceCertificateOrderCertificates extends cdktf.ComplexCompute
   }
 }
 export interface AppServiceCertificateOrderTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_certificate_order.html#create AppServiceCertificateOrder#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_certificate_order.html#delete AppServiceCertificateOrder#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_certificate_order.html#read AppServiceCertificateOrder#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_certificate_order.html#update AppServiceCertificateOrder#update}
+  */
   readonly update?: string;
 }
 
@@ -60,14 +106,22 @@ function appServiceCertificateOrderTimeoutsToTerraform(struct?: AppServiceCertif
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_certificate_order.html azurerm_app_service_certificate_order}
+*/
 export class AppServiceCertificateOrder extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_certificate_order.html azurerm_app_service_certificate_order} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options AppServiceCertificateOrderConfig
+  */
   public constructor(scope: Construct, id: string, config: AppServiceCertificateOrderConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_app_service_certificate_order',

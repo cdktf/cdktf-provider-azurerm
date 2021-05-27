@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/data_azurerm_iothub.html
+// https://www.terraform.io/docs/providers/azurerm/d/iothub.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,13 +7,29 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataAzurermIothubConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/iothub.html#name DataAzurermIothub#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/iothub.html#resource_group_name DataAzurermIothub#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/iothub.html#tags DataAzurermIothub#tags}
+  */
   readonly tags?: { [key: string]: string };
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/iothub.html#timeouts DataAzurermIothub#timeouts}
+  */
   readonly timeouts?: DataAzurermIothubTimeouts;
 }
 export interface DataAzurermIothubTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/iothub.html#read DataAzurermIothub#read}
+  */
   readonly read?: string;
 }
 
@@ -25,14 +41,22 @@ function dataAzurermIothubTimeoutsToTerraform(struct?: DataAzurermIothubTimeouts
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/iothub.html azurerm_iothub}
+*/
 export class DataAzurermIothub extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/iothub.html azurerm_iothub} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataAzurermIothubConfig
+  */
   public constructor(scope: Construct, id: string, config: DataAzurermIothubConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_iothub',

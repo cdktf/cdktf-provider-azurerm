@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/data_azurerm_virtual_machine.html
+// https://www.terraform.io/docs/providers/azurerm/d/virtual_machine.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,9 +7,19 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataAzurermVirtualMachineConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/virtual_machine.html#name DataAzurermVirtualMachine#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/virtual_machine.html#resource_group_name DataAzurermVirtualMachine#resource_group_name}
+  */
   readonly resourceGroupName: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/virtual_machine.html#timeouts DataAzurermVirtualMachine#timeouts}
+  */
   readonly timeouts?: DataAzurermVirtualMachineTimeouts;
 }
 export class DataAzurermVirtualMachineIdentity extends cdktf.ComplexComputedList {
@@ -35,6 +45,9 @@ export class DataAzurermVirtualMachineIdentity extends cdktf.ComplexComputedList
   }
 }
 export interface DataAzurermVirtualMachineTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/virtual_machine.html#read DataAzurermVirtualMachine#read}
+  */
   readonly read?: string;
 }
 
@@ -46,14 +59,22 @@ function dataAzurermVirtualMachineTimeoutsToTerraform(struct?: DataAzurermVirtua
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/virtual_machine.html azurerm_virtual_machine}
+*/
 export class DataAzurermVirtualMachine extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/virtual_machine.html azurerm_virtual_machine} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataAzurermVirtualMachineConfig
+  */
   public constructor(scope: Construct, id: string, config: DataAzurermVirtualMachineConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_virtual_machine',

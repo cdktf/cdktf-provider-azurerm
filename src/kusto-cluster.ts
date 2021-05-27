@@ -7,31 +7,93 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface KustoClusterConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_cluster.html#double_encryption_enabled KustoCluster#double_encryption_enabled}
+  */
   readonly doubleEncryptionEnabled?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_cluster.html#enable_disk_encryption KustoCluster#enable_disk_encryption}
+  */
   readonly enableDiskEncryption?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_cluster.html#enable_purge KustoCluster#enable_purge}
+  */
   readonly enablePurge?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_cluster.html#enable_streaming_ingest KustoCluster#enable_streaming_ingest}
+  */
   readonly enableStreamingIngest?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_cluster.html#engine KustoCluster#engine}
+  */
   readonly engine?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_cluster.html#language_extensions KustoCluster#language_extensions}
+  */
   readonly languageExtensions?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_cluster.html#location KustoCluster#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_cluster.html#name KustoCluster#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_cluster.html#resource_group_name KustoCluster#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_cluster.html#tags KustoCluster#tags}
+  */
   readonly tags?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_cluster.html#trusted_external_tenants KustoCluster#trusted_external_tenants}
+  */
   readonly trustedExternalTenants?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_cluster.html#zones KustoCluster#zones}
+  */
   readonly zones?: string[];
-  /** identity block */
+  /**
+  * identity block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_cluster.html#identity KustoCluster#identity}
+  */
   readonly identity?: KustoClusterIdentity[];
-  /** optimized_auto_scale block */
+  /**
+  * optimized_auto_scale block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_cluster.html#optimized_auto_scale KustoCluster#optimized_auto_scale}
+  */
   readonly optimizedAutoScale?: KustoClusterOptimizedAutoScale[];
-  /** sku block */
+  /**
+  * sku block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_cluster.html#sku KustoCluster#sku}
+  */
   readonly sku: KustoClusterSku[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_cluster.html#timeouts KustoCluster#timeouts}
+  */
   readonly timeouts?: KustoClusterTimeouts;
-  /** virtual_network_configuration block */
+  /**
+  * virtual_network_configuration block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_cluster.html#virtual_network_configuration KustoCluster#virtual_network_configuration}
+  */
   readonly virtualNetworkConfiguration?: KustoClusterVirtualNetworkConfiguration[];
 }
 export interface KustoClusterIdentity {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_cluster.html#identity_ids KustoCluster#identity_ids}
+  */
   readonly identityIds?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_cluster.html#type KustoCluster#type}
+  */
   readonly type: string;
 }
 
@@ -44,7 +106,13 @@ function kustoClusterIdentityToTerraform(struct?: KustoClusterIdentity): any {
 }
 
 export interface KustoClusterOptimizedAutoScale {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_cluster.html#maximum_instances KustoCluster#maximum_instances}
+  */
   readonly maximumInstances: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_cluster.html#minimum_instances KustoCluster#minimum_instances}
+  */
   readonly minimumInstances: number;
 }
 
@@ -57,7 +125,13 @@ function kustoClusterOptimizedAutoScaleToTerraform(struct?: KustoClusterOptimize
 }
 
 export interface KustoClusterSku {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_cluster.html#capacity KustoCluster#capacity}
+  */
   readonly capacity?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_cluster.html#name KustoCluster#name}
+  */
   readonly name: string;
 }
 
@@ -70,9 +144,21 @@ function kustoClusterSkuToTerraform(struct?: KustoClusterSku): any {
 }
 
 export interface KustoClusterTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_cluster.html#create KustoCluster#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_cluster.html#delete KustoCluster#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_cluster.html#read KustoCluster#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_cluster.html#update KustoCluster#update}
+  */
   readonly update?: string;
 }
 
@@ -87,8 +173,17 @@ function kustoClusterTimeoutsToTerraform(struct?: KustoClusterTimeouts): any {
 }
 
 export interface KustoClusterVirtualNetworkConfiguration {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_cluster.html#data_management_public_ip_id KustoCluster#data_management_public_ip_id}
+  */
   readonly dataManagementPublicIpId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_cluster.html#engine_public_ip_id KustoCluster#engine_public_ip_id}
+  */
   readonly enginePublicIpId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_cluster.html#subnet_id KustoCluster#subnet_id}
+  */
   readonly subnetId: string;
 }
 
@@ -102,14 +197,22 @@ function kustoClusterVirtualNetworkConfigurationToTerraform(struct?: KustoCluste
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_cluster.html azurerm_kusto_cluster}
+*/
 export class KustoCluster extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_cluster.html azurerm_kusto_cluster} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options KustoClusterConfig
+  */
   public constructor(scope: Construct, id: string, config: KustoClusterConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_kusto_cluster',

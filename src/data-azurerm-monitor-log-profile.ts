@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/data_azurerm_monitor_log_profile.html
+// https://www.terraform.io/docs/providers/azurerm/d/monitor_log_profile.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,8 +7,15 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataAzurermMonitorLogProfileConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/monitor_log_profile.html#name DataAzurermMonitorLogProfile#name}
+  */
   readonly name: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/monitor_log_profile.html#timeouts DataAzurermMonitorLogProfile#timeouts}
+  */
   readonly timeouts?: DataAzurermMonitorLogProfileTimeouts;
 }
 export class DataAzurermMonitorLogProfileRetentionPolicy extends cdktf.ComplexComputedList {
@@ -24,6 +31,9 @@ export class DataAzurermMonitorLogProfileRetentionPolicy extends cdktf.ComplexCo
   }
 }
 export interface DataAzurermMonitorLogProfileTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/monitor_log_profile.html#read DataAzurermMonitorLogProfile#read}
+  */
   readonly read?: string;
 }
 
@@ -35,14 +45,22 @@ function dataAzurermMonitorLogProfileTimeoutsToTerraform(struct?: DataAzurermMon
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/monitor_log_profile.html azurerm_monitor_log_profile}
+*/
 export class DataAzurermMonitorLogProfile extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/monitor_log_profile.html azurerm_monitor_log_profile} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataAzurermMonitorLogProfileConfig
+  */
   public constructor(scope: Construct, id: string, config: DataAzurermMonitorLogProfileConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_monitor_log_profile',

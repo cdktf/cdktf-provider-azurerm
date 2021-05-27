@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/data_azurerm_key_vault_key.html
+// https://www.terraform.io/docs/providers/azurerm/d/key_vault_key.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,12 +7,25 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataAzurermKeyVaultKeyConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/key_vault_key.html#key_vault_id DataAzurermKeyVaultKey#key_vault_id}
+  */
   readonly keyVaultId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/key_vault_key.html#name DataAzurermKeyVaultKey#name}
+  */
   readonly name: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/key_vault_key.html#timeouts DataAzurermKeyVaultKey#timeouts}
+  */
   readonly timeouts?: DataAzurermKeyVaultKeyTimeouts;
 }
 export interface DataAzurermKeyVaultKeyTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/key_vault_key.html#read DataAzurermKeyVaultKey#read}
+  */
   readonly read?: string;
 }
 
@@ -24,14 +37,22 @@ function dataAzurermKeyVaultKeyTimeoutsToTerraform(struct?: DataAzurermKeyVaultK
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/key_vault_key.html azurerm_key_vault_key}
+*/
 export class DataAzurermKeyVaultKey extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/key_vault_key.html azurerm_key_vault_key} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataAzurermKeyVaultKeyConfig
+  */
   public constructor(scope: Construct, id: string, config: DataAzurermKeyVaultKeyConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_key_vault_key',

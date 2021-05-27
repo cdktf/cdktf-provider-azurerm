@@ -7,18 +7,49 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface CosmosdbSqlTriggerConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_sql_trigger.html#body CosmosdbSqlTrigger#body}
+  */
   readonly body: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_sql_trigger.html#container_id CosmosdbSqlTrigger#container_id}
+  */
   readonly containerId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_sql_trigger.html#name CosmosdbSqlTrigger#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_sql_trigger.html#operation CosmosdbSqlTrigger#operation}
+  */
   readonly operation: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_sql_trigger.html#type CosmosdbSqlTrigger#type}
+  */
   readonly type: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_sql_trigger.html#timeouts CosmosdbSqlTrigger#timeouts}
+  */
   readonly timeouts?: CosmosdbSqlTriggerTimeouts;
 }
 export interface CosmosdbSqlTriggerTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_sql_trigger.html#create CosmosdbSqlTrigger#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_sql_trigger.html#delete CosmosdbSqlTrigger#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_sql_trigger.html#read CosmosdbSqlTrigger#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_sql_trigger.html#update CosmosdbSqlTrigger#update}
+  */
   readonly update?: string;
 }
 
@@ -33,14 +64,22 @@ function cosmosdbSqlTriggerTimeoutsToTerraform(struct?: CosmosdbSqlTriggerTimeou
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_sql_trigger.html azurerm_cosmosdb_sql_trigger}
+*/
 export class CosmosdbSqlTrigger extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_sql_trigger.html azurerm_cosmosdb_sql_trigger} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options CosmosdbSqlTriggerConfig
+  */
   public constructor(scope: Construct, id: string, config: CosmosdbSqlTriggerConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_cosmosdb_sql_trigger',

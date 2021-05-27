@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/data_azurerm_network_security_group.html
+// https://www.terraform.io/docs/providers/azurerm/d/network_security_group.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,9 +7,19 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataAzurermNetworkSecurityGroupConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/network_security_group.html#name DataAzurermNetworkSecurityGroup#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/network_security_group.html#resource_group_name DataAzurermNetworkSecurityGroup#resource_group_name}
+  */
   readonly resourceGroupName: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/network_security_group.html#timeouts DataAzurermNetworkSecurityGroup#timeouts}
+  */
   readonly timeouts?: DataAzurermNetworkSecurityGroupTimeouts;
 }
 export class DataAzurermNetworkSecurityGroupSecurityRule extends cdktf.ComplexComputedList {
@@ -95,6 +105,9 @@ export class DataAzurermNetworkSecurityGroupSecurityRule extends cdktf.ComplexCo
   }
 }
 export interface DataAzurermNetworkSecurityGroupTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/network_security_group.html#read DataAzurermNetworkSecurityGroup#read}
+  */
   readonly read?: string;
 }
 
@@ -106,14 +119,22 @@ function dataAzurermNetworkSecurityGroupTimeoutsToTerraform(struct?: DataAzurerm
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/network_security_group.html azurerm_network_security_group}
+*/
 export class DataAzurermNetworkSecurityGroup extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/network_security_group.html azurerm_network_security_group} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataAzurermNetworkSecurityGroupConfig
+  */
   public constructor(scope: Construct, id: string, config: DataAzurermNetworkSecurityGroupConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_network_security_group',

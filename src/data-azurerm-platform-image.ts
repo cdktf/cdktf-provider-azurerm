@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/data_azurerm_platform_image.html
+// https://www.terraform.io/docs/providers/azurerm/d/platform_image.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,15 +7,37 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataAzurermPlatformImageConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/platform_image.html#location DataAzurermPlatformImage#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/platform_image.html#offer DataAzurermPlatformImage#offer}
+  */
   readonly offer: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/platform_image.html#publisher DataAzurermPlatformImage#publisher}
+  */
   readonly publisher: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/platform_image.html#sku DataAzurermPlatformImage#sku}
+  */
   readonly sku: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/platform_image.html#version DataAzurermPlatformImage#version}
+  */
   readonly version?: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/platform_image.html#timeouts DataAzurermPlatformImage#timeouts}
+  */
   readonly timeouts?: DataAzurermPlatformImageTimeouts;
 }
 export interface DataAzurermPlatformImageTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/platform_image.html#read DataAzurermPlatformImage#read}
+  */
   readonly read?: string;
 }
 
@@ -27,14 +49,22 @@ function dataAzurermPlatformImageTimeoutsToTerraform(struct?: DataAzurermPlatfor
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/platform_image.html azurerm_platform_image}
+*/
 export class DataAzurermPlatformImage extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/platform_image.html azurerm_platform_image} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataAzurermPlatformImageConfig
+  */
   public constructor(scope: Construct, id: string, config: DataAzurermPlatformImageConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_platform_image',

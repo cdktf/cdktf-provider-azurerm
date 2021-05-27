@@ -7,17 +7,43 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DiskEncryptionSetConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/disk_encryption_set.html#key_vault_key_id DiskEncryptionSet#key_vault_key_id}
+  */
   readonly keyVaultKeyId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/disk_encryption_set.html#location DiskEncryptionSet#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/disk_encryption_set.html#name DiskEncryptionSet#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/disk_encryption_set.html#resource_group_name DiskEncryptionSet#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/disk_encryption_set.html#tags DiskEncryptionSet#tags}
+  */
   readonly tags?: { [key: string]: string };
-  /** identity block */
+  /**
+  * identity block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/disk_encryption_set.html#identity DiskEncryptionSet#identity}
+  */
   readonly identity: DiskEncryptionSetIdentity[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/disk_encryption_set.html#timeouts DiskEncryptionSet#timeouts}
+  */
   readonly timeouts?: DiskEncryptionSetTimeouts;
 }
 export interface DiskEncryptionSetIdentity {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/disk_encryption_set.html#type DiskEncryptionSet#type}
+  */
   readonly type: string;
 }
 
@@ -29,9 +55,21 @@ function diskEncryptionSetIdentityToTerraform(struct?: DiskEncryptionSetIdentity
 }
 
 export interface DiskEncryptionSetTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/disk_encryption_set.html#create DiskEncryptionSet#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/disk_encryption_set.html#delete DiskEncryptionSet#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/disk_encryption_set.html#read DiskEncryptionSet#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/disk_encryption_set.html#update DiskEncryptionSet#update}
+  */
   readonly update?: string;
 }
 
@@ -46,14 +84,22 @@ function diskEncryptionSetTimeoutsToTerraform(struct?: DiskEncryptionSetTimeouts
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/disk_encryption_set.html azurerm_disk_encryption_set}
+*/
 export class DiskEncryptionSet extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/disk_encryption_set.html azurerm_disk_encryption_set} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DiskEncryptionSetConfig
+  */
   public constructor(scope: Construct, id: string, config: DiskEncryptionSetConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_disk_encryption_set',

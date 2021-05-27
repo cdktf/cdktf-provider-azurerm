@@ -7,19 +7,53 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface ApiManagementApiSchemaConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_schema.html#api_management_name ApiManagementApiSchema#api_management_name}
+  */
   readonly apiManagementName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_schema.html#api_name ApiManagementApiSchema#api_name}
+  */
   readonly apiName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_schema.html#content_type ApiManagementApiSchema#content_type}
+  */
   readonly contentType: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_schema.html#resource_group_name ApiManagementApiSchema#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_schema.html#schema_id ApiManagementApiSchema#schema_id}
+  */
   readonly schemaId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_schema.html#value ApiManagementApiSchema#value}
+  */
   readonly value: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_schema.html#timeouts ApiManagementApiSchema#timeouts}
+  */
   readonly timeouts?: ApiManagementApiSchemaTimeouts;
 }
 export interface ApiManagementApiSchemaTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_schema.html#create ApiManagementApiSchema#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_schema.html#delete ApiManagementApiSchema#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_schema.html#read ApiManagementApiSchema#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_schema.html#update ApiManagementApiSchema#update}
+  */
   readonly update?: string;
 }
 
@@ -34,14 +68,22 @@ function apiManagementApiSchemaTimeoutsToTerraform(struct?: ApiManagementApiSche
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_schema.html azurerm_api_management_api_schema}
+*/
 export class ApiManagementApiSchema extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_schema.html azurerm_api_management_api_schema} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options ApiManagementApiSchemaConfig
+  */
   public constructor(scope: Construct, id: string, config: ApiManagementApiSchemaConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_api_management_api_schema',
