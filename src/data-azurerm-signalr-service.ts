@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/data_azurerm_signalr_service.html
+// https://www.terraform.io/docs/providers/azurerm/d/signalr_service.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,12 +7,25 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataAzurermSignalrServiceConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/signalr_service.html#name DataAzurermSignalrService#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/signalr_service.html#resource_group_name DataAzurermSignalrService#resource_group_name}
+  */
   readonly resourceGroupName: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/signalr_service.html#timeouts DataAzurermSignalrService#timeouts}
+  */
   readonly timeouts?: DataAzurermSignalrServiceTimeouts;
 }
 export interface DataAzurermSignalrServiceTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/signalr_service.html#read DataAzurermSignalrService#read}
+  */
   readonly read?: string;
 }
 
@@ -24,14 +37,22 @@ function dataAzurermSignalrServiceTimeoutsToTerraform(struct?: DataAzurermSignal
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/signalr_service.html azurerm_signalr_service}
+*/
 export class DataAzurermSignalrService extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/signalr_service.html azurerm_signalr_service} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataAzurermSignalrServiceConfig
+  */
   public constructor(scope: Construct, id: string, config: DataAzurermSignalrServiceConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_signalr_service',

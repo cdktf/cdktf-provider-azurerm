@@ -7,18 +7,49 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface BotChannelMsTeamsConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_ms_teams.html#bot_name BotChannelMsTeams#bot_name}
+  */
   readonly botName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_ms_teams.html#calling_web_hook BotChannelMsTeams#calling_web_hook}
+  */
   readonly callingWebHook?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_ms_teams.html#enable_calling BotChannelMsTeams#enable_calling}
+  */
   readonly enableCalling?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_ms_teams.html#location BotChannelMsTeams#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_ms_teams.html#resource_group_name BotChannelMsTeams#resource_group_name}
+  */
   readonly resourceGroupName: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_ms_teams.html#timeouts BotChannelMsTeams#timeouts}
+  */
   readonly timeouts?: BotChannelMsTeamsTimeouts;
 }
 export interface BotChannelMsTeamsTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_ms_teams.html#create BotChannelMsTeams#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_ms_teams.html#delete BotChannelMsTeams#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_ms_teams.html#read BotChannelMsTeams#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_ms_teams.html#update BotChannelMsTeams#update}
+  */
   readonly update?: string;
 }
 
@@ -33,14 +64,22 @@ function botChannelMsTeamsTimeoutsToTerraform(struct?: BotChannelMsTeamsTimeouts
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_ms_teams.html azurerm_bot_channel_ms_teams}
+*/
 export class BotChannelMsTeams extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_ms_teams.html azurerm_bot_channel_ms_teams} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options BotChannelMsTeamsConfig
+  */
   public constructor(scope: Construct, id: string, config: BotChannelMsTeamsConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_bot_channel_ms_teams',

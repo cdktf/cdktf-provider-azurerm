@@ -7,17 +7,45 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DigitalTwinsInstanceConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/digital_twins_instance.html#location DigitalTwinsInstance#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/digital_twins_instance.html#name DigitalTwinsInstance#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/digital_twins_instance.html#resource_group_name DigitalTwinsInstance#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/digital_twins_instance.html#tags DigitalTwinsInstance#tags}
+  */
   readonly tags?: { [key: string]: string };
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/digital_twins_instance.html#timeouts DigitalTwinsInstance#timeouts}
+  */
   readonly timeouts?: DigitalTwinsInstanceTimeouts;
 }
 export interface DigitalTwinsInstanceTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/digital_twins_instance.html#create DigitalTwinsInstance#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/digital_twins_instance.html#delete DigitalTwinsInstance#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/digital_twins_instance.html#read DigitalTwinsInstance#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/digital_twins_instance.html#update DigitalTwinsInstance#update}
+  */
   readonly update?: string;
 }
 
@@ -32,14 +60,22 @@ function digitalTwinsInstanceTimeoutsToTerraform(struct?: DigitalTwinsInstanceTi
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/digital_twins_instance.html azurerm_digital_twins_instance}
+*/
 export class DigitalTwinsInstance extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/digital_twins_instance.html azurerm_digital_twins_instance} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DigitalTwinsInstanceConfig
+  */
   public constructor(scope: Construct, id: string, config: DigitalTwinsInstanceConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_digital_twins_instance',

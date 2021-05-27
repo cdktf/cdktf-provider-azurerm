@@ -7,18 +7,49 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface MysqlActiveDirectoryAdministratorConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_active_directory_administrator.html#login MysqlActiveDirectoryAdministrator#login}
+  */
   readonly login: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_active_directory_administrator.html#object_id MysqlActiveDirectoryAdministrator#object_id}
+  */
   readonly objectId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_active_directory_administrator.html#resource_group_name MysqlActiveDirectoryAdministrator#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_active_directory_administrator.html#server_name MysqlActiveDirectoryAdministrator#server_name}
+  */
   readonly serverName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_active_directory_administrator.html#tenant_id MysqlActiveDirectoryAdministrator#tenant_id}
+  */
   readonly tenantId: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_active_directory_administrator.html#timeouts MysqlActiveDirectoryAdministrator#timeouts}
+  */
   readonly timeouts?: MysqlActiveDirectoryAdministratorTimeouts;
 }
 export interface MysqlActiveDirectoryAdministratorTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_active_directory_administrator.html#create MysqlActiveDirectoryAdministrator#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_active_directory_administrator.html#delete MysqlActiveDirectoryAdministrator#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_active_directory_administrator.html#read MysqlActiveDirectoryAdministrator#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_active_directory_administrator.html#update MysqlActiveDirectoryAdministrator#update}
+  */
   readonly update?: string;
 }
 
@@ -33,14 +64,22 @@ function mysqlActiveDirectoryAdministratorTimeoutsToTerraform(struct?: MysqlActi
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_active_directory_administrator.html azurerm_mysql_active_directory_administrator}
+*/
 export class MysqlActiveDirectoryAdministrator extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_active_directory_administrator.html azurerm_mysql_active_directory_administrator} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options MysqlActiveDirectoryAdministratorConfig
+  */
   public constructor(scope: Construct, id: string, config: MysqlActiveDirectoryAdministratorConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_mysql_active_directory_administrator',

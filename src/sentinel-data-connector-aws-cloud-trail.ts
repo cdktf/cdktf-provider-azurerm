@@ -7,16 +7,41 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface SentinelDataConnectorAwsCloudTrailConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_data_connector_aws_cloud_trail.html#aws_role_arn SentinelDataConnectorAwsCloudTrail#aws_role_arn}
+  */
   readonly awsRoleArn: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_data_connector_aws_cloud_trail.html#log_analytics_workspace_id SentinelDataConnectorAwsCloudTrail#log_analytics_workspace_id}
+  */
   readonly logAnalyticsWorkspaceId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_data_connector_aws_cloud_trail.html#name SentinelDataConnectorAwsCloudTrail#name}
+  */
   readonly name: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_data_connector_aws_cloud_trail.html#timeouts SentinelDataConnectorAwsCloudTrail#timeouts}
+  */
   readonly timeouts?: SentinelDataConnectorAwsCloudTrailTimeouts;
 }
 export interface SentinelDataConnectorAwsCloudTrailTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_data_connector_aws_cloud_trail.html#create SentinelDataConnectorAwsCloudTrail#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_data_connector_aws_cloud_trail.html#delete SentinelDataConnectorAwsCloudTrail#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_data_connector_aws_cloud_trail.html#read SentinelDataConnectorAwsCloudTrail#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_data_connector_aws_cloud_trail.html#update SentinelDataConnectorAwsCloudTrail#update}
+  */
   readonly update?: string;
 }
 
@@ -31,14 +56,22 @@ function sentinelDataConnectorAwsCloudTrailTimeoutsToTerraform(struct?: Sentinel
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_data_connector_aws_cloud_trail.html azurerm_sentinel_data_connector_aws_cloud_trail}
+*/
 export class SentinelDataConnectorAwsCloudTrail extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_data_connector_aws_cloud_trail.html azurerm_sentinel_data_connector_aws_cloud_trail} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options SentinelDataConnectorAwsCloudTrailConfig
+  */
   public constructor(scope: Construct, id: string, config: SentinelDataConnectorAwsCloudTrailConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_sentinel_data_connector_aws_cloud_trail',

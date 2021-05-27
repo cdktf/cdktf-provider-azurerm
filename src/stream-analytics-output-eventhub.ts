@@ -7,22 +7,63 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface StreamAnalyticsOutputEventhubConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_eventhub.html#eventhub_name StreamAnalyticsOutputEventhub#eventhub_name}
+  */
   readonly eventhubName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_eventhub.html#name StreamAnalyticsOutputEventhub#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_eventhub.html#resource_group_name StreamAnalyticsOutputEventhub#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_eventhub.html#servicebus_namespace StreamAnalyticsOutputEventhub#servicebus_namespace}
+  */
   readonly servicebusNamespace: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_eventhub.html#shared_access_policy_key StreamAnalyticsOutputEventhub#shared_access_policy_key}
+  */
   readonly sharedAccessPolicyKey: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_eventhub.html#shared_access_policy_name StreamAnalyticsOutputEventhub#shared_access_policy_name}
+  */
   readonly sharedAccessPolicyName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_eventhub.html#stream_analytics_job_name StreamAnalyticsOutputEventhub#stream_analytics_job_name}
+  */
   readonly streamAnalyticsJobName: string;
-  /** serialization block */
+  /**
+  * serialization block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_eventhub.html#serialization StreamAnalyticsOutputEventhub#serialization}
+  */
   readonly serialization: StreamAnalyticsOutputEventhubSerialization[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_eventhub.html#timeouts StreamAnalyticsOutputEventhub#timeouts}
+  */
   readonly timeouts?: StreamAnalyticsOutputEventhubTimeouts;
 }
 export interface StreamAnalyticsOutputEventhubSerialization {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_eventhub.html#encoding StreamAnalyticsOutputEventhub#encoding}
+  */
   readonly encoding?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_eventhub.html#field_delimiter StreamAnalyticsOutputEventhub#field_delimiter}
+  */
   readonly fieldDelimiter?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_eventhub.html#format StreamAnalyticsOutputEventhub#format}
+  */
   readonly format?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_eventhub.html#type StreamAnalyticsOutputEventhub#type}
+  */
   readonly type: string;
 }
 
@@ -37,9 +78,21 @@ function streamAnalyticsOutputEventhubSerializationToTerraform(struct?: StreamAn
 }
 
 export interface StreamAnalyticsOutputEventhubTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_eventhub.html#create StreamAnalyticsOutputEventhub#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_eventhub.html#delete StreamAnalyticsOutputEventhub#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_eventhub.html#read StreamAnalyticsOutputEventhub#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_eventhub.html#update StreamAnalyticsOutputEventhub#update}
+  */
   readonly update?: string;
 }
 
@@ -54,14 +107,22 @@ function streamAnalyticsOutputEventhubTimeoutsToTerraform(struct?: StreamAnalyti
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_eventhub.html azurerm_stream_analytics_output_eventhub}
+*/
 export class StreamAnalyticsOutputEventhub extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_eventhub.html azurerm_stream_analytics_output_eventhub} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options StreamAnalyticsOutputEventhubConfig
+  */
   public constructor(scope: Construct, id: string, config: StreamAnalyticsOutputEventhubConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_stream_analytics_output_eventhub',

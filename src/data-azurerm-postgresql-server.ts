@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/data_azurerm_postgresql_server.html
+// https://www.terraform.io/docs/providers/azurerm/d/postgresql_server.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,9 +7,19 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataAzurermPostgresqlServerConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/postgresql_server.html#name DataAzurermPostgresqlServer#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/postgresql_server.html#resource_group_name DataAzurermPostgresqlServer#resource_group_name}
+  */
   readonly resourceGroupName: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/postgresql_server.html#timeouts DataAzurermPostgresqlServer#timeouts}
+  */
   readonly timeouts?: DataAzurermPostgresqlServerTimeouts;
 }
 export class DataAzurermPostgresqlServerIdentity extends cdktf.ComplexComputedList {
@@ -30,6 +40,9 @@ export class DataAzurermPostgresqlServerIdentity extends cdktf.ComplexComputedLi
   }
 }
 export interface DataAzurermPostgresqlServerTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/postgresql_server.html#read DataAzurermPostgresqlServer#read}
+  */
   readonly read?: string;
 }
 
@@ -41,14 +54,22 @@ function dataAzurermPostgresqlServerTimeoutsToTerraform(struct?: DataAzurermPost
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/postgresql_server.html azurerm_postgresql_server}
+*/
 export class DataAzurermPostgresqlServer extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/postgresql_server.html azurerm_postgresql_server} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataAzurermPostgresqlServerConfig
+  */
   public constructor(scope: Construct, id: string, config: DataAzurermPostgresqlServerConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_postgresql_server',

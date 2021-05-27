@@ -7,20 +7,55 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DevTestGlobalVmShutdownScheduleConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_global_vm_shutdown_schedule.html#daily_recurrence_time DevTestGlobalVmShutdownSchedule#daily_recurrence_time}
+  */
   readonly dailyRecurrenceTime: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_global_vm_shutdown_schedule.html#enabled DevTestGlobalVmShutdownSchedule#enabled}
+  */
   readonly enabled?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_global_vm_shutdown_schedule.html#location DevTestGlobalVmShutdownSchedule#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_global_vm_shutdown_schedule.html#tags DevTestGlobalVmShutdownSchedule#tags}
+  */
   readonly tags?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_global_vm_shutdown_schedule.html#timezone DevTestGlobalVmShutdownSchedule#timezone}
+  */
   readonly timezone: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_global_vm_shutdown_schedule.html#virtual_machine_id DevTestGlobalVmShutdownSchedule#virtual_machine_id}
+  */
   readonly virtualMachineId: string;
-  /** notification_settings block */
+  /**
+  * notification_settings block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_global_vm_shutdown_schedule.html#notification_settings DevTestGlobalVmShutdownSchedule#notification_settings}
+  */
   readonly notificationSettings: DevTestGlobalVmShutdownScheduleNotificationSettings[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_global_vm_shutdown_schedule.html#timeouts DevTestGlobalVmShutdownSchedule#timeouts}
+  */
   readonly timeouts?: DevTestGlobalVmShutdownScheduleTimeouts;
 }
 export interface DevTestGlobalVmShutdownScheduleNotificationSettings {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_global_vm_shutdown_schedule.html#enabled DevTestGlobalVmShutdownSchedule#enabled}
+  */
   readonly enabled: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_global_vm_shutdown_schedule.html#time_in_minutes DevTestGlobalVmShutdownSchedule#time_in_minutes}
+  */
   readonly timeInMinutes?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_global_vm_shutdown_schedule.html#webhook_url DevTestGlobalVmShutdownSchedule#webhook_url}
+  */
   readonly webhookUrl?: string;
 }
 
@@ -34,9 +69,21 @@ function devTestGlobalVmShutdownScheduleNotificationSettingsToTerraform(struct?:
 }
 
 export interface DevTestGlobalVmShutdownScheduleTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_global_vm_shutdown_schedule.html#create DevTestGlobalVmShutdownSchedule#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_global_vm_shutdown_schedule.html#delete DevTestGlobalVmShutdownSchedule#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_global_vm_shutdown_schedule.html#read DevTestGlobalVmShutdownSchedule#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_global_vm_shutdown_schedule.html#update DevTestGlobalVmShutdownSchedule#update}
+  */
   readonly update?: string;
 }
 
@@ -51,14 +98,22 @@ function devTestGlobalVmShutdownScheduleTimeoutsToTerraform(struct?: DevTestGlob
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_global_vm_shutdown_schedule.html azurerm_dev_test_global_vm_shutdown_schedule}
+*/
 export class DevTestGlobalVmShutdownSchedule extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_global_vm_shutdown_schedule.html azurerm_dev_test_global_vm_shutdown_schedule} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DevTestGlobalVmShutdownScheduleConfig
+  */
   public constructor(scope: Construct, id: string, config: DevTestGlobalVmShutdownScheduleConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_dev_test_global_vm_shutdown_schedule',

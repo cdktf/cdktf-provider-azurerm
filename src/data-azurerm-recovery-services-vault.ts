@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/data_azurerm_recovery_services_vault.html
+// https://www.terraform.io/docs/providers/azurerm/d/recovery_services_vault.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,12 +7,25 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataAzurermRecoveryServicesVaultConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/recovery_services_vault.html#name DataAzurermRecoveryServicesVault#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/recovery_services_vault.html#resource_group_name DataAzurermRecoveryServicesVault#resource_group_name}
+  */
   readonly resourceGroupName: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/recovery_services_vault.html#timeouts DataAzurermRecoveryServicesVault#timeouts}
+  */
   readonly timeouts?: DataAzurermRecoveryServicesVaultTimeouts;
 }
 export interface DataAzurermRecoveryServicesVaultTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/recovery_services_vault.html#read DataAzurermRecoveryServicesVault#read}
+  */
   readonly read?: string;
 }
 
@@ -24,14 +37,22 @@ function dataAzurermRecoveryServicesVaultTimeoutsToTerraform(struct?: DataAzurer
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/recovery_services_vault.html azurerm_recovery_services_vault}
+*/
 export class DataAzurermRecoveryServicesVault extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/recovery_services_vault.html azurerm_recovery_services_vault} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataAzurermRecoveryServicesVaultConfig
+  */
   public constructor(scope: Construct, id: string, config: DataAzurermRecoveryServicesVaultConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_recovery_services_vault',

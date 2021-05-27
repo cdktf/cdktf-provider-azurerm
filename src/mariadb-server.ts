@@ -7,33 +7,107 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface MariadbServerConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mariadb_server.html#administrator_login MariadbServer#administrator_login}
+  */
   readonly administratorLogin?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mariadb_server.html#administrator_login_password MariadbServer#administrator_login_password}
+  */
   readonly administratorLoginPassword?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mariadb_server.html#auto_grow_enabled MariadbServer#auto_grow_enabled}
+  */
   readonly autoGrowEnabled?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mariadb_server.html#backup_retention_days MariadbServer#backup_retention_days}
+  */
   readonly backupRetentionDays?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mariadb_server.html#create_mode MariadbServer#create_mode}
+  */
   readonly createMode?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mariadb_server.html#creation_source_server_id MariadbServer#creation_source_server_id}
+  */
   readonly creationSourceServerId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mariadb_server.html#geo_redundant_backup_enabled MariadbServer#geo_redundant_backup_enabled}
+  */
   readonly geoRedundantBackupEnabled?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mariadb_server.html#location MariadbServer#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mariadb_server.html#name MariadbServer#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mariadb_server.html#public_network_access_enabled MariadbServer#public_network_access_enabled}
+  */
   readonly publicNetworkAccessEnabled?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mariadb_server.html#resource_group_name MariadbServer#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mariadb_server.html#restore_point_in_time MariadbServer#restore_point_in_time}
+  */
   readonly restorePointInTime?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mariadb_server.html#sku_name MariadbServer#sku_name}
+  */
   readonly skuName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mariadb_server.html#ssl_enforcement MariadbServer#ssl_enforcement}
+  */
   readonly sslEnforcement?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mariadb_server.html#ssl_enforcement_enabled MariadbServer#ssl_enforcement_enabled}
+  */
   readonly sslEnforcementEnabled?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mariadb_server.html#storage_mb MariadbServer#storage_mb}
+  */
   readonly storageMb?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mariadb_server.html#tags MariadbServer#tags}
+  */
   readonly tags?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mariadb_server.html#version MariadbServer#version}
+  */
   readonly version: string;
-  /** storage_profile block */
+  /**
+  * storage_profile block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mariadb_server.html#storage_profile MariadbServer#storage_profile}
+  */
   readonly storageProfile?: MariadbServerStorageProfile[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mariadb_server.html#timeouts MariadbServer#timeouts}
+  */
   readonly timeouts?: MariadbServerTimeouts;
 }
 export interface MariadbServerStorageProfile {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mariadb_server.html#auto_grow MariadbServer#auto_grow}
+  */
   readonly autoGrow?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mariadb_server.html#backup_retention_days MariadbServer#backup_retention_days}
+  */
   readonly backupRetentionDays?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mariadb_server.html#geo_redundant_backup MariadbServer#geo_redundant_backup}
+  */
   readonly geoRedundantBackup?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mariadb_server.html#storage_mb MariadbServer#storage_mb}
+  */
   readonly storageMb?: number;
 }
 
@@ -48,9 +122,21 @@ function mariadbServerStorageProfileToTerraform(struct?: MariadbServerStoragePro
 }
 
 export interface MariadbServerTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mariadb_server.html#create MariadbServer#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mariadb_server.html#delete MariadbServer#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mariadb_server.html#read MariadbServer#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mariadb_server.html#update MariadbServer#update}
+  */
   readonly update?: string;
 }
 
@@ -65,14 +151,22 @@ function mariadbServerTimeoutsToTerraform(struct?: MariadbServerTimeouts): any {
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/mariadb_server.html azurerm_mariadb_server}
+*/
 export class MariadbServer extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/mariadb_server.html azurerm_mariadb_server} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options MariadbServerConfig
+  */
   public constructor(scope: Construct, id: string, config: MariadbServerConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_mariadb_server',

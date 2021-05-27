@@ -7,18 +7,49 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface StorageTableEntityConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_table_entity.html#entity StorageTableEntity#entity}
+  */
   readonly entity: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_table_entity.html#partition_key StorageTableEntity#partition_key}
+  */
   readonly partitionKey: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_table_entity.html#row_key StorageTableEntity#row_key}
+  */
   readonly rowKey: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_table_entity.html#storage_account_name StorageTableEntity#storage_account_name}
+  */
   readonly storageAccountName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_table_entity.html#table_name StorageTableEntity#table_name}
+  */
   readonly tableName: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_table_entity.html#timeouts StorageTableEntity#timeouts}
+  */
   readonly timeouts?: StorageTableEntityTimeouts;
 }
 export interface StorageTableEntityTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_table_entity.html#create StorageTableEntity#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_table_entity.html#delete StorageTableEntity#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_table_entity.html#read StorageTableEntity#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_table_entity.html#update StorageTableEntity#update}
+  */
   readonly update?: string;
 }
 
@@ -33,14 +64,22 @@ function storageTableEntityTimeoutsToTerraform(struct?: StorageTableEntityTimeou
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/storage_table_entity.html azurerm_storage_table_entity}
+*/
 export class StorageTableEntity extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/storage_table_entity.html azurerm_storage_table_entity} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options StorageTableEntityConfig
+  */
   public constructor(scope: Construct, id: string, config: StorageTableEntityConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_storage_table_entity',

@@ -7,16 +7,39 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface CosmosdbMongoDatabaseConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_mongo_database.html#account_name CosmosdbMongoDatabase#account_name}
+  */
   readonly accountName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_mongo_database.html#name CosmosdbMongoDatabase#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_mongo_database.html#resource_group_name CosmosdbMongoDatabase#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_mongo_database.html#throughput CosmosdbMongoDatabase#throughput}
+  */
   readonly throughput?: number;
-  /** autoscale_settings block */
+  /**
+  * autoscale_settings block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_mongo_database.html#autoscale_settings CosmosdbMongoDatabase#autoscale_settings}
+  */
   readonly autoscaleSettings?: CosmosdbMongoDatabaseAutoscaleSettings[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_mongo_database.html#timeouts CosmosdbMongoDatabase#timeouts}
+  */
   readonly timeouts?: CosmosdbMongoDatabaseTimeouts;
 }
 export interface CosmosdbMongoDatabaseAutoscaleSettings {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_mongo_database.html#max_throughput CosmosdbMongoDatabase#max_throughput}
+  */
   readonly maxThroughput?: number;
 }
 
@@ -28,9 +51,21 @@ function cosmosdbMongoDatabaseAutoscaleSettingsToTerraform(struct?: CosmosdbMong
 }
 
 export interface CosmosdbMongoDatabaseTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_mongo_database.html#create CosmosdbMongoDatabase#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_mongo_database.html#delete CosmosdbMongoDatabase#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_mongo_database.html#read CosmosdbMongoDatabase#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_mongo_database.html#update CosmosdbMongoDatabase#update}
+  */
   readonly update?: string;
 }
 
@@ -45,14 +80,22 @@ function cosmosdbMongoDatabaseTimeoutsToTerraform(struct?: CosmosdbMongoDatabase
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_mongo_database.html azurerm_cosmosdb_mongo_database}
+*/
 export class CosmosdbMongoDatabase extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_mongo_database.html azurerm_cosmosdb_mongo_database} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options CosmosdbMongoDatabaseConfig
+  */
   public constructor(scope: Construct, id: string, config: CosmosdbMongoDatabaseConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_cosmosdb_mongo_database',

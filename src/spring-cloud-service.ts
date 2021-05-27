@@ -7,18 +7,49 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface SpringCloudServiceConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_service.html#location SpringCloudService#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_service.html#name SpringCloudService#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_service.html#resource_group_name SpringCloudService#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_service.html#sku_name SpringCloudService#sku_name}
+  */
   readonly skuName?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_service.html#tags SpringCloudService#tags}
+  */
   readonly tags?: { [key: string]: string };
-  /** config_server_git_setting block */
+  /**
+  * config_server_git_setting block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_service.html#config_server_git_setting SpringCloudService#config_server_git_setting}
+  */
   readonly configServerGitSetting?: SpringCloudServiceConfigServerGitSetting[];
-  /** network block */
+  /**
+  * network block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_service.html#network SpringCloudService#network}
+  */
   readonly network?: SpringCloudServiceNetwork[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_service.html#timeouts SpringCloudService#timeouts}
+  */
   readonly timeouts?: SpringCloudServiceTimeouts;
-  /** trace block */
+  /**
+  * trace block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_service.html#trace SpringCloudService#trace}
+  */
   readonly trace?: SpringCloudServiceTrace[];
 }
 export class SpringCloudServiceRequiredNetworkTrafficRules extends cdktf.ComplexComputedList {
@@ -49,7 +80,13 @@ export class SpringCloudServiceRequiredNetworkTrafficRules extends cdktf.Complex
   }
 }
 export interface SpringCloudServiceConfigServerGitSettingHttpBasicAuth {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_service.html#password SpringCloudService#password}
+  */
   readonly password: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_service.html#username SpringCloudService#username}
+  */
   readonly username: string;
 }
 
@@ -62,7 +99,13 @@ function springCloudServiceConfigServerGitSettingHttpBasicAuthToTerraform(struct
 }
 
 export interface SpringCloudServiceConfigServerGitSettingRepositoryHttpBasicAuth {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_service.html#password SpringCloudService#password}
+  */
   readonly password: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_service.html#username SpringCloudService#username}
+  */
   readonly username: string;
 }
 
@@ -75,9 +118,21 @@ function springCloudServiceConfigServerGitSettingRepositoryHttpBasicAuthToTerraf
 }
 
 export interface SpringCloudServiceConfigServerGitSettingRepositorySshAuth {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_service.html#host_key SpringCloudService#host_key}
+  */
   readonly hostKey?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_service.html#host_key_algorithm SpringCloudService#host_key_algorithm}
+  */
   readonly hostKeyAlgorithm?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_service.html#private_key SpringCloudService#private_key}
+  */
   readonly privateKey: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_service.html#strict_host_key_checking_enabled SpringCloudService#strict_host_key_checking_enabled}
+  */
   readonly strictHostKeyCheckingEnabled?: boolean;
 }
 
@@ -92,14 +147,37 @@ function springCloudServiceConfigServerGitSettingRepositorySshAuthToTerraform(st
 }
 
 export interface SpringCloudServiceConfigServerGitSettingRepository {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_service.html#label SpringCloudService#label}
+  */
   readonly label?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_service.html#name SpringCloudService#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_service.html#pattern SpringCloudService#pattern}
+  */
   readonly pattern?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_service.html#search_paths SpringCloudService#search_paths}
+  */
   readonly searchPaths?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_service.html#uri SpringCloudService#uri}
+  */
   readonly uri: string;
-  /** http_basic_auth block */
+  /**
+  * http_basic_auth block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_service.html#http_basic_auth SpringCloudService#http_basic_auth}
+  */
   readonly httpBasicAuth?: SpringCloudServiceConfigServerGitSettingRepositoryHttpBasicAuth[];
-  /** ssh_auth block */
+  /**
+  * ssh_auth block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_service.html#ssh_auth SpringCloudService#ssh_auth}
+  */
   readonly sshAuth?: SpringCloudServiceConfigServerGitSettingRepositorySshAuth[];
 }
 
@@ -117,9 +195,21 @@ function springCloudServiceConfigServerGitSettingRepositoryToTerraform(struct?: 
 }
 
 export interface SpringCloudServiceConfigServerGitSettingSshAuth {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_service.html#host_key SpringCloudService#host_key}
+  */
   readonly hostKey?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_service.html#host_key_algorithm SpringCloudService#host_key_algorithm}
+  */
   readonly hostKeyAlgorithm?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_service.html#private_key SpringCloudService#private_key}
+  */
   readonly privateKey: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_service.html#strict_host_key_checking_enabled SpringCloudService#strict_host_key_checking_enabled}
+  */
   readonly strictHostKeyCheckingEnabled?: boolean;
 }
 
@@ -134,14 +224,35 @@ function springCloudServiceConfigServerGitSettingSshAuthToTerraform(struct?: Spr
 }
 
 export interface SpringCloudServiceConfigServerGitSetting {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_service.html#label SpringCloudService#label}
+  */
   readonly label?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_service.html#search_paths SpringCloudService#search_paths}
+  */
   readonly searchPaths?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_service.html#uri SpringCloudService#uri}
+  */
   readonly uri: string;
-  /** http_basic_auth block */
+  /**
+  * http_basic_auth block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_service.html#http_basic_auth SpringCloudService#http_basic_auth}
+  */
   readonly httpBasicAuth?: SpringCloudServiceConfigServerGitSettingHttpBasicAuth[];
-  /** repository block */
+  /**
+  * repository block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_service.html#repository SpringCloudService#repository}
+  */
   readonly repository?: SpringCloudServiceConfigServerGitSettingRepository[];
-  /** ssh_auth block */
+  /**
+  * ssh_auth block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_service.html#ssh_auth SpringCloudService#ssh_auth}
+  */
   readonly sshAuth?: SpringCloudServiceConfigServerGitSettingSshAuth[];
 }
 
@@ -158,10 +269,25 @@ function springCloudServiceConfigServerGitSettingToTerraform(struct?: SpringClou
 }
 
 export interface SpringCloudServiceNetwork {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_service.html#app_network_resource_group SpringCloudService#app_network_resource_group}
+  */
   readonly appNetworkResourceGroup?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_service.html#app_subnet_id SpringCloudService#app_subnet_id}
+  */
   readonly appSubnetId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_service.html#cidr_ranges SpringCloudService#cidr_ranges}
+  */
   readonly cidrRanges: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_service.html#service_runtime_network_resource_group SpringCloudService#service_runtime_network_resource_group}
+  */
   readonly serviceRuntimeNetworkResourceGroup?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_service.html#service_runtime_subnet_id SpringCloudService#service_runtime_subnet_id}
+  */
   readonly serviceRuntimeSubnetId: string;
 }
 
@@ -177,9 +303,21 @@ function springCloudServiceNetworkToTerraform(struct?: SpringCloudServiceNetwork
 }
 
 export interface SpringCloudServiceTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_service.html#create SpringCloudService#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_service.html#delete SpringCloudService#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_service.html#read SpringCloudService#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_service.html#update SpringCloudService#update}
+  */
   readonly update?: string;
 }
 
@@ -194,7 +332,13 @@ function springCloudServiceTimeoutsToTerraform(struct?: SpringCloudServiceTimeou
 }
 
 export interface SpringCloudServiceTrace {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_service.html#instrumentation_key SpringCloudService#instrumentation_key}
+  */
   readonly instrumentationKey: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_service.html#sample_rate SpringCloudService#sample_rate}
+  */
   readonly sampleRate?: number;
 }
 
@@ -207,14 +351,22 @@ function springCloudServiceTraceToTerraform(struct?: SpringCloudServiceTrace): a
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_service.html azurerm_spring_cloud_service}
+*/
 export class SpringCloudService extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_service.html azurerm_spring_cloud_service} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options SpringCloudServiceConfig
+  */
   public constructor(scope: Construct, id: string, config: SpringCloudServiceConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_spring_cloud_service',

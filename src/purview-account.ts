@@ -7,13 +7,35 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface PurviewAccountConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/purview_account.html#location PurviewAccount#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/purview_account.html#name PurviewAccount#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/purview_account.html#public_network_enabled PurviewAccount#public_network_enabled}
+  */
   readonly publicNetworkEnabled?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/purview_account.html#resource_group_name PurviewAccount#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/purview_account.html#sku_name PurviewAccount#sku_name}
+  */
   readonly skuName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/purview_account.html#tags PurviewAccount#tags}
+  */
   readonly tags?: { [key: string]: string };
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/purview_account.html#timeouts PurviewAccount#timeouts}
+  */
   readonly timeouts?: PurviewAccountTimeouts;
 }
 export class PurviewAccountIdentity extends cdktf.ComplexComputedList {
@@ -34,9 +56,21 @@ export class PurviewAccountIdentity extends cdktf.ComplexComputedList {
   }
 }
 export interface PurviewAccountTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/purview_account.html#create PurviewAccount#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/purview_account.html#delete PurviewAccount#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/purview_account.html#read PurviewAccount#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/purview_account.html#update PurviewAccount#update}
+  */
   readonly update?: string;
 }
 
@@ -51,14 +85,22 @@ function purviewAccountTimeoutsToTerraform(struct?: PurviewAccountTimeouts): any
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/purview_account.html azurerm_purview_account}
+*/
 export class PurviewAccount extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/purview_account.html azurerm_purview_account} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options PurviewAccountConfig
+  */
   public constructor(scope: Construct, id: string, config: PurviewAccountConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_purview_account',

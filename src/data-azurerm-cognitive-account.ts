@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/data_azurerm_cognitive_account.html
+// https://www.terraform.io/docs/providers/azurerm/d/cognitive_account.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,12 +7,25 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataAzurermCognitiveAccountConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/cognitive_account.html#name DataAzurermCognitiveAccount#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/cognitive_account.html#resource_group_name DataAzurermCognitiveAccount#resource_group_name}
+  */
   readonly resourceGroupName: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/cognitive_account.html#timeouts DataAzurermCognitiveAccount#timeouts}
+  */
   readonly timeouts?: DataAzurermCognitiveAccountTimeouts;
 }
 export interface DataAzurermCognitiveAccountTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/cognitive_account.html#read DataAzurermCognitiveAccount#read}
+  */
   readonly read?: string;
 }
 
@@ -24,14 +37,22 @@ function dataAzurermCognitiveAccountTimeoutsToTerraform(struct?: DataAzurermCogn
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/cognitive_account.html azurerm_cognitive_account}
+*/
 export class DataAzurermCognitiveAccount extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/cognitive_account.html azurerm_cognitive_account} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataAzurermCognitiveAccountConfig
+  */
   public constructor(scope: Construct, id: string, config: DataAzurermCognitiveAccountConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_cognitive_account',

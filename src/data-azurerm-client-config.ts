@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/data_azurerm_client_config.html
+// https://www.terraform.io/docs/providers/azurerm/d/client_config.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,10 +7,17 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataAzurermClientConfigConfig extends cdktf.TerraformMetaArguments {
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/client_config.html#timeouts DataAzurermClientConfig#timeouts}
+  */
   readonly timeouts?: DataAzurermClientConfigTimeouts;
 }
 export interface DataAzurermClientConfigTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/client_config.html#read DataAzurermClientConfig#read}
+  */
   readonly read?: string;
 }
 
@@ -22,14 +29,22 @@ function dataAzurermClientConfigTimeoutsToTerraform(struct?: DataAzurermClientCo
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/client_config.html azurerm_client_config}
+*/
 export class DataAzurermClientConfig extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/client_config.html azurerm_client_config} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataAzurermClientConfigConfig = {}
+  */
   public constructor(scope: Construct, id: string, config: DataAzurermClientConfigConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'azurerm_client_config',

@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/data_azurerm_network_ddos_protection_plan.html
+// https://www.terraform.io/docs/providers/azurerm/d/network_ddos_protection_plan.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,13 +7,29 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataAzurermNetworkDdosProtectionPlanConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/network_ddos_protection_plan.html#name DataAzurermNetworkDdosProtectionPlan#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/network_ddos_protection_plan.html#resource_group_name DataAzurermNetworkDdosProtectionPlan#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/network_ddos_protection_plan.html#tags DataAzurermNetworkDdosProtectionPlan#tags}
+  */
   readonly tags?: { [key: string]: string };
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/network_ddos_protection_plan.html#timeouts DataAzurermNetworkDdosProtectionPlan#timeouts}
+  */
   readonly timeouts?: DataAzurermNetworkDdosProtectionPlanTimeouts;
 }
 export interface DataAzurermNetworkDdosProtectionPlanTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/network_ddos_protection_plan.html#read DataAzurermNetworkDdosProtectionPlan#read}
+  */
   readonly read?: string;
 }
 
@@ -25,14 +41,22 @@ function dataAzurermNetworkDdosProtectionPlanTimeoutsToTerraform(struct?: DataAz
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/network_ddos_protection_plan.html azurerm_network_ddos_protection_plan}
+*/
 export class DataAzurermNetworkDdosProtectionPlan extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/network_ddos_protection_plan.html azurerm_network_ddos_protection_plan} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataAzurermNetworkDdosProtectionPlanConfig
+  */
   public constructor(scope: Construct, id: string, config: DataAzurermNetworkDdosProtectionPlanConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_network_ddos_protection_plan',

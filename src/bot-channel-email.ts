@@ -7,18 +7,49 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface BotChannelEmailConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_email.html#bot_name BotChannelEmail#bot_name}
+  */
   readonly botName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_email.html#email_address BotChannelEmail#email_address}
+  */
   readonly emailAddress: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_email.html#email_password BotChannelEmail#email_password}
+  */
   readonly emailPassword: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_email.html#location BotChannelEmail#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_email.html#resource_group_name BotChannelEmail#resource_group_name}
+  */
   readonly resourceGroupName: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_email.html#timeouts BotChannelEmail#timeouts}
+  */
   readonly timeouts?: BotChannelEmailTimeouts;
 }
 export interface BotChannelEmailTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_email.html#create BotChannelEmail#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_email.html#delete BotChannelEmail#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_email.html#read BotChannelEmail#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_email.html#update BotChannelEmail#update}
+  */
   readonly update?: string;
 }
 
@@ -33,14 +64,22 @@ function botChannelEmailTimeoutsToTerraform(struct?: BotChannelEmailTimeouts): a
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_email.html azurerm_bot_channel_email}
+*/
 export class BotChannelEmail extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_email.html azurerm_bot_channel_email} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options BotChannelEmailConfig
+  */
   public constructor(scope: Construct, id: string, config: BotChannelEmailConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_bot_channel_email',

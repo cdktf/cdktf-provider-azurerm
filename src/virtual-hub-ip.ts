@@ -7,19 +7,53 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface VirtualHubIpConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_hub_ip.html#name VirtualHubIp#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_hub_ip.html#private_ip_address VirtualHubIp#private_ip_address}
+  */
   readonly privateIpAddress?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_hub_ip.html#private_ip_allocation_method VirtualHubIp#private_ip_allocation_method}
+  */
   readonly privateIpAllocationMethod?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_hub_ip.html#public_ip_address_id VirtualHubIp#public_ip_address_id}
+  */
   readonly publicIpAddressId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_hub_ip.html#subnet_id VirtualHubIp#subnet_id}
+  */
   readonly subnetId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_hub_ip.html#virtual_hub_id VirtualHubIp#virtual_hub_id}
+  */
   readonly virtualHubId: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_hub_ip.html#timeouts VirtualHubIp#timeouts}
+  */
   readonly timeouts?: VirtualHubIpTimeouts;
 }
 export interface VirtualHubIpTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_hub_ip.html#create VirtualHubIp#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_hub_ip.html#delete VirtualHubIp#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_hub_ip.html#read VirtualHubIp#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_hub_ip.html#update VirtualHubIp#update}
+  */
   readonly update?: string;
 }
 
@@ -34,14 +68,22 @@ function virtualHubIpTimeoutsToTerraform(struct?: VirtualHubIpTimeouts): any {
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_hub_ip.html azurerm_virtual_hub_ip}
+*/
 export class VirtualHubIp extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_hub_ip.html azurerm_virtual_hub_ip} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options VirtualHubIpConfig
+  */
   public constructor(scope: Construct, id: string, config: VirtualHubIpConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_virtual_hub_ip',

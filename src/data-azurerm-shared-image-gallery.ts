@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/data_azurerm_shared_image_gallery.html
+// https://www.terraform.io/docs/providers/azurerm/d/shared_image_gallery.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,12 +7,25 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataAzurermSharedImageGalleryConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/shared_image_gallery.html#name DataAzurermSharedImageGallery#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/shared_image_gallery.html#resource_group_name DataAzurermSharedImageGallery#resource_group_name}
+  */
   readonly resourceGroupName: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/shared_image_gallery.html#timeouts DataAzurermSharedImageGallery#timeouts}
+  */
   readonly timeouts?: DataAzurermSharedImageGalleryTimeouts;
 }
 export interface DataAzurermSharedImageGalleryTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/shared_image_gallery.html#read DataAzurermSharedImageGallery#read}
+  */
   readonly read?: string;
 }
 
@@ -24,14 +37,22 @@ function dataAzurermSharedImageGalleryTimeoutsToTerraform(struct?: DataAzurermSh
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/shared_image_gallery.html azurerm_shared_image_gallery}
+*/
 export class DataAzurermSharedImageGallery extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/shared_image_gallery.html azurerm_shared_image_gallery} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataAzurermSharedImageGalleryConfig
+  */
   public constructor(scope: Construct, id: string, config: DataAzurermSharedImageGalleryConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_shared_image_gallery',

@@ -7,22 +7,63 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface AppServiceEnvironmentConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_environment.html#allowed_user_ip_cidrs AppServiceEnvironment#allowed_user_ip_cidrs}
+  */
   readonly allowedUserIpCidrs?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_environment.html#front_end_scale_factor AppServiceEnvironment#front_end_scale_factor}
+  */
   readonly frontEndScaleFactor?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_environment.html#internal_load_balancing_mode AppServiceEnvironment#internal_load_balancing_mode}
+  */
   readonly internalLoadBalancingMode?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_environment.html#name AppServiceEnvironment#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_environment.html#pricing_tier AppServiceEnvironment#pricing_tier}
+  */
   readonly pricingTier?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_environment.html#resource_group_name AppServiceEnvironment#resource_group_name}
+  */
   readonly resourceGroupName?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_environment.html#subnet_id AppServiceEnvironment#subnet_id}
+  */
   readonly subnetId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_environment.html#tags AppServiceEnvironment#tags}
+  */
   readonly tags?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_environment.html#user_whitelisted_ip_ranges AppServiceEnvironment#user_whitelisted_ip_ranges}
+  */
   readonly userWhitelistedIpRanges?: string[];
-  /** cluster_setting block */
+  /**
+  * cluster_setting block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_environment.html#cluster_setting AppServiceEnvironment#cluster_setting}
+  */
   readonly clusterSetting?: AppServiceEnvironmentClusterSetting[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_environment.html#timeouts AppServiceEnvironment#timeouts}
+  */
   readonly timeouts?: AppServiceEnvironmentTimeouts;
 }
 export interface AppServiceEnvironmentClusterSetting {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_environment.html#name AppServiceEnvironment#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_environment.html#value AppServiceEnvironment#value}
+  */
   readonly value: string;
 }
 
@@ -35,9 +76,21 @@ function appServiceEnvironmentClusterSettingToTerraform(struct?: AppServiceEnvir
 }
 
 export interface AppServiceEnvironmentTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_environment.html#create AppServiceEnvironment#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_environment.html#delete AppServiceEnvironment#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_environment.html#read AppServiceEnvironment#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_environment.html#update AppServiceEnvironment#update}
+  */
   readonly update?: string;
 }
 
@@ -52,14 +105,22 @@ function appServiceEnvironmentTimeoutsToTerraform(struct?: AppServiceEnvironment
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_environment.html azurerm_app_service_environment}
+*/
 export class AppServiceEnvironment extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_environment.html azurerm_app_service_environment} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options AppServiceEnvironmentConfig
+  */
   public constructor(scope: Construct, id: string, config: AppServiceEnvironmentConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_app_service_environment',

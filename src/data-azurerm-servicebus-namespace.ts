@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/data_azurerm_servicebus_namespace.html
+// https://www.terraform.io/docs/providers/azurerm/d/servicebus_namespace.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,12 +7,25 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataAzurermServicebusNamespaceConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/servicebus_namespace.html#name DataAzurermServicebusNamespace#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/servicebus_namespace.html#resource_group_name DataAzurermServicebusNamespace#resource_group_name}
+  */
   readonly resourceGroupName: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/servicebus_namespace.html#timeouts DataAzurermServicebusNamespace#timeouts}
+  */
   readonly timeouts?: DataAzurermServicebusNamespaceTimeouts;
 }
 export interface DataAzurermServicebusNamespaceTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/servicebus_namespace.html#read DataAzurermServicebusNamespace#read}
+  */
   readonly read?: string;
 }
 
@@ -24,14 +37,22 @@ function dataAzurermServicebusNamespaceTimeoutsToTerraform(struct?: DataAzurermS
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/servicebus_namespace.html azurerm_servicebus_namespace}
+*/
 export class DataAzurermServicebusNamespace extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/servicebus_namespace.html azurerm_servicebus_namespace} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataAzurermServicebusNamespaceConfig
+  */
   public constructor(scope: Construct, id: string, config: DataAzurermServicebusNamespaceConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_servicebus_namespace',

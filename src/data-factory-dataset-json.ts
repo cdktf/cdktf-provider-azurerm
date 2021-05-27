@@ -7,28 +7,83 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataFactoryDatasetJsonConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_json.html#additional_properties DataFactoryDatasetJson#additional_properties}
+  */
   readonly additionalProperties?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_json.html#annotations DataFactoryDatasetJson#annotations}
+  */
   readonly annotations?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_json.html#data_factory_name DataFactoryDatasetJson#data_factory_name}
+  */
   readonly dataFactoryName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_json.html#description DataFactoryDatasetJson#description}
+  */
   readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_json.html#encoding DataFactoryDatasetJson#encoding}
+  */
   readonly encoding?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_json.html#folder DataFactoryDatasetJson#folder}
+  */
   readonly folder?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_json.html#linked_service_name DataFactoryDatasetJson#linked_service_name}
+  */
   readonly linkedServiceName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_json.html#name DataFactoryDatasetJson#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_json.html#parameters DataFactoryDatasetJson#parameters}
+  */
   readonly parameters?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_json.html#resource_group_name DataFactoryDatasetJson#resource_group_name}
+  */
   readonly resourceGroupName: string;
-  /** azure_blob_storage_location block */
+  /**
+  * azure_blob_storage_location block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_json.html#azure_blob_storage_location DataFactoryDatasetJson#azure_blob_storage_location}
+  */
   readonly azureBlobStorageLocation?: DataFactoryDatasetJsonAzureBlobStorageLocation[];
-  /** http_server_location block */
+  /**
+  * http_server_location block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_json.html#http_server_location DataFactoryDatasetJson#http_server_location}
+  */
   readonly httpServerLocation?: DataFactoryDatasetJsonHttpServerLocation[];
-  /** schema_column block */
+  /**
+  * schema_column block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_json.html#schema_column DataFactoryDatasetJson#schema_column}
+  */
   readonly schemaColumn?: DataFactoryDatasetJsonSchemaColumn[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_json.html#timeouts DataFactoryDatasetJson#timeouts}
+  */
   readonly timeouts?: DataFactoryDatasetJsonTimeouts;
 }
 export interface DataFactoryDatasetJsonAzureBlobStorageLocation {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_json.html#container DataFactoryDatasetJson#container}
+  */
   readonly container: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_json.html#filename DataFactoryDatasetJson#filename}
+  */
   readonly filename: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_json.html#path DataFactoryDatasetJson#path}
+  */
   readonly path: string;
 }
 
@@ -42,8 +97,17 @@ function dataFactoryDatasetJsonAzureBlobStorageLocationToTerraform(struct?: Data
 }
 
 export interface DataFactoryDatasetJsonHttpServerLocation {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_json.html#filename DataFactoryDatasetJson#filename}
+  */
   readonly filename: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_json.html#path DataFactoryDatasetJson#path}
+  */
   readonly path: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_json.html#relative_url DataFactoryDatasetJson#relative_url}
+  */
   readonly relativeUrl: string;
 }
 
@@ -57,8 +121,17 @@ function dataFactoryDatasetJsonHttpServerLocationToTerraform(struct?: DataFactor
 }
 
 export interface DataFactoryDatasetJsonSchemaColumn {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_json.html#description DataFactoryDatasetJson#description}
+  */
   readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_json.html#name DataFactoryDatasetJson#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_json.html#type DataFactoryDatasetJson#type}
+  */
   readonly type?: string;
 }
 
@@ -72,9 +145,21 @@ function dataFactoryDatasetJsonSchemaColumnToTerraform(struct?: DataFactoryDatas
 }
 
 export interface DataFactoryDatasetJsonTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_json.html#create DataFactoryDatasetJson#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_json.html#delete DataFactoryDatasetJson#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_json.html#read DataFactoryDatasetJson#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_json.html#update DataFactoryDatasetJson#update}
+  */
   readonly update?: string;
 }
 
@@ -89,14 +174,22 @@ function dataFactoryDatasetJsonTimeoutsToTerraform(struct?: DataFactoryDatasetJs
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_json.html azurerm_data_factory_dataset_json}
+*/
 export class DataFactoryDatasetJson extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_json.html azurerm_data_factory_dataset_json} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataFactoryDatasetJsonConfig
+  */
   public constructor(scope: Construct, id: string, config: DataFactoryDatasetJsonConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_data_factory_dataset_json',

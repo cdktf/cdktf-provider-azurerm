@@ -7,33 +7,93 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface HdinsightInteractiveQueryClusterConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_interactive_query_cluster.html#cluster_version HdinsightInteractiveQueryCluster#cluster_version}
+  */
   readonly clusterVersion: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_interactive_query_cluster.html#location HdinsightInteractiveQueryCluster#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_interactive_query_cluster.html#name HdinsightInteractiveQueryCluster#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_interactive_query_cluster.html#resource_group_name HdinsightInteractiveQueryCluster#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_interactive_query_cluster.html#tags HdinsightInteractiveQueryCluster#tags}
+  */
   readonly tags?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_interactive_query_cluster.html#tier HdinsightInteractiveQueryCluster#tier}
+  */
   readonly tier: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_interactive_query_cluster.html#tls_min_version HdinsightInteractiveQueryCluster#tls_min_version}
+  */
   readonly tlsMinVersion?: string;
-  /** component_version block */
+  /**
+  * component_version block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_interactive_query_cluster.html#component_version HdinsightInteractiveQueryCluster#component_version}
+  */
   readonly componentVersion: HdinsightInteractiveQueryClusterComponentVersion[];
-  /** gateway block */
+  /**
+  * gateway block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_interactive_query_cluster.html#gateway HdinsightInteractiveQueryCluster#gateway}
+  */
   readonly gateway: HdinsightInteractiveQueryClusterGateway[];
-  /** metastores block */
+  /**
+  * metastores block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_interactive_query_cluster.html#metastores HdinsightInteractiveQueryCluster#metastores}
+  */
   readonly metastores?: HdinsightInteractiveQueryClusterMetastores[];
-  /** monitor block */
+  /**
+  * monitor block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_interactive_query_cluster.html#monitor HdinsightInteractiveQueryCluster#monitor}
+  */
   readonly monitor?: HdinsightInteractiveQueryClusterMonitor[];
-  /** network block */
+  /**
+  * network block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_interactive_query_cluster.html#network HdinsightInteractiveQueryCluster#network}
+  */
   readonly network?: HdinsightInteractiveQueryClusterNetwork[];
-  /** roles block */
+  /**
+  * roles block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_interactive_query_cluster.html#roles HdinsightInteractiveQueryCluster#roles}
+  */
   readonly roles: HdinsightInteractiveQueryClusterRoles[];
-  /** storage_account block */
+  /**
+  * storage_account block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_interactive_query_cluster.html#storage_account HdinsightInteractiveQueryCluster#storage_account}
+  */
   readonly storageAccount?: HdinsightInteractiveQueryClusterStorageAccount[];
-  /** storage_account_gen2 block */
+  /**
+  * storage_account_gen2 block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_interactive_query_cluster.html#storage_account_gen2 HdinsightInteractiveQueryCluster#storage_account_gen2}
+  */
   readonly storageAccountGen2?: HdinsightInteractiveQueryClusterStorageAccountGen2[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_interactive_query_cluster.html#timeouts HdinsightInteractiveQueryCluster#timeouts}
+  */
   readonly timeouts?: HdinsightInteractiveQueryClusterTimeouts;
 }
 export interface HdinsightInteractiveQueryClusterComponentVersion {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_interactive_query_cluster.html#interactive_hive HdinsightInteractiveQueryCluster#interactive_hive}
+  */
   readonly interactiveHive: string;
 }
 
@@ -45,8 +105,17 @@ function hdinsightInteractiveQueryClusterComponentVersionToTerraform(struct?: Hd
 }
 
 export interface HdinsightInteractiveQueryClusterGateway {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_interactive_query_cluster.html#enabled HdinsightInteractiveQueryCluster#enabled}
+  */
   readonly enabled?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_interactive_query_cluster.html#password HdinsightInteractiveQueryCluster#password}
+  */
   readonly password: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_interactive_query_cluster.html#username HdinsightInteractiveQueryCluster#username}
+  */
   readonly username: string;
 }
 
@@ -60,9 +129,21 @@ function hdinsightInteractiveQueryClusterGatewayToTerraform(struct?: HdinsightIn
 }
 
 export interface HdinsightInteractiveQueryClusterMetastoresAmbari {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_interactive_query_cluster.html#database_name HdinsightInteractiveQueryCluster#database_name}
+  */
   readonly databaseName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_interactive_query_cluster.html#password HdinsightInteractiveQueryCluster#password}
+  */
   readonly password: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_interactive_query_cluster.html#server HdinsightInteractiveQueryCluster#server}
+  */
   readonly server: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_interactive_query_cluster.html#username HdinsightInteractiveQueryCluster#username}
+  */
   readonly username: string;
 }
 
@@ -77,9 +158,21 @@ function hdinsightInteractiveQueryClusterMetastoresAmbariToTerraform(struct?: Hd
 }
 
 export interface HdinsightInteractiveQueryClusterMetastoresHive {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_interactive_query_cluster.html#database_name HdinsightInteractiveQueryCluster#database_name}
+  */
   readonly databaseName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_interactive_query_cluster.html#password HdinsightInteractiveQueryCluster#password}
+  */
   readonly password: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_interactive_query_cluster.html#server HdinsightInteractiveQueryCluster#server}
+  */
   readonly server: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_interactive_query_cluster.html#username HdinsightInteractiveQueryCluster#username}
+  */
   readonly username: string;
 }
 
@@ -94,9 +187,21 @@ function hdinsightInteractiveQueryClusterMetastoresHiveToTerraform(struct?: Hdin
 }
 
 export interface HdinsightInteractiveQueryClusterMetastoresOozie {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_interactive_query_cluster.html#database_name HdinsightInteractiveQueryCluster#database_name}
+  */
   readonly databaseName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_interactive_query_cluster.html#password HdinsightInteractiveQueryCluster#password}
+  */
   readonly password: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_interactive_query_cluster.html#server HdinsightInteractiveQueryCluster#server}
+  */
   readonly server: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_interactive_query_cluster.html#username HdinsightInteractiveQueryCluster#username}
+  */
   readonly username: string;
 }
 
@@ -111,11 +216,23 @@ function hdinsightInteractiveQueryClusterMetastoresOozieToTerraform(struct?: Hdi
 }
 
 export interface HdinsightInteractiveQueryClusterMetastores {
-  /** ambari block */
+  /**
+  * ambari block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_interactive_query_cluster.html#ambari HdinsightInteractiveQueryCluster#ambari}
+  */
   readonly ambari?: HdinsightInteractiveQueryClusterMetastoresAmbari[];
-  /** hive block */
+  /**
+  * hive block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_interactive_query_cluster.html#hive HdinsightInteractiveQueryCluster#hive}
+  */
   readonly hive?: HdinsightInteractiveQueryClusterMetastoresHive[];
-  /** oozie block */
+  /**
+  * oozie block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_interactive_query_cluster.html#oozie HdinsightInteractiveQueryCluster#oozie}
+  */
   readonly oozie?: HdinsightInteractiveQueryClusterMetastoresOozie[];
 }
 
@@ -129,7 +246,13 @@ function hdinsightInteractiveQueryClusterMetastoresToTerraform(struct?: Hdinsigh
 }
 
 export interface HdinsightInteractiveQueryClusterMonitor {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_interactive_query_cluster.html#log_analytics_workspace_id HdinsightInteractiveQueryCluster#log_analytics_workspace_id}
+  */
   readonly logAnalyticsWorkspaceId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_interactive_query_cluster.html#primary_key HdinsightInteractiveQueryCluster#primary_key}
+  */
   readonly primaryKey: string;
 }
 
@@ -142,7 +265,13 @@ function hdinsightInteractiveQueryClusterMonitorToTerraform(struct?: HdinsightIn
 }
 
 export interface HdinsightInteractiveQueryClusterNetwork {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_interactive_query_cluster.html#connection_direction HdinsightInteractiveQueryCluster#connection_direction}
+  */
   readonly connectionDirection?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_interactive_query_cluster.html#private_link_enabled HdinsightInteractiveQueryCluster#private_link_enabled}
+  */
   readonly privateLinkEnabled?: boolean;
 }
 
@@ -155,11 +284,29 @@ function hdinsightInteractiveQueryClusterNetworkToTerraform(struct?: HdinsightIn
 }
 
 export interface HdinsightInteractiveQueryClusterRolesHeadNode {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_interactive_query_cluster.html#password HdinsightInteractiveQueryCluster#password}
+  */
   readonly password?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_interactive_query_cluster.html#ssh_keys HdinsightInteractiveQueryCluster#ssh_keys}
+  */
   readonly sshKeys?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_interactive_query_cluster.html#subnet_id HdinsightInteractiveQueryCluster#subnet_id}
+  */
   readonly subnetId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_interactive_query_cluster.html#username HdinsightInteractiveQueryCluster#username}
+  */
   readonly username: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_interactive_query_cluster.html#virtual_network_id HdinsightInteractiveQueryCluster#virtual_network_id}
+  */
   readonly virtualNetworkId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_interactive_query_cluster.html#vm_size HdinsightInteractiveQueryCluster#vm_size}
+  */
   readonly vmSize: string;
 }
 
@@ -176,7 +323,13 @@ function hdinsightInteractiveQueryClusterRolesHeadNodeToTerraform(struct?: Hdins
 }
 
 export interface HdinsightInteractiveQueryClusterRolesWorkerNodeAutoscaleCapacity {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_interactive_query_cluster.html#max_instance_count HdinsightInteractiveQueryCluster#max_instance_count}
+  */
   readonly maxInstanceCount: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_interactive_query_cluster.html#min_instance_count HdinsightInteractiveQueryCluster#min_instance_count}
+  */
   readonly minInstanceCount: number;
 }
 
@@ -189,8 +342,17 @@ function hdinsightInteractiveQueryClusterRolesWorkerNodeAutoscaleCapacityToTerra
 }
 
 export interface HdinsightInteractiveQueryClusterRolesWorkerNodeAutoscaleRecurrenceSchedule {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_interactive_query_cluster.html#days HdinsightInteractiveQueryCluster#days}
+  */
   readonly days: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_interactive_query_cluster.html#target_instance_count HdinsightInteractiveQueryCluster#target_instance_count}
+  */
   readonly targetInstanceCount: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_interactive_query_cluster.html#time HdinsightInteractiveQueryCluster#time}
+  */
   readonly time: string;
 }
 
@@ -204,8 +366,15 @@ function hdinsightInteractiveQueryClusterRolesWorkerNodeAutoscaleRecurrenceSched
 }
 
 export interface HdinsightInteractiveQueryClusterRolesWorkerNodeAutoscaleRecurrence {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_interactive_query_cluster.html#timezone HdinsightInteractiveQueryCluster#timezone}
+  */
   readonly timezone: string;
-  /** schedule block */
+  /**
+  * schedule block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_interactive_query_cluster.html#schedule HdinsightInteractiveQueryCluster#schedule}
+  */
   readonly schedule: HdinsightInteractiveQueryClusterRolesWorkerNodeAutoscaleRecurrenceSchedule[];
 }
 
@@ -218,9 +387,17 @@ function hdinsightInteractiveQueryClusterRolesWorkerNodeAutoscaleRecurrenceToTer
 }
 
 export interface HdinsightInteractiveQueryClusterRolesWorkerNodeAutoscale {
-  /** capacity block */
+  /**
+  * capacity block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_interactive_query_cluster.html#capacity HdinsightInteractiveQueryCluster#capacity}
+  */
   readonly capacity?: HdinsightInteractiveQueryClusterRolesWorkerNodeAutoscaleCapacity[];
-  /** recurrence block */
+  /**
+  * recurrence block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_interactive_query_cluster.html#recurrence HdinsightInteractiveQueryCluster#recurrence}
+  */
   readonly recurrence?: HdinsightInteractiveQueryClusterRolesWorkerNodeAutoscaleRecurrence[];
 }
 
@@ -233,15 +410,43 @@ function hdinsightInteractiveQueryClusterRolesWorkerNodeAutoscaleToTerraform(str
 }
 
 export interface HdinsightInteractiveQueryClusterRolesWorkerNode {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_interactive_query_cluster.html#min_instance_count HdinsightInteractiveQueryCluster#min_instance_count}
+  */
   readonly minInstanceCount?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_interactive_query_cluster.html#password HdinsightInteractiveQueryCluster#password}
+  */
   readonly password?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_interactive_query_cluster.html#ssh_keys HdinsightInteractiveQueryCluster#ssh_keys}
+  */
   readonly sshKeys?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_interactive_query_cluster.html#subnet_id HdinsightInteractiveQueryCluster#subnet_id}
+  */
   readonly subnetId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_interactive_query_cluster.html#target_instance_count HdinsightInteractiveQueryCluster#target_instance_count}
+  */
   readonly targetInstanceCount: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_interactive_query_cluster.html#username HdinsightInteractiveQueryCluster#username}
+  */
   readonly username: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_interactive_query_cluster.html#virtual_network_id HdinsightInteractiveQueryCluster#virtual_network_id}
+  */
   readonly virtualNetworkId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_interactive_query_cluster.html#vm_size HdinsightInteractiveQueryCluster#vm_size}
+  */
   readonly vmSize: string;
-  /** autoscale block */
+  /**
+  * autoscale block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_interactive_query_cluster.html#autoscale HdinsightInteractiveQueryCluster#autoscale}
+  */
   readonly autoscale?: HdinsightInteractiveQueryClusterRolesWorkerNodeAutoscale[];
 }
 
@@ -261,11 +466,29 @@ function hdinsightInteractiveQueryClusterRolesWorkerNodeToTerraform(struct?: Hdi
 }
 
 export interface HdinsightInteractiveQueryClusterRolesZookeeperNode {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_interactive_query_cluster.html#password HdinsightInteractiveQueryCluster#password}
+  */
   readonly password?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_interactive_query_cluster.html#ssh_keys HdinsightInteractiveQueryCluster#ssh_keys}
+  */
   readonly sshKeys?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_interactive_query_cluster.html#subnet_id HdinsightInteractiveQueryCluster#subnet_id}
+  */
   readonly subnetId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_interactive_query_cluster.html#username HdinsightInteractiveQueryCluster#username}
+  */
   readonly username: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_interactive_query_cluster.html#virtual_network_id HdinsightInteractiveQueryCluster#virtual_network_id}
+  */
   readonly virtualNetworkId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_interactive_query_cluster.html#vm_size HdinsightInteractiveQueryCluster#vm_size}
+  */
   readonly vmSize: string;
 }
 
@@ -282,11 +505,23 @@ function hdinsightInteractiveQueryClusterRolesZookeeperNodeToTerraform(struct?: 
 }
 
 export interface HdinsightInteractiveQueryClusterRoles {
-  /** head_node block */
+  /**
+  * head_node block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_interactive_query_cluster.html#head_node HdinsightInteractiveQueryCluster#head_node}
+  */
   readonly headNode: HdinsightInteractiveQueryClusterRolesHeadNode[];
-  /** worker_node block */
+  /**
+  * worker_node block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_interactive_query_cluster.html#worker_node HdinsightInteractiveQueryCluster#worker_node}
+  */
   readonly workerNode: HdinsightInteractiveQueryClusterRolesWorkerNode[];
-  /** zookeeper_node block */
+  /**
+  * zookeeper_node block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_interactive_query_cluster.html#zookeeper_node HdinsightInteractiveQueryCluster#zookeeper_node}
+  */
   readonly zookeeperNode: HdinsightInteractiveQueryClusterRolesZookeeperNode[];
 }
 
@@ -300,8 +535,17 @@ function hdinsightInteractiveQueryClusterRolesToTerraform(struct?: HdinsightInte
 }
 
 export interface HdinsightInteractiveQueryClusterStorageAccount {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_interactive_query_cluster.html#is_default HdinsightInteractiveQueryCluster#is_default}
+  */
   readonly isDefault: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_interactive_query_cluster.html#storage_account_key HdinsightInteractiveQueryCluster#storage_account_key}
+  */
   readonly storageAccountKey: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_interactive_query_cluster.html#storage_container_id HdinsightInteractiveQueryCluster#storage_container_id}
+  */
   readonly storageContainerId: string;
 }
 
@@ -315,9 +559,21 @@ function hdinsightInteractiveQueryClusterStorageAccountToTerraform(struct?: Hdin
 }
 
 export interface HdinsightInteractiveQueryClusterStorageAccountGen2 {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_interactive_query_cluster.html#filesystem_id HdinsightInteractiveQueryCluster#filesystem_id}
+  */
   readonly filesystemId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_interactive_query_cluster.html#is_default HdinsightInteractiveQueryCluster#is_default}
+  */
   readonly isDefault: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_interactive_query_cluster.html#managed_identity_resource_id HdinsightInteractiveQueryCluster#managed_identity_resource_id}
+  */
   readonly managedIdentityResourceId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_interactive_query_cluster.html#storage_resource_id HdinsightInteractiveQueryCluster#storage_resource_id}
+  */
   readonly storageResourceId: string;
 }
 
@@ -332,9 +588,21 @@ function hdinsightInteractiveQueryClusterStorageAccountGen2ToTerraform(struct?: 
 }
 
 export interface HdinsightInteractiveQueryClusterTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_interactive_query_cluster.html#create HdinsightInteractiveQueryCluster#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_interactive_query_cluster.html#delete HdinsightInteractiveQueryCluster#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_interactive_query_cluster.html#read HdinsightInteractiveQueryCluster#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_interactive_query_cluster.html#update HdinsightInteractiveQueryCluster#update}
+  */
   readonly update?: string;
 }
 
@@ -349,14 +617,22 @@ function hdinsightInteractiveQueryClusterTimeoutsToTerraform(struct?: HdinsightI
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_interactive_query_cluster.html azurerm_hdinsight_interactive_query_cluster}
+*/
 export class HdinsightInteractiveQueryCluster extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_interactive_query_cluster.html azurerm_hdinsight_interactive_query_cluster} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options HdinsightInteractiveQueryClusterConfig
+  */
   public constructor(scope: Construct, id: string, config: HdinsightInteractiveQueryClusterConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_hdinsight_interactive_query_cluster',

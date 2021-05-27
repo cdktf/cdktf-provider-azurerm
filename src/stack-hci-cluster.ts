@@ -7,19 +7,53 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface StackHciClusterConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stack_hci_cluster.html#client_id StackHciCluster#client_id}
+  */
   readonly clientId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stack_hci_cluster.html#location StackHciCluster#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stack_hci_cluster.html#name StackHciCluster#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stack_hci_cluster.html#resource_group_name StackHciCluster#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stack_hci_cluster.html#tags StackHciCluster#tags}
+  */
   readonly tags?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stack_hci_cluster.html#tenant_id StackHciCluster#tenant_id}
+  */
   readonly tenantId?: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stack_hci_cluster.html#timeouts StackHciCluster#timeouts}
+  */
   readonly timeouts?: StackHciClusterTimeouts;
 }
 export interface StackHciClusterTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stack_hci_cluster.html#create StackHciCluster#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stack_hci_cluster.html#delete StackHciCluster#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stack_hci_cluster.html#read StackHciCluster#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stack_hci_cluster.html#update StackHciCluster#update}
+  */
   readonly update?: string;
 }
 
@@ -34,14 +68,22 @@ function stackHciClusterTimeoutsToTerraform(struct?: StackHciClusterTimeouts): a
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/stack_hci_cluster.html azurerm_stack_hci_cluster}
+*/
 export class StackHciCluster extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/stack_hci_cluster.html azurerm_stack_hci_cluster} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options StackHciClusterConfig
+  */
   public constructor(scope: Construct, id: string, config: StackHciClusterConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_stack_hci_cluster',

@@ -7,26 +7,81 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataFactoryLinkedServiceDataLakeStorageGen2Config extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_data_lake_storage_gen2.html#additional_properties DataFactoryLinkedServiceDataLakeStorageGen2#additional_properties}
+  */
   readonly additionalProperties?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_data_lake_storage_gen2.html#annotations DataFactoryLinkedServiceDataLakeStorageGen2#annotations}
+  */
   readonly annotations?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_data_lake_storage_gen2.html#data_factory_name DataFactoryLinkedServiceDataLakeStorageGen2#data_factory_name}
+  */
   readonly dataFactoryName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_data_lake_storage_gen2.html#description DataFactoryLinkedServiceDataLakeStorageGen2#description}
+  */
   readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_data_lake_storage_gen2.html#integration_runtime_name DataFactoryLinkedServiceDataLakeStorageGen2#integration_runtime_name}
+  */
   readonly integrationRuntimeName?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_data_lake_storage_gen2.html#name DataFactoryLinkedServiceDataLakeStorageGen2#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_data_lake_storage_gen2.html#parameters DataFactoryLinkedServiceDataLakeStorageGen2#parameters}
+  */
   readonly parameters?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_data_lake_storage_gen2.html#resource_group_name DataFactoryLinkedServiceDataLakeStorageGen2#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_data_lake_storage_gen2.html#service_principal_id DataFactoryLinkedServiceDataLakeStorageGen2#service_principal_id}
+  */
   readonly servicePrincipalId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_data_lake_storage_gen2.html#service_principal_key DataFactoryLinkedServiceDataLakeStorageGen2#service_principal_key}
+  */
   readonly servicePrincipalKey?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_data_lake_storage_gen2.html#tenant DataFactoryLinkedServiceDataLakeStorageGen2#tenant}
+  */
   readonly tenant?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_data_lake_storage_gen2.html#url DataFactoryLinkedServiceDataLakeStorageGen2#url}
+  */
   readonly url: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_data_lake_storage_gen2.html#use_managed_identity DataFactoryLinkedServiceDataLakeStorageGen2#use_managed_identity}
+  */
   readonly useManagedIdentity?: boolean;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_data_lake_storage_gen2.html#timeouts DataFactoryLinkedServiceDataLakeStorageGen2#timeouts}
+  */
   readonly timeouts?: DataFactoryLinkedServiceDataLakeStorageGen2Timeouts;
 }
 export interface DataFactoryLinkedServiceDataLakeStorageGen2Timeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_data_lake_storage_gen2.html#create DataFactoryLinkedServiceDataLakeStorageGen2#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_data_lake_storage_gen2.html#delete DataFactoryLinkedServiceDataLakeStorageGen2#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_data_lake_storage_gen2.html#read DataFactoryLinkedServiceDataLakeStorageGen2#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_data_lake_storage_gen2.html#update DataFactoryLinkedServiceDataLakeStorageGen2#update}
+  */
   readonly update?: string;
 }
 
@@ -41,14 +96,22 @@ function dataFactoryLinkedServiceDataLakeStorageGen2TimeoutsToTerraform(struct?:
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_data_lake_storage_gen2.html azurerm_data_factory_linked_service_data_lake_storage_gen2}
+*/
 export class DataFactoryLinkedServiceDataLakeStorageGen2 extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_data_lake_storage_gen2.html azurerm_data_factory_linked_service_data_lake_storage_gen2} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataFactoryLinkedServiceDataLakeStorageGen2Config
+  */
   public constructor(scope: Construct, id: string, config: DataFactoryLinkedServiceDataLakeStorageGen2Config) {
     super(scope, id, {
       terraformResourceType: 'azurerm_data_factory_linked_service_data_lake_storage_gen2',

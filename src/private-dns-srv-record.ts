@@ -7,20 +7,55 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface PrivateDnsSrvRecordConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/private_dns_srv_record.html#name PrivateDnsSrvRecord#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/private_dns_srv_record.html#resource_group_name PrivateDnsSrvRecord#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/private_dns_srv_record.html#tags PrivateDnsSrvRecord#tags}
+  */
   readonly tags?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/private_dns_srv_record.html#ttl PrivateDnsSrvRecord#ttl}
+  */
   readonly ttl: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/private_dns_srv_record.html#zone_name PrivateDnsSrvRecord#zone_name}
+  */
   readonly zoneName: string;
-  /** record block */
+  /**
+  * record block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/private_dns_srv_record.html#record PrivateDnsSrvRecord#record}
+  */
   readonly record: PrivateDnsSrvRecordRecord[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/private_dns_srv_record.html#timeouts PrivateDnsSrvRecord#timeouts}
+  */
   readonly timeouts?: PrivateDnsSrvRecordTimeouts;
 }
 export interface PrivateDnsSrvRecordRecord {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/private_dns_srv_record.html#port PrivateDnsSrvRecord#port}
+  */
   readonly port: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/private_dns_srv_record.html#priority PrivateDnsSrvRecord#priority}
+  */
   readonly priority: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/private_dns_srv_record.html#target PrivateDnsSrvRecord#target}
+  */
   readonly target: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/private_dns_srv_record.html#weight PrivateDnsSrvRecord#weight}
+  */
   readonly weight: number;
 }
 
@@ -35,9 +70,21 @@ function privateDnsSrvRecordRecordToTerraform(struct?: PrivateDnsSrvRecordRecord
 }
 
 export interface PrivateDnsSrvRecordTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/private_dns_srv_record.html#create PrivateDnsSrvRecord#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/private_dns_srv_record.html#delete PrivateDnsSrvRecord#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/private_dns_srv_record.html#read PrivateDnsSrvRecord#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/private_dns_srv_record.html#update PrivateDnsSrvRecord#update}
+  */
   readonly update?: string;
 }
 
@@ -52,14 +99,22 @@ function privateDnsSrvRecordTimeoutsToTerraform(struct?: PrivateDnsSrvRecordTime
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/private_dns_srv_record.html azurerm_private_dns_srv_record}
+*/
 export class PrivateDnsSrvRecord extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/private_dns_srv_record.html azurerm_private_dns_srv_record} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options PrivateDnsSrvRecordConfig
+  */
   public constructor(scope: Construct, id: string, config: PrivateDnsSrvRecordConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_private_dns_srv_record',

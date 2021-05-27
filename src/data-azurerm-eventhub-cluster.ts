@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/data_azurerm_eventhub_cluster.html
+// https://www.terraform.io/docs/providers/azurerm/d/eventhub_cluster.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,12 +7,25 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataAzurermEventhubClusterConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/eventhub_cluster.html#name DataAzurermEventhubCluster#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/eventhub_cluster.html#resource_group_name DataAzurermEventhubCluster#resource_group_name}
+  */
   readonly resourceGroupName: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/eventhub_cluster.html#timeouts DataAzurermEventhubCluster#timeouts}
+  */
   readonly timeouts?: DataAzurermEventhubClusterTimeouts;
 }
 export interface DataAzurermEventhubClusterTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/eventhub_cluster.html#read DataAzurermEventhubCluster#read}
+  */
   readonly read?: string;
 }
 
@@ -24,14 +37,22 @@ function dataAzurermEventhubClusterTimeoutsToTerraform(struct?: DataAzurermEvent
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/eventhub_cluster.html azurerm_eventhub_cluster}
+*/
 export class DataAzurermEventhubCluster extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/eventhub_cluster.html azurerm_eventhub_cluster} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataAzurermEventhubClusterConfig
+  */
   public constructor(scope: Construct, id: string, config: DataAzurermEventhubClusterConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_eventhub_cluster',

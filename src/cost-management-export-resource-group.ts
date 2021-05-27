@@ -7,22 +7,61 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface CostManagementExportResourceGroupConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cost_management_export_resource_group.html#active CostManagementExportResourceGroup#active}
+  */
   readonly active?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cost_management_export_resource_group.html#name CostManagementExportResourceGroup#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cost_management_export_resource_group.html#recurrence_period_end CostManagementExportResourceGroup#recurrence_period_end}
+  */
   readonly recurrencePeriodEnd: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cost_management_export_resource_group.html#recurrence_period_start CostManagementExportResourceGroup#recurrence_period_start}
+  */
   readonly recurrencePeriodStart: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cost_management_export_resource_group.html#recurrence_type CostManagementExportResourceGroup#recurrence_type}
+  */
   readonly recurrenceType: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cost_management_export_resource_group.html#resource_group_id CostManagementExportResourceGroup#resource_group_id}
+  */
   readonly resourceGroupId: string;
-  /** delivery_info block */
+  /**
+  * delivery_info block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cost_management_export_resource_group.html#delivery_info CostManagementExportResourceGroup#delivery_info}
+  */
   readonly deliveryInfo: CostManagementExportResourceGroupDeliveryInfo[];
-  /** query block */
+  /**
+  * query block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cost_management_export_resource_group.html#query CostManagementExportResourceGroup#query}
+  */
   readonly query: CostManagementExportResourceGroupQuery[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cost_management_export_resource_group.html#timeouts CostManagementExportResourceGroup#timeouts}
+  */
   readonly timeouts?: CostManagementExportResourceGroupTimeouts;
 }
 export interface CostManagementExportResourceGroupDeliveryInfo {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cost_management_export_resource_group.html#container_name CostManagementExportResourceGroup#container_name}
+  */
   readonly containerName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cost_management_export_resource_group.html#root_folder_path CostManagementExportResourceGroup#root_folder_path}
+  */
   readonly rootFolderPath: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cost_management_export_resource_group.html#storage_account_id CostManagementExportResourceGroup#storage_account_id}
+  */
   readonly storageAccountId: string;
 }
 
@@ -36,7 +75,13 @@ function costManagementExportResourceGroupDeliveryInfoToTerraform(struct?: CostM
 }
 
 export interface CostManagementExportResourceGroupQuery {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cost_management_export_resource_group.html#time_frame CostManagementExportResourceGroup#time_frame}
+  */
   readonly timeFrame: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cost_management_export_resource_group.html#type CostManagementExportResourceGroup#type}
+  */
   readonly type: string;
 }
 
@@ -49,9 +94,21 @@ function costManagementExportResourceGroupQueryToTerraform(struct?: CostManageme
 }
 
 export interface CostManagementExportResourceGroupTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cost_management_export_resource_group.html#create CostManagementExportResourceGroup#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cost_management_export_resource_group.html#delete CostManagementExportResourceGroup#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cost_management_export_resource_group.html#read CostManagementExportResourceGroup#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cost_management_export_resource_group.html#update CostManagementExportResourceGroup#update}
+  */
   readonly update?: string;
 }
 
@@ -66,14 +123,22 @@ function costManagementExportResourceGroupTimeoutsToTerraform(struct?: CostManag
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/cost_management_export_resource_group.html azurerm_cost_management_export_resource_group}
+*/
 export class CostManagementExportResourceGroup extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/cost_management_export_resource_group.html azurerm_cost_management_export_resource_group} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options CostManagementExportResourceGroupConfig
+  */
   public constructor(scope: Construct, id: string, config: CostManagementExportResourceGroupConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_cost_management_export_resource_group',

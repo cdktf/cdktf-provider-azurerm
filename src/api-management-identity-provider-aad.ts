@@ -7,19 +7,53 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface ApiManagementIdentityProviderAadConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_identity_provider_aad.html#allowed_tenants ApiManagementIdentityProviderAad#allowed_tenants}
+  */
   readonly allowedTenants: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_identity_provider_aad.html#api_management_name ApiManagementIdentityProviderAad#api_management_name}
+  */
   readonly apiManagementName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_identity_provider_aad.html#client_id ApiManagementIdentityProviderAad#client_id}
+  */
   readonly clientId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_identity_provider_aad.html#client_secret ApiManagementIdentityProviderAad#client_secret}
+  */
   readonly clientSecret: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_identity_provider_aad.html#resource_group_name ApiManagementIdentityProviderAad#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_identity_provider_aad.html#signin_tenant ApiManagementIdentityProviderAad#signin_tenant}
+  */
   readonly signinTenant?: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_identity_provider_aad.html#timeouts ApiManagementIdentityProviderAad#timeouts}
+  */
   readonly timeouts?: ApiManagementIdentityProviderAadTimeouts;
 }
 export interface ApiManagementIdentityProviderAadTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_identity_provider_aad.html#create ApiManagementIdentityProviderAad#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_identity_provider_aad.html#delete ApiManagementIdentityProviderAad#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_identity_provider_aad.html#read ApiManagementIdentityProviderAad#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_identity_provider_aad.html#update ApiManagementIdentityProviderAad#update}
+  */
   readonly update?: string;
 }
 
@@ -34,14 +68,22 @@ function apiManagementIdentityProviderAadTimeoutsToTerraform(struct?: ApiManagem
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_identity_provider_aad.html azurerm_api_management_identity_provider_aad}
+*/
 export class ApiManagementIdentityProviderAad extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_identity_provider_aad.html azurerm_api_management_identity_provider_aad} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options ApiManagementIdentityProviderAadConfig
+  */
   public constructor(scope: Construct, id: string, config: ApiManagementIdentityProviderAadConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_api_management_identity_provider_aad',

@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/data_azurerm_blueprint_definition.html
+// https://www.terraform.io/docs/providers/azurerm/d/blueprint_definition.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,12 +7,25 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataAzurermBlueprintDefinitionConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/blueprint_definition.html#name DataAzurermBlueprintDefinition#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/blueprint_definition.html#scope_id DataAzurermBlueprintDefinition#scope_id}
+  */
   readonly scopeId: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/blueprint_definition.html#timeouts DataAzurermBlueprintDefinition#timeouts}
+  */
   readonly timeouts?: DataAzurermBlueprintDefinitionTimeouts;
 }
 export interface DataAzurermBlueprintDefinitionTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/blueprint_definition.html#read DataAzurermBlueprintDefinition#read}
+  */
   readonly read?: string;
 }
 
@@ -24,14 +37,22 @@ function dataAzurermBlueprintDefinitionTimeoutsToTerraform(struct?: DataAzurermB
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/blueprint_definition.html azurerm_blueprint_definition}
+*/
 export class DataAzurermBlueprintDefinition extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/blueprint_definition.html azurerm_blueprint_definition} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataAzurermBlueprintDefinitionConfig
+  */
   public constructor(scope: Construct, id: string, config: DataAzurermBlueprintDefinitionConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_blueprint_definition',

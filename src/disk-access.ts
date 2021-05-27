@@ -7,17 +7,45 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DiskAccessConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/disk_access.html#location DiskAccess#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/disk_access.html#name DiskAccess#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/disk_access.html#resource_group_name DiskAccess#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/disk_access.html#tags DiskAccess#tags}
+  */
   readonly tags?: { [key: string]: string };
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/disk_access.html#timeouts DiskAccess#timeouts}
+  */
   readonly timeouts?: DiskAccessTimeouts;
 }
 export interface DiskAccessTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/disk_access.html#create DiskAccess#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/disk_access.html#delete DiskAccess#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/disk_access.html#read DiskAccess#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/disk_access.html#update DiskAccess#update}
+  */
   readonly update?: string;
 }
 
@@ -32,14 +60,22 @@ function diskAccessTimeoutsToTerraform(struct?: DiskAccessTimeouts): any {
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/disk_access.html azurerm_disk_access}
+*/
 export class DiskAccess extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/disk_access.html azurerm_disk_access} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DiskAccessConfig
+  */
   public constructor(scope: Construct, id: string, config: DiskAccessConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_disk_access',

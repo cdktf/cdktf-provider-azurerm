@@ -7,21 +7,61 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface LbProbeConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb_probe.html#interval_in_seconds LbProbe#interval_in_seconds}
+  */
   readonly intervalInSeconds?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb_probe.html#loadbalancer_id LbProbe#loadbalancer_id}
+  */
   readonly loadbalancerId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb_probe.html#name LbProbe#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb_probe.html#number_of_probes LbProbe#number_of_probes}
+  */
   readonly numberOfProbes?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb_probe.html#port LbProbe#port}
+  */
   readonly port: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb_probe.html#protocol LbProbe#protocol}
+  */
   readonly protocol?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb_probe.html#request_path LbProbe#request_path}
+  */
   readonly requestPath?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb_probe.html#resource_group_name LbProbe#resource_group_name}
+  */
   readonly resourceGroupName: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb_probe.html#timeouts LbProbe#timeouts}
+  */
   readonly timeouts?: LbProbeTimeouts;
 }
 export interface LbProbeTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb_probe.html#create LbProbe#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb_probe.html#delete LbProbe#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb_probe.html#read LbProbe#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb_probe.html#update LbProbe#update}
+  */
   readonly update?: string;
 }
 
@@ -36,14 +76,22 @@ function lbProbeTimeoutsToTerraform(struct?: LbProbeTimeouts): any {
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/lb_probe.html azurerm_lb_probe}
+*/
 export class LbProbe extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/lb_probe.html azurerm_lb_probe} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options LbProbeConfig
+  */
   public constructor(scope: Construct, id: string, config: LbProbeConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_lb_probe',

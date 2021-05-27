@@ -7,23 +7,69 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface ApiManagementProductConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_product.html#api_management_name ApiManagementProduct#api_management_name}
+  */
   readonly apiManagementName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_product.html#approval_required ApiManagementProduct#approval_required}
+  */
   readonly approvalRequired?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_product.html#description ApiManagementProduct#description}
+  */
   readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_product.html#display_name ApiManagementProduct#display_name}
+  */
   readonly displayName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_product.html#product_id ApiManagementProduct#product_id}
+  */
   readonly productId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_product.html#published ApiManagementProduct#published}
+  */
   readonly published: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_product.html#resource_group_name ApiManagementProduct#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_product.html#subscription_required ApiManagementProduct#subscription_required}
+  */
   readonly subscriptionRequired: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_product.html#subscriptions_limit ApiManagementProduct#subscriptions_limit}
+  */
   readonly subscriptionsLimit?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_product.html#terms ApiManagementProduct#terms}
+  */
   readonly terms?: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_product.html#timeouts ApiManagementProduct#timeouts}
+  */
   readonly timeouts?: ApiManagementProductTimeouts;
 }
 export interface ApiManagementProductTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_product.html#create ApiManagementProduct#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_product.html#delete ApiManagementProduct#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_product.html#read ApiManagementProduct#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_product.html#update ApiManagementProduct#update}
+  */
   readonly update?: string;
 }
 
@@ -38,14 +84,22 @@ function apiManagementProductTimeoutsToTerraform(struct?: ApiManagementProductTi
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_product.html azurerm_api_management_product}
+*/
 export class ApiManagementProduct extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_product.html azurerm_api_management_product} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options ApiManagementProductConfig
+  */
   public constructor(scope: Construct, id: string, config: ApiManagementProductConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_api_management_product',

@@ -7,16 +7,41 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface ResourceGroupConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/resource_group.html#location ResourceGroup#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/resource_group.html#name ResourceGroup#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/resource_group.html#tags ResourceGroup#tags}
+  */
   readonly tags?: { [key: string]: string };
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/resource_group.html#timeouts ResourceGroup#timeouts}
+  */
   readonly timeouts?: ResourceGroupTimeouts;
 }
 export interface ResourceGroupTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/resource_group.html#create ResourceGroup#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/resource_group.html#delete ResourceGroup#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/resource_group.html#read ResourceGroup#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/resource_group.html#update ResourceGroup#update}
+  */
   readonly update?: string;
 }
 
@@ -31,14 +56,22 @@ function resourceGroupTimeoutsToTerraform(struct?: ResourceGroupTimeouts): any {
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/resource_group.html azurerm_resource_group}
+*/
 export class ResourceGroup extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/resource_group.html azurerm_resource_group} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options ResourceGroupConfig
+  */
   public constructor(scope: Construct, id: string, config: ResourceGroupConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_resource_group',

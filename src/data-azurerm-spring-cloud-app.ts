@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/data_azurerm_spring_cloud_app.html
+// https://www.terraform.io/docs/providers/azurerm/d/spring_cloud_app.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,10 +7,23 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataAzurermSpringCloudAppConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/spring_cloud_app.html#name DataAzurermSpringCloudApp#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/spring_cloud_app.html#resource_group_name DataAzurermSpringCloudApp#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/spring_cloud_app.html#service_name DataAzurermSpringCloudApp#service_name}
+  */
   readonly serviceName: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/spring_cloud_app.html#timeouts DataAzurermSpringCloudApp#timeouts}
+  */
   readonly timeouts?: DataAzurermSpringCloudAppTimeouts;
 }
 export class DataAzurermSpringCloudAppIdentity extends cdktf.ComplexComputedList {
@@ -43,6 +56,9 @@ export class DataAzurermSpringCloudAppPersistentDisk extends cdktf.ComplexComput
   }
 }
 export interface DataAzurermSpringCloudAppTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/spring_cloud_app.html#read DataAzurermSpringCloudApp#read}
+  */
   readonly read?: string;
 }
 
@@ -54,14 +70,22 @@ function dataAzurermSpringCloudAppTimeoutsToTerraform(struct?: DataAzurermSpring
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/spring_cloud_app.html azurerm_spring_cloud_app}
+*/
 export class DataAzurermSpringCloudApp extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/spring_cloud_app.html azurerm_spring_cloud_app} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataAzurermSpringCloudAppConfig
+  */
   public constructor(scope: Construct, id: string, config: DataAzurermSpringCloudAppConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_spring_cloud_app',

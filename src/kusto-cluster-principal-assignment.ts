@@ -7,20 +7,57 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface KustoClusterPrincipalAssignmentConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_cluster_principal_assignment.html#cluster_name KustoClusterPrincipalAssignment#cluster_name}
+  */
   readonly clusterName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_cluster_principal_assignment.html#name KustoClusterPrincipalAssignment#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_cluster_principal_assignment.html#principal_id KustoClusterPrincipalAssignment#principal_id}
+  */
   readonly principalId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_cluster_principal_assignment.html#principal_type KustoClusterPrincipalAssignment#principal_type}
+  */
   readonly principalType: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_cluster_principal_assignment.html#resource_group_name KustoClusterPrincipalAssignment#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_cluster_principal_assignment.html#role KustoClusterPrincipalAssignment#role}
+  */
   readonly role: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_cluster_principal_assignment.html#tenant_id KustoClusterPrincipalAssignment#tenant_id}
+  */
   readonly tenantId: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_cluster_principal_assignment.html#timeouts KustoClusterPrincipalAssignment#timeouts}
+  */
   readonly timeouts?: KustoClusterPrincipalAssignmentTimeouts;
 }
 export interface KustoClusterPrincipalAssignmentTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_cluster_principal_assignment.html#create KustoClusterPrincipalAssignment#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_cluster_principal_assignment.html#delete KustoClusterPrincipalAssignment#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_cluster_principal_assignment.html#read KustoClusterPrincipalAssignment#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_cluster_principal_assignment.html#update KustoClusterPrincipalAssignment#update}
+  */
   readonly update?: string;
 }
 
@@ -35,14 +72,22 @@ function kustoClusterPrincipalAssignmentTimeoutsToTerraform(struct?: KustoCluste
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_cluster_principal_assignment.html azurerm_kusto_cluster_principal_assignment}
+*/
 export class KustoClusterPrincipalAssignment extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_cluster_principal_assignment.html azurerm_kusto_cluster_principal_assignment} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options KustoClusterPrincipalAssignmentConfig
+  */
   public constructor(scope: Construct, id: string, config: KustoClusterPrincipalAssignmentConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_kusto_cluster_principal_assignment',

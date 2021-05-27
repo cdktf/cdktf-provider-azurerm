@@ -7,18 +7,49 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface ApiManagementApiPolicyConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_policy.html#api_management_name ApiManagementApiPolicy#api_management_name}
+  */
   readonly apiManagementName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_policy.html#api_name ApiManagementApiPolicy#api_name}
+  */
   readonly apiName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_policy.html#resource_group_name ApiManagementApiPolicy#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_policy.html#xml_content ApiManagementApiPolicy#xml_content}
+  */
   readonly xmlContent?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_policy.html#xml_link ApiManagementApiPolicy#xml_link}
+  */
   readonly xmlLink?: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_policy.html#timeouts ApiManagementApiPolicy#timeouts}
+  */
   readonly timeouts?: ApiManagementApiPolicyTimeouts;
 }
 export interface ApiManagementApiPolicyTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_policy.html#create ApiManagementApiPolicy#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_policy.html#delete ApiManagementApiPolicy#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_policy.html#read ApiManagementApiPolicy#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_policy.html#update ApiManagementApiPolicy#update}
+  */
   readonly update?: string;
 }
 
@@ -33,14 +64,22 @@ function apiManagementApiPolicyTimeoutsToTerraform(struct?: ApiManagementApiPoli
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_policy.html azurerm_api_management_api_policy}
+*/
 export class ApiManagementApiPolicy extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_policy.html azurerm_api_management_api_policy} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options ApiManagementApiPolicyConfig
+  */
   public constructor(scope: Construct, id: string, config: ApiManagementApiPolicyConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_api_management_api_policy',

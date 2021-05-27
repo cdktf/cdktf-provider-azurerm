@@ -7,21 +7,61 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface ApiManagementApiVersionSetConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_version_set.html#api_management_name ApiManagementApiVersionSet#api_management_name}
+  */
   readonly apiManagementName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_version_set.html#description ApiManagementApiVersionSet#description}
+  */
   readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_version_set.html#display_name ApiManagementApiVersionSet#display_name}
+  */
   readonly displayName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_version_set.html#name ApiManagementApiVersionSet#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_version_set.html#resource_group_name ApiManagementApiVersionSet#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_version_set.html#version_header_name ApiManagementApiVersionSet#version_header_name}
+  */
   readonly versionHeaderName?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_version_set.html#version_query_name ApiManagementApiVersionSet#version_query_name}
+  */
   readonly versionQueryName?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_version_set.html#versioning_scheme ApiManagementApiVersionSet#versioning_scheme}
+  */
   readonly versioningScheme: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_version_set.html#timeouts ApiManagementApiVersionSet#timeouts}
+  */
   readonly timeouts?: ApiManagementApiVersionSetTimeouts;
 }
 export interface ApiManagementApiVersionSetTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_version_set.html#create ApiManagementApiVersionSet#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_version_set.html#delete ApiManagementApiVersionSet#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_version_set.html#read ApiManagementApiVersionSet#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_version_set.html#update ApiManagementApiVersionSet#update}
+  */
   readonly update?: string;
 }
 
@@ -36,14 +76,22 @@ function apiManagementApiVersionSetTimeoutsToTerraform(struct?: ApiManagementApi
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_version_set.html azurerm_api_management_api_version_set}
+*/
 export class ApiManagementApiVersionSet extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_version_set.html azurerm_api_management_api_version_set} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options ApiManagementApiVersionSetConfig
+  */
   public constructor(scope: Construct, id: string, config: ApiManagementApiVersionSetConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_api_management_api_version_set',

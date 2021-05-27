@@ -7,17 +7,45 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface ManagementLockConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/management_lock.html#lock_level ManagementLock#lock_level}
+  */
   readonly lockLevel: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/management_lock.html#name ManagementLock#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/management_lock.html#notes ManagementLock#notes}
+  */
   readonly notes?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/management_lock.html#scope ManagementLock#scope}
+  */
   readonly scope: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/management_lock.html#timeouts ManagementLock#timeouts}
+  */
   readonly timeouts?: ManagementLockTimeouts;
 }
 export interface ManagementLockTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/management_lock.html#create ManagementLock#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/management_lock.html#delete ManagementLock#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/management_lock.html#read ManagementLock#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/management_lock.html#update ManagementLock#update}
+  */
   readonly update?: string;
 }
 
@@ -32,14 +60,22 @@ function managementLockTimeoutsToTerraform(struct?: ManagementLockTimeouts): any
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/management_lock.html azurerm_management_lock}
+*/
 export class ManagementLock extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/management_lock.html azurerm_management_lock} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options ManagementLockConfig
+  */
   public constructor(scope: Construct, id: string, config: ManagementLockConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_management_lock',

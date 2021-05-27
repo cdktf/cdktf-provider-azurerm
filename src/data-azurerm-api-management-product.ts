@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/data_azurerm_api_management_product.html
+// https://www.terraform.io/docs/providers/azurerm/d/api_management_product.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,13 +7,29 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataAzurermApiManagementProductConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/api_management_product.html#api_management_name DataAzurermApiManagementProduct#api_management_name}
+  */
   readonly apiManagementName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/api_management_product.html#product_id DataAzurermApiManagementProduct#product_id}
+  */
   readonly productId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/api_management_product.html#resource_group_name DataAzurermApiManagementProduct#resource_group_name}
+  */
   readonly resourceGroupName: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/api_management_product.html#timeouts DataAzurermApiManagementProduct#timeouts}
+  */
   readonly timeouts?: DataAzurermApiManagementProductTimeouts;
 }
 export interface DataAzurermApiManagementProductTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/api_management_product.html#read DataAzurermApiManagementProduct#read}
+  */
   readonly read?: string;
 }
 
@@ -25,14 +41,22 @@ function dataAzurermApiManagementProductTimeoutsToTerraform(struct?: DataAzurerm
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/api_management_product.html azurerm_api_management_product}
+*/
 export class DataAzurermApiManagementProduct extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/api_management_product.html azurerm_api_management_product} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataAzurermApiManagementProductConfig
+  */
   public constructor(scope: Construct, id: string, config: DataAzurermApiManagementProductConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_api_management_product',

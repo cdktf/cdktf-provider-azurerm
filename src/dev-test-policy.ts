@@ -7,22 +7,65 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DevTestPolicyConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_policy.html#description DevTestPolicy#description}
+  */
   readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_policy.html#evaluator_type DevTestPolicy#evaluator_type}
+  */
   readonly evaluatorType: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_policy.html#fact_data DevTestPolicy#fact_data}
+  */
   readonly factData?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_policy.html#lab_name DevTestPolicy#lab_name}
+  */
   readonly labName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_policy.html#name DevTestPolicy#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_policy.html#policy_set_name DevTestPolicy#policy_set_name}
+  */
   readonly policySetName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_policy.html#resource_group_name DevTestPolicy#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_policy.html#tags DevTestPolicy#tags}
+  */
   readonly tags?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_policy.html#threshold DevTestPolicy#threshold}
+  */
   readonly threshold: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_policy.html#timeouts DevTestPolicy#timeouts}
+  */
   readonly timeouts?: DevTestPolicyTimeouts;
 }
 export interface DevTestPolicyTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_policy.html#create DevTestPolicy#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_policy.html#delete DevTestPolicy#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_policy.html#read DevTestPolicy#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_policy.html#update DevTestPolicy#update}
+  */
   readonly update?: string;
 }
 
@@ -37,14 +80,22 @@ function devTestPolicyTimeoutsToTerraform(struct?: DevTestPolicyTimeouts): any {
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_policy.html azurerm_dev_test_policy}
+*/
 export class DevTestPolicy extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_policy.html azurerm_dev_test_policy} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DevTestPolicyConfig
+  */
   public constructor(scope: Construct, id: string, config: DevTestPolicyConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_dev_test_policy',

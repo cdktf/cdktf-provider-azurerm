@@ -7,21 +7,59 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface VpnSiteConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_site.html#address_cidrs VpnSite#address_cidrs}
+  */
   readonly addressCidrs?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_site.html#device_model VpnSite#device_model}
+  */
   readonly deviceModel?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_site.html#device_vendor VpnSite#device_vendor}
+  */
   readonly deviceVendor?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_site.html#location VpnSite#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_site.html#name VpnSite#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_site.html#resource_group_name VpnSite#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_site.html#tags VpnSite#tags}
+  */
   readonly tags?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_site.html#virtual_wan_id VpnSite#virtual_wan_id}
+  */
   readonly virtualWanId: string;
-  /** link block */
+  /**
+  * link block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_site.html#link VpnSite#link}
+  */
   readonly link?: VpnSiteLink[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_site.html#timeouts VpnSite#timeouts}
+  */
   readonly timeouts?: VpnSiteTimeouts;
 }
 export interface VpnSiteLinkBgp {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_site.html#asn VpnSite#asn}
+  */
   readonly asn: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_site.html#peering_address VpnSite#peering_address}
+  */
   readonly peeringAddress: string;
 }
 
@@ -34,12 +72,31 @@ function vpnSiteLinkBgpToTerraform(struct?: VpnSiteLinkBgp): any {
 }
 
 export interface VpnSiteLink {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_site.html#fqdn VpnSite#fqdn}
+  */
   readonly fqdn?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_site.html#ip_address VpnSite#ip_address}
+  */
   readonly ipAddress?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_site.html#name VpnSite#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_site.html#provider_name VpnSite#provider_name}
+  */
   readonly providerName?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_site.html#speed_in_mbps VpnSite#speed_in_mbps}
+  */
   readonly speedInMbps?: number;
-  /** bgp block */
+  /**
+  * bgp block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_site.html#bgp VpnSite#bgp}
+  */
   readonly bgp?: VpnSiteLinkBgp[];
 }
 
@@ -56,9 +113,21 @@ function vpnSiteLinkToTerraform(struct?: VpnSiteLink): any {
 }
 
 export interface VpnSiteTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_site.html#create VpnSite#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_site.html#delete VpnSite#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_site.html#read VpnSite#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_site.html#update VpnSite#update}
+  */
   readonly update?: string;
 }
 
@@ -73,14 +142,22 @@ function vpnSiteTimeoutsToTerraform(struct?: VpnSiteTimeouts): any {
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_site.html azurerm_vpn_site}
+*/
 export class VpnSite extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_site.html azurerm_vpn_site} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options VpnSiteConfig
+  */
   public constructor(scope: Construct, id: string, config: VpnSiteConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_vpn_site',

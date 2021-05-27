@@ -7,24 +7,71 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataFactoryDatasetPostgresqlConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_postgresql.html#additional_properties DataFactoryDatasetPostgresql#additional_properties}
+  */
   readonly additionalProperties?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_postgresql.html#annotations DataFactoryDatasetPostgresql#annotations}
+  */
   readonly annotations?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_postgresql.html#data_factory_name DataFactoryDatasetPostgresql#data_factory_name}
+  */
   readonly dataFactoryName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_postgresql.html#description DataFactoryDatasetPostgresql#description}
+  */
   readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_postgresql.html#folder DataFactoryDatasetPostgresql#folder}
+  */
   readonly folder?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_postgresql.html#linked_service_name DataFactoryDatasetPostgresql#linked_service_name}
+  */
   readonly linkedServiceName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_postgresql.html#name DataFactoryDatasetPostgresql#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_postgresql.html#parameters DataFactoryDatasetPostgresql#parameters}
+  */
   readonly parameters?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_postgresql.html#resource_group_name DataFactoryDatasetPostgresql#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_postgresql.html#table_name DataFactoryDatasetPostgresql#table_name}
+  */
   readonly tableName?: string;
-  /** schema_column block */
+  /**
+  * schema_column block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_postgresql.html#schema_column DataFactoryDatasetPostgresql#schema_column}
+  */
   readonly schemaColumn?: DataFactoryDatasetPostgresqlSchemaColumn[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_postgresql.html#timeouts DataFactoryDatasetPostgresql#timeouts}
+  */
   readonly timeouts?: DataFactoryDatasetPostgresqlTimeouts;
 }
 export interface DataFactoryDatasetPostgresqlSchemaColumn {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_postgresql.html#description DataFactoryDatasetPostgresql#description}
+  */
   readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_postgresql.html#name DataFactoryDatasetPostgresql#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_postgresql.html#type DataFactoryDatasetPostgresql#type}
+  */
   readonly type?: string;
 }
 
@@ -38,9 +85,21 @@ function dataFactoryDatasetPostgresqlSchemaColumnToTerraform(struct?: DataFactor
 }
 
 export interface DataFactoryDatasetPostgresqlTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_postgresql.html#create DataFactoryDatasetPostgresql#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_postgresql.html#delete DataFactoryDatasetPostgresql#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_postgresql.html#read DataFactoryDatasetPostgresql#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_postgresql.html#update DataFactoryDatasetPostgresql#update}
+  */
   readonly update?: string;
 }
 
@@ -55,14 +114,22 @@ function dataFactoryDatasetPostgresqlTimeoutsToTerraform(struct?: DataFactoryDat
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_postgresql.html azurerm_data_factory_dataset_postgresql}
+*/
 export class DataFactoryDatasetPostgresql extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_postgresql.html azurerm_data_factory_dataset_postgresql} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataFactoryDatasetPostgresqlConfig
+  */
   public constructor(scope: Construct, id: string, config: DataFactoryDatasetPostgresqlConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_data_factory_dataset_postgresql',

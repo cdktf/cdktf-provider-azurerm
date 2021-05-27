@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/data_azurerm_app_service_environment.html
+// https://www.terraform.io/docs/providers/azurerm/d/app_service_environment.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,9 +7,19 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataAzurermAppServiceEnvironmentConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/app_service_environment.html#name DataAzurermAppServiceEnvironment#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/app_service_environment.html#resource_group_name DataAzurermAppServiceEnvironment#resource_group_name}
+  */
   readonly resourceGroupName: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/app_service_environment.html#timeouts DataAzurermAppServiceEnvironment#timeouts}
+  */
   readonly timeouts?: DataAzurermAppServiceEnvironmentTimeouts;
 }
 export class DataAzurermAppServiceEnvironmentClusterSetting extends cdktf.ComplexComputedList {
@@ -25,6 +35,9 @@ export class DataAzurermAppServiceEnvironmentClusterSetting extends cdktf.Comple
   }
 }
 export interface DataAzurermAppServiceEnvironmentTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/app_service_environment.html#read DataAzurermAppServiceEnvironment#read}
+  */
   readonly read?: string;
 }
 
@@ -36,14 +49,22 @@ function dataAzurermAppServiceEnvironmentTimeoutsToTerraform(struct?: DataAzurer
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/app_service_environment.html azurerm_app_service_environment}
+*/
 export class DataAzurermAppServiceEnvironment extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/app_service_environment.html azurerm_app_service_environment} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataAzurermAppServiceEnvironmentConfig
+  */
   public constructor(scope: Construct, id: string, config: DataAzurermAppServiceEnvironmentConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_app_service_environment',

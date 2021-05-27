@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/data_azurerm_database_migration_service.html
+// https://www.terraform.io/docs/providers/azurerm/d/database_migration_service.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,12 +7,25 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataAzurermDatabaseMigrationServiceConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/database_migration_service.html#name DataAzurermDatabaseMigrationService#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/database_migration_service.html#resource_group_name DataAzurermDatabaseMigrationService#resource_group_name}
+  */
   readonly resourceGroupName: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/database_migration_service.html#timeouts DataAzurermDatabaseMigrationService#timeouts}
+  */
   readonly timeouts?: DataAzurermDatabaseMigrationServiceTimeouts;
 }
 export interface DataAzurermDatabaseMigrationServiceTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/database_migration_service.html#read DataAzurermDatabaseMigrationService#read}
+  */
   readonly read?: string;
 }
 
@@ -24,14 +37,22 @@ function dataAzurermDatabaseMigrationServiceTimeoutsToTerraform(struct?: DataAzu
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/database_migration_service.html azurerm_database_migration_service}
+*/
 export class DataAzurermDatabaseMigrationService extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/database_migration_service.html azurerm_database_migration_service} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataAzurermDatabaseMigrationServiceConfig
+  */
   public constructor(scope: Construct, id: string, config: DataAzurermDatabaseMigrationServiceConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_database_migration_service',

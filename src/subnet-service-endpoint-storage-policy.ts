@@ -7,18 +7,47 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface SubnetServiceEndpointStoragePolicyConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/subnet_service_endpoint_storage_policy.html#location SubnetServiceEndpointStoragePolicy#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/subnet_service_endpoint_storage_policy.html#name SubnetServiceEndpointStoragePolicy#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/subnet_service_endpoint_storage_policy.html#resource_group_name SubnetServiceEndpointStoragePolicy#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/subnet_service_endpoint_storage_policy.html#tags SubnetServiceEndpointStoragePolicy#tags}
+  */
   readonly tags?: { [key: string]: string };
-  /** definition block */
+  /**
+  * definition block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/subnet_service_endpoint_storage_policy.html#definition SubnetServiceEndpointStoragePolicy#definition}
+  */
   readonly definition?: SubnetServiceEndpointStoragePolicyDefinition[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/subnet_service_endpoint_storage_policy.html#timeouts SubnetServiceEndpointStoragePolicy#timeouts}
+  */
   readonly timeouts?: SubnetServiceEndpointStoragePolicyTimeouts;
 }
 export interface SubnetServiceEndpointStoragePolicyDefinition {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/subnet_service_endpoint_storage_policy.html#description SubnetServiceEndpointStoragePolicy#description}
+  */
   readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/subnet_service_endpoint_storage_policy.html#name SubnetServiceEndpointStoragePolicy#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/subnet_service_endpoint_storage_policy.html#service_resources SubnetServiceEndpointStoragePolicy#service_resources}
+  */
   readonly serviceResources: string[];
 }
 
@@ -32,9 +61,21 @@ function subnetServiceEndpointStoragePolicyDefinitionToTerraform(struct?: Subnet
 }
 
 export interface SubnetServiceEndpointStoragePolicyTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/subnet_service_endpoint_storage_policy.html#create SubnetServiceEndpointStoragePolicy#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/subnet_service_endpoint_storage_policy.html#delete SubnetServiceEndpointStoragePolicy#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/subnet_service_endpoint_storage_policy.html#read SubnetServiceEndpointStoragePolicy#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/subnet_service_endpoint_storage_policy.html#update SubnetServiceEndpointStoragePolicy#update}
+  */
   readonly update?: string;
 }
 
@@ -49,14 +90,22 @@ function subnetServiceEndpointStoragePolicyTimeoutsToTerraform(struct?: SubnetSe
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/subnet_service_endpoint_storage_policy.html azurerm_subnet_service_endpoint_storage_policy}
+*/
 export class SubnetServiceEndpointStoragePolicy extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/subnet_service_endpoint_storage_policy.html azurerm_subnet_service_endpoint_storage_policy} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options SubnetServiceEndpointStoragePolicyConfig
+  */
   public constructor(scope: Construct, id: string, config: SubnetServiceEndpointStoragePolicyConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_subnet_service_endpoint_storage_policy',

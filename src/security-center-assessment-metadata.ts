@@ -7,20 +7,57 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface SecurityCenterAssessmentMetadataConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_assessment_metadata.html#description SecurityCenterAssessmentMetadata#description}
+  */
   readonly description: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_assessment_metadata.html#display_name SecurityCenterAssessmentMetadata#display_name}
+  */
   readonly displayName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_assessment_metadata.html#implementation_effort SecurityCenterAssessmentMetadata#implementation_effort}
+  */
   readonly implementationEffort?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_assessment_metadata.html#remediation_description SecurityCenterAssessmentMetadata#remediation_description}
+  */
   readonly remediationDescription?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_assessment_metadata.html#severity SecurityCenterAssessmentMetadata#severity}
+  */
   readonly severity?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_assessment_metadata.html#threats SecurityCenterAssessmentMetadata#threats}
+  */
   readonly threats?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_assessment_metadata.html#user_impact SecurityCenterAssessmentMetadata#user_impact}
+  */
   readonly userImpact?: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_assessment_metadata.html#timeouts SecurityCenterAssessmentMetadata#timeouts}
+  */
   readonly timeouts?: SecurityCenterAssessmentMetadataTimeouts;
 }
 export interface SecurityCenterAssessmentMetadataTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_assessment_metadata.html#create SecurityCenterAssessmentMetadata#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_assessment_metadata.html#delete SecurityCenterAssessmentMetadata#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_assessment_metadata.html#read SecurityCenterAssessmentMetadata#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_assessment_metadata.html#update SecurityCenterAssessmentMetadata#update}
+  */
   readonly update?: string;
 }
 
@@ -35,14 +72,22 @@ function securityCenterAssessmentMetadataTimeoutsToTerraform(struct?: SecurityCe
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_assessment_metadata.html azurerm_security_center_assessment_metadata}
+*/
 export class SecurityCenterAssessmentMetadata extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_assessment_metadata.html azurerm_security_center_assessment_metadata} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options SecurityCenterAssessmentMetadataConfig
+  */
   public constructor(scope: Construct, id: string, config: SecurityCenterAssessmentMetadataConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_security_center_assessment_metadata',

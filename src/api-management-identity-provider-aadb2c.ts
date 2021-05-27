@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/api_management_identity_provider_aadb2_c.html
+// https://www.terraform.io/docs/providers/azurerm/r/api_management_identity_provider_aadb2c.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,24 +7,73 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface ApiManagementIdentityProviderAadb2CConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_identity_provider_aadb2c.html#allowed_tenant ApiManagementIdentityProviderAadb2C#allowed_tenant}
+  */
   readonly allowedTenant: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_identity_provider_aadb2c.html#api_management_name ApiManagementIdentityProviderAadb2C#api_management_name}
+  */
   readonly apiManagementName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_identity_provider_aadb2c.html#authority ApiManagementIdentityProviderAadb2C#authority}
+  */
   readonly authority: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_identity_provider_aadb2c.html#client_id ApiManagementIdentityProviderAadb2C#client_id}
+  */
   readonly clientId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_identity_provider_aadb2c.html#client_secret ApiManagementIdentityProviderAadb2C#client_secret}
+  */
   readonly clientSecret: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_identity_provider_aadb2c.html#password_reset_policy ApiManagementIdentityProviderAadb2C#password_reset_policy}
+  */
   readonly passwordResetPolicy?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_identity_provider_aadb2c.html#profile_editing_policy ApiManagementIdentityProviderAadb2C#profile_editing_policy}
+  */
   readonly profileEditingPolicy?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_identity_provider_aadb2c.html#resource_group_name ApiManagementIdentityProviderAadb2C#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_identity_provider_aadb2c.html#signin_policy ApiManagementIdentityProviderAadb2C#signin_policy}
+  */
   readonly signinPolicy: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_identity_provider_aadb2c.html#signin_tenant ApiManagementIdentityProviderAadb2C#signin_tenant}
+  */
   readonly signinTenant: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_identity_provider_aadb2c.html#signup_policy ApiManagementIdentityProviderAadb2C#signup_policy}
+  */
   readonly signupPolicy: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_identity_provider_aadb2c.html#timeouts ApiManagementIdentityProviderAadb2C#timeouts}
+  */
   readonly timeouts?: ApiManagementIdentityProviderAadb2CTimeouts;
 }
 export interface ApiManagementIdentityProviderAadb2CTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_identity_provider_aadb2c.html#create ApiManagementIdentityProviderAadb2C#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_identity_provider_aadb2c.html#delete ApiManagementIdentityProviderAadb2C#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_identity_provider_aadb2c.html#read ApiManagementIdentityProviderAadb2C#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_identity_provider_aadb2c.html#update ApiManagementIdentityProviderAadb2C#update}
+  */
   readonly update?: string;
 }
 
@@ -39,14 +88,22 @@ function apiManagementIdentityProviderAadb2CTimeoutsToTerraform(struct?: ApiMana
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_identity_provider_aadb2c.html azurerm_api_management_identity_provider_aadb2c}
+*/
 export class ApiManagementIdentityProviderAadb2C extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_identity_provider_aadb2c.html azurerm_api_management_identity_provider_aadb2c} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options ApiManagementIdentityProviderAadb2CConfig
+  */
   public constructor(scope: Construct, id: string, config: ApiManagementIdentityProviderAadb2CConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_api_management_identity_provider_aadb2c',

@@ -7,20 +7,55 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface VirtualHubConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_hub.html#address_prefix VirtualHub#address_prefix}
+  */
   readonly addressPrefix?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_hub.html#location VirtualHub#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_hub.html#name VirtualHub#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_hub.html#resource_group_name VirtualHub#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_hub.html#sku VirtualHub#sku}
+  */
   readonly sku?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_hub.html#tags VirtualHub#tags}
+  */
   readonly tags?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_hub.html#virtual_wan_id VirtualHub#virtual_wan_id}
+  */
   readonly virtualWanId?: string;
-  /** route block */
+  /**
+  * route block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_hub.html#route VirtualHub#route}
+  */
   readonly route?: VirtualHubRoute[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_hub.html#timeouts VirtualHub#timeouts}
+  */
   readonly timeouts?: VirtualHubTimeouts;
 }
 export interface VirtualHubRoute {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_hub.html#address_prefixes VirtualHub#address_prefixes}
+  */
   readonly addressPrefixes: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_hub.html#next_hop_ip_address VirtualHub#next_hop_ip_address}
+  */
   readonly nextHopIpAddress: string;
 }
 
@@ -33,9 +68,21 @@ function virtualHubRouteToTerraform(struct?: VirtualHubRoute): any {
 }
 
 export interface VirtualHubTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_hub.html#create VirtualHub#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_hub.html#delete VirtualHub#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_hub.html#read VirtualHub#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_hub.html#update VirtualHub#update}
+  */
   readonly update?: string;
 }
 
@@ -50,14 +97,22 @@ function virtualHubTimeoutsToTerraform(struct?: VirtualHubTimeouts): any {
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_hub.html azurerm_virtual_hub}
+*/
 export class VirtualHub extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_hub.html azurerm_virtual_hub} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options VirtualHubConfig
+  */
   public constructor(scope: Construct, id: string, config: VirtualHubConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_virtual_hub',

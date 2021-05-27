@@ -7,21 +7,59 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface KeyVaultCertificateIssuerConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_certificate_issuer.html#account_id KeyVaultCertificateIssuer#account_id}
+  */
   readonly accountId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_certificate_issuer.html#key_vault_id KeyVaultCertificateIssuer#key_vault_id}
+  */
   readonly keyVaultId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_certificate_issuer.html#name KeyVaultCertificateIssuer#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_certificate_issuer.html#org_id KeyVaultCertificateIssuer#org_id}
+  */
   readonly orgId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_certificate_issuer.html#password KeyVaultCertificateIssuer#password}
+  */
   readonly password?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_certificate_issuer.html#provider_name KeyVaultCertificateIssuer#provider_name}
+  */
   readonly providerName: string;
-  /** admin block */
+  /**
+  * admin block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_certificate_issuer.html#admin KeyVaultCertificateIssuer#admin}
+  */
   readonly admin?: KeyVaultCertificateIssuerAdmin[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_certificate_issuer.html#timeouts KeyVaultCertificateIssuer#timeouts}
+  */
   readonly timeouts?: KeyVaultCertificateIssuerTimeouts;
 }
 export interface KeyVaultCertificateIssuerAdmin {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_certificate_issuer.html#email_address KeyVaultCertificateIssuer#email_address}
+  */
   readonly emailAddress: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_certificate_issuer.html#first_name KeyVaultCertificateIssuer#first_name}
+  */
   readonly firstName?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_certificate_issuer.html#last_name KeyVaultCertificateIssuer#last_name}
+  */
   readonly lastName?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_certificate_issuer.html#phone KeyVaultCertificateIssuer#phone}
+  */
   readonly phone?: string;
 }
 
@@ -36,9 +74,21 @@ function keyVaultCertificateIssuerAdminToTerraform(struct?: KeyVaultCertificateI
 }
 
 export interface KeyVaultCertificateIssuerTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_certificate_issuer.html#create KeyVaultCertificateIssuer#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_certificate_issuer.html#delete KeyVaultCertificateIssuer#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_certificate_issuer.html#read KeyVaultCertificateIssuer#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_certificate_issuer.html#update KeyVaultCertificateIssuer#update}
+  */
   readonly update?: string;
 }
 
@@ -53,14 +103,22 @@ function keyVaultCertificateIssuerTimeoutsToTerraform(struct?: KeyVaultCertifica
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_certificate_issuer.html azurerm_key_vault_certificate_issuer}
+*/
 export class KeyVaultCertificateIssuer extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_certificate_issuer.html azurerm_key_vault_certificate_issuer} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options KeyVaultCertificateIssuerConfig
+  */
   public constructor(scope: Construct, id: string, config: KeyVaultCertificateIssuerConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_key_vault_certificate_issuer',

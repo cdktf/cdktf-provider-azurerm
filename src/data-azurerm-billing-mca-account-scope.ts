@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/data_azurerm_billing_mca_account_scope.html
+// https://www.terraform.io/docs/providers/azurerm/d/billing_mca_account_scope.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,13 +7,29 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataAzurermBillingMcaAccountScopeConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/billing_mca_account_scope.html#billing_account_name DataAzurermBillingMcaAccountScope#billing_account_name}
+  */
   readonly billingAccountName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/billing_mca_account_scope.html#billing_profile_name DataAzurermBillingMcaAccountScope#billing_profile_name}
+  */
   readonly billingProfileName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/billing_mca_account_scope.html#invoice_section_name DataAzurermBillingMcaAccountScope#invoice_section_name}
+  */
   readonly invoiceSectionName: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/billing_mca_account_scope.html#timeouts DataAzurermBillingMcaAccountScope#timeouts}
+  */
   readonly timeouts?: DataAzurermBillingMcaAccountScopeTimeouts;
 }
 export interface DataAzurermBillingMcaAccountScopeTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/billing_mca_account_scope.html#read DataAzurermBillingMcaAccountScope#read}
+  */
   readonly read?: string;
 }
 
@@ -25,14 +41,22 @@ function dataAzurermBillingMcaAccountScopeTimeoutsToTerraform(struct?: DataAzure
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/billing_mca_account_scope.html azurerm_billing_mca_account_scope}
+*/
 export class DataAzurermBillingMcaAccountScope extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/billing_mca_account_scope.html azurerm_billing_mca_account_scope} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataAzurermBillingMcaAccountScopeConfig
+  */
   public constructor(scope: Construct, id: string, config: DataAzurermBillingMcaAccountScopeConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_billing_mca_account_scope',

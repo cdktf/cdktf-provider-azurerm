@@ -7,56 +7,183 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface WindowsVirtualMachineConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine.html#admin_password WindowsVirtualMachine#admin_password}
+  */
   readonly adminPassword: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine.html#admin_username WindowsVirtualMachine#admin_username}
+  */
   readonly adminUsername: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine.html#allow_extension_operations WindowsVirtualMachine#allow_extension_operations}
+  */
   readonly allowExtensionOperations?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine.html#availability_set_id WindowsVirtualMachine#availability_set_id}
+  */
   readonly availabilitySetId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine.html#computer_name WindowsVirtualMachine#computer_name}
+  */
   readonly computerName?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine.html#custom_data WindowsVirtualMachine#custom_data}
+  */
   readonly customData?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine.html#dedicated_host_id WindowsVirtualMachine#dedicated_host_id}
+  */
   readonly dedicatedHostId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine.html#enable_automatic_updates WindowsVirtualMachine#enable_automatic_updates}
+  */
   readonly enableAutomaticUpdates?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine.html#encryption_at_host_enabled WindowsVirtualMachine#encryption_at_host_enabled}
+  */
   readonly encryptionAtHostEnabled?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine.html#eviction_policy WindowsVirtualMachine#eviction_policy}
+  */
   readonly evictionPolicy?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine.html#extensions_time_budget WindowsVirtualMachine#extensions_time_budget}
+  */
   readonly extensionsTimeBudget?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine.html#license_type WindowsVirtualMachine#license_type}
+  */
   readonly licenseType?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine.html#location WindowsVirtualMachine#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine.html#max_bid_price WindowsVirtualMachine#max_bid_price}
+  */
   readonly maxBidPrice?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine.html#name WindowsVirtualMachine#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine.html#network_interface_ids WindowsVirtualMachine#network_interface_ids}
+  */
   readonly networkInterfaceIds: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine.html#patch_mode WindowsVirtualMachine#patch_mode}
+  */
   readonly patchMode?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine.html#platform_fault_domain WindowsVirtualMachine#platform_fault_domain}
+  */
   readonly platformFaultDomain?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine.html#priority WindowsVirtualMachine#priority}
+  */
   readonly priority?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine.html#provision_vm_agent WindowsVirtualMachine#provision_vm_agent}
+  */
   readonly provisionVmAgent?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine.html#proximity_placement_group_id WindowsVirtualMachine#proximity_placement_group_id}
+  */
   readonly proximityPlacementGroupId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine.html#resource_group_name WindowsVirtualMachine#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine.html#size WindowsVirtualMachine#size}
+  */
   readonly size: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine.html#source_image_id WindowsVirtualMachine#source_image_id}
+  */
   readonly sourceImageId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine.html#tags WindowsVirtualMachine#tags}
+  */
   readonly tags?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine.html#timezone WindowsVirtualMachine#timezone}
+  */
   readonly timezone?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine.html#virtual_machine_scale_set_id WindowsVirtualMachine#virtual_machine_scale_set_id}
+  */
   readonly virtualMachineScaleSetId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine.html#zone WindowsVirtualMachine#zone}
+  */
   readonly zone?: string;
-  /** additional_capabilities block */
+  /**
+  * additional_capabilities block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine.html#additional_capabilities WindowsVirtualMachine#additional_capabilities}
+  */
   readonly additionalCapabilities?: WindowsVirtualMachineAdditionalCapabilities[];
-  /** additional_unattend_content block */
+  /**
+  * additional_unattend_content block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine.html#additional_unattend_content WindowsVirtualMachine#additional_unattend_content}
+  */
   readonly additionalUnattendContent?: WindowsVirtualMachineAdditionalUnattendContent[];
-  /** boot_diagnostics block */
+  /**
+  * boot_diagnostics block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine.html#boot_diagnostics WindowsVirtualMachine#boot_diagnostics}
+  */
   readonly bootDiagnostics?: WindowsVirtualMachineBootDiagnostics[];
-  /** identity block */
+  /**
+  * identity block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine.html#identity WindowsVirtualMachine#identity}
+  */
   readonly identity?: WindowsVirtualMachineIdentity[];
-  /** os_disk block */
+  /**
+  * os_disk block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine.html#os_disk WindowsVirtualMachine#os_disk}
+  */
   readonly osDisk: WindowsVirtualMachineOsDisk[];
-  /** plan block */
+  /**
+  * plan block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine.html#plan WindowsVirtualMachine#plan}
+  */
   readonly plan?: WindowsVirtualMachinePlan[];
-  /** secret block */
+  /**
+  * secret block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine.html#secret WindowsVirtualMachine#secret}
+  */
   readonly secret?: WindowsVirtualMachineSecret[];
-  /** source_image_reference block */
+  /**
+  * source_image_reference block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine.html#source_image_reference WindowsVirtualMachine#source_image_reference}
+  */
   readonly sourceImageReference?: WindowsVirtualMachineSourceImageReference[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine.html#timeouts WindowsVirtualMachine#timeouts}
+  */
   readonly timeouts?: WindowsVirtualMachineTimeouts;
-  /** winrm_listener block */
+  /**
+  * winrm_listener block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine.html#winrm_listener WindowsVirtualMachine#winrm_listener}
+  */
   readonly winrmListener?: WindowsVirtualMachineWinrmListener[];
 }
 export interface WindowsVirtualMachineAdditionalCapabilities {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine.html#ultra_ssd_enabled WindowsVirtualMachine#ultra_ssd_enabled}
+  */
   readonly ultraSsdEnabled?: boolean;
 }
 
@@ -68,7 +195,13 @@ function windowsVirtualMachineAdditionalCapabilitiesToTerraform(struct?: Windows
 }
 
 export interface WindowsVirtualMachineAdditionalUnattendContent {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine.html#content WindowsVirtualMachine#content}
+  */
   readonly content: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine.html#setting WindowsVirtualMachine#setting}
+  */
   readonly setting: string;
 }
 
@@ -81,6 +214,9 @@ function windowsVirtualMachineAdditionalUnattendContentToTerraform(struct?: Wind
 }
 
 export interface WindowsVirtualMachineBootDiagnostics {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine.html#storage_account_uri WindowsVirtualMachine#storage_account_uri}
+  */
   readonly storageAccountUri?: string;
 }
 
@@ -92,7 +228,13 @@ function windowsVirtualMachineBootDiagnosticsToTerraform(struct?: WindowsVirtual
 }
 
 export interface WindowsVirtualMachineIdentity {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine.html#identity_ids WindowsVirtualMachine#identity_ids}
+  */
   readonly identityIds?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine.html#type WindowsVirtualMachine#type}
+  */
   readonly type: string;
 }
 
@@ -105,6 +247,9 @@ function windowsVirtualMachineIdentityToTerraform(struct?: WindowsVirtualMachine
 }
 
 export interface WindowsVirtualMachineOsDiskDiffDiskSettings {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine.html#option WindowsVirtualMachine#option}
+  */
   readonly option: string;
 }
 
@@ -116,13 +261,35 @@ function windowsVirtualMachineOsDiskDiffDiskSettingsToTerraform(struct?: Windows
 }
 
 export interface WindowsVirtualMachineOsDisk {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine.html#caching WindowsVirtualMachine#caching}
+  */
   readonly caching: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine.html#disk_encryption_set_id WindowsVirtualMachine#disk_encryption_set_id}
+  */
   readonly diskEncryptionSetId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine.html#disk_size_gb WindowsVirtualMachine#disk_size_gb}
+  */
   readonly diskSizeGb?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine.html#name WindowsVirtualMachine#name}
+  */
   readonly name?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine.html#storage_account_type WindowsVirtualMachine#storage_account_type}
+  */
   readonly storageAccountType: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine.html#write_accelerator_enabled WindowsVirtualMachine#write_accelerator_enabled}
+  */
   readonly writeAcceleratorEnabled?: boolean;
-  /** diff_disk_settings block */
+  /**
+  * diff_disk_settings block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine.html#diff_disk_settings WindowsVirtualMachine#diff_disk_settings}
+  */
   readonly diffDiskSettings?: WindowsVirtualMachineOsDiskDiffDiskSettings[];
 }
 
@@ -140,8 +307,17 @@ function windowsVirtualMachineOsDiskToTerraform(struct?: WindowsVirtualMachineOs
 }
 
 export interface WindowsVirtualMachinePlan {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine.html#name WindowsVirtualMachine#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine.html#product WindowsVirtualMachine#product}
+  */
   readonly product: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine.html#publisher WindowsVirtualMachine#publisher}
+  */
   readonly publisher: string;
 }
 
@@ -155,7 +331,13 @@ function windowsVirtualMachinePlanToTerraform(struct?: WindowsVirtualMachinePlan
 }
 
 export interface WindowsVirtualMachineSecretCertificate {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine.html#store WindowsVirtualMachine#store}
+  */
   readonly store: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine.html#url WindowsVirtualMachine#url}
+  */
   readonly url: string;
 }
 
@@ -168,8 +350,15 @@ function windowsVirtualMachineSecretCertificateToTerraform(struct?: WindowsVirtu
 }
 
 export interface WindowsVirtualMachineSecret {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine.html#key_vault_id WindowsVirtualMachine#key_vault_id}
+  */
   readonly keyVaultId: string;
-  /** certificate block */
+  /**
+  * certificate block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine.html#certificate WindowsVirtualMachine#certificate}
+  */
   readonly certificate: WindowsVirtualMachineSecretCertificate[];
 }
 
@@ -182,9 +371,21 @@ function windowsVirtualMachineSecretToTerraform(struct?: WindowsVirtualMachineSe
 }
 
 export interface WindowsVirtualMachineSourceImageReference {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine.html#offer WindowsVirtualMachine#offer}
+  */
   readonly offer: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine.html#publisher WindowsVirtualMachine#publisher}
+  */
   readonly publisher: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine.html#sku WindowsVirtualMachine#sku}
+  */
   readonly sku: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine.html#version WindowsVirtualMachine#version}
+  */
   readonly version: string;
 }
 
@@ -199,9 +400,21 @@ function windowsVirtualMachineSourceImageReferenceToTerraform(struct?: WindowsVi
 }
 
 export interface WindowsVirtualMachineTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine.html#create WindowsVirtualMachine#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine.html#delete WindowsVirtualMachine#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine.html#read WindowsVirtualMachine#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine.html#update WindowsVirtualMachine#update}
+  */
   readonly update?: string;
 }
 
@@ -216,7 +429,13 @@ function windowsVirtualMachineTimeoutsToTerraform(struct?: WindowsVirtualMachine
 }
 
 export interface WindowsVirtualMachineWinrmListener {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine.html#certificate_url WindowsVirtualMachine#certificate_url}
+  */
   readonly certificateUrl?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine.html#protocol WindowsVirtualMachine#protocol}
+  */
   readonly protocol: string;
 }
 
@@ -229,14 +448,22 @@ function windowsVirtualMachineWinrmListenerToTerraform(struct?: WindowsVirtualMa
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine.html azurerm_windows_virtual_machine}
+*/
 export class WindowsVirtualMachine extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine.html azurerm_windows_virtual_machine} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options WindowsVirtualMachineConfig
+  */
   public constructor(scope: Construct, id: string, config: WindowsVirtualMachineConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_windows_virtual_machine',

@@ -7,22 +7,65 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface VirtualMachineExtensionConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_extension.html#auto_upgrade_minor_version VirtualMachineExtension#auto_upgrade_minor_version}
+  */
   readonly autoUpgradeMinorVersion?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_extension.html#name VirtualMachineExtension#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_extension.html#protected_settings VirtualMachineExtension#protected_settings}
+  */
   readonly protectedSettings?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_extension.html#publisher VirtualMachineExtension#publisher}
+  */
   readonly publisher: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_extension.html#settings VirtualMachineExtension#settings}
+  */
   readonly settings?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_extension.html#tags VirtualMachineExtension#tags}
+  */
   readonly tags?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_extension.html#type VirtualMachineExtension#type}
+  */
   readonly type: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_extension.html#type_handler_version VirtualMachineExtension#type_handler_version}
+  */
   readonly typeHandlerVersion: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_extension.html#virtual_machine_id VirtualMachineExtension#virtual_machine_id}
+  */
   readonly virtualMachineId: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_extension.html#timeouts VirtualMachineExtension#timeouts}
+  */
   readonly timeouts?: VirtualMachineExtensionTimeouts;
 }
 export interface VirtualMachineExtensionTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_extension.html#create VirtualMachineExtension#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_extension.html#delete VirtualMachineExtension#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_extension.html#read VirtualMachineExtension#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_extension.html#update VirtualMachineExtension#update}
+  */
   readonly update?: string;
 }
 
@@ -37,14 +80,22 @@ function virtualMachineExtensionTimeoutsToTerraform(struct?: VirtualMachineExten
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_extension.html azurerm_virtual_machine_extension}
+*/
 export class VirtualMachineExtension extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_extension.html azurerm_virtual_machine_extension} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options VirtualMachineExtensionConfig
+  */
   public constructor(scope: Construct, id: string, config: VirtualMachineExtensionConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_virtual_machine_extension',

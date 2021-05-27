@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/data_azurerm_sentinel_alert_rule.html
+// https://www.terraform.io/docs/providers/azurerm/d/sentinel_alert_rule.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,12 +7,25 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataAzurermSentinelAlertRuleConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/sentinel_alert_rule.html#log_analytics_workspace_id DataAzurermSentinelAlertRule#log_analytics_workspace_id}
+  */
   readonly logAnalyticsWorkspaceId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/sentinel_alert_rule.html#name DataAzurermSentinelAlertRule#name}
+  */
   readonly name: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/sentinel_alert_rule.html#timeouts DataAzurermSentinelAlertRule#timeouts}
+  */
   readonly timeouts?: DataAzurermSentinelAlertRuleTimeouts;
 }
 export interface DataAzurermSentinelAlertRuleTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/sentinel_alert_rule.html#read DataAzurermSentinelAlertRule#read}
+  */
   readonly read?: string;
 }
 
@@ -24,14 +37,22 @@ function dataAzurermSentinelAlertRuleTimeoutsToTerraform(struct?: DataAzurermSen
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/sentinel_alert_rule.html azurerm_sentinel_alert_rule}
+*/
 export class DataAzurermSentinelAlertRule extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/sentinel_alert_rule.html azurerm_sentinel_alert_rule} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataAzurermSentinelAlertRuleConfig
+  */
   public constructor(scope: Construct, id: string, config: DataAzurermSentinelAlertRuleConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_sentinel_alert_rule',

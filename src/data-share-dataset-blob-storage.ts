@@ -7,19 +7,51 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataShareDatasetBlobStorageConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_share_dataset_blob_storage.html#container_name DataShareDatasetBlobStorage#container_name}
+  */
   readonly containerName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_share_dataset_blob_storage.html#data_share_id DataShareDatasetBlobStorage#data_share_id}
+  */
   readonly dataShareId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_share_dataset_blob_storage.html#file_path DataShareDatasetBlobStorage#file_path}
+  */
   readonly filePath?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_share_dataset_blob_storage.html#folder_path DataShareDatasetBlobStorage#folder_path}
+  */
   readonly folderPath?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_share_dataset_blob_storage.html#name DataShareDatasetBlobStorage#name}
+  */
   readonly name: string;
-  /** storage_account block */
+  /**
+  * storage_account block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_share_dataset_blob_storage.html#storage_account DataShareDatasetBlobStorage#storage_account}
+  */
   readonly storageAccount: DataShareDatasetBlobStorageStorageAccount[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_share_dataset_blob_storage.html#timeouts DataShareDatasetBlobStorage#timeouts}
+  */
   readonly timeouts?: DataShareDatasetBlobStorageTimeouts;
 }
 export interface DataShareDatasetBlobStorageStorageAccount {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_share_dataset_blob_storage.html#name DataShareDatasetBlobStorage#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_share_dataset_blob_storage.html#resource_group_name DataShareDatasetBlobStorage#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_share_dataset_blob_storage.html#subscription_id DataShareDatasetBlobStorage#subscription_id}
+  */
   readonly subscriptionId: string;
 }
 
@@ -33,8 +65,17 @@ function dataShareDatasetBlobStorageStorageAccountToTerraform(struct?: DataShare
 }
 
 export interface DataShareDatasetBlobStorageTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_share_dataset_blob_storage.html#create DataShareDatasetBlobStorage#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_share_dataset_blob_storage.html#delete DataShareDatasetBlobStorage#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_share_dataset_blob_storage.html#read DataShareDatasetBlobStorage#read}
+  */
   readonly read?: string;
 }
 
@@ -48,14 +89,22 @@ function dataShareDatasetBlobStorageTimeoutsToTerraform(struct?: DataShareDatase
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/data_share_dataset_blob_storage.html azurerm_data_share_dataset_blob_storage}
+*/
 export class DataShareDatasetBlobStorage extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/data_share_dataset_blob_storage.html azurerm_data_share_dataset_blob_storage} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataShareDatasetBlobStorageConfig
+  */
   public constructor(scope: Construct, id: string, config: DataShareDatasetBlobStorageConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_data_share_dataset_blob_storage',

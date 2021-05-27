@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/data_azurerm_api_management.html
+// https://www.terraform.io/docs/providers/azurerm/d/api_management.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,9 +7,19 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataAzurermApiManagementConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/api_management.html#name DataAzurermApiManagement#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/api_management.html#resource_group_name DataAzurermApiManagement#resource_group_name}
+  */
   readonly resourceGroupName: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/api_management.html#timeouts DataAzurermApiManagement#timeouts}
+  */
   readonly timeouts?: DataAzurermApiManagementTimeouts;
 }
 export class DataAzurermApiManagementAdditionalLocation extends cdktf.ComplexComputedList {
@@ -174,6 +184,9 @@ export class DataAzurermApiManagementIdentity extends cdktf.ComplexComputedList 
   }
 }
 export interface DataAzurermApiManagementTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/api_management.html#read DataAzurermApiManagement#read}
+  */
   readonly read?: string;
 }
 
@@ -185,14 +198,22 @@ function dataAzurermApiManagementTimeoutsToTerraform(struct?: DataAzurermApiMana
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/api_management.html azurerm_api_management}
+*/
 export class DataAzurermApiManagement extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/api_management.html azurerm_api_management} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataAzurermApiManagementConfig
+  */
   public constructor(scope: Construct, id: string, config: DataAzurermApiManagementConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_api_management',

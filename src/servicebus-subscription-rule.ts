@@ -7,28 +7,87 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface ServicebusSubscriptionRuleConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_subscription_rule.html#action ServicebusSubscriptionRule#action}
+  */
   readonly action?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_subscription_rule.html#filter_type ServicebusSubscriptionRule#filter_type}
+  */
   readonly filterType: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_subscription_rule.html#name ServicebusSubscriptionRule#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_subscription_rule.html#namespace_name ServicebusSubscriptionRule#namespace_name}
+  */
   readonly namespaceName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_subscription_rule.html#resource_group_name ServicebusSubscriptionRule#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_subscription_rule.html#sql_filter ServicebusSubscriptionRule#sql_filter}
+  */
   readonly sqlFilter?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_subscription_rule.html#subscription_name ServicebusSubscriptionRule#subscription_name}
+  */
   readonly subscriptionName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_subscription_rule.html#topic_name ServicebusSubscriptionRule#topic_name}
+  */
   readonly topicName: string;
-  /** correlation_filter block */
+  /**
+  * correlation_filter block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_subscription_rule.html#correlation_filter ServicebusSubscriptionRule#correlation_filter}
+  */
   readonly correlationFilter?: ServicebusSubscriptionRuleCorrelationFilter[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_subscription_rule.html#timeouts ServicebusSubscriptionRule#timeouts}
+  */
   readonly timeouts?: ServicebusSubscriptionRuleTimeouts;
 }
 export interface ServicebusSubscriptionRuleCorrelationFilter {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_subscription_rule.html#content_type ServicebusSubscriptionRule#content_type}
+  */
   readonly contentType?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_subscription_rule.html#correlation_id ServicebusSubscriptionRule#correlation_id}
+  */
   readonly correlationId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_subscription_rule.html#label ServicebusSubscriptionRule#label}
+  */
   readonly label?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_subscription_rule.html#message_id ServicebusSubscriptionRule#message_id}
+  */
   readonly messageId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_subscription_rule.html#properties ServicebusSubscriptionRule#properties}
+  */
   readonly properties?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_subscription_rule.html#reply_to ServicebusSubscriptionRule#reply_to}
+  */
   readonly replyTo?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_subscription_rule.html#reply_to_session_id ServicebusSubscriptionRule#reply_to_session_id}
+  */
   readonly replyToSessionId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_subscription_rule.html#session_id ServicebusSubscriptionRule#session_id}
+  */
   readonly sessionId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_subscription_rule.html#to ServicebusSubscriptionRule#to}
+  */
   readonly to?: string;
 }
 
@@ -48,9 +107,21 @@ function servicebusSubscriptionRuleCorrelationFilterToTerraform(struct?: Service
 }
 
 export interface ServicebusSubscriptionRuleTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_subscription_rule.html#create ServicebusSubscriptionRule#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_subscription_rule.html#delete ServicebusSubscriptionRule#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_subscription_rule.html#read ServicebusSubscriptionRule#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_subscription_rule.html#update ServicebusSubscriptionRule#update}
+  */
   readonly update?: string;
 }
 
@@ -65,14 +136,22 @@ function servicebusSubscriptionRuleTimeoutsToTerraform(struct?: ServicebusSubscr
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_subscription_rule.html azurerm_servicebus_subscription_rule}
+*/
 export class ServicebusSubscriptionRule extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_subscription_rule.html azurerm_servicebus_subscription_rule} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options ServicebusSubscriptionRuleConfig
+  */
   public constructor(scope: Construct, id: string, config: ServicebusSubscriptionRuleConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_servicebus_subscription_rule',

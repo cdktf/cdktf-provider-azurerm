@@ -7,16 +7,41 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface VirtualHubBgpConnectionConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_hub_bgp_connection.html#name VirtualHubBgpConnection#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_hub_bgp_connection.html#peer_asn VirtualHubBgpConnection#peer_asn}
+  */
   readonly peerAsn: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_hub_bgp_connection.html#peer_ip VirtualHubBgpConnection#peer_ip}
+  */
   readonly peerIp: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_hub_bgp_connection.html#virtual_hub_id VirtualHubBgpConnection#virtual_hub_id}
+  */
   readonly virtualHubId: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_hub_bgp_connection.html#timeouts VirtualHubBgpConnection#timeouts}
+  */
   readonly timeouts?: VirtualHubBgpConnectionTimeouts;
 }
 export interface VirtualHubBgpConnectionTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_hub_bgp_connection.html#create VirtualHubBgpConnection#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_hub_bgp_connection.html#delete VirtualHubBgpConnection#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_hub_bgp_connection.html#read VirtualHubBgpConnection#read}
+  */
   readonly read?: string;
 }
 
@@ -30,14 +55,22 @@ function virtualHubBgpConnectionTimeoutsToTerraform(struct?: VirtualHubBgpConnec
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_hub_bgp_connection.html azurerm_virtual_hub_bgp_connection}
+*/
 export class VirtualHubBgpConnection extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_hub_bgp_connection.html azurerm_virtual_hub_bgp_connection} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options VirtualHubBgpConnectionConfig
+  */
   public constructor(scope: Construct, id: string, config: VirtualHubBgpConnectionConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_virtual_hub_bgp_connection',

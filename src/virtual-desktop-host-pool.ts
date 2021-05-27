@@ -7,26 +7,77 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface VirtualDesktopHostPoolConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_desktop_host_pool.html#custom_rdp_properties VirtualDesktopHostPool#custom_rdp_properties}
+  */
   readonly customRdpProperties?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_desktop_host_pool.html#description VirtualDesktopHostPool#description}
+  */
   readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_desktop_host_pool.html#friendly_name VirtualDesktopHostPool#friendly_name}
+  */
   readonly friendlyName?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_desktop_host_pool.html#load_balancer_type VirtualDesktopHostPool#load_balancer_type}
+  */
   readonly loadBalancerType: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_desktop_host_pool.html#location VirtualDesktopHostPool#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_desktop_host_pool.html#maximum_sessions_allowed VirtualDesktopHostPool#maximum_sessions_allowed}
+  */
   readonly maximumSessionsAllowed?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_desktop_host_pool.html#name VirtualDesktopHostPool#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_desktop_host_pool.html#personal_desktop_assignment_type VirtualDesktopHostPool#personal_desktop_assignment_type}
+  */
   readonly personalDesktopAssignmentType?: string;
-  /** Preferred App Group type to display */
+  /**
+  * Preferred App Group type to display
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_desktop_host_pool.html#preferred_app_group_type VirtualDesktopHostPool#preferred_app_group_type}
+  */
   readonly preferredAppGroupType?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_desktop_host_pool.html#resource_group_name VirtualDesktopHostPool#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_desktop_host_pool.html#tags VirtualDesktopHostPool#tags}
+  */
   readonly tags?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_desktop_host_pool.html#type VirtualDesktopHostPool#type}
+  */
   readonly type: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_desktop_host_pool.html#validate_environment VirtualDesktopHostPool#validate_environment}
+  */
   readonly validateEnvironment?: boolean;
-  /** registration_info block */
+  /**
+  * registration_info block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_desktop_host_pool.html#registration_info VirtualDesktopHostPool#registration_info}
+  */
   readonly registrationInfo?: VirtualDesktopHostPoolRegistrationInfo[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_desktop_host_pool.html#timeouts VirtualDesktopHostPool#timeouts}
+  */
   readonly timeouts?: VirtualDesktopHostPoolTimeouts;
 }
 export interface VirtualDesktopHostPoolRegistrationInfo {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_desktop_host_pool.html#expiration_date VirtualDesktopHostPool#expiration_date}
+  */
   readonly expirationDate: string;
 }
 
@@ -38,9 +89,21 @@ function virtualDesktopHostPoolRegistrationInfoToTerraform(struct?: VirtualDeskt
 }
 
 export interface VirtualDesktopHostPoolTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_desktop_host_pool.html#create VirtualDesktopHostPool#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_desktop_host_pool.html#delete VirtualDesktopHostPool#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_desktop_host_pool.html#read VirtualDesktopHostPool#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_desktop_host_pool.html#update VirtualDesktopHostPool#update}
+  */
   readonly update?: string;
 }
 
@@ -55,14 +118,22 @@ function virtualDesktopHostPoolTimeoutsToTerraform(struct?: VirtualDesktopHostPo
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_desktop_host_pool.html azurerm_virtual_desktop_host_pool}
+*/
 export class VirtualDesktopHostPool extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_desktop_host_pool.html azurerm_virtual_desktop_host_pool} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options VirtualDesktopHostPoolConfig
+  */
   public constructor(scope: Construct, id: string, config: VirtualDesktopHostPoolConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_virtual_desktop_host_pool',

@@ -7,20 +7,57 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface BotChannelSlackConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_slack.html#bot_name BotChannelSlack#bot_name}
+  */
   readonly botName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_slack.html#client_id BotChannelSlack#client_id}
+  */
   readonly clientId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_slack.html#client_secret BotChannelSlack#client_secret}
+  */
   readonly clientSecret: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_slack.html#landing_page_url BotChannelSlack#landing_page_url}
+  */
   readonly landingPageUrl?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_slack.html#location BotChannelSlack#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_slack.html#resource_group_name BotChannelSlack#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_slack.html#verification_token BotChannelSlack#verification_token}
+  */
   readonly verificationToken: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_slack.html#timeouts BotChannelSlack#timeouts}
+  */
   readonly timeouts?: BotChannelSlackTimeouts;
 }
 export interface BotChannelSlackTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_slack.html#create BotChannelSlack#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_slack.html#delete BotChannelSlack#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_slack.html#read BotChannelSlack#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_slack.html#update BotChannelSlack#update}
+  */
   readonly update?: string;
 }
 
@@ -35,14 +72,22 @@ function botChannelSlackTimeoutsToTerraform(struct?: BotChannelSlackTimeouts): a
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_slack.html azurerm_bot_channel_slack}
+*/
 export class BotChannelSlack extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_slack.html azurerm_bot_channel_slack} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options BotChannelSlackConfig
+  */
   public constructor(scope: Construct, id: string, config: BotChannelSlackConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_bot_channel_slack',

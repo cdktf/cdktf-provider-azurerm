@@ -7,19 +7,51 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface VirtualHubConnectionConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_hub_connection.html#hub_to_vitual_network_traffic_allowed VirtualHubConnection#hub_to_vitual_network_traffic_allowed}
+  */
   readonly hubToVitualNetworkTrafficAllowed?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_hub_connection.html#internet_security_enabled VirtualHubConnection#internet_security_enabled}
+  */
   readonly internetSecurityEnabled?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_hub_connection.html#name VirtualHubConnection#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_hub_connection.html#remote_virtual_network_id VirtualHubConnection#remote_virtual_network_id}
+  */
   readonly remoteVirtualNetworkId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_hub_connection.html#virtual_hub_id VirtualHubConnection#virtual_hub_id}
+  */
   readonly virtualHubId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_hub_connection.html#vitual_network_to_hub_gateways_traffic_allowed VirtualHubConnection#vitual_network_to_hub_gateways_traffic_allowed}
+  */
   readonly vitualNetworkToHubGatewaysTrafficAllowed?: boolean;
-  /** routing block */
+  /**
+  * routing block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_hub_connection.html#routing VirtualHubConnection#routing}
+  */
   readonly routing?: VirtualHubConnectionRouting[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_hub_connection.html#timeouts VirtualHubConnection#timeouts}
+  */
   readonly timeouts?: VirtualHubConnectionTimeouts;
 }
 export interface VirtualHubConnectionRoutingPropagatedRouteTable {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_hub_connection.html#labels VirtualHubConnection#labels}
+  */
   readonly labels?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_hub_connection.html#route_table_ids VirtualHubConnection#route_table_ids}
+  */
   readonly routeTableIds?: string[];
 }
 
@@ -32,8 +64,17 @@ function virtualHubConnectionRoutingPropagatedRouteTableToTerraform(struct?: Vir
 }
 
 export interface VirtualHubConnectionRoutingStaticVnetRoute {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_hub_connection.html#address_prefixes VirtualHubConnection#address_prefixes}
+  */
   readonly addressPrefixes?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_hub_connection.html#name VirtualHubConnection#name}
+  */
   readonly name?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_hub_connection.html#next_hop_ip_address VirtualHubConnection#next_hop_ip_address}
+  */
   readonly nextHopIpAddress?: string;
 }
 
@@ -47,10 +88,21 @@ function virtualHubConnectionRoutingStaticVnetRouteToTerraform(struct?: VirtualH
 }
 
 export interface VirtualHubConnectionRouting {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_hub_connection.html#associated_route_table_id VirtualHubConnection#associated_route_table_id}
+  */
   readonly associatedRouteTableId?: string;
-  /** propagated_route_table block */
+  /**
+  * propagated_route_table block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_hub_connection.html#propagated_route_table VirtualHubConnection#propagated_route_table}
+  */
   readonly propagatedRouteTable?: VirtualHubConnectionRoutingPropagatedRouteTable[];
-  /** static_vnet_route block */
+  /**
+  * static_vnet_route block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_hub_connection.html#static_vnet_route VirtualHubConnection#static_vnet_route}
+  */
   readonly staticVnetRoute?: VirtualHubConnectionRoutingStaticVnetRoute[];
 }
 
@@ -64,9 +116,21 @@ function virtualHubConnectionRoutingToTerraform(struct?: VirtualHubConnectionRou
 }
 
 export interface VirtualHubConnectionTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_hub_connection.html#create VirtualHubConnection#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_hub_connection.html#delete VirtualHubConnection#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_hub_connection.html#read VirtualHubConnection#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_hub_connection.html#update VirtualHubConnection#update}
+  */
   readonly update?: string;
 }
 
@@ -81,14 +145,22 @@ function virtualHubConnectionTimeoutsToTerraform(struct?: VirtualHubConnectionTi
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_hub_connection.html azurerm_virtual_hub_connection}
+*/
 export class VirtualHubConnection extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_hub_connection.html azurerm_virtual_hub_connection} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options VirtualHubConnectionConfig
+  */
   public constructor(scope: Construct, id: string, config: VirtualHubConnectionConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_virtual_hub_connection',

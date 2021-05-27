@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/data_azurerm_dedicated_host_group.html
+// https://www.terraform.io/docs/providers/azurerm/d/dedicated_host_group.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,12 +7,25 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataAzurermDedicatedHostGroupConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/dedicated_host_group.html#name DataAzurermDedicatedHostGroup#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/dedicated_host_group.html#resource_group_name DataAzurermDedicatedHostGroup#resource_group_name}
+  */
   readonly resourceGroupName: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/dedicated_host_group.html#timeouts DataAzurermDedicatedHostGroup#timeouts}
+  */
   readonly timeouts?: DataAzurermDedicatedHostGroupTimeouts;
 }
 export interface DataAzurermDedicatedHostGroupTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/dedicated_host_group.html#read DataAzurermDedicatedHostGroup#read}
+  */
   readonly read?: string;
 }
 
@@ -24,14 +37,22 @@ function dataAzurermDedicatedHostGroupTimeoutsToTerraform(struct?: DataAzurermDe
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/dedicated_host_group.html azurerm_dedicated_host_group}
+*/
 export class DataAzurermDedicatedHostGroup extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/dedicated_host_group.html azurerm_dedicated_host_group} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataAzurermDedicatedHostGroupConfig
+  */
   public constructor(scope: Construct, id: string, config: DataAzurermDedicatedHostGroupConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_dedicated_host_group',

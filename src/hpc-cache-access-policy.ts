@@ -7,21 +7,59 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface HpcCacheAccessPolicyConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hpc_cache_access_policy.html#hpc_cache_id HpcCacheAccessPolicy#hpc_cache_id}
+  */
   readonly hpcCacheId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hpc_cache_access_policy.html#name HpcCacheAccessPolicy#name}
+  */
   readonly name: string;
-  /** access_rule block */
+  /**
+  * access_rule block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hpc_cache_access_policy.html#access_rule HpcCacheAccessPolicy#access_rule}
+  */
   readonly accessRule: HpcCacheAccessPolicyAccessRule[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hpc_cache_access_policy.html#timeouts HpcCacheAccessPolicy#timeouts}
+  */
   readonly timeouts?: HpcCacheAccessPolicyTimeouts;
 }
 export interface HpcCacheAccessPolicyAccessRule {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hpc_cache_access_policy.html#access HpcCacheAccessPolicy#access}
+  */
   readonly access: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hpc_cache_access_policy.html#anonymous_gid HpcCacheAccessPolicy#anonymous_gid}
+  */
   readonly anonymousGid?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hpc_cache_access_policy.html#anonymous_uid HpcCacheAccessPolicy#anonymous_uid}
+  */
   readonly anonymousUid?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hpc_cache_access_policy.html#filter HpcCacheAccessPolicy#filter}
+  */
   readonly filter?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hpc_cache_access_policy.html#root_squash_enabled HpcCacheAccessPolicy#root_squash_enabled}
+  */
   readonly rootSquashEnabled?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hpc_cache_access_policy.html#scope HpcCacheAccessPolicy#scope}
+  */
   readonly scope: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hpc_cache_access_policy.html#submount_access_enabled HpcCacheAccessPolicy#submount_access_enabled}
+  */
   readonly submountAccessEnabled?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hpc_cache_access_policy.html#suid_enabled HpcCacheAccessPolicy#suid_enabled}
+  */
   readonly suidEnabled?: boolean;
 }
 
@@ -40,9 +78,21 @@ function hpcCacheAccessPolicyAccessRuleToTerraform(struct?: HpcCacheAccessPolicy
 }
 
 export interface HpcCacheAccessPolicyTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hpc_cache_access_policy.html#create HpcCacheAccessPolicy#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hpc_cache_access_policy.html#delete HpcCacheAccessPolicy#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hpc_cache_access_policy.html#read HpcCacheAccessPolicy#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hpc_cache_access_policy.html#update HpcCacheAccessPolicy#update}
+  */
   readonly update?: string;
 }
 
@@ -57,14 +107,22 @@ function hpcCacheAccessPolicyTimeoutsToTerraform(struct?: HpcCacheAccessPolicyTi
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/hpc_cache_access_policy.html azurerm_hpc_cache_access_policy}
+*/
 export class HpcCacheAccessPolicy extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/hpc_cache_access_policy.html azurerm_hpc_cache_access_policy} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options HpcCacheAccessPolicyConfig
+  */
   public constructor(scope: Construct, id: string, config: HpcCacheAccessPolicyConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_hpc_cache_access_policy',

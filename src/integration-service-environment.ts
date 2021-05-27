@@ -7,20 +7,57 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface IntegrationServiceEnvironmentConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/integration_service_environment.html#access_endpoint_type IntegrationServiceEnvironment#access_endpoint_type}
+  */
   readonly accessEndpointType: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/integration_service_environment.html#location IntegrationServiceEnvironment#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/integration_service_environment.html#name IntegrationServiceEnvironment#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/integration_service_environment.html#resource_group_name IntegrationServiceEnvironment#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/integration_service_environment.html#sku_name IntegrationServiceEnvironment#sku_name}
+  */
   readonly skuName?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/integration_service_environment.html#tags IntegrationServiceEnvironment#tags}
+  */
   readonly tags?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/integration_service_environment.html#virtual_network_subnet_ids IntegrationServiceEnvironment#virtual_network_subnet_ids}
+  */
   readonly virtualNetworkSubnetIds: string[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/integration_service_environment.html#timeouts IntegrationServiceEnvironment#timeouts}
+  */
   readonly timeouts?: IntegrationServiceEnvironmentTimeouts;
 }
 export interface IntegrationServiceEnvironmentTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/integration_service_environment.html#create IntegrationServiceEnvironment#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/integration_service_environment.html#delete IntegrationServiceEnvironment#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/integration_service_environment.html#read IntegrationServiceEnvironment#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/integration_service_environment.html#update IntegrationServiceEnvironment#update}
+  */
   readonly update?: string;
 }
 
@@ -35,14 +72,22 @@ function integrationServiceEnvironmentTimeoutsToTerraform(struct?: IntegrationSe
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/integration_service_environment.html azurerm_integration_service_environment}
+*/
 export class IntegrationServiceEnvironment extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/integration_service_environment.html azurerm_integration_service_environment} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options IntegrationServiceEnvironmentConfig
+  */
   public constructor(scope: Construct, id: string, config: IntegrationServiceEnvironmentConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_integration_service_environment',

@@ -7,20 +7,53 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface SpringCloudAppConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_app.html#https_only SpringCloudApp#https_only}
+  */
   readonly httpsOnly?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_app.html#is_public SpringCloudApp#is_public}
+  */
   readonly isPublic?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_app.html#name SpringCloudApp#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_app.html#resource_group_name SpringCloudApp#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_app.html#service_name SpringCloudApp#service_name}
+  */
   readonly serviceName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_app.html#tls_enabled SpringCloudApp#tls_enabled}
+  */
   readonly tlsEnabled?: boolean;
-  /** identity block */
+  /**
+  * identity block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_app.html#identity SpringCloudApp#identity}
+  */
   readonly identity?: SpringCloudAppIdentity[];
-  /** persistent_disk block */
+  /**
+  * persistent_disk block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_app.html#persistent_disk SpringCloudApp#persistent_disk}
+  */
   readonly persistentDisk?: SpringCloudAppPersistentDisk[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_app.html#timeouts SpringCloudApp#timeouts}
+  */
   readonly timeouts?: SpringCloudAppTimeouts;
 }
 export interface SpringCloudAppIdentity {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_app.html#type SpringCloudApp#type}
+  */
   readonly type?: string;
 }
 
@@ -32,7 +65,13 @@ function springCloudAppIdentityToTerraform(struct?: SpringCloudAppIdentity): any
 }
 
 export interface SpringCloudAppPersistentDisk {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_app.html#mount_path SpringCloudApp#mount_path}
+  */
   readonly mountPath?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_app.html#size_in_gb SpringCloudApp#size_in_gb}
+  */
   readonly sizeInGb: number;
 }
 
@@ -45,9 +84,21 @@ function springCloudAppPersistentDiskToTerraform(struct?: SpringCloudAppPersiste
 }
 
 export interface SpringCloudAppTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_app.html#create SpringCloudApp#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_app.html#delete SpringCloudApp#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_app.html#read SpringCloudApp#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_app.html#update SpringCloudApp#update}
+  */
   readonly update?: string;
 }
 
@@ -62,14 +113,22 @@ function springCloudAppTimeoutsToTerraform(struct?: SpringCloudAppTimeouts): any
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_app.html azurerm_spring_cloud_app}
+*/
 export class SpringCloudApp extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_app.html azurerm_spring_cloud_app} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options SpringCloudAppConfig
+  */
   public constructor(scope: Construct, id: string, config: SpringCloudAppConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_spring_cloud_app',

@@ -7,30 +7,85 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface VpnServerConfigurationConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_server_configuration.html#location VpnServerConfiguration#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_server_configuration.html#name VpnServerConfiguration#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_server_configuration.html#resource_group_name VpnServerConfiguration#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_server_configuration.html#tags VpnServerConfiguration#tags}
+  */
   readonly tags?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_server_configuration.html#vpn_authentication_types VpnServerConfiguration#vpn_authentication_types}
+  */
   readonly vpnAuthenticationTypes: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_server_configuration.html#vpn_protocols VpnServerConfiguration#vpn_protocols}
+  */
   readonly vpnProtocols?: string[];
-  /** azure_active_directory_authentication block */
+  /**
+  * azure_active_directory_authentication block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_server_configuration.html#azure_active_directory_authentication VpnServerConfiguration#azure_active_directory_authentication}
+  */
   readonly azureActiveDirectoryAuthentication?: VpnServerConfigurationAzureActiveDirectoryAuthentication[];
-  /** client_revoked_certificate block */
+  /**
+  * client_revoked_certificate block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_server_configuration.html#client_revoked_certificate VpnServerConfiguration#client_revoked_certificate}
+  */
   readonly clientRevokedCertificate?: VpnServerConfigurationClientRevokedCertificate[];
-  /** client_root_certificate block */
+  /**
+  * client_root_certificate block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_server_configuration.html#client_root_certificate VpnServerConfiguration#client_root_certificate}
+  */
   readonly clientRootCertificate?: VpnServerConfigurationClientRootCertificate[];
-  /** ipsec_policy block */
+  /**
+  * ipsec_policy block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_server_configuration.html#ipsec_policy VpnServerConfiguration#ipsec_policy}
+  */
   readonly ipsecPolicy?: VpnServerConfigurationIpsecPolicy[];
-  /** radius block */
+  /**
+  * radius block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_server_configuration.html#radius VpnServerConfiguration#radius}
+  */
   readonly radius?: VpnServerConfigurationRadius[];
-  /** radius_server block */
+  /**
+  * radius_server block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_server_configuration.html#radius_server VpnServerConfiguration#radius_server}
+  */
   readonly radiusServer?: VpnServerConfigurationRadiusServerA[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_server_configuration.html#timeouts VpnServerConfiguration#timeouts}
+  */
   readonly timeouts?: VpnServerConfigurationTimeouts;
 }
 export interface VpnServerConfigurationAzureActiveDirectoryAuthentication {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_server_configuration.html#audience VpnServerConfiguration#audience}
+  */
   readonly audience: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_server_configuration.html#issuer VpnServerConfiguration#issuer}
+  */
   readonly issuer: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_server_configuration.html#tenant VpnServerConfiguration#tenant}
+  */
   readonly tenant: string;
 }
 
@@ -44,7 +99,13 @@ function vpnServerConfigurationAzureActiveDirectoryAuthenticationToTerraform(str
 }
 
 export interface VpnServerConfigurationClientRevokedCertificate {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_server_configuration.html#name VpnServerConfiguration#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_server_configuration.html#thumbprint VpnServerConfiguration#thumbprint}
+  */
   readonly thumbprint: string;
 }
 
@@ -57,7 +118,13 @@ function vpnServerConfigurationClientRevokedCertificateToTerraform(struct?: VpnS
 }
 
 export interface VpnServerConfigurationClientRootCertificate {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_server_configuration.html#name VpnServerConfiguration#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_server_configuration.html#public_cert_data VpnServerConfiguration#public_cert_data}
+  */
   readonly publicCertData: string;
 }
 
@@ -70,13 +137,37 @@ function vpnServerConfigurationClientRootCertificateToTerraform(struct?: VpnServ
 }
 
 export interface VpnServerConfigurationIpsecPolicy {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_server_configuration.html#dh_group VpnServerConfiguration#dh_group}
+  */
   readonly dhGroup: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_server_configuration.html#ike_encryption VpnServerConfiguration#ike_encryption}
+  */
   readonly ikeEncryption: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_server_configuration.html#ike_integrity VpnServerConfiguration#ike_integrity}
+  */
   readonly ikeIntegrity: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_server_configuration.html#ipsec_encryption VpnServerConfiguration#ipsec_encryption}
+  */
   readonly ipsecEncryption: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_server_configuration.html#ipsec_integrity VpnServerConfiguration#ipsec_integrity}
+  */
   readonly ipsecIntegrity: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_server_configuration.html#pfs_group VpnServerConfiguration#pfs_group}
+  */
   readonly pfsGroup: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_server_configuration.html#sa_data_size_kilobytes VpnServerConfiguration#sa_data_size_kilobytes}
+  */
   readonly saDataSizeKilobytes: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_server_configuration.html#sa_lifetime_seconds VpnServerConfiguration#sa_lifetime_seconds}
+  */
   readonly saLifetimeSeconds: number;
 }
 
@@ -95,7 +186,13 @@ function vpnServerConfigurationIpsecPolicyToTerraform(struct?: VpnServerConfigur
 }
 
 export interface VpnServerConfigurationRadiusClientRootCertificate {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_server_configuration.html#name VpnServerConfiguration#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_server_configuration.html#thumbprint VpnServerConfiguration#thumbprint}
+  */
   readonly thumbprint: string;
 }
 
@@ -108,8 +205,17 @@ function vpnServerConfigurationRadiusClientRootCertificateToTerraform(struct?: V
 }
 
 export interface VpnServerConfigurationRadiusServer {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_server_configuration.html#address VpnServerConfiguration#address}
+  */
   readonly address: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_server_configuration.html#score VpnServerConfiguration#score}
+  */
   readonly score: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_server_configuration.html#secret VpnServerConfiguration#secret}
+  */
   readonly secret: string;
 }
 
@@ -123,7 +229,13 @@ function vpnServerConfigurationRadiusServerToTerraform(struct?: VpnServerConfigu
 }
 
 export interface VpnServerConfigurationRadiusServerRootCertificate {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_server_configuration.html#name VpnServerConfiguration#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_server_configuration.html#public_cert_data VpnServerConfiguration#public_cert_data}
+  */
   readonly publicCertData: string;
 }
 
@@ -136,11 +248,23 @@ function vpnServerConfigurationRadiusServerRootCertificateToTerraform(struct?: V
 }
 
 export interface VpnServerConfigurationRadius {
-  /** client_root_certificate block */
+  /**
+  * client_root_certificate block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_server_configuration.html#client_root_certificate VpnServerConfiguration#client_root_certificate}
+  */
   readonly clientRootCertificate?: VpnServerConfigurationRadiusClientRootCertificate[];
-  /** server block */
+  /**
+  * server block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_server_configuration.html#server VpnServerConfiguration#server}
+  */
   readonly server?: VpnServerConfigurationRadiusServer[];
-  /** server_root_certificate block */
+  /**
+  * server_root_certificate block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_server_configuration.html#server_root_certificate VpnServerConfiguration#server_root_certificate}
+  */
   readonly serverRootCertificate: VpnServerConfigurationRadiusServerRootCertificate[];
 }
 
@@ -154,7 +278,13 @@ function vpnServerConfigurationRadiusToTerraform(struct?: VpnServerConfiguration
 }
 
 export interface VpnServerConfigurationRadiusServerClientRootCertificate {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_server_configuration.html#name VpnServerConfiguration#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_server_configuration.html#thumbprint VpnServerConfiguration#thumbprint}
+  */
   readonly thumbprint: string;
 }
 
@@ -167,7 +297,13 @@ function vpnServerConfigurationRadiusServerClientRootCertificateToTerraform(stru
 }
 
 export interface VpnServerConfigurationRadiusServerServerRootCertificate {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_server_configuration.html#name VpnServerConfiguration#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_server_configuration.html#public_cert_data VpnServerConfiguration#public_cert_data}
+  */
   readonly publicCertData: string;
 }
 
@@ -180,11 +316,25 @@ function vpnServerConfigurationRadiusServerServerRootCertificateToTerraform(stru
 }
 
 export interface VpnServerConfigurationRadiusServerA {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_server_configuration.html#address VpnServerConfiguration#address}
+  */
   readonly address: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_server_configuration.html#secret VpnServerConfiguration#secret}
+  */
   readonly secret: string;
-  /** client_root_certificate block */
+  /**
+  * client_root_certificate block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_server_configuration.html#client_root_certificate VpnServerConfiguration#client_root_certificate}
+  */
   readonly clientRootCertificate?: VpnServerConfigurationRadiusServerClientRootCertificate[];
-  /** server_root_certificate block */
+  /**
+  * server_root_certificate block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_server_configuration.html#server_root_certificate VpnServerConfiguration#server_root_certificate}
+  */
   readonly serverRootCertificate: VpnServerConfigurationRadiusServerServerRootCertificate[];
 }
 
@@ -199,9 +349,21 @@ function vpnServerConfigurationRadiusServerAToTerraform(struct?: VpnServerConfig
 }
 
 export interface VpnServerConfigurationTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_server_configuration.html#create VpnServerConfiguration#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_server_configuration.html#delete VpnServerConfiguration#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_server_configuration.html#read VpnServerConfiguration#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_server_configuration.html#update VpnServerConfiguration#update}
+  */
   readonly update?: string;
 }
 
@@ -216,14 +378,22 @@ function vpnServerConfigurationTimeoutsToTerraform(struct?: VpnServerConfigurati
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_server_configuration.html azurerm_vpn_server_configuration}
+*/
 export class VpnServerConfiguration extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_server_configuration.html azurerm_vpn_server_configuration} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options VpnServerConfigurationConfig
+  */
   public constructor(scope: Construct, id: string, config: VpnServerConfigurationConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_vpn_server_configuration',

@@ -7,19 +7,53 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface AutomationVariableStringConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_variable_string.html#automation_account_name AutomationVariableString#automation_account_name}
+  */
   readonly automationAccountName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_variable_string.html#description AutomationVariableString#description}
+  */
   readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_variable_string.html#encrypted AutomationVariableString#encrypted}
+  */
   readonly encrypted?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_variable_string.html#name AutomationVariableString#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_variable_string.html#resource_group_name AutomationVariableString#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_variable_string.html#value AutomationVariableString#value}
+  */
   readonly value?: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_variable_string.html#timeouts AutomationVariableString#timeouts}
+  */
   readonly timeouts?: AutomationVariableStringTimeouts;
 }
 export interface AutomationVariableStringTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_variable_string.html#create AutomationVariableString#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_variable_string.html#delete AutomationVariableString#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_variable_string.html#read AutomationVariableString#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_variable_string.html#update AutomationVariableString#update}
+  */
   readonly update?: string;
 }
 
@@ -34,14 +68,22 @@ function automationVariableStringTimeoutsToTerraform(struct?: AutomationVariable
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/automation_variable_string.html azurerm_automation_variable_string}
+*/
 export class AutomationVariableString extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/automation_variable_string.html azurerm_automation_variable_string} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options AutomationVariableStringConfig
+  */
   public constructor(scope: Construct, id: string, config: AutomationVariableStringConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_automation_variable_string',

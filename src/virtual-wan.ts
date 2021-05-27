@@ -7,22 +7,65 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface VirtualWanConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_wan.html#allow_branch_to_branch_traffic VirtualWan#allow_branch_to_branch_traffic}
+  */
   readonly allowBranchToBranchTraffic?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_wan.html#allow_vnet_to_vnet_traffic VirtualWan#allow_vnet_to_vnet_traffic}
+  */
   readonly allowVnetToVnetTraffic?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_wan.html#disable_vpn_encryption VirtualWan#disable_vpn_encryption}
+  */
   readonly disableVpnEncryption?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_wan.html#location VirtualWan#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_wan.html#name VirtualWan#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_wan.html#office365_local_breakout_category VirtualWan#office365_local_breakout_category}
+  */
   readonly office365LocalBreakoutCategory?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_wan.html#resource_group_name VirtualWan#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_wan.html#tags VirtualWan#tags}
+  */
   readonly tags?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_wan.html#type VirtualWan#type}
+  */
   readonly type?: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_wan.html#timeouts VirtualWan#timeouts}
+  */
   readonly timeouts?: VirtualWanTimeouts;
 }
 export interface VirtualWanTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_wan.html#create VirtualWan#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_wan.html#delete VirtualWan#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_wan.html#read VirtualWan#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_wan.html#update VirtualWan#update}
+  */
   readonly update?: string;
 }
 
@@ -37,14 +80,22 @@ function virtualWanTimeoutsToTerraform(struct?: VirtualWanTimeouts): any {
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_wan.html azurerm_virtual_wan}
+*/
 export class VirtualWan extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_wan.html azurerm_virtual_wan} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options VirtualWanConfig
+  */
   public constructor(scope: Construct, id: string, config: VirtualWanConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_virtual_wan',

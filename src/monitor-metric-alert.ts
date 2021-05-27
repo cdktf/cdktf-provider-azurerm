@@ -7,33 +7,97 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface MonitorMetricAlertConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_metric_alert.html#auto_mitigate MonitorMetricAlert#auto_mitigate}
+  */
   readonly autoMitigate?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_metric_alert.html#description MonitorMetricAlert#description}
+  */
   readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_metric_alert.html#enabled MonitorMetricAlert#enabled}
+  */
   readonly enabled?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_metric_alert.html#frequency MonitorMetricAlert#frequency}
+  */
   readonly frequency?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_metric_alert.html#name MonitorMetricAlert#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_metric_alert.html#resource_group_name MonitorMetricAlert#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_metric_alert.html#scopes MonitorMetricAlert#scopes}
+  */
   readonly scopes: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_metric_alert.html#severity MonitorMetricAlert#severity}
+  */
   readonly severity?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_metric_alert.html#tags MonitorMetricAlert#tags}
+  */
   readonly tags?: { [key: string]: string };
-  /** The location of the target pluginsdk. Required when using subscription, resource group scope or multiple scopes. */
+  /**
+  * The location of the target pluginsdk. Required when using subscription, resource group scope or multiple scopes.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_metric_alert.html#target_resource_location MonitorMetricAlert#target_resource_location}
+  */
   readonly targetResourceLocation?: string;
-  /** The resource type (e.g. Microsoft.Compute/virtualMachines) of the target pluginsdk. Required when using subscription, resource group scope or multiple scopes. */
+  /**
+  * The resource type (e.g. Microsoft.Compute/virtualMachines) of the target pluginsdk. Required when using subscription, resource group scope or multiple scopes.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_metric_alert.html#target_resource_type MonitorMetricAlert#target_resource_type}
+  */
   readonly targetResourceType?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_metric_alert.html#window_size MonitorMetricAlert#window_size}
+  */
   readonly windowSize?: string;
-  /** action block */
+  /**
+  * action block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_metric_alert.html#action MonitorMetricAlert#action}
+  */
   readonly action?: MonitorMetricAlertAction[];
-  /** application_insights_web_test_location_availability_criteria block */
+  /**
+  * application_insights_web_test_location_availability_criteria block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_metric_alert.html#application_insights_web_test_location_availability_criteria MonitorMetricAlert#application_insights_web_test_location_availability_criteria}
+  */
   readonly applicationInsightsWebTestLocationAvailabilityCriteria?: MonitorMetricAlertApplicationInsightsWebTestLocationAvailabilityCriteria[];
-  /** criteria block */
+  /**
+  * criteria block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_metric_alert.html#criteria MonitorMetricAlert#criteria}
+  */
   readonly criteria?: MonitorMetricAlertCriteria[];
-  /** dynamic_criteria block */
+  /**
+  * dynamic_criteria block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_metric_alert.html#dynamic_criteria MonitorMetricAlert#dynamic_criteria}
+  */
   readonly dynamicCriteria?: MonitorMetricAlertDynamicCriteria[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_metric_alert.html#timeouts MonitorMetricAlert#timeouts}
+  */
   readonly timeouts?: MonitorMetricAlertTimeouts;
 }
 export interface MonitorMetricAlertAction {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_metric_alert.html#action_group_id MonitorMetricAlert#action_group_id}
+  */
   readonly actionGroupId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_metric_alert.html#webhook_properties MonitorMetricAlert#webhook_properties}
+  */
   readonly webhookProperties?: { [key: string]: string };
 }
 
@@ -46,8 +110,17 @@ function monitorMetricAlertActionToTerraform(struct?: MonitorMetricAlertAction):
 }
 
 export interface MonitorMetricAlertApplicationInsightsWebTestLocationAvailabilityCriteria {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_metric_alert.html#component_id MonitorMetricAlert#component_id}
+  */
   readonly componentId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_metric_alert.html#failed_location_count MonitorMetricAlert#failed_location_count}
+  */
   readonly failedLocationCount: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_metric_alert.html#web_test_id MonitorMetricAlert#web_test_id}
+  */
   readonly webTestId: string;
 }
 
@@ -61,8 +134,17 @@ function monitorMetricAlertApplicationInsightsWebTestLocationAvailabilityCriteri
 }
 
 export interface MonitorMetricAlertCriteriaDimension {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_metric_alert.html#name MonitorMetricAlert#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_metric_alert.html#operator MonitorMetricAlert#operator}
+  */
   readonly operator: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_metric_alert.html#values MonitorMetricAlert#values}
+  */
   readonly values: string[];
 }
 
@@ -76,13 +158,35 @@ function monitorMetricAlertCriteriaDimensionToTerraform(struct?: MonitorMetricAl
 }
 
 export interface MonitorMetricAlertCriteria {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_metric_alert.html#aggregation MonitorMetricAlert#aggregation}
+  */
   readonly aggregation: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_metric_alert.html#metric_name MonitorMetricAlert#metric_name}
+  */
   readonly metricName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_metric_alert.html#metric_namespace MonitorMetricAlert#metric_namespace}
+  */
   readonly metricNamespace: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_metric_alert.html#operator MonitorMetricAlert#operator}
+  */
   readonly operator: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_metric_alert.html#skip_metric_validation MonitorMetricAlert#skip_metric_validation}
+  */
   readonly skipMetricValidation?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_metric_alert.html#threshold MonitorMetricAlert#threshold}
+  */
   readonly threshold: number;
-  /** dimension block */
+  /**
+  * dimension block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_metric_alert.html#dimension MonitorMetricAlert#dimension}
+  */
   readonly dimension?: MonitorMetricAlertCriteriaDimension[];
 }
 
@@ -100,8 +204,17 @@ function monitorMetricAlertCriteriaToTerraform(struct?: MonitorMetricAlertCriter
 }
 
 export interface MonitorMetricAlertDynamicCriteriaDimension {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_metric_alert.html#name MonitorMetricAlert#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_metric_alert.html#operator MonitorMetricAlert#operator}
+  */
   readonly operator: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_metric_alert.html#values MonitorMetricAlert#values}
+  */
   readonly values: string[];
 }
 
@@ -115,16 +228,47 @@ function monitorMetricAlertDynamicCriteriaDimensionToTerraform(struct?: MonitorM
 }
 
 export interface MonitorMetricAlertDynamicCriteria {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_metric_alert.html#aggregation MonitorMetricAlert#aggregation}
+  */
   readonly aggregation: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_metric_alert.html#alert_sensitivity MonitorMetricAlert#alert_sensitivity}
+  */
   readonly alertSensitivity: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_metric_alert.html#evaluation_failure_count MonitorMetricAlert#evaluation_failure_count}
+  */
   readonly evaluationFailureCount?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_metric_alert.html#evaluation_total_count MonitorMetricAlert#evaluation_total_count}
+  */
   readonly evaluationTotalCount?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_metric_alert.html#ignore_data_before MonitorMetricAlert#ignore_data_before}
+  */
   readonly ignoreDataBefore?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_metric_alert.html#metric_name MonitorMetricAlert#metric_name}
+  */
   readonly metricName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_metric_alert.html#metric_namespace MonitorMetricAlert#metric_namespace}
+  */
   readonly metricNamespace: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_metric_alert.html#operator MonitorMetricAlert#operator}
+  */
   readonly operator: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_metric_alert.html#skip_metric_validation MonitorMetricAlert#skip_metric_validation}
+  */
   readonly skipMetricValidation?: boolean;
-  /** dimension block */
+  /**
+  * dimension block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_metric_alert.html#dimension MonitorMetricAlert#dimension}
+  */
   readonly dimension?: MonitorMetricAlertDynamicCriteriaDimension[];
 }
 
@@ -145,9 +289,21 @@ function monitorMetricAlertDynamicCriteriaToTerraform(struct?: MonitorMetricAler
 }
 
 export interface MonitorMetricAlertTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_metric_alert.html#create MonitorMetricAlert#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_metric_alert.html#delete MonitorMetricAlert#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_metric_alert.html#read MonitorMetricAlert#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_metric_alert.html#update MonitorMetricAlert#update}
+  */
   readonly update?: string;
 }
 
@@ -162,14 +318,22 @@ function monitorMetricAlertTimeoutsToTerraform(struct?: MonitorMetricAlertTimeou
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_metric_alert.html azurerm_monitor_metric_alert}
+*/
 export class MonitorMetricAlert extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_metric_alert.html azurerm_monitor_metric_alert} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options MonitorMetricAlertConfig
+  */
   public constructor(scope: Construct, id: string, config: MonitorMetricAlertConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_monitor_metric_alert',

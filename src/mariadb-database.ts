@@ -7,18 +7,49 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface MariadbDatabaseConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mariadb_database.html#charset MariadbDatabase#charset}
+  */
   readonly charset: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mariadb_database.html#collation MariadbDatabase#collation}
+  */
   readonly collation: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mariadb_database.html#name MariadbDatabase#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mariadb_database.html#resource_group_name MariadbDatabase#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mariadb_database.html#server_name MariadbDatabase#server_name}
+  */
   readonly serverName: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mariadb_database.html#timeouts MariadbDatabase#timeouts}
+  */
   readonly timeouts?: MariadbDatabaseTimeouts;
 }
 export interface MariadbDatabaseTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mariadb_database.html#create MariadbDatabase#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mariadb_database.html#delete MariadbDatabase#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mariadb_database.html#read MariadbDatabase#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mariadb_database.html#update MariadbDatabase#update}
+  */
   readonly update?: string;
 }
 
@@ -33,14 +64,22 @@ function mariadbDatabaseTimeoutsToTerraform(struct?: MariadbDatabaseTimeouts): a
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/mariadb_database.html azurerm_mariadb_database}
+*/
 export class MariadbDatabase extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/mariadb_database.html azurerm_mariadb_database} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options MariadbDatabaseConfig
+  */
   public constructor(scope: Construct, id: string, config: MariadbDatabaseConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_mariadb_database',

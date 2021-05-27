@@ -7,26 +7,81 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface BotWebAppConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_web_app.html#developer_app_insights_api_key BotWebApp#developer_app_insights_api_key}
+  */
   readonly developerAppInsightsApiKey?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_web_app.html#developer_app_insights_application_id BotWebApp#developer_app_insights_application_id}
+  */
   readonly developerAppInsightsApplicationId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_web_app.html#developer_app_insights_key BotWebApp#developer_app_insights_key}
+  */
   readonly developerAppInsightsKey?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_web_app.html#display_name BotWebApp#display_name}
+  */
   readonly displayName?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_web_app.html#endpoint BotWebApp#endpoint}
+  */
   readonly endpoint?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_web_app.html#location BotWebApp#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_web_app.html#luis_app_ids BotWebApp#luis_app_ids}
+  */
   readonly luisAppIds?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_web_app.html#luis_key BotWebApp#luis_key}
+  */
   readonly luisKey?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_web_app.html#microsoft_app_id BotWebApp#microsoft_app_id}
+  */
   readonly microsoftAppId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_web_app.html#name BotWebApp#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_web_app.html#resource_group_name BotWebApp#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_web_app.html#sku BotWebApp#sku}
+  */
   readonly sku: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_web_app.html#tags BotWebApp#tags}
+  */
   readonly tags?: { [key: string]: string };
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_web_app.html#timeouts BotWebApp#timeouts}
+  */
   readonly timeouts?: BotWebAppTimeouts;
 }
 export interface BotWebAppTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_web_app.html#create BotWebApp#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_web_app.html#delete BotWebApp#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_web_app.html#read BotWebApp#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_web_app.html#update BotWebApp#update}
+  */
   readonly update?: string;
 }
 
@@ -41,14 +96,22 @@ function botWebAppTimeoutsToTerraform(struct?: BotWebAppTimeouts): any {
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/bot_web_app.html azurerm_bot_web_app}
+*/
 export class BotWebApp extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/bot_web_app.html azurerm_bot_web_app} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options BotWebAppConfig
+  */
   public constructor(scope: Construct, id: string, config: BotWebAppConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_bot_web_app',

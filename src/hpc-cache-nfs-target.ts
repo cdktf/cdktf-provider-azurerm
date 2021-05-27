@@ -7,20 +7,55 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface HpcCacheNfsTargetConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hpc_cache_nfs_target.html#cache_name HpcCacheNfsTarget#cache_name}
+  */
   readonly cacheName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hpc_cache_nfs_target.html#name HpcCacheNfsTarget#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hpc_cache_nfs_target.html#resource_group_name HpcCacheNfsTarget#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hpc_cache_nfs_target.html#target_host_name HpcCacheNfsTarget#target_host_name}
+  */
   readonly targetHostName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hpc_cache_nfs_target.html#usage_model HpcCacheNfsTarget#usage_model}
+  */
   readonly usageModel: string;
-  /** namespace_junction block */
+  /**
+  * namespace_junction block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hpc_cache_nfs_target.html#namespace_junction HpcCacheNfsTarget#namespace_junction}
+  */
   readonly namespaceJunction: HpcCacheNfsTargetNamespaceJunction[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hpc_cache_nfs_target.html#timeouts HpcCacheNfsTarget#timeouts}
+  */
   readonly timeouts?: HpcCacheNfsTargetTimeouts;
 }
 export interface HpcCacheNfsTargetNamespaceJunction {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hpc_cache_nfs_target.html#access_policy_name HpcCacheNfsTarget#access_policy_name}
+  */
   readonly accessPolicyName?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hpc_cache_nfs_target.html#namespace_path HpcCacheNfsTarget#namespace_path}
+  */
   readonly namespacePath: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hpc_cache_nfs_target.html#nfs_export HpcCacheNfsTarget#nfs_export}
+  */
   readonly nfsExport: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hpc_cache_nfs_target.html#target_path HpcCacheNfsTarget#target_path}
+  */
   readonly targetPath?: string;
 }
 
@@ -35,9 +70,21 @@ function hpcCacheNfsTargetNamespaceJunctionToTerraform(struct?: HpcCacheNfsTarge
 }
 
 export interface HpcCacheNfsTargetTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hpc_cache_nfs_target.html#create HpcCacheNfsTarget#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hpc_cache_nfs_target.html#delete HpcCacheNfsTarget#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hpc_cache_nfs_target.html#read HpcCacheNfsTarget#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hpc_cache_nfs_target.html#update HpcCacheNfsTarget#update}
+  */
   readonly update?: string;
 }
 
@@ -52,14 +99,22 @@ function hpcCacheNfsTargetTimeoutsToTerraform(struct?: HpcCacheNfsTargetTimeouts
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/hpc_cache_nfs_target.html azurerm_hpc_cache_nfs_target}
+*/
 export class HpcCacheNfsTarget extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/hpc_cache_nfs_target.html azurerm_hpc_cache_nfs_target} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options HpcCacheNfsTargetConfig
+  */
   public constructor(scope: Construct, id: string, config: HpcCacheNfsTargetConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_hpc_cache_nfs_target',

@@ -7,21 +7,61 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface AvailabilitySetConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/availability_set.html#location AvailabilitySet#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/availability_set.html#managed AvailabilitySet#managed}
+  */
   readonly managed?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/availability_set.html#name AvailabilitySet#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/availability_set.html#platform_fault_domain_count AvailabilitySet#platform_fault_domain_count}
+  */
   readonly platformFaultDomainCount?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/availability_set.html#platform_update_domain_count AvailabilitySet#platform_update_domain_count}
+  */
   readonly platformUpdateDomainCount?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/availability_set.html#proximity_placement_group_id AvailabilitySet#proximity_placement_group_id}
+  */
   readonly proximityPlacementGroupId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/availability_set.html#resource_group_name AvailabilitySet#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/availability_set.html#tags AvailabilitySet#tags}
+  */
   readonly tags?: { [key: string]: string };
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/availability_set.html#timeouts AvailabilitySet#timeouts}
+  */
   readonly timeouts?: AvailabilitySetTimeouts;
 }
 export interface AvailabilitySetTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/availability_set.html#create AvailabilitySet#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/availability_set.html#delete AvailabilitySet#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/availability_set.html#read AvailabilitySet#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/availability_set.html#update AvailabilitySet#update}
+  */
   readonly update?: string;
 }
 
@@ -36,14 +76,22 @@ function availabilitySetTimeoutsToTerraform(struct?: AvailabilitySetTimeouts): a
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/availability_set.html azurerm_availability_set}
+*/
 export class AvailabilitySet extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/availability_set.html azurerm_availability_set} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options AvailabilitySetConfig
+  */
   public constructor(scope: Construct, id: string, config: AvailabilitySetConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_availability_set',

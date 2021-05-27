@@ -7,45 +7,135 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface VirtualMachineConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine.html#availability_set_id VirtualMachine#availability_set_id}
+  */
   readonly availabilitySetId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine.html#delete_data_disks_on_termination VirtualMachine#delete_data_disks_on_termination}
+  */
   readonly deleteDataDisksOnTermination?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine.html#delete_os_disk_on_termination VirtualMachine#delete_os_disk_on_termination}
+  */
   readonly deleteOsDiskOnTermination?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine.html#license_type VirtualMachine#license_type}
+  */
   readonly licenseType?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine.html#location VirtualMachine#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine.html#name VirtualMachine#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine.html#network_interface_ids VirtualMachine#network_interface_ids}
+  */
   readonly networkInterfaceIds: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine.html#primary_network_interface_id VirtualMachine#primary_network_interface_id}
+  */
   readonly primaryNetworkInterfaceId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine.html#proximity_placement_group_id VirtualMachine#proximity_placement_group_id}
+  */
   readonly proximityPlacementGroupId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine.html#resource_group_name VirtualMachine#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine.html#tags VirtualMachine#tags}
+  */
   readonly tags?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine.html#vm_size VirtualMachine#vm_size}
+  */
   readonly vmSize: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine.html#zones VirtualMachine#zones}
+  */
   readonly zones?: string[];
-  /** additional_capabilities block */
+  /**
+  * additional_capabilities block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine.html#additional_capabilities VirtualMachine#additional_capabilities}
+  */
   readonly additionalCapabilities?: VirtualMachineAdditionalCapabilities[];
-  /** boot_diagnostics block */
+  /**
+  * boot_diagnostics block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine.html#boot_diagnostics VirtualMachine#boot_diagnostics}
+  */
   readonly bootDiagnostics?: VirtualMachineBootDiagnostics[];
-  /** identity block */
+  /**
+  * identity block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine.html#identity VirtualMachine#identity}
+  */
   readonly identity?: VirtualMachineIdentity[];
-  /** os_profile block */
+  /**
+  * os_profile block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine.html#os_profile VirtualMachine#os_profile}
+  */
   readonly osProfile?: VirtualMachineOsProfile[];
-  /** os_profile_linux_config block */
+  /**
+  * os_profile_linux_config block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine.html#os_profile_linux_config VirtualMachine#os_profile_linux_config}
+  */
   readonly osProfileLinuxConfig?: VirtualMachineOsProfileLinuxConfig[];
-  /** os_profile_secrets block */
+  /**
+  * os_profile_secrets block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine.html#os_profile_secrets VirtualMachine#os_profile_secrets}
+  */
   readonly osProfileSecrets?: VirtualMachineOsProfileSecrets[];
-  /** os_profile_windows_config block */
+  /**
+  * os_profile_windows_config block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine.html#os_profile_windows_config VirtualMachine#os_profile_windows_config}
+  */
   readonly osProfileWindowsConfig?: VirtualMachineOsProfileWindowsConfig[];
-  /** plan block */
+  /**
+  * plan block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine.html#plan VirtualMachine#plan}
+  */
   readonly plan?: VirtualMachinePlan[];
-  /** storage_data_disk block */
+  /**
+  * storage_data_disk block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine.html#storage_data_disk VirtualMachine#storage_data_disk}
+  */
   readonly storageDataDisk?: VirtualMachineStorageDataDisk[];
-  /** storage_image_reference block */
+  /**
+  * storage_image_reference block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine.html#storage_image_reference VirtualMachine#storage_image_reference}
+  */
   readonly storageImageReference?: VirtualMachineStorageImageReference[];
-  /** storage_os_disk block */
+  /**
+  * storage_os_disk block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine.html#storage_os_disk VirtualMachine#storage_os_disk}
+  */
   readonly storageOsDisk: VirtualMachineStorageOsDisk[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine.html#timeouts VirtualMachine#timeouts}
+  */
   readonly timeouts?: VirtualMachineTimeouts;
 }
 export interface VirtualMachineAdditionalCapabilities {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine.html#ultra_ssd_enabled VirtualMachine#ultra_ssd_enabled}
+  */
   readonly ultraSsdEnabled: boolean;
 }
 
@@ -57,7 +147,13 @@ function virtualMachineAdditionalCapabilitiesToTerraform(struct?: VirtualMachine
 }
 
 export interface VirtualMachineBootDiagnostics {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine.html#enabled VirtualMachine#enabled}
+  */
   readonly enabled: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine.html#storage_uri VirtualMachine#storage_uri}
+  */
   readonly storageUri: string;
 }
 
@@ -70,7 +166,13 @@ function virtualMachineBootDiagnosticsToTerraform(struct?: VirtualMachineBootDia
 }
 
 export interface VirtualMachineIdentity {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine.html#identity_ids VirtualMachine#identity_ids}
+  */
   readonly identityIds?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine.html#type VirtualMachine#type}
+  */
   readonly type: string;
 }
 
@@ -83,9 +185,21 @@ function virtualMachineIdentityToTerraform(struct?: VirtualMachineIdentity): any
 }
 
 export interface VirtualMachineOsProfile {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine.html#admin_password VirtualMachine#admin_password}
+  */
   readonly adminPassword?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine.html#admin_username VirtualMachine#admin_username}
+  */
   readonly adminUsername: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine.html#computer_name VirtualMachine#computer_name}
+  */
   readonly computerName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine.html#custom_data VirtualMachine#custom_data}
+  */
   readonly customData?: string;
 }
 
@@ -100,7 +214,13 @@ function virtualMachineOsProfileToTerraform(struct?: VirtualMachineOsProfile): a
 }
 
 export interface VirtualMachineOsProfileLinuxConfigSshKeys {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine.html#key_data VirtualMachine#key_data}
+  */
   readonly keyData: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine.html#path VirtualMachine#path}
+  */
   readonly path: string;
 }
 
@@ -113,8 +233,15 @@ function virtualMachineOsProfileLinuxConfigSshKeysToTerraform(struct?: VirtualMa
 }
 
 export interface VirtualMachineOsProfileLinuxConfig {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine.html#disable_password_authentication VirtualMachine#disable_password_authentication}
+  */
   readonly disablePasswordAuthentication: boolean;
-  /** ssh_keys block */
+  /**
+  * ssh_keys block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine.html#ssh_keys VirtualMachine#ssh_keys}
+  */
   readonly sshKeys?: VirtualMachineOsProfileLinuxConfigSshKeys[];
 }
 
@@ -127,7 +254,13 @@ function virtualMachineOsProfileLinuxConfigToTerraform(struct?: VirtualMachineOs
 }
 
 export interface VirtualMachineOsProfileSecretsVaultCertificates {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine.html#certificate_store VirtualMachine#certificate_store}
+  */
   readonly certificateStore?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine.html#certificate_url VirtualMachine#certificate_url}
+  */
   readonly certificateUrl: string;
 }
 
@@ -140,8 +273,15 @@ function virtualMachineOsProfileSecretsVaultCertificatesToTerraform(struct?: Vir
 }
 
 export interface VirtualMachineOsProfileSecrets {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine.html#source_vault_id VirtualMachine#source_vault_id}
+  */
   readonly sourceVaultId: string;
-  /** vault_certificates block */
+  /**
+  * vault_certificates block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine.html#vault_certificates VirtualMachine#vault_certificates}
+  */
   readonly vaultCertificates?: VirtualMachineOsProfileSecretsVaultCertificates[];
 }
 
@@ -154,9 +294,21 @@ function virtualMachineOsProfileSecretsToTerraform(struct?: VirtualMachineOsProf
 }
 
 export interface VirtualMachineOsProfileWindowsConfigAdditionalUnattendConfig {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine.html#component VirtualMachine#component}
+  */
   readonly component: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine.html#content VirtualMachine#content}
+  */
   readonly content: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine.html#pass VirtualMachine#pass}
+  */
   readonly pass: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine.html#setting_name VirtualMachine#setting_name}
+  */
   readonly settingName: string;
 }
 
@@ -171,7 +323,13 @@ function virtualMachineOsProfileWindowsConfigAdditionalUnattendConfigToTerraform
 }
 
 export interface VirtualMachineOsProfileWindowsConfigWinrm {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine.html#certificate_url VirtualMachine#certificate_url}
+  */
   readonly certificateUrl?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine.html#protocol VirtualMachine#protocol}
+  */
   readonly protocol: string;
 }
 
@@ -184,12 +342,29 @@ function virtualMachineOsProfileWindowsConfigWinrmToTerraform(struct?: VirtualMa
 }
 
 export interface VirtualMachineOsProfileWindowsConfig {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine.html#enable_automatic_upgrades VirtualMachine#enable_automatic_upgrades}
+  */
   readonly enableAutomaticUpgrades?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine.html#provision_vm_agent VirtualMachine#provision_vm_agent}
+  */
   readonly provisionVmAgent?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine.html#timezone VirtualMachine#timezone}
+  */
   readonly timezone?: string;
-  /** additional_unattend_config block */
+  /**
+  * additional_unattend_config block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine.html#additional_unattend_config VirtualMachine#additional_unattend_config}
+  */
   readonly additionalUnattendConfig?: VirtualMachineOsProfileWindowsConfigAdditionalUnattendConfig[];
-  /** winrm block */
+  /**
+  * winrm block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine.html#winrm VirtualMachine#winrm}
+  */
   readonly winrm?: VirtualMachineOsProfileWindowsConfigWinrm[];
 }
 
@@ -205,8 +380,17 @@ function virtualMachineOsProfileWindowsConfigToTerraform(struct?: VirtualMachine
 }
 
 export interface VirtualMachinePlan {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine.html#name VirtualMachine#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine.html#product VirtualMachine#product}
+  */
   readonly product: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine.html#publisher VirtualMachine#publisher}
+  */
   readonly publisher: string;
 }
 
@@ -220,14 +404,41 @@ function virtualMachinePlanToTerraform(struct?: VirtualMachinePlan): any {
 }
 
 export interface VirtualMachineStorageDataDisk {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine.html#caching VirtualMachine#caching}
+  */
   readonly caching?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine.html#create_option VirtualMachine#create_option}
+  */
   readonly createOption: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine.html#disk_size_gb VirtualMachine#disk_size_gb}
+  */
   readonly diskSizeGb?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine.html#lun VirtualMachine#lun}
+  */
   readonly lun: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine.html#managed_disk_id VirtualMachine#managed_disk_id}
+  */
   readonly managedDiskId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine.html#managed_disk_type VirtualMachine#managed_disk_type}
+  */
   readonly managedDiskType?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine.html#name VirtualMachine#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine.html#vhd_uri VirtualMachine#vhd_uri}
+  */
   readonly vhdUri?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine.html#write_accelerator_enabled VirtualMachine#write_accelerator_enabled}
+  */
   readonly writeAcceleratorEnabled?: boolean;
 }
 
@@ -247,10 +458,25 @@ function virtualMachineStorageDataDiskToTerraform(struct?: VirtualMachineStorage
 }
 
 export interface VirtualMachineStorageImageReference {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine.html#id VirtualMachine#id}
+  */
   readonly id?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine.html#offer VirtualMachine#offer}
+  */
   readonly offer?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine.html#publisher VirtualMachine#publisher}
+  */
   readonly publisher?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine.html#sku VirtualMachine#sku}
+  */
   readonly sku?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine.html#version VirtualMachine#version}
+  */
   readonly version?: string;
 }
 
@@ -266,15 +492,45 @@ function virtualMachineStorageImageReferenceToTerraform(struct?: VirtualMachineS
 }
 
 export interface VirtualMachineStorageOsDisk {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine.html#caching VirtualMachine#caching}
+  */
   readonly caching?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine.html#create_option VirtualMachine#create_option}
+  */
   readonly createOption: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine.html#disk_size_gb VirtualMachine#disk_size_gb}
+  */
   readonly diskSizeGb?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine.html#image_uri VirtualMachine#image_uri}
+  */
   readonly imageUri?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine.html#managed_disk_id VirtualMachine#managed_disk_id}
+  */
   readonly managedDiskId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine.html#managed_disk_type VirtualMachine#managed_disk_type}
+  */
   readonly managedDiskType?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine.html#name VirtualMachine#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine.html#os_type VirtualMachine#os_type}
+  */
   readonly osType?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine.html#vhd_uri VirtualMachine#vhd_uri}
+  */
   readonly vhdUri?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine.html#write_accelerator_enabled VirtualMachine#write_accelerator_enabled}
+  */
   readonly writeAcceleratorEnabled?: boolean;
 }
 
@@ -295,9 +551,21 @@ function virtualMachineStorageOsDiskToTerraform(struct?: VirtualMachineStorageOs
 }
 
 export interface VirtualMachineTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine.html#create VirtualMachine#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine.html#delete VirtualMachine#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine.html#read VirtualMachine#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine.html#update VirtualMachine#update}
+  */
   readonly update?: string;
 }
 
@@ -312,14 +580,22 @@ function virtualMachineTimeoutsToTerraform(struct?: VirtualMachineTimeouts): any
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine.html azurerm_virtual_machine}
+*/
 export class VirtualMachine extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine.html azurerm_virtual_machine} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options VirtualMachineConfig
+  */
   public constructor(scope: Construct, id: string, config: VirtualMachineConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_virtual_machine',

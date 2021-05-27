@@ -7,58 +7,169 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface ApplicationGatewayConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#enable_http2 ApplicationGateway#enable_http2}
+  */
   readonly enableHttp2?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#firewall_policy_id ApplicationGateway#firewall_policy_id}
+  */
   readonly firewallPolicyId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#location ApplicationGateway#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#name ApplicationGateway#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#resource_group_name ApplicationGateway#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#tags ApplicationGateway#tags}
+  */
   readonly tags?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#zones ApplicationGateway#zones}
+  */
   readonly zones?: string[];
-  /** authentication_certificate block */
+  /**
+  * authentication_certificate block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#authentication_certificate ApplicationGateway#authentication_certificate}
+  */
   readonly authenticationCertificate?: ApplicationGatewayAuthenticationCertificate[];
-  /** autoscale_configuration block */
+  /**
+  * autoscale_configuration block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#autoscale_configuration ApplicationGateway#autoscale_configuration}
+  */
   readonly autoscaleConfiguration?: ApplicationGatewayAutoscaleConfiguration[];
-  /** backend_address_pool block */
+  /**
+  * backend_address_pool block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#backend_address_pool ApplicationGateway#backend_address_pool}
+  */
   readonly backendAddressPool: ApplicationGatewayBackendAddressPool[];
-  /** backend_http_settings block */
+  /**
+  * backend_http_settings block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#backend_http_settings ApplicationGateway#backend_http_settings}
+  */
   readonly backendHttpSettings: ApplicationGatewayBackendHttpSettings[];
-  /** custom_error_configuration block */
+  /**
+  * custom_error_configuration block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#custom_error_configuration ApplicationGateway#custom_error_configuration}
+  */
   readonly customErrorConfiguration?: ApplicationGatewayCustomErrorConfiguration[];
-  /** frontend_ip_configuration block */
+  /**
+  * frontend_ip_configuration block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#frontend_ip_configuration ApplicationGateway#frontend_ip_configuration}
+  */
   readonly frontendIpConfiguration: ApplicationGatewayFrontendIpConfiguration[];
-  /** frontend_port block */
+  /**
+  * frontend_port block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#frontend_port ApplicationGateway#frontend_port}
+  */
   readonly frontendPort: ApplicationGatewayFrontendPort[];
-  /** gateway_ip_configuration block */
+  /**
+  * gateway_ip_configuration block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#gateway_ip_configuration ApplicationGateway#gateway_ip_configuration}
+  */
   readonly gatewayIpConfiguration: ApplicationGatewayGatewayIpConfiguration[];
-  /** http_listener block */
+  /**
+  * http_listener block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#http_listener ApplicationGateway#http_listener}
+  */
   readonly httpListener: ApplicationGatewayHttpListener[];
-  /** identity block */
+  /**
+  * identity block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#identity ApplicationGateway#identity}
+  */
   readonly identity?: ApplicationGatewayIdentity[];
-  /** probe block */
+  /**
+  * probe block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#probe ApplicationGateway#probe}
+  */
   readonly probe?: ApplicationGatewayProbe[];
-  /** redirect_configuration block */
+  /**
+  * redirect_configuration block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#redirect_configuration ApplicationGateway#redirect_configuration}
+  */
   readonly redirectConfiguration?: ApplicationGatewayRedirectConfiguration[];
-  /** request_routing_rule block */
+  /**
+  * request_routing_rule block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#request_routing_rule ApplicationGateway#request_routing_rule}
+  */
   readonly requestRoutingRule: ApplicationGatewayRequestRoutingRule[];
-  /** rewrite_rule_set block */
+  /**
+  * rewrite_rule_set block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#rewrite_rule_set ApplicationGateway#rewrite_rule_set}
+  */
   readonly rewriteRuleSet?: ApplicationGatewayRewriteRuleSet[];
-  /** sku block */
+  /**
+  * sku block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#sku ApplicationGateway#sku}
+  */
   readonly sku: ApplicationGatewaySku[];
-  /** ssl_certificate block */
+  /**
+  * ssl_certificate block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#ssl_certificate ApplicationGateway#ssl_certificate}
+  */
   readonly sslCertificate?: ApplicationGatewaySslCertificate[];
-  /** ssl_policy block */
+  /**
+  * ssl_policy block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#ssl_policy ApplicationGateway#ssl_policy}
+  */
   readonly sslPolicy?: ApplicationGatewaySslPolicy[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#timeouts ApplicationGateway#timeouts}
+  */
   readonly timeouts?: ApplicationGatewayTimeouts;
-  /** trusted_root_certificate block */
+  /**
+  * trusted_root_certificate block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#trusted_root_certificate ApplicationGateway#trusted_root_certificate}
+  */
   readonly trustedRootCertificate?: ApplicationGatewayTrustedRootCertificate[];
-  /** url_path_map block */
+  /**
+  * url_path_map block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#url_path_map ApplicationGateway#url_path_map}
+  */
   readonly urlPathMap?: ApplicationGatewayUrlPathMap[];
-  /** waf_configuration block */
+  /**
+  * waf_configuration block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#waf_configuration ApplicationGateway#waf_configuration}
+  */
   readonly wafConfiguration?: ApplicationGatewayWafConfiguration[];
 }
 export interface ApplicationGatewayAuthenticationCertificate {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#data ApplicationGateway#data}
+  */
   readonly data: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#name ApplicationGateway#name}
+  */
   readonly name: string;
 }
 
@@ -71,7 +182,13 @@ function applicationGatewayAuthenticationCertificateToTerraform(struct?: Applica
 }
 
 export interface ApplicationGatewayAutoscaleConfiguration {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#max_capacity ApplicationGateway#max_capacity}
+  */
   readonly maxCapacity?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#min_capacity ApplicationGateway#min_capacity}
+  */
   readonly minCapacity: number;
 }
 
@@ -84,8 +201,17 @@ function applicationGatewayAutoscaleConfigurationToTerraform(struct?: Applicatio
 }
 
 export interface ApplicationGatewayBackendAddressPool {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#fqdns ApplicationGateway#fqdns}
+  */
   readonly fqdns?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#ip_addresses ApplicationGateway#ip_addresses}
+  */
   readonly ipAddresses?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#name ApplicationGateway#name}
+  */
   readonly name: string;
 }
 
@@ -99,6 +225,9 @@ function applicationGatewayBackendAddressPoolToTerraform(struct?: ApplicationGat
 }
 
 export interface ApplicationGatewayBackendHttpSettingsAuthenticationCertificate {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#name ApplicationGateway#name}
+  */
   readonly name: string;
 }
 
@@ -110,7 +239,13 @@ function applicationGatewayBackendHttpSettingsAuthenticationCertificateToTerrafo
 }
 
 export interface ApplicationGatewayBackendHttpSettingsConnectionDraining {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#drain_timeout_sec ApplicationGateway#drain_timeout_sec}
+  */
   readonly drainTimeoutSec: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#enabled ApplicationGateway#enabled}
+  */
   readonly enabled: boolean;
 }
 
@@ -123,20 +258,61 @@ function applicationGatewayBackendHttpSettingsConnectionDrainingToTerraform(stru
 }
 
 export interface ApplicationGatewayBackendHttpSettings {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#affinity_cookie_name ApplicationGateway#affinity_cookie_name}
+  */
   readonly affinityCookieName?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#cookie_based_affinity ApplicationGateway#cookie_based_affinity}
+  */
   readonly cookieBasedAffinity: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#host_name ApplicationGateway#host_name}
+  */
   readonly hostName?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#name ApplicationGateway#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#path ApplicationGateway#path}
+  */
   readonly path?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#pick_host_name_from_backend_address ApplicationGateway#pick_host_name_from_backend_address}
+  */
   readonly pickHostNameFromBackendAddress?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#port ApplicationGateway#port}
+  */
   readonly port: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#probe_name ApplicationGateway#probe_name}
+  */
   readonly probeName?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#protocol ApplicationGateway#protocol}
+  */
   readonly protocol: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#request_timeout ApplicationGateway#request_timeout}
+  */
   readonly requestTimeout?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#trusted_root_certificate_names ApplicationGateway#trusted_root_certificate_names}
+  */
   readonly trustedRootCertificateNames?: string[];
-  /** authentication_certificate block */
+  /**
+  * authentication_certificate block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#authentication_certificate ApplicationGateway#authentication_certificate}
+  */
   readonly authenticationCertificate?: ApplicationGatewayBackendHttpSettingsAuthenticationCertificate[];
-  /** connection_draining block */
+  /**
+  * connection_draining block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#connection_draining ApplicationGateway#connection_draining}
+  */
   readonly connectionDraining?: ApplicationGatewayBackendHttpSettingsConnectionDraining[];
 }
 
@@ -160,7 +336,13 @@ function applicationGatewayBackendHttpSettingsToTerraform(struct?: ApplicationGa
 }
 
 export interface ApplicationGatewayCustomErrorConfiguration {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#custom_error_page_url ApplicationGateway#custom_error_page_url}
+  */
   readonly customErrorPageUrl: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#status_code ApplicationGateway#status_code}
+  */
   readonly statusCode: string;
 }
 
@@ -173,10 +355,25 @@ function applicationGatewayCustomErrorConfigurationToTerraform(struct?: Applicat
 }
 
 export interface ApplicationGatewayFrontendIpConfiguration {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#name ApplicationGateway#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#private_ip_address ApplicationGateway#private_ip_address}
+  */
   readonly privateIpAddress?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#private_ip_address_allocation ApplicationGateway#private_ip_address_allocation}
+  */
   readonly privateIpAddressAllocation?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#public_ip_address_id ApplicationGateway#public_ip_address_id}
+  */
   readonly publicIpAddressId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#subnet_id ApplicationGateway#subnet_id}
+  */
   readonly subnetId?: string;
 }
 
@@ -192,7 +389,13 @@ function applicationGatewayFrontendIpConfigurationToTerraform(struct?: Applicati
 }
 
 export interface ApplicationGatewayFrontendPort {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#name ApplicationGateway#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#port ApplicationGateway#port}
+  */
   readonly port: number;
 }
 
@@ -205,7 +408,13 @@ function applicationGatewayFrontendPortToTerraform(struct?: ApplicationGatewayFr
 }
 
 export interface ApplicationGatewayGatewayIpConfiguration {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#name ApplicationGateway#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#subnet_id ApplicationGateway#subnet_id}
+  */
   readonly subnetId: string;
 }
 
@@ -218,7 +427,13 @@ function applicationGatewayGatewayIpConfigurationToTerraform(struct?: Applicatio
 }
 
 export interface ApplicationGatewayHttpListenerCustomErrorConfiguration {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#custom_error_page_url ApplicationGateway#custom_error_page_url}
+  */
   readonly customErrorPageUrl: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#status_code ApplicationGateway#status_code}
+  */
   readonly statusCode: string;
 }
 
@@ -231,16 +446,47 @@ function applicationGatewayHttpListenerCustomErrorConfigurationToTerraform(struc
 }
 
 export interface ApplicationGatewayHttpListener {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#firewall_policy_id ApplicationGateway#firewall_policy_id}
+  */
   readonly firewallPolicyId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#frontend_ip_configuration_name ApplicationGateway#frontend_ip_configuration_name}
+  */
   readonly frontendIpConfigurationName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#frontend_port_name ApplicationGateway#frontend_port_name}
+  */
   readonly frontendPortName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#host_name ApplicationGateway#host_name}
+  */
   readonly hostName?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#host_names ApplicationGateway#host_names}
+  */
   readonly hostNames?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#name ApplicationGateway#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#protocol ApplicationGateway#protocol}
+  */
   readonly protocol: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#require_sni ApplicationGateway#require_sni}
+  */
   readonly requireSni?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#ssl_certificate_name ApplicationGateway#ssl_certificate_name}
+  */
   readonly sslCertificateName?: string;
-  /** custom_error_configuration block */
+  /**
+  * custom_error_configuration block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#custom_error_configuration ApplicationGateway#custom_error_configuration}
+  */
   readonly customErrorConfiguration?: ApplicationGatewayHttpListenerCustomErrorConfiguration[];
 }
 
@@ -261,7 +507,13 @@ function applicationGatewayHttpListenerToTerraform(struct?: ApplicationGatewayHt
 }
 
 export interface ApplicationGatewayIdentity {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#identity_ids ApplicationGateway#identity_ids}
+  */
   readonly identityIds: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#type ApplicationGateway#type}
+  */
   readonly type?: string;
 }
 
@@ -274,7 +526,13 @@ function applicationGatewayIdentityToTerraform(struct?: ApplicationGatewayIdenti
 }
 
 export interface ApplicationGatewayProbeMatch {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#body ApplicationGateway#body}
+  */
   readonly body?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#status_code ApplicationGateway#status_code}
+  */
   readonly statusCode?: string[];
 }
 
@@ -287,17 +545,51 @@ function applicationGatewayProbeMatchToTerraform(struct?: ApplicationGatewayProb
 }
 
 export interface ApplicationGatewayProbe {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#host ApplicationGateway#host}
+  */
   readonly host?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#interval ApplicationGateway#interval}
+  */
   readonly interval: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#minimum_servers ApplicationGateway#minimum_servers}
+  */
   readonly minimumServers?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#name ApplicationGateway#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#path ApplicationGateway#path}
+  */
   readonly path: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#pick_host_name_from_backend_http_settings ApplicationGateway#pick_host_name_from_backend_http_settings}
+  */
   readonly pickHostNameFromBackendHttpSettings?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#port ApplicationGateway#port}
+  */
   readonly port?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#protocol ApplicationGateway#protocol}
+  */
   readonly protocol: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#timeout ApplicationGateway#timeout}
+  */
   readonly timeout: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#unhealthy_threshold ApplicationGateway#unhealthy_threshold}
+  */
   readonly unhealthyThreshold: number;
-  /** match block */
+  /**
+  * match block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#match ApplicationGateway#match}
+  */
   readonly match?: ApplicationGatewayProbeMatch[];
 }
 
@@ -319,11 +611,29 @@ function applicationGatewayProbeToTerraform(struct?: ApplicationGatewayProbe): a
 }
 
 export interface ApplicationGatewayRedirectConfiguration {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#include_path ApplicationGateway#include_path}
+  */
   readonly includePath?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#include_query_string ApplicationGateway#include_query_string}
+  */
   readonly includeQueryString?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#name ApplicationGateway#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#redirect_type ApplicationGateway#redirect_type}
+  */
   readonly redirectType: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#target_listener_name ApplicationGateway#target_listener_name}
+  */
   readonly targetListenerName?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#target_url ApplicationGateway#target_url}
+  */
   readonly targetUrl?: string;
 }
 
@@ -340,13 +650,37 @@ function applicationGatewayRedirectConfigurationToTerraform(struct?: Application
 }
 
 export interface ApplicationGatewayRequestRoutingRule {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#backend_address_pool_name ApplicationGateway#backend_address_pool_name}
+  */
   readonly backendAddressPoolName?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#backend_http_settings_name ApplicationGateway#backend_http_settings_name}
+  */
   readonly backendHttpSettingsName?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#http_listener_name ApplicationGateway#http_listener_name}
+  */
   readonly httpListenerName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#name ApplicationGateway#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#redirect_configuration_name ApplicationGateway#redirect_configuration_name}
+  */
   readonly redirectConfigurationName?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#rewrite_rule_set_name ApplicationGateway#rewrite_rule_set_name}
+  */
   readonly rewriteRuleSetName?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#rule_type ApplicationGateway#rule_type}
+  */
   readonly ruleType: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#url_path_map_name ApplicationGateway#url_path_map_name}
+  */
   readonly urlPathMapName?: string;
 }
 
@@ -365,9 +699,21 @@ function applicationGatewayRequestRoutingRuleToTerraform(struct?: ApplicationGat
 }
 
 export interface ApplicationGatewayRewriteRuleSetRewriteRuleCondition {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#ignore_case ApplicationGateway#ignore_case}
+  */
   readonly ignoreCase?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#negate ApplicationGateway#negate}
+  */
   readonly negate?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#pattern ApplicationGateway#pattern}
+  */
   readonly pattern: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#variable ApplicationGateway#variable}
+  */
   readonly variable: string;
 }
 
@@ -382,7 +728,13 @@ function applicationGatewayRewriteRuleSetRewriteRuleConditionToTerraform(struct?
 }
 
 export interface ApplicationGatewayRewriteRuleSetRewriteRuleRequestHeaderConfiguration {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#header_name ApplicationGateway#header_name}
+  */
   readonly headerName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#header_value ApplicationGateway#header_value}
+  */
   readonly headerValue: string;
 }
 
@@ -395,7 +747,13 @@ function applicationGatewayRewriteRuleSetRewriteRuleRequestHeaderConfigurationTo
 }
 
 export interface ApplicationGatewayRewriteRuleSetRewriteRuleResponseHeaderConfiguration {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#header_name ApplicationGateway#header_name}
+  */
   readonly headerName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#header_value ApplicationGateway#header_value}
+  */
   readonly headerValue: string;
 }
 
@@ -408,8 +766,17 @@ function applicationGatewayRewriteRuleSetRewriteRuleResponseHeaderConfigurationT
 }
 
 export interface ApplicationGatewayRewriteRuleSetRewriteRuleUrl {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#path ApplicationGateway#path}
+  */
   readonly path?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#query_string ApplicationGateway#query_string}
+  */
   readonly queryString?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#reroute ApplicationGateway#reroute}
+  */
   readonly reroute?: boolean;
 }
 
@@ -423,15 +790,37 @@ function applicationGatewayRewriteRuleSetRewriteRuleUrlToTerraform(struct?: Appl
 }
 
 export interface ApplicationGatewayRewriteRuleSetRewriteRule {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#name ApplicationGateway#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#rule_sequence ApplicationGateway#rule_sequence}
+  */
   readonly ruleSequence: number;
-  /** condition block */
+  /**
+  * condition block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#condition ApplicationGateway#condition}
+  */
   readonly condition?: ApplicationGatewayRewriteRuleSetRewriteRuleCondition[];
-  /** request_header_configuration block */
+  /**
+  * request_header_configuration block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#request_header_configuration ApplicationGateway#request_header_configuration}
+  */
   readonly requestHeaderConfiguration?: ApplicationGatewayRewriteRuleSetRewriteRuleRequestHeaderConfiguration[];
-  /** response_header_configuration block */
+  /**
+  * response_header_configuration block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#response_header_configuration ApplicationGateway#response_header_configuration}
+  */
   readonly responseHeaderConfiguration?: ApplicationGatewayRewriteRuleSetRewriteRuleResponseHeaderConfiguration[];
-  /** url block */
+  /**
+  * url block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#url ApplicationGateway#url}
+  */
   readonly url?: ApplicationGatewayRewriteRuleSetRewriteRuleUrl[];
 }
 
@@ -448,8 +837,15 @@ function applicationGatewayRewriteRuleSetRewriteRuleToTerraform(struct?: Applica
 }
 
 export interface ApplicationGatewayRewriteRuleSet {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#name ApplicationGateway#name}
+  */
   readonly name: string;
-  /** rewrite_rule block */
+  /**
+  * rewrite_rule block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#rewrite_rule ApplicationGateway#rewrite_rule}
+  */
   readonly rewriteRule?: ApplicationGatewayRewriteRuleSetRewriteRule[];
 }
 
@@ -462,8 +858,17 @@ function applicationGatewayRewriteRuleSetToTerraform(struct?: ApplicationGateway
 }
 
 export interface ApplicationGatewaySku {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#capacity ApplicationGateway#capacity}
+  */
   readonly capacity?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#name ApplicationGateway#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#tier ApplicationGateway#tier}
+  */
   readonly tier: string;
 }
 
@@ -477,9 +882,21 @@ function applicationGatewaySkuToTerraform(struct?: ApplicationGatewaySku): any {
 }
 
 export interface ApplicationGatewaySslCertificate {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#data ApplicationGateway#data}
+  */
   readonly data?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#key_vault_secret_id ApplicationGateway#key_vault_secret_id}
+  */
   readonly keyVaultSecretId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#name ApplicationGateway#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#password ApplicationGateway#password}
+  */
   readonly password?: string;
 }
 
@@ -494,10 +911,25 @@ function applicationGatewaySslCertificateToTerraform(struct?: ApplicationGateway
 }
 
 export interface ApplicationGatewaySslPolicy {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#cipher_suites ApplicationGateway#cipher_suites}
+  */
   readonly cipherSuites?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#disabled_protocols ApplicationGateway#disabled_protocols}
+  */
   readonly disabledProtocols?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#min_protocol_version ApplicationGateway#min_protocol_version}
+  */
   readonly minProtocolVersion?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#policy_name ApplicationGateway#policy_name}
+  */
   readonly policyName?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#policy_type ApplicationGateway#policy_type}
+  */
   readonly policyType?: string;
 }
 
@@ -513,9 +945,21 @@ function applicationGatewaySslPolicyToTerraform(struct?: ApplicationGatewaySslPo
 }
 
 export interface ApplicationGatewayTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#create ApplicationGateway#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#delete ApplicationGateway#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#read ApplicationGateway#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#update ApplicationGateway#update}
+  */
   readonly update?: string;
 }
 
@@ -530,7 +974,13 @@ function applicationGatewayTimeoutsToTerraform(struct?: ApplicationGatewayTimeou
 }
 
 export interface ApplicationGatewayTrustedRootCertificate {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#data ApplicationGateway#data}
+  */
   readonly data: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#name ApplicationGateway#name}
+  */
   readonly name: string;
 }
 
@@ -543,12 +993,33 @@ function applicationGatewayTrustedRootCertificateToTerraform(struct?: Applicatio
 }
 
 export interface ApplicationGatewayUrlPathMapPathRule {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#backend_address_pool_name ApplicationGateway#backend_address_pool_name}
+  */
   readonly backendAddressPoolName?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#backend_http_settings_name ApplicationGateway#backend_http_settings_name}
+  */
   readonly backendHttpSettingsName?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#firewall_policy_id ApplicationGateway#firewall_policy_id}
+  */
   readonly firewallPolicyId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#name ApplicationGateway#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#paths ApplicationGateway#paths}
+  */
   readonly paths: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#redirect_configuration_name ApplicationGateway#redirect_configuration_name}
+  */
   readonly redirectConfigurationName?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#rewrite_rule_set_name ApplicationGateway#rewrite_rule_set_name}
+  */
   readonly rewriteRuleSetName?: string;
 }
 
@@ -566,12 +1037,31 @@ function applicationGatewayUrlPathMapPathRuleToTerraform(struct?: ApplicationGat
 }
 
 export interface ApplicationGatewayUrlPathMap {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#default_backend_address_pool_name ApplicationGateway#default_backend_address_pool_name}
+  */
   readonly defaultBackendAddressPoolName?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#default_backend_http_settings_name ApplicationGateway#default_backend_http_settings_name}
+  */
   readonly defaultBackendHttpSettingsName?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#default_redirect_configuration_name ApplicationGateway#default_redirect_configuration_name}
+  */
   readonly defaultRedirectConfigurationName?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#default_rewrite_rule_set_name ApplicationGateway#default_rewrite_rule_set_name}
+  */
   readonly defaultRewriteRuleSetName?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#name ApplicationGateway#name}
+  */
   readonly name: string;
-  /** path_rule block */
+  /**
+  * path_rule block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#path_rule ApplicationGateway#path_rule}
+  */
   readonly pathRule: ApplicationGatewayUrlPathMapPathRule[];
 }
 
@@ -588,7 +1078,13 @@ function applicationGatewayUrlPathMapToTerraform(struct?: ApplicationGatewayUrlP
 }
 
 export interface ApplicationGatewayWafConfigurationDisabledRuleGroup {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#rule_group_name ApplicationGateway#rule_group_name}
+  */
   readonly ruleGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#rules ApplicationGateway#rules}
+  */
   readonly rules?: number[];
 }
 
@@ -601,8 +1097,17 @@ function applicationGatewayWafConfigurationDisabledRuleGroupToTerraform(struct?:
 }
 
 export interface ApplicationGatewayWafConfigurationExclusion {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#match_variable ApplicationGateway#match_variable}
+  */
   readonly matchVariable: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#selector ApplicationGateway#selector}
+  */
   readonly selector?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#selector_match_operator ApplicationGateway#selector_match_operator}
+  */
   readonly selectorMatchOperator?: string;
 }
 
@@ -616,16 +1121,45 @@ function applicationGatewayWafConfigurationExclusionToTerraform(struct?: Applica
 }
 
 export interface ApplicationGatewayWafConfiguration {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#enabled ApplicationGateway#enabled}
+  */
   readonly enabled: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#file_upload_limit_mb ApplicationGateway#file_upload_limit_mb}
+  */
   readonly fileUploadLimitMb?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#firewall_mode ApplicationGateway#firewall_mode}
+  */
   readonly firewallMode: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#max_request_body_size_kb ApplicationGateway#max_request_body_size_kb}
+  */
   readonly maxRequestBodySizeKb?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#request_body_check ApplicationGateway#request_body_check}
+  */
   readonly requestBodyCheck?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#rule_set_type ApplicationGateway#rule_set_type}
+  */
   readonly ruleSetType?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#rule_set_version ApplicationGateway#rule_set_version}
+  */
   readonly ruleSetVersion: string;
-  /** disabled_rule_group block */
+  /**
+  * disabled_rule_group block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#disabled_rule_group ApplicationGateway#disabled_rule_group}
+  */
   readonly disabledRuleGroup?: ApplicationGatewayWafConfigurationDisabledRuleGroup[];
-  /** exclusion block */
+  /**
+  * exclusion block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#exclusion ApplicationGateway#exclusion}
+  */
   readonly exclusion?: ApplicationGatewayWafConfigurationExclusion[];
 }
 
@@ -645,14 +1179,22 @@ function applicationGatewayWafConfigurationToTerraform(struct?: ApplicationGatew
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html azurerm_application_gateway}
+*/
 export class ApplicationGateway extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html azurerm_application_gateway} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options ApplicationGatewayConfig
+  */
   public constructor(scope: Construct, id: string, config: ApplicationGatewayConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_application_gateway',

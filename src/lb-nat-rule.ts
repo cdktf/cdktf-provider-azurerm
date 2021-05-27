@@ -7,23 +7,69 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface LbNatRuleConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb_nat_rule.html#backend_port LbNatRule#backend_port}
+  */
   readonly backendPort: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb_nat_rule.html#enable_floating_ip LbNatRule#enable_floating_ip}
+  */
   readonly enableFloatingIp?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb_nat_rule.html#enable_tcp_reset LbNatRule#enable_tcp_reset}
+  */
   readonly enableTcpReset?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb_nat_rule.html#frontend_ip_configuration_name LbNatRule#frontend_ip_configuration_name}
+  */
   readonly frontendIpConfigurationName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb_nat_rule.html#frontend_port LbNatRule#frontend_port}
+  */
   readonly frontendPort: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb_nat_rule.html#idle_timeout_in_minutes LbNatRule#idle_timeout_in_minutes}
+  */
   readonly idleTimeoutInMinutes?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb_nat_rule.html#loadbalancer_id LbNatRule#loadbalancer_id}
+  */
   readonly loadbalancerId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb_nat_rule.html#name LbNatRule#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb_nat_rule.html#protocol LbNatRule#protocol}
+  */
   readonly protocol: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb_nat_rule.html#resource_group_name LbNatRule#resource_group_name}
+  */
   readonly resourceGroupName: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb_nat_rule.html#timeouts LbNatRule#timeouts}
+  */
   readonly timeouts?: LbNatRuleTimeouts;
 }
 export interface LbNatRuleTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb_nat_rule.html#create LbNatRule#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb_nat_rule.html#delete LbNatRule#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb_nat_rule.html#read LbNatRule#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb_nat_rule.html#update LbNatRule#update}
+  */
   readonly update?: string;
 }
 
@@ -38,14 +84,22 @@ function lbNatRuleTimeoutsToTerraform(struct?: LbNatRuleTimeouts): any {
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/lb_nat_rule.html azurerm_lb_nat_rule}
+*/
 export class LbNatRule extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/lb_nat_rule.html azurerm_lb_nat_rule} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options LbNatRuleConfig
+  */
   public constructor(scope: Construct, id: string, config: LbNatRuleConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_lb_nat_rule',

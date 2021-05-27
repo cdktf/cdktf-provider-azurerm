@@ -7,18 +7,49 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface SshPublicKeyConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/ssh_public_key.html#location SshPublicKey#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/ssh_public_key.html#name SshPublicKey#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/ssh_public_key.html#public_key SshPublicKey#public_key}
+  */
   readonly publicKey: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/ssh_public_key.html#resource_group_name SshPublicKey#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/ssh_public_key.html#tags SshPublicKey#tags}
+  */
   readonly tags?: { [key: string]: string };
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/ssh_public_key.html#timeouts SshPublicKey#timeouts}
+  */
   readonly timeouts?: SshPublicKeyTimeouts;
 }
 export interface SshPublicKeyTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/ssh_public_key.html#create SshPublicKey#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/ssh_public_key.html#delete SshPublicKey#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/ssh_public_key.html#read SshPublicKey#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/ssh_public_key.html#update SshPublicKey#update}
+  */
   readonly update?: string;
 }
 
@@ -33,14 +64,22 @@ function sshPublicKeyTimeoutsToTerraform(struct?: SshPublicKeyTimeouts): any {
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/ssh_public_key.html azurerm_ssh_public_key}
+*/
 export class SshPublicKey extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/ssh_public_key.html azurerm_ssh_public_key} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options SshPublicKeyConfig
+  */
   public constructor(scope: Construct, id: string, config: SshPublicKeyConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_ssh_public_key',

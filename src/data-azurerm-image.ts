@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/data_azurerm_image.html
+// https://www.terraform.io/docs/providers/azurerm/d/image.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,11 +7,27 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataAzurermImageConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/image.html#name DataAzurermImage#name}
+  */
   readonly name?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/image.html#name_regex DataAzurermImage#name_regex}
+  */
   readonly nameRegex?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/image.html#resource_group_name DataAzurermImage#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/image.html#sort_descending DataAzurermImage#sort_descending}
+  */
   readonly sortDescending?: boolean;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/image.html#timeouts DataAzurermImage#timeouts}
+  */
   readonly timeouts?: DataAzurermImageTimeouts;
 }
 export class DataAzurermImageDataDisk extends cdktf.ComplexComputedList {
@@ -74,6 +90,9 @@ export class DataAzurermImageOsDisk extends cdktf.ComplexComputedList {
   }
 }
 export interface DataAzurermImageTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/image.html#read DataAzurermImage#read}
+  */
   readonly read?: string;
 }
 
@@ -85,14 +104,22 @@ function dataAzurermImageTimeoutsToTerraform(struct?: DataAzurermImageTimeouts):
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/image.html azurerm_image}
+*/
 export class DataAzurermImage extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/image.html azurerm_image} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataAzurermImageConfig
+  */
   public constructor(scope: Construct, id: string, config: DataAzurermImageConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_image',

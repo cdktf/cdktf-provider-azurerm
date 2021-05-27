@@ -7,21 +7,59 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface NetappAccountConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/netapp_account.html#location NetappAccount#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/netapp_account.html#name NetappAccount#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/netapp_account.html#resource_group_name NetappAccount#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/netapp_account.html#tags NetappAccount#tags}
+  */
   readonly tags?: { [key: string]: string };
-  /** active_directory block */
+  /**
+  * active_directory block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/netapp_account.html#active_directory NetappAccount#active_directory}
+  */
   readonly activeDirectory?: NetappAccountActiveDirectory[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/netapp_account.html#timeouts NetappAccount#timeouts}
+  */
   readonly timeouts?: NetappAccountTimeouts;
 }
 export interface NetappAccountActiveDirectory {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/netapp_account.html#dns_servers NetappAccount#dns_servers}
+  */
   readonly dnsServers: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/netapp_account.html#domain NetappAccount#domain}
+  */
   readonly domain: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/netapp_account.html#organizational_unit NetappAccount#organizational_unit}
+  */
   readonly organizationalUnit?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/netapp_account.html#password NetappAccount#password}
+  */
   readonly password: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/netapp_account.html#smb_server_name NetappAccount#smb_server_name}
+  */
   readonly smbServerName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/netapp_account.html#username NetappAccount#username}
+  */
   readonly username: string;
 }
 
@@ -38,9 +76,21 @@ function netappAccountActiveDirectoryToTerraform(struct?: NetappAccountActiveDir
 }
 
 export interface NetappAccountTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/netapp_account.html#create NetappAccount#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/netapp_account.html#delete NetappAccount#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/netapp_account.html#read NetappAccount#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/netapp_account.html#update NetappAccount#update}
+  */
   readonly update?: string;
 }
 
@@ -55,14 +105,22 @@ function netappAccountTimeoutsToTerraform(struct?: NetappAccountTimeouts): any {
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/netapp_account.html azurerm_netapp_account}
+*/
 export class NetappAccount extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/netapp_account.html azurerm_netapp_account} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options NetappAccountConfig
+  */
   public constructor(scope: Construct, id: string, config: NetappAccountConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_netapp_account',

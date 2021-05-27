@@ -7,22 +7,65 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface RoleAssignmentConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/role_assignment.html#condition RoleAssignment#condition}
+  */
   readonly condition?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/role_assignment.html#condition_version RoleAssignment#condition_version}
+  */
   readonly conditionVersion?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/role_assignment.html#description RoleAssignment#description}
+  */
   readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/role_assignment.html#name RoleAssignment#name}
+  */
   readonly name?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/role_assignment.html#principal_id RoleAssignment#principal_id}
+  */
   readonly principalId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/role_assignment.html#role_definition_id RoleAssignment#role_definition_id}
+  */
   readonly roleDefinitionId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/role_assignment.html#role_definition_name RoleAssignment#role_definition_name}
+  */
   readonly roleDefinitionName?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/role_assignment.html#scope RoleAssignment#scope}
+  */
   readonly scope: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/role_assignment.html#skip_service_principal_aad_check RoleAssignment#skip_service_principal_aad_check}
+  */
   readonly skipServicePrincipalAadCheck?: boolean;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/role_assignment.html#timeouts RoleAssignment#timeouts}
+  */
   readonly timeouts?: RoleAssignmentTimeouts;
 }
 export interface RoleAssignmentTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/role_assignment.html#create RoleAssignment#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/role_assignment.html#delete RoleAssignment#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/role_assignment.html#read RoleAssignment#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/role_assignment.html#update RoleAssignment#update}
+  */
   readonly update?: string;
 }
 
@@ -37,14 +80,22 @@ function roleAssignmentTimeoutsToTerraform(struct?: RoleAssignmentTimeouts): any
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/role_assignment.html azurerm_role_assignment}
+*/
 export class RoleAssignment extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/role_assignment.html azurerm_role_assignment} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options RoleAssignmentConfig
+  */
   public constructor(scope: Construct, id: string, config: RoleAssignmentConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_role_assignment',

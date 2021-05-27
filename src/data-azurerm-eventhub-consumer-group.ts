@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/data_azurerm_eventhub_consumer_group.html
+// https://www.terraform.io/docs/providers/azurerm/d/eventhub_consumer_group.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,14 +7,33 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataAzurermEventhubConsumerGroupConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/eventhub_consumer_group.html#eventhub_name DataAzurermEventhubConsumerGroup#eventhub_name}
+  */
   readonly eventhubName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/eventhub_consumer_group.html#name DataAzurermEventhubConsumerGroup#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/eventhub_consumer_group.html#namespace_name DataAzurermEventhubConsumerGroup#namespace_name}
+  */
   readonly namespaceName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/eventhub_consumer_group.html#resource_group_name DataAzurermEventhubConsumerGroup#resource_group_name}
+  */
   readonly resourceGroupName: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/eventhub_consumer_group.html#timeouts DataAzurermEventhubConsumerGroup#timeouts}
+  */
   readonly timeouts?: DataAzurermEventhubConsumerGroupTimeouts;
 }
 export interface DataAzurermEventhubConsumerGroupTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/eventhub_consumer_group.html#read DataAzurermEventhubConsumerGroup#read}
+  */
   readonly read?: string;
 }
 
@@ -26,14 +45,22 @@ function dataAzurermEventhubConsumerGroupTimeoutsToTerraform(struct?: DataAzurer
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/eventhub_consumer_group.html azurerm_eventhub_consumer_group}
+*/
 export class DataAzurermEventhubConsumerGroup extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/eventhub_consumer_group.html azurerm_eventhub_consumer_group} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataAzurermEventhubConsumerGroupConfig
+  */
   public constructor(scope: Construct, id: string, config: DataAzurermEventhubConsumerGroupConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_eventhub_consumer_group',

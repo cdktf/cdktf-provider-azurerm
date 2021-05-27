@@ -7,27 +7,85 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface LbRuleConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb_rule.html#backend_address_pool_id LbRule#backend_address_pool_id}
+  */
   readonly backendAddressPoolId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb_rule.html#backend_port LbRule#backend_port}
+  */
   readonly backendPort: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb_rule.html#disable_outbound_snat LbRule#disable_outbound_snat}
+  */
   readonly disableOutboundSnat?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb_rule.html#enable_floating_ip LbRule#enable_floating_ip}
+  */
   readonly enableFloatingIp?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb_rule.html#enable_tcp_reset LbRule#enable_tcp_reset}
+  */
   readonly enableTcpReset?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb_rule.html#frontend_ip_configuration_name LbRule#frontend_ip_configuration_name}
+  */
   readonly frontendIpConfigurationName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb_rule.html#frontend_port LbRule#frontend_port}
+  */
   readonly frontendPort: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb_rule.html#idle_timeout_in_minutes LbRule#idle_timeout_in_minutes}
+  */
   readonly idleTimeoutInMinutes?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb_rule.html#load_distribution LbRule#load_distribution}
+  */
   readonly loadDistribution?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb_rule.html#loadbalancer_id LbRule#loadbalancer_id}
+  */
   readonly loadbalancerId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb_rule.html#name LbRule#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb_rule.html#probe_id LbRule#probe_id}
+  */
   readonly probeId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb_rule.html#protocol LbRule#protocol}
+  */
   readonly protocol: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb_rule.html#resource_group_name LbRule#resource_group_name}
+  */
   readonly resourceGroupName: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb_rule.html#timeouts LbRule#timeouts}
+  */
   readonly timeouts?: LbRuleTimeouts;
 }
 export interface LbRuleTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb_rule.html#create LbRule#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb_rule.html#delete LbRule#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb_rule.html#read LbRule#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb_rule.html#update LbRule#update}
+  */
   readonly update?: string;
 }
 
@@ -42,14 +100,22 @@ function lbRuleTimeoutsToTerraform(struct?: LbRuleTimeouts): any {
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/lb_rule.html azurerm_lb_rule}
+*/
 export class LbRule extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/lb_rule.html azurerm_lb_rule} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options LbRuleConfig
+  */
   public constructor(scope: Construct, id: string, config: LbRuleConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_lb_rule',

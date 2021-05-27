@@ -7,21 +7,61 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface MediaLiveEventOutputConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_live_event_output.html#archive_window_duration MediaLiveEventOutput#archive_window_duration}
+  */
   readonly archiveWindowDuration: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_live_event_output.html#asset_name MediaLiveEventOutput#asset_name}
+  */
   readonly assetName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_live_event_output.html#description MediaLiveEventOutput#description}
+  */
   readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_live_event_output.html#hls_fragments_per_ts_segment MediaLiveEventOutput#hls_fragments_per_ts_segment}
+  */
   readonly hlsFragmentsPerTsSegment?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_live_event_output.html#live_event_id MediaLiveEventOutput#live_event_id}
+  */
   readonly liveEventId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_live_event_output.html#manifest_name MediaLiveEventOutput#manifest_name}
+  */
   readonly manifestName?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_live_event_output.html#name MediaLiveEventOutput#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_live_event_output.html#output_snap_time_in_seconds MediaLiveEventOutput#output_snap_time_in_seconds}
+  */
   readonly outputSnapTimeInSeconds?: number;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_live_event_output.html#timeouts MediaLiveEventOutput#timeouts}
+  */
   readonly timeouts?: MediaLiveEventOutputTimeouts;
 }
 export interface MediaLiveEventOutputTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_live_event_output.html#create MediaLiveEventOutput#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_live_event_output.html#delete MediaLiveEventOutput#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_live_event_output.html#read MediaLiveEventOutput#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_live_event_output.html#update MediaLiveEventOutput#update}
+  */
   readonly update?: string;
 }
 
@@ -36,14 +76,22 @@ function mediaLiveEventOutputTimeoutsToTerraform(struct?: MediaLiveEventOutputTi
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/media_live_event_output.html azurerm_media_live_event_output}
+*/
 export class MediaLiveEventOutput extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/media_live_event_output.html azurerm_media_live_event_output} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options MediaLiveEventOutputConfig
+  */
   public constructor(scope: Construct, id: string, config: MediaLiveEventOutputConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_media_live_event_output',

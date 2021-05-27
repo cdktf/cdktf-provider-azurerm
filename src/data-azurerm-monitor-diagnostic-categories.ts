@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/data_azurerm_monitor_diagnostic_categories.html
+// https://www.terraform.io/docs/providers/azurerm/d/monitor_diagnostic_categories.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,11 +7,21 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataAzurermMonitorDiagnosticCategoriesConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/monitor_diagnostic_categories.html#resource_id DataAzurermMonitorDiagnosticCategories#resource_id}
+  */
   readonly resourceId: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/monitor_diagnostic_categories.html#timeouts DataAzurermMonitorDiagnosticCategories#timeouts}
+  */
   readonly timeouts?: DataAzurermMonitorDiagnosticCategoriesTimeouts;
 }
 export interface DataAzurermMonitorDiagnosticCategoriesTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/monitor_diagnostic_categories.html#read DataAzurermMonitorDiagnosticCategories#read}
+  */
   readonly read?: string;
 }
 
@@ -23,14 +33,22 @@ function dataAzurermMonitorDiagnosticCategoriesTimeoutsToTerraform(struct?: Data
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/monitor_diagnostic_categories.html azurerm_monitor_diagnostic_categories}
+*/
 export class DataAzurermMonitorDiagnosticCategories extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/monitor_diagnostic_categories.html azurerm_monitor_diagnostic_categories} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataAzurermMonitorDiagnosticCategoriesConfig
+  */
   public constructor(scope: Construct, id: string, config: DataAzurermMonitorDiagnosticCategoriesConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_monitor_diagnostic_categories',

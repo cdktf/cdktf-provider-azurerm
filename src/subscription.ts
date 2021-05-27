@@ -7,22 +7,57 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface SubscriptionConfig extends cdktf.TerraformMetaArguments {
-  /** The Alias Name of the subscription. If omitted a new UUID will be generated for this property. */
+  /**
+  * The Alias Name of the subscription. If omitted a new UUID will be generated for this property.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/subscription.html#alias Subscription#alias}
+  */
   readonly alias?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/subscription.html#billing_scope_id Subscription#billing_scope_id}
+  */
   readonly billingScopeId?: string;
-  /** The GUID of the Subscription. */
+  /**
+  * The GUID of the Subscription.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/subscription.html#subscription_id Subscription#subscription_id}
+  */
   readonly subscriptionId?: string;
-  /** The Display Name for the Subscription. */
+  /**
+  * The Display Name for the Subscription.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/subscription.html#subscription_name Subscription#subscription_name}
+  */
   readonly subscriptionName: string;
-  /** The workload type for the Subscription. Possible values are `Production` (default) and `DevTest`. */
+  /**
+  * The workload type for the Subscription. Possible values are `Production` (default) and `DevTest`.
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/subscription.html#workload Subscription#workload}
+  */
   readonly workload?: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/subscription.html#timeouts Subscription#timeouts}
+  */
   readonly timeouts?: SubscriptionTimeouts;
 }
 export interface SubscriptionTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/subscription.html#create Subscription#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/subscription.html#delete Subscription#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/subscription.html#read Subscription#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/subscription.html#update Subscription#update}
+  */
   readonly update?: string;
 }
 
@@ -37,14 +72,22 @@ function subscriptionTimeoutsToTerraform(struct?: SubscriptionTimeouts): any {
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/subscription.html azurerm_subscription}
+*/
 export class Subscription extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/subscription.html azurerm_subscription} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options SubscriptionConfig
+  */
   public constructor(scope: Construct, id: string, config: SubscriptionConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_subscription',

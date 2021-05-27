@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/data_azurerm_mariadb_server.html
+// https://www.terraform.io/docs/providers/azurerm/d/mariadb_server.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,9 +7,19 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataAzurermMariadbServerConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/mariadb_server.html#name DataAzurermMariadbServer#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/mariadb_server.html#resource_group_name DataAzurermMariadbServer#resource_group_name}
+  */
   readonly resourceGroupName: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/mariadb_server.html#timeouts DataAzurermMariadbServer#timeouts}
+  */
   readonly timeouts?: DataAzurermMariadbServerTimeouts;
 }
 export class DataAzurermMariadbServerStorageProfile extends cdktf.ComplexComputedList {
@@ -35,6 +45,9 @@ export class DataAzurermMariadbServerStorageProfile extends cdktf.ComplexCompute
   }
 }
 export interface DataAzurermMariadbServerTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/mariadb_server.html#read DataAzurermMariadbServer#read}
+  */
   readonly read?: string;
 }
 
@@ -46,14 +59,22 @@ function dataAzurermMariadbServerTimeoutsToTerraform(struct?: DataAzurermMariadb
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/mariadb_server.html azurerm_mariadb_server}
+*/
 export class DataAzurermMariadbServer extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/mariadb_server.html azurerm_mariadb_server} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataAzurermMariadbServerConfig
+  */
   public constructor(scope: Construct, id: string, config: DataAzurermMariadbServerConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_mariadb_server',

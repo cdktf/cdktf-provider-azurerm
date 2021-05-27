@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/data_azurerm_api_management_api_version_set.html
+// https://www.terraform.io/docs/providers/azurerm/d/api_management_api_version_set.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,13 +7,29 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataAzurermApiManagementApiVersionSetConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/api_management_api_version_set.html#api_management_name DataAzurermApiManagementApiVersionSet#api_management_name}
+  */
   readonly apiManagementName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/api_management_api_version_set.html#name DataAzurermApiManagementApiVersionSet#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/api_management_api_version_set.html#resource_group_name DataAzurermApiManagementApiVersionSet#resource_group_name}
+  */
   readonly resourceGroupName: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/api_management_api_version_set.html#timeouts DataAzurermApiManagementApiVersionSet#timeouts}
+  */
   readonly timeouts?: DataAzurermApiManagementApiVersionSetTimeouts;
 }
 export interface DataAzurermApiManagementApiVersionSetTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/api_management_api_version_set.html#read DataAzurermApiManagementApiVersionSet#read}
+  */
   readonly read?: string;
 }
 
@@ -25,14 +41,22 @@ function dataAzurermApiManagementApiVersionSetTimeoutsToTerraform(struct?: DataA
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/api_management_api_version_set.html azurerm_api_management_api_version_set}
+*/
 export class DataAzurermApiManagementApiVersionSet extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/api_management_api_version_set.html azurerm_api_management_api_version_set} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataAzurermApiManagementApiVersionSetConfig
+  */
   public constructor(scope: Construct, id: string, config: DataAzurermApiManagementApiVersionSetConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_api_management_api_version_set',

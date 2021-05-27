@@ -7,34 +7,99 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface BatchPoolConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool.html#account_name BatchPool#account_name}
+  */
   readonly accountName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool.html#display_name BatchPool#display_name}
+  */
   readonly displayName?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool.html#max_tasks_per_node BatchPool#max_tasks_per_node}
+  */
   readonly maxTasksPerNode?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool.html#metadata BatchPool#metadata}
+  */
   readonly metadata?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool.html#name BatchPool#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool.html#node_agent_sku_id BatchPool#node_agent_sku_id}
+  */
   readonly nodeAgentSkuId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool.html#resource_group_name BatchPool#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool.html#stop_pending_resize_operation BatchPool#stop_pending_resize_operation}
+  */
   readonly stopPendingResizeOperation?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool.html#vm_size BatchPool#vm_size}
+  */
   readonly vmSize: string;
-  /** auto_scale block */
+  /**
+  * auto_scale block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool.html#auto_scale BatchPool#auto_scale}
+  */
   readonly autoScale?: BatchPoolAutoScale[];
-  /** certificate block */
+  /**
+  * certificate block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool.html#certificate BatchPool#certificate}
+  */
   readonly certificate?: BatchPoolCertificate[];
-  /** container_configuration block */
+  /**
+  * container_configuration block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool.html#container_configuration BatchPool#container_configuration}
+  */
   readonly containerConfiguration?: BatchPoolContainerConfiguration[];
-  /** fixed_scale block */
+  /**
+  * fixed_scale block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool.html#fixed_scale BatchPool#fixed_scale}
+  */
   readonly fixedScale?: BatchPoolFixedScale[];
-  /** network_configuration block */
+  /**
+  * network_configuration block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool.html#network_configuration BatchPool#network_configuration}
+  */
   readonly networkConfiguration?: BatchPoolNetworkConfiguration[];
-  /** start_task block */
+  /**
+  * start_task block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool.html#start_task BatchPool#start_task}
+  */
   readonly startTask?: BatchPoolStartTask[];
-  /** storage_image_reference block */
+  /**
+  * storage_image_reference block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool.html#storage_image_reference BatchPool#storage_image_reference}
+  */
   readonly storageImageReference: BatchPoolStorageImageReference[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool.html#timeouts BatchPool#timeouts}
+  */
   readonly timeouts?: BatchPoolTimeouts;
 }
 export interface BatchPoolAutoScale {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool.html#evaluation_interval BatchPool#evaluation_interval}
+  */
   readonly evaluationInterval?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool.html#formula BatchPool#formula}
+  */
   readonly formula: string;
 }
 
@@ -47,9 +112,21 @@ function batchPoolAutoScaleToTerraform(struct?: BatchPoolAutoScale): any {
 }
 
 export interface BatchPoolCertificate {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool.html#id BatchPool#id}
+  */
   readonly id: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool.html#store_location BatchPool#store_location}
+  */
   readonly storeLocation: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool.html#store_name BatchPool#store_name}
+  */
   readonly storeName?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool.html#visibility BatchPool#visibility}
+  */
   readonly visibility?: string[];
 }
 
@@ -64,8 +141,17 @@ function batchPoolCertificateToTerraform(struct?: BatchPoolCertificate): any {
 }
 
 export interface BatchPoolContainerConfigurationContainerRegistries {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool.html#password BatchPool#password}
+  */
   readonly password?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool.html#registry_server BatchPool#registry_server}
+  */
   readonly registryServer?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool.html#user_name BatchPool#user_name}
+  */
   readonly userName?: string;
 }
 
@@ -79,8 +165,17 @@ function batchPoolContainerConfigurationContainerRegistriesToTerraform(struct?: 
 }
 
 export interface BatchPoolContainerConfiguration {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool.html#container_image_names BatchPool#container_image_names}
+  */
   readonly containerImageNames?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool.html#container_registries BatchPool#container_registries}
+  */
   readonly containerRegistries?: BatchPoolContainerConfigurationContainerRegistries[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool.html#type BatchPool#type}
+  */
   readonly type?: string;
 }
 
@@ -94,8 +189,17 @@ function batchPoolContainerConfigurationToTerraform(struct?: BatchPoolContainerC
 }
 
 export interface BatchPoolFixedScale {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool.html#resize_timeout BatchPool#resize_timeout}
+  */
   readonly resizeTimeout?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool.html#target_dedicated_nodes BatchPool#target_dedicated_nodes}
+  */
   readonly targetDedicatedNodes?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool.html#target_low_priority_nodes BatchPool#target_low_priority_nodes}
+  */
   readonly targetLowPriorityNodes?: number;
 }
 
@@ -109,8 +213,17 @@ function batchPoolFixedScaleToTerraform(struct?: BatchPoolFixedScale): any {
 }
 
 export interface BatchPoolNetworkConfigurationEndpointConfigurationNetworkSecurityGroupRules {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool.html#access BatchPool#access}
+  */
   readonly access: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool.html#priority BatchPool#priority}
+  */
   readonly priority: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool.html#source_address_prefix BatchPool#source_address_prefix}
+  */
   readonly sourceAddressPrefix: string;
 }
 
@@ -124,11 +237,27 @@ function batchPoolNetworkConfigurationEndpointConfigurationNetworkSecurityGroupR
 }
 
 export interface BatchPoolNetworkConfigurationEndpointConfiguration {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool.html#backend_port BatchPool#backend_port}
+  */
   readonly backendPort: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool.html#frontend_port_range BatchPool#frontend_port_range}
+  */
   readonly frontendPortRange: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool.html#name BatchPool#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool.html#protocol BatchPool#protocol}
+  */
   readonly protocol: string;
-  /** network_security_group_rules block */
+  /**
+  * network_security_group_rules block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool.html#network_security_group_rules BatchPool#network_security_group_rules}
+  */
   readonly networkSecurityGroupRules?: BatchPoolNetworkConfigurationEndpointConfigurationNetworkSecurityGroupRules[];
 }
 
@@ -144,10 +273,23 @@ function batchPoolNetworkConfigurationEndpointConfigurationToTerraform(struct?: 
 }
 
 export interface BatchPoolNetworkConfiguration {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool.html#public_address_provisioning_type BatchPool#public_address_provisioning_type}
+  */
   readonly publicAddressProvisioningType?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool.html#public_ips BatchPool#public_ips}
+  */
   readonly publicIps?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool.html#subnet_id BatchPool#subnet_id}
+  */
   readonly subnetId: string;
-  /** endpoint_configuration block */
+  /**
+  * endpoint_configuration block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool.html#endpoint_configuration BatchPool#endpoint_configuration}
+  */
   readonly endpointConfiguration?: BatchPoolNetworkConfigurationEndpointConfiguration[];
 }
 
@@ -162,11 +304,29 @@ function batchPoolNetworkConfigurationToTerraform(struct?: BatchPoolNetworkConfi
 }
 
 export interface BatchPoolStartTaskResourceFile {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool.html#auto_storage_container_name BatchPool#auto_storage_container_name}
+  */
   readonly autoStorageContainerName?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool.html#blob_prefix BatchPool#blob_prefix}
+  */
   readonly blobPrefix?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool.html#file_mode BatchPool#file_mode}
+  */
   readonly fileMode?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool.html#file_path BatchPool#file_path}
+  */
   readonly filePath?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool.html#http_url BatchPool#http_url}
+  */
   readonly httpUrl?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool.html#storage_container_url BatchPool#storage_container_url}
+  */
   readonly storageContainerUrl?: string;
 }
 
@@ -183,7 +343,13 @@ function batchPoolStartTaskResourceFileToTerraform(struct?: BatchPoolStartTaskRe
 }
 
 export interface BatchPoolStartTaskUserIdentityAutoUser {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool.html#elevation_level BatchPool#elevation_level}
+  */
   readonly elevationLevel?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool.html#scope BatchPool#scope}
+  */
   readonly scope?: string;
 }
 
@@ -196,8 +362,15 @@ function batchPoolStartTaskUserIdentityAutoUserToTerraform(struct?: BatchPoolSta
 }
 
 export interface BatchPoolStartTaskUserIdentity {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool.html#user_name BatchPool#user_name}
+  */
   readonly userName?: string;
-  /** auto_user block */
+  /**
+  * auto_user block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool.html#auto_user BatchPool#auto_user}
+  */
   readonly autoUser?: BatchPoolStartTaskUserIdentityAutoUser[];
 }
 
@@ -210,13 +383,33 @@ function batchPoolStartTaskUserIdentityToTerraform(struct?: BatchPoolStartTaskUs
 }
 
 export interface BatchPoolStartTask {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool.html#command_line BatchPool#command_line}
+  */
   readonly commandLine: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool.html#environment BatchPool#environment}
+  */
   readonly environment?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool.html#max_task_retry_count BatchPool#max_task_retry_count}
+  */
   readonly maxTaskRetryCount?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool.html#wait_for_success BatchPool#wait_for_success}
+  */
   readonly waitForSuccess?: boolean;
-  /** resource_file block */
+  /**
+  * resource_file block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool.html#resource_file BatchPool#resource_file}
+  */
   readonly resourceFile?: BatchPoolStartTaskResourceFile[];
-  /** user_identity block */
+  /**
+  * user_identity block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool.html#user_identity BatchPool#user_identity}
+  */
   readonly userIdentity: BatchPoolStartTaskUserIdentity[];
 }
 
@@ -233,10 +426,25 @@ function batchPoolStartTaskToTerraform(struct?: BatchPoolStartTask): any {
 }
 
 export interface BatchPoolStorageImageReference {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool.html#id BatchPool#id}
+  */
   readonly id?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool.html#offer BatchPool#offer}
+  */
   readonly offer?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool.html#publisher BatchPool#publisher}
+  */
   readonly publisher?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool.html#sku BatchPool#sku}
+  */
   readonly sku?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool.html#version BatchPool#version}
+  */
   readonly version?: string;
 }
 
@@ -252,9 +460,21 @@ function batchPoolStorageImageReferenceToTerraform(struct?: BatchPoolStorageImag
 }
 
 export interface BatchPoolTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool.html#create BatchPool#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool.html#delete BatchPool#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool.html#read BatchPool#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool.html#update BatchPool#update}
+  */
   readonly update?: string;
 }
 
@@ -269,14 +489,22 @@ function batchPoolTimeoutsToTerraform(struct?: BatchPoolTimeouts): any {
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool.html azurerm_batch_pool}
+*/
 export class BatchPool extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool.html azurerm_batch_pool} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options BatchPoolConfig
+  */
   public constructor(scope: Construct, id: string, config: BatchPoolConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_batch_pool',

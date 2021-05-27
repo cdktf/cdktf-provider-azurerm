@@ -7,26 +7,79 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataFactoryLinkedServiceAzureSqlDatabaseConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_sql_database.html#additional_properties DataFactoryLinkedServiceAzureSqlDatabase#additional_properties}
+  */
   readonly additionalProperties?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_sql_database.html#annotations DataFactoryLinkedServiceAzureSqlDatabase#annotations}
+  */
   readonly annotations?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_sql_database.html#connection_string DataFactoryLinkedServiceAzureSqlDatabase#connection_string}
+  */
   readonly connectionString: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_sql_database.html#data_factory_name DataFactoryLinkedServiceAzureSqlDatabase#data_factory_name}
+  */
   readonly dataFactoryName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_sql_database.html#description DataFactoryLinkedServiceAzureSqlDatabase#description}
+  */
   readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_sql_database.html#integration_runtime_name DataFactoryLinkedServiceAzureSqlDatabase#integration_runtime_name}
+  */
   readonly integrationRuntimeName?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_sql_database.html#name DataFactoryLinkedServiceAzureSqlDatabase#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_sql_database.html#parameters DataFactoryLinkedServiceAzureSqlDatabase#parameters}
+  */
   readonly parameters?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_sql_database.html#resource_group_name DataFactoryLinkedServiceAzureSqlDatabase#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_sql_database.html#service_principal_id DataFactoryLinkedServiceAzureSqlDatabase#service_principal_id}
+  */
   readonly servicePrincipalId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_sql_database.html#service_principal_key DataFactoryLinkedServiceAzureSqlDatabase#service_principal_key}
+  */
   readonly servicePrincipalKey?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_sql_database.html#tenant_id DataFactoryLinkedServiceAzureSqlDatabase#tenant_id}
+  */
   readonly tenantId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_sql_database.html#use_managed_identity DataFactoryLinkedServiceAzureSqlDatabase#use_managed_identity}
+  */
   readonly useManagedIdentity?: boolean;
-  /** key_vault_password block */
+  /**
+  * key_vault_password block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_sql_database.html#key_vault_password DataFactoryLinkedServiceAzureSqlDatabase#key_vault_password}
+  */
   readonly keyVaultPassword?: DataFactoryLinkedServiceAzureSqlDatabaseKeyVaultPassword[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_sql_database.html#timeouts DataFactoryLinkedServiceAzureSqlDatabase#timeouts}
+  */
   readonly timeouts?: DataFactoryLinkedServiceAzureSqlDatabaseTimeouts;
 }
 export interface DataFactoryLinkedServiceAzureSqlDatabaseKeyVaultPassword {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_sql_database.html#linked_service_name DataFactoryLinkedServiceAzureSqlDatabase#linked_service_name}
+  */
   readonly linkedServiceName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_sql_database.html#secret_name DataFactoryLinkedServiceAzureSqlDatabase#secret_name}
+  */
   readonly secretName: string;
 }
 
@@ -39,9 +92,21 @@ function dataFactoryLinkedServiceAzureSqlDatabaseKeyVaultPasswordToTerraform(str
 }
 
 export interface DataFactoryLinkedServiceAzureSqlDatabaseTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_sql_database.html#create DataFactoryLinkedServiceAzureSqlDatabase#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_sql_database.html#delete DataFactoryLinkedServiceAzureSqlDatabase#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_sql_database.html#read DataFactoryLinkedServiceAzureSqlDatabase#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_sql_database.html#update DataFactoryLinkedServiceAzureSqlDatabase#update}
+  */
   readonly update?: string;
 }
 
@@ -56,14 +121,22 @@ function dataFactoryLinkedServiceAzureSqlDatabaseTimeoutsToTerraform(struct?: Da
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_sql_database.html azurerm_data_factory_linked_service_azure_sql_database}
+*/
 export class DataFactoryLinkedServiceAzureSqlDatabase extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_sql_database.html azurerm_data_factory_linked_service_azure_sql_database} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataFactoryLinkedServiceAzureSqlDatabaseConfig
+  */
   public constructor(scope: Construct, id: string, config: DataFactoryLinkedServiceAzureSqlDatabaseConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_data_factory_linked_service_azure_sql_database',

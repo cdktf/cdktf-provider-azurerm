@@ -7,21 +7,55 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface CustomProviderConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/custom_provider.html#location CustomProvider#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/custom_provider.html#name CustomProvider#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/custom_provider.html#resource_group_name CustomProvider#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/custom_provider.html#tags CustomProvider#tags}
+  */
   readonly tags?: { [key: string]: string };
-  /** action block */
+  /**
+  * action block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/custom_provider.html#action CustomProvider#action}
+  */
   readonly action?: CustomProviderAction[];
-  /** resource_type block */
+  /**
+  * resource_type block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/custom_provider.html#resource_type CustomProvider#resource_type}
+  */
   readonly resourceType?: CustomProviderResourceType[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/custom_provider.html#timeouts CustomProvider#timeouts}
+  */
   readonly timeouts?: CustomProviderTimeouts;
-  /** validation block */
+  /**
+  * validation block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/custom_provider.html#validation CustomProvider#validation}
+  */
   readonly validation?: CustomProviderValidation[];
 }
 export interface CustomProviderAction {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/custom_provider.html#endpoint CustomProvider#endpoint}
+  */
   readonly endpoint: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/custom_provider.html#name CustomProvider#name}
+  */
   readonly name: string;
 }
 
@@ -34,8 +68,17 @@ function customProviderActionToTerraform(struct?: CustomProviderAction): any {
 }
 
 export interface CustomProviderResourceType {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/custom_provider.html#endpoint CustomProvider#endpoint}
+  */
   readonly endpoint: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/custom_provider.html#name CustomProvider#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/custom_provider.html#routing_type CustomProvider#routing_type}
+  */
   readonly routingType?: string;
 }
 
@@ -49,9 +92,21 @@ function customProviderResourceTypeToTerraform(struct?: CustomProviderResourceTy
 }
 
 export interface CustomProviderTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/custom_provider.html#create CustomProvider#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/custom_provider.html#delete CustomProvider#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/custom_provider.html#read CustomProvider#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/custom_provider.html#update CustomProvider#update}
+  */
   readonly update?: string;
 }
 
@@ -66,6 +121,9 @@ function customProviderTimeoutsToTerraform(struct?: CustomProviderTimeouts): any
 }
 
 export interface CustomProviderValidation {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/custom_provider.html#specification CustomProvider#specification}
+  */
   readonly specification: string;
 }
 
@@ -77,14 +135,22 @@ function customProviderValidationToTerraform(struct?: CustomProviderValidation):
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/custom_provider.html azurerm_custom_provider}
+*/
 export class CustomProvider extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/custom_provider.html azurerm_custom_provider} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options CustomProviderConfig
+  */
   public constructor(scope: Construct, id: string, config: CustomProviderConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_custom_provider',

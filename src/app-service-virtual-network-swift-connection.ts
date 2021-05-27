@@ -7,15 +7,37 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface AppServiceVirtualNetworkSwiftConnectionConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_virtual_network_swift_connection.html#app_service_id AppServiceVirtualNetworkSwiftConnection#app_service_id}
+  */
   readonly appServiceId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_virtual_network_swift_connection.html#subnet_id AppServiceVirtualNetworkSwiftConnection#subnet_id}
+  */
   readonly subnetId: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_virtual_network_swift_connection.html#timeouts AppServiceVirtualNetworkSwiftConnection#timeouts}
+  */
   readonly timeouts?: AppServiceVirtualNetworkSwiftConnectionTimeouts;
 }
 export interface AppServiceVirtualNetworkSwiftConnectionTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_virtual_network_swift_connection.html#create AppServiceVirtualNetworkSwiftConnection#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_virtual_network_swift_connection.html#delete AppServiceVirtualNetworkSwiftConnection#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_virtual_network_swift_connection.html#read AppServiceVirtualNetworkSwiftConnection#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_virtual_network_swift_connection.html#update AppServiceVirtualNetworkSwiftConnection#update}
+  */
   readonly update?: string;
 }
 
@@ -30,14 +52,22 @@ function appServiceVirtualNetworkSwiftConnectionTimeoutsToTerraform(struct?: App
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_virtual_network_swift_connection.html azurerm_app_service_virtual_network_swift_connection}
+*/
 export class AppServiceVirtualNetworkSwiftConnection extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_virtual_network_swift_connection.html azurerm_app_service_virtual_network_swift_connection} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options AppServiceVirtualNetworkSwiftConnectionConfig
+  */
   public constructor(scope: Construct, id: string, config: AppServiceVirtualNetworkSwiftConnectionConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_app_service_virtual_network_swift_connection',

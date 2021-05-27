@@ -7,24 +7,71 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataFactoryDatasetSqlServerTableConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_sql_server_table.html#additional_properties DataFactoryDatasetSqlServerTable#additional_properties}
+  */
   readonly additionalProperties?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_sql_server_table.html#annotations DataFactoryDatasetSqlServerTable#annotations}
+  */
   readonly annotations?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_sql_server_table.html#data_factory_name DataFactoryDatasetSqlServerTable#data_factory_name}
+  */
   readonly dataFactoryName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_sql_server_table.html#description DataFactoryDatasetSqlServerTable#description}
+  */
   readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_sql_server_table.html#folder DataFactoryDatasetSqlServerTable#folder}
+  */
   readonly folder?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_sql_server_table.html#linked_service_name DataFactoryDatasetSqlServerTable#linked_service_name}
+  */
   readonly linkedServiceName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_sql_server_table.html#name DataFactoryDatasetSqlServerTable#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_sql_server_table.html#parameters DataFactoryDatasetSqlServerTable#parameters}
+  */
   readonly parameters?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_sql_server_table.html#resource_group_name DataFactoryDatasetSqlServerTable#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_sql_server_table.html#table_name DataFactoryDatasetSqlServerTable#table_name}
+  */
   readonly tableName?: string;
-  /** schema_column block */
+  /**
+  * schema_column block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_sql_server_table.html#schema_column DataFactoryDatasetSqlServerTable#schema_column}
+  */
   readonly schemaColumn?: DataFactoryDatasetSqlServerTableSchemaColumn[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_sql_server_table.html#timeouts DataFactoryDatasetSqlServerTable#timeouts}
+  */
   readonly timeouts?: DataFactoryDatasetSqlServerTableTimeouts;
 }
 export interface DataFactoryDatasetSqlServerTableSchemaColumn {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_sql_server_table.html#description DataFactoryDatasetSqlServerTable#description}
+  */
   readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_sql_server_table.html#name DataFactoryDatasetSqlServerTable#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_sql_server_table.html#type DataFactoryDatasetSqlServerTable#type}
+  */
   readonly type?: string;
 }
 
@@ -38,9 +85,21 @@ function dataFactoryDatasetSqlServerTableSchemaColumnToTerraform(struct?: DataFa
 }
 
 export interface DataFactoryDatasetSqlServerTableTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_sql_server_table.html#create DataFactoryDatasetSqlServerTable#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_sql_server_table.html#delete DataFactoryDatasetSqlServerTable#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_sql_server_table.html#read DataFactoryDatasetSqlServerTable#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_sql_server_table.html#update DataFactoryDatasetSqlServerTable#update}
+  */
   readonly update?: string;
 }
 
@@ -55,14 +114,22 @@ function dataFactoryDatasetSqlServerTableTimeoutsToTerraform(struct?: DataFactor
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_sql_server_table.html azurerm_data_factory_dataset_sql_server_table}
+*/
 export class DataFactoryDatasetSqlServerTable extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_sql_server_table.html azurerm_data_factory_dataset_sql_server_table} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataFactoryDatasetSqlServerTableConfig
+  */
   public constructor(scope: Construct, id: string, config: DataFactoryDatasetSqlServerTableConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_data_factory_dataset_sql_server_table',

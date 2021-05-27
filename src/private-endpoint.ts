@@ -7,16 +7,43 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface PrivateEndpointConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/private_endpoint.html#location PrivateEndpoint#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/private_endpoint.html#name PrivateEndpoint#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/private_endpoint.html#resource_group_name PrivateEndpoint#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/private_endpoint.html#subnet_id PrivateEndpoint#subnet_id}
+  */
   readonly subnetId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/private_endpoint.html#tags PrivateEndpoint#tags}
+  */
   readonly tags?: { [key: string]: string };
-  /** private_dns_zone_group block */
+  /**
+  * private_dns_zone_group block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/private_endpoint.html#private_dns_zone_group PrivateEndpoint#private_dns_zone_group}
+  */
   readonly privateDnsZoneGroup?: PrivateEndpointPrivateDnsZoneGroup[];
-  /** private_service_connection block */
+  /**
+  * private_service_connection block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/private_endpoint.html#private_service_connection PrivateEndpoint#private_service_connection}
+  */
   readonly privateServiceConnection: PrivateEndpointPrivateServiceConnection[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/private_endpoint.html#timeouts PrivateEndpoint#timeouts}
+  */
   readonly timeouts?: PrivateEndpointTimeouts;
 }
 export class PrivateEndpointCustomDnsConfigs extends cdktf.ComplexComputedList {
@@ -81,7 +108,13 @@ export class PrivateEndpointPrivateDnsZoneConfigs extends cdktf.ComplexComputedL
   }
 }
 export interface PrivateEndpointPrivateDnsZoneGroup {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/private_endpoint.html#name PrivateEndpoint#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/private_endpoint.html#private_dns_zone_ids PrivateEndpoint#private_dns_zone_ids}
+  */
   readonly privateDnsZoneIds: string[];
 }
 
@@ -94,11 +127,29 @@ function privateEndpointPrivateDnsZoneGroupToTerraform(struct?: PrivateEndpointP
 }
 
 export interface PrivateEndpointPrivateServiceConnection {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/private_endpoint.html#is_manual_connection PrivateEndpoint#is_manual_connection}
+  */
   readonly isManualConnection: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/private_endpoint.html#name PrivateEndpoint#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/private_endpoint.html#private_connection_resource_alias PrivateEndpoint#private_connection_resource_alias}
+  */
   readonly privateConnectionResourceAlias?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/private_endpoint.html#private_connection_resource_id PrivateEndpoint#private_connection_resource_id}
+  */
   readonly privateConnectionResourceId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/private_endpoint.html#request_message PrivateEndpoint#request_message}
+  */
   readonly requestMessage?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/private_endpoint.html#subresource_names PrivateEndpoint#subresource_names}
+  */
   readonly subresourceNames?: string[];
 }
 
@@ -115,9 +166,21 @@ function privateEndpointPrivateServiceConnectionToTerraform(struct?: PrivateEndp
 }
 
 export interface PrivateEndpointTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/private_endpoint.html#create PrivateEndpoint#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/private_endpoint.html#delete PrivateEndpoint#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/private_endpoint.html#read PrivateEndpoint#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/private_endpoint.html#update PrivateEndpoint#update}
+  */
   readonly update?: string;
 }
 
@@ -132,14 +195,22 @@ function privateEndpointTimeoutsToTerraform(struct?: PrivateEndpointTimeouts): a
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/private_endpoint.html azurerm_private_endpoint}
+*/
 export class PrivateEndpoint extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/private_endpoint.html azurerm_private_endpoint} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options PrivateEndpointConfig
+  */
   public constructor(scope: Construct, id: string, config: PrivateEndpointConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_private_endpoint',

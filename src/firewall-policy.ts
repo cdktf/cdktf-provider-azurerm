@@ -7,23 +7,65 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface FirewallPolicyConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_policy.html#base_policy_id FirewallPolicy#base_policy_id}
+  */
   readonly basePolicyId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_policy.html#location FirewallPolicy#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_policy.html#name FirewallPolicy#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_policy.html#resource_group_name FirewallPolicy#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_policy.html#sku FirewallPolicy#sku}
+  */
   readonly sku?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_policy.html#tags FirewallPolicy#tags}
+  */
   readonly tags?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_policy.html#threat_intelligence_mode FirewallPolicy#threat_intelligence_mode}
+  */
   readonly threatIntelligenceMode?: string;
-  /** dns block */
+  /**
+  * dns block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_policy.html#dns FirewallPolicy#dns}
+  */
   readonly dns?: FirewallPolicyDns[];
-  /** threat_intelligence_allowlist block */
+  /**
+  * threat_intelligence_allowlist block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_policy.html#threat_intelligence_allowlist FirewallPolicy#threat_intelligence_allowlist}
+  */
   readonly threatIntelligenceAllowlist?: FirewallPolicyThreatIntelligenceAllowlist[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_policy.html#timeouts FirewallPolicy#timeouts}
+  */
   readonly timeouts?: FirewallPolicyTimeouts;
 }
 export interface FirewallPolicyDns {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_policy.html#network_rule_fqdn_enabled FirewallPolicy#network_rule_fqdn_enabled}
+  */
   readonly networkRuleFqdnEnabled?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_policy.html#proxy_enabled FirewallPolicy#proxy_enabled}
+  */
   readonly proxyEnabled?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_policy.html#servers FirewallPolicy#servers}
+  */
   readonly servers?: string[];
 }
 
@@ -37,7 +79,13 @@ function firewallPolicyDnsToTerraform(struct?: FirewallPolicyDns): any {
 }
 
 export interface FirewallPolicyThreatIntelligenceAllowlist {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_policy.html#fqdns FirewallPolicy#fqdns}
+  */
   readonly fqdns?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_policy.html#ip_addresses FirewallPolicy#ip_addresses}
+  */
   readonly ipAddresses?: string[];
 }
 
@@ -50,9 +98,21 @@ function firewallPolicyThreatIntelligenceAllowlistToTerraform(struct?: FirewallP
 }
 
 export interface FirewallPolicyTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_policy.html#create FirewallPolicy#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_policy.html#delete FirewallPolicy#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_policy.html#read FirewallPolicy#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_policy.html#update FirewallPolicy#update}
+  */
   readonly update?: string;
 }
 
@@ -67,14 +127,22 @@ function firewallPolicyTimeoutsToTerraform(struct?: FirewallPolicyTimeouts): any
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_policy.html azurerm_firewall_policy}
+*/
 export class FirewallPolicy extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_policy.html azurerm_firewall_policy} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options FirewallPolicyConfig
+  */
   public constructor(scope: Construct, id: string, config: FirewallPolicyConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_firewall_policy',

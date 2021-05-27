@@ -7,23 +7,69 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface ApplicationInsightsConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights.html#application_type ApplicationInsights#application_type}
+  */
   readonly applicationType: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights.html#daily_data_cap_in_gb ApplicationInsights#daily_data_cap_in_gb}
+  */
   readonly dailyDataCapInGb?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights.html#daily_data_cap_notifications_disabled ApplicationInsights#daily_data_cap_notifications_disabled}
+  */
   readonly dailyDataCapNotificationsDisabled?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights.html#disable_ip_masking ApplicationInsights#disable_ip_masking}
+  */
   readonly disableIpMasking?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights.html#location ApplicationInsights#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights.html#name ApplicationInsights#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights.html#resource_group_name ApplicationInsights#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights.html#retention_in_days ApplicationInsights#retention_in_days}
+  */
   readonly retentionInDays?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights.html#sampling_percentage ApplicationInsights#sampling_percentage}
+  */
   readonly samplingPercentage?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights.html#tags ApplicationInsights#tags}
+  */
   readonly tags?: { [key: string]: string };
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights.html#timeouts ApplicationInsights#timeouts}
+  */
   readonly timeouts?: ApplicationInsightsTimeouts;
 }
 export interface ApplicationInsightsTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights.html#create ApplicationInsights#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights.html#delete ApplicationInsights#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights.html#read ApplicationInsights#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights.html#update ApplicationInsights#update}
+  */
   readonly update?: string;
 }
 
@@ -38,14 +84,22 @@ function applicationInsightsTimeoutsToTerraform(struct?: ApplicationInsightsTime
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights.html azurerm_application_insights}
+*/
 export class ApplicationInsights extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights.html azurerm_application_insights} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options ApplicationInsightsConfig
+  */
   public constructor(scope: Construct, id: string, config: ApplicationInsightsConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_application_insights',

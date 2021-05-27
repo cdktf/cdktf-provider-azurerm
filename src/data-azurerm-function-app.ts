@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/data_azurerm_function_app.html
+// https://www.terraform.io/docs/providers/azurerm/d/function_app.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,10 +7,23 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataAzurermFunctionAppConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/function_app.html#name DataAzurermFunctionApp#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/function_app.html#resource_group_name DataAzurermFunctionApp#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/function_app.html#tags DataAzurermFunctionApp#tags}
+  */
   readonly tags?: { [key: string]: string };
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/function_app.html#timeouts DataAzurermFunctionApp#timeouts}
+  */
   readonly timeouts?: DataAzurermFunctionAppTimeouts;
 }
 export class DataAzurermFunctionAppConnectionString extends cdktf.ComplexComputedList {
@@ -245,6 +258,9 @@ export class DataAzurermFunctionAppSourceControl extends cdktf.ComplexComputedLi
   }
 }
 export interface DataAzurermFunctionAppTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/function_app.html#read DataAzurermFunctionApp#read}
+  */
   readonly read?: string;
 }
 
@@ -256,14 +272,22 @@ function dataAzurermFunctionAppTimeoutsToTerraform(struct?: DataAzurermFunctionA
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/function_app.html azurerm_function_app}
+*/
 export class DataAzurermFunctionApp extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/function_app.html azurerm_function_app} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataAzurermFunctionAppConfig
+  */
   public constructor(scope: Construct, id: string, config: DataAzurermFunctionAppConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_function_app',

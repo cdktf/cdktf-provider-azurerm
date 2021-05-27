@@ -7,20 +7,57 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface SubscriptionTemplateDeploymentConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/subscription_template_deployment.html#debug_level SubscriptionTemplateDeployment#debug_level}
+  */
   readonly debugLevel?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/subscription_template_deployment.html#location SubscriptionTemplateDeployment#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/subscription_template_deployment.html#name SubscriptionTemplateDeployment#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/subscription_template_deployment.html#parameters_content SubscriptionTemplateDeployment#parameters_content}
+  */
   readonly parametersContent?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/subscription_template_deployment.html#tags SubscriptionTemplateDeployment#tags}
+  */
   readonly tags?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/subscription_template_deployment.html#template_content SubscriptionTemplateDeployment#template_content}
+  */
   readonly templateContent?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/subscription_template_deployment.html#template_spec_version_id SubscriptionTemplateDeployment#template_spec_version_id}
+  */
   readonly templateSpecVersionId?: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/subscription_template_deployment.html#timeouts SubscriptionTemplateDeployment#timeouts}
+  */
   readonly timeouts?: SubscriptionTemplateDeploymentTimeouts;
 }
 export interface SubscriptionTemplateDeploymentTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/subscription_template_deployment.html#create SubscriptionTemplateDeployment#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/subscription_template_deployment.html#delete SubscriptionTemplateDeployment#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/subscription_template_deployment.html#read SubscriptionTemplateDeployment#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/subscription_template_deployment.html#update SubscriptionTemplateDeployment#update}
+  */
   readonly update?: string;
 }
 
@@ -35,14 +72,22 @@ function subscriptionTemplateDeploymentTimeoutsToTerraform(struct?: Subscription
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/subscription_template_deployment.html azurerm_subscription_template_deployment}
+*/
 export class SubscriptionTemplateDeployment extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/subscription_template_deployment.html azurerm_subscription_template_deployment} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options SubscriptionTemplateDeploymentConfig
+  */
   public constructor(scope: Construct, id: string, config: SubscriptionTemplateDeploymentConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_subscription_template_deployment',

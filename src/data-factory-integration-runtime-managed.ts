@@ -7,29 +7,87 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataFactoryIntegrationRuntimeManagedConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_managed.html#data_factory_name DataFactoryIntegrationRuntimeManaged#data_factory_name}
+  */
   readonly dataFactoryName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_managed.html#description DataFactoryIntegrationRuntimeManaged#description}
+  */
   readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_managed.html#edition DataFactoryIntegrationRuntimeManaged#edition}
+  */
   readonly edition?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_managed.html#license_type DataFactoryIntegrationRuntimeManaged#license_type}
+  */
   readonly licenseType?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_managed.html#location DataFactoryIntegrationRuntimeManaged#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_managed.html#max_parallel_executions_per_node DataFactoryIntegrationRuntimeManaged#max_parallel_executions_per_node}
+  */
   readonly maxParallelExecutionsPerNode?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_managed.html#name DataFactoryIntegrationRuntimeManaged#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_managed.html#node_size DataFactoryIntegrationRuntimeManaged#node_size}
+  */
   readonly nodeSize: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_managed.html#number_of_nodes DataFactoryIntegrationRuntimeManaged#number_of_nodes}
+  */
   readonly numberOfNodes?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_managed.html#resource_group_name DataFactoryIntegrationRuntimeManaged#resource_group_name}
+  */
   readonly resourceGroupName: string;
-  /** catalog_info block */
+  /**
+  * catalog_info block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_managed.html#catalog_info DataFactoryIntegrationRuntimeManaged#catalog_info}
+  */
   readonly catalogInfo?: DataFactoryIntegrationRuntimeManagedCatalogInfo[];
-  /** custom_setup_script block */
+  /**
+  * custom_setup_script block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_managed.html#custom_setup_script DataFactoryIntegrationRuntimeManaged#custom_setup_script}
+  */
   readonly customSetupScript?: DataFactoryIntegrationRuntimeManagedCustomSetupScript[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_managed.html#timeouts DataFactoryIntegrationRuntimeManaged#timeouts}
+  */
   readonly timeouts?: DataFactoryIntegrationRuntimeManagedTimeouts;
-  /** vnet_integration block */
+  /**
+  * vnet_integration block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_managed.html#vnet_integration DataFactoryIntegrationRuntimeManaged#vnet_integration}
+  */
   readonly vnetIntegration?: DataFactoryIntegrationRuntimeManagedVnetIntegration[];
 }
 export interface DataFactoryIntegrationRuntimeManagedCatalogInfo {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_managed.html#administrator_login DataFactoryIntegrationRuntimeManaged#administrator_login}
+  */
   readonly administratorLogin?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_managed.html#administrator_password DataFactoryIntegrationRuntimeManaged#administrator_password}
+  */
   readonly administratorPassword?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_managed.html#pricing_tier DataFactoryIntegrationRuntimeManaged#pricing_tier}
+  */
   readonly pricingTier?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_managed.html#server_endpoint DataFactoryIntegrationRuntimeManaged#server_endpoint}
+  */
   readonly serverEndpoint: string;
 }
 
@@ -44,7 +102,13 @@ function dataFactoryIntegrationRuntimeManagedCatalogInfoToTerraform(struct?: Dat
 }
 
 export interface DataFactoryIntegrationRuntimeManagedCustomSetupScript {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_managed.html#blob_container_uri DataFactoryIntegrationRuntimeManaged#blob_container_uri}
+  */
   readonly blobContainerUri: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_managed.html#sas_token DataFactoryIntegrationRuntimeManaged#sas_token}
+  */
   readonly sasToken: string;
 }
 
@@ -57,9 +121,21 @@ function dataFactoryIntegrationRuntimeManagedCustomSetupScriptToTerraform(struct
 }
 
 export interface DataFactoryIntegrationRuntimeManagedTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_managed.html#create DataFactoryIntegrationRuntimeManaged#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_managed.html#delete DataFactoryIntegrationRuntimeManaged#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_managed.html#read DataFactoryIntegrationRuntimeManaged#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_managed.html#update DataFactoryIntegrationRuntimeManaged#update}
+  */
   readonly update?: string;
 }
 
@@ -74,7 +150,13 @@ function dataFactoryIntegrationRuntimeManagedTimeoutsToTerraform(struct?: DataFa
 }
 
 export interface DataFactoryIntegrationRuntimeManagedVnetIntegration {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_managed.html#subnet_name DataFactoryIntegrationRuntimeManaged#subnet_name}
+  */
   readonly subnetName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_managed.html#vnet_id DataFactoryIntegrationRuntimeManaged#vnet_id}
+  */
   readonly vnetId: string;
 }
 
@@ -87,14 +169,22 @@ function dataFactoryIntegrationRuntimeManagedVnetIntegrationToTerraform(struct?:
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_managed.html azurerm_data_factory_integration_runtime_managed}
+*/
 export class DataFactoryIntegrationRuntimeManaged extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_managed.html azurerm_data_factory_integration_runtime_managed} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataFactoryIntegrationRuntimeManagedConfig
+  */
   public constructor(scope: Construct, id: string, config: DataFactoryIntegrationRuntimeManagedConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_data_factory_integration_runtime_managed',

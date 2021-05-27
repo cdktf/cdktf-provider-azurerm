@@ -7,14 +7,37 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface AppConfigurationConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_configuration.html#location AppConfiguration#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_configuration.html#name AppConfiguration#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_configuration.html#resource_group_name AppConfiguration#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_configuration.html#sku AppConfiguration#sku}
+  */
   readonly sku?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_configuration.html#tags AppConfiguration#tags}
+  */
   readonly tags?: { [key: string]: string };
-  /** identity block */
+  /**
+  * identity block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_configuration.html#identity AppConfiguration#identity}
+  */
   readonly identity?: AppConfigurationIdentity[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_configuration.html#timeouts AppConfiguration#timeouts}
+  */
   readonly timeouts?: AppConfigurationTimeouts;
 }
 export class AppConfigurationPrimaryReadKey extends cdktf.ComplexComputedList {
@@ -86,6 +109,9 @@ export class AppConfigurationSecondaryWriteKey extends cdktf.ComplexComputedList
   }
 }
 export interface AppConfigurationIdentity {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_configuration.html#type AppConfiguration#type}
+  */
   readonly type: string;
 }
 
@@ -97,9 +123,21 @@ function appConfigurationIdentityToTerraform(struct?: AppConfigurationIdentity):
 }
 
 export interface AppConfigurationTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_configuration.html#create AppConfiguration#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_configuration.html#delete AppConfiguration#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_configuration.html#read AppConfiguration#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_configuration.html#update AppConfiguration#update}
+  */
   readonly update?: string;
 }
 
@@ -114,14 +152,22 @@ function appConfigurationTimeoutsToTerraform(struct?: AppConfigurationTimeouts):
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/app_configuration.html azurerm_app_configuration}
+*/
 export class AppConfiguration extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/app_configuration.html azurerm_app_configuration} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options AppConfigurationConfig
+  */
   public constructor(scope: Construct, id: string, config: AppConfigurationConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_app_configuration',

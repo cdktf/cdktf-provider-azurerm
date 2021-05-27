@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/data_azurerm_nat_gateway.html
+// https://www.terraform.io/docs/providers/azurerm/d/nat_gateway.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,14 +7,33 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataAzurermNatGatewayConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/nat_gateway.html#name DataAzurermNatGateway#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/nat_gateway.html#public_ip_address_ids DataAzurermNatGateway#public_ip_address_ids}
+  */
   readonly publicIpAddressIds?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/nat_gateway.html#public_ip_prefix_ids DataAzurermNatGateway#public_ip_prefix_ids}
+  */
   readonly publicIpPrefixIds?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/nat_gateway.html#resource_group_name DataAzurermNatGateway#resource_group_name}
+  */
   readonly resourceGroupName: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/nat_gateway.html#timeouts DataAzurermNatGateway#timeouts}
+  */
   readonly timeouts?: DataAzurermNatGatewayTimeouts;
 }
 export interface DataAzurermNatGatewayTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/nat_gateway.html#read DataAzurermNatGateway#read}
+  */
   readonly read?: string;
 }
 
@@ -26,14 +45,22 @@ function dataAzurermNatGatewayTimeoutsToTerraform(struct?: DataAzurermNatGateway
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/nat_gateway.html azurerm_nat_gateway}
+*/
 export class DataAzurermNatGateway extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/nat_gateway.html azurerm_nat_gateway} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataAzurermNatGatewayConfig
+  */
   public constructor(scope: Construct, id: string, config: DataAzurermNatGatewayConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_nat_gateway',

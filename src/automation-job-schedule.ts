@@ -7,20 +7,57 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface AutomationJobScheduleConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_job_schedule.html#automation_account_name AutomationJobSchedule#automation_account_name}
+  */
   readonly automationAccountName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_job_schedule.html#job_schedule_id AutomationJobSchedule#job_schedule_id}
+  */
   readonly jobScheduleId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_job_schedule.html#parameters AutomationJobSchedule#parameters}
+  */
   readonly parameters?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_job_schedule.html#resource_group_name AutomationJobSchedule#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_job_schedule.html#run_on AutomationJobSchedule#run_on}
+  */
   readonly runOn?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_job_schedule.html#runbook_name AutomationJobSchedule#runbook_name}
+  */
   readonly runbookName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_job_schedule.html#schedule_name AutomationJobSchedule#schedule_name}
+  */
   readonly scheduleName: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_job_schedule.html#timeouts AutomationJobSchedule#timeouts}
+  */
   readonly timeouts?: AutomationJobScheduleTimeouts;
 }
 export interface AutomationJobScheduleTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_job_schedule.html#create AutomationJobSchedule#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_job_schedule.html#delete AutomationJobSchedule#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_job_schedule.html#read AutomationJobSchedule#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_job_schedule.html#update AutomationJobSchedule#update}
+  */
   readonly update?: string;
 }
 
@@ -35,14 +72,22 @@ function automationJobScheduleTimeoutsToTerraform(struct?: AutomationJobSchedule
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/automation_job_schedule.html azurerm_automation_job_schedule}
+*/
 export class AutomationJobSchedule extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/automation_job_schedule.html azurerm_automation_job_schedule} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options AutomationJobScheduleConfig
+  */
   public constructor(scope: Construct, id: string, config: AutomationJobScheduleConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_automation_job_schedule',

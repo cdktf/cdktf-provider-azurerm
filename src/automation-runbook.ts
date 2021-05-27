@@ -7,26 +7,79 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface AutomationRunbookConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_runbook.html#automation_account_name AutomationRunbook#automation_account_name}
+  */
   readonly automationAccountName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_runbook.html#content AutomationRunbook#content}
+  */
   readonly content?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_runbook.html#description AutomationRunbook#description}
+  */
   readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_runbook.html#job_schedule AutomationRunbook#job_schedule}
+  */
   readonly jobSchedule?: AutomationRunbookJobSchedule[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_runbook.html#location AutomationRunbook#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_runbook.html#log_progress AutomationRunbook#log_progress}
+  */
   readonly logProgress: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_runbook.html#log_verbose AutomationRunbook#log_verbose}
+  */
   readonly logVerbose: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_runbook.html#name AutomationRunbook#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_runbook.html#resource_group_name AutomationRunbook#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_runbook.html#runbook_type AutomationRunbook#runbook_type}
+  */
   readonly runbookType: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_runbook.html#tags AutomationRunbook#tags}
+  */
   readonly tags?: { [key: string]: string };
-  /** publish_content_link block */
+  /**
+  * publish_content_link block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_runbook.html#publish_content_link AutomationRunbook#publish_content_link}
+  */
   readonly publishContentLink?: AutomationRunbookPublishContentLink[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_runbook.html#timeouts AutomationRunbook#timeouts}
+  */
   readonly timeouts?: AutomationRunbookTimeouts;
 }
 export interface AutomationRunbookJobSchedule {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_runbook.html#job_schedule_id AutomationRunbook#job_schedule_id}
+  */
   readonly jobScheduleId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_runbook.html#parameters AutomationRunbook#parameters}
+  */
   readonly parameters?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_runbook.html#run_on AutomationRunbook#run_on}
+  */
   readonly runOn?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_runbook.html#schedule_name AutomationRunbook#schedule_name}
+  */
   readonly scheduleName?: string;
 }
 
@@ -41,7 +94,13 @@ function automationRunbookJobScheduleToTerraform(struct?: AutomationRunbookJobSc
 }
 
 export interface AutomationRunbookPublishContentLinkHash {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_runbook.html#algorithm AutomationRunbook#algorithm}
+  */
   readonly algorithm: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_runbook.html#value AutomationRunbook#value}
+  */
   readonly value: string;
 }
 
@@ -54,9 +113,19 @@ function automationRunbookPublishContentLinkHashToTerraform(struct?: AutomationR
 }
 
 export interface AutomationRunbookPublishContentLink {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_runbook.html#uri AutomationRunbook#uri}
+  */
   readonly uri: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_runbook.html#version AutomationRunbook#version}
+  */
   readonly version?: string;
-  /** hash block */
+  /**
+  * hash block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_runbook.html#hash AutomationRunbook#hash}
+  */
   readonly hash?: AutomationRunbookPublishContentLinkHash[];
 }
 
@@ -70,9 +139,21 @@ function automationRunbookPublishContentLinkToTerraform(struct?: AutomationRunbo
 }
 
 export interface AutomationRunbookTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_runbook.html#create AutomationRunbook#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_runbook.html#delete AutomationRunbook#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_runbook.html#read AutomationRunbook#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_runbook.html#update AutomationRunbook#update}
+  */
   readonly update?: string;
 }
 
@@ -87,14 +168,22 @@ function automationRunbookTimeoutsToTerraform(struct?: AutomationRunbookTimeouts
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/automation_runbook.html azurerm_automation_runbook}
+*/
 export class AutomationRunbook extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/automation_runbook.html azurerm_automation_runbook} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options AutomationRunbookConfig
+  */
   public constructor(scope: Construct, id: string, config: AutomationRunbookConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_automation_runbook',

@@ -7,29 +7,85 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface ApiManagementDiagnosticConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_diagnostic.html#always_log_errors ApiManagementDiagnostic#always_log_errors}
+  */
   readonly alwaysLogErrors?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_diagnostic.html#api_management_logger_id ApiManagementDiagnostic#api_management_logger_id}
+  */
   readonly apiManagementLoggerId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_diagnostic.html#api_management_name ApiManagementDiagnostic#api_management_name}
+  */
   readonly apiManagementName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_diagnostic.html#enabled ApiManagementDiagnostic#enabled}
+  */
   readonly enabled?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_diagnostic.html#http_correlation_protocol ApiManagementDiagnostic#http_correlation_protocol}
+  */
   readonly httpCorrelationProtocol?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_diagnostic.html#identifier ApiManagementDiagnostic#identifier}
+  */
   readonly identifier: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_diagnostic.html#log_client_ip ApiManagementDiagnostic#log_client_ip}
+  */
   readonly logClientIp?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_diagnostic.html#resource_group_name ApiManagementDiagnostic#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_diagnostic.html#sampling_percentage ApiManagementDiagnostic#sampling_percentage}
+  */
   readonly samplingPercentage?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_diagnostic.html#verbosity ApiManagementDiagnostic#verbosity}
+  */
   readonly verbosity?: string;
-  /** backend_request block */
+  /**
+  * backend_request block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_diagnostic.html#backend_request ApiManagementDiagnostic#backend_request}
+  */
   readonly backendRequest?: ApiManagementDiagnosticBackendRequest[];
-  /** backend_response block */
+  /**
+  * backend_response block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_diagnostic.html#backend_response ApiManagementDiagnostic#backend_response}
+  */
   readonly backendResponse?: ApiManagementDiagnosticBackendResponse[];
-  /** frontend_request block */
+  /**
+  * frontend_request block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_diagnostic.html#frontend_request ApiManagementDiagnostic#frontend_request}
+  */
   readonly frontendRequest?: ApiManagementDiagnosticFrontendRequest[];
-  /** frontend_response block */
+  /**
+  * frontend_response block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_diagnostic.html#frontend_response ApiManagementDiagnostic#frontend_response}
+  */
   readonly frontendResponse?: ApiManagementDiagnosticFrontendResponse[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_diagnostic.html#timeouts ApiManagementDiagnostic#timeouts}
+  */
   readonly timeouts?: ApiManagementDiagnosticTimeouts;
 }
 export interface ApiManagementDiagnosticBackendRequest {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_diagnostic.html#body_bytes ApiManagementDiagnostic#body_bytes}
+  */
   readonly bodyBytes?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_diagnostic.html#headers_to_log ApiManagementDiagnostic#headers_to_log}
+  */
   readonly headersToLog?: string[];
 }
 
@@ -42,7 +98,13 @@ function apiManagementDiagnosticBackendRequestToTerraform(struct?: ApiManagement
 }
 
 export interface ApiManagementDiagnosticBackendResponse {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_diagnostic.html#body_bytes ApiManagementDiagnostic#body_bytes}
+  */
   readonly bodyBytes?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_diagnostic.html#headers_to_log ApiManagementDiagnostic#headers_to_log}
+  */
   readonly headersToLog?: string[];
 }
 
@@ -55,7 +117,13 @@ function apiManagementDiagnosticBackendResponseToTerraform(struct?: ApiManagemen
 }
 
 export interface ApiManagementDiagnosticFrontendRequest {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_diagnostic.html#body_bytes ApiManagementDiagnostic#body_bytes}
+  */
   readonly bodyBytes?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_diagnostic.html#headers_to_log ApiManagementDiagnostic#headers_to_log}
+  */
   readonly headersToLog?: string[];
 }
 
@@ -68,7 +136,13 @@ function apiManagementDiagnosticFrontendRequestToTerraform(struct?: ApiManagemen
 }
 
 export interface ApiManagementDiagnosticFrontendResponse {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_diagnostic.html#body_bytes ApiManagementDiagnostic#body_bytes}
+  */
   readonly bodyBytes?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_diagnostic.html#headers_to_log ApiManagementDiagnostic#headers_to_log}
+  */
   readonly headersToLog?: string[];
 }
 
@@ -81,9 +155,21 @@ function apiManagementDiagnosticFrontendResponseToTerraform(struct?: ApiManageme
 }
 
 export interface ApiManagementDiagnosticTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_diagnostic.html#create ApiManagementDiagnostic#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_diagnostic.html#delete ApiManagementDiagnostic#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_diagnostic.html#read ApiManagementDiagnostic#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_diagnostic.html#update ApiManagementDiagnostic#update}
+  */
   readonly update?: string;
 }
 
@@ -98,14 +184,22 @@ function apiManagementDiagnosticTimeoutsToTerraform(struct?: ApiManagementDiagno
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_diagnostic.html azurerm_api_management_diagnostic}
+*/
 export class ApiManagementDiagnostic extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_diagnostic.html azurerm_api_management_diagnostic} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options ApiManagementDiagnosticConfig
+  */
   public constructor(scope: Construct, id: string, config: ApiManagementDiagnosticConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_api_management_diagnostic',

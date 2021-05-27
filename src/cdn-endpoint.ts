@@ -7,33 +7,101 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface CdnEndpointConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#content_types_to_compress CdnEndpoint#content_types_to_compress}
+  */
   readonly contentTypesToCompress?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#is_compression_enabled CdnEndpoint#is_compression_enabled}
+  */
   readonly isCompressionEnabled?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#is_http_allowed CdnEndpoint#is_http_allowed}
+  */
   readonly isHttpAllowed?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#is_https_allowed CdnEndpoint#is_https_allowed}
+  */
   readonly isHttpsAllowed?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#location CdnEndpoint#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#name CdnEndpoint#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#optimization_type CdnEndpoint#optimization_type}
+  */
   readonly optimizationType?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#origin_host_header CdnEndpoint#origin_host_header}
+  */
   readonly originHostHeader?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#origin_path CdnEndpoint#origin_path}
+  */
   readonly originPath?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#probe_path CdnEndpoint#probe_path}
+  */
   readonly probePath?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#profile_name CdnEndpoint#profile_name}
+  */
   readonly profileName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#querystring_caching_behaviour CdnEndpoint#querystring_caching_behaviour}
+  */
   readonly querystringCachingBehaviour?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#resource_group_name CdnEndpoint#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#tags CdnEndpoint#tags}
+  */
   readonly tags?: { [key: string]: string };
-  /** delivery_rule block */
+  /**
+  * delivery_rule block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#delivery_rule CdnEndpoint#delivery_rule}
+  */
   readonly deliveryRule?: CdnEndpointDeliveryRule[];
-  /** geo_filter block */
+  /**
+  * geo_filter block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#geo_filter CdnEndpoint#geo_filter}
+  */
   readonly geoFilter?: CdnEndpointGeoFilter[];
-  /** global_delivery_rule block */
+  /**
+  * global_delivery_rule block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#global_delivery_rule CdnEndpoint#global_delivery_rule}
+  */
   readonly globalDeliveryRule?: CdnEndpointGlobalDeliveryRule[];
-  /** origin block */
+  /**
+  * origin block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#origin CdnEndpoint#origin}
+  */
   readonly origin: CdnEndpointOrigin[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#timeouts CdnEndpoint#timeouts}
+  */
   readonly timeouts?: CdnEndpointTimeouts;
 }
 export interface CdnEndpointDeliveryRuleCacheExpirationAction {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#behavior CdnEndpoint#behavior}
+  */
   readonly behavior: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#duration CdnEndpoint#duration}
+  */
   readonly duration?: string;
 }
 
@@ -46,7 +114,13 @@ function cdnEndpointDeliveryRuleCacheExpirationActionToTerraform(struct?: CdnEnd
 }
 
 export interface CdnEndpointDeliveryRuleCacheKeyQueryStringAction {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#behavior CdnEndpoint#behavior}
+  */
   readonly behavior: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#parameters CdnEndpoint#parameters}
+  */
   readonly parameters?: string;
 }
 
@@ -59,10 +133,25 @@ function cdnEndpointDeliveryRuleCacheKeyQueryStringActionToTerraform(struct?: Cd
 }
 
 export interface CdnEndpointDeliveryRuleCookiesCondition {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#match_values CdnEndpoint#match_values}
+  */
   readonly matchValues?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#negate_condition CdnEndpoint#negate_condition}
+  */
   readonly negateCondition?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#operator CdnEndpoint#operator}
+  */
   readonly operator: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#selector CdnEndpoint#selector}
+  */
   readonly selector: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#transforms CdnEndpoint#transforms}
+  */
   readonly transforms?: string[];
 }
 
@@ -78,8 +167,17 @@ function cdnEndpointDeliveryRuleCookiesConditionToTerraform(struct?: CdnEndpoint
 }
 
 export interface CdnEndpointDeliveryRuleDeviceCondition {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#match_values CdnEndpoint#match_values}
+  */
   readonly matchValues: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#negate_condition CdnEndpoint#negate_condition}
+  */
   readonly negateCondition?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#operator CdnEndpoint#operator}
+  */
   readonly operator?: string;
 }
 
@@ -93,8 +191,17 @@ function cdnEndpointDeliveryRuleDeviceConditionToTerraform(struct?: CdnEndpointD
 }
 
 export interface CdnEndpointDeliveryRuleHttpVersionCondition {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#match_values CdnEndpoint#match_values}
+  */
   readonly matchValues: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#negate_condition CdnEndpoint#negate_condition}
+  */
   readonly negateCondition?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#operator CdnEndpoint#operator}
+  */
   readonly operator?: string;
 }
 
@@ -108,8 +215,17 @@ function cdnEndpointDeliveryRuleHttpVersionConditionToTerraform(struct?: CdnEndp
 }
 
 export interface CdnEndpointDeliveryRuleModifyRequestHeaderAction {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#action CdnEndpoint#action}
+  */
   readonly action: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#name CdnEndpoint#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#value CdnEndpoint#value}
+  */
   readonly value?: string;
 }
 
@@ -123,8 +239,17 @@ function cdnEndpointDeliveryRuleModifyRequestHeaderActionToTerraform(struct?: Cd
 }
 
 export interface CdnEndpointDeliveryRuleModifyResponseHeaderAction {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#action CdnEndpoint#action}
+  */
   readonly action: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#name CdnEndpoint#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#value CdnEndpoint#value}
+  */
   readonly value?: string;
 }
 
@@ -138,10 +263,25 @@ function cdnEndpointDeliveryRuleModifyResponseHeaderActionToTerraform(struct?: C
 }
 
 export interface CdnEndpointDeliveryRulePostArgCondition {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#match_values CdnEndpoint#match_values}
+  */
   readonly matchValues?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#negate_condition CdnEndpoint#negate_condition}
+  */
   readonly negateCondition?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#operator CdnEndpoint#operator}
+  */
   readonly operator: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#selector CdnEndpoint#selector}
+  */
   readonly selector: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#transforms CdnEndpoint#transforms}
+  */
   readonly transforms?: string[];
 }
 
@@ -157,9 +297,21 @@ function cdnEndpointDeliveryRulePostArgConditionToTerraform(struct?: CdnEndpoint
 }
 
 export interface CdnEndpointDeliveryRuleQueryStringCondition {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#match_values CdnEndpoint#match_values}
+  */
   readonly matchValues?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#negate_condition CdnEndpoint#negate_condition}
+  */
   readonly negateCondition?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#operator CdnEndpoint#operator}
+  */
   readonly operator: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#transforms CdnEndpoint#transforms}
+  */
   readonly transforms?: string[];
 }
 
@@ -174,8 +326,17 @@ function cdnEndpointDeliveryRuleQueryStringConditionToTerraform(struct?: CdnEndp
 }
 
 export interface CdnEndpointDeliveryRuleRemoteAddressCondition {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#match_values CdnEndpoint#match_values}
+  */
   readonly matchValues?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#negate_condition CdnEndpoint#negate_condition}
+  */
   readonly negateCondition?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#operator CdnEndpoint#operator}
+  */
   readonly operator: string;
 }
 
@@ -189,9 +350,21 @@ function cdnEndpointDeliveryRuleRemoteAddressConditionToTerraform(struct?: CdnEn
 }
 
 export interface CdnEndpointDeliveryRuleRequestBodyCondition {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#match_values CdnEndpoint#match_values}
+  */
   readonly matchValues?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#negate_condition CdnEndpoint#negate_condition}
+  */
   readonly negateCondition?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#operator CdnEndpoint#operator}
+  */
   readonly operator: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#transforms CdnEndpoint#transforms}
+  */
   readonly transforms?: string[];
 }
 
@@ -206,10 +379,25 @@ function cdnEndpointDeliveryRuleRequestBodyConditionToTerraform(struct?: CdnEndp
 }
 
 export interface CdnEndpointDeliveryRuleRequestHeaderCondition {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#match_values CdnEndpoint#match_values}
+  */
   readonly matchValues?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#negate_condition CdnEndpoint#negate_condition}
+  */
   readonly negateCondition?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#operator CdnEndpoint#operator}
+  */
   readonly operator: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#selector CdnEndpoint#selector}
+  */
   readonly selector: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#transforms CdnEndpoint#transforms}
+  */
   readonly transforms?: string[];
 }
 
@@ -225,8 +413,17 @@ function cdnEndpointDeliveryRuleRequestHeaderConditionToTerraform(struct?: CdnEn
 }
 
 export interface CdnEndpointDeliveryRuleRequestMethodCondition {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#match_values CdnEndpoint#match_values}
+  */
   readonly matchValues: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#negate_condition CdnEndpoint#negate_condition}
+  */
   readonly negateCondition?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#operator CdnEndpoint#operator}
+  */
   readonly operator?: string;
 }
 
@@ -240,8 +437,17 @@ function cdnEndpointDeliveryRuleRequestMethodConditionToTerraform(struct?: CdnEn
 }
 
 export interface CdnEndpointDeliveryRuleRequestSchemeCondition {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#match_values CdnEndpoint#match_values}
+  */
   readonly matchValues: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#negate_condition CdnEndpoint#negate_condition}
+  */
   readonly negateCondition?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#operator CdnEndpoint#operator}
+  */
   readonly operator?: string;
 }
 
@@ -255,9 +461,21 @@ function cdnEndpointDeliveryRuleRequestSchemeConditionToTerraform(struct?: CdnEn
 }
 
 export interface CdnEndpointDeliveryRuleRequestUriCondition {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#match_values CdnEndpoint#match_values}
+  */
   readonly matchValues?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#negate_condition CdnEndpoint#negate_condition}
+  */
   readonly negateCondition?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#operator CdnEndpoint#operator}
+  */
   readonly operator: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#transforms CdnEndpoint#transforms}
+  */
   readonly transforms?: string[];
 }
 
@@ -272,9 +490,21 @@ function cdnEndpointDeliveryRuleRequestUriConditionToTerraform(struct?: CdnEndpo
 }
 
 export interface CdnEndpointDeliveryRuleUrlFileExtensionCondition {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#match_values CdnEndpoint#match_values}
+  */
   readonly matchValues?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#negate_condition CdnEndpoint#negate_condition}
+  */
   readonly negateCondition?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#operator CdnEndpoint#operator}
+  */
   readonly operator: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#transforms CdnEndpoint#transforms}
+  */
   readonly transforms?: string[];
 }
 
@@ -289,9 +519,21 @@ function cdnEndpointDeliveryRuleUrlFileExtensionConditionToTerraform(struct?: Cd
 }
 
 export interface CdnEndpointDeliveryRuleUrlFileNameCondition {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#match_values CdnEndpoint#match_values}
+  */
   readonly matchValues?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#negate_condition CdnEndpoint#negate_condition}
+  */
   readonly negateCondition?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#operator CdnEndpoint#operator}
+  */
   readonly operator: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#transforms CdnEndpoint#transforms}
+  */
   readonly transforms?: string[];
 }
 
@@ -306,9 +548,21 @@ function cdnEndpointDeliveryRuleUrlFileNameConditionToTerraform(struct?: CdnEndp
 }
 
 export interface CdnEndpointDeliveryRuleUrlPathCondition {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#match_values CdnEndpoint#match_values}
+  */
   readonly matchValues?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#negate_condition CdnEndpoint#negate_condition}
+  */
   readonly negateCondition?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#operator CdnEndpoint#operator}
+  */
   readonly operator: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#transforms CdnEndpoint#transforms}
+  */
   readonly transforms?: string[];
 }
 
@@ -323,11 +577,29 @@ function cdnEndpointDeliveryRuleUrlPathConditionToTerraform(struct?: CdnEndpoint
 }
 
 export interface CdnEndpointDeliveryRuleUrlRedirectAction {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#fragment CdnEndpoint#fragment}
+  */
   readonly fragment?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#hostname CdnEndpoint#hostname}
+  */
   readonly hostname?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#path CdnEndpoint#path}
+  */
   readonly path?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#protocol CdnEndpoint#protocol}
+  */
   readonly protocol?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#query_string CdnEndpoint#query_string}
+  */
   readonly queryString?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#redirect_type CdnEndpoint#redirect_type}
+  */
   readonly redirectType: string;
 }
 
@@ -344,8 +616,17 @@ function cdnEndpointDeliveryRuleUrlRedirectActionToTerraform(struct?: CdnEndpoin
 }
 
 export interface CdnEndpointDeliveryRuleUrlRewriteAction {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#destination CdnEndpoint#destination}
+  */
   readonly destination: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#preserve_unmatched_path CdnEndpoint#preserve_unmatched_path}
+  */
   readonly preserveUnmatchedPath?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#source_pattern CdnEndpoint#source_pattern}
+  */
   readonly sourcePattern: string;
 }
 
@@ -359,47 +640,133 @@ function cdnEndpointDeliveryRuleUrlRewriteActionToTerraform(struct?: CdnEndpoint
 }
 
 export interface CdnEndpointDeliveryRule {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#name CdnEndpoint#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#order CdnEndpoint#order}
+  */
   readonly order: number;
-  /** cache_expiration_action block */
+  /**
+  * cache_expiration_action block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#cache_expiration_action CdnEndpoint#cache_expiration_action}
+  */
   readonly cacheExpirationAction?: CdnEndpointDeliveryRuleCacheExpirationAction[];
-  /** cache_key_query_string_action block */
+  /**
+  * cache_key_query_string_action block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#cache_key_query_string_action CdnEndpoint#cache_key_query_string_action}
+  */
   readonly cacheKeyQueryStringAction?: CdnEndpointDeliveryRuleCacheKeyQueryStringAction[];
-  /** cookies_condition block */
+  /**
+  * cookies_condition block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#cookies_condition CdnEndpoint#cookies_condition}
+  */
   readonly cookiesCondition?: CdnEndpointDeliveryRuleCookiesCondition[];
-  /** device_condition block */
+  /**
+  * device_condition block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#device_condition CdnEndpoint#device_condition}
+  */
   readonly deviceCondition?: CdnEndpointDeliveryRuleDeviceCondition[];
-  /** http_version_condition block */
+  /**
+  * http_version_condition block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#http_version_condition CdnEndpoint#http_version_condition}
+  */
   readonly httpVersionCondition?: CdnEndpointDeliveryRuleHttpVersionCondition[];
-  /** modify_request_header_action block */
+  /**
+  * modify_request_header_action block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#modify_request_header_action CdnEndpoint#modify_request_header_action}
+  */
   readonly modifyRequestHeaderAction?: CdnEndpointDeliveryRuleModifyRequestHeaderAction[];
-  /** modify_response_header_action block */
+  /**
+  * modify_response_header_action block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#modify_response_header_action CdnEndpoint#modify_response_header_action}
+  */
   readonly modifyResponseHeaderAction?: CdnEndpointDeliveryRuleModifyResponseHeaderAction[];
-  /** post_arg_condition block */
+  /**
+  * post_arg_condition block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#post_arg_condition CdnEndpoint#post_arg_condition}
+  */
   readonly postArgCondition?: CdnEndpointDeliveryRulePostArgCondition[];
-  /** query_string_condition block */
+  /**
+  * query_string_condition block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#query_string_condition CdnEndpoint#query_string_condition}
+  */
   readonly queryStringCondition?: CdnEndpointDeliveryRuleQueryStringCondition[];
-  /** remote_address_condition block */
+  /**
+  * remote_address_condition block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#remote_address_condition CdnEndpoint#remote_address_condition}
+  */
   readonly remoteAddressCondition?: CdnEndpointDeliveryRuleRemoteAddressCondition[];
-  /** request_body_condition block */
+  /**
+  * request_body_condition block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#request_body_condition CdnEndpoint#request_body_condition}
+  */
   readonly requestBodyCondition?: CdnEndpointDeliveryRuleRequestBodyCondition[];
-  /** request_header_condition block */
+  /**
+  * request_header_condition block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#request_header_condition CdnEndpoint#request_header_condition}
+  */
   readonly requestHeaderCondition?: CdnEndpointDeliveryRuleRequestHeaderCondition[];
-  /** request_method_condition block */
+  /**
+  * request_method_condition block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#request_method_condition CdnEndpoint#request_method_condition}
+  */
   readonly requestMethodCondition?: CdnEndpointDeliveryRuleRequestMethodCondition[];
-  /** request_scheme_condition block */
+  /**
+  * request_scheme_condition block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#request_scheme_condition CdnEndpoint#request_scheme_condition}
+  */
   readonly requestSchemeCondition?: CdnEndpointDeliveryRuleRequestSchemeCondition[];
-  /** request_uri_condition block */
+  /**
+  * request_uri_condition block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#request_uri_condition CdnEndpoint#request_uri_condition}
+  */
   readonly requestUriCondition?: CdnEndpointDeliveryRuleRequestUriCondition[];
-  /** url_file_extension_condition block */
+  /**
+  * url_file_extension_condition block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#url_file_extension_condition CdnEndpoint#url_file_extension_condition}
+  */
   readonly urlFileExtensionCondition?: CdnEndpointDeliveryRuleUrlFileExtensionCondition[];
-  /** url_file_name_condition block */
+  /**
+  * url_file_name_condition block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#url_file_name_condition CdnEndpoint#url_file_name_condition}
+  */
   readonly urlFileNameCondition?: CdnEndpointDeliveryRuleUrlFileNameCondition[];
-  /** url_path_condition block */
+  /**
+  * url_path_condition block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#url_path_condition CdnEndpoint#url_path_condition}
+  */
   readonly urlPathCondition?: CdnEndpointDeliveryRuleUrlPathCondition[];
-  /** url_redirect_action block */
+  /**
+  * url_redirect_action block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#url_redirect_action CdnEndpoint#url_redirect_action}
+  */
   readonly urlRedirectAction?: CdnEndpointDeliveryRuleUrlRedirectAction[];
-  /** url_rewrite_action block */
+  /**
+  * url_rewrite_action block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#url_rewrite_action CdnEndpoint#url_rewrite_action}
+  */
   readonly urlRewriteAction?: CdnEndpointDeliveryRuleUrlRewriteAction[];
 }
 
@@ -432,8 +799,17 @@ function cdnEndpointDeliveryRuleToTerraform(struct?: CdnEndpointDeliveryRule): a
 }
 
 export interface CdnEndpointGeoFilter {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#action CdnEndpoint#action}
+  */
   readonly action: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#country_codes CdnEndpoint#country_codes}
+  */
   readonly countryCodes: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#relative_path CdnEndpoint#relative_path}
+  */
   readonly relativePath: string;
 }
 
@@ -447,7 +823,13 @@ function cdnEndpointGeoFilterToTerraform(struct?: CdnEndpointGeoFilter): any {
 }
 
 export interface CdnEndpointGlobalDeliveryRuleCacheExpirationAction {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#behavior CdnEndpoint#behavior}
+  */
   readonly behavior: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#duration CdnEndpoint#duration}
+  */
   readonly duration?: string;
 }
 
@@ -460,7 +842,13 @@ function cdnEndpointGlobalDeliveryRuleCacheExpirationActionToTerraform(struct?: 
 }
 
 export interface CdnEndpointGlobalDeliveryRuleCacheKeyQueryStringAction {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#behavior CdnEndpoint#behavior}
+  */
   readonly behavior: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#parameters CdnEndpoint#parameters}
+  */
   readonly parameters?: string;
 }
 
@@ -473,8 +861,17 @@ function cdnEndpointGlobalDeliveryRuleCacheKeyQueryStringActionToTerraform(struc
 }
 
 export interface CdnEndpointGlobalDeliveryRuleModifyRequestHeaderAction {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#action CdnEndpoint#action}
+  */
   readonly action: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#name CdnEndpoint#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#value CdnEndpoint#value}
+  */
   readonly value?: string;
 }
 
@@ -488,8 +885,17 @@ function cdnEndpointGlobalDeliveryRuleModifyRequestHeaderActionToTerraform(struc
 }
 
 export interface CdnEndpointGlobalDeliveryRuleModifyResponseHeaderAction {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#action CdnEndpoint#action}
+  */
   readonly action: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#name CdnEndpoint#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#value CdnEndpoint#value}
+  */
   readonly value?: string;
 }
 
@@ -503,11 +909,29 @@ function cdnEndpointGlobalDeliveryRuleModifyResponseHeaderActionToTerraform(stru
 }
 
 export interface CdnEndpointGlobalDeliveryRuleUrlRedirectAction {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#fragment CdnEndpoint#fragment}
+  */
   readonly fragment?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#hostname CdnEndpoint#hostname}
+  */
   readonly hostname?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#path CdnEndpoint#path}
+  */
   readonly path?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#protocol CdnEndpoint#protocol}
+  */
   readonly protocol?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#query_string CdnEndpoint#query_string}
+  */
   readonly queryString?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#redirect_type CdnEndpoint#redirect_type}
+  */
   readonly redirectType: string;
 }
 
@@ -524,8 +948,17 @@ function cdnEndpointGlobalDeliveryRuleUrlRedirectActionToTerraform(struct?: CdnE
 }
 
 export interface CdnEndpointGlobalDeliveryRuleUrlRewriteAction {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#destination CdnEndpoint#destination}
+  */
   readonly destination: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#preserve_unmatched_path CdnEndpoint#preserve_unmatched_path}
+  */
   readonly preserveUnmatchedPath?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#source_pattern CdnEndpoint#source_pattern}
+  */
   readonly sourcePattern: string;
 }
 
@@ -539,17 +972,41 @@ function cdnEndpointGlobalDeliveryRuleUrlRewriteActionToTerraform(struct?: CdnEn
 }
 
 export interface CdnEndpointGlobalDeliveryRule {
-  /** cache_expiration_action block */
+  /**
+  * cache_expiration_action block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#cache_expiration_action CdnEndpoint#cache_expiration_action}
+  */
   readonly cacheExpirationAction?: CdnEndpointGlobalDeliveryRuleCacheExpirationAction[];
-  /** cache_key_query_string_action block */
+  /**
+  * cache_key_query_string_action block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#cache_key_query_string_action CdnEndpoint#cache_key_query_string_action}
+  */
   readonly cacheKeyQueryStringAction?: CdnEndpointGlobalDeliveryRuleCacheKeyQueryStringAction[];
-  /** modify_request_header_action block */
+  /**
+  * modify_request_header_action block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#modify_request_header_action CdnEndpoint#modify_request_header_action}
+  */
   readonly modifyRequestHeaderAction?: CdnEndpointGlobalDeliveryRuleModifyRequestHeaderAction[];
-  /** modify_response_header_action block */
+  /**
+  * modify_response_header_action block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#modify_response_header_action CdnEndpoint#modify_response_header_action}
+  */
   readonly modifyResponseHeaderAction?: CdnEndpointGlobalDeliveryRuleModifyResponseHeaderAction[];
-  /** url_redirect_action block */
+  /**
+  * url_redirect_action block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#url_redirect_action CdnEndpoint#url_redirect_action}
+  */
   readonly urlRedirectAction?: CdnEndpointGlobalDeliveryRuleUrlRedirectAction[];
-  /** url_rewrite_action block */
+  /**
+  * url_rewrite_action block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#url_rewrite_action CdnEndpoint#url_rewrite_action}
+  */
   readonly urlRewriteAction?: CdnEndpointGlobalDeliveryRuleUrlRewriteAction[];
 }
 
@@ -566,9 +1023,21 @@ function cdnEndpointGlobalDeliveryRuleToTerraform(struct?: CdnEndpointGlobalDeli
 }
 
 export interface CdnEndpointOrigin {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#host_name CdnEndpoint#host_name}
+  */
   readonly hostName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#http_port CdnEndpoint#http_port}
+  */
   readonly httpPort?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#https_port CdnEndpoint#https_port}
+  */
   readonly httpsPort?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#name CdnEndpoint#name}
+  */
   readonly name: string;
 }
 
@@ -583,9 +1052,21 @@ function cdnEndpointOriginToTerraform(struct?: CdnEndpointOrigin): any {
 }
 
 export interface CdnEndpointTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#create CdnEndpoint#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#delete CdnEndpoint#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#read CdnEndpoint#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#update CdnEndpoint#update}
+  */
   readonly update?: string;
 }
 
@@ -600,14 +1081,22 @@ function cdnEndpointTimeoutsToTerraform(struct?: CdnEndpointTimeouts): any {
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html azurerm_cdn_endpoint}
+*/
 export class CdnEndpoint extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html azurerm_cdn_endpoint} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options CdnEndpointConfig
+  */
   public constructor(scope: Construct, id: string, config: CdnEndpointConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_cdn_endpoint',

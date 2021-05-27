@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/data_azurerm_search_service.html
+// https://www.terraform.io/docs/providers/azurerm/d/search_service.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,9 +7,19 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataAzurermSearchServiceConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/search_service.html#name DataAzurermSearchService#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/search_service.html#resource_group_name DataAzurermSearchService#resource_group_name}
+  */
   readonly resourceGroupName: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/search_service.html#timeouts DataAzurermSearchService#timeouts}
+  */
   readonly timeouts?: DataAzurermSearchServiceTimeouts;
 }
 export class DataAzurermSearchServiceIdentity extends cdktf.ComplexComputedList {
@@ -42,6 +52,9 @@ export class DataAzurermSearchServiceQueryKeys extends cdktf.ComplexComputedList
   }
 }
 export interface DataAzurermSearchServiceTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/search_service.html#read DataAzurermSearchService#read}
+  */
   readonly read?: string;
 }
 
@@ -53,14 +66,22 @@ function dataAzurermSearchServiceTimeoutsToTerraform(struct?: DataAzurermSearchS
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/search_service.html azurerm_search_service}
+*/
 export class DataAzurermSearchService extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/search_service.html azurerm_search_service} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataAzurermSearchServiceConfig
+  */
   public constructor(scope: Construct, id: string, config: DataAzurermSearchServiceConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_search_service',

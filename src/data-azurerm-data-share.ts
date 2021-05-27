@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/data_azurerm_data_share.html
+// https://www.terraform.io/docs/providers/azurerm/d/data_share.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,9 +7,19 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataAzurermDataShareConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/data_share.html#account_id DataAzurermDataShare#account_id}
+  */
   readonly accountId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/data_share.html#name DataAzurermDataShare#name}
+  */
   readonly name: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/data_share.html#timeouts DataAzurermDataShare#timeouts}
+  */
   readonly timeouts?: DataAzurermDataShareTimeouts;
 }
 export class DataAzurermDataShareSnapshotSchedule extends cdktf.ComplexComputedList {
@@ -30,6 +40,9 @@ export class DataAzurermDataShareSnapshotSchedule extends cdktf.ComplexComputedL
   }
 }
 export interface DataAzurermDataShareTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/data_share.html#read DataAzurermDataShare#read}
+  */
   readonly read?: string;
 }
 
@@ -41,14 +54,22 @@ function dataAzurermDataShareTimeoutsToTerraform(struct?: DataAzurermDataShareTi
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/data_share.html azurerm_data_share}
+*/
 export class DataAzurermDataShare extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/data_share.html azurerm_data_share} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataAzurermDataShareConfig
+  */
   public constructor(scope: Construct, id: string, config: DataAzurermDataShareConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_data_share',

@@ -7,19 +7,53 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface AutomationVariableBoolConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_variable_bool.html#automation_account_name AutomationVariableBool#automation_account_name}
+  */
   readonly automationAccountName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_variable_bool.html#description AutomationVariableBool#description}
+  */
   readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_variable_bool.html#encrypted AutomationVariableBool#encrypted}
+  */
   readonly encrypted?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_variable_bool.html#name AutomationVariableBool#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_variable_bool.html#resource_group_name AutomationVariableBool#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_variable_bool.html#value AutomationVariableBool#value}
+  */
   readonly value?: boolean;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_variable_bool.html#timeouts AutomationVariableBool#timeouts}
+  */
   readonly timeouts?: AutomationVariableBoolTimeouts;
 }
 export interface AutomationVariableBoolTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_variable_bool.html#create AutomationVariableBool#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_variable_bool.html#delete AutomationVariableBool#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_variable_bool.html#read AutomationVariableBool#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_variable_bool.html#update AutomationVariableBool#update}
+  */
   readonly update?: string;
 }
 
@@ -34,14 +68,22 @@ function automationVariableBoolTimeoutsToTerraform(struct?: AutomationVariableBo
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/automation_variable_bool.html azurerm_automation_variable_bool}
+*/
 export class AutomationVariableBool extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/automation_variable_bool.html azurerm_automation_variable_bool} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options AutomationVariableBoolConfig
+  */
   public constructor(scope: Construct, id: string, config: AutomationVariableBoolConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_automation_variable_bool',

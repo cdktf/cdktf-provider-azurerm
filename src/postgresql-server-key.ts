@@ -7,15 +7,37 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface PostgresqlServerKeyConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_server_key.html#key_vault_key_id PostgresqlServerKey#key_vault_key_id}
+  */
   readonly keyVaultKeyId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_server_key.html#server_id PostgresqlServerKey#server_id}
+  */
   readonly serverId: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_server_key.html#timeouts PostgresqlServerKey#timeouts}
+  */
   readonly timeouts?: PostgresqlServerKeyTimeouts;
 }
 export interface PostgresqlServerKeyTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_server_key.html#create PostgresqlServerKey#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_server_key.html#delete PostgresqlServerKey#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_server_key.html#read PostgresqlServerKey#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_server_key.html#update PostgresqlServerKey#update}
+  */
   readonly update?: string;
 }
 
@@ -30,14 +52,22 @@ function postgresqlServerKeyTimeoutsToTerraform(struct?: PostgresqlServerKeyTime
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_server_key.html azurerm_postgresql_server_key}
+*/
 export class PostgresqlServerKey extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_server_key.html azurerm_postgresql_server_key} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options PostgresqlServerKeyConfig
+  */
   public constructor(scope: Construct, id: string, config: PostgresqlServerKeyConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_postgresql_server_key',

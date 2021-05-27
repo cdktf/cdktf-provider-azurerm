@@ -7,24 +7,69 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface MssqlElasticpoolConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_elasticpool.html#license_type MssqlElasticpool#license_type}
+  */
   readonly licenseType?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_elasticpool.html#location MssqlElasticpool#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_elasticpool.html#max_size_bytes MssqlElasticpool#max_size_bytes}
+  */
   readonly maxSizeBytes?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_elasticpool.html#max_size_gb MssqlElasticpool#max_size_gb}
+  */
   readonly maxSizeGb?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_elasticpool.html#name MssqlElasticpool#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_elasticpool.html#resource_group_name MssqlElasticpool#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_elasticpool.html#server_name MssqlElasticpool#server_name}
+  */
   readonly serverName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_elasticpool.html#tags MssqlElasticpool#tags}
+  */
   readonly tags?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_elasticpool.html#zone_redundant MssqlElasticpool#zone_redundant}
+  */
   readonly zoneRedundant?: boolean;
-  /** per_database_settings block */
+  /**
+  * per_database_settings block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_elasticpool.html#per_database_settings MssqlElasticpool#per_database_settings}
+  */
   readonly perDatabaseSettings: MssqlElasticpoolPerDatabaseSettings[];
-  /** sku block */
+  /**
+  * sku block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_elasticpool.html#sku MssqlElasticpool#sku}
+  */
   readonly sku: MssqlElasticpoolSku[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_elasticpool.html#timeouts MssqlElasticpool#timeouts}
+  */
   readonly timeouts?: MssqlElasticpoolTimeouts;
 }
 export interface MssqlElasticpoolPerDatabaseSettings {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_elasticpool.html#max_capacity MssqlElasticpool#max_capacity}
+  */
   readonly maxCapacity: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_elasticpool.html#min_capacity MssqlElasticpool#min_capacity}
+  */
   readonly minCapacity: number;
 }
 
@@ -37,9 +82,21 @@ function mssqlElasticpoolPerDatabaseSettingsToTerraform(struct?: MssqlElasticpoo
 }
 
 export interface MssqlElasticpoolSku {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_elasticpool.html#capacity MssqlElasticpool#capacity}
+  */
   readonly capacity: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_elasticpool.html#family MssqlElasticpool#family}
+  */
   readonly family?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_elasticpool.html#name MssqlElasticpool#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_elasticpool.html#tier MssqlElasticpool#tier}
+  */
   readonly tier: string;
 }
 
@@ -54,9 +111,21 @@ function mssqlElasticpoolSkuToTerraform(struct?: MssqlElasticpoolSku): any {
 }
 
 export interface MssqlElasticpoolTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_elasticpool.html#create MssqlElasticpool#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_elasticpool.html#delete MssqlElasticpool#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_elasticpool.html#read MssqlElasticpool#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_elasticpool.html#update MssqlElasticpool#update}
+  */
   readonly update?: string;
 }
 
@@ -71,14 +140,22 @@ function mssqlElasticpoolTimeoutsToTerraform(struct?: MssqlElasticpoolTimeouts):
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_elasticpool.html azurerm_mssql_elasticpool}
+*/
 export class MssqlElasticpool extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_elasticpool.html azurerm_mssql_elasticpool} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options MssqlElasticpoolConfig
+  */
   public constructor(scope: Construct, id: string, config: MssqlElasticpoolConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_mssql_elasticpool',

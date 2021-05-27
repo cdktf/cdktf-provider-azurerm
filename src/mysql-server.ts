@@ -7,36 +7,115 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface MysqlServerConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_server.html#administrator_login MysqlServer#administrator_login}
+  */
   readonly administratorLogin?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_server.html#administrator_login_password MysqlServer#administrator_login_password}
+  */
   readonly administratorLoginPassword?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_server.html#auto_grow_enabled MysqlServer#auto_grow_enabled}
+  */
   readonly autoGrowEnabled?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_server.html#backup_retention_days MysqlServer#backup_retention_days}
+  */
   readonly backupRetentionDays?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_server.html#create_mode MysqlServer#create_mode}
+  */
   readonly createMode?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_server.html#creation_source_server_id MysqlServer#creation_source_server_id}
+  */
   readonly creationSourceServerId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_server.html#geo_redundant_backup_enabled MysqlServer#geo_redundant_backup_enabled}
+  */
   readonly geoRedundantBackupEnabled?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_server.html#infrastructure_encryption_enabled MysqlServer#infrastructure_encryption_enabled}
+  */
   readonly infrastructureEncryptionEnabled?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_server.html#location MysqlServer#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_server.html#name MysqlServer#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_server.html#public_network_access_enabled MysqlServer#public_network_access_enabled}
+  */
   readonly publicNetworkAccessEnabled?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_server.html#resource_group_name MysqlServer#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_server.html#restore_point_in_time MysqlServer#restore_point_in_time}
+  */
   readonly restorePointInTime?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_server.html#sku_name MysqlServer#sku_name}
+  */
   readonly skuName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_server.html#ssl_enforcement MysqlServer#ssl_enforcement}
+  */
   readonly sslEnforcement?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_server.html#ssl_enforcement_enabled MysqlServer#ssl_enforcement_enabled}
+  */
   readonly sslEnforcementEnabled?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_server.html#ssl_minimal_tls_version_enforced MysqlServer#ssl_minimal_tls_version_enforced}
+  */
   readonly sslMinimalTlsVersionEnforced?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_server.html#storage_mb MysqlServer#storage_mb}
+  */
   readonly storageMb?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_server.html#tags MysqlServer#tags}
+  */
   readonly tags?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_server.html#version MysqlServer#version}
+  */
   readonly version: string;
-  /** identity block */
+  /**
+  * identity block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_server.html#identity MysqlServer#identity}
+  */
   readonly identity?: MysqlServerIdentity[];
-  /** storage_profile block */
+  /**
+  * storage_profile block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_server.html#storage_profile MysqlServer#storage_profile}
+  */
   readonly storageProfile?: MysqlServerStorageProfile[];
-  /** threat_detection_policy block */
+  /**
+  * threat_detection_policy block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_server.html#threat_detection_policy MysqlServer#threat_detection_policy}
+  */
   readonly threatDetectionPolicy?: MysqlServerThreatDetectionPolicy[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_server.html#timeouts MysqlServer#timeouts}
+  */
   readonly timeouts?: MysqlServerTimeouts;
 }
 export interface MysqlServerIdentity {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_server.html#type MysqlServer#type}
+  */
   readonly type: string;
 }
 
@@ -48,9 +127,21 @@ function mysqlServerIdentityToTerraform(struct?: MysqlServerIdentity): any {
 }
 
 export interface MysqlServerStorageProfile {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_server.html#auto_grow MysqlServer#auto_grow}
+  */
   readonly autoGrow?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_server.html#backup_retention_days MysqlServer#backup_retention_days}
+  */
   readonly backupRetentionDays?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_server.html#geo_redundant_backup MysqlServer#geo_redundant_backup}
+  */
   readonly geoRedundantBackup?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_server.html#storage_mb MysqlServer#storage_mb}
+  */
   readonly storageMb?: number;
 }
 
@@ -65,12 +156,33 @@ function mysqlServerStorageProfileToTerraform(struct?: MysqlServerStorageProfile
 }
 
 export interface MysqlServerThreatDetectionPolicy {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_server.html#disabled_alerts MysqlServer#disabled_alerts}
+  */
   readonly disabledAlerts?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_server.html#email_account_admins MysqlServer#email_account_admins}
+  */
   readonly emailAccountAdmins?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_server.html#email_addresses MysqlServer#email_addresses}
+  */
   readonly emailAddresses?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_server.html#enabled MysqlServer#enabled}
+  */
   readonly enabled?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_server.html#retention_days MysqlServer#retention_days}
+  */
   readonly retentionDays?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_server.html#storage_account_access_key MysqlServer#storage_account_access_key}
+  */
   readonly storageAccountAccessKey?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_server.html#storage_endpoint MysqlServer#storage_endpoint}
+  */
   readonly storageEndpoint?: string;
 }
 
@@ -88,9 +200,21 @@ function mysqlServerThreatDetectionPolicyToTerraform(struct?: MysqlServerThreatD
 }
 
 export interface MysqlServerTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_server.html#create MysqlServer#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_server.html#delete MysqlServer#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_server.html#read MysqlServer#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_server.html#update MysqlServer#update}
+  */
   readonly update?: string;
 }
 
@@ -105,14 +229,22 @@ function mysqlServerTimeoutsToTerraform(struct?: MysqlServerTimeouts): any {
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_server.html azurerm_mysql_server}
+*/
 export class MysqlServer extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_server.html azurerm_mysql_server} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options MysqlServerConfig
+  */
   public constructor(scope: Construct, id: string, config: MysqlServerConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_mysql_server',

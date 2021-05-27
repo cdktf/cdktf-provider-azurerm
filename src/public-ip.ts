@@ -7,26 +7,81 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface PublicIpConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/public_ip.html#allocation_method PublicIp#allocation_method}
+  */
   readonly allocationMethod: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/public_ip.html#domain_name_label PublicIp#domain_name_label}
+  */
   readonly domainNameLabel?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/public_ip.html#idle_timeout_in_minutes PublicIp#idle_timeout_in_minutes}
+  */
   readonly idleTimeoutInMinutes?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/public_ip.html#ip_tags PublicIp#ip_tags}
+  */
   readonly ipTags?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/public_ip.html#ip_version PublicIp#ip_version}
+  */
   readonly ipVersion?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/public_ip.html#location PublicIp#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/public_ip.html#name PublicIp#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/public_ip.html#public_ip_prefix_id PublicIp#public_ip_prefix_id}
+  */
   readonly publicIpPrefixId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/public_ip.html#resource_group_name PublicIp#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/public_ip.html#reverse_fqdn PublicIp#reverse_fqdn}
+  */
   readonly reverseFqdn?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/public_ip.html#sku PublicIp#sku}
+  */
   readonly sku?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/public_ip.html#tags PublicIp#tags}
+  */
   readonly tags?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/public_ip.html#zones PublicIp#zones}
+  */
   readonly zones?: string[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/public_ip.html#timeouts PublicIp#timeouts}
+  */
   readonly timeouts?: PublicIpTimeouts;
 }
 export interface PublicIpTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/public_ip.html#create PublicIp#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/public_ip.html#delete PublicIp#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/public_ip.html#read PublicIp#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/public_ip.html#update PublicIp#update}
+  */
   readonly update?: string;
 }
 
@@ -41,14 +96,22 @@ function publicIpTimeoutsToTerraform(struct?: PublicIpTimeouts): any {
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/public_ip.html azurerm_public_ip}
+*/
 export class PublicIp extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/public_ip.html azurerm_public_ip} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options PublicIpConfig
+  */
   public constructor(scope: Construct, id: string, config: PublicIpConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_public_ip',

@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/iothub_shared_access_policy_a.html
+// https://www.terraform.io/docs/providers/azurerm/r/iothub_shared_access_policy.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,20 +7,57 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface IothubSharedAccessPolicyAConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_shared_access_policy.html#device_connect IothubSharedAccessPolicyA#device_connect}
+  */
   readonly deviceConnect?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_shared_access_policy.html#iothub_name IothubSharedAccessPolicyA#iothub_name}
+  */
   readonly iothubName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_shared_access_policy.html#name IothubSharedAccessPolicyA#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_shared_access_policy.html#registry_read IothubSharedAccessPolicyA#registry_read}
+  */
   readonly registryRead?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_shared_access_policy.html#registry_write IothubSharedAccessPolicyA#registry_write}
+  */
   readonly registryWrite?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_shared_access_policy.html#resource_group_name IothubSharedAccessPolicyA#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_shared_access_policy.html#service_connect IothubSharedAccessPolicyA#service_connect}
+  */
   readonly serviceConnect?: boolean;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_shared_access_policy.html#timeouts IothubSharedAccessPolicyA#timeouts}
+  */
   readonly timeouts?: IothubSharedAccessPolicyTimeouts;
 }
 export interface IothubSharedAccessPolicyTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_shared_access_policy.html#create IothubSharedAccessPolicyA#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_shared_access_policy.html#delete IothubSharedAccessPolicyA#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_shared_access_policy.html#read IothubSharedAccessPolicyA#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_shared_access_policy.html#update IothubSharedAccessPolicyA#update}
+  */
   readonly update?: string;
 }
 
@@ -35,14 +72,22 @@ function iothubSharedAccessPolicyTimeoutsToTerraform(struct?: IothubSharedAccess
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_shared_access_policy.html azurerm_iothub_shared_access_policy}
+*/
 export class IothubSharedAccessPolicyA extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_shared_access_policy.html azurerm_iothub_shared_access_policy} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options IothubSharedAccessPolicyAConfig
+  */
   public constructor(scope: Construct, id: string, config: IothubSharedAccessPolicyAConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_iothub_shared_access_policy',

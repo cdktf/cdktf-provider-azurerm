@@ -7,20 +7,55 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface LogicAppTriggerRecurrenceConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_trigger_recurrence.html#frequency LogicAppTriggerRecurrence#frequency}
+  */
   readonly frequency: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_trigger_recurrence.html#interval LogicAppTriggerRecurrence#interval}
+  */
   readonly interval: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_trigger_recurrence.html#logic_app_id LogicAppTriggerRecurrence#logic_app_id}
+  */
   readonly logicAppId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_trigger_recurrence.html#name LogicAppTriggerRecurrence#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_trigger_recurrence.html#start_time LogicAppTriggerRecurrence#start_time}
+  */
   readonly startTime?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_trigger_recurrence.html#time_zone LogicAppTriggerRecurrence#time_zone}
+  */
   readonly timeZone?: string;
-  /** schedule block */
+  /**
+  * schedule block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_trigger_recurrence.html#schedule LogicAppTriggerRecurrence#schedule}
+  */
   readonly schedule?: LogicAppTriggerRecurrenceSchedule[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_trigger_recurrence.html#timeouts LogicAppTriggerRecurrence#timeouts}
+  */
   readonly timeouts?: LogicAppTriggerRecurrenceTimeouts;
 }
 export interface LogicAppTriggerRecurrenceSchedule {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_trigger_recurrence.html#at_these_hours LogicAppTriggerRecurrence#at_these_hours}
+  */
   readonly atTheseHours?: number[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_trigger_recurrence.html#at_these_minutes LogicAppTriggerRecurrence#at_these_minutes}
+  */
   readonly atTheseMinutes?: number[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_trigger_recurrence.html#on_these_days LogicAppTriggerRecurrence#on_these_days}
+  */
   readonly onTheseDays?: string[];
 }
 
@@ -34,9 +69,21 @@ function logicAppTriggerRecurrenceScheduleToTerraform(struct?: LogicAppTriggerRe
 }
 
 export interface LogicAppTriggerRecurrenceTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_trigger_recurrence.html#create LogicAppTriggerRecurrence#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_trigger_recurrence.html#delete LogicAppTriggerRecurrence#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_trigger_recurrence.html#read LogicAppTriggerRecurrence#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_trigger_recurrence.html#update LogicAppTriggerRecurrence#update}
+  */
   readonly update?: string;
 }
 
@@ -51,14 +98,22 @@ function logicAppTriggerRecurrenceTimeoutsToTerraform(struct?: LogicAppTriggerRe
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_trigger_recurrence.html azurerm_logic_app_trigger_recurrence}
+*/
 export class LogicAppTriggerRecurrence extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_trigger_recurrence.html azurerm_logic_app_trigger_recurrence} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options LogicAppTriggerRecurrenceConfig
+  */
   public constructor(scope: Construct, id: string, config: LogicAppTriggerRecurrenceConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_logic_app_trigger_recurrence',

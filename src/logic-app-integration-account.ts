@@ -7,18 +7,49 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface LogicAppIntegrationAccountConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account.html#location LogicAppIntegrationAccount#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account.html#name LogicAppIntegrationAccount#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account.html#resource_group_name LogicAppIntegrationAccount#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account.html#sku_name LogicAppIntegrationAccount#sku_name}
+  */
   readonly skuName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account.html#tags LogicAppIntegrationAccount#tags}
+  */
   readonly tags?: { [key: string]: string };
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account.html#timeouts LogicAppIntegrationAccount#timeouts}
+  */
   readonly timeouts?: LogicAppIntegrationAccountTimeouts;
 }
 export interface LogicAppIntegrationAccountTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account.html#create LogicAppIntegrationAccount#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account.html#delete LogicAppIntegrationAccount#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account.html#read LogicAppIntegrationAccount#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account.html#update LogicAppIntegrationAccount#update}
+  */
   readonly update?: string;
 }
 
@@ -33,14 +64,22 @@ function logicAppIntegrationAccountTimeoutsToTerraform(struct?: LogicAppIntegrat
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account.html azurerm_logic_app_integration_account}
+*/
 export class LogicAppIntegrationAccount extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account.html azurerm_logic_app_integration_account} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options LogicAppIntegrationAccountConfig
+  */
   public constructor(scope: Construct, id: string, config: LogicAppIntegrationAccountConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_logic_app_integration_account',

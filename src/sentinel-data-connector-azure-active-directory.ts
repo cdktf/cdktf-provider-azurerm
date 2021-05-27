@@ -7,15 +7,37 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface SentinelDataConnectorAzureActiveDirectoryConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_data_connector_azure_active_directory.html#log_analytics_workspace_id SentinelDataConnectorAzureActiveDirectory#log_analytics_workspace_id}
+  */
   readonly logAnalyticsWorkspaceId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_data_connector_azure_active_directory.html#name SentinelDataConnectorAzureActiveDirectory#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_data_connector_azure_active_directory.html#tenant_id SentinelDataConnectorAzureActiveDirectory#tenant_id}
+  */
   readonly tenantId?: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_data_connector_azure_active_directory.html#timeouts SentinelDataConnectorAzureActiveDirectory#timeouts}
+  */
   readonly timeouts?: SentinelDataConnectorAzureActiveDirectoryTimeouts;
 }
 export interface SentinelDataConnectorAzureActiveDirectoryTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_data_connector_azure_active_directory.html#create SentinelDataConnectorAzureActiveDirectory#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_data_connector_azure_active_directory.html#delete SentinelDataConnectorAzureActiveDirectory#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_data_connector_azure_active_directory.html#read SentinelDataConnectorAzureActiveDirectory#read}
+  */
   readonly read?: string;
 }
 
@@ -29,14 +51,22 @@ function sentinelDataConnectorAzureActiveDirectoryTimeoutsToTerraform(struct?: S
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_data_connector_azure_active_directory.html azurerm_sentinel_data_connector_azure_active_directory}
+*/
 export class SentinelDataConnectorAzureActiveDirectory extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_data_connector_azure_active_directory.html azurerm_sentinel_data_connector_azure_active_directory} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options SentinelDataConnectorAzureActiveDirectoryConfig
+  */
   public constructor(scope: Construct, id: string, config: SentinelDataConnectorAzureActiveDirectoryConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_sentinel_data_connector_azure_active_directory',

@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/data_azurerm_netapp_snapshot.html
+// https://www.terraform.io/docs/providers/azurerm/d/netapp_snapshot.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,15 +7,37 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataAzurermNetappSnapshotConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/netapp_snapshot.html#account_name DataAzurermNetappSnapshot#account_name}
+  */
   readonly accountName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/netapp_snapshot.html#name DataAzurermNetappSnapshot#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/netapp_snapshot.html#pool_name DataAzurermNetappSnapshot#pool_name}
+  */
   readonly poolName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/netapp_snapshot.html#resource_group_name DataAzurermNetappSnapshot#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/netapp_snapshot.html#volume_name DataAzurermNetappSnapshot#volume_name}
+  */
   readonly volumeName: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/netapp_snapshot.html#timeouts DataAzurermNetappSnapshot#timeouts}
+  */
   readonly timeouts?: DataAzurermNetappSnapshotTimeouts;
 }
 export interface DataAzurermNetappSnapshotTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/netapp_snapshot.html#read DataAzurermNetappSnapshot#read}
+  */
   readonly read?: string;
 }
 
@@ -27,14 +49,22 @@ function dataAzurermNetappSnapshotTimeoutsToTerraform(struct?: DataAzurermNetapp
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/netapp_snapshot.html azurerm_netapp_snapshot}
+*/
 export class DataAzurermNetappSnapshot extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/netapp_snapshot.html azurerm_netapp_snapshot} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataAzurermNetappSnapshotConfig
+  */
   public constructor(scope: Construct, id: string, config: DataAzurermNetappSnapshotConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_netapp_snapshot',

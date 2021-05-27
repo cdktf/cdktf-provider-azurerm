@@ -7,16 +7,41 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface SpringCloudCertificateConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_certificate.html#key_vault_certificate_id SpringCloudCertificate#key_vault_certificate_id}
+  */
   readonly keyVaultCertificateId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_certificate.html#name SpringCloudCertificate#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_certificate.html#resource_group_name SpringCloudCertificate#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_certificate.html#service_name SpringCloudCertificate#service_name}
+  */
   readonly serviceName: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_certificate.html#timeouts SpringCloudCertificate#timeouts}
+  */
   readonly timeouts?: SpringCloudCertificateTimeouts;
 }
 export interface SpringCloudCertificateTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_certificate.html#create SpringCloudCertificate#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_certificate.html#delete SpringCloudCertificate#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_certificate.html#read SpringCloudCertificate#read}
+  */
   readonly read?: string;
 }
 
@@ -30,14 +55,22 @@ function springCloudCertificateTimeoutsToTerraform(struct?: SpringCloudCertifica
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_certificate.html azurerm_spring_cloud_certificate}
+*/
 export class SpringCloudCertificate extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_certificate.html azurerm_spring_cloud_certificate} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options SpringCloudCertificateConfig
+  */
   public constructor(scope: Construct, id: string, config: SpringCloudCertificateConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_spring_cloud_certificate',

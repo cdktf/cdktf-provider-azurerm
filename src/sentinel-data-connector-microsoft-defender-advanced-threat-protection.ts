@@ -7,15 +7,37 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface SentinelDataConnectorMicrosoftDefenderAdvancedThreatProtectionConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_data_connector_microsoft_defender_advanced_threat_protection.html#log_analytics_workspace_id SentinelDataConnectorMicrosoftDefenderAdvancedThreatProtection#log_analytics_workspace_id}
+  */
   readonly logAnalyticsWorkspaceId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_data_connector_microsoft_defender_advanced_threat_protection.html#name SentinelDataConnectorMicrosoftDefenderAdvancedThreatProtection#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_data_connector_microsoft_defender_advanced_threat_protection.html#tenant_id SentinelDataConnectorMicrosoftDefenderAdvancedThreatProtection#tenant_id}
+  */
   readonly tenantId?: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_data_connector_microsoft_defender_advanced_threat_protection.html#timeouts SentinelDataConnectorMicrosoftDefenderAdvancedThreatProtection#timeouts}
+  */
   readonly timeouts?: SentinelDataConnectorMicrosoftDefenderAdvancedThreatProtectionTimeouts;
 }
 export interface SentinelDataConnectorMicrosoftDefenderAdvancedThreatProtectionTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_data_connector_microsoft_defender_advanced_threat_protection.html#create SentinelDataConnectorMicrosoftDefenderAdvancedThreatProtection#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_data_connector_microsoft_defender_advanced_threat_protection.html#delete SentinelDataConnectorMicrosoftDefenderAdvancedThreatProtection#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_data_connector_microsoft_defender_advanced_threat_protection.html#read SentinelDataConnectorMicrosoftDefenderAdvancedThreatProtection#read}
+  */
   readonly read?: string;
 }
 
@@ -29,14 +51,22 @@ function sentinelDataConnectorMicrosoftDefenderAdvancedThreatProtectionTimeoutsT
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_data_connector_microsoft_defender_advanced_threat_protection.html azurerm_sentinel_data_connector_microsoft_defender_advanced_threat_protection}
+*/
 export class SentinelDataConnectorMicrosoftDefenderAdvancedThreatProtection extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_data_connector_microsoft_defender_advanced_threat_protection.html azurerm_sentinel_data_connector_microsoft_defender_advanced_threat_protection} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options SentinelDataConnectorMicrosoftDefenderAdvancedThreatProtectionConfig
+  */
   public constructor(scope: Construct, id: string, config: SentinelDataConnectorMicrosoftDefenderAdvancedThreatProtectionConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_sentinel_data_connector_microsoft_defender_advanced_threat_protection',

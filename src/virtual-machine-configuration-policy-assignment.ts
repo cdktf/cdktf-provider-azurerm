@@ -7,16 +7,39 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface VirtualMachineConfigurationPolicyAssignmentConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_configuration_policy_assignment.html#location VirtualMachineConfigurationPolicyAssignment#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_configuration_policy_assignment.html#name VirtualMachineConfigurationPolicyAssignment#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_configuration_policy_assignment.html#virtual_machine_id VirtualMachineConfigurationPolicyAssignment#virtual_machine_id}
+  */
   readonly virtualMachineId: string;
-  /** configuration block */
+  /**
+  * configuration block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_configuration_policy_assignment.html#configuration VirtualMachineConfigurationPolicyAssignment#configuration}
+  */
   readonly configuration: VirtualMachineConfigurationPolicyAssignmentConfiguration[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_configuration_policy_assignment.html#timeouts VirtualMachineConfigurationPolicyAssignment#timeouts}
+  */
   readonly timeouts?: VirtualMachineConfigurationPolicyAssignmentTimeouts;
 }
 export interface VirtualMachineConfigurationPolicyAssignmentConfigurationParameter {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_configuration_policy_assignment.html#name VirtualMachineConfigurationPolicyAssignment#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_configuration_policy_assignment.html#value VirtualMachineConfigurationPolicyAssignment#value}
+  */
   readonly value: string;
 }
 
@@ -29,9 +52,19 @@ function virtualMachineConfigurationPolicyAssignmentConfigurationParameterToTerr
 }
 
 export interface VirtualMachineConfigurationPolicyAssignmentConfiguration {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_configuration_policy_assignment.html#name VirtualMachineConfigurationPolicyAssignment#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_configuration_policy_assignment.html#version VirtualMachineConfigurationPolicyAssignment#version}
+  */
   readonly version?: string;
-  /** parameter block */
+  /**
+  * parameter block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_configuration_policy_assignment.html#parameter VirtualMachineConfigurationPolicyAssignment#parameter}
+  */
   readonly parameter?: VirtualMachineConfigurationPolicyAssignmentConfigurationParameter[];
 }
 
@@ -45,9 +78,21 @@ function virtualMachineConfigurationPolicyAssignmentConfigurationToTerraform(str
 }
 
 export interface VirtualMachineConfigurationPolicyAssignmentTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_configuration_policy_assignment.html#create VirtualMachineConfigurationPolicyAssignment#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_configuration_policy_assignment.html#delete VirtualMachineConfigurationPolicyAssignment#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_configuration_policy_assignment.html#read VirtualMachineConfigurationPolicyAssignment#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_configuration_policy_assignment.html#update VirtualMachineConfigurationPolicyAssignment#update}
+  */
   readonly update?: string;
 }
 
@@ -62,14 +107,22 @@ function virtualMachineConfigurationPolicyAssignmentTimeoutsToTerraform(struct?:
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_configuration_policy_assignment.html azurerm_virtual_machine_configuration_policy_assignment}
+*/
 export class VirtualMachineConfigurationPolicyAssignment extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_configuration_policy_assignment.html azurerm_virtual_machine_configuration_policy_assignment} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options VirtualMachineConfigurationPolicyAssignmentConfig
+  */
   public constructor(scope: Construct, id: string, config: VirtualMachineConfigurationPolicyAssignmentConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_virtual_machine_configuration_policy_assignment',

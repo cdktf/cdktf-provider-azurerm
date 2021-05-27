@@ -7,31 +7,97 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DevTestWindowsVirtualMachineConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_windows_virtual_machine.html#allow_claim DevTestWindowsVirtualMachine#allow_claim}
+  */
   readonly allowClaim?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_windows_virtual_machine.html#disallow_public_ip_address DevTestWindowsVirtualMachine#disallow_public_ip_address}
+  */
   readonly disallowPublicIpAddress?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_windows_virtual_machine.html#lab_name DevTestWindowsVirtualMachine#lab_name}
+  */
   readonly labName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_windows_virtual_machine.html#lab_subnet_name DevTestWindowsVirtualMachine#lab_subnet_name}
+  */
   readonly labSubnetName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_windows_virtual_machine.html#lab_virtual_network_id DevTestWindowsVirtualMachine#lab_virtual_network_id}
+  */
   readonly labVirtualNetworkId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_windows_virtual_machine.html#location DevTestWindowsVirtualMachine#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_windows_virtual_machine.html#name DevTestWindowsVirtualMachine#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_windows_virtual_machine.html#notes DevTestWindowsVirtualMachine#notes}
+  */
   readonly notes?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_windows_virtual_machine.html#password DevTestWindowsVirtualMachine#password}
+  */
   readonly password: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_windows_virtual_machine.html#resource_group_name DevTestWindowsVirtualMachine#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_windows_virtual_machine.html#size DevTestWindowsVirtualMachine#size}
+  */
   readonly size: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_windows_virtual_machine.html#storage_type DevTestWindowsVirtualMachine#storage_type}
+  */
   readonly storageType: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_windows_virtual_machine.html#tags DevTestWindowsVirtualMachine#tags}
+  */
   readonly tags?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_windows_virtual_machine.html#username DevTestWindowsVirtualMachine#username}
+  */
   readonly username: string;
-  /** gallery_image_reference block */
+  /**
+  * gallery_image_reference block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_windows_virtual_machine.html#gallery_image_reference DevTestWindowsVirtualMachine#gallery_image_reference}
+  */
   readonly galleryImageReference: DevTestWindowsVirtualMachineGalleryImageReference[];
-  /** inbound_nat_rule block */
+  /**
+  * inbound_nat_rule block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_windows_virtual_machine.html#inbound_nat_rule DevTestWindowsVirtualMachine#inbound_nat_rule}
+  */
   readonly inboundNatRule?: DevTestWindowsVirtualMachineInboundNatRule[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_windows_virtual_machine.html#timeouts DevTestWindowsVirtualMachine#timeouts}
+  */
   readonly timeouts?: DevTestWindowsVirtualMachineTimeouts;
 }
 export interface DevTestWindowsVirtualMachineGalleryImageReference {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_windows_virtual_machine.html#offer DevTestWindowsVirtualMachine#offer}
+  */
   readonly offer: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_windows_virtual_machine.html#publisher DevTestWindowsVirtualMachine#publisher}
+  */
   readonly publisher: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_windows_virtual_machine.html#sku DevTestWindowsVirtualMachine#sku}
+  */
   readonly sku: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_windows_virtual_machine.html#version DevTestWindowsVirtualMachine#version}
+  */
   readonly version: string;
 }
 
@@ -46,7 +112,13 @@ function devTestWindowsVirtualMachineGalleryImageReferenceToTerraform(struct?: D
 }
 
 export interface DevTestWindowsVirtualMachineInboundNatRule {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_windows_virtual_machine.html#backend_port DevTestWindowsVirtualMachine#backend_port}
+  */
   readonly backendPort: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_windows_virtual_machine.html#protocol DevTestWindowsVirtualMachine#protocol}
+  */
   readonly protocol: string;
 }
 
@@ -59,9 +131,21 @@ function devTestWindowsVirtualMachineInboundNatRuleToTerraform(struct?: DevTestW
 }
 
 export interface DevTestWindowsVirtualMachineTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_windows_virtual_machine.html#create DevTestWindowsVirtualMachine#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_windows_virtual_machine.html#delete DevTestWindowsVirtualMachine#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_windows_virtual_machine.html#read DevTestWindowsVirtualMachine#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_windows_virtual_machine.html#update DevTestWindowsVirtualMachine#update}
+  */
   readonly update?: string;
 }
 
@@ -76,14 +160,22 @@ function devTestWindowsVirtualMachineTimeoutsToTerraform(struct?: DevTestWindows
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_windows_virtual_machine.html azurerm_dev_test_windows_virtual_machine}
+*/
 export class DevTestWindowsVirtualMachine extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_windows_virtual_machine.html azurerm_dev_test_windows_virtual_machine} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DevTestWindowsVirtualMachineConfig
+  */
   public constructor(scope: Construct, id: string, config: DevTestWindowsVirtualMachineConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_dev_test_windows_virtual_machine',

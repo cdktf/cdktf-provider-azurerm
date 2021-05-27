@@ -7,24 +7,71 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface LbConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb.html#location Lb#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb.html#name Lb#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb.html#resource_group_name Lb#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb.html#sku Lb#sku}
+  */
   readonly sku?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb.html#tags Lb#tags}
+  */
   readonly tags?: { [key: string]: string };
-  /** frontend_ip_configuration block */
+  /**
+  * frontend_ip_configuration block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb.html#frontend_ip_configuration Lb#frontend_ip_configuration}
+  */
   readonly frontendIpConfiguration?: LbFrontendIpConfiguration[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb.html#timeouts Lb#timeouts}
+  */
   readonly timeouts?: LbTimeouts;
 }
 export interface LbFrontendIpConfiguration {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb.html#name Lb#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb.html#private_ip_address Lb#private_ip_address}
+  */
   readonly privateIpAddress?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb.html#private_ip_address_allocation Lb#private_ip_address_allocation}
+  */
   readonly privateIpAddressAllocation?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb.html#private_ip_address_version Lb#private_ip_address_version}
+  */
   readonly privateIpAddressVersion?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb.html#public_ip_address_id Lb#public_ip_address_id}
+  */
   readonly publicIpAddressId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb.html#public_ip_prefix_id Lb#public_ip_prefix_id}
+  */
   readonly publicIpPrefixId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb.html#subnet_id Lb#subnet_id}
+  */
   readonly subnetId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb.html#zones Lb#zones}
+  */
   readonly zones?: string[];
 }
 
@@ -43,9 +90,21 @@ function lbFrontendIpConfigurationToTerraform(struct?: LbFrontendIpConfiguration
 }
 
 export interface LbTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb.html#create Lb#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb.html#delete Lb#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb.html#read Lb#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb.html#update Lb#update}
+  */
   readonly update?: string;
 }
 
@@ -60,14 +119,22 @@ function lbTimeoutsToTerraform(struct?: LbTimeouts): any {
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/lb.html azurerm_lb}
+*/
 export class Lb extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/lb.html azurerm_lb} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options LbConfig
+  */
   public constructor(scope: Construct, id: string, config: LbConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_lb',

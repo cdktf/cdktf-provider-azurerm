@@ -7,20 +7,57 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface KustoAttachedDatabaseConfigurationConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_attached_database_configuration.html#cluster_name KustoAttachedDatabaseConfiguration#cluster_name}
+  */
   readonly clusterName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_attached_database_configuration.html#cluster_resource_id KustoAttachedDatabaseConfiguration#cluster_resource_id}
+  */
   readonly clusterResourceId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_attached_database_configuration.html#database_name KustoAttachedDatabaseConfiguration#database_name}
+  */
   readonly databaseName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_attached_database_configuration.html#default_principal_modification_kind KustoAttachedDatabaseConfiguration#default_principal_modification_kind}
+  */
   readonly defaultPrincipalModificationKind?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_attached_database_configuration.html#location KustoAttachedDatabaseConfiguration#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_attached_database_configuration.html#name KustoAttachedDatabaseConfiguration#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_attached_database_configuration.html#resource_group_name KustoAttachedDatabaseConfiguration#resource_group_name}
+  */
   readonly resourceGroupName: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_attached_database_configuration.html#timeouts KustoAttachedDatabaseConfiguration#timeouts}
+  */
   readonly timeouts?: KustoAttachedDatabaseConfigurationTimeouts;
 }
 export interface KustoAttachedDatabaseConfigurationTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_attached_database_configuration.html#create KustoAttachedDatabaseConfiguration#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_attached_database_configuration.html#delete KustoAttachedDatabaseConfiguration#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_attached_database_configuration.html#read KustoAttachedDatabaseConfiguration#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_attached_database_configuration.html#update KustoAttachedDatabaseConfiguration#update}
+  */
   readonly update?: string;
 }
 
@@ -35,14 +72,22 @@ function kustoAttachedDatabaseConfigurationTimeoutsToTerraform(struct?: KustoAtt
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_attached_database_configuration.html azurerm_kusto_attached_database_configuration}
+*/
 export class KustoAttachedDatabaseConfiguration extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_attached_database_configuration.html azurerm_kusto_attached_database_configuration} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options KustoAttachedDatabaseConfigurationConfig
+  */
   public constructor(scope: Construct, id: string, config: KustoAttachedDatabaseConfigurationConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_kusto_attached_database_configuration',

@@ -7,18 +7,45 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface IotSecurityDeviceGroupConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_security_device_group.html#iothub_id IotSecurityDeviceGroup#iothub_id}
+  */
   readonly iothubId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_security_device_group.html#name IotSecurityDeviceGroup#name}
+  */
   readonly name: string;
-  /** allow_rule block */
+  /**
+  * allow_rule block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_security_device_group.html#allow_rule IotSecurityDeviceGroup#allow_rule}
+  */
   readonly allowRule?: IotSecurityDeviceGroupAllowRule[];
-  /** range_rule block */
+  /**
+  * range_rule block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_security_device_group.html#range_rule IotSecurityDeviceGroup#range_rule}
+  */
   readonly rangeRule?: IotSecurityDeviceGroupRangeRule[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_security_device_group.html#timeouts IotSecurityDeviceGroup#timeouts}
+  */
   readonly timeouts?: IotSecurityDeviceGroupTimeouts;
 }
 export interface IotSecurityDeviceGroupAllowRule {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_security_device_group.html#connection_to_ip_not_allowed IotSecurityDeviceGroup#connection_to_ip_not_allowed}
+  */
   readonly connectionToIpNotAllowed?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_security_device_group.html#local_user_not_allowed IotSecurityDeviceGroup#local_user_not_allowed}
+  */
   readonly localUserNotAllowed?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_security_device_group.html#process_not_allowed IotSecurityDeviceGroup#process_not_allowed}
+  */
   readonly processNotAllowed?: string[];
 }
 
@@ -32,9 +59,21 @@ function iotSecurityDeviceGroupAllowRuleToTerraform(struct?: IotSecurityDeviceGr
 }
 
 export interface IotSecurityDeviceGroupRangeRule {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_security_device_group.html#duration IotSecurityDeviceGroup#duration}
+  */
   readonly duration: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_security_device_group.html#max IotSecurityDeviceGroup#max}
+  */
   readonly max: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_security_device_group.html#min IotSecurityDeviceGroup#min}
+  */
   readonly min: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_security_device_group.html#type IotSecurityDeviceGroup#type}
+  */
   readonly type: string;
 }
 
@@ -49,9 +88,21 @@ function iotSecurityDeviceGroupRangeRuleToTerraform(struct?: IotSecurityDeviceGr
 }
 
 export interface IotSecurityDeviceGroupTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_security_device_group.html#create IotSecurityDeviceGroup#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_security_device_group.html#delete IotSecurityDeviceGroup#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_security_device_group.html#read IotSecurityDeviceGroup#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_security_device_group.html#update IotSecurityDeviceGroup#update}
+  */
   readonly update?: string;
 }
 
@@ -66,14 +117,22 @@ function iotSecurityDeviceGroupTimeoutsToTerraform(struct?: IotSecurityDeviceGro
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/iot_security_device_group.html azurerm_iot_security_device_group}
+*/
 export class IotSecurityDeviceGroup extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/iot_security_device_group.html azurerm_iot_security_device_group} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options IotSecurityDeviceGroupConfig
+  */
   public constructor(scope: Construct, id: string, config: IotSecurityDeviceGroupConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_iot_security_device_group',

@@ -7,21 +7,57 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface MonitorActivityLogAlertConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_activity_log_alert.html#description MonitorActivityLogAlert#description}
+  */
   readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_activity_log_alert.html#enabled MonitorActivityLogAlert#enabled}
+  */
   readonly enabled?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_activity_log_alert.html#name MonitorActivityLogAlert#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_activity_log_alert.html#resource_group_name MonitorActivityLogAlert#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_activity_log_alert.html#scopes MonitorActivityLogAlert#scopes}
+  */
   readonly scopes: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_activity_log_alert.html#tags MonitorActivityLogAlert#tags}
+  */
   readonly tags?: { [key: string]: string };
-  /** action block */
+  /**
+  * action block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_activity_log_alert.html#action MonitorActivityLogAlert#action}
+  */
   readonly action?: MonitorActivityLogAlertAction[];
-  /** criteria block */
+  /**
+  * criteria block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_activity_log_alert.html#criteria MonitorActivityLogAlert#criteria}
+  */
   readonly criteria: MonitorActivityLogAlertCriteria[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_activity_log_alert.html#timeouts MonitorActivityLogAlert#timeouts}
+  */
   readonly timeouts?: MonitorActivityLogAlertTimeouts;
 }
 export interface MonitorActivityLogAlertAction {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_activity_log_alert.html#action_group_id MonitorActivityLogAlert#action_group_id}
+  */
   readonly actionGroupId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_activity_log_alert.html#webhook_properties MonitorActivityLogAlert#webhook_properties}
+  */
   readonly webhookProperties?: { [key: string]: string };
 }
 
@@ -34,8 +70,17 @@ function monitorActivityLogAlertActionToTerraform(struct?: MonitorActivityLogAle
 }
 
 export interface MonitorActivityLogAlertCriteriaServiceHealth {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_activity_log_alert.html#events MonitorActivityLogAlert#events}
+  */
   readonly events?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_activity_log_alert.html#locations MonitorActivityLogAlert#locations}
+  */
   readonly locations?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_activity_log_alert.html#services MonitorActivityLogAlert#services}
+  */
   readonly services?: string[];
 }
 
@@ -49,20 +94,63 @@ function monitorActivityLogAlertCriteriaServiceHealthToTerraform(struct?: Monito
 }
 
 export interface MonitorActivityLogAlertCriteria {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_activity_log_alert.html#caller MonitorActivityLogAlert#caller}
+  */
   readonly caller?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_activity_log_alert.html#category MonitorActivityLogAlert#category}
+  */
   readonly category: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_activity_log_alert.html#level MonitorActivityLogAlert#level}
+  */
   readonly level?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_activity_log_alert.html#operation_name MonitorActivityLogAlert#operation_name}
+  */
   readonly operationName?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_activity_log_alert.html#recommendation_category MonitorActivityLogAlert#recommendation_category}
+  */
   readonly recommendationCategory?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_activity_log_alert.html#recommendation_impact MonitorActivityLogAlert#recommendation_impact}
+  */
   readonly recommendationImpact?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_activity_log_alert.html#recommendation_type MonitorActivityLogAlert#recommendation_type}
+  */
   readonly recommendationType?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_activity_log_alert.html#resource_group MonitorActivityLogAlert#resource_group}
+  */
   readonly resourceGroup?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_activity_log_alert.html#resource_id MonitorActivityLogAlert#resource_id}
+  */
   readonly resourceId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_activity_log_alert.html#resource_provider MonitorActivityLogAlert#resource_provider}
+  */
   readonly resourceProvider?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_activity_log_alert.html#resource_type MonitorActivityLogAlert#resource_type}
+  */
   readonly resourceType?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_activity_log_alert.html#status MonitorActivityLogAlert#status}
+  */
   readonly status?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_activity_log_alert.html#sub_status MonitorActivityLogAlert#sub_status}
+  */
   readonly subStatus?: string;
-  /** service_health block */
+  /**
+  * service_health block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_activity_log_alert.html#service_health MonitorActivityLogAlert#service_health}
+  */
   readonly serviceHealth?: MonitorActivityLogAlertCriteriaServiceHealth[];
 }
 
@@ -87,9 +175,21 @@ function monitorActivityLogAlertCriteriaToTerraform(struct?: MonitorActivityLogA
 }
 
 export interface MonitorActivityLogAlertTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_activity_log_alert.html#create MonitorActivityLogAlert#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_activity_log_alert.html#delete MonitorActivityLogAlert#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_activity_log_alert.html#read MonitorActivityLogAlert#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_activity_log_alert.html#update MonitorActivityLogAlert#update}
+  */
   readonly update?: string;
 }
 
@@ -104,14 +204,22 @@ function monitorActivityLogAlertTimeoutsToTerraform(struct?: MonitorActivityLogA
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_activity_log_alert.html azurerm_monitor_activity_log_alert}
+*/
 export class MonitorActivityLogAlert extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_activity_log_alert.html azurerm_monitor_activity_log_alert} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options MonitorActivityLogAlertConfig
+  */
   public constructor(scope: Construct, id: string, config: MonitorActivityLogAlertConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_monitor_activity_log_alert',

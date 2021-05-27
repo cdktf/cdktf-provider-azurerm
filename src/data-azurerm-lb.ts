@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/data_azurerm_lb.html
+// https://www.terraform.io/docs/providers/azurerm/d/lb.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,9 +7,19 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataAzurermLbConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/lb.html#name DataAzurermLb#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/lb.html#resource_group_name DataAzurermLb#resource_group_name}
+  */
   readonly resourceGroupName: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/lb.html#timeouts DataAzurermLb#timeouts}
+  */
   readonly timeouts?: DataAzurermLbTimeouts;
 }
 export class DataAzurermLbFrontendIpConfiguration extends cdktf.ComplexComputedList {
@@ -55,6 +65,9 @@ export class DataAzurermLbFrontendIpConfiguration extends cdktf.ComplexComputedL
   }
 }
 export interface DataAzurermLbTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/lb.html#read DataAzurermLb#read}
+  */
   readonly read?: string;
 }
 
@@ -66,14 +79,22 @@ function dataAzurermLbTimeoutsToTerraform(struct?: DataAzurermLbTimeouts): any {
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/lb.html azurerm_lb}
+*/
 export class DataAzurermLb extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/lb.html azurerm_lb} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataAzurermLbConfig
+  */
   public constructor(scope: Construct, id: string, config: DataAzurermLbConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_lb',

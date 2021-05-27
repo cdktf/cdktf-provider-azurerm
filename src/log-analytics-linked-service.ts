@@ -7,21 +7,61 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface LogAnalyticsLinkedServiceConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_linked_service.html#linked_service_name LogAnalyticsLinkedService#linked_service_name}
+  */
   readonly linkedServiceName?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_linked_service.html#read_access_id LogAnalyticsLinkedService#read_access_id}
+  */
   readonly readAccessId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_linked_service.html#resource_group_name LogAnalyticsLinkedService#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_linked_service.html#resource_id LogAnalyticsLinkedService#resource_id}
+  */
   readonly resourceId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_linked_service.html#tags LogAnalyticsLinkedService#tags}
+  */
   readonly tags?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_linked_service.html#workspace_id LogAnalyticsLinkedService#workspace_id}
+  */
   readonly workspaceId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_linked_service.html#workspace_name LogAnalyticsLinkedService#workspace_name}
+  */
   readonly workspaceName?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_linked_service.html#write_access_id LogAnalyticsLinkedService#write_access_id}
+  */
   readonly writeAccessId?: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_linked_service.html#timeouts LogAnalyticsLinkedService#timeouts}
+  */
   readonly timeouts?: LogAnalyticsLinkedServiceTimeouts;
 }
 export interface LogAnalyticsLinkedServiceTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_linked_service.html#create LogAnalyticsLinkedService#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_linked_service.html#delete LogAnalyticsLinkedService#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_linked_service.html#read LogAnalyticsLinkedService#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_linked_service.html#update LogAnalyticsLinkedService#update}
+  */
   readonly update?: string;
 }
 
@@ -36,14 +76,22 @@ function logAnalyticsLinkedServiceTimeoutsToTerraform(struct?: LogAnalyticsLinke
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_linked_service.html azurerm_log_analytics_linked_service}
+*/
 export class LogAnalyticsLinkedService extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_linked_service.html azurerm_log_analytics_linked_service} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options LogAnalyticsLinkedServiceConfig
+  */
   public constructor(scope: Construct, id: string, config: LogAnalyticsLinkedServiceConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_log_analytics_linked_service',

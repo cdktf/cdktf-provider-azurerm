@@ -7,24 +7,71 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface StreamAnalyticsOutputBlobConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_blob.html#date_format StreamAnalyticsOutputBlob#date_format}
+  */
   readonly dateFormat: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_blob.html#name StreamAnalyticsOutputBlob#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_blob.html#path_pattern StreamAnalyticsOutputBlob#path_pattern}
+  */
   readonly pathPattern: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_blob.html#resource_group_name StreamAnalyticsOutputBlob#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_blob.html#storage_account_key StreamAnalyticsOutputBlob#storage_account_key}
+  */
   readonly storageAccountKey: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_blob.html#storage_account_name StreamAnalyticsOutputBlob#storage_account_name}
+  */
   readonly storageAccountName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_blob.html#storage_container_name StreamAnalyticsOutputBlob#storage_container_name}
+  */
   readonly storageContainerName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_blob.html#stream_analytics_job_name StreamAnalyticsOutputBlob#stream_analytics_job_name}
+  */
   readonly streamAnalyticsJobName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_blob.html#time_format StreamAnalyticsOutputBlob#time_format}
+  */
   readonly timeFormat: string;
-  /** serialization block */
+  /**
+  * serialization block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_blob.html#serialization StreamAnalyticsOutputBlob#serialization}
+  */
   readonly serialization: StreamAnalyticsOutputBlobSerialization[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_blob.html#timeouts StreamAnalyticsOutputBlob#timeouts}
+  */
   readonly timeouts?: StreamAnalyticsOutputBlobTimeouts;
 }
 export interface StreamAnalyticsOutputBlobSerialization {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_blob.html#encoding StreamAnalyticsOutputBlob#encoding}
+  */
   readonly encoding?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_blob.html#field_delimiter StreamAnalyticsOutputBlob#field_delimiter}
+  */
   readonly fieldDelimiter?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_blob.html#format StreamAnalyticsOutputBlob#format}
+  */
   readonly format?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_blob.html#type StreamAnalyticsOutputBlob#type}
+  */
   readonly type: string;
 }
 
@@ -39,9 +86,21 @@ function streamAnalyticsOutputBlobSerializationToTerraform(struct?: StreamAnalyt
 }
 
 export interface StreamAnalyticsOutputBlobTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_blob.html#create StreamAnalyticsOutputBlob#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_blob.html#delete StreamAnalyticsOutputBlob#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_blob.html#read StreamAnalyticsOutputBlob#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_blob.html#update StreamAnalyticsOutputBlob#update}
+  */
   readonly update?: string;
 }
 
@@ -56,14 +115,22 @@ function streamAnalyticsOutputBlobTimeoutsToTerraform(struct?: StreamAnalyticsOu
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_blob.html azurerm_stream_analytics_output_blob}
+*/
 export class StreamAnalyticsOutputBlob extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_blob.html azurerm_stream_analytics_output_blob} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options StreamAnalyticsOutputBlobConfig
+  */
   public constructor(scope: Construct, id: string, config: StreamAnalyticsOutputBlobConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_stream_analytics_output_blob',

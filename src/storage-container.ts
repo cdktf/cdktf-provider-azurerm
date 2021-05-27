@@ -7,17 +7,45 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface StorageContainerConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_container.html#container_access_type StorageContainer#container_access_type}
+  */
   readonly containerAccessType?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_container.html#metadata StorageContainer#metadata}
+  */
   readonly metadata?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_container.html#name StorageContainer#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_container.html#storage_account_name StorageContainer#storage_account_name}
+  */
   readonly storageAccountName: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_container.html#timeouts StorageContainer#timeouts}
+  */
   readonly timeouts?: StorageContainerTimeouts;
 }
 export interface StorageContainerTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_container.html#create StorageContainer#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_container.html#delete StorageContainer#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_container.html#read StorageContainer#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_container.html#update StorageContainer#update}
+  */
   readonly update?: string;
 }
 
@@ -32,14 +60,22 @@ function storageContainerTimeoutsToTerraform(struct?: StorageContainerTimeouts):
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/storage_container.html azurerm_storage_container}
+*/
 export class StorageContainer extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/storage_container.html azurerm_storage_container} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options StorageContainerConfig
+  */
   public constructor(scope: Construct, id: string, config: StorageContainerConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_storage_container',

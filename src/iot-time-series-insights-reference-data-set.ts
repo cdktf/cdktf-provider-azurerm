@@ -7,18 +7,47 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface IotTimeSeriesInsightsReferenceDataSetConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_time_series_insights_reference_data_set.html#data_string_comparison_behavior IotTimeSeriesInsightsReferenceDataSet#data_string_comparison_behavior}
+  */
   readonly dataStringComparisonBehavior?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_time_series_insights_reference_data_set.html#location IotTimeSeriesInsightsReferenceDataSet#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_time_series_insights_reference_data_set.html#name IotTimeSeriesInsightsReferenceDataSet#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_time_series_insights_reference_data_set.html#tags IotTimeSeriesInsightsReferenceDataSet#tags}
+  */
   readonly tags?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_time_series_insights_reference_data_set.html#time_series_insights_environment_id IotTimeSeriesInsightsReferenceDataSet#time_series_insights_environment_id}
+  */
   readonly timeSeriesInsightsEnvironmentId: string;
-  /** key_property block */
+  /**
+  * key_property block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_time_series_insights_reference_data_set.html#key_property IotTimeSeriesInsightsReferenceDataSet#key_property}
+  */
   readonly keyProperty: IotTimeSeriesInsightsReferenceDataSetKeyProperty[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_time_series_insights_reference_data_set.html#timeouts IotTimeSeriesInsightsReferenceDataSet#timeouts}
+  */
   readonly timeouts?: IotTimeSeriesInsightsReferenceDataSetTimeouts;
 }
 export interface IotTimeSeriesInsightsReferenceDataSetKeyProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_time_series_insights_reference_data_set.html#name IotTimeSeriesInsightsReferenceDataSet#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_time_series_insights_reference_data_set.html#type IotTimeSeriesInsightsReferenceDataSet#type}
+  */
   readonly type: string;
 }
 
@@ -31,9 +60,21 @@ function iotTimeSeriesInsightsReferenceDataSetKeyPropertyToTerraform(struct?: Io
 }
 
 export interface IotTimeSeriesInsightsReferenceDataSetTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_time_series_insights_reference_data_set.html#create IotTimeSeriesInsightsReferenceDataSet#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_time_series_insights_reference_data_set.html#delete IotTimeSeriesInsightsReferenceDataSet#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_time_series_insights_reference_data_set.html#read IotTimeSeriesInsightsReferenceDataSet#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_time_series_insights_reference_data_set.html#update IotTimeSeriesInsightsReferenceDataSet#update}
+  */
   readonly update?: string;
 }
 
@@ -48,14 +89,22 @@ function iotTimeSeriesInsightsReferenceDataSetTimeoutsToTerraform(struct?: IotTi
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/iot_time_series_insights_reference_data_set.html azurerm_iot_time_series_insights_reference_data_set}
+*/
 export class IotTimeSeriesInsightsReferenceDataSet extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/iot_time_series_insights_reference_data_set.html azurerm_iot_time_series_insights_reference_data_set} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options IotTimeSeriesInsightsReferenceDataSetConfig
+  */
   public constructor(scope: Construct, id: string, config: IotTimeSeriesInsightsReferenceDataSetConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_iot_time_series_insights_reference_data_set',

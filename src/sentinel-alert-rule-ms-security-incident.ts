@@ -7,24 +7,73 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface SentinelAlertRuleMsSecurityIncidentConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_alert_rule_ms_security_incident.html#alert_rule_template_guid SentinelAlertRuleMsSecurityIncident#alert_rule_template_guid}
+  */
   readonly alertRuleTemplateGuid?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_alert_rule_ms_security_incident.html#description SentinelAlertRuleMsSecurityIncident#description}
+  */
   readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_alert_rule_ms_security_incident.html#display_name SentinelAlertRuleMsSecurityIncident#display_name}
+  */
   readonly displayName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_alert_rule_ms_security_incident.html#display_name_exclude_filter SentinelAlertRuleMsSecurityIncident#display_name_exclude_filter}
+  */
   readonly displayNameExcludeFilter?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_alert_rule_ms_security_incident.html#display_name_filter SentinelAlertRuleMsSecurityIncident#display_name_filter}
+  */
   readonly displayNameFilter?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_alert_rule_ms_security_incident.html#enabled SentinelAlertRuleMsSecurityIncident#enabled}
+  */
   readonly enabled?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_alert_rule_ms_security_incident.html#log_analytics_workspace_id SentinelAlertRuleMsSecurityIncident#log_analytics_workspace_id}
+  */
   readonly logAnalyticsWorkspaceId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_alert_rule_ms_security_incident.html#name SentinelAlertRuleMsSecurityIncident#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_alert_rule_ms_security_incident.html#product_filter SentinelAlertRuleMsSecurityIncident#product_filter}
+  */
   readonly productFilter: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_alert_rule_ms_security_incident.html#severity_filter SentinelAlertRuleMsSecurityIncident#severity_filter}
+  */
   readonly severityFilter: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_alert_rule_ms_security_incident.html#text_whitelist SentinelAlertRuleMsSecurityIncident#text_whitelist}
+  */
   readonly textWhitelist?: string[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_alert_rule_ms_security_incident.html#timeouts SentinelAlertRuleMsSecurityIncident#timeouts}
+  */
   readonly timeouts?: SentinelAlertRuleMsSecurityIncidentTimeouts;
 }
 export interface SentinelAlertRuleMsSecurityIncidentTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_alert_rule_ms_security_incident.html#create SentinelAlertRuleMsSecurityIncident#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_alert_rule_ms_security_incident.html#delete SentinelAlertRuleMsSecurityIncident#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_alert_rule_ms_security_incident.html#read SentinelAlertRuleMsSecurityIncident#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_alert_rule_ms_security_incident.html#update SentinelAlertRuleMsSecurityIncident#update}
+  */
   readonly update?: string;
 }
 
@@ -39,14 +88,22 @@ function sentinelAlertRuleMsSecurityIncidentTimeoutsToTerraform(struct?: Sentine
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_alert_rule_ms_security_incident.html azurerm_sentinel_alert_rule_ms_security_incident}
+*/
 export class SentinelAlertRuleMsSecurityIncident extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_alert_rule_ms_security_incident.html azurerm_sentinel_alert_rule_ms_security_incident} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options SentinelAlertRuleMsSecurityIncidentConfig
+  */
   public constructor(scope: Construct, id: string, config: SentinelAlertRuleMsSecurityIncidentConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_sentinel_alert_rule_ms_security_incident',

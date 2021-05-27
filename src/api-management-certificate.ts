@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/api_management_certificate_a.html
+// https://www.terraform.io/docs/providers/azurerm/r/api_management_certificate.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,20 +7,57 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface ApiManagementCertificateAConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_certificate.html#api_management_name ApiManagementCertificateA#api_management_name}
+  */
   readonly apiManagementName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_certificate.html#data ApiManagementCertificateA#data}
+  */
   readonly data?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_certificate.html#key_vault_identity_client_id ApiManagementCertificateA#key_vault_identity_client_id}
+  */
   readonly keyVaultIdentityClientId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_certificate.html#key_vault_secret_id ApiManagementCertificateA#key_vault_secret_id}
+  */
   readonly keyVaultSecretId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_certificate.html#name ApiManagementCertificateA#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_certificate.html#password ApiManagementCertificateA#password}
+  */
   readonly password?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_certificate.html#resource_group_name ApiManagementCertificateA#resource_group_name}
+  */
   readonly resourceGroupName: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_certificate.html#timeouts ApiManagementCertificateA#timeouts}
+  */
   readonly timeouts?: ApiManagementCertificateTimeouts;
 }
 export interface ApiManagementCertificateTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_certificate.html#create ApiManagementCertificateA#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_certificate.html#delete ApiManagementCertificateA#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_certificate.html#read ApiManagementCertificateA#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_certificate.html#update ApiManagementCertificateA#update}
+  */
   readonly update?: string;
 }
 
@@ -35,14 +72,22 @@ function apiManagementCertificateTimeoutsToTerraform(struct?: ApiManagementCerti
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_certificate.html azurerm_api_management_certificate}
+*/
 export class ApiManagementCertificateA extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_certificate.html azurerm_api_management_certificate} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options ApiManagementCertificateAConfig
+  */
   public constructor(scope: Construct, id: string, config: ApiManagementCertificateAConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_api_management_certificate',

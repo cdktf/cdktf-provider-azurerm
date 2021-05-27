@@ -7,20 +7,57 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface ApiManagementNamedValueConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_named_value.html#api_management_name ApiManagementNamedValue#api_management_name}
+  */
   readonly apiManagementName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_named_value.html#display_name ApiManagementNamedValue#display_name}
+  */
   readonly displayName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_named_value.html#name ApiManagementNamedValue#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_named_value.html#resource_group_name ApiManagementNamedValue#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_named_value.html#secret ApiManagementNamedValue#secret}
+  */
   readonly secret?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_named_value.html#tags ApiManagementNamedValue#tags}
+  */
   readonly tags?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_named_value.html#value ApiManagementNamedValue#value}
+  */
   readonly value: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_named_value.html#timeouts ApiManagementNamedValue#timeouts}
+  */
   readonly timeouts?: ApiManagementNamedValueTimeouts;
 }
 export interface ApiManagementNamedValueTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_named_value.html#create ApiManagementNamedValue#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_named_value.html#delete ApiManagementNamedValue#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_named_value.html#read ApiManagementNamedValue#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_named_value.html#update ApiManagementNamedValue#update}
+  */
   readonly update?: string;
 }
 
@@ -35,14 +72,22 @@ function apiManagementNamedValueTimeoutsToTerraform(struct?: ApiManagementNamedV
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_named_value.html azurerm_api_management_named_value}
+*/
 export class ApiManagementNamedValue extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_named_value.html azurerm_api_management_named_value} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options ApiManagementNamedValueConfig
+  */
   public constructor(scope: Construct, id: string, config: ApiManagementNamedValueConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_api_management_named_value',

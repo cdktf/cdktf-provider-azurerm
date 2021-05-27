@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/data_azurerm_app_service_environment_v3.html
+// https://www.terraform.io/docs/providers/azurerm/d/app_service_environment_v3.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,9 +7,19 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataAzurermAppServiceEnvironmentV3Config extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/app_service_environment_v3.html#name DataAzurermAppServiceEnvironmentV3#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/app_service_environment_v3.html#resource_group_name DataAzurermAppServiceEnvironmentV3#resource_group_name}
+  */
   readonly resourceGroupName: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/app_service_environment_v3.html#timeouts DataAzurermAppServiceEnvironmentV3#timeouts}
+  */
   readonly timeouts?: DataAzurermAppServiceEnvironmentV3Timeouts;
 }
 export class DataAzurermAppServiceEnvironmentV3ClusterSetting extends cdktf.ComplexComputedList {
@@ -25,6 +35,9 @@ export class DataAzurermAppServiceEnvironmentV3ClusterSetting extends cdktf.Comp
   }
 }
 export interface DataAzurermAppServiceEnvironmentV3Timeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/app_service_environment_v3.html#read DataAzurermAppServiceEnvironmentV3#read}
+  */
   readonly read?: string;
 }
 
@@ -36,14 +49,22 @@ function dataAzurermAppServiceEnvironmentV3TimeoutsToTerraform(struct?: DataAzur
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/app_service_environment_v3.html azurerm_app_service_environment_v3}
+*/
 export class DataAzurermAppServiceEnvironmentV3 extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/app_service_environment_v3.html azurerm_app_service_environment_v3} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataAzurermAppServiceEnvironmentV3Config
+  */
   public constructor(scope: Construct, id: string, config: DataAzurermAppServiceEnvironmentV3Config) {
     super(scope, id, {
       terraformResourceType: 'azurerm_app_service_environment_v3',

@@ -7,16 +7,41 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface SynapseManagedPrivateEndpointConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_managed_private_endpoint.html#name SynapseManagedPrivateEndpoint#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_managed_private_endpoint.html#subresource_name SynapseManagedPrivateEndpoint#subresource_name}
+  */
   readonly subresourceName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_managed_private_endpoint.html#synapse_workspace_id SynapseManagedPrivateEndpoint#synapse_workspace_id}
+  */
   readonly synapseWorkspaceId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_managed_private_endpoint.html#target_resource_id SynapseManagedPrivateEndpoint#target_resource_id}
+  */
   readonly targetResourceId: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_managed_private_endpoint.html#timeouts SynapseManagedPrivateEndpoint#timeouts}
+  */
   readonly timeouts?: SynapseManagedPrivateEndpointTimeouts;
 }
 export interface SynapseManagedPrivateEndpointTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_managed_private_endpoint.html#create SynapseManagedPrivateEndpoint#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_managed_private_endpoint.html#delete SynapseManagedPrivateEndpoint#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_managed_private_endpoint.html#read SynapseManagedPrivateEndpoint#read}
+  */
   readonly read?: string;
 }
 
@@ -30,14 +55,22 @@ function synapseManagedPrivateEndpointTimeoutsToTerraform(struct?: SynapseManage
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_managed_private_endpoint.html azurerm_synapse_managed_private_endpoint}
+*/
 export class SynapseManagedPrivateEndpoint extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_managed_private_endpoint.html azurerm_synapse_managed_private_endpoint} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options SynapseManagedPrivateEndpointConfig
+  */
   public constructor(scope: Construct, id: string, config: SynapseManagedPrivateEndpointConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_synapse_managed_private_endpoint',

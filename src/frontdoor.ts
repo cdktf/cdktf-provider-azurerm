@@ -7,25 +7,73 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface FrontdoorConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor.html#backend_pools_send_receive_timeout_seconds Frontdoor#backend_pools_send_receive_timeout_seconds}
+  */
   readonly backendPoolsSendReceiveTimeoutSeconds?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor.html#enforce_backend_pools_certificate_name_check Frontdoor#enforce_backend_pools_certificate_name_check}
+  */
   readonly enforceBackendPoolsCertificateNameCheck: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor.html#friendly_name Frontdoor#friendly_name}
+  */
   readonly friendlyName?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor.html#load_balancer_enabled Frontdoor#load_balancer_enabled}
+  */
   readonly loadBalancerEnabled?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor.html#location Frontdoor#location}
+  */
   readonly location?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor.html#name Frontdoor#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor.html#resource_group_name Frontdoor#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor.html#tags Frontdoor#tags}
+  */
   readonly tags?: { [key: string]: string };
-  /** backend_pool block */
+  /**
+  * backend_pool block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor.html#backend_pool Frontdoor#backend_pool}
+  */
   readonly backendPool: FrontdoorBackendPool[];
-  /** backend_pool_health_probe block */
+  /**
+  * backend_pool_health_probe block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor.html#backend_pool_health_probe Frontdoor#backend_pool_health_probe}
+  */
   readonly backendPoolHealthProbe: FrontdoorBackendPoolHealthProbe[];
-  /** backend_pool_load_balancing block */
+  /**
+  * backend_pool_load_balancing block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor.html#backend_pool_load_balancing Frontdoor#backend_pool_load_balancing}
+  */
   readonly backendPoolLoadBalancing: FrontdoorBackendPoolLoadBalancing[];
-  /** frontend_endpoint block */
+  /**
+  * frontend_endpoint block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor.html#frontend_endpoint Frontdoor#frontend_endpoint}
+  */
   readonly frontendEndpoint: FrontdoorFrontendEndpoint[];
-  /** routing_rule block */
+  /**
+  * routing_rule block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor.html#routing_rule Frontdoor#routing_rule}
+  */
   readonly routingRule: FrontdoorRoutingRule[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor.html#timeouts Frontdoor#timeouts}
+  */
   readonly timeouts?: FrontdoorTimeouts;
 }
 export class FrontdoorExplicitResourceOrder extends cdktf.ComplexComputedList {
@@ -56,12 +104,33 @@ export class FrontdoorExplicitResourceOrder extends cdktf.ComplexComputedList {
   }
 }
 export interface FrontdoorBackendPoolBackend {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor.html#address Frontdoor#address}
+  */
   readonly address: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor.html#enabled Frontdoor#enabled}
+  */
   readonly enabled?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor.html#host_header Frontdoor#host_header}
+  */
   readonly hostHeader: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor.html#http_port Frontdoor#http_port}
+  */
   readonly httpPort: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor.html#https_port Frontdoor#https_port}
+  */
   readonly httpsPort: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor.html#priority Frontdoor#priority}
+  */
   readonly priority?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor.html#weight Frontdoor#weight}
+  */
   readonly weight?: number;
 }
 
@@ -79,10 +148,23 @@ function frontdoorBackendPoolBackendToTerraform(struct?: FrontdoorBackendPoolBac
 }
 
 export interface FrontdoorBackendPool {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor.html#health_probe_name Frontdoor#health_probe_name}
+  */
   readonly healthProbeName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor.html#load_balancing_name Frontdoor#load_balancing_name}
+  */
   readonly loadBalancingName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor.html#name Frontdoor#name}
+  */
   readonly name: string;
-  /** backend block */
+  /**
+  * backend block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor.html#backend Frontdoor#backend}
+  */
   readonly backend: FrontdoorBackendPoolBackend[];
 }
 
@@ -97,11 +179,29 @@ function frontdoorBackendPoolToTerraform(struct?: FrontdoorBackendPool): any {
 }
 
 export interface FrontdoorBackendPoolHealthProbe {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor.html#enabled Frontdoor#enabled}
+  */
   readonly enabled?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor.html#interval_in_seconds Frontdoor#interval_in_seconds}
+  */
   readonly intervalInSeconds?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor.html#name Frontdoor#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor.html#path Frontdoor#path}
+  */
   readonly path?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor.html#probe_method Frontdoor#probe_method}
+  */
   readonly probeMethod?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor.html#protocol Frontdoor#protocol}
+  */
   readonly protocol?: string;
 }
 
@@ -118,9 +218,21 @@ function frontdoorBackendPoolHealthProbeToTerraform(struct?: FrontdoorBackendPoo
 }
 
 export interface FrontdoorBackendPoolLoadBalancing {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor.html#additional_latency_milliseconds Frontdoor#additional_latency_milliseconds}
+  */
   readonly additionalLatencyMilliseconds?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor.html#name Frontdoor#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor.html#sample_size Frontdoor#sample_size}
+  */
   readonly sampleSize?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor.html#successful_samples_required Frontdoor#successful_samples_required}
+  */
   readonly successfulSamplesRequired?: number;
 }
 
@@ -135,10 +247,25 @@ function frontdoorBackendPoolLoadBalancingToTerraform(struct?: FrontdoorBackendP
 }
 
 export interface FrontdoorFrontendEndpoint {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor.html#host_name Frontdoor#host_name}
+  */
   readonly hostName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor.html#name Frontdoor#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor.html#session_affinity_enabled Frontdoor#session_affinity_enabled}
+  */
   readonly sessionAffinityEnabled?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor.html#session_affinity_ttl_seconds Frontdoor#session_affinity_ttl_seconds}
+  */
   readonly sessionAffinityTtlSeconds?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor.html#web_application_firewall_policy_link_id Frontdoor#web_application_firewall_policy_link_id}
+  */
   readonly webApplicationFirewallPolicyLinkId?: string;
 }
 
@@ -154,11 +281,29 @@ function frontdoorFrontendEndpointToTerraform(struct?: FrontdoorFrontendEndpoint
 }
 
 export interface FrontdoorRoutingRuleForwardingConfiguration {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor.html#backend_pool_name Frontdoor#backend_pool_name}
+  */
   readonly backendPoolName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor.html#cache_enabled Frontdoor#cache_enabled}
+  */
   readonly cacheEnabled?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor.html#cache_query_parameter_strip_directive Frontdoor#cache_query_parameter_strip_directive}
+  */
   readonly cacheQueryParameterStripDirective?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor.html#cache_use_dynamic_compression Frontdoor#cache_use_dynamic_compression}
+  */
   readonly cacheUseDynamicCompression?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor.html#custom_forwarding_path Frontdoor#custom_forwarding_path}
+  */
   readonly customForwardingPath?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor.html#forwarding_protocol Frontdoor#forwarding_protocol}
+  */
   readonly forwardingProtocol?: string;
 }
 
@@ -175,11 +320,29 @@ function frontdoorRoutingRuleForwardingConfigurationToTerraform(struct?: Frontdo
 }
 
 export interface FrontdoorRoutingRuleRedirectConfiguration {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor.html#custom_fragment Frontdoor#custom_fragment}
+  */
   readonly customFragment?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor.html#custom_host Frontdoor#custom_host}
+  */
   readonly customHost?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor.html#custom_path Frontdoor#custom_path}
+  */
   readonly customPath?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor.html#custom_query_string Frontdoor#custom_query_string}
+  */
   readonly customQueryString?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor.html#redirect_protocol Frontdoor#redirect_protocol}
+  */
   readonly redirectProtocol: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor.html#redirect_type Frontdoor#redirect_type}
+  */
   readonly redirectType: string;
 }
 
@@ -196,14 +359,37 @@ function frontdoorRoutingRuleRedirectConfigurationToTerraform(struct?: Frontdoor
 }
 
 export interface FrontdoorRoutingRule {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor.html#accepted_protocols Frontdoor#accepted_protocols}
+  */
   readonly acceptedProtocols: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor.html#enabled Frontdoor#enabled}
+  */
   readonly enabled?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor.html#frontend_endpoints Frontdoor#frontend_endpoints}
+  */
   readonly frontendEndpoints: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor.html#name Frontdoor#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor.html#patterns_to_match Frontdoor#patterns_to_match}
+  */
   readonly patternsToMatch: string[];
-  /** forwarding_configuration block */
+  /**
+  * forwarding_configuration block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor.html#forwarding_configuration Frontdoor#forwarding_configuration}
+  */
   readonly forwardingConfiguration?: FrontdoorRoutingRuleForwardingConfiguration[];
-  /** redirect_configuration block */
+  /**
+  * redirect_configuration block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor.html#redirect_configuration Frontdoor#redirect_configuration}
+  */
   readonly redirectConfiguration?: FrontdoorRoutingRuleRedirectConfiguration[];
 }
 
@@ -221,9 +407,21 @@ function frontdoorRoutingRuleToTerraform(struct?: FrontdoorRoutingRule): any {
 }
 
 export interface FrontdoorTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor.html#create Frontdoor#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor.html#delete Frontdoor#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor.html#read Frontdoor#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor.html#update Frontdoor#update}
+  */
   readonly update?: string;
 }
 
@@ -238,14 +436,22 @@ function frontdoorTimeoutsToTerraform(struct?: FrontdoorTimeouts): any {
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor.html azurerm_frontdoor}
+*/
 export class Frontdoor extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor.html azurerm_frontdoor} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options FrontdoorConfig
+  */
   public constructor(scope: Construct, id: string, config: FrontdoorConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_frontdoor',

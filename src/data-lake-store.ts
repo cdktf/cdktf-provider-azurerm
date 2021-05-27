@@ -7,22 +7,65 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataLakeStoreConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_lake_store.html#encryption_state DataLakeStore#encryption_state}
+  */
   readonly encryptionState?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_lake_store.html#encryption_type DataLakeStore#encryption_type}
+  */
   readonly encryptionType?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_lake_store.html#firewall_allow_azure_ips DataLakeStore#firewall_allow_azure_ips}
+  */
   readonly firewallAllowAzureIps?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_lake_store.html#firewall_state DataLakeStore#firewall_state}
+  */
   readonly firewallState?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_lake_store.html#location DataLakeStore#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_lake_store.html#name DataLakeStore#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_lake_store.html#resource_group_name DataLakeStore#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_lake_store.html#tags DataLakeStore#tags}
+  */
   readonly tags?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_lake_store.html#tier DataLakeStore#tier}
+  */
   readonly tier?: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_lake_store.html#timeouts DataLakeStore#timeouts}
+  */
   readonly timeouts?: DataLakeStoreTimeouts;
 }
 export interface DataLakeStoreTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_lake_store.html#create DataLakeStore#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_lake_store.html#delete DataLakeStore#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_lake_store.html#read DataLakeStore#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_lake_store.html#update DataLakeStore#update}
+  */
   readonly update?: string;
 }
 
@@ -37,14 +80,22 @@ function dataLakeStoreTimeoutsToTerraform(struct?: DataLakeStoreTimeouts): any {
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/data_lake_store.html azurerm_data_lake_store}
+*/
 export class DataLakeStore extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/data_lake_store.html azurerm_data_lake_store} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataLakeStoreConfig
+  */
   public constructor(scope: Construct, id: string, config: DataLakeStoreConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_data_lake_store',

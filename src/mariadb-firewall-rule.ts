@@ -7,18 +7,49 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface MariadbFirewallRuleConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mariadb_firewall_rule.html#end_ip_address MariadbFirewallRule#end_ip_address}
+  */
   readonly endIpAddress: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mariadb_firewall_rule.html#name MariadbFirewallRule#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mariadb_firewall_rule.html#resource_group_name MariadbFirewallRule#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mariadb_firewall_rule.html#server_name MariadbFirewallRule#server_name}
+  */
   readonly serverName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mariadb_firewall_rule.html#start_ip_address MariadbFirewallRule#start_ip_address}
+  */
   readonly startIpAddress: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mariadb_firewall_rule.html#timeouts MariadbFirewallRule#timeouts}
+  */
   readonly timeouts?: MariadbFirewallRuleTimeouts;
 }
 export interface MariadbFirewallRuleTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mariadb_firewall_rule.html#create MariadbFirewallRule#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mariadb_firewall_rule.html#delete MariadbFirewallRule#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mariadb_firewall_rule.html#read MariadbFirewallRule#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mariadb_firewall_rule.html#update MariadbFirewallRule#update}
+  */
   readonly update?: string;
 }
 
@@ -33,14 +64,22 @@ function mariadbFirewallRuleTimeoutsToTerraform(struct?: MariadbFirewallRuleTime
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/mariadb_firewall_rule.html azurerm_mariadb_firewall_rule}
+*/
 export class MariadbFirewallRule extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/mariadb_firewall_rule.html azurerm_mariadb_firewall_rule} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options MariadbFirewallRuleConfig
+  */
   public constructor(scope: Construct, id: string, config: MariadbFirewallRuleConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_mariadb_firewall_rule',

@@ -7,25 +7,75 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface FirewallNetworkRuleCollectionConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_network_rule_collection.html#action FirewallNetworkRuleCollection#action}
+  */
   readonly action: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_network_rule_collection.html#azure_firewall_name FirewallNetworkRuleCollection#azure_firewall_name}
+  */
   readonly azureFirewallName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_network_rule_collection.html#name FirewallNetworkRuleCollection#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_network_rule_collection.html#priority FirewallNetworkRuleCollection#priority}
+  */
   readonly priority: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_network_rule_collection.html#resource_group_name FirewallNetworkRuleCollection#resource_group_name}
+  */
   readonly resourceGroupName: string;
-  /** rule block */
+  /**
+  * rule block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_network_rule_collection.html#rule FirewallNetworkRuleCollection#rule}
+  */
   readonly rule: FirewallNetworkRuleCollectionRule[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_network_rule_collection.html#timeouts FirewallNetworkRuleCollection#timeouts}
+  */
   readonly timeouts?: FirewallNetworkRuleCollectionTimeouts;
 }
 export interface FirewallNetworkRuleCollectionRule {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_network_rule_collection.html#description FirewallNetworkRuleCollection#description}
+  */
   readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_network_rule_collection.html#destination_addresses FirewallNetworkRuleCollection#destination_addresses}
+  */
   readonly destinationAddresses?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_network_rule_collection.html#destination_fqdns FirewallNetworkRuleCollection#destination_fqdns}
+  */
   readonly destinationFqdns?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_network_rule_collection.html#destination_ip_groups FirewallNetworkRuleCollection#destination_ip_groups}
+  */
   readonly destinationIpGroups?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_network_rule_collection.html#destination_ports FirewallNetworkRuleCollection#destination_ports}
+  */
   readonly destinationPorts: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_network_rule_collection.html#name FirewallNetworkRuleCollection#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_network_rule_collection.html#protocols FirewallNetworkRuleCollection#protocols}
+  */
   readonly protocols: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_network_rule_collection.html#source_addresses FirewallNetworkRuleCollection#source_addresses}
+  */
   readonly sourceAddresses?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_network_rule_collection.html#source_ip_groups FirewallNetworkRuleCollection#source_ip_groups}
+  */
   readonly sourceIpGroups?: string[];
 }
 
@@ -45,9 +95,21 @@ function firewallNetworkRuleCollectionRuleToTerraform(struct?: FirewallNetworkRu
 }
 
 export interface FirewallNetworkRuleCollectionTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_network_rule_collection.html#create FirewallNetworkRuleCollection#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_network_rule_collection.html#delete FirewallNetworkRuleCollection#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_network_rule_collection.html#read FirewallNetworkRuleCollection#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_network_rule_collection.html#update FirewallNetworkRuleCollection#update}
+  */
   readonly update?: string;
 }
 
@@ -62,14 +124,22 @@ function firewallNetworkRuleCollectionTimeoutsToTerraform(struct?: FirewallNetwo
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_network_rule_collection.html azurerm_firewall_network_rule_collection}
+*/
 export class FirewallNetworkRuleCollection extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_network_rule_collection.html azurerm_firewall_network_rule_collection} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options FirewallNetworkRuleCollectionConfig
+  */
   public constructor(scope: Construct, id: string, config: FirewallNetworkRuleCollectionConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_firewall_network_rule_collection',

@@ -7,19 +7,51 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface VirtualHubRouteTableConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_hub_route_table.html#labels VirtualHubRouteTable#labels}
+  */
   readonly labels?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_hub_route_table.html#name VirtualHubRouteTable#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_hub_route_table.html#virtual_hub_id VirtualHubRouteTable#virtual_hub_id}
+  */
   readonly virtualHubId: string;
-  /** route block */
+  /**
+  * route block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_hub_route_table.html#route VirtualHubRouteTable#route}
+  */
   readonly route?: VirtualHubRouteTableRoute[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_hub_route_table.html#timeouts VirtualHubRouteTable#timeouts}
+  */
   readonly timeouts?: VirtualHubRouteTableTimeouts;
 }
 export interface VirtualHubRouteTableRoute {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_hub_route_table.html#destinations VirtualHubRouteTable#destinations}
+  */
   readonly destinations: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_hub_route_table.html#destinations_type VirtualHubRouteTable#destinations_type}
+  */
   readonly destinationsType: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_hub_route_table.html#name VirtualHubRouteTable#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_hub_route_table.html#next_hop VirtualHubRouteTable#next_hop}
+  */
   readonly nextHop: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_hub_route_table.html#next_hop_type VirtualHubRouteTable#next_hop_type}
+  */
   readonly nextHopType?: string;
 }
 
@@ -35,9 +67,21 @@ function virtualHubRouteTableRouteToTerraform(struct?: VirtualHubRouteTableRoute
 }
 
 export interface VirtualHubRouteTableTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_hub_route_table.html#create VirtualHubRouteTable#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_hub_route_table.html#delete VirtualHubRouteTable#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_hub_route_table.html#read VirtualHubRouteTable#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_hub_route_table.html#update VirtualHubRouteTable#update}
+  */
   readonly update?: string;
 }
 
@@ -52,14 +96,22 @@ function virtualHubRouteTableTimeoutsToTerraform(struct?: VirtualHubRouteTableTi
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_hub_route_table.html azurerm_virtual_hub_route_table}
+*/
 export class VirtualHubRouteTable extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_hub_route_table.html azurerm_virtual_hub_route_table} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options VirtualHubRouteTableConfig
+  */
   public constructor(scope: Construct, id: string, config: VirtualHubRouteTableConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_virtual_hub_route_table',

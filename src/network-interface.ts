@@ -7,26 +7,79 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface NetworkInterfaceConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_interface.html#dns_servers NetworkInterface#dns_servers}
+  */
   readonly dnsServers?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_interface.html#enable_accelerated_networking NetworkInterface#enable_accelerated_networking}
+  */
   readonly enableAcceleratedNetworking?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_interface.html#enable_ip_forwarding NetworkInterface#enable_ip_forwarding}
+  */
   readonly enableIpForwarding?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_interface.html#internal_dns_name_label NetworkInterface#internal_dns_name_label}
+  */
   readonly internalDnsNameLabel?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_interface.html#location NetworkInterface#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_interface.html#name NetworkInterface#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_interface.html#resource_group_name NetworkInterface#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_interface.html#tags NetworkInterface#tags}
+  */
   readonly tags?: { [key: string]: string };
-  /** ip_configuration block */
+  /**
+  * ip_configuration block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_interface.html#ip_configuration NetworkInterface#ip_configuration}
+  */
   readonly ipConfiguration: NetworkInterfaceIpConfiguration[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_interface.html#timeouts NetworkInterface#timeouts}
+  */
   readonly timeouts?: NetworkInterfaceTimeouts;
 }
 export interface NetworkInterfaceIpConfiguration {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_interface.html#name NetworkInterface#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_interface.html#primary NetworkInterface#primary}
+  */
   readonly primary?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_interface.html#private_ip_address NetworkInterface#private_ip_address}
+  */
   readonly privateIpAddress?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_interface.html#private_ip_address_allocation NetworkInterface#private_ip_address_allocation}
+  */
   readonly privateIpAddressAllocation: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_interface.html#private_ip_address_version NetworkInterface#private_ip_address_version}
+  */
   readonly privateIpAddressVersion?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_interface.html#public_ip_address_id NetworkInterface#public_ip_address_id}
+  */
   readonly publicIpAddressId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_interface.html#subnet_id NetworkInterface#subnet_id}
+  */
   readonly subnetId?: string;
 }
 
@@ -44,9 +97,21 @@ function networkInterfaceIpConfigurationToTerraform(struct?: NetworkInterfaceIpC
 }
 
 export interface NetworkInterfaceTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_interface.html#create NetworkInterface#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_interface.html#delete NetworkInterface#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_interface.html#read NetworkInterface#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_interface.html#update NetworkInterface#update}
+  */
   readonly update?: string;
 }
 
@@ -61,14 +126,22 @@ function networkInterfaceTimeoutsToTerraform(struct?: NetworkInterfaceTimeouts):
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/network_interface.html azurerm_network_interface}
+*/
 export class NetworkInterface extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/network_interface.html azurerm_network_interface} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options NetworkInterfaceConfig
+  */
   public constructor(scope: Construct, id: string, config: NetworkInterfaceConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_network_interface',

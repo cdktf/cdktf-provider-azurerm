@@ -7,34 +7,109 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface FunctionAppConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app.html#app_service_plan_id FunctionApp#app_service_plan_id}
+  */
   readonly appServicePlanId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app.html#app_settings FunctionApp#app_settings}
+  */
   readonly appSettings?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app.html#client_affinity_enabled FunctionApp#client_affinity_enabled}
+  */
   readonly clientAffinityEnabled?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app.html#client_cert_mode FunctionApp#client_cert_mode}
+  */
   readonly clientCertMode?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app.html#daily_memory_time_quota FunctionApp#daily_memory_time_quota}
+  */
   readonly dailyMemoryTimeQuota?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app.html#enable_builtin_logging FunctionApp#enable_builtin_logging}
+  */
   readonly enableBuiltinLogging?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app.html#enabled FunctionApp#enabled}
+  */
   readonly enabled?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app.html#https_only FunctionApp#https_only}
+  */
   readonly httpsOnly?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app.html#location FunctionApp#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app.html#name FunctionApp#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app.html#os_type FunctionApp#os_type}
+  */
   readonly osType?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app.html#resource_group_name FunctionApp#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app.html#storage_account_access_key FunctionApp#storage_account_access_key}
+  */
   readonly storageAccountAccessKey?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app.html#storage_account_name FunctionApp#storage_account_name}
+  */
   readonly storageAccountName?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app.html#storage_connection_string FunctionApp#storage_connection_string}
+  */
   readonly storageConnectionString?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app.html#tags FunctionApp#tags}
+  */
   readonly tags?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app.html#version FunctionApp#version}
+  */
   readonly version?: string;
-  /** auth_settings block */
+  /**
+  * auth_settings block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app.html#auth_settings FunctionApp#auth_settings}
+  */
   readonly authSettings?: FunctionAppAuthSettings[];
-  /** connection_string block */
+  /**
+  * connection_string block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app.html#connection_string FunctionApp#connection_string}
+  */
   readonly connectionString?: FunctionAppConnectionString[];
-  /** identity block */
+  /**
+  * identity block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app.html#identity FunctionApp#identity}
+  */
   readonly identity?: FunctionAppIdentity[];
-  /** site_config block */
+  /**
+  * site_config block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app.html#site_config FunctionApp#site_config}
+  */
   readonly siteConfig?: FunctionAppSiteConfig[];
-  /** source_control block */
+  /**
+  * source_control block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app.html#source_control FunctionApp#source_control}
+  */
   readonly sourceControl?: FunctionAppSourceControl[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app.html#timeouts FunctionApp#timeouts}
+  */
   readonly timeouts?: FunctionAppTimeouts;
 }
 export class FunctionAppSiteCredential extends cdktf.ComplexComputedList {
@@ -50,8 +125,17 @@ export class FunctionAppSiteCredential extends cdktf.ComplexComputedList {
   }
 }
 export interface FunctionAppAuthSettingsActiveDirectory {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app.html#allowed_audiences FunctionApp#allowed_audiences}
+  */
   readonly allowedAudiences?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app.html#client_id FunctionApp#client_id}
+  */
   readonly clientId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app.html#client_secret FunctionApp#client_secret}
+  */
   readonly clientSecret?: string;
 }
 
@@ -65,8 +149,17 @@ function functionAppAuthSettingsActiveDirectoryToTerraform(struct?: FunctionAppA
 }
 
 export interface FunctionAppAuthSettingsFacebook {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app.html#app_id FunctionApp#app_id}
+  */
   readonly appId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app.html#app_secret FunctionApp#app_secret}
+  */
   readonly appSecret: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app.html#oauth_scopes FunctionApp#oauth_scopes}
+  */
   readonly oauthScopes?: string[];
 }
 
@@ -80,8 +173,17 @@ function functionAppAuthSettingsFacebookToTerraform(struct?: FunctionAppAuthSett
 }
 
 export interface FunctionAppAuthSettingsGoogle {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app.html#client_id FunctionApp#client_id}
+  */
   readonly clientId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app.html#client_secret FunctionApp#client_secret}
+  */
   readonly clientSecret: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app.html#oauth_scopes FunctionApp#oauth_scopes}
+  */
   readonly oauthScopes?: string[];
 }
 
@@ -95,8 +197,17 @@ function functionAppAuthSettingsGoogleToTerraform(struct?: FunctionAppAuthSettin
 }
 
 export interface FunctionAppAuthSettingsMicrosoft {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app.html#client_id FunctionApp#client_id}
+  */
   readonly clientId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app.html#client_secret FunctionApp#client_secret}
+  */
   readonly clientSecret: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app.html#oauth_scopes FunctionApp#oauth_scopes}
+  */
   readonly oauthScopes?: string[];
 }
 
@@ -110,7 +221,13 @@ function functionAppAuthSettingsMicrosoftToTerraform(struct?: FunctionAppAuthSet
 }
 
 export interface FunctionAppAuthSettingsTwitter {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app.html#consumer_key FunctionApp#consumer_key}
+  */
   readonly consumerKey: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app.html#consumer_secret FunctionApp#consumer_secret}
+  */
   readonly consumerSecret: string;
 }
 
@@ -123,24 +240,71 @@ function functionAppAuthSettingsTwitterToTerraform(struct?: FunctionAppAuthSetti
 }
 
 export interface FunctionAppAuthSettings {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app.html#additional_login_params FunctionApp#additional_login_params}
+  */
   readonly additionalLoginParams?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app.html#allowed_external_redirect_urls FunctionApp#allowed_external_redirect_urls}
+  */
   readonly allowedExternalRedirectUrls?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app.html#default_provider FunctionApp#default_provider}
+  */
   readonly defaultProvider?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app.html#enabled FunctionApp#enabled}
+  */
   readonly enabled: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app.html#issuer FunctionApp#issuer}
+  */
   readonly issuer?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app.html#runtime_version FunctionApp#runtime_version}
+  */
   readonly runtimeVersion?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app.html#token_refresh_extension_hours FunctionApp#token_refresh_extension_hours}
+  */
   readonly tokenRefreshExtensionHours?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app.html#token_store_enabled FunctionApp#token_store_enabled}
+  */
   readonly tokenStoreEnabled?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app.html#unauthenticated_client_action FunctionApp#unauthenticated_client_action}
+  */
   readonly unauthenticatedClientAction?: string;
-  /** active_directory block */
+  /**
+  * active_directory block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app.html#active_directory FunctionApp#active_directory}
+  */
   readonly activeDirectory?: FunctionAppAuthSettingsActiveDirectory[];
-  /** facebook block */
+  /**
+  * facebook block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app.html#facebook FunctionApp#facebook}
+  */
   readonly facebook?: FunctionAppAuthSettingsFacebook[];
-  /** google block */
+  /**
+  * google block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app.html#google FunctionApp#google}
+  */
   readonly google?: FunctionAppAuthSettingsGoogle[];
-  /** microsoft block */
+  /**
+  * microsoft block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app.html#microsoft FunctionApp#microsoft}
+  */
   readonly microsoft?: FunctionAppAuthSettingsMicrosoft[];
-  /** twitter block */
+  /**
+  * twitter block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app.html#twitter FunctionApp#twitter}
+  */
   readonly twitter?: FunctionAppAuthSettingsTwitter[];
 }
 
@@ -165,8 +329,17 @@ function functionAppAuthSettingsToTerraform(struct?: FunctionAppAuthSettings): a
 }
 
 export interface FunctionAppConnectionString {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app.html#name FunctionApp#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app.html#type FunctionApp#type}
+  */
   readonly type: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app.html#value FunctionApp#value}
+  */
   readonly value: string;
 }
 
@@ -180,7 +353,13 @@ function functionAppConnectionStringToTerraform(struct?: FunctionAppConnectionSt
 }
 
 export interface FunctionAppIdentity {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app.html#identity_ids FunctionApp#identity_ids}
+  */
   readonly identityIds?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app.html#type FunctionApp#type}
+  */
   readonly type: string;
 }
 
@@ -193,9 +372,21 @@ function functionAppIdentityToTerraform(struct?: FunctionAppIdentity): any {
 }
 
 export interface FunctionAppSiteConfigIpRestrictionHeaders {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app.html#x_azure_fdid FunctionApp#x_azure_fdid}
+  */
   readonly xAzureFdid?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app.html#x_fd_health_probe FunctionApp#x_fd_health_probe}
+  */
   readonly xFdHealthProbe?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app.html#x_forwarded_for FunctionApp#x_forwarded_for}
+  */
   readonly xForwardedFor?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app.html#x_forwarded_host FunctionApp#x_forwarded_host}
+  */
   readonly xForwardedHost?: string[];
 }
 
@@ -210,12 +401,33 @@ function functionAppSiteConfigIpRestrictionHeadersToTerraform(struct?: FunctionA
 }
 
 export interface FunctionAppSiteConfigIpRestriction {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app.html#action FunctionApp#action}
+  */
   readonly action?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app.html#headers FunctionApp#headers}
+  */
   readonly headers?: FunctionAppSiteConfigIpRestrictionHeaders[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app.html#ip_address FunctionApp#ip_address}
+  */
   readonly ipAddress?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app.html#name FunctionApp#name}
+  */
   readonly name?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app.html#priority FunctionApp#priority}
+  */
   readonly priority?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app.html#service_tag FunctionApp#service_tag}
+  */
   readonly serviceTag?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app.html#virtual_network_subnet_id FunctionApp#virtual_network_subnet_id}
+  */
   readonly virtualNetworkSubnetId?: string;
 }
 
@@ -233,9 +445,21 @@ function functionAppSiteConfigIpRestrictionToTerraform(struct?: FunctionAppSiteC
 }
 
 export interface FunctionAppSiteConfigScmIpRestrictionHeaders {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app.html#x_azure_fdid FunctionApp#x_azure_fdid}
+  */
   readonly xAzureFdid?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app.html#x_fd_health_probe FunctionApp#x_fd_health_probe}
+  */
   readonly xFdHealthProbe?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app.html#x_forwarded_for FunctionApp#x_forwarded_for}
+  */
   readonly xForwardedFor?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app.html#x_forwarded_host FunctionApp#x_forwarded_host}
+  */
   readonly xForwardedHost?: string[];
 }
 
@@ -250,12 +474,33 @@ function functionAppSiteConfigScmIpRestrictionHeadersToTerraform(struct?: Functi
 }
 
 export interface FunctionAppSiteConfigScmIpRestriction {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app.html#action FunctionApp#action}
+  */
   readonly action?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app.html#headers FunctionApp#headers}
+  */
   readonly headers?: FunctionAppSiteConfigScmIpRestrictionHeaders[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app.html#ip_address FunctionApp#ip_address}
+  */
   readonly ipAddress?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app.html#name FunctionApp#name}
+  */
   readonly name?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app.html#priority FunctionApp#priority}
+  */
   readonly priority?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app.html#service_tag FunctionApp#service_tag}
+  */
   readonly serviceTag?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app.html#virtual_network_subnet_id FunctionApp#virtual_network_subnet_id}
+  */
   readonly virtualNetworkSubnetId?: string;
 }
 
@@ -273,7 +518,13 @@ function functionAppSiteConfigScmIpRestrictionToTerraform(struct?: FunctionAppSi
 }
 
 export interface FunctionAppSiteConfigCors {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app.html#allowed_origins FunctionApp#allowed_origins}
+  */
   readonly allowedOrigins: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app.html#support_credentials FunctionApp#support_credentials}
+  */
   readonly supportCredentials?: boolean;
 }
 
@@ -286,22 +537,71 @@ function functionAppSiteConfigCorsToTerraform(struct?: FunctionAppSiteConfigCors
 }
 
 export interface FunctionAppSiteConfig {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app.html#always_on FunctionApp#always_on}
+  */
   readonly alwaysOn?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app.html#auto_swap_slot_name FunctionApp#auto_swap_slot_name}
+  */
   readonly autoSwapSlotName?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app.html#ftps_state FunctionApp#ftps_state}
+  */
   readonly ftpsState?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app.html#health_check_path FunctionApp#health_check_path}
+  */
   readonly healthCheckPath?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app.html#http2_enabled FunctionApp#http2_enabled}
+  */
   readonly http2Enabled?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app.html#ip_restriction FunctionApp#ip_restriction}
+  */
   readonly ipRestriction?: FunctionAppSiteConfigIpRestriction[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app.html#java_version FunctionApp#java_version}
+  */
   readonly javaVersion?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app.html#linux_fx_version FunctionApp#linux_fx_version}
+  */
   readonly linuxFxVersion?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app.html#min_tls_version FunctionApp#min_tls_version}
+  */
   readonly minTlsVersion?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app.html#pre_warmed_instance_count FunctionApp#pre_warmed_instance_count}
+  */
   readonly preWarmedInstanceCount?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app.html#scm_ip_restriction FunctionApp#scm_ip_restriction}
+  */
   readonly scmIpRestriction?: FunctionAppSiteConfigScmIpRestriction[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app.html#scm_type FunctionApp#scm_type}
+  */
   readonly scmType?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app.html#scm_use_main_ip_restriction FunctionApp#scm_use_main_ip_restriction}
+  */
   readonly scmUseMainIpRestriction?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app.html#use_32_bit_worker_process FunctionApp#use_32_bit_worker_process}
+  */
   readonly use32BitWorkerProcess?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app.html#websockets_enabled FunctionApp#websockets_enabled}
+  */
   readonly websocketsEnabled?: boolean;
-  /** cors block */
+  /**
+  * cors block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app.html#cors FunctionApp#cors}
+  */
   readonly cors?: FunctionAppSiteConfigCors[];
 }
 
@@ -328,10 +628,25 @@ function functionAppSiteConfigToTerraform(struct?: FunctionAppSiteConfig): any {
 }
 
 export interface FunctionAppSourceControl {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app.html#branch FunctionApp#branch}
+  */
   readonly branch?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app.html#manual_integration FunctionApp#manual_integration}
+  */
   readonly manualIntegration?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app.html#repo_url FunctionApp#repo_url}
+  */
   readonly repoUrl?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app.html#rollback_enabled FunctionApp#rollback_enabled}
+  */
   readonly rollbackEnabled?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app.html#use_mercurial FunctionApp#use_mercurial}
+  */
   readonly useMercurial?: boolean;
 }
 
@@ -347,9 +662,21 @@ function functionAppSourceControlToTerraform(struct?: FunctionAppSourceControl):
 }
 
 export interface FunctionAppTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app.html#create FunctionApp#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app.html#delete FunctionApp#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app.html#read FunctionApp#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app.html#update FunctionApp#update}
+  */
   readonly update?: string;
 }
 
@@ -364,14 +691,22 @@ function functionAppTimeoutsToTerraform(struct?: FunctionAppTimeouts): any {
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/function_app.html azurerm_function_app}
+*/
 export class FunctionApp extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/function_app.html azurerm_function_app} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options FunctionAppConfig
+  */
   public constructor(scope: Construct, id: string, config: FunctionAppConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_function_app',

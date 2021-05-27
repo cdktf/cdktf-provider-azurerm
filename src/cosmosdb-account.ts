@@ -7,44 +7,139 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface CosmosdbAccountConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_account.html#access_key_metadata_writes_enabled CosmosdbAccount#access_key_metadata_writes_enabled}
+  */
   readonly accessKeyMetadataWritesEnabled?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_account.html#analytical_storage_enabled CosmosdbAccount#analytical_storage_enabled}
+  */
   readonly analyticalStorageEnabled?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_account.html#enable_automatic_failover CosmosdbAccount#enable_automatic_failover}
+  */
   readonly enableAutomaticFailover?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_account.html#enable_free_tier CosmosdbAccount#enable_free_tier}
+  */
   readonly enableFreeTier?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_account.html#enable_multiple_write_locations CosmosdbAccount#enable_multiple_write_locations}
+  */
   readonly enableMultipleWriteLocations?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_account.html#ip_range_filter CosmosdbAccount#ip_range_filter}
+  */
   readonly ipRangeFilter?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_account.html#is_virtual_network_filter_enabled CosmosdbAccount#is_virtual_network_filter_enabled}
+  */
   readonly isVirtualNetworkFilterEnabled?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_account.html#key_vault_key_id CosmosdbAccount#key_vault_key_id}
+  */
   readonly keyVaultKeyId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_account.html#kind CosmosdbAccount#kind}
+  */
   readonly kind?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_account.html#location CosmosdbAccount#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_account.html#mongo_server_version CosmosdbAccount#mongo_server_version}
+  */
   readonly mongoServerVersion?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_account.html#name CosmosdbAccount#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_account.html#network_acl_bypass_for_azure_services CosmosdbAccount#network_acl_bypass_for_azure_services}
+  */
   readonly networkAclBypassForAzureServices?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_account.html#network_acl_bypass_ids CosmosdbAccount#network_acl_bypass_ids}
+  */
   readonly networkAclBypassIds?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_account.html#offer_type CosmosdbAccount#offer_type}
+  */
   readonly offerType: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_account.html#public_network_access_enabled CosmosdbAccount#public_network_access_enabled}
+  */
   readonly publicNetworkAccessEnabled?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_account.html#resource_group_name CosmosdbAccount#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_account.html#tags CosmosdbAccount#tags}
+  */
   readonly tags?: { [key: string]: string };
-  /** backup block */
+  /**
+  * backup block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_account.html#backup CosmosdbAccount#backup}
+  */
   readonly backup?: CosmosdbAccountBackup[];
-  /** capabilities block */
+  /**
+  * capabilities block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_account.html#capabilities CosmosdbAccount#capabilities}
+  */
   readonly capabilities?: CosmosdbAccountCapabilities[];
-  /** consistency_policy block */
+  /**
+  * consistency_policy block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_account.html#consistency_policy CosmosdbAccount#consistency_policy}
+  */
   readonly consistencyPolicy: CosmosdbAccountConsistencyPolicy[];
-  /** cors_rule block */
+  /**
+  * cors_rule block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_account.html#cors_rule CosmosdbAccount#cors_rule}
+  */
   readonly corsRule?: CosmosdbAccountCorsRule[];
-  /** geo_location block */
+  /**
+  * geo_location block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_account.html#geo_location CosmosdbAccount#geo_location}
+  */
   readonly geoLocation: CosmosdbAccountGeoLocation[];
-  /** identity block */
+  /**
+  * identity block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_account.html#identity CosmosdbAccount#identity}
+  */
   readonly identity?: CosmosdbAccountIdentity[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_account.html#timeouts CosmosdbAccount#timeouts}
+  */
   readonly timeouts?: CosmosdbAccountTimeouts;
-  /** virtual_network_rule block */
+  /**
+  * virtual_network_rule block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_account.html#virtual_network_rule CosmosdbAccount#virtual_network_rule}
+  */
   readonly virtualNetworkRule?: CosmosdbAccountVirtualNetworkRule[];
 }
 export interface CosmosdbAccountBackup {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_account.html#interval_in_minutes CosmosdbAccount#interval_in_minutes}
+  */
   readonly intervalInMinutes?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_account.html#retention_in_hours CosmosdbAccount#retention_in_hours}
+  */
   readonly retentionInHours?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_account.html#type CosmosdbAccount#type}
+  */
   readonly type: string;
 }
 
@@ -58,6 +153,9 @@ function cosmosdbAccountBackupToTerraform(struct?: CosmosdbAccountBackup): any {
 }
 
 export interface CosmosdbAccountCapabilities {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_account.html#name CosmosdbAccount#name}
+  */
   readonly name: string;
 }
 
@@ -69,8 +167,17 @@ function cosmosdbAccountCapabilitiesToTerraform(struct?: CosmosdbAccountCapabili
 }
 
 export interface CosmosdbAccountConsistencyPolicy {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_account.html#consistency_level CosmosdbAccount#consistency_level}
+  */
   readonly consistencyLevel: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_account.html#max_interval_in_seconds CosmosdbAccount#max_interval_in_seconds}
+  */
   readonly maxIntervalInSeconds?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_account.html#max_staleness_prefix CosmosdbAccount#max_staleness_prefix}
+  */
   readonly maxStalenessPrefix?: number;
 }
 
@@ -84,10 +191,25 @@ function cosmosdbAccountConsistencyPolicyToTerraform(struct?: CosmosdbAccountCon
 }
 
 export interface CosmosdbAccountCorsRule {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_account.html#allowed_headers CosmosdbAccount#allowed_headers}
+  */
   readonly allowedHeaders: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_account.html#allowed_methods CosmosdbAccount#allowed_methods}
+  */
   readonly allowedMethods: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_account.html#allowed_origins CosmosdbAccount#allowed_origins}
+  */
   readonly allowedOrigins: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_account.html#exposed_headers CosmosdbAccount#exposed_headers}
+  */
   readonly exposedHeaders: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_account.html#max_age_in_seconds CosmosdbAccount#max_age_in_seconds}
+  */
   readonly maxAgeInSeconds: number;
 }
 
@@ -103,9 +225,21 @@ function cosmosdbAccountCorsRuleToTerraform(struct?: CosmosdbAccountCorsRule): a
 }
 
 export interface CosmosdbAccountGeoLocation {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_account.html#failover_priority CosmosdbAccount#failover_priority}
+  */
   readonly failoverPriority: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_account.html#location CosmosdbAccount#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_account.html#prefix CosmosdbAccount#prefix}
+  */
   readonly prefix?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_account.html#zone_redundant CosmosdbAccount#zone_redundant}
+  */
   readonly zoneRedundant?: boolean;
 }
 
@@ -120,6 +254,9 @@ function cosmosdbAccountGeoLocationToTerraform(struct?: CosmosdbAccountGeoLocati
 }
 
 export interface CosmosdbAccountIdentity {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_account.html#type CosmosdbAccount#type}
+  */
   readonly type: string;
 }
 
@@ -131,9 +268,21 @@ function cosmosdbAccountIdentityToTerraform(struct?: CosmosdbAccountIdentity): a
 }
 
 export interface CosmosdbAccountTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_account.html#create CosmosdbAccount#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_account.html#delete CosmosdbAccount#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_account.html#read CosmosdbAccount#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_account.html#update CosmosdbAccount#update}
+  */
   readonly update?: string;
 }
 
@@ -148,7 +297,13 @@ function cosmosdbAccountTimeoutsToTerraform(struct?: CosmosdbAccountTimeouts): a
 }
 
 export interface CosmosdbAccountVirtualNetworkRule {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_account.html#id CosmosdbAccount#id}
+  */
   readonly id: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_account.html#ignore_missing_vnet_service_endpoint CosmosdbAccount#ignore_missing_vnet_service_endpoint}
+  */
   readonly ignoreMissingVnetServiceEndpoint?: boolean;
 }
 
@@ -161,14 +316,22 @@ function cosmosdbAccountVirtualNetworkRuleToTerraform(struct?: CosmosdbAccountVi
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_account.html azurerm_cosmosdb_account}
+*/
 export class CosmosdbAccount extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_account.html azurerm_cosmosdb_account} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options CosmosdbAccountConfig
+  */
   public constructor(scope: Construct, id: string, config: CosmosdbAccountConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_cosmosdb_account',

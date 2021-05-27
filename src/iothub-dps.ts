@@ -7,21 +7,57 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface IothubDpsConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_dps.html#location IothubDps#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_dps.html#name IothubDps#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_dps.html#resource_group_name IothubDps#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_dps.html#tags IothubDps#tags}
+  */
   readonly tags?: { [key: string]: string };
-  /** linked_hub block */
+  /**
+  * linked_hub block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_dps.html#linked_hub IothubDps#linked_hub}
+  */
   readonly linkedHub?: IothubDpsLinkedHub[];
-  /** sku block */
+  /**
+  * sku block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_dps.html#sku IothubDps#sku}
+  */
   readonly sku: IothubDpsSku[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_dps.html#timeouts IothubDps#timeouts}
+  */
   readonly timeouts?: IothubDpsTimeouts;
 }
 export interface IothubDpsLinkedHub {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_dps.html#allocation_weight IothubDps#allocation_weight}
+  */
   readonly allocationWeight?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_dps.html#apply_allocation_policy IothubDps#apply_allocation_policy}
+  */
   readonly applyAllocationPolicy?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_dps.html#connection_string IothubDps#connection_string}
+  */
   readonly connectionString: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_dps.html#location IothubDps#location}
+  */
   readonly location: string;
 }
 
@@ -36,7 +72,13 @@ function iothubDpsLinkedHubToTerraform(struct?: IothubDpsLinkedHub): any {
 }
 
 export interface IothubDpsSku {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_dps.html#capacity IothubDps#capacity}
+  */
   readonly capacity: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_dps.html#name IothubDps#name}
+  */
   readonly name: string;
 }
 
@@ -49,9 +91,21 @@ function iothubDpsSkuToTerraform(struct?: IothubDpsSku): any {
 }
 
 export interface IothubDpsTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_dps.html#create IothubDps#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_dps.html#delete IothubDps#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_dps.html#read IothubDps#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_dps.html#update IothubDps#update}
+  */
   readonly update?: string;
 }
 
@@ -66,14 +120,22 @@ function iothubDpsTimeoutsToTerraform(struct?: IothubDpsTimeouts): any {
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_dps.html azurerm_iothub_dps}
+*/
 export class IothubDps extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_dps.html azurerm_iothub_dps} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options IothubDpsConfig
+  */
   public constructor(scope: Construct, id: string, config: IothubDpsConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_iothub_dps',

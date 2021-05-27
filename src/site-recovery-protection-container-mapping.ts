@@ -7,20 +7,57 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface SiteRecoveryProtectionContainerMappingConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/site_recovery_protection_container_mapping.html#name SiteRecoveryProtectionContainerMapping#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/site_recovery_protection_container_mapping.html#recovery_fabric_name SiteRecoveryProtectionContainerMapping#recovery_fabric_name}
+  */
   readonly recoveryFabricName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/site_recovery_protection_container_mapping.html#recovery_replication_policy_id SiteRecoveryProtectionContainerMapping#recovery_replication_policy_id}
+  */
   readonly recoveryReplicationPolicyId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/site_recovery_protection_container_mapping.html#recovery_source_protection_container_name SiteRecoveryProtectionContainerMapping#recovery_source_protection_container_name}
+  */
   readonly recoverySourceProtectionContainerName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/site_recovery_protection_container_mapping.html#recovery_target_protection_container_id SiteRecoveryProtectionContainerMapping#recovery_target_protection_container_id}
+  */
   readonly recoveryTargetProtectionContainerId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/site_recovery_protection_container_mapping.html#recovery_vault_name SiteRecoveryProtectionContainerMapping#recovery_vault_name}
+  */
   readonly recoveryVaultName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/site_recovery_protection_container_mapping.html#resource_group_name SiteRecoveryProtectionContainerMapping#resource_group_name}
+  */
   readonly resourceGroupName: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/site_recovery_protection_container_mapping.html#timeouts SiteRecoveryProtectionContainerMapping#timeouts}
+  */
   readonly timeouts?: SiteRecoveryProtectionContainerMappingTimeouts;
 }
 export interface SiteRecoveryProtectionContainerMappingTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/site_recovery_protection_container_mapping.html#create SiteRecoveryProtectionContainerMapping#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/site_recovery_protection_container_mapping.html#delete SiteRecoveryProtectionContainerMapping#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/site_recovery_protection_container_mapping.html#read SiteRecoveryProtectionContainerMapping#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/site_recovery_protection_container_mapping.html#update SiteRecoveryProtectionContainerMapping#update}
+  */
   readonly update?: string;
 }
 
@@ -35,14 +72,22 @@ function siteRecoveryProtectionContainerMappingTimeoutsToTerraform(struct?: Site
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/site_recovery_protection_container_mapping.html azurerm_site_recovery_protection_container_mapping}
+*/
 export class SiteRecoveryProtectionContainerMapping extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/site_recovery_protection_container_mapping.html azurerm_site_recovery_protection_container_mapping} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options SiteRecoveryProtectionContainerMappingConfig
+  */
   public constructor(scope: Construct, id: string, config: SiteRecoveryProtectionContainerMappingConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_site_recovery_protection_container_mapping',

@@ -7,12 +7,31 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataboxEdgeDeviceConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/databox_edge_device.html#location DataboxEdgeDevice#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/databox_edge_device.html#name DataboxEdgeDevice#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/databox_edge_device.html#resource_group_name DataboxEdgeDevice#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/databox_edge_device.html#sku_name DataboxEdgeDevice#sku_name}
+  */
   readonly skuName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/databox_edge_device.html#tags DataboxEdgeDevice#tags}
+  */
   readonly tags?: { [key: string]: string };
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/databox_edge_device.html#timeouts DataboxEdgeDevice#timeouts}
+  */
   readonly timeouts?: DataboxEdgeDeviceTimeouts;
 }
 export class DataboxEdgeDeviceDeviceProperties extends cdktf.ComplexComputedList {
@@ -73,9 +92,21 @@ export class DataboxEdgeDeviceDeviceProperties extends cdktf.ComplexComputedList
   }
 }
 export interface DataboxEdgeDeviceTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/databox_edge_device.html#create DataboxEdgeDevice#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/databox_edge_device.html#delete DataboxEdgeDevice#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/databox_edge_device.html#read DataboxEdgeDevice#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/databox_edge_device.html#update DataboxEdgeDevice#update}
+  */
   readonly update?: string;
 }
 
@@ -90,14 +121,22 @@ function databoxEdgeDeviceTimeoutsToTerraform(struct?: DataboxEdgeDeviceTimeouts
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/databox_edge_device.html azurerm_databox_edge_device}
+*/
 export class DataboxEdgeDevice extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/databox_edge_device.html azurerm_databox_edge_device} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataboxEdgeDeviceConfig
+  */
   public constructor(scope: Construct, id: string, config: DataboxEdgeDeviceConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_databox_edge_device',

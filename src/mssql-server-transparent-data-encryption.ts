@@ -7,15 +7,37 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface MssqlServerTransparentDataEncryptionConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server_transparent_data_encryption.html#key_vault_key_id MssqlServerTransparentDataEncryption#key_vault_key_id}
+  */
   readonly keyVaultKeyId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server_transparent_data_encryption.html#server_id MssqlServerTransparentDataEncryption#server_id}
+  */
   readonly serverId: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server_transparent_data_encryption.html#timeouts MssqlServerTransparentDataEncryption#timeouts}
+  */
   readonly timeouts?: MssqlServerTransparentDataEncryptionTimeouts;
 }
 export interface MssqlServerTransparentDataEncryptionTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server_transparent_data_encryption.html#create MssqlServerTransparentDataEncryption#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server_transparent_data_encryption.html#delete MssqlServerTransparentDataEncryption#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server_transparent_data_encryption.html#read MssqlServerTransparentDataEncryption#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server_transparent_data_encryption.html#update MssqlServerTransparentDataEncryption#update}
+  */
   readonly update?: string;
 }
 
@@ -30,14 +52,22 @@ function mssqlServerTransparentDataEncryptionTimeoutsToTerraform(struct?: MssqlS
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server_transparent_data_encryption.html azurerm_mssql_server_transparent_data_encryption}
+*/
 export class MssqlServerTransparentDataEncryption extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server_transparent_data_encryption.html azurerm_mssql_server_transparent_data_encryption} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options MssqlServerTransparentDataEncryptionConfig
+  */
   public constructor(scope: Construct, id: string, config: MssqlServerTransparentDataEncryptionConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_mssql_server_transparent_data_encryption',

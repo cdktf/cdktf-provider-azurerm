@@ -7,21 +7,61 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface SpringCloudJavaDeploymentConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_java_deployment.html#cpu SpringCloudJavaDeployment#cpu}
+  */
   readonly cpu?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_java_deployment.html#environment_variables SpringCloudJavaDeployment#environment_variables}
+  */
   readonly environmentVariables?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_java_deployment.html#instance_count SpringCloudJavaDeployment#instance_count}
+  */
   readonly instanceCount?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_java_deployment.html#jvm_options SpringCloudJavaDeployment#jvm_options}
+  */
   readonly jvmOptions?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_java_deployment.html#memory_in_gb SpringCloudJavaDeployment#memory_in_gb}
+  */
   readonly memoryInGb?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_java_deployment.html#name SpringCloudJavaDeployment#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_java_deployment.html#runtime_version SpringCloudJavaDeployment#runtime_version}
+  */
   readonly runtimeVersion?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_java_deployment.html#spring_cloud_app_id SpringCloudJavaDeployment#spring_cloud_app_id}
+  */
   readonly springCloudAppId: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_java_deployment.html#timeouts SpringCloudJavaDeployment#timeouts}
+  */
   readonly timeouts?: SpringCloudJavaDeploymentTimeouts;
 }
 export interface SpringCloudJavaDeploymentTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_java_deployment.html#create SpringCloudJavaDeployment#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_java_deployment.html#delete SpringCloudJavaDeployment#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_java_deployment.html#read SpringCloudJavaDeployment#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_java_deployment.html#update SpringCloudJavaDeployment#update}
+  */
   readonly update?: string;
 }
 
@@ -36,14 +76,22 @@ function springCloudJavaDeploymentTimeoutsToTerraform(struct?: SpringCloudJavaDe
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_java_deployment.html azurerm_spring_cloud_java_deployment}
+*/
 export class SpringCloudJavaDeployment extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_java_deployment.html azurerm_spring_cloud_java_deployment} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options SpringCloudJavaDeploymentConfig
+  */
   public constructor(scope: Construct, id: string, config: SpringCloudJavaDeploymentConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_spring_cloud_java_deployment',

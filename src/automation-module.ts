@@ -7,16 +7,39 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface AutomationModuleConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_module.html#automation_account_name AutomationModule#automation_account_name}
+  */
   readonly automationAccountName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_module.html#name AutomationModule#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_module.html#resource_group_name AutomationModule#resource_group_name}
+  */
   readonly resourceGroupName: string;
-  /** module_link block */
+  /**
+  * module_link block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_module.html#module_link AutomationModule#module_link}
+  */
   readonly moduleLink: AutomationModuleModuleLink[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_module.html#timeouts AutomationModule#timeouts}
+  */
   readonly timeouts?: AutomationModuleTimeouts;
 }
 export interface AutomationModuleModuleLinkHash {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_module.html#algorithm AutomationModule#algorithm}
+  */
   readonly algorithm: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_module.html#value AutomationModule#value}
+  */
   readonly value: string;
 }
 
@@ -29,8 +52,15 @@ function automationModuleModuleLinkHashToTerraform(struct?: AutomationModuleModu
 }
 
 export interface AutomationModuleModuleLink {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_module.html#uri AutomationModule#uri}
+  */
   readonly uri: string;
-  /** hash block */
+  /**
+  * hash block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_module.html#hash AutomationModule#hash}
+  */
   readonly hash?: AutomationModuleModuleLinkHash[];
 }
 
@@ -43,9 +73,21 @@ function automationModuleModuleLinkToTerraform(struct?: AutomationModuleModuleLi
 }
 
 export interface AutomationModuleTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_module.html#create AutomationModule#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_module.html#delete AutomationModule#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_module.html#read AutomationModule#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_module.html#update AutomationModule#update}
+  */
   readonly update?: string;
 }
 
@@ -60,14 +102,22 @@ function automationModuleTimeoutsToTerraform(struct?: AutomationModuleTimeouts):
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/automation_module.html azurerm_automation_module}
+*/
 export class AutomationModule extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/automation_module.html azurerm_automation_module} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options AutomationModuleConfig
+  */
   public constructor(scope: Construct, id: string, config: AutomationModuleConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_automation_module',

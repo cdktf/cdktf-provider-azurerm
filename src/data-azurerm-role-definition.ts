@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/data_azurerm_role_definition.html
+// https://www.terraform.io/docs/providers/azurerm/d/role_definition.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,10 +7,23 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataAzurermRoleDefinitionConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/role_definition.html#name DataAzurermRoleDefinition#name}
+  */
   readonly name?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/role_definition.html#role_definition_id DataAzurermRoleDefinition#role_definition_id}
+  */
   readonly roleDefinitionId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/role_definition.html#scope DataAzurermRoleDefinition#scope}
+  */
   readonly scope?: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/role_definition.html#timeouts DataAzurermRoleDefinition#timeouts}
+  */
   readonly timeouts?: DataAzurermRoleDefinitionTimeouts;
 }
 export class DataAzurermRoleDefinitionPermissions extends cdktf.ComplexComputedList {
@@ -36,6 +49,9 @@ export class DataAzurermRoleDefinitionPermissions extends cdktf.ComplexComputedL
   }
 }
 export interface DataAzurermRoleDefinitionTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/role_definition.html#read DataAzurermRoleDefinition#read}
+  */
   readonly read?: string;
 }
 
@@ -47,14 +63,22 @@ function dataAzurermRoleDefinitionTimeoutsToTerraform(struct?: DataAzurermRoleDe
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/role_definition.html azurerm_role_definition}
+*/
 export class DataAzurermRoleDefinition extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/role_definition.html azurerm_role_definition} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataAzurermRoleDefinitionConfig = {}
+  */
   public constructor(scope: Construct, id: string, config: DataAzurermRoleDefinitionConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'azurerm_role_definition',

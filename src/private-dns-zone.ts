@@ -7,21 +7,59 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface PrivateDnsZoneConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/private_dns_zone.html#name PrivateDnsZone#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/private_dns_zone.html#resource_group_name PrivateDnsZone#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/private_dns_zone.html#tags PrivateDnsZone#tags}
+  */
   readonly tags?: { [key: string]: string };
-  /** soa_record block */
+  /**
+  * soa_record block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/private_dns_zone.html#soa_record PrivateDnsZone#soa_record}
+  */
   readonly soaRecord?: PrivateDnsZoneSoaRecord[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/private_dns_zone.html#timeouts PrivateDnsZone#timeouts}
+  */
   readonly timeouts?: PrivateDnsZoneTimeouts;
 }
 export interface PrivateDnsZoneSoaRecord {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/private_dns_zone.html#email PrivateDnsZone#email}
+  */
   readonly email: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/private_dns_zone.html#expire_time PrivateDnsZone#expire_time}
+  */
   readonly expireTime?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/private_dns_zone.html#minimum_ttl PrivateDnsZone#minimum_ttl}
+  */
   readonly minimumTtl?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/private_dns_zone.html#refresh_time PrivateDnsZone#refresh_time}
+  */
   readonly refreshTime?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/private_dns_zone.html#retry_time PrivateDnsZone#retry_time}
+  */
   readonly retryTime?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/private_dns_zone.html#tags PrivateDnsZone#tags}
+  */
   readonly tags?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/private_dns_zone.html#ttl PrivateDnsZone#ttl}
+  */
   readonly ttl?: number;
 }
 
@@ -39,9 +77,21 @@ function privateDnsZoneSoaRecordToTerraform(struct?: PrivateDnsZoneSoaRecord): a
 }
 
 export interface PrivateDnsZoneTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/private_dns_zone.html#create PrivateDnsZone#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/private_dns_zone.html#delete PrivateDnsZone#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/private_dns_zone.html#read PrivateDnsZone#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/private_dns_zone.html#update PrivateDnsZone#update}
+  */
   readonly update?: string;
 }
 
@@ -56,14 +106,22 @@ function privateDnsZoneTimeoutsToTerraform(struct?: PrivateDnsZoneTimeouts): any
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/private_dns_zone.html azurerm_private_dns_zone}
+*/
 export class PrivateDnsZone extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/private_dns_zone.html azurerm_private_dns_zone} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options PrivateDnsZoneConfig
+  */
   public constructor(scope: Construct, id: string, config: PrivateDnsZoneConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_private_dns_zone',

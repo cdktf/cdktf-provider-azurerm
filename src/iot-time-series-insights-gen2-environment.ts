@@ -7,20 +7,55 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface IotTimeSeriesInsightsGen2EnvironmentConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_time_series_insights_gen2_environment.html#id_properties IotTimeSeriesInsightsGen2Environment#id_properties}
+  */
   readonly idProperties: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_time_series_insights_gen2_environment.html#location IotTimeSeriesInsightsGen2Environment#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_time_series_insights_gen2_environment.html#name IotTimeSeriesInsightsGen2Environment#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_time_series_insights_gen2_environment.html#resource_group_name IotTimeSeriesInsightsGen2Environment#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_time_series_insights_gen2_environment.html#sku_name IotTimeSeriesInsightsGen2Environment#sku_name}
+  */
   readonly skuName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_time_series_insights_gen2_environment.html#tags IotTimeSeriesInsightsGen2Environment#tags}
+  */
   readonly tags?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_time_series_insights_gen2_environment.html#warm_store_data_retention_time IotTimeSeriesInsightsGen2Environment#warm_store_data_retention_time}
+  */
   readonly warmStoreDataRetentionTime?: string;
-  /** storage block */
+  /**
+  * storage block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_time_series_insights_gen2_environment.html#storage IotTimeSeriesInsightsGen2Environment#storage}
+  */
   readonly storage: IotTimeSeriesInsightsGen2EnvironmentStorage[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_time_series_insights_gen2_environment.html#timeouts IotTimeSeriesInsightsGen2Environment#timeouts}
+  */
   readonly timeouts?: IotTimeSeriesInsightsGen2EnvironmentTimeouts;
 }
 export interface IotTimeSeriesInsightsGen2EnvironmentStorage {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_time_series_insights_gen2_environment.html#key IotTimeSeriesInsightsGen2Environment#key}
+  */
   readonly key: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_time_series_insights_gen2_environment.html#name IotTimeSeriesInsightsGen2Environment#name}
+  */
   readonly name: string;
 }
 
@@ -33,9 +68,21 @@ function iotTimeSeriesInsightsGen2EnvironmentStorageToTerraform(struct?: IotTime
 }
 
 export interface IotTimeSeriesInsightsGen2EnvironmentTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_time_series_insights_gen2_environment.html#create IotTimeSeriesInsightsGen2Environment#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_time_series_insights_gen2_environment.html#delete IotTimeSeriesInsightsGen2Environment#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_time_series_insights_gen2_environment.html#read IotTimeSeriesInsightsGen2Environment#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_time_series_insights_gen2_environment.html#update IotTimeSeriesInsightsGen2Environment#update}
+  */
   readonly update?: string;
 }
 
@@ -50,14 +97,22 @@ function iotTimeSeriesInsightsGen2EnvironmentTimeoutsToTerraform(struct?: IotTim
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/iot_time_series_insights_gen2_environment.html azurerm_iot_time_series_insights_gen2_environment}
+*/
 export class IotTimeSeriesInsightsGen2Environment extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/iot_time_series_insights_gen2_environment.html azurerm_iot_time_series_insights_gen2_environment} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options IotTimeSeriesInsightsGen2EnvironmentConfig
+  */
   public constructor(scope: Construct, id: string, config: IotTimeSeriesInsightsGen2EnvironmentConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_iot_time_series_insights_gen2_environment',

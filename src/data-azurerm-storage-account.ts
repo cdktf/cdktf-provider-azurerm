@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/data_azurerm_storage_account.html
+// https://www.terraform.io/docs/providers/azurerm/d/storage_account.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,10 +7,23 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataAzurermStorageAccountConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account.html#min_tls_version DataAzurermStorageAccount#min_tls_version}
+  */
   readonly minTlsVersion?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account.html#name DataAzurermStorageAccount#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account.html#resource_group_name DataAzurermStorageAccount#resource_group_name}
+  */
   readonly resourceGroupName: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account.html#timeouts DataAzurermStorageAccount#timeouts}
+  */
   readonly timeouts?: DataAzurermStorageAccountTimeouts;
 }
 export class DataAzurermStorageAccountCustomDomain extends cdktf.ComplexComputedList {
@@ -21,6 +34,9 @@ export class DataAzurermStorageAccountCustomDomain extends cdktf.ComplexComputed
   }
 }
 export interface DataAzurermStorageAccountTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account.html#read DataAzurermStorageAccount#read}
+  */
   readonly read?: string;
 }
 
@@ -32,14 +48,22 @@ function dataAzurermStorageAccountTimeoutsToTerraform(struct?: DataAzurermStorag
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account.html azurerm_storage_account}
+*/
 export class DataAzurermStorageAccount extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account.html azurerm_storage_account} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataAzurermStorageAccountConfig
+  */
   public constructor(scope: Construct, id: string, config: DataAzurermStorageAccountConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_storage_account',

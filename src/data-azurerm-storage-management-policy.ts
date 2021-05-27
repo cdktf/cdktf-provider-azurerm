@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/data_azurerm_storage_management_policy.html
+// https://www.terraform.io/docs/providers/azurerm/d/storage_management_policy.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,8 +7,15 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataAzurermStorageManagementPolicyConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_management_policy.html#storage_account_id DataAzurermStorageManagementPolicy#storage_account_id}
+  */
   readonly storageAccountId: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_management_policy.html#timeouts DataAzurermStorageManagementPolicy#timeouts}
+  */
   readonly timeouts?: DataAzurermStorageManagementPolicyTimeouts;
 }
 export class DataAzurermStorageManagementPolicyRuleActionsBaseBlob extends cdktf.ComplexComputedList {
@@ -136,6 +143,9 @@ export class DataAzurermStorageManagementPolicyRule extends cdktf.ComplexCompute
   }
 }
 export interface DataAzurermStorageManagementPolicyTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_management_policy.html#read DataAzurermStorageManagementPolicy#read}
+  */
   readonly read?: string;
 }
 
@@ -147,14 +157,22 @@ function dataAzurermStorageManagementPolicyTimeoutsToTerraform(struct?: DataAzur
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/storage_management_policy.html azurerm_storage_management_policy}
+*/
 export class DataAzurermStorageManagementPolicy extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/storage_management_policy.html azurerm_storage_management_policy} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataAzurermStorageManagementPolicyConfig
+  */
   public constructor(scope: Construct, id: string, config: DataAzurermStorageManagementPolicyConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_storage_management_policy',

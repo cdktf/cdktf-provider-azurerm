@@ -7,16 +7,41 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataLakeStoreFileConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_lake_store_file.html#account_name DataLakeStoreFile#account_name}
+  */
   readonly accountName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_lake_store_file.html#local_file_path DataLakeStoreFile#local_file_path}
+  */
   readonly localFilePath: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_lake_store_file.html#remote_file_path DataLakeStoreFile#remote_file_path}
+  */
   readonly remoteFilePath: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_lake_store_file.html#timeouts DataLakeStoreFile#timeouts}
+  */
   readonly timeouts?: DataLakeStoreFileTimeouts;
 }
 export interface DataLakeStoreFileTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_lake_store_file.html#create DataLakeStoreFile#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_lake_store_file.html#delete DataLakeStoreFile#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_lake_store_file.html#read DataLakeStoreFile#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_lake_store_file.html#update DataLakeStoreFile#update}
+  */
   readonly update?: string;
 }
 
@@ -31,14 +56,22 @@ function dataLakeStoreFileTimeoutsToTerraform(struct?: DataLakeStoreFileTimeouts
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/data_lake_store_file.html azurerm_data_lake_store_file}
+*/
 export class DataLakeStoreFile extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/data_lake_store_file.html azurerm_data_lake_store_file} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataLakeStoreFileConfig
+  */
   public constructor(scope: Construct, id: string, config: DataLakeStoreFileConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_data_lake_store_file',

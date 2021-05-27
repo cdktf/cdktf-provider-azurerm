@@ -7,16 +7,41 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface CosmosdbSqlFunctionConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_sql_function.html#body CosmosdbSqlFunction#body}
+  */
   readonly body: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_sql_function.html#container_id CosmosdbSqlFunction#container_id}
+  */
   readonly containerId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_sql_function.html#name CosmosdbSqlFunction#name}
+  */
   readonly name: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_sql_function.html#timeouts CosmosdbSqlFunction#timeouts}
+  */
   readonly timeouts?: CosmosdbSqlFunctionTimeouts;
 }
 export interface CosmosdbSqlFunctionTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_sql_function.html#create CosmosdbSqlFunction#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_sql_function.html#delete CosmosdbSqlFunction#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_sql_function.html#read CosmosdbSqlFunction#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_sql_function.html#update CosmosdbSqlFunction#update}
+  */
   readonly update?: string;
 }
 
@@ -31,14 +56,22 @@ function cosmosdbSqlFunctionTimeoutsToTerraform(struct?: CosmosdbSqlFunctionTime
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_sql_function.html azurerm_cosmosdb_sql_function}
+*/
 export class CosmosdbSqlFunction extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_sql_function.html azurerm_cosmosdb_sql_function} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options CosmosdbSqlFunctionConfig
+  */
   public constructor(scope: Construct, id: string, config: CosmosdbSqlFunctionConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_cosmosdb_sql_function',

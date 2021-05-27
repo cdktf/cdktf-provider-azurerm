@@ -7,22 +7,63 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface PolicyAssignmentConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/policy_assignment.html#description PolicyAssignment#description}
+  */
   readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/policy_assignment.html#display_name PolicyAssignment#display_name}
+  */
   readonly displayName?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/policy_assignment.html#enforcement_mode PolicyAssignment#enforcement_mode}
+  */
   readonly enforcementMode?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/policy_assignment.html#location PolicyAssignment#location}
+  */
   readonly location?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/policy_assignment.html#metadata PolicyAssignment#metadata}
+  */
   readonly metadata?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/policy_assignment.html#name PolicyAssignment#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/policy_assignment.html#not_scopes PolicyAssignment#not_scopes}
+  */
   readonly notScopes?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/policy_assignment.html#parameters PolicyAssignment#parameters}
+  */
   readonly parameters?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/policy_assignment.html#policy_definition_id PolicyAssignment#policy_definition_id}
+  */
   readonly policyDefinitionId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/policy_assignment.html#scope PolicyAssignment#scope}
+  */
   readonly scope: string;
-  /** identity block */
+  /**
+  * identity block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/policy_assignment.html#identity PolicyAssignment#identity}
+  */
   readonly identity?: PolicyAssignmentIdentity[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/policy_assignment.html#timeouts PolicyAssignment#timeouts}
+  */
   readonly timeouts?: PolicyAssignmentTimeouts;
 }
 export interface PolicyAssignmentIdentity {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/policy_assignment.html#type PolicyAssignment#type}
+  */
   readonly type?: string;
 }
 
@@ -34,9 +75,21 @@ function policyAssignmentIdentityToTerraform(struct?: PolicyAssignmentIdentity):
 }
 
 export interface PolicyAssignmentTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/policy_assignment.html#create PolicyAssignment#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/policy_assignment.html#delete PolicyAssignment#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/policy_assignment.html#read PolicyAssignment#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/policy_assignment.html#update PolicyAssignment#update}
+  */
   readonly update?: string;
 }
 
@@ -51,14 +104,22 @@ function policyAssignmentTimeoutsToTerraform(struct?: PolicyAssignmentTimeouts):
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/policy_assignment.html azurerm_policy_assignment}
+*/
 export class PolicyAssignment extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/policy_assignment.html azurerm_policy_assignment} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options PolicyAssignmentConfig
+  */
   public constructor(scope: Construct, id: string, config: PolicyAssignmentConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_policy_assignment',

@@ -7,26 +7,79 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataFactoryLinkedServiceAzureFileStorageConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_file_storage.html#additional_properties DataFactoryLinkedServiceAzureFileStorage#additional_properties}
+  */
   readonly additionalProperties?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_file_storage.html#annotations DataFactoryLinkedServiceAzureFileStorage#annotations}
+  */
   readonly annotations?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_file_storage.html#connection_string DataFactoryLinkedServiceAzureFileStorage#connection_string}
+  */
   readonly connectionString: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_file_storage.html#data_factory_name DataFactoryLinkedServiceAzureFileStorage#data_factory_name}
+  */
   readonly dataFactoryName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_file_storage.html#description DataFactoryLinkedServiceAzureFileStorage#description}
+  */
   readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_file_storage.html#file_share DataFactoryLinkedServiceAzureFileStorage#file_share}
+  */
   readonly fileShare?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_file_storage.html#host DataFactoryLinkedServiceAzureFileStorage#host}
+  */
   readonly host?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_file_storage.html#integration_runtime_name DataFactoryLinkedServiceAzureFileStorage#integration_runtime_name}
+  */
   readonly integrationRuntimeName?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_file_storage.html#name DataFactoryLinkedServiceAzureFileStorage#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_file_storage.html#parameters DataFactoryLinkedServiceAzureFileStorage#parameters}
+  */
   readonly parameters?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_file_storage.html#password DataFactoryLinkedServiceAzureFileStorage#password}
+  */
   readonly password?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_file_storage.html#resource_group_name DataFactoryLinkedServiceAzureFileStorage#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_file_storage.html#user_id DataFactoryLinkedServiceAzureFileStorage#user_id}
+  */
   readonly userId?: string;
-  /** key_vault_password block */
+  /**
+  * key_vault_password block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_file_storage.html#key_vault_password DataFactoryLinkedServiceAzureFileStorage#key_vault_password}
+  */
   readonly keyVaultPassword?: DataFactoryLinkedServiceAzureFileStorageKeyVaultPassword[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_file_storage.html#timeouts DataFactoryLinkedServiceAzureFileStorage#timeouts}
+  */
   readonly timeouts?: DataFactoryLinkedServiceAzureFileStorageTimeouts;
 }
 export interface DataFactoryLinkedServiceAzureFileStorageKeyVaultPassword {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_file_storage.html#linked_service_name DataFactoryLinkedServiceAzureFileStorage#linked_service_name}
+  */
   readonly linkedServiceName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_file_storage.html#secret_name DataFactoryLinkedServiceAzureFileStorage#secret_name}
+  */
   readonly secretName: string;
 }
 
@@ -39,9 +92,21 @@ function dataFactoryLinkedServiceAzureFileStorageKeyVaultPasswordToTerraform(str
 }
 
 export interface DataFactoryLinkedServiceAzureFileStorageTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_file_storage.html#create DataFactoryLinkedServiceAzureFileStorage#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_file_storage.html#delete DataFactoryLinkedServiceAzureFileStorage#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_file_storage.html#read DataFactoryLinkedServiceAzureFileStorage#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_file_storage.html#update DataFactoryLinkedServiceAzureFileStorage#update}
+  */
   readonly update?: string;
 }
 
@@ -56,14 +121,22 @@ function dataFactoryLinkedServiceAzureFileStorageTimeoutsToTerraform(struct?: Da
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_file_storage.html azurerm_data_factory_linked_service_azure_file_storage}
+*/
 export class DataFactoryLinkedServiceAzureFileStorage extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_file_storage.html azurerm_data_factory_linked_service_azure_file_storage} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataFactoryLinkedServiceAzureFileStorageConfig
+  */
   public constructor(scope: Construct, id: string, config: DataFactoryLinkedServiceAzureFileStorageConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_data_factory_linked_service_azure_file_storage',

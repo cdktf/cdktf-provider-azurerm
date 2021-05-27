@@ -7,19 +7,53 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface EventhubNamespaceAuthorizationRuleConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_namespace_authorization_rule.html#listen EventhubNamespaceAuthorizationRule#listen}
+  */
   readonly listen?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_namespace_authorization_rule.html#manage EventhubNamespaceAuthorizationRule#manage}
+  */
   readonly manage?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_namespace_authorization_rule.html#name EventhubNamespaceAuthorizationRule#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_namespace_authorization_rule.html#namespace_name EventhubNamespaceAuthorizationRule#namespace_name}
+  */
   readonly namespaceName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_namespace_authorization_rule.html#resource_group_name EventhubNamespaceAuthorizationRule#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_namespace_authorization_rule.html#send EventhubNamespaceAuthorizationRule#send}
+  */
   readonly send?: boolean;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_namespace_authorization_rule.html#timeouts EventhubNamespaceAuthorizationRule#timeouts}
+  */
   readonly timeouts?: EventhubNamespaceAuthorizationRuleTimeouts;
 }
 export interface EventhubNamespaceAuthorizationRuleTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_namespace_authorization_rule.html#create EventhubNamespaceAuthorizationRule#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_namespace_authorization_rule.html#delete EventhubNamespaceAuthorizationRule#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_namespace_authorization_rule.html#read EventhubNamespaceAuthorizationRule#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_namespace_authorization_rule.html#update EventhubNamespaceAuthorizationRule#update}
+  */
   readonly update?: string;
 }
 
@@ -34,14 +68,22 @@ function eventhubNamespaceAuthorizationRuleTimeoutsToTerraform(struct?: Eventhub
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_namespace_authorization_rule.html azurerm_eventhub_namespace_authorization_rule}
+*/
 export class EventhubNamespaceAuthorizationRule extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_namespace_authorization_rule.html azurerm_eventhub_namespace_authorization_rule} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options EventhubNamespaceAuthorizationRuleConfig
+  */
   public constructor(scope: Construct, id: string, config: EventhubNamespaceAuthorizationRuleConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_eventhub_namespace_authorization_rule',

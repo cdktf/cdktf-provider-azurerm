@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/data_azurerm_hdinsight_cluster.html
+// https://www.terraform.io/docs/providers/azurerm/d/hdinsight_cluster.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,9 +7,19 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataAzurermHdinsightClusterConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/hdinsight_cluster.html#name DataAzurermHdinsightCluster#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/hdinsight_cluster.html#resource_group_name DataAzurermHdinsightCluster#resource_group_name}
+  */
   readonly resourceGroupName: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/hdinsight_cluster.html#timeouts DataAzurermHdinsightCluster#timeouts}
+  */
   readonly timeouts?: DataAzurermHdinsightClusterTimeouts;
 }
 export class DataAzurermHdinsightClusterGateway extends cdktf.ComplexComputedList {
@@ -30,6 +40,9 @@ export class DataAzurermHdinsightClusterGateway extends cdktf.ComplexComputedLis
   }
 }
 export interface DataAzurermHdinsightClusterTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/hdinsight_cluster.html#read DataAzurermHdinsightCluster#read}
+  */
   readonly read?: string;
 }
 
@@ -41,14 +54,22 @@ function dataAzurermHdinsightClusterTimeoutsToTerraform(struct?: DataAzurermHdin
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/hdinsight_cluster.html azurerm_hdinsight_cluster}
+*/
 export class DataAzurermHdinsightCluster extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/hdinsight_cluster.html azurerm_hdinsight_cluster} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataAzurermHdinsightClusterConfig
+  */
   public constructor(scope: Construct, id: string, config: DataAzurermHdinsightClusterConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_hdinsight_cluster',

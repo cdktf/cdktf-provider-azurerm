@@ -7,17 +7,43 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface ServicebusNamespaceNetworkRuleSetConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_namespace_network_rule_set.html#default_action ServicebusNamespaceNetworkRuleSet#default_action}
+  */
   readonly defaultAction?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_namespace_network_rule_set.html#ip_rules ServicebusNamespaceNetworkRuleSet#ip_rules}
+  */
   readonly ipRules?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_namespace_network_rule_set.html#namespace_name ServicebusNamespaceNetworkRuleSet#namespace_name}
+  */
   readonly namespaceName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_namespace_network_rule_set.html#resource_group_name ServicebusNamespaceNetworkRuleSet#resource_group_name}
+  */
   readonly resourceGroupName: string;
-  /** network_rules block */
+  /**
+  * network_rules block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_namespace_network_rule_set.html#network_rules ServicebusNamespaceNetworkRuleSet#network_rules}
+  */
   readonly networkRules?: ServicebusNamespaceNetworkRuleSetNetworkRules[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_namespace_network_rule_set.html#timeouts ServicebusNamespaceNetworkRuleSet#timeouts}
+  */
   readonly timeouts?: ServicebusNamespaceNetworkRuleSetTimeouts;
 }
 export interface ServicebusNamespaceNetworkRuleSetNetworkRules {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_namespace_network_rule_set.html#ignore_missing_vnet_service_endpoint ServicebusNamespaceNetworkRuleSet#ignore_missing_vnet_service_endpoint}
+  */
   readonly ignoreMissingVnetServiceEndpoint?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_namespace_network_rule_set.html#subnet_id ServicebusNamespaceNetworkRuleSet#subnet_id}
+  */
   readonly subnetId: string;
 }
 
@@ -30,9 +56,21 @@ function servicebusNamespaceNetworkRuleSetNetworkRulesToTerraform(struct?: Servi
 }
 
 export interface ServicebusNamespaceNetworkRuleSetTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_namespace_network_rule_set.html#create ServicebusNamespaceNetworkRuleSet#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_namespace_network_rule_set.html#delete ServicebusNamespaceNetworkRuleSet#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_namespace_network_rule_set.html#read ServicebusNamespaceNetworkRuleSet#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_namespace_network_rule_set.html#update ServicebusNamespaceNetworkRuleSet#update}
+  */
   readonly update?: string;
 }
 
@@ -47,14 +85,22 @@ function servicebusNamespaceNetworkRuleSetTimeoutsToTerraform(struct?: Servicebu
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_namespace_network_rule_set.html azurerm_servicebus_namespace_network_rule_set}
+*/
 export class ServicebusNamespaceNetworkRuleSet extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_namespace_network_rule_set.html azurerm_servicebus_namespace_network_rule_set} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options ServicebusNamespaceNetworkRuleSetConfig
+  */
   public constructor(scope: Construct, id: string, config: ServicebusNamespaceNetworkRuleSetConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_servicebus_namespace_network_rule_set',

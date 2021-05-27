@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/data_azurerm_storage_blob.html
+// https://www.terraform.io/docs/providers/azurerm/d/storage_blob.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,14 +7,33 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataAzurermStorageBlobConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_blob.html#metadata DataAzurermStorageBlob#metadata}
+  */
   readonly metadata?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_blob.html#name DataAzurermStorageBlob#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_blob.html#storage_account_name DataAzurermStorageBlob#storage_account_name}
+  */
   readonly storageAccountName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_blob.html#storage_container_name DataAzurermStorageBlob#storage_container_name}
+  */
   readonly storageContainerName: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_blob.html#timeouts DataAzurermStorageBlob#timeouts}
+  */
   readonly timeouts?: DataAzurermStorageBlobTimeouts;
 }
 export interface DataAzurermStorageBlobTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_blob.html#read DataAzurermStorageBlob#read}
+  */
   readonly read?: string;
 }
 
@@ -26,14 +45,22 @@ function dataAzurermStorageBlobTimeoutsToTerraform(struct?: DataAzurermStorageBl
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/storage_blob.html azurerm_storage_blob}
+*/
 export class DataAzurermStorageBlob extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/storage_blob.html azurerm_storage_blob} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataAzurermStorageBlobConfig
+  */
   public constructor(scope: Construct, id: string, config: DataAzurermStorageBlobConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_storage_blob',

@@ -7,17 +7,45 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface StorageShareDirectoryConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_share_directory.html#metadata StorageShareDirectory#metadata}
+  */
   readonly metadata?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_share_directory.html#name StorageShareDirectory#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_share_directory.html#share_name StorageShareDirectory#share_name}
+  */
   readonly shareName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_share_directory.html#storage_account_name StorageShareDirectory#storage_account_name}
+  */
   readonly storageAccountName: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_share_directory.html#timeouts StorageShareDirectory#timeouts}
+  */
   readonly timeouts?: StorageShareDirectoryTimeouts;
 }
 export interface StorageShareDirectoryTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_share_directory.html#create StorageShareDirectory#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_share_directory.html#delete StorageShareDirectory#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_share_directory.html#read StorageShareDirectory#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_share_directory.html#update StorageShareDirectory#update}
+  */
   readonly update?: string;
 }
 
@@ -32,14 +60,22 @@ function storageShareDirectoryTimeoutsToTerraform(struct?: StorageShareDirectory
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/storage_share_directory.html azurerm_storage_share_directory}
+*/
 export class StorageShareDirectory extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/storage_share_directory.html azurerm_storage_share_directory} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options StorageShareDirectoryConfig
+  */
   public constructor(scope: Construct, id: string, config: StorageShareDirectoryConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_storage_share_directory',

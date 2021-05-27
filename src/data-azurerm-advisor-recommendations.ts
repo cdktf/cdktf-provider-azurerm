@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/data_azurerm_advisor_recommendations.html
+// https://www.terraform.io/docs/providers/azurerm/d/advisor_recommendations.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,9 +7,19 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataAzurermAdvisorRecommendationsConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/advisor_recommendations.html#filter_by_category DataAzurermAdvisorRecommendations#filter_by_category}
+  */
   readonly filterByCategory?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/advisor_recommendations.html#filter_by_resource_groups DataAzurermAdvisorRecommendations#filter_by_resource_groups}
+  */
   readonly filterByResourceGroups?: string[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/advisor_recommendations.html#timeouts DataAzurermAdvisorRecommendations#timeouts}
+  */
   readonly timeouts?: DataAzurermAdvisorRecommendationsTimeouts;
 }
 export class DataAzurermAdvisorRecommendationsRecommendations extends cdktf.ComplexComputedList {
@@ -60,6 +70,9 @@ export class DataAzurermAdvisorRecommendationsRecommendations extends cdktf.Comp
   }
 }
 export interface DataAzurermAdvisorRecommendationsTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/advisor_recommendations.html#read DataAzurermAdvisorRecommendations#read}
+  */
   readonly read?: string;
 }
 
@@ -71,14 +84,22 @@ function dataAzurermAdvisorRecommendationsTimeoutsToTerraform(struct?: DataAzure
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/advisor_recommendations.html azurerm_advisor_recommendations}
+*/
 export class DataAzurermAdvisorRecommendations extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/advisor_recommendations.html azurerm_advisor_recommendations} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataAzurermAdvisorRecommendationsConfig = {}
+  */
   public constructor(scope: Construct, id: string, config: DataAzurermAdvisorRecommendationsConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'azurerm_advisor_recommendations',

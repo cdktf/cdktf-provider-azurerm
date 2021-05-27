@@ -7,23 +7,69 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataFactoryLinkedServiceAzureFunctionConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_function.html#additional_properties DataFactoryLinkedServiceAzureFunction#additional_properties}
+  */
   readonly additionalProperties?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_function.html#annotations DataFactoryLinkedServiceAzureFunction#annotations}
+  */
   readonly annotations?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_function.html#data_factory_name DataFactoryLinkedServiceAzureFunction#data_factory_name}
+  */
   readonly dataFactoryName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_function.html#description DataFactoryLinkedServiceAzureFunction#description}
+  */
   readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_function.html#integration_runtime_name DataFactoryLinkedServiceAzureFunction#integration_runtime_name}
+  */
   readonly integrationRuntimeName?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_function.html#key DataFactoryLinkedServiceAzureFunction#key}
+  */
   readonly key: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_function.html#name DataFactoryLinkedServiceAzureFunction#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_function.html#parameters DataFactoryLinkedServiceAzureFunction#parameters}
+  */
   readonly parameters?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_function.html#resource_group_name DataFactoryLinkedServiceAzureFunction#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_function.html#url DataFactoryLinkedServiceAzureFunction#url}
+  */
   readonly url: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_function.html#timeouts DataFactoryLinkedServiceAzureFunction#timeouts}
+  */
   readonly timeouts?: DataFactoryLinkedServiceAzureFunctionTimeouts;
 }
 export interface DataFactoryLinkedServiceAzureFunctionTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_function.html#create DataFactoryLinkedServiceAzureFunction#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_function.html#delete DataFactoryLinkedServiceAzureFunction#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_function.html#read DataFactoryLinkedServiceAzureFunction#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_function.html#update DataFactoryLinkedServiceAzureFunction#update}
+  */
   readonly update?: string;
 }
 
@@ -38,14 +84,22 @@ function dataFactoryLinkedServiceAzureFunctionTimeoutsToTerraform(struct?: DataF
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_function.html azurerm_data_factory_linked_service_azure_function}
+*/
 export class DataFactoryLinkedServiceAzureFunction extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_function.html azurerm_data_factory_linked_service_azure_function} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataFactoryLinkedServiceAzureFunctionConfig
+  */
   public constructor(scope: Construct, id: string, config: DataFactoryLinkedServiceAzureFunctionConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_data_factory_linked_service_azure_function',

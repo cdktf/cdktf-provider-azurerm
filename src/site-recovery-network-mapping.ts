@@ -7,20 +7,57 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface SiteRecoveryNetworkMappingConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/site_recovery_network_mapping.html#name SiteRecoveryNetworkMapping#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/site_recovery_network_mapping.html#recovery_vault_name SiteRecoveryNetworkMapping#recovery_vault_name}
+  */
   readonly recoveryVaultName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/site_recovery_network_mapping.html#resource_group_name SiteRecoveryNetworkMapping#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/site_recovery_network_mapping.html#source_network_id SiteRecoveryNetworkMapping#source_network_id}
+  */
   readonly sourceNetworkId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/site_recovery_network_mapping.html#source_recovery_fabric_name SiteRecoveryNetworkMapping#source_recovery_fabric_name}
+  */
   readonly sourceRecoveryFabricName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/site_recovery_network_mapping.html#target_network_id SiteRecoveryNetworkMapping#target_network_id}
+  */
   readonly targetNetworkId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/site_recovery_network_mapping.html#target_recovery_fabric_name SiteRecoveryNetworkMapping#target_recovery_fabric_name}
+  */
   readonly targetRecoveryFabricName: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/site_recovery_network_mapping.html#timeouts SiteRecoveryNetworkMapping#timeouts}
+  */
   readonly timeouts?: SiteRecoveryNetworkMappingTimeouts;
 }
 export interface SiteRecoveryNetworkMappingTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/site_recovery_network_mapping.html#create SiteRecoveryNetworkMapping#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/site_recovery_network_mapping.html#delete SiteRecoveryNetworkMapping#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/site_recovery_network_mapping.html#read SiteRecoveryNetworkMapping#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/site_recovery_network_mapping.html#update SiteRecoveryNetworkMapping#update}
+  */
   readonly update?: string;
 }
 
@@ -35,14 +72,22 @@ function siteRecoveryNetworkMappingTimeoutsToTerraform(struct?: SiteRecoveryNetw
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/site_recovery_network_mapping.html azurerm_site_recovery_network_mapping}
+*/
 export class SiteRecoveryNetworkMapping extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/site_recovery_network_mapping.html azurerm_site_recovery_network_mapping} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options SiteRecoveryNetworkMappingConfig
+  */
   public constructor(scope: Construct, id: string, config: SiteRecoveryNetworkMappingConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_site_recovery_network_mapping',

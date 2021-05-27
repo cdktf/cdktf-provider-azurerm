@@ -7,18 +7,49 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface SqlVirtualNetworkRuleConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_virtual_network_rule.html#ignore_missing_vnet_service_endpoint SqlVirtualNetworkRule#ignore_missing_vnet_service_endpoint}
+  */
   readonly ignoreMissingVnetServiceEndpoint?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_virtual_network_rule.html#name SqlVirtualNetworkRule#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_virtual_network_rule.html#resource_group_name SqlVirtualNetworkRule#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_virtual_network_rule.html#server_name SqlVirtualNetworkRule#server_name}
+  */
   readonly serverName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_virtual_network_rule.html#subnet_id SqlVirtualNetworkRule#subnet_id}
+  */
   readonly subnetId: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_virtual_network_rule.html#timeouts SqlVirtualNetworkRule#timeouts}
+  */
   readonly timeouts?: SqlVirtualNetworkRuleTimeouts;
 }
 export interface SqlVirtualNetworkRuleTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_virtual_network_rule.html#create SqlVirtualNetworkRule#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_virtual_network_rule.html#delete SqlVirtualNetworkRule#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_virtual_network_rule.html#read SqlVirtualNetworkRule#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_virtual_network_rule.html#update SqlVirtualNetworkRule#update}
+  */
   readonly update?: string;
 }
 
@@ -33,14 +64,22 @@ function sqlVirtualNetworkRuleTimeoutsToTerraform(struct?: SqlVirtualNetworkRule
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/sql_virtual_network_rule.html azurerm_sql_virtual_network_rule}
+*/
 export class SqlVirtualNetworkRule extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/sql_virtual_network_rule.html azurerm_sql_virtual_network_rule} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options SqlVirtualNetworkRuleConfig
+  */
   public constructor(scope: Construct, id: string, config: SqlVirtualNetworkRuleConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_sql_virtual_network_rule',

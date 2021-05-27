@@ -7,18 +7,49 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface BackupProtectedFileShareConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_protected_file_share.html#backup_policy_id BackupProtectedFileShare#backup_policy_id}
+  */
   readonly backupPolicyId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_protected_file_share.html#recovery_vault_name BackupProtectedFileShare#recovery_vault_name}
+  */
   readonly recoveryVaultName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_protected_file_share.html#resource_group_name BackupProtectedFileShare#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_protected_file_share.html#source_file_share_name BackupProtectedFileShare#source_file_share_name}
+  */
   readonly sourceFileShareName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_protected_file_share.html#source_storage_account_id BackupProtectedFileShare#source_storage_account_id}
+  */
   readonly sourceStorageAccountId: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_protected_file_share.html#timeouts BackupProtectedFileShare#timeouts}
+  */
   readonly timeouts?: BackupProtectedFileShareTimeouts;
 }
 export interface BackupProtectedFileShareTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_protected_file_share.html#create BackupProtectedFileShare#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_protected_file_share.html#delete BackupProtectedFileShare#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_protected_file_share.html#read BackupProtectedFileShare#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_protected_file_share.html#update BackupProtectedFileShare#update}
+  */
   readonly update?: string;
 }
 
@@ -33,14 +64,22 @@ function backupProtectedFileShareTimeoutsToTerraform(struct?: BackupProtectedFil
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/backup_protected_file_share.html azurerm_backup_protected_file_share}
+*/
 export class BackupProtectedFileShare extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/backup_protected_file_share.html azurerm_backup_protected_file_share} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options BackupProtectedFileShareConfig
+  */
   public constructor(scope: Construct, id: string, config: BackupProtectedFileShareConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_backup_protected_file_share',

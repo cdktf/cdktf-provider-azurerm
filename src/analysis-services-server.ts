@@ -7,23 +7,67 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface AnalysisServicesServerConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/analysis_services_server.html#admin_users AnalysisServicesServer#admin_users}
+  */
   readonly adminUsers?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/analysis_services_server.html#backup_blob_container_uri AnalysisServicesServer#backup_blob_container_uri}
+  */
   readonly backupBlobContainerUri?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/analysis_services_server.html#enable_power_bi_service AnalysisServicesServer#enable_power_bi_service}
+  */
   readonly enablePowerBiService?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/analysis_services_server.html#location AnalysisServicesServer#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/analysis_services_server.html#name AnalysisServicesServer#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/analysis_services_server.html#querypool_connection_mode AnalysisServicesServer#querypool_connection_mode}
+  */
   readonly querypoolConnectionMode?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/analysis_services_server.html#resource_group_name AnalysisServicesServer#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/analysis_services_server.html#sku AnalysisServicesServer#sku}
+  */
   readonly sku: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/analysis_services_server.html#tags AnalysisServicesServer#tags}
+  */
   readonly tags?: { [key: string]: string };
-  /** ipv4_firewall_rule block */
+  /**
+  * ipv4_firewall_rule block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/analysis_services_server.html#ipv4_firewall_rule AnalysisServicesServer#ipv4_firewall_rule}
+  */
   readonly ipv4FirewallRule?: AnalysisServicesServerIpv4FirewallRule[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/analysis_services_server.html#timeouts AnalysisServicesServer#timeouts}
+  */
   readonly timeouts?: AnalysisServicesServerTimeouts;
 }
 export interface AnalysisServicesServerIpv4FirewallRule {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/analysis_services_server.html#name AnalysisServicesServer#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/analysis_services_server.html#range_end AnalysisServicesServer#range_end}
+  */
   readonly rangeEnd: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/analysis_services_server.html#range_start AnalysisServicesServer#range_start}
+  */
   readonly rangeStart: string;
 }
 
@@ -37,9 +81,21 @@ function analysisServicesServerIpv4FirewallRuleToTerraform(struct?: AnalysisServ
 }
 
 export interface AnalysisServicesServerTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/analysis_services_server.html#create AnalysisServicesServer#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/analysis_services_server.html#delete AnalysisServicesServer#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/analysis_services_server.html#read AnalysisServicesServer#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/analysis_services_server.html#update AnalysisServicesServer#update}
+  */
   readonly update?: string;
 }
 
@@ -54,14 +110,22 @@ function analysisServicesServerTimeoutsToTerraform(struct?: AnalysisServicesServ
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/analysis_services_server.html azurerm_analysis_services_server}
+*/
 export class AnalysisServicesServer extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/analysis_services_server.html azurerm_analysis_services_server} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options AnalysisServicesServerConfig
+  */
   public constructor(scope: Construct, id: string, config: AnalysisServicesServerConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_analysis_services_server',

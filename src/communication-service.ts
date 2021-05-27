@@ -7,17 +7,45 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface CommunicationServiceConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/communication_service.html#data_location CommunicationService#data_location}
+  */
   readonly dataLocation?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/communication_service.html#name CommunicationService#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/communication_service.html#resource_group_name CommunicationService#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/communication_service.html#tags CommunicationService#tags}
+  */
   readonly tags?: { [key: string]: string };
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/communication_service.html#timeouts CommunicationService#timeouts}
+  */
   readonly timeouts?: CommunicationServiceTimeouts;
 }
 export interface CommunicationServiceTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/communication_service.html#create CommunicationService#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/communication_service.html#delete CommunicationService#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/communication_service.html#read CommunicationService#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/communication_service.html#update CommunicationService#update}
+  */
   readonly update?: string;
 }
 
@@ -32,14 +60,22 @@ function communicationServiceTimeoutsToTerraform(struct?: CommunicationServiceTi
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/communication_service.html azurerm_communication_service}
+*/
 export class CommunicationService extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/communication_service.html azurerm_communication_service} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options CommunicationServiceConfig
+  */
   public constructor(scope: Construct, id: string, config: CommunicationServiceConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_communication_service',

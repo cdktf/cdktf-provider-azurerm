@@ -7,18 +7,49 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface SharedImageGalleryConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/shared_image_gallery.html#description SharedImageGallery#description}
+  */
   readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/shared_image_gallery.html#location SharedImageGallery#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/shared_image_gallery.html#name SharedImageGallery#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/shared_image_gallery.html#resource_group_name SharedImageGallery#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/shared_image_gallery.html#tags SharedImageGallery#tags}
+  */
   readonly tags?: { [key: string]: string };
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/shared_image_gallery.html#timeouts SharedImageGallery#timeouts}
+  */
   readonly timeouts?: SharedImageGalleryTimeouts;
 }
 export interface SharedImageGalleryTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/shared_image_gallery.html#create SharedImageGallery#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/shared_image_gallery.html#delete SharedImageGallery#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/shared_image_gallery.html#read SharedImageGallery#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/shared_image_gallery.html#update SharedImageGallery#update}
+  */
   readonly update?: string;
 }
 
@@ -33,14 +64,22 @@ function sharedImageGalleryTimeoutsToTerraform(struct?: SharedImageGalleryTimeou
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/shared_image_gallery.html azurerm_shared_image_gallery}
+*/
 export class SharedImageGallery extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/shared_image_gallery.html azurerm_shared_image_gallery} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options SharedImageGalleryConfig
+  */
   public constructor(scope: Construct, id: string, config: SharedImageGalleryConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_shared_image_gallery',

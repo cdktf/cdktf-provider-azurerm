@@ -7,25 +7,67 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface ApiManagementCustomDomainConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_custom_domain.html#api_management_id ApiManagementCustomDomain#api_management_id}
+  */
   readonly apiManagementId: string;
-  /** developer_portal block */
+  /**
+  * developer_portal block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_custom_domain.html#developer_portal ApiManagementCustomDomain#developer_portal}
+  */
   readonly developerPortal?: ApiManagementCustomDomainDeveloperPortal[];
-  /** management block */
+  /**
+  * management block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_custom_domain.html#management ApiManagementCustomDomain#management}
+  */
   readonly management?: ApiManagementCustomDomainManagement[];
-  /** portal block */
+  /**
+  * portal block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_custom_domain.html#portal ApiManagementCustomDomain#portal}
+  */
   readonly portal?: ApiManagementCustomDomainPortal[];
-  /** proxy block */
+  /**
+  * proxy block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_custom_domain.html#proxy ApiManagementCustomDomain#proxy}
+  */
   readonly proxy?: ApiManagementCustomDomainProxy[];
-  /** scm block */
+  /**
+  * scm block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_custom_domain.html#scm ApiManagementCustomDomain#scm}
+  */
   readonly scm?: ApiManagementCustomDomainScm[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_custom_domain.html#timeouts ApiManagementCustomDomain#timeouts}
+  */
   readonly timeouts?: ApiManagementCustomDomainTimeouts;
 }
 export interface ApiManagementCustomDomainDeveloperPortal {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_custom_domain.html#certificate ApiManagementCustomDomain#certificate}
+  */
   readonly certificate?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_custom_domain.html#certificate_password ApiManagementCustomDomain#certificate_password}
+  */
   readonly certificatePassword?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_custom_domain.html#host_name ApiManagementCustomDomain#host_name}
+  */
   readonly hostName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_custom_domain.html#key_vault_id ApiManagementCustomDomain#key_vault_id}
+  */
   readonly keyVaultId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_custom_domain.html#negotiate_client_certificate ApiManagementCustomDomain#negotiate_client_certificate}
+  */
   readonly negotiateClientCertificate?: boolean;
 }
 
@@ -41,10 +83,25 @@ function apiManagementCustomDomainDeveloperPortalToTerraform(struct?: ApiManagem
 }
 
 export interface ApiManagementCustomDomainManagement {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_custom_domain.html#certificate ApiManagementCustomDomain#certificate}
+  */
   readonly certificate?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_custom_domain.html#certificate_password ApiManagementCustomDomain#certificate_password}
+  */
   readonly certificatePassword?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_custom_domain.html#host_name ApiManagementCustomDomain#host_name}
+  */
   readonly hostName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_custom_domain.html#key_vault_id ApiManagementCustomDomain#key_vault_id}
+  */
   readonly keyVaultId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_custom_domain.html#negotiate_client_certificate ApiManagementCustomDomain#negotiate_client_certificate}
+  */
   readonly negotiateClientCertificate?: boolean;
 }
 
@@ -60,10 +117,25 @@ function apiManagementCustomDomainManagementToTerraform(struct?: ApiManagementCu
 }
 
 export interface ApiManagementCustomDomainPortal {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_custom_domain.html#certificate ApiManagementCustomDomain#certificate}
+  */
   readonly certificate?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_custom_domain.html#certificate_password ApiManagementCustomDomain#certificate_password}
+  */
   readonly certificatePassword?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_custom_domain.html#host_name ApiManagementCustomDomain#host_name}
+  */
   readonly hostName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_custom_domain.html#key_vault_id ApiManagementCustomDomain#key_vault_id}
+  */
   readonly keyVaultId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_custom_domain.html#negotiate_client_certificate ApiManagementCustomDomain#negotiate_client_certificate}
+  */
   readonly negotiateClientCertificate?: boolean;
 }
 
@@ -79,11 +151,29 @@ function apiManagementCustomDomainPortalToTerraform(struct?: ApiManagementCustom
 }
 
 export interface ApiManagementCustomDomainProxy {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_custom_domain.html#certificate ApiManagementCustomDomain#certificate}
+  */
   readonly certificate?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_custom_domain.html#certificate_password ApiManagementCustomDomain#certificate_password}
+  */
   readonly certificatePassword?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_custom_domain.html#default_ssl_binding ApiManagementCustomDomain#default_ssl_binding}
+  */
   readonly defaultSslBinding?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_custom_domain.html#host_name ApiManagementCustomDomain#host_name}
+  */
   readonly hostName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_custom_domain.html#key_vault_id ApiManagementCustomDomain#key_vault_id}
+  */
   readonly keyVaultId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_custom_domain.html#negotiate_client_certificate ApiManagementCustomDomain#negotiate_client_certificate}
+  */
   readonly negotiateClientCertificate?: boolean;
 }
 
@@ -100,10 +190,25 @@ function apiManagementCustomDomainProxyToTerraform(struct?: ApiManagementCustomD
 }
 
 export interface ApiManagementCustomDomainScm {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_custom_domain.html#certificate ApiManagementCustomDomain#certificate}
+  */
   readonly certificate?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_custom_domain.html#certificate_password ApiManagementCustomDomain#certificate_password}
+  */
   readonly certificatePassword?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_custom_domain.html#host_name ApiManagementCustomDomain#host_name}
+  */
   readonly hostName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_custom_domain.html#key_vault_id ApiManagementCustomDomain#key_vault_id}
+  */
   readonly keyVaultId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_custom_domain.html#negotiate_client_certificate ApiManagementCustomDomain#negotiate_client_certificate}
+  */
   readonly negotiateClientCertificate?: boolean;
 }
 
@@ -119,9 +224,21 @@ function apiManagementCustomDomainScmToTerraform(struct?: ApiManagementCustomDom
 }
 
 export interface ApiManagementCustomDomainTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_custom_domain.html#create ApiManagementCustomDomain#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_custom_domain.html#delete ApiManagementCustomDomain#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_custom_domain.html#read ApiManagementCustomDomain#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_custom_domain.html#update ApiManagementCustomDomain#update}
+  */
   readonly update?: string;
 }
 
@@ -136,14 +253,22 @@ function apiManagementCustomDomainTimeoutsToTerraform(struct?: ApiManagementCust
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_custom_domain.html azurerm_api_management_custom_domain}
+*/
 export class ApiManagementCustomDomain extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_custom_domain.html azurerm_api_management_custom_domain} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options ApiManagementCustomDomainConfig
+  */
   public constructor(scope: Construct, id: string, config: ApiManagementCustomDomainConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_api_management_custom_domain',

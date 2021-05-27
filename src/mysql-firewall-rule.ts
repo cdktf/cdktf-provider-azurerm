@@ -7,18 +7,49 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface MysqlFirewallRuleConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_firewall_rule.html#end_ip_address MysqlFirewallRule#end_ip_address}
+  */
   readonly endIpAddress: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_firewall_rule.html#name MysqlFirewallRule#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_firewall_rule.html#resource_group_name MysqlFirewallRule#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_firewall_rule.html#server_name MysqlFirewallRule#server_name}
+  */
   readonly serverName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_firewall_rule.html#start_ip_address MysqlFirewallRule#start_ip_address}
+  */
   readonly startIpAddress: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_firewall_rule.html#timeouts MysqlFirewallRule#timeouts}
+  */
   readonly timeouts?: MysqlFirewallRuleTimeouts;
 }
 export interface MysqlFirewallRuleTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_firewall_rule.html#create MysqlFirewallRule#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_firewall_rule.html#delete MysqlFirewallRule#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_firewall_rule.html#read MysqlFirewallRule#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_firewall_rule.html#update MysqlFirewallRule#update}
+  */
   readonly update?: string;
 }
 
@@ -33,14 +64,22 @@ function mysqlFirewallRuleTimeoutsToTerraform(struct?: MysqlFirewallRuleTimeouts
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_firewall_rule.html azurerm_mysql_firewall_rule}
+*/
 export class MysqlFirewallRule extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_firewall_rule.html azurerm_mysql_firewall_rule} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options MysqlFirewallRuleConfig
+  */
   public constructor(scope: Construct, id: string, config: MysqlFirewallRuleConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_mysql_firewall_rule',

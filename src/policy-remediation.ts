@@ -7,19 +7,53 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface PolicyRemediationConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/policy_remediation.html#location_filters PolicyRemediation#location_filters}
+  */
   readonly locationFilters?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/policy_remediation.html#name PolicyRemediation#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/policy_remediation.html#policy_assignment_id PolicyRemediation#policy_assignment_id}
+  */
   readonly policyAssignmentId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/policy_remediation.html#policy_definition_reference_id PolicyRemediation#policy_definition_reference_id}
+  */
   readonly policyDefinitionReferenceId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/policy_remediation.html#resource_discovery_mode PolicyRemediation#resource_discovery_mode}
+  */
   readonly resourceDiscoveryMode?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/policy_remediation.html#scope PolicyRemediation#scope}
+  */
   readonly scope: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/policy_remediation.html#timeouts PolicyRemediation#timeouts}
+  */
   readonly timeouts?: PolicyRemediationTimeouts;
 }
 export interface PolicyRemediationTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/policy_remediation.html#create PolicyRemediation#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/policy_remediation.html#delete PolicyRemediation#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/policy_remediation.html#read PolicyRemediation#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/policy_remediation.html#update PolicyRemediation#update}
+  */
   readonly update?: string;
 }
 
@@ -34,14 +68,22 @@ function policyRemediationTimeoutsToTerraform(struct?: PolicyRemediationTimeouts
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/policy_remediation.html azurerm_policy_remediation}
+*/
 export class PolicyRemediation extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/policy_remediation.html azurerm_policy_remediation} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options PolicyRemediationConfig
+  */
   public constructor(scope: Construct, id: string, config: PolicyRemediationConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_policy_remediation',

@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/data_azurerm_storage_account_sas.html
+// https://www.terraform.io/docs/providers/azurerm/d/storage_account_sas.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,28 +7,83 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataAzurermStorageAccountSasConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account_sas.html#connection_string DataAzurermStorageAccountSas#connection_string}
+  */
   readonly connectionString: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account_sas.html#expiry DataAzurermStorageAccountSas#expiry}
+  */
   readonly expiry: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account_sas.html#https_only DataAzurermStorageAccountSas#https_only}
+  */
   readonly httpsOnly?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account_sas.html#signed_version DataAzurermStorageAccountSas#signed_version}
+  */
   readonly signedVersion?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account_sas.html#start DataAzurermStorageAccountSas#start}
+  */
   readonly start: string;
-  /** permissions block */
+  /**
+  * permissions block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account_sas.html#permissions DataAzurermStorageAccountSas#permissions}
+  */
   readonly permissions: DataAzurermStorageAccountSasPermissions[];
-  /** resource_types block */
+  /**
+  * resource_types block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account_sas.html#resource_types DataAzurermStorageAccountSas#resource_types}
+  */
   readonly resourceTypes: DataAzurermStorageAccountSasResourceTypes[];
-  /** services block */
+  /**
+  * services block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account_sas.html#services DataAzurermStorageAccountSas#services}
+  */
   readonly services: DataAzurermStorageAccountSasServices[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account_sas.html#timeouts DataAzurermStorageAccountSas#timeouts}
+  */
   readonly timeouts?: DataAzurermStorageAccountSasTimeouts;
 }
 export interface DataAzurermStorageAccountSasPermissions {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account_sas.html#add DataAzurermStorageAccountSas#add}
+  */
   readonly add: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account_sas.html#create DataAzurermStorageAccountSas#create}
+  */
   readonly create: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account_sas.html#delete DataAzurermStorageAccountSas#delete}
+  */
   readonly delete: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account_sas.html#list DataAzurermStorageAccountSas#list}
+  */
   readonly list: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account_sas.html#process DataAzurermStorageAccountSas#process}
+  */
   readonly process: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account_sas.html#read DataAzurermStorageAccountSas#read}
+  */
   readonly read: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account_sas.html#update DataAzurermStorageAccountSas#update}
+  */
   readonly update: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account_sas.html#write DataAzurermStorageAccountSas#write}
+  */
   readonly write: boolean;
 }
 
@@ -47,8 +102,17 @@ function dataAzurermStorageAccountSasPermissionsToTerraform(struct?: DataAzurerm
 }
 
 export interface DataAzurermStorageAccountSasResourceTypes {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account_sas.html#container DataAzurermStorageAccountSas#container}
+  */
   readonly container: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account_sas.html#object DataAzurermStorageAccountSas#object}
+  */
   readonly object: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account_sas.html#service DataAzurermStorageAccountSas#service}
+  */
   readonly service: boolean;
 }
 
@@ -62,9 +126,21 @@ function dataAzurermStorageAccountSasResourceTypesToTerraform(struct?: DataAzure
 }
 
 export interface DataAzurermStorageAccountSasServices {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account_sas.html#blob DataAzurermStorageAccountSas#blob}
+  */
   readonly blob: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account_sas.html#file DataAzurermStorageAccountSas#file}
+  */
   readonly file: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account_sas.html#queue DataAzurermStorageAccountSas#queue}
+  */
   readonly queue: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account_sas.html#table DataAzurermStorageAccountSas#table}
+  */
   readonly table: boolean;
 }
 
@@ -79,6 +155,9 @@ function dataAzurermStorageAccountSasServicesToTerraform(struct?: DataAzurermSto
 }
 
 export interface DataAzurermStorageAccountSasTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account_sas.html#read DataAzurermStorageAccountSas#read}
+  */
   readonly read?: string;
 }
 
@@ -90,14 +169,22 @@ function dataAzurermStorageAccountSasTimeoutsToTerraform(struct?: DataAzurermSto
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account_sas.html azurerm_storage_account_sas}
+*/
 export class DataAzurermStorageAccountSas extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account_sas.html azurerm_storage_account_sas} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataAzurermStorageAccountSasConfig
+  */
   public constructor(scope: Construct, id: string, config: DataAzurermStorageAccountSasConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_storage_account_sas',

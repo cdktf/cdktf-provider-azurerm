@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/key_vault_access_policy_a.html
+// https://www.terraform.io/docs/providers/azurerm/r/key_vault_access_policy.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,21 +7,61 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface KeyVaultAccessPolicyAConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_access_policy.html#application_id KeyVaultAccessPolicyA#application_id}
+  */
   readonly applicationId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_access_policy.html#certificate_permissions KeyVaultAccessPolicyA#certificate_permissions}
+  */
   readonly certificatePermissions?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_access_policy.html#key_permissions KeyVaultAccessPolicyA#key_permissions}
+  */
   readonly keyPermissions?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_access_policy.html#key_vault_id KeyVaultAccessPolicyA#key_vault_id}
+  */
   readonly keyVaultId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_access_policy.html#object_id KeyVaultAccessPolicyA#object_id}
+  */
   readonly objectId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_access_policy.html#secret_permissions KeyVaultAccessPolicyA#secret_permissions}
+  */
   readonly secretPermissions?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_access_policy.html#storage_permissions KeyVaultAccessPolicyA#storage_permissions}
+  */
   readonly storagePermissions?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_access_policy.html#tenant_id KeyVaultAccessPolicyA#tenant_id}
+  */
   readonly tenantId: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_access_policy.html#timeouts KeyVaultAccessPolicyA#timeouts}
+  */
   readonly timeouts?: KeyVaultAccessPolicyTimeouts;
 }
 export interface KeyVaultAccessPolicyTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_access_policy.html#create KeyVaultAccessPolicyA#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_access_policy.html#delete KeyVaultAccessPolicyA#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_access_policy.html#read KeyVaultAccessPolicyA#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_access_policy.html#update KeyVaultAccessPolicyA#update}
+  */
   readonly update?: string;
 }
 
@@ -36,14 +76,22 @@ function keyVaultAccessPolicyTimeoutsToTerraform(struct?: KeyVaultAccessPolicyTi
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_access_policy.html azurerm_key_vault_access_policy}
+*/
 export class KeyVaultAccessPolicyA extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_access_policy.html azurerm_key_vault_access_policy} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options KeyVaultAccessPolicyAConfig
+  */
   public constructor(scope: Construct, id: string, config: KeyVaultAccessPolicyAConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_key_vault_access_policy',

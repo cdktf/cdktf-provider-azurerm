@@ -7,23 +7,69 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataFactoryTriggerScheduleConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_trigger_schedule.html#annotations DataFactoryTriggerSchedule#annotations}
+  */
   readonly annotations?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_trigger_schedule.html#data_factory_name DataFactoryTriggerSchedule#data_factory_name}
+  */
   readonly dataFactoryName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_trigger_schedule.html#end_time DataFactoryTriggerSchedule#end_time}
+  */
   readonly endTime?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_trigger_schedule.html#frequency DataFactoryTriggerSchedule#frequency}
+  */
   readonly frequency?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_trigger_schedule.html#interval DataFactoryTriggerSchedule#interval}
+  */
   readonly interval?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_trigger_schedule.html#name DataFactoryTriggerSchedule#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_trigger_schedule.html#pipeline_name DataFactoryTriggerSchedule#pipeline_name}
+  */
   readonly pipelineName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_trigger_schedule.html#pipeline_parameters DataFactoryTriggerSchedule#pipeline_parameters}
+  */
   readonly pipelineParameters?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_trigger_schedule.html#resource_group_name DataFactoryTriggerSchedule#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_trigger_schedule.html#start_time DataFactoryTriggerSchedule#start_time}
+  */
   readonly startTime?: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_trigger_schedule.html#timeouts DataFactoryTriggerSchedule#timeouts}
+  */
   readonly timeouts?: DataFactoryTriggerScheduleTimeouts;
 }
 export interface DataFactoryTriggerScheduleTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_trigger_schedule.html#create DataFactoryTriggerSchedule#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_trigger_schedule.html#delete DataFactoryTriggerSchedule#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_trigger_schedule.html#read DataFactoryTriggerSchedule#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_trigger_schedule.html#update DataFactoryTriggerSchedule#update}
+  */
   readonly update?: string;
 }
 
@@ -38,14 +84,22 @@ function dataFactoryTriggerScheduleTimeoutsToTerraform(struct?: DataFactoryTrigg
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_trigger_schedule.html azurerm_data_factory_trigger_schedule}
+*/
 export class DataFactoryTriggerSchedule extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_trigger_schedule.html azurerm_data_factory_trigger_schedule} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataFactoryTriggerScheduleConfig
+  */
   public constructor(scope: Construct, id: string, config: DataFactoryTriggerScheduleConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_data_factory_trigger_schedule',

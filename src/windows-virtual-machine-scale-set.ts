@@ -7,72 +7,233 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface WindowsVirtualMachineScaleSetConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#admin_password WindowsVirtualMachineScaleSet#admin_password}
+  */
   readonly adminPassword: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#admin_username WindowsVirtualMachineScaleSet#admin_username}
+  */
   readonly adminUsername: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#computer_name_prefix WindowsVirtualMachineScaleSet#computer_name_prefix}
+  */
   readonly computerNamePrefix?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#custom_data WindowsVirtualMachineScaleSet#custom_data}
+  */
   readonly customData?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#do_not_run_extensions_on_overprovisioned_machines WindowsVirtualMachineScaleSet#do_not_run_extensions_on_overprovisioned_machines}
+  */
   readonly doNotRunExtensionsOnOverprovisionedMachines?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#enable_automatic_updates WindowsVirtualMachineScaleSet#enable_automatic_updates}
+  */
   readonly enableAutomaticUpdates?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#encryption_at_host_enabled WindowsVirtualMachineScaleSet#encryption_at_host_enabled}
+  */
   readonly encryptionAtHostEnabled?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#eviction_policy WindowsVirtualMachineScaleSet#eviction_policy}
+  */
   readonly evictionPolicy?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#extensions_time_budget WindowsVirtualMachineScaleSet#extensions_time_budget}
+  */
   readonly extensionsTimeBudget?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#health_probe_id WindowsVirtualMachineScaleSet#health_probe_id}
+  */
   readonly healthProbeId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#instances WindowsVirtualMachineScaleSet#instances}
+  */
   readonly instances: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#license_type WindowsVirtualMachineScaleSet#license_type}
+  */
   readonly licenseType?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#location WindowsVirtualMachineScaleSet#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#max_bid_price WindowsVirtualMachineScaleSet#max_bid_price}
+  */
   readonly maxBidPrice?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#name WindowsVirtualMachineScaleSet#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#overprovision WindowsVirtualMachineScaleSet#overprovision}
+  */
   readonly overprovision?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#platform_fault_domain_count WindowsVirtualMachineScaleSet#platform_fault_domain_count}
+  */
   readonly platformFaultDomainCount?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#priority WindowsVirtualMachineScaleSet#priority}
+  */
   readonly priority?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#provision_vm_agent WindowsVirtualMachineScaleSet#provision_vm_agent}
+  */
   readonly provisionVmAgent?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#proximity_placement_group_id WindowsVirtualMachineScaleSet#proximity_placement_group_id}
+  */
   readonly proximityPlacementGroupId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#resource_group_name WindowsVirtualMachineScaleSet#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#scale_in_policy WindowsVirtualMachineScaleSet#scale_in_policy}
+  */
   readonly scaleInPolicy?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#single_placement_group WindowsVirtualMachineScaleSet#single_placement_group}
+  */
   readonly singlePlacementGroup?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#sku WindowsVirtualMachineScaleSet#sku}
+  */
   readonly sku: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#source_image_id WindowsVirtualMachineScaleSet#source_image_id}
+  */
   readonly sourceImageId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#tags WindowsVirtualMachineScaleSet#tags}
+  */
   readonly tags?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#timezone WindowsVirtualMachineScaleSet#timezone}
+  */
   readonly timezone?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#upgrade_mode WindowsVirtualMachineScaleSet#upgrade_mode}
+  */
   readonly upgradeMode?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#zone_balance WindowsVirtualMachineScaleSet#zone_balance}
+  */
   readonly zoneBalance?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#zones WindowsVirtualMachineScaleSet#zones}
+  */
   readonly zones?: string[];
-  /** additional_capabilities block */
+  /**
+  * additional_capabilities block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#additional_capabilities WindowsVirtualMachineScaleSet#additional_capabilities}
+  */
   readonly additionalCapabilities?: WindowsVirtualMachineScaleSetAdditionalCapabilities[];
-  /** additional_unattend_content block */
+  /**
+  * additional_unattend_content block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#additional_unattend_content WindowsVirtualMachineScaleSet#additional_unattend_content}
+  */
   readonly additionalUnattendContent?: WindowsVirtualMachineScaleSetAdditionalUnattendContent[];
-  /** automatic_instance_repair block */
+  /**
+  * automatic_instance_repair block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#automatic_instance_repair WindowsVirtualMachineScaleSet#automatic_instance_repair}
+  */
   readonly automaticInstanceRepair?: WindowsVirtualMachineScaleSetAutomaticInstanceRepair[];
-  /** automatic_os_upgrade_policy block */
+  /**
+  * automatic_os_upgrade_policy block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#automatic_os_upgrade_policy WindowsVirtualMachineScaleSet#automatic_os_upgrade_policy}
+  */
   readonly automaticOsUpgradePolicy?: WindowsVirtualMachineScaleSetAutomaticOsUpgradePolicy[];
-  /** boot_diagnostics block */
+  /**
+  * boot_diagnostics block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#boot_diagnostics WindowsVirtualMachineScaleSet#boot_diagnostics}
+  */
   readonly bootDiagnostics?: WindowsVirtualMachineScaleSetBootDiagnostics[];
-  /** data_disk block */
+  /**
+  * data_disk block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#data_disk WindowsVirtualMachineScaleSet#data_disk}
+  */
   readonly dataDisk?: WindowsVirtualMachineScaleSetDataDisk[];
-  /** extension block */
+  /**
+  * extension block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#extension WindowsVirtualMachineScaleSet#extension}
+  */
   readonly extension?: WindowsVirtualMachineScaleSetExtension[];
-  /** identity block */
+  /**
+  * identity block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#identity WindowsVirtualMachineScaleSet#identity}
+  */
   readonly identity?: WindowsVirtualMachineScaleSetIdentity[];
-  /** network_interface block */
+  /**
+  * network_interface block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#network_interface WindowsVirtualMachineScaleSet#network_interface}
+  */
   readonly networkInterface: WindowsVirtualMachineScaleSetNetworkInterface[];
-  /** os_disk block */
+  /**
+  * os_disk block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#os_disk WindowsVirtualMachineScaleSet#os_disk}
+  */
   readonly osDisk: WindowsVirtualMachineScaleSetOsDisk[];
-  /** plan block */
+  /**
+  * plan block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#plan WindowsVirtualMachineScaleSet#plan}
+  */
   readonly plan?: WindowsVirtualMachineScaleSetPlan[];
-  /** rolling_upgrade_policy block */
+  /**
+  * rolling_upgrade_policy block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#rolling_upgrade_policy WindowsVirtualMachineScaleSet#rolling_upgrade_policy}
+  */
   readonly rollingUpgradePolicy?: WindowsVirtualMachineScaleSetRollingUpgradePolicy[];
-  /** secret block */
+  /**
+  * secret block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#secret WindowsVirtualMachineScaleSet#secret}
+  */
   readonly secret?: WindowsVirtualMachineScaleSetSecret[];
-  /** source_image_reference block */
+  /**
+  * source_image_reference block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#source_image_reference WindowsVirtualMachineScaleSet#source_image_reference}
+  */
   readonly sourceImageReference?: WindowsVirtualMachineScaleSetSourceImageReference[];
-  /** terminate_notification block */
+  /**
+  * terminate_notification block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#terminate_notification WindowsVirtualMachineScaleSet#terminate_notification}
+  */
   readonly terminateNotification?: WindowsVirtualMachineScaleSetTerminateNotification[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#timeouts WindowsVirtualMachineScaleSet#timeouts}
+  */
   readonly timeouts?: WindowsVirtualMachineScaleSetTimeouts;
-  /** winrm_listener block */
+  /**
+  * winrm_listener block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#winrm_listener WindowsVirtualMachineScaleSet#winrm_listener}
+  */
   readonly winrmListener?: WindowsVirtualMachineScaleSetWinrmListener[];
 }
 export interface WindowsVirtualMachineScaleSetAdditionalCapabilities {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#ultra_ssd_enabled WindowsVirtualMachineScaleSet#ultra_ssd_enabled}
+  */
   readonly ultraSsdEnabled?: boolean;
 }
 
@@ -84,7 +245,13 @@ function windowsVirtualMachineScaleSetAdditionalCapabilitiesToTerraform(struct?:
 }
 
 export interface WindowsVirtualMachineScaleSetAdditionalUnattendContent {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#content WindowsVirtualMachineScaleSet#content}
+  */
   readonly content: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#setting WindowsVirtualMachineScaleSet#setting}
+  */
   readonly setting: string;
 }
 
@@ -97,7 +264,13 @@ function windowsVirtualMachineScaleSetAdditionalUnattendContentToTerraform(struc
 }
 
 export interface WindowsVirtualMachineScaleSetAutomaticInstanceRepair {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#enabled WindowsVirtualMachineScaleSet#enabled}
+  */
   readonly enabled: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#grace_period WindowsVirtualMachineScaleSet#grace_period}
+  */
   readonly gracePeriod?: string;
 }
 
@@ -110,7 +283,13 @@ function windowsVirtualMachineScaleSetAutomaticInstanceRepairToTerraform(struct?
 }
 
 export interface WindowsVirtualMachineScaleSetAutomaticOsUpgradePolicy {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#disable_automatic_rollback WindowsVirtualMachineScaleSet#disable_automatic_rollback}
+  */
   readonly disableAutomaticRollback: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#enable_automatic_os_upgrade WindowsVirtualMachineScaleSet#enable_automatic_os_upgrade}
+  */
   readonly enableAutomaticOsUpgrade: boolean;
 }
 
@@ -123,6 +302,9 @@ function windowsVirtualMachineScaleSetAutomaticOsUpgradePolicyToTerraform(struct
 }
 
 export interface WindowsVirtualMachineScaleSetBootDiagnostics {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#storage_account_uri WindowsVirtualMachineScaleSet#storage_account_uri}
+  */
   readonly storageAccountUri?: string;
 }
 
@@ -134,14 +316,41 @@ function windowsVirtualMachineScaleSetBootDiagnosticsToTerraform(struct?: Window
 }
 
 export interface WindowsVirtualMachineScaleSetDataDisk {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#caching WindowsVirtualMachineScaleSet#caching}
+  */
   readonly caching: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#create_option WindowsVirtualMachineScaleSet#create_option}
+  */
   readonly createOption?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#disk_encryption_set_id WindowsVirtualMachineScaleSet#disk_encryption_set_id}
+  */
   readonly diskEncryptionSetId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#disk_iops_read_write WindowsVirtualMachineScaleSet#disk_iops_read_write}
+  */
   readonly diskIopsReadWrite?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#disk_mbps_read_write WindowsVirtualMachineScaleSet#disk_mbps_read_write}
+  */
   readonly diskMbpsReadWrite?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#disk_size_gb WindowsVirtualMachineScaleSet#disk_size_gb}
+  */
   readonly diskSizeGb: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#lun WindowsVirtualMachineScaleSet#lun}
+  */
   readonly lun: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#storage_account_type WindowsVirtualMachineScaleSet#storage_account_type}
+  */
   readonly storageAccountType: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#write_accelerator_enabled WindowsVirtualMachineScaleSet#write_accelerator_enabled}
+  */
   readonly writeAcceleratorEnabled?: boolean;
 }
 
@@ -161,14 +370,41 @@ function windowsVirtualMachineScaleSetDataDiskToTerraform(struct?: WindowsVirtua
 }
 
 export interface WindowsVirtualMachineScaleSetExtension {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#auto_upgrade_minor_version WindowsVirtualMachineScaleSet#auto_upgrade_minor_version}
+  */
   readonly autoUpgradeMinorVersion?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#force_update_tag WindowsVirtualMachineScaleSet#force_update_tag}
+  */
   readonly forceUpdateTag?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#name WindowsVirtualMachineScaleSet#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#protected_settings WindowsVirtualMachineScaleSet#protected_settings}
+  */
   readonly protectedSettings?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#provision_after_extensions WindowsVirtualMachineScaleSet#provision_after_extensions}
+  */
   readonly provisionAfterExtensions?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#publisher WindowsVirtualMachineScaleSet#publisher}
+  */
   readonly publisher: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#settings WindowsVirtualMachineScaleSet#settings}
+  */
   readonly settings?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#type WindowsVirtualMachineScaleSet#type}
+  */
   readonly type: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#type_handler_version WindowsVirtualMachineScaleSet#type_handler_version}
+  */
   readonly typeHandlerVersion: string;
 }
 
@@ -188,7 +424,13 @@ function windowsVirtualMachineScaleSetExtensionToTerraform(struct?: WindowsVirtu
 }
 
 export interface WindowsVirtualMachineScaleSetIdentity {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#identity_ids WindowsVirtualMachineScaleSet#identity_ids}
+  */
   readonly identityIds?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#type WindowsVirtualMachineScaleSet#type}
+  */
   readonly type: string;
 }
 
@@ -201,7 +443,13 @@ function windowsVirtualMachineScaleSetIdentityToTerraform(struct?: WindowsVirtua
 }
 
 export interface WindowsVirtualMachineScaleSetNetworkInterfaceIpConfigurationPublicIpAddressIpTag {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#tag WindowsVirtualMachineScaleSet#tag}
+  */
   readonly tag: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#type WindowsVirtualMachineScaleSet#type}
+  */
   readonly type: string;
 }
 
@@ -214,11 +462,27 @@ function windowsVirtualMachineScaleSetNetworkInterfaceIpConfigurationPublicIpAdd
 }
 
 export interface WindowsVirtualMachineScaleSetNetworkInterfaceIpConfigurationPublicIpAddress {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#domain_name_label WindowsVirtualMachineScaleSet#domain_name_label}
+  */
   readonly domainNameLabel?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#idle_timeout_in_minutes WindowsVirtualMachineScaleSet#idle_timeout_in_minutes}
+  */
   readonly idleTimeoutInMinutes?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#name WindowsVirtualMachineScaleSet#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#public_ip_prefix_id WindowsVirtualMachineScaleSet#public_ip_prefix_id}
+  */
   readonly publicIpPrefixId?: string;
-  /** ip_tag block */
+  /**
+  * ip_tag block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#ip_tag WindowsVirtualMachineScaleSet#ip_tag}
+  */
   readonly ipTag?: WindowsVirtualMachineScaleSetNetworkInterfaceIpConfigurationPublicIpAddressIpTag[];
 }
 
@@ -234,15 +498,43 @@ function windowsVirtualMachineScaleSetNetworkInterfaceIpConfigurationPublicIpAdd
 }
 
 export interface WindowsVirtualMachineScaleSetNetworkInterfaceIpConfiguration {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#application_gateway_backend_address_pool_ids WindowsVirtualMachineScaleSet#application_gateway_backend_address_pool_ids}
+  */
   readonly applicationGatewayBackendAddressPoolIds?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#application_security_group_ids WindowsVirtualMachineScaleSet#application_security_group_ids}
+  */
   readonly applicationSecurityGroupIds?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#load_balancer_backend_address_pool_ids WindowsVirtualMachineScaleSet#load_balancer_backend_address_pool_ids}
+  */
   readonly loadBalancerBackendAddressPoolIds?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#load_balancer_inbound_nat_rules_ids WindowsVirtualMachineScaleSet#load_balancer_inbound_nat_rules_ids}
+  */
   readonly loadBalancerInboundNatRulesIds?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#name WindowsVirtualMachineScaleSet#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#primary WindowsVirtualMachineScaleSet#primary}
+  */
   readonly primary?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#subnet_id WindowsVirtualMachineScaleSet#subnet_id}
+  */
   readonly subnetId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#version WindowsVirtualMachineScaleSet#version}
+  */
   readonly version?: string;
-  /** public_ip_address block */
+  /**
+  * public_ip_address block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#public_ip_address WindowsVirtualMachineScaleSet#public_ip_address}
+  */
   readonly publicIpAddress?: WindowsVirtualMachineScaleSetNetworkInterfaceIpConfigurationPublicIpAddress[];
 }
 
@@ -262,13 +554,35 @@ function windowsVirtualMachineScaleSetNetworkInterfaceIpConfigurationToTerraform
 }
 
 export interface WindowsVirtualMachineScaleSetNetworkInterface {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#dns_servers WindowsVirtualMachineScaleSet#dns_servers}
+  */
   readonly dnsServers?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#enable_accelerated_networking WindowsVirtualMachineScaleSet#enable_accelerated_networking}
+  */
   readonly enableAcceleratedNetworking?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#enable_ip_forwarding WindowsVirtualMachineScaleSet#enable_ip_forwarding}
+  */
   readonly enableIpForwarding?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#name WindowsVirtualMachineScaleSet#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#network_security_group_id WindowsVirtualMachineScaleSet#network_security_group_id}
+  */
   readonly networkSecurityGroupId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#primary WindowsVirtualMachineScaleSet#primary}
+  */
   readonly primary?: boolean;
-  /** ip_configuration block */
+  /**
+  * ip_configuration block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#ip_configuration WindowsVirtualMachineScaleSet#ip_configuration}
+  */
   readonly ipConfiguration: WindowsVirtualMachineScaleSetNetworkInterfaceIpConfiguration[];
 }
 
@@ -286,6 +600,9 @@ function windowsVirtualMachineScaleSetNetworkInterfaceToTerraform(struct?: Windo
 }
 
 export interface WindowsVirtualMachineScaleSetOsDiskDiffDiskSettings {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#option WindowsVirtualMachineScaleSet#option}
+  */
   readonly option: string;
 }
 
@@ -297,12 +614,31 @@ function windowsVirtualMachineScaleSetOsDiskDiffDiskSettingsToTerraform(struct?:
 }
 
 export interface WindowsVirtualMachineScaleSetOsDisk {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#caching WindowsVirtualMachineScaleSet#caching}
+  */
   readonly caching: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#disk_encryption_set_id WindowsVirtualMachineScaleSet#disk_encryption_set_id}
+  */
   readonly diskEncryptionSetId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#disk_size_gb WindowsVirtualMachineScaleSet#disk_size_gb}
+  */
   readonly diskSizeGb?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#storage_account_type WindowsVirtualMachineScaleSet#storage_account_type}
+  */
   readonly storageAccountType: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#write_accelerator_enabled WindowsVirtualMachineScaleSet#write_accelerator_enabled}
+  */
   readonly writeAcceleratorEnabled?: boolean;
-  /** diff_disk_settings block */
+  /**
+  * diff_disk_settings block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#diff_disk_settings WindowsVirtualMachineScaleSet#diff_disk_settings}
+  */
   readonly diffDiskSettings?: WindowsVirtualMachineScaleSetOsDiskDiffDiskSettings[];
 }
 
@@ -319,8 +655,17 @@ function windowsVirtualMachineScaleSetOsDiskToTerraform(struct?: WindowsVirtualM
 }
 
 export interface WindowsVirtualMachineScaleSetPlan {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#name WindowsVirtualMachineScaleSet#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#product WindowsVirtualMachineScaleSet#product}
+  */
   readonly product: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#publisher WindowsVirtualMachineScaleSet#publisher}
+  */
   readonly publisher: string;
 }
 
@@ -334,9 +679,21 @@ function windowsVirtualMachineScaleSetPlanToTerraform(struct?: WindowsVirtualMac
 }
 
 export interface WindowsVirtualMachineScaleSetRollingUpgradePolicy {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#max_batch_instance_percent WindowsVirtualMachineScaleSet#max_batch_instance_percent}
+  */
   readonly maxBatchInstancePercent: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#max_unhealthy_instance_percent WindowsVirtualMachineScaleSet#max_unhealthy_instance_percent}
+  */
   readonly maxUnhealthyInstancePercent: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#max_unhealthy_upgraded_instance_percent WindowsVirtualMachineScaleSet#max_unhealthy_upgraded_instance_percent}
+  */
   readonly maxUnhealthyUpgradedInstancePercent: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#pause_time_between_batches WindowsVirtualMachineScaleSet#pause_time_between_batches}
+  */
   readonly pauseTimeBetweenBatches: string;
 }
 
@@ -351,7 +708,13 @@ function windowsVirtualMachineScaleSetRollingUpgradePolicyToTerraform(struct?: W
 }
 
 export interface WindowsVirtualMachineScaleSetSecretCertificate {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#store WindowsVirtualMachineScaleSet#store}
+  */
   readonly store: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#url WindowsVirtualMachineScaleSet#url}
+  */
   readonly url: string;
 }
 
@@ -364,8 +727,15 @@ function windowsVirtualMachineScaleSetSecretCertificateToTerraform(struct?: Wind
 }
 
 export interface WindowsVirtualMachineScaleSetSecret {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#key_vault_id WindowsVirtualMachineScaleSet#key_vault_id}
+  */
   readonly keyVaultId: string;
-  /** certificate block */
+  /**
+  * certificate block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#certificate WindowsVirtualMachineScaleSet#certificate}
+  */
   readonly certificate: WindowsVirtualMachineScaleSetSecretCertificate[];
 }
 
@@ -378,9 +748,21 @@ function windowsVirtualMachineScaleSetSecretToTerraform(struct?: WindowsVirtualM
 }
 
 export interface WindowsVirtualMachineScaleSetSourceImageReference {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#offer WindowsVirtualMachineScaleSet#offer}
+  */
   readonly offer: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#publisher WindowsVirtualMachineScaleSet#publisher}
+  */
   readonly publisher: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#sku WindowsVirtualMachineScaleSet#sku}
+  */
   readonly sku: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#version WindowsVirtualMachineScaleSet#version}
+  */
   readonly version: string;
 }
 
@@ -395,7 +777,13 @@ function windowsVirtualMachineScaleSetSourceImageReferenceToTerraform(struct?: W
 }
 
 export interface WindowsVirtualMachineScaleSetTerminateNotification {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#enabled WindowsVirtualMachineScaleSet#enabled}
+  */
   readonly enabled: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#timeout WindowsVirtualMachineScaleSet#timeout}
+  */
   readonly timeout?: string;
 }
 
@@ -408,9 +796,21 @@ function windowsVirtualMachineScaleSetTerminateNotificationToTerraform(struct?: 
 }
 
 export interface WindowsVirtualMachineScaleSetTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#create WindowsVirtualMachineScaleSet#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#delete WindowsVirtualMachineScaleSet#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#read WindowsVirtualMachineScaleSet#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#update WindowsVirtualMachineScaleSet#update}
+  */
   readonly update?: string;
 }
 
@@ -425,7 +825,13 @@ function windowsVirtualMachineScaleSetTimeoutsToTerraform(struct?: WindowsVirtua
 }
 
 export interface WindowsVirtualMachineScaleSetWinrmListener {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#certificate_url WindowsVirtualMachineScaleSet#certificate_url}
+  */
   readonly certificateUrl?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#protocol WindowsVirtualMachineScaleSet#protocol}
+  */
   readonly protocol: string;
 }
 
@@ -438,14 +844,22 @@ function windowsVirtualMachineScaleSetWinrmListenerToTerraform(struct?: WindowsV
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html azurerm_windows_virtual_machine_scale_set}
+*/
 export class WindowsVirtualMachineScaleSet extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html azurerm_windows_virtual_machine_scale_set} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options WindowsVirtualMachineScaleSetConfig
+  */
   public constructor(scope: Construct, id: string, config: WindowsVirtualMachineScaleSetConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_windows_virtual_machine_scale_set',

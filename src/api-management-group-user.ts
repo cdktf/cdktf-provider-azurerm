@@ -7,17 +7,45 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface ApiManagementGroupUserConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_group_user.html#api_management_name ApiManagementGroupUser#api_management_name}
+  */
   readonly apiManagementName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_group_user.html#group_name ApiManagementGroupUser#group_name}
+  */
   readonly groupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_group_user.html#resource_group_name ApiManagementGroupUser#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_group_user.html#user_id ApiManagementGroupUser#user_id}
+  */
   readonly userId: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_group_user.html#timeouts ApiManagementGroupUser#timeouts}
+  */
   readonly timeouts?: ApiManagementGroupUserTimeouts;
 }
 export interface ApiManagementGroupUserTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_group_user.html#create ApiManagementGroupUser#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_group_user.html#delete ApiManagementGroupUser#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_group_user.html#read ApiManagementGroupUser#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_group_user.html#update ApiManagementGroupUser#update}
+  */
   readonly update?: string;
 }
 
@@ -32,14 +60,22 @@ function apiManagementGroupUserTimeoutsToTerraform(struct?: ApiManagementGroupUs
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_group_user.html azurerm_api_management_group_user}
+*/
 export class ApiManagementGroupUser extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_group_user.html azurerm_api_management_group_user} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options ApiManagementGroupUserConfig
+  */
   public constructor(scope: Construct, id: string, config: ApiManagementGroupUserConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_api_management_group_user',

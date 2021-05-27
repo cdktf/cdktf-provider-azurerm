@@ -7,30 +7,97 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface NetworkSecurityGroupConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_security_group.html#location NetworkSecurityGroup#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_security_group.html#name NetworkSecurityGroup#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_security_group.html#resource_group_name NetworkSecurityGroup#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_security_group.html#security_rule NetworkSecurityGroup#security_rule}
+  */
   readonly securityRule?: NetworkSecurityGroupSecurityRule[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_security_group.html#tags NetworkSecurityGroup#tags}
+  */
   readonly tags?: { [key: string]: string };
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_security_group.html#timeouts NetworkSecurityGroup#timeouts}
+  */
   readonly timeouts?: NetworkSecurityGroupTimeouts;
 }
 export interface NetworkSecurityGroupSecurityRule {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_security_group.html#access NetworkSecurityGroup#access}
+  */
   readonly access?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_security_group.html#description NetworkSecurityGroup#description}
+  */
   readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_security_group.html#destination_address_prefix NetworkSecurityGroup#destination_address_prefix}
+  */
   readonly destinationAddressPrefix?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_security_group.html#destination_address_prefixes NetworkSecurityGroup#destination_address_prefixes}
+  */
   readonly destinationAddressPrefixes?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_security_group.html#destination_application_security_group_ids NetworkSecurityGroup#destination_application_security_group_ids}
+  */
   readonly destinationApplicationSecurityGroupIds?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_security_group.html#destination_port_range NetworkSecurityGroup#destination_port_range}
+  */
   readonly destinationPortRange?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_security_group.html#destination_port_ranges NetworkSecurityGroup#destination_port_ranges}
+  */
   readonly destinationPortRanges?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_security_group.html#direction NetworkSecurityGroup#direction}
+  */
   readonly direction?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_security_group.html#name NetworkSecurityGroup#name}
+  */
   readonly name?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_security_group.html#priority NetworkSecurityGroup#priority}
+  */
   readonly priority?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_security_group.html#protocol NetworkSecurityGroup#protocol}
+  */
   readonly protocol?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_security_group.html#source_address_prefix NetworkSecurityGroup#source_address_prefix}
+  */
   readonly sourceAddressPrefix?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_security_group.html#source_address_prefixes NetworkSecurityGroup#source_address_prefixes}
+  */
   readonly sourceAddressPrefixes?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_security_group.html#source_application_security_group_ids NetworkSecurityGroup#source_application_security_group_ids}
+  */
   readonly sourceApplicationSecurityGroupIds?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_security_group.html#source_port_range NetworkSecurityGroup#source_port_range}
+  */
   readonly sourcePortRange?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_security_group.html#source_port_ranges NetworkSecurityGroup#source_port_ranges}
+  */
   readonly sourcePortRanges?: string[];
 }
 
@@ -57,9 +124,21 @@ function networkSecurityGroupSecurityRuleToTerraform(struct?: NetworkSecurityGro
 }
 
 export interface NetworkSecurityGroupTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_security_group.html#create NetworkSecurityGroup#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_security_group.html#delete NetworkSecurityGroup#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_security_group.html#read NetworkSecurityGroup#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_security_group.html#update NetworkSecurityGroup#update}
+  */
   readonly update?: string;
 }
 
@@ -74,14 +153,22 @@ function networkSecurityGroupTimeoutsToTerraform(struct?: NetworkSecurityGroupTi
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/network_security_group.html azurerm_network_security_group}
+*/
 export class NetworkSecurityGroup extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/network_security_group.html azurerm_network_security_group} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options NetworkSecurityGroupConfig
+  */
   public constructor(scope: Construct, id: string, config: NetworkSecurityGroupConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_network_security_group',

@@ -7,21 +7,55 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface SqlFailoverGroupConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_failover_group.html#databases SqlFailoverGroup#databases}
+  */
   readonly databases?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_failover_group.html#name SqlFailoverGroup#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_failover_group.html#resource_group_name SqlFailoverGroup#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_failover_group.html#server_name SqlFailoverGroup#server_name}
+  */
   readonly serverName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_failover_group.html#tags SqlFailoverGroup#tags}
+  */
   readonly tags?: { [key: string]: string };
-  /** partner_servers block */
+  /**
+  * partner_servers block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_failover_group.html#partner_servers SqlFailoverGroup#partner_servers}
+  */
   readonly partnerServers: SqlFailoverGroupPartnerServers[];
-  /** read_write_endpoint_failover_policy block */
+  /**
+  * read_write_endpoint_failover_policy block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_failover_group.html#read_write_endpoint_failover_policy SqlFailoverGroup#read_write_endpoint_failover_policy}
+  */
   readonly readWriteEndpointFailoverPolicy: SqlFailoverGroupReadWriteEndpointFailoverPolicy[];
-  /** readonly_endpoint_failover_policy block */
+  /**
+  * readonly_endpoint_failover_policy block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_failover_group.html#readonly_endpoint_failover_policy SqlFailoverGroup#readonly_endpoint_failover_policy}
+  */
   readonly readonlyEndpointFailoverPolicy?: SqlFailoverGroupReadonlyEndpointFailoverPolicy[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_failover_group.html#timeouts SqlFailoverGroup#timeouts}
+  */
   readonly timeouts?: SqlFailoverGroupTimeouts;
 }
 export interface SqlFailoverGroupPartnerServers {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_failover_group.html#id SqlFailoverGroup#id}
+  */
   readonly id: string;
 }
 
@@ -33,7 +67,13 @@ function sqlFailoverGroupPartnerServersToTerraform(struct?: SqlFailoverGroupPart
 }
 
 export interface SqlFailoverGroupReadWriteEndpointFailoverPolicy {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_failover_group.html#grace_minutes SqlFailoverGroup#grace_minutes}
+  */
   readonly graceMinutes?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_failover_group.html#mode SqlFailoverGroup#mode}
+  */
   readonly mode: string;
 }
 
@@ -46,6 +86,9 @@ function sqlFailoverGroupReadWriteEndpointFailoverPolicyToTerraform(struct?: Sql
 }
 
 export interface SqlFailoverGroupReadonlyEndpointFailoverPolicy {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_failover_group.html#mode SqlFailoverGroup#mode}
+  */
   readonly mode: string;
 }
 
@@ -57,9 +100,21 @@ function sqlFailoverGroupReadonlyEndpointFailoverPolicyToTerraform(struct?: SqlF
 }
 
 export interface SqlFailoverGroupTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_failover_group.html#create SqlFailoverGroup#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_failover_group.html#delete SqlFailoverGroup#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_failover_group.html#read SqlFailoverGroup#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_failover_group.html#update SqlFailoverGroup#update}
+  */
   readonly update?: string;
 }
 
@@ -74,14 +129,22 @@ function sqlFailoverGroupTimeoutsToTerraform(struct?: SqlFailoverGroupTimeouts):
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/sql_failover_group.html azurerm_sql_failover_group}
+*/
 export class SqlFailoverGroup extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/sql_failover_group.html azurerm_sql_failover_group} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options SqlFailoverGroupConfig
+  */
   public constructor(scope: Construct, id: string, config: SqlFailoverGroupConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_sql_failover_group',

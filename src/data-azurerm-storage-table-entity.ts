@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/data_azurerm_storage_table_entity.html
+// https://www.terraform.io/docs/providers/azurerm/d/storage_table_entity.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,14 +7,33 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataAzurermStorageTableEntityConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_table_entity.html#partition_key DataAzurermStorageTableEntity#partition_key}
+  */
   readonly partitionKey: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_table_entity.html#row_key DataAzurermStorageTableEntity#row_key}
+  */
   readonly rowKey: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_table_entity.html#storage_account_name DataAzurermStorageTableEntity#storage_account_name}
+  */
   readonly storageAccountName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_table_entity.html#table_name DataAzurermStorageTableEntity#table_name}
+  */
   readonly tableName: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_table_entity.html#timeouts DataAzurermStorageTableEntity#timeouts}
+  */
   readonly timeouts?: DataAzurermStorageTableEntityTimeouts;
 }
 export interface DataAzurermStorageTableEntityTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_table_entity.html#read DataAzurermStorageTableEntity#read}
+  */
   readonly read?: string;
 }
 
@@ -26,14 +45,22 @@ function dataAzurermStorageTableEntityTimeoutsToTerraform(struct?: DataAzurermSt
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/storage_table_entity.html azurerm_storage_table_entity}
+*/
 export class DataAzurermStorageTableEntity extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/storage_table_entity.html azurerm_storage_table_entity} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataAzurermStorageTableEntityConfig
+  */
   public constructor(scope: Construct, id: string, config: DataAzurermStorageTableEntityConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_storage_table_entity',

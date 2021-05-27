@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/data_azurerm_policy_definition.html
+// https://www.terraform.io/docs/providers/azurerm/d/policy_definition.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,14 +7,33 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataAzurermPolicyDefinitionConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/policy_definition.html#display_name DataAzurermPolicyDefinition#display_name}
+  */
   readonly displayName?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/policy_definition.html#management_group_id DataAzurermPolicyDefinition#management_group_id}
+  */
   readonly managementGroupId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/policy_definition.html#management_group_name DataAzurermPolicyDefinition#management_group_name}
+  */
   readonly managementGroupName?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/policy_definition.html#name DataAzurermPolicyDefinition#name}
+  */
   readonly name?: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/policy_definition.html#timeouts DataAzurermPolicyDefinition#timeouts}
+  */
   readonly timeouts?: DataAzurermPolicyDefinitionTimeouts;
 }
 export interface DataAzurermPolicyDefinitionTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/policy_definition.html#read DataAzurermPolicyDefinition#read}
+  */
   readonly read?: string;
 }
 
@@ -26,14 +45,22 @@ function dataAzurermPolicyDefinitionTimeoutsToTerraform(struct?: DataAzurermPoli
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/policy_definition.html azurerm_policy_definition}
+*/
 export class DataAzurermPolicyDefinition extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/policy_definition.html azurerm_policy_definition} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataAzurermPolicyDefinitionConfig = {}
+  */
   public constructor(scope: Construct, id: string, config: DataAzurermPolicyDefinitionConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'azurerm_policy_definition',

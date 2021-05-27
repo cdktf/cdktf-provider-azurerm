@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/data_azurerm_batch_certificate.html
+// https://www.terraform.io/docs/providers/azurerm/d/batch_certificate.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,13 +7,29 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataAzurermBatchCertificateConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/batch_certificate.html#account_name DataAzurermBatchCertificate#account_name}
+  */
   readonly accountName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/batch_certificate.html#name DataAzurermBatchCertificate#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/batch_certificate.html#resource_group_name DataAzurermBatchCertificate#resource_group_name}
+  */
   readonly resourceGroupName: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/batch_certificate.html#timeouts DataAzurermBatchCertificate#timeouts}
+  */
   readonly timeouts?: DataAzurermBatchCertificateTimeouts;
 }
 export interface DataAzurermBatchCertificateTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/batch_certificate.html#read DataAzurermBatchCertificate#read}
+  */
   readonly read?: string;
 }
 
@@ -25,14 +41,22 @@ function dataAzurermBatchCertificateTimeoutsToTerraform(struct?: DataAzurermBatc
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/batch_certificate.html azurerm_batch_certificate}
+*/
 export class DataAzurermBatchCertificate extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/batch_certificate.html azurerm_batch_certificate} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataAzurermBatchCertificateConfig
+  */
   public constructor(scope: Construct, id: string, config: DataAzurermBatchCertificateConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_batch_certificate',

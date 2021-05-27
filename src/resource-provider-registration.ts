@@ -7,13 +7,29 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface ResourceProviderRegistrationConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/resource_provider_registration.html#name ResourceProviderRegistration#name}
+  */
   readonly name: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/resource_provider_registration.html#timeouts ResourceProviderRegistration#timeouts}
+  */
   readonly timeouts?: ResourceProviderRegistrationTimeouts;
 }
 export interface ResourceProviderRegistrationTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/resource_provider_registration.html#create ResourceProviderRegistration#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/resource_provider_registration.html#delete ResourceProviderRegistration#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/resource_provider_registration.html#read ResourceProviderRegistration#read}
+  */
   readonly read?: string;
 }
 
@@ -27,14 +43,22 @@ function resourceProviderRegistrationTimeoutsToTerraform(struct?: ResourceProvid
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/resource_provider_registration.html azurerm_resource_provider_registration}
+*/
 export class ResourceProviderRegistration extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/resource_provider_registration.html azurerm_resource_provider_registration} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options ResourceProviderRegistrationConfig
+  */
   public constructor(scope: Construct, id: string, config: ResourceProviderRegistrationConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_resource_provider_registration',

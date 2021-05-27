@@ -7,20 +7,57 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface KustoDatabasePrincipalConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_database_principal.html#client_id KustoDatabasePrincipal#client_id}
+  */
   readonly clientId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_database_principal.html#cluster_name KustoDatabasePrincipal#cluster_name}
+  */
   readonly clusterName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_database_principal.html#database_name KustoDatabasePrincipal#database_name}
+  */
   readonly databaseName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_database_principal.html#object_id KustoDatabasePrincipal#object_id}
+  */
   readonly objectId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_database_principal.html#resource_group_name KustoDatabasePrincipal#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_database_principal.html#role KustoDatabasePrincipal#role}
+  */
   readonly role: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_database_principal.html#type KustoDatabasePrincipal#type}
+  */
   readonly type: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_database_principal.html#timeouts KustoDatabasePrincipal#timeouts}
+  */
   readonly timeouts?: KustoDatabasePrincipalTimeouts;
 }
 export interface KustoDatabasePrincipalTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_database_principal.html#create KustoDatabasePrincipal#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_database_principal.html#delete KustoDatabasePrincipal#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_database_principal.html#read KustoDatabasePrincipal#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_database_principal.html#update KustoDatabasePrincipal#update}
+  */
   readonly update?: string;
 }
 
@@ -35,14 +72,22 @@ function kustoDatabasePrincipalTimeoutsToTerraform(struct?: KustoDatabasePrincip
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_database_principal.html azurerm_kusto_database_principal}
+*/
 export class KustoDatabasePrincipal extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_database_principal.html azurerm_kusto_database_principal} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options KustoDatabasePrincipalConfig
+  */
   public constructor(scope: Construct, id: string, config: KustoDatabasePrincipalConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_kusto_database_principal',

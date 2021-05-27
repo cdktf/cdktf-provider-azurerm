@@ -7,20 +7,55 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface RoleDefinitionConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/role_definition.html#assignable_scopes RoleDefinition#assignable_scopes}
+  */
   readonly assignableScopes?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/role_definition.html#description RoleDefinition#description}
+  */
   readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/role_definition.html#name RoleDefinition#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/role_definition.html#role_definition_id RoleDefinition#role_definition_id}
+  */
   readonly roleDefinitionId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/role_definition.html#scope RoleDefinition#scope}
+  */
   readonly scope: string;
-  /** permissions block */
+  /**
+  * permissions block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/role_definition.html#permissions RoleDefinition#permissions}
+  */
   readonly permissions?: RoleDefinitionPermissions[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/role_definition.html#timeouts RoleDefinition#timeouts}
+  */
   readonly timeouts?: RoleDefinitionTimeouts;
 }
 export interface RoleDefinitionPermissions {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/role_definition.html#actions RoleDefinition#actions}
+  */
   readonly actions?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/role_definition.html#data_actions RoleDefinition#data_actions}
+  */
   readonly dataActions?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/role_definition.html#not_actions RoleDefinition#not_actions}
+  */
   readonly notActions?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/role_definition.html#not_data_actions RoleDefinition#not_data_actions}
+  */
   readonly notDataActions?: string[];
 }
 
@@ -35,9 +70,21 @@ function roleDefinitionPermissionsToTerraform(struct?: RoleDefinitionPermissions
 }
 
 export interface RoleDefinitionTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/role_definition.html#create RoleDefinition#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/role_definition.html#delete RoleDefinition#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/role_definition.html#read RoleDefinition#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/role_definition.html#update RoleDefinition#update}
+  */
   readonly update?: string;
 }
 
@@ -52,14 +99,22 @@ function roleDefinitionTimeoutsToTerraform(struct?: RoleDefinitionTimeouts): any
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/role_definition.html azurerm_role_definition}
+*/
 export class RoleDefinition extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/role_definition.html azurerm_role_definition} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options RoleDefinitionConfig
+  */
   public constructor(scope: Construct, id: string, config: RoleDefinitionConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_role_definition',

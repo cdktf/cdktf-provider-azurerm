@@ -7,22 +7,61 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface EventgridDomainConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_domain.html#inbound_ip_rule EventgridDomain#inbound_ip_rule}
+  */
   readonly inboundIpRule?: EventgridDomainInboundIpRule[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_domain.html#input_schema EventgridDomain#input_schema}
+  */
   readonly inputSchema?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_domain.html#location EventgridDomain#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_domain.html#name EventgridDomain#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_domain.html#public_network_access_enabled EventgridDomain#public_network_access_enabled}
+  */
   readonly publicNetworkAccessEnabled?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_domain.html#resource_group_name EventgridDomain#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_domain.html#tags EventgridDomain#tags}
+  */
   readonly tags?: { [key: string]: string };
-  /** input_mapping_default_values block */
+  /**
+  * input_mapping_default_values block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_domain.html#input_mapping_default_values EventgridDomain#input_mapping_default_values}
+  */
   readonly inputMappingDefaultValues?: EventgridDomainInputMappingDefaultValues[];
-  /** input_mapping_fields block */
+  /**
+  * input_mapping_fields block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_domain.html#input_mapping_fields EventgridDomain#input_mapping_fields}
+  */
   readonly inputMappingFields?: EventgridDomainInputMappingFields[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_domain.html#timeouts EventgridDomain#timeouts}
+  */
   readonly timeouts?: EventgridDomainTimeouts;
 }
 export interface EventgridDomainInboundIpRule {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_domain.html#action EventgridDomain#action}
+  */
   readonly action?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_domain.html#ip_mask EventgridDomain#ip_mask}
+  */
   readonly ipMask?: string;
 }
 
@@ -35,8 +74,17 @@ function eventgridDomainInboundIpRuleToTerraform(struct?: EventgridDomainInbound
 }
 
 export interface EventgridDomainInputMappingDefaultValues {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_domain.html#data_version EventgridDomain#data_version}
+  */
   readonly dataVersion?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_domain.html#event_type EventgridDomain#event_type}
+  */
   readonly eventType?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_domain.html#subject EventgridDomain#subject}
+  */
   readonly subject?: string;
 }
 
@@ -50,11 +98,29 @@ function eventgridDomainInputMappingDefaultValuesToTerraform(struct?: EventgridD
 }
 
 export interface EventgridDomainInputMappingFields {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_domain.html#data_version EventgridDomain#data_version}
+  */
   readonly dataVersion?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_domain.html#event_time EventgridDomain#event_time}
+  */
   readonly eventTime?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_domain.html#event_type EventgridDomain#event_type}
+  */
   readonly eventType?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_domain.html#id EventgridDomain#id}
+  */
   readonly id?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_domain.html#subject EventgridDomain#subject}
+  */
   readonly subject?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_domain.html#topic EventgridDomain#topic}
+  */
   readonly topic?: string;
 }
 
@@ -71,9 +137,21 @@ function eventgridDomainInputMappingFieldsToTerraform(struct?: EventgridDomainIn
 }
 
 export interface EventgridDomainTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_domain.html#create EventgridDomain#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_domain.html#delete EventgridDomain#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_domain.html#read EventgridDomain#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_domain.html#update EventgridDomain#update}
+  */
   readonly update?: string;
 }
 
@@ -88,14 +166,22 @@ function eventgridDomainTimeoutsToTerraform(struct?: EventgridDomainTimeouts): a
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_domain.html azurerm_eventgrid_domain}
+*/
 export class EventgridDomain extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_domain.html azurerm_eventgrid_domain} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options EventgridDomainConfig
+  */
   public constructor(scope: Construct, id: string, config: EventgridDomainConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_eventgrid_domain',

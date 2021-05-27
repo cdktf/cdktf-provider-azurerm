@@ -7,17 +7,45 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface AutomationDscNodeconfigurationConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_dsc_nodeconfiguration.html#automation_account_name AutomationDscNodeconfiguration#automation_account_name}
+  */
   readonly automationAccountName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_dsc_nodeconfiguration.html#content_embedded AutomationDscNodeconfiguration#content_embedded}
+  */
   readonly contentEmbedded: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_dsc_nodeconfiguration.html#name AutomationDscNodeconfiguration#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_dsc_nodeconfiguration.html#resource_group_name AutomationDscNodeconfiguration#resource_group_name}
+  */
   readonly resourceGroupName: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_dsc_nodeconfiguration.html#timeouts AutomationDscNodeconfiguration#timeouts}
+  */
   readonly timeouts?: AutomationDscNodeconfigurationTimeouts;
 }
 export interface AutomationDscNodeconfigurationTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_dsc_nodeconfiguration.html#create AutomationDscNodeconfiguration#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_dsc_nodeconfiguration.html#delete AutomationDscNodeconfiguration#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_dsc_nodeconfiguration.html#read AutomationDscNodeconfiguration#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_dsc_nodeconfiguration.html#update AutomationDscNodeconfiguration#update}
+  */
   readonly update?: string;
 }
 
@@ -32,14 +60,22 @@ function automationDscNodeconfigurationTimeoutsToTerraform(struct?: AutomationDs
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/automation_dsc_nodeconfiguration.html azurerm_automation_dsc_nodeconfiguration}
+*/
 export class AutomationDscNodeconfiguration extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/automation_dsc_nodeconfiguration.html azurerm_automation_dsc_nodeconfiguration} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options AutomationDscNodeconfigurationConfig
+  */
   public constructor(scope: Construct, id: string, config: AutomationDscNodeconfigurationConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_automation_dsc_nodeconfiguration',

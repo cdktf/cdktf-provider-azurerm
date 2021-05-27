@@ -7,27 +7,77 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface CosmosdbSqlContainerConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_sql_container.html#account_name CosmosdbSqlContainer#account_name}
+  */
   readonly accountName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_sql_container.html#analytical_storage_ttl CosmosdbSqlContainer#analytical_storage_ttl}
+  */
   readonly analyticalStorageTtl?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_sql_container.html#database_name CosmosdbSqlContainer#database_name}
+  */
   readonly databaseName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_sql_container.html#default_ttl CosmosdbSqlContainer#default_ttl}
+  */
   readonly defaultTtl?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_sql_container.html#name CosmosdbSqlContainer#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_sql_container.html#partition_key_path CosmosdbSqlContainer#partition_key_path}
+  */
   readonly partitionKeyPath: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_sql_container.html#partition_key_version CosmosdbSqlContainer#partition_key_version}
+  */
   readonly partitionKeyVersion?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_sql_container.html#resource_group_name CosmosdbSqlContainer#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_sql_container.html#throughput CosmosdbSqlContainer#throughput}
+  */
   readonly throughput?: number;
-  /** autoscale_settings block */
+  /**
+  * autoscale_settings block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_sql_container.html#autoscale_settings CosmosdbSqlContainer#autoscale_settings}
+  */
   readonly autoscaleSettings?: CosmosdbSqlContainerAutoscaleSettings[];
-  /** conflict_resolution_policy block */
+  /**
+  * conflict_resolution_policy block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_sql_container.html#conflict_resolution_policy CosmosdbSqlContainer#conflict_resolution_policy}
+  */
   readonly conflictResolutionPolicy?: CosmosdbSqlContainerConflictResolutionPolicy[];
-  /** indexing_policy block */
+  /**
+  * indexing_policy block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_sql_container.html#indexing_policy CosmosdbSqlContainer#indexing_policy}
+  */
   readonly indexingPolicy?: CosmosdbSqlContainerIndexingPolicy[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_sql_container.html#timeouts CosmosdbSqlContainer#timeouts}
+  */
   readonly timeouts?: CosmosdbSqlContainerTimeouts;
-  /** unique_key block */
+  /**
+  * unique_key block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_sql_container.html#unique_key CosmosdbSqlContainer#unique_key}
+  */
   readonly uniqueKey?: CosmosdbSqlContainerUniqueKey[];
 }
 export interface CosmosdbSqlContainerAutoscaleSettings {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_sql_container.html#max_throughput CosmosdbSqlContainer#max_throughput}
+  */
   readonly maxThroughput?: number;
 }
 
@@ -39,8 +89,17 @@ function cosmosdbSqlContainerAutoscaleSettingsToTerraform(struct?: CosmosdbSqlCo
 }
 
 export interface CosmosdbSqlContainerConflictResolutionPolicy {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_sql_container.html#conflict_resolution_path CosmosdbSqlContainer#conflict_resolution_path}
+  */
   readonly conflictResolutionPath?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_sql_container.html#conflict_resolution_procedure CosmosdbSqlContainer#conflict_resolution_procedure}
+  */
   readonly conflictResolutionProcedure?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_sql_container.html#mode CosmosdbSqlContainer#mode}
+  */
   readonly mode: string;
 }
 
@@ -54,7 +113,13 @@ function cosmosdbSqlContainerConflictResolutionPolicyToTerraform(struct?: Cosmos
 }
 
 export interface CosmosdbSqlContainerIndexingPolicyCompositeIndexIndex {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_sql_container.html#order CosmosdbSqlContainer#order}
+  */
   readonly order: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_sql_container.html#path CosmosdbSqlContainer#path}
+  */
   readonly path: string;
 }
 
@@ -67,7 +132,11 @@ function cosmosdbSqlContainerIndexingPolicyCompositeIndexIndexToTerraform(struct
 }
 
 export interface CosmosdbSqlContainerIndexingPolicyCompositeIndex {
-  /** index block */
+  /**
+  * index block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_sql_container.html#index CosmosdbSqlContainer#index}
+  */
   readonly index: CosmosdbSqlContainerIndexingPolicyCompositeIndexIndex[];
 }
 
@@ -79,6 +148,9 @@ function cosmosdbSqlContainerIndexingPolicyCompositeIndexToTerraform(struct?: Co
 }
 
 export interface CosmosdbSqlContainerIndexingPolicyExcludedPath {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_sql_container.html#path CosmosdbSqlContainer#path}
+  */
   readonly path: string;
 }
 
@@ -90,6 +162,9 @@ function cosmosdbSqlContainerIndexingPolicyExcludedPathToTerraform(struct?: Cosm
 }
 
 export interface CosmosdbSqlContainerIndexingPolicyIncludedPath {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_sql_container.html#path CosmosdbSqlContainer#path}
+  */
   readonly path: string;
 }
 
@@ -101,12 +176,27 @@ function cosmosdbSqlContainerIndexingPolicyIncludedPathToTerraform(struct?: Cosm
 }
 
 export interface CosmosdbSqlContainerIndexingPolicy {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_sql_container.html#indexing_mode CosmosdbSqlContainer#indexing_mode}
+  */
   readonly indexingMode?: string;
-  /** composite_index block */
+  /**
+  * composite_index block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_sql_container.html#composite_index CosmosdbSqlContainer#composite_index}
+  */
   readonly compositeIndex?: CosmosdbSqlContainerIndexingPolicyCompositeIndex[];
-  /** excluded_path block */
+  /**
+  * excluded_path block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_sql_container.html#excluded_path CosmosdbSqlContainer#excluded_path}
+  */
   readonly excludedPath?: CosmosdbSqlContainerIndexingPolicyExcludedPath[];
-  /** included_path block */
+  /**
+  * included_path block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_sql_container.html#included_path CosmosdbSqlContainer#included_path}
+  */
   readonly includedPath?: CosmosdbSqlContainerIndexingPolicyIncludedPath[];
 }
 
@@ -121,9 +211,21 @@ function cosmosdbSqlContainerIndexingPolicyToTerraform(struct?: CosmosdbSqlConta
 }
 
 export interface CosmosdbSqlContainerTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_sql_container.html#create CosmosdbSqlContainer#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_sql_container.html#delete CosmosdbSqlContainer#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_sql_container.html#read CosmosdbSqlContainer#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_sql_container.html#update CosmosdbSqlContainer#update}
+  */
   readonly update?: string;
 }
 
@@ -138,6 +240,9 @@ function cosmosdbSqlContainerTimeoutsToTerraform(struct?: CosmosdbSqlContainerTi
 }
 
 export interface CosmosdbSqlContainerUniqueKey {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_sql_container.html#paths CosmosdbSqlContainer#paths}
+  */
   readonly paths: string[];
 }
 
@@ -149,14 +254,22 @@ function cosmosdbSqlContainerUniqueKeyToTerraform(struct?: CosmosdbSqlContainerU
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_sql_container.html azurerm_cosmosdb_sql_container}
+*/
 export class CosmosdbSqlContainer extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_sql_container.html azurerm_cosmosdb_sql_container} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options CosmosdbSqlContainerConfig
+  */
   public constructor(scope: Construct, id: string, config: CosmosdbSqlContainerConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_cosmosdb_sql_container',

@@ -7,20 +7,57 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface ServicebusTopicAuthorizationRuleConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_topic_authorization_rule.html#listen ServicebusTopicAuthorizationRule#listen}
+  */
   readonly listen?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_topic_authorization_rule.html#manage ServicebusTopicAuthorizationRule#manage}
+  */
   readonly manage?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_topic_authorization_rule.html#name ServicebusTopicAuthorizationRule#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_topic_authorization_rule.html#namespace_name ServicebusTopicAuthorizationRule#namespace_name}
+  */
   readonly namespaceName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_topic_authorization_rule.html#resource_group_name ServicebusTopicAuthorizationRule#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_topic_authorization_rule.html#send ServicebusTopicAuthorizationRule#send}
+  */
   readonly send?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_topic_authorization_rule.html#topic_name ServicebusTopicAuthorizationRule#topic_name}
+  */
   readonly topicName: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_topic_authorization_rule.html#timeouts ServicebusTopicAuthorizationRule#timeouts}
+  */
   readonly timeouts?: ServicebusTopicAuthorizationRuleTimeouts;
 }
 export interface ServicebusTopicAuthorizationRuleTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_topic_authorization_rule.html#create ServicebusTopicAuthorizationRule#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_topic_authorization_rule.html#delete ServicebusTopicAuthorizationRule#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_topic_authorization_rule.html#read ServicebusTopicAuthorizationRule#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_topic_authorization_rule.html#update ServicebusTopicAuthorizationRule#update}
+  */
   readonly update?: string;
 }
 
@@ -35,14 +72,22 @@ function servicebusTopicAuthorizationRuleTimeoutsToTerraform(struct?: Servicebus
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_topic_authorization_rule.html azurerm_servicebus_topic_authorization_rule}
+*/
 export class ServicebusTopicAuthorizationRule extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_topic_authorization_rule.html azurerm_servicebus_topic_authorization_rule} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options ServicebusTopicAuthorizationRuleConfig
+  */
   public constructor(scope: Construct, id: string, config: ServicebusTopicAuthorizationRuleConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_servicebus_topic_authorization_rule',

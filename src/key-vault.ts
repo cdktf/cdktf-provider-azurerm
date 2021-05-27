@@ -7,34 +7,109 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface KeyVaultConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault.html#access_policy KeyVault#access_policy}
+  */
   readonly accessPolicy?: KeyVaultAccessPolicy[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault.html#enable_rbac_authorization KeyVault#enable_rbac_authorization}
+  */
   readonly enableRbacAuthorization?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault.html#enabled_for_deployment KeyVault#enabled_for_deployment}
+  */
   readonly enabledForDeployment?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault.html#enabled_for_disk_encryption KeyVault#enabled_for_disk_encryption}
+  */
   readonly enabledForDiskEncryption?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault.html#enabled_for_template_deployment KeyVault#enabled_for_template_deployment}
+  */
   readonly enabledForTemplateDeployment?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault.html#location KeyVault#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault.html#name KeyVault#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault.html#purge_protection_enabled KeyVault#purge_protection_enabled}
+  */
   readonly purgeProtectionEnabled?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault.html#resource_group_name KeyVault#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault.html#sku_name KeyVault#sku_name}
+  */
   readonly skuName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault.html#soft_delete_enabled KeyVault#soft_delete_enabled}
+  */
   readonly softDeleteEnabled?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault.html#soft_delete_retention_days KeyVault#soft_delete_retention_days}
+  */
   readonly softDeleteRetentionDays?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault.html#tags KeyVault#tags}
+  */
   readonly tags?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault.html#tenant_id KeyVault#tenant_id}
+  */
   readonly tenantId: string;
-  /** contact block */
+  /**
+  * contact block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault.html#contact KeyVault#contact}
+  */
   readonly contact?: KeyVaultContact[];
-  /** network_acls block */
+  /**
+  * network_acls block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault.html#network_acls KeyVault#network_acls}
+  */
   readonly networkAcls?: KeyVaultNetworkAcls[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault.html#timeouts KeyVault#timeouts}
+  */
   readonly timeouts?: KeyVaultTimeouts;
 }
 export interface KeyVaultAccessPolicy {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault.html#application_id KeyVault#application_id}
+  */
   readonly applicationId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault.html#certificate_permissions KeyVault#certificate_permissions}
+  */
   readonly certificatePermissions?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault.html#key_permissions KeyVault#key_permissions}
+  */
   readonly keyPermissions?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault.html#object_id KeyVault#object_id}
+  */
   readonly objectId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault.html#secret_permissions KeyVault#secret_permissions}
+  */
   readonly secretPermissions?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault.html#storage_permissions KeyVault#storage_permissions}
+  */
   readonly storagePermissions?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault.html#tenant_id KeyVault#tenant_id}
+  */
   readonly tenantId?: string;
 }
 
@@ -52,8 +127,17 @@ function keyVaultAccessPolicyToTerraform(struct?: KeyVaultAccessPolicy): any {
 }
 
 export interface KeyVaultContact {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault.html#email KeyVault#email}
+  */
   readonly email: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault.html#name KeyVault#name}
+  */
   readonly name?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault.html#phone KeyVault#phone}
+  */
   readonly phone?: string;
 }
 
@@ -67,9 +151,21 @@ function keyVaultContactToTerraform(struct?: KeyVaultContact): any {
 }
 
 export interface KeyVaultNetworkAcls {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault.html#bypass KeyVault#bypass}
+  */
   readonly bypass: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault.html#default_action KeyVault#default_action}
+  */
   readonly defaultAction: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault.html#ip_rules KeyVault#ip_rules}
+  */
   readonly ipRules?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault.html#virtual_network_subnet_ids KeyVault#virtual_network_subnet_ids}
+  */
   readonly virtualNetworkSubnetIds?: string[];
 }
 
@@ -84,9 +180,21 @@ function keyVaultNetworkAclsToTerraform(struct?: KeyVaultNetworkAcls): any {
 }
 
 export interface KeyVaultTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault.html#create KeyVault#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault.html#delete KeyVault#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault.html#read KeyVault#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault.html#update KeyVault#update}
+  */
   readonly update?: string;
 }
 
@@ -101,14 +209,22 @@ function keyVaultTimeoutsToTerraform(struct?: KeyVaultTimeouts): any {
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault.html azurerm_key_vault}
+*/
 export class KeyVault extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault.html azurerm_key_vault} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options KeyVaultConfig
+  */
   public constructor(scope: Construct, id: string, config: KeyVaultConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_key_vault',

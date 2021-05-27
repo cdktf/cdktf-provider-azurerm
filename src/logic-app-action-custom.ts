@@ -7,16 +7,41 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface LogicAppActionCustomConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_action_custom.html#body LogicAppActionCustom#body}
+  */
   readonly body: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_action_custom.html#logic_app_id LogicAppActionCustom#logic_app_id}
+  */
   readonly logicAppId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_action_custom.html#name LogicAppActionCustom#name}
+  */
   readonly name: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_action_custom.html#timeouts LogicAppActionCustom#timeouts}
+  */
   readonly timeouts?: LogicAppActionCustomTimeouts;
 }
 export interface LogicAppActionCustomTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_action_custom.html#create LogicAppActionCustom#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_action_custom.html#delete LogicAppActionCustom#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_action_custom.html#read LogicAppActionCustom#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_action_custom.html#update LogicAppActionCustom#update}
+  */
   readonly update?: string;
 }
 
@@ -31,14 +56,22 @@ function logicAppActionCustomTimeoutsToTerraform(struct?: LogicAppActionCustomTi
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_action_custom.html azurerm_logic_app_action_custom}
+*/
 export class LogicAppActionCustom extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_action_custom.html azurerm_logic_app_action_custom} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options LogicAppActionCustomConfig
+  */
   public constructor(scope: Construct, id: string, config: LogicAppActionCustomConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_logic_app_action_custom',

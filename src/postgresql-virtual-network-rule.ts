@@ -7,18 +7,49 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface PostgresqlVirtualNetworkRuleConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_virtual_network_rule.html#ignore_missing_vnet_service_endpoint PostgresqlVirtualNetworkRule#ignore_missing_vnet_service_endpoint}
+  */
   readonly ignoreMissingVnetServiceEndpoint?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_virtual_network_rule.html#name PostgresqlVirtualNetworkRule#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_virtual_network_rule.html#resource_group_name PostgresqlVirtualNetworkRule#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_virtual_network_rule.html#server_name PostgresqlVirtualNetworkRule#server_name}
+  */
   readonly serverName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_virtual_network_rule.html#subnet_id PostgresqlVirtualNetworkRule#subnet_id}
+  */
   readonly subnetId: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_virtual_network_rule.html#timeouts PostgresqlVirtualNetworkRule#timeouts}
+  */
   readonly timeouts?: PostgresqlVirtualNetworkRuleTimeouts;
 }
 export interface PostgresqlVirtualNetworkRuleTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_virtual_network_rule.html#create PostgresqlVirtualNetworkRule#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_virtual_network_rule.html#delete PostgresqlVirtualNetworkRule#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_virtual_network_rule.html#read PostgresqlVirtualNetworkRule#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_virtual_network_rule.html#update PostgresqlVirtualNetworkRule#update}
+  */
   readonly update?: string;
 }
 
@@ -33,14 +64,22 @@ function postgresqlVirtualNetworkRuleTimeoutsToTerraform(struct?: PostgresqlVirt
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_virtual_network_rule.html azurerm_postgresql_virtual_network_rule}
+*/
 export class PostgresqlVirtualNetworkRule extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_virtual_network_rule.html azurerm_postgresql_virtual_network_rule} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options PostgresqlVirtualNetworkRuleConfig
+  */
   public constructor(scope: Construct, id: string, config: PostgresqlVirtualNetworkRuleConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_postgresql_virtual_network_rule',

@@ -7,21 +7,59 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface StorageDataLakeGen2PathConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_data_lake_gen2_path.html#filesystem_name StorageDataLakeGen2Path#filesystem_name}
+  */
   readonly filesystemName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_data_lake_gen2_path.html#group StorageDataLakeGen2Path#group}
+  */
   readonly group?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_data_lake_gen2_path.html#owner StorageDataLakeGen2Path#owner}
+  */
   readonly owner?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_data_lake_gen2_path.html#path StorageDataLakeGen2Path#path}
+  */
   readonly path: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_data_lake_gen2_path.html#resource StorageDataLakeGen2Path#resource}
+  */
   readonly resource: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_data_lake_gen2_path.html#storage_account_id StorageDataLakeGen2Path#storage_account_id}
+  */
   readonly storageAccountId: string;
-  /** ace block */
+  /**
+  * ace block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_data_lake_gen2_path.html#ace StorageDataLakeGen2Path#ace}
+  */
   readonly ace?: StorageDataLakeGen2PathAce[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_data_lake_gen2_path.html#timeouts StorageDataLakeGen2Path#timeouts}
+  */
   readonly timeouts?: StorageDataLakeGen2PathTimeouts;
 }
 export interface StorageDataLakeGen2PathAce {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_data_lake_gen2_path.html#id StorageDataLakeGen2Path#id}
+  */
   readonly id?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_data_lake_gen2_path.html#permissions StorageDataLakeGen2Path#permissions}
+  */
   readonly permissions: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_data_lake_gen2_path.html#scope StorageDataLakeGen2Path#scope}
+  */
   readonly scope?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_data_lake_gen2_path.html#type StorageDataLakeGen2Path#type}
+  */
   readonly type: string;
 }
 
@@ -36,9 +74,21 @@ function storageDataLakeGen2PathAceToTerraform(struct?: StorageDataLakeGen2PathA
 }
 
 export interface StorageDataLakeGen2PathTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_data_lake_gen2_path.html#create StorageDataLakeGen2Path#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_data_lake_gen2_path.html#delete StorageDataLakeGen2Path#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_data_lake_gen2_path.html#read StorageDataLakeGen2Path#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_data_lake_gen2_path.html#update StorageDataLakeGen2Path#update}
+  */
   readonly update?: string;
 }
 
@@ -53,14 +103,22 @@ function storageDataLakeGen2PathTimeoutsToTerraform(struct?: StorageDataLakeGen2
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/storage_data_lake_gen2_path.html azurerm_storage_data_lake_gen2_path}
+*/
 export class StorageDataLakeGen2Path extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/storage_data_lake_gen2_path.html azurerm_storage_data_lake_gen2_path} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options StorageDataLakeGen2PathConfig
+  */
   public constructor(scope: Construct, id: string, config: StorageDataLakeGen2PathConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_storage_data_lake_gen2_path',

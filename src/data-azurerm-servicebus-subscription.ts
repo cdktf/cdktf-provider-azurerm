@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/data_azurerm_servicebus_subscription.html
+// https://www.terraform.io/docs/providers/azurerm/d/servicebus_subscription.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,14 +7,33 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataAzurermServicebusSubscriptionConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/servicebus_subscription.html#name DataAzurermServicebusSubscription#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/servicebus_subscription.html#namespace_name DataAzurermServicebusSubscription#namespace_name}
+  */
   readonly namespaceName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/servicebus_subscription.html#resource_group_name DataAzurermServicebusSubscription#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/servicebus_subscription.html#topic_name DataAzurermServicebusSubscription#topic_name}
+  */
   readonly topicName: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/servicebus_subscription.html#timeouts DataAzurermServicebusSubscription#timeouts}
+  */
   readonly timeouts?: DataAzurermServicebusSubscriptionTimeouts;
 }
 export interface DataAzurermServicebusSubscriptionTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/servicebus_subscription.html#read DataAzurermServicebusSubscription#read}
+  */
   readonly read?: string;
 }
 
@@ -26,14 +45,22 @@ function dataAzurermServicebusSubscriptionTimeoutsToTerraform(struct?: DataAzure
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/servicebus_subscription.html azurerm_servicebus_subscription}
+*/
 export class DataAzurermServicebusSubscription extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/servicebus_subscription.html azurerm_servicebus_subscription} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataAzurermServicebusSubscriptionConfig
+  */
   public constructor(scope: Construct, id: string, config: DataAzurermServicebusSubscriptionConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_servicebus_subscription',

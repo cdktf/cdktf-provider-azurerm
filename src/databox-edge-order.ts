@@ -7,13 +7,31 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataboxEdgeOrderConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/databox_edge_order.html#device_name DataboxEdgeOrder#device_name}
+  */
   readonly deviceName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/databox_edge_order.html#resource_group_name DataboxEdgeOrder#resource_group_name}
+  */
   readonly resourceGroupName: string;
-  /** contact block */
+  /**
+  * contact block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/databox_edge_order.html#contact DataboxEdgeOrder#contact}
+  */
   readonly contact: DataboxEdgeOrderContact[];
-  /** shipment_address block */
+  /**
+  * shipment_address block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/databox_edge_order.html#shipment_address DataboxEdgeOrder#shipment_address}
+  */
   readonly shipmentAddress: DataboxEdgeOrderShipmentAddress[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/databox_edge_order.html#timeouts DataboxEdgeOrder#timeouts}
+  */
   readonly timeouts?: DataboxEdgeOrderTimeouts;
 }
 export class DataboxEdgeOrderReturnTracking extends cdktf.ComplexComputedList {
@@ -100,9 +118,21 @@ export class DataboxEdgeOrderStatus extends cdktf.ComplexComputedList {
   }
 }
 export interface DataboxEdgeOrderContact {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/databox_edge_order.html#company_name DataboxEdgeOrder#company_name}
+  */
   readonly companyName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/databox_edge_order.html#emails DataboxEdgeOrder#emails}
+  */
   readonly emails: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/databox_edge_order.html#name DataboxEdgeOrder#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/databox_edge_order.html#phone_number DataboxEdgeOrder#phone_number}
+  */
   readonly phoneNumber: string;
 }
 
@@ -117,10 +147,25 @@ function databoxEdgeOrderContactToTerraform(struct?: DataboxEdgeOrderContact): a
 }
 
 export interface DataboxEdgeOrderShipmentAddress {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/databox_edge_order.html#address DataboxEdgeOrder#address}
+  */
   readonly address: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/databox_edge_order.html#city DataboxEdgeOrder#city}
+  */
   readonly city: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/databox_edge_order.html#country DataboxEdgeOrder#country}
+  */
   readonly country: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/databox_edge_order.html#postal_code DataboxEdgeOrder#postal_code}
+  */
   readonly postalCode: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/databox_edge_order.html#state DataboxEdgeOrder#state}
+  */
   readonly state: string;
 }
 
@@ -136,9 +181,21 @@ function databoxEdgeOrderShipmentAddressToTerraform(struct?: DataboxEdgeOrderShi
 }
 
 export interface DataboxEdgeOrderTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/databox_edge_order.html#create DataboxEdgeOrder#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/databox_edge_order.html#delete DataboxEdgeOrder#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/databox_edge_order.html#read DataboxEdgeOrder#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/databox_edge_order.html#update DataboxEdgeOrder#update}
+  */
   readonly update?: string;
 }
 
@@ -153,14 +210,22 @@ function databoxEdgeOrderTimeoutsToTerraform(struct?: DataboxEdgeOrderTimeouts):
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/databox_edge_order.html azurerm_databox_edge_order}
+*/
 export class DataboxEdgeOrder extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/databox_edge_order.html azurerm_databox_edge_order} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataboxEdgeOrderConfig
+  */
   public constructor(scope: Construct, id: string, config: DataboxEdgeOrderConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_databox_edge_order',

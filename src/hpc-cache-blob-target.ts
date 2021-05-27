@@ -7,19 +7,53 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface HpcCacheBlobTargetConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hpc_cache_blob_target.html#access_policy_name HpcCacheBlobTarget#access_policy_name}
+  */
   readonly accessPolicyName?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hpc_cache_blob_target.html#cache_name HpcCacheBlobTarget#cache_name}
+  */
   readonly cacheName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hpc_cache_blob_target.html#name HpcCacheBlobTarget#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hpc_cache_blob_target.html#namespace_path HpcCacheBlobTarget#namespace_path}
+  */
   readonly namespacePath: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hpc_cache_blob_target.html#resource_group_name HpcCacheBlobTarget#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hpc_cache_blob_target.html#storage_container_id HpcCacheBlobTarget#storage_container_id}
+  */
   readonly storageContainerId: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hpc_cache_blob_target.html#timeouts HpcCacheBlobTarget#timeouts}
+  */
   readonly timeouts?: HpcCacheBlobTargetTimeouts;
 }
 export interface HpcCacheBlobTargetTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hpc_cache_blob_target.html#create HpcCacheBlobTarget#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hpc_cache_blob_target.html#delete HpcCacheBlobTarget#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hpc_cache_blob_target.html#read HpcCacheBlobTarget#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hpc_cache_blob_target.html#update HpcCacheBlobTarget#update}
+  */
   readonly update?: string;
 }
 
@@ -34,14 +68,22 @@ function hpcCacheBlobTargetTimeoutsToTerraform(struct?: HpcCacheBlobTargetTimeou
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/hpc_cache_blob_target.html azurerm_hpc_cache_blob_target}
+*/
 export class HpcCacheBlobTarget extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/hpc_cache_blob_target.html azurerm_hpc_cache_blob_target} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options HpcCacheBlobTargetConfig
+  */
   public constructor(scope: Construct, id: string, config: HpcCacheBlobTargetConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_hpc_cache_blob_target',

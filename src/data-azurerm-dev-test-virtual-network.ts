@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/data_azurerm_dev_test_virtual_network.html
+// https://www.terraform.io/docs/providers/azurerm/d/dev_test_virtual_network.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,10 +7,23 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataAzurermDevTestVirtualNetworkConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/dev_test_virtual_network.html#lab_name DataAzurermDevTestVirtualNetwork#lab_name}
+  */
   readonly labName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/dev_test_virtual_network.html#name DataAzurermDevTestVirtualNetwork#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/dev_test_virtual_network.html#resource_group_name DataAzurermDevTestVirtualNetwork#resource_group_name}
+  */
   readonly resourceGroupName: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/dev_test_virtual_network.html#timeouts DataAzurermDevTestVirtualNetwork#timeouts}
+  */
   readonly timeouts?: DataAzurermDevTestVirtualNetworkTimeouts;
 }
 export class DataAzurermDevTestVirtualNetworkAllowedSubnets extends cdktf.ComplexComputedList {
@@ -58,6 +71,9 @@ export class DataAzurermDevTestVirtualNetworkSubnetOverrides extends cdktf.Compl
   }
 }
 export interface DataAzurermDevTestVirtualNetworkTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/dev_test_virtual_network.html#read DataAzurermDevTestVirtualNetwork#read}
+  */
   readonly read?: string;
 }
 
@@ -69,14 +85,22 @@ function dataAzurermDevTestVirtualNetworkTimeoutsToTerraform(struct?: DataAzurer
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/dev_test_virtual_network.html azurerm_dev_test_virtual_network}
+*/
 export class DataAzurermDevTestVirtualNetwork extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/dev_test_virtual_network.html azurerm_dev_test_virtual_network} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataAzurermDevTestVirtualNetworkConfig
+  */
   public constructor(scope: Construct, id: string, config: DataAzurermDevTestVirtualNetworkConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_dev_test_virtual_network',

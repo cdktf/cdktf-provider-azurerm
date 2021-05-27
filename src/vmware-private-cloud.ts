@@ -7,18 +7,53 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface VmwarePrivateCloudConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vmware_private_cloud.html#internet_connection_enabled VmwarePrivateCloud#internet_connection_enabled}
+  */
   readonly internetConnectionEnabled?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vmware_private_cloud.html#location VmwarePrivateCloud#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vmware_private_cloud.html#name VmwarePrivateCloud#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vmware_private_cloud.html#network_subnet_cidr VmwarePrivateCloud#network_subnet_cidr}
+  */
   readonly networkSubnetCidr: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vmware_private_cloud.html#nsxt_password VmwarePrivateCloud#nsxt_password}
+  */
   readonly nsxtPassword?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vmware_private_cloud.html#resource_group_name VmwarePrivateCloud#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vmware_private_cloud.html#sku_name VmwarePrivateCloud#sku_name}
+  */
   readonly skuName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vmware_private_cloud.html#tags VmwarePrivateCloud#tags}
+  */
   readonly tags?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vmware_private_cloud.html#vcenter_password VmwarePrivateCloud#vcenter_password}
+  */
   readonly vcenterPassword?: string;
-  /** management_cluster block */
+  /**
+  * management_cluster block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vmware_private_cloud.html#management_cluster VmwarePrivateCloud#management_cluster}
+  */
   readonly managementCluster: VmwarePrivateCloudManagementCluster[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vmware_private_cloud.html#timeouts VmwarePrivateCloud#timeouts}
+  */
   readonly timeouts?: VmwarePrivateCloudTimeouts;
 }
 export class VmwarePrivateCloudCircuit extends cdktf.ComplexComputedList {
@@ -44,6 +79,9 @@ export class VmwarePrivateCloudCircuit extends cdktf.ComplexComputedList {
   }
 }
 export interface VmwarePrivateCloudManagementCluster {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vmware_private_cloud.html#size VmwarePrivateCloud#size}
+  */
   readonly size: number;
 }
 
@@ -55,9 +93,21 @@ function vmwarePrivateCloudManagementClusterToTerraform(struct?: VmwarePrivateCl
 }
 
 export interface VmwarePrivateCloudTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vmware_private_cloud.html#create VmwarePrivateCloud#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vmware_private_cloud.html#delete VmwarePrivateCloud#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vmware_private_cloud.html#read VmwarePrivateCloud#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vmware_private_cloud.html#update VmwarePrivateCloud#update}
+  */
   readonly update?: string;
 }
 
@@ -72,14 +122,22 @@ function vmwarePrivateCloudTimeoutsToTerraform(struct?: VmwarePrivateCloudTimeou
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/vmware_private_cloud.html azurerm_vmware_private_cloud}
+*/
 export class VmwarePrivateCloud extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/vmware_private_cloud.html azurerm_vmware_private_cloud} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options VmwarePrivateCloudConfig
+  */
   public constructor(scope: Construct, id: string, config: VmwarePrivateCloudConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_vmware_private_cloud',

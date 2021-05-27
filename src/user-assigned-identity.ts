@@ -7,17 +7,45 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface UserAssignedIdentityConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/user_assigned_identity.html#location UserAssignedIdentity#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/user_assigned_identity.html#name UserAssignedIdentity#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/user_assigned_identity.html#resource_group_name UserAssignedIdentity#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/user_assigned_identity.html#tags UserAssignedIdentity#tags}
+  */
   readonly tags?: { [key: string]: string };
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/user_assigned_identity.html#timeouts UserAssignedIdentity#timeouts}
+  */
   readonly timeouts?: UserAssignedIdentityTimeouts;
 }
 export interface UserAssignedIdentityTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/user_assigned_identity.html#create UserAssignedIdentity#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/user_assigned_identity.html#delete UserAssignedIdentity#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/user_assigned_identity.html#read UserAssignedIdentity#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/user_assigned_identity.html#update UserAssignedIdentity#update}
+  */
   readonly update?: string;
 }
 
@@ -32,14 +60,22 @@ function userAssignedIdentityTimeoutsToTerraform(struct?: UserAssignedIdentityTi
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/user_assigned_identity.html azurerm_user_assigned_identity}
+*/
 export class UserAssignedIdentity extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/user_assigned_identity.html azurerm_user_assigned_identity} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options UserAssignedIdentityConfig
+  */
   public constructor(scope: Construct, id: string, config: UserAssignedIdentityConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_user_assigned_identity',

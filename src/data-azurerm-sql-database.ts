@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/data_azurerm_sql_database.html
+// https://www.terraform.io/docs/providers/azurerm/d/sql_database.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,14 +7,33 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataAzurermSqlDatabaseConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/sql_database.html#name DataAzurermSqlDatabase#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/sql_database.html#resource_group_name DataAzurermSqlDatabase#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/sql_database.html#server_name DataAzurermSqlDatabase#server_name}
+  */
   readonly serverName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/sql_database.html#tags DataAzurermSqlDatabase#tags}
+  */
   readonly tags?: { [key: string]: string };
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/sql_database.html#timeouts DataAzurermSqlDatabase#timeouts}
+  */
   readonly timeouts?: DataAzurermSqlDatabaseTimeouts;
 }
 export interface DataAzurermSqlDatabaseTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/sql_database.html#read DataAzurermSqlDatabase#read}
+  */
   readonly read?: string;
 }
 
@@ -26,14 +45,22 @@ function dataAzurermSqlDatabaseTimeoutsToTerraform(struct?: DataAzurermSqlDataba
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/sql_database.html azurerm_sql_database}
+*/
 export class DataAzurermSqlDatabase extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/sql_database.html azurerm_sql_database} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataAzurermSqlDatabaseConfig
+  */
   public constructor(scope: Construct, id: string, config: DataAzurermSqlDatabaseConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_sql_database',

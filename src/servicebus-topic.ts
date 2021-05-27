@@ -7,26 +7,81 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface ServicebusTopicConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_topic.html#auto_delete_on_idle ServicebusTopic#auto_delete_on_idle}
+  */
   readonly autoDeleteOnIdle?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_topic.html#default_message_ttl ServicebusTopic#default_message_ttl}
+  */
   readonly defaultMessageTtl?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_topic.html#duplicate_detection_history_time_window ServicebusTopic#duplicate_detection_history_time_window}
+  */
   readonly duplicateDetectionHistoryTimeWindow?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_topic.html#enable_batched_operations ServicebusTopic#enable_batched_operations}
+  */
   readonly enableBatchedOperations?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_topic.html#enable_express ServicebusTopic#enable_express}
+  */
   readonly enableExpress?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_topic.html#enable_partitioning ServicebusTopic#enable_partitioning}
+  */
   readonly enablePartitioning?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_topic.html#max_size_in_megabytes ServicebusTopic#max_size_in_megabytes}
+  */
   readonly maxSizeInMegabytes?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_topic.html#name ServicebusTopic#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_topic.html#namespace_name ServicebusTopic#namespace_name}
+  */
   readonly namespaceName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_topic.html#requires_duplicate_detection ServicebusTopic#requires_duplicate_detection}
+  */
   readonly requiresDuplicateDetection?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_topic.html#resource_group_name ServicebusTopic#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_topic.html#status ServicebusTopic#status}
+  */
   readonly status?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_topic.html#support_ordering ServicebusTopic#support_ordering}
+  */
   readonly supportOrdering?: boolean;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_topic.html#timeouts ServicebusTopic#timeouts}
+  */
   readonly timeouts?: ServicebusTopicTimeouts;
 }
 export interface ServicebusTopicTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_topic.html#create ServicebusTopic#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_topic.html#delete ServicebusTopic#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_topic.html#read ServicebusTopic#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_topic.html#update ServicebusTopic#update}
+  */
   readonly update?: string;
 }
 
@@ -41,14 +96,22 @@ function servicebusTopicTimeoutsToTerraform(struct?: ServicebusTopicTimeouts): a
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_topic.html azurerm_servicebus_topic}
+*/
 export class ServicebusTopic extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_topic.html azurerm_servicebus_topic} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options ServicebusTopicConfig
+  */
   public constructor(scope: Construct, id: string, config: ServicebusTopicConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_servicebus_topic',

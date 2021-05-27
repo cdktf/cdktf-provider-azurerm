@@ -7,17 +7,43 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface FrontdoorCustomHttpsConfigurationConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_custom_https_configuration.html#custom_https_provisioning_enabled FrontdoorCustomHttpsConfiguration#custom_https_provisioning_enabled}
+  */
   readonly customHttpsProvisioningEnabled: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_custom_https_configuration.html#frontend_endpoint_id FrontdoorCustomHttpsConfiguration#frontend_endpoint_id}
+  */
   readonly frontendEndpointId: string;
-  /** custom_https_configuration block */
+  /**
+  * custom_https_configuration block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_custom_https_configuration.html#custom_https_configuration FrontdoorCustomHttpsConfiguration#custom_https_configuration}
+  */
   readonly customHttpsConfiguration?: FrontdoorCustomHttpsConfigurationCustomHttpsConfiguration[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_custom_https_configuration.html#timeouts FrontdoorCustomHttpsConfiguration#timeouts}
+  */
   readonly timeouts?: FrontdoorCustomHttpsConfigurationTimeouts;
 }
 export interface FrontdoorCustomHttpsConfigurationCustomHttpsConfiguration {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_custom_https_configuration.html#azure_key_vault_certificate_secret_name FrontdoorCustomHttpsConfiguration#azure_key_vault_certificate_secret_name}
+  */
   readonly azureKeyVaultCertificateSecretName?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_custom_https_configuration.html#azure_key_vault_certificate_secret_version FrontdoorCustomHttpsConfiguration#azure_key_vault_certificate_secret_version}
+  */
   readonly azureKeyVaultCertificateSecretVersion?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_custom_https_configuration.html#azure_key_vault_certificate_vault_id FrontdoorCustomHttpsConfiguration#azure_key_vault_certificate_vault_id}
+  */
   readonly azureKeyVaultCertificateVaultId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_custom_https_configuration.html#certificate_source FrontdoorCustomHttpsConfiguration#certificate_source}
+  */
   readonly certificateSource?: string;
 }
 
@@ -32,9 +58,21 @@ function frontdoorCustomHttpsConfigurationCustomHttpsConfigurationToTerraform(st
 }
 
 export interface FrontdoorCustomHttpsConfigurationTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_custom_https_configuration.html#create FrontdoorCustomHttpsConfiguration#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_custom_https_configuration.html#delete FrontdoorCustomHttpsConfiguration#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_custom_https_configuration.html#read FrontdoorCustomHttpsConfiguration#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_custom_https_configuration.html#update FrontdoorCustomHttpsConfiguration#update}
+  */
   readonly update?: string;
 }
 
@@ -49,14 +87,22 @@ function frontdoorCustomHttpsConfigurationTimeoutsToTerraform(struct?: Frontdoor
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_custom_https_configuration.html azurerm_frontdoor_custom_https_configuration}
+*/
 export class FrontdoorCustomHttpsConfiguration extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_custom_https_configuration.html azurerm_frontdoor_custom_https_configuration} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options FrontdoorCustomHttpsConfigurationConfig
+  */
   public constructor(scope: Construct, id: string, config: FrontdoorCustomHttpsConfigurationConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_frontdoor_custom_https_configuration',

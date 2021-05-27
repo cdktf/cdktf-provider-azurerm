@@ -7,45 +7,141 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface StorageAccountConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account.html#access_tier StorageAccount#access_tier}
+  */
   readonly accessTier?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account.html#account_kind StorageAccount#account_kind}
+  */
   readonly accountKind?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account.html#account_replication_type StorageAccount#account_replication_type}
+  */
   readonly accountReplicationType: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account.html#account_tier StorageAccount#account_tier}
+  */
   readonly accountTier: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account.html#allow_blob_public_access StorageAccount#allow_blob_public_access}
+  */
   readonly allowBlobPublicAccess?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account.html#enable_https_traffic_only StorageAccount#enable_https_traffic_only}
+  */
   readonly enableHttpsTrafficOnly?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account.html#is_hns_enabled StorageAccount#is_hns_enabled}
+  */
   readonly isHnsEnabled?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account.html#large_file_share_enabled StorageAccount#large_file_share_enabled}
+  */
   readonly largeFileShareEnabled?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account.html#location StorageAccount#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account.html#min_tls_version StorageAccount#min_tls_version}
+  */
   readonly minTlsVersion?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account.html#name StorageAccount#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account.html#nfsv3_enabled StorageAccount#nfsv3_enabled}
+  */
   readonly nfsv3Enabled?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account.html#resource_group_name StorageAccount#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account.html#tags StorageAccount#tags}
+  */
   readonly tags?: { [key: string]: string };
-  /** azure_files_authentication block */
+  /**
+  * azure_files_authentication block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account.html#azure_files_authentication StorageAccount#azure_files_authentication}
+  */
   readonly azureFilesAuthentication?: StorageAccountAzureFilesAuthentication[];
-  /** blob_properties block */
+  /**
+  * blob_properties block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account.html#blob_properties StorageAccount#blob_properties}
+  */
   readonly blobProperties?: StorageAccountBlobProperties[];
-  /** custom_domain block */
+  /**
+  * custom_domain block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account.html#custom_domain StorageAccount#custom_domain}
+  */
   readonly customDomain?: StorageAccountCustomDomain[];
-  /** identity block */
+  /**
+  * identity block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account.html#identity StorageAccount#identity}
+  */
   readonly identity?: StorageAccountIdentity[];
-  /** network_rules block */
+  /**
+  * network_rules block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account.html#network_rules StorageAccount#network_rules}
+  */
   readonly networkRules?: StorageAccountNetworkRules[];
-  /** queue_properties block */
+  /**
+  * queue_properties block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account.html#queue_properties StorageAccount#queue_properties}
+  */
   readonly queueProperties?: StorageAccountQueueProperties[];
-  /** routing block */
+  /**
+  * routing block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account.html#routing StorageAccount#routing}
+  */
   readonly routing?: StorageAccountRouting[];
-  /** static_website block */
+  /**
+  * static_website block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account.html#static_website StorageAccount#static_website}
+  */
   readonly staticWebsite?: StorageAccountStaticWebsite[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account.html#timeouts StorageAccount#timeouts}
+  */
   readonly timeouts?: StorageAccountTimeouts;
 }
 export interface StorageAccountAzureFilesAuthenticationActiveDirectory {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account.html#domain_guid StorageAccount#domain_guid}
+  */
   readonly domainGuid: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account.html#domain_name StorageAccount#domain_name}
+  */
   readonly domainName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account.html#domain_sid StorageAccount#domain_sid}
+  */
   readonly domainSid: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account.html#forest_name StorageAccount#forest_name}
+  */
   readonly forestName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account.html#netbios_domain_name StorageAccount#netbios_domain_name}
+  */
   readonly netbiosDomainName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account.html#storage_sid StorageAccount#storage_sid}
+  */
   readonly storageSid: string;
 }
 
@@ -62,8 +158,15 @@ function storageAccountAzureFilesAuthenticationActiveDirectoryToTerraform(struct
 }
 
 export interface StorageAccountAzureFilesAuthentication {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account.html#directory_type StorageAccount#directory_type}
+  */
   readonly directoryType: string;
-  /** active_directory block */
+  /**
+  * active_directory block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account.html#active_directory StorageAccount#active_directory}
+  */
   readonly activeDirectory?: StorageAccountAzureFilesAuthenticationActiveDirectory[];
 }
 
@@ -76,6 +179,9 @@ function storageAccountAzureFilesAuthenticationToTerraform(struct?: StorageAccou
 }
 
 export interface StorageAccountBlobPropertiesContainerDeleteRetentionPolicy {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account.html#days StorageAccount#days}
+  */
   readonly days?: number;
 }
 
@@ -87,10 +193,25 @@ function storageAccountBlobPropertiesContainerDeleteRetentionPolicyToTerraform(s
 }
 
 export interface StorageAccountBlobPropertiesCorsRule {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account.html#allowed_headers StorageAccount#allowed_headers}
+  */
   readonly allowedHeaders: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account.html#allowed_methods StorageAccount#allowed_methods}
+  */
   readonly allowedMethods: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account.html#allowed_origins StorageAccount#allowed_origins}
+  */
   readonly allowedOrigins: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account.html#exposed_headers StorageAccount#exposed_headers}
+  */
   readonly exposedHeaders: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account.html#max_age_in_seconds StorageAccount#max_age_in_seconds}
+  */
   readonly maxAgeInSeconds: number;
 }
 
@@ -106,6 +227,9 @@ function storageAccountBlobPropertiesCorsRuleToTerraform(struct?: StorageAccount
 }
 
 export interface StorageAccountBlobPropertiesDeleteRetentionPolicy {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account.html#days StorageAccount#days}
+  */
   readonly days?: number;
 }
 
@@ -117,15 +241,39 @@ function storageAccountBlobPropertiesDeleteRetentionPolicyToTerraform(struct?: S
 }
 
 export interface StorageAccountBlobProperties {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account.html#change_feed_enabled StorageAccount#change_feed_enabled}
+  */
   readonly changeFeedEnabled?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account.html#default_service_version StorageAccount#default_service_version}
+  */
   readonly defaultServiceVersion?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account.html#last_access_time_enabled StorageAccount#last_access_time_enabled}
+  */
   readonly lastAccessTimeEnabled?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account.html#versioning_enabled StorageAccount#versioning_enabled}
+  */
   readonly versioningEnabled?: boolean;
-  /** container_delete_retention_policy block */
+  /**
+  * container_delete_retention_policy block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account.html#container_delete_retention_policy StorageAccount#container_delete_retention_policy}
+  */
   readonly containerDeleteRetentionPolicy?: StorageAccountBlobPropertiesContainerDeleteRetentionPolicy[];
-  /** cors_rule block */
+  /**
+  * cors_rule block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account.html#cors_rule StorageAccount#cors_rule}
+  */
   readonly corsRule?: StorageAccountBlobPropertiesCorsRule[];
-  /** delete_retention_policy block */
+  /**
+  * delete_retention_policy block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account.html#delete_retention_policy StorageAccount#delete_retention_policy}
+  */
   readonly deleteRetentionPolicy?: StorageAccountBlobPropertiesDeleteRetentionPolicy[];
 }
 
@@ -143,7 +291,13 @@ function storageAccountBlobPropertiesToTerraform(struct?: StorageAccountBlobProp
 }
 
 export interface StorageAccountCustomDomain {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account.html#name StorageAccount#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account.html#use_subdomain StorageAccount#use_subdomain}
+  */
   readonly useSubdomain?: boolean;
 }
 
@@ -156,6 +310,9 @@ function storageAccountCustomDomainToTerraform(struct?: StorageAccountCustomDoma
 }
 
 export interface StorageAccountIdentity {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account.html#type StorageAccount#type}
+  */
   readonly type: string;
 }
 
@@ -167,7 +324,13 @@ function storageAccountIdentityToTerraform(struct?: StorageAccountIdentity): any
 }
 
 export interface StorageAccountNetworkRulesPrivateLinkAccess {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account.html#endpoint_resource_id StorageAccount#endpoint_resource_id}
+  */
   readonly endpointResourceId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account.html#endpoint_tenant_id StorageAccount#endpoint_tenant_id}
+  */
   readonly endpointTenantId?: string;
 }
 
@@ -180,11 +343,27 @@ function storageAccountNetworkRulesPrivateLinkAccessToTerraform(struct?: Storage
 }
 
 export interface StorageAccountNetworkRules {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account.html#bypass StorageAccount#bypass}
+  */
   readonly bypass?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account.html#default_action StorageAccount#default_action}
+  */
   readonly defaultAction: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account.html#ip_rules StorageAccount#ip_rules}
+  */
   readonly ipRules?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account.html#virtual_network_subnet_ids StorageAccount#virtual_network_subnet_ids}
+  */
   readonly virtualNetworkSubnetIds?: string[];
-  /** private_link_access block */
+  /**
+  * private_link_access block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account.html#private_link_access StorageAccount#private_link_access}
+  */
   readonly privateLinkAccess?: StorageAccountNetworkRulesPrivateLinkAccess[];
 }
 
@@ -200,10 +379,25 @@ function storageAccountNetworkRulesToTerraform(struct?: StorageAccountNetworkRul
 }
 
 export interface StorageAccountQueuePropertiesCorsRule {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account.html#allowed_headers StorageAccount#allowed_headers}
+  */
   readonly allowedHeaders: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account.html#allowed_methods StorageAccount#allowed_methods}
+  */
   readonly allowedMethods: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account.html#allowed_origins StorageAccount#allowed_origins}
+  */
   readonly allowedOrigins: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account.html#exposed_headers StorageAccount#exposed_headers}
+  */
   readonly exposedHeaders: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account.html#max_age_in_seconds StorageAccount#max_age_in_seconds}
+  */
   readonly maxAgeInSeconds: number;
 }
 
@@ -219,9 +413,21 @@ function storageAccountQueuePropertiesCorsRuleToTerraform(struct?: StorageAccoun
 }
 
 export interface StorageAccountQueuePropertiesHourMetrics {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account.html#enabled StorageAccount#enabled}
+  */
   readonly enabled: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account.html#include_apis StorageAccount#include_apis}
+  */
   readonly includeApis?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account.html#retention_policy_days StorageAccount#retention_policy_days}
+  */
   readonly retentionPolicyDays?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account.html#version StorageAccount#version}
+  */
   readonly version: string;
 }
 
@@ -236,10 +442,25 @@ function storageAccountQueuePropertiesHourMetricsToTerraform(struct?: StorageAcc
 }
 
 export interface StorageAccountQueuePropertiesLogging {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account.html#delete StorageAccount#delete}
+  */
   readonly delete: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account.html#read StorageAccount#read}
+  */
   readonly read: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account.html#retention_policy_days StorageAccount#retention_policy_days}
+  */
   readonly retentionPolicyDays?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account.html#version StorageAccount#version}
+  */
   readonly version: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account.html#write StorageAccount#write}
+  */
   readonly write: boolean;
 }
 
@@ -255,9 +476,21 @@ function storageAccountQueuePropertiesLoggingToTerraform(struct?: StorageAccount
 }
 
 export interface StorageAccountQueuePropertiesMinuteMetrics {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account.html#enabled StorageAccount#enabled}
+  */
   readonly enabled: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account.html#include_apis StorageAccount#include_apis}
+  */
   readonly includeApis?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account.html#retention_policy_days StorageAccount#retention_policy_days}
+  */
   readonly retentionPolicyDays?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account.html#version StorageAccount#version}
+  */
   readonly version: string;
 }
 
@@ -272,13 +505,29 @@ function storageAccountQueuePropertiesMinuteMetricsToTerraform(struct?: StorageA
 }
 
 export interface StorageAccountQueueProperties {
-  /** cors_rule block */
+  /**
+  * cors_rule block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account.html#cors_rule StorageAccount#cors_rule}
+  */
   readonly corsRule?: StorageAccountQueuePropertiesCorsRule[];
-  /** hour_metrics block */
+  /**
+  * hour_metrics block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account.html#hour_metrics StorageAccount#hour_metrics}
+  */
   readonly hourMetrics?: StorageAccountQueuePropertiesHourMetrics[];
-  /** logging block */
+  /**
+  * logging block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account.html#logging StorageAccount#logging}
+  */
   readonly logging?: StorageAccountQueuePropertiesLogging[];
-  /** minute_metrics block */
+  /**
+  * minute_metrics block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account.html#minute_metrics StorageAccount#minute_metrics}
+  */
   readonly minuteMetrics?: StorageAccountQueuePropertiesMinuteMetrics[];
 }
 
@@ -293,8 +542,17 @@ function storageAccountQueuePropertiesToTerraform(struct?: StorageAccountQueuePr
 }
 
 export interface StorageAccountRouting {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account.html#choice StorageAccount#choice}
+  */
   readonly choice?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account.html#publish_internet_endpoints StorageAccount#publish_internet_endpoints}
+  */
   readonly publishInternetEndpoints?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account.html#publish_microsoft_endpoints StorageAccount#publish_microsoft_endpoints}
+  */
   readonly publishMicrosoftEndpoints?: boolean;
 }
 
@@ -308,7 +566,13 @@ function storageAccountRoutingToTerraform(struct?: StorageAccountRouting): any {
 }
 
 export interface StorageAccountStaticWebsite {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account.html#error_404_document StorageAccount#error_404_document}
+  */
   readonly error404Document?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account.html#index_document StorageAccount#index_document}
+  */
   readonly indexDocument?: string;
 }
 
@@ -321,9 +585,21 @@ function storageAccountStaticWebsiteToTerraform(struct?: StorageAccountStaticWeb
 }
 
 export interface StorageAccountTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account.html#create StorageAccount#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account.html#delete StorageAccount#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account.html#read StorageAccount#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account.html#update StorageAccount#update}
+  */
   readonly update?: string;
 }
 
@@ -338,14 +614,22 @@ function storageAccountTimeoutsToTerraform(struct?: StorageAccountTimeouts): any
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account.html azurerm_storage_account}
+*/
 export class StorageAccount extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account.html azurerm_storage_account} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options StorageAccountConfig
+  */
   public constructor(scope: Construct, id: string, config: StorageAccountConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_storage_account',

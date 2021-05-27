@@ -7,21 +7,59 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface PointToSiteVpnGatewayConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/point_to_site_vpn_gateway.html#dns_servers PointToSiteVpnGateway#dns_servers}
+  */
   readonly dnsServers?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/point_to_site_vpn_gateway.html#location PointToSiteVpnGateway#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/point_to_site_vpn_gateway.html#name PointToSiteVpnGateway#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/point_to_site_vpn_gateway.html#resource_group_name PointToSiteVpnGateway#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/point_to_site_vpn_gateway.html#scale_unit PointToSiteVpnGateway#scale_unit}
+  */
   readonly scaleUnit: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/point_to_site_vpn_gateway.html#tags PointToSiteVpnGateway#tags}
+  */
   readonly tags?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/point_to_site_vpn_gateway.html#virtual_hub_id PointToSiteVpnGateway#virtual_hub_id}
+  */
   readonly virtualHubId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/point_to_site_vpn_gateway.html#vpn_server_configuration_id PointToSiteVpnGateway#vpn_server_configuration_id}
+  */
   readonly vpnServerConfigurationId: string;
-  /** connection_configuration block */
+  /**
+  * connection_configuration block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/point_to_site_vpn_gateway.html#connection_configuration PointToSiteVpnGateway#connection_configuration}
+  */
   readonly connectionConfiguration: PointToSiteVpnGatewayConnectionConfiguration[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/point_to_site_vpn_gateway.html#timeouts PointToSiteVpnGateway#timeouts}
+  */
   readonly timeouts?: PointToSiteVpnGatewayTimeouts;
 }
 export interface PointToSiteVpnGatewayConnectionConfigurationRoutePropagatedRouteTable {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/point_to_site_vpn_gateway.html#ids PointToSiteVpnGateway#ids}
+  */
   readonly ids: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/point_to_site_vpn_gateway.html#labels PointToSiteVpnGateway#labels}
+  */
   readonly labels?: string[];
 }
 
@@ -34,8 +72,15 @@ function pointToSiteVpnGatewayConnectionConfigurationRoutePropagatedRouteTableTo
 }
 
 export interface PointToSiteVpnGatewayConnectionConfigurationRoute {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/point_to_site_vpn_gateway.html#associated_route_table_id PointToSiteVpnGateway#associated_route_table_id}
+  */
   readonly associatedRouteTableId: string;
-  /** propagated_route_table block */
+  /**
+  * propagated_route_table block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/point_to_site_vpn_gateway.html#propagated_route_table PointToSiteVpnGateway#propagated_route_table}
+  */
   readonly propagatedRouteTable?: PointToSiteVpnGatewayConnectionConfigurationRoutePropagatedRouteTable[];
 }
 
@@ -48,6 +93,9 @@ function pointToSiteVpnGatewayConnectionConfigurationRouteToTerraform(struct?: P
 }
 
 export interface PointToSiteVpnGatewayConnectionConfigurationVpnClientAddressPool {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/point_to_site_vpn_gateway.html#address_prefixes PointToSiteVpnGateway#address_prefixes}
+  */
   readonly addressPrefixes: string[];
 }
 
@@ -59,10 +107,21 @@ function pointToSiteVpnGatewayConnectionConfigurationVpnClientAddressPoolToTerra
 }
 
 export interface PointToSiteVpnGatewayConnectionConfiguration {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/point_to_site_vpn_gateway.html#name PointToSiteVpnGateway#name}
+  */
   readonly name: string;
-  /** route block */
+  /**
+  * route block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/point_to_site_vpn_gateway.html#route PointToSiteVpnGateway#route}
+  */
   readonly route?: PointToSiteVpnGatewayConnectionConfigurationRoute[];
-  /** vpn_client_address_pool block */
+  /**
+  * vpn_client_address_pool block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/point_to_site_vpn_gateway.html#vpn_client_address_pool PointToSiteVpnGateway#vpn_client_address_pool}
+  */
   readonly vpnClientAddressPool: PointToSiteVpnGatewayConnectionConfigurationVpnClientAddressPool[];
 }
 
@@ -76,9 +135,21 @@ function pointToSiteVpnGatewayConnectionConfigurationToTerraform(struct?: PointT
 }
 
 export interface PointToSiteVpnGatewayTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/point_to_site_vpn_gateway.html#create PointToSiteVpnGateway#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/point_to_site_vpn_gateway.html#delete PointToSiteVpnGateway#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/point_to_site_vpn_gateway.html#read PointToSiteVpnGateway#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/point_to_site_vpn_gateway.html#update PointToSiteVpnGateway#update}
+  */
   readonly update?: string;
 }
 
@@ -93,14 +164,22 @@ function pointToSiteVpnGatewayTimeoutsToTerraform(struct?: PointToSiteVpnGateway
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/point_to_site_vpn_gateway.html azurerm_point_to_site_vpn_gateway}
+*/
 export class PointToSiteVpnGateway extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/point_to_site_vpn_gateway.html azurerm_point_to_site_vpn_gateway} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options PointToSiteVpnGatewayConfig
+  */
   public constructor(scope: Construct, id: string, config: PointToSiteVpnGatewayConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_point_to_site_vpn_gateway',

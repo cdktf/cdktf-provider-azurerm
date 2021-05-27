@@ -7,17 +7,45 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface IothubConsumerGroupConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_consumer_group.html#eventhub_endpoint_name IothubConsumerGroup#eventhub_endpoint_name}
+  */
   readonly eventhubEndpointName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_consumer_group.html#iothub_name IothubConsumerGroup#iothub_name}
+  */
   readonly iothubName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_consumer_group.html#name IothubConsumerGroup#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_consumer_group.html#resource_group_name IothubConsumerGroup#resource_group_name}
+  */
   readonly resourceGroupName: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_consumer_group.html#timeouts IothubConsumerGroup#timeouts}
+  */
   readonly timeouts?: IothubConsumerGroupTimeouts;
 }
 export interface IothubConsumerGroupTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_consumer_group.html#create IothubConsumerGroup#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_consumer_group.html#delete IothubConsumerGroup#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_consumer_group.html#read IothubConsumerGroup#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_consumer_group.html#update IothubConsumerGroup#update}
+  */
   readonly update?: string;
 }
 
@@ -32,14 +60,22 @@ function iothubConsumerGroupTimeoutsToTerraform(struct?: IothubConsumerGroupTime
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_consumer_group.html azurerm_iothub_consumer_group}
+*/
 export class IothubConsumerGroup extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_consumer_group.html azurerm_iothub_consumer_group} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options IothubConsumerGroupConfig
+  */
   public constructor(scope: Construct, id: string, config: IothubConsumerGroupConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_iothub_consumer_group',

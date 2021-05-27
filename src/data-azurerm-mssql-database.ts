@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/data_azurerm_mssql_database.html
+// https://www.terraform.io/docs/providers/azurerm/d/mssql_database.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,12 +7,25 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataAzurermMssqlDatabaseConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/mssql_database.html#name DataAzurermMssqlDatabase#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/mssql_database.html#server_id DataAzurermMssqlDatabase#server_id}
+  */
   readonly serverId: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/mssql_database.html#timeouts DataAzurermMssqlDatabase#timeouts}
+  */
   readonly timeouts?: DataAzurermMssqlDatabaseTimeouts;
 }
 export interface DataAzurermMssqlDatabaseTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/mssql_database.html#read DataAzurermMssqlDatabase#read}
+  */
   readonly read?: string;
 }
 
@@ -24,14 +37,22 @@ function dataAzurermMssqlDatabaseTimeoutsToTerraform(struct?: DataAzurermMssqlDa
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/mssql_database.html azurerm_mssql_database}
+*/
 export class DataAzurermMssqlDatabase extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/mssql_database.html azurerm_mssql_database} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataAzurermMssqlDatabaseConfig
+  */
   public constructor(scope: Construct, id: string, config: DataAzurermMssqlDatabaseConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_mssql_database',

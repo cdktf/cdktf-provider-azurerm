@@ -7,21 +7,61 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface IothubDpsSharedAccessPolicyConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_dps_shared_access_policy.html#enrollment_read IothubDpsSharedAccessPolicy#enrollment_read}
+  */
   readonly enrollmentRead?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_dps_shared_access_policy.html#enrollment_write IothubDpsSharedAccessPolicy#enrollment_write}
+  */
   readonly enrollmentWrite?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_dps_shared_access_policy.html#iothub_dps_name IothubDpsSharedAccessPolicy#iothub_dps_name}
+  */
   readonly iothubDpsName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_dps_shared_access_policy.html#name IothubDpsSharedAccessPolicy#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_dps_shared_access_policy.html#registration_read IothubDpsSharedAccessPolicy#registration_read}
+  */
   readonly registrationRead?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_dps_shared_access_policy.html#registration_write IothubDpsSharedAccessPolicy#registration_write}
+  */
   readonly registrationWrite?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_dps_shared_access_policy.html#resource_group_name IothubDpsSharedAccessPolicy#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_dps_shared_access_policy.html#service_config IothubDpsSharedAccessPolicy#service_config}
+  */
   readonly serviceConfig?: boolean;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_dps_shared_access_policy.html#timeouts IothubDpsSharedAccessPolicy#timeouts}
+  */
   readonly timeouts?: IothubDpsSharedAccessPolicyTimeouts;
 }
 export interface IothubDpsSharedAccessPolicyTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_dps_shared_access_policy.html#create IothubDpsSharedAccessPolicy#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_dps_shared_access_policy.html#delete IothubDpsSharedAccessPolicy#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_dps_shared_access_policy.html#read IothubDpsSharedAccessPolicy#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_dps_shared_access_policy.html#update IothubDpsSharedAccessPolicy#update}
+  */
   readonly update?: string;
 }
 
@@ -36,14 +76,22 @@ function iothubDpsSharedAccessPolicyTimeoutsToTerraform(struct?: IothubDpsShared
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_dps_shared_access_policy.html azurerm_iothub_dps_shared_access_policy}
+*/
 export class IothubDpsSharedAccessPolicy extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_dps_shared_access_policy.html azurerm_iothub_dps_shared_access_policy} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options IothubDpsSharedAccessPolicyConfig
+  */
   public constructor(scope: Construct, id: string, config: IothubDpsSharedAccessPolicyConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_iothub_dps_shared_access_policy',

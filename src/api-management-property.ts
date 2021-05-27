@@ -7,20 +7,57 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface ApiManagementPropertyConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_property.html#api_management_name ApiManagementProperty#api_management_name}
+  */
   readonly apiManagementName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_property.html#display_name ApiManagementProperty#display_name}
+  */
   readonly displayName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_property.html#name ApiManagementProperty#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_property.html#resource_group_name ApiManagementProperty#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_property.html#secret ApiManagementProperty#secret}
+  */
   readonly secret?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_property.html#tags ApiManagementProperty#tags}
+  */
   readonly tags?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_property.html#value ApiManagementProperty#value}
+  */
   readonly value: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_property.html#timeouts ApiManagementProperty#timeouts}
+  */
   readonly timeouts?: ApiManagementPropertyTimeouts;
 }
 export interface ApiManagementPropertyTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_property.html#create ApiManagementProperty#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_property.html#delete ApiManagementProperty#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_property.html#read ApiManagementProperty#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_property.html#update ApiManagementProperty#update}
+  */
   readonly update?: string;
 }
 
@@ -35,14 +72,22 @@ function apiManagementPropertyTimeoutsToTerraform(struct?: ApiManagementProperty
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_property.html azurerm_api_management_property}
+*/
 export class ApiManagementProperty extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_property.html azurerm_api_management_property} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options ApiManagementPropertyConfig
+  */
   public constructor(scope: Construct, id: string, config: ApiManagementPropertyConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_api_management_property',

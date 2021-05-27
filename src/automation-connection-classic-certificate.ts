@@ -7,20 +7,57 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface AutomationConnectionClassicCertificateConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_connection_classic_certificate.html#automation_account_name AutomationConnectionClassicCertificate#automation_account_name}
+  */
   readonly automationAccountName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_connection_classic_certificate.html#certificate_asset_name AutomationConnectionClassicCertificate#certificate_asset_name}
+  */
   readonly certificateAssetName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_connection_classic_certificate.html#description AutomationConnectionClassicCertificate#description}
+  */
   readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_connection_classic_certificate.html#name AutomationConnectionClassicCertificate#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_connection_classic_certificate.html#resource_group_name AutomationConnectionClassicCertificate#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_connection_classic_certificate.html#subscription_id AutomationConnectionClassicCertificate#subscription_id}
+  */
   readonly subscriptionId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_connection_classic_certificate.html#subscription_name AutomationConnectionClassicCertificate#subscription_name}
+  */
   readonly subscriptionName: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_connection_classic_certificate.html#timeouts AutomationConnectionClassicCertificate#timeouts}
+  */
   readonly timeouts?: AutomationConnectionClassicCertificateTimeouts;
 }
 export interface AutomationConnectionClassicCertificateTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_connection_classic_certificate.html#create AutomationConnectionClassicCertificate#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_connection_classic_certificate.html#delete AutomationConnectionClassicCertificate#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_connection_classic_certificate.html#read AutomationConnectionClassicCertificate#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_connection_classic_certificate.html#update AutomationConnectionClassicCertificate#update}
+  */
   readonly update?: string;
 }
 
@@ -35,14 +72,22 @@ function automationConnectionClassicCertificateTimeoutsToTerraform(struct?: Auto
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/automation_connection_classic_certificate.html azurerm_automation_connection_classic_certificate}
+*/
 export class AutomationConnectionClassicCertificate extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/automation_connection_classic_certificate.html azurerm_automation_connection_classic_certificate} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options AutomationConnectionClassicCertificateConfig
+  */
   public constructor(scope: Construct, id: string, config: AutomationConnectionClassicCertificateConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_automation_connection_classic_certificate',

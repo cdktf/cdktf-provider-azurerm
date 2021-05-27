@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/data_azurerm_digital_twins_instance.html
+// https://www.terraform.io/docs/providers/azurerm/d/digital_twins_instance.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,12 +7,25 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataAzurermDigitalTwinsInstanceConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/digital_twins_instance.html#name DataAzurermDigitalTwinsInstance#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/digital_twins_instance.html#resource_group_name DataAzurermDigitalTwinsInstance#resource_group_name}
+  */
   readonly resourceGroupName: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/digital_twins_instance.html#timeouts DataAzurermDigitalTwinsInstance#timeouts}
+  */
   readonly timeouts?: DataAzurermDigitalTwinsInstanceTimeouts;
 }
 export interface DataAzurermDigitalTwinsInstanceTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/digital_twins_instance.html#read DataAzurermDigitalTwinsInstance#read}
+  */
   readonly read?: string;
 }
 
@@ -24,14 +37,22 @@ function dataAzurermDigitalTwinsInstanceTimeoutsToTerraform(struct?: DataAzurerm
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/digital_twins_instance.html azurerm_digital_twins_instance}
+*/
 export class DataAzurermDigitalTwinsInstance extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/digital_twins_instance.html azurerm_digital_twins_instance} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataAzurermDigitalTwinsInstanceConfig
+  */
   public constructor(scope: Construct, id: string, config: DataAzurermDigitalTwinsInstanceConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_digital_twins_instance',

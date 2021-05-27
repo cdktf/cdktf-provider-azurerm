@@ -7,18 +7,49 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface BackupProtectedVmConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_protected_vm.html#backup_policy_id BackupProtectedVm#backup_policy_id}
+  */
   readonly backupPolicyId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_protected_vm.html#recovery_vault_name BackupProtectedVm#recovery_vault_name}
+  */
   readonly recoveryVaultName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_protected_vm.html#resource_group_name BackupProtectedVm#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_protected_vm.html#source_vm_id BackupProtectedVm#source_vm_id}
+  */
   readonly sourceVmId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_protected_vm.html#tags BackupProtectedVm#tags}
+  */
   readonly tags?: { [key: string]: string };
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_protected_vm.html#timeouts BackupProtectedVm#timeouts}
+  */
   readonly timeouts?: BackupProtectedVmTimeouts;
 }
 export interface BackupProtectedVmTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_protected_vm.html#create BackupProtectedVm#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_protected_vm.html#delete BackupProtectedVm#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_protected_vm.html#read BackupProtectedVm#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_protected_vm.html#update BackupProtectedVm#update}
+  */
   readonly update?: string;
 }
 
@@ -33,14 +64,22 @@ function backupProtectedVmTimeoutsToTerraform(struct?: BackupProtectedVmTimeouts
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/backup_protected_vm.html azurerm_backup_protected_vm}
+*/
 export class BackupProtectedVm extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/backup_protected_vm.html azurerm_backup_protected_vm} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options BackupProtectedVmConfig
+  */
   public constructor(scope: Construct, id: string, config: BackupProtectedVmConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_backup_protected_vm',

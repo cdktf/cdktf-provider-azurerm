@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/data_azurerm_container_registry_scope_map.html
+// https://www.terraform.io/docs/providers/azurerm/d/container_registry_scope_map.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,13 +7,29 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataAzurermContainerRegistryScopeMapConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/container_registry_scope_map.html#container_registry_name DataAzurermContainerRegistryScopeMap#container_registry_name}
+  */
   readonly containerRegistryName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/container_registry_scope_map.html#name DataAzurermContainerRegistryScopeMap#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/container_registry_scope_map.html#resource_group_name DataAzurermContainerRegistryScopeMap#resource_group_name}
+  */
   readonly resourceGroupName: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/container_registry_scope_map.html#timeouts DataAzurermContainerRegistryScopeMap#timeouts}
+  */
   readonly timeouts?: DataAzurermContainerRegistryScopeMapTimeouts;
 }
 export interface DataAzurermContainerRegistryScopeMapTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/container_registry_scope_map.html#read DataAzurermContainerRegistryScopeMap#read}
+  */
   readonly read?: string;
 }
 
@@ -25,14 +41,22 @@ function dataAzurermContainerRegistryScopeMapTimeoutsToTerraform(struct?: DataAz
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/container_registry_scope_map.html azurerm_container_registry_scope_map}
+*/
 export class DataAzurermContainerRegistryScopeMap extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/container_registry_scope_map.html azurerm_container_registry_scope_map} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataAzurermContainerRegistryScopeMapConfig
+  */
   public constructor(scope: Construct, id: string, config: DataAzurermContainerRegistryScopeMapConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_container_registry_scope_map',

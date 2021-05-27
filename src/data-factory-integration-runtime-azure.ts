@@ -7,21 +7,61 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataFactoryIntegrationRuntimeAzureConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_azure.html#compute_type DataFactoryIntegrationRuntimeAzure#compute_type}
+  */
   readonly computeType?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_azure.html#core_count DataFactoryIntegrationRuntimeAzure#core_count}
+  */
   readonly coreCount?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_azure.html#data_factory_name DataFactoryIntegrationRuntimeAzure#data_factory_name}
+  */
   readonly dataFactoryName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_azure.html#description DataFactoryIntegrationRuntimeAzure#description}
+  */
   readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_azure.html#location DataFactoryIntegrationRuntimeAzure#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_azure.html#name DataFactoryIntegrationRuntimeAzure#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_azure.html#resource_group_name DataFactoryIntegrationRuntimeAzure#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_azure.html#time_to_live_min DataFactoryIntegrationRuntimeAzure#time_to_live_min}
+  */
   readonly timeToLiveMin?: number;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_azure.html#timeouts DataFactoryIntegrationRuntimeAzure#timeouts}
+  */
   readonly timeouts?: DataFactoryIntegrationRuntimeAzureTimeouts;
 }
 export interface DataFactoryIntegrationRuntimeAzureTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_azure.html#create DataFactoryIntegrationRuntimeAzure#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_azure.html#delete DataFactoryIntegrationRuntimeAzure#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_azure.html#read DataFactoryIntegrationRuntimeAzure#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_azure.html#update DataFactoryIntegrationRuntimeAzure#update}
+  */
   readonly update?: string;
 }
 
@@ -36,14 +76,22 @@ function dataFactoryIntegrationRuntimeAzureTimeoutsToTerraform(struct?: DataFact
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_azure.html azurerm_data_factory_integration_runtime_azure}
+*/
 export class DataFactoryIntegrationRuntimeAzure extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_azure.html azurerm_data_factory_integration_runtime_azure} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataFactoryIntegrationRuntimeAzureConfig
+  */
   public constructor(scope: Construct, id: string, config: DataFactoryIntegrationRuntimeAzureConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_data_factory_integration_runtime_azure',

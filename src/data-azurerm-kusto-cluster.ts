@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/data_azurerm_kusto_cluster.html
+// https://www.terraform.io/docs/providers/azurerm/d/kusto_cluster.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,12 +7,25 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataAzurermKustoClusterConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/kusto_cluster.html#name DataAzurermKustoCluster#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/kusto_cluster.html#resource_group_name DataAzurermKustoCluster#resource_group_name}
+  */
   readonly resourceGroupName: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/kusto_cluster.html#timeouts DataAzurermKustoCluster#timeouts}
+  */
   readonly timeouts?: DataAzurermKustoClusterTimeouts;
 }
 export interface DataAzurermKustoClusterTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/kusto_cluster.html#read DataAzurermKustoCluster#read}
+  */
   readonly read?: string;
 }
 
@@ -24,14 +37,22 @@ function dataAzurermKustoClusterTimeoutsToTerraform(struct?: DataAzurermKustoClu
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/kusto_cluster.html azurerm_kusto_cluster}
+*/
 export class DataAzurermKustoCluster extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/kusto_cluster.html azurerm_kusto_cluster} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataAzurermKustoClusterConfig
+  */
   public constructor(scope: Construct, id: string, config: DataAzurermKustoClusterConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_kusto_cluster',

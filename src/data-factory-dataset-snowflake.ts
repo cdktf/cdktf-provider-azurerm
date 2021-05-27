@@ -7,25 +7,75 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataFactoryDatasetSnowflakeConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_snowflake.html#additional_properties DataFactoryDatasetSnowflake#additional_properties}
+  */
   readonly additionalProperties?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_snowflake.html#annotations DataFactoryDatasetSnowflake#annotations}
+  */
   readonly annotations?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_snowflake.html#data_factory_name DataFactoryDatasetSnowflake#data_factory_name}
+  */
   readonly dataFactoryName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_snowflake.html#description DataFactoryDatasetSnowflake#description}
+  */
   readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_snowflake.html#folder DataFactoryDatasetSnowflake#folder}
+  */
   readonly folder?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_snowflake.html#linked_service_name DataFactoryDatasetSnowflake#linked_service_name}
+  */
   readonly linkedServiceName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_snowflake.html#name DataFactoryDatasetSnowflake#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_snowflake.html#parameters DataFactoryDatasetSnowflake#parameters}
+  */
   readonly parameters?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_snowflake.html#resource_group_name DataFactoryDatasetSnowflake#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_snowflake.html#schema_name DataFactoryDatasetSnowflake#schema_name}
+  */
   readonly schemaName?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_snowflake.html#table_name DataFactoryDatasetSnowflake#table_name}
+  */
   readonly tableName?: string;
-  /** schema_column block */
+  /**
+  * schema_column block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_snowflake.html#schema_column DataFactoryDatasetSnowflake#schema_column}
+  */
   readonly schemaColumn?: DataFactoryDatasetSnowflakeSchemaColumn[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_snowflake.html#timeouts DataFactoryDatasetSnowflake#timeouts}
+  */
   readonly timeouts?: DataFactoryDatasetSnowflakeTimeouts;
 }
 export interface DataFactoryDatasetSnowflakeSchemaColumn {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_snowflake.html#description DataFactoryDatasetSnowflake#description}
+  */
   readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_snowflake.html#name DataFactoryDatasetSnowflake#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_snowflake.html#type DataFactoryDatasetSnowflake#type}
+  */
   readonly type?: string;
 }
 
@@ -39,9 +89,21 @@ function dataFactoryDatasetSnowflakeSchemaColumnToTerraform(struct?: DataFactory
 }
 
 export interface DataFactoryDatasetSnowflakeTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_snowflake.html#create DataFactoryDatasetSnowflake#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_snowflake.html#delete DataFactoryDatasetSnowflake#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_snowflake.html#read DataFactoryDatasetSnowflake#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_snowflake.html#update DataFactoryDatasetSnowflake#update}
+  */
   readonly update?: string;
 }
 
@@ -56,14 +118,22 @@ function dataFactoryDatasetSnowflakeTimeoutsToTerraform(struct?: DataFactoryData
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_snowflake.html azurerm_data_factory_dataset_snowflake}
+*/
 export class DataFactoryDatasetSnowflake extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_snowflake.html azurerm_data_factory_dataset_snowflake} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataFactoryDatasetSnowflakeConfig
+  */
   public constructor(scope: Construct, id: string, config: DataFactoryDatasetSnowflakeConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_data_factory_dataset_snowflake',

@@ -7,26 +7,75 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataFactoryConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory.html#customer_managed_key_id DataFactory#customer_managed_key_id}
+  */
   readonly customerManagedKeyId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory.html#location DataFactory#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory.html#name DataFactory#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory.html#public_network_enabled DataFactory#public_network_enabled}
+  */
   readonly publicNetworkEnabled?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory.html#resource_group_name DataFactory#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory.html#tags DataFactory#tags}
+  */
   readonly tags?: { [key: string]: string };
-  /** github_configuration block */
+  /**
+  * github_configuration block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory.html#github_configuration DataFactory#github_configuration}
+  */
   readonly githubConfiguration?: DataFactoryGithubConfiguration[];
-  /** identity block */
+  /**
+  * identity block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory.html#identity DataFactory#identity}
+  */
   readonly identity?: DataFactoryIdentity[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory.html#timeouts DataFactory#timeouts}
+  */
   readonly timeouts?: DataFactoryTimeouts;
-  /** vsts_configuration block */
+  /**
+  * vsts_configuration block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory.html#vsts_configuration DataFactory#vsts_configuration}
+  */
   readonly vstsConfiguration?: DataFactoryVstsConfiguration[];
 }
 export interface DataFactoryGithubConfiguration {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory.html#account_name DataFactory#account_name}
+  */
   readonly accountName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory.html#branch_name DataFactory#branch_name}
+  */
   readonly branchName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory.html#git_url DataFactory#git_url}
+  */
   readonly gitUrl: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory.html#repository_name DataFactory#repository_name}
+  */
   readonly repositoryName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory.html#root_folder DataFactory#root_folder}
+  */
   readonly rootFolder: string;
 }
 
@@ -42,7 +91,13 @@ function dataFactoryGithubConfigurationToTerraform(struct?: DataFactoryGithubCon
 }
 
 export interface DataFactoryIdentity {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory.html#identity_ids DataFactory#identity_ids}
+  */
   readonly identityIds?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory.html#type DataFactory#type}
+  */
   readonly type: string;
 }
 
@@ -55,9 +110,21 @@ function dataFactoryIdentityToTerraform(struct?: DataFactoryIdentity): any {
 }
 
 export interface DataFactoryTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory.html#create DataFactory#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory.html#delete DataFactory#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory.html#read DataFactory#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory.html#update DataFactory#update}
+  */
   readonly update?: string;
 }
 
@@ -72,11 +139,29 @@ function dataFactoryTimeoutsToTerraform(struct?: DataFactoryTimeouts): any {
 }
 
 export interface DataFactoryVstsConfiguration {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory.html#account_name DataFactory#account_name}
+  */
   readonly accountName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory.html#branch_name DataFactory#branch_name}
+  */
   readonly branchName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory.html#project_name DataFactory#project_name}
+  */
   readonly projectName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory.html#repository_name DataFactory#repository_name}
+  */
   readonly repositoryName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory.html#root_folder DataFactory#root_folder}
+  */
   readonly rootFolder: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory.html#tenant_id DataFactory#tenant_id}
+  */
   readonly tenantId: string;
 }
 
@@ -93,14 +178,22 @@ function dataFactoryVstsConfigurationToTerraform(struct?: DataFactoryVstsConfigu
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory.html azurerm_data_factory}
+*/
 export class DataFactory extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory.html azurerm_data_factory} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataFactoryConfig
+  */
   public constructor(scope: Construct, id: string, config: DataFactoryConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_data_factory',

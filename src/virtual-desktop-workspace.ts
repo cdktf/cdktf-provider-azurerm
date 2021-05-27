@@ -7,19 +7,53 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface VirtualDesktopWorkspaceConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_desktop_workspace.html#description VirtualDesktopWorkspace#description}
+  */
   readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_desktop_workspace.html#friendly_name VirtualDesktopWorkspace#friendly_name}
+  */
   readonly friendlyName?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_desktop_workspace.html#location VirtualDesktopWorkspace#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_desktop_workspace.html#name VirtualDesktopWorkspace#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_desktop_workspace.html#resource_group_name VirtualDesktopWorkspace#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_desktop_workspace.html#tags VirtualDesktopWorkspace#tags}
+  */
   readonly tags?: { [key: string]: string };
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_desktop_workspace.html#timeouts VirtualDesktopWorkspace#timeouts}
+  */
   readonly timeouts?: VirtualDesktopWorkspaceTimeouts;
 }
 export interface VirtualDesktopWorkspaceTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_desktop_workspace.html#create VirtualDesktopWorkspace#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_desktop_workspace.html#delete VirtualDesktopWorkspace#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_desktop_workspace.html#read VirtualDesktopWorkspace#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_desktop_workspace.html#update VirtualDesktopWorkspace#update}
+  */
   readonly update?: string;
 }
 
@@ -34,14 +68,22 @@ function virtualDesktopWorkspaceTimeoutsToTerraform(struct?: VirtualDesktopWorks
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_desktop_workspace.html azurerm_virtual_desktop_workspace}
+*/
 export class VirtualDesktopWorkspace extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_desktop_workspace.html azurerm_virtual_desktop_workspace} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options VirtualDesktopWorkspaceConfig
+  */
   public constructor(scope: Construct, id: string, config: VirtualDesktopWorkspaceConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_virtual_desktop_workspace',

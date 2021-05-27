@@ -7,22 +7,57 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface SignalrServiceConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/signalr_service.html#location SignalrService#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/signalr_service.html#name SignalrService#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/signalr_service.html#resource_group_name SignalrService#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/signalr_service.html#tags SignalrService#tags}
+  */
   readonly tags?: { [key: string]: string };
-  /** cors block */
+  /**
+  * cors block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/signalr_service.html#cors SignalrService#cors}
+  */
   readonly cors?: SignalrServiceCors[];
-  /** features block */
+  /**
+  * features block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/signalr_service.html#features SignalrService#features}
+  */
   readonly features?: SignalrServiceFeatures[];
-  /** sku block */
+  /**
+  * sku block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/signalr_service.html#sku SignalrService#sku}
+  */
   readonly sku: SignalrServiceSku[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/signalr_service.html#timeouts SignalrService#timeouts}
+  */
   readonly timeouts?: SignalrServiceTimeouts;
-  /** upstream_endpoint block */
+  /**
+  * upstream_endpoint block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/signalr_service.html#upstream_endpoint SignalrService#upstream_endpoint}
+  */
   readonly upstreamEndpoint?: SignalrServiceUpstreamEndpoint[];
 }
 export interface SignalrServiceCors {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/signalr_service.html#allowed_origins SignalrService#allowed_origins}
+  */
   readonly allowedOrigins: string[];
 }
 
@@ -34,7 +69,13 @@ function signalrServiceCorsToTerraform(struct?: SignalrServiceCors): any {
 }
 
 export interface SignalrServiceFeatures {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/signalr_service.html#flag SignalrService#flag}
+  */
   readonly flag: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/signalr_service.html#value SignalrService#value}
+  */
   readonly value: string;
 }
 
@@ -47,7 +88,13 @@ function signalrServiceFeaturesToTerraform(struct?: SignalrServiceFeatures): any
 }
 
 export interface SignalrServiceSku {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/signalr_service.html#capacity SignalrService#capacity}
+  */
   readonly capacity: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/signalr_service.html#name SignalrService#name}
+  */
   readonly name: string;
 }
 
@@ -60,9 +107,21 @@ function signalrServiceSkuToTerraform(struct?: SignalrServiceSku): any {
 }
 
 export interface SignalrServiceTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/signalr_service.html#create SignalrService#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/signalr_service.html#delete SignalrService#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/signalr_service.html#read SignalrService#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/signalr_service.html#update SignalrService#update}
+  */
   readonly update?: string;
 }
 
@@ -77,9 +136,21 @@ function signalrServiceTimeoutsToTerraform(struct?: SignalrServiceTimeouts): any
 }
 
 export interface SignalrServiceUpstreamEndpoint {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/signalr_service.html#category_pattern SignalrService#category_pattern}
+  */
   readonly categoryPattern: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/signalr_service.html#event_pattern SignalrService#event_pattern}
+  */
   readonly eventPattern: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/signalr_service.html#hub_pattern SignalrService#hub_pattern}
+  */
   readonly hubPattern: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/signalr_service.html#url_template SignalrService#url_template}
+  */
   readonly urlTemplate: string;
 }
 
@@ -94,14 +165,22 @@ function signalrServiceUpstreamEndpointToTerraform(struct?: SignalrServiceUpstre
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/signalr_service.html azurerm_signalr_service}
+*/
 export class SignalrService extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/signalr_service.html azurerm_signalr_service} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options SignalrServiceConfig
+  */
   public constructor(scope: Construct, id: string, config: SignalrServiceConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_signalr_service',

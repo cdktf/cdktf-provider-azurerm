@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/data_azurerm_sentinel_alert_rule_template.html
+// https://www.terraform.io/docs/providers/azurerm/d/sentinel_alert_rule_template.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,10 +7,23 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataAzurermSentinelAlertRuleTemplateConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/sentinel_alert_rule_template.html#display_name DataAzurermSentinelAlertRuleTemplate#display_name}
+  */
   readonly displayName?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/sentinel_alert_rule_template.html#log_analytics_workspace_id DataAzurermSentinelAlertRuleTemplate#log_analytics_workspace_id}
+  */
   readonly logAnalyticsWorkspaceId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/sentinel_alert_rule_template.html#name DataAzurermSentinelAlertRuleTemplate#name}
+  */
   readonly name?: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/sentinel_alert_rule_template.html#timeouts DataAzurermSentinelAlertRuleTemplate#timeouts}
+  */
   readonly timeouts?: DataAzurermSentinelAlertRuleTemplateTimeouts;
 }
 export class DataAzurermSentinelAlertRuleTemplateScheduledTemplate extends cdktf.ComplexComputedList {
@@ -68,6 +81,9 @@ export class DataAzurermSentinelAlertRuleTemplateSecurityIncidentTemplate extend
   }
 }
 export interface DataAzurermSentinelAlertRuleTemplateTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/sentinel_alert_rule_template.html#read DataAzurermSentinelAlertRuleTemplate#read}
+  */
   readonly read?: string;
 }
 
@@ -79,14 +95,22 @@ function dataAzurermSentinelAlertRuleTemplateTimeoutsToTerraform(struct?: DataAz
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/sentinel_alert_rule_template.html azurerm_sentinel_alert_rule_template}
+*/
 export class DataAzurermSentinelAlertRuleTemplate extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/sentinel_alert_rule_template.html azurerm_sentinel_alert_rule_template} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataAzurermSentinelAlertRuleTemplateConfig
+  */
   public constructor(scope: Construct, id: string, config: DataAzurermSentinelAlertRuleTemplateConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_sentinel_alert_rule_template',

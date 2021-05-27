@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/data_azurerm_key_vault_managed_hardware_security_module.html
+// https://www.terraform.io/docs/providers/azurerm/d/key_vault_managed_hardware_security_module.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,12 +7,25 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataAzurermKeyVaultManagedHardwareSecurityModuleConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/key_vault_managed_hardware_security_module.html#name DataAzurermKeyVaultManagedHardwareSecurityModule#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/key_vault_managed_hardware_security_module.html#resource_group_name DataAzurermKeyVaultManagedHardwareSecurityModule#resource_group_name}
+  */
   readonly resourceGroupName: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/key_vault_managed_hardware_security_module.html#timeouts DataAzurermKeyVaultManagedHardwareSecurityModule#timeouts}
+  */
   readonly timeouts?: DataAzurermKeyVaultManagedHardwareSecurityModuleTimeouts;
 }
 export interface DataAzurermKeyVaultManagedHardwareSecurityModuleTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/key_vault_managed_hardware_security_module.html#read DataAzurermKeyVaultManagedHardwareSecurityModule#read}
+  */
   readonly read?: string;
 }
 
@@ -24,14 +37,22 @@ function dataAzurermKeyVaultManagedHardwareSecurityModuleTimeoutsToTerraform(str
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/key_vault_managed_hardware_security_module.html azurerm_key_vault_managed_hardware_security_module}
+*/
 export class DataAzurermKeyVaultManagedHardwareSecurityModule extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/key_vault_managed_hardware_security_module.html azurerm_key_vault_managed_hardware_security_module} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataAzurermKeyVaultManagedHardwareSecurityModuleConfig
+  */
   public constructor(scope: Construct, id: string, config: DataAzurermKeyVaultManagedHardwareSecurityModuleConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_key_vault_managed_hardware_security_module',

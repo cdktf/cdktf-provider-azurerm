@@ -7,17 +7,45 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface ApiManagementIdentityProviderMicrosoftConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_identity_provider_microsoft.html#api_management_name ApiManagementIdentityProviderMicrosoft#api_management_name}
+  */
   readonly apiManagementName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_identity_provider_microsoft.html#client_id ApiManagementIdentityProviderMicrosoft#client_id}
+  */
   readonly clientId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_identity_provider_microsoft.html#client_secret ApiManagementIdentityProviderMicrosoft#client_secret}
+  */
   readonly clientSecret: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_identity_provider_microsoft.html#resource_group_name ApiManagementIdentityProviderMicrosoft#resource_group_name}
+  */
   readonly resourceGroupName: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_identity_provider_microsoft.html#timeouts ApiManagementIdentityProviderMicrosoft#timeouts}
+  */
   readonly timeouts?: ApiManagementIdentityProviderMicrosoftTimeouts;
 }
 export interface ApiManagementIdentityProviderMicrosoftTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_identity_provider_microsoft.html#create ApiManagementIdentityProviderMicrosoft#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_identity_provider_microsoft.html#delete ApiManagementIdentityProviderMicrosoft#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_identity_provider_microsoft.html#read ApiManagementIdentityProviderMicrosoft#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_identity_provider_microsoft.html#update ApiManagementIdentityProviderMicrosoft#update}
+  */
   readonly update?: string;
 }
 
@@ -32,14 +60,22 @@ function apiManagementIdentityProviderMicrosoftTimeoutsToTerraform(struct?: ApiM
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_identity_provider_microsoft.html azurerm_api_management_identity_provider_microsoft}
+*/
 export class ApiManagementIdentityProviderMicrosoft extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_identity_provider_microsoft.html azurerm_api_management_identity_provider_microsoft} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options ApiManagementIdentityProviderMicrosoftConfig
+  */
   public constructor(scope: Construct, id: string, config: ApiManagementIdentityProviderMicrosoftConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_api_management_identity_provider_microsoft',

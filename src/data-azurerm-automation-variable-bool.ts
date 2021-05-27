@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/data_azurerm_automation_variable_bool.html
+// https://www.terraform.io/docs/providers/azurerm/d/automation_variable_bool.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,13 +7,29 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataAzurermAutomationVariableBoolConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/automation_variable_bool.html#automation_account_name DataAzurermAutomationVariableBool#automation_account_name}
+  */
   readonly automationAccountName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/automation_variable_bool.html#name DataAzurermAutomationVariableBool#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/automation_variable_bool.html#resource_group_name DataAzurermAutomationVariableBool#resource_group_name}
+  */
   readonly resourceGroupName: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/automation_variable_bool.html#timeouts DataAzurermAutomationVariableBool#timeouts}
+  */
   readonly timeouts?: DataAzurermAutomationVariableBoolTimeouts;
 }
 export interface DataAzurermAutomationVariableBoolTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/automation_variable_bool.html#read DataAzurermAutomationVariableBool#read}
+  */
   readonly read?: string;
 }
 
@@ -25,14 +41,22 @@ function dataAzurermAutomationVariableBoolTimeoutsToTerraform(struct?: DataAzure
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/automation_variable_bool.html azurerm_automation_variable_bool}
+*/
 export class DataAzurermAutomationVariableBool extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/automation_variable_bool.html azurerm_automation_variable_bool} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataAzurermAutomationVariableBoolConfig
+  */
   public constructor(scope: Construct, id: string, config: DataAzurermAutomationVariableBoolConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_automation_variable_bool',

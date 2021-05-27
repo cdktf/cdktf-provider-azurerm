@@ -7,17 +7,45 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface KustoClusterCustomerManagedKeyConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_cluster_customer_managed_key.html#cluster_id KustoClusterCustomerManagedKey#cluster_id}
+  */
   readonly clusterId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_cluster_customer_managed_key.html#key_name KustoClusterCustomerManagedKey#key_name}
+  */
   readonly keyName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_cluster_customer_managed_key.html#key_vault_id KustoClusterCustomerManagedKey#key_vault_id}
+  */
   readonly keyVaultId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_cluster_customer_managed_key.html#key_version KustoClusterCustomerManagedKey#key_version}
+  */
   readonly keyVersion: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_cluster_customer_managed_key.html#timeouts KustoClusterCustomerManagedKey#timeouts}
+  */
   readonly timeouts?: KustoClusterCustomerManagedKeyTimeouts;
 }
 export interface KustoClusterCustomerManagedKeyTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_cluster_customer_managed_key.html#create KustoClusterCustomerManagedKey#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_cluster_customer_managed_key.html#delete KustoClusterCustomerManagedKey#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_cluster_customer_managed_key.html#read KustoClusterCustomerManagedKey#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_cluster_customer_managed_key.html#update KustoClusterCustomerManagedKey#update}
+  */
   readonly update?: string;
 }
 
@@ -32,14 +60,22 @@ function kustoClusterCustomerManagedKeyTimeoutsToTerraform(struct?: KustoCluster
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_cluster_customer_managed_key.html azurerm_kusto_cluster_customer_managed_key}
+*/
 export class KustoClusterCustomerManagedKey extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_cluster_customer_managed_key.html azurerm_kusto_cluster_customer_managed_key} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options KustoClusterCustomerManagedKeyConfig
+  */
   public constructor(scope: Construct, id: string, config: KustoClusterCustomerManagedKeyConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_kusto_cluster_customer_managed_key',

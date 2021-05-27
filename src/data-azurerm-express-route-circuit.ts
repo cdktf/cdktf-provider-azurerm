@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/data_azurerm_express_route_circuit.html
+// https://www.terraform.io/docs/providers/azurerm/d/express_route_circuit.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,9 +7,19 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataAzurermExpressRouteCircuitConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/express_route_circuit.html#name DataAzurermExpressRouteCircuit#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/express_route_circuit.html#resource_group_name DataAzurermExpressRouteCircuit#resource_group_name}
+  */
   readonly resourceGroupName: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/express_route_circuit.html#timeouts DataAzurermExpressRouteCircuit#timeouts}
+  */
   readonly timeouts?: DataAzurermExpressRouteCircuitTimeouts;
 }
 export class DataAzurermExpressRouteCircuitPeerings extends cdktf.ComplexComputedList {
@@ -79,6 +89,9 @@ export class DataAzurermExpressRouteCircuitSku extends cdktf.ComplexComputedList
   }
 }
 export interface DataAzurermExpressRouteCircuitTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/express_route_circuit.html#read DataAzurermExpressRouteCircuit#read}
+  */
   readonly read?: string;
 }
 
@@ -90,14 +103,22 @@ function dataAzurermExpressRouteCircuitTimeoutsToTerraform(struct?: DataAzurermE
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/express_route_circuit.html azurerm_express_route_circuit}
+*/
 export class DataAzurermExpressRouteCircuit extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/express_route_circuit.html azurerm_express_route_circuit} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataAzurermExpressRouteCircuitConfig
+  */
   public constructor(scope: Construct, id: string, config: DataAzurermExpressRouteCircuitConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_express_route_circuit',

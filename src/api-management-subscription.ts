@@ -7,23 +7,69 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface ApiManagementSubscriptionConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_subscription.html#allow_tracing ApiManagementSubscription#allow_tracing}
+  */
   readonly allowTracing?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_subscription.html#api_management_name ApiManagementSubscription#api_management_name}
+  */
   readonly apiManagementName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_subscription.html#display_name ApiManagementSubscription#display_name}
+  */
   readonly displayName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_subscription.html#primary_key ApiManagementSubscription#primary_key}
+  */
   readonly primaryKey?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_subscription.html#product_id ApiManagementSubscription#product_id}
+  */
   readonly productId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_subscription.html#resource_group_name ApiManagementSubscription#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_subscription.html#secondary_key ApiManagementSubscription#secondary_key}
+  */
   readonly secondaryKey?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_subscription.html#state ApiManagementSubscription#state}
+  */
   readonly state?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_subscription.html#subscription_id ApiManagementSubscription#subscription_id}
+  */
   readonly subscriptionId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_subscription.html#user_id ApiManagementSubscription#user_id}
+  */
   readonly userId?: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_subscription.html#timeouts ApiManagementSubscription#timeouts}
+  */
   readonly timeouts?: ApiManagementSubscriptionTimeouts;
 }
 export interface ApiManagementSubscriptionTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_subscription.html#create ApiManagementSubscription#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_subscription.html#delete ApiManagementSubscription#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_subscription.html#read ApiManagementSubscription#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_subscription.html#update ApiManagementSubscription#update}
+  */
   readonly update?: string;
 }
 
@@ -38,14 +84,22 @@ function apiManagementSubscriptionTimeoutsToTerraform(struct?: ApiManagementSubs
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_subscription.html azurerm_api_management_subscription}
+*/
 export class ApiManagementSubscription extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_subscription.html azurerm_api_management_subscription} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options ApiManagementSubscriptionConfig
+  */
   public constructor(scope: Construct, id: string, config: ApiManagementSubscriptionConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_api_management_subscription',

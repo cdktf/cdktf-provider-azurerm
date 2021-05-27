@@ -7,15 +7,37 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface SecurityCenterWorkspaceConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_workspace.html#scope SecurityCenterWorkspace#scope}
+  */
   readonly scope: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_workspace.html#workspace_id SecurityCenterWorkspace#workspace_id}
+  */
   readonly workspaceId: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_workspace.html#timeouts SecurityCenterWorkspace#timeouts}
+  */
   readonly timeouts?: SecurityCenterWorkspaceTimeouts;
 }
 export interface SecurityCenterWorkspaceTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_workspace.html#create SecurityCenterWorkspace#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_workspace.html#delete SecurityCenterWorkspace#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_workspace.html#read SecurityCenterWorkspace#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_workspace.html#update SecurityCenterWorkspace#update}
+  */
   readonly update?: string;
 }
 
@@ -30,14 +52,22 @@ function securityCenterWorkspaceTimeoutsToTerraform(struct?: SecurityCenterWorks
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_workspace.html azurerm_security_center_workspace}
+*/
 export class SecurityCenterWorkspace extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_workspace.html azurerm_security_center_workspace} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options SecurityCenterWorkspaceConfig
+  */
   public constructor(scope: Construct, id: string, config: SecurityCenterWorkspaceConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_security_center_workspace',

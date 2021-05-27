@@ -7,19 +7,53 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DigitalTwinsEndpointEventgridConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/digital_twins_endpoint_eventgrid.html#dead_letter_storage_secret DigitalTwinsEndpointEventgrid#dead_letter_storage_secret}
+  */
   readonly deadLetterStorageSecret?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/digital_twins_endpoint_eventgrid.html#digital_twins_id DigitalTwinsEndpointEventgrid#digital_twins_id}
+  */
   readonly digitalTwinsId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/digital_twins_endpoint_eventgrid.html#eventgrid_topic_endpoint DigitalTwinsEndpointEventgrid#eventgrid_topic_endpoint}
+  */
   readonly eventgridTopicEndpoint: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/digital_twins_endpoint_eventgrid.html#eventgrid_topic_primary_access_key DigitalTwinsEndpointEventgrid#eventgrid_topic_primary_access_key}
+  */
   readonly eventgridTopicPrimaryAccessKey: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/digital_twins_endpoint_eventgrid.html#eventgrid_topic_secondary_access_key DigitalTwinsEndpointEventgrid#eventgrid_topic_secondary_access_key}
+  */
   readonly eventgridTopicSecondaryAccessKey: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/digital_twins_endpoint_eventgrid.html#name DigitalTwinsEndpointEventgrid#name}
+  */
   readonly name: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/digital_twins_endpoint_eventgrid.html#timeouts DigitalTwinsEndpointEventgrid#timeouts}
+  */
   readonly timeouts?: DigitalTwinsEndpointEventgridTimeouts;
 }
 export interface DigitalTwinsEndpointEventgridTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/digital_twins_endpoint_eventgrid.html#create DigitalTwinsEndpointEventgrid#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/digital_twins_endpoint_eventgrid.html#delete DigitalTwinsEndpointEventgrid#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/digital_twins_endpoint_eventgrid.html#read DigitalTwinsEndpointEventgrid#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/digital_twins_endpoint_eventgrid.html#update DigitalTwinsEndpointEventgrid#update}
+  */
   readonly update?: string;
 }
 
@@ -34,14 +68,22 @@ function digitalTwinsEndpointEventgridTimeoutsToTerraform(struct?: DigitalTwinsE
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/digital_twins_endpoint_eventgrid.html azurerm_digital_twins_endpoint_eventgrid}
+*/
 export class DigitalTwinsEndpointEventgrid extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/digital_twins_endpoint_eventgrid.html azurerm_digital_twins_endpoint_eventgrid} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DigitalTwinsEndpointEventgridConfig
+  */
   public constructor(scope: Construct, id: string, config: DigitalTwinsEndpointEventgridConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_digital_twins_endpoint_eventgrid',

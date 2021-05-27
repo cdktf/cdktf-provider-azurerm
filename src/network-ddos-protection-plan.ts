@@ -7,17 +7,45 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface NetworkDdosProtectionPlanConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_ddos_protection_plan.html#location NetworkDdosProtectionPlan#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_ddos_protection_plan.html#name NetworkDdosProtectionPlan#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_ddos_protection_plan.html#resource_group_name NetworkDdosProtectionPlan#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_ddos_protection_plan.html#tags NetworkDdosProtectionPlan#tags}
+  */
   readonly tags?: { [key: string]: string };
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_ddos_protection_plan.html#timeouts NetworkDdosProtectionPlan#timeouts}
+  */
   readonly timeouts?: NetworkDdosProtectionPlanTimeouts;
 }
 export interface NetworkDdosProtectionPlanTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_ddos_protection_plan.html#create NetworkDdosProtectionPlan#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_ddos_protection_plan.html#delete NetworkDdosProtectionPlan#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_ddos_protection_plan.html#read NetworkDdosProtectionPlan#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_ddos_protection_plan.html#update NetworkDdosProtectionPlan#update}
+  */
   readonly update?: string;
 }
 
@@ -32,14 +60,22 @@ function networkDdosProtectionPlanTimeoutsToTerraform(struct?: NetworkDdosProtec
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/network_ddos_protection_plan.html azurerm_network_ddos_protection_plan}
+*/
 export class NetworkDdosProtectionPlan extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/network_ddos_protection_plan.html azurerm_network_ddos_protection_plan} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options NetworkDdosProtectionPlanConfig
+  */
   public constructor(scope: Construct, id: string, config: NetworkDdosProtectionPlanConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_network_ddos_protection_plan',

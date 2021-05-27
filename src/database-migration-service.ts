@@ -7,19 +7,53 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DatabaseMigrationServiceConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/database_migration_service.html#location DatabaseMigrationService#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/database_migration_service.html#name DatabaseMigrationService#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/database_migration_service.html#resource_group_name DatabaseMigrationService#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/database_migration_service.html#sku_name DatabaseMigrationService#sku_name}
+  */
   readonly skuName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/database_migration_service.html#subnet_id DatabaseMigrationService#subnet_id}
+  */
   readonly subnetId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/database_migration_service.html#tags DatabaseMigrationService#tags}
+  */
   readonly tags?: { [key: string]: string };
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/database_migration_service.html#timeouts DatabaseMigrationService#timeouts}
+  */
   readonly timeouts?: DatabaseMigrationServiceTimeouts;
 }
 export interface DatabaseMigrationServiceTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/database_migration_service.html#create DatabaseMigrationService#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/database_migration_service.html#delete DatabaseMigrationService#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/database_migration_service.html#read DatabaseMigrationService#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/database_migration_service.html#update DatabaseMigrationService#update}
+  */
   readonly update?: string;
 }
 
@@ -34,14 +68,22 @@ function databaseMigrationServiceTimeoutsToTerraform(struct?: DatabaseMigrationS
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/database_migration_service.html azurerm_database_migration_service}
+*/
 export class DatabaseMigrationService extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/database_migration_service.html azurerm_database_migration_service} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DatabaseMigrationServiceConfig
+  */
   public constructor(scope: Construct, id: string, config: DatabaseMigrationServiceConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_database_migration_service',

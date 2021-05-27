@@ -7,23 +7,69 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface LogAnalyticsWorkspaceConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_workspace.html#daily_quota_gb LogAnalyticsWorkspace#daily_quota_gb}
+  */
   readonly dailyQuotaGb?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_workspace.html#internet_ingestion_enabled LogAnalyticsWorkspace#internet_ingestion_enabled}
+  */
   readonly internetIngestionEnabled?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_workspace.html#internet_query_enabled LogAnalyticsWorkspace#internet_query_enabled}
+  */
   readonly internetQueryEnabled?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_workspace.html#location LogAnalyticsWorkspace#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_workspace.html#name LogAnalyticsWorkspace#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_workspace.html#reservation_capcity_in_gb_per_day LogAnalyticsWorkspace#reservation_capcity_in_gb_per_day}
+  */
   readonly reservationCapcityInGbPerDay?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_workspace.html#resource_group_name LogAnalyticsWorkspace#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_workspace.html#retention_in_days LogAnalyticsWorkspace#retention_in_days}
+  */
   readonly retentionInDays?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_workspace.html#sku LogAnalyticsWorkspace#sku}
+  */
   readonly sku?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_workspace.html#tags LogAnalyticsWorkspace#tags}
+  */
   readonly tags?: { [key: string]: string };
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_workspace.html#timeouts LogAnalyticsWorkspace#timeouts}
+  */
   readonly timeouts?: LogAnalyticsWorkspaceTimeouts;
 }
 export interface LogAnalyticsWorkspaceTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_workspace.html#create LogAnalyticsWorkspace#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_workspace.html#delete LogAnalyticsWorkspace#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_workspace.html#read LogAnalyticsWorkspace#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_workspace.html#update LogAnalyticsWorkspace#update}
+  */
   readonly update?: string;
 }
 
@@ -38,14 +84,22 @@ function logAnalyticsWorkspaceTimeoutsToTerraform(struct?: LogAnalyticsWorkspace
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_workspace.html azurerm_log_analytics_workspace}
+*/
 export class LogAnalyticsWorkspace extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_workspace.html azurerm_log_analytics_workspace} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options LogAnalyticsWorkspaceConfig
+  */
   public constructor(scope: Construct, id: string, config: LogAnalyticsWorkspaceConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_log_analytics_workspace',

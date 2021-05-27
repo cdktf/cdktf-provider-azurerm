@@ -7,33 +7,99 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface AppServiceConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#app_service_plan_id AppService#app_service_plan_id}
+  */
   readonly appServicePlanId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#app_settings AppService#app_settings}
+  */
   readonly appSettings?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#client_affinity_enabled AppService#client_affinity_enabled}
+  */
   readonly clientAffinityEnabled?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#client_cert_enabled AppService#client_cert_enabled}
+  */
   readonly clientCertEnabled?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#enabled AppService#enabled}
+  */
   readonly enabled?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#https_only AppService#https_only}
+  */
   readonly httpsOnly?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#location AppService#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#name AppService#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#resource_group_name AppService#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#tags AppService#tags}
+  */
   readonly tags?: { [key: string]: string };
-  /** auth_settings block */
+  /**
+  * auth_settings block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#auth_settings AppService#auth_settings}
+  */
   readonly authSettings?: AppServiceAuthSettings[];
-  /** backup block */
+  /**
+  * backup block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#backup AppService#backup}
+  */
   readonly backup?: AppServiceBackup[];
-  /** connection_string block */
+  /**
+  * connection_string block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#connection_string AppService#connection_string}
+  */
   readonly connectionString?: AppServiceConnectionString[];
-  /** identity block */
+  /**
+  * identity block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#identity AppService#identity}
+  */
   readonly identity?: AppServiceIdentity[];
-  /** logs block */
+  /**
+  * logs block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#logs AppService#logs}
+  */
   readonly logs?: AppServiceLogs[];
-  /** site_config block */
+  /**
+  * site_config block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#site_config AppService#site_config}
+  */
   readonly siteConfig?: AppServiceSiteConfig[];
-  /** source_control block */
+  /**
+  * source_control block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#source_control AppService#source_control}
+  */
   readonly sourceControl?: AppServiceSourceControl[];
-  /** storage_account block */
+  /**
+  * storage_account block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#storage_account AppService#storage_account}
+  */
   readonly storageAccount?: AppServiceStorageAccount[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#timeouts AppService#timeouts}
+  */
   readonly timeouts?: AppServiceTimeouts;
 }
 export class AppServiceSiteCredential extends cdktf.ComplexComputedList {
@@ -49,8 +115,17 @@ export class AppServiceSiteCredential extends cdktf.ComplexComputedList {
   }
 }
 export interface AppServiceAuthSettingsActiveDirectory {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#allowed_audiences AppService#allowed_audiences}
+  */
   readonly allowedAudiences?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#client_id AppService#client_id}
+  */
   readonly clientId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#client_secret AppService#client_secret}
+  */
   readonly clientSecret?: string;
 }
 
@@ -64,8 +139,17 @@ function appServiceAuthSettingsActiveDirectoryToTerraform(struct?: AppServiceAut
 }
 
 export interface AppServiceAuthSettingsFacebook {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#app_id AppService#app_id}
+  */
   readonly appId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#app_secret AppService#app_secret}
+  */
   readonly appSecret: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#oauth_scopes AppService#oauth_scopes}
+  */
   readonly oauthScopes?: string[];
 }
 
@@ -79,8 +163,17 @@ function appServiceAuthSettingsFacebookToTerraform(struct?: AppServiceAuthSettin
 }
 
 export interface AppServiceAuthSettingsGoogle {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#client_id AppService#client_id}
+  */
   readonly clientId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#client_secret AppService#client_secret}
+  */
   readonly clientSecret: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#oauth_scopes AppService#oauth_scopes}
+  */
   readonly oauthScopes?: string[];
 }
 
@@ -94,8 +187,17 @@ function appServiceAuthSettingsGoogleToTerraform(struct?: AppServiceAuthSettings
 }
 
 export interface AppServiceAuthSettingsMicrosoft {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#client_id AppService#client_id}
+  */
   readonly clientId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#client_secret AppService#client_secret}
+  */
   readonly clientSecret: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#oauth_scopes AppService#oauth_scopes}
+  */
   readonly oauthScopes?: string[];
 }
 
@@ -109,7 +211,13 @@ function appServiceAuthSettingsMicrosoftToTerraform(struct?: AppServiceAuthSetti
 }
 
 export interface AppServiceAuthSettingsTwitter {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#consumer_key AppService#consumer_key}
+  */
   readonly consumerKey: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#consumer_secret AppService#consumer_secret}
+  */
   readonly consumerSecret: string;
 }
 
@@ -122,24 +230,71 @@ function appServiceAuthSettingsTwitterToTerraform(struct?: AppServiceAuthSetting
 }
 
 export interface AppServiceAuthSettings {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#additional_login_params AppService#additional_login_params}
+  */
   readonly additionalLoginParams?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#allowed_external_redirect_urls AppService#allowed_external_redirect_urls}
+  */
   readonly allowedExternalRedirectUrls?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#default_provider AppService#default_provider}
+  */
   readonly defaultProvider?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#enabled AppService#enabled}
+  */
   readonly enabled: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#issuer AppService#issuer}
+  */
   readonly issuer?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#runtime_version AppService#runtime_version}
+  */
   readonly runtimeVersion?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#token_refresh_extension_hours AppService#token_refresh_extension_hours}
+  */
   readonly tokenRefreshExtensionHours?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#token_store_enabled AppService#token_store_enabled}
+  */
   readonly tokenStoreEnabled?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#unauthenticated_client_action AppService#unauthenticated_client_action}
+  */
   readonly unauthenticatedClientAction?: string;
-  /** active_directory block */
+  /**
+  * active_directory block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#active_directory AppService#active_directory}
+  */
   readonly activeDirectory?: AppServiceAuthSettingsActiveDirectory[];
-  /** facebook block */
+  /**
+  * facebook block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#facebook AppService#facebook}
+  */
   readonly facebook?: AppServiceAuthSettingsFacebook[];
-  /** google block */
+  /**
+  * google block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#google AppService#google}
+  */
   readonly google?: AppServiceAuthSettingsGoogle[];
-  /** microsoft block */
+  /**
+  * microsoft block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#microsoft AppService#microsoft}
+  */
   readonly microsoft?: AppServiceAuthSettingsMicrosoft[];
-  /** twitter block */
+  /**
+  * twitter block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#twitter AppService#twitter}
+  */
   readonly twitter?: AppServiceAuthSettingsTwitter[];
 }
 
@@ -164,10 +319,25 @@ function appServiceAuthSettingsToTerraform(struct?: AppServiceAuthSettings): any
 }
 
 export interface AppServiceBackupSchedule {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#frequency_interval AppService#frequency_interval}
+  */
   readonly frequencyInterval: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#frequency_unit AppService#frequency_unit}
+  */
   readonly frequencyUnit: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#keep_at_least_one_backup AppService#keep_at_least_one_backup}
+  */
   readonly keepAtLeastOneBackup?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#retention_period_in_days AppService#retention_period_in_days}
+  */
   readonly retentionPeriodInDays?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#start_time AppService#start_time}
+  */
   readonly startTime?: string;
 }
 
@@ -183,10 +353,23 @@ function appServiceBackupScheduleToTerraform(struct?: AppServiceBackupSchedule):
 }
 
 export interface AppServiceBackup {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#enabled AppService#enabled}
+  */
   readonly enabled?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#name AppService#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#storage_account_url AppService#storage_account_url}
+  */
   readonly storageAccountUrl: string;
-  /** schedule block */
+  /**
+  * schedule block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#schedule AppService#schedule}
+  */
   readonly schedule: AppServiceBackupSchedule[];
 }
 
@@ -201,8 +384,17 @@ function appServiceBackupToTerraform(struct?: AppServiceBackup): any {
 }
 
 export interface AppServiceConnectionString {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#name AppService#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#type AppService#type}
+  */
   readonly type: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#value AppService#value}
+  */
   readonly value: string;
 }
 
@@ -216,7 +408,13 @@ function appServiceConnectionStringToTerraform(struct?: AppServiceConnectionStri
 }
 
 export interface AppServiceIdentity {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#identity_ids AppService#identity_ids}
+  */
   readonly identityIds?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#type AppService#type}
+  */
   readonly type: string;
 }
 
@@ -229,8 +427,17 @@ function appServiceIdentityToTerraform(struct?: AppServiceIdentity): any {
 }
 
 export interface AppServiceLogsApplicationLogsAzureBlobStorage {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#level AppService#level}
+  */
   readonly level: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#retention_in_days AppService#retention_in_days}
+  */
   readonly retentionInDays: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#sas_url AppService#sas_url}
+  */
   readonly sasUrl: string;
 }
 
@@ -244,8 +451,15 @@ function appServiceLogsApplicationLogsAzureBlobStorageToTerraform(struct?: AppSe
 }
 
 export interface AppServiceLogsApplicationLogs {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#file_system_level AppService#file_system_level}
+  */
   readonly fileSystemLevel?: string;
-  /** azure_blob_storage block */
+  /**
+  * azure_blob_storage block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#azure_blob_storage AppService#azure_blob_storage}
+  */
   readonly azureBlobStorage?: AppServiceLogsApplicationLogsAzureBlobStorage[];
 }
 
@@ -258,7 +472,13 @@ function appServiceLogsApplicationLogsToTerraform(struct?: AppServiceLogsApplica
 }
 
 export interface AppServiceLogsHttpLogsAzureBlobStorage {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#retention_in_days AppService#retention_in_days}
+  */
   readonly retentionInDays: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#sas_url AppService#sas_url}
+  */
   readonly sasUrl: string;
 }
 
@@ -271,7 +491,13 @@ function appServiceLogsHttpLogsAzureBlobStorageToTerraform(struct?: AppServiceLo
 }
 
 export interface AppServiceLogsHttpLogsFileSystem {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#retention_in_days AppService#retention_in_days}
+  */
   readonly retentionInDays: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#retention_in_mb AppService#retention_in_mb}
+  */
   readonly retentionInMb: number;
 }
 
@@ -284,9 +510,17 @@ function appServiceLogsHttpLogsFileSystemToTerraform(struct?: AppServiceLogsHttp
 }
 
 export interface AppServiceLogsHttpLogs {
-  /** azure_blob_storage block */
+  /**
+  * azure_blob_storage block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#azure_blob_storage AppService#azure_blob_storage}
+  */
   readonly azureBlobStorage?: AppServiceLogsHttpLogsAzureBlobStorage[];
-  /** file_system block */
+  /**
+  * file_system block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#file_system AppService#file_system}
+  */
   readonly fileSystem?: AppServiceLogsHttpLogsFileSystem[];
 }
 
@@ -299,11 +533,25 @@ function appServiceLogsHttpLogsToTerraform(struct?: AppServiceLogsHttpLogs): any
 }
 
 export interface AppServiceLogs {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#detailed_error_messages_enabled AppService#detailed_error_messages_enabled}
+  */
   readonly detailedErrorMessagesEnabled?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#failed_request_tracing_enabled AppService#failed_request_tracing_enabled}
+  */
   readonly failedRequestTracingEnabled?: boolean;
-  /** application_logs block */
+  /**
+  * application_logs block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#application_logs AppService#application_logs}
+  */
   readonly applicationLogs?: AppServiceLogsApplicationLogs[];
-  /** http_logs block */
+  /**
+  * http_logs block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#http_logs AppService#http_logs}
+  */
   readonly httpLogs?: AppServiceLogsHttpLogs[];
 }
 
@@ -318,9 +566,21 @@ function appServiceLogsToTerraform(struct?: AppServiceLogs): any {
 }
 
 export interface AppServiceSiteConfigIpRestrictionHeaders {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#x_azure_fdid AppService#x_azure_fdid}
+  */
   readonly xAzureFdid?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#x_fd_health_probe AppService#x_fd_health_probe}
+  */
   readonly xFdHealthProbe?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#x_forwarded_for AppService#x_forwarded_for}
+  */
   readonly xForwardedFor?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#x_forwarded_host AppService#x_forwarded_host}
+  */
   readonly xForwardedHost?: string[];
 }
 
@@ -335,12 +595,33 @@ function appServiceSiteConfigIpRestrictionHeadersToTerraform(struct?: AppService
 }
 
 export interface AppServiceSiteConfigIpRestriction {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#action AppService#action}
+  */
   readonly action?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#headers AppService#headers}
+  */
   readonly headers?: AppServiceSiteConfigIpRestrictionHeaders[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#ip_address AppService#ip_address}
+  */
   readonly ipAddress?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#name AppService#name}
+  */
   readonly name?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#priority AppService#priority}
+  */
   readonly priority?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#service_tag AppService#service_tag}
+  */
   readonly serviceTag?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#virtual_network_subnet_id AppService#virtual_network_subnet_id}
+  */
   readonly virtualNetworkSubnetId?: string;
 }
 
@@ -358,9 +639,21 @@ function appServiceSiteConfigIpRestrictionToTerraform(struct?: AppServiceSiteCon
 }
 
 export interface AppServiceSiteConfigScmIpRestrictionHeaders {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#x_azure_fdid AppService#x_azure_fdid}
+  */
   readonly xAzureFdid?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#x_fd_health_probe AppService#x_fd_health_probe}
+  */
   readonly xFdHealthProbe?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#x_forwarded_for AppService#x_forwarded_for}
+  */
   readonly xForwardedFor?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#x_forwarded_host AppService#x_forwarded_host}
+  */
   readonly xForwardedHost?: string[];
 }
 
@@ -375,12 +668,33 @@ function appServiceSiteConfigScmIpRestrictionHeadersToTerraform(struct?: AppServ
 }
 
 export interface AppServiceSiteConfigScmIpRestriction {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#action AppService#action}
+  */
   readonly action?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#headers AppService#headers}
+  */
   readonly headers?: AppServiceSiteConfigScmIpRestrictionHeaders[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#ip_address AppService#ip_address}
+  */
   readonly ipAddress?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#name AppService#name}
+  */
   readonly name?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#priority AppService#priority}
+  */
   readonly priority?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#service_tag AppService#service_tag}
+  */
   readonly serviceTag?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#virtual_network_subnet_id AppService#virtual_network_subnet_id}
+  */
   readonly virtualNetworkSubnetId?: string;
 }
 
@@ -398,7 +712,13 @@ function appServiceSiteConfigScmIpRestrictionToTerraform(struct?: AppServiceSite
 }
 
 export interface AppServiceSiteConfigCors {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#allowed_origins AppService#allowed_origins}
+  */
   readonly allowedOrigins: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#support_credentials AppService#support_credentials}
+  */
   readonly supportCredentials?: boolean;
 }
 
@@ -411,34 +731,119 @@ function appServiceSiteConfigCorsToTerraform(struct?: AppServiceSiteConfigCors):
 }
 
 export interface AppServiceSiteConfig {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#always_on AppService#always_on}
+  */
   readonly alwaysOn?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#app_command_line AppService#app_command_line}
+  */
   readonly appCommandLine?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#auto_swap_slot_name AppService#auto_swap_slot_name}
+  */
   readonly autoSwapSlotName?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#default_documents AppService#default_documents}
+  */
   readonly defaultDocuments?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#dotnet_framework_version AppService#dotnet_framework_version}
+  */
   readonly dotnetFrameworkVersion?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#ftps_state AppService#ftps_state}
+  */
   readonly ftpsState?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#health_check_path AppService#health_check_path}
+  */
   readonly healthCheckPath?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#http2_enabled AppService#http2_enabled}
+  */
   readonly http2Enabled?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#ip_restriction AppService#ip_restriction}
+  */
   readonly ipRestriction?: AppServiceSiteConfigIpRestriction[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#java_container AppService#java_container}
+  */
   readonly javaContainer?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#java_container_version AppService#java_container_version}
+  */
   readonly javaContainerVersion?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#java_version AppService#java_version}
+  */
   readonly javaVersion?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#linux_fx_version AppService#linux_fx_version}
+  */
   readonly linuxFxVersion?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#local_mysql_enabled AppService#local_mysql_enabled}
+  */
   readonly localMysqlEnabled?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#managed_pipeline_mode AppService#managed_pipeline_mode}
+  */
   readonly managedPipelineMode?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#min_tls_version AppService#min_tls_version}
+  */
   readonly minTlsVersion?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#number_of_workers AppService#number_of_workers}
+  */
   readonly numberOfWorkers?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#php_version AppService#php_version}
+  */
   readonly phpVersion?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#python_version AppService#python_version}
+  */
   readonly pythonVersion?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#remote_debugging_enabled AppService#remote_debugging_enabled}
+  */
   readonly remoteDebuggingEnabled?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#remote_debugging_version AppService#remote_debugging_version}
+  */
   readonly remoteDebuggingVersion?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#scm_ip_restriction AppService#scm_ip_restriction}
+  */
   readonly scmIpRestriction?: AppServiceSiteConfigScmIpRestriction[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#scm_type AppService#scm_type}
+  */
   readonly scmType?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#scm_use_main_ip_restriction AppService#scm_use_main_ip_restriction}
+  */
   readonly scmUseMainIpRestriction?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#use_32_bit_worker_process AppService#use_32_bit_worker_process}
+  */
   readonly use32BitWorkerProcess?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#websockets_enabled AppService#websockets_enabled}
+  */
   readonly websocketsEnabled?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#windows_fx_version AppService#windows_fx_version}
+  */
   readonly windowsFxVersion?: string;
-  /** cors block */
+  /**
+  * cors block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#cors AppService#cors}
+  */
   readonly cors?: AppServiceSiteConfigCors[];
 }
 
@@ -477,10 +882,25 @@ function appServiceSiteConfigToTerraform(struct?: AppServiceSiteConfig): any {
 }
 
 export interface AppServiceSourceControl {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#branch AppService#branch}
+  */
   readonly branch?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#manual_integration AppService#manual_integration}
+  */
   readonly manualIntegration?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#repo_url AppService#repo_url}
+  */
   readonly repoUrl?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#rollback_enabled AppService#rollback_enabled}
+  */
   readonly rollbackEnabled?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#use_mercurial AppService#use_mercurial}
+  */
   readonly useMercurial?: boolean;
 }
 
@@ -496,11 +916,29 @@ function appServiceSourceControlToTerraform(struct?: AppServiceSourceControl): a
 }
 
 export interface AppServiceStorageAccount {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#access_key AppService#access_key}
+  */
   readonly accessKey: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#account_name AppService#account_name}
+  */
   readonly accountName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#mount_path AppService#mount_path}
+  */
   readonly mountPath?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#name AppService#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#share_name AppService#share_name}
+  */
   readonly shareName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#type AppService#type}
+  */
   readonly type: string;
 }
 
@@ -517,9 +955,21 @@ function appServiceStorageAccountToTerraform(struct?: AppServiceStorageAccount):
 }
 
 export interface AppServiceTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#create AppService#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#delete AppService#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#read AppService#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#update AppService#update}
+  */
   readonly update?: string;
 }
 
@@ -534,14 +984,22 @@ function appServiceTimeoutsToTerraform(struct?: AppServiceTimeouts): any {
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html azurerm_app_service}
+*/
 export class AppService extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html azurerm_app_service} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options AppServiceConfig
+  */
   public constructor(scope: Construct, id: string, config: AppServiceConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_app_service',

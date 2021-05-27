@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/mssql_database_extended_auditing_policy_a.html
+// https://www.terraform.io/docs/providers/azurerm/r/mssql_database_extended_auditing_policy.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,19 +7,53 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface MssqlDatabaseExtendedAuditingPolicyAConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_database_extended_auditing_policy.html#database_id MssqlDatabaseExtendedAuditingPolicyA#database_id}
+  */
   readonly databaseId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_database_extended_auditing_policy.html#log_monitoring_enabled MssqlDatabaseExtendedAuditingPolicyA#log_monitoring_enabled}
+  */
   readonly logMonitoringEnabled?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_database_extended_auditing_policy.html#retention_in_days MssqlDatabaseExtendedAuditingPolicyA#retention_in_days}
+  */
   readonly retentionInDays?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_database_extended_auditing_policy.html#storage_account_access_key MssqlDatabaseExtendedAuditingPolicyA#storage_account_access_key}
+  */
   readonly storageAccountAccessKey?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_database_extended_auditing_policy.html#storage_account_access_key_is_secondary MssqlDatabaseExtendedAuditingPolicyA#storage_account_access_key_is_secondary}
+  */
   readonly storageAccountAccessKeyIsSecondary?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_database_extended_auditing_policy.html#storage_endpoint MssqlDatabaseExtendedAuditingPolicyA#storage_endpoint}
+  */
   readonly storageEndpoint?: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_database_extended_auditing_policy.html#timeouts MssqlDatabaseExtendedAuditingPolicyA#timeouts}
+  */
   readonly timeouts?: MssqlDatabaseExtendedAuditingPolicyTimeouts;
 }
 export interface MssqlDatabaseExtendedAuditingPolicyTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_database_extended_auditing_policy.html#create MssqlDatabaseExtendedAuditingPolicyA#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_database_extended_auditing_policy.html#delete MssqlDatabaseExtendedAuditingPolicyA#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_database_extended_auditing_policy.html#read MssqlDatabaseExtendedAuditingPolicyA#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_database_extended_auditing_policy.html#update MssqlDatabaseExtendedAuditingPolicyA#update}
+  */
   readonly update?: string;
 }
 
@@ -34,14 +68,22 @@ function mssqlDatabaseExtendedAuditingPolicyTimeoutsToTerraform(struct?: MssqlDa
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_database_extended_auditing_policy.html azurerm_mssql_database_extended_auditing_policy}
+*/
 export class MssqlDatabaseExtendedAuditingPolicyA extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_database_extended_auditing_policy.html azurerm_mssql_database_extended_auditing_policy} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options MssqlDatabaseExtendedAuditingPolicyAConfig
+  */
   public constructor(scope: Construct, id: string, config: MssqlDatabaseExtendedAuditingPolicyAConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_mssql_database_extended_auditing_policy',

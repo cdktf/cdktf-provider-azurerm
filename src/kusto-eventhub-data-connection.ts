@@ -7,25 +7,77 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface KustoEventhubDataConnectionConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_eventhub_data_connection.html#cluster_name KustoEventhubDataConnection#cluster_name}
+  */
   readonly clusterName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_eventhub_data_connection.html#compression KustoEventhubDataConnection#compression}
+  */
   readonly compression?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_eventhub_data_connection.html#consumer_group KustoEventhubDataConnection#consumer_group}
+  */
   readonly consumerGroup: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_eventhub_data_connection.html#data_format KustoEventhubDataConnection#data_format}
+  */
   readonly dataFormat?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_eventhub_data_connection.html#database_name KustoEventhubDataConnection#database_name}
+  */
   readonly databaseName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_eventhub_data_connection.html#event_system_properties KustoEventhubDataConnection#event_system_properties}
+  */
   readonly eventSystemProperties?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_eventhub_data_connection.html#eventhub_id KustoEventhubDataConnection#eventhub_id}
+  */
   readonly eventhubId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_eventhub_data_connection.html#location KustoEventhubDataConnection#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_eventhub_data_connection.html#mapping_rule_name KustoEventhubDataConnection#mapping_rule_name}
+  */
   readonly mappingRuleName?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_eventhub_data_connection.html#name KustoEventhubDataConnection#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_eventhub_data_connection.html#resource_group_name KustoEventhubDataConnection#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_eventhub_data_connection.html#table_name KustoEventhubDataConnection#table_name}
+  */
   readonly tableName?: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_eventhub_data_connection.html#timeouts KustoEventhubDataConnection#timeouts}
+  */
   readonly timeouts?: KustoEventhubDataConnectionTimeouts;
 }
 export interface KustoEventhubDataConnectionTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_eventhub_data_connection.html#create KustoEventhubDataConnection#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_eventhub_data_connection.html#delete KustoEventhubDataConnection#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_eventhub_data_connection.html#read KustoEventhubDataConnection#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_eventhub_data_connection.html#update KustoEventhubDataConnection#update}
+  */
   readonly update?: string;
 }
 
@@ -40,14 +92,22 @@ function kustoEventhubDataConnectionTimeoutsToTerraform(struct?: KustoEventhubDa
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_eventhub_data_connection.html azurerm_kusto_eventhub_data_connection}
+*/
 export class KustoEventhubDataConnection extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_eventhub_data_connection.html azurerm_kusto_eventhub_data_connection} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options KustoEventhubDataConnectionConfig
+  */
   public constructor(scope: Construct, id: string, config: KustoEventhubDataConnectionConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_kusto_eventhub_data_connection',

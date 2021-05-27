@@ -7,20 +7,57 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DnsCnameRecordConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_cname_record.html#name DnsCnameRecord#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_cname_record.html#record DnsCnameRecord#record}
+  */
   readonly record?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_cname_record.html#resource_group_name DnsCnameRecord#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_cname_record.html#tags DnsCnameRecord#tags}
+  */
   readonly tags?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_cname_record.html#target_resource_id DnsCnameRecord#target_resource_id}
+  */
   readonly targetResourceId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_cname_record.html#ttl DnsCnameRecord#ttl}
+  */
   readonly ttl: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_cname_record.html#zone_name DnsCnameRecord#zone_name}
+  */
   readonly zoneName: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_cname_record.html#timeouts DnsCnameRecord#timeouts}
+  */
   readonly timeouts?: DnsCnameRecordTimeouts;
 }
 export interface DnsCnameRecordTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_cname_record.html#create DnsCnameRecord#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_cname_record.html#delete DnsCnameRecord#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_cname_record.html#read DnsCnameRecord#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_cname_record.html#update DnsCnameRecord#update}
+  */
   readonly update?: string;
 }
 
@@ -35,14 +72,22 @@ function dnsCnameRecordTimeoutsToTerraform(struct?: DnsCnameRecordTimeouts): any
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/dns_cname_record.html azurerm_dns_cname_record}
+*/
 export class DnsCnameRecord extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/dns_cname_record.html azurerm_dns_cname_record} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DnsCnameRecordConfig
+  */
   public constructor(scope: Construct, id: string, config: DnsCnameRecordConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_dns_cname_record',

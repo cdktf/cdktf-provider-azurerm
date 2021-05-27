@@ -7,25 +7,75 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataFactoryDatasetAzureBlobConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_azure_blob.html#additional_properties DataFactoryDatasetAzureBlob#additional_properties}
+  */
   readonly additionalProperties?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_azure_blob.html#annotations DataFactoryDatasetAzureBlob#annotations}
+  */
   readonly annotations?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_azure_blob.html#data_factory_name DataFactoryDatasetAzureBlob#data_factory_name}
+  */
   readonly dataFactoryName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_azure_blob.html#description DataFactoryDatasetAzureBlob#description}
+  */
   readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_azure_blob.html#filename DataFactoryDatasetAzureBlob#filename}
+  */
   readonly filename?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_azure_blob.html#folder DataFactoryDatasetAzureBlob#folder}
+  */
   readonly folder?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_azure_blob.html#linked_service_name DataFactoryDatasetAzureBlob#linked_service_name}
+  */
   readonly linkedServiceName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_azure_blob.html#name DataFactoryDatasetAzureBlob#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_azure_blob.html#parameters DataFactoryDatasetAzureBlob#parameters}
+  */
   readonly parameters?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_azure_blob.html#path DataFactoryDatasetAzureBlob#path}
+  */
   readonly path?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_azure_blob.html#resource_group_name DataFactoryDatasetAzureBlob#resource_group_name}
+  */
   readonly resourceGroupName: string;
-  /** schema_column block */
+  /**
+  * schema_column block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_azure_blob.html#schema_column DataFactoryDatasetAzureBlob#schema_column}
+  */
   readonly schemaColumn?: DataFactoryDatasetAzureBlobSchemaColumn[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_azure_blob.html#timeouts DataFactoryDatasetAzureBlob#timeouts}
+  */
   readonly timeouts?: DataFactoryDatasetAzureBlobTimeouts;
 }
 export interface DataFactoryDatasetAzureBlobSchemaColumn {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_azure_blob.html#description DataFactoryDatasetAzureBlob#description}
+  */
   readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_azure_blob.html#name DataFactoryDatasetAzureBlob#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_azure_blob.html#type DataFactoryDatasetAzureBlob#type}
+  */
   readonly type?: string;
 }
 
@@ -39,9 +89,21 @@ function dataFactoryDatasetAzureBlobSchemaColumnToTerraform(struct?: DataFactory
 }
 
 export interface DataFactoryDatasetAzureBlobTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_azure_blob.html#create DataFactoryDatasetAzureBlob#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_azure_blob.html#delete DataFactoryDatasetAzureBlob#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_azure_blob.html#read DataFactoryDatasetAzureBlob#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_azure_blob.html#update DataFactoryDatasetAzureBlob#update}
+  */
   readonly update?: string;
 }
 
@@ -56,14 +118,22 @@ function dataFactoryDatasetAzureBlobTimeoutsToTerraform(struct?: DataFactoryData
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_azure_blob.html azurerm_data_factory_dataset_azure_blob}
+*/
 export class DataFactoryDatasetAzureBlob extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_azure_blob.html azurerm_data_factory_dataset_azure_blob} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataFactoryDatasetAzureBlobConfig
+  */
   public constructor(scope: Construct, id: string, config: DataFactoryDatasetAzureBlobConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_data_factory_dataset_azure_blob',

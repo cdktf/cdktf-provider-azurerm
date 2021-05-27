@@ -7,18 +7,49 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface RedisFirewallRuleConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_firewall_rule.html#end_ip RedisFirewallRule#end_ip}
+  */
   readonly endIp: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_firewall_rule.html#name RedisFirewallRule#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_firewall_rule.html#redis_cache_name RedisFirewallRule#redis_cache_name}
+  */
   readonly redisCacheName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_firewall_rule.html#resource_group_name RedisFirewallRule#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_firewall_rule.html#start_ip RedisFirewallRule#start_ip}
+  */
   readonly startIp: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_firewall_rule.html#timeouts RedisFirewallRule#timeouts}
+  */
   readonly timeouts?: RedisFirewallRuleTimeouts;
 }
 export interface RedisFirewallRuleTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_firewall_rule.html#create RedisFirewallRule#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_firewall_rule.html#delete RedisFirewallRule#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_firewall_rule.html#read RedisFirewallRule#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_firewall_rule.html#update RedisFirewallRule#update}
+  */
   readonly update?: string;
 }
 
@@ -33,14 +64,22 @@ function redisFirewallRuleTimeoutsToTerraform(struct?: RedisFirewallRuleTimeouts
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/redis_firewall_rule.html azurerm_redis_firewall_rule}
+*/
 export class RedisFirewallRule extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/redis_firewall_rule.html azurerm_redis_firewall_rule} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options RedisFirewallRuleConfig
+  */
   public constructor(scope: Construct, id: string, config: RedisFirewallRuleConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_redis_firewall_rule',

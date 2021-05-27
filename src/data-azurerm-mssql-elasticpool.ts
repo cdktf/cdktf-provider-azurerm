@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/data_azurerm_mssql_elasticpool.html
+// https://www.terraform.io/docs/providers/azurerm/d/mssql_elasticpool.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,13 +7,29 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataAzurermMssqlElasticpoolConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/mssql_elasticpool.html#name DataAzurermMssqlElasticpool#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/mssql_elasticpool.html#resource_group_name DataAzurermMssqlElasticpool#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/mssql_elasticpool.html#server_name DataAzurermMssqlElasticpool#server_name}
+  */
   readonly serverName: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/mssql_elasticpool.html#timeouts DataAzurermMssqlElasticpool#timeouts}
+  */
   readonly timeouts?: DataAzurermMssqlElasticpoolTimeouts;
 }
 export interface DataAzurermMssqlElasticpoolTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/mssql_elasticpool.html#read DataAzurermMssqlElasticpool#read}
+  */
   readonly read?: string;
 }
 
@@ -25,14 +41,22 @@ function dataAzurermMssqlElasticpoolTimeoutsToTerraform(struct?: DataAzurermMssq
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/mssql_elasticpool.html azurerm_mssql_elasticpool}
+*/
 export class DataAzurermMssqlElasticpool extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/mssql_elasticpool.html azurerm_mssql_elasticpool} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataAzurermMssqlElasticpoolConfig
+  */
   public constructor(scope: Construct, id: string, config: DataAzurermMssqlElasticpoolConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_mssql_elasticpool',

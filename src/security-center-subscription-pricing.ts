@@ -7,15 +7,37 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface SecurityCenterSubscriptionPricingConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_subscription_pricing.html#resource_type SecurityCenterSubscriptionPricing#resource_type}
+  */
   readonly resourceType?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_subscription_pricing.html#tier SecurityCenterSubscriptionPricing#tier}
+  */
   readonly tier: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_subscription_pricing.html#timeouts SecurityCenterSubscriptionPricing#timeouts}
+  */
   readonly timeouts?: SecurityCenterSubscriptionPricingTimeouts;
 }
 export interface SecurityCenterSubscriptionPricingTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_subscription_pricing.html#create SecurityCenterSubscriptionPricing#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_subscription_pricing.html#delete SecurityCenterSubscriptionPricing#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_subscription_pricing.html#read SecurityCenterSubscriptionPricing#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_subscription_pricing.html#update SecurityCenterSubscriptionPricing#update}
+  */
   readonly update?: string;
 }
 
@@ -30,14 +52,22 @@ function securityCenterSubscriptionPricingTimeoutsToTerraform(struct?: SecurityC
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_subscription_pricing.html azurerm_security_center_subscription_pricing}
+*/
 export class SecurityCenterSubscriptionPricing extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_subscription_pricing.html azurerm_security_center_subscription_pricing} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options SecurityCenterSubscriptionPricingConfig
+  */
   public constructor(scope: Construct, id: string, config: SecurityCenterSubscriptionPricingConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_security_center_subscription_pricing',

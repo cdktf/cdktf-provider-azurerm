@@ -7,17 +7,45 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface SiteRecoveryProtectionContainerConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/site_recovery_protection_container.html#name SiteRecoveryProtectionContainer#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/site_recovery_protection_container.html#recovery_fabric_name SiteRecoveryProtectionContainer#recovery_fabric_name}
+  */
   readonly recoveryFabricName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/site_recovery_protection_container.html#recovery_vault_name SiteRecoveryProtectionContainer#recovery_vault_name}
+  */
   readonly recoveryVaultName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/site_recovery_protection_container.html#resource_group_name SiteRecoveryProtectionContainer#resource_group_name}
+  */
   readonly resourceGroupName: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/site_recovery_protection_container.html#timeouts SiteRecoveryProtectionContainer#timeouts}
+  */
   readonly timeouts?: SiteRecoveryProtectionContainerTimeouts;
 }
 export interface SiteRecoveryProtectionContainerTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/site_recovery_protection_container.html#create SiteRecoveryProtectionContainer#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/site_recovery_protection_container.html#delete SiteRecoveryProtectionContainer#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/site_recovery_protection_container.html#read SiteRecoveryProtectionContainer#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/site_recovery_protection_container.html#update SiteRecoveryProtectionContainer#update}
+  */
   readonly update?: string;
 }
 
@@ -32,14 +60,22 @@ function siteRecoveryProtectionContainerTimeoutsToTerraform(struct?: SiteRecover
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/site_recovery_protection_container.html azurerm_site_recovery_protection_container}
+*/
 export class SiteRecoveryProtectionContainer extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/site_recovery_protection_container.html azurerm_site_recovery_protection_container} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options SiteRecoveryProtectionContainerConfig
+  */
   public constructor(scope: Construct, id: string, config: SiteRecoveryProtectionContainerConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_site_recovery_protection_container',

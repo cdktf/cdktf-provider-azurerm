@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/data_azurerm_function_app_host_keys.html
+// https://www.terraform.io/docs/providers/azurerm/d/function_app_host_keys.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,12 +7,25 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataAzurermFunctionAppHostKeysConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/function_app_host_keys.html#name DataAzurermFunctionAppHostKeys#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/function_app_host_keys.html#resource_group_name DataAzurermFunctionAppHostKeys#resource_group_name}
+  */
   readonly resourceGroupName: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/function_app_host_keys.html#timeouts DataAzurermFunctionAppHostKeys#timeouts}
+  */
   readonly timeouts?: DataAzurermFunctionAppHostKeysTimeouts;
 }
 export interface DataAzurermFunctionAppHostKeysTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/function_app_host_keys.html#read DataAzurermFunctionAppHostKeys#read}
+  */
   readonly read?: string;
 }
 
@@ -24,14 +37,22 @@ function dataAzurermFunctionAppHostKeysTimeoutsToTerraform(struct?: DataAzurermF
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/function_app_host_keys.html azurerm_function_app_host_keys}
+*/
 export class DataAzurermFunctionAppHostKeys extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/function_app_host_keys.html azurerm_function_app_host_keys} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataAzurermFunctionAppHostKeysConfig
+  */
   public constructor(scope: Construct, id: string, config: DataAzurermFunctionAppHostKeysConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_function_app_host_keys',

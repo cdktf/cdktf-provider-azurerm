@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/data_azurerm_virtual_machine_scale_set.html
+// https://www.terraform.io/docs/providers/azurerm/d/virtual_machine_scale_set.html
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -7,9 +7,19 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataAzurermVirtualMachineScaleSetConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/virtual_machine_scale_set.html#name DataAzurermVirtualMachineScaleSet#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/virtual_machine_scale_set.html#resource_group_name DataAzurermVirtualMachineScaleSet#resource_group_name}
+  */
   readonly resourceGroupName: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/virtual_machine_scale_set.html#timeouts DataAzurermVirtualMachineScaleSet#timeouts}
+  */
   readonly timeouts?: DataAzurermVirtualMachineScaleSetTimeouts;
 }
 export class DataAzurermVirtualMachineScaleSetIdentity extends cdktf.ComplexComputedList {
@@ -153,6 +163,9 @@ export class DataAzurermVirtualMachineScaleSetNetworkInterface extends cdktf.Com
   }
 }
 export interface DataAzurermVirtualMachineScaleSetTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/virtual_machine_scale_set.html#read DataAzurermVirtualMachineScaleSet#read}
+  */
   readonly read?: string;
 }
 
@@ -164,14 +177,22 @@ function dataAzurermVirtualMachineScaleSetTimeoutsToTerraform(struct?: DataAzure
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/virtual_machine_scale_set.html azurerm_virtual_machine_scale_set}
+*/
 export class DataAzurermVirtualMachineScaleSet extends cdktf.TerraformDataSource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/virtual_machine_scale_set.html azurerm_virtual_machine_scale_set} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataAzurermVirtualMachineScaleSetConfig
+  */
   public constructor(scope: Construct, id: string, config: DataAzurermVirtualMachineScaleSetConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_virtual_machine_scale_set',

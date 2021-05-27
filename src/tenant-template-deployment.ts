@@ -7,20 +7,57 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface TenantTemplateDeploymentConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/tenant_template_deployment.html#debug_level TenantTemplateDeployment#debug_level}
+  */
   readonly debugLevel?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/tenant_template_deployment.html#location TenantTemplateDeployment#location}
+  */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/tenant_template_deployment.html#name TenantTemplateDeployment#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/tenant_template_deployment.html#parameters_content TenantTemplateDeployment#parameters_content}
+  */
   readonly parametersContent?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/tenant_template_deployment.html#tags TenantTemplateDeployment#tags}
+  */
   readonly tags?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/tenant_template_deployment.html#template_content TenantTemplateDeployment#template_content}
+  */
   readonly templateContent?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/tenant_template_deployment.html#template_spec_version_id TenantTemplateDeployment#template_spec_version_id}
+  */
   readonly templateSpecVersionId?: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/tenant_template_deployment.html#timeouts TenantTemplateDeployment#timeouts}
+  */
   readonly timeouts?: TenantTemplateDeploymentTimeouts;
 }
 export interface TenantTemplateDeploymentTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/tenant_template_deployment.html#create TenantTemplateDeployment#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/tenant_template_deployment.html#delete TenantTemplateDeployment#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/tenant_template_deployment.html#read TenantTemplateDeployment#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/tenant_template_deployment.html#update TenantTemplateDeployment#update}
+  */
   readonly update?: string;
 }
 
@@ -35,14 +72,22 @@ function tenantTemplateDeploymentTimeoutsToTerraform(struct?: TenantTemplateDepl
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/tenant_template_deployment.html azurerm_tenant_template_deployment}
+*/
 export class TenantTemplateDeployment extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/tenant_template_deployment.html azurerm_tenant_template_deployment} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options TenantTemplateDeploymentConfig
+  */
   public constructor(scope: Construct, id: string, config: TenantTemplateDeploymentConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_tenant_template_deployment',

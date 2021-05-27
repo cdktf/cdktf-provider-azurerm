@@ -7,18 +7,49 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface PostgresqlDatabaseConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_database.html#charset PostgresqlDatabase#charset}
+  */
   readonly charset: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_database.html#collation PostgresqlDatabase#collation}
+  */
   readonly collation: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_database.html#name PostgresqlDatabase#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_database.html#resource_group_name PostgresqlDatabase#resource_group_name}
+  */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_database.html#server_name PostgresqlDatabase#server_name}
+  */
   readonly serverName: string;
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_database.html#timeouts PostgresqlDatabase#timeouts}
+  */
   readonly timeouts?: PostgresqlDatabaseTimeouts;
 }
 export interface PostgresqlDatabaseTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_database.html#create PostgresqlDatabase#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_database.html#delete PostgresqlDatabase#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_database.html#read PostgresqlDatabase#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_database.html#update PostgresqlDatabase#update}
+  */
   readonly update?: string;
 }
 
@@ -33,14 +64,22 @@ function postgresqlDatabaseTimeoutsToTerraform(struct?: PostgresqlDatabaseTimeou
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_database.html azurerm_postgresql_database}
+*/
 export class PostgresqlDatabase extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_database.html azurerm_postgresql_database} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options PostgresqlDatabaseConfig
+  */
   public constructor(scope: Construct, id: string, config: PostgresqlDatabaseConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_postgresql_database',

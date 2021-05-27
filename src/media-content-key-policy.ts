@@ -7,17 +7,43 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface MediaContentKeyPolicyConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_content_key_policy.html#description MediaContentKeyPolicy#description}
+  */
   readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_content_key_policy.html#media_services_account_name MediaContentKeyPolicy#media_services_account_name}
+  */
   readonly mediaServicesAccountName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_content_key_policy.html#name MediaContentKeyPolicy#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_content_key_policy.html#resource_group_name MediaContentKeyPolicy#resource_group_name}
+  */
   readonly resourceGroupName: string;
-  /** policy_option block */
+  /**
+  * policy_option block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_content_key_policy.html#policy_option MediaContentKeyPolicy#policy_option}
+  */
   readonly policyOption: MediaContentKeyPolicyPolicyOption[];
-  /** timeouts block */
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_content_key_policy.html#timeouts MediaContentKeyPolicy#timeouts}
+  */
   readonly timeouts?: MediaContentKeyPolicyTimeouts;
 }
 export interface MediaContentKeyPolicyPolicyOptionFairplayConfigurationOfflineRentalConfiguration {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_content_key_policy.html#playback_duration_seconds MediaContentKeyPolicy#playback_duration_seconds}
+  */
   readonly playbackDurationSeconds?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_content_key_policy.html#storage_duration_seconds MediaContentKeyPolicy#storage_duration_seconds}
+  */
   readonly storageDurationSeconds?: number;
 }
 
@@ -30,12 +56,31 @@ function mediaContentKeyPolicyPolicyOptionFairplayConfigurationOfflineRentalConf
 }
 
 export interface MediaContentKeyPolicyPolicyOptionFairplayConfiguration {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_content_key_policy.html#ask MediaContentKeyPolicy#ask}
+  */
   readonly ask?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_content_key_policy.html#pfx MediaContentKeyPolicy#pfx}
+  */
   readonly pfx?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_content_key_policy.html#pfx_password MediaContentKeyPolicy#pfx_password}
+  */
   readonly pfxPassword?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_content_key_policy.html#rental_and_lease_key_type MediaContentKeyPolicy#rental_and_lease_key_type}
+  */
   readonly rentalAndLeaseKeyType?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_content_key_policy.html#rental_duration_seconds MediaContentKeyPolicy#rental_duration_seconds}
+  */
   readonly rentalDurationSeconds?: number;
-  /** offline_rental_configuration block */
+  /**
+  * offline_rental_configuration block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_content_key_policy.html#offline_rental_configuration MediaContentKeyPolicy#offline_rental_configuration}
+  */
   readonly offlineRentalConfiguration?: MediaContentKeyPolicyPolicyOptionFairplayConfigurationOfflineRentalConfiguration[];
 }
 
@@ -52,16 +97,49 @@ function mediaContentKeyPolicyPolicyOptionFairplayConfigurationToTerraform(struc
 }
 
 export interface MediaContentKeyPolicyPolicyOptionPlayreadyConfigurationLicensePlayRight {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_content_key_policy.html#agc_and_color_stripe_restriction MediaContentKeyPolicy#agc_and_color_stripe_restriction}
+  */
   readonly agcAndColorStripeRestriction?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_content_key_policy.html#allow_passing_video_content_to_unknown_output MediaContentKeyPolicy#allow_passing_video_content_to_unknown_output}
+  */
   readonly allowPassingVideoContentToUnknownOutput?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_content_key_policy.html#analog_video_opl MediaContentKeyPolicy#analog_video_opl}
+  */
   readonly analogVideoOpl?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_content_key_policy.html#compressed_digital_audio_opl MediaContentKeyPolicy#compressed_digital_audio_opl}
+  */
   readonly compressedDigitalAudioOpl?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_content_key_policy.html#digital_video_only_content_restriction MediaContentKeyPolicy#digital_video_only_content_restriction}
+  */
   readonly digitalVideoOnlyContentRestriction?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_content_key_policy.html#first_play_expiration MediaContentKeyPolicy#first_play_expiration}
+  */
   readonly firstPlayExpiration?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_content_key_policy.html#image_constraint_for_analog_component_video_restriction MediaContentKeyPolicy#image_constraint_for_analog_component_video_restriction}
+  */
   readonly imageConstraintForAnalogComponentVideoRestriction?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_content_key_policy.html#image_constraint_for_analog_computer_monitor_restriction MediaContentKeyPolicy#image_constraint_for_analog_computer_monitor_restriction}
+  */
   readonly imageConstraintForAnalogComputerMonitorRestriction?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_content_key_policy.html#scms_restriction MediaContentKeyPolicy#scms_restriction}
+  */
   readonly scmsRestriction?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_content_key_policy.html#uncompressed_digital_audio_opl MediaContentKeyPolicy#uncompressed_digital_audio_opl}
+  */
   readonly uncompressedDigitalAudioOpl?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_content_key_policy.html#uncompressed_digital_video_opl MediaContentKeyPolicy#uncompressed_digital_video_opl}
+  */
   readonly uncompressedDigitalVideoOpl?: number;
 }
 
@@ -83,17 +161,51 @@ function mediaContentKeyPolicyPolicyOptionPlayreadyConfigurationLicensePlayRight
 }
 
 export interface MediaContentKeyPolicyPolicyOptionPlayreadyConfigurationLicense {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_content_key_policy.html#allow_test_devices MediaContentKeyPolicy#allow_test_devices}
+  */
   readonly allowTestDevices?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_content_key_policy.html#begin_date MediaContentKeyPolicy#begin_date}
+  */
   readonly beginDate?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_content_key_policy.html#content_key_location_from_header_enabled MediaContentKeyPolicy#content_key_location_from_header_enabled}
+  */
   readonly contentKeyLocationFromHeaderEnabled?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_content_key_policy.html#content_key_location_from_key_id MediaContentKeyPolicy#content_key_location_from_key_id}
+  */
   readonly contentKeyLocationFromKeyId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_content_key_policy.html#content_type MediaContentKeyPolicy#content_type}
+  */
   readonly contentType?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_content_key_policy.html#expiration_date MediaContentKeyPolicy#expiration_date}
+  */
   readonly expirationDate?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_content_key_policy.html#grace_period MediaContentKeyPolicy#grace_period}
+  */
   readonly gracePeriod?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_content_key_policy.html#license_type MediaContentKeyPolicy#license_type}
+  */
   readonly licenseType?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_content_key_policy.html#relative_begin_date MediaContentKeyPolicy#relative_begin_date}
+  */
   readonly relativeBeginDate?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_content_key_policy.html#relative_expiration_date MediaContentKeyPolicy#relative_expiration_date}
+  */
   readonly relativeExpirationDate?: string;
-  /** play_right block */
+  /**
+  * play_right block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_content_key_policy.html#play_right MediaContentKeyPolicy#play_right}
+  */
   readonly playRight?: MediaContentKeyPolicyPolicyOptionPlayreadyConfigurationLicensePlayRight[];
 }
 
@@ -115,7 +227,13 @@ function mediaContentKeyPolicyPolicyOptionPlayreadyConfigurationLicenseToTerrafo
 }
 
 export interface MediaContentKeyPolicyPolicyOptionTokenRestrictionRequiredClaim {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_content_key_policy.html#type MediaContentKeyPolicy#type}
+  */
   readonly type?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_content_key_policy.html#value MediaContentKeyPolicy#value}
+  */
   readonly value?: string;
 }
 
@@ -128,15 +246,43 @@ function mediaContentKeyPolicyPolicyOptionTokenRestrictionRequiredClaimToTerrafo
 }
 
 export interface MediaContentKeyPolicyPolicyOptionTokenRestriction {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_content_key_policy.html#audience MediaContentKeyPolicy#audience}
+  */
   readonly audience?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_content_key_policy.html#issuer MediaContentKeyPolicy#issuer}
+  */
   readonly issuer?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_content_key_policy.html#open_id_connect_discovery_document MediaContentKeyPolicy#open_id_connect_discovery_document}
+  */
   readonly openIdConnectDiscoveryDocument?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_content_key_policy.html#primary_rsa_token_key_exponent MediaContentKeyPolicy#primary_rsa_token_key_exponent}
+  */
   readonly primaryRsaTokenKeyExponent?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_content_key_policy.html#primary_rsa_token_key_modulus MediaContentKeyPolicy#primary_rsa_token_key_modulus}
+  */
   readonly primaryRsaTokenKeyModulus?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_content_key_policy.html#primary_symmetric_token_key MediaContentKeyPolicy#primary_symmetric_token_key}
+  */
   readonly primarySymmetricTokenKey?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_content_key_policy.html#primary_x509_token_key_raw MediaContentKeyPolicy#primary_x509_token_key_raw}
+  */
   readonly primaryX509TokenKeyRaw?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_content_key_policy.html#token_type MediaContentKeyPolicy#token_type}
+  */
   readonly tokenType?: string;
-  /** required_claim block */
+  /**
+  * required_claim block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_content_key_policy.html#required_claim MediaContentKeyPolicy#required_claim}
+  */
   readonly requiredClaim?: MediaContentKeyPolicyPolicyOptionTokenRestrictionRequiredClaim[];
 }
 
@@ -156,15 +302,39 @@ function mediaContentKeyPolicyPolicyOptionTokenRestrictionToTerraform(struct?: M
 }
 
 export interface MediaContentKeyPolicyPolicyOption {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_content_key_policy.html#clear_key_configuration_enabled MediaContentKeyPolicy#clear_key_configuration_enabled}
+  */
   readonly clearKeyConfigurationEnabled?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_content_key_policy.html#name MediaContentKeyPolicy#name}
+  */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_content_key_policy.html#open_restriction_enabled MediaContentKeyPolicy#open_restriction_enabled}
+  */
   readonly openRestrictionEnabled?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_content_key_policy.html#widevine_configuration_template MediaContentKeyPolicy#widevine_configuration_template}
+  */
   readonly widevineConfigurationTemplate?: string;
-  /** fairplay_configuration block */
+  /**
+  * fairplay_configuration block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_content_key_policy.html#fairplay_configuration MediaContentKeyPolicy#fairplay_configuration}
+  */
   readonly fairplayConfiguration?: MediaContentKeyPolicyPolicyOptionFairplayConfiguration[];
-  /** playready_configuration_license block */
+  /**
+  * playready_configuration_license block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_content_key_policy.html#playready_configuration_license MediaContentKeyPolicy#playready_configuration_license}
+  */
   readonly playreadyConfigurationLicense?: MediaContentKeyPolicyPolicyOptionPlayreadyConfigurationLicense[];
-  /** token_restriction block */
+  /**
+  * token_restriction block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_content_key_policy.html#token_restriction MediaContentKeyPolicy#token_restriction}
+  */
   readonly tokenRestriction?: MediaContentKeyPolicyPolicyOptionTokenRestriction[];
 }
 
@@ -182,9 +352,21 @@ function mediaContentKeyPolicyPolicyOptionToTerraform(struct?: MediaContentKeyPo
 }
 
 export interface MediaContentKeyPolicyTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_content_key_policy.html#create MediaContentKeyPolicy#create}
+  */
   readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_content_key_policy.html#delete MediaContentKeyPolicy#delete}
+  */
   readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_content_key_policy.html#read MediaContentKeyPolicy#read}
+  */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_content_key_policy.html#update MediaContentKeyPolicy#update}
+  */
   readonly update?: string;
 }
 
@@ -199,14 +381,22 @@ function mediaContentKeyPolicyTimeoutsToTerraform(struct?: MediaContentKeyPolicy
 }
 
 
-// Resource
-
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/media_content_key_policy.html azurerm_media_content_key_policy}
+*/
 export class MediaContentKeyPolicy extends cdktf.TerraformResource {
 
   // ===========
   // INITIALIZER
   // ===========
 
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/media_content_key_policy.html azurerm_media_content_key_policy} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options MediaContentKeyPolicyConfig
+  */
   public constructor(scope: Construct, id: string, config: MediaContentKeyPolicyConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_media_content_key_policy',
