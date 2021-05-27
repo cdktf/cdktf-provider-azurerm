@@ -24,6 +24,7 @@ export interface ManagedDiskConfig extends cdktf.TerraformMetaArguments {
   readonly storageAccountId?: string;
   readonly storageAccountType: string;
   readonly tags?: { [key: string]: string };
+  readonly tier?: string;
   readonly zones?: string[];
   /** encryption_settings block */
   readonly encryptionSettings?: ManagedDiskEncryptionSettings[];
@@ -127,6 +128,7 @@ export class ManagedDisk extends cdktf.TerraformResource {
     this._storageAccountId = config.storageAccountId;
     this._storageAccountType = config.storageAccountType;
     this._tags = config.tags;
+    this._tier = config.tier;
     this._zones = config.zones;
     this._encryptionSettings = config.encryptionSettings;
     this._timeouts = config.timeouts;
@@ -398,6 +400,22 @@ export class ManagedDisk extends cdktf.TerraformResource {
     return this._tags
   }
 
+  // tier - computed: true, optional: true, required: false
+  private _tier?: string;
+  public get tier() {
+    return this.getStringAttribute('tier');
+  }
+  public set tier(value: string) {
+    this._tier = value;
+  }
+  public resetTier() {
+    this._tier = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tierInput() {
+    return this._tier
+  }
+
   // zones - computed: false, optional: true, required: false
   private _zones?: string[];
   public get zones() {
@@ -469,6 +487,7 @@ export class ManagedDisk extends cdktf.TerraformResource {
       storage_account_id: cdktf.stringToTerraform(this._storageAccountId),
       storage_account_type: cdktf.stringToTerraform(this._storageAccountType),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      tier: cdktf.stringToTerraform(this._tier),
       zones: cdktf.listMapper(cdktf.stringToTerraform)(this._zones),
       encryption_settings: cdktf.listMapper(managedDiskEncryptionSettingsToTerraform)(this._encryptionSettings),
       timeouts: managedDiskTimeoutsToTerraform(this._timeouts),

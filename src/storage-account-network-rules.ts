@@ -13,9 +13,24 @@ export interface StorageAccountNetworkRulesAConfig extends cdktf.TerraformMetaAr
   readonly resourceGroupName: string;
   readonly storageAccountName: string;
   readonly virtualNetworkSubnetIds?: string[];
+  /** private_link_access block */
+  readonly privateLinkAccess?: StorageAccountNetworkRulesPrivateLinkAccessA[];
   /** timeouts block */
   readonly timeouts?: StorageAccountNetworkRulesTimeouts;
 }
+export interface StorageAccountNetworkRulesPrivateLinkAccessA {
+  readonly endpointResourceId: string;
+  readonly endpointTenantId?: string;
+}
+
+function storageAccountNetworkRulesPrivateLinkAccessAToTerraform(struct?: StorageAccountNetworkRulesPrivateLinkAccessA): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    endpoint_resource_id: cdktf.stringToTerraform(struct!.endpointResourceId),
+    endpoint_tenant_id: cdktf.stringToTerraform(struct!.endpointTenantId),
+  }
+}
+
 export interface StorageAccountNetworkRulesTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -59,6 +74,7 @@ export class StorageAccountNetworkRulesA extends cdktf.TerraformResource {
     this._resourceGroupName = config.resourceGroupName;
     this._storageAccountName = config.storageAccountName;
     this._virtualNetworkSubnetIds = config.virtualNetworkSubnetIds;
+    this._privateLinkAccess = config.privateLinkAccess;
     this._timeouts = config.timeouts;
   }
 
@@ -158,6 +174,22 @@ export class StorageAccountNetworkRulesA extends cdktf.TerraformResource {
     return this._virtualNetworkSubnetIds
   }
 
+  // private_link_access - computed: false, optional: true, required: false
+  private _privateLinkAccess?: StorageAccountNetworkRulesPrivateLinkAccessA[];
+  public get privateLinkAccess() {
+    return this.interpolationForAttribute('private_link_access') as any;
+  }
+  public set privateLinkAccess(value: StorageAccountNetworkRulesPrivateLinkAccessA[] ) {
+    this._privateLinkAccess = value;
+  }
+  public resetPrivateLinkAccess() {
+    this._privateLinkAccess = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get privateLinkAccessInput() {
+    return this._privateLinkAccess
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: StorageAccountNetworkRulesTimeouts;
   public get timeouts() {
@@ -186,6 +218,7 @@ export class StorageAccountNetworkRulesA extends cdktf.TerraformResource {
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       storage_account_name: cdktf.stringToTerraform(this._storageAccountName),
       virtual_network_subnet_ids: cdktf.listMapper(cdktf.stringToTerraform)(this._virtualNetworkSubnetIds),
+      private_link_access: cdktf.listMapper(storageAccountNetworkRulesPrivateLinkAccessAToTerraform)(this._privateLinkAccess),
       timeouts: storageAccountNetworkRulesTimeoutsToTerraform(this._timeouts),
     };
   }

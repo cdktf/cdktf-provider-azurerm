@@ -1,0 +1,243 @@
+// https://www.terraform.io/docs/providers/azurerm/r/machine_learning_inference_cluster.html
+// generated from terraform resource schema
+
+import { Construct } from 'constructs';
+import * as cdktf from 'cdktf';
+
+// Configuration
+
+export interface MachineLearningInferenceClusterConfig extends cdktf.TerraformMetaArguments {
+  readonly clusterPurpose?: string;
+  readonly description?: string;
+  readonly kubernetesClusterId: string;
+  readonly location: string;
+  readonly machineLearningWorkspaceId: string;
+  readonly name: string;
+  readonly tags?: { [key: string]: string };
+  /** ssl block */
+  readonly ssl?: MachineLearningInferenceClusterSsl[];
+  /** timeouts block */
+  readonly timeouts?: MachineLearningInferenceClusterTimeouts;
+}
+export interface MachineLearningInferenceClusterSsl {
+  readonly cert?: string;
+  readonly cname?: string;
+  readonly key?: string;
+}
+
+function machineLearningInferenceClusterSslToTerraform(struct?: MachineLearningInferenceClusterSsl): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    cert: cdktf.stringToTerraform(struct!.cert),
+    cname: cdktf.stringToTerraform(struct!.cname),
+    key: cdktf.stringToTerraform(struct!.key),
+  }
+}
+
+export interface MachineLearningInferenceClusterTimeouts {
+  readonly create?: string;
+  readonly delete?: string;
+  readonly read?: string;
+  readonly update?: string;
+}
+
+function machineLearningInferenceClusterTimeoutsToTerraform(struct?: MachineLearningInferenceClusterTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+
+// Resource
+
+export class MachineLearningInferenceCluster extends cdktf.TerraformResource {
+
+  // ===========
+  // INITIALIZER
+  // ===========
+
+  public constructor(scope: Construct, id: string, config: MachineLearningInferenceClusterConfig) {
+    super(scope, id, {
+      terraformResourceType: 'azurerm_machine_learning_inference_cluster',
+      terraformGeneratorMetadata: {
+        providerName: 'azurerm'
+      },
+      provider: config.provider,
+      dependsOn: config.dependsOn,
+      count: config.count,
+      lifecycle: config.lifecycle
+    });
+    this._clusterPurpose = config.clusterPurpose;
+    this._description = config.description;
+    this._kubernetesClusterId = config.kubernetesClusterId;
+    this._location = config.location;
+    this._machineLearningWorkspaceId = config.machineLearningWorkspaceId;
+    this._name = config.name;
+    this._tags = config.tags;
+    this._ssl = config.ssl;
+    this._timeouts = config.timeouts;
+  }
+
+  // ==========
+  // ATTRIBUTES
+  // ==========
+
+  // cluster_purpose - computed: false, optional: true, required: false
+  private _clusterPurpose?: string;
+  public get clusterPurpose() {
+    return this.getStringAttribute('cluster_purpose');
+  }
+  public set clusterPurpose(value: string ) {
+    this._clusterPurpose = value;
+  }
+  public resetClusterPurpose() {
+    this._clusterPurpose = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get clusterPurposeInput() {
+    return this._clusterPurpose
+  }
+
+  // description - computed: false, optional: true, required: false
+  private _description?: string;
+  public get description() {
+    return this.getStringAttribute('description');
+  }
+  public set description(value: string ) {
+    this._description = value;
+  }
+  public resetDescription() {
+    this._description = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get descriptionInput() {
+    return this._description
+  }
+
+  // id - computed: true, optional: true, required: false
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+
+  // kubernetes_cluster_id - computed: false, optional: false, required: true
+  private _kubernetesClusterId: string;
+  public get kubernetesClusterId() {
+    return this.getStringAttribute('kubernetes_cluster_id');
+  }
+  public set kubernetesClusterId(value: string) {
+    this._kubernetesClusterId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get kubernetesClusterIdInput() {
+    return this._kubernetesClusterId
+  }
+
+  // location - computed: false, optional: false, required: true
+  private _location: string;
+  public get location() {
+    return this.getStringAttribute('location');
+  }
+  public set location(value: string) {
+    this._location = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get locationInput() {
+    return this._location
+  }
+
+  // machine_learning_workspace_id - computed: false, optional: false, required: true
+  private _machineLearningWorkspaceId: string;
+  public get machineLearningWorkspaceId() {
+    return this.getStringAttribute('machine_learning_workspace_id');
+  }
+  public set machineLearningWorkspaceId(value: string) {
+    this._machineLearningWorkspaceId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get machineLearningWorkspaceIdInput() {
+    return this._machineLearningWorkspaceId
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name: string;
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
+  }
+
+  // tags - computed: false, optional: true, required: false
+  private _tags?: { [key: string]: string };
+  public get tags() {
+    return this.interpolationForAttribute('tags') as any;
+  }
+  public set tags(value: { [key: string]: string } ) {
+    this._tags = value;
+  }
+  public resetTags() {
+    this._tags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsInput() {
+    return this._tags
+  }
+
+  // ssl - computed: false, optional: true, required: false
+  private _ssl?: MachineLearningInferenceClusterSsl[];
+  public get ssl() {
+    return this.interpolationForAttribute('ssl') as any;
+  }
+  public set ssl(value: MachineLearningInferenceClusterSsl[] ) {
+    this._ssl = value;
+  }
+  public resetSsl() {
+    this._ssl = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sslInput() {
+    return this._ssl
+  }
+
+  // timeouts - computed: false, optional: true, required: false
+  private _timeouts?: MachineLearningInferenceClusterTimeouts;
+  public get timeouts() {
+    return this.interpolationForAttribute('timeouts') as any;
+  }
+  public set timeouts(value: MachineLearningInferenceClusterTimeouts ) {
+    this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
+  }
+
+  // =========
+  // SYNTHESIS
+  // =========
+
+  protected synthesizeAttributes(): { [name: string]: any } {
+    return {
+      cluster_purpose: cdktf.stringToTerraform(this._clusterPurpose),
+      description: cdktf.stringToTerraform(this._description),
+      kubernetes_cluster_id: cdktf.stringToTerraform(this._kubernetesClusterId),
+      location: cdktf.stringToTerraform(this._location),
+      machine_learning_workspace_id: cdktf.stringToTerraform(this._machineLearningWorkspaceId),
+      name: cdktf.stringToTerraform(this._name),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      ssl: cdktf.listMapper(machineLearningInferenceClusterSslToTerraform)(this._ssl),
+      timeouts: machineLearningInferenceClusterTimeoutsToTerraform(this._timeouts),
+    };
+  }
+}

@@ -16,9 +16,9 @@ export interface MonitorMetricAlertConfig extends cdktf.TerraformMetaArguments {
   readonly scopes: string[];
   readonly severity?: number;
   readonly tags?: { [key: string]: string };
-  /** The location of the target resource. Required when using subscription, resource group scope or multiple scopes. */
+  /** The location of the target pluginsdk. Required when using subscription, resource group scope or multiple scopes. */
   readonly targetResourceLocation?: string;
-  /** The resource type (e.g. Microsoft.Compute/virtualMachines) of the target resource. Required when using subscription, resource group scope or multiple scopes. */
+  /** The resource type (e.g. Microsoft.Compute/virtualMachines) of the target pluginsdk. Required when using subscription, resource group scope or multiple scopes. */
   readonly targetResourceType?: string;
   readonly windowSize?: string;
   /** action block */

@@ -14,6 +14,8 @@ export interface MediaServicesAccountConfig extends cdktf.TerraformMetaArguments
   readonly tags?: { [key: string]: string };
   /** identity block */
   readonly identity?: MediaServicesAccountIdentity[];
+  /** key_delivery_access_control block */
+  readonly keyDeliveryAccessControl?: MediaServicesAccountKeyDeliveryAccessControl[];
   /** storage_account block */
   readonly storageAccount: MediaServicesAccountStorageAccount[];
   /** timeouts block */
@@ -27,6 +29,19 @@ function mediaServicesAccountIdentityToTerraform(struct?: MediaServicesAccountId
   if (!cdktf.canInspect(struct)) { return struct; }
   return {
     type: cdktf.stringToTerraform(struct!.type),
+  }
+}
+
+export interface MediaServicesAccountKeyDeliveryAccessControl {
+  readonly defaultAction?: string;
+  readonly ipAllowList?: string[];
+}
+
+function mediaServicesAccountKeyDeliveryAccessControlToTerraform(struct?: MediaServicesAccountKeyDeliveryAccessControl): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    default_action: cdktf.stringToTerraform(struct!.defaultAction),
+    ip_allow_list: cdktf.listMapper(cdktf.stringToTerraform)(struct!.ipAllowList),
   }
 }
 
@@ -86,6 +101,7 @@ export class MediaServicesAccount extends cdktf.TerraformResource {
     this._storageAuthenticationType = config.storageAuthenticationType;
     this._tags = config.tags;
     this._identity = config.identity;
+    this._keyDeliveryAccessControl = config.keyDeliveryAccessControl;
     this._storageAccount = config.storageAccount;
     this._timeouts = config.timeouts;
   }
@@ -186,6 +202,22 @@ export class MediaServicesAccount extends cdktf.TerraformResource {
     return this._identity
   }
 
+  // key_delivery_access_control - computed: false, optional: true, required: false
+  private _keyDeliveryAccessControl?: MediaServicesAccountKeyDeliveryAccessControl[];
+  public get keyDeliveryAccessControl() {
+    return this.interpolationForAttribute('key_delivery_access_control') as any;
+  }
+  public set keyDeliveryAccessControl(value: MediaServicesAccountKeyDeliveryAccessControl[] ) {
+    this._keyDeliveryAccessControl = value;
+  }
+  public resetKeyDeliveryAccessControl() {
+    this._keyDeliveryAccessControl = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keyDeliveryAccessControlInput() {
+    return this._keyDeliveryAccessControl
+  }
+
   // storage_account - computed: false, optional: false, required: true
   private _storageAccount: MediaServicesAccountStorageAccount[];
   public get storageAccount() {
@@ -227,6 +259,7 @@ export class MediaServicesAccount extends cdktf.TerraformResource {
       storage_authentication_type: cdktf.stringToTerraform(this._storageAuthenticationType),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
       identity: cdktf.listMapper(mediaServicesAccountIdentityToTerraform)(this._identity),
+      key_delivery_access_control: cdktf.listMapper(mediaServicesAccountKeyDeliveryAccessControlToTerraform)(this._keyDeliveryAccessControl),
       storage_account: cdktf.listMapper(mediaServicesAccountStorageAccountToTerraform)(this._storageAccount),
       timeouts: mediaServicesAccountTimeoutsToTerraform(this._timeouts),
     };

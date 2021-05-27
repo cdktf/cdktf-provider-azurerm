@@ -96,6 +96,7 @@ function azurermProviderFeaturesTemplateDeploymentToTerraform(struct?: AzurermPr
 export interface AzurermProviderFeaturesVirtualMachine {
   readonly deleteOsDiskOnDeletion?: boolean;
   readonly gracefulShutdown?: boolean;
+  readonly skipShutdownAndForceDelete?: boolean;
 }
 
 function azurermProviderFeaturesVirtualMachineToTerraform(struct?: AzurermProviderFeaturesVirtualMachine): any {
@@ -103,16 +104,19 @@ function azurermProviderFeaturesVirtualMachineToTerraform(struct?: AzurermProvid
   return {
     delete_os_disk_on_deletion: cdktf.booleanToTerraform(struct!.deleteOsDiskOnDeletion),
     graceful_shutdown: cdktf.booleanToTerraform(struct!.gracefulShutdown),
+    skip_shutdown_and_force_delete: cdktf.booleanToTerraform(struct!.skipShutdownAndForceDelete),
   }
 }
 
 export interface AzurermProviderFeaturesVirtualMachineScaleSet {
+  readonly forceDelete?: boolean;
   readonly rollInstancesWhenRequired: boolean;
 }
 
 function azurermProviderFeaturesVirtualMachineScaleSetToTerraform(struct?: AzurermProviderFeaturesVirtualMachineScaleSet): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   return {
+    force_delete: cdktf.booleanToTerraform(struct!.forceDelete),
     roll_instances_when_required: cdktf.booleanToTerraform(struct!.rollInstancesWhenRequired),
   }
 }

@@ -21,6 +21,33 @@ export interface SpringCloudServiceConfig extends cdktf.TerraformMetaArguments {
   /** trace block */
   readonly trace?: SpringCloudServiceTrace[];
 }
+export class SpringCloudServiceRequiredNetworkTrafficRules extends cdktf.ComplexComputedList {
+
+  // direction - computed: true, optional: false, required: false
+  public get direction() {
+    return this.getStringAttribute('direction');
+  }
+
+  // fqdns - computed: true, optional: false, required: false
+  public get fqdns() {
+    return this.getListAttribute('fqdns');
+  }
+
+  // ip_addresses - computed: true, optional: false, required: false
+  public get ipAddresses() {
+    return this.getListAttribute('ip_addresses');
+  }
+
+  // port - computed: true, optional: false, required: false
+  public get port() {
+    return this.getNumberAttribute('port');
+  }
+
+  // protocol - computed: true, optional: false, required: false
+  public get protocol() {
+    return this.getStringAttribute('protocol');
+  }
+}
 export interface SpringCloudServiceConfigServerGitSettingHttpBasicAuth {
   readonly password: string;
   readonly username: string;
@@ -248,6 +275,11 @@ export class SpringCloudService extends cdktf.TerraformResource {
   // outbound_public_ip_addresses - computed: true, optional: false, required: false
   public get outboundPublicIpAddresses() {
     return this.getListAttribute('outbound_public_ip_addresses');
+  }
+
+  // required_network_traffic_rules - computed: true, optional: false, required: false
+  public requiredNetworkTrafficRules(index: string) {
+    return new SpringCloudServiceRequiredNetworkTrafficRules(this, 'required_network_traffic_rules', index);
   }
 
   // resource_group_name - computed: false, optional: false, required: true

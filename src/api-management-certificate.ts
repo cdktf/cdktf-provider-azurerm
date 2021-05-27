@@ -8,7 +8,9 @@ import * as cdktf from 'cdktf';
 
 export interface ApiManagementCertificateAConfig extends cdktf.TerraformMetaArguments {
   readonly apiManagementName: string;
-  readonly data: string;
+  readonly data?: string;
+  readonly keyVaultIdentityClientId?: string;
+  readonly keyVaultSecretId?: string;
   readonly name: string;
   readonly password?: string;
   readonly resourceGroupName: string;
@@ -54,6 +56,8 @@ export class ApiManagementCertificateA extends cdktf.TerraformResource {
     });
     this._apiManagementName = config.apiManagementName;
     this._data = config.data;
+    this._keyVaultIdentityClientId = config.keyVaultIdentityClientId;
+    this._keyVaultSecretId = config.keyVaultSecretId;
     this._name = config.name;
     this._password = config.password;
     this._resourceGroupName = config.resourceGroupName;
@@ -77,13 +81,16 @@ export class ApiManagementCertificateA extends cdktf.TerraformResource {
     return this._apiManagementName
   }
 
-  // data - computed: false, optional: false, required: true
-  private _data: string;
+  // data - computed: false, optional: true, required: false
+  private _data?: string;
   public get data() {
     return this.getStringAttribute('data');
   }
-  public set data(value: string) {
+  public set data(value: string ) {
     this._data = value;
+  }
+  public resetData() {
+    this._data = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get dataInput() {
@@ -98,6 +105,38 @@ export class ApiManagementCertificateA extends cdktf.TerraformResource {
   // id - computed: true, optional: true, required: false
   public get id() {
     return this.getStringAttribute('id');
+  }
+
+  // key_vault_identity_client_id - computed: false, optional: true, required: false
+  private _keyVaultIdentityClientId?: string;
+  public get keyVaultIdentityClientId() {
+    return this.getStringAttribute('key_vault_identity_client_id');
+  }
+  public set keyVaultIdentityClientId(value: string ) {
+    this._keyVaultIdentityClientId = value;
+  }
+  public resetKeyVaultIdentityClientId() {
+    this._keyVaultIdentityClientId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keyVaultIdentityClientIdInput() {
+    return this._keyVaultIdentityClientId
+  }
+
+  // key_vault_secret_id - computed: false, optional: true, required: false
+  private _keyVaultSecretId?: string;
+  public get keyVaultSecretId() {
+    return this.getStringAttribute('key_vault_secret_id');
+  }
+  public set keyVaultSecretId(value: string ) {
+    this._keyVaultSecretId = value;
+  }
+  public resetKeyVaultSecretId() {
+    this._keyVaultSecretId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keyVaultSecretIdInput() {
+    return this._keyVaultSecretId
   }
 
   // name - computed: false, optional: false, required: true
@@ -176,6 +215,8 @@ export class ApiManagementCertificateA extends cdktf.TerraformResource {
     return {
       api_management_name: cdktf.stringToTerraform(this._apiManagementName),
       data: cdktf.stringToTerraform(this._data),
+      key_vault_identity_client_id: cdktf.stringToTerraform(this._keyVaultIdentityClientId),
+      key_vault_secret_id: cdktf.stringToTerraform(this._keyVaultSecretId),
       name: cdktf.stringToTerraform(this._name),
       password: cdktf.stringToTerraform(this._password),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),

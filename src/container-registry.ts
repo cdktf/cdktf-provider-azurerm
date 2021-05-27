@@ -8,6 +8,7 @@ import * as cdktf from 'cdktf';
 
 export interface ContainerRegistryConfig extends cdktf.TerraformMetaArguments {
   readonly adminEnabled?: boolean;
+  readonly encryption?: ContainerRegistryEncryption[];
   readonly georeplicationLocations?: string[];
   readonly georeplications?: ContainerRegistryGeoreplications[];
   readonly location: string;
@@ -21,9 +22,26 @@ export interface ContainerRegistryConfig extends cdktf.TerraformMetaArguments {
   readonly storageAccountId?: string;
   readonly tags?: { [key: string]: string };
   readonly trustPolicy?: ContainerRegistryTrustPolicy[];
+  /** identity block */
+  readonly identity?: ContainerRegistryIdentity[];
   /** timeouts block */
   readonly timeouts?: ContainerRegistryTimeouts;
 }
+export interface ContainerRegistryEncryption {
+  readonly enabled?: boolean;
+  readonly identityClientId?: string;
+  readonly keyVaultKeyId?: string;
+}
+
+function containerRegistryEncryptionToTerraform(struct?: ContainerRegistryEncryption): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    enabled: cdktf.booleanToTerraform(struct!.enabled),
+    identity_client_id: cdktf.stringToTerraform(struct!.identityClientId),
+    key_vault_key_id: cdktf.stringToTerraform(struct!.keyVaultKeyId),
+  }
+}
+
 export interface ContainerRegistryGeoreplications {
   readonly location?: string;
   readonly tags?: { [key: string]: string };
@@ -102,6 +120,19 @@ function containerRegistryTrustPolicyToTerraform(struct?: ContainerRegistryTrust
   }
 }
 
+export interface ContainerRegistryIdentity {
+  readonly identityIds?: string[];
+  readonly type: string;
+}
+
+function containerRegistryIdentityToTerraform(struct?: ContainerRegistryIdentity): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    identity_ids: cdktf.listMapper(cdktf.stringToTerraform)(struct!.identityIds),
+    type: cdktf.stringToTerraform(struct!.type),
+  }
+}
+
 export interface ContainerRegistryTimeouts {
   readonly create?: string;
   readonly delete?: string;
@@ -140,6 +171,7 @@ export class ContainerRegistry extends cdktf.TerraformResource {
       lifecycle: config.lifecycle
     });
     this._adminEnabled = config.adminEnabled;
+    this._encryption = config.encryption;
     this._georeplicationLocations = config.georeplicationLocations;
     this._georeplications = config.georeplications;
     this._location = config.location;
@@ -153,6 +185,7 @@ export class ContainerRegistry extends cdktf.TerraformResource {
     this._storageAccountId = config.storageAccountId;
     this._tags = config.tags;
     this._trustPolicy = config.trustPolicy;
+    this._identity = config.identity;
     this._timeouts = config.timeouts;
   }
 
@@ -184,6 +217,22 @@ export class ContainerRegistry extends cdktf.TerraformResource {
   // admin_username - computed: true, optional: false, required: false
   public get adminUsername() {
     return this.getStringAttribute('admin_username');
+  }
+
+  // encryption - computed: true, optional: true, required: false
+  private _encryption?: ContainerRegistryEncryption[]
+  public get encryption(): ContainerRegistryEncryption[] {
+    return this.interpolationForAttribute('encryption') as any; // Getting the computed value is not yet implemented
+  }
+  public set encryption(value: ContainerRegistryEncryption[]) {
+    this._encryption = value;
+  }
+  public resetEncryption() {
+    this._encryption = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get encryptionInput() {
+    return this._encryption
   }
 
   // georeplication_locations - computed: true, optional: true, required: false
@@ -395,6 +444,22 @@ export class ContainerRegistry extends cdktf.TerraformResource {
     return this._trustPolicy
   }
 
+  // identity - computed: false, optional: true, required: false
+  private _identity?: ContainerRegistryIdentity[];
+  public get identity() {
+    return this.interpolationForAttribute('identity') as any;
+  }
+  public set identity(value: ContainerRegistryIdentity[] ) {
+    this._identity = value;
+  }
+  public resetIdentity() {
+    this._identity = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get identityInput() {
+    return this._identity
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: ContainerRegistryTimeouts;
   public get timeouts() {
@@ -418,6 +483,7 @@ export class ContainerRegistry extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       admin_enabled: cdktf.booleanToTerraform(this._adminEnabled),
+      encryption: cdktf.listMapper(containerRegistryEncryptionToTerraform)(this._encryption),
       georeplication_locations: cdktf.listMapper(cdktf.stringToTerraform)(this._georeplicationLocations),
       georeplications: cdktf.listMapper(containerRegistryGeoreplicationsToTerraform)(this._georeplications),
       location: cdktf.stringToTerraform(this._location),
@@ -431,6 +497,7 @@ export class ContainerRegistry extends cdktf.TerraformResource {
       storage_account_id: cdktf.stringToTerraform(this._storageAccountId),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
       trust_policy: cdktf.listMapper(containerRegistryTrustPolicyToTerraform)(this._trustPolicy),
+      identity: cdktf.listMapper(containerRegistryIdentityToTerraform)(this._identity),
       timeouts: containerRegistryTimeoutsToTerraform(this._timeouts),
     };
   }

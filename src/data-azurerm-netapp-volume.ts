@@ -11,6 +11,7 @@ export interface DataAzurermNetappVolumeConfig extends cdktf.TerraformMetaArgume
   readonly name: string;
   readonly poolName: string;
   readonly resourceGroupName: string;
+  readonly securityStyle?: string;
   /** timeouts block */
   readonly timeouts?: DataAzurermNetappVolumeTimeouts;
 }
@@ -76,6 +77,7 @@ export class DataAzurermNetappVolume extends cdktf.TerraformDataSource {
     this._name = config.name;
     this._poolName = config.poolName;
     this._resourceGroupName = config.resourceGroupName;
+    this._securityStyle = config.securityStyle;
     this._timeouts = config.timeouts;
   }
 
@@ -160,6 +162,22 @@ export class DataAzurermNetappVolume extends cdktf.TerraformDataSource {
     return this._resourceGroupName
   }
 
+  // security_style - computed: false, optional: true, required: false
+  private _securityStyle?: string;
+  public get securityStyle() {
+    return this.getStringAttribute('security_style');
+  }
+  public set securityStyle(value: string ) {
+    this._securityStyle = value;
+  }
+  public resetSecurityStyle() {
+    this._securityStyle = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get securityStyleInput() {
+    return this._securityStyle
+  }
+
   // service_level - computed: true, optional: false, required: false
   public get serviceLevel() {
     return this.getStringAttribute('service_level');
@@ -206,6 +224,7 @@ export class DataAzurermNetappVolume extends cdktf.TerraformDataSource {
       name: cdktf.stringToTerraform(this._name),
       pool_name: cdktf.stringToTerraform(this._poolName),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      security_style: cdktf.stringToTerraform(this._securityStyle),
       timeouts: dataAzurermNetappVolumeTimeoutsToTerraform(this._timeouts),
     };
   }

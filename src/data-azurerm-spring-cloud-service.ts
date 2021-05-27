@@ -149,6 +149,33 @@ export class DataAzurermSpringCloudServiceConfigServerGitSetting extends cdktf.C
     return this.getStringAttribute('uri');
   }
 }
+export class DataAzurermSpringCloudServiceRequiredNetworkTrafficRules extends cdktf.ComplexComputedList {
+
+  // direction - computed: true, optional: false, required: false
+  public get direction() {
+    return this.getStringAttribute('direction');
+  }
+
+  // fqdns - computed: true, optional: false, required: false
+  public get fqdns() {
+    return this.getListAttribute('fqdns');
+  }
+
+  // ip_addresses - computed: true, optional: false, required: false
+  public get ipAddresses() {
+    return this.getListAttribute('ip_addresses');
+  }
+
+  // port - computed: true, optional: false, required: false
+  public get port() {
+    return this.getNumberAttribute('port');
+  }
+
+  // protocol - computed: true, optional: false, required: false
+  public get protocol() {
+    return this.getStringAttribute('protocol');
+  }
+}
 export interface DataAzurermSpringCloudServiceTimeouts {
   readonly read?: string;
 }
@@ -220,6 +247,11 @@ export class DataAzurermSpringCloudService extends cdktf.TerraformDataSource {
   // outbound_public_ip_addresses - computed: true, optional: false, required: false
   public get outboundPublicIpAddresses() {
     return this.getListAttribute('outbound_public_ip_addresses');
+  }
+
+  // required_network_traffic_rules - computed: true, optional: false, required: false
+  public requiredNetworkTrafficRules(index: string) {
+    return new DataAzurermSpringCloudServiceRequiredNetworkTrafficRules(this, 'required_network_traffic_rules', index);
   }
 
   // resource_group_name - computed: false, optional: false, required: true

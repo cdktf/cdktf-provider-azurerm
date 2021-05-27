@@ -72,7 +72,12 @@ function networkConnectionMonitorEndpointFilterToTerraform(struct?: NetworkConne
 
 export interface NetworkConnectionMonitorEndpoint {
   readonly address?: string;
+  readonly coverageLevel?: string;
+  readonly excludedIpAddresses?: string[];
+  readonly includedIpAddresses?: string[];
   readonly name: string;
+  readonly targetResourceId?: string;
+  readonly targetResourceType?: string;
   readonly virtualMachineId?: string;
   /** filter block */
   readonly filter?: NetworkConnectionMonitorEndpointFilter[];
@@ -82,7 +87,12 @@ function networkConnectionMonitorEndpointToTerraform(struct?: NetworkConnectionM
   if (!cdktf.canInspect(struct)) { return struct; }
   return {
     address: cdktf.stringToTerraform(struct!.address),
+    coverage_level: cdktf.stringToTerraform(struct!.coverageLevel),
+    excluded_ip_addresses: cdktf.listMapper(cdktf.stringToTerraform)(struct!.excludedIpAddresses),
+    included_ip_addresses: cdktf.listMapper(cdktf.stringToTerraform)(struct!.includedIpAddresses),
     name: cdktf.stringToTerraform(struct!.name),
+    target_resource_id: cdktf.stringToTerraform(struct!.targetResourceId),
+    target_resource_type: cdktf.stringToTerraform(struct!.targetResourceType),
     virtual_machine_id: cdktf.stringToTerraform(struct!.virtualMachineId),
     filter: cdktf.listMapper(networkConnectionMonitorEndpointFilterToTerraform)(struct!.filter),
   }

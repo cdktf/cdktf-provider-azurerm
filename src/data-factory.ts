@@ -7,6 +7,7 @@ import * as cdktf from 'cdktf';
 // Configuration
 
 export interface DataFactoryConfig extends cdktf.TerraformMetaArguments {
+  readonly customerManagedKeyId?: string;
   readonly location: string;
   readonly name: string;
   readonly publicNetworkEnabled?: boolean;
@@ -41,12 +42,14 @@ function dataFactoryGithubConfigurationToTerraform(struct?: DataFactoryGithubCon
 }
 
 export interface DataFactoryIdentity {
+  readonly identityIds?: string[];
   readonly type: string;
 }
 
 function dataFactoryIdentityToTerraform(struct?: DataFactoryIdentity): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   return {
+    identity_ids: cdktf.listMapper(cdktf.stringToTerraform)(struct!.identityIds),
     type: cdktf.stringToTerraform(struct!.type),
   }
 }
@@ -109,6 +112,7 @@ export class DataFactory extends cdktf.TerraformResource {
       count: config.count,
       lifecycle: config.lifecycle
     });
+    this._customerManagedKeyId = config.customerManagedKeyId;
     this._location = config.location;
     this._name = config.name;
     this._publicNetworkEnabled = config.publicNetworkEnabled;
@@ -123,6 +127,22 @@ export class DataFactory extends cdktf.TerraformResource {
   // ==========
   // ATTRIBUTES
   // ==========
+
+  // customer_managed_key_id - computed: false, optional: true, required: false
+  private _customerManagedKeyId?: string;
+  public get customerManagedKeyId() {
+    return this.getStringAttribute('customer_managed_key_id');
+  }
+  public set customerManagedKeyId(value: string ) {
+    this._customerManagedKeyId = value;
+  }
+  public resetCustomerManagedKeyId() {
+    this._customerManagedKeyId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get customerManagedKeyIdInput() {
+    return this._customerManagedKeyId
+  }
 
   // id - computed: true, optional: true, required: false
   public get id() {
@@ -270,6 +290,7 @@ export class DataFactory extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      customer_managed_key_id: cdktf.stringToTerraform(this._customerManagedKeyId),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
       public_network_enabled: cdktf.booleanToTerraform(this._publicNetworkEnabled),

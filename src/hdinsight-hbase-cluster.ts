@@ -160,6 +160,47 @@ function hdinsightHbaseClusterRolesHeadNodeToTerraform(struct?: HdinsightHbaseCl
   }
 }
 
+export interface HdinsightHbaseClusterRolesWorkerNodeAutoscaleRecurrenceSchedule {
+  readonly days: string[];
+  readonly targetInstanceCount: number;
+  readonly time: string;
+}
+
+function hdinsightHbaseClusterRolesWorkerNodeAutoscaleRecurrenceScheduleToTerraform(struct?: HdinsightHbaseClusterRolesWorkerNodeAutoscaleRecurrenceSchedule): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    days: cdktf.listMapper(cdktf.stringToTerraform)(struct!.days),
+    target_instance_count: cdktf.numberToTerraform(struct!.targetInstanceCount),
+    time: cdktf.stringToTerraform(struct!.time),
+  }
+}
+
+export interface HdinsightHbaseClusterRolesWorkerNodeAutoscaleRecurrence {
+  readonly timezone: string;
+  /** schedule block */
+  readonly schedule: HdinsightHbaseClusterRolesWorkerNodeAutoscaleRecurrenceSchedule[];
+}
+
+function hdinsightHbaseClusterRolesWorkerNodeAutoscaleRecurrenceToTerraform(struct?: HdinsightHbaseClusterRolesWorkerNodeAutoscaleRecurrence): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    timezone: cdktf.stringToTerraform(struct!.timezone),
+    schedule: cdktf.listMapper(hdinsightHbaseClusterRolesWorkerNodeAutoscaleRecurrenceScheduleToTerraform)(struct!.schedule),
+  }
+}
+
+export interface HdinsightHbaseClusterRolesWorkerNodeAutoscale {
+  /** recurrence block */
+  readonly recurrence?: HdinsightHbaseClusterRolesWorkerNodeAutoscaleRecurrence[];
+}
+
+function hdinsightHbaseClusterRolesWorkerNodeAutoscaleToTerraform(struct?: HdinsightHbaseClusterRolesWorkerNodeAutoscale): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    recurrence: cdktf.listMapper(hdinsightHbaseClusterRolesWorkerNodeAutoscaleRecurrenceToTerraform)(struct!.recurrence),
+  }
+}
+
 export interface HdinsightHbaseClusterRolesWorkerNode {
   readonly minInstanceCount?: number;
   readonly password?: string;
@@ -169,6 +210,8 @@ export interface HdinsightHbaseClusterRolesWorkerNode {
   readonly username: string;
   readonly virtualNetworkId?: string;
   readonly vmSize: string;
+  /** autoscale block */
+  readonly autoscale?: HdinsightHbaseClusterRolesWorkerNodeAutoscale[];
 }
 
 function hdinsightHbaseClusterRolesWorkerNodeToTerraform(struct?: HdinsightHbaseClusterRolesWorkerNode): any {
@@ -182,6 +225,7 @@ function hdinsightHbaseClusterRolesWorkerNodeToTerraform(struct?: HdinsightHbase
     username: cdktf.stringToTerraform(struct!.username),
     virtual_network_id: cdktf.stringToTerraform(struct!.virtualNetworkId),
     vm_size: cdktf.stringToTerraform(struct!.vmSize),
+    autoscale: cdktf.listMapper(hdinsightHbaseClusterRolesWorkerNodeAutoscaleToTerraform)(struct!.autoscale),
   }
 }
 

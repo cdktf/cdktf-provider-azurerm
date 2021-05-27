@@ -11,6 +11,7 @@ export interface DataFactoryPipelineConfig extends cdktf.TerraformMetaArguments 
   readonly annotations?: string[];
   readonly dataFactoryName: string;
   readonly description?: string;
+  readonly folder?: string;
   readonly name: string;
   readonly parameters?: { [key: string]: string };
   readonly resourceGroupName: string;
@@ -59,6 +60,7 @@ export class DataFactoryPipeline extends cdktf.TerraformResource {
     this._annotations = config.annotations;
     this._dataFactoryName = config.dataFactoryName;
     this._description = config.description;
+    this._folder = config.folder;
     this._name = config.name;
     this._parameters = config.parameters;
     this._resourceGroupName = config.resourceGroupName;
@@ -129,6 +131,22 @@ export class DataFactoryPipeline extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get descriptionInput() {
     return this._description
+  }
+
+  // folder - computed: false, optional: true, required: false
+  private _folder?: string;
+  public get folder() {
+    return this.getStringAttribute('folder');
+  }
+  public set folder(value: string ) {
+    this._folder = value;
+  }
+  public resetFolder() {
+    this._folder = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get folderInput() {
+    return this._folder
   }
 
   // id - computed: true, optional: true, required: false
@@ -220,6 +238,7 @@ export class DataFactoryPipeline extends cdktf.TerraformResource {
       annotations: cdktf.listMapper(cdktf.stringToTerraform)(this._annotations),
       data_factory_name: cdktf.stringToTerraform(this._dataFactoryName),
       description: cdktf.stringToTerraform(this._description),
+      folder: cdktf.stringToTerraform(this._folder),
       name: cdktf.stringToTerraform(this._name),
       parameters: cdktf.hashMapper(cdktf.anyToTerraform)(this._parameters),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),

@@ -8,6 +8,7 @@ import * as cdktf from 'cdktf';
 
 export interface CosmosdbMongoCollectionConfig extends cdktf.TerraformMetaArguments {
   readonly accountName: string;
+  readonly analyticalStorageTtl?: number;
   readonly databaseName: string;
   readonly defaultTtlSeconds?: number;
   readonly name: string;
@@ -95,6 +96,7 @@ export class CosmosdbMongoCollection extends cdktf.TerraformResource {
       lifecycle: config.lifecycle
     });
     this._accountName = config.accountName;
+    this._analyticalStorageTtl = config.analyticalStorageTtl;
     this._databaseName = config.databaseName;
     this._defaultTtlSeconds = config.defaultTtlSeconds;
     this._name = config.name;
@@ -121,6 +123,22 @@ export class CosmosdbMongoCollection extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get accountNameInput() {
     return this._accountName
+  }
+
+  // analytical_storage_ttl - computed: false, optional: true, required: false
+  private _analyticalStorageTtl?: number;
+  public get analyticalStorageTtl() {
+    return this.getNumberAttribute('analytical_storage_ttl');
+  }
+  public set analyticalStorageTtl(value: number ) {
+    this._analyticalStorageTtl = value;
+  }
+  public resetAnalyticalStorageTtl() {
+    this._analyticalStorageTtl = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get analyticalStorageTtlInput() {
+    return this._analyticalStorageTtl
   }
 
   // database_name - computed: false, optional: false, required: true
@@ -275,6 +293,7 @@ export class CosmosdbMongoCollection extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       account_name: cdktf.stringToTerraform(this._accountName),
+      analytical_storage_ttl: cdktf.numberToTerraform(this._analyticalStorageTtl),
       database_name: cdktf.stringToTerraform(this._databaseName),
       default_ttl_seconds: cdktf.numberToTerraform(this._defaultTtlSeconds),
       name: cdktf.stringToTerraform(this._name),

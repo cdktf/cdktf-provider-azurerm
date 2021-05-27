@@ -8,6 +8,7 @@ import * as cdktf from 'cdktf';
 
 export interface HdinsightKafkaClusterConfig extends cdktf.TerraformMetaArguments {
   readonly clusterVersion: string;
+  readonly encryptionInTransitEnabled?: boolean;
   readonly location: string;
   readonly name: string;
   readonly resourceGroupName: string;
@@ -333,6 +334,7 @@ export class HdinsightKafkaCluster extends cdktf.TerraformResource {
       lifecycle: config.lifecycle
     });
     this._clusterVersion = config.clusterVersion;
+    this._encryptionInTransitEnabled = config.encryptionInTransitEnabled;
     this._location = config.location;
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
@@ -365,6 +367,22 @@ export class HdinsightKafkaCluster extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get clusterVersionInput() {
     return this._clusterVersion
+  }
+
+  // encryption_in_transit_enabled - computed: false, optional: true, required: false
+  private _encryptionInTransitEnabled?: boolean;
+  public get encryptionInTransitEnabled() {
+    return this.getBooleanAttribute('encryption_in_transit_enabled');
+  }
+  public set encryptionInTransitEnabled(value: boolean ) {
+    this._encryptionInTransitEnabled = value;
+  }
+  public resetEncryptionInTransitEnabled() {
+    this._encryptionInTransitEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get encryptionInTransitEnabledInput() {
+    return this._encryptionInTransitEnabled
   }
 
   // https_endpoint - computed: true, optional: false, required: false
@@ -613,6 +631,7 @@ export class HdinsightKafkaCluster extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       cluster_version: cdktf.stringToTerraform(this._clusterVersion),
+      encryption_in_transit_enabled: cdktf.booleanToTerraform(this._encryptionInTransitEnabled),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),

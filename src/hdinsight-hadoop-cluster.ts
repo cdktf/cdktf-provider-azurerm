@@ -204,6 +204,63 @@ function hdinsightHadoopClusterRolesHeadNodeToTerraform(struct?: HdinsightHadoop
   }
 }
 
+export interface HdinsightHadoopClusterRolesWorkerNodeAutoscaleCapacity {
+  readonly maxInstanceCount: number;
+  readonly minInstanceCount: number;
+}
+
+function hdinsightHadoopClusterRolesWorkerNodeAutoscaleCapacityToTerraform(struct?: HdinsightHadoopClusterRolesWorkerNodeAutoscaleCapacity): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    max_instance_count: cdktf.numberToTerraform(struct!.maxInstanceCount),
+    min_instance_count: cdktf.numberToTerraform(struct!.minInstanceCount),
+  }
+}
+
+export interface HdinsightHadoopClusterRolesWorkerNodeAutoscaleRecurrenceSchedule {
+  readonly days: string[];
+  readonly targetInstanceCount: number;
+  readonly time: string;
+}
+
+function hdinsightHadoopClusterRolesWorkerNodeAutoscaleRecurrenceScheduleToTerraform(struct?: HdinsightHadoopClusterRolesWorkerNodeAutoscaleRecurrenceSchedule): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    days: cdktf.listMapper(cdktf.stringToTerraform)(struct!.days),
+    target_instance_count: cdktf.numberToTerraform(struct!.targetInstanceCount),
+    time: cdktf.stringToTerraform(struct!.time),
+  }
+}
+
+export interface HdinsightHadoopClusterRolesWorkerNodeAutoscaleRecurrence {
+  readonly timezone: string;
+  /** schedule block */
+  readonly schedule: HdinsightHadoopClusterRolesWorkerNodeAutoscaleRecurrenceSchedule[];
+}
+
+function hdinsightHadoopClusterRolesWorkerNodeAutoscaleRecurrenceToTerraform(struct?: HdinsightHadoopClusterRolesWorkerNodeAutoscaleRecurrence): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    timezone: cdktf.stringToTerraform(struct!.timezone),
+    schedule: cdktf.listMapper(hdinsightHadoopClusterRolesWorkerNodeAutoscaleRecurrenceScheduleToTerraform)(struct!.schedule),
+  }
+}
+
+export interface HdinsightHadoopClusterRolesWorkerNodeAutoscale {
+  /** capacity block */
+  readonly capacity?: HdinsightHadoopClusterRolesWorkerNodeAutoscaleCapacity[];
+  /** recurrence block */
+  readonly recurrence?: HdinsightHadoopClusterRolesWorkerNodeAutoscaleRecurrence[];
+}
+
+function hdinsightHadoopClusterRolesWorkerNodeAutoscaleToTerraform(struct?: HdinsightHadoopClusterRolesWorkerNodeAutoscale): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    capacity: cdktf.listMapper(hdinsightHadoopClusterRolesWorkerNodeAutoscaleCapacityToTerraform)(struct!.capacity),
+    recurrence: cdktf.listMapper(hdinsightHadoopClusterRolesWorkerNodeAutoscaleRecurrenceToTerraform)(struct!.recurrence),
+  }
+}
+
 export interface HdinsightHadoopClusterRolesWorkerNode {
   readonly minInstanceCount?: number;
   readonly password?: string;
@@ -213,6 +270,8 @@ export interface HdinsightHadoopClusterRolesWorkerNode {
   readonly username: string;
   readonly virtualNetworkId?: string;
   readonly vmSize: string;
+  /** autoscale block */
+  readonly autoscale?: HdinsightHadoopClusterRolesWorkerNodeAutoscale[];
 }
 
 function hdinsightHadoopClusterRolesWorkerNodeToTerraform(struct?: HdinsightHadoopClusterRolesWorkerNode): any {
@@ -226,6 +285,7 @@ function hdinsightHadoopClusterRolesWorkerNodeToTerraform(struct?: HdinsightHado
     username: cdktf.stringToTerraform(struct!.username),
     virtual_network_id: cdktf.stringToTerraform(struct!.virtualNetworkId),
     vm_size: cdktf.stringToTerraform(struct!.vmSize),
+    autoscale: cdktf.listMapper(hdinsightHadoopClusterRolesWorkerNodeAutoscaleToTerraform)(struct!.autoscale),
   }
 }
 

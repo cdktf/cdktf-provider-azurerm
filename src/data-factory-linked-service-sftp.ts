@@ -13,12 +13,14 @@ export interface DataFactoryLinkedServiceSftpConfig extends cdktf.TerraformMetaA
   readonly dataFactoryName: string;
   readonly description?: string;
   readonly host: string;
+  readonly hostKeyFingerprint?: string;
   readonly integrationRuntimeName?: string;
   readonly name: string;
   readonly parameters?: { [key: string]: string };
   readonly password: string;
   readonly port: number;
   readonly resourceGroupName: string;
+  readonly skipHostKeyValidation?: boolean;
   readonly username: string;
   /** timeouts block */
   readonly timeouts?: DataFactoryLinkedServiceSftpTimeouts;
@@ -66,12 +68,14 @@ export class DataFactoryLinkedServiceSftp extends cdktf.TerraformResource {
     this._dataFactoryName = config.dataFactoryName;
     this._description = config.description;
     this._host = config.host;
+    this._hostKeyFingerprint = config.hostKeyFingerprint;
     this._integrationRuntimeName = config.integrationRuntimeName;
     this._name = config.name;
     this._parameters = config.parameters;
     this._password = config.password;
     this._port = config.port;
     this._resourceGroupName = config.resourceGroupName;
+    this._skipHostKeyValidation = config.skipHostKeyValidation;
     this._username = config.username;
     this._timeouts = config.timeouts;
   }
@@ -167,6 +171,22 @@ export class DataFactoryLinkedServiceSftp extends cdktf.TerraformResource {
     return this._host
   }
 
+  // host_key_fingerprint - computed: false, optional: true, required: false
+  private _hostKeyFingerprint?: string;
+  public get hostKeyFingerprint() {
+    return this.getStringAttribute('host_key_fingerprint');
+  }
+  public set hostKeyFingerprint(value: string ) {
+    this._hostKeyFingerprint = value;
+  }
+  public resetHostKeyFingerprint() {
+    this._hostKeyFingerprint = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get hostKeyFingerprintInput() {
+    return this._hostKeyFingerprint
+  }
+
   // id - computed: true, optional: true, required: false
   public get id() {
     return this.getStringAttribute('id');
@@ -256,6 +276,22 @@ export class DataFactoryLinkedServiceSftp extends cdktf.TerraformResource {
     return this._resourceGroupName
   }
 
+  // skip_host_key_validation - computed: false, optional: true, required: false
+  private _skipHostKeyValidation?: boolean;
+  public get skipHostKeyValidation() {
+    return this.getBooleanAttribute('skip_host_key_validation');
+  }
+  public set skipHostKeyValidation(value: boolean ) {
+    this._skipHostKeyValidation = value;
+  }
+  public resetSkipHostKeyValidation() {
+    this._skipHostKeyValidation = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get skipHostKeyValidationInput() {
+    return this._skipHostKeyValidation
+  }
+
   // username - computed: false, optional: false, required: true
   private _username: string;
   public get username() {
@@ -297,12 +333,14 @@ export class DataFactoryLinkedServiceSftp extends cdktf.TerraformResource {
       data_factory_name: cdktf.stringToTerraform(this._dataFactoryName),
       description: cdktf.stringToTerraform(this._description),
       host: cdktf.stringToTerraform(this._host),
+      host_key_fingerprint: cdktf.stringToTerraform(this._hostKeyFingerprint),
       integration_runtime_name: cdktf.stringToTerraform(this._integrationRuntimeName),
       name: cdktf.stringToTerraform(this._name),
       parameters: cdktf.hashMapper(cdktf.anyToTerraform)(this._parameters),
       password: cdktf.stringToTerraform(this._password),
       port: cdktf.numberToTerraform(this._port),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      skip_host_key_validation: cdktf.booleanToTerraform(this._skipHostKeyValidation),
       username: cdktf.stringToTerraform(this._username),
       timeouts: dataFactoryLinkedServiceSftpTimeoutsToTerraform(this._timeouts),
     };

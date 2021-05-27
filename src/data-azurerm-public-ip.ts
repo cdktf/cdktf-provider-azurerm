@@ -86,6 +86,11 @@ export class DataAzurermPublicIp extends cdktf.TerraformDataSource {
     return this.getStringAttribute('ip_address');
   }
 
+  // ip_tags - computed: true, optional: false, required: false
+  public ipTags(key: string): string {
+    return new cdktf.StringMap(this, 'ip_tags').lookup(key);
+  }
+
   // ip_version - computed: true, optional: false, required: false
   public get ipVersion() {
     return this.getStringAttribute('ip_version');

@@ -175,6 +175,63 @@ function hdinsightSparkClusterRolesHeadNodeToTerraform(struct?: HdinsightSparkCl
   }
 }
 
+export interface HdinsightSparkClusterRolesWorkerNodeAutoscaleCapacity {
+  readonly maxInstanceCount: number;
+  readonly minInstanceCount: number;
+}
+
+function hdinsightSparkClusterRolesWorkerNodeAutoscaleCapacityToTerraform(struct?: HdinsightSparkClusterRolesWorkerNodeAutoscaleCapacity): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    max_instance_count: cdktf.numberToTerraform(struct!.maxInstanceCount),
+    min_instance_count: cdktf.numberToTerraform(struct!.minInstanceCount),
+  }
+}
+
+export interface HdinsightSparkClusterRolesWorkerNodeAutoscaleRecurrenceSchedule {
+  readonly days: string[];
+  readonly targetInstanceCount: number;
+  readonly time: string;
+}
+
+function hdinsightSparkClusterRolesWorkerNodeAutoscaleRecurrenceScheduleToTerraform(struct?: HdinsightSparkClusterRolesWorkerNodeAutoscaleRecurrenceSchedule): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    days: cdktf.listMapper(cdktf.stringToTerraform)(struct!.days),
+    target_instance_count: cdktf.numberToTerraform(struct!.targetInstanceCount),
+    time: cdktf.stringToTerraform(struct!.time),
+  }
+}
+
+export interface HdinsightSparkClusterRolesWorkerNodeAutoscaleRecurrence {
+  readonly timezone: string;
+  /** schedule block */
+  readonly schedule: HdinsightSparkClusterRolesWorkerNodeAutoscaleRecurrenceSchedule[];
+}
+
+function hdinsightSparkClusterRolesWorkerNodeAutoscaleRecurrenceToTerraform(struct?: HdinsightSparkClusterRolesWorkerNodeAutoscaleRecurrence): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    timezone: cdktf.stringToTerraform(struct!.timezone),
+    schedule: cdktf.listMapper(hdinsightSparkClusterRolesWorkerNodeAutoscaleRecurrenceScheduleToTerraform)(struct!.schedule),
+  }
+}
+
+export interface HdinsightSparkClusterRolesWorkerNodeAutoscale {
+  /** capacity block */
+  readonly capacity?: HdinsightSparkClusterRolesWorkerNodeAutoscaleCapacity[];
+  /** recurrence block */
+  readonly recurrence?: HdinsightSparkClusterRolesWorkerNodeAutoscaleRecurrence[];
+}
+
+function hdinsightSparkClusterRolesWorkerNodeAutoscaleToTerraform(struct?: HdinsightSparkClusterRolesWorkerNodeAutoscale): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    capacity: cdktf.listMapper(hdinsightSparkClusterRolesWorkerNodeAutoscaleCapacityToTerraform)(struct!.capacity),
+    recurrence: cdktf.listMapper(hdinsightSparkClusterRolesWorkerNodeAutoscaleRecurrenceToTerraform)(struct!.recurrence),
+  }
+}
+
 export interface HdinsightSparkClusterRolesWorkerNode {
   readonly minInstanceCount?: number;
   readonly password?: string;
@@ -184,6 +241,8 @@ export interface HdinsightSparkClusterRolesWorkerNode {
   readonly username: string;
   readonly virtualNetworkId?: string;
   readonly vmSize: string;
+  /** autoscale block */
+  readonly autoscale?: HdinsightSparkClusterRolesWorkerNodeAutoscale[];
 }
 
 function hdinsightSparkClusterRolesWorkerNodeToTerraform(struct?: HdinsightSparkClusterRolesWorkerNode): any {
@@ -197,6 +256,7 @@ function hdinsightSparkClusterRolesWorkerNodeToTerraform(struct?: HdinsightSpark
     username: cdktf.stringToTerraform(struct!.username),
     virtual_network_id: cdktf.stringToTerraform(struct!.virtualNetworkId),
     vm_size: cdktf.stringToTerraform(struct!.vmSize),
+    autoscale: cdktf.listMapper(hdinsightSparkClusterRolesWorkerNodeAutoscaleToTerraform)(struct!.autoscale),
   }
 }
 

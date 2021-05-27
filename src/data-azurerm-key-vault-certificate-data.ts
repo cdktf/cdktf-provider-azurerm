@@ -54,6 +54,11 @@ export class DataAzurermKeyVaultCertificateData extends cdktf.TerraformDataSourc
   // ATTRIBUTES
   // ==========
 
+  // certificates_count - computed: true, optional: false, required: false
+  public get certificatesCount() {
+    return this.getNumberAttribute('certificates_count');
+  }
+
   // expires - computed: true, optional: false, required: false
   public get expires() {
     return this.getStringAttribute('expires');

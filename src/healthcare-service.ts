@@ -13,6 +13,7 @@ export interface HealthcareServiceConfig extends cdktf.TerraformMetaArguments {
   readonly kind?: string;
   readonly location: string;
   readonly name: string;
+  readonly publicNetworkAccessEnabled?: boolean;
   readonly resourceGroupName: string;
   readonly tags?: { [key: string]: string };
   /** authentication_configuration block */
@@ -99,6 +100,7 @@ export class HealthcareService extends cdktf.TerraformResource {
     this._kind = config.kind;
     this._location = config.location;
     this._name = config.name;
+    this._publicNetworkAccessEnabled = config.publicNetworkAccessEnabled;
     this._resourceGroupName = config.resourceGroupName;
     this._tags = config.tags;
     this._authenticationConfiguration = config.authenticationConfiguration;
@@ -205,6 +207,22 @@ export class HealthcareService extends cdktf.TerraformResource {
     return this._name
   }
 
+  // public_network_access_enabled - computed: false, optional: true, required: false
+  private _publicNetworkAccessEnabled?: boolean;
+  public get publicNetworkAccessEnabled() {
+    return this.getBooleanAttribute('public_network_access_enabled');
+  }
+  public set publicNetworkAccessEnabled(value: boolean ) {
+    this._publicNetworkAccessEnabled = value;
+  }
+  public resetPublicNetworkAccessEnabled() {
+    this._publicNetworkAccessEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get publicNetworkAccessEnabledInput() {
+    return this._publicNetworkAccessEnabled
+  }
+
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
@@ -294,6 +312,7 @@ export class HealthcareService extends cdktf.TerraformResource {
       kind: cdktf.stringToTerraform(this._kind),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
+      public_network_access_enabled: cdktf.booleanToTerraform(this._publicNetworkAccessEnabled),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
       authentication_configuration: cdktf.listMapper(healthcareServiceAuthenticationConfigurationToTerraform)(this._authenticationConfiguration),
