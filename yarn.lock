@@ -270,10 +270,10 @@
   resolved "https://registry.yarnpkg.com/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
-"@cdktf/hcl2json@0.4.0":
-  version "0.4.0"
-  resolved "https://registry.yarnpkg.com/@cdktf/hcl2json/-/hcl2json-0.4.0.tgz#4d3b1958eeebdc0d1c50e2cbdbbe0733cb4fccbb"
-  integrity sha512-etFW1+DoAwQ7ENtdvpuKxmosJDDJ2rnQUDkJPZnNIqLUAXcGG3MdU6PWTnLQX/xwDMQq7xfCZlDK/hrV7g2rhA==
+"@cdktf/hcl2json@0.4.1":
+  version "0.4.1"
+  resolved "https://registry.yarnpkg.com/@cdktf/hcl2json/-/hcl2json-0.4.1.tgz#904cbcab5c934cb69b32cec06498e0ec4405ca2b"
+  integrity sha512-yabxBeKkCJvj3gFQmHfsS/P6JaQMBqbyEZ1G67gTCtfkbOSEGib8KWsl3ZA+u5Fs2z5q9M4emLcCBHHPrmSG3g==
   dependencies:
     "@types/node-fetch" "^2.5.8"
     node-fetch "^2.6.1"
@@ -1208,16 +1208,16 @@ caseless@~0.12.0:
   integrity sha1-G2gcIf+EAzyCZUMJBolCDRhxUdw=
 
 cdktf-cli@^0.4:
-  version "0.4.0"
-  resolved "https://registry.yarnpkg.com/cdktf-cli/-/cdktf-cli-0.4.0.tgz#c949bf6d849e1d50def99f879cb9c2c7d765216f"
-  integrity sha512-2mJA2Kq8mCcTzfHbNnogPWj/OVtPFEtzgL00hxPyLIKaQz7gX0Sagej18qp7kPh0pVA5Qenm5jVST3GdkjoX6A==
+  version "0.4.1"
+  resolved "https://registry.yarnpkg.com/cdktf-cli/-/cdktf-cli-0.4.1.tgz#6c9cf17cf547cf9399c5a1adc1df2a00581a998f"
+  integrity sha512-bDK7F4MQFFgzkZBoxMimSu297IJ4duhG1ZpOGG/YcQ9MF/IuIKqlxV6WhWUEfPupnSuZuDQMNCRf/PhKsWcy9Q==
   dependencies:
-    "@cdktf/hcl2json" "0.4.0"
+    "@cdktf/hcl2json" "0.4.1"
     "@skorfmann/ink-confirm-input" "^3.0.0"
     "@skorfmann/terraform-cloud" "^1.10.1"
     "@types/node" "^14.0.26"
     archiver "^5.1.0"
-    cdktf "0.4.0"
+    cdktf "0.4.1"
     chalk "^4.1.0"
     codemaker "^0.22.0"
     constructs "^3.3.75"
@@ -1239,14 +1239,7 @@ cdktf-cli@^0.4:
     uuid "^8.3.0"
     yargs "^15.1.0"
 
-cdktf@0.4.0:
-  version "0.4.0"
-  resolved "https://registry.yarnpkg.com/cdktf/-/cdktf-0.4.0.tgz#2513c054d656c1a859541c0b5e13cf3bb1c3c107"
-  integrity sha512-P6KRqGokkAVRZdT2+fXfEdQszpOXrJa/EuNZr0WPcIrfTVfjL6HNrHyuP1HWUvJRzlcbG5ZZ3+8Uk4oFS9IXvA==
-  dependencies:
-    archiver "5.3.0"
-
-cdktf@^0.4:
+cdktf@0.4.1, cdktf@^0.4:
   version "0.4.1"
   resolved "https://registry.yarnpkg.com/cdktf/-/cdktf-0.4.1.tgz#83c3756e30fbbfe7919bd76f6330da4bce441700"
   integrity sha512-U5aap+QH+w/0ibeFRYm8T/JtaA8AkjCkQ6c60eL/5hY0K0qi8rjEBpQcEho9KljqZvWap6mD2yD+JqunbLzRGA==
@@ -2338,12 +2331,7 @@ flatted@^2.0.1:
   resolved "https://registry.yarnpkg.com/flatted/-/flatted-2.0.2.tgz#4575b21e2bcee7434aa9be662f4b7b5f9c2b5138"
   integrity sha512-r5wGx7YeOwNWNlCA0wQ86zKyDLMQr+/RB8xy74M4hTphfmjlijTSSXGuH8rnvKZnfT9i+75zmd8jcKdMR4O6jA==
 
-follow-redirects@^1.10.0:
-  version "1.13.2"
-  resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.13.2.tgz#dd73c8effc12728ba5cf4259d760ea5fb83e3147"
-  integrity sha512-6mPTgLxYm3r6Bkkg0vNM0HTjfGrOEtsfbhagQvbxDEsEkpNhw582upBaoRZylzen6krEmxXJgt9Ju6HiI4O7BA==
-
-follow-redirects@^1.13.3:
+follow-redirects@^1.10.0, follow-redirects@^1.13.3:
   version "1.13.3"
   resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.13.3.tgz#e5598ad50174c1bc4e872301e82ac2cd97f90267"
   integrity sha512-DUgl6+HDzB0iEptNQEXLx/KhTmDb8tZUHSeLqpnjpknR70H0nC2t9N73BK6fN4hOvJ84pKlIQVQ4k5FFlBedKA==
