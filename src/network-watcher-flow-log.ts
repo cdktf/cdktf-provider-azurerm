@@ -12,6 +12,10 @@ export interface NetworkWatcherFlowLogConfig extends cdktf.TerraformMetaArgument
   */
   readonly enabled: boolean;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_watcher_flow_log.html#location NetworkWatcherFlowLog#location}
+  */
+  readonly location?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_watcher_flow_log.html#network_security_group_id NetworkWatcherFlowLog#network_security_group_id}
   */
   readonly networkSecurityGroupId: string;
@@ -27,6 +31,10 @@ export interface NetworkWatcherFlowLogConfig extends cdktf.TerraformMetaArgument
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_watcher_flow_log.html#storage_account_id NetworkWatcherFlowLog#storage_account_id}
   */
   readonly storageAccountId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_watcher_flow_log.html#tags NetworkWatcherFlowLog#tags}
+  */
+  readonly tags?: { [key: string]: string };
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_watcher_flow_log.html#version NetworkWatcherFlowLog#version}
   */
@@ -161,10 +169,12 @@ export class NetworkWatcherFlowLog extends cdktf.TerraformResource {
       lifecycle: config.lifecycle
     });
     this._enabled = config.enabled;
+    this._location = config.location;
     this._networkSecurityGroupId = config.networkSecurityGroupId;
     this._networkWatcherName = config.networkWatcherName;
     this._resourceGroupName = config.resourceGroupName;
     this._storageAccountId = config.storageAccountId;
+    this._tags = config.tags;
     this._version = config.version;
     this._retentionPolicy = config.retentionPolicy;
     this._timeouts = config.timeouts;
@@ -191,6 +201,22 @@ export class NetworkWatcherFlowLog extends cdktf.TerraformResource {
   // id - computed: true, optional: true, required: false
   public get id() {
     return this.getStringAttribute('id');
+  }
+
+  // location - computed: true, optional: true, required: false
+  private _location?: string;
+  public get location() {
+    return this.getStringAttribute('location');
+  }
+  public set location(value: string) {
+    this._location = value;
+  }
+  public resetLocation() {
+    this._location = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get locationInput() {
+    return this._location
   }
 
   // network_security_group_id - computed: false, optional: false, required: true
@@ -243,6 +269,22 @@ export class NetworkWatcherFlowLog extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get storageAccountIdInput() {
     return this._storageAccountId
+  }
+
+  // tags - computed: false, optional: true, required: false
+  private _tags?: { [key: string]: string };
+  public get tags() {
+    return this.interpolationForAttribute('tags') as any;
+  }
+  public set tags(value: { [key: string]: string } ) {
+    this._tags = value;
+  }
+  public resetTags() {
+    this._tags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsInput() {
+    return this._tags
   }
 
   // version - computed: true, optional: true, required: false
@@ -313,10 +355,12 @@ export class NetworkWatcherFlowLog extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       enabled: cdktf.booleanToTerraform(this._enabled),
+      location: cdktf.stringToTerraform(this._location),
       network_security_group_id: cdktf.stringToTerraform(this._networkSecurityGroupId),
       network_watcher_name: cdktf.stringToTerraform(this._networkWatcherName),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       storage_account_id: cdktf.stringToTerraform(this._storageAccountId),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
       version: cdktf.numberToTerraform(this._version),
       retention_policy: cdktf.listMapper(networkWatcherFlowLogRetentionPolicyToTerraform)(this._retentionPolicy),
       timeouts: networkWatcherFlowLogTimeoutsToTerraform(this._timeouts),

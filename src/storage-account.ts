@@ -106,6 +106,12 @@ export interface StorageAccountConfig extends cdktf.TerraformMetaArguments {
   */
   readonly routing?: StorageAccountRouting[];
   /**
+  * share_properties block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account.html#share_properties StorageAccount#share_properties}
+  */
+  readonly shareProperties?: StorageAccountShareProperties[];
+  /**
   * static_website block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account.html#static_website StorageAccount#static_website}
@@ -311,6 +317,10 @@ function storageAccountCustomDomainToTerraform(struct?: StorageAccountCustomDoma
 
 export interface StorageAccountIdentity {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account.html#identity_ids StorageAccount#identity_ids}
+  */
+  readonly identityIds?: string[];
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account.html#type StorageAccount#type}
   */
   readonly type: string;
@@ -319,6 +329,7 @@ export interface StorageAccountIdentity {
 function storageAccountIdentityToTerraform(struct?: StorageAccountIdentity): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   return {
+    identity_ids: cdktf.listMapper(cdktf.stringToTerraform)(struct!.identityIds),
     type: cdktf.stringToTerraform(struct!.type),
   }
 }
@@ -565,6 +576,113 @@ function storageAccountRoutingToTerraform(struct?: StorageAccountRouting): any {
   }
 }
 
+export interface StorageAccountSharePropertiesCorsRule {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account.html#allowed_headers StorageAccount#allowed_headers}
+  */
+  readonly allowedHeaders: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account.html#allowed_methods StorageAccount#allowed_methods}
+  */
+  readonly allowedMethods: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account.html#allowed_origins StorageAccount#allowed_origins}
+  */
+  readonly allowedOrigins: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account.html#exposed_headers StorageAccount#exposed_headers}
+  */
+  readonly exposedHeaders: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account.html#max_age_in_seconds StorageAccount#max_age_in_seconds}
+  */
+  readonly maxAgeInSeconds: number;
+}
+
+function storageAccountSharePropertiesCorsRuleToTerraform(struct?: StorageAccountSharePropertiesCorsRule): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    allowed_headers: cdktf.listMapper(cdktf.stringToTerraform)(struct!.allowedHeaders),
+    allowed_methods: cdktf.listMapper(cdktf.stringToTerraform)(struct!.allowedMethods),
+    allowed_origins: cdktf.listMapper(cdktf.stringToTerraform)(struct!.allowedOrigins),
+    exposed_headers: cdktf.listMapper(cdktf.stringToTerraform)(struct!.exposedHeaders),
+    max_age_in_seconds: cdktf.numberToTerraform(struct!.maxAgeInSeconds),
+  }
+}
+
+export interface StorageAccountSharePropertiesRetentionPolicy {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account.html#days StorageAccount#days}
+  */
+  readonly days?: number;
+}
+
+function storageAccountSharePropertiesRetentionPolicyToTerraform(struct?: StorageAccountSharePropertiesRetentionPolicy): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    days: cdktf.numberToTerraform(struct!.days),
+  }
+}
+
+export interface StorageAccountSharePropertiesSmb {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account.html#authentication_types StorageAccount#authentication_types}
+  */
+  readonly authenticationTypes?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account.html#channel_encryption_type StorageAccount#channel_encryption_type}
+  */
+  readonly channelEncryptionType?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account.html#kerberos_ticket_encryption_type StorageAccount#kerberos_ticket_encryption_type}
+  */
+  readonly kerberosTicketEncryptionType?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account.html#versions StorageAccount#versions}
+  */
+  readonly versions?: string[];
+}
+
+function storageAccountSharePropertiesSmbToTerraform(struct?: StorageAccountSharePropertiesSmb): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    authentication_types: cdktf.listMapper(cdktf.stringToTerraform)(struct!.authenticationTypes),
+    channel_encryption_type: cdktf.listMapper(cdktf.stringToTerraform)(struct!.channelEncryptionType),
+    kerberos_ticket_encryption_type: cdktf.listMapper(cdktf.stringToTerraform)(struct!.kerberosTicketEncryptionType),
+    versions: cdktf.listMapper(cdktf.stringToTerraform)(struct!.versions),
+  }
+}
+
+export interface StorageAccountShareProperties {
+  /**
+  * cors_rule block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account.html#cors_rule StorageAccount#cors_rule}
+  */
+  readonly corsRule?: StorageAccountSharePropertiesCorsRule[];
+  /**
+  * retention_policy block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account.html#retention_policy StorageAccount#retention_policy}
+  */
+  readonly retentionPolicy?: StorageAccountSharePropertiesRetentionPolicy[];
+  /**
+  * smb block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account.html#smb StorageAccount#smb}
+  */
+  readonly smb?: StorageAccountSharePropertiesSmb[];
+}
+
+function storageAccountSharePropertiesToTerraform(struct?: StorageAccountShareProperties): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    cors_rule: cdktf.listMapper(storageAccountSharePropertiesCorsRuleToTerraform)(struct!.corsRule),
+    retention_policy: cdktf.listMapper(storageAccountSharePropertiesRetentionPolicyToTerraform)(struct!.retentionPolicy),
+    smb: cdktf.listMapper(storageAccountSharePropertiesSmbToTerraform)(struct!.smb),
+  }
+}
+
 export interface StorageAccountStaticWebsite {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account.html#error_404_document StorageAccount#error_404_document}
@@ -662,6 +780,7 @@ export class StorageAccount extends cdktf.TerraformResource {
     this._networkRules = config.networkRules;
     this._queueProperties = config.queueProperties;
     this._routing = config.routing;
+    this._shareProperties = config.shareProperties;
     this._staticWebsite = config.staticWebsite;
     this._timeouts = config.timeouts;
   }
@@ -1156,6 +1275,22 @@ export class StorageAccount extends cdktf.TerraformResource {
     return this._routing
   }
 
+  // share_properties - computed: false, optional: true, required: false
+  private _shareProperties?: StorageAccountShareProperties[];
+  public get shareProperties() {
+    return this.interpolationForAttribute('share_properties') as any;
+  }
+  public set shareProperties(value: StorageAccountShareProperties[] ) {
+    this._shareProperties = value;
+  }
+  public resetShareProperties() {
+    this._shareProperties = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sharePropertiesInput() {
+    return this._shareProperties
+  }
+
   // static_website - computed: false, optional: true, required: false
   private _staticWebsite?: StorageAccountStaticWebsite[];
   public get staticWebsite() {
@@ -1215,6 +1350,7 @@ export class StorageAccount extends cdktf.TerraformResource {
       network_rules: cdktf.listMapper(storageAccountNetworkRulesToTerraform)(this._networkRules),
       queue_properties: cdktf.listMapper(storageAccountQueuePropertiesToTerraform)(this._queueProperties),
       routing: cdktf.listMapper(storageAccountRoutingToTerraform)(this._routing),
+      share_properties: cdktf.listMapper(storageAccountSharePropertiesToTerraform)(this._shareProperties),
       static_website: cdktf.listMapper(storageAccountStaticWebsiteToTerraform)(this._staticWebsite),
       timeouts: storageAccountTimeoutsToTerraform(this._timeouts),
     };

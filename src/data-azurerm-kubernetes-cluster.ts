@@ -212,6 +212,11 @@ export class DataAzurermKubernetesClusterAgentPoolProfile extends cdktf.ComplexC
     return this.interpolationForAttribute('node_labels') as any;
   }
 
+  // node_public_ip_prefix_id - computed: true, optional: false, required: false
+  public get nodePublicIpPrefixId() {
+    return this.getStringAttribute('node_public_ip_prefix_id');
+  }
+
   // node_taints - computed: true, optional: false, required: false
   public get nodeTaints() {
     return this.getListAttribute('node_taints');

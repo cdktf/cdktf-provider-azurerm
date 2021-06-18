@@ -12,6 +12,10 @@ export interface ApiManagementSubscriptionConfig extends cdktf.TerraformMetaArgu
   */
   readonly allowTracing?: boolean;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_subscription.html#api_id ApiManagementSubscription#api_id}
+  */
+  readonly apiId?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_subscription.html#api_management_name ApiManagementSubscription#api_management_name}
   */
   readonly apiManagementName: string;
@@ -112,6 +116,7 @@ export class ApiManagementSubscription extends cdktf.TerraformResource {
       lifecycle: config.lifecycle
     });
     this._allowTracing = config.allowTracing;
+    this._apiId = config.apiId;
     this._apiManagementName = config.apiManagementName;
     this._displayName = config.displayName;
     this._primaryKey = config.primaryKey;
@@ -142,6 +147,22 @@ export class ApiManagementSubscription extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get allowTracingInput() {
     return this._allowTracing
+  }
+
+  // api_id - computed: false, optional: true, required: false
+  private _apiId?: string;
+  public get apiId() {
+    return this.getStringAttribute('api_id');
+  }
+  public set apiId(value: string ) {
+    this._apiId = value;
+  }
+  public resetApiId() {
+    this._apiId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get apiIdInput() {
+    return this._apiId
   }
 
   // api_management_name - computed: false, optional: false, required: true
@@ -307,6 +328,7 @@ export class ApiManagementSubscription extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       allow_tracing: cdktf.booleanToTerraform(this._allowTracing),
+      api_id: cdktf.stringToTerraform(this._apiId),
       api_management_name: cdktf.stringToTerraform(this._apiManagementName),
       display_name: cdktf.stringToTerraform(this._displayName),
       primary_key: cdktf.stringToTerraform(this._primaryKey),

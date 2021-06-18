@@ -186,6 +186,11 @@ export class AppServiceEnvironment extends cdktf.TerraformResource {
     return this.getStringAttribute('id');
   }
 
+  // internal_ip_address - computed: true, optional: false, required: false
+  public get internalIpAddress() {
+    return this.getStringAttribute('internal_ip_address');
+  }
+
   // internal_load_balancing_mode - computed: false, optional: true, required: false
   private _internalLoadBalancingMode?: string;
   public get internalLoadBalancingMode() {
@@ -220,6 +225,11 @@ export class AppServiceEnvironment extends cdktf.TerraformResource {
     return this._name
   }
 
+  // outbound_ip_addresses - computed: true, optional: false, required: false
+  public get outboundIpAddresses() {
+    return this.getListAttribute('outbound_ip_addresses');
+  }
+
   // pricing_tier - computed: false, optional: true, required: false
   private _pricingTier?: string;
   public get pricingTier() {
@@ -250,6 +260,11 @@ export class AppServiceEnvironment extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
     return this._resourceGroupName
+  }
+
+  // service_ip_address - computed: true, optional: false, required: false
+  public get serviceIpAddress() {
+    return this.getStringAttribute('service_ip_address');
   }
 
   // subnet_id - computed: false, optional: false, required: true

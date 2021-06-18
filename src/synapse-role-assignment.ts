@@ -16,9 +16,13 @@ export interface SynapseRoleAssignmentConfig extends cdktf.TerraformMetaArgument
   */
   readonly roleName: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_role_assignment.html#synapse_spark_pool_id SynapseRoleAssignment#synapse_spark_pool_id}
+  */
+  readonly synapseSparkPoolId?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_role_assignment.html#synapse_workspace_id SynapseRoleAssignment#synapse_workspace_id}
   */
-  readonly synapseWorkspaceId: string;
+  readonly synapseWorkspaceId?: string;
   /**
   * timeouts block
   * 
@@ -80,6 +84,7 @@ export class SynapseRoleAssignment extends cdktf.TerraformResource {
     });
     this._principalId = config.principalId;
     this._roleName = config.roleName;
+    this._synapseSparkPoolId = config.synapseSparkPoolId;
     this._synapseWorkspaceId = config.synapseWorkspaceId;
     this._timeouts = config.timeouts;
   }
@@ -119,13 +124,32 @@ export class SynapseRoleAssignment extends cdktf.TerraformResource {
     return this._roleName
   }
 
-  // synapse_workspace_id - computed: false, optional: false, required: true
-  private _synapseWorkspaceId: string;
+  // synapse_spark_pool_id - computed: false, optional: true, required: false
+  private _synapseSparkPoolId?: string;
+  public get synapseSparkPoolId() {
+    return this.getStringAttribute('synapse_spark_pool_id');
+  }
+  public set synapseSparkPoolId(value: string ) {
+    this._synapseSparkPoolId = value;
+  }
+  public resetSynapseSparkPoolId() {
+    this._synapseSparkPoolId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get synapseSparkPoolIdInput() {
+    return this._synapseSparkPoolId
+  }
+
+  // synapse_workspace_id - computed: false, optional: true, required: false
+  private _synapseWorkspaceId?: string;
   public get synapseWorkspaceId() {
     return this.getStringAttribute('synapse_workspace_id');
   }
-  public set synapseWorkspaceId(value: string) {
+  public set synapseWorkspaceId(value: string ) {
     this._synapseWorkspaceId = value;
+  }
+  public resetSynapseWorkspaceId() {
+    this._synapseWorkspaceId = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get synapseWorkspaceIdInput() {
@@ -156,6 +180,7 @@ export class SynapseRoleAssignment extends cdktf.TerraformResource {
     return {
       principal_id: cdktf.stringToTerraform(this._principalId),
       role_name: cdktf.stringToTerraform(this._roleName),
+      synapse_spark_pool_id: cdktf.stringToTerraform(this._synapseSparkPoolId),
       synapse_workspace_id: cdktf.stringToTerraform(this._synapseWorkspaceId),
       timeouts: synapseRoleAssignmentTimeoutsToTerraform(this._timeouts),
     };

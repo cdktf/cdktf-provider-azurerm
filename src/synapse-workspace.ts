@@ -16,6 +16,10 @@ export interface SynapseWorkspaceConfig extends cdktf.TerraformMetaArguments {
   */
   readonly customerManagedKeyVersionlessId?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace.html#data_exfiltration_protection_enabled SynapseWorkspace#data_exfiltration_protection_enabled}
+  */
+  readonly dataExfiltrationProtectionEnabled?: boolean;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace.html#location SynapseWorkspace#location}
   */
   readonly location: string;
@@ -242,6 +246,7 @@ export class SynapseWorkspace extends cdktf.TerraformResource {
     });
     this._aadAdmin = config.aadAdmin;
     this._customerManagedKeyVersionlessId = config.customerManagedKeyVersionlessId;
+    this._dataExfiltrationProtectionEnabled = config.dataExfiltrationProtectionEnabled;
     this._location = config.location;
     this._managedResourceGroupName = config.managedResourceGroupName;
     this._managedVirtualNetworkEnabled = config.managedVirtualNetworkEnabled;
@@ -296,6 +301,22 @@ export class SynapseWorkspace extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get customerManagedKeyVersionlessIdInput() {
     return this._customerManagedKeyVersionlessId
+  }
+
+  // data_exfiltration_protection_enabled - computed: false, optional: true, required: false
+  private _dataExfiltrationProtectionEnabled?: boolean;
+  public get dataExfiltrationProtectionEnabled() {
+    return this.getBooleanAttribute('data_exfiltration_protection_enabled');
+  }
+  public set dataExfiltrationProtectionEnabled(value: boolean ) {
+    this._dataExfiltrationProtectionEnabled = value;
+  }
+  public resetDataExfiltrationProtectionEnabled() {
+    this._dataExfiltrationProtectionEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dataExfiltrationProtectionEnabledInput() {
+    return this._dataExfiltrationProtectionEnabled
   }
 
   // id - computed: true, optional: true, required: false
@@ -506,6 +527,7 @@ export class SynapseWorkspace extends cdktf.TerraformResource {
     return {
       aad_admin: cdktf.listMapper(synapseWorkspaceAadAdminToTerraform)(this._aadAdmin),
       customer_managed_key_versionless_id: cdktf.stringToTerraform(this._customerManagedKeyVersionlessId),
+      data_exfiltration_protection_enabled: cdktf.booleanToTerraform(this._dataExfiltrationProtectionEnabled),
       location: cdktf.stringToTerraform(this._location),
       managed_resource_group_name: cdktf.stringToTerraform(this._managedResourceGroupName),
       managed_virtual_network_enabled: cdktf.booleanToTerraform(this._managedVirtualNetworkEnabled),

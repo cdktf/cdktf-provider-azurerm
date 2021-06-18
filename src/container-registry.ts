@@ -68,6 +68,10 @@ export interface ContainerRegistryConfig extends cdktf.TerraformMetaArguments {
   */
   readonly trustPolicy?: ContainerRegistryTrustPolicy[];
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry.html#zone_redundancy_enabled ContainerRegistry#zone_redundancy_enabled}
+  */
+  readonly zoneRedundancyEnabled?: boolean;
+  /**
   * identity block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry.html#identity ContainerRegistry#identity}
@@ -113,6 +117,10 @@ export interface ContainerRegistryGeoreplications {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry.html#tags ContainerRegistry#tags}
   */
   readonly tags?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry.html#zone_redundancy_enabled ContainerRegistry#zone_redundancy_enabled}
+  */
+  readonly zoneRedundancyEnabled?: boolean;
 }
 
 function containerRegistryGeoreplicationsToTerraform(struct?: ContainerRegistryGeoreplications): any {
@@ -120,6 +128,7 @@ function containerRegistryGeoreplicationsToTerraform(struct?: ContainerRegistryG
   return {
     location: cdktf.stringToTerraform(struct!.location),
     tags: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.tags),
+    zone_redundancy_enabled: cdktf.booleanToTerraform(struct!.zoneRedundancyEnabled),
   }
 }
 
@@ -309,6 +318,7 @@ export class ContainerRegistry extends cdktf.TerraformResource {
     this._storageAccountId = config.storageAccountId;
     this._tags = config.tags;
     this._trustPolicy = config.trustPolicy;
+    this._zoneRedundancyEnabled = config.zoneRedundancyEnabled;
     this._identity = config.identity;
     this._timeouts = config.timeouts;
   }
@@ -568,6 +578,22 @@ export class ContainerRegistry extends cdktf.TerraformResource {
     return this._trustPolicy
   }
 
+  // zone_redundancy_enabled - computed: false, optional: true, required: false
+  private _zoneRedundancyEnabled?: boolean;
+  public get zoneRedundancyEnabled() {
+    return this.getBooleanAttribute('zone_redundancy_enabled');
+  }
+  public set zoneRedundancyEnabled(value: boolean ) {
+    this._zoneRedundancyEnabled = value;
+  }
+  public resetZoneRedundancyEnabled() {
+    this._zoneRedundancyEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get zoneRedundancyEnabledInput() {
+    return this._zoneRedundancyEnabled
+  }
+
   // identity - computed: false, optional: true, required: false
   private _identity?: ContainerRegistryIdentity[];
   public get identity() {
@@ -621,6 +647,7 @@ export class ContainerRegistry extends cdktf.TerraformResource {
       storage_account_id: cdktf.stringToTerraform(this._storageAccountId),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
       trust_policy: cdktf.listMapper(containerRegistryTrustPolicyToTerraform)(this._trustPolicy),
+      zone_redundancy_enabled: cdktf.booleanToTerraform(this._zoneRedundancyEnabled),
       identity: cdktf.listMapper(containerRegistryIdentityToTerraform)(this._identity),
       timeouts: containerRegistryTimeoutsToTerraform(this._timeouts),
     };

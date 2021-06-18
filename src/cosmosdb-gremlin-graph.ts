@@ -28,6 +28,10 @@ export interface CosmosdbGremlinGraphConfig extends cdktf.TerraformMetaArguments
   */
   readonly partitionKeyPath: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_gremlin_graph.html#partition_key_version CosmosdbGremlinGraph#partition_key_version}
+  */
+  readonly partitionKeyVersion?: number;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_gremlin_graph.html#resource_group_name CosmosdbGremlinGraph#resource_group_name}
   */
   readonly resourceGroupName: string;
@@ -52,7 +56,7 @@ export interface CosmosdbGremlinGraphConfig extends cdktf.TerraformMetaArguments
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_gremlin_graph.html#index_policy CosmosdbGremlinGraph#index_policy}
   */
-  readonly indexPolicy: CosmosdbGremlinGraphIndexPolicy[];
+  readonly indexPolicy?: CosmosdbGremlinGraphIndexPolicy[];
   /**
   * timeouts block
   * 
@@ -104,6 +108,55 @@ function cosmosdbGremlinGraphConflictResolutionPolicyToTerraform(struct?: Cosmos
   }
 }
 
+export interface CosmosdbGremlinGraphIndexPolicyCompositeIndexIndex {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_gremlin_graph.html#order CosmosdbGremlinGraph#order}
+  */
+  readonly order: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_gremlin_graph.html#path CosmosdbGremlinGraph#path}
+  */
+  readonly path: string;
+}
+
+function cosmosdbGremlinGraphIndexPolicyCompositeIndexIndexToTerraform(struct?: CosmosdbGremlinGraphIndexPolicyCompositeIndexIndex): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    order: cdktf.stringToTerraform(struct!.order),
+    path: cdktf.stringToTerraform(struct!.path),
+  }
+}
+
+export interface CosmosdbGremlinGraphIndexPolicyCompositeIndex {
+  /**
+  * index block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_gremlin_graph.html#index CosmosdbGremlinGraph#index}
+  */
+  readonly index: CosmosdbGremlinGraphIndexPolicyCompositeIndexIndex[];
+}
+
+function cosmosdbGremlinGraphIndexPolicyCompositeIndexToTerraform(struct?: CosmosdbGremlinGraphIndexPolicyCompositeIndex): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    index: cdktf.listMapper(cosmosdbGremlinGraphIndexPolicyCompositeIndexIndexToTerraform)(struct!.index),
+  }
+}
+
+export interface CosmosdbGremlinGraphIndexPolicySpatialIndex {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_gremlin_graph.html#path CosmosdbGremlinGraph#path}
+  */
+  readonly path: string;
+}
+
+function cosmosdbGremlinGraphIndexPolicySpatialIndexToTerraform(struct?: CosmosdbGremlinGraphIndexPolicySpatialIndex): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    path: cdktf.stringToTerraform(struct!.path),
+  }
+}
+
 export interface CosmosdbGremlinGraphIndexPolicy {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_gremlin_graph.html#automatic CosmosdbGremlinGraph#automatic}
@@ -121,6 +174,18 @@ export interface CosmosdbGremlinGraphIndexPolicy {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_gremlin_graph.html#indexing_mode CosmosdbGremlinGraph#indexing_mode}
   */
   readonly indexingMode: string;
+  /**
+  * composite_index block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_gremlin_graph.html#composite_index CosmosdbGremlinGraph#composite_index}
+  */
+  readonly compositeIndex?: CosmosdbGremlinGraphIndexPolicyCompositeIndex[];
+  /**
+  * spatial_index block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_gremlin_graph.html#spatial_index CosmosdbGremlinGraph#spatial_index}
+  */
+  readonly spatialIndex?: CosmosdbGremlinGraphIndexPolicySpatialIndex[];
 }
 
 function cosmosdbGremlinGraphIndexPolicyToTerraform(struct?: CosmosdbGremlinGraphIndexPolicy): any {
@@ -130,6 +195,8 @@ function cosmosdbGremlinGraphIndexPolicyToTerraform(struct?: CosmosdbGremlinGrap
     excluded_paths: cdktf.listMapper(cdktf.stringToTerraform)(struct!.excludedPaths),
     included_paths: cdktf.listMapper(cdktf.stringToTerraform)(struct!.includedPaths),
     indexing_mode: cdktf.stringToTerraform(struct!.indexingMode),
+    composite_index: cdktf.listMapper(cosmosdbGremlinGraphIndexPolicyCompositeIndexToTerraform)(struct!.compositeIndex),
+    spatial_index: cdktf.listMapper(cosmosdbGremlinGraphIndexPolicySpatialIndexToTerraform)(struct!.spatialIndex),
   }
 }
 
@@ -209,6 +276,7 @@ export class CosmosdbGremlinGraph extends cdktf.TerraformResource {
     this._defaultTtl = config.defaultTtl;
     this._name = config.name;
     this._partitionKeyPath = config.partitionKeyPath;
+    this._partitionKeyVersion = config.partitionKeyVersion;
     this._resourceGroupName = config.resourceGroupName;
     this._throughput = config.throughput;
     this._autoscaleSettings = config.autoscaleSettings;
@@ -295,6 +363,22 @@ export class CosmosdbGremlinGraph extends cdktf.TerraformResource {
     return this._partitionKeyPath
   }
 
+  // partition_key_version - computed: false, optional: true, required: false
+  private _partitionKeyVersion?: number;
+  public get partitionKeyVersion() {
+    return this.getNumberAttribute('partition_key_version');
+  }
+  public set partitionKeyVersion(value: number ) {
+    this._partitionKeyVersion = value;
+  }
+  public resetPartitionKeyVersion() {
+    this._partitionKeyVersion = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get partitionKeyVersionInput() {
+    return this._partitionKeyVersion
+  }
+
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
@@ -356,13 +440,16 @@ export class CosmosdbGremlinGraph extends cdktf.TerraformResource {
     return this._conflictResolutionPolicy
   }
 
-  // index_policy - computed: false, optional: false, required: true
-  private _indexPolicy: CosmosdbGremlinGraphIndexPolicy[];
+  // index_policy - computed: false, optional: true, required: false
+  private _indexPolicy?: CosmosdbGremlinGraphIndexPolicy[];
   public get indexPolicy() {
     return this.interpolationForAttribute('index_policy') as any;
   }
-  public set indexPolicy(value: CosmosdbGremlinGraphIndexPolicy[]) {
+  public set indexPolicy(value: CosmosdbGremlinGraphIndexPolicy[] ) {
     this._indexPolicy = value;
+  }
+  public resetIndexPolicy() {
+    this._indexPolicy = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get indexPolicyInput() {
@@ -412,6 +499,7 @@ export class CosmosdbGremlinGraph extends cdktf.TerraformResource {
       default_ttl: cdktf.numberToTerraform(this._defaultTtl),
       name: cdktf.stringToTerraform(this._name),
       partition_key_path: cdktf.stringToTerraform(this._partitionKeyPath),
+      partition_key_version: cdktf.numberToTerraform(this._partitionKeyVersion),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       throughput: cdktf.numberToTerraform(this._throughput),
       autoscale_settings: cdktf.listMapper(cosmosdbGremlinGraphAutoscaleSettingsToTerraform)(this._autoscaleSettings),

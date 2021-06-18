@@ -8,9 +8,21 @@ import * as cdktf from 'cdktf';
 
 export interface ApiManagementConfig extends cdktf.TerraformMetaArguments {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management.html#client_certificate_enabled ApiManagement#client_certificate_enabled}
+  */
+  readonly clientCertificateEnabled?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management.html#gateway_disabled ApiManagement#gateway_disabled}
+  */
+  readonly gatewayDisabled?: boolean;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management.html#location ApiManagement#location}
   */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management.html#min_api_version ApiManagement#min_api_version}
+  */
+  readonly minApiVersion?: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management.html#name ApiManagement#name}
   */
@@ -47,6 +59,10 @@ export interface ApiManagementConfig extends cdktf.TerraformMetaArguments {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management.html#virtual_network_type ApiManagement#virtual_network_type}
   */
   readonly virtualNetworkType?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management.html#zones ApiManagement#zones}
+  */
+  readonly zones?: string[];
   /**
   * additional_location block
   * 
@@ -682,7 +698,10 @@ export class ApiManagement extends cdktf.TerraformResource {
       count: config.count,
       lifecycle: config.lifecycle
     });
+    this._clientCertificateEnabled = config.clientCertificateEnabled;
+    this._gatewayDisabled = config.gatewayDisabled;
     this._location = config.location;
+    this._minApiVersion = config.minApiVersion;
     this._name = config.name;
     this._notificationSenderEmail = config.notificationSenderEmail;
     this._policy = config.policy;
@@ -692,6 +711,7 @@ export class ApiManagement extends cdktf.TerraformResource {
     this._skuName = config.skuName;
     this._tags = config.tags;
     this._virtualNetworkType = config.virtualNetworkType;
+    this._zones = config.zones;
     this._additionalLocation = config.additionalLocation;
     this._certificate = config.certificate;
     this._hostnameConfiguration = config.hostnameConfiguration;
@@ -709,9 +729,41 @@ export class ApiManagement extends cdktf.TerraformResource {
   // ATTRIBUTES
   // ==========
 
+  // client_certificate_enabled - computed: false, optional: true, required: false
+  private _clientCertificateEnabled?: boolean;
+  public get clientCertificateEnabled() {
+    return this.getBooleanAttribute('client_certificate_enabled');
+  }
+  public set clientCertificateEnabled(value: boolean ) {
+    this._clientCertificateEnabled = value;
+  }
+  public resetClientCertificateEnabled() {
+    this._clientCertificateEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get clientCertificateEnabledInput() {
+    return this._clientCertificateEnabled
+  }
+
   // developer_portal_url - computed: true, optional: false, required: false
   public get developerPortalUrl() {
     return this.getStringAttribute('developer_portal_url');
+  }
+
+  // gateway_disabled - computed: false, optional: true, required: false
+  private _gatewayDisabled?: boolean;
+  public get gatewayDisabled() {
+    return this.getBooleanAttribute('gateway_disabled');
+  }
+  public set gatewayDisabled(value: boolean ) {
+    this._gatewayDisabled = value;
+  }
+  public resetGatewayDisabled() {
+    this._gatewayDisabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get gatewayDisabledInput() {
+    return this._gatewayDisabled
   }
 
   // gateway_regional_url - computed: true, optional: false, required: false
@@ -745,6 +797,22 @@ export class ApiManagement extends cdktf.TerraformResource {
   // management_api_url - computed: true, optional: false, required: false
   public get managementApiUrl() {
     return this.getStringAttribute('management_api_url');
+  }
+
+  // min_api_version - computed: false, optional: true, required: false
+  private _minApiVersion?: string;
+  public get minApiVersion() {
+    return this.getStringAttribute('min_api_version');
+  }
+  public set minApiVersion(value: string ) {
+    this._minApiVersion = value;
+  }
+  public resetMinApiVersion() {
+    this._minApiVersion = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get minApiVersionInput() {
+    return this._minApiVersion
   }
 
   // name - computed: false, optional: false, required: true
@@ -894,6 +962,22 @@ export class ApiManagement extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get virtualNetworkTypeInput() {
     return this._virtualNetworkType
+  }
+
+  // zones - computed: false, optional: true, required: false
+  private _zones?: string[];
+  public get zones() {
+    return this.getListAttribute('zones');
+  }
+  public set zones(value: string[] ) {
+    this._zones = value;
+  }
+  public resetZones() {
+    this._zones = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get zonesInput() {
+    return this._zones
   }
 
   // additional_location - computed: false, optional: true, required: false
@@ -1078,7 +1162,10 @@ export class ApiManagement extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      client_certificate_enabled: cdktf.booleanToTerraform(this._clientCertificateEnabled),
+      gateway_disabled: cdktf.booleanToTerraform(this._gatewayDisabled),
       location: cdktf.stringToTerraform(this._location),
+      min_api_version: cdktf.stringToTerraform(this._minApiVersion),
       name: cdktf.stringToTerraform(this._name),
       notification_sender_email: cdktf.stringToTerraform(this._notificationSenderEmail),
       policy: cdktf.listMapper(apiManagementPolicyToTerraform)(this._policy),
@@ -1088,6 +1175,7 @@ export class ApiManagement extends cdktf.TerraformResource {
       sku_name: cdktf.stringToTerraform(this._skuName),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
       virtual_network_type: cdktf.stringToTerraform(this._virtualNetworkType),
+      zones: cdktf.listMapper(cdktf.stringToTerraform)(this._zones),
       additional_location: cdktf.listMapper(apiManagementAdditionalLocationToTerraform)(this._additionalLocation),
       certificate: cdktf.listMapper(apiManagementCertificateToTerraform)(this._certificate),
       hostname_configuration: cdktf.listMapper(apiManagementHostnameConfigurationToTerraform)(this._hostnameConfiguration),

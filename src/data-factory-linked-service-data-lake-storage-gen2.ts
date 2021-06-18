@@ -48,6 +48,10 @@ export interface DataFactoryLinkedServiceDataLakeStorageGen2Config extends cdktf
   */
   readonly servicePrincipalKey?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_data_lake_storage_gen2.html#storage_account_key DataFactoryLinkedServiceDataLakeStorageGen2#storage_account_key}
+  */
+  readonly storageAccountKey?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_data_lake_storage_gen2.html#tenant DataFactoryLinkedServiceDataLakeStorageGen2#tenant}
   */
   readonly tenant?: string;
@@ -133,6 +137,7 @@ export class DataFactoryLinkedServiceDataLakeStorageGen2 extends cdktf.Terraform
     this._resourceGroupName = config.resourceGroupName;
     this._servicePrincipalId = config.servicePrincipalId;
     this._servicePrincipalKey = config.servicePrincipalKey;
+    this._storageAccountKey = config.storageAccountKey;
     this._tenant = config.tenant;
     this._url = config.url;
     this._useManagedIdentity = config.useManagedIdentity;
@@ -299,6 +304,22 @@ export class DataFactoryLinkedServiceDataLakeStorageGen2 extends cdktf.Terraform
     return this._servicePrincipalKey
   }
 
+  // storage_account_key - computed: false, optional: true, required: false
+  private _storageAccountKey?: string;
+  public get storageAccountKey() {
+    return this.getStringAttribute('storage_account_key');
+  }
+  public set storageAccountKey(value: string ) {
+    this._storageAccountKey = value;
+  }
+  public resetStorageAccountKey() {
+    this._storageAccountKey = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get storageAccountKeyInput() {
+    return this._storageAccountKey
+  }
+
   // tenant - computed: false, optional: true, required: false
   private _tenant?: string;
   public get tenant() {
@@ -376,6 +397,7 @@ export class DataFactoryLinkedServiceDataLakeStorageGen2 extends cdktf.Terraform
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       service_principal_id: cdktf.stringToTerraform(this._servicePrincipalId),
       service_principal_key: cdktf.stringToTerraform(this._servicePrincipalKey),
+      storage_account_key: cdktf.stringToTerraform(this._storageAccountKey),
       tenant: cdktf.stringToTerraform(this._tenant),
       url: cdktf.stringToTerraform(this._url),
       use_managed_identity: cdktf.booleanToTerraform(this._useManagedIdentity),

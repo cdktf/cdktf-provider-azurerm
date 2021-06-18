@@ -38,6 +38,12 @@ export interface DataFactoryConfig extends cdktf.TerraformMetaArguments {
   */
   readonly githubConfiguration?: DataFactoryGithubConfiguration[];
   /**
+  * global_parameter block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory.html#global_parameter DataFactory#global_parameter}
+  */
+  readonly globalParameter?: DataFactoryGlobalParameter[];
+  /**
   * identity block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory.html#identity DataFactory#identity}
@@ -87,6 +93,30 @@ function dataFactoryGithubConfigurationToTerraform(struct?: DataFactoryGithubCon
     git_url: cdktf.stringToTerraform(struct!.gitUrl),
     repository_name: cdktf.stringToTerraform(struct!.repositoryName),
     root_folder: cdktf.stringToTerraform(struct!.rootFolder),
+  }
+}
+
+export interface DataFactoryGlobalParameter {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory.html#name DataFactory#name}
+  */
+  readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory.html#type DataFactory#type}
+  */
+  readonly type: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory.html#value DataFactory#value}
+  */
+  readonly value: string;
+}
+
+function dataFactoryGlobalParameterToTerraform(struct?: DataFactoryGlobalParameter): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    name: cdktf.stringToTerraform(struct!.name),
+    type: cdktf.stringToTerraform(struct!.type),
+    value: cdktf.stringToTerraform(struct!.value),
   }
 }
 
@@ -212,6 +242,7 @@ export class DataFactory extends cdktf.TerraformResource {
     this._resourceGroupName = config.resourceGroupName;
     this._tags = config.tags;
     this._githubConfiguration = config.githubConfiguration;
+    this._globalParameter = config.globalParameter;
     this._identity = config.identity;
     this._timeouts = config.timeouts;
     this._vstsConfiguration = config.vstsConfiguration;
@@ -329,6 +360,22 @@ export class DataFactory extends cdktf.TerraformResource {
     return this._githubConfiguration
   }
 
+  // global_parameter - computed: false, optional: true, required: false
+  private _globalParameter?: DataFactoryGlobalParameter[];
+  public get globalParameter() {
+    return this.interpolationForAttribute('global_parameter') as any;
+  }
+  public set globalParameter(value: DataFactoryGlobalParameter[] ) {
+    this._globalParameter = value;
+  }
+  public resetGlobalParameter() {
+    this._globalParameter = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get globalParameterInput() {
+    return this._globalParameter
+  }
+
   // identity - computed: false, optional: true, required: false
   private _identity?: DataFactoryIdentity[];
   public get identity() {
@@ -390,6 +437,7 @@ export class DataFactory extends cdktf.TerraformResource {
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
       github_configuration: cdktf.listMapper(dataFactoryGithubConfigurationToTerraform)(this._githubConfiguration),
+      global_parameter: cdktf.listMapper(dataFactoryGlobalParameterToTerraform)(this._globalParameter),
       identity: cdktf.listMapper(dataFactoryIdentityToTerraform)(this._identity),
       timeouts: dataFactoryTimeoutsToTerraform(this._timeouts),
       vsts_configuration: cdktf.listMapper(dataFactoryVstsConfigurationToTerraform)(this._vstsConfiguration),
