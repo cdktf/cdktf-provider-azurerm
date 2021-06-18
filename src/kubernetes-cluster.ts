@@ -96,6 +96,12 @@ export interface KubernetesClusterConfig extends cdktf.TerraformMetaArguments {
   */
   readonly identity?: KubernetesClusterIdentity[];
   /**
+  * kubelet_identity block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#kubelet_identity KubernetesCluster#kubelet_identity}
+  */
+  readonly kubeletIdentity?: KubernetesClusterKubeletIdentity[];
+  /**
   * linux_profile block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#linux_profile KubernetesCluster#linux_profile}
@@ -196,23 +202,6 @@ export class KubernetesClusterKubeConfig extends cdktf.ComplexComputedList {
     return this.getStringAttribute('username');
   }
 }
-export class KubernetesClusterKubeletIdentity extends cdktf.ComplexComputedList {
-
-  // client_id - computed: true, optional: false, required: false
-  public get clientId() {
-    return this.getStringAttribute('client_id');
-  }
-
-  // object_id - computed: true, optional: false, required: false
-  public get objectId() {
-    return this.getStringAttribute('object_id');
-  }
-
-  // user_assigned_identity_id - computed: true, optional: false, required: false
-  public get userAssignedIdentityId() {
-    return this.getStringAttribute('user_assigned_identity_id');
-  }
-}
 export interface KubernetesClusterAddonProfileAciConnectorLinux {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#enabled KubernetesCluster#enabled}
@@ -270,6 +259,10 @@ export interface KubernetesClusterAddonProfileIngressApplicationGateway {
   */
   readonly gatewayId?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#gateway_name KubernetesCluster#gateway_name}
+  */
+  readonly gatewayName?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#subnet_cidr KubernetesCluster#subnet_cidr}
   */
   readonly subnetCidr?: string;
@@ -284,6 +277,7 @@ function kubernetesClusterAddonProfileIngressApplicationGatewayToTerraform(struc
   return {
     enabled: cdktf.booleanToTerraform(struct!.enabled),
     gateway_id: cdktf.stringToTerraform(struct!.gatewayId),
+    gateway_name: cdktf.stringToTerraform(struct!.gatewayName),
     subnet_cidr: cdktf.stringToTerraform(struct!.subnetCidr),
     subnet_id: cdktf.stringToTerraform(struct!.subnetId),
   }
@@ -467,6 +461,250 @@ function kubernetesClusterAutoScalerProfileToTerraform(struct?: KubernetesCluste
   }
 }
 
+export interface KubernetesClusterDefaultNodePoolKubeletConfig {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#allowed_unsafe_sysctls KubernetesCluster#allowed_unsafe_sysctls}
+  */
+  readonly allowedUnsafeSysctls?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#container_log_max_line KubernetesCluster#container_log_max_line}
+  */
+  readonly containerLogMaxLine?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#container_log_max_size_mb KubernetesCluster#container_log_max_size_mb}
+  */
+  readonly containerLogMaxSizeMb?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#cpu_cfs_quota_enabled KubernetesCluster#cpu_cfs_quota_enabled}
+  */
+  readonly cpuCfsQuotaEnabled?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#cpu_cfs_quota_period KubernetesCluster#cpu_cfs_quota_period}
+  */
+  readonly cpuCfsQuotaPeriod?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#cpu_manager_policy KubernetesCluster#cpu_manager_policy}
+  */
+  readonly cpuManagerPolicy?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#image_gc_high_threshold KubernetesCluster#image_gc_high_threshold}
+  */
+  readonly imageGcHighThreshold?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#image_gc_low_threshold KubernetesCluster#image_gc_low_threshold}
+  */
+  readonly imageGcLowThreshold?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#pod_max_pid KubernetesCluster#pod_max_pid}
+  */
+  readonly podMaxPid?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#topology_manager_policy KubernetesCluster#topology_manager_policy}
+  */
+  readonly topologyManagerPolicy?: string;
+}
+
+function kubernetesClusterDefaultNodePoolKubeletConfigToTerraform(struct?: KubernetesClusterDefaultNodePoolKubeletConfig): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    allowed_unsafe_sysctls: cdktf.listMapper(cdktf.stringToTerraform)(struct!.allowedUnsafeSysctls),
+    container_log_max_line: cdktf.numberToTerraform(struct!.containerLogMaxLine),
+    container_log_max_size_mb: cdktf.numberToTerraform(struct!.containerLogMaxSizeMb),
+    cpu_cfs_quota_enabled: cdktf.booleanToTerraform(struct!.cpuCfsQuotaEnabled),
+    cpu_cfs_quota_period: cdktf.stringToTerraform(struct!.cpuCfsQuotaPeriod),
+    cpu_manager_policy: cdktf.stringToTerraform(struct!.cpuManagerPolicy),
+    image_gc_high_threshold: cdktf.numberToTerraform(struct!.imageGcHighThreshold),
+    image_gc_low_threshold: cdktf.numberToTerraform(struct!.imageGcLowThreshold),
+    pod_max_pid: cdktf.numberToTerraform(struct!.podMaxPid),
+    topology_manager_policy: cdktf.stringToTerraform(struct!.topologyManagerPolicy),
+  }
+}
+
+export interface KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfig {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#fs_aio_max_nr KubernetesCluster#fs_aio_max_nr}
+  */
+  readonly fsAioMaxNr?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#fs_file_max KubernetesCluster#fs_file_max}
+  */
+  readonly fsFileMax?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#fs_inotify_max_user_watches KubernetesCluster#fs_inotify_max_user_watches}
+  */
+  readonly fsInotifyMaxUserWatches?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#fs_nr_open KubernetesCluster#fs_nr_open}
+  */
+  readonly fsNrOpen?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#kernel_threads_max KubernetesCluster#kernel_threads_max}
+  */
+  readonly kernelThreadsMax?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#net_core_netdev_max_backlog KubernetesCluster#net_core_netdev_max_backlog}
+  */
+  readonly netCoreNetdevMaxBacklog?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#net_core_optmem_max KubernetesCluster#net_core_optmem_max}
+  */
+  readonly netCoreOptmemMax?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#net_core_rmem_default KubernetesCluster#net_core_rmem_default}
+  */
+  readonly netCoreRmemDefault?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#net_core_rmem_max KubernetesCluster#net_core_rmem_max}
+  */
+  readonly netCoreRmemMax?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#net_core_somaxconn KubernetesCluster#net_core_somaxconn}
+  */
+  readonly netCoreSomaxconn?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#net_core_wmem_default KubernetesCluster#net_core_wmem_default}
+  */
+  readonly netCoreWmemDefault?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#net_core_wmem_max KubernetesCluster#net_core_wmem_max}
+  */
+  readonly netCoreWmemMax?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#net_ipv4_ip_local_port_range_max KubernetesCluster#net_ipv4_ip_local_port_range_max}
+  */
+  readonly netIpv4IpLocalPortRangeMax?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#net_ipv4_ip_local_port_range_min KubernetesCluster#net_ipv4_ip_local_port_range_min}
+  */
+  readonly netIpv4IpLocalPortRangeMin?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#net_ipv4_neigh_default_gc_thresh1 KubernetesCluster#net_ipv4_neigh_default_gc_thresh1}
+  */
+  readonly netIpv4NeighDefaultGcThresh1?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#net_ipv4_neigh_default_gc_thresh2 KubernetesCluster#net_ipv4_neigh_default_gc_thresh2}
+  */
+  readonly netIpv4NeighDefaultGcThresh2?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#net_ipv4_neigh_default_gc_thresh3 KubernetesCluster#net_ipv4_neigh_default_gc_thresh3}
+  */
+  readonly netIpv4NeighDefaultGcThresh3?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#net_ipv4_tcp_fin_timeout KubernetesCluster#net_ipv4_tcp_fin_timeout}
+  */
+  readonly netIpv4TcpFinTimeout?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#net_ipv4_tcp_keepalive_intvl KubernetesCluster#net_ipv4_tcp_keepalive_intvl}
+  */
+  readonly netIpv4TcpKeepaliveIntvl?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#net_ipv4_tcp_keepalive_probes KubernetesCluster#net_ipv4_tcp_keepalive_probes}
+  */
+  readonly netIpv4TcpKeepaliveProbes?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#net_ipv4_tcp_keepalive_time KubernetesCluster#net_ipv4_tcp_keepalive_time}
+  */
+  readonly netIpv4TcpKeepaliveTime?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#net_ipv4_tcp_max_syn_backlog KubernetesCluster#net_ipv4_tcp_max_syn_backlog}
+  */
+  readonly netIpv4TcpMaxSynBacklog?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#net_ipv4_tcp_max_tw_buckets KubernetesCluster#net_ipv4_tcp_max_tw_buckets}
+  */
+  readonly netIpv4TcpMaxTwBuckets?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#net_ipv4_tcp_tw_reuse KubernetesCluster#net_ipv4_tcp_tw_reuse}
+  */
+  readonly netIpv4TcpTwReuse?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#net_netfilter_nf_conntrack_buckets KubernetesCluster#net_netfilter_nf_conntrack_buckets}
+  */
+  readonly netNetfilterNfConntrackBuckets?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#net_netfilter_nf_conntrack_max KubernetesCluster#net_netfilter_nf_conntrack_max}
+  */
+  readonly netNetfilterNfConntrackMax?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#vm_max_map_count KubernetesCluster#vm_max_map_count}
+  */
+  readonly vmMaxMapCount?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#vm_swappiness KubernetesCluster#vm_swappiness}
+  */
+  readonly vmSwappiness?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#vm_vfs_cache_pressure KubernetesCluster#vm_vfs_cache_pressure}
+  */
+  readonly vmVfsCachePressure?: number;
+}
+
+function kubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfigToTerraform(struct?: KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfig): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    fs_aio_max_nr: cdktf.numberToTerraform(struct!.fsAioMaxNr),
+    fs_file_max: cdktf.numberToTerraform(struct!.fsFileMax),
+    fs_inotify_max_user_watches: cdktf.numberToTerraform(struct!.fsInotifyMaxUserWatches),
+    fs_nr_open: cdktf.numberToTerraform(struct!.fsNrOpen),
+    kernel_threads_max: cdktf.numberToTerraform(struct!.kernelThreadsMax),
+    net_core_netdev_max_backlog: cdktf.numberToTerraform(struct!.netCoreNetdevMaxBacklog),
+    net_core_optmem_max: cdktf.numberToTerraform(struct!.netCoreOptmemMax),
+    net_core_rmem_default: cdktf.numberToTerraform(struct!.netCoreRmemDefault),
+    net_core_rmem_max: cdktf.numberToTerraform(struct!.netCoreRmemMax),
+    net_core_somaxconn: cdktf.numberToTerraform(struct!.netCoreSomaxconn),
+    net_core_wmem_default: cdktf.numberToTerraform(struct!.netCoreWmemDefault),
+    net_core_wmem_max: cdktf.numberToTerraform(struct!.netCoreWmemMax),
+    net_ipv4_ip_local_port_range_max: cdktf.numberToTerraform(struct!.netIpv4IpLocalPortRangeMax),
+    net_ipv4_ip_local_port_range_min: cdktf.numberToTerraform(struct!.netIpv4IpLocalPortRangeMin),
+    net_ipv4_neigh_default_gc_thresh1: cdktf.numberToTerraform(struct!.netIpv4NeighDefaultGcThresh1),
+    net_ipv4_neigh_default_gc_thresh2: cdktf.numberToTerraform(struct!.netIpv4NeighDefaultGcThresh2),
+    net_ipv4_neigh_default_gc_thresh3: cdktf.numberToTerraform(struct!.netIpv4NeighDefaultGcThresh3),
+    net_ipv4_tcp_fin_timeout: cdktf.numberToTerraform(struct!.netIpv4TcpFinTimeout),
+    net_ipv4_tcp_keepalive_intvl: cdktf.numberToTerraform(struct!.netIpv4TcpKeepaliveIntvl),
+    net_ipv4_tcp_keepalive_probes: cdktf.numberToTerraform(struct!.netIpv4TcpKeepaliveProbes),
+    net_ipv4_tcp_keepalive_time: cdktf.numberToTerraform(struct!.netIpv4TcpKeepaliveTime),
+    net_ipv4_tcp_max_syn_backlog: cdktf.numberToTerraform(struct!.netIpv4TcpMaxSynBacklog),
+    net_ipv4_tcp_max_tw_buckets: cdktf.numberToTerraform(struct!.netIpv4TcpMaxTwBuckets),
+    net_ipv4_tcp_tw_reuse: cdktf.booleanToTerraform(struct!.netIpv4TcpTwReuse),
+    net_netfilter_nf_conntrack_buckets: cdktf.numberToTerraform(struct!.netNetfilterNfConntrackBuckets),
+    net_netfilter_nf_conntrack_max: cdktf.numberToTerraform(struct!.netNetfilterNfConntrackMax),
+    vm_max_map_count: cdktf.numberToTerraform(struct!.vmMaxMapCount),
+    vm_swappiness: cdktf.numberToTerraform(struct!.vmSwappiness),
+    vm_vfs_cache_pressure: cdktf.numberToTerraform(struct!.vmVfsCachePressure),
+  }
+}
+
+export interface KubernetesClusterDefaultNodePoolLinuxOsConfig {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#swap_file_size_mb KubernetesCluster#swap_file_size_mb}
+  */
+  readonly swapFileSizeMb?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#transparent_huge_page_defrag KubernetesCluster#transparent_huge_page_defrag}
+  */
+  readonly transparentHugePageDefrag?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#transparent_huge_page_enabled KubernetesCluster#transparent_huge_page_enabled}
+  */
+  readonly transparentHugePageEnabled?: string;
+  /**
+  * sysctl_config block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#sysctl_config KubernetesCluster#sysctl_config}
+  */
+  readonly sysctlConfig?: KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfig[];
+}
+
+function kubernetesClusterDefaultNodePoolLinuxOsConfigToTerraform(struct?: KubernetesClusterDefaultNodePoolLinuxOsConfig): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    swap_file_size_mb: cdktf.numberToTerraform(struct!.swapFileSizeMb),
+    transparent_huge_page_defrag: cdktf.stringToTerraform(struct!.transparentHugePageDefrag),
+    transparent_huge_page_enabled: cdktf.stringToTerraform(struct!.transparentHugePageEnabled),
+    sysctl_config: cdktf.listMapper(kubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfigToTerraform)(struct!.sysctlConfig),
+  }
+}
+
 export interface KubernetesClusterDefaultNodePoolUpgradeSettings {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#max_surge KubernetesCluster#max_surge}
@@ -523,6 +761,10 @@ export interface KubernetesClusterDefaultNodePool {
   */
   readonly nodeLabels?: { [key: string]: string };
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#node_public_ip_prefix_id KubernetesCluster#node_public_ip_prefix_id}
+  */
+  readonly nodePublicIpPrefixId?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#node_taints KubernetesCluster#node_taints}
   */
   readonly nodeTaints?: string[];
@@ -563,6 +805,18 @@ export interface KubernetesClusterDefaultNodePool {
   */
   readonly vnetSubnetId?: string;
   /**
+  * kubelet_config block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#kubelet_config KubernetesCluster#kubelet_config}
+  */
+  readonly kubeletConfig?: KubernetesClusterDefaultNodePoolKubeletConfig[];
+  /**
+  * linux_os_config block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#linux_os_config KubernetesCluster#linux_os_config}
+  */
+  readonly linuxOsConfig?: KubernetesClusterDefaultNodePoolLinuxOsConfig[];
+  /**
   * upgrade_settings block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#upgrade_settings KubernetesCluster#upgrade_settings}
@@ -583,6 +837,7 @@ function kubernetesClusterDefaultNodePoolToTerraform(struct?: KubernetesClusterD
     name: cdktf.stringToTerraform(struct!.name),
     node_count: cdktf.numberToTerraform(struct!.nodeCount),
     node_labels: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.nodeLabels),
+    node_public_ip_prefix_id: cdktf.stringToTerraform(struct!.nodePublicIpPrefixId),
     node_taints: cdktf.listMapper(cdktf.stringToTerraform)(struct!.nodeTaints),
     only_critical_addons_enabled: cdktf.booleanToTerraform(struct!.onlyCriticalAddonsEnabled),
     orchestrator_version: cdktf.stringToTerraform(struct!.orchestratorVersion),
@@ -593,6 +848,8 @@ function kubernetesClusterDefaultNodePoolToTerraform(struct?: KubernetesClusterD
     type: cdktf.stringToTerraform(struct!.type),
     vm_size: cdktf.stringToTerraform(struct!.vmSize),
     vnet_subnet_id: cdktf.stringToTerraform(struct!.vnetSubnetId),
+    kubelet_config: cdktf.listMapper(kubernetesClusterDefaultNodePoolKubeletConfigToTerraform)(struct!.kubeletConfig),
+    linux_os_config: cdktf.listMapper(kubernetesClusterDefaultNodePoolLinuxOsConfigToTerraform)(struct!.linuxOsConfig),
     upgrade_settings: cdktf.listMapper(kubernetesClusterDefaultNodePoolUpgradeSettingsToTerraform)(struct!.upgradeSettings),
   }
 }
@@ -612,6 +869,30 @@ function kubernetesClusterIdentityToTerraform(struct?: KubernetesClusterIdentity
   if (!cdktf.canInspect(struct)) { return struct; }
   return {
     type: cdktf.stringToTerraform(struct!.type),
+    user_assigned_identity_id: cdktf.stringToTerraform(struct!.userAssignedIdentityId),
+  }
+}
+
+export interface KubernetesClusterKubeletIdentity {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#client_id KubernetesCluster#client_id}
+  */
+  readonly clientId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#object_id KubernetesCluster#object_id}
+  */
+  readonly objectId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#user_assigned_identity_id KubernetesCluster#user_assigned_identity_id}
+  */
+  readonly userAssignedIdentityId?: string;
+}
+
+function kubernetesClusterKubeletIdentityToTerraform(struct?: KubernetesClusterKubeletIdentity): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    client_id: cdktf.stringToTerraform(struct!.clientId),
+    object_id: cdktf.stringToTerraform(struct!.objectId),
     user_assigned_identity_id: cdktf.stringToTerraform(struct!.userAssignedIdentityId),
   }
 }
@@ -926,6 +1207,7 @@ export class KubernetesCluster extends cdktf.TerraformResource {
     this._autoScalerProfile = config.autoScalerProfile;
     this._defaultNodePool = config.defaultNodePool;
     this._identity = config.identity;
+    this._kubeletIdentity = config.kubeletIdentity;
     this._linuxProfile = config.linuxProfile;
     this._networkProfile = config.networkProfile;
     this._roleBasedAccessControl = config.roleBasedAccessControl;
@@ -1062,11 +1344,6 @@ export class KubernetesCluster extends cdktf.TerraformResource {
   // kube_config_raw - computed: true, optional: false, required: false
   public get kubeConfigRaw() {
     return this.getStringAttribute('kube_config_raw');
-  }
-
-  // kubelet_identity - computed: true, optional: false, required: false
-  public kubeletIdentity(index: string) {
-    return new KubernetesClusterKubeletIdentity(this, 'kubelet_identity', index);
   }
 
   // kubernetes_version - computed: true, optional: true, required: false
@@ -1286,6 +1563,22 @@ export class KubernetesCluster extends cdktf.TerraformResource {
     return this._identity
   }
 
+  // kubelet_identity - computed: false, optional: true, required: false
+  private _kubeletIdentity?: KubernetesClusterKubeletIdentity[];
+  public get kubeletIdentity() {
+    return this.interpolationForAttribute('kubelet_identity') as any;
+  }
+  public set kubeletIdentity(value: KubernetesClusterKubeletIdentity[] ) {
+    this._kubeletIdentity = value;
+  }
+  public resetKubeletIdentity() {
+    this._kubeletIdentity = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get kubeletIdentityInput() {
+    return this._kubeletIdentity
+  }
+
   // linux_profile - computed: false, optional: true, required: false
   private _linuxProfile?: KubernetesClusterLinuxProfile[];
   public get linuxProfile() {
@@ -1408,6 +1701,7 @@ export class KubernetesCluster extends cdktf.TerraformResource {
       auto_scaler_profile: cdktf.listMapper(kubernetesClusterAutoScalerProfileToTerraform)(this._autoScalerProfile),
       default_node_pool: cdktf.listMapper(kubernetesClusterDefaultNodePoolToTerraform)(this._defaultNodePool),
       identity: cdktf.listMapper(kubernetesClusterIdentityToTerraform)(this._identity),
+      kubelet_identity: cdktf.listMapper(kubernetesClusterKubeletIdentityToTerraform)(this._kubeletIdentity),
       linux_profile: cdktf.listMapper(kubernetesClusterLinuxProfileToTerraform)(this._linuxProfile),
       network_profile: cdktf.listMapper(kubernetesClusterNetworkProfileToTerraform)(this._networkProfile),
       role_based_access_control: cdktf.listMapper(kubernetesClusterRoleBasedAccessControlToTerraform)(this._roleBasedAccessControl),

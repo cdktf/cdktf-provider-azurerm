@@ -24,6 +24,14 @@ export interface DataFactoryDatasetAzureBlobConfig extends cdktf.TerraformMetaAr
   */
   readonly description?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_azure_blob.html#dynamic_filename_enabled DataFactoryDatasetAzureBlob#dynamic_filename_enabled}
+  */
+  readonly dynamicFilenameEnabled?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_azure_blob.html#dynamic_path_enabled DataFactoryDatasetAzureBlob#dynamic_path_enabled}
+  */
+  readonly dynamicPathEnabled?: boolean;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_azure_blob.html#filename DataFactoryDatasetAzureBlob#filename}
   */
   readonly filename?: string;
@@ -149,6 +157,8 @@ export class DataFactoryDatasetAzureBlob extends cdktf.TerraformResource {
     this._annotations = config.annotations;
     this._dataFactoryName = config.dataFactoryName;
     this._description = config.description;
+    this._dynamicFilenameEnabled = config.dynamicFilenameEnabled;
+    this._dynamicPathEnabled = config.dynamicPathEnabled;
     this._filename = config.filename;
     this._folder = config.folder;
     this._linkedServiceName = config.linkedServiceName;
@@ -223,6 +233,38 @@ export class DataFactoryDatasetAzureBlob extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get descriptionInput() {
     return this._description
+  }
+
+  // dynamic_filename_enabled - computed: false, optional: true, required: false
+  private _dynamicFilenameEnabled?: boolean;
+  public get dynamicFilenameEnabled() {
+    return this.getBooleanAttribute('dynamic_filename_enabled');
+  }
+  public set dynamicFilenameEnabled(value: boolean ) {
+    this._dynamicFilenameEnabled = value;
+  }
+  public resetDynamicFilenameEnabled() {
+    this._dynamicFilenameEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dynamicFilenameEnabledInput() {
+    return this._dynamicFilenameEnabled
+  }
+
+  // dynamic_path_enabled - computed: false, optional: true, required: false
+  private _dynamicPathEnabled?: boolean;
+  public get dynamicPathEnabled() {
+    return this.getBooleanAttribute('dynamic_path_enabled');
+  }
+  public set dynamicPathEnabled(value: boolean ) {
+    this._dynamicPathEnabled = value;
+  }
+  public resetDynamicPathEnabled() {
+    this._dynamicPathEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dynamicPathEnabledInput() {
+    return this._dynamicPathEnabled
   }
 
   // filename - computed: false, optional: true, required: false
@@ -375,6 +417,8 @@ export class DataFactoryDatasetAzureBlob extends cdktf.TerraformResource {
       annotations: cdktf.listMapper(cdktf.stringToTerraform)(this._annotations),
       data_factory_name: cdktf.stringToTerraform(this._dataFactoryName),
       description: cdktf.stringToTerraform(this._description),
+      dynamic_filename_enabled: cdktf.booleanToTerraform(this._dynamicFilenameEnabled),
+      dynamic_path_enabled: cdktf.booleanToTerraform(this._dynamicPathEnabled),
       filename: cdktf.stringToTerraform(this._filename),
       folder: cdktf.stringToTerraform(this._folder),
       linked_service_name: cdktf.stringToTerraform(this._linkedServiceName),

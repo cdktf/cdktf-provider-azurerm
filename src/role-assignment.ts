@@ -16,6 +16,10 @@ export interface RoleAssignmentConfig extends cdktf.TerraformMetaArguments {
   */
   readonly conditionVersion?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/role_assignment.html#delegated_managed_identity_resource_id RoleAssignment#delegated_managed_identity_resource_id}
+  */
+  readonly delegatedManagedIdentityResourceId?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/role_assignment.html#description RoleAssignment#description}
   */
   readonly description?: string;
@@ -109,6 +113,7 @@ export class RoleAssignment extends cdktf.TerraformResource {
     });
     this._condition = config.condition;
     this._conditionVersion = config.conditionVersion;
+    this._delegatedManagedIdentityResourceId = config.delegatedManagedIdentityResourceId;
     this._description = config.description;
     this._name = config.name;
     this._principalId = config.principalId;
@@ -153,6 +158,22 @@ export class RoleAssignment extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get conditionVersionInput() {
     return this._conditionVersion
+  }
+
+  // delegated_managed_identity_resource_id - computed: false, optional: true, required: false
+  private _delegatedManagedIdentityResourceId?: string;
+  public get delegatedManagedIdentityResourceId() {
+    return this.getStringAttribute('delegated_managed_identity_resource_id');
+  }
+  public set delegatedManagedIdentityResourceId(value: string ) {
+    this._delegatedManagedIdentityResourceId = value;
+  }
+  public resetDelegatedManagedIdentityResourceId() {
+    this._delegatedManagedIdentityResourceId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get delegatedManagedIdentityResourceIdInput() {
+    return this._delegatedManagedIdentityResourceId
   }
 
   // description - computed: false, optional: true, required: false
@@ -295,6 +316,7 @@ export class RoleAssignment extends cdktf.TerraformResource {
     return {
       condition: cdktf.stringToTerraform(this._condition),
       condition_version: cdktf.stringToTerraform(this._conditionVersion),
+      delegated_managed_identity_resource_id: cdktf.stringToTerraform(this._delegatedManagedIdentityResourceId),
       description: cdktf.stringToTerraform(this._description),
       name: cdktf.stringToTerraform(this._name),
       principal_id: cdktf.stringToTerraform(this._principalId),

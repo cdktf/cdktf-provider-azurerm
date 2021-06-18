@@ -50,6 +50,10 @@ export interface VirtualDesktopHostPoolConfig extends cdktf.TerraformMetaArgumen
   */
   readonly resourceGroupName: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_desktop_host_pool.html#start_vm_on_connect VirtualDesktopHostPool#start_vm_on_connect}
+  */
+  readonly startVmOnConnect?: boolean;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_desktop_host_pool.html#tags VirtualDesktopHostPool#tags}
   */
   readonly tags?: { [key: string]: string };
@@ -155,6 +159,7 @@ export class VirtualDesktopHostPool extends cdktf.TerraformResource {
     this._personalDesktopAssignmentType = config.personalDesktopAssignmentType;
     this._preferredAppGroupType = config.preferredAppGroupType;
     this._resourceGroupName = config.resourceGroupName;
+    this._startVmOnConnect = config.startVmOnConnect;
     this._tags = config.tags;
     this._type = config.type;
     this._validateEnvironment = config.validateEnvironment;
@@ -319,6 +324,22 @@ export class VirtualDesktopHostPool extends cdktf.TerraformResource {
     return this._resourceGroupName
   }
 
+  // start_vm_on_connect - computed: false, optional: true, required: false
+  private _startVmOnConnect?: boolean;
+  public get startVmOnConnect() {
+    return this.getBooleanAttribute('start_vm_on_connect');
+  }
+  public set startVmOnConnect(value: boolean ) {
+    this._startVmOnConnect = value;
+  }
+  public resetStartVmOnConnect() {
+    this._startVmOnConnect = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get startVmOnConnectInput() {
+    return this._startVmOnConnect
+  }
+
   // tags - computed: false, optional: true, required: false
   private _tags?: { [key: string]: string };
   public get tags() {
@@ -412,6 +433,7 @@ export class VirtualDesktopHostPool extends cdktf.TerraformResource {
       personal_desktop_assignment_type: cdktf.stringToTerraform(this._personalDesktopAssignmentType),
       preferred_app_group_type: cdktf.stringToTerraform(this._preferredAppGroupType),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      start_vm_on_connect: cdktf.booleanToTerraform(this._startVmOnConnect),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
       type: cdktf.stringToTerraform(this._type),
       validate_environment: cdktf.booleanToTerraform(this._validateEnvironment),

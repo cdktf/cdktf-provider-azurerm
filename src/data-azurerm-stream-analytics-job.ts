@@ -22,6 +22,23 @@ export interface DataAzurermStreamAnalyticsJobConfig extends cdktf.TerraformMeta
   */
   readonly timeouts?: DataAzurermStreamAnalyticsJobTimeouts;
 }
+export class DataAzurermStreamAnalyticsJobIdentity extends cdktf.ComplexComputedList {
+
+  // principal_id - computed: true, optional: false, required: false
+  public get principalId() {
+    return this.getStringAttribute('principal_id');
+  }
+
+  // tenant_id - computed: true, optional: false, required: false
+  public get tenantId() {
+    return this.getStringAttribute('tenant_id');
+  }
+
+  // type - computed: true, optional: false, required: false
+  public get type() {
+    return this.getStringAttribute('type');
+  }
+}
 export interface DataAzurermStreamAnalyticsJobTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/stream_analytics_job.html#read DataAzurermStreamAnalyticsJob#read}
@@ -101,6 +118,11 @@ export class DataAzurermStreamAnalyticsJob extends cdktf.TerraformDataSource {
   // id - computed: true, optional: true, required: false
   public get id() {
     return this.getStringAttribute('id');
+  }
+
+  // identity - computed: true, optional: false, required: false
+  public identity(index: string) {
+    return new DataAzurermStreamAnalyticsJobIdentity(this, 'identity', index);
   }
 
   // job_id - computed: true, optional: false, required: false

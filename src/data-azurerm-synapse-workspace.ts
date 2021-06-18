@@ -22,6 +22,23 @@ export interface DataAzurermSynapseWorkspaceConfig extends cdktf.TerraformMetaAr
   */
   readonly timeouts?: DataAzurermSynapseWorkspaceTimeouts;
 }
+export class DataAzurermSynapseWorkspaceIdentity extends cdktf.ComplexComputedList {
+
+  // principal_id - computed: true, optional: false, required: false
+  public get principalId() {
+    return this.getStringAttribute('principal_id');
+  }
+
+  // tenant_id - computed: true, optional: false, required: false
+  public get tenantId() {
+    return this.getStringAttribute('tenant_id');
+  }
+
+  // type - computed: true, optional: false, required: false
+  public get type() {
+    return this.getStringAttribute('type');
+  }
+}
 export interface DataAzurermSynapseWorkspaceTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/synapse_workspace.html#read DataAzurermSynapseWorkspace#read}
@@ -81,6 +98,11 @@ export class DataAzurermSynapseWorkspace extends cdktf.TerraformDataSource {
   // id - computed: true, optional: true, required: false
   public get id() {
     return this.getStringAttribute('id');
+  }
+
+  // identity - computed: true, optional: false, required: false
+  public identity(index: string) {
+    return new DataAzurermSynapseWorkspaceIdentity(this, 'identity', index);
   }
 
   // location - computed: true, optional: false, required: false

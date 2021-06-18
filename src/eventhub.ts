@@ -28,6 +28,10 @@ export interface EventhubConfig extends cdktf.TerraformMetaArguments {
   */
   readonly resourceGroupName: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub.html#status Eventhub#status}
+  */
+  readonly status?: string;
+  /**
   * capture_description block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub.html#capture_description Eventhub#capture_description}
@@ -172,6 +176,7 @@ export class Eventhub extends cdktf.TerraformResource {
     this._namespaceName = config.namespaceName;
     this._partitionCount = config.partitionCount;
     this._resourceGroupName = config.resourceGroupName;
+    this._status = config.status;
     this._captureDescription = config.captureDescription;
     this._timeouts = config.timeouts;
   }
@@ -255,6 +260,22 @@ export class Eventhub extends cdktf.TerraformResource {
     return this._resourceGroupName
   }
 
+  // status - computed: false, optional: true, required: false
+  private _status?: string;
+  public get status() {
+    return this.getStringAttribute('status');
+  }
+  public set status(value: string ) {
+    this._status = value;
+  }
+  public resetStatus() {
+    this._status = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get statusInput() {
+    return this._status
+  }
+
   // capture_description - computed: false, optional: true, required: false
   private _captureDescription?: EventhubCaptureDescription[];
   public get captureDescription() {
@@ -298,6 +319,7 @@ export class Eventhub extends cdktf.TerraformResource {
       namespace_name: cdktf.stringToTerraform(this._namespaceName),
       partition_count: cdktf.numberToTerraform(this._partitionCount),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      status: cdktf.stringToTerraform(this._status),
       capture_description: cdktf.listMapper(eventhubCaptureDescriptionToTerraform)(this._captureDescription),
       timeouts: eventhubTimeoutsToTerraform(this._timeouts),
     };

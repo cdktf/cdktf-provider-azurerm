@@ -18,7 +18,7 @@ export interface DataFactoryLinkedServiceSqlServerConfig extends cdktf.Terraform
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_sql_server.html#connection_string DataFactoryLinkedServiceSqlServer#connection_string}
   */
-  readonly connectionString: string;
+  readonly connectionString?: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_sql_server.html#data_factory_name DataFactoryLinkedServiceSqlServer#data_factory_name}
   */
@@ -44,6 +44,12 @@ export interface DataFactoryLinkedServiceSqlServerConfig extends cdktf.Terraform
   */
   readonly resourceGroupName: string;
   /**
+  * key_vault_connection_string block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_sql_server.html#key_vault_connection_string DataFactoryLinkedServiceSqlServer#key_vault_connection_string}
+  */
+  readonly keyVaultConnectionString?: DataFactoryLinkedServiceSqlServerKeyVaultConnectionString[];
+  /**
   * key_vault_password block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_sql_server.html#key_vault_password DataFactoryLinkedServiceSqlServer#key_vault_password}
@@ -56,6 +62,25 @@ export interface DataFactoryLinkedServiceSqlServerConfig extends cdktf.Terraform
   */
   readonly timeouts?: DataFactoryLinkedServiceSqlServerTimeouts;
 }
+export interface DataFactoryLinkedServiceSqlServerKeyVaultConnectionString {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_sql_server.html#linked_service_name DataFactoryLinkedServiceSqlServer#linked_service_name}
+  */
+  readonly linkedServiceName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_sql_server.html#secret_name DataFactoryLinkedServiceSqlServer#secret_name}
+  */
+  readonly secretName: string;
+}
+
+function dataFactoryLinkedServiceSqlServerKeyVaultConnectionStringToTerraform(struct?: DataFactoryLinkedServiceSqlServerKeyVaultConnectionString): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    linked_service_name: cdktf.stringToTerraform(struct!.linkedServiceName),
+    secret_name: cdktf.stringToTerraform(struct!.secretName),
+  }
+}
+
 export interface DataFactoryLinkedServiceSqlServerKeyVaultPassword {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_sql_server.html#linked_service_name DataFactoryLinkedServiceSqlServer#linked_service_name}
@@ -141,6 +166,7 @@ export class DataFactoryLinkedServiceSqlServer extends cdktf.TerraformResource {
     this._name = config.name;
     this._parameters = config.parameters;
     this._resourceGroupName = config.resourceGroupName;
+    this._keyVaultConnectionString = config.keyVaultConnectionString;
     this._keyVaultPassword = config.keyVaultPassword;
     this._timeouts = config.timeouts;
   }
@@ -181,13 +207,16 @@ export class DataFactoryLinkedServiceSqlServer extends cdktf.TerraformResource {
     return this._annotations
   }
 
-  // connection_string - computed: false, optional: false, required: true
-  private _connectionString: string;
+  // connection_string - computed: false, optional: true, required: false
+  private _connectionString?: string;
   public get connectionString() {
     return this.getStringAttribute('connection_string');
   }
-  public set connectionString(value: string) {
+  public set connectionString(value: string ) {
     this._connectionString = value;
+  }
+  public resetConnectionString() {
+    this._connectionString = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get connectionStringInput() {
@@ -286,6 +315,22 @@ export class DataFactoryLinkedServiceSqlServer extends cdktf.TerraformResource {
     return this._resourceGroupName
   }
 
+  // key_vault_connection_string - computed: false, optional: true, required: false
+  private _keyVaultConnectionString?: DataFactoryLinkedServiceSqlServerKeyVaultConnectionString[];
+  public get keyVaultConnectionString() {
+    return this.interpolationForAttribute('key_vault_connection_string') as any;
+  }
+  public set keyVaultConnectionString(value: DataFactoryLinkedServiceSqlServerKeyVaultConnectionString[] ) {
+    this._keyVaultConnectionString = value;
+  }
+  public resetKeyVaultConnectionString() {
+    this._keyVaultConnectionString = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keyVaultConnectionStringInput() {
+    return this._keyVaultConnectionString
+  }
+
   // key_vault_password - computed: false, optional: true, required: false
   private _keyVaultPassword?: DataFactoryLinkedServiceSqlServerKeyVaultPassword[];
   public get keyVaultPassword() {
@@ -333,6 +378,7 @@ export class DataFactoryLinkedServiceSqlServer extends cdktf.TerraformResource {
       name: cdktf.stringToTerraform(this._name),
       parameters: cdktf.hashMapper(cdktf.anyToTerraform)(this._parameters),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      key_vault_connection_string: cdktf.listMapper(dataFactoryLinkedServiceSqlServerKeyVaultConnectionStringToTerraform)(this._keyVaultConnectionString),
       key_vault_password: cdktf.listMapper(dataFactoryLinkedServiceSqlServerKeyVaultPasswordToTerraform)(this._keyVaultPassword),
       timeouts: dataFactoryLinkedServiceSqlServerTimeoutsToTerraform(this._timeouts),
     };

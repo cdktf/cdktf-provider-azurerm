@@ -61,6 +61,14 @@ export interface MachineLearningInferenceClusterSsl {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/machine_learning_inference_cluster.html#key MachineLearningInferenceCluster#key}
   */
   readonly key?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/machine_learning_inference_cluster.html#leaf_domain_label MachineLearningInferenceCluster#leaf_domain_label}
+  */
+  readonly leafDomainLabel?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/machine_learning_inference_cluster.html#overwrite_existing_domain MachineLearningInferenceCluster#overwrite_existing_domain}
+  */
+  readonly overwriteExistingDomain?: boolean;
 }
 
 function machineLearningInferenceClusterSslToTerraform(struct?: MachineLearningInferenceClusterSsl): any {
@@ -69,6 +77,8 @@ function machineLearningInferenceClusterSslToTerraform(struct?: MachineLearningI
     cert: cdktf.stringToTerraform(struct!.cert),
     cname: cdktf.stringToTerraform(struct!.cname),
     key: cdktf.stringToTerraform(struct!.key),
+    leaf_domain_label: cdktf.stringToTerraform(struct!.leafDomainLabel),
+    overwrite_existing_domain: cdktf.booleanToTerraform(struct!.overwriteExistingDomain),
   }
 }
 

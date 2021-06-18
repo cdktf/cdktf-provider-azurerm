@@ -175,6 +175,20 @@ function cosmosdbSqlContainerIndexingPolicyIncludedPathToTerraform(struct?: Cosm
   }
 }
 
+export interface CosmosdbSqlContainerIndexingPolicySpatialIndex {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_sql_container.html#path CosmosdbSqlContainer#path}
+  */
+  readonly path: string;
+}
+
+function cosmosdbSqlContainerIndexingPolicySpatialIndexToTerraform(struct?: CosmosdbSqlContainerIndexingPolicySpatialIndex): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    path: cdktf.stringToTerraform(struct!.path),
+  }
+}
+
 export interface CosmosdbSqlContainerIndexingPolicy {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_sql_container.html#indexing_mode CosmosdbSqlContainer#indexing_mode}
@@ -198,6 +212,12 @@ export interface CosmosdbSqlContainerIndexingPolicy {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_sql_container.html#included_path CosmosdbSqlContainer#included_path}
   */
   readonly includedPath?: CosmosdbSqlContainerIndexingPolicyIncludedPath[];
+  /**
+  * spatial_index block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_sql_container.html#spatial_index CosmosdbSqlContainer#spatial_index}
+  */
+  readonly spatialIndex?: CosmosdbSqlContainerIndexingPolicySpatialIndex[];
 }
 
 function cosmosdbSqlContainerIndexingPolicyToTerraform(struct?: CosmosdbSqlContainerIndexingPolicy): any {
@@ -207,6 +227,7 @@ function cosmosdbSqlContainerIndexingPolicyToTerraform(struct?: CosmosdbSqlConta
     composite_index: cdktf.listMapper(cosmosdbSqlContainerIndexingPolicyCompositeIndexToTerraform)(struct!.compositeIndex),
     excluded_path: cdktf.listMapper(cosmosdbSqlContainerIndexingPolicyExcludedPathToTerraform)(struct!.excludedPath),
     included_path: cdktf.listMapper(cosmosdbSqlContainerIndexingPolicyIncludedPathToTerraform)(struct!.includedPath),
+    spatial_index: cdktf.listMapper(cosmosdbSqlContainerIndexingPolicySpatialIndexToTerraform)(struct!.spatialIndex),
   }
 }
 

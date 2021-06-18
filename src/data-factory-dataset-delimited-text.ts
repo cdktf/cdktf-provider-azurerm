@@ -80,6 +80,12 @@ export interface DataFactoryDatasetDelimitedTextConfig extends cdktf.TerraformMe
   */
   readonly rowDelimiter?: string;
   /**
+  * azure_blob_fs_location block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_delimited_text.html#azure_blob_fs_location DataFactoryDatasetDelimitedText#azure_blob_fs_location}
+  */
+  readonly azureBlobFsLocation?: DataFactoryDatasetDelimitedTextAzureBlobFsLocation[];
+  /**
   * azure_blob_storage_location block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_delimited_text.html#azure_blob_storage_location DataFactoryDatasetDelimitedText#azure_blob_storage_location}
@@ -104,6 +110,30 @@ export interface DataFactoryDatasetDelimitedTextConfig extends cdktf.TerraformMe
   */
   readonly timeouts?: DataFactoryDatasetDelimitedTextTimeouts;
 }
+export interface DataFactoryDatasetDelimitedTextAzureBlobFsLocation {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_delimited_text.html#file_system DataFactoryDatasetDelimitedText#file_system}
+  */
+  readonly fileSystem: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_delimited_text.html#filename DataFactoryDatasetDelimitedText#filename}
+  */
+  readonly filename?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_delimited_text.html#path DataFactoryDatasetDelimitedText#path}
+  */
+  readonly path?: string;
+}
+
+function dataFactoryDatasetDelimitedTextAzureBlobFsLocationToTerraform(struct?: DataFactoryDatasetDelimitedTextAzureBlobFsLocation): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    file_system: cdktf.stringToTerraform(struct!.fileSystem),
+    filename: cdktf.stringToTerraform(struct!.filename),
+    path: cdktf.stringToTerraform(struct!.path),
+  }
+}
+
 export interface DataFactoryDatasetDelimitedTextAzureBlobStorageLocation {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_delimited_text.html#container DataFactoryDatasetDelimitedText#container}
@@ -251,6 +281,7 @@ export class DataFactoryDatasetDelimitedText extends cdktf.TerraformResource {
     this._quoteCharacter = config.quoteCharacter;
     this._resourceGroupName = config.resourceGroupName;
     this._rowDelimiter = config.rowDelimiter;
+    this._azureBlobFsLocation = config.azureBlobFsLocation;
     this._azureBlobStorageLocation = config.azureBlobStorageLocation;
     this._httpServerLocation = config.httpServerLocation;
     this._schemaColumn = config.schemaColumn;
@@ -542,6 +573,22 @@ export class DataFactoryDatasetDelimitedText extends cdktf.TerraformResource {
     return this._rowDelimiter
   }
 
+  // azure_blob_fs_location - computed: false, optional: true, required: false
+  private _azureBlobFsLocation?: DataFactoryDatasetDelimitedTextAzureBlobFsLocation[];
+  public get azureBlobFsLocation() {
+    return this.interpolationForAttribute('azure_blob_fs_location') as any;
+  }
+  public set azureBlobFsLocation(value: DataFactoryDatasetDelimitedTextAzureBlobFsLocation[] ) {
+    this._azureBlobFsLocation = value;
+  }
+  public resetAzureBlobFsLocation() {
+    this._azureBlobFsLocation = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get azureBlobFsLocationInput() {
+    return this._azureBlobFsLocation
+  }
+
   // azure_blob_storage_location - computed: false, optional: true, required: false
   private _azureBlobStorageLocation?: DataFactoryDatasetDelimitedTextAzureBlobStorageLocation[];
   public get azureBlobStorageLocation() {
@@ -630,6 +677,7 @@ export class DataFactoryDatasetDelimitedText extends cdktf.TerraformResource {
       quote_character: cdktf.stringToTerraform(this._quoteCharacter),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       row_delimiter: cdktf.stringToTerraform(this._rowDelimiter),
+      azure_blob_fs_location: cdktf.listMapper(dataFactoryDatasetDelimitedTextAzureBlobFsLocationToTerraform)(this._azureBlobFsLocation),
       azure_blob_storage_location: cdktf.listMapper(dataFactoryDatasetDelimitedTextAzureBlobStorageLocationToTerraform)(this._azureBlobStorageLocation),
       http_server_location: cdktf.listMapper(dataFactoryDatasetDelimitedTextHttpServerLocationToTerraform)(this._httpServerLocation),
       schema_column: cdktf.listMapper(dataFactoryDatasetDelimitedTextSchemaColumnToTerraform)(this._schemaColumn),

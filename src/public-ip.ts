@@ -12,6 +12,10 @@ export interface PublicIpConfig extends cdktf.TerraformMetaArguments {
   */
   readonly allocationMethod: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/public_ip.html#availability_zone PublicIp#availability_zone}
+  */
+  readonly availabilityZone?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/public_ip.html#domain_name_label PublicIp#domain_name_label}
   */
   readonly domainNameLabel?: string;
@@ -124,6 +128,7 @@ export class PublicIp extends cdktf.TerraformResource {
       lifecycle: config.lifecycle
     });
     this._allocationMethod = config.allocationMethod;
+    this._availabilityZone = config.availabilityZone;
     this._domainNameLabel = config.domainNameLabel;
     this._idleTimeoutInMinutes = config.idleTimeoutInMinutes;
     this._ipTags = config.ipTags;
@@ -154,6 +159,22 @@ export class PublicIp extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get allocationMethodInput() {
     return this._allocationMethod
+  }
+
+  // availability_zone - computed: true, optional: true, required: false
+  private _availabilityZone?: string;
+  public get availabilityZone() {
+    return this.getStringAttribute('availability_zone');
+  }
+  public set availabilityZone(value: string) {
+    this._availabilityZone = value;
+  }
+  public resetAvailabilityZone() {
+    this._availabilityZone = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get availabilityZoneInput() {
+    return this._availabilityZone
   }
 
   // domain_name_label - computed: false, optional: true, required: false
@@ -338,12 +359,12 @@ export class PublicIp extends cdktf.TerraformResource {
     return this._tags
   }
 
-  // zones - computed: false, optional: true, required: false
+  // zones - computed: true, optional: true, required: false
   private _zones?: string[];
   public get zones() {
     return this.getListAttribute('zones');
   }
-  public set zones(value: string[] ) {
+  public set zones(value: string[]) {
     this._zones = value;
   }
   public resetZones() {
@@ -377,6 +398,7 @@ export class PublicIp extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       allocation_method: cdktf.stringToTerraform(this._allocationMethod),
+      availability_zone: cdktf.stringToTerraform(this._availabilityZone),
       domain_name_label: cdktf.stringToTerraform(this._domainNameLabel),
       idle_timeout_in_minutes: cdktf.numberToTerraform(this._idleTimeoutInMinutes),
       ip_tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._ipTags),

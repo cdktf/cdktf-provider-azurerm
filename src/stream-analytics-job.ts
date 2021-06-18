@@ -56,12 +56,32 @@ export interface StreamAnalyticsJobConfig extends cdktf.TerraformMetaArguments {
   */
   readonly transformationQuery: string;
   /**
+  * identity block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_job.html#identity StreamAnalyticsJob#identity}
+  */
+  readonly identity?: StreamAnalyticsJobIdentity[];
+  /**
   * timeouts block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_job.html#timeouts StreamAnalyticsJob#timeouts}
   */
   readonly timeouts?: StreamAnalyticsJobTimeouts;
 }
+export interface StreamAnalyticsJobIdentity {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_job.html#type StreamAnalyticsJob#type}
+  */
+  readonly type: string;
+}
+
+function streamAnalyticsJobIdentityToTerraform(struct?: StreamAnalyticsJobIdentity): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    type: cdktf.stringToTerraform(struct!.type),
+  }
+}
+
 export interface StreamAnalyticsJobTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_job.html#create StreamAnalyticsJob#create}
@@ -131,6 +151,7 @@ export class StreamAnalyticsJob extends cdktf.TerraformResource {
     this._streamingUnits = config.streamingUnits;
     this._tags = config.tags;
     this._transformationQuery = config.transformationQuery;
+    this._identity = config.identity;
     this._timeouts = config.timeouts;
   }
 
@@ -325,6 +346,22 @@ export class StreamAnalyticsJob extends cdktf.TerraformResource {
     return this._transformationQuery
   }
 
+  // identity - computed: false, optional: true, required: false
+  private _identity?: StreamAnalyticsJobIdentity[];
+  public get identity() {
+    return this.interpolationForAttribute('identity') as any;
+  }
+  public set identity(value: StreamAnalyticsJobIdentity[] ) {
+    this._identity = value;
+  }
+  public resetIdentity() {
+    this._identity = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get identityInput() {
+    return this._identity
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: StreamAnalyticsJobTimeouts;
   public get timeouts() {
@@ -359,6 +396,7 @@ export class StreamAnalyticsJob extends cdktf.TerraformResource {
       streaming_units: cdktf.numberToTerraform(this._streamingUnits),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
       transformation_query: cdktf.stringToTerraform(this._transformationQuery),
+      identity: cdktf.listMapper(streamAnalyticsJobIdentityToTerraform)(this._identity),
       timeouts: streamAnalyticsJobTimeoutsToTerraform(this._timeouts),
     };
   }

@@ -24,6 +24,10 @@ export interface KustoClusterCustomerManagedKeyConfig extends cdktf.TerraformMet
   */
   readonly keyVersion: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_cluster_customer_managed_key.html#user_identity KustoClusterCustomerManagedKey#user_identity}
+  */
+  readonly userIdentity?: string;
+  /**
   * timeouts block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_cluster_customer_managed_key.html#timeouts KustoClusterCustomerManagedKey#timeouts}
@@ -91,6 +95,7 @@ export class KustoClusterCustomerManagedKey extends cdktf.TerraformResource {
     this._keyName = config.keyName;
     this._keyVaultId = config.keyVaultId;
     this._keyVersion = config.keyVersion;
+    this._userIdentity = config.userIdentity;
     this._timeouts = config.timeouts;
   }
 
@@ -155,6 +160,22 @@ export class KustoClusterCustomerManagedKey extends cdktf.TerraformResource {
     return this._keyVersion
   }
 
+  // user_identity - computed: false, optional: true, required: false
+  private _userIdentity?: string;
+  public get userIdentity() {
+    return this.getStringAttribute('user_identity');
+  }
+  public set userIdentity(value: string ) {
+    this._userIdentity = value;
+  }
+  public resetUserIdentity() {
+    this._userIdentity = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get userIdentityInput() {
+    return this._userIdentity
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: KustoClusterCustomerManagedKeyTimeouts;
   public get timeouts() {
@@ -181,6 +202,7 @@ export class KustoClusterCustomerManagedKey extends cdktf.TerraformResource {
       key_name: cdktf.stringToTerraform(this._keyName),
       key_vault_id: cdktf.stringToTerraform(this._keyVaultId),
       key_version: cdktf.stringToTerraform(this._keyVersion),
+      user_identity: cdktf.stringToTerraform(this._userIdentity),
       timeouts: kustoClusterCustomerManagedKeyTimeoutsToTerraform(this._timeouts),
     };
   }

@@ -42,6 +42,10 @@ export interface LbConfig extends cdktf.TerraformMetaArguments {
 }
 export interface LbFrontendIpConfiguration {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb.html#availability_zone Lb#availability_zone}
+  */
+  readonly availabilityZone?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb.html#name Lb#name}
   */
   readonly name: string;
@@ -78,6 +82,7 @@ export interface LbFrontendIpConfiguration {
 function lbFrontendIpConfigurationToTerraform(struct?: LbFrontendIpConfiguration): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   return {
+    availability_zone: cdktf.stringToTerraform(struct!.availabilityZone),
     name: cdktf.stringToTerraform(struct!.name),
     private_ip_address: cdktf.stringToTerraform(struct!.privateIpAddress),
     private_ip_address_allocation: cdktf.stringToTerraform(struct!.privateIpAddressAllocation),
