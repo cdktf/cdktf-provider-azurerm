@@ -207,12 +207,12 @@ export class VirtualNetwork extends cdktf.TerraformResource {
     return this._bgpCommunity
   }
 
-  // dns_servers - computed: false, optional: true, required: false
+  // dns_servers - computed: true, optional: true, required: false
   private _dnsServers?: string[];
   public get dnsServers() {
     return this.getListAttribute('dns_servers');
   }
-  public set dnsServers(value: string[] ) {
+  public set dnsServers(value: string[]) {
     this._dnsServers = value;
   }
   public resetDnsServers() {

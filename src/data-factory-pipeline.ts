@@ -16,6 +16,10 @@ export interface DataFactoryPipelineConfig extends cdktf.TerraformMetaArguments 
   */
   readonly annotations?: string[];
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_pipeline.html#concurrency DataFactoryPipeline#concurrency}
+  */
+  readonly concurrency?: number;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_pipeline.html#data_factory_name DataFactoryPipeline#data_factory_name}
   */
   readonly dataFactoryName: string;
@@ -27,6 +31,10 @@ export interface DataFactoryPipelineConfig extends cdktf.TerraformMetaArguments 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_pipeline.html#folder DataFactoryPipeline#folder}
   */
   readonly folder?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_pipeline.html#moniter_metrics_after_duration DataFactoryPipeline#moniter_metrics_after_duration}
+  */
+  readonly moniterMetricsAfterDuration?: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_pipeline.html#name DataFactoryPipeline#name}
   */
@@ -109,9 +117,11 @@ export class DataFactoryPipeline extends cdktf.TerraformResource {
     });
     this._activitiesJson = config.activitiesJson;
     this._annotations = config.annotations;
+    this._concurrency = config.concurrency;
     this._dataFactoryName = config.dataFactoryName;
     this._description = config.description;
     this._folder = config.folder;
+    this._moniterMetricsAfterDuration = config.moniterMetricsAfterDuration;
     this._name = config.name;
     this._parameters = config.parameters;
     this._resourceGroupName = config.resourceGroupName;
@@ -153,6 +163,22 @@ export class DataFactoryPipeline extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get annotationsInput() {
     return this._annotations
+  }
+
+  // concurrency - computed: false, optional: true, required: false
+  private _concurrency?: number;
+  public get concurrency() {
+    return this.getNumberAttribute('concurrency');
+  }
+  public set concurrency(value: number ) {
+    this._concurrency = value;
+  }
+  public resetConcurrency() {
+    this._concurrency = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get concurrencyInput() {
+    return this._concurrency
   }
 
   // data_factory_name - computed: false, optional: false, required: true
@@ -203,6 +229,22 @@ export class DataFactoryPipeline extends cdktf.TerraformResource {
   // id - computed: true, optional: true, required: false
   public get id() {
     return this.getStringAttribute('id');
+  }
+
+  // moniter_metrics_after_duration - computed: false, optional: true, required: false
+  private _moniterMetricsAfterDuration?: string;
+  public get moniterMetricsAfterDuration() {
+    return this.getStringAttribute('moniter_metrics_after_duration');
+  }
+  public set moniterMetricsAfterDuration(value: string ) {
+    this._moniterMetricsAfterDuration = value;
+  }
+  public resetMoniterMetricsAfterDuration() {
+    this._moniterMetricsAfterDuration = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get moniterMetricsAfterDurationInput() {
+    return this._moniterMetricsAfterDuration
   }
 
   // name - computed: false, optional: false, required: true
@@ -287,9 +329,11 @@ export class DataFactoryPipeline extends cdktf.TerraformResource {
     return {
       activities_json: cdktf.stringToTerraform(this._activitiesJson),
       annotations: cdktf.listMapper(cdktf.stringToTerraform)(this._annotations),
+      concurrency: cdktf.numberToTerraform(this._concurrency),
       data_factory_name: cdktf.stringToTerraform(this._dataFactoryName),
       description: cdktf.stringToTerraform(this._description),
       folder: cdktf.stringToTerraform(this._folder),
+      moniter_metrics_after_duration: cdktf.stringToTerraform(this._moniterMetricsAfterDuration),
       name: cdktf.stringToTerraform(this._name),
       parameters: cdktf.hashMapper(cdktf.anyToTerraform)(this._parameters),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),

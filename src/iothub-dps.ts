@@ -8,6 +8,10 @@ import * as cdktf from 'cdktf';
 
 export interface IothubDpsConfig extends cdktf.TerraformMetaArguments {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_dps.html#allocation_policy IothubDps#allocation_policy}
+  */
+  readonly allocationPolicy?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_dps.html#location IothubDps#location}
   */
   readonly location: string;
@@ -147,6 +151,7 @@ export class IothubDps extends cdktf.TerraformResource {
       count: config.count,
       lifecycle: config.lifecycle
     });
+    this._allocationPolicy = config.allocationPolicy;
     this._location = config.location;
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
@@ -160,9 +165,20 @@ export class IothubDps extends cdktf.TerraformResource {
   // ATTRIBUTES
   // ==========
 
-  // allocation_policy - computed: true, optional: false, required: false
+  // allocation_policy - computed: false, optional: true, required: false
+  private _allocationPolicy?: string;
   public get allocationPolicy() {
     return this.getStringAttribute('allocation_policy');
+  }
+  public set allocationPolicy(value: string ) {
+    this._allocationPolicy = value;
+  }
+  public resetAllocationPolicy() {
+    this._allocationPolicy = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get allocationPolicyInput() {
+    return this._allocationPolicy
   }
 
   // device_provisioning_host_name - computed: true, optional: false, required: false
@@ -291,6 +307,7 @@ export class IothubDps extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      allocation_policy: cdktf.stringToTerraform(this._allocationPolicy),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),

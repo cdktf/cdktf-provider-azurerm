@@ -34,13 +34,19 @@ export interface ApiManagementNamedValueConfig extends cdktf.TerraformMetaArgume
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_named_value.html#value ApiManagementNamedValue#value}
   */
-  readonly value: string;
+  readonly value?: string;
   /**
   * timeouts block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_named_value.html#timeouts ApiManagementNamedValue#timeouts}
   */
   readonly timeouts?: ApiManagementNamedValueTimeouts;
+  /**
+  * value_from_key_vault block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_named_value.html#value_from_key_vault ApiManagementNamedValue#value_from_key_vault}
+  */
+  readonly valueFromKeyVault?: ApiManagementNamedValueValueFromKeyVault[];
 }
 export interface ApiManagementNamedValueTimeouts {
   /**
@@ -68,6 +74,25 @@ function apiManagementNamedValueTimeoutsToTerraform(struct?: ApiManagementNamedV
     delete: cdktf.stringToTerraform(struct!.delete),
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+export interface ApiManagementNamedValueValueFromKeyVault {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_named_value.html#identity_client_id ApiManagementNamedValue#identity_client_id}
+  */
+  readonly identityClientId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_named_value.html#secret_id ApiManagementNamedValue#secret_id}
+  */
+  readonly secretId: string;
+}
+
+function apiManagementNamedValueValueFromKeyVaultToTerraform(struct?: ApiManagementNamedValueValueFromKeyVault): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    identity_client_id: cdktf.stringToTerraform(struct!.identityClientId),
+    secret_id: cdktf.stringToTerraform(struct!.secretId),
   }
 }
 
@@ -107,6 +132,7 @@ export class ApiManagementNamedValue extends cdktf.TerraformResource {
     this._tags = config.tags;
     this._value = config.value;
     this._timeouts = config.timeouts;
+    this._valueFromKeyVault = config.valueFromKeyVault;
   }
 
   // ==========
@@ -202,13 +228,16 @@ export class ApiManagementNamedValue extends cdktf.TerraformResource {
     return this._tags
   }
 
-  // value - computed: false, optional: false, required: true
-  private _value: string;
+  // value - computed: false, optional: true, required: false
+  private _value?: string;
   public get value() {
     return this.getStringAttribute('value');
   }
-  public set value(value: string) {
+  public set value(value: string ) {
     this._value = value;
+  }
+  public resetValue() {
+    this._value = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get valueInput() {
@@ -231,6 +260,22 @@ export class ApiManagementNamedValue extends cdktf.TerraformResource {
     return this._timeouts
   }
 
+  // value_from_key_vault - computed: false, optional: true, required: false
+  private _valueFromKeyVault?: ApiManagementNamedValueValueFromKeyVault[];
+  public get valueFromKeyVault() {
+    return this.interpolationForAttribute('value_from_key_vault') as any;
+  }
+  public set valueFromKeyVault(value: ApiManagementNamedValueValueFromKeyVault[] ) {
+    this._valueFromKeyVault = value;
+  }
+  public resetValueFromKeyVault() {
+    this._valueFromKeyVault = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get valueFromKeyVaultInput() {
+    return this._valueFromKeyVault
+  }
+
   // =========
   // SYNTHESIS
   // =========
@@ -245,6 +290,7 @@ export class ApiManagementNamedValue extends cdktf.TerraformResource {
       tags: cdktf.listMapper(cdktf.stringToTerraform)(this._tags),
       value: cdktf.stringToTerraform(this._value),
       timeouts: apiManagementNamedValueTimeoutsToTerraform(this._timeouts),
+      value_from_key_vault: cdktf.listMapper(apiManagementNamedValueValueFromKeyVaultToTerraform)(this._valueFromKeyVault),
     };
   }
 }

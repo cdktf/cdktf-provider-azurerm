@@ -20,6 +20,10 @@ export interface DataAzurermStorageAccountSasConfig extends cdktf.TerraformMetaA
   */
   readonly httpsOnly?: boolean;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account_sas.html#ip_addresses DataAzurermStorageAccountSas#ip_addresses}
+  */
+  readonly ipAddresses?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account_sas.html#signed_version DataAzurermStorageAccountSas#signed_version}
   */
   readonly signedVersion?: string;
@@ -199,6 +203,7 @@ export class DataAzurermStorageAccountSas extends cdktf.TerraformDataSource {
     this._connectionString = config.connectionString;
     this._expiry = config.expiry;
     this._httpsOnly = config.httpsOnly;
+    this._ipAddresses = config.ipAddresses;
     this._signedVersion = config.signedVersion;
     this._start = config.start;
     this._permissions = config.permissions;
@@ -256,6 +261,22 @@ export class DataAzurermStorageAccountSas extends cdktf.TerraformDataSource {
   // id - computed: true, optional: true, required: false
   public get id() {
     return this.getStringAttribute('id');
+  }
+
+  // ip_addresses - computed: false, optional: true, required: false
+  private _ipAddresses?: string;
+  public get ipAddresses() {
+    return this.getStringAttribute('ip_addresses');
+  }
+  public set ipAddresses(value: string ) {
+    this._ipAddresses = value;
+  }
+  public resetIpAddresses() {
+    this._ipAddresses = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ipAddressesInput() {
+    return this._ipAddresses
   }
 
   // sas - computed: true, optional: false, required: false
@@ -356,6 +377,7 @@ export class DataAzurermStorageAccountSas extends cdktf.TerraformDataSource {
       connection_string: cdktf.stringToTerraform(this._connectionString),
       expiry: cdktf.stringToTerraform(this._expiry),
       https_only: cdktf.booleanToTerraform(this._httpsOnly),
+      ip_addresses: cdktf.stringToTerraform(this._ipAddresses),
       signed_version: cdktf.stringToTerraform(this._signedVersion),
       start: cdktf.stringToTerraform(this._start),
       permissions: cdktf.listMapper(dataAzurermStorageAccountSasPermissionsToTerraform)(this._permissions),

@@ -92,6 +92,10 @@ export interface RedisCachePatchSchedule {
   */
   readonly dayOfWeek: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_cache.html#maintenance_window RedisCache#maintenance_window}
+  */
+  readonly maintenanceWindow?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_cache.html#start_hour_utc RedisCache#start_hour_utc}
   */
   readonly startHourUtc?: number;
@@ -101,6 +105,7 @@ function redisCachePatchScheduleToTerraform(struct?: RedisCachePatchSchedule): a
   if (!cdktf.canInspect(struct)) { return struct; }
   return {
     day_of_week: cdktf.stringToTerraform(struct!.dayOfWeek),
+    maintenance_window: cdktf.stringToTerraform(struct!.maintenanceWindow),
     start_hour_utc: cdktf.numberToTerraform(struct!.startHourUtc),
   }
 }

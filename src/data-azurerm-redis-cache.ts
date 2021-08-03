@@ -33,6 +33,11 @@ export class DataAzurermRedisCachePatchSchedule extends cdktf.ComplexComputedLis
     return this.getStringAttribute('day_of_week');
   }
 
+  // maintenance_window - computed: true, optional: false, required: false
+  public get maintenanceWindow() {
+    return this.getStringAttribute('maintenance_window');
+  }
+
   // start_hour_utc - computed: true, optional: false, required: false
   public get startHourUtc() {
     return this.getNumberAttribute('start_hour_utc');

@@ -8,6 +8,10 @@ import * as cdktf from 'cdktf';
 
 export interface EventgridEventSubscriptionConfig extends cdktf.TerraformMetaArguments {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#advanced_filtering_on_arrays_enabled EventgridEventSubscription#advanced_filtering_on_arrays_enabled}
+  */
+  readonly advancedFilteringOnArraysEnabled?: boolean;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#event_delivery_schema EventgridEventSubscription#event_delivery_schema}
   */
   readonly eventDeliverySchema?: string;
@@ -131,6 +135,34 @@ function eventgridEventSubscriptionAdvancedFilterBoolEqualsToTerraform(struct?: 
   }
 }
 
+export interface EventgridEventSubscriptionAdvancedFilterIsNotNull {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#key EventgridEventSubscription#key}
+  */
+  readonly key: string;
+}
+
+function eventgridEventSubscriptionAdvancedFilterIsNotNullToTerraform(struct?: EventgridEventSubscriptionAdvancedFilterIsNotNull): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    key: cdktf.stringToTerraform(struct!.key),
+  }
+}
+
+export interface EventgridEventSubscriptionAdvancedFilterIsNullOrUndefined {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#key EventgridEventSubscription#key}
+  */
+  readonly key: string;
+}
+
+function eventgridEventSubscriptionAdvancedFilterIsNullOrUndefinedToTerraform(struct?: EventgridEventSubscriptionAdvancedFilterIsNullOrUndefined): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    key: cdktf.stringToTerraform(struct!.key),
+  }
+}
+
 export interface EventgridEventSubscriptionAdvancedFilterNumberGreaterThan {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#key EventgridEventSubscription#key}
@@ -188,6 +220,25 @@ function eventgridEventSubscriptionAdvancedFilterNumberInToTerraform(struct?: Ev
   }
 }
 
+export interface EventgridEventSubscriptionAdvancedFilterNumberInRange {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#key EventgridEventSubscription#key}
+  */
+  readonly key: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#values EventgridEventSubscription#values}
+  */
+  readonly values: number[];
+}
+
+function eventgridEventSubscriptionAdvancedFilterNumberInRangeToTerraform(struct?: EventgridEventSubscriptionAdvancedFilterNumberInRange): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    key: cdktf.stringToTerraform(struct!.key),
+    values: cdktf.listMapper(cdktf.numberToTerraform)(struct!.values),
+  }
+}
+
 export interface EventgridEventSubscriptionAdvancedFilterNumberLessThan {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#key EventgridEventSubscription#key}
@@ -238,6 +289,25 @@ export interface EventgridEventSubscriptionAdvancedFilterNumberNotIn {
 }
 
 function eventgridEventSubscriptionAdvancedFilterNumberNotInToTerraform(struct?: EventgridEventSubscriptionAdvancedFilterNumberNotIn): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    key: cdktf.stringToTerraform(struct!.key),
+    values: cdktf.listMapper(cdktf.numberToTerraform)(struct!.values),
+  }
+}
+
+export interface EventgridEventSubscriptionAdvancedFilterNumberNotInRange {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#key EventgridEventSubscription#key}
+  */
+  readonly key: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#values EventgridEventSubscription#values}
+  */
+  readonly values: number[];
+}
+
+function eventgridEventSubscriptionAdvancedFilterNumberNotInRangeToTerraform(struct?: EventgridEventSubscriptionAdvancedFilterNumberNotInRange): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   return {
     key: cdktf.stringToTerraform(struct!.key),
@@ -321,6 +391,63 @@ function eventgridEventSubscriptionAdvancedFilterStringInToTerraform(struct?: Ev
   }
 }
 
+export interface EventgridEventSubscriptionAdvancedFilterStringNotBeginsWith {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#key EventgridEventSubscription#key}
+  */
+  readonly key: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#values EventgridEventSubscription#values}
+  */
+  readonly values: string[];
+}
+
+function eventgridEventSubscriptionAdvancedFilterStringNotBeginsWithToTerraform(struct?: EventgridEventSubscriptionAdvancedFilterStringNotBeginsWith): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    key: cdktf.stringToTerraform(struct!.key),
+    values: cdktf.listMapper(cdktf.stringToTerraform)(struct!.values),
+  }
+}
+
+export interface EventgridEventSubscriptionAdvancedFilterStringNotContains {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#key EventgridEventSubscription#key}
+  */
+  readonly key: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#values EventgridEventSubscription#values}
+  */
+  readonly values: string[];
+}
+
+function eventgridEventSubscriptionAdvancedFilterStringNotContainsToTerraform(struct?: EventgridEventSubscriptionAdvancedFilterStringNotContains): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    key: cdktf.stringToTerraform(struct!.key),
+    values: cdktf.listMapper(cdktf.stringToTerraform)(struct!.values),
+  }
+}
+
+export interface EventgridEventSubscriptionAdvancedFilterStringNotEndsWith {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#key EventgridEventSubscription#key}
+  */
+  readonly key: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#values EventgridEventSubscription#values}
+  */
+  readonly values: string[];
+}
+
+function eventgridEventSubscriptionAdvancedFilterStringNotEndsWithToTerraform(struct?: EventgridEventSubscriptionAdvancedFilterStringNotEndsWith): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    key: cdktf.stringToTerraform(struct!.key),
+    values: cdktf.listMapper(cdktf.stringToTerraform)(struct!.values),
+  }
+}
+
 export interface EventgridEventSubscriptionAdvancedFilterStringNotIn {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#key EventgridEventSubscription#key}
@@ -348,6 +475,18 @@ export interface EventgridEventSubscriptionAdvancedFilter {
   */
   readonly boolEquals?: EventgridEventSubscriptionAdvancedFilterBoolEquals[];
   /**
+  * is_not_null block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#is_not_null EventgridEventSubscription#is_not_null}
+  */
+  readonly isNotNull?: EventgridEventSubscriptionAdvancedFilterIsNotNull[];
+  /**
+  * is_null_or_undefined block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#is_null_or_undefined EventgridEventSubscription#is_null_or_undefined}
+  */
+  readonly isNullOrUndefined?: EventgridEventSubscriptionAdvancedFilterIsNullOrUndefined[];
+  /**
   * number_greater_than block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#number_greater_than EventgridEventSubscription#number_greater_than}
@@ -366,6 +505,12 @@ export interface EventgridEventSubscriptionAdvancedFilter {
   */
   readonly numberIn?: EventgridEventSubscriptionAdvancedFilterNumberIn[];
   /**
+  * number_in_range block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#number_in_range EventgridEventSubscription#number_in_range}
+  */
+  readonly numberInRange?: EventgridEventSubscriptionAdvancedFilterNumberInRange[];
+  /**
   * number_less_than block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#number_less_than EventgridEventSubscription#number_less_than}
@@ -383,6 +528,12 @@ export interface EventgridEventSubscriptionAdvancedFilter {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#number_not_in EventgridEventSubscription#number_not_in}
   */
   readonly numberNotIn?: EventgridEventSubscriptionAdvancedFilterNumberNotIn[];
+  /**
+  * number_not_in_range block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#number_not_in_range EventgridEventSubscription#number_not_in_range}
+  */
+  readonly numberNotInRange?: EventgridEventSubscriptionAdvancedFilterNumberNotInRange[];
   /**
   * string_begins_with block
   * 
@@ -408,6 +559,24 @@ export interface EventgridEventSubscriptionAdvancedFilter {
   */
   readonly stringIn?: EventgridEventSubscriptionAdvancedFilterStringIn[];
   /**
+  * string_not_begins_with block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#string_not_begins_with EventgridEventSubscription#string_not_begins_with}
+  */
+  readonly stringNotBeginsWith?: EventgridEventSubscriptionAdvancedFilterStringNotBeginsWith[];
+  /**
+  * string_not_contains block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#string_not_contains EventgridEventSubscription#string_not_contains}
+  */
+  readonly stringNotContains?: EventgridEventSubscriptionAdvancedFilterStringNotContains[];
+  /**
+  * string_not_ends_with block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#string_not_ends_with EventgridEventSubscription#string_not_ends_with}
+  */
+  readonly stringNotEndsWith?: EventgridEventSubscriptionAdvancedFilterStringNotEndsWith[];
+  /**
   * string_not_in block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#string_not_in EventgridEventSubscription#string_not_in}
@@ -419,16 +588,23 @@ function eventgridEventSubscriptionAdvancedFilterToTerraform(struct?: EventgridE
   if (!cdktf.canInspect(struct)) { return struct; }
   return {
     bool_equals: cdktf.listMapper(eventgridEventSubscriptionAdvancedFilterBoolEqualsToTerraform)(struct!.boolEquals),
+    is_not_null: cdktf.listMapper(eventgridEventSubscriptionAdvancedFilterIsNotNullToTerraform)(struct!.isNotNull),
+    is_null_or_undefined: cdktf.listMapper(eventgridEventSubscriptionAdvancedFilterIsNullOrUndefinedToTerraform)(struct!.isNullOrUndefined),
     number_greater_than: cdktf.listMapper(eventgridEventSubscriptionAdvancedFilterNumberGreaterThanToTerraform)(struct!.numberGreaterThan),
     number_greater_than_or_equals: cdktf.listMapper(eventgridEventSubscriptionAdvancedFilterNumberGreaterThanOrEqualsToTerraform)(struct!.numberGreaterThanOrEquals),
     number_in: cdktf.listMapper(eventgridEventSubscriptionAdvancedFilterNumberInToTerraform)(struct!.numberIn),
+    number_in_range: cdktf.listMapper(eventgridEventSubscriptionAdvancedFilterNumberInRangeToTerraform)(struct!.numberInRange),
     number_less_than: cdktf.listMapper(eventgridEventSubscriptionAdvancedFilterNumberLessThanToTerraform)(struct!.numberLessThan),
     number_less_than_or_equals: cdktf.listMapper(eventgridEventSubscriptionAdvancedFilterNumberLessThanOrEqualsToTerraform)(struct!.numberLessThanOrEquals),
     number_not_in: cdktf.listMapper(eventgridEventSubscriptionAdvancedFilterNumberNotInToTerraform)(struct!.numberNotIn),
+    number_not_in_range: cdktf.listMapper(eventgridEventSubscriptionAdvancedFilterNumberNotInRangeToTerraform)(struct!.numberNotInRange),
     string_begins_with: cdktf.listMapper(eventgridEventSubscriptionAdvancedFilterStringBeginsWithToTerraform)(struct!.stringBeginsWith),
     string_contains: cdktf.listMapper(eventgridEventSubscriptionAdvancedFilterStringContainsToTerraform)(struct!.stringContains),
     string_ends_with: cdktf.listMapper(eventgridEventSubscriptionAdvancedFilterStringEndsWithToTerraform)(struct!.stringEndsWith),
     string_in: cdktf.listMapper(eventgridEventSubscriptionAdvancedFilterStringInToTerraform)(struct!.stringIn),
+    string_not_begins_with: cdktf.listMapper(eventgridEventSubscriptionAdvancedFilterStringNotBeginsWithToTerraform)(struct!.stringNotBeginsWith),
+    string_not_contains: cdktf.listMapper(eventgridEventSubscriptionAdvancedFilterStringNotContainsToTerraform)(struct!.stringNotContains),
+    string_not_ends_with: cdktf.listMapper(eventgridEventSubscriptionAdvancedFilterStringNotEndsWithToTerraform)(struct!.stringNotEndsWith),
     string_not_in: cdktf.listMapper(eventgridEventSubscriptionAdvancedFilterStringNotInToTerraform)(struct!.stringNotIn),
   }
 }
@@ -657,6 +833,7 @@ export class EventgridEventSubscription extends cdktf.TerraformResource {
       count: config.count,
       lifecycle: config.lifecycle
     });
+    this._advancedFilteringOnArraysEnabled = config.advancedFilteringOnArraysEnabled;
     this._eventDeliverySchema = config.eventDeliverySchema;
     this._eventhubEndpointId = config.eventhubEndpointId;
     this._expirationTimeUtc = config.expirationTimeUtc;
@@ -683,6 +860,22 @@ export class EventgridEventSubscription extends cdktf.TerraformResource {
   // ==========
   // ATTRIBUTES
   // ==========
+
+  // advanced_filtering_on_arrays_enabled - computed: false, optional: true, required: false
+  private _advancedFilteringOnArraysEnabled?: boolean;
+  public get advancedFilteringOnArraysEnabled() {
+    return this.getBooleanAttribute('advanced_filtering_on_arrays_enabled');
+  }
+  public set advancedFilteringOnArraysEnabled(value: boolean ) {
+    this._advancedFilteringOnArraysEnabled = value;
+  }
+  public resetAdvancedFilteringOnArraysEnabled() {
+    this._advancedFilteringOnArraysEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get advancedFilteringOnArraysEnabledInput() {
+    return this._advancedFilteringOnArraysEnabled
+  }
 
   // event_delivery_schema - computed: false, optional: true, required: false
   private _eventDeliverySchema?: string;
@@ -1025,6 +1218,7 @@ export class EventgridEventSubscription extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      advanced_filtering_on_arrays_enabled: cdktf.booleanToTerraform(this._advancedFilteringOnArraysEnabled),
       event_delivery_schema: cdktf.stringToTerraform(this._eventDeliverySchema),
       eventhub_endpoint_id: cdktf.stringToTerraform(this._eventhubEndpointId),
       expiration_time_utc: cdktf.stringToTerraform(this._expirationTimeUtc),

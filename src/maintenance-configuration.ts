@@ -16,6 +16,10 @@ export interface MaintenanceConfigurationConfig extends cdktf.TerraformMetaArgum
   */
   readonly name: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/maintenance_configuration.html#properties MaintenanceConfiguration#properties}
+  */
+  readonly properties?: { [key: string]: string };
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/maintenance_configuration.html#resource_group_name MaintenanceConfiguration#resource_group_name}
   */
   readonly resourceGroupName: string;
@@ -28,11 +32,21 @@ export interface MaintenanceConfigurationConfig extends cdktf.TerraformMetaArgum
   */
   readonly tags?: { [key: string]: string };
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/maintenance_configuration.html#visibility MaintenanceConfiguration#visibility}
+  */
+  readonly visibility?: string;
+  /**
   * timeouts block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/maintenance_configuration.html#timeouts MaintenanceConfiguration#timeouts}
   */
   readonly timeouts?: MaintenanceConfigurationTimeouts;
+  /**
+  * window block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/maintenance_configuration.html#window MaintenanceConfiguration#window}
+  */
+  readonly window?: MaintenanceConfigurationWindow[];
 }
 export interface MaintenanceConfigurationTimeouts {
   /**
@@ -60,6 +74,40 @@ function maintenanceConfigurationTimeoutsToTerraform(struct?: MaintenanceConfigu
     delete: cdktf.stringToTerraform(struct!.delete),
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+export interface MaintenanceConfigurationWindow {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/maintenance_configuration.html#duration MaintenanceConfiguration#duration}
+  */
+  readonly duration?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/maintenance_configuration.html#expiration_date_time MaintenanceConfiguration#expiration_date_time}
+  */
+  readonly expirationDateTime?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/maintenance_configuration.html#recur_every MaintenanceConfiguration#recur_every}
+  */
+  readonly recurEvery?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/maintenance_configuration.html#start_date_time MaintenanceConfiguration#start_date_time}
+  */
+  readonly startDateTime: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/maintenance_configuration.html#time_zone MaintenanceConfiguration#time_zone}
+  */
+  readonly timeZone: string;
+}
+
+function maintenanceConfigurationWindowToTerraform(struct?: MaintenanceConfigurationWindow): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    duration: cdktf.stringToTerraform(struct!.duration),
+    expiration_date_time: cdktf.stringToTerraform(struct!.expirationDateTime),
+    recur_every: cdktf.stringToTerraform(struct!.recurEvery),
+    start_date_time: cdktf.stringToTerraform(struct!.startDateTime),
+    time_zone: cdktf.stringToTerraform(struct!.timeZone),
   }
 }
 
@@ -93,10 +141,13 @@ export class MaintenanceConfiguration extends cdktf.TerraformResource {
     });
     this._location = config.location;
     this._name = config.name;
+    this._properties = config.properties;
     this._resourceGroupName = config.resourceGroupName;
     this._scope = config.scope;
     this._tags = config.tags;
+    this._visibility = config.visibility;
     this._timeouts = config.timeouts;
+    this._window = config.window;
   }
 
   // ==========
@@ -132,6 +183,22 @@ export class MaintenanceConfiguration extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
     return this._name
+  }
+
+  // properties - computed: false, optional: true, required: false
+  private _properties?: { [key: string]: string };
+  public get properties() {
+    return this.interpolationForAttribute('properties') as any;
+  }
+  public set properties(value: { [key: string]: string } ) {
+    this._properties = value;
+  }
+  public resetProperties() {
+    this._properties = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get propertiesInput() {
+    return this._properties
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -179,6 +246,22 @@ export class MaintenanceConfiguration extends cdktf.TerraformResource {
     return this._tags
   }
 
+  // visibility - computed: false, optional: true, required: false
+  private _visibility?: string;
+  public get visibility() {
+    return this.getStringAttribute('visibility');
+  }
+  public set visibility(value: string ) {
+    this._visibility = value;
+  }
+  public resetVisibility() {
+    this._visibility = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get visibilityInput() {
+    return this._visibility
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: MaintenanceConfigurationTimeouts;
   public get timeouts() {
@@ -195,6 +278,22 @@ export class MaintenanceConfiguration extends cdktf.TerraformResource {
     return this._timeouts
   }
 
+  // window - computed: false, optional: true, required: false
+  private _window?: MaintenanceConfigurationWindow[];
+  public get window() {
+    return this.interpolationForAttribute('window') as any;
+  }
+  public set window(value: MaintenanceConfigurationWindow[] ) {
+    this._window = value;
+  }
+  public resetWindow() {
+    this._window = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get windowInput() {
+    return this._window
+  }
+
   // =========
   // SYNTHESIS
   // =========
@@ -203,10 +302,13 @@ export class MaintenanceConfiguration extends cdktf.TerraformResource {
     return {
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
+      properties: cdktf.hashMapper(cdktf.anyToTerraform)(this._properties),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       scope: cdktf.stringToTerraform(this._scope),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      visibility: cdktf.stringToTerraform(this._visibility),
       timeouts: maintenanceConfigurationTimeoutsToTerraform(this._timeouts),
+      window: cdktf.listMapper(maintenanceConfigurationWindowToTerraform)(this._window),
     };
   }
 }

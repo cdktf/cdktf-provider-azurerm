@@ -78,6 +78,67 @@ export interface ApiManagementApiDiagnosticConfig extends cdktf.TerraformMetaArg
   */
   readonly timeouts?: ApiManagementApiDiagnosticTimeouts;
 }
+export interface ApiManagementApiDiagnosticBackendRequestDataMaskingHeaders {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_diagnostic.html#mode ApiManagementApiDiagnostic#mode}
+  */
+  readonly mode: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_diagnostic.html#value ApiManagementApiDiagnostic#value}
+  */
+  readonly value: string;
+}
+
+function apiManagementApiDiagnosticBackendRequestDataMaskingHeadersToTerraform(struct?: ApiManagementApiDiagnosticBackendRequestDataMaskingHeaders): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    mode: cdktf.stringToTerraform(struct!.mode),
+    value: cdktf.stringToTerraform(struct!.value),
+  }
+}
+
+export interface ApiManagementApiDiagnosticBackendRequestDataMaskingQueryParams {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_diagnostic.html#mode ApiManagementApiDiagnostic#mode}
+  */
+  readonly mode: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_diagnostic.html#value ApiManagementApiDiagnostic#value}
+  */
+  readonly value: string;
+}
+
+function apiManagementApiDiagnosticBackendRequestDataMaskingQueryParamsToTerraform(struct?: ApiManagementApiDiagnosticBackendRequestDataMaskingQueryParams): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    mode: cdktf.stringToTerraform(struct!.mode),
+    value: cdktf.stringToTerraform(struct!.value),
+  }
+}
+
+export interface ApiManagementApiDiagnosticBackendRequestDataMasking {
+  /**
+  * headers block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_diagnostic.html#headers ApiManagementApiDiagnostic#headers}
+  */
+  readonly headers?: ApiManagementApiDiagnosticBackendRequestDataMaskingHeaders[];
+  /**
+  * query_params block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_diagnostic.html#query_params ApiManagementApiDiagnostic#query_params}
+  */
+  readonly queryParams?: ApiManagementApiDiagnosticBackendRequestDataMaskingQueryParams[];
+}
+
+function apiManagementApiDiagnosticBackendRequestDataMaskingToTerraform(struct?: ApiManagementApiDiagnosticBackendRequestDataMasking): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    headers: cdktf.listMapper(apiManagementApiDiagnosticBackendRequestDataMaskingHeadersToTerraform)(struct!.headers),
+    query_params: cdktf.listMapper(apiManagementApiDiagnosticBackendRequestDataMaskingQueryParamsToTerraform)(struct!.queryParams),
+  }
+}
+
 export interface ApiManagementApiDiagnosticBackendRequest {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_diagnostic.html#body_bytes ApiManagementApiDiagnostic#body_bytes}
@@ -87,6 +148,12 @@ export interface ApiManagementApiDiagnosticBackendRequest {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_diagnostic.html#headers_to_log ApiManagementApiDiagnostic#headers_to_log}
   */
   readonly headersToLog?: string[];
+  /**
+  * data_masking block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_diagnostic.html#data_masking ApiManagementApiDiagnostic#data_masking}
+  */
+  readonly dataMasking?: ApiManagementApiDiagnosticBackendRequestDataMasking[];
 }
 
 function apiManagementApiDiagnosticBackendRequestToTerraform(struct?: ApiManagementApiDiagnosticBackendRequest): any {
@@ -94,6 +161,68 @@ function apiManagementApiDiagnosticBackendRequestToTerraform(struct?: ApiManagem
   return {
     body_bytes: cdktf.numberToTerraform(struct!.bodyBytes),
     headers_to_log: cdktf.listMapper(cdktf.stringToTerraform)(struct!.headersToLog),
+    data_masking: cdktf.listMapper(apiManagementApiDiagnosticBackendRequestDataMaskingToTerraform)(struct!.dataMasking),
+  }
+}
+
+export interface ApiManagementApiDiagnosticBackendResponseDataMaskingHeaders {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_diagnostic.html#mode ApiManagementApiDiagnostic#mode}
+  */
+  readonly mode: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_diagnostic.html#value ApiManagementApiDiagnostic#value}
+  */
+  readonly value: string;
+}
+
+function apiManagementApiDiagnosticBackendResponseDataMaskingHeadersToTerraform(struct?: ApiManagementApiDiagnosticBackendResponseDataMaskingHeaders): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    mode: cdktf.stringToTerraform(struct!.mode),
+    value: cdktf.stringToTerraform(struct!.value),
+  }
+}
+
+export interface ApiManagementApiDiagnosticBackendResponseDataMaskingQueryParams {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_diagnostic.html#mode ApiManagementApiDiagnostic#mode}
+  */
+  readonly mode: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_diagnostic.html#value ApiManagementApiDiagnostic#value}
+  */
+  readonly value: string;
+}
+
+function apiManagementApiDiagnosticBackendResponseDataMaskingQueryParamsToTerraform(struct?: ApiManagementApiDiagnosticBackendResponseDataMaskingQueryParams): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    mode: cdktf.stringToTerraform(struct!.mode),
+    value: cdktf.stringToTerraform(struct!.value),
+  }
+}
+
+export interface ApiManagementApiDiagnosticBackendResponseDataMasking {
+  /**
+  * headers block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_diagnostic.html#headers ApiManagementApiDiagnostic#headers}
+  */
+  readonly headers?: ApiManagementApiDiagnosticBackendResponseDataMaskingHeaders[];
+  /**
+  * query_params block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_diagnostic.html#query_params ApiManagementApiDiagnostic#query_params}
+  */
+  readonly queryParams?: ApiManagementApiDiagnosticBackendResponseDataMaskingQueryParams[];
+}
+
+function apiManagementApiDiagnosticBackendResponseDataMaskingToTerraform(struct?: ApiManagementApiDiagnosticBackendResponseDataMasking): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    headers: cdktf.listMapper(apiManagementApiDiagnosticBackendResponseDataMaskingHeadersToTerraform)(struct!.headers),
+    query_params: cdktf.listMapper(apiManagementApiDiagnosticBackendResponseDataMaskingQueryParamsToTerraform)(struct!.queryParams),
   }
 }
 
@@ -106,6 +235,12 @@ export interface ApiManagementApiDiagnosticBackendResponse {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_diagnostic.html#headers_to_log ApiManagementApiDiagnostic#headers_to_log}
   */
   readonly headersToLog?: string[];
+  /**
+  * data_masking block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_diagnostic.html#data_masking ApiManagementApiDiagnostic#data_masking}
+  */
+  readonly dataMasking?: ApiManagementApiDiagnosticBackendResponseDataMasking[];
 }
 
 function apiManagementApiDiagnosticBackendResponseToTerraform(struct?: ApiManagementApiDiagnosticBackendResponse): any {
@@ -113,6 +248,68 @@ function apiManagementApiDiagnosticBackendResponseToTerraform(struct?: ApiManage
   return {
     body_bytes: cdktf.numberToTerraform(struct!.bodyBytes),
     headers_to_log: cdktf.listMapper(cdktf.stringToTerraform)(struct!.headersToLog),
+    data_masking: cdktf.listMapper(apiManagementApiDiagnosticBackendResponseDataMaskingToTerraform)(struct!.dataMasking),
+  }
+}
+
+export interface ApiManagementApiDiagnosticFrontendRequestDataMaskingHeaders {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_diagnostic.html#mode ApiManagementApiDiagnostic#mode}
+  */
+  readonly mode: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_diagnostic.html#value ApiManagementApiDiagnostic#value}
+  */
+  readonly value: string;
+}
+
+function apiManagementApiDiagnosticFrontendRequestDataMaskingHeadersToTerraform(struct?: ApiManagementApiDiagnosticFrontendRequestDataMaskingHeaders): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    mode: cdktf.stringToTerraform(struct!.mode),
+    value: cdktf.stringToTerraform(struct!.value),
+  }
+}
+
+export interface ApiManagementApiDiagnosticFrontendRequestDataMaskingQueryParams {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_diagnostic.html#mode ApiManagementApiDiagnostic#mode}
+  */
+  readonly mode: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_diagnostic.html#value ApiManagementApiDiagnostic#value}
+  */
+  readonly value: string;
+}
+
+function apiManagementApiDiagnosticFrontendRequestDataMaskingQueryParamsToTerraform(struct?: ApiManagementApiDiagnosticFrontendRequestDataMaskingQueryParams): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    mode: cdktf.stringToTerraform(struct!.mode),
+    value: cdktf.stringToTerraform(struct!.value),
+  }
+}
+
+export interface ApiManagementApiDiagnosticFrontendRequestDataMasking {
+  /**
+  * headers block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_diagnostic.html#headers ApiManagementApiDiagnostic#headers}
+  */
+  readonly headers?: ApiManagementApiDiagnosticFrontendRequestDataMaskingHeaders[];
+  /**
+  * query_params block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_diagnostic.html#query_params ApiManagementApiDiagnostic#query_params}
+  */
+  readonly queryParams?: ApiManagementApiDiagnosticFrontendRequestDataMaskingQueryParams[];
+}
+
+function apiManagementApiDiagnosticFrontendRequestDataMaskingToTerraform(struct?: ApiManagementApiDiagnosticFrontendRequestDataMasking): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    headers: cdktf.listMapper(apiManagementApiDiagnosticFrontendRequestDataMaskingHeadersToTerraform)(struct!.headers),
+    query_params: cdktf.listMapper(apiManagementApiDiagnosticFrontendRequestDataMaskingQueryParamsToTerraform)(struct!.queryParams),
   }
 }
 
@@ -125,6 +322,12 @@ export interface ApiManagementApiDiagnosticFrontendRequest {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_diagnostic.html#headers_to_log ApiManagementApiDiagnostic#headers_to_log}
   */
   readonly headersToLog?: string[];
+  /**
+  * data_masking block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_diagnostic.html#data_masking ApiManagementApiDiagnostic#data_masking}
+  */
+  readonly dataMasking?: ApiManagementApiDiagnosticFrontendRequestDataMasking[];
 }
 
 function apiManagementApiDiagnosticFrontendRequestToTerraform(struct?: ApiManagementApiDiagnosticFrontendRequest): any {
@@ -132,6 +335,68 @@ function apiManagementApiDiagnosticFrontendRequestToTerraform(struct?: ApiManage
   return {
     body_bytes: cdktf.numberToTerraform(struct!.bodyBytes),
     headers_to_log: cdktf.listMapper(cdktf.stringToTerraform)(struct!.headersToLog),
+    data_masking: cdktf.listMapper(apiManagementApiDiagnosticFrontendRequestDataMaskingToTerraform)(struct!.dataMasking),
+  }
+}
+
+export interface ApiManagementApiDiagnosticFrontendResponseDataMaskingHeaders {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_diagnostic.html#mode ApiManagementApiDiagnostic#mode}
+  */
+  readonly mode: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_diagnostic.html#value ApiManagementApiDiagnostic#value}
+  */
+  readonly value: string;
+}
+
+function apiManagementApiDiagnosticFrontendResponseDataMaskingHeadersToTerraform(struct?: ApiManagementApiDiagnosticFrontendResponseDataMaskingHeaders): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    mode: cdktf.stringToTerraform(struct!.mode),
+    value: cdktf.stringToTerraform(struct!.value),
+  }
+}
+
+export interface ApiManagementApiDiagnosticFrontendResponseDataMaskingQueryParams {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_diagnostic.html#mode ApiManagementApiDiagnostic#mode}
+  */
+  readonly mode: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_diagnostic.html#value ApiManagementApiDiagnostic#value}
+  */
+  readonly value: string;
+}
+
+function apiManagementApiDiagnosticFrontendResponseDataMaskingQueryParamsToTerraform(struct?: ApiManagementApiDiagnosticFrontendResponseDataMaskingQueryParams): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    mode: cdktf.stringToTerraform(struct!.mode),
+    value: cdktf.stringToTerraform(struct!.value),
+  }
+}
+
+export interface ApiManagementApiDiagnosticFrontendResponseDataMasking {
+  /**
+  * headers block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_diagnostic.html#headers ApiManagementApiDiagnostic#headers}
+  */
+  readonly headers?: ApiManagementApiDiagnosticFrontendResponseDataMaskingHeaders[];
+  /**
+  * query_params block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_diagnostic.html#query_params ApiManagementApiDiagnostic#query_params}
+  */
+  readonly queryParams?: ApiManagementApiDiagnosticFrontendResponseDataMaskingQueryParams[];
+}
+
+function apiManagementApiDiagnosticFrontendResponseDataMaskingToTerraform(struct?: ApiManagementApiDiagnosticFrontendResponseDataMasking): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    headers: cdktf.listMapper(apiManagementApiDiagnosticFrontendResponseDataMaskingHeadersToTerraform)(struct!.headers),
+    query_params: cdktf.listMapper(apiManagementApiDiagnosticFrontendResponseDataMaskingQueryParamsToTerraform)(struct!.queryParams),
   }
 }
 
@@ -144,6 +409,12 @@ export interface ApiManagementApiDiagnosticFrontendResponse {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_diagnostic.html#headers_to_log ApiManagementApiDiagnostic#headers_to_log}
   */
   readonly headersToLog?: string[];
+  /**
+  * data_masking block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_diagnostic.html#data_masking ApiManagementApiDiagnostic#data_masking}
+  */
+  readonly dataMasking?: ApiManagementApiDiagnosticFrontendResponseDataMasking[];
 }
 
 function apiManagementApiDiagnosticFrontendResponseToTerraform(struct?: ApiManagementApiDiagnosticFrontendResponse): any {
@@ -151,6 +422,7 @@ function apiManagementApiDiagnosticFrontendResponseToTerraform(struct?: ApiManag
   return {
     body_bytes: cdktf.numberToTerraform(struct!.bodyBytes),
     headers_to_log: cdktf.listMapper(cdktf.stringToTerraform)(struct!.headersToLog),
+    data_masking: cdktf.listMapper(apiManagementApiDiagnosticFrontendResponseDataMaskingToTerraform)(struct!.dataMasking),
   }
 }
 
