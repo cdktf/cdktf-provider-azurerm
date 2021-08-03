@@ -16,6 +16,10 @@ export interface PowerbiEmbeddedConfig extends cdktf.TerraformMetaArguments {
   */
   readonly location: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/powerbi_embedded.html#mode PowerbiEmbedded#mode}
+  */
+  readonly mode?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/powerbi_embedded.html#name PowerbiEmbedded#name}
   */
   readonly name: string;
@@ -97,6 +101,7 @@ export class PowerbiEmbedded extends cdktf.TerraformResource {
     });
     this._administrators = config.administrators;
     this._location = config.location;
+    this._mode = config.mode;
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
     this._skuName = config.skuName;
@@ -137,6 +142,22 @@ export class PowerbiEmbedded extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get locationInput() {
     return this._location
+  }
+
+  // mode - computed: false, optional: true, required: false
+  private _mode?: string;
+  public get mode() {
+    return this.getStringAttribute('mode');
+  }
+  public set mode(value: string ) {
+    this._mode = value;
+  }
+  public resetMode() {
+    this._mode = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get modeInput() {
+    return this._mode
   }
 
   // name - computed: false, optional: false, required: true
@@ -218,6 +239,7 @@ export class PowerbiEmbedded extends cdktf.TerraformResource {
     return {
       administrators: cdktf.listMapper(cdktf.stringToTerraform)(this._administrators),
       location: cdktf.stringToTerraform(this._location),
+      mode: cdktf.stringToTerraform(this._mode),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       sku_name: cdktf.stringToTerraform(this._skuName),

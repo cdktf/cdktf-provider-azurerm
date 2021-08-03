@@ -219,6 +219,11 @@ export class NetworkWatcherFlowLog extends cdktf.TerraformResource {
     return this._location
   }
 
+  // name - computed: true, optional: false, required: false
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+
   // network_security_group_id - computed: false, optional: false, required: true
   private _networkSecurityGroupId: string;
   public get networkSecurityGroupId() {

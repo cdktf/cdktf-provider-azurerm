@@ -20,6 +20,10 @@ export interface AutomationCertificateConfig extends cdktf.TerraformMetaArgument
   */
   readonly description?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_certificate.html#exportable AutomationCertificate#exportable}
+  */
+  readonly exportable?: boolean;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_certificate.html#name AutomationCertificate#name}
   */
   readonly name: string;
@@ -94,6 +98,7 @@ export class AutomationCertificate extends cdktf.TerraformResource {
     this._automationAccountName = config.automationAccountName;
     this._base64 = config.base64;
     this._description = config.description;
+    this._exportable = config.exportable;
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
     this._timeouts = config.timeouts;
@@ -145,9 +150,20 @@ export class AutomationCertificate extends cdktf.TerraformResource {
     return this._description
   }
 
-  // exportable - computed: true, optional: false, required: false
+  // exportable - computed: true, optional: true, required: false
+  private _exportable?: boolean;
   public get exportable() {
     return this.getBooleanAttribute('exportable');
+  }
+  public set exportable(value: boolean) {
+    this._exportable = value;
+  }
+  public resetExportable() {
+    this._exportable = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get exportableInput() {
+    return this._exportable
   }
 
   // id - computed: true, optional: true, required: false
@@ -211,6 +227,7 @@ export class AutomationCertificate extends cdktf.TerraformResource {
       automation_account_name: cdktf.stringToTerraform(this._automationAccountName),
       base64: cdktf.stringToTerraform(this._base64),
       description: cdktf.stringToTerraform(this._description),
+      exportable: cdktf.booleanToTerraform(this._exportable),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       timeouts: automationCertificateTimeoutsToTerraform(this._timeouts),

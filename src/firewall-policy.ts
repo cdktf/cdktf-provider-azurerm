@@ -20,6 +20,10 @@ export interface FirewallPolicyConfig extends cdktf.TerraformMetaArguments {
   */
   readonly name: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_policy.html#private_ip_ranges FirewallPolicy#private_ip_ranges}
+  */
+  readonly privateIpRanges?: string[];
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_policy.html#resource_group_name FirewallPolicy#resource_group_name}
   */
   readonly resourceGroupName: string;
@@ -157,6 +161,7 @@ export class FirewallPolicy extends cdktf.TerraformResource {
     this._basePolicyId = config.basePolicyId;
     this._location = config.location;
     this._name = config.name;
+    this._privateIpRanges = config.privateIpRanges;
     this._resourceGroupName = config.resourceGroupName;
     this._sku = config.sku;
     this._tags = config.tags;
@@ -225,6 +230,22 @@ export class FirewallPolicy extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
     return this._name
+  }
+
+  // private_ip_ranges - computed: false, optional: true, required: false
+  private _privateIpRanges?: string[];
+  public get privateIpRanges() {
+    return this.getListAttribute('private_ip_ranges');
+  }
+  public set privateIpRanges(value: string[] ) {
+    this._privateIpRanges = value;
+  }
+  public resetPrivateIpRanges() {
+    this._privateIpRanges = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get privateIpRangesInput() {
+    return this._privateIpRanges
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -350,6 +371,7 @@ export class FirewallPolicy extends cdktf.TerraformResource {
       base_policy_id: cdktf.stringToTerraform(this._basePolicyId),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
+      private_ip_ranges: cdktf.listMapper(cdktf.stringToTerraform)(this._privateIpRanges),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       sku: cdktf.stringToTerraform(this._sku),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),

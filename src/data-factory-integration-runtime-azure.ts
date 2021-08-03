@@ -40,6 +40,10 @@ export interface DataFactoryIntegrationRuntimeAzureConfig extends cdktf.Terrafor
   */
   readonly timeToLiveMin?: number;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_azure.html#virtual_network_enabled DataFactoryIntegrationRuntimeAzure#virtual_network_enabled}
+  */
+  readonly virtualNetworkEnabled?: boolean;
+  /**
   * timeouts block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_azure.html#timeouts DataFactoryIntegrationRuntimeAzure#timeouts}
@@ -111,6 +115,7 @@ export class DataFactoryIntegrationRuntimeAzure extends cdktf.TerraformResource 
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
     this._timeToLiveMin = config.timeToLiveMin;
+    this._virtualNetworkEnabled = config.virtualNetworkEnabled;
     this._timeouts = config.timeouts;
   }
 
@@ -239,6 +244,22 @@ export class DataFactoryIntegrationRuntimeAzure extends cdktf.TerraformResource 
     return this._timeToLiveMin
   }
 
+  // virtual_network_enabled - computed: false, optional: true, required: false
+  private _virtualNetworkEnabled?: boolean;
+  public get virtualNetworkEnabled() {
+    return this.getBooleanAttribute('virtual_network_enabled');
+  }
+  public set virtualNetworkEnabled(value: boolean ) {
+    this._virtualNetworkEnabled = value;
+  }
+  public resetVirtualNetworkEnabled() {
+    this._virtualNetworkEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get virtualNetworkEnabledInput() {
+    return this._virtualNetworkEnabled
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: DataFactoryIntegrationRuntimeAzureTimeouts;
   public get timeouts() {
@@ -269,6 +290,7 @@ export class DataFactoryIntegrationRuntimeAzure extends cdktf.TerraformResource 
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       time_to_live_min: cdktf.numberToTerraform(this._timeToLiveMin),
+      virtual_network_enabled: cdktf.booleanToTerraform(this._virtualNetworkEnabled),
       timeouts: dataFactoryIntegrationRuntimeAzureTimeoutsToTerraform(this._timeouts),
     };
   }

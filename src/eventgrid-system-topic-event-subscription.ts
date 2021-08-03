@@ -8,6 +8,10 @@ import * as cdktf from 'cdktf';
 
 export interface EventgridSystemTopicEventSubscriptionConfig extends cdktf.TerraformMetaArguments {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_system_topic_event_subscription.html#advanced_filtering_on_arrays_enabled EventgridSystemTopicEventSubscription#advanced_filtering_on_arrays_enabled}
+  */
+  readonly advancedFilteringOnArraysEnabled?: boolean;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_system_topic_event_subscription.html#event_delivery_schema EventgridSystemTopicEventSubscription#event_delivery_schema}
   */
   readonly eventDeliverySchema?: string;
@@ -119,6 +123,34 @@ function eventgridSystemTopicEventSubscriptionAdvancedFilterBoolEqualsToTerrafor
   }
 }
 
+export interface EventgridSystemTopicEventSubscriptionAdvancedFilterIsNotNull {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_system_topic_event_subscription.html#key EventgridSystemTopicEventSubscription#key}
+  */
+  readonly key: string;
+}
+
+function eventgridSystemTopicEventSubscriptionAdvancedFilterIsNotNullToTerraform(struct?: EventgridSystemTopicEventSubscriptionAdvancedFilterIsNotNull): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    key: cdktf.stringToTerraform(struct!.key),
+  }
+}
+
+export interface EventgridSystemTopicEventSubscriptionAdvancedFilterIsNullOrUndefined {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_system_topic_event_subscription.html#key EventgridSystemTopicEventSubscription#key}
+  */
+  readonly key: string;
+}
+
+function eventgridSystemTopicEventSubscriptionAdvancedFilterIsNullOrUndefinedToTerraform(struct?: EventgridSystemTopicEventSubscriptionAdvancedFilterIsNullOrUndefined): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    key: cdktf.stringToTerraform(struct!.key),
+  }
+}
+
 export interface EventgridSystemTopicEventSubscriptionAdvancedFilterNumberGreaterThan {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_system_topic_event_subscription.html#key EventgridSystemTopicEventSubscription#key}
@@ -176,6 +208,25 @@ function eventgridSystemTopicEventSubscriptionAdvancedFilterNumberInToTerraform(
   }
 }
 
+export interface EventgridSystemTopicEventSubscriptionAdvancedFilterNumberInRange {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_system_topic_event_subscription.html#key EventgridSystemTopicEventSubscription#key}
+  */
+  readonly key: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_system_topic_event_subscription.html#values EventgridSystemTopicEventSubscription#values}
+  */
+  readonly values: number[];
+}
+
+function eventgridSystemTopicEventSubscriptionAdvancedFilterNumberInRangeToTerraform(struct?: EventgridSystemTopicEventSubscriptionAdvancedFilterNumberInRange): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    key: cdktf.stringToTerraform(struct!.key),
+    values: cdktf.listMapper(cdktf.numberToTerraform)(struct!.values),
+  }
+}
+
 export interface EventgridSystemTopicEventSubscriptionAdvancedFilterNumberLessThan {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_system_topic_event_subscription.html#key EventgridSystemTopicEventSubscription#key}
@@ -226,6 +277,25 @@ export interface EventgridSystemTopicEventSubscriptionAdvancedFilterNumberNotIn 
 }
 
 function eventgridSystemTopicEventSubscriptionAdvancedFilterNumberNotInToTerraform(struct?: EventgridSystemTopicEventSubscriptionAdvancedFilterNumberNotIn): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    key: cdktf.stringToTerraform(struct!.key),
+    values: cdktf.listMapper(cdktf.numberToTerraform)(struct!.values),
+  }
+}
+
+export interface EventgridSystemTopicEventSubscriptionAdvancedFilterNumberNotInRange {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_system_topic_event_subscription.html#key EventgridSystemTopicEventSubscription#key}
+  */
+  readonly key: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_system_topic_event_subscription.html#values EventgridSystemTopicEventSubscription#values}
+  */
+  readonly values: number[];
+}
+
+function eventgridSystemTopicEventSubscriptionAdvancedFilterNumberNotInRangeToTerraform(struct?: EventgridSystemTopicEventSubscriptionAdvancedFilterNumberNotInRange): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   return {
     key: cdktf.stringToTerraform(struct!.key),
@@ -309,6 +379,63 @@ function eventgridSystemTopicEventSubscriptionAdvancedFilterStringInToTerraform(
   }
 }
 
+export interface EventgridSystemTopicEventSubscriptionAdvancedFilterStringNotBeginsWith {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_system_topic_event_subscription.html#key EventgridSystemTopicEventSubscription#key}
+  */
+  readonly key: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_system_topic_event_subscription.html#values EventgridSystemTopicEventSubscription#values}
+  */
+  readonly values: string[];
+}
+
+function eventgridSystemTopicEventSubscriptionAdvancedFilterStringNotBeginsWithToTerraform(struct?: EventgridSystemTopicEventSubscriptionAdvancedFilterStringNotBeginsWith): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    key: cdktf.stringToTerraform(struct!.key),
+    values: cdktf.listMapper(cdktf.stringToTerraform)(struct!.values),
+  }
+}
+
+export interface EventgridSystemTopicEventSubscriptionAdvancedFilterStringNotContains {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_system_topic_event_subscription.html#key EventgridSystemTopicEventSubscription#key}
+  */
+  readonly key: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_system_topic_event_subscription.html#values EventgridSystemTopicEventSubscription#values}
+  */
+  readonly values: string[];
+}
+
+function eventgridSystemTopicEventSubscriptionAdvancedFilterStringNotContainsToTerraform(struct?: EventgridSystemTopicEventSubscriptionAdvancedFilterStringNotContains): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    key: cdktf.stringToTerraform(struct!.key),
+    values: cdktf.listMapper(cdktf.stringToTerraform)(struct!.values),
+  }
+}
+
+export interface EventgridSystemTopicEventSubscriptionAdvancedFilterStringNotEndsWith {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_system_topic_event_subscription.html#key EventgridSystemTopicEventSubscription#key}
+  */
+  readonly key: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_system_topic_event_subscription.html#values EventgridSystemTopicEventSubscription#values}
+  */
+  readonly values: string[];
+}
+
+function eventgridSystemTopicEventSubscriptionAdvancedFilterStringNotEndsWithToTerraform(struct?: EventgridSystemTopicEventSubscriptionAdvancedFilterStringNotEndsWith): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    key: cdktf.stringToTerraform(struct!.key),
+    values: cdktf.listMapper(cdktf.stringToTerraform)(struct!.values),
+  }
+}
+
 export interface EventgridSystemTopicEventSubscriptionAdvancedFilterStringNotIn {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_system_topic_event_subscription.html#key EventgridSystemTopicEventSubscription#key}
@@ -336,6 +463,18 @@ export interface EventgridSystemTopicEventSubscriptionAdvancedFilter {
   */
   readonly boolEquals?: EventgridSystemTopicEventSubscriptionAdvancedFilterBoolEquals[];
   /**
+  * is_not_null block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_system_topic_event_subscription.html#is_not_null EventgridSystemTopicEventSubscription#is_not_null}
+  */
+  readonly isNotNull?: EventgridSystemTopicEventSubscriptionAdvancedFilterIsNotNull[];
+  /**
+  * is_null_or_undefined block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_system_topic_event_subscription.html#is_null_or_undefined EventgridSystemTopicEventSubscription#is_null_or_undefined}
+  */
+  readonly isNullOrUndefined?: EventgridSystemTopicEventSubscriptionAdvancedFilterIsNullOrUndefined[];
+  /**
   * number_greater_than block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_system_topic_event_subscription.html#number_greater_than EventgridSystemTopicEventSubscription#number_greater_than}
@@ -354,6 +493,12 @@ export interface EventgridSystemTopicEventSubscriptionAdvancedFilter {
   */
   readonly numberIn?: EventgridSystemTopicEventSubscriptionAdvancedFilterNumberIn[];
   /**
+  * number_in_range block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_system_topic_event_subscription.html#number_in_range EventgridSystemTopicEventSubscription#number_in_range}
+  */
+  readonly numberInRange?: EventgridSystemTopicEventSubscriptionAdvancedFilterNumberInRange[];
+  /**
   * number_less_than block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_system_topic_event_subscription.html#number_less_than EventgridSystemTopicEventSubscription#number_less_than}
@@ -371,6 +516,12 @@ export interface EventgridSystemTopicEventSubscriptionAdvancedFilter {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_system_topic_event_subscription.html#number_not_in EventgridSystemTopicEventSubscription#number_not_in}
   */
   readonly numberNotIn?: EventgridSystemTopicEventSubscriptionAdvancedFilterNumberNotIn[];
+  /**
+  * number_not_in_range block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_system_topic_event_subscription.html#number_not_in_range EventgridSystemTopicEventSubscription#number_not_in_range}
+  */
+  readonly numberNotInRange?: EventgridSystemTopicEventSubscriptionAdvancedFilterNumberNotInRange[];
   /**
   * string_begins_with block
   * 
@@ -396,6 +547,24 @@ export interface EventgridSystemTopicEventSubscriptionAdvancedFilter {
   */
   readonly stringIn?: EventgridSystemTopicEventSubscriptionAdvancedFilterStringIn[];
   /**
+  * string_not_begins_with block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_system_topic_event_subscription.html#string_not_begins_with EventgridSystemTopicEventSubscription#string_not_begins_with}
+  */
+  readonly stringNotBeginsWith?: EventgridSystemTopicEventSubscriptionAdvancedFilterStringNotBeginsWith[];
+  /**
+  * string_not_contains block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_system_topic_event_subscription.html#string_not_contains EventgridSystemTopicEventSubscription#string_not_contains}
+  */
+  readonly stringNotContains?: EventgridSystemTopicEventSubscriptionAdvancedFilterStringNotContains[];
+  /**
+  * string_not_ends_with block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_system_topic_event_subscription.html#string_not_ends_with EventgridSystemTopicEventSubscription#string_not_ends_with}
+  */
+  readonly stringNotEndsWith?: EventgridSystemTopicEventSubscriptionAdvancedFilterStringNotEndsWith[];
+  /**
   * string_not_in block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_system_topic_event_subscription.html#string_not_in EventgridSystemTopicEventSubscription#string_not_in}
@@ -407,16 +576,23 @@ function eventgridSystemTopicEventSubscriptionAdvancedFilterToTerraform(struct?:
   if (!cdktf.canInspect(struct)) { return struct; }
   return {
     bool_equals: cdktf.listMapper(eventgridSystemTopicEventSubscriptionAdvancedFilterBoolEqualsToTerraform)(struct!.boolEquals),
+    is_not_null: cdktf.listMapper(eventgridSystemTopicEventSubscriptionAdvancedFilterIsNotNullToTerraform)(struct!.isNotNull),
+    is_null_or_undefined: cdktf.listMapper(eventgridSystemTopicEventSubscriptionAdvancedFilterIsNullOrUndefinedToTerraform)(struct!.isNullOrUndefined),
     number_greater_than: cdktf.listMapper(eventgridSystemTopicEventSubscriptionAdvancedFilterNumberGreaterThanToTerraform)(struct!.numberGreaterThan),
     number_greater_than_or_equals: cdktf.listMapper(eventgridSystemTopicEventSubscriptionAdvancedFilterNumberGreaterThanOrEqualsToTerraform)(struct!.numberGreaterThanOrEquals),
     number_in: cdktf.listMapper(eventgridSystemTopicEventSubscriptionAdvancedFilterNumberInToTerraform)(struct!.numberIn),
+    number_in_range: cdktf.listMapper(eventgridSystemTopicEventSubscriptionAdvancedFilterNumberInRangeToTerraform)(struct!.numberInRange),
     number_less_than: cdktf.listMapper(eventgridSystemTopicEventSubscriptionAdvancedFilterNumberLessThanToTerraform)(struct!.numberLessThan),
     number_less_than_or_equals: cdktf.listMapper(eventgridSystemTopicEventSubscriptionAdvancedFilterNumberLessThanOrEqualsToTerraform)(struct!.numberLessThanOrEquals),
     number_not_in: cdktf.listMapper(eventgridSystemTopicEventSubscriptionAdvancedFilterNumberNotInToTerraform)(struct!.numberNotIn),
+    number_not_in_range: cdktf.listMapper(eventgridSystemTopicEventSubscriptionAdvancedFilterNumberNotInRangeToTerraform)(struct!.numberNotInRange),
     string_begins_with: cdktf.listMapper(eventgridSystemTopicEventSubscriptionAdvancedFilterStringBeginsWithToTerraform)(struct!.stringBeginsWith),
     string_contains: cdktf.listMapper(eventgridSystemTopicEventSubscriptionAdvancedFilterStringContainsToTerraform)(struct!.stringContains),
     string_ends_with: cdktf.listMapper(eventgridSystemTopicEventSubscriptionAdvancedFilterStringEndsWithToTerraform)(struct!.stringEndsWith),
     string_in: cdktf.listMapper(eventgridSystemTopicEventSubscriptionAdvancedFilterStringInToTerraform)(struct!.stringIn),
+    string_not_begins_with: cdktf.listMapper(eventgridSystemTopicEventSubscriptionAdvancedFilterStringNotBeginsWithToTerraform)(struct!.stringNotBeginsWith),
+    string_not_contains: cdktf.listMapper(eventgridSystemTopicEventSubscriptionAdvancedFilterStringNotContainsToTerraform)(struct!.stringNotContains),
+    string_not_ends_with: cdktf.listMapper(eventgridSystemTopicEventSubscriptionAdvancedFilterStringNotEndsWithToTerraform)(struct!.stringNotEndsWith),
     string_not_in: cdktf.listMapper(eventgridSystemTopicEventSubscriptionAdvancedFilterStringNotInToTerraform)(struct!.stringNotIn),
   }
 }
@@ -617,6 +793,7 @@ export class EventgridSystemTopicEventSubscription extends cdktf.TerraformResour
       count: config.count,
       lifecycle: config.lifecycle
     });
+    this._advancedFilteringOnArraysEnabled = config.advancedFilteringOnArraysEnabled;
     this._eventDeliverySchema = config.eventDeliverySchema;
     this._eventhubEndpointId = config.eventhubEndpointId;
     this._expirationTimeUtc = config.expirationTimeUtc;
@@ -641,6 +818,22 @@ export class EventgridSystemTopicEventSubscription extends cdktf.TerraformResour
   // ==========
   // ATTRIBUTES
   // ==========
+
+  // advanced_filtering_on_arrays_enabled - computed: false, optional: true, required: false
+  private _advancedFilteringOnArraysEnabled?: boolean;
+  public get advancedFilteringOnArraysEnabled() {
+    return this.getBooleanAttribute('advanced_filtering_on_arrays_enabled');
+  }
+  public set advancedFilteringOnArraysEnabled(value: boolean ) {
+    this._advancedFilteringOnArraysEnabled = value;
+  }
+  public resetAdvancedFilteringOnArraysEnabled() {
+    this._advancedFilteringOnArraysEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get advancedFilteringOnArraysEnabledInput() {
+    return this._advancedFilteringOnArraysEnabled
+  }
 
   // event_delivery_schema - computed: false, optional: true, required: false
   private _eventDeliverySchema?: string;
@@ -948,6 +1141,7 @@ export class EventgridSystemTopicEventSubscription extends cdktf.TerraformResour
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      advanced_filtering_on_arrays_enabled: cdktf.booleanToTerraform(this._advancedFilteringOnArraysEnabled),
       event_delivery_schema: cdktf.stringToTerraform(this._eventDeliverySchema),
       eventhub_endpoint_id: cdktf.stringToTerraform(this._eventhubEndpointId),
       expiration_time_utc: cdktf.stringToTerraform(this._expirationTimeUtc),

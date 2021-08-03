@@ -8,6 +8,14 @@ import * as cdktf from 'cdktf';
 
 export interface BotChannelsRegistrationConfig extends cdktf.TerraformMetaArguments {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channels_registration.html#cmk_key_vault_url BotChannelsRegistration#cmk_key_vault_url}
+  */
+  readonly cmkKeyVaultUrl?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channels_registration.html#description BotChannelsRegistration#description}
+  */
+  readonly description?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channels_registration.html#developer_app_insights_api_key BotChannelsRegistration#developer_app_insights_api_key}
   */
   readonly developerAppInsightsApiKey?: string;
@@ -27,6 +35,14 @@ export interface BotChannelsRegistrationConfig extends cdktf.TerraformMetaArgume
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channels_registration.html#endpoint BotChannelsRegistration#endpoint}
   */
   readonly endpoint?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channels_registration.html#icon_url BotChannelsRegistration#icon_url}
+  */
+  readonly iconUrl?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channels_registration.html#isolated_network_enabled BotChannelsRegistration#isolated_network_enabled}
+  */
+  readonly isolatedNetworkEnabled?: boolean;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channels_registration.html#location BotChannelsRegistration#location}
   */
@@ -115,11 +131,15 @@ export class BotChannelsRegistration extends cdktf.TerraformResource {
       count: config.count,
       lifecycle: config.lifecycle
     });
+    this._cmkKeyVaultUrl = config.cmkKeyVaultUrl;
+    this._description = config.description;
     this._developerAppInsightsApiKey = config.developerAppInsightsApiKey;
     this._developerAppInsightsApplicationId = config.developerAppInsightsApplicationId;
     this._developerAppInsightsKey = config.developerAppInsightsKey;
     this._displayName = config.displayName;
     this._endpoint = config.endpoint;
+    this._iconUrl = config.iconUrl;
+    this._isolatedNetworkEnabled = config.isolatedNetworkEnabled;
     this._location = config.location;
     this._microsoftAppId = config.microsoftAppId;
     this._name = config.name;
@@ -132,6 +152,38 @@ export class BotChannelsRegistration extends cdktf.TerraformResource {
   // ==========
   // ATTRIBUTES
   // ==========
+
+  // cmk_key_vault_url - computed: false, optional: true, required: false
+  private _cmkKeyVaultUrl?: string;
+  public get cmkKeyVaultUrl() {
+    return this.getStringAttribute('cmk_key_vault_url');
+  }
+  public set cmkKeyVaultUrl(value: string ) {
+    this._cmkKeyVaultUrl = value;
+  }
+  public resetCmkKeyVaultUrl() {
+    this._cmkKeyVaultUrl = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get cmkKeyVaultUrlInput() {
+    return this._cmkKeyVaultUrl
+  }
+
+  // description - computed: false, optional: true, required: false
+  private _description?: string;
+  public get description() {
+    return this.getStringAttribute('description');
+  }
+  public set description(value: string ) {
+    this._description = value;
+  }
+  public resetDescription() {
+    this._description = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get descriptionInput() {
+    return this._description
+  }
 
   // developer_app_insights_api_key - computed: true, optional: true, required: false
   private _developerAppInsightsApiKey?: string;
@@ -213,9 +265,41 @@ export class BotChannelsRegistration extends cdktf.TerraformResource {
     return this._endpoint
   }
 
+  // icon_url - computed: true, optional: true, required: false
+  private _iconUrl?: string;
+  public get iconUrl() {
+    return this.getStringAttribute('icon_url');
+  }
+  public set iconUrl(value: string) {
+    this._iconUrl = value;
+  }
+  public resetIconUrl() {
+    this._iconUrl = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get iconUrlInput() {
+    return this._iconUrl
+  }
+
   // id - computed: true, optional: true, required: false
   public get id() {
     return this.getStringAttribute('id');
+  }
+
+  // isolated_network_enabled - computed: false, optional: true, required: false
+  private _isolatedNetworkEnabled?: boolean;
+  public get isolatedNetworkEnabled() {
+    return this.getBooleanAttribute('isolated_network_enabled');
+  }
+  public set isolatedNetworkEnabled(value: boolean ) {
+    this._isolatedNetworkEnabled = value;
+  }
+  public resetIsolatedNetworkEnabled() {
+    this._isolatedNetworkEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get isolatedNetworkEnabledInput() {
+    return this._isolatedNetworkEnabled
   }
 
   // location - computed: false, optional: false, required: true
@@ -321,11 +405,15 @@ export class BotChannelsRegistration extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      cmk_key_vault_url: cdktf.stringToTerraform(this._cmkKeyVaultUrl),
+      description: cdktf.stringToTerraform(this._description),
       developer_app_insights_api_key: cdktf.stringToTerraform(this._developerAppInsightsApiKey),
       developer_app_insights_application_id: cdktf.stringToTerraform(this._developerAppInsightsApplicationId),
       developer_app_insights_key: cdktf.stringToTerraform(this._developerAppInsightsKey),
       display_name: cdktf.stringToTerraform(this._displayName),
       endpoint: cdktf.stringToTerraform(this._endpoint),
+      icon_url: cdktf.stringToTerraform(this._iconUrl),
+      isolated_network_enabled: cdktf.booleanToTerraform(this._isolatedNetworkEnabled),
       location: cdktf.stringToTerraform(this._location),
       microsoft_app_id: cdktf.stringToTerraform(this._microsoftAppId),
       name: cdktf.stringToTerraform(this._name),

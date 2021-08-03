@@ -40,6 +40,10 @@ export interface PostgresqlFlexibleServerConfig extends cdktf.TerraformMetaArgum
   */
   readonly pointInTimeRestoreTimeInUtc?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_flexible_server.html#private_dns_zone_id PostgresqlFlexibleServer#private_dns_zone_id}
+  */
+  readonly privateDnsZoneId?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_flexible_server.html#resource_group_name PostgresqlFlexibleServer#resource_group_name}
   */
   readonly resourceGroupName: string;
@@ -68,6 +72,12 @@ export interface PostgresqlFlexibleServerConfig extends cdktf.TerraformMetaArgum
   */
   readonly zone?: string;
   /**
+  * high_availability block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_flexible_server.html#high_availability PostgresqlFlexibleServer#high_availability}
+  */
+  readonly highAvailability?: PostgresqlFlexibleServerHighAvailability[];
+  /**
   * maintenance_window block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_flexible_server.html#maintenance_window PostgresqlFlexibleServer#maintenance_window}
@@ -80,6 +90,25 @@ export interface PostgresqlFlexibleServerConfig extends cdktf.TerraformMetaArgum
   */
   readonly timeouts?: PostgresqlFlexibleServerTimeouts;
 }
+export interface PostgresqlFlexibleServerHighAvailability {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_flexible_server.html#mode PostgresqlFlexibleServer#mode}
+  */
+  readonly mode: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_flexible_server.html#standby_availability_zone PostgresqlFlexibleServer#standby_availability_zone}
+  */
+  readonly standbyAvailabilityZone?: string;
+}
+
+function postgresqlFlexibleServerHighAvailabilityToTerraform(struct?: PostgresqlFlexibleServerHighAvailability): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    mode: cdktf.stringToTerraform(struct!.mode),
+    standby_availability_zone: cdktf.stringToTerraform(struct!.standbyAvailabilityZone),
+  }
+}
+
 export interface PostgresqlFlexibleServerMaintenanceWindow {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_flexible_server.html#day_of_week PostgresqlFlexibleServer#day_of_week}
@@ -169,6 +198,7 @@ export class PostgresqlFlexibleServer extends cdktf.TerraformResource {
     this._location = config.location;
     this._name = config.name;
     this._pointInTimeRestoreTimeInUtc = config.pointInTimeRestoreTimeInUtc;
+    this._privateDnsZoneId = config.privateDnsZoneId;
     this._resourceGroupName = config.resourceGroupName;
     this._skuName = config.skuName;
     this._sourceServerId = config.sourceServerId;
@@ -176,6 +206,7 @@ export class PostgresqlFlexibleServer extends cdktf.TerraformResource {
     this._tags = config.tags;
     this._version = config.version;
     this._zone = config.zone;
+    this._highAvailability = config.highAvailability;
     this._maintenanceWindow = config.maintenanceWindow;
     this._timeouts = config.timeouts;
   }
@@ -321,6 +352,22 @@ export class PostgresqlFlexibleServer extends cdktf.TerraformResource {
     return this._pointInTimeRestoreTimeInUtc
   }
 
+  // private_dns_zone_id - computed: true, optional: true, required: false
+  private _privateDnsZoneId?: string;
+  public get privateDnsZoneId() {
+    return this.getStringAttribute('private_dns_zone_id');
+  }
+  public set privateDnsZoneId(value: string) {
+    this._privateDnsZoneId = value;
+  }
+  public resetPrivateDnsZoneId() {
+    this._privateDnsZoneId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get privateDnsZoneIdInput() {
+    return this._privateDnsZoneId
+  }
+
   // public_network_access_enabled - computed: true, optional: false, required: false
   public get publicNetworkAccessEnabled() {
     return this.getBooleanAttribute('public_network_access_enabled');
@@ -435,6 +482,22 @@ export class PostgresqlFlexibleServer extends cdktf.TerraformResource {
     return this._zone
   }
 
+  // high_availability - computed: false, optional: true, required: false
+  private _highAvailability?: PostgresqlFlexibleServerHighAvailability[];
+  public get highAvailability() {
+    return this.interpolationForAttribute('high_availability') as any;
+  }
+  public set highAvailability(value: PostgresqlFlexibleServerHighAvailability[] ) {
+    this._highAvailability = value;
+  }
+  public resetHighAvailability() {
+    this._highAvailability = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get highAvailabilityInput() {
+    return this._highAvailability
+  }
+
   // maintenance_window - computed: false, optional: true, required: false
   private _maintenanceWindow?: PostgresqlFlexibleServerMaintenanceWindow[];
   public get maintenanceWindow() {
@@ -481,6 +544,7 @@ export class PostgresqlFlexibleServer extends cdktf.TerraformResource {
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
       point_in_time_restore_time_in_utc: cdktf.stringToTerraform(this._pointInTimeRestoreTimeInUtc),
+      private_dns_zone_id: cdktf.stringToTerraform(this._privateDnsZoneId),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       sku_name: cdktf.stringToTerraform(this._skuName),
       source_server_id: cdktf.stringToTerraform(this._sourceServerId),
@@ -488,6 +552,7 @@ export class PostgresqlFlexibleServer extends cdktf.TerraformResource {
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
       version: cdktf.stringToTerraform(this._version),
       zone: cdktf.stringToTerraform(this._zone),
+      high_availability: cdktf.listMapper(postgresqlFlexibleServerHighAvailabilityToTerraform)(this._highAvailability),
       maintenance_window: cdktf.listMapper(postgresqlFlexibleServerMaintenanceWindowToTerraform)(this._maintenanceWindow),
       timeouts: postgresqlFlexibleServerTimeoutsToTerraform(this._timeouts),
     };

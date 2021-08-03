@@ -16,6 +16,10 @@ export interface DataFactoryConfig extends cdktf.TerraformMetaArguments {
   */
   readonly location: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory.html#managed_virtual_network_enabled DataFactory#managed_virtual_network_enabled}
+  */
+  readonly managedVirtualNetworkEnabled?: boolean;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory.html#name DataFactory#name}
   */
   readonly name: string;
@@ -237,6 +241,7 @@ export class DataFactory extends cdktf.TerraformResource {
     });
     this._customerManagedKeyId = config.customerManagedKeyId;
     this._location = config.location;
+    this._managedVirtualNetworkEnabled = config.managedVirtualNetworkEnabled;
     this._name = config.name;
     this._publicNetworkEnabled = config.publicNetworkEnabled;
     this._resourceGroupName = config.resourceGroupName;
@@ -284,6 +289,22 @@ export class DataFactory extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get locationInput() {
     return this._location
+  }
+
+  // managed_virtual_network_enabled - computed: false, optional: true, required: false
+  private _managedVirtualNetworkEnabled?: boolean;
+  public get managedVirtualNetworkEnabled() {
+    return this.getBooleanAttribute('managed_virtual_network_enabled');
+  }
+  public set managedVirtualNetworkEnabled(value: boolean ) {
+    this._managedVirtualNetworkEnabled = value;
+  }
+  public resetManagedVirtualNetworkEnabled() {
+    this._managedVirtualNetworkEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get managedVirtualNetworkEnabledInput() {
+    return this._managedVirtualNetworkEnabled
   }
 
   // name - computed: false, optional: false, required: true
@@ -432,6 +453,7 @@ export class DataFactory extends cdktf.TerraformResource {
     return {
       customer_managed_key_id: cdktf.stringToTerraform(this._customerManagedKeyId),
       location: cdktf.stringToTerraform(this._location),
+      managed_virtual_network_enabled: cdktf.booleanToTerraform(this._managedVirtualNetworkEnabled),
       name: cdktf.stringToTerraform(this._name),
       public_network_enabled: cdktf.booleanToTerraform(this._publicNetworkEnabled),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),

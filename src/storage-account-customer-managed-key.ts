@@ -24,6 +24,10 @@ export interface StorageAccountCustomerManagedKeyConfig extends cdktf.TerraformM
   */
   readonly storageAccountId: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account_customer_managed_key.html#user_assigned_identity_id StorageAccountCustomerManagedKey#user_assigned_identity_id}
+  */
+  readonly userAssignedIdentityId?: string;
+  /**
   * timeouts block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account_customer_managed_key.html#timeouts StorageAccountCustomerManagedKey#timeouts}
@@ -91,6 +95,7 @@ export class StorageAccountCustomerManagedKey extends cdktf.TerraformResource {
     this._keyVaultId = config.keyVaultId;
     this._keyVersion = config.keyVersion;
     this._storageAccountId = config.storageAccountId;
+    this._userAssignedIdentityId = config.userAssignedIdentityId;
     this._timeouts = config.timeouts;
   }
 
@@ -158,6 +163,22 @@ export class StorageAccountCustomerManagedKey extends cdktf.TerraformResource {
     return this._storageAccountId
   }
 
+  // user_assigned_identity_id - computed: false, optional: true, required: false
+  private _userAssignedIdentityId?: string;
+  public get userAssignedIdentityId() {
+    return this.getStringAttribute('user_assigned_identity_id');
+  }
+  public set userAssignedIdentityId(value: string ) {
+    this._userAssignedIdentityId = value;
+  }
+  public resetUserAssignedIdentityId() {
+    this._userAssignedIdentityId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get userAssignedIdentityIdInput() {
+    return this._userAssignedIdentityId
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: StorageAccountCustomerManagedKeyTimeouts;
   public get timeouts() {
@@ -184,6 +205,7 @@ export class StorageAccountCustomerManagedKey extends cdktf.TerraformResource {
       key_vault_id: cdktf.stringToTerraform(this._keyVaultId),
       key_version: cdktf.stringToTerraform(this._keyVersion),
       storage_account_id: cdktf.stringToTerraform(this._storageAccountId),
+      user_assigned_identity_id: cdktf.stringToTerraform(this._userAssignedIdentityId),
       timeouts: storageAccountCustomerManagedKeyTimeoutsToTerraform(this._timeouts),
     };
   }

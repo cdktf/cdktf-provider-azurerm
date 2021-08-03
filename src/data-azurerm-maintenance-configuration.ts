@@ -22,6 +22,33 @@ export interface DataAzurermMaintenanceConfigurationConfig extends cdktf.Terrafo
   */
   readonly timeouts?: DataAzurermMaintenanceConfigurationTimeouts;
 }
+export class DataAzurermMaintenanceConfigurationWindow extends cdktf.ComplexComputedList {
+
+  // duration - computed: true, optional: false, required: false
+  public get duration() {
+    return this.getStringAttribute('duration');
+  }
+
+  // expiration_date_time - computed: true, optional: false, required: false
+  public get expirationDateTime() {
+    return this.getStringAttribute('expiration_date_time');
+  }
+
+  // recur_every - computed: true, optional: false, required: false
+  public get recurEvery() {
+    return this.getStringAttribute('recur_every');
+  }
+
+  // start_date_time - computed: true, optional: false, required: false
+  public get startDateTime() {
+    return this.getStringAttribute('start_date_time');
+  }
+
+  // time_zone - computed: true, optional: false, required: false
+  public get timeZone() {
+    return this.getStringAttribute('time_zone');
+  }
+}
 export interface DataAzurermMaintenanceConfigurationTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/maintenance_configuration.html#read DataAzurermMaintenanceConfiguration#read}
@@ -96,6 +123,11 @@ export class DataAzurermMaintenanceConfiguration extends cdktf.TerraformDataSour
     return this._name
   }
 
+  // properties - computed: true, optional: false, required: false
+  public properties(key: string): string {
+    return new cdktf.StringMap(this, 'properties').lookup(key);
+  }
+
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
@@ -117,6 +149,16 @@ export class DataAzurermMaintenanceConfiguration extends cdktf.TerraformDataSour
   // tags - computed: true, optional: false, required: false
   public tags(key: string): string {
     return new cdktf.StringMap(this, 'tags').lookup(key);
+  }
+
+  // visibility - computed: true, optional: false, required: false
+  public get visibility() {
+    return this.getStringAttribute('visibility');
+  }
+
+  // window - computed: true, optional: false, required: false
+  public window(index: string) {
+    return new DataAzurermMaintenanceConfigurationWindow(this, 'window', index);
   }
 
   // timeouts - computed: false, optional: true, required: false

@@ -60,6 +60,24 @@ export interface DataFactoryIntegrationRuntimeAzureSsisConfig extends cdktf.Terr
   */
   readonly customSetupScript?: DataFactoryIntegrationRuntimeAzureSsisCustomSetupScript[];
   /**
+  * express_custom_setup block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_azure_ssis.html#express_custom_setup DataFactoryIntegrationRuntimeAzureSsis#express_custom_setup}
+  */
+  readonly expressCustomSetup?: DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetup[];
+  /**
+  * package_store block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_azure_ssis.html#package_store DataFactoryIntegrationRuntimeAzureSsis#package_store}
+  */
+  readonly packageStore?: DataFactoryIntegrationRuntimeAzureSsisPackageStore[];
+  /**
+  * proxy block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_azure_ssis.html#proxy DataFactoryIntegrationRuntimeAzureSsis#proxy}
+  */
+  readonly proxy?: DataFactoryIntegrationRuntimeAzureSsisProxy[];
+  /**
   * timeouts block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_azure_ssis.html#timeouts DataFactoryIntegrationRuntimeAzureSsis#timeouts}
@@ -82,6 +100,10 @@ export interface DataFactoryIntegrationRuntimeAzureSsisCatalogInfo {
   */
   readonly administratorPassword?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_azure_ssis.html#dual_standby_pair_name DataFactoryIntegrationRuntimeAzureSsis#dual_standby_pair_name}
+  */
+  readonly dualStandbyPairName?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_azure_ssis.html#pricing_tier DataFactoryIntegrationRuntimeAzureSsis#pricing_tier}
   */
   readonly pricingTier?: string;
@@ -96,6 +118,7 @@ function dataFactoryIntegrationRuntimeAzureSsisCatalogInfoToTerraform(struct?: D
   return {
     administrator_login: cdktf.stringToTerraform(struct!.administratorLogin),
     administrator_password: cdktf.stringToTerraform(struct!.administratorPassword),
+    dual_standby_pair_name: cdktf.stringToTerraform(struct!.dualStandbyPairName),
     pricing_tier: cdktf.stringToTerraform(struct!.pricingTier),
     server_endpoint: cdktf.stringToTerraform(struct!.serverEndpoint),
   }
@@ -117,6 +140,197 @@ function dataFactoryIntegrationRuntimeAzureSsisCustomSetupScriptToTerraform(stru
   return {
     blob_container_uri: cdktf.stringToTerraform(struct!.blobContainerUri),
     sas_token: cdktf.stringToTerraform(struct!.sasToken),
+  }
+}
+
+export interface DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupCommandKeyKeyVaultPassword {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_azure_ssis.html#linked_service_name DataFactoryIntegrationRuntimeAzureSsis#linked_service_name}
+  */
+  readonly linkedServiceName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_azure_ssis.html#parameters DataFactoryIntegrationRuntimeAzureSsis#parameters}
+  */
+  readonly parameters?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_azure_ssis.html#secret_name DataFactoryIntegrationRuntimeAzureSsis#secret_name}
+  */
+  readonly secretName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_azure_ssis.html#secret_version DataFactoryIntegrationRuntimeAzureSsis#secret_version}
+  */
+  readonly secretVersion?: string;
+}
+
+function dataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupCommandKeyKeyVaultPasswordToTerraform(struct?: DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupCommandKeyKeyVaultPassword): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    linked_service_name: cdktf.stringToTerraform(struct!.linkedServiceName),
+    parameters: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.parameters),
+    secret_name: cdktf.stringToTerraform(struct!.secretName),
+    secret_version: cdktf.stringToTerraform(struct!.secretVersion),
+  }
+}
+
+export interface DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupCommandKey {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_azure_ssis.html#password DataFactoryIntegrationRuntimeAzureSsis#password}
+  */
+  readonly password?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_azure_ssis.html#target_name DataFactoryIntegrationRuntimeAzureSsis#target_name}
+  */
+  readonly targetName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_azure_ssis.html#user_name DataFactoryIntegrationRuntimeAzureSsis#user_name}
+  */
+  readonly userName: string;
+  /**
+  * key_vault_password block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_azure_ssis.html#key_vault_password DataFactoryIntegrationRuntimeAzureSsis#key_vault_password}
+  */
+  readonly keyVaultPassword?: DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupCommandKeyKeyVaultPassword[];
+}
+
+function dataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupCommandKeyToTerraform(struct?: DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupCommandKey): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    password: cdktf.stringToTerraform(struct!.password),
+    target_name: cdktf.stringToTerraform(struct!.targetName),
+    user_name: cdktf.stringToTerraform(struct!.userName),
+    key_vault_password: cdktf.listMapper(dataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupCommandKeyKeyVaultPasswordToTerraform)(struct!.keyVaultPassword),
+  }
+}
+
+export interface DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupComponentKeyVaultLicense {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_azure_ssis.html#linked_service_name DataFactoryIntegrationRuntimeAzureSsis#linked_service_name}
+  */
+  readonly linkedServiceName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_azure_ssis.html#parameters DataFactoryIntegrationRuntimeAzureSsis#parameters}
+  */
+  readonly parameters?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_azure_ssis.html#secret_name DataFactoryIntegrationRuntimeAzureSsis#secret_name}
+  */
+  readonly secretName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_azure_ssis.html#secret_version DataFactoryIntegrationRuntimeAzureSsis#secret_version}
+  */
+  readonly secretVersion?: string;
+}
+
+function dataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupComponentKeyVaultLicenseToTerraform(struct?: DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupComponentKeyVaultLicense): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    linked_service_name: cdktf.stringToTerraform(struct!.linkedServiceName),
+    parameters: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.parameters),
+    secret_name: cdktf.stringToTerraform(struct!.secretName),
+    secret_version: cdktf.stringToTerraform(struct!.secretVersion),
+  }
+}
+
+export interface DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupComponent {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_azure_ssis.html#license DataFactoryIntegrationRuntimeAzureSsis#license}
+  */
+  readonly license?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_azure_ssis.html#name DataFactoryIntegrationRuntimeAzureSsis#name}
+  */
+  readonly name: string;
+  /**
+  * key_vault_license block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_azure_ssis.html#key_vault_license DataFactoryIntegrationRuntimeAzureSsis#key_vault_license}
+  */
+  readonly keyVaultLicense?: DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupComponentKeyVaultLicense[];
+}
+
+function dataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupComponentToTerraform(struct?: DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupComponent): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    license: cdktf.stringToTerraform(struct!.license),
+    name: cdktf.stringToTerraform(struct!.name),
+    key_vault_license: cdktf.listMapper(dataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupComponentKeyVaultLicenseToTerraform)(struct!.keyVaultLicense),
+  }
+}
+
+export interface DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetup {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_azure_ssis.html#environment DataFactoryIntegrationRuntimeAzureSsis#environment}
+  */
+  readonly environment?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_azure_ssis.html#powershell_version DataFactoryIntegrationRuntimeAzureSsis#powershell_version}
+  */
+  readonly powershellVersion?: string;
+  /**
+  * command_key block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_azure_ssis.html#command_key DataFactoryIntegrationRuntimeAzureSsis#command_key}
+  */
+  readonly commandKey?: DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupCommandKey[];
+  /**
+  * component block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_azure_ssis.html#component DataFactoryIntegrationRuntimeAzureSsis#component}
+  */
+  readonly component?: DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupComponent[];
+}
+
+function dataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupToTerraform(struct?: DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetup): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    environment: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.environment),
+    powershell_version: cdktf.stringToTerraform(struct!.powershellVersion),
+    command_key: cdktf.listMapper(dataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupCommandKeyToTerraform)(struct!.commandKey),
+    component: cdktf.listMapper(dataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupComponentToTerraform)(struct!.component),
+  }
+}
+
+export interface DataFactoryIntegrationRuntimeAzureSsisPackageStore {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_azure_ssis.html#linked_service_name DataFactoryIntegrationRuntimeAzureSsis#linked_service_name}
+  */
+  readonly linkedServiceName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_azure_ssis.html#name DataFactoryIntegrationRuntimeAzureSsis#name}
+  */
+  readonly name: string;
+}
+
+function dataFactoryIntegrationRuntimeAzureSsisPackageStoreToTerraform(struct?: DataFactoryIntegrationRuntimeAzureSsisPackageStore): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    linked_service_name: cdktf.stringToTerraform(struct!.linkedServiceName),
+    name: cdktf.stringToTerraform(struct!.name),
+  }
+}
+
+export interface DataFactoryIntegrationRuntimeAzureSsisProxy {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_azure_ssis.html#path DataFactoryIntegrationRuntimeAzureSsis#path}
+  */
+  readonly path?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_azure_ssis.html#self_hosted_integration_runtime_name DataFactoryIntegrationRuntimeAzureSsis#self_hosted_integration_runtime_name}
+  */
+  readonly selfHostedIntegrationRuntimeName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_azure_ssis.html#staging_storage_linked_service_name DataFactoryIntegrationRuntimeAzureSsis#staging_storage_linked_service_name}
+  */
+  readonly stagingStorageLinkedServiceName: string;
+}
+
+function dataFactoryIntegrationRuntimeAzureSsisProxyToTerraform(struct?: DataFactoryIntegrationRuntimeAzureSsisProxy): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    path: cdktf.stringToTerraform(struct!.path),
+    self_hosted_integration_runtime_name: cdktf.stringToTerraform(struct!.selfHostedIntegrationRuntimeName),
+    staging_storage_linked_service_name: cdktf.stringToTerraform(struct!.stagingStorageLinkedServiceName),
   }
 }
 
@@ -151,6 +365,10 @@ function dataFactoryIntegrationRuntimeAzureSsisTimeoutsToTerraform(struct?: Data
 
 export interface DataFactoryIntegrationRuntimeAzureSsisVnetIntegration {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_azure_ssis.html#public_ips DataFactoryIntegrationRuntimeAzureSsis#public_ips}
+  */
+  readonly publicIps?: string[];
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_azure_ssis.html#subnet_name DataFactoryIntegrationRuntimeAzureSsis#subnet_name}
   */
   readonly subnetName: string;
@@ -163,6 +381,7 @@ export interface DataFactoryIntegrationRuntimeAzureSsisVnetIntegration {
 function dataFactoryIntegrationRuntimeAzureSsisVnetIntegrationToTerraform(struct?: DataFactoryIntegrationRuntimeAzureSsisVnetIntegration): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   return {
+    public_ips: cdktf.listMapper(cdktf.stringToTerraform)(struct!.publicIps),
     subnet_name: cdktf.stringToTerraform(struct!.subnetName),
     vnet_id: cdktf.stringToTerraform(struct!.vnetId),
   }
@@ -208,6 +427,9 @@ export class DataFactoryIntegrationRuntimeAzureSsis extends cdktf.TerraformResou
     this._resourceGroupName = config.resourceGroupName;
     this._catalogInfo = config.catalogInfo;
     this._customSetupScript = config.customSetupScript;
+    this._expressCustomSetup = config.expressCustomSetup;
+    this._packageStore = config.packageStore;
+    this._proxy = config.proxy;
     this._timeouts = config.timeouts;
     this._vnetIntegration = config.vnetIntegration;
   }
@@ -398,6 +620,54 @@ export class DataFactoryIntegrationRuntimeAzureSsis extends cdktf.TerraformResou
     return this._customSetupScript
   }
 
+  // express_custom_setup - computed: false, optional: true, required: false
+  private _expressCustomSetup?: DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetup[];
+  public get expressCustomSetup() {
+    return this.interpolationForAttribute('express_custom_setup') as any;
+  }
+  public set expressCustomSetup(value: DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetup[] ) {
+    this._expressCustomSetup = value;
+  }
+  public resetExpressCustomSetup() {
+    this._expressCustomSetup = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get expressCustomSetupInput() {
+    return this._expressCustomSetup
+  }
+
+  // package_store - computed: false, optional: true, required: false
+  private _packageStore?: DataFactoryIntegrationRuntimeAzureSsisPackageStore[];
+  public get packageStore() {
+    return this.interpolationForAttribute('package_store') as any;
+  }
+  public set packageStore(value: DataFactoryIntegrationRuntimeAzureSsisPackageStore[] ) {
+    this._packageStore = value;
+  }
+  public resetPackageStore() {
+    this._packageStore = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get packageStoreInput() {
+    return this._packageStore
+  }
+
+  // proxy - computed: false, optional: true, required: false
+  private _proxy?: DataFactoryIntegrationRuntimeAzureSsisProxy[];
+  public get proxy() {
+    return this.interpolationForAttribute('proxy') as any;
+  }
+  public set proxy(value: DataFactoryIntegrationRuntimeAzureSsisProxy[] ) {
+    this._proxy = value;
+  }
+  public resetProxy() {
+    this._proxy = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get proxyInput() {
+    return this._proxy
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: DataFactoryIntegrationRuntimeAzureSsisTimeouts;
   public get timeouts() {
@@ -448,6 +718,9 @@ export class DataFactoryIntegrationRuntimeAzureSsis extends cdktf.TerraformResou
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       catalog_info: cdktf.listMapper(dataFactoryIntegrationRuntimeAzureSsisCatalogInfoToTerraform)(this._catalogInfo),
       custom_setup_script: cdktf.listMapper(dataFactoryIntegrationRuntimeAzureSsisCustomSetupScriptToTerraform)(this._customSetupScript),
+      express_custom_setup: cdktf.listMapper(dataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupToTerraform)(this._expressCustomSetup),
+      package_store: cdktf.listMapper(dataFactoryIntegrationRuntimeAzureSsisPackageStoreToTerraform)(this._packageStore),
+      proxy: cdktf.listMapper(dataFactoryIntegrationRuntimeAzureSsisProxyToTerraform)(this._proxy),
       timeouts: dataFactoryIntegrationRuntimeAzureSsisTimeoutsToTerraform(this._timeouts),
       vnet_integration: cdktf.listMapper(dataFactoryIntegrationRuntimeAzureSsisVnetIntegrationToTerraform)(this._vnetIntegration),
     };
