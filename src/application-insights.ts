@@ -48,6 +48,10 @@ export interface ApplicationInsightsConfig extends cdktf.TerraformMetaArguments 
   */
   readonly tags?: { [key: string]: string };
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights.html#workspace_id ApplicationInsights#workspace_id}
+  */
+  readonly workspaceId?: string;
+  /**
   * timeouts block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights.html#timeouts ApplicationInsights#timeouts}
@@ -121,6 +125,7 @@ export class ApplicationInsights extends cdktf.TerraformResource {
     this._retentionInDays = config.retentionInDays;
     this._samplingPercentage = config.samplingPercentage;
     this._tags = config.tags;
+    this._workspaceId = config.workspaceId;
     this._timeouts = config.timeouts;
   }
 
@@ -296,6 +301,22 @@ export class ApplicationInsights extends cdktf.TerraformResource {
     return this._tags
   }
 
+  // workspace_id - computed: false, optional: true, required: false
+  private _workspaceId?: string;
+  public get workspaceId() {
+    return this.getStringAttribute('workspace_id');
+  }
+  public set workspaceId(value: string ) {
+    this._workspaceId = value;
+  }
+  public resetWorkspaceId() {
+    this._workspaceId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get workspaceIdInput() {
+    return this._workspaceId
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: ApplicationInsightsTimeouts;
   public get timeouts() {
@@ -328,6 +349,7 @@ export class ApplicationInsights extends cdktf.TerraformResource {
       retention_in_days: cdktf.numberToTerraform(this._retentionInDays),
       sampling_percentage: cdktf.numberToTerraform(this._samplingPercentage),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      workspace_id: cdktf.stringToTerraform(this._workspaceId),
       timeouts: applicationInsightsTimeoutsToTerraform(this._timeouts),
     };
   }

@@ -56,6 +56,10 @@ export interface PublicIpConfig extends cdktf.TerraformMetaArguments {
   */
   readonly sku?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/public_ip.html#sku_tier PublicIp#sku_tier}
+  */
+  readonly skuTier?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/public_ip.html#tags PublicIp#tags}
   */
   readonly tags?: { [key: string]: string };
@@ -139,6 +143,7 @@ export class PublicIp extends cdktf.TerraformResource {
     this._resourceGroupName = config.resourceGroupName;
     this._reverseFqdn = config.reverseFqdn;
     this._sku = config.sku;
+    this._skuTier = config.skuTier;
     this._tags = config.tags;
     this._zones = config.zones;
     this._timeouts = config.timeouts;
@@ -343,6 +348,22 @@ export class PublicIp extends cdktf.TerraformResource {
     return this._sku
   }
 
+  // sku_tier - computed: false, optional: true, required: false
+  private _skuTier?: string;
+  public get skuTier() {
+    return this.getStringAttribute('sku_tier');
+  }
+  public set skuTier(value: string ) {
+    this._skuTier = value;
+  }
+  public resetSkuTier() {
+    this._skuTier = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get skuTierInput() {
+    return this._skuTier
+  }
+
   // tags - computed: false, optional: true, required: false
   private _tags?: { [key: string]: string };
   public get tags() {
@@ -409,6 +430,7 @@ export class PublicIp extends cdktf.TerraformResource {
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       reverse_fqdn: cdktf.stringToTerraform(this._reverseFqdn),
       sku: cdktf.stringToTerraform(this._sku),
+      sku_tier: cdktf.stringToTerraform(this._skuTier),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
       zones: cdktf.listMapper(cdktf.stringToTerraform)(this._zones),
       timeouts: publicIpTimeoutsToTerraform(this._timeouts),

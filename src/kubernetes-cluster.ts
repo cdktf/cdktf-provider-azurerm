@@ -36,6 +36,10 @@ export interface KubernetesClusterConfig extends cdktf.TerraformMetaArguments {
   */
   readonly kubernetesVersion?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#local_account_disabled KubernetesCluster#local_account_disabled}
+  */
+  readonly localAccountDisabled?: boolean;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#location KubernetesCluster#location}
   */
   readonly location: string;
@@ -107,6 +111,12 @@ export interface KubernetesClusterConfig extends cdktf.TerraformMetaArguments {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#linux_profile KubernetesCluster#linux_profile}
   */
   readonly linuxProfile?: KubernetesClusterLinuxProfile[];
+  /**
+  * maintenance_window block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#maintenance_window KubernetesCluster#maintenance_window}
+  */
+  readonly maintenanceWindow?: KubernetesClusterMaintenanceWindow[];
   /**
   * network_profile block
   * 
@@ -942,6 +952,67 @@ function kubernetesClusterLinuxProfileToTerraform(struct?: KubernetesClusterLinu
   }
 }
 
+export interface KubernetesClusterMaintenanceWindowAllowed {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#day KubernetesCluster#day}
+  */
+  readonly day: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#hours KubernetesCluster#hours}
+  */
+  readonly hours: number[];
+}
+
+function kubernetesClusterMaintenanceWindowAllowedToTerraform(struct?: KubernetesClusterMaintenanceWindowAllowed): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    day: cdktf.stringToTerraform(struct!.day),
+    hours: cdktf.listMapper(cdktf.numberToTerraform)(struct!.hours),
+  }
+}
+
+export interface KubernetesClusterMaintenanceWindowNotAllowed {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#end KubernetesCluster#end}
+  */
+  readonly end: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#start KubernetesCluster#start}
+  */
+  readonly start: string;
+}
+
+function kubernetesClusterMaintenanceWindowNotAllowedToTerraform(struct?: KubernetesClusterMaintenanceWindowNotAllowed): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    end: cdktf.stringToTerraform(struct!.end),
+    start: cdktf.stringToTerraform(struct!.start),
+  }
+}
+
+export interface KubernetesClusterMaintenanceWindow {
+  /**
+  * allowed block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#allowed KubernetesCluster#allowed}
+  */
+  readonly allowed?: KubernetesClusterMaintenanceWindowAllowed[];
+  /**
+  * not_allowed block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#not_allowed KubernetesCluster#not_allowed}
+  */
+  readonly notAllowed?: KubernetesClusterMaintenanceWindowNotAllowed[];
+}
+
+function kubernetesClusterMaintenanceWindowToTerraform(struct?: KubernetesClusterMaintenanceWindow): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    allowed: cdktf.listMapper(kubernetesClusterMaintenanceWindowAllowedToTerraform)(struct!.allowed),
+    not_allowed: cdktf.listMapper(kubernetesClusterMaintenanceWindowNotAllowedToTerraform)(struct!.notAllowed),
+  }
+}
+
 export interface KubernetesClusterNetworkProfileLoadBalancerProfile {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#idle_timeout_in_minutes KubernetesCluster#idle_timeout_in_minutes}
@@ -1209,6 +1280,7 @@ export class KubernetesCluster extends cdktf.TerraformResource {
     this._dnsPrefixPrivateCluster = config.dnsPrefixPrivateCluster;
     this._enablePodSecurityPolicy = config.enablePodSecurityPolicy;
     this._kubernetesVersion = config.kubernetesVersion;
+    this._localAccountDisabled = config.localAccountDisabled;
     this._location = config.location;
     this._name = config.name;
     this._nodeResourceGroup = config.nodeResourceGroup;
@@ -1224,6 +1296,7 @@ export class KubernetesCluster extends cdktf.TerraformResource {
     this._identity = config.identity;
     this._kubeletIdentity = config.kubeletIdentity;
     this._linuxProfile = config.linuxProfile;
+    this._maintenanceWindow = config.maintenanceWindow;
     this._networkProfile = config.networkProfile;
     this._roleBasedAccessControl = config.roleBasedAccessControl;
     this._servicePrincipal = config.servicePrincipal;
@@ -1375,6 +1448,22 @@ export class KubernetesCluster extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get kubernetesVersionInput() {
     return this._kubernetesVersion
+  }
+
+  // local_account_disabled - computed: false, optional: true, required: false
+  private _localAccountDisabled?: boolean;
+  public get localAccountDisabled() {
+    return this.getBooleanAttribute('local_account_disabled');
+  }
+  public set localAccountDisabled(value: boolean ) {
+    this._localAccountDisabled = value;
+  }
+  public resetLocalAccountDisabled() {
+    this._localAccountDisabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get localAccountDisabledInput() {
+    return this._localAccountDisabled
   }
 
   // location - computed: false, optional: false, required: true
@@ -1610,6 +1699,22 @@ export class KubernetesCluster extends cdktf.TerraformResource {
     return this._linuxProfile
   }
 
+  // maintenance_window - computed: false, optional: true, required: false
+  private _maintenanceWindow?: KubernetesClusterMaintenanceWindow[];
+  public get maintenanceWindow() {
+    return this.interpolationForAttribute('maintenance_window') as any;
+  }
+  public set maintenanceWindow(value: KubernetesClusterMaintenanceWindow[] ) {
+    this._maintenanceWindow = value;
+  }
+  public resetMaintenanceWindow() {
+    this._maintenanceWindow = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get maintenanceWindowInput() {
+    return this._maintenanceWindow
+  }
+
   // network_profile - computed: false, optional: true, required: false
   private _networkProfile?: KubernetesClusterNetworkProfile[];
   public get networkProfile() {
@@ -1703,6 +1808,7 @@ export class KubernetesCluster extends cdktf.TerraformResource {
       dns_prefix_private_cluster: cdktf.stringToTerraform(this._dnsPrefixPrivateCluster),
       enable_pod_security_policy: cdktf.booleanToTerraform(this._enablePodSecurityPolicy),
       kubernetes_version: cdktf.stringToTerraform(this._kubernetesVersion),
+      local_account_disabled: cdktf.booleanToTerraform(this._localAccountDisabled),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
       node_resource_group: cdktf.stringToTerraform(this._nodeResourceGroup),
@@ -1718,6 +1824,7 @@ export class KubernetesCluster extends cdktf.TerraformResource {
       identity: cdktf.listMapper(kubernetesClusterIdentityToTerraform)(this._identity),
       kubelet_identity: cdktf.listMapper(kubernetesClusterKubeletIdentityToTerraform)(this._kubeletIdentity),
       linux_profile: cdktf.listMapper(kubernetesClusterLinuxProfileToTerraform)(this._linuxProfile),
+      maintenance_window: cdktf.listMapper(kubernetesClusterMaintenanceWindowToTerraform)(this._maintenanceWindow),
       network_profile: cdktf.listMapper(kubernetesClusterNetworkProfileToTerraform)(this._networkProfile),
       role_based_access_control: cdktf.listMapper(kubernetesClusterRoleBasedAccessControlToTerraform)(this._roleBasedAccessControl),
       service_principal: cdktf.listMapper(kubernetesClusterServicePrincipalToTerraform)(this._servicePrincipal),

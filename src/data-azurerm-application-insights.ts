@@ -139,6 +139,11 @@ export class DataAzurermApplicationInsights extends cdktf.TerraformDataSource {
     return new cdktf.StringMap(this, 'tags').lookup(key);
   }
 
+  // workspace_id - computed: true, optional: false, required: false
+  public get workspaceId() {
+    return this.getStringAttribute('workspace_id');
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: DataAzurermApplicationInsightsTimeouts;
   public get timeouts() {

@@ -197,6 +197,11 @@ export class DataAzurermFunctionAppSiteConfig extends cdktf.ComplexComputedList 
     return this.getBooleanAttribute('always_on');
   }
 
+  // app_scale_limit - computed: true, optional: false, required: false
+  public get appScaleLimit() {
+    return this.getNumberAttribute('app_scale_limit');
+  }
+
   // auto_swap_slot_name - computed: true, optional: false, required: false
   public get autoSwapSlotName() {
     return this.getStringAttribute('auto_swap_slot_name');
@@ -205,6 +210,11 @@ export class DataAzurermFunctionAppSiteConfig extends cdktf.ComplexComputedList 
   // cors - computed: true, optional: false, required: false
   public get cors() {
     return this.interpolationForAttribute('cors') as any;
+  }
+
+  // elastic_instance_minimum - computed: true, optional: false, required: false
+  public get elasticInstanceMinimum() {
+    return this.getNumberAttribute('elastic_instance_minimum');
   }
 
   // ftps_state - computed: true, optional: false, required: false
@@ -245,6 +255,11 @@ export class DataAzurermFunctionAppSiteConfig extends cdktf.ComplexComputedList 
   // pre_warmed_instance_count - computed: true, optional: false, required: false
   public get preWarmedInstanceCount() {
     return this.getNumberAttribute('pre_warmed_instance_count');
+  }
+
+  // runtime_scale_monitoring_enabled - computed: true, optional: false, required: false
+  public get runtimeScaleMonitoringEnabled() {
+    return this.getBooleanAttribute('runtime_scale_monitoring_enabled');
   }
 
   // scm_ip_restriction - computed: true, optional: false, required: false

@@ -171,6 +171,16 @@ export class DataAzurermAppServiceSiteConfigScmIpRestriction extends cdktf.Compl
 }
 export class DataAzurermAppServiceSiteConfig extends cdktf.ComplexComputedList {
 
+  // acr_use_managed_identity_credentials - computed: true, optional: false, required: false
+  public get acrUseManagedIdentityCredentials() {
+    return this.getBooleanAttribute('acr_use_managed_identity_credentials');
+  }
+
+  // acr_user_managed_identity_client_id - computed: true, optional: false, required: false
+  public get acrUserManagedIdentityClientId() {
+    return this.getStringAttribute('acr_user_managed_identity_client_id');
+  }
+
   // always_on - computed: true, optional: false, required: false
   public get alwaysOn() {
     return this.getBooleanAttribute('always_on');
