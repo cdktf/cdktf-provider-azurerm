@@ -16,6 +16,10 @@ export interface DatabricksWorkspaceConfig extends cdktf.TerraformMetaArguments 
   */
   readonly infrastructureEncryptionEnabled?: boolean;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/databricks_workspace.html#load_balancer_backend_address_pool_id DatabricksWorkspace#load_balancer_backend_address_pool_id}
+  */
+  readonly loadBalancerBackendAddressPoolId?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/databricks_workspace.html#location DatabricksWorkspace#location}
   */
   readonly location: string;
@@ -24,9 +28,21 @@ export interface DatabricksWorkspaceConfig extends cdktf.TerraformMetaArguments 
   */
   readonly managedResourceGroupName?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/databricks_workspace.html#managed_services_cmk_key_vault_key_id DatabricksWorkspace#managed_services_cmk_key_vault_key_id}
+  */
+  readonly managedServicesCmkKeyVaultKeyId?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/databricks_workspace.html#name DatabricksWorkspace#name}
   */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/databricks_workspace.html#network_security_group_rules_required DatabricksWorkspace#network_security_group_rules_required}
+  */
+  readonly networkSecurityGroupRulesRequired?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/databricks_workspace.html#public_network_access_enabled DatabricksWorkspace#public_network_access_enabled}
+  */
+  readonly publicNetworkAccessEnabled?: boolean;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/databricks_workspace.html#resource_group_name DatabricksWorkspace#resource_group_name}
   */
@@ -75,6 +91,10 @@ export interface DatabricksWorkspaceCustomParameters {
   */
   readonly machineLearningWorkspaceId?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/databricks_workspace.html#nat_gateway_name DatabricksWorkspace#nat_gateway_name}
+  */
+  readonly natGatewayName?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/databricks_workspace.html#no_public_ip DatabricksWorkspace#no_public_ip}
   */
   readonly noPublicIp?: boolean;
@@ -83,23 +103,54 @@ export interface DatabricksWorkspaceCustomParameters {
   */
   readonly privateSubnetName?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/databricks_workspace.html#private_subnet_network_security_group_association_id DatabricksWorkspace#private_subnet_network_security_group_association_id}
+  */
+  readonly privateSubnetNetworkSecurityGroupAssociationId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/databricks_workspace.html#public_ip_name DatabricksWorkspace#public_ip_name}
+  */
+  readonly publicIpName?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/databricks_workspace.html#public_subnet_name DatabricksWorkspace#public_subnet_name}
   */
   readonly publicSubnetName?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/databricks_workspace.html#public_subnet_network_security_group_association_id DatabricksWorkspace#public_subnet_network_security_group_association_id}
+  */
+  readonly publicSubnetNetworkSecurityGroupAssociationId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/databricks_workspace.html#storage_account_name DatabricksWorkspace#storage_account_name}
+  */
+  readonly storageAccountName?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/databricks_workspace.html#storage_account_sku_name DatabricksWorkspace#storage_account_sku_name}
+  */
+  readonly storageAccountSkuName?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/databricks_workspace.html#virtual_network_id DatabricksWorkspace#virtual_network_id}
   */
   readonly virtualNetworkId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/databricks_workspace.html#vnet_address_prefix DatabricksWorkspace#vnet_address_prefix}
+  */
+  readonly vnetAddressPrefix?: string;
 }
 
 function databricksWorkspaceCustomParametersToTerraform(struct?: DatabricksWorkspaceCustomParameters): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   return {
     machine_learning_workspace_id: cdktf.stringToTerraform(struct!.machineLearningWorkspaceId),
+    nat_gateway_name: cdktf.stringToTerraform(struct!.natGatewayName),
     no_public_ip: cdktf.booleanToTerraform(struct!.noPublicIp),
     private_subnet_name: cdktf.stringToTerraform(struct!.privateSubnetName),
+    private_subnet_network_security_group_association_id: cdktf.stringToTerraform(struct!.privateSubnetNetworkSecurityGroupAssociationId),
+    public_ip_name: cdktf.stringToTerraform(struct!.publicIpName),
     public_subnet_name: cdktf.stringToTerraform(struct!.publicSubnetName),
+    public_subnet_network_security_group_association_id: cdktf.stringToTerraform(struct!.publicSubnetNetworkSecurityGroupAssociationId),
+    storage_account_name: cdktf.stringToTerraform(struct!.storageAccountName),
+    storage_account_sku_name: cdktf.stringToTerraform(struct!.storageAccountSkuName),
     virtual_network_id: cdktf.stringToTerraform(struct!.virtualNetworkId),
+    vnet_address_prefix: cdktf.stringToTerraform(struct!.vnetAddressPrefix),
   }
 }
 
@@ -162,9 +213,13 @@ export class DatabricksWorkspace extends cdktf.TerraformResource {
     });
     this._customerManagedKeyEnabled = config.customerManagedKeyEnabled;
     this._infrastructureEncryptionEnabled = config.infrastructureEncryptionEnabled;
+    this._loadBalancerBackendAddressPoolId = config.loadBalancerBackendAddressPoolId;
     this._location = config.location;
     this._managedResourceGroupName = config.managedResourceGroupName;
+    this._managedServicesCmkKeyVaultKeyId = config.managedServicesCmkKeyVaultKeyId;
     this._name = config.name;
+    this._networkSecurityGroupRulesRequired = config.networkSecurityGroupRulesRequired;
+    this._publicNetworkAccessEnabled = config.publicNetworkAccessEnabled;
     this._resourceGroupName = config.resourceGroupName;
     this._sku = config.sku;
     this._tags = config.tags;
@@ -213,6 +268,22 @@ export class DatabricksWorkspace extends cdktf.TerraformResource {
     return this._infrastructureEncryptionEnabled
   }
 
+  // load_balancer_backend_address_pool_id - computed: false, optional: true, required: false
+  private _loadBalancerBackendAddressPoolId?: string;
+  public get loadBalancerBackendAddressPoolId() {
+    return this.getStringAttribute('load_balancer_backend_address_pool_id');
+  }
+  public set loadBalancerBackendAddressPoolId(value: string ) {
+    this._loadBalancerBackendAddressPoolId = value;
+  }
+  public resetLoadBalancerBackendAddressPoolId() {
+    this._loadBalancerBackendAddressPoolId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get loadBalancerBackendAddressPoolIdInput() {
+    return this._loadBalancerBackendAddressPoolId
+  }
+
   // location - computed: false, optional: false, required: true
   private _location: string;
   public get location() {
@@ -247,6 +318,22 @@ export class DatabricksWorkspace extends cdktf.TerraformResource {
     return this._managedResourceGroupName
   }
 
+  // managed_services_cmk_key_vault_key_id - computed: false, optional: true, required: false
+  private _managedServicesCmkKeyVaultKeyId?: string;
+  public get managedServicesCmkKeyVaultKeyId() {
+    return this.getStringAttribute('managed_services_cmk_key_vault_key_id');
+  }
+  public set managedServicesCmkKeyVaultKeyId(value: string ) {
+    this._managedServicesCmkKeyVaultKeyId = value;
+  }
+  public resetManagedServicesCmkKeyVaultKeyId() {
+    this._managedServicesCmkKeyVaultKeyId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get managedServicesCmkKeyVaultKeyIdInput() {
+    return this._managedServicesCmkKeyVaultKeyId
+  }
+
   // name - computed: false, optional: false, required: true
   private _name: string;
   public get name() {
@@ -258,6 +345,38 @@ export class DatabricksWorkspace extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
     return this._name
+  }
+
+  // network_security_group_rules_required - computed: true, optional: true, required: false
+  private _networkSecurityGroupRulesRequired?: string;
+  public get networkSecurityGroupRulesRequired() {
+    return this.getStringAttribute('network_security_group_rules_required');
+  }
+  public set networkSecurityGroupRulesRequired(value: string) {
+    this._networkSecurityGroupRulesRequired = value;
+  }
+  public resetNetworkSecurityGroupRulesRequired() {
+    this._networkSecurityGroupRulesRequired = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get networkSecurityGroupRulesRequiredInput() {
+    return this._networkSecurityGroupRulesRequired
+  }
+
+  // public_network_access_enabled - computed: false, optional: true, required: false
+  private _publicNetworkAccessEnabled?: boolean;
+  public get publicNetworkAccessEnabled() {
+    return this.getBooleanAttribute('public_network_access_enabled');
+  }
+  public set publicNetworkAccessEnabled(value: boolean ) {
+    this._publicNetworkAccessEnabled = value;
+  }
+  public resetPublicNetworkAccessEnabled() {
+    this._publicNetworkAccessEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get publicNetworkAccessEnabledInput() {
+    return this._publicNetworkAccessEnabled
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -357,9 +476,13 @@ export class DatabricksWorkspace extends cdktf.TerraformResource {
     return {
       customer_managed_key_enabled: cdktf.booleanToTerraform(this._customerManagedKeyEnabled),
       infrastructure_encryption_enabled: cdktf.booleanToTerraform(this._infrastructureEncryptionEnabled),
+      load_balancer_backend_address_pool_id: cdktf.stringToTerraform(this._loadBalancerBackendAddressPoolId),
       location: cdktf.stringToTerraform(this._location),
       managed_resource_group_name: cdktf.stringToTerraform(this._managedResourceGroupName),
+      managed_services_cmk_key_vault_key_id: cdktf.stringToTerraform(this._managedServicesCmkKeyVaultKeyId),
       name: cdktf.stringToTerraform(this._name),
+      network_security_group_rules_required: cdktf.stringToTerraform(this._networkSecurityGroupRulesRequired),
+      public_network_access_enabled: cdktf.booleanToTerraform(this._publicNetworkAccessEnabled),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       sku: cdktf.stringToTerraform(this._sku),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),

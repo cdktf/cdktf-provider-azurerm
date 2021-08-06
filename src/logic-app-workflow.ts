@@ -36,6 +36,10 @@ export interface LogicAppWorkflowConfig extends cdktf.TerraformMetaArguments {
   */
   readonly tags?: { [key: string]: string };
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_workflow.html#workflow_parameters LogicAppWorkflow#workflow_parameters}
+  */
+  readonly workflowParameters?: { [key: string]: string };
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_workflow.html#workflow_schema LogicAppWorkflow#workflow_schema}
   */
   readonly workflowSchema?: string;
@@ -114,6 +118,7 @@ export class LogicAppWorkflow extends cdktf.TerraformResource {
     this._parameters = config.parameters;
     this._resourceGroupName = config.resourceGroupName;
     this._tags = config.tags;
+    this._workflowParameters = config.workflowParameters;
     this._workflowSchema = config.workflowSchema;
     this._workflowVersion = config.workflowVersion;
     this._timeouts = config.timeouts;
@@ -256,6 +261,22 @@ export class LogicAppWorkflow extends cdktf.TerraformResource {
     return this.getListAttribute('workflow_outbound_ip_addresses');
   }
 
+  // workflow_parameters - computed: false, optional: true, required: false
+  private _workflowParameters?: { [key: string]: string };
+  public get workflowParameters() {
+    return this.interpolationForAttribute('workflow_parameters') as any;
+  }
+  public set workflowParameters(value: { [key: string]: string } ) {
+    this._workflowParameters = value;
+  }
+  public resetWorkflowParameters() {
+    this._workflowParameters = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get workflowParametersInput() {
+    return this._workflowParameters
+  }
+
   // workflow_schema - computed: false, optional: true, required: false
   private _workflowSchema?: string;
   public get workflowSchema() {
@@ -317,6 +338,7 @@ export class LogicAppWorkflow extends cdktf.TerraformResource {
       parameters: cdktf.hashMapper(cdktf.anyToTerraform)(this._parameters),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      workflow_parameters: cdktf.hashMapper(cdktf.anyToTerraform)(this._workflowParameters),
       workflow_schema: cdktf.stringToTerraform(this._workflowSchema),
       workflow_version: cdktf.stringToTerraform(this._workflowVersion),
       timeouts: logicAppWorkflowTimeoutsToTerraform(this._timeouts),

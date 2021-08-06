@@ -40,9 +40,17 @@ export interface RedisCacheConfig extends cdktf.TerraformMetaArguments {
   */
   readonly publicNetworkAccessEnabled?: boolean;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_cache.html#redis_version RedisCache#redis_version}
+  */
+  readonly redisVersion?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_cache.html#replicas_per_master RedisCache#replicas_per_master}
   */
   readonly replicasPerMaster?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_cache.html#replicas_per_primary RedisCache#replicas_per_primary}
+  */
+  readonly replicasPerPrimary?: number;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_cache.html#resource_group_name RedisCache#resource_group_name}
   */
@@ -63,6 +71,10 @@ export interface RedisCacheConfig extends cdktf.TerraformMetaArguments {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_cache.html#tags RedisCache#tags}
   */
   readonly tags?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_cache.html#tenant_settings RedisCache#tenant_settings}
+  */
+  readonly tenantSettings?: { [key: string]: string };
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_cache.html#zones RedisCache#zones}
   */
@@ -249,12 +261,15 @@ export class RedisCache extends cdktf.TerraformResource {
     this._name = config.name;
     this._privateStaticIpAddress = config.privateStaticIpAddress;
     this._publicNetworkAccessEnabled = config.publicNetworkAccessEnabled;
+    this._redisVersion = config.redisVersion;
     this._replicasPerMaster = config.replicasPerMaster;
+    this._replicasPerPrimary = config.replicasPerPrimary;
     this._resourceGroupName = config.resourceGroupName;
     this._shardCount = config.shardCount;
     this._skuName = config.skuName;
     this._subnetId = config.subnetId;
     this._tags = config.tags;
+    this._tenantSettings = config.tenantSettings;
     this._zones = config.zones;
     this._patchSchedule = config.patchSchedule;
     this._redisConfiguration = config.redisConfiguration;
@@ -406,12 +421,28 @@ export class RedisCache extends cdktf.TerraformResource {
     return this._publicNetworkAccessEnabled
   }
 
-  // replicas_per_master - computed: false, optional: true, required: false
+  // redis_version - computed: true, optional: true, required: false
+  private _redisVersion?: string;
+  public get redisVersion() {
+    return this.getStringAttribute('redis_version');
+  }
+  public set redisVersion(value: string) {
+    this._redisVersion = value;
+  }
+  public resetRedisVersion() {
+    this._redisVersion = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get redisVersionInput() {
+    return this._redisVersion
+  }
+
+  // replicas_per_master - computed: true, optional: true, required: false
   private _replicasPerMaster?: number;
   public get replicasPerMaster() {
     return this.getNumberAttribute('replicas_per_master');
   }
-  public set replicasPerMaster(value: number ) {
+  public set replicasPerMaster(value: number) {
     this._replicasPerMaster = value;
   }
   public resetReplicasPerMaster() {
@@ -420,6 +451,22 @@ export class RedisCache extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get replicasPerMasterInput() {
     return this._replicasPerMaster
+  }
+
+  // replicas_per_primary - computed: true, optional: true, required: false
+  private _replicasPerPrimary?: number;
+  public get replicasPerPrimary() {
+    return this.getNumberAttribute('replicas_per_primary');
+  }
+  public set replicasPerPrimary(value: number) {
+    this._replicasPerPrimary = value;
+  }
+  public resetReplicasPerPrimary() {
+    this._replicasPerPrimary = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get replicasPerPrimaryInput() {
+    return this._replicasPerPrimary
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -511,6 +558,22 @@ export class RedisCache extends cdktf.TerraformResource {
     return this._tags
   }
 
+  // tenant_settings - computed: false, optional: true, required: false
+  private _tenantSettings?: { [key: string]: string };
+  public get tenantSettings() {
+    return this.interpolationForAttribute('tenant_settings') as any;
+  }
+  public set tenantSettings(value: { [key: string]: string } ) {
+    this._tenantSettings = value;
+  }
+  public resetTenantSettings() {
+    this._tenantSettings = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tenantSettingsInput() {
+    return this._tenantSettings
+  }
+
   // zones - computed: false, optional: true, required: false
   private _zones?: string[];
   public get zones() {
@@ -589,12 +652,15 @@ export class RedisCache extends cdktf.TerraformResource {
       name: cdktf.stringToTerraform(this._name),
       private_static_ip_address: cdktf.stringToTerraform(this._privateStaticIpAddress),
       public_network_access_enabled: cdktf.booleanToTerraform(this._publicNetworkAccessEnabled),
+      redis_version: cdktf.stringToTerraform(this._redisVersion),
       replicas_per_master: cdktf.numberToTerraform(this._replicasPerMaster),
+      replicas_per_primary: cdktf.numberToTerraform(this._replicasPerPrimary),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       shard_count: cdktf.numberToTerraform(this._shardCount),
       sku_name: cdktf.stringToTerraform(this._skuName),
       subnet_id: cdktf.stringToTerraform(this._subnetId),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      tenant_settings: cdktf.hashMapper(cdktf.anyToTerraform)(this._tenantSettings),
       zones: cdktf.listMapper(cdktf.stringToTerraform)(this._zones),
       patch_schedule: cdktf.listMapper(redisCachePatchScheduleToTerraform)(this._patchSchedule),
       redis_configuration: cdktf.listMapper(redisCacheRedisConfigurationToTerraform)(this._redisConfiguration),

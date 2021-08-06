@@ -732,6 +732,14 @@ function appServiceSiteConfigCorsToTerraform(struct?: AppServiceSiteConfigCors):
 
 export interface AppServiceSiteConfig {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#acr_use_managed_identity_credentials AppService#acr_use_managed_identity_credentials}
+  */
+  readonly acrUseManagedIdentityCredentials?: boolean;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#acr_user_managed_identity_client_id AppService#acr_user_managed_identity_client_id}
+  */
+  readonly acrUserManagedIdentityClientId?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#always_on AppService#always_on}
   */
   readonly alwaysOn?: boolean;
@@ -850,6 +858,8 @@ export interface AppServiceSiteConfig {
 function appServiceSiteConfigToTerraform(struct?: AppServiceSiteConfig): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   return {
+    acr_use_managed_identity_credentials: cdktf.booleanToTerraform(struct!.acrUseManagedIdentityCredentials),
+    acr_user_managed_identity_client_id: cdktf.stringToTerraform(struct!.acrUserManagedIdentityClientId),
     always_on: cdktf.booleanToTerraform(struct!.alwaysOn),
     app_command_line: cdktf.stringToTerraform(struct!.appCommandLine),
     auto_swap_slot_name: cdktf.stringToTerraform(struct!.autoSwapSlotName),

@@ -36,6 +36,10 @@ export interface ApiManagementApiDiagnosticConfig extends cdktf.TerraformMetaArg
   */
   readonly logClientIp?: boolean;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_diagnostic.html#operation_name_format ApiManagementApiDiagnostic#operation_name_format}
+  */
+  readonly operationNameFormat?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_diagnostic.html#resource_group_name ApiManagementApiDiagnostic#resource_group_name}
   */
   readonly resourceGroupName: string;
@@ -490,6 +494,7 @@ export class ApiManagementApiDiagnostic extends cdktf.TerraformResource {
     this._httpCorrelationProtocol = config.httpCorrelationProtocol;
     this._identifier = config.identifier;
     this._logClientIp = config.logClientIp;
+    this._operationNameFormat = config.operationNameFormat;
     this._resourceGroupName = config.resourceGroupName;
     this._samplingPercentage = config.samplingPercentage;
     this._verbosity = config.verbosity;
@@ -607,6 +612,22 @@ export class ApiManagementApiDiagnostic extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get logClientIpInput() {
     return this._logClientIp
+  }
+
+  // operation_name_format - computed: false, optional: true, required: false
+  private _operationNameFormat?: string;
+  public get operationNameFormat() {
+    return this.getStringAttribute('operation_name_format');
+  }
+  public set operationNameFormat(value: string ) {
+    this._operationNameFormat = value;
+  }
+  public resetOperationNameFormat() {
+    this._operationNameFormat = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get operationNameFormatInput() {
+    return this._operationNameFormat
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -747,6 +768,7 @@ export class ApiManagementApiDiagnostic extends cdktf.TerraformResource {
       http_correlation_protocol: cdktf.stringToTerraform(this._httpCorrelationProtocol),
       identifier: cdktf.stringToTerraform(this._identifier),
       log_client_ip: cdktf.booleanToTerraform(this._logClientIp),
+      operation_name_format: cdktf.stringToTerraform(this._operationNameFormat),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       sampling_percentage: cdktf.numberToTerraform(this._samplingPercentage),
       verbosity: cdktf.stringToTerraform(this._verbosity),

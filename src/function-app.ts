@@ -542,9 +542,17 @@ export interface FunctionAppSiteConfig {
   */
   readonly alwaysOn?: boolean;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app.html#app_scale_limit FunctionApp#app_scale_limit}
+  */
+  readonly appScaleLimit?: number;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app.html#auto_swap_slot_name FunctionApp#auto_swap_slot_name}
   */
   readonly autoSwapSlotName?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app.html#elastic_instance_minimum FunctionApp#elastic_instance_minimum}
+  */
+  readonly elasticInstanceMinimum?: number;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app.html#ftps_state FunctionApp#ftps_state}
   */
@@ -578,6 +586,10 @@ export interface FunctionAppSiteConfig {
   */
   readonly preWarmedInstanceCount?: number;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app.html#runtime_scale_monitoring_enabled FunctionApp#runtime_scale_monitoring_enabled}
+  */
+  readonly runtimeScaleMonitoringEnabled?: boolean;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app.html#scm_ip_restriction FunctionApp#scm_ip_restriction}
   */
   readonly scmIpRestriction?: FunctionAppSiteConfigScmIpRestriction[];
@@ -609,7 +621,9 @@ function functionAppSiteConfigToTerraform(struct?: FunctionAppSiteConfig): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   return {
     always_on: cdktf.booleanToTerraform(struct!.alwaysOn),
+    app_scale_limit: cdktf.numberToTerraform(struct!.appScaleLimit),
     auto_swap_slot_name: cdktf.stringToTerraform(struct!.autoSwapSlotName),
+    elastic_instance_minimum: cdktf.numberToTerraform(struct!.elasticInstanceMinimum),
     ftps_state: cdktf.stringToTerraform(struct!.ftpsState),
     health_check_path: cdktf.stringToTerraform(struct!.healthCheckPath),
     http2_enabled: cdktf.booleanToTerraform(struct!.http2Enabled),
@@ -618,6 +632,7 @@ function functionAppSiteConfigToTerraform(struct?: FunctionAppSiteConfig): any {
     linux_fx_version: cdktf.stringToTerraform(struct!.linuxFxVersion),
     min_tls_version: cdktf.stringToTerraform(struct!.minTlsVersion),
     pre_warmed_instance_count: cdktf.numberToTerraform(struct!.preWarmedInstanceCount),
+    runtime_scale_monitoring_enabled: cdktf.booleanToTerraform(struct!.runtimeScaleMonitoringEnabled),
     scm_ip_restriction: cdktf.listMapper(functionAppSiteConfigScmIpRestrictionToTerraform)(struct!.scmIpRestriction),
     scm_type: cdktf.stringToTerraform(struct!.scmType),
     scm_use_main_ip_restriction: cdktf.booleanToTerraform(struct!.scmUseMainIpRestriction),
