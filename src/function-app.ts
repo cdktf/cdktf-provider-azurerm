@@ -550,6 +550,10 @@ export interface FunctionAppSiteConfig {
   */
   readonly autoSwapSlotName?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app.html#dotnet_framework_version FunctionApp#dotnet_framework_version}
+  */
+  readonly dotnetFrameworkVersion?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app.html#elastic_instance_minimum FunctionApp#elastic_instance_minimum}
   */
   readonly elasticInstanceMinimum?: number;
@@ -623,6 +627,7 @@ function functionAppSiteConfigToTerraform(struct?: FunctionAppSiteConfig): any {
     always_on: cdktf.booleanToTerraform(struct!.alwaysOn),
     app_scale_limit: cdktf.numberToTerraform(struct!.appScaleLimit),
     auto_swap_slot_name: cdktf.stringToTerraform(struct!.autoSwapSlotName),
+    dotnet_framework_version: cdktf.stringToTerraform(struct!.dotnetFrameworkVersion),
     elastic_instance_minimum: cdktf.numberToTerraform(struct!.elasticInstanceMinimum),
     ftps_state: cdktf.stringToTerraform(struct!.ftpsState),
     health_check_path: cdktf.stringToTerraform(struct!.healthCheckPath),

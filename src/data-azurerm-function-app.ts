@@ -212,6 +212,11 @@ export class DataAzurermFunctionAppSiteConfig extends cdktf.ComplexComputedList 
     return this.interpolationForAttribute('cors') as any;
   }
 
+  // dotnet_framework_version - computed: true, optional: false, required: false
+  public get dotnetFrameworkVersion() {
+    return this.getStringAttribute('dotnet_framework_version');
+  }
+
   // elastic_instance_minimum - computed: true, optional: false, required: false
   public get elasticInstanceMinimum() {
     return this.getNumberAttribute('elastic_instance_minimum');

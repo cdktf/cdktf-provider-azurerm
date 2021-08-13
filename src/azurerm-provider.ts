@@ -187,6 +187,20 @@ function azurermProviderFeaturesNetworkToTerraform(struct?: AzurermProviderFeatu
   }
 }
 
+export interface AzurermProviderFeaturesResourceGroup {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm#prevent_deletion_if_contains_resources AzurermProvider#prevent_deletion_if_contains_resources}
+  */
+  readonly preventDeletionIfContainsResources?: boolean;
+}
+
+function azurermProviderFeaturesResourceGroupToTerraform(struct?: AzurermProviderFeaturesResourceGroup): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    prevent_deletion_if_contains_resources: cdktf.booleanToTerraform(struct!.preventDeletionIfContainsResources),
+  }
+}
+
 export interface AzurermProviderFeaturesTemplateDeployment {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm#delete_nested_items_during_deletion AzurermProvider#delete_nested_items_during_deletion}
@@ -270,6 +284,12 @@ export interface AzurermProviderFeatures {
   */
   readonly network?: AzurermProviderFeaturesNetwork[];
   /**
+  * resource_group block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm#resource_group AzurermProvider#resource_group}
+  */
+  readonly resourceGroup?: AzurermProviderFeaturesResourceGroup[];
+  /**
   * template_deployment block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm#template_deployment AzurermProvider#template_deployment}
@@ -296,6 +316,7 @@ function azurermProviderFeaturesToTerraform(struct?: AzurermProviderFeatures): a
     key_vault: cdktf.listMapper(azurermProviderFeaturesKeyVaultToTerraform)(struct!.keyVault),
     log_analytics_workspace: cdktf.listMapper(azurermProviderFeaturesLogAnalyticsWorkspaceToTerraform)(struct!.logAnalyticsWorkspace),
     network: cdktf.listMapper(azurermProviderFeaturesNetworkToTerraform)(struct!.network),
+    resource_group: cdktf.listMapper(azurermProviderFeaturesResourceGroupToTerraform)(struct!.resourceGroup),
     template_deployment: cdktf.listMapper(azurermProviderFeaturesTemplateDeploymentToTerraform)(struct!.templateDeployment),
     virtual_machine: cdktf.listMapper(azurermProviderFeaturesVirtualMachineToTerraform)(struct!.virtualMachine),
     virtual_machine_scale_set: cdktf.listMapper(azurermProviderFeaturesVirtualMachineScaleSetToTerraform)(struct!.virtualMachineScaleSet),
