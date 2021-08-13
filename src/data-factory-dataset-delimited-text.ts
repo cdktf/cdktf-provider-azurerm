@@ -142,11 +142,11 @@ export interface DataFactoryDatasetDelimitedTextAzureBlobStorageLocation {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_delimited_text.html#filename DataFactoryDatasetDelimitedText#filename}
   */
-  readonly filename: string;
+  readonly filename?: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_delimited_text.html#path DataFactoryDatasetDelimitedText#path}
   */
-  readonly path: string;
+  readonly path?: string;
 }
 
 function dataFactoryDatasetDelimitedTextAzureBlobStorageLocationToTerraform(struct?: DataFactoryDatasetDelimitedTextAzureBlobStorageLocation): any {

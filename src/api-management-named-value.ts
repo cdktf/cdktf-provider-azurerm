@@ -81,7 +81,7 @@ export interface ApiManagementNamedValueValueFromKeyVault {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_named_value.html#identity_client_id ApiManagementNamedValue#identity_client_id}
   */
-  readonly identityClientId: string;
+  readonly identityClientId?: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_named_value.html#secret_id ApiManagementNamedValue#secret_id}
   */

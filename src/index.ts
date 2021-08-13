@@ -620,6 +620,8 @@ export * from './tenant-template-deployment';
 export * from './traffic-manager-endpoint';
 export * from './traffic-manager-profile';
 export * from './user-assigned-identity';
+export * from './video-analyzer';
+export * from './video-analyzer-edge-module';
 export * from './virtual-desktop-application';
 export * from './virtual-desktop-application-group';
 export * from './virtual-desktop-host-pool';
