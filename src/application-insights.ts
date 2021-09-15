@@ -18,11 +18,15 @@ export interface ApplicationInsightsConfig extends cdktf.TerraformMetaArguments 
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights.html#daily_data_cap_notifications_disabled ApplicationInsights#daily_data_cap_notifications_disabled}
   */
-  readonly dailyDataCapNotificationsDisabled?: boolean;
+  readonly dailyDataCapNotificationsDisabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights.html#disable_ip_masking ApplicationInsights#disable_ip_masking}
   */
-  readonly disableIpMasking?: boolean;
+  readonly disableIpMasking?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights.html#local_authentication_disabled ApplicationInsights#local_authentication_disabled}
+  */
+  readonly localAuthenticationDisabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights.html#location ApplicationInsights#location}
   */
@@ -46,7 +50,7 @@ export interface ApplicationInsightsConfig extends cdktf.TerraformMetaArguments 
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights.html#tags ApplicationInsights#tags}
   */
-  readonly tags?: { [key: string]: string };
+  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights.html#workspace_id ApplicationInsights#workspace_id}
   */
@@ -93,6 +97,11 @@ function applicationInsightsTimeoutsToTerraform(struct?: ApplicationInsightsTime
 */
 export class ApplicationInsights extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_application_insights";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -119,6 +128,7 @@ export class ApplicationInsights extends cdktf.TerraformResource {
     this._dailyDataCapInGb = config.dailyDataCapInGb;
     this._dailyDataCapNotificationsDisabled = config.dailyDataCapNotificationsDisabled;
     this._disableIpMasking = config.disableIpMasking;
+    this._localAuthenticationDisabled = config.localAuthenticationDisabled;
     this._location = config.location;
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
@@ -173,11 +183,11 @@ export class ApplicationInsights extends cdktf.TerraformResource {
   }
 
   // daily_data_cap_notifications_disabled - computed: true, optional: true, required: false
-  private _dailyDataCapNotificationsDisabled?: boolean;
+  private _dailyDataCapNotificationsDisabled?: boolean | cdktf.IResolvable;
   public get dailyDataCapNotificationsDisabled() {
     return this.getBooleanAttribute('daily_data_cap_notifications_disabled');
   }
-  public set dailyDataCapNotificationsDisabled(value: boolean) {
+  public set dailyDataCapNotificationsDisabled(value: boolean | cdktf.IResolvable) {
     this._dailyDataCapNotificationsDisabled = value;
   }
   public resetDailyDataCapNotificationsDisabled() {
@@ -189,11 +199,11 @@ export class ApplicationInsights extends cdktf.TerraformResource {
   }
 
   // disable_ip_masking - computed: false, optional: true, required: false
-  private _disableIpMasking?: boolean;
+  private _disableIpMasking?: boolean | cdktf.IResolvable;
   public get disableIpMasking() {
     return this.getBooleanAttribute('disable_ip_masking');
   }
-  public set disableIpMasking(value: boolean ) {
+  public set disableIpMasking(value: boolean | cdktf.IResolvable ) {
     this._disableIpMasking = value;
   }
   public resetDisableIpMasking() {
@@ -212,6 +222,22 @@ export class ApplicationInsights extends cdktf.TerraformResource {
   // instrumentation_key - computed: true, optional: false, required: false
   public get instrumentationKey() {
     return this.getStringAttribute('instrumentation_key');
+  }
+
+  // local_authentication_disabled - computed: false, optional: true, required: false
+  private _localAuthenticationDisabled?: boolean | cdktf.IResolvable;
+  public get localAuthenticationDisabled() {
+    return this.getBooleanAttribute('local_authentication_disabled');
+  }
+  public set localAuthenticationDisabled(value: boolean | cdktf.IResolvable ) {
+    this._localAuthenticationDisabled = value;
+  }
+  public resetLocalAuthenticationDisabled() {
+    this._localAuthenticationDisabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get localAuthenticationDisabledInput() {
+    return this._localAuthenticationDisabled
   }
 
   // location - computed: false, optional: false, required: true
@@ -286,11 +312,11 @@ export class ApplicationInsights extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string };
+  private _tags?: { [key: string]: string } | cdktf.IResolvable;
   public get tags() {
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._tags = value;
   }
   public resetTags() {
@@ -343,6 +369,7 @@ export class ApplicationInsights extends cdktf.TerraformResource {
       daily_data_cap_in_gb: cdktf.numberToTerraform(this._dailyDataCapInGb),
       daily_data_cap_notifications_disabled: cdktf.booleanToTerraform(this._dailyDataCapNotificationsDisabled),
       disable_ip_masking: cdktf.booleanToTerraform(this._disableIpMasking),
+      local_authentication_disabled: cdktf.booleanToTerraform(this._localAuthenticationDisabled),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),

@@ -69,6 +69,11 @@ function iotTimeSeriesInsightsAccessPolicyTimeoutsToTerraform(struct?: IotTimeSe
 */
 export class IotTimeSeriesInsightsAccessPolicy extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_iot_time_series_insights_access_policy";
+
   // ===========
   // INITIALIZER
   // ===========

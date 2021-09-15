@@ -22,7 +22,7 @@ export interface BatchAccountConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_account.html#public_network_access_enabled BatchAccount#public_network_access_enabled}
   */
-  readonly publicNetworkAccessEnabled?: boolean;
+  readonly publicNetworkAccessEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_account.html#resource_group_name BatchAccount#resource_group_name}
   */
@@ -34,7 +34,7 @@ export interface BatchAccountConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_account.html#tags BatchAccount#tags}
   */
-  readonly tags?: { [key: string]: string };
+  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * key_vault_reference block
   * 
@@ -101,6 +101,11 @@ function batchAccountTimeoutsToTerraform(struct?: BatchAccountTimeouts): any {
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/batch_account.html azurerm_batch_account}
 */
 export class BatchAccount extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_batch_account";
 
   // ===========
   // INITIALIZER
@@ -197,11 +202,11 @@ export class BatchAccount extends cdktf.TerraformResource {
   }
 
   // public_network_access_enabled - computed: false, optional: true, required: false
-  private _publicNetworkAccessEnabled?: boolean;
+  private _publicNetworkAccessEnabled?: boolean | cdktf.IResolvable;
   public get publicNetworkAccessEnabled() {
     return this.getBooleanAttribute('public_network_access_enabled');
   }
-  public set publicNetworkAccessEnabled(value: boolean ) {
+  public set publicNetworkAccessEnabled(value: boolean | cdktf.IResolvable ) {
     this._publicNetworkAccessEnabled = value;
   }
   public resetPublicNetworkAccessEnabled() {
@@ -247,11 +252,11 @@ export class BatchAccount extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string };
+  private _tags?: { [key: string]: string } | cdktf.IResolvable;
   public get tags() {
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._tags = value;
   }
   public resetTags() {

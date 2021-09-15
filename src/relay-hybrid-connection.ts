@@ -18,7 +18,7 @@ export interface RelayHybridConnectionConfig extends cdktf.TerraformMetaArgument
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/relay_hybrid_connection.html#requires_client_authorization RelayHybridConnection#requires_client_authorization}
   */
-  readonly requiresClientAuthorization?: boolean;
+  readonly requiresClientAuthorization?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/relay_hybrid_connection.html#resource_group_name RelayHybridConnection#resource_group_name}
   */
@@ -68,6 +68,11 @@ function relayHybridConnectionTimeoutsToTerraform(struct?: RelayHybridConnection
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/relay_hybrid_connection.html azurerm_relay_hybrid_connection}
 */
 export class RelayHybridConnection extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_relay_hybrid_connection";
 
   // ===========
   // INITIALIZER
@@ -135,11 +140,11 @@ export class RelayHybridConnection extends cdktf.TerraformResource {
   }
 
   // requires_client_authorization - computed: false, optional: true, required: false
-  private _requiresClientAuthorization?: boolean;
+  private _requiresClientAuthorization?: boolean | cdktf.IResolvable;
   public get requiresClientAuthorization() {
     return this.getBooleanAttribute('requires_client_authorization');
   }
-  public set requiresClientAuthorization(value: boolean ) {
+  public set requiresClientAuthorization(value: boolean | cdktf.IResolvable ) {
     this._requiresClientAuthorization = value;
   }
   public resetRequiresClientAuthorization() {

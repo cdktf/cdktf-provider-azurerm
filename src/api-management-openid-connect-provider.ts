@@ -81,6 +81,11 @@ function apiManagementOpenidConnectProviderTimeoutsToTerraform(struct?: ApiManag
 */
 export class ApiManagementOpenidConnectProvider extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_api_management_openid_connect_provider";
+
   // ===========
   // INITIALIZER
   // ===========

@@ -60,6 +60,11 @@ function springCloudCertificateTimeoutsToTerraform(struct?: SpringCloudCertifica
 */
 export class SpringCloudCertificate extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_spring_cloud_certificate";
+
   // ===========
   // INITIALIZER
   // ===========

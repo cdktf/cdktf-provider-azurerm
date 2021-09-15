@@ -64,6 +64,11 @@ function dataAzurermKeyVaultCertificateIssuerTimeoutsToTerraform(struct?: DataAz
 */
 export class DataAzurermKeyVaultCertificateIssuer extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_key_vault_certificate_issuer";
+
   // ===========
   // INITIALIZER
   // ===========

@@ -57,6 +57,11 @@ function virtualDesktopWorkspaceApplicationGroupAssociationTimeoutsToTerraform(s
 */
 export class VirtualDesktopWorkspaceApplicationGroupAssociation extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_virtual_desktop_workspace_application_group_association";
+
   // ===========
   // INITIALIZER
   // ===========

@@ -18,7 +18,7 @@ export interface LbOutboundRuleConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb_outbound_rule.html#enable_tcp_reset LbOutboundRule#enable_tcp_reset}
   */
-  readonly enableTcpReset?: boolean;
+  readonly enableTcpReset?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb_outbound_rule.html#idle_timeout_in_minutes LbOutboundRule#idle_timeout_in_minutes}
   */
@@ -101,6 +101,11 @@ function lbOutboundRuleTimeoutsToTerraform(struct?: LbOutboundRuleTimeouts): any
 */
 export class LbOutboundRule extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_lb_outbound_rule";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -169,11 +174,11 @@ export class LbOutboundRule extends cdktf.TerraformResource {
   }
 
   // enable_tcp_reset - computed: false, optional: true, required: false
-  private _enableTcpReset?: boolean;
+  private _enableTcpReset?: boolean | cdktf.IResolvable;
   public get enableTcpReset() {
     return this.getBooleanAttribute('enable_tcp_reset');
   }
-  public set enableTcpReset(value: boolean ) {
+  public set enableTcpReset(value: boolean | cdktf.IResolvable ) {
     this._enableTcpReset = value;
   }
   public resetEnableTcpReset() {

@@ -22,7 +22,7 @@ export interface ApplicationInsightsWebTestConfig extends cdktf.TerraformMetaArg
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights_web_test.html#enabled ApplicationInsightsWebTest#enabled}
   */
-  readonly enabled?: boolean;
+  readonly enabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights_web_test.html#frequency ApplicationInsightsWebTest#frequency}
   */
@@ -50,11 +50,11 @@ export interface ApplicationInsightsWebTestConfig extends cdktf.TerraformMetaArg
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights_web_test.html#retry_enabled ApplicationInsightsWebTest#retry_enabled}
   */
-  readonly retryEnabled?: boolean;
+  readonly retryEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights_web_test.html#tags ApplicationInsightsWebTest#tags}
   */
-  readonly tags?: { [key: string]: string };
+  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights_web_test.html#timeout ApplicationInsightsWebTest#timeout}
   */
@@ -100,6 +100,11 @@ function applicationInsightsWebTestTimeoutsToTerraform(struct?: ApplicationInsig
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights_web_test.html azurerm_application_insights_web_test}
 */
 export class ApplicationInsightsWebTest extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_application_insights_web_test";
 
   // ===========
   // INITIALIZER
@@ -186,11 +191,11 @@ export class ApplicationInsightsWebTest extends cdktf.TerraformResource {
   }
 
   // enabled - computed: false, optional: true, required: false
-  private _enabled?: boolean;
+  private _enabled?: boolean | cdktf.IResolvable;
   public get enabled() {
     return this.getBooleanAttribute('enabled');
   }
-  public set enabled(value: boolean ) {
+  public set enabled(value: boolean | cdktf.IResolvable ) {
     this._enabled = value;
   }
   public resetEnabled() {
@@ -288,11 +293,11 @@ export class ApplicationInsightsWebTest extends cdktf.TerraformResource {
   }
 
   // retry_enabled - computed: false, optional: true, required: false
-  private _retryEnabled?: boolean;
+  private _retryEnabled?: boolean | cdktf.IResolvable;
   public get retryEnabled() {
     return this.getBooleanAttribute('retry_enabled');
   }
-  public set retryEnabled(value: boolean ) {
+  public set retryEnabled(value: boolean | cdktf.IResolvable ) {
     this._retryEnabled = value;
   }
   public resetRetryEnabled() {
@@ -309,11 +314,11 @@ export class ApplicationInsightsWebTest extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string };
+  private _tags?: { [key: string]: string } | cdktf.IResolvable;
   public get tags() {
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._tags = value;
   }
   public resetTags() {

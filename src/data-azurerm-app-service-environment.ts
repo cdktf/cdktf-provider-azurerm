@@ -54,6 +54,11 @@ function dataAzurermAppServiceEnvironmentTimeoutsToTerraform(struct?: DataAzurer
 */
 export class DataAzurermAppServiceEnvironment extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_app_service_environment";
+
   // ===========
   // INITIALIZER
   // ===========

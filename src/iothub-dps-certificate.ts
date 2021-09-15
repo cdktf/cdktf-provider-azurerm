@@ -65,6 +65,11 @@ function iothubDpsCertificateTimeoutsToTerraform(struct?: IothubDpsCertificateTi
 */
 export class IothubDpsCertificate extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_iothub_dps_certificate";
+
   // ===========
   // INITIALIZER
   // ===========

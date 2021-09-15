@@ -77,6 +77,11 @@ function siteRecoveryNetworkMappingTimeoutsToTerraform(struct?: SiteRecoveryNetw
 */
 export class SiteRecoveryNetworkMapping extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_site_recovery_network_mapping";
+
   // ===========
   // INITIALIZER
   // ===========

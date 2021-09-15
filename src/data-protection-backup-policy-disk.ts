@@ -116,6 +116,11 @@ function dataProtectionBackupPolicyDiskTimeoutsToTerraform(struct?: DataProtecti
 */
 export class DataProtectionBackupPolicyDisk extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_data_protection_backup_policy_disk";
+
   // ===========
   // INITIALIZER
   // ===========

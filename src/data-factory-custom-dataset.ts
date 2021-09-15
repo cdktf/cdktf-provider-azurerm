@@ -10,7 +10,7 @@ export interface DataFactoryCustomDatasetConfig extends cdktf.TerraformMetaArgum
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_custom_dataset.html#additional_properties DataFactoryCustomDataset#additional_properties}
   */
-  readonly additionalProperties?: { [key: string]: string };
+  readonly additionalProperties?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_custom_dataset.html#annotations DataFactoryCustomDataset#annotations}
   */
@@ -34,7 +34,7 @@ export interface DataFactoryCustomDatasetConfig extends cdktf.TerraformMetaArgum
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_custom_dataset.html#parameters DataFactoryCustomDataset#parameters}
   */
-  readonly parameters?: { [key: string]: string };
+  readonly parameters?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_custom_dataset.html#schema_json DataFactoryCustomDataset#schema_json}
   */
@@ -68,7 +68,7 @@ export interface DataFactoryCustomDatasetLinkedService {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_custom_dataset.html#parameters DataFactoryCustomDataset#parameters}
   */
-  readonly parameters?: { [key: string]: string };
+  readonly parameters?: { [key: string]: string } | cdktf.IResolvable;
 }
 
 function dataFactoryCustomDatasetLinkedServiceToTerraform(struct?: DataFactoryCustomDatasetLinkedService): any {
@@ -114,6 +114,11 @@ function dataFactoryCustomDatasetTimeoutsToTerraform(struct?: DataFactoryCustomD
 */
 export class DataFactoryCustomDataset extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_data_factory_custom_dataset";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -155,11 +160,11 @@ export class DataFactoryCustomDataset extends cdktf.TerraformResource {
   // ==========
 
   // additional_properties - computed: false, optional: true, required: false
-  private _additionalProperties?: { [key: string]: string };
+  private _additionalProperties?: { [key: string]: string } | cdktf.IResolvable;
   public get additionalProperties() {
     return this.interpolationForAttribute('additional_properties') as any;
   }
-  public set additionalProperties(value: { [key: string]: string } ) {
+  public set additionalProperties(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._additionalProperties = value;
   }
   public resetAdditionalProperties() {
@@ -250,11 +255,11 @@ export class DataFactoryCustomDataset extends cdktf.TerraformResource {
   }
 
   // parameters - computed: false, optional: true, required: false
-  private _parameters?: { [key: string]: string };
+  private _parameters?: { [key: string]: string } | cdktf.IResolvable;
   public get parameters() {
     return this.interpolationForAttribute('parameters') as any;
   }
-  public set parameters(value: { [key: string]: string } ) {
+  public set parameters(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._parameters = value;
   }
   public resetParameters() {

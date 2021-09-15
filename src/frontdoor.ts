@@ -14,7 +14,7 @@ export interface FrontdoorConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor.html#enforce_backend_pools_certificate_name_check Frontdoor#enforce_backend_pools_certificate_name_check}
   */
-  readonly enforceBackendPoolsCertificateNameCheck: boolean;
+  readonly enforceBackendPoolsCertificateNameCheck: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor.html#friendly_name Frontdoor#friendly_name}
   */
@@ -22,7 +22,7 @@ export interface FrontdoorConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor.html#load_balancer_enabled Frontdoor#load_balancer_enabled}
   */
-  readonly loadBalancerEnabled?: boolean;
+  readonly loadBalancerEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor.html#location Frontdoor#location}
   */
@@ -38,7 +38,7 @@ export interface FrontdoorConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor.html#tags Frontdoor#tags}
   */
-  readonly tags?: { [key: string]: string };
+  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * backend_pool block
   * 
@@ -111,7 +111,7 @@ export interface FrontdoorBackendPoolBackend {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor.html#enabled Frontdoor#enabled}
   */
-  readonly enabled?: boolean;
+  readonly enabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor.html#host_header Frontdoor#host_header}
   */
@@ -182,7 +182,7 @@ export interface FrontdoorBackendPoolHealthProbe {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor.html#enabled Frontdoor#enabled}
   */
-  readonly enabled?: boolean;
+  readonly enabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor.html#interval_in_seconds Frontdoor#interval_in_seconds}
   */
@@ -258,7 +258,7 @@ export interface FrontdoorFrontendEndpoint {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor.html#session_affinity_enabled Frontdoor#session_affinity_enabled}
   */
-  readonly sessionAffinityEnabled?: boolean;
+  readonly sessionAffinityEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor.html#session_affinity_ttl_seconds Frontdoor#session_affinity_ttl_seconds}
   */
@@ -286,17 +286,25 @@ export interface FrontdoorRoutingRuleForwardingConfiguration {
   */
   readonly backendPoolName: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor.html#cache_duration Frontdoor#cache_duration}
+  */
+  readonly cacheDuration?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor.html#cache_enabled Frontdoor#cache_enabled}
   */
-  readonly cacheEnabled?: boolean;
+  readonly cacheEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor.html#cache_query_parameter_strip_directive Frontdoor#cache_query_parameter_strip_directive}
   */
   readonly cacheQueryParameterStripDirective?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor.html#cache_query_parameters Frontdoor#cache_query_parameters}
+  */
+  readonly cacheQueryParameters?: string[];
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor.html#cache_use_dynamic_compression Frontdoor#cache_use_dynamic_compression}
   */
-  readonly cacheUseDynamicCompression?: boolean;
+  readonly cacheUseDynamicCompression?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor.html#custom_forwarding_path Frontdoor#custom_forwarding_path}
   */
@@ -311,8 +319,10 @@ function frontdoorRoutingRuleForwardingConfigurationToTerraform(struct?: Frontdo
   if (!cdktf.canInspect(struct)) { return struct; }
   return {
     backend_pool_name: cdktf.stringToTerraform(struct!.backendPoolName),
+    cache_duration: cdktf.stringToTerraform(struct!.cacheDuration),
     cache_enabled: cdktf.booleanToTerraform(struct!.cacheEnabled),
     cache_query_parameter_strip_directive: cdktf.stringToTerraform(struct!.cacheQueryParameterStripDirective),
+    cache_query_parameters: cdktf.listMapper(cdktf.stringToTerraform)(struct!.cacheQueryParameters),
     cache_use_dynamic_compression: cdktf.booleanToTerraform(struct!.cacheUseDynamicCompression),
     custom_forwarding_path: cdktf.stringToTerraform(struct!.customForwardingPath),
     forwarding_protocol: cdktf.stringToTerraform(struct!.forwardingProtocol),
@@ -366,7 +376,7 @@ export interface FrontdoorRoutingRule {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor.html#enabled Frontdoor#enabled}
   */
-  readonly enabled?: boolean;
+  readonly enabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor.html#frontend_endpoints Frontdoor#frontend_endpoints}
   */
@@ -440,6 +450,11 @@ function frontdoorTimeoutsToTerraform(struct?: FrontdoorTimeouts): any {
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor.html azurerm_frontdoor}
 */
 export class Frontdoor extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_frontdoor";
 
   // ===========
   // INITIALIZER
@@ -520,11 +535,11 @@ export class Frontdoor extends cdktf.TerraformResource {
   }
 
   // enforce_backend_pools_certificate_name_check - computed: false, optional: false, required: true
-  private _enforceBackendPoolsCertificateNameCheck: boolean;
+  private _enforceBackendPoolsCertificateNameCheck: boolean | cdktf.IResolvable;
   public get enforceBackendPoolsCertificateNameCheck() {
     return this.getBooleanAttribute('enforce_backend_pools_certificate_name_check');
   }
-  public set enforceBackendPoolsCertificateNameCheck(value: boolean) {
+  public set enforceBackendPoolsCertificateNameCheck(value: boolean | cdktf.IResolvable) {
     this._enforceBackendPoolsCertificateNameCheck = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -569,11 +584,11 @@ export class Frontdoor extends cdktf.TerraformResource {
   }
 
   // load_balancer_enabled - computed: false, optional: true, required: false
-  private _loadBalancerEnabled?: boolean;
+  private _loadBalancerEnabled?: boolean | cdktf.IResolvable;
   public get loadBalancerEnabled() {
     return this.getBooleanAttribute('load_balancer_enabled');
   }
-  public set loadBalancerEnabled(value: boolean ) {
+  public set loadBalancerEnabled(value: boolean | cdktf.IResolvable ) {
     this._loadBalancerEnabled = value;
   }
   public resetLoadBalancerEnabled() {
@@ -632,11 +647,11 @@ export class Frontdoor extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string };
+  private _tags?: { [key: string]: string } | cdktf.IResolvable;
   public get tags() {
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._tags = value;
   }
   public resetTags() {

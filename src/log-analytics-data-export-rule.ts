@@ -14,7 +14,7 @@ export interface LogAnalyticsDataExportRuleConfig extends cdktf.TerraformMetaArg
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_data_export_rule.html#enabled LogAnalyticsDataExportRule#enabled}
   */
-  readonly enabled?: boolean;
+  readonly enabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_data_export_rule.html#name LogAnalyticsDataExportRule#name}
   */
@@ -73,6 +73,11 @@ function logAnalyticsDataExportRuleTimeoutsToTerraform(struct?: LogAnalyticsData
 */
 export class LogAnalyticsDataExportRule extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_log_analytics_data_export_rule";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -122,11 +127,11 @@ export class LogAnalyticsDataExportRule extends cdktf.TerraformResource {
   }
 
   // enabled - computed: false, optional: true, required: false
-  private _enabled?: boolean;
+  private _enabled?: boolean | cdktf.IResolvable;
   public get enabled() {
     return this.getBooleanAttribute('enabled');
   }
-  public set enabled(value: boolean ) {
+  public set enabled(value: boolean | cdktf.IResolvable ) {
     this._enabled = value;
   }
   public resetEnabled() {

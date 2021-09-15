@@ -30,7 +30,7 @@ export interface KubernetesClusterConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#enable_pod_security_policy KubernetesCluster#enable_pod_security_policy}
   */
-  readonly enablePodSecurityPolicy?: boolean;
+  readonly enablePodSecurityPolicy?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#kubernetes_version KubernetesCluster#kubernetes_version}
   */
@@ -38,7 +38,7 @@ export interface KubernetesClusterConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#local_account_disabled KubernetesCluster#local_account_disabled}
   */
-  readonly localAccountDisabled?: boolean;
+  readonly localAccountDisabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#location KubernetesCluster#location}
   */
@@ -54,7 +54,11 @@ export interface KubernetesClusterConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#private_cluster_enabled KubernetesCluster#private_cluster_enabled}
   */
-  readonly privateClusterEnabled?: boolean;
+  readonly privateClusterEnabled?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#private_cluster_public_fqdn_enabled KubernetesCluster#private_cluster_public_fqdn_enabled}
+  */
+  readonly privateClusterPublicFqdnEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#private_dns_zone_id KubernetesCluster#private_dns_zone_id}
   */
@@ -62,7 +66,7 @@ export interface KubernetesClusterConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#private_link_enabled KubernetesCluster#private_link_enabled}
   */
-  readonly privateLinkEnabled?: boolean;
+  readonly privateLinkEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#resource_group_name KubernetesCluster#resource_group_name}
   */
@@ -74,7 +78,7 @@ export interface KubernetesClusterConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#tags KubernetesCluster#tags}
   */
-  readonly tags?: { [key: string]: string };
+  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * addon_profile block
   * 
@@ -216,7 +220,7 @@ export interface KubernetesClusterAddonProfileAciConnectorLinux {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#enabled KubernetesCluster#enabled}
   */
-  readonly enabled: boolean;
+  readonly enabled: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#subnet_name KubernetesCluster#subnet_name}
   */
@@ -235,7 +239,7 @@ export interface KubernetesClusterAddonProfileAzurePolicy {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#enabled KubernetesCluster#enabled}
   */
-  readonly enabled: boolean;
+  readonly enabled: boolean | cdktf.IResolvable;
 }
 
 function kubernetesClusterAddonProfileAzurePolicyToTerraform(struct?: KubernetesClusterAddonProfileAzurePolicy): any {
@@ -249,7 +253,7 @@ export interface KubernetesClusterAddonProfileHttpApplicationRouting {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#enabled KubernetesCluster#enabled}
   */
-  readonly enabled: boolean;
+  readonly enabled: boolean | cdktf.IResolvable;
 }
 
 function kubernetesClusterAddonProfileHttpApplicationRoutingToTerraform(struct?: KubernetesClusterAddonProfileHttpApplicationRouting): any {
@@ -263,7 +267,7 @@ export interface KubernetesClusterAddonProfileIngressApplicationGateway {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#enabled KubernetesCluster#enabled}
   */
-  readonly enabled: boolean;
+  readonly enabled: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#gateway_id KubernetesCluster#gateway_id}
   */
@@ -297,7 +301,7 @@ export interface KubernetesClusterAddonProfileKubeDashboard {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#enabled KubernetesCluster#enabled}
   */
-  readonly enabled: boolean;
+  readonly enabled: boolean | cdktf.IResolvable;
 }
 
 function kubernetesClusterAddonProfileKubeDashboardToTerraform(struct?: KubernetesClusterAddonProfileKubeDashboard): any {
@@ -311,7 +315,7 @@ export interface KubernetesClusterAddonProfileOmsAgent {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#enabled KubernetesCluster#enabled}
   */
-  readonly enabled: boolean;
+  readonly enabled: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#log_analytics_workspace_id KubernetesCluster#log_analytics_workspace_id}
   */
@@ -381,7 +385,7 @@ export interface KubernetesClusterAutoScalerProfile {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#balance_similar_node_groups KubernetesCluster#balance_similar_node_groups}
   */
-  readonly balanceSimilarNodeGroups?: boolean;
+  readonly balanceSimilarNodeGroups?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#empty_bulk_delete_max KubernetesCluster#empty_bulk_delete_max}
   */
@@ -441,11 +445,11 @@ export interface KubernetesClusterAutoScalerProfile {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#skip_nodes_with_local_storage KubernetesCluster#skip_nodes_with_local_storage}
   */
-  readonly skipNodesWithLocalStorage?: boolean;
+  readonly skipNodesWithLocalStorage?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#skip_nodes_with_system_pods KubernetesCluster#skip_nodes_with_system_pods}
   */
-  readonly skipNodesWithSystemPods?: boolean;
+  readonly skipNodesWithSystemPods?: boolean | cdktf.IResolvable;
 }
 
 function kubernetesClusterAutoScalerProfileToTerraform(struct?: KubernetesClusterAutoScalerProfile): any {
@@ -487,7 +491,7 @@ export interface KubernetesClusterDefaultNodePoolKubeletConfig {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#cpu_cfs_quota_enabled KubernetesCluster#cpu_cfs_quota_enabled}
   */
-  readonly cpuCfsQuotaEnabled?: boolean;
+  readonly cpuCfsQuotaEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#cpu_cfs_quota_period KubernetesCluster#cpu_cfs_quota_period}
   */
@@ -626,7 +630,7 @@ export interface KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfig {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#net_ipv4_tcp_tw_reuse KubernetesCluster#net_ipv4_tcp_tw_reuse}
   */
-  readonly netIpv4TcpTwReuse?: boolean;
+  readonly netIpv4TcpTwReuse?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#net_netfilter_nf_conntrack_buckets KubernetesCluster#net_netfilter_nf_conntrack_buckets}
   */
@@ -737,19 +741,19 @@ export interface KubernetesClusterDefaultNodePool {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#enable_auto_scaling KubernetesCluster#enable_auto_scaling}
   */
-  readonly enableAutoScaling?: boolean;
+  readonly enableAutoScaling?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#enable_host_encryption KubernetesCluster#enable_host_encryption}
   */
-  readonly enableHostEncryption?: boolean;
+  readonly enableHostEncryption?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#enable_node_public_ip KubernetesCluster#enable_node_public_ip}
   */
-  readonly enableNodePublicIp?: boolean;
+  readonly enableNodePublicIp?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#fips_enabled KubernetesCluster#fips_enabled}
   */
-  readonly fipsEnabled?: boolean;
+  readonly fipsEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#kubelet_disk_type KubernetesCluster#kubelet_disk_type}
   */
@@ -777,7 +781,7 @@ export interface KubernetesClusterDefaultNodePool {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#node_labels KubernetesCluster#node_labels}
   */
-  readonly nodeLabels?: { [key: string]: string };
+  readonly nodeLabels?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#node_public_ip_prefix_id KubernetesCluster#node_public_ip_prefix_id}
   */
@@ -789,7 +793,7 @@ export interface KubernetesClusterDefaultNodePool {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#only_critical_addons_enabled KubernetesCluster#only_critical_addons_enabled}
   */
-  readonly onlyCriticalAddonsEnabled?: boolean;
+  readonly onlyCriticalAddonsEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#orchestrator_version KubernetesCluster#orchestrator_version}
   */
@@ -803,17 +807,29 @@ export interface KubernetesClusterDefaultNodePool {
   */
   readonly osDiskType?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#os_sku KubernetesCluster#os_sku}
+  */
+  readonly osSku?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#pod_subnet_id KubernetesCluster#pod_subnet_id}
+  */
+  readonly podSubnetId?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#proximity_placement_group_id KubernetesCluster#proximity_placement_group_id}
   */
   readonly proximityPlacementGroupId?: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#tags KubernetesCluster#tags}
   */
-  readonly tags?: { [key: string]: string };
+  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#type KubernetesCluster#type}
   */
   readonly type?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#ultra_ssd_enabled KubernetesCluster#ultra_ssd_enabled}
+  */
+  readonly ultraSsdEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#vm_size KubernetesCluster#vm_size}
   */
@@ -863,9 +879,12 @@ function kubernetesClusterDefaultNodePoolToTerraform(struct?: KubernetesClusterD
     orchestrator_version: cdktf.stringToTerraform(struct!.orchestratorVersion),
     os_disk_size_gb: cdktf.numberToTerraform(struct!.osDiskSizeGb),
     os_disk_type: cdktf.stringToTerraform(struct!.osDiskType),
+    os_sku: cdktf.stringToTerraform(struct!.osSku),
+    pod_subnet_id: cdktf.stringToTerraform(struct!.podSubnetId),
     proximity_placement_group_id: cdktf.stringToTerraform(struct!.proximityPlacementGroupId),
     tags: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.tags),
     type: cdktf.stringToTerraform(struct!.type),
+    ultra_ssd_enabled: cdktf.booleanToTerraform(struct!.ultraSsdEnabled),
     vm_size: cdktf.stringToTerraform(struct!.vmSize),
     vnet_subnet_id: cdktf.stringToTerraform(struct!.vnetSubnetId),
     kubelet_config: cdktf.listMapper(kubernetesClusterDefaultNodePoolKubeletConfigToTerraform)(struct!.kubeletConfig),
@@ -1116,7 +1135,7 @@ export interface KubernetesClusterRoleBasedAccessControlAzureActiveDirectory {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#azure_rbac_enabled KubernetesCluster#azure_rbac_enabled}
   */
-  readonly azureRbacEnabled?: boolean;
+  readonly azureRbacEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#client_app_id KubernetesCluster#client_app_id}
   */
@@ -1124,7 +1143,7 @@ export interface KubernetesClusterRoleBasedAccessControlAzureActiveDirectory {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#managed KubernetesCluster#managed}
   */
-  readonly managed?: boolean;
+  readonly managed?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#server_app_id KubernetesCluster#server_app_id}
   */
@@ -1156,7 +1175,7 @@ export interface KubernetesClusterRoleBasedAccessControl {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#enabled KubernetesCluster#enabled}
   */
-  readonly enabled: boolean;
+  readonly enabled: boolean | cdktf.IResolvable;
   /**
   * azure_active_directory block
   * 
@@ -1251,6 +1270,11 @@ function kubernetesClusterWindowsProfileToTerraform(struct?: KubernetesClusterWi
 */
 export class KubernetesCluster extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_kubernetes_cluster";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -1285,6 +1309,7 @@ export class KubernetesCluster extends cdktf.TerraformResource {
     this._name = config.name;
     this._nodeResourceGroup = config.nodeResourceGroup;
     this._privateClusterEnabled = config.privateClusterEnabled;
+    this._privateClusterPublicFqdnEnabled = config.privateClusterPublicFqdnEnabled;
     this._privateDnsZoneId = config.privateDnsZoneId;
     this._privateLinkEnabled = config.privateLinkEnabled;
     this._resourceGroupName = config.resourceGroupName;
@@ -1389,11 +1414,11 @@ export class KubernetesCluster extends cdktf.TerraformResource {
   }
 
   // enable_pod_security_policy - computed: false, optional: true, required: false
-  private _enablePodSecurityPolicy?: boolean;
+  private _enablePodSecurityPolicy?: boolean | cdktf.IResolvable;
   public get enablePodSecurityPolicy() {
     return this.getBooleanAttribute('enable_pod_security_policy');
   }
-  public set enablePodSecurityPolicy(value: boolean ) {
+  public set enablePodSecurityPolicy(value: boolean | cdktf.IResolvable ) {
     this._enablePodSecurityPolicy = value;
   }
   public resetEnablePodSecurityPolicy() {
@@ -1451,11 +1476,11 @@ export class KubernetesCluster extends cdktf.TerraformResource {
   }
 
   // local_account_disabled - computed: false, optional: true, required: false
-  private _localAccountDisabled?: boolean;
+  private _localAccountDisabled?: boolean | cdktf.IResolvable;
   public get localAccountDisabled() {
     return this.getBooleanAttribute('local_account_disabled');
   }
-  public set localAccountDisabled(value: boolean ) {
+  public set localAccountDisabled(value: boolean | cdktf.IResolvable ) {
     this._localAccountDisabled = value;
   }
   public resetLocalAccountDisabled() {
@@ -1509,11 +1534,11 @@ export class KubernetesCluster extends cdktf.TerraformResource {
   }
 
   // private_cluster_enabled - computed: true, optional: true, required: false
-  private _privateClusterEnabled?: boolean;
+  private _privateClusterEnabled?: boolean | cdktf.IResolvable;
   public get privateClusterEnabled() {
     return this.getBooleanAttribute('private_cluster_enabled');
   }
-  public set privateClusterEnabled(value: boolean) {
+  public set privateClusterEnabled(value: boolean | cdktf.IResolvable) {
     this._privateClusterEnabled = value;
   }
   public resetPrivateClusterEnabled() {
@@ -1522,6 +1547,22 @@ export class KubernetesCluster extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get privateClusterEnabledInput() {
     return this._privateClusterEnabled
+  }
+
+  // private_cluster_public_fqdn_enabled - computed: false, optional: true, required: false
+  private _privateClusterPublicFqdnEnabled?: boolean | cdktf.IResolvable;
+  public get privateClusterPublicFqdnEnabled() {
+    return this.getBooleanAttribute('private_cluster_public_fqdn_enabled');
+  }
+  public set privateClusterPublicFqdnEnabled(value: boolean | cdktf.IResolvable ) {
+    this._privateClusterPublicFqdnEnabled = value;
+  }
+  public resetPrivateClusterPublicFqdnEnabled() {
+    this._privateClusterPublicFqdnEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get privateClusterPublicFqdnEnabledInput() {
+    return this._privateClusterPublicFqdnEnabled
   }
 
   // private_dns_zone_id - computed: true, optional: true, required: false
@@ -1546,11 +1587,11 @@ export class KubernetesCluster extends cdktf.TerraformResource {
   }
 
   // private_link_enabled - computed: true, optional: true, required: false
-  private _privateLinkEnabled?: boolean;
+  private _privateLinkEnabled?: boolean | cdktf.IResolvable;
   public get privateLinkEnabled() {
     return this.getBooleanAttribute('private_link_enabled');
   }
-  public set privateLinkEnabled(value: boolean) {
+  public set privateLinkEnabled(value: boolean | cdktf.IResolvable) {
     this._privateLinkEnabled = value;
   }
   public resetPrivateLinkEnabled() {
@@ -1591,11 +1632,11 @@ export class KubernetesCluster extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string };
+  private _tags?: { [key: string]: string } | cdktf.IResolvable;
   public get tags() {
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._tags = value;
   }
   public resetTags() {
@@ -1813,6 +1854,7 @@ export class KubernetesCluster extends cdktf.TerraformResource {
       name: cdktf.stringToTerraform(this._name),
       node_resource_group: cdktf.stringToTerraform(this._nodeResourceGroup),
       private_cluster_enabled: cdktf.booleanToTerraform(this._privateClusterEnabled),
+      private_cluster_public_fqdn_enabled: cdktf.booleanToTerraform(this._privateClusterPublicFqdnEnabled),
       private_dns_zone_id: cdktf.stringToTerraform(this._privateDnsZoneId),
       private_link_enabled: cdktf.booleanToTerraform(this._privateLinkEnabled),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),

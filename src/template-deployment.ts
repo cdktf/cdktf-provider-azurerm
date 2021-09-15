@@ -18,7 +18,7 @@ export interface TemplateDeploymentConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/template_deployment.html#parameters TemplateDeployment#parameters}
   */
-  readonly parameters?: { [key: string]: string };
+  readonly parameters?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/template_deployment.html#parameters_body TemplateDeployment#parameters_body}
   */
@@ -72,6 +72,11 @@ function templateDeploymentTimeoutsToTerraform(struct?: TemplateDeploymentTimeou
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/template_deployment.html azurerm_template_deployment}
 */
 export class TemplateDeployment extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_template_deployment";
 
   // ===========
   // INITIALIZER
@@ -145,11 +150,11 @@ export class TemplateDeployment extends cdktf.TerraformResource {
   }
 
   // parameters - computed: false, optional: true, required: false
-  private _parameters?: { [key: string]: string };
+  private _parameters?: { [key: string]: string } | cdktf.IResolvable;
   public get parameters() {
     return this.interpolationForAttribute('parameters') as any;
   }
-  public set parameters(value: { [key: string]: string } ) {
+  public set parameters(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._parameters = value;
   }
   public resetParameters() {

@@ -98,6 +98,11 @@ function storageAccountNetworkRulesTimeoutsToTerraform(struct?: StorageAccountNe
 */
 export class StorageAccountNetworkRulesA extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_storage_account_network_rules";
+
   // ===========
   // INITIALIZER
   // ===========

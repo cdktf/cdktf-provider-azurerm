@@ -18,7 +18,7 @@ export interface DataFactoryLinkedServiceCosmosdbConfig extends cdktf.TerraformM
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_cosmosdb.html#additional_properties DataFactoryLinkedServiceCosmosdb#additional_properties}
   */
-  readonly additionalProperties?: { [key: string]: string };
+  readonly additionalProperties?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_cosmosdb.html#annotations DataFactoryLinkedServiceCosmosdb#annotations}
   */
@@ -50,7 +50,7 @@ export interface DataFactoryLinkedServiceCosmosdbConfig extends cdktf.TerraformM
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_cosmosdb.html#parameters DataFactoryLinkedServiceCosmosdb#parameters}
   */
-  readonly parameters?: { [key: string]: string };
+  readonly parameters?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_cosmosdb.html#resource_group_name DataFactoryLinkedServiceCosmosdb#resource_group_name}
   */
@@ -96,6 +96,11 @@ function dataFactoryLinkedServiceCosmosdbTimeoutsToTerraform(struct?: DataFactor
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_cosmosdb.html azurerm_data_factory_linked_service_cosmosdb}
 */
 export class DataFactoryLinkedServiceCosmosdb extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_data_factory_linked_service_cosmosdb";
 
   // ===========
   // INITIALIZER
@@ -171,11 +176,11 @@ export class DataFactoryLinkedServiceCosmosdb extends cdktf.TerraformResource {
   }
 
   // additional_properties - computed: false, optional: true, required: false
-  private _additionalProperties?: { [key: string]: string };
+  private _additionalProperties?: { [key: string]: string } | cdktf.IResolvable;
   public get additionalProperties() {
     return this.interpolationForAttribute('additional_properties') as any;
   }
-  public set additionalProperties(value: { [key: string]: string } ) {
+  public set additionalProperties(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._additionalProperties = value;
   }
   public resetAdditionalProperties() {
@@ -298,11 +303,11 @@ export class DataFactoryLinkedServiceCosmosdb extends cdktf.TerraformResource {
   }
 
   // parameters - computed: false, optional: true, required: false
-  private _parameters?: { [key: string]: string };
+  private _parameters?: { [key: string]: string } | cdktf.IResolvable;
   public get parameters() {
     return this.interpolationForAttribute('parameters') as any;
   }
-  public set parameters(value: { [key: string]: string } ) {
+  public set parameters(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._parameters = value;
   }
   public resetParameters() {

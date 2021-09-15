@@ -73,6 +73,11 @@ function routeTimeoutsToTerraform(struct?: RouteTimeouts): any {
 */
 export class Route extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_route";
+
   // ===========
   // INITIALIZER
   // ===========

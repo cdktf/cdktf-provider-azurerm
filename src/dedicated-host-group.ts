@@ -10,7 +10,7 @@ export interface DedicatedHostGroupConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dedicated_host_group.html#automatic_placement_enabled DedicatedHostGroup#automatic_placement_enabled}
   */
-  readonly automaticPlacementEnabled?: boolean;
+  readonly automaticPlacementEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dedicated_host_group.html#location DedicatedHostGroup#location}
   */
@@ -30,7 +30,7 @@ export interface DedicatedHostGroupConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dedicated_host_group.html#tags DedicatedHostGroup#tags}
   */
-  readonly tags?: { [key: string]: string };
+  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dedicated_host_group.html#zones DedicatedHostGroup#zones}
   */
@@ -77,6 +77,11 @@ function dedicatedHostGroupTimeoutsToTerraform(struct?: DedicatedHostGroupTimeou
 */
 export class DedicatedHostGroup extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_dedicated_host_group";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -114,11 +119,11 @@ export class DedicatedHostGroup extends cdktf.TerraformResource {
   // ==========
 
   // automatic_placement_enabled - computed: false, optional: true, required: false
-  private _automaticPlacementEnabled?: boolean;
+  private _automaticPlacementEnabled?: boolean | cdktf.IResolvable;
   public get automaticPlacementEnabled() {
     return this.getBooleanAttribute('automatic_placement_enabled');
   }
-  public set automaticPlacementEnabled(value: boolean ) {
+  public set automaticPlacementEnabled(value: boolean | cdktf.IResolvable ) {
     this._automaticPlacementEnabled = value;
   }
   public resetAutomaticPlacementEnabled() {
@@ -187,11 +192,11 @@ export class DedicatedHostGroup extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string };
+  private _tags?: { [key: string]: string } | cdktf.IResolvable;
   public get tags() {
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._tags = value;
   }
   public resetTags() {

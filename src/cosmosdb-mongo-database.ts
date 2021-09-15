@@ -85,6 +85,11 @@ function cosmosdbMongoDatabaseTimeoutsToTerraform(struct?: CosmosdbMongoDatabase
 */
 export class CosmosdbMongoDatabase extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_cosmosdb_mongo_database";
+
   // ===========
   // INITIALIZER
   // ===========

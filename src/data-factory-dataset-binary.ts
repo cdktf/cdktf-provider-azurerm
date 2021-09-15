@@ -10,7 +10,7 @@ export interface DataFactoryDatasetBinaryConfig extends cdktf.TerraformMetaArgum
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_binary.html#additional_properties DataFactoryDatasetBinary#additional_properties}
   */
-  readonly additionalProperties?: { [key: string]: string };
+  readonly additionalProperties?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_binary.html#annotations DataFactoryDatasetBinary#annotations}
   */
@@ -38,7 +38,7 @@ export interface DataFactoryDatasetBinaryConfig extends cdktf.TerraformMetaArgum
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_binary.html#parameters DataFactoryDatasetBinary#parameters}
   */
-  readonly parameters?: { [key: string]: string };
+  readonly parameters?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_binary.html#resource_group_name DataFactoryDatasetBinary#resource_group_name}
   */
@@ -80,6 +80,14 @@ export interface DataFactoryDatasetBinaryAzureBlobStorageLocation {
   */
   readonly container: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_binary.html#dynamic_filename_enabled DataFactoryDatasetBinary#dynamic_filename_enabled}
+  */
+  readonly dynamicFilenameEnabled?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_binary.html#dynamic_path_enabled DataFactoryDatasetBinary#dynamic_path_enabled}
+  */
+  readonly dynamicPathEnabled?: boolean | cdktf.IResolvable;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_binary.html#filename DataFactoryDatasetBinary#filename}
   */
   readonly filename?: string;
@@ -93,6 +101,8 @@ function dataFactoryDatasetBinaryAzureBlobStorageLocationToTerraform(struct?: Da
   if (!cdktf.canInspect(struct)) { return struct; }
   return {
     container: cdktf.stringToTerraform(struct!.container),
+    dynamic_filename_enabled: cdktf.booleanToTerraform(struct!.dynamicFilenameEnabled),
+    dynamic_path_enabled: cdktf.booleanToTerraform(struct!.dynamicPathEnabled),
     filename: cdktf.stringToTerraform(struct!.filename),
     path: cdktf.stringToTerraform(struct!.path),
   }
@@ -119,6 +129,14 @@ function dataFactoryDatasetBinaryCompressionToTerraform(struct?: DataFactoryData
 
 export interface DataFactoryDatasetBinaryHttpServerLocation {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_binary.html#dynamic_filename_enabled DataFactoryDatasetBinary#dynamic_filename_enabled}
+  */
+  readonly dynamicFilenameEnabled?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_binary.html#dynamic_path_enabled DataFactoryDatasetBinary#dynamic_path_enabled}
+  */
+  readonly dynamicPathEnabled?: boolean | cdktf.IResolvable;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_binary.html#filename DataFactoryDatasetBinary#filename}
   */
   readonly filename: string;
@@ -135,6 +153,8 @@ export interface DataFactoryDatasetBinaryHttpServerLocation {
 function dataFactoryDatasetBinaryHttpServerLocationToTerraform(struct?: DataFactoryDatasetBinaryHttpServerLocation): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   return {
+    dynamic_filename_enabled: cdktf.booleanToTerraform(struct!.dynamicFilenameEnabled),
+    dynamic_path_enabled: cdktf.booleanToTerraform(struct!.dynamicPathEnabled),
     filename: cdktf.stringToTerraform(struct!.filename),
     path: cdktf.stringToTerraform(struct!.path),
     relative_url: cdktf.stringToTerraform(struct!.relativeUrl),
@@ -142,6 +162,14 @@ function dataFactoryDatasetBinaryHttpServerLocationToTerraform(struct?: DataFact
 }
 
 export interface DataFactoryDatasetBinarySftpServerLocation {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_binary.html#dynamic_filename_enabled DataFactoryDatasetBinary#dynamic_filename_enabled}
+  */
+  readonly dynamicFilenameEnabled?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_binary.html#dynamic_path_enabled DataFactoryDatasetBinary#dynamic_path_enabled}
+  */
+  readonly dynamicPathEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_binary.html#filename DataFactoryDatasetBinary#filename}
   */
@@ -155,6 +183,8 @@ export interface DataFactoryDatasetBinarySftpServerLocation {
 function dataFactoryDatasetBinarySftpServerLocationToTerraform(struct?: DataFactoryDatasetBinarySftpServerLocation): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   return {
+    dynamic_filename_enabled: cdktf.booleanToTerraform(struct!.dynamicFilenameEnabled),
+    dynamic_path_enabled: cdktf.booleanToTerraform(struct!.dynamicPathEnabled),
     filename: cdktf.stringToTerraform(struct!.filename),
     path: cdktf.stringToTerraform(struct!.path),
   }
@@ -194,6 +224,11 @@ function dataFactoryDatasetBinaryTimeoutsToTerraform(struct?: DataFactoryDataset
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_binary.html azurerm_data_factory_dataset_binary}
 */
 export class DataFactoryDatasetBinary extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_data_factory_dataset_binary";
 
   // ===========
   // INITIALIZER
@@ -238,11 +273,11 @@ export class DataFactoryDatasetBinary extends cdktf.TerraformResource {
   // ==========
 
   // additional_properties - computed: false, optional: true, required: false
-  private _additionalProperties?: { [key: string]: string };
+  private _additionalProperties?: { [key: string]: string } | cdktf.IResolvable;
   public get additionalProperties() {
     return this.interpolationForAttribute('additional_properties') as any;
   }
-  public set additionalProperties(value: { [key: string]: string } ) {
+  public set additionalProperties(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._additionalProperties = value;
   }
   public resetAdditionalProperties() {
@@ -346,11 +381,11 @@ export class DataFactoryDatasetBinary extends cdktf.TerraformResource {
   }
 
   // parameters - computed: false, optional: true, required: false
-  private _parameters?: { [key: string]: string };
+  private _parameters?: { [key: string]: string } | cdktf.IResolvable;
   public get parameters() {
     return this.interpolationForAttribute('parameters') as any;
   }
-  public set parameters(value: { [key: string]: string } ) {
+  public set parameters(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._parameters = value;
   }
   public resetParameters() {

@@ -26,11 +26,11 @@ export interface RecoveryServicesVaultConfig extends cdktf.TerraformMetaArgument
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/recovery_services_vault.html#soft_delete_enabled RecoveryServicesVault#soft_delete_enabled}
   */
-  readonly softDeleteEnabled?: boolean;
+  readonly softDeleteEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/recovery_services_vault.html#tags RecoveryServicesVault#tags}
   */
-  readonly tags?: { [key: string]: string };
+  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * identity block
   * 
@@ -92,6 +92,11 @@ function recoveryServicesVaultTimeoutsToTerraform(struct?: RecoveryServicesVault
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/recovery_services_vault.html azurerm_recovery_services_vault}
 */
 export class RecoveryServicesVault extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_recovery_services_vault";
 
   // ===========
   // INITIALIZER
@@ -187,11 +192,11 @@ export class RecoveryServicesVault extends cdktf.TerraformResource {
   }
 
   // soft_delete_enabled - computed: false, optional: true, required: false
-  private _softDeleteEnabled?: boolean;
+  private _softDeleteEnabled?: boolean | cdktf.IResolvable;
   public get softDeleteEnabled() {
     return this.getBooleanAttribute('soft_delete_enabled');
   }
-  public set softDeleteEnabled(value: boolean ) {
+  public set softDeleteEnabled(value: boolean | cdktf.IResolvable ) {
     this._softDeleteEnabled = value;
   }
   public resetSoftDeleteEnabled() {
@@ -203,11 +208,11 @@ export class RecoveryServicesVault extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string };
+  private _tags?: { [key: string]: string } | cdktf.IResolvable;
   public get tags() {
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._tags = value;
   }
   public resetTags() {

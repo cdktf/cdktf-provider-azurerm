@@ -57,6 +57,11 @@ function eventhubNamespaceCustomerManagedKeyTimeoutsToTerraform(struct?: Eventhu
 */
 export class EventhubNamespaceCustomerManagedKey extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_eventhub_namespace_customer_managed_key";
+
   // ===========
   // INITIALIZER
   // ===========

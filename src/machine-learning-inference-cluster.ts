@@ -34,7 +34,7 @@ export interface MachineLearningInferenceClusterConfig extends cdktf.TerraformMe
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/machine_learning_inference_cluster.html#tags MachineLearningInferenceCluster#tags}
   */
-  readonly tags?: { [key: string]: string };
+  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * ssl block
   * 
@@ -68,7 +68,7 @@ export interface MachineLearningInferenceClusterSsl {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/machine_learning_inference_cluster.html#overwrite_existing_domain MachineLearningInferenceCluster#overwrite_existing_domain}
   */
-  readonly overwriteExistingDomain?: boolean;
+  readonly overwriteExistingDomain?: boolean | cdktf.IResolvable;
 }
 
 function machineLearningInferenceClusterSslToTerraform(struct?: MachineLearningInferenceClusterSsl): any {
@@ -116,6 +116,11 @@ function machineLearningInferenceClusterTimeoutsToTerraform(struct?: MachineLear
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/machine_learning_inference_cluster.html azurerm_machine_learning_inference_cluster}
 */
 export class MachineLearningInferenceCluster extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_machine_learning_inference_cluster";
 
   // ===========
   // INITIALIZER
@@ -244,11 +249,11 @@ export class MachineLearningInferenceCluster extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string };
+  private _tags?: { [key: string]: string } | cdktf.IResolvable;
   public get tags() {
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._tags = value;
   }
   public resetTags() {

@@ -26,7 +26,7 @@ export interface SubscriptionTemplateDeploymentConfig extends cdktf.TerraformMet
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/subscription_template_deployment.html#tags SubscriptionTemplateDeployment#tags}
   */
-  readonly tags?: { [key: string]: string };
+  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/subscription_template_deployment.html#template_content SubscriptionTemplateDeployment#template_content}
   */
@@ -76,6 +76,11 @@ function subscriptionTemplateDeploymentTimeoutsToTerraform(struct?: Subscription
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/subscription_template_deployment.html azurerm_subscription_template_deployment}
 */
 export class SubscriptionTemplateDeployment extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_subscription_template_deployment";
 
   // ===========
   // INITIALIZER
@@ -182,11 +187,11 @@ export class SubscriptionTemplateDeployment extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string };
+  private _tags?: { [key: string]: string } | cdktf.IResolvable;
   public get tags() {
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._tags = value;
   }
   public resetTags() {

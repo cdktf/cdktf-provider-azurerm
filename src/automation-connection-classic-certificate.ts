@@ -77,6 +77,11 @@ function automationConnectionClassicCertificateTimeoutsToTerraform(struct?: Auto
 */
 export class AutomationConnectionClassicCertificate extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_automation_connection_classic_certificate";
+
   // ===========
   // INITIALIZER
   // ===========

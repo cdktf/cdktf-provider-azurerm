@@ -26,7 +26,7 @@ export interface IpGroupConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/ip_group.html#tags IpGroup#tags}
   */
-  readonly tags?: { [key: string]: string };
+  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * timeouts block
   * 
@@ -68,6 +68,11 @@ function ipGroupTimeoutsToTerraform(struct?: IpGroupTimeouts): any {
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/ip_group.html azurerm_ip_group}
 */
 export class IpGroup extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_ip_group";
 
   // ===========
   // INITIALIZER
@@ -164,11 +169,11 @@ export class IpGroup extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string };
+  private _tags?: { [key: string]: string } | cdktf.IResolvable;
   public get tags() {
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._tags = value;
   }
   public resetTags() {

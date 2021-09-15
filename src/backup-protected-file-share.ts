@@ -69,6 +69,11 @@ function backupProtectedFileShareTimeoutsToTerraform(struct?: BackupProtectedFil
 */
 export class BackupProtectedFileShare extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_backup_protected_file_share";
+
   // ===========
   // INITIALIZER
   // ===========

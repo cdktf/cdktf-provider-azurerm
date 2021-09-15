@@ -215,6 +215,11 @@ function databoxEdgeOrderTimeoutsToTerraform(struct?: DataboxEdgeOrderTimeouts):
 */
 export class DataboxEdgeOrder extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_databox_edge_order";
+
   // ===========
   // INITIALIZER
   // ===========

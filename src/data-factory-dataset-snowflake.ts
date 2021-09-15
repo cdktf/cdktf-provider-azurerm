@@ -10,7 +10,7 @@ export interface DataFactoryDatasetSnowflakeConfig extends cdktf.TerraformMetaAr
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_snowflake.html#additional_properties DataFactoryDatasetSnowflake#additional_properties}
   */
-  readonly additionalProperties?: { [key: string]: string };
+  readonly additionalProperties?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_snowflake.html#annotations DataFactoryDatasetSnowflake#annotations}
   */
@@ -38,7 +38,7 @@ export interface DataFactoryDatasetSnowflakeConfig extends cdktf.TerraformMetaAr
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_snowflake.html#parameters DataFactoryDatasetSnowflake#parameters}
   */
-  readonly parameters?: { [key: string]: string };
+  readonly parameters?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_snowflake.html#resource_group_name DataFactoryDatasetSnowflake#resource_group_name}
   */
@@ -123,6 +123,11 @@ function dataFactoryDatasetSnowflakeTimeoutsToTerraform(struct?: DataFactoryData
 */
 export class DataFactoryDatasetSnowflake extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_data_factory_dataset_snowflake";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -165,11 +170,11 @@ export class DataFactoryDatasetSnowflake extends cdktf.TerraformResource {
   // ==========
 
   // additional_properties - computed: false, optional: true, required: false
-  private _additionalProperties?: { [key: string]: string };
+  private _additionalProperties?: { [key: string]: string } | cdktf.IResolvable;
   public get additionalProperties() {
     return this.interpolationForAttribute('additional_properties') as any;
   }
-  public set additionalProperties(value: { [key: string]: string } ) {
+  public set additionalProperties(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._additionalProperties = value;
   }
   public resetAdditionalProperties() {
@@ -273,11 +278,11 @@ export class DataFactoryDatasetSnowflake extends cdktf.TerraformResource {
   }
 
   // parameters - computed: false, optional: true, required: false
-  private _parameters?: { [key: string]: string };
+  private _parameters?: { [key: string]: string } | cdktf.IResolvable;
   public get parameters() {
     return this.interpolationForAttribute('parameters') as any;
   }
-  public set parameters(value: { [key: string]: string } ) {
+  public set parameters(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._parameters = value;
   }
   public resetParameters() {

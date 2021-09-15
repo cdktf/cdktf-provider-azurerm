@@ -61,6 +61,11 @@ function apiManagementApiOperationTagTimeoutsToTerraform(struct?: ApiManagementA
 */
 export class ApiManagementApiOperationTag extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_api_management_api_operation_tag";
+
   // ===========
   // INITIALIZER
   // ===========

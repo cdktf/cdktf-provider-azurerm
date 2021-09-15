@@ -123,6 +123,11 @@ function dataAzurermDataFactoryTimeoutsToTerraform(struct?: DataAzurermDataFacto
 */
 export class DataAzurermDataFactory extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_data_factory";
+
   // ===========
   // INITIALIZER
   // ===========

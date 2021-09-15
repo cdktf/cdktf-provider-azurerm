@@ -26,7 +26,7 @@ export interface StorageSyncConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_sync.html#tags StorageSync#tags}
   */
-  readonly tags?: { [key: string]: string };
+  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * timeouts block
   * 
@@ -68,6 +68,11 @@ function storageSyncTimeoutsToTerraform(struct?: StorageSyncTimeouts): any {
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/storage_sync.html azurerm_storage_sync}
 */
 export class StorageSync extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_storage_sync";
 
   // ===========
   // INITIALIZER
@@ -164,11 +169,11 @@ export class StorageSync extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string };
+  private _tags?: { [key: string]: string } | cdktf.IResolvable;
   public get tags() {
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._tags = value;
   }
   public resetTags() {

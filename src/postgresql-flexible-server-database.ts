@@ -10,11 +10,11 @@ export interface PostgresqlFlexibleServerDatabaseConfig extends cdktf.TerraformM
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_flexible_server_database.html#charset PostgresqlFlexibleServerDatabase#charset}
   */
-  readonly charset: string;
+  readonly charset?: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_flexible_server_database.html#collation PostgresqlFlexibleServerDatabase#collation}
   */
-  readonly collation: string;
+  readonly collation?: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_flexible_server_database.html#name PostgresqlFlexibleServerDatabase#name}
   */
@@ -60,6 +60,11 @@ function postgresqlFlexibleServerDatabaseTimeoutsToTerraform(struct?: Postgresql
 */
 export class PostgresqlFlexibleServerDatabase extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_postgresql_flexible_server_database";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -93,26 +98,32 @@ export class PostgresqlFlexibleServerDatabase extends cdktf.TerraformResource {
   // ATTRIBUTES
   // ==========
 
-  // charset - computed: false, optional: false, required: true
-  private _charset: string;
+  // charset - computed: false, optional: true, required: false
+  private _charset?: string;
   public get charset() {
     return this.getStringAttribute('charset');
   }
-  public set charset(value: string) {
+  public set charset(value: string ) {
     this._charset = value;
+  }
+  public resetCharset() {
+    this._charset = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get charsetInput() {
     return this._charset
   }
 
-  // collation - computed: false, optional: false, required: true
-  private _collation: string;
+  // collation - computed: false, optional: true, required: false
+  private _collation?: string;
   public get collation() {
     return this.getStringAttribute('collation');
   }
-  public set collation(value: string) {
+  public set collation(value: string ) {
     this._collation = value;
+  }
+  public resetCollation() {
+    this._collation = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get collationInput() {

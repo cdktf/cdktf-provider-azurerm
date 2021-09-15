@@ -46,6 +46,11 @@ function dataAzurermEventhubNamespaceAuthorizationRuleTimeoutsToTerraform(struct
 */
 export class DataAzurermEventhubNamespaceAuthorizationRule extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_eventhub_namespace_authorization_rule";
+
   // ===========
   // INITIALIZER
   // ===========

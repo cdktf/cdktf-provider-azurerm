@@ -50,7 +50,7 @@ export interface KustoEventgridDataConnectionConfig extends cdktf.TerraformMetaA
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_eventgrid_data_connection.html#skip_first_record KustoEventgridDataConnection#skip_first_record}
   */
-  readonly skipFirstRecord?: boolean;
+  readonly skipFirstRecord?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_eventgrid_data_connection.html#storage_account_id KustoEventgridDataConnection#storage_account_id}
   */
@@ -100,6 +100,11 @@ function kustoEventgridDataConnectionTimeoutsToTerraform(struct?: KustoEventgrid
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_eventgrid_data_connection.html azurerm_kusto_eventgrid_data_connection}
 */
 export class KustoEventgridDataConnection extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_kusto_eventgrid_data_connection";
 
   // ===========
   // INITIALIZER
@@ -288,11 +293,11 @@ export class KustoEventgridDataConnection extends cdktf.TerraformResource {
   }
 
   // skip_first_record - computed: false, optional: true, required: false
-  private _skipFirstRecord?: boolean;
+  private _skipFirstRecord?: boolean | cdktf.IResolvable;
   public get skipFirstRecord() {
     return this.getBooleanAttribute('skip_first_record');
   }
-  public set skipFirstRecord(value: boolean ) {
+  public set skipFirstRecord(value: boolean | cdktf.IResolvable ) {
     this._skipFirstRecord = value;
   }
   public resetSkipFirstRecord() {

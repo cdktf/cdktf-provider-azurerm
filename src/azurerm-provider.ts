@@ -40,13 +40,13 @@ export interface AzurermProviderConfig {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm#disable_correlation_request_id AzurermProvider#disable_correlation_request_id}
   */
-  readonly disableCorrelationRequestId?: boolean;
+  readonly disableCorrelationRequestId?: boolean | cdktf.IResolvable;
   /**
   * This will disable the Terraform Partner ID which is used if a custom `partner_id` isn't specified.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm#disable_terraform_partner_id AzurermProvider#disable_terraform_partner_id}
   */
-  readonly disableTerraformPartnerId?: boolean;
+  readonly disableTerraformPartnerId?: boolean | cdktf.IResolvable;
   /**
   * The Cloud Environment which should be used. Possible values are public, usgovernment, german, and china. Defaults to public.
   * 
@@ -82,19 +82,19 @@ export interface AzurermProviderConfig {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm#skip_credentials_validation AzurermProvider#skip_credentials_validation}
   */
-  readonly skipCredentialsValidation?: boolean;
+  readonly skipCredentialsValidation?: boolean | cdktf.IResolvable;
   /**
   * Should the AzureRM Provider skip registering all of the Resource Providers that it supports, if they're not already registered?
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm#skip_provider_registration AzurermProvider#skip_provider_registration}
   */
-  readonly skipProviderRegistration?: boolean;
+  readonly skipProviderRegistration?: boolean | cdktf.IResolvable;
   /**
   * Should the AzureRM Provider use AzureAD to access the Storage Data Plane API's?
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm#storage_use_azuread AzurermProvider#storage_use_azuread}
   */
-  readonly storageUseAzuread?: boolean;
+  readonly storageUseAzuread?: boolean | cdktf.IResolvable;
   /**
   * The Subscription ID which should be used.
   * 
@@ -112,7 +112,7 @@ export interface AzurermProviderConfig {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm#use_msi AzurermProvider#use_msi}
   */
-  readonly useMsi?: boolean;
+  readonly useMsi?: boolean | cdktf.IResolvable;
   /**
   * Alias name
   * 
@@ -130,7 +130,7 @@ export interface AzurermProviderFeaturesCognitiveAccount {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm#purge_soft_delete_on_destroy AzurermProvider#purge_soft_delete_on_destroy}
   */
-  readonly purgeSoftDeleteOnDestroy?: boolean;
+  readonly purgeSoftDeleteOnDestroy?: boolean | cdktf.IResolvable;
 }
 
 function azurermProviderFeaturesCognitiveAccountToTerraform(struct?: AzurermProviderFeaturesCognitiveAccount): any {
@@ -144,11 +144,11 @@ export interface AzurermProviderFeaturesKeyVault {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm#purge_soft_delete_on_destroy AzurermProvider#purge_soft_delete_on_destroy}
   */
-  readonly purgeSoftDeleteOnDestroy?: boolean;
+  readonly purgeSoftDeleteOnDestroy?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm#recover_soft_deleted_key_vaults AzurermProvider#recover_soft_deleted_key_vaults}
   */
-  readonly recoverSoftDeletedKeyVaults?: boolean;
+  readonly recoverSoftDeletedKeyVaults?: boolean | cdktf.IResolvable;
 }
 
 function azurermProviderFeaturesKeyVaultToTerraform(struct?: AzurermProviderFeaturesKeyVault): any {
@@ -163,7 +163,7 @@ export interface AzurermProviderFeaturesLogAnalyticsWorkspace {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm#permanently_delete_on_destroy AzurermProvider#permanently_delete_on_destroy}
   */
-  readonly permanentlyDeleteOnDestroy: boolean;
+  readonly permanentlyDeleteOnDestroy: boolean | cdktf.IResolvable;
 }
 
 function azurermProviderFeaturesLogAnalyticsWorkspaceToTerraform(struct?: AzurermProviderFeaturesLogAnalyticsWorkspace): any {
@@ -177,7 +177,7 @@ export interface AzurermProviderFeaturesNetwork {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm#relaxed_locking AzurermProvider#relaxed_locking}
   */
-  readonly relaxedLocking: boolean;
+  readonly relaxedLocking: boolean | cdktf.IResolvable;
 }
 
 function azurermProviderFeaturesNetworkToTerraform(struct?: AzurermProviderFeaturesNetwork): any {
@@ -191,7 +191,7 @@ export interface AzurermProviderFeaturesResourceGroup {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm#prevent_deletion_if_contains_resources AzurermProvider#prevent_deletion_if_contains_resources}
   */
-  readonly preventDeletionIfContainsResources?: boolean;
+  readonly preventDeletionIfContainsResources?: boolean | cdktf.IResolvable;
 }
 
 function azurermProviderFeaturesResourceGroupToTerraform(struct?: AzurermProviderFeaturesResourceGroup): any {
@@ -205,7 +205,7 @@ export interface AzurermProviderFeaturesTemplateDeployment {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm#delete_nested_items_during_deletion AzurermProvider#delete_nested_items_during_deletion}
   */
-  readonly deleteNestedItemsDuringDeletion: boolean;
+  readonly deleteNestedItemsDuringDeletion: boolean | cdktf.IResolvable;
 }
 
 function azurermProviderFeaturesTemplateDeploymentToTerraform(struct?: AzurermProviderFeaturesTemplateDeployment): any {
@@ -219,15 +219,15 @@ export interface AzurermProviderFeaturesVirtualMachine {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm#delete_os_disk_on_deletion AzurermProvider#delete_os_disk_on_deletion}
   */
-  readonly deleteOsDiskOnDeletion?: boolean;
+  readonly deleteOsDiskOnDeletion?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm#graceful_shutdown AzurermProvider#graceful_shutdown}
   */
-  readonly gracefulShutdown?: boolean;
+  readonly gracefulShutdown?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm#skip_shutdown_and_force_delete AzurermProvider#skip_shutdown_and_force_delete}
   */
-  readonly skipShutdownAndForceDelete?: boolean;
+  readonly skipShutdownAndForceDelete?: boolean | cdktf.IResolvable;
 }
 
 function azurermProviderFeaturesVirtualMachineToTerraform(struct?: AzurermProviderFeaturesVirtualMachine): any {
@@ -243,11 +243,11 @@ export interface AzurermProviderFeaturesVirtualMachineScaleSet {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm#force_delete AzurermProvider#force_delete}
   */
-  readonly forceDelete?: boolean;
+  readonly forceDelete?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm#roll_instances_when_required AzurermProvider#roll_instances_when_required}
   */
-  readonly rollInstancesWhenRequired: boolean;
+  readonly rollInstancesWhenRequired: boolean | cdktf.IResolvable;
 }
 
 function azurermProviderFeaturesVirtualMachineScaleSetToTerraform(struct?: AzurermProviderFeaturesVirtualMachineScaleSet): any {
@@ -328,6 +328,11 @@ function azurermProviderFeaturesToTerraform(struct?: AzurermProviderFeatures): a
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm azurerm}
 */
 export class AzurermProvider extends cdktf.TerraformProvider {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm";
 
   // ===========
   // INITIALIZER
@@ -456,11 +461,11 @@ export class AzurermProvider extends cdktf.TerraformProvider {
   }
 
   // disable_correlation_request_id - computed: false, optional: true, required: false
-  private _disableCorrelationRequestId?: boolean;
+  private _disableCorrelationRequestId?: boolean | cdktf.IResolvable;
   public get disableCorrelationRequestId() {
     return this._disableCorrelationRequestId;
   }
-  public set disableCorrelationRequestId(value: boolean  | undefined) {
+  public set disableCorrelationRequestId(value: boolean | cdktf.IResolvable  | undefined) {
     this._disableCorrelationRequestId = value;
   }
   public resetDisableCorrelationRequestId() {
@@ -472,11 +477,11 @@ export class AzurermProvider extends cdktf.TerraformProvider {
   }
 
   // disable_terraform_partner_id - computed: false, optional: true, required: false
-  private _disableTerraformPartnerId?: boolean;
+  private _disableTerraformPartnerId?: boolean | cdktf.IResolvable;
   public get disableTerraformPartnerId() {
     return this._disableTerraformPartnerId;
   }
-  public set disableTerraformPartnerId(value: boolean  | undefined) {
+  public set disableTerraformPartnerId(value: boolean | cdktf.IResolvable  | undefined) {
     this._disableTerraformPartnerId = value;
   }
   public resetDisableTerraformPartnerId() {
@@ -568,11 +573,11 @@ export class AzurermProvider extends cdktf.TerraformProvider {
   }
 
   // skip_credentials_validation - computed: false, optional: true, required: false
-  private _skipCredentialsValidation?: boolean;
+  private _skipCredentialsValidation?: boolean | cdktf.IResolvable;
   public get skipCredentialsValidation() {
     return this._skipCredentialsValidation;
   }
-  public set skipCredentialsValidation(value: boolean  | undefined) {
+  public set skipCredentialsValidation(value: boolean | cdktf.IResolvable  | undefined) {
     this._skipCredentialsValidation = value;
   }
   public resetSkipCredentialsValidation() {
@@ -584,11 +589,11 @@ export class AzurermProvider extends cdktf.TerraformProvider {
   }
 
   // skip_provider_registration - computed: false, optional: true, required: false
-  private _skipProviderRegistration?: boolean;
+  private _skipProviderRegistration?: boolean | cdktf.IResolvable;
   public get skipProviderRegistration() {
     return this._skipProviderRegistration;
   }
-  public set skipProviderRegistration(value: boolean  | undefined) {
+  public set skipProviderRegistration(value: boolean | cdktf.IResolvable  | undefined) {
     this._skipProviderRegistration = value;
   }
   public resetSkipProviderRegistration() {
@@ -600,11 +605,11 @@ export class AzurermProvider extends cdktf.TerraformProvider {
   }
 
   // storage_use_azuread - computed: false, optional: true, required: false
-  private _storageUseAzuread?: boolean;
+  private _storageUseAzuread?: boolean | cdktf.IResolvable;
   public get storageUseAzuread() {
     return this._storageUseAzuread;
   }
-  public set storageUseAzuread(value: boolean  | undefined) {
+  public set storageUseAzuread(value: boolean | cdktf.IResolvable  | undefined) {
     this._storageUseAzuread = value;
   }
   public resetStorageUseAzuread() {
@@ -648,11 +653,11 @@ export class AzurermProvider extends cdktf.TerraformProvider {
   }
 
   // use_msi - computed: false, optional: true, required: false
-  private _useMsi?: boolean;
+  private _useMsi?: boolean | cdktf.IResolvable;
   public get useMsi() {
     return this._useMsi;
   }
-  public set useMsi(value: boolean  | undefined) {
+  public set useMsi(value: boolean | cdktf.IResolvable  | undefined) {
     this._useMsi = value;
   }
   public resetUseMsi() {

@@ -50,6 +50,11 @@ function dataAzurermServicebusQueueAuthorizationRuleTimeoutsToTerraform(struct?:
 */
 export class DataAzurermServicebusQueueAuthorizationRule extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_servicebus_queue_authorization_rule";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -129,6 +134,11 @@ export class DataAzurermServicebusQueueAuthorizationRule extends cdktf.Terraform
     return this.getStringAttribute('primary_connection_string');
   }
 
+  // primary_connection_string_alias - computed: true, optional: false, required: false
+  public get primaryConnectionStringAlias() {
+    return this.getStringAttribute('primary_connection_string_alias');
+  }
+
   // primary_key - computed: true, optional: false, required: false
   public get primaryKey() {
     return this.getStringAttribute('primary_key');
@@ -163,6 +173,11 @@ export class DataAzurermServicebusQueueAuthorizationRule extends cdktf.Terraform
   // secondary_connection_string - computed: true, optional: false, required: false
   public get secondaryConnectionString() {
     return this.getStringAttribute('secondary_connection_string');
+  }
+
+  // secondary_connection_string_alias - computed: true, optional: false, required: false
+  public get secondaryConnectionStringAlias() {
+    return this.getStringAttribute('secondary_connection_string_alias');
   }
 
   // secondary_key - computed: true, optional: false, required: false

@@ -50,6 +50,11 @@ function dataAzurermMonitorLogProfileTimeoutsToTerraform(struct?: DataAzurermMon
 */
 export class DataAzurermMonitorLogProfile extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_monitor_log_profile";
+
   // ===========
   // INITIALIZER
   // ===========

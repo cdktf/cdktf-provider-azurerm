@@ -30,7 +30,7 @@ export interface NetappSnapshotConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/netapp_snapshot.html#tags NetappSnapshot#tags}
   */
-  readonly tags?: { [key: string]: string };
+  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/netapp_snapshot.html#volume_name NetappSnapshot#volume_name}
   */
@@ -76,6 +76,11 @@ function netappSnapshotTimeoutsToTerraform(struct?: NetappSnapshotTimeouts): any
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/netapp_snapshot.html azurerm_netapp_snapshot}
 */
 export class NetappSnapshot extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_netapp_snapshot";
 
   // ===========
   // INITIALIZER
@@ -184,11 +189,11 @@ export class NetappSnapshot extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string };
+  private _tags?: { [key: string]: string } | cdktf.IResolvable;
   public get tags() {
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._tags = value;
   }
   public resetTags() {

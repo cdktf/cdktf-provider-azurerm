@@ -56,6 +56,11 @@ function lighthouseAssignmentTimeoutsToTerraform(struct?: LighthouseAssignmentTi
 */
 export class LighthouseAssignment extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_lighthouse_assignment";
+
   // ===========
   // INITIALIZER
   // ===========

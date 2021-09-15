@@ -57,6 +57,11 @@ function mysqlServerKeyTimeoutsToTerraform(struct?: MysqlServerKeyTimeouts): any
 */
 export class MysqlServerKey extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_mysql_server_key";
+
   // ===========
   // INITIALIZER
   // ===========

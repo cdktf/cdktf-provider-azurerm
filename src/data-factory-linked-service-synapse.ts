@@ -10,7 +10,7 @@ export interface DataFactoryLinkedServiceSynapseConfig extends cdktf.TerraformMe
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_synapse.html#additional_properties DataFactoryLinkedServiceSynapse#additional_properties}
   */
-  readonly additionalProperties?: { [key: string]: string };
+  readonly additionalProperties?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_synapse.html#annotations DataFactoryLinkedServiceSynapse#annotations}
   */
@@ -38,7 +38,7 @@ export interface DataFactoryLinkedServiceSynapseConfig extends cdktf.TerraformMe
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_synapse.html#parameters DataFactoryLinkedServiceSynapse#parameters}
   */
-  readonly parameters?: { [key: string]: string };
+  readonly parameters?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_synapse.html#resource_group_name DataFactoryLinkedServiceSynapse#resource_group_name}
   */
@@ -110,6 +110,11 @@ function dataFactoryLinkedServiceSynapseTimeoutsToTerraform(struct?: DataFactory
 */
 export class DataFactoryLinkedServiceSynapse extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_data_factory_linked_service_synapse";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -150,11 +155,11 @@ export class DataFactoryLinkedServiceSynapse extends cdktf.TerraformResource {
   // ==========
 
   // additional_properties - computed: false, optional: true, required: false
-  private _additionalProperties?: { [key: string]: string };
+  private _additionalProperties?: { [key: string]: string } | cdktf.IResolvable;
   public get additionalProperties() {
     return this.interpolationForAttribute('additional_properties') as any;
   }
-  public set additionalProperties(value: { [key: string]: string } ) {
+  public set additionalProperties(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._additionalProperties = value;
   }
   public resetAdditionalProperties() {
@@ -258,11 +263,11 @@ export class DataFactoryLinkedServiceSynapse extends cdktf.TerraformResource {
   }
 
   // parameters - computed: false, optional: true, required: false
-  private _parameters?: { [key: string]: string };
+  private _parameters?: { [key: string]: string } | cdktf.IResolvable;
   public get parameters() {
     return this.interpolationForAttribute('parameters') as any;
   }
-  public set parameters(value: { [key: string]: string } ) {
+  public set parameters(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._parameters = value;
   }
   public resetParameters() {

@@ -48,7 +48,7 @@ export interface HpcCacheAccessPolicyAccessRule {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hpc_cache_access_policy.html#root_squash_enabled HpcCacheAccessPolicy#root_squash_enabled}
   */
-  readonly rootSquashEnabled?: boolean;
+  readonly rootSquashEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hpc_cache_access_policy.html#scope HpcCacheAccessPolicy#scope}
   */
@@ -56,11 +56,11 @@ export interface HpcCacheAccessPolicyAccessRule {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hpc_cache_access_policy.html#submount_access_enabled HpcCacheAccessPolicy#submount_access_enabled}
   */
-  readonly submountAccessEnabled?: boolean;
+  readonly submountAccessEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hpc_cache_access_policy.html#suid_enabled HpcCacheAccessPolicy#suid_enabled}
   */
-  readonly suidEnabled?: boolean;
+  readonly suidEnabled?: boolean | cdktf.IResolvable;
 }
 
 function hpcCacheAccessPolicyAccessRuleToTerraform(struct?: HpcCacheAccessPolicyAccessRule): any {
@@ -111,6 +111,11 @@ function hpcCacheAccessPolicyTimeoutsToTerraform(struct?: HpcCacheAccessPolicyTi
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/hpc_cache_access_policy.html azurerm_hpc_cache_access_policy}
 */
 export class HpcCacheAccessPolicy extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_hpc_cache_access_policy";
 
   // ===========
   // INITIALIZER

@@ -30,11 +30,11 @@ export interface OrchestratedVirtualMachineScaleSetConfig extends cdktf.Terrafor
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/orchestrated_virtual_machine_scale_set.html#single_placement_group OrchestratedVirtualMachineScaleSet#single_placement_group}
   */
-  readonly singlePlacementGroup?: boolean;
+  readonly singlePlacementGroup?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/orchestrated_virtual_machine_scale_set.html#tags OrchestratedVirtualMachineScaleSet#tags}
   */
-  readonly tags?: { [key: string]: string };
+  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/orchestrated_virtual_machine_scale_set.html#zones OrchestratedVirtualMachineScaleSet#zones}
   */
@@ -80,6 +80,11 @@ function orchestratedVirtualMachineScaleSetTimeoutsToTerraform(struct?: Orchestr
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/orchestrated_virtual_machine_scale_set.html azurerm_orchestrated_virtual_machine_scale_set}
 */
 export class OrchestratedVirtualMachineScaleSet extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_orchestrated_virtual_machine_scale_set";
 
   // ===========
   // INITIALIZER
@@ -192,11 +197,11 @@ export class OrchestratedVirtualMachineScaleSet extends cdktf.TerraformResource 
   }
 
   // single_placement_group - computed: false, optional: true, required: false
-  private _singlePlacementGroup?: boolean;
+  private _singlePlacementGroup?: boolean | cdktf.IResolvable;
   public get singlePlacementGroup() {
     return this.getBooleanAttribute('single_placement_group');
   }
-  public set singlePlacementGroup(value: boolean ) {
+  public set singlePlacementGroup(value: boolean | cdktf.IResolvable ) {
     this._singlePlacementGroup = value;
   }
   public resetSinglePlacementGroup() {
@@ -208,11 +213,11 @@ export class OrchestratedVirtualMachineScaleSet extends cdktf.TerraformResource 
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string };
+  private _tags?: { [key: string]: string } | cdktf.IResolvable;
   public get tags() {
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._tags = value;
   }
   public resetTags() {

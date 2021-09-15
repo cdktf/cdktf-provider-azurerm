@@ -46,6 +46,11 @@ function dataAzurermIothubDpsSharedAccessPolicyTimeoutsToTerraform(struct?: Data
 */
 export class DataAzurermIothubDpsSharedAccessPolicy extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_iothub_dps_shared_access_policy";
+
   // ===========
   // INITIALIZER
   // ===========

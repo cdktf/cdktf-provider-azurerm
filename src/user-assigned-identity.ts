@@ -22,7 +22,7 @@ export interface UserAssignedIdentityConfig extends cdktf.TerraformMetaArguments
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/user_assigned_identity.html#tags UserAssignedIdentity#tags}
   */
-  readonly tags?: { [key: string]: string };
+  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * timeouts block
   * 
@@ -64,6 +64,11 @@ function userAssignedIdentityTimeoutsToTerraform(struct?: UserAssignedIdentityTi
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/user_assigned_identity.html azurerm_user_assigned_identity}
 */
 export class UserAssignedIdentity extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_user_assigned_identity";
 
   // ===========
   // INITIALIZER
@@ -153,11 +158,11 @@ export class UserAssignedIdentity extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string };
+  private _tags?: { [key: string]: string } | cdktf.IResolvable;
   public get tags() {
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._tags = value;
   }
   public resetTags() {

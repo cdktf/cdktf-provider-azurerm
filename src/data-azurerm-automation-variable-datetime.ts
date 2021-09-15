@@ -46,6 +46,11 @@ function dataAzurermAutomationVariableDatetimeTimeoutsToTerraform(struct?: DataA
 */
 export class DataAzurermAutomationVariableDatetime extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_automation_variable_datetime";
+
   // ===========
   // INITIALIZER
   // ===========

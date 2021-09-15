@@ -10,7 +10,7 @@ export interface StorageShareConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_share.html#metadata StorageShare#metadata}
   */
-  readonly metadata?: { [key: string]: string };
+  readonly metadata?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_share.html#name StorageShare#name}
   */
@@ -116,6 +116,11 @@ function storageShareTimeoutsToTerraform(struct?: StorageShareTimeouts): any {
 */
 export class StorageShare extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_storage_share";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -156,11 +161,11 @@ export class StorageShare extends cdktf.TerraformResource {
   }
 
   // metadata - computed: true, optional: true, required: false
-  private _metadata?: { [key: string]: string }
-  public get metadata(): { [key: string]: string } {
+  private _metadata?: { [key: string]: string } | cdktf.IResolvable
+  public get metadata(): { [key: string]: string } | cdktf.IResolvable {
     return this.interpolationForAttribute('metadata') as any; // Getting the computed value is not yet implemented
   }
-  public set metadata(value: { [key: string]: string }) {
+  public set metadata(value: { [key: string]: string } | cdktf.IResolvable) {
     this._metadata = value;
   }
   public resetMetadata() {

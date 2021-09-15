@@ -73,6 +73,11 @@ function appServiceHybridConnectionTimeoutsToTerraform(struct?: AppServiceHybrid
 */
 export class AppServiceHybridConnection extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_app_service_hybrid_connection";
+
   // ===========
   // INITIALIZER
   // ===========

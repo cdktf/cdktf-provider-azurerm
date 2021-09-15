@@ -26,7 +26,7 @@ export interface ApiManagementNamedValueConfig extends cdktf.TerraformMetaArgume
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_named_value.html#secret ApiManagementNamedValue#secret}
   */
-  readonly secret?: boolean;
+  readonly secret?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_named_value.html#tags ApiManagementNamedValue#tags}
   */
@@ -101,6 +101,11 @@ function apiManagementNamedValueValueFromKeyVaultToTerraform(struct?: ApiManagem
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_named_value.html azurerm_api_management_named_value}
 */
 export class ApiManagementNamedValue extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_api_management_named_value";
 
   // ===========
   // INITIALIZER
@@ -197,11 +202,11 @@ export class ApiManagementNamedValue extends cdktf.TerraformResource {
   }
 
   // secret - computed: false, optional: true, required: false
-  private _secret?: boolean;
+  private _secret?: boolean | cdktf.IResolvable;
   public get secret() {
     return this.getBooleanAttribute('secret');
   }
-  public set secret(value: boolean ) {
+  public set secret(value: boolean | cdktf.IResolvable ) {
     this._secret = value;
   }
   public resetSecret() {

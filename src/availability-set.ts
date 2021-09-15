@@ -14,7 +14,7 @@ export interface AvailabilitySetConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/availability_set.html#managed AvailabilitySet#managed}
   */
-  readonly managed?: boolean;
+  readonly managed?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/availability_set.html#name AvailabilitySet#name}
   */
@@ -38,7 +38,7 @@ export interface AvailabilitySetConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/availability_set.html#tags AvailabilitySet#tags}
   */
-  readonly tags?: { [key: string]: string };
+  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * timeouts block
   * 
@@ -80,6 +80,11 @@ function availabilitySetTimeoutsToTerraform(struct?: AvailabilitySetTimeouts): a
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/availability_set.html azurerm_availability_set}
 */
 export class AvailabilitySet extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_availability_set";
 
   // ===========
   // INITIALIZER
@@ -137,11 +142,11 @@ export class AvailabilitySet extends cdktf.TerraformResource {
   }
 
   // managed - computed: false, optional: true, required: false
-  private _managed?: boolean;
+  private _managed?: boolean | cdktf.IResolvable;
   public get managed() {
     return this.getBooleanAttribute('managed');
   }
-  public set managed(value: boolean ) {
+  public set managed(value: boolean | cdktf.IResolvable ) {
     this._managed = value;
   }
   public resetManaged() {
@@ -227,11 +232,11 @@ export class AvailabilitySet extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string };
+  private _tags?: { [key: string]: string } | cdktf.IResolvable;
   public get tags() {
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._tags = value;
   }
   public resetTags() {

@@ -10,7 +10,7 @@ export interface ApiManagementApiDiagnosticConfig extends cdktf.TerraformMetaArg
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_diagnostic.html#always_log_errors ApiManagementApiDiagnostic#always_log_errors}
   */
-  readonly alwaysLogErrors?: boolean;
+  readonly alwaysLogErrors?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_diagnostic.html#api_management_logger_id ApiManagementApiDiagnostic#api_management_logger_id}
   */
@@ -34,7 +34,7 @@ export interface ApiManagementApiDiagnosticConfig extends cdktf.TerraformMetaArg
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_diagnostic.html#log_client_ip ApiManagementApiDiagnostic#log_client_ip}
   */
-  readonly logClientIp?: boolean;
+  readonly logClientIp?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_diagnostic.html#operation_name_format ApiManagementApiDiagnostic#operation_name_format}
   */
@@ -465,6 +465,11 @@ function apiManagementApiDiagnosticTimeoutsToTerraform(struct?: ApiManagementApi
 */
 export class ApiManagementApiDiagnostic extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_api_management_api_diagnostic";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -510,11 +515,11 @@ export class ApiManagementApiDiagnostic extends cdktf.TerraformResource {
   // ==========
 
   // always_log_errors - computed: true, optional: true, required: false
-  private _alwaysLogErrors?: boolean;
+  private _alwaysLogErrors?: boolean | cdktf.IResolvable;
   public get alwaysLogErrors() {
     return this.getBooleanAttribute('always_log_errors');
   }
-  public set alwaysLogErrors(value: boolean) {
+  public set alwaysLogErrors(value: boolean | cdktf.IResolvable) {
     this._alwaysLogErrors = value;
   }
   public resetAlwaysLogErrors() {
@@ -599,11 +604,11 @@ export class ApiManagementApiDiagnostic extends cdktf.TerraformResource {
   }
 
   // log_client_ip - computed: true, optional: true, required: false
-  private _logClientIp?: boolean;
+  private _logClientIp?: boolean | cdktf.IResolvable;
   public get logClientIp() {
     return this.getBooleanAttribute('log_client_ip');
   }
-  public set logClientIp(value: boolean) {
+  public set logClientIp(value: boolean | cdktf.IResolvable) {
     this._logClientIp = value;
   }
   public resetLogClientIp() {

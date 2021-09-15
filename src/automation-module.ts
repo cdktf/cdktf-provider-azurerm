@@ -107,6 +107,11 @@ function automationModuleTimeoutsToTerraform(struct?: AutomationModuleTimeouts):
 */
 export class AutomationModule extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_automation_module";
+
   // ===========
   // INITIALIZER
   // ===========

@@ -69,6 +69,11 @@ function eventhubConsumerGroupTimeoutsToTerraform(struct?: EventhubConsumerGroup
 */
 export class EventhubConsumerGroup extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_eventhub_consumer_group";
+
   // ===========
   // INITIALIZER
   // ===========

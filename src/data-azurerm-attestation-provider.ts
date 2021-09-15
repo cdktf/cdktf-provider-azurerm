@@ -42,6 +42,11 @@ function dataAzurermAttestationProviderTimeoutsToTerraform(struct?: DataAzurermA
 */
 export class DataAzurermAttestationProvider extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_attestation_provider";
+
   // ===========
   // INITIALIZER
   // ===========

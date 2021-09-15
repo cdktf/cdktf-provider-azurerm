@@ -104,7 +104,7 @@ export interface PolicySetDefinitionPolicyDefinitionReference {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/policy_set_definition.html#parameters PolicySetDefinition#parameters}
   */
-  readonly parameters?: { [key: string]: string };
+  readonly parameters?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/policy_set_definition.html#policy_definition_id PolicySetDefinition#policy_definition_id}
   */
@@ -164,6 +164,11 @@ function policySetDefinitionTimeoutsToTerraform(struct?: PolicySetDefinitionTime
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/policy_set_definition.html azurerm_policy_set_definition}
 */
 export class PolicySetDefinition extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_policy_set_definition";
 
   // ===========
   // INITIALIZER

@@ -42,6 +42,11 @@ function dataAzurermDevTestLabTimeoutsToTerraform(struct?: DataAzurermDevTestLab
 */
 export class DataAzurermDevTestLab extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_dev_test_lab";
+
   // ===========
   // INITIALIZER
   // ===========

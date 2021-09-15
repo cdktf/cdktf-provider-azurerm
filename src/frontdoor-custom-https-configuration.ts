@@ -10,7 +10,7 @@ export interface FrontdoorCustomHttpsConfigurationConfig extends cdktf.Terraform
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_custom_https_configuration.html#custom_https_provisioning_enabled FrontdoorCustomHttpsConfiguration#custom_https_provisioning_enabled}
   */
-  readonly customHttpsProvisioningEnabled: boolean;
+  readonly customHttpsProvisioningEnabled: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_custom_https_configuration.html#frontend_endpoint_id FrontdoorCustomHttpsConfiguration#frontend_endpoint_id}
   */
@@ -92,6 +92,11 @@ function frontdoorCustomHttpsConfigurationTimeoutsToTerraform(struct?: Frontdoor
 */
 export class FrontdoorCustomHttpsConfiguration extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_frontdoor_custom_https_configuration";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -125,11 +130,11 @@ export class FrontdoorCustomHttpsConfiguration extends cdktf.TerraformResource {
   // ==========
 
   // custom_https_provisioning_enabled - computed: false, optional: false, required: true
-  private _customHttpsProvisioningEnabled: boolean;
+  private _customHttpsProvisioningEnabled: boolean | cdktf.IResolvable;
   public get customHttpsProvisioningEnabled() {
     return this.getBooleanAttribute('custom_https_provisioning_enabled');
   }
-  public set customHttpsProvisioningEnabled(value: boolean) {
+  public set customHttpsProvisioningEnabled(value: boolean | cdktf.IResolvable) {
     this._customHttpsProvisioningEnabled = value;
   }
   // Temporarily expose input value. Use with caution.

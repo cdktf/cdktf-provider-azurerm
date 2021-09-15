@@ -53,6 +53,11 @@ function dataAzurermStorageAccountTimeoutsToTerraform(struct?: DataAzurermStorag
 */
 export class DataAzurermStorageAccount extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_storage_account";
+
   // ===========
   // INITIALIZER
   // ===========

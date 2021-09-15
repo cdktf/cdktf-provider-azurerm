@@ -42,6 +42,11 @@ function dataAzurermStorageEncryptionScopeTimeoutsToTerraform(struct?: DataAzure
 */
 export class DataAzurermStorageEncryptionScope extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_storage_encryption_scope";
+
   // ===========
   // INITIALIZER
   // ===========

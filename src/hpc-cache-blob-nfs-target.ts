@@ -77,6 +77,11 @@ function hpcCacheBlobNfsTargetTimeoutsToTerraform(struct?: HpcCacheBlobNfsTarget
 */
 export class HpcCacheBlobNfsTarget extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_hpc_cache_blob_nfs_target";
+
   // ===========
   // INITIALIZER
   // ===========

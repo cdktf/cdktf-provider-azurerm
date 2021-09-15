@@ -46,6 +46,11 @@ function dataAzurermEventhubTimeoutsToTerraform(struct?: DataAzurermEventhubTime
 */
 export class DataAzurermEventhub extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_eventhub";
+
   // ===========
   // INITIALIZER
   // ===========

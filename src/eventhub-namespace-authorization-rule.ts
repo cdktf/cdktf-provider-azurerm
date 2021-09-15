@@ -10,11 +10,11 @@ export interface EventhubNamespaceAuthorizationRuleConfig extends cdktf.Terrafor
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_namespace_authorization_rule.html#listen EventhubNamespaceAuthorizationRule#listen}
   */
-  readonly listen?: boolean;
+  readonly listen?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_namespace_authorization_rule.html#manage EventhubNamespaceAuthorizationRule#manage}
   */
-  readonly manage?: boolean;
+  readonly manage?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_namespace_authorization_rule.html#name EventhubNamespaceAuthorizationRule#name}
   */
@@ -30,7 +30,7 @@ export interface EventhubNamespaceAuthorizationRuleConfig extends cdktf.Terrafor
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_namespace_authorization_rule.html#send EventhubNamespaceAuthorizationRule#send}
   */
-  readonly send?: boolean;
+  readonly send?: boolean | cdktf.IResolvable;
   /**
   * timeouts block
   * 
@@ -73,6 +73,11 @@ function eventhubNamespaceAuthorizationRuleTimeoutsToTerraform(struct?: Eventhub
 */
 export class EventhubNamespaceAuthorizationRule extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_eventhub_namespace_authorization_rule";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -114,11 +119,11 @@ export class EventhubNamespaceAuthorizationRule extends cdktf.TerraformResource 
   }
 
   // listen - computed: false, optional: true, required: false
-  private _listen?: boolean;
+  private _listen?: boolean | cdktf.IResolvable;
   public get listen() {
     return this.getBooleanAttribute('listen');
   }
-  public set listen(value: boolean ) {
+  public set listen(value: boolean | cdktf.IResolvable ) {
     this._listen = value;
   }
   public resetListen() {
@@ -130,11 +135,11 @@ export class EventhubNamespaceAuthorizationRule extends cdktf.TerraformResource 
   }
 
   // manage - computed: false, optional: true, required: false
-  private _manage?: boolean;
+  private _manage?: boolean | cdktf.IResolvable;
   public get manage() {
     return this.getBooleanAttribute('manage');
   }
-  public set manage(value: boolean ) {
+  public set manage(value: boolean | cdktf.IResolvable ) {
     this._manage = value;
   }
   public resetManage() {
@@ -215,11 +220,11 @@ export class EventhubNamespaceAuthorizationRule extends cdktf.TerraformResource 
   }
 
   // send - computed: false, optional: true, required: false
-  private _send?: boolean;
+  private _send?: boolean | cdktf.IResolvable;
   public get send() {
     return this.getBooleanAttribute('send');
   }
-  public set send(value: boolean ) {
+  public set send(value: boolean | cdktf.IResolvable ) {
     this._send = value;
   }
   public resetSend() {

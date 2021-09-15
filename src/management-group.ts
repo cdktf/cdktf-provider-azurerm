@@ -69,6 +69,11 @@ function managementGroupTimeoutsToTerraform(struct?: ManagementGroupTimeouts): a
 */
 export class ManagementGroup extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_management_group";
+
   // ===========
   // INITIALIZER
   // ===========

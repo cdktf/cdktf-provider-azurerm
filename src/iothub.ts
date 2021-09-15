@@ -38,7 +38,7 @@ export interface IothubConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub.html#public_network_access_enabled Iothub#public_network_access_enabled}
   */
-  readonly publicNetworkAccessEnabled?: boolean;
+  readonly publicNetworkAccessEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub.html#resource_group_name Iothub#resource_group_name}
   */
@@ -50,7 +50,7 @@ export interface IothubConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub.html#tags Iothub#tags}
   */
-  readonly tags?: { [key: string]: string };
+  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * fallback_route block
   * 
@@ -168,7 +168,7 @@ export interface IothubRoute {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub.html#enabled Iothub#enabled}
   */
-  readonly enabled?: boolean;
+  readonly enabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub.html#endpoint_names Iothub#endpoint_names}
   */
@@ -224,7 +224,7 @@ export interface IothubFallbackRoute {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub.html#enabled Iothub#enabled}
   */
-  readonly enabled?: boolean;
+  readonly enabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub.html#endpoint_names Iothub#endpoint_names}
   */
@@ -269,7 +269,7 @@ export interface IothubFileUpload {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub.html#notifications Iothub#notifications}
   */
-  readonly notifications?: boolean;
+  readonly notifications?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub.html#sas_ttl Iothub#sas_ttl}
   */
@@ -366,6 +366,11 @@ function iothubTimeoutsToTerraform(struct?: IothubTimeouts): any {
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/iothub.html azurerm_iothub}
 */
 export class Iothub extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_iothub";
 
   // ===========
   // INITIALIZER
@@ -548,11 +553,11 @@ export class Iothub extends cdktf.TerraformResource {
   }
 
   // public_network_access_enabled - computed: false, optional: true, required: false
-  private _publicNetworkAccessEnabled?: boolean;
+  private _publicNetworkAccessEnabled?: boolean | cdktf.IResolvable;
   public get publicNetworkAccessEnabled() {
     return this.getBooleanAttribute('public_network_access_enabled');
   }
-  public set publicNetworkAccessEnabled(value: boolean ) {
+  public set publicNetworkAccessEnabled(value: boolean | cdktf.IResolvable ) {
     this._publicNetworkAccessEnabled = value;
   }
   public resetPublicNetworkAccessEnabled() {
@@ -598,11 +603,11 @@ export class Iothub extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string };
+  private _tags?: { [key: string]: string } | cdktf.IResolvable;
   public get tags() {
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._tags = value;
   }
   public resetTags() {

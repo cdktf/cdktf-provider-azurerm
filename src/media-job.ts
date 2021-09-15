@@ -123,6 +123,11 @@ function mediaJobTimeoutsToTerraform(struct?: MediaJobTimeouts): any {
 */
 export class MediaJob extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_media_job";
+
   // ===========
   // INITIALIZER
   // ===========

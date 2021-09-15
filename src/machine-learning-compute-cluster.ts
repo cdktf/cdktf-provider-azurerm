@@ -30,7 +30,7 @@ export interface MachineLearningComputeClusterConfig extends cdktf.TerraformMeta
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/machine_learning_compute_cluster.html#tags MachineLearningComputeCluster#tags}
   */
-  readonly tags?: { [key: string]: string };
+  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/machine_learning_compute_cluster.html#vm_priority MachineLearningComputeCluster#vm_priority}
   */
@@ -125,6 +125,11 @@ function machineLearningComputeClusterTimeoutsToTerraform(struct?: MachineLearni
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/machine_learning_compute_cluster.html azurerm_machine_learning_compute_cluster}
 */
 export class MachineLearningComputeCluster extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_machine_learning_compute_cluster";
 
   // ===========
   // INITIALIZER
@@ -242,11 +247,11 @@ export class MachineLearningComputeCluster extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string };
+  private _tags?: { [key: string]: string } | cdktf.IResolvable;
   public get tags() {
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._tags = value;
   }
   public resetTags() {

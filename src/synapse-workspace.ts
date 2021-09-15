@@ -18,7 +18,7 @@ export interface SynapseWorkspaceConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace.html#data_exfiltration_protection_enabled SynapseWorkspace#data_exfiltration_protection_enabled}
   */
-  readonly dataExfiltrationProtectionEnabled?: boolean;
+  readonly dataExfiltrationProtectionEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace.html#location SynapseWorkspace#location}
   */
@@ -30,7 +30,7 @@ export interface SynapseWorkspaceConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace.html#managed_virtual_network_enabled SynapseWorkspace#managed_virtual_network_enabled}
   */
-  readonly managedVirtualNetworkEnabled?: boolean;
+  readonly managedVirtualNetworkEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace.html#name SynapseWorkspace#name}
   */
@@ -50,7 +50,7 @@ export interface SynapseWorkspaceConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace.html#sql_identity_control_enabled SynapseWorkspace#sql_identity_control_enabled}
   */
-  readonly sqlIdentityControlEnabled?: boolean;
+  readonly sqlIdentityControlEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace.html#storage_data_lake_gen2_filesystem_id SynapseWorkspace#storage_data_lake_gen2_filesystem_id}
   */
@@ -58,7 +58,7 @@ export interface SynapseWorkspaceConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace.html#tags SynapseWorkspace#tags}
   */
-  readonly tags?: { [key: string]: string };
+  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * azure_devops_repo block
   * 
@@ -140,6 +140,10 @@ export interface SynapseWorkspaceAzureDevopsRepo {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace.html#root_folder SynapseWorkspace#root_folder}
   */
   readonly rootFolder: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace.html#tenant_id SynapseWorkspace#tenant_id}
+  */
+  readonly tenantId?: string;
 }
 
 function synapseWorkspaceAzureDevopsRepoToTerraform(struct?: SynapseWorkspaceAzureDevopsRepo): any {
@@ -150,6 +154,7 @@ function synapseWorkspaceAzureDevopsRepoToTerraform(struct?: SynapseWorkspaceAzu
     project_name: cdktf.stringToTerraform(struct!.projectName),
     repository_name: cdktf.stringToTerraform(struct!.repositoryName),
     root_folder: cdktf.stringToTerraform(struct!.rootFolder),
+    tenant_id: cdktf.stringToTerraform(struct!.tenantId),
   }
 }
 
@@ -221,6 +226,11 @@ function synapseWorkspaceTimeoutsToTerraform(struct?: SynapseWorkspaceTimeouts):
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace.html azurerm_synapse_workspace}
 */
 export class SynapseWorkspace extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_synapse_workspace";
 
   // ===========
   // INITIALIZER
@@ -304,11 +314,11 @@ export class SynapseWorkspace extends cdktf.TerraformResource {
   }
 
   // data_exfiltration_protection_enabled - computed: false, optional: true, required: false
-  private _dataExfiltrationProtectionEnabled?: boolean;
+  private _dataExfiltrationProtectionEnabled?: boolean | cdktf.IResolvable;
   public get dataExfiltrationProtectionEnabled() {
     return this.getBooleanAttribute('data_exfiltration_protection_enabled');
   }
-  public set dataExfiltrationProtectionEnabled(value: boolean ) {
+  public set dataExfiltrationProtectionEnabled(value: boolean | cdktf.IResolvable ) {
     this._dataExfiltrationProtectionEnabled = value;
   }
   public resetDataExfiltrationProtectionEnabled() {
@@ -359,11 +369,11 @@ export class SynapseWorkspace extends cdktf.TerraformResource {
   }
 
   // managed_virtual_network_enabled - computed: false, optional: true, required: false
-  private _managedVirtualNetworkEnabled?: boolean;
+  private _managedVirtualNetworkEnabled?: boolean | cdktf.IResolvable;
   public get managedVirtualNetworkEnabled() {
     return this.getBooleanAttribute('managed_virtual_network_enabled');
   }
-  public set managedVirtualNetworkEnabled(value: boolean ) {
+  public set managedVirtualNetworkEnabled(value: boolean | cdktf.IResolvable ) {
     this._managedVirtualNetworkEnabled = value;
   }
   public resetManagedVirtualNetworkEnabled() {
@@ -427,11 +437,11 @@ export class SynapseWorkspace extends cdktf.TerraformResource {
   }
 
   // sql_identity_control_enabled - computed: false, optional: true, required: false
-  private _sqlIdentityControlEnabled?: boolean;
+  private _sqlIdentityControlEnabled?: boolean | cdktf.IResolvable;
   public get sqlIdentityControlEnabled() {
     return this.getBooleanAttribute('sql_identity_control_enabled');
   }
-  public set sqlIdentityControlEnabled(value: boolean ) {
+  public set sqlIdentityControlEnabled(value: boolean | cdktf.IResolvable ) {
     this._sqlIdentityControlEnabled = value;
   }
   public resetSqlIdentityControlEnabled() {
@@ -456,11 +466,11 @@ export class SynapseWorkspace extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string };
+  private _tags?: { [key: string]: string } | cdktf.IResolvable;
   public get tags() {
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._tags = value;
   }
   public resetTags() {

@@ -42,6 +42,11 @@ function dataAzurermAvailabilitySetTimeoutsToTerraform(struct?: DataAzurermAvail
 */
 export class DataAzurermAvailabilitySet extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_availability_set";
+
   // ===========
   // INITIALIZER
   // ===========

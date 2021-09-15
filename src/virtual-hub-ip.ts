@@ -73,6 +73,11 @@ function virtualHubIpTimeoutsToTerraform(struct?: VirtualHubIpTimeouts): any {
 */
 export class VirtualHubIp extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_virtual_hub_ip";
+
   // ===========
   // INITIALIZER
   // ===========

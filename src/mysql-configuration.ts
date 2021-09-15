@@ -65,6 +65,11 @@ function mysqlConfigurationTimeoutsToTerraform(struct?: MysqlConfigurationTimeou
 */
 export class MysqlConfiguration extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_mysql_configuration";
+
   // ===========
   // INITIALIZER
   // ===========

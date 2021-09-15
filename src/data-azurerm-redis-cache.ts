@@ -135,6 +135,11 @@ function dataAzurermRedisCacheTimeoutsToTerraform(struct?: DataAzurermRedisCache
 */
 export class DataAzurermRedisCache extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_redis_cache";
+
   // ===========
   // INITIALIZER
   // ===========

@@ -306,6 +306,11 @@ export class DataAzurermAppServiceSiteConfig extends cdktf.ComplexComputedList {
     return this.getBooleanAttribute('use_32_bit_worker_process');
   }
 
+  // vnet_route_all_enabled - computed: true, optional: false, required: false
+  public get vnetRouteAllEnabled() {
+    return this.getBooleanAttribute('vnet_route_all_enabled');
+  }
+
   // websockets_enabled - computed: true, optional: false, required: false
   public get websocketsEnabled() {
     return this.getBooleanAttribute('websockets_enabled');
@@ -374,6 +379,11 @@ function dataAzurermAppServiceTimeoutsToTerraform(struct?: DataAzurermAppService
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/app_service.html azurerm_app_service}
 */
 export class DataAzurermAppService extends cdktf.TerraformDataSource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_app_service";
 
   // ===========
   // INITIALIZER

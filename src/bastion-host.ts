@@ -22,7 +22,7 @@ export interface BastionHostConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bastion_host.html#tags BastionHost#tags}
   */
-  readonly tags?: { [key: string]: string };
+  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * ip_configuration block
   * 
@@ -94,6 +94,11 @@ function bastionHostTimeoutsToTerraform(struct?: BastionHostTimeouts): any {
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/bastion_host.html azurerm_bastion_host}
 */
 export class BastionHost extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_bastion_host";
 
   // ===========
   // INITIALIZER
@@ -179,11 +184,11 @@ export class BastionHost extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string };
+  private _tags?: { [key: string]: string } | cdktf.IResolvable;
   public get tags() {
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._tags = value;
   }
   public resetTags() {

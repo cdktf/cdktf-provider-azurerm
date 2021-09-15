@@ -46,6 +46,11 @@ function dataAzurermPublicIpPrefixTimeoutsToTerraform(struct?: DataAzurermPublic
 */
 export class DataAzurermPublicIpPrefix extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_public_ip_prefix";
+
   // ===========
   // INITIALIZER
   // ===========

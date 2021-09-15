@@ -54,6 +54,11 @@ function dataAzurermPlatformImageTimeoutsToTerraform(struct?: DataAzurermPlatfor
 */
 export class DataAzurermPlatformImage extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_platform_image";
+
   // ===========
   // INITIALIZER
   // ===========

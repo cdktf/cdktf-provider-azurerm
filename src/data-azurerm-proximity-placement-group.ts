@@ -42,6 +42,11 @@ function dataAzurermProximityPlacementGroupTimeoutsToTerraform(struct?: DataAzur
 */
 export class DataAzurermProximityPlacementGroup extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_proximity_placement_group";
+
   // ===========
   // INITIALIZER
   // ===========

@@ -206,6 +206,11 @@ function dataAzurermSpringCloudServiceTimeoutsToTerraform(struct?: DataAzurermSp
 */
 export class DataAzurermSpringCloudService extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_spring_cloud_service";
+
   // ===========
   // INITIALIZER
   // ===========

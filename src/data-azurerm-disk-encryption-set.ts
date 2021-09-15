@@ -42,6 +42,11 @@ function dataAzurermDiskEncryptionSetTimeoutsToTerraform(struct?: DataAzurermDis
 */
 export class DataAzurermDiskEncryptionSet extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_disk_encryption_set";
+
   // ===========
   // INITIALIZER
   // ===========

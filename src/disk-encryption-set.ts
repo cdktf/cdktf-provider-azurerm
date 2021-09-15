@@ -26,7 +26,7 @@ export interface DiskEncryptionSetConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/disk_encryption_set.html#tags DiskEncryptionSet#tags}
   */
-  readonly tags?: { [key: string]: string };
+  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * identity block
   * 
@@ -88,6 +88,11 @@ function diskEncryptionSetTimeoutsToTerraform(struct?: DiskEncryptionSetTimeouts
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/disk_encryption_set.html azurerm_disk_encryption_set}
 */
 export class DiskEncryptionSet extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_disk_encryption_set";
 
   // ===========
   // INITIALIZER
@@ -182,11 +187,11 @@ export class DiskEncryptionSet extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string };
+  private _tags?: { [key: string]: string } | cdktf.IResolvable;
   public get tags() {
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._tags = value;
   }
   public resetTags() {

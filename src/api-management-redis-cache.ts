@@ -73,6 +73,11 @@ function apiManagementRedisCacheTimeoutsToTerraform(struct?: ApiManagementRedisC
 */
 export class ApiManagementRedisCache extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_api_management_redis_cache";
+
   // ===========
   // INITIALIZER
   // ===========

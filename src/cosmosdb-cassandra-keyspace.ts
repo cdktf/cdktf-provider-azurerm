@@ -85,6 +85,11 @@ function cosmosdbCassandraKeyspaceTimeoutsToTerraform(struct?: CosmosdbCassandra
 */
 export class CosmosdbCassandraKeyspace extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_cosmosdb_cassandra_keyspace";
+
   // ===========
   // INITIALIZER
   // ===========

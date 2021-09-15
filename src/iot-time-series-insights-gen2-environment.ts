@@ -30,7 +30,7 @@ export interface IotTimeSeriesInsightsGen2EnvironmentConfig extends cdktf.Terraf
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_time_series_insights_gen2_environment.html#tags IotTimeSeriesInsightsGen2Environment#tags}
   */
-  readonly tags?: { [key: string]: string };
+  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_time_series_insights_gen2_environment.html#warm_store_data_retention_time IotTimeSeriesInsightsGen2Environment#warm_store_data_retention_time}
   */
@@ -101,6 +101,11 @@ function iotTimeSeriesInsightsGen2EnvironmentTimeoutsToTerraform(struct?: IotTim
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/iot_time_series_insights_gen2_environment.html azurerm_iot_time_series_insights_gen2_environment}
 */
 export class IotTimeSeriesInsightsGen2Environment extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_iot_time_series_insights_gen2_environment";
 
   // ===========
   // INITIALIZER
@@ -215,11 +220,11 @@ export class IotTimeSeriesInsightsGen2Environment extends cdktf.TerraformResourc
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string };
+  private _tags?: { [key: string]: string } | cdktf.IResolvable;
   public get tags() {
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._tags = value;
   }
   public resetTags() {

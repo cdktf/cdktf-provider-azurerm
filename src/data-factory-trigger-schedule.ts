@@ -16,6 +16,10 @@ export interface DataFactoryTriggerScheduleConfig extends cdktf.TerraformMetaArg
   */
   readonly dataFactoryName: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_trigger_schedule.html#description DataFactoryTriggerSchedule#description}
+  */
+  readonly description?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_trigger_schedule.html#end_time DataFactoryTriggerSchedule#end_time}
   */
   readonly endTime?: string;
@@ -38,7 +42,7 @@ export interface DataFactoryTriggerScheduleConfig extends cdktf.TerraformMetaArg
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_trigger_schedule.html#pipeline_parameters DataFactoryTriggerSchedule#pipeline_parameters}
   */
-  readonly pipelineParameters?: { [key: string]: string };
+  readonly pipelineParameters?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_trigger_schedule.html#resource_group_name DataFactoryTriggerSchedule#resource_group_name}
   */
@@ -48,12 +52,73 @@ export interface DataFactoryTriggerScheduleConfig extends cdktf.TerraformMetaArg
   */
   readonly startTime?: string;
   /**
+  * schedule block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_trigger_schedule.html#schedule DataFactoryTriggerSchedule#schedule}
+  */
+  readonly schedule?: DataFactoryTriggerScheduleSchedule[];
+  /**
   * timeouts block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_trigger_schedule.html#timeouts DataFactoryTriggerSchedule#timeouts}
   */
   readonly timeouts?: DataFactoryTriggerScheduleTimeouts;
 }
+export interface DataFactoryTriggerScheduleScheduleMonthly {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_trigger_schedule.html#week DataFactoryTriggerSchedule#week}
+  */
+  readonly week?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_trigger_schedule.html#weekday DataFactoryTriggerSchedule#weekday}
+  */
+  readonly weekday: string;
+}
+
+function dataFactoryTriggerScheduleScheduleMonthlyToTerraform(struct?: DataFactoryTriggerScheduleScheduleMonthly): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    week: cdktf.numberToTerraform(struct!.week),
+    weekday: cdktf.stringToTerraform(struct!.weekday),
+  }
+}
+
+export interface DataFactoryTriggerScheduleSchedule {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_trigger_schedule.html#days_of_month DataFactoryTriggerSchedule#days_of_month}
+  */
+  readonly daysOfMonth?: number[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_trigger_schedule.html#days_of_week DataFactoryTriggerSchedule#days_of_week}
+  */
+  readonly daysOfWeek?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_trigger_schedule.html#hours DataFactoryTriggerSchedule#hours}
+  */
+  readonly hours?: number[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_trigger_schedule.html#minutes DataFactoryTriggerSchedule#minutes}
+  */
+  readonly minutes?: number[];
+  /**
+  * monthly block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_trigger_schedule.html#monthly DataFactoryTriggerSchedule#monthly}
+  */
+  readonly monthly?: DataFactoryTriggerScheduleScheduleMonthly[];
+}
+
+function dataFactoryTriggerScheduleScheduleToTerraform(struct?: DataFactoryTriggerScheduleSchedule): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    days_of_month: cdktf.listMapper(cdktf.numberToTerraform)(struct!.daysOfMonth),
+    days_of_week: cdktf.listMapper(cdktf.stringToTerraform)(struct!.daysOfWeek),
+    hours: cdktf.listMapper(cdktf.numberToTerraform)(struct!.hours),
+    minutes: cdktf.listMapper(cdktf.numberToTerraform)(struct!.minutes),
+    monthly: cdktf.listMapper(dataFactoryTriggerScheduleScheduleMonthlyToTerraform)(struct!.monthly),
+  }
+}
+
 export interface DataFactoryTriggerScheduleTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_trigger_schedule.html#create DataFactoryTriggerSchedule#create}
@@ -89,6 +154,11 @@ function dataFactoryTriggerScheduleTimeoutsToTerraform(struct?: DataFactoryTrigg
 */
 export class DataFactoryTriggerSchedule extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_data_factory_trigger_schedule";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -113,6 +183,7 @@ export class DataFactoryTriggerSchedule extends cdktf.TerraformResource {
     });
     this._annotations = config.annotations;
     this._dataFactoryName = config.dataFactoryName;
+    this._description = config.description;
     this._endTime = config.endTime;
     this._frequency = config.frequency;
     this._interval = config.interval;
@@ -121,6 +192,7 @@ export class DataFactoryTriggerSchedule extends cdktf.TerraformResource {
     this._pipelineParameters = config.pipelineParameters;
     this._resourceGroupName = config.resourceGroupName;
     this._startTime = config.startTime;
+    this._schedule = config.schedule;
     this._timeouts = config.timeouts;
   }
 
@@ -155,6 +227,22 @@ export class DataFactoryTriggerSchedule extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get dataFactoryNameInput() {
     return this._dataFactoryName
+  }
+
+  // description - computed: false, optional: true, required: false
+  private _description?: string;
+  public get description() {
+    return this.getStringAttribute('description');
+  }
+  public set description(value: string ) {
+    this._description = value;
+  }
+  public resetDescription() {
+    this._description = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get descriptionInput() {
+    return this._description
   }
 
   // end_time - computed: false, optional: true, required: false
@@ -237,11 +325,11 @@ export class DataFactoryTriggerSchedule extends cdktf.TerraformResource {
   }
 
   // pipeline_parameters - computed: false, optional: true, required: false
-  private _pipelineParameters?: { [key: string]: string };
+  private _pipelineParameters?: { [key: string]: string } | cdktf.IResolvable;
   public get pipelineParameters() {
     return this.interpolationForAttribute('pipeline_parameters') as any;
   }
-  public set pipelineParameters(value: { [key: string]: string } ) {
+  public set pipelineParameters(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._pipelineParameters = value;
   }
   public resetPipelineParameters() {
@@ -281,6 +369,22 @@ export class DataFactoryTriggerSchedule extends cdktf.TerraformResource {
     return this._startTime
   }
 
+  // schedule - computed: false, optional: true, required: false
+  private _schedule?: DataFactoryTriggerScheduleSchedule[];
+  public get schedule() {
+    return this.interpolationForAttribute('schedule') as any;
+  }
+  public set schedule(value: DataFactoryTriggerScheduleSchedule[] ) {
+    this._schedule = value;
+  }
+  public resetSchedule() {
+    this._schedule = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get scheduleInput() {
+    return this._schedule
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: DataFactoryTriggerScheduleTimeouts;
   public get timeouts() {
@@ -305,6 +409,7 @@ export class DataFactoryTriggerSchedule extends cdktf.TerraformResource {
     return {
       annotations: cdktf.listMapper(cdktf.stringToTerraform)(this._annotations),
       data_factory_name: cdktf.stringToTerraform(this._dataFactoryName),
+      description: cdktf.stringToTerraform(this._description),
       end_time: cdktf.stringToTerraform(this._endTime),
       frequency: cdktf.stringToTerraform(this._frequency),
       interval: cdktf.numberToTerraform(this._interval),
@@ -313,6 +418,7 @@ export class DataFactoryTriggerSchedule extends cdktf.TerraformResource {
       pipeline_parameters: cdktf.hashMapper(cdktf.anyToTerraform)(this._pipelineParameters),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       start_time: cdktf.stringToTerraform(this._startTime),
+      schedule: cdktf.listMapper(dataFactoryTriggerScheduleScheduleToTerraform)(this._schedule),
       timeouts: dataFactoryTriggerScheduleTimeoutsToTerraform(this._timeouts),
     };
   }

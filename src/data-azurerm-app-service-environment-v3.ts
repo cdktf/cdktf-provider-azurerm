@@ -34,6 +34,23 @@ export class DataAzurermAppServiceEnvironmentV3ClusterSetting extends cdktf.Comp
     return this.getStringAttribute('value');
   }
 }
+export class DataAzurermAppServiceEnvironmentV3InboundNetworkDependencies extends cdktf.ComplexComputedList {
+
+  // description - computed: true, optional: false, required: false
+  public get description() {
+    return this.getStringAttribute('description');
+  }
+
+  // ip_addresses - computed: true, optional: false, required: false
+  public get ipAddresses() {
+    return this.getListAttribute('ip_addresses');
+  }
+
+  // ports - computed: true, optional: false, required: false
+  public get ports() {
+    return this.getListAttribute('ports');
+  }
+}
 export interface DataAzurermAppServiceEnvironmentV3Timeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/app_service_environment_v3.html#read DataAzurermAppServiceEnvironmentV3#read}
@@ -53,6 +70,11 @@ function dataAzurermAppServiceEnvironmentV3TimeoutsToTerraform(struct?: DataAzur
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/app_service_environment_v3.html azurerm_app_service_environment_v3}
 */
 export class DataAzurermAppServiceEnvironmentV3 extends cdktf.TerraformDataSource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_app_service_environment_v3";
 
   // ===========
   // INITIALIZER
@@ -85,14 +107,59 @@ export class DataAzurermAppServiceEnvironmentV3 extends cdktf.TerraformDataSourc
   // ATTRIBUTES
   // ==========
 
+  // allow_new_private_endpoint_connections - computed: true, optional: false, required: false
+  public get allowNewPrivateEndpointConnections() {
+    return this.getBooleanAttribute('allow_new_private_endpoint_connections');
+  }
+
   // cluster_setting - computed: true, optional: false, required: false
   public clusterSetting(index: string) {
     return new DataAzurermAppServiceEnvironmentV3ClusterSetting(this, 'cluster_setting', index);
   }
 
+  // dedicated_host_count - computed: true, optional: false, required: false
+  public get dedicatedHostCount() {
+    return this.getNumberAttribute('dedicated_host_count');
+  }
+
+  // dns_suffix - computed: true, optional: false, required: false
+  public get dnsSuffix() {
+    return this.getStringAttribute('dns_suffix');
+  }
+
+  // external_inbound_ip_addresses - computed: true, optional: false, required: false
+  public get externalInboundIpAddresses() {
+    return this.getListAttribute('external_inbound_ip_addresses');
+  }
+
   // id - computed: true, optional: true, required: false
   public get id() {
     return this.getStringAttribute('id');
+  }
+
+  // inbound_network_dependencies - computed: true, optional: false, required: false
+  public inboundNetworkDependencies(index: string) {
+    return new DataAzurermAppServiceEnvironmentV3InboundNetworkDependencies(this, 'inbound_network_dependencies', index);
+  }
+
+  // internal_inbound_ip_addresses - computed: true, optional: false, required: false
+  public get internalInboundIpAddresses() {
+    return this.getListAttribute('internal_inbound_ip_addresses');
+  }
+
+  // internal_load_balancing_mode - computed: true, optional: false, required: false
+  public get internalLoadBalancingMode() {
+    return this.getStringAttribute('internal_load_balancing_mode');
+  }
+
+  // ip_ssl_address_count - computed: true, optional: false, required: false
+  public get ipSslAddressCount() {
+    return this.getNumberAttribute('ip_ssl_address_count');
+  }
+
+  // linux_outbound_ip_addresses - computed: true, optional: false, required: false
+  public get linuxOutboundIpAddresses() {
+    return this.getListAttribute('linux_outbound_ip_addresses');
   }
 
   // location - computed: true, optional: false, required: false
@@ -139,6 +206,16 @@ export class DataAzurermAppServiceEnvironmentV3 extends cdktf.TerraformDataSourc
   // tags - computed: true, optional: false, required: false
   public tags(key: string): string {
     return new cdktf.StringMap(this, 'tags').lookup(key);
+  }
+
+  // windows_outbound_ip_addresses - computed: true, optional: false, required: false
+  public get windowsOutboundIpAddresses() {
+    return this.getListAttribute('windows_outbound_ip_addresses');
+  }
+
+  // zone_redundant - computed: true, optional: false, required: false
+  public get zoneRedundant() {
+    return this.getBooleanAttribute('zone_redundant');
   }
 
   // timeouts - computed: false, optional: true, required: false

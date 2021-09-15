@@ -50,6 +50,11 @@ function dataAzurermEventhubConsumerGroupTimeoutsToTerraform(struct?: DataAzurer
 */
 export class DataAzurermEventhubConsumerGroup extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_eventhub_consumer_group";
+
   // ===========
   // INITIALIZER
   // ===========

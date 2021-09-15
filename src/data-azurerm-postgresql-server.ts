@@ -59,6 +59,11 @@ function dataAzurermPostgresqlServerTimeoutsToTerraform(struct?: DataAzurermPost
 */
 export class DataAzurermPostgresqlServer extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_postgresql_server";
+
   // ===========
   // INITIALIZER
   // ===========

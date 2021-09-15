@@ -10,7 +10,7 @@ export interface DataFactoryLinkedServiceKustoConfig extends cdktf.TerraformMeta
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_kusto.html#additional_properties DataFactoryLinkedServiceKusto#additional_properties}
   */
-  readonly additionalProperties?: { [key: string]: string };
+  readonly additionalProperties?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_kusto.html#annotations DataFactoryLinkedServiceKusto#annotations}
   */
@@ -42,7 +42,7 @@ export interface DataFactoryLinkedServiceKustoConfig extends cdktf.TerraformMeta
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_kusto.html#parameters DataFactoryLinkedServiceKusto#parameters}
   */
-  readonly parameters?: { [key: string]: string };
+  readonly parameters?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_kusto.html#service_principal_id DataFactoryLinkedServiceKusto#service_principal_id}
   */
@@ -58,7 +58,7 @@ export interface DataFactoryLinkedServiceKustoConfig extends cdktf.TerraformMeta
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_kusto.html#use_managed_identity DataFactoryLinkedServiceKusto#use_managed_identity}
   */
-  readonly useManagedIdentity?: boolean;
+  readonly useManagedIdentity?: boolean | cdktf.IResolvable;
   /**
   * timeouts block
   * 
@@ -100,6 +100,11 @@ function dataFactoryLinkedServiceKustoTimeoutsToTerraform(struct?: DataFactoryLi
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_kusto.html azurerm_data_factory_linked_service_kusto}
 */
 export class DataFactoryLinkedServiceKusto extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_data_factory_linked_service_kusto";
 
   // ===========
   // INITIALIZER
@@ -144,11 +149,11 @@ export class DataFactoryLinkedServiceKusto extends cdktf.TerraformResource {
   // ==========
 
   // additional_properties - computed: false, optional: true, required: false
-  private _additionalProperties?: { [key: string]: string };
+  private _additionalProperties?: { [key: string]: string } | cdktf.IResolvable;
   public get additionalProperties() {
     return this.interpolationForAttribute('additional_properties') as any;
   }
-  public set additionalProperties(value: { [key: string]: string } ) {
+  public set additionalProperties(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._additionalProperties = value;
   }
   public resetAdditionalProperties() {
@@ -265,11 +270,11 @@ export class DataFactoryLinkedServiceKusto extends cdktf.TerraformResource {
   }
 
   // parameters - computed: false, optional: true, required: false
-  private _parameters?: { [key: string]: string };
+  private _parameters?: { [key: string]: string } | cdktf.IResolvable;
   public get parameters() {
     return this.interpolationForAttribute('parameters') as any;
   }
-  public set parameters(value: { [key: string]: string } ) {
+  public set parameters(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._parameters = value;
   }
   public resetParameters() {
@@ -329,11 +334,11 @@ export class DataFactoryLinkedServiceKusto extends cdktf.TerraformResource {
   }
 
   // use_managed_identity - computed: false, optional: true, required: false
-  private _useManagedIdentity?: boolean;
+  private _useManagedIdentity?: boolean | cdktf.IResolvable;
   public get useManagedIdentity() {
     return this.getBooleanAttribute('use_managed_identity');
   }
-  public set useManagedIdentity(value: boolean ) {
+  public set useManagedIdentity(value: boolean | cdktf.IResolvable ) {
     this._useManagedIdentity = value;
   }
   public resetUseManagedIdentity() {

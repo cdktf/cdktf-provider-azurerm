@@ -42,6 +42,11 @@ function dataAzurermSpatialAnchorsAccountTimeoutsToTerraform(struct?: DataAzurer
 */
 export class DataAzurermSpatialAnchorsAccount extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_spatial_anchors_account";
+
   // ===========
   // INITIALIZER
   // ===========

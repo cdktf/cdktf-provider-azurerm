@@ -14,7 +14,7 @@ export interface ExpressRouteConnectionConfig extends cdktf.TerraformMetaArgumen
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_connection.html#enable_internet_security ExpressRouteConnection#enable_internet_security}
   */
-  readonly enableInternetSecurity?: boolean;
+  readonly enableInternetSecurity?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_connection.html#express_route_circuit_peering_id ExpressRouteConnection#express_route_circuit_peering_id}
   */
@@ -119,6 +119,11 @@ function expressRouteConnectionTimeoutsToTerraform(struct?: ExpressRouteConnecti
 */
 export class ExpressRouteConnection extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_express_route_connection";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -172,11 +177,11 @@ export class ExpressRouteConnection extends cdktf.TerraformResource {
   }
 
   // enable_internet_security - computed: false, optional: true, required: false
-  private _enableInternetSecurity?: boolean;
+  private _enableInternetSecurity?: boolean | cdktf.IResolvable;
   public get enableInternetSecurity() {
     return this.getBooleanAttribute('enable_internet_security');
   }
-  public set enableInternetSecurity(value: boolean ) {
+  public set enableInternetSecurity(value: boolean | cdktf.IResolvable ) {
     this._enableInternetSecurity = value;
   }
   public resetEnableInternetSecurity() {

@@ -81,6 +81,11 @@ function apiManagementApiVersionSetTimeoutsToTerraform(struct?: ApiManagementApi
 */
 export class ApiManagementApiVersionSet extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_api_management_api_version_set";
+
   // ===========
   // INITIALIZER
   // ===========

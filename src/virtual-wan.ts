@@ -10,15 +10,15 @@ export interface VirtualWanConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_wan.html#allow_branch_to_branch_traffic VirtualWan#allow_branch_to_branch_traffic}
   */
-  readonly allowBranchToBranchTraffic?: boolean;
+  readonly allowBranchToBranchTraffic?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_wan.html#allow_vnet_to_vnet_traffic VirtualWan#allow_vnet_to_vnet_traffic}
   */
-  readonly allowVnetToVnetTraffic?: boolean;
+  readonly allowVnetToVnetTraffic?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_wan.html#disable_vpn_encryption VirtualWan#disable_vpn_encryption}
   */
-  readonly disableVpnEncryption?: boolean;
+  readonly disableVpnEncryption?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_wan.html#location VirtualWan#location}
   */
@@ -38,7 +38,7 @@ export interface VirtualWanConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_wan.html#tags VirtualWan#tags}
   */
-  readonly tags?: { [key: string]: string };
+  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_wan.html#type VirtualWan#type}
   */
@@ -85,6 +85,11 @@ function virtualWanTimeoutsToTerraform(struct?: VirtualWanTimeouts): any {
 */
 export class VirtualWan extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_virtual_wan";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -124,11 +129,11 @@ export class VirtualWan extends cdktf.TerraformResource {
   // ==========
 
   // allow_branch_to_branch_traffic - computed: false, optional: true, required: false
-  private _allowBranchToBranchTraffic?: boolean;
+  private _allowBranchToBranchTraffic?: boolean | cdktf.IResolvable;
   public get allowBranchToBranchTraffic() {
     return this.getBooleanAttribute('allow_branch_to_branch_traffic');
   }
-  public set allowBranchToBranchTraffic(value: boolean ) {
+  public set allowBranchToBranchTraffic(value: boolean | cdktf.IResolvable ) {
     this._allowBranchToBranchTraffic = value;
   }
   public resetAllowBranchToBranchTraffic() {
@@ -140,11 +145,11 @@ export class VirtualWan extends cdktf.TerraformResource {
   }
 
   // allow_vnet_to_vnet_traffic - computed: false, optional: true, required: false
-  private _allowVnetToVnetTraffic?: boolean;
+  private _allowVnetToVnetTraffic?: boolean | cdktf.IResolvable;
   public get allowVnetToVnetTraffic() {
     return this.getBooleanAttribute('allow_vnet_to_vnet_traffic');
   }
-  public set allowVnetToVnetTraffic(value: boolean ) {
+  public set allowVnetToVnetTraffic(value: boolean | cdktf.IResolvable ) {
     this._allowVnetToVnetTraffic = value;
   }
   public resetAllowVnetToVnetTraffic() {
@@ -156,11 +161,11 @@ export class VirtualWan extends cdktf.TerraformResource {
   }
 
   // disable_vpn_encryption - computed: false, optional: true, required: false
-  private _disableVpnEncryption?: boolean;
+  private _disableVpnEncryption?: boolean | cdktf.IResolvable;
   public get disableVpnEncryption() {
     return this.getBooleanAttribute('disable_vpn_encryption');
   }
-  public set disableVpnEncryption(value: boolean ) {
+  public set disableVpnEncryption(value: boolean | cdktf.IResolvable ) {
     this._disableVpnEncryption = value;
   }
   public resetDisableVpnEncryption() {
@@ -232,11 +237,11 @@ export class VirtualWan extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string };
+  private _tags?: { [key: string]: string } | cdktf.IResolvable;
   public get tags() {
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._tags = value;
   }
   public resetTags() {

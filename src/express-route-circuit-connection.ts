@@ -73,6 +73,11 @@ function expressRouteCircuitConnectionTimeoutsToTerraform(struct?: ExpressRouteC
 */
 export class ExpressRouteCircuitConnection extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_express_route_circuit_connection";
+
   // ===========
   // INITIALIZER
   // ===========

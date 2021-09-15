@@ -10,11 +10,11 @@ export interface DataFactoryTriggerTumblingWindowConfig extends cdktf.TerraformM
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_trigger_tumbling_window.html#activated DataFactoryTriggerTumblingWindow#activated}
   */
-  readonly activated?: boolean;
+  readonly activated?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_trigger_tumbling_window.html#additional_properties DataFactoryTriggerTumblingWindow#additional_properties}
   */
-  readonly additionalProperties?: { [key: string]: string };
+  readonly additionalProperties?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_trigger_tumbling_window.html#annotations DataFactoryTriggerTumblingWindow#annotations}
   */
@@ -88,7 +88,7 @@ export interface DataFactoryTriggerTumblingWindowPipeline {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_trigger_tumbling_window.html#parameters DataFactoryTriggerTumblingWindow#parameters}
   */
-  readonly parameters?: { [key: string]: string };
+  readonly parameters?: { [key: string]: string } | cdktf.IResolvable;
 }
 
 function dataFactoryTriggerTumblingWindowPipelineToTerraform(struct?: DataFactoryTriggerTumblingWindowPipeline): any {
@@ -177,6 +177,11 @@ function dataFactoryTriggerTumblingWindowTriggerDependencyToTerraform(struct?: D
 */
 export class DataFactoryTriggerTumblingWindow extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_data_factory_trigger_tumbling_window";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -222,11 +227,11 @@ export class DataFactoryTriggerTumblingWindow extends cdktf.TerraformResource {
   // ==========
 
   // activated - computed: false, optional: true, required: false
-  private _activated?: boolean;
+  private _activated?: boolean | cdktf.IResolvable;
   public get activated() {
     return this.getBooleanAttribute('activated');
   }
-  public set activated(value: boolean ) {
+  public set activated(value: boolean | cdktf.IResolvable ) {
     this._activated = value;
   }
   public resetActivated() {
@@ -238,11 +243,11 @@ export class DataFactoryTriggerTumblingWindow extends cdktf.TerraformResource {
   }
 
   // additional_properties - computed: false, optional: true, required: false
-  private _additionalProperties?: { [key: string]: string };
+  private _additionalProperties?: { [key: string]: string } | cdktf.IResolvable;
   public get additionalProperties() {
     return this.interpolationForAttribute('additional_properties') as any;
   }
-  public set additionalProperties(value: { [key: string]: string } ) {
+  public set additionalProperties(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._additionalProperties = value;
   }
   public resetAdditionalProperties() {

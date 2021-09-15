@@ -92,7 +92,7 @@ export interface CosmosdbMongoCollectionIndex {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_mongo_collection.html#unique CosmosdbMongoCollection#unique}
   */
-  readonly unique?: boolean;
+  readonly unique?: boolean | cdktf.IResolvable;
 }
 
 function cosmosdbMongoCollectionIndexToTerraform(struct?: CosmosdbMongoCollectionIndex): any {
@@ -137,6 +137,11 @@ function cosmosdbMongoCollectionTimeoutsToTerraform(struct?: CosmosdbMongoCollec
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_mongo_collection.html azurerm_cosmosdb_mongo_collection}
 */
 export class CosmosdbMongoCollection extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_cosmosdb_mongo_collection";
 
   // ===========
   // INITIALIZER

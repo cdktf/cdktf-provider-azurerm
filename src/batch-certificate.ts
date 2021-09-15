@@ -77,6 +77,11 @@ function batchCertificateTimeoutsToTerraform(struct?: BatchCertificateTimeouts):
 */
 export class BatchCertificate extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_batch_certificate";
+
   // ===========
   // INITIALIZER
   // ===========

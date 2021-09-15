@@ -81,6 +81,11 @@ function securityCenterAssessmentPolicyTimeoutsToTerraform(struct?: SecurityCent
 */
 export class SecurityCenterAssessmentPolicy extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_security_center_assessment_policy";
+
   // ===========
   // INITIALIZER
   // ===========

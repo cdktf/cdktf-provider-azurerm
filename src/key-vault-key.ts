@@ -42,7 +42,7 @@ export interface KeyVaultKeyConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_key.html#tags KeyVaultKey#tags}
   */
-  readonly tags?: { [key: string]: string };
+  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * timeouts block
   * 
@@ -84,6 +84,11 @@ function keyVaultKeyTimeoutsToTerraform(struct?: KeyVaultKeyTimeouts): any {
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_key.html azurerm_key_vault_key}
 */
 export class KeyVaultKey extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_key_vault_key";
 
   // ===========
   // INITIALIZER
@@ -255,11 +260,11 @@ export class KeyVaultKey extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string };
+  private _tags?: { [key: string]: string } | cdktf.IResolvable;
   public get tags() {
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._tags = value;
   }
   public resetTags() {

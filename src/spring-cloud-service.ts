@@ -26,7 +26,7 @@ export interface SpringCloudServiceConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_service.html#tags SpringCloudService#tags}
   */
-  readonly tags?: { [key: string]: string };
+  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * config_server_git_setting block
   * 
@@ -133,7 +133,7 @@ export interface SpringCloudServiceConfigServerGitSettingRepositorySshAuth {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_service.html#strict_host_key_checking_enabled SpringCloudService#strict_host_key_checking_enabled}
   */
-  readonly strictHostKeyCheckingEnabled?: boolean;
+  readonly strictHostKeyCheckingEnabled?: boolean | cdktf.IResolvable;
 }
 
 function springCloudServiceConfigServerGitSettingRepositorySshAuthToTerraform(struct?: SpringCloudServiceConfigServerGitSettingRepositorySshAuth): any {
@@ -210,7 +210,7 @@ export interface SpringCloudServiceConfigServerGitSettingSshAuth {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_service.html#strict_host_key_checking_enabled SpringCloudService#strict_host_key_checking_enabled}
   */
-  readonly strictHostKeyCheckingEnabled?: boolean;
+  readonly strictHostKeyCheckingEnabled?: boolean | cdktf.IResolvable;
 }
 
 function springCloudServiceConfigServerGitSettingSshAuthToTerraform(struct?: SpringCloudServiceConfigServerGitSettingSshAuth): any {
@@ -356,6 +356,11 @@ function springCloudServiceTraceToTerraform(struct?: SpringCloudServiceTrace): a
 */
 export class SpringCloudService extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_spring_cloud_service";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -464,11 +469,11 @@ export class SpringCloudService extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string };
+  private _tags?: { [key: string]: string } | cdktf.IResolvable;
   public get tags() {
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._tags = value;
   }
   public resetTags() {

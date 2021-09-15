@@ -30,11 +30,11 @@ export interface ImageConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/image.html#tags Image#tags}
   */
-  readonly tags?: { [key: string]: string };
+  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/image.html#zone_resilient Image#zone_resilient}
   */
-  readonly zoneResilient?: boolean;
+  readonly zoneResilient?: boolean | cdktf.IResolvable;
   /**
   * data_disk block
   * 
@@ -162,6 +162,11 @@ function imageTimeoutsToTerraform(struct?: ImageTimeouts): any {
 */
 export class Image extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_image";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -277,11 +282,11 @@ export class Image extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string };
+  private _tags?: { [key: string]: string } | cdktf.IResolvable;
   public get tags() {
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._tags = value;
   }
   public resetTags() {
@@ -293,11 +298,11 @@ export class Image extends cdktf.TerraformResource {
   }
 
   // zone_resilient - computed: false, optional: true, required: false
-  private _zoneResilient?: boolean;
+  private _zoneResilient?: boolean | cdktf.IResolvable;
   public get zoneResilient() {
     return this.getBooleanAttribute('zone_resilient');
   }
-  public set zoneResilient(value: boolean ) {
+  public set zoneResilient(value: boolean | cdktf.IResolvable ) {
     this._zoneResilient = value;
   }
   public resetZoneResilient() {

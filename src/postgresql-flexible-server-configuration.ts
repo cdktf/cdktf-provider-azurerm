@@ -61,6 +61,11 @@ function postgresqlFlexibleServerConfigurationTimeoutsToTerraform(struct?: Postg
 */
 export class PostgresqlFlexibleServerConfiguration extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_postgresql_flexible_server_configuration";
+
   // ===========
   // INITIALIZER
   // ===========

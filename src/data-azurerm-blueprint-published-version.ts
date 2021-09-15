@@ -46,6 +46,11 @@ function dataAzurermBlueprintPublishedVersionTimeoutsToTerraform(struct?: DataAz
 */
 export class DataAzurermBlueprintPublishedVersion extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_blueprint_published_version";
+
   // ===========
   // INITIALIZER
   // ===========

@@ -14,7 +14,7 @@ export interface AppServiceManagedCertificateConfig extends cdktf.TerraformMetaA
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_managed_certificate.html#tags AppServiceManagedCertificate#tags}
   */
-  readonly tags?: { [key: string]: string };
+  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * timeouts block
   * 
@@ -56,6 +56,11 @@ function appServiceManagedCertificateTimeoutsToTerraform(struct?: AppServiceMana
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_managed_certificate.html azurerm_app_service_managed_certificate}
 */
 export class AppServiceManagedCertificate extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_app_service_managed_certificate";
 
   // ===========
   // INITIALIZER
@@ -142,11 +147,11 @@ export class AppServiceManagedCertificate extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string };
+  private _tags?: { [key: string]: string } | cdktf.IResolvable;
   public get tags() {
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._tags = value;
   }
   public resetTags() {

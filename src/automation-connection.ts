@@ -30,7 +30,7 @@ export interface AutomationConnectionConfig extends cdktf.TerraformMetaArguments
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_connection.html#values AutomationConnection#values}
   */
-  readonly values: { [key: string]: string };
+  readonly values: { [key: string]: string } | cdktf.IResolvable;
   /**
   * timeouts block
   * 
@@ -72,6 +72,11 @@ function automationConnectionTimeoutsToTerraform(struct?: AutomationConnectionTi
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/automation_connection.html azurerm_automation_connection}
 */
 export class AutomationConnection extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_automation_connection";
 
   // ===========
   // INITIALIZER
@@ -182,11 +187,11 @@ export class AutomationConnection extends cdktf.TerraformResource {
   }
 
   // values - computed: false, optional: false, required: true
-  private _values: { [key: string]: string };
+  private _values: { [key: string]: string } | cdktf.IResolvable;
   public get values() {
     return this.interpolationForAttribute('values') as any;
   }
-  public set values(value: { [key: string]: string }) {
+  public set values(value: { [key: string]: string } | cdktf.IResolvable) {
     this._values = value;
   }
   // Temporarily expose input value. Use with caution.

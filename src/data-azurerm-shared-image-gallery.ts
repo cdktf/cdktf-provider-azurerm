@@ -42,6 +42,11 @@ function dataAzurermSharedImageGalleryTimeoutsToTerraform(struct?: DataAzurermSh
 */
 export class DataAzurermSharedImageGallery extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_shared_image_gallery";
+
   // ===========
   // INITIALIZER
   // ===========

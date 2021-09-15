@@ -54,6 +54,11 @@ function dataAzurermBatchAccountTimeoutsToTerraform(struct?: DataAzurermBatchAcc
 */
 export class DataAzurermBatchAccount extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_batch_account";
+
   // ===========
   // INITIALIZER
   // ===========

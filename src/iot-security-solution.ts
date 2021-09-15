@@ -14,7 +14,7 @@ export interface IotSecuritySolutionConfig extends cdktf.TerraformMetaArguments 
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_security_solution.html#enabled IotSecuritySolution#enabled}
   */
-  readonly enabled?: boolean;
+  readonly enabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_security_solution.html#events_to_export IotSecuritySolution#events_to_export}
   */
@@ -34,7 +34,7 @@ export interface IotSecuritySolutionConfig extends cdktf.TerraformMetaArguments 
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_security_solution.html#log_unmasked_ips_enabled IotSecuritySolution#log_unmasked_ips_enabled}
   */
-  readonly logUnmaskedIpsEnabled?: boolean;
+  readonly logUnmaskedIpsEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_security_solution.html#name IotSecuritySolution#name}
   */
@@ -54,7 +54,7 @@ export interface IotSecuritySolutionConfig extends cdktf.TerraformMetaArguments 
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_security_solution.html#tags IotSecuritySolution#tags}
   */
-  readonly tags?: { [key: string]: string };
+  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * recommendations_enabled block
   * 
@@ -72,67 +72,67 @@ export interface IotSecuritySolutionRecommendationsEnabled {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_security_solution.html#acr_authentication IotSecuritySolution#acr_authentication}
   */
-  readonly acrAuthentication?: boolean;
+  readonly acrAuthentication?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_security_solution.html#agent_send_unutilized_msg IotSecuritySolution#agent_send_unutilized_msg}
   */
-  readonly agentSendUnutilizedMsg?: boolean;
+  readonly agentSendUnutilizedMsg?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_security_solution.html#baseline IotSecuritySolution#baseline}
   */
-  readonly baseline?: boolean;
+  readonly baseline?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_security_solution.html#edge_hub_mem_optimize IotSecuritySolution#edge_hub_mem_optimize}
   */
-  readonly edgeHubMemOptimize?: boolean;
+  readonly edgeHubMemOptimize?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_security_solution.html#edge_logging_option IotSecuritySolution#edge_logging_option}
   */
-  readonly edgeLoggingOption?: boolean;
+  readonly edgeLoggingOption?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_security_solution.html#inconsistent_module_settings IotSecuritySolution#inconsistent_module_settings}
   */
-  readonly inconsistentModuleSettings?: boolean;
+  readonly inconsistentModuleSettings?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_security_solution.html#install_agent IotSecuritySolution#install_agent}
   */
-  readonly installAgent?: boolean;
+  readonly installAgent?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_security_solution.html#ip_filter_deny_all IotSecuritySolution#ip_filter_deny_all}
   */
-  readonly ipFilterDenyAll?: boolean;
+  readonly ipFilterDenyAll?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_security_solution.html#ip_filter_permissive_rule IotSecuritySolution#ip_filter_permissive_rule}
   */
-  readonly ipFilterPermissiveRule?: boolean;
+  readonly ipFilterPermissiveRule?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_security_solution.html#open_ports IotSecuritySolution#open_ports}
   */
-  readonly openPorts?: boolean;
+  readonly openPorts?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_security_solution.html#permissive_firewall_policy IotSecuritySolution#permissive_firewall_policy}
   */
-  readonly permissiveFirewallPolicy?: boolean;
+  readonly permissiveFirewallPolicy?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_security_solution.html#permissive_input_firewall_rules IotSecuritySolution#permissive_input_firewall_rules}
   */
-  readonly permissiveInputFirewallRules?: boolean;
+  readonly permissiveInputFirewallRules?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_security_solution.html#permissive_output_firewall_rules IotSecuritySolution#permissive_output_firewall_rules}
   */
-  readonly permissiveOutputFirewallRules?: boolean;
+  readonly permissiveOutputFirewallRules?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_security_solution.html#privileged_docker_options IotSecuritySolution#privileged_docker_options}
   */
-  readonly privilegedDockerOptions?: boolean;
+  readonly privilegedDockerOptions?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_security_solution.html#shared_credentials IotSecuritySolution#shared_credentials}
   */
-  readonly sharedCredentials?: boolean;
+  readonly sharedCredentials?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_security_solution.html#vulnerable_tls_cipher_suite IotSecuritySolution#vulnerable_tls_cipher_suite}
   */
-  readonly vulnerableTlsCipherSuite?: boolean;
+  readonly vulnerableTlsCipherSuite?: boolean | cdktf.IResolvable;
 }
 
 function iotSecuritySolutionRecommendationsEnabledToTerraform(struct?: IotSecuritySolutionRecommendationsEnabled): any {
@@ -192,6 +192,11 @@ function iotSecuritySolutionTimeoutsToTerraform(struct?: IotSecuritySolutionTime
 */
 export class IotSecuritySolution extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_iot_security_solution";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -248,11 +253,11 @@ export class IotSecuritySolution extends cdktf.TerraformResource {
   }
 
   // enabled - computed: false, optional: true, required: false
-  private _enabled?: boolean;
+  private _enabled?: boolean | cdktf.IResolvable;
   public get enabled() {
     return this.getBooleanAttribute('enabled');
   }
-  public set enabled(value: boolean ) {
+  public set enabled(value: boolean | cdktf.IResolvable ) {
     this._enabled = value;
   }
   public resetEnabled() {
@@ -327,11 +332,11 @@ export class IotSecuritySolution extends cdktf.TerraformResource {
   }
 
   // log_unmasked_ips_enabled - computed: false, optional: true, required: false
-  private _logUnmaskedIpsEnabled?: boolean;
+  private _logUnmaskedIpsEnabled?: boolean | cdktf.IResolvable;
   public get logUnmaskedIpsEnabled() {
     return this.getBooleanAttribute('log_unmasked_ips_enabled');
   }
-  public set logUnmaskedIpsEnabled(value: boolean ) {
+  public set logUnmaskedIpsEnabled(value: boolean | cdktf.IResolvable ) {
     this._logUnmaskedIpsEnabled = value;
   }
   public resetLogUnmaskedIpsEnabled() {
@@ -401,11 +406,11 @@ export class IotSecuritySolution extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string };
+  private _tags?: { [key: string]: string } | cdktf.IResolvable;
   public get tags() {
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._tags = value;
   }
   public resetTags() {

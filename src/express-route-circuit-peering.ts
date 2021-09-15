@@ -176,6 +176,11 @@ function expressRouteCircuitPeeringTimeoutsToTerraform(struct?: ExpressRouteCirc
 */
 export class ExpressRouteCircuitPeering extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_express_route_circuit_peering";
+
   // ===========
   // INITIALIZER
   // ===========

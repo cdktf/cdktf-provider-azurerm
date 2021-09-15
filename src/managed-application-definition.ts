@@ -38,7 +38,7 @@ export interface ManagedApplicationDefinitionConfig extends cdktf.TerraformMetaA
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/managed_application_definition.html#package_enabled ManagedApplicationDefinition#package_enabled}
   */
-  readonly packageEnabled?: boolean;
+  readonly packageEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/managed_application_definition.html#package_file_uri ManagedApplicationDefinition#package_file_uri}
   */
@@ -50,7 +50,7 @@ export interface ManagedApplicationDefinitionConfig extends cdktf.TerraformMetaA
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/managed_application_definition.html#tags ManagedApplicationDefinition#tags}
   */
-  readonly tags?: { [key: string]: string };
+  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * authorization block
   * 
@@ -117,6 +117,11 @@ function managedApplicationDefinitionTimeoutsToTerraform(struct?: ManagedApplica
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/managed_application_definition.html azurerm_managed_application_definition}
 */
 export class ManagedApplicationDefinition extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_managed_application_definition";
 
   // ===========
   // INITIALIZER
@@ -265,11 +270,11 @@ export class ManagedApplicationDefinition extends cdktf.TerraformResource {
   }
 
   // package_enabled - computed: false, optional: true, required: false
-  private _packageEnabled?: boolean;
+  private _packageEnabled?: boolean | cdktf.IResolvable;
   public get packageEnabled() {
     return this.getBooleanAttribute('package_enabled');
   }
-  public set packageEnabled(value: boolean ) {
+  public set packageEnabled(value: boolean | cdktf.IResolvable ) {
     this._packageEnabled = value;
   }
   public resetPackageEnabled() {
@@ -310,11 +315,11 @@ export class ManagedApplicationDefinition extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string };
+  private _tags?: { [key: string]: string } | cdktf.IResolvable;
   public get tags() {
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._tags = value;
   }
   public resetTags() {

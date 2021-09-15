@@ -10,11 +10,11 @@ export interface DevTestWindowsVirtualMachineConfig extends cdktf.TerraformMetaA
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_windows_virtual_machine.html#allow_claim DevTestWindowsVirtualMachine#allow_claim}
   */
-  readonly allowClaim?: boolean;
+  readonly allowClaim?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_windows_virtual_machine.html#disallow_public_ip_address DevTestWindowsVirtualMachine#disallow_public_ip_address}
   */
-  readonly disallowPublicIpAddress?: boolean;
+  readonly disallowPublicIpAddress?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_windows_virtual_machine.html#lab_name DevTestWindowsVirtualMachine#lab_name}
   */
@@ -58,7 +58,7 @@ export interface DevTestWindowsVirtualMachineConfig extends cdktf.TerraformMetaA
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_windows_virtual_machine.html#tags DevTestWindowsVirtualMachine#tags}
   */
-  readonly tags?: { [key: string]: string };
+  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_windows_virtual_machine.html#username DevTestWindowsVirtualMachine#username}
   */
@@ -165,6 +165,11 @@ function devTestWindowsVirtualMachineTimeoutsToTerraform(struct?: DevTestWindows
 */
 export class DevTestWindowsVirtualMachine extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_dev_test_windows_virtual_machine";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -211,11 +216,11 @@ export class DevTestWindowsVirtualMachine extends cdktf.TerraformResource {
   // ==========
 
   // allow_claim - computed: false, optional: true, required: false
-  private _allowClaim?: boolean;
+  private _allowClaim?: boolean | cdktf.IResolvable;
   public get allowClaim() {
     return this.getBooleanAttribute('allow_claim');
   }
-  public set allowClaim(value: boolean ) {
+  public set allowClaim(value: boolean | cdktf.IResolvable ) {
     this._allowClaim = value;
   }
   public resetAllowClaim() {
@@ -227,11 +232,11 @@ export class DevTestWindowsVirtualMachine extends cdktf.TerraformResource {
   }
 
   // disallow_public_ip_address - computed: false, optional: true, required: false
-  private _disallowPublicIpAddress?: boolean;
+  private _disallowPublicIpAddress?: boolean | cdktf.IResolvable;
   public get disallowPublicIpAddress() {
     return this.getBooleanAttribute('disallow_public_ip_address');
   }
-  public set disallowPublicIpAddress(value: boolean ) {
+  public set disallowPublicIpAddress(value: boolean | cdktf.IResolvable ) {
     this._disallowPublicIpAddress = value;
   }
   public resetDisallowPublicIpAddress() {
@@ -386,11 +391,11 @@ export class DevTestWindowsVirtualMachine extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string };
+  private _tags?: { [key: string]: string } | cdktf.IResolvable;
   public get tags() {
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._tags = value;
   }
   public resetTags() {

@@ -26,11 +26,11 @@ export interface HdinsightRserverClusterConfig extends cdktf.TerraformMetaArgume
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_rserver_cluster.html#rstudio HdinsightRserverCluster#rstudio}
   */
-  readonly rstudio: boolean;
+  readonly rstudio: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_rserver_cluster.html#tags HdinsightRserverCluster#tags}
   */
-  readonly tags?: { [key: string]: string };
+  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_rserver_cluster.html#tier HdinsightRserverCluster#tier}
   */
@@ -68,7 +68,7 @@ export interface HdinsightRserverClusterGateway {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_rserver_cluster.html#enabled HdinsightRserverCluster#enabled}
   */
-  readonly enabled?: boolean;
+  readonly enabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_rserver_cluster.html#password HdinsightRserverCluster#password}
   */
@@ -295,7 +295,7 @@ export interface HdinsightRserverClusterStorageAccount {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_rserver_cluster.html#is_default HdinsightRserverCluster#is_default}
   */
-  readonly isDefault: boolean;
+  readonly isDefault: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_rserver_cluster.html#storage_account_key HdinsightRserverCluster#storage_account_key}
   */
@@ -349,6 +349,11 @@ function hdinsightRserverClusterTimeoutsToTerraform(struct?: HdinsightRserverClu
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_rserver_cluster.html azurerm_hdinsight_rserver_cluster}
 */
 export class HdinsightRserverCluster extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_hdinsight_rserver_cluster";
 
   // ===========
   // INITIALIZER
@@ -458,11 +463,11 @@ export class HdinsightRserverCluster extends cdktf.TerraformResource {
   }
 
   // rstudio - computed: false, optional: false, required: true
-  private _rstudio: boolean;
+  private _rstudio: boolean | cdktf.IResolvable;
   public get rstudio() {
     return this.getBooleanAttribute('rstudio');
   }
-  public set rstudio(value: boolean) {
+  public set rstudio(value: boolean | cdktf.IResolvable) {
     this._rstudio = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -476,11 +481,11 @@ export class HdinsightRserverCluster extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string };
+  private _tags?: { [key: string]: string } | cdktf.IResolvable;
   public get tags() {
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._tags = value;
   }
   public resetTags() {

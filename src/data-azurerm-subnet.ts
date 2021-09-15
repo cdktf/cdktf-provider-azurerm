@@ -46,6 +46,11 @@ function dataAzurermSubnetTimeoutsToTerraform(struct?: DataAzurermSubnetTimeouts
 */
 export class DataAzurermSubnet extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_subnet";
+
   // ===========
   // INITIALIZER
   // ===========

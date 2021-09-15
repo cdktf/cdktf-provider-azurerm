@@ -34,7 +34,7 @@ export interface FirewallPolicyConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_policy.html#tags FirewallPolicy#tags}
   */
-  readonly tags?: { [key: string]: string };
+  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_policy.html#threat_intelligence_mode FirewallPolicy#threat_intelligence_mode}
   */
@@ -45,6 +45,18 @@ export interface FirewallPolicyConfig extends cdktf.TerraformMetaArguments {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_policy.html#dns FirewallPolicy#dns}
   */
   readonly dns?: FirewallPolicyDns[];
+  /**
+  * identity block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_policy.html#identity FirewallPolicy#identity}
+  */
+  readonly identity?: FirewallPolicyIdentity[];
+  /**
+  * intrusion_detection block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_policy.html#intrusion_detection FirewallPolicy#intrusion_detection}
+  */
+  readonly intrusionDetection?: FirewallPolicyIntrusionDetection[];
   /**
   * threat_intelligence_allowlist block
   * 
@@ -57,16 +69,22 @@ export interface FirewallPolicyConfig extends cdktf.TerraformMetaArguments {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_policy.html#timeouts FirewallPolicy#timeouts}
   */
   readonly timeouts?: FirewallPolicyTimeouts;
+  /**
+  * tls_certificate block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_policy.html#tls_certificate FirewallPolicy#tls_certificate}
+  */
+  readonly tlsCertificate?: FirewallPolicyTlsCertificate[];
 }
 export interface FirewallPolicyDns {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_policy.html#network_rule_fqdn_enabled FirewallPolicy#network_rule_fqdn_enabled}
   */
-  readonly networkRuleFqdnEnabled?: boolean;
+  readonly networkRuleFqdnEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_policy.html#proxy_enabled FirewallPolicy#proxy_enabled}
   */
-  readonly proxyEnabled?: boolean;
+  readonly proxyEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_policy.html#servers FirewallPolicy#servers}
   */
@@ -79,6 +97,121 @@ function firewallPolicyDnsToTerraform(struct?: FirewallPolicyDns): any {
     network_rule_fqdn_enabled: cdktf.booleanToTerraform(struct!.networkRuleFqdnEnabled),
     proxy_enabled: cdktf.booleanToTerraform(struct!.proxyEnabled),
     servers: cdktf.listMapper(cdktf.stringToTerraform)(struct!.servers),
+  }
+}
+
+export interface FirewallPolicyIdentity {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_policy.html#type FirewallPolicy#type}
+  */
+  readonly type: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_policy.html#user_assigned_identity_ids FirewallPolicy#user_assigned_identity_ids}
+  */
+  readonly userAssignedIdentityIds?: string[];
+}
+
+function firewallPolicyIdentityToTerraform(struct?: FirewallPolicyIdentity): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    type: cdktf.stringToTerraform(struct!.type),
+    user_assigned_identity_ids: cdktf.listMapper(cdktf.stringToTerraform)(struct!.userAssignedIdentityIds),
+  }
+}
+
+export interface FirewallPolicyIntrusionDetectionSignatureOverrides {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_policy.html#id FirewallPolicy#id}
+  */
+  readonly id?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_policy.html#state FirewallPolicy#state}
+  */
+  readonly state?: string;
+}
+
+function firewallPolicyIntrusionDetectionSignatureOverridesToTerraform(struct?: FirewallPolicyIntrusionDetectionSignatureOverrides): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    id: cdktf.stringToTerraform(struct!.id),
+    state: cdktf.stringToTerraform(struct!.state),
+  }
+}
+
+export interface FirewallPolicyIntrusionDetectionTrafficBypass {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_policy.html#description FirewallPolicy#description}
+  */
+  readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_policy.html#destination_addresses FirewallPolicy#destination_addresses}
+  */
+  readonly destinationAddresses?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_policy.html#destination_ip_groups FirewallPolicy#destination_ip_groups}
+  */
+  readonly destinationIpGroups?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_policy.html#destination_ports FirewallPolicy#destination_ports}
+  */
+  readonly destinationPorts?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_policy.html#name FirewallPolicy#name}
+  */
+  readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_policy.html#protocol FirewallPolicy#protocol}
+  */
+  readonly protocol: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_policy.html#source_addresses FirewallPolicy#source_addresses}
+  */
+  readonly sourceAddresses?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_policy.html#source_ip_groups FirewallPolicy#source_ip_groups}
+  */
+  readonly sourceIpGroups?: string[];
+}
+
+function firewallPolicyIntrusionDetectionTrafficBypassToTerraform(struct?: FirewallPolicyIntrusionDetectionTrafficBypass): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    description: cdktf.stringToTerraform(struct!.description),
+    destination_addresses: cdktf.listMapper(cdktf.stringToTerraform)(struct!.destinationAddresses),
+    destination_ip_groups: cdktf.listMapper(cdktf.stringToTerraform)(struct!.destinationIpGroups),
+    destination_ports: cdktf.listMapper(cdktf.stringToTerraform)(struct!.destinationPorts),
+    name: cdktf.stringToTerraform(struct!.name),
+    protocol: cdktf.stringToTerraform(struct!.protocol),
+    source_addresses: cdktf.listMapper(cdktf.stringToTerraform)(struct!.sourceAddresses),
+    source_ip_groups: cdktf.listMapper(cdktf.stringToTerraform)(struct!.sourceIpGroups),
+  }
+}
+
+export interface FirewallPolicyIntrusionDetection {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_policy.html#mode FirewallPolicy#mode}
+  */
+  readonly mode?: string;
+  /**
+  * signature_overrides block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_policy.html#signature_overrides FirewallPolicy#signature_overrides}
+  */
+  readonly signatureOverrides?: FirewallPolicyIntrusionDetectionSignatureOverrides[];
+  /**
+  * traffic_bypass block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_policy.html#traffic_bypass FirewallPolicy#traffic_bypass}
+  */
+  readonly trafficBypass?: FirewallPolicyIntrusionDetectionTrafficBypass[];
+}
+
+function firewallPolicyIntrusionDetectionToTerraform(struct?: FirewallPolicyIntrusionDetection): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    mode: cdktf.stringToTerraform(struct!.mode),
+    signature_overrides: cdktf.listMapper(firewallPolicyIntrusionDetectionSignatureOverridesToTerraform)(struct!.signatureOverrides),
+    traffic_bypass: cdktf.listMapper(firewallPolicyIntrusionDetectionTrafficBypassToTerraform)(struct!.trafficBypass),
   }
 }
 
@@ -130,11 +263,35 @@ function firewallPolicyTimeoutsToTerraform(struct?: FirewallPolicyTimeouts): any
   }
 }
 
+export interface FirewallPolicyTlsCertificate {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_policy.html#key_vault_secret_id FirewallPolicy#key_vault_secret_id}
+  */
+  readonly keyVaultSecretId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_policy.html#name FirewallPolicy#name}
+  */
+  readonly name: string;
+}
+
+function firewallPolicyTlsCertificateToTerraform(struct?: FirewallPolicyTlsCertificate): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    key_vault_secret_id: cdktf.stringToTerraform(struct!.keyVaultSecretId),
+    name: cdktf.stringToTerraform(struct!.name),
+  }
+}
+
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_policy.html azurerm_firewall_policy}
 */
 export class FirewallPolicy extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_firewall_policy";
 
   // ===========
   // INITIALIZER
@@ -167,8 +324,11 @@ export class FirewallPolicy extends cdktf.TerraformResource {
     this._tags = config.tags;
     this._threatIntelligenceMode = config.threatIntelligenceMode;
     this._dns = config.dns;
+    this._identity = config.identity;
+    this._intrusionDetection = config.intrusionDetection;
     this._threatIntelligenceAllowlist = config.threatIntelligenceAllowlist;
     this._timeouts = config.timeouts;
+    this._tlsCertificate = config.tlsCertificate;
   }
 
   // ==========
@@ -283,11 +443,11 @@ export class FirewallPolicy extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string };
+  private _tags?: { [key: string]: string } | cdktf.IResolvable;
   public get tags() {
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._tags = value;
   }
   public resetTags() {
@@ -330,6 +490,38 @@ export class FirewallPolicy extends cdktf.TerraformResource {
     return this._dns
   }
 
+  // identity - computed: false, optional: true, required: false
+  private _identity?: FirewallPolicyIdentity[];
+  public get identity() {
+    return this.interpolationForAttribute('identity') as any;
+  }
+  public set identity(value: FirewallPolicyIdentity[] ) {
+    this._identity = value;
+  }
+  public resetIdentity() {
+    this._identity = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get identityInput() {
+    return this._identity
+  }
+
+  // intrusion_detection - computed: false, optional: true, required: false
+  private _intrusionDetection?: FirewallPolicyIntrusionDetection[];
+  public get intrusionDetection() {
+    return this.interpolationForAttribute('intrusion_detection') as any;
+  }
+  public set intrusionDetection(value: FirewallPolicyIntrusionDetection[] ) {
+    this._intrusionDetection = value;
+  }
+  public resetIntrusionDetection() {
+    this._intrusionDetection = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get intrusionDetectionInput() {
+    return this._intrusionDetection
+  }
+
   // threat_intelligence_allowlist - computed: false, optional: true, required: false
   private _threatIntelligenceAllowlist?: FirewallPolicyThreatIntelligenceAllowlist[];
   public get threatIntelligenceAllowlist() {
@@ -362,6 +554,22 @@ export class FirewallPolicy extends cdktf.TerraformResource {
     return this._timeouts
   }
 
+  // tls_certificate - computed: false, optional: true, required: false
+  private _tlsCertificate?: FirewallPolicyTlsCertificate[];
+  public get tlsCertificate() {
+    return this.interpolationForAttribute('tls_certificate') as any;
+  }
+  public set tlsCertificate(value: FirewallPolicyTlsCertificate[] ) {
+    this._tlsCertificate = value;
+  }
+  public resetTlsCertificate() {
+    this._tlsCertificate = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tlsCertificateInput() {
+    return this._tlsCertificate
+  }
+
   // =========
   // SYNTHESIS
   // =========
@@ -377,8 +585,11 @@ export class FirewallPolicy extends cdktf.TerraformResource {
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
       threat_intelligence_mode: cdktf.stringToTerraform(this._threatIntelligenceMode),
       dns: cdktf.listMapper(firewallPolicyDnsToTerraform)(this._dns),
+      identity: cdktf.listMapper(firewallPolicyIdentityToTerraform)(this._identity),
+      intrusion_detection: cdktf.listMapper(firewallPolicyIntrusionDetectionToTerraform)(this._intrusionDetection),
       threat_intelligence_allowlist: cdktf.listMapper(firewallPolicyThreatIntelligenceAllowlistToTerraform)(this._threatIntelligenceAllowlist),
       timeouts: firewallPolicyTimeoutsToTerraform(this._timeouts),
+      tls_certificate: cdktf.listMapper(firewallPolicyTlsCertificateToTerraform)(this._tlsCertificate),
     };
   }
 }

@@ -10,7 +10,7 @@ export interface IothubSharedAccessPolicyAConfig extends cdktf.TerraformMetaArgu
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_shared_access_policy.html#device_connect IothubSharedAccessPolicyA#device_connect}
   */
-  readonly deviceConnect?: boolean;
+  readonly deviceConnect?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_shared_access_policy.html#iothub_name IothubSharedAccessPolicyA#iothub_name}
   */
@@ -22,11 +22,11 @@ export interface IothubSharedAccessPolicyAConfig extends cdktf.TerraformMetaArgu
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_shared_access_policy.html#registry_read IothubSharedAccessPolicyA#registry_read}
   */
-  readonly registryRead?: boolean;
+  readonly registryRead?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_shared_access_policy.html#registry_write IothubSharedAccessPolicyA#registry_write}
   */
-  readonly registryWrite?: boolean;
+  readonly registryWrite?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_shared_access_policy.html#resource_group_name IothubSharedAccessPolicyA#resource_group_name}
   */
@@ -34,7 +34,7 @@ export interface IothubSharedAccessPolicyAConfig extends cdktf.TerraformMetaArgu
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_shared_access_policy.html#service_connect IothubSharedAccessPolicyA#service_connect}
   */
-  readonly serviceConnect?: boolean;
+  readonly serviceConnect?: boolean | cdktf.IResolvable;
   /**
   * timeouts block
   * 
@@ -77,6 +77,11 @@ function iothubSharedAccessPolicyTimeoutsToTerraform(struct?: IothubSharedAccess
 */
 export class IothubSharedAccessPolicyA extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_iothub_shared_access_policy";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -114,11 +119,11 @@ export class IothubSharedAccessPolicyA extends cdktf.TerraformResource {
   // ==========
 
   // device_connect - computed: false, optional: true, required: false
-  private _deviceConnect?: boolean;
+  private _deviceConnect?: boolean | cdktf.IResolvable;
   public get deviceConnect() {
     return this.getBooleanAttribute('device_connect');
   }
-  public set deviceConnect(value: boolean ) {
+  public set deviceConnect(value: boolean | cdktf.IResolvable ) {
     this._deviceConnect = value;
   }
   public resetDeviceConnect() {
@@ -171,11 +176,11 @@ export class IothubSharedAccessPolicyA extends cdktf.TerraformResource {
   }
 
   // registry_read - computed: false, optional: true, required: false
-  private _registryRead?: boolean;
+  private _registryRead?: boolean | cdktf.IResolvable;
   public get registryRead() {
     return this.getBooleanAttribute('registry_read');
   }
-  public set registryRead(value: boolean ) {
+  public set registryRead(value: boolean | cdktf.IResolvable ) {
     this._registryRead = value;
   }
   public resetRegistryRead() {
@@ -187,11 +192,11 @@ export class IothubSharedAccessPolicyA extends cdktf.TerraformResource {
   }
 
   // registry_write - computed: false, optional: true, required: false
-  private _registryWrite?: boolean;
+  private _registryWrite?: boolean | cdktf.IResolvable;
   public get registryWrite() {
     return this.getBooleanAttribute('registry_write');
   }
-  public set registryWrite(value: boolean ) {
+  public set registryWrite(value: boolean | cdktf.IResolvable ) {
     this._registryWrite = value;
   }
   public resetRegistryWrite() {
@@ -226,11 +231,11 @@ export class IothubSharedAccessPolicyA extends cdktf.TerraformResource {
   }
 
   // service_connect - computed: false, optional: true, required: false
-  private _serviceConnect?: boolean;
+  private _serviceConnect?: boolean | cdktf.IResolvable;
   public get serviceConnect() {
     return this.getBooleanAttribute('service_connect');
   }
-  public set serviceConnect(value: boolean ) {
+  public set serviceConnect(value: boolean | cdktf.IResolvable ) {
     this._serviceConnect = value;
   }
   public resetServiceConnect() {

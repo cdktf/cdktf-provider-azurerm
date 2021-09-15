@@ -30,11 +30,11 @@ export interface ServicebusNamespaceConfig extends cdktf.TerraformMetaArguments 
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_namespace.html#tags ServicebusNamespace#tags}
   */
-  readonly tags?: { [key: string]: string };
+  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_namespace.html#zone_redundant ServicebusNamespace#zone_redundant}
   */
-  readonly zoneRedundant?: boolean;
+  readonly zoneRedundant?: boolean | cdktf.IResolvable;
   /**
   * timeouts block
   * 
@@ -76,6 +76,11 @@ function servicebusNamespaceTimeoutsToTerraform(struct?: ServicebusNamespaceTime
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_namespace.html azurerm_servicebus_namespace}
 */
 export class ServicebusNamespace extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_servicebus_namespace";
 
   // ===========
   // INITIALIZER
@@ -207,11 +212,11 @@ export class ServicebusNamespace extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string };
+  private _tags?: { [key: string]: string } | cdktf.IResolvable;
   public get tags() {
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._tags = value;
   }
   public resetTags() {
@@ -223,11 +228,11 @@ export class ServicebusNamespace extends cdktf.TerraformResource {
   }
 
   // zone_redundant - computed: false, optional: true, required: false
-  private _zoneRedundant?: boolean;
+  private _zoneRedundant?: boolean | cdktf.IResolvable;
   public get zoneRedundant() {
     return this.getBooleanAttribute('zone_redundant');
   }
-  public set zoneRedundant(value: boolean ) {
+  public set zoneRedundant(value: boolean | cdktf.IResolvable ) {
     this._zoneRedundant = value;
   }
   public resetZoneRedundant() {

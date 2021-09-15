@@ -46,6 +46,11 @@ function dataAzurermAutomationVariableStringTimeoutsToTerraform(struct?: DataAzu
 */
 export class DataAzurermAutomationVariableString extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_automation_variable_string";
+
   // ===========
   // INITIALIZER
   // ===========

@@ -38,11 +38,11 @@ export interface MssqlElasticpoolConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_elasticpool.html#tags MssqlElasticpool#tags}
   */
-  readonly tags?: { [key: string]: string };
+  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_elasticpool.html#zone_redundant MssqlElasticpool#zone_redundant}
   */
-  readonly zoneRedundant?: boolean;
+  readonly zoneRedundant?: boolean | cdktf.IResolvable;
   /**
   * per_database_settings block
   * 
@@ -144,6 +144,11 @@ function mssqlElasticpoolTimeoutsToTerraform(struct?: MssqlElasticpoolTimeouts):
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_elasticpool.html azurerm_mssql_elasticpool}
 */
 export class MssqlElasticpool extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_mssql_elasticpool";
 
   // ===========
   // INITIALIZER
@@ -291,11 +296,11 @@ export class MssqlElasticpool extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string };
+  private _tags?: { [key: string]: string } | cdktf.IResolvable;
   public get tags() {
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._tags = value;
   }
   public resetTags() {
@@ -307,11 +312,11 @@ export class MssqlElasticpool extends cdktf.TerraformResource {
   }
 
   // zone_redundant - computed: false, optional: true, required: false
-  private _zoneRedundant?: boolean;
+  private _zoneRedundant?: boolean | cdktf.IResolvable;
   public get zoneRedundant() {
     return this.getBooleanAttribute('zone_redundant');
   }
-  public set zoneRedundant(value: boolean ) {
+  public set zoneRedundant(value: boolean | cdktf.IResolvable ) {
     this._zoneRedundant = value;
   }
   public resetZoneRedundant() {

@@ -57,6 +57,11 @@ function postgresqlServerKeyTimeoutsToTerraform(struct?: PostgresqlServerKeyTime
 */
 export class PostgresqlServerKey extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_postgresql_server_key";
+
   // ===========
   // INITIALIZER
   // ===========

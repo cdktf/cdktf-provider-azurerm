@@ -61,6 +61,11 @@ function servicebusNamespaceDisasterRecoveryConfigTimeoutsToTerraform(struct?: S
 */
 export class ServicebusNamespaceDisasterRecoveryConfig extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_servicebus_namespace_disaster_recovery_config";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -92,16 +97,6 @@ export class ServicebusNamespaceDisasterRecoveryConfig extends cdktf.TerraformRe
   // ==========
   // ATTRIBUTES
   // ==========
-
-  // alias_primary_connection_string - computed: true, optional: false, required: false
-  public get aliasPrimaryConnectionString() {
-    return this.getStringAttribute('alias_primary_connection_string');
-  }
-
-  // alias_secondary_connection_string - computed: true, optional: false, required: false
-  public get aliasSecondaryConnectionString() {
-    return this.getStringAttribute('alias_secondary_connection_string');
-  }
 
   // default_primary_key - computed: true, optional: false, required: false
   public get defaultPrimaryKey() {
@@ -144,6 +139,11 @@ export class ServicebusNamespaceDisasterRecoveryConfig extends cdktf.TerraformRe
     return this._partnerNamespaceId
   }
 
+  // primary_connection_string_alias - computed: true, optional: false, required: false
+  public get primaryConnectionStringAlias() {
+    return this.getStringAttribute('primary_connection_string_alias');
+  }
+
   // primary_namespace_id - computed: false, optional: false, required: true
   private _primaryNamespaceId: string;
   public get primaryNamespaceId() {
@@ -155,6 +155,11 @@ export class ServicebusNamespaceDisasterRecoveryConfig extends cdktf.TerraformRe
   // Temporarily expose input value. Use with caution.
   public get primaryNamespaceIdInput() {
     return this._primaryNamespaceId
+  }
+
+  // secondary_connection_string_alias - computed: true, optional: false, required: false
+  public get secondaryConnectionStringAlias() {
+    return this.getStringAttribute('secondary_connection_string_alias');
   }
 
   // timeouts - computed: false, optional: true, required: false

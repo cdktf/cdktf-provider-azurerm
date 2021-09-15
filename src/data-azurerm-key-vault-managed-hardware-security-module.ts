@@ -42,6 +42,11 @@ function dataAzurermKeyVaultManagedHardwareSecurityModuleTimeoutsToTerraform(str
 */
 export class DataAzurermKeyVaultManagedHardwareSecurityModule extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_key_vault_managed_hardware_security_module";
+
   // ===========
   // INITIALIZER
   // ===========

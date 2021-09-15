@@ -42,6 +42,11 @@ function dataAzurermEventhubNamespaceTimeoutsToTerraform(struct?: DataAzurermEve
 */
 export class DataAzurermEventhubNamespace extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_eventhub_namespace";
+
   // ===========
   // INITIALIZER
   // ===========

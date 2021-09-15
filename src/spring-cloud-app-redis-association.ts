@@ -26,7 +26,7 @@ export interface SpringCloudAppRedisAssociationConfig extends cdktf.TerraformMet
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_app_redis_association.html#ssl_enabled SpringCloudAppRedisAssociation#ssl_enabled}
   */
-  readonly sslEnabled?: boolean;
+  readonly sslEnabled?: boolean | cdktf.IResolvable;
   /**
   * timeouts block
   * 
@@ -68,6 +68,11 @@ function springCloudAppRedisAssociationTimeoutsToTerraform(struct?: SpringCloudA
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_app_redis_association.html azurerm_spring_cloud_app_redis_association}
 */
 export class SpringCloudAppRedisAssociation extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_spring_cloud_app_redis_association";
 
   // ===========
   // INITIALIZER
@@ -161,11 +166,11 @@ export class SpringCloudAppRedisAssociation extends cdktf.TerraformResource {
   }
 
   // ssl_enabled - computed: false, optional: true, required: false
-  private _sslEnabled?: boolean;
+  private _sslEnabled?: boolean | cdktf.IResolvable;
   public get sslEnabled() {
     return this.getBooleanAttribute('ssl_enabled');
   }
-  public set sslEnabled(value: boolean ) {
+  public set sslEnabled(value: boolean | cdktf.IResolvable ) {
     this._sslEnabled = value;
   }
   public resetSslEnabled() {

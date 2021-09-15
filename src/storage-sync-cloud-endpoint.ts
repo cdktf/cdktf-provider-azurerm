@@ -64,6 +64,11 @@ function storageSyncCloudEndpointTimeoutsToTerraform(struct?: StorageSyncCloudEn
 */
 export class StorageSyncCloudEndpoint extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_storage_sync_cloud_endpoint";
+
   // ===========
   // INITIALIZER
   // ===========

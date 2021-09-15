@@ -129,6 +129,11 @@ function firewallNatRuleCollectionTimeoutsToTerraform(struct?: FirewallNatRuleCo
 */
 export class FirewallNatRuleCollection extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_firewall_nat_rule_collection";
+
   // ===========
   // INITIALIZER
   // ===========

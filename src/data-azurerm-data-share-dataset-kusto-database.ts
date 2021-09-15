@@ -42,6 +42,11 @@ function dataAzurermDataShareDatasetKustoDatabaseTimeoutsToTerraform(struct?: Da
 */
 export class DataAzurermDataShareDatasetKustoDatabase extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_data_share_dataset_kusto_database";
+
   // ===========
   // INITIALIZER
   // ===========

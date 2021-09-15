@@ -174,6 +174,11 @@ function dataFactoryIntegrationRuntimeManagedVnetIntegrationToTerraform(struct?:
 */
 export class DataFactoryIntegrationRuntimeManaged extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_data_factory_integration_runtime_managed";
+
   // ===========
   // INITIALIZER
   // ===========

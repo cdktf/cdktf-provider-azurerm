@@ -10,7 +10,7 @@ export interface ExpressRouteCircuitConfig extends cdktf.TerraformMetaArguments 
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit.html#allow_classic_operations ExpressRouteCircuit#allow_classic_operations}
   */
-  readonly allowClassicOperations?: boolean;
+  readonly allowClassicOperations?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit.html#bandwidth_in_gbps ExpressRouteCircuit#bandwidth_in_gbps}
   */
@@ -46,7 +46,7 @@ export interface ExpressRouteCircuitConfig extends cdktf.TerraformMetaArguments 
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit.html#tags ExpressRouteCircuit#tags}
   */
-  readonly tags?: { [key: string]: string };
+  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * sku block
   * 
@@ -114,6 +114,11 @@ function expressRouteCircuitTimeoutsToTerraform(struct?: ExpressRouteCircuitTime
 */
 export class ExpressRouteCircuit extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_express_route_circuit";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -155,11 +160,11 @@ export class ExpressRouteCircuit extends cdktf.TerraformResource {
   // ==========
 
   // allow_classic_operations - computed: false, optional: true, required: false
-  private _allowClassicOperations?: boolean;
+  private _allowClassicOperations?: boolean | cdktf.IResolvable;
   public get allowClassicOperations() {
     return this.getBooleanAttribute('allow_classic_operations');
   }
-  public set allowClassicOperations(value: boolean ) {
+  public set allowClassicOperations(value: boolean | cdktf.IResolvable ) {
     this._allowClassicOperations = value;
   }
   public resetAllowClassicOperations() {
@@ -305,11 +310,11 @@ export class ExpressRouteCircuit extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string };
+  private _tags?: { [key: string]: string } | cdktf.IResolvable;
   public get tags() {
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._tags = value;
   }
   public resetTags() {

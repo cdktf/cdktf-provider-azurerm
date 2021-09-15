@@ -115,6 +115,11 @@ function streamAnalyticsReferenceInputBlobTimeoutsToTerraform(struct?: StreamAna
 */
 export class StreamAnalyticsReferenceInputBlob extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_stream_analytics_reference_input_blob";
+
   // ===========
   // INITIALIZER
   // ===========

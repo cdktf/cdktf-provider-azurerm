@@ -34,7 +34,7 @@ export interface MssqlDatabaseConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_database.html#geo_backup_enabled MssqlDatabase#geo_backup_enabled}
   */
-  readonly geoBackupEnabled?: boolean;
+  readonly geoBackupEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_database.html#license_type MssqlDatabase#license_type}
   */
@@ -58,7 +58,7 @@ export interface MssqlDatabaseConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_database.html#read_scale MssqlDatabase#read_scale}
   */
-  readonly readScale?: boolean;
+  readonly readScale?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_database.html#recover_database_id MssqlDatabase#recover_database_id}
   */
@@ -90,11 +90,11 @@ export interface MssqlDatabaseConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_database.html#tags MssqlDatabase#tags}
   */
-  readonly tags?: { [key: string]: string };
+  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_database.html#zone_redundant MssqlDatabase#zone_redundant}
   */
-  readonly zoneRedundant?: boolean;
+  readonly zoneRedundant?: boolean | cdktf.IResolvable;
   /**
   * long_term_retention_policy block
   * 
@@ -124,7 +124,7 @@ export interface MssqlDatabaseExtendedAuditingPolicy {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_database.html#log_monitoring_enabled MssqlDatabase#log_monitoring_enabled}
   */
-  readonly logMonitoringEnabled?: boolean;
+  readonly logMonitoringEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_database.html#retention_in_days MssqlDatabase#retention_in_days}
   */
@@ -136,7 +136,7 @@ export interface MssqlDatabaseExtendedAuditingPolicy {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_database.html#storage_account_access_key_is_secondary MssqlDatabase#storage_account_access_key_is_secondary}
   */
-  readonly storageAccountAccessKeyIsSecondary?: boolean;
+  readonly storageAccountAccessKeyIsSecondary?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_database.html#storage_endpoint MssqlDatabase#storage_endpoint}
   */
@@ -280,6 +280,11 @@ function mssqlDatabaseTimeoutsToTerraform(struct?: MssqlDatabaseTimeouts): any {
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_database.html azurerm_mssql_database}
 */
 export class MssqlDatabase extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_mssql_database";
 
   // ===========
   // INITIALIZER
@@ -432,11 +437,11 @@ export class MssqlDatabase extends cdktf.TerraformResource {
   }
 
   // geo_backup_enabled - computed: false, optional: true, required: false
-  private _geoBackupEnabled?: boolean;
+  private _geoBackupEnabled?: boolean | cdktf.IResolvable;
   public get geoBackupEnabled() {
     return this.getBooleanAttribute('geo_backup_enabled');
   }
-  public set geoBackupEnabled(value: boolean ) {
+  public set geoBackupEnabled(value: boolean | cdktf.IResolvable ) {
     this._geoBackupEnabled = value;
   }
   public resetGeoBackupEnabled() {
@@ -530,11 +535,11 @@ export class MssqlDatabase extends cdktf.TerraformResource {
   }
 
   // read_scale - computed: true, optional: true, required: false
-  private _readScale?: boolean;
+  private _readScale?: boolean | cdktf.IResolvable;
   public get readScale() {
     return this.getBooleanAttribute('read_scale');
   }
-  public set readScale(value: boolean) {
+  public set readScale(value: boolean | cdktf.IResolvable) {
     this._readScale = value;
   }
   public resetReadScale() {
@@ -655,11 +660,11 @@ export class MssqlDatabase extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string };
+  private _tags?: { [key: string]: string } | cdktf.IResolvable;
   public get tags() {
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._tags = value;
   }
   public resetTags() {
@@ -671,11 +676,11 @@ export class MssqlDatabase extends cdktf.TerraformResource {
   }
 
   // zone_redundant - computed: true, optional: true, required: false
-  private _zoneRedundant?: boolean;
+  private _zoneRedundant?: boolean | cdktf.IResolvable;
   public get zoneRedundant() {
     return this.getBooleanAttribute('zone_redundant');
   }
-  public set zoneRedundant(value: boolean) {
+  public set zoneRedundant(value: boolean | cdktf.IResolvable) {
     this._zoneRedundant = value;
   }
   public resetZoneRedundant() {

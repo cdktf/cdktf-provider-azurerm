@@ -62,7 +62,7 @@ export interface MonitorDiagnosticSettingLogRetentionPolicy {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_diagnostic_setting.html#enabled MonitorDiagnosticSetting#enabled}
   */
-  readonly enabled: boolean;
+  readonly enabled: boolean | cdktf.IResolvable;
 }
 
 function monitorDiagnosticSettingLogRetentionPolicyToTerraform(struct?: MonitorDiagnosticSettingLogRetentionPolicy): any {
@@ -81,7 +81,7 @@ export interface MonitorDiagnosticSettingLog {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_diagnostic_setting.html#enabled MonitorDiagnosticSetting#enabled}
   */
-  readonly enabled?: boolean;
+  readonly enabled?: boolean | cdktf.IResolvable;
   /**
   * retention_policy block
   * 
@@ -107,7 +107,7 @@ export interface MonitorDiagnosticSettingMetricRetentionPolicy {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_diagnostic_setting.html#enabled MonitorDiagnosticSetting#enabled}
   */
-  readonly enabled: boolean;
+  readonly enabled: boolean | cdktf.IResolvable;
 }
 
 function monitorDiagnosticSettingMetricRetentionPolicyToTerraform(struct?: MonitorDiagnosticSettingMetricRetentionPolicy): any {
@@ -126,7 +126,7 @@ export interface MonitorDiagnosticSettingMetric {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_diagnostic_setting.html#enabled MonitorDiagnosticSetting#enabled}
   */
-  readonly enabled?: boolean;
+  readonly enabled?: boolean | cdktf.IResolvable;
   /**
   * retention_policy block
   * 
@@ -178,6 +178,11 @@ function monitorDiagnosticSettingTimeoutsToTerraform(struct?: MonitorDiagnosticS
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_diagnostic_setting.html azurerm_monitor_diagnostic_setting}
 */
 export class MonitorDiagnosticSetting extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_monitor_diagnostic_setting";
 
   // ===========
   // INITIALIZER

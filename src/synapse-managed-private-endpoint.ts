@@ -60,6 +60,11 @@ function synapseManagedPrivateEndpointTimeoutsToTerraform(struct?: SynapseManage
 */
 export class SynapseManagedPrivateEndpoint extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_synapse_managed_private_endpoint";
+
   // ===========
   // INITIALIZER
   // ===========

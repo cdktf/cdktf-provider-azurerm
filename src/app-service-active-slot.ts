@@ -61,6 +61,11 @@ function appServiceActiveSlotTimeoutsToTerraform(struct?: AppServiceActiveSlotTi
 */
 export class AppServiceActiveSlot extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_app_service_active_slot";
+
   // ===========
   // INITIALIZER
   // ===========

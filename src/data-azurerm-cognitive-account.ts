@@ -42,6 +42,11 @@ function dataAzurermCognitiveAccountTimeoutsToTerraform(struct?: DataAzurermCogn
 */
 export class DataAzurermCognitiveAccount extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_cognitive_account";
+
   // ===========
   // INITIALIZER
   // ===========

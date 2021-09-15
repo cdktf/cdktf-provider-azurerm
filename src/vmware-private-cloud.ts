@@ -10,7 +10,7 @@ export interface VmwarePrivateCloudConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vmware_private_cloud.html#internet_connection_enabled VmwarePrivateCloud#internet_connection_enabled}
   */
-  readonly internetConnectionEnabled?: boolean;
+  readonly internetConnectionEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vmware_private_cloud.html#location VmwarePrivateCloud#location}
   */
@@ -38,7 +38,7 @@ export interface VmwarePrivateCloudConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vmware_private_cloud.html#tags VmwarePrivateCloud#tags}
   */
-  readonly tags?: { [key: string]: string };
+  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vmware_private_cloud.html#vcenter_password VmwarePrivateCloud#vcenter_password}
   */
@@ -127,6 +127,11 @@ function vmwarePrivateCloudTimeoutsToTerraform(struct?: VmwarePrivateCloudTimeou
 */
 export class VmwarePrivateCloud extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_vmware_private_cloud";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -182,11 +187,11 @@ export class VmwarePrivateCloud extends cdktf.TerraformResource {
   }
 
   // internet_connection_enabled - computed: false, optional: true, required: false
-  private _internetConnectionEnabled?: boolean;
+  private _internetConnectionEnabled?: boolean | cdktf.IResolvable;
   public get internetConnectionEnabled() {
     return this.getBooleanAttribute('internet_connection_enabled');
   }
-  public set internetConnectionEnabled(value: boolean ) {
+  public set internetConnectionEnabled(value: boolean | cdktf.IResolvable ) {
     this._internetConnectionEnabled = value;
   }
   public resetInternetConnectionEnabled() {
@@ -299,11 +304,11 @@ export class VmwarePrivateCloud extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string };
+  private _tags?: { [key: string]: string } | cdktf.IResolvable;
   public get tags() {
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._tags = value;
   }
   public resetTags() {

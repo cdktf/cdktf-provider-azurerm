@@ -68,6 +68,11 @@ function dataAzurermRoleDefinitionTimeoutsToTerraform(struct?: DataAzurermRoleDe
 */
 export class DataAzurermRoleDefinition extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_role_definition";
+
   // ===========
   // INITIALIZER
   // ===========

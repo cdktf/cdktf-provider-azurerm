@@ -30,7 +30,7 @@ export interface SentinelAlertRuleMsSecurityIncidentConfig extends cdktf.Terrafo
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_alert_rule_ms_security_incident.html#enabled SentinelAlertRuleMsSecurityIncident#enabled}
   */
-  readonly enabled?: boolean;
+  readonly enabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_alert_rule_ms_security_incident.html#log_analytics_workspace_id SentinelAlertRuleMsSecurityIncident#log_analytics_workspace_id}
   */
@@ -92,6 +92,11 @@ function sentinelAlertRuleMsSecurityIncidentTimeoutsToTerraform(struct?: Sentine
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_alert_rule_ms_security_incident.html azurerm_sentinel_alert_rule_ms_security_incident}
 */
 export class SentinelAlertRuleMsSecurityIncident extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_sentinel_alert_rule_ms_security_incident";
 
   // ===========
   // INITIALIZER
@@ -211,11 +216,11 @@ export class SentinelAlertRuleMsSecurityIncident extends cdktf.TerraformResource
   }
 
   // enabled - computed: false, optional: true, required: false
-  private _enabled?: boolean;
+  private _enabled?: boolean | cdktf.IResolvable;
   public get enabled() {
     return this.getBooleanAttribute('enabled');
   }
-  public set enabled(value: boolean ) {
+  public set enabled(value: boolean | cdktf.IResolvable ) {
     this._enabled = value;
   }
   public resetEnabled() {

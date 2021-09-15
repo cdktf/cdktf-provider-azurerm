@@ -83,6 +83,11 @@ function dataAzurermSnapshotTimeoutsToTerraform(struct?: DataAzurermSnapshotTime
 */
 export class DataAzurermSnapshot extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_snapshot";
+
   // ===========
   // INITIALIZER
   // ===========

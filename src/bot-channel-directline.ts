@@ -36,11 +36,11 @@ export interface BotChannelDirectlineSite {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_directline.html#enabled BotChannelDirectline#enabled}
   */
-  readonly enabled?: boolean;
+  readonly enabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_directline.html#enhanced_authentication_enabled BotChannelDirectline#enhanced_authentication_enabled}
   */
-  readonly enhancedAuthenticationEnabled?: boolean;
+  readonly enhancedAuthenticationEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_directline.html#name BotChannelDirectline#name}
   */
@@ -52,11 +52,11 @@ export interface BotChannelDirectlineSite {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_directline.html#v1_allowed BotChannelDirectline#v1_allowed}
   */
-  readonly v1Allowed?: boolean;
+  readonly v1Allowed?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_directline.html#v3_allowed BotChannelDirectline#v3_allowed}
   */
-  readonly v3Allowed?: boolean;
+  readonly v3Allowed?: boolean | cdktf.IResolvable;
 }
 
 function botChannelDirectlineSiteToTerraform(struct?: BotChannelDirectlineSite): any {
@@ -105,6 +105,11 @@ function botChannelDirectlineTimeoutsToTerraform(struct?: BotChannelDirectlineTi
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_directline.html azurerm_bot_channel_directline}
 */
 export class BotChannelDirectline extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_bot_channel_directline";
 
   // ===========
   // INITIALIZER

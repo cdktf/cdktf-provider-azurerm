@@ -177,6 +177,11 @@ function cosmosdbCassandraTableTimeoutsToTerraform(struct?: CosmosdbCassandraTab
 */
 export class CosmosdbCassandraTable extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_cosmosdb_cassandra_table";
+
   // ===========
   // INITIALIZER
   // ===========

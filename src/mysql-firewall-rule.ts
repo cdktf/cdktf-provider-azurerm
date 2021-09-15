@@ -69,6 +69,11 @@ function mysqlFirewallRuleTimeoutsToTerraform(struct?: MysqlFirewallRuleTimeouts
 */
 export class MysqlFirewallRule extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_mysql_firewall_rule";
+
   // ===========
   // INITIALIZER
   // ===========

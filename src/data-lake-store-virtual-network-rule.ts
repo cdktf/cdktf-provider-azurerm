@@ -65,6 +65,11 @@ function dataLakeStoreVirtualNetworkRuleTimeoutsToTerraform(struct?: DataLakeSto
 */
 export class DataLakeStoreVirtualNetworkRule extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_data_lake_store_virtual_network_rule";
+
   // ===========
   // INITIALIZER
   // ===========

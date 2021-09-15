@@ -69,6 +69,11 @@ function sqlFirewallRuleTimeoutsToTerraform(struct?: SqlFirewallRuleTimeouts): a
 */
 export class SqlFirewallRule extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_sql_firewall_rule";
+
   // ===========
   // INITIALIZER
   // ===========

@@ -48,6 +48,11 @@ function resourceProviderRegistrationTimeoutsToTerraform(struct?: ResourceProvid
 */
 export class ResourceProviderRegistration extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_resource_provider_registration";
+
   // ===========
   // INITIALIZER
   // ===========

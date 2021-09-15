@@ -18,7 +18,7 @@ export interface PolicyAssignmentConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/policy_assignment.html#enforcement_mode PolicyAssignment#enforcement_mode}
   */
-  readonly enforcementMode?: boolean;
+  readonly enforcementMode?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/policy_assignment.html#location PolicyAssignment#location}
   */
@@ -109,6 +109,11 @@ function policyAssignmentTimeoutsToTerraform(struct?: PolicyAssignmentTimeouts):
 */
 export class PolicyAssignment extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_policy_assignment";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -182,11 +187,11 @@ export class PolicyAssignment extends cdktf.TerraformResource {
   }
 
   // enforcement_mode - computed: false, optional: true, required: false
-  private _enforcementMode?: boolean;
+  private _enforcementMode?: boolean | cdktf.IResolvable;
   public get enforcementMode() {
     return this.getBooleanAttribute('enforcement_mode');
   }
-  public set enforcementMode(value: boolean ) {
+  public set enforcementMode(value: boolean | cdktf.IResolvable ) {
     this._enforcementMode = value;
   }
   public resetEnforcementMode() {

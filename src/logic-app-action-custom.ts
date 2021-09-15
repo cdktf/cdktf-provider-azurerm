@@ -61,6 +61,11 @@ function logicAppActionCustomTimeoutsToTerraform(struct?: LogicAppActionCustomTi
 */
 export class LogicAppActionCustom extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_logic_app_action_custom";
+
   // ===========
   // INITIALIZER
   // ===========

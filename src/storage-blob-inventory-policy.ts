@@ -36,11 +36,11 @@ export interface StorageBlobInventoryPolicyRulesFilter {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_blob_inventory_policy.html#include_blob_versions StorageBlobInventoryPolicy#include_blob_versions}
   */
-  readonly includeBlobVersions?: boolean;
+  readonly includeBlobVersions?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_blob_inventory_policy.html#include_snapshots StorageBlobInventoryPolicy#include_snapshots}
   */
-  readonly includeSnapshots?: boolean;
+  readonly includeSnapshots?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_blob_inventory_policy.html#prefix_match StorageBlobInventoryPolicy#prefix_match}
   */
@@ -112,6 +112,11 @@ function storageBlobInventoryPolicyTimeoutsToTerraform(struct?: StorageBlobInven
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/storage_blob_inventory_policy.html azurerm_storage_blob_inventory_policy}
 */
 export class StorageBlobInventoryPolicy extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_storage_blob_inventory_policy";
 
   // ===========
   // INITIALIZER

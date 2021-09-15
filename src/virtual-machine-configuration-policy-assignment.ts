@@ -112,6 +112,11 @@ function virtualMachineConfigurationPolicyAssignmentTimeoutsToTerraform(struct?:
 */
 export class VirtualMachineConfigurationPolicyAssignment extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_virtual_machine_configuration_policy_assignment";
+
   // ===========
   // INITIALIZER
   // ===========

@@ -66,6 +66,11 @@ function dataAzurermLbBackendAddressPoolTimeoutsToTerraform(struct?: DataAzurerm
 */
 export class DataAzurermLbBackendAddressPool extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_lb_backend_address_pool";
+
   // ===========
   // INITIALIZER
   // ===========

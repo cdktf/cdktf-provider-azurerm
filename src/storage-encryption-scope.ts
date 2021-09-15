@@ -10,7 +10,7 @@ export interface StorageEncryptionScopeConfig extends cdktf.TerraformMetaArgumen
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_encryption_scope.html#infrastructure_encryption_required StorageEncryptionScope#infrastructure_encryption_required}
   */
-  readonly infrastructureEncryptionRequired?: boolean;
+  readonly infrastructureEncryptionRequired?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_encryption_scope.html#key_vault_key_id StorageEncryptionScope#key_vault_key_id}
   */
@@ -69,6 +69,11 @@ function storageEncryptionScopeTimeoutsToTerraform(struct?: StorageEncryptionSco
 */
 export class StorageEncryptionScope extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_storage_encryption_scope";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -109,11 +114,11 @@ export class StorageEncryptionScope extends cdktf.TerraformResource {
   }
 
   // infrastructure_encryption_required - computed: false, optional: true, required: false
-  private _infrastructureEncryptionRequired?: boolean;
+  private _infrastructureEncryptionRequired?: boolean | cdktf.IResolvable;
   public get infrastructureEncryptionRequired() {
     return this.getBooleanAttribute('infrastructure_encryption_required');
   }
-  public set infrastructureEncryptionRequired(value: boolean ) {
+  public set infrastructureEncryptionRequired(value: boolean | cdktf.IResolvable ) {
     this._infrastructureEncryptionRequired = value;
   }
   public resetInfrastructureEncryptionRequired() {

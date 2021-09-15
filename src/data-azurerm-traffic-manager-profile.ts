@@ -18,11 +18,11 @@ export interface DataAzurermTrafficManagerProfileConfig extends cdktf.TerraformM
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/traffic_manager_profile.html#tags DataAzurermTrafficManagerProfile#tags}
   */
-  readonly tags?: { [key: string]: string };
+  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/traffic_manager_profile.html#traffic_view_enabled DataAzurermTrafficManagerProfile#traffic_view_enabled}
   */
-  readonly trafficViewEnabled?: boolean;
+  readonly trafficViewEnabled?: boolean | cdktf.IResolvable;
   /**
   * timeouts block
   * 
@@ -116,6 +116,11 @@ function dataAzurermTrafficManagerProfileTimeoutsToTerraform(struct?: DataAzurer
 */
 export class DataAzurermTrafficManagerProfile extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_traffic_manager_profile";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -201,11 +206,11 @@ export class DataAzurermTrafficManagerProfile extends cdktf.TerraformDataSource 
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string };
+  private _tags?: { [key: string]: string } | cdktf.IResolvable;
   public get tags() {
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._tags = value;
   }
   public resetTags() {
@@ -222,11 +227,11 @@ export class DataAzurermTrafficManagerProfile extends cdktf.TerraformDataSource 
   }
 
   // traffic_view_enabled - computed: false, optional: true, required: false
-  private _trafficViewEnabled?: boolean;
+  private _trafficViewEnabled?: boolean | cdktf.IResolvable;
   public get trafficViewEnabled() {
     return this.getBooleanAttribute('traffic_view_enabled');
   }
-  public set trafficViewEnabled(value: boolean ) {
+  public set trafficViewEnabled(value: boolean | cdktf.IResolvable ) {
     this._trafficViewEnabled = value;
   }
   public resetTrafficViewEnabled() {

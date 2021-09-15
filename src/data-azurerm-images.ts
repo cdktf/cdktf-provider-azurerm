@@ -14,7 +14,7 @@ export interface DataAzurermImagesConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/images.html#tags_filter DataAzurermImages#tags_filter}
   */
-  readonly tagsFilter?: { [key: string]: string };
+  readonly tagsFilter?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * timeouts block
   * 
@@ -133,6 +133,11 @@ function dataAzurermImagesTimeoutsToTerraform(struct?: DataAzurermImagesTimeouts
 */
 export class DataAzurermImages extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_images";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -188,11 +193,11 @@ export class DataAzurermImages extends cdktf.TerraformDataSource {
   }
 
   // tags_filter - computed: false, optional: true, required: false
-  private _tagsFilter?: { [key: string]: string };
+  private _tagsFilter?: { [key: string]: string } | cdktf.IResolvable;
   public get tagsFilter() {
     return this.interpolationForAttribute('tags_filter') as any;
   }
-  public set tagsFilter(value: { [key: string]: string } ) {
+  public set tagsFilter(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._tagsFilter = value;
   }
   public resetTagsFilter() {

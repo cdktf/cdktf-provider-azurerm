@@ -18,7 +18,7 @@ export interface PurviewAccountConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/purview_account.html#public_network_enabled PurviewAccount#public_network_enabled}
   */
-  readonly publicNetworkEnabled?: boolean;
+  readonly publicNetworkEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/purview_account.html#resource_group_name PurviewAccount#resource_group_name}
   */
@@ -30,7 +30,7 @@ export interface PurviewAccountConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/purview_account.html#tags PurviewAccount#tags}
   */
-  readonly tags?: { [key: string]: string };
+  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * timeouts block
   * 
@@ -89,6 +89,11 @@ function purviewAccountTimeoutsToTerraform(struct?: PurviewAccountTimeouts): any
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/purview_account.html azurerm_purview_account}
 */
 export class PurviewAccount extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_purview_account";
 
   // ===========
   // INITIALIZER
@@ -182,11 +187,11 @@ export class PurviewAccount extends cdktf.TerraformResource {
   }
 
   // public_network_enabled - computed: false, optional: true, required: false
-  private _publicNetworkEnabled?: boolean;
+  private _publicNetworkEnabled?: boolean | cdktf.IResolvable;
   public get publicNetworkEnabled() {
     return this.getBooleanAttribute('public_network_enabled');
   }
-  public set publicNetworkEnabled(value: boolean ) {
+  public set publicNetworkEnabled(value: boolean | cdktf.IResolvable ) {
     this._publicNetworkEnabled = value;
   }
   public resetPublicNetworkEnabled() {
@@ -229,11 +234,11 @@ export class PurviewAccount extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string };
+  private _tags?: { [key: string]: string } | cdktf.IResolvable;
   public get tags() {
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._tags = value;
   }
   public resetTags() {

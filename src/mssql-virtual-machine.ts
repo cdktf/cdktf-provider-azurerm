@@ -10,7 +10,7 @@ export interface MssqlVirtualMachineConfig extends cdktf.TerraformMetaArguments 
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_virtual_machine.html#r_services_enabled MssqlVirtualMachine#r_services_enabled}
   */
-  readonly rServicesEnabled?: boolean;
+  readonly rServicesEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_virtual_machine.html#sql_connectivity_port MssqlVirtualMachine#sql_connectivity_port}
   */
@@ -34,7 +34,7 @@ export interface MssqlVirtualMachineConfig extends cdktf.TerraformMetaArguments 
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_virtual_machine.html#tags MssqlVirtualMachine#tags}
   */
-  readonly tags?: { [key: string]: string };
+  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_virtual_machine.html#virtual_machine_id MssqlVirtualMachine#virtual_machine_id}
   */
@@ -103,7 +103,7 @@ export interface MssqlVirtualMachineAutoBackup {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_virtual_machine.html#encryption_enabled MssqlVirtualMachine#encryption_enabled}
   */
-  readonly encryptionEnabled?: boolean;
+  readonly encryptionEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_virtual_machine.html#encryption_password MssqlVirtualMachine#encryption_password}
   */
@@ -123,7 +123,7 @@ export interface MssqlVirtualMachineAutoBackup {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_virtual_machine.html#system_databases_backup_enabled MssqlVirtualMachine#system_databases_backup_enabled}
   */
-  readonly systemDatabasesBackupEnabled?: boolean;
+  readonly systemDatabasesBackupEnabled?: boolean | cdktf.IResolvable;
   /**
   * manual_schedule block
   * 
@@ -330,6 +330,11 @@ function mssqlVirtualMachineTimeoutsToTerraform(struct?: MssqlVirtualMachineTime
 */
 export class MssqlVirtualMachine extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_mssql_virtual_machine";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -377,11 +382,11 @@ export class MssqlVirtualMachine extends cdktf.TerraformResource {
   }
 
   // r_services_enabled - computed: false, optional: true, required: false
-  private _rServicesEnabled?: boolean;
+  private _rServicesEnabled?: boolean | cdktf.IResolvable;
   public get rServicesEnabled() {
     return this.getBooleanAttribute('r_services_enabled');
   }
-  public set rServicesEnabled(value: boolean ) {
+  public set rServicesEnabled(value: boolean | cdktf.IResolvable ) {
     this._rServicesEnabled = value;
   }
   public resetRServicesEnabled() {
@@ -470,11 +475,11 @@ export class MssqlVirtualMachine extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string };
+  private _tags?: { [key: string]: string } | cdktf.IResolvable;
   public get tags() {
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._tags = value;
   }
   public resetTags() {

@@ -180,7 +180,7 @@ export interface StorageManagementPolicyRule {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_management_policy.html#enabled StorageManagementPolicy#enabled}
   */
-  readonly enabled: boolean;
+  readonly enabled: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_management_policy.html#name StorageManagementPolicy#name}
   */
@@ -243,6 +243,11 @@ function storageManagementPolicyTimeoutsToTerraform(struct?: StorageManagementPo
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/storage_management_policy.html azurerm_storage_management_policy}
 */
 export class StorageManagementPolicy extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_storage_management_policy";
 
   // ===========
   // INITIALIZER

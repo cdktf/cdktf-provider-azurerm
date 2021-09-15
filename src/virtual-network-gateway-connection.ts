@@ -22,7 +22,7 @@ export interface VirtualNetworkGatewayConnectionConfig extends cdktf.TerraformMe
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_network_gateway_connection.html#enable_bgp VirtualNetworkGatewayConnection#enable_bgp}
   */
-  readonly enableBgp?: boolean;
+  readonly enableBgp?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_network_gateway_connection.html#express_route_circuit_id VirtualNetworkGatewayConnection#express_route_circuit_id}
   */
@@ -30,11 +30,11 @@ export interface VirtualNetworkGatewayConnectionConfig extends cdktf.TerraformMe
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_network_gateway_connection.html#express_route_gateway_bypass VirtualNetworkGatewayConnection#express_route_gateway_bypass}
   */
-  readonly expressRouteGatewayBypass?: boolean;
+  readonly expressRouteGatewayBypass?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_network_gateway_connection.html#local_azure_ip_address_enabled VirtualNetworkGatewayConnection#local_azure_ip_address_enabled}
   */
-  readonly localAzureIpAddressEnabled?: boolean;
+  readonly localAzureIpAddressEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_network_gateway_connection.html#local_network_gateway_id VirtualNetworkGatewayConnection#local_network_gateway_id}
   */
@@ -66,7 +66,7 @@ export interface VirtualNetworkGatewayConnectionConfig extends cdktf.TerraformMe
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_network_gateway_connection.html#tags VirtualNetworkGatewayConnection#tags}
   */
-  readonly tags?: { [key: string]: string };
+  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_network_gateway_connection.html#type VirtualNetworkGatewayConnection#type}
   */
@@ -74,7 +74,7 @@ export interface VirtualNetworkGatewayConnectionConfig extends cdktf.TerraformMe
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_network_gateway_connection.html#use_policy_based_traffic_selectors VirtualNetworkGatewayConnection#use_policy_based_traffic_selectors}
   */
-  readonly usePolicyBasedTrafficSelectors?: boolean;
+  readonly usePolicyBasedTrafficSelectors?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_network_gateway_connection.html#virtual_network_gateway_id VirtualNetworkGatewayConnection#virtual_network_gateway_id}
   */
@@ -201,6 +201,11 @@ function virtualNetworkGatewayConnectionTrafficSelectorPolicyToTerraform(struct?
 */
 export class VirtualNetworkGatewayConnection extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_virtual_network_gateway_connection";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -299,11 +304,11 @@ export class VirtualNetworkGatewayConnection extends cdktf.TerraformResource {
   }
 
   // enable_bgp - computed: true, optional: true, required: false
-  private _enableBgp?: boolean;
+  private _enableBgp?: boolean | cdktf.IResolvable;
   public get enableBgp() {
     return this.getBooleanAttribute('enable_bgp');
   }
-  public set enableBgp(value: boolean) {
+  public set enableBgp(value: boolean | cdktf.IResolvable) {
     this._enableBgp = value;
   }
   public resetEnableBgp() {
@@ -331,11 +336,11 @@ export class VirtualNetworkGatewayConnection extends cdktf.TerraformResource {
   }
 
   // express_route_gateway_bypass - computed: true, optional: true, required: false
-  private _expressRouteGatewayBypass?: boolean;
+  private _expressRouteGatewayBypass?: boolean | cdktf.IResolvable;
   public get expressRouteGatewayBypass() {
     return this.getBooleanAttribute('express_route_gateway_bypass');
   }
-  public set expressRouteGatewayBypass(value: boolean) {
+  public set expressRouteGatewayBypass(value: boolean | cdktf.IResolvable) {
     this._expressRouteGatewayBypass = value;
   }
   public resetExpressRouteGatewayBypass() {
@@ -352,11 +357,11 @@ export class VirtualNetworkGatewayConnection extends cdktf.TerraformResource {
   }
 
   // local_azure_ip_address_enabled - computed: false, optional: true, required: false
-  private _localAzureIpAddressEnabled?: boolean;
+  private _localAzureIpAddressEnabled?: boolean | cdktf.IResolvable;
   public get localAzureIpAddressEnabled() {
     return this.getBooleanAttribute('local_azure_ip_address_enabled');
   }
-  public set localAzureIpAddressEnabled(value: boolean ) {
+  public set localAzureIpAddressEnabled(value: boolean | cdktf.IResolvable ) {
     this._localAzureIpAddressEnabled = value;
   }
   public resetLocalAzureIpAddressEnabled() {
@@ -471,11 +476,11 @@ export class VirtualNetworkGatewayConnection extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string };
+  private _tags?: { [key: string]: string } | cdktf.IResolvable;
   public get tags() {
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._tags = value;
   }
   public resetTags() {
@@ -500,11 +505,11 @@ export class VirtualNetworkGatewayConnection extends cdktf.TerraformResource {
   }
 
   // use_policy_based_traffic_selectors - computed: true, optional: true, required: false
-  private _usePolicyBasedTrafficSelectors?: boolean;
+  private _usePolicyBasedTrafficSelectors?: boolean | cdktf.IResolvable;
   public get usePolicyBasedTrafficSelectors() {
     return this.getBooleanAttribute('use_policy_based_traffic_selectors');
   }
-  public set usePolicyBasedTrafficSelectors(value: boolean) {
+  public set usePolicyBasedTrafficSelectors(value: boolean | cdktf.IResolvable) {
     this._usePolicyBasedTrafficSelectors = value;
   }
   public resetUsePolicyBasedTrafficSelectors() {

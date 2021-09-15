@@ -46,6 +46,11 @@ function dataAzurermApiManagementApiVersionSetTimeoutsToTerraform(struct?: DataA
 */
 export class DataAzurermApiManagementApiVersionSet extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_api_management_api_version_set";
+
   // ===========
   // INITIALIZER
   // ===========

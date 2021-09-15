@@ -97,11 +97,11 @@ export interface ApiManagementBackendCredentials {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_backend.html#header ApiManagementBackend#header}
   */
-  readonly header?: { [key: string]: string };
+  readonly header?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_backend.html#query ApiManagementBackend#query}
   */
-  readonly query?: { [key: string]: string };
+  readonly query?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * authorization block
   * 
@@ -237,11 +237,11 @@ export interface ApiManagementBackendTls {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_backend.html#validate_certificate_chain ApiManagementBackend#validate_certificate_chain}
   */
-  readonly validateCertificateChain?: boolean;
+  readonly validateCertificateChain?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_backend.html#validate_certificate_name ApiManagementBackend#validate_certificate_name}
   */
-  readonly validateCertificateName?: boolean;
+  readonly validateCertificateName?: boolean | cdktf.IResolvable;
 }
 
 function apiManagementBackendTlsToTerraform(struct?: ApiManagementBackendTls): any {
@@ -257,6 +257,11 @@ function apiManagementBackendTlsToTerraform(struct?: ApiManagementBackendTls): a
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_backend.html azurerm_api_management_backend}
 */
 export class ApiManagementBackend extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_api_management_backend";
 
   // ===========
   // INITIALIZER

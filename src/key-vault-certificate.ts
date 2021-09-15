@@ -18,7 +18,7 @@ export interface KeyVaultCertificateConfig extends cdktf.TerraformMetaArguments 
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_certificate.html#tags KeyVaultCertificate#tags}
   */
-  readonly tags?: { [key: string]: string };
+  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * certificate block
   * 
@@ -111,7 +111,7 @@ export interface KeyVaultCertificateCertificatePolicyKeyProperties {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_certificate.html#exportable KeyVaultCertificate#exportable}
   */
-  readonly exportable: boolean;
+  readonly exportable: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_certificate.html#key_size KeyVaultCertificate#key_size}
   */
@@ -123,7 +123,7 @@ export interface KeyVaultCertificateCertificatePolicyKeyProperties {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_certificate.html#reuse_key KeyVaultCertificate#reuse_key}
   */
-  readonly reuseKey: boolean;
+  readonly reuseKey: boolean | cdktf.IResolvable;
 }
 
 function keyVaultCertificateCertificatePolicyKeyPropertiesToTerraform(struct?: KeyVaultCertificateCertificatePolicyKeyProperties): any {
@@ -341,6 +341,11 @@ function keyVaultCertificateTimeoutsToTerraform(struct?: KeyVaultCertificateTime
 */
 export class KeyVaultCertificate extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_key_vault_certificate";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -427,11 +432,11 @@ export class KeyVaultCertificate extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string };
+  private _tags?: { [key: string]: string } | cdktf.IResolvable;
   public get tags() {
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._tags = value;
   }
   public resetTags() {

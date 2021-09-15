@@ -99,6 +99,11 @@ function dataShareTimeoutsToTerraform(struct?: DataShareTimeouts): any {
 */
 export class DataShare extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_data_share";
+
   // ===========
   // INITIALIZER
   // ===========

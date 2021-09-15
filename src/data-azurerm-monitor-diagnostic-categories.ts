@@ -38,6 +38,11 @@ function dataAzurermMonitorDiagnosticCategoriesTimeoutsToTerraform(struct?: Data
 */
 export class DataAzurermMonitorDiagnosticCategories extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_monitor_diagnostic_categories";
+
   // ===========
   // INITIALIZER
   // ===========

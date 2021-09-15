@@ -18,7 +18,7 @@ export interface ResourceGroupPolicyAssignmentConfig extends cdktf.TerraformMeta
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/resource_group_policy_assignment.html#enforce ResourceGroupPolicyAssignment#enforce}
   */
-  readonly enforce?: boolean;
+  readonly enforce?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/resource_group_policy_assignment.html#location ResourceGroupPolicyAssignment#location}
   */
@@ -109,6 +109,11 @@ function resourceGroupPolicyAssignmentTimeoutsToTerraform(struct?: ResourceGroup
 */
 export class ResourceGroupPolicyAssignment extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_resource_group_policy_assignment";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -182,11 +187,11 @@ export class ResourceGroupPolicyAssignment extends cdktf.TerraformResource {
   }
 
   // enforce - computed: false, optional: true, required: false
-  private _enforce?: boolean;
+  private _enforce?: boolean | cdktf.IResolvable;
   public get enforce() {
     return this.getBooleanAttribute('enforce');
   }
-  public set enforce(value: boolean ) {
+  public set enforce(value: boolean | cdktf.IResolvable ) {
     this._enforce = value;
   }
   public resetEnforce() {

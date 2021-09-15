@@ -14,7 +14,7 @@ export interface ServicebusQueueConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_queue.html#dead_lettering_on_message_expiration ServicebusQueue#dead_lettering_on_message_expiration}
   */
-  readonly deadLetteringOnMessageExpiration?: boolean;
+  readonly deadLetteringOnMessageExpiration?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_queue.html#default_message_ttl ServicebusQueue#default_message_ttl}
   */
@@ -26,15 +26,15 @@ export interface ServicebusQueueConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_queue.html#enable_batched_operations ServicebusQueue#enable_batched_operations}
   */
-  readonly enableBatchedOperations?: boolean;
+  readonly enableBatchedOperations?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_queue.html#enable_express ServicebusQueue#enable_express}
   */
-  readonly enableExpress?: boolean;
+  readonly enableExpress?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_queue.html#enable_partitioning ServicebusQueue#enable_partitioning}
   */
-  readonly enablePartitioning?: boolean;
+  readonly enablePartitioning?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_queue.html#forward_dead_lettered_messages_to ServicebusQueue#forward_dead_lettered_messages_to}
   */
@@ -66,11 +66,11 @@ export interface ServicebusQueueConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_queue.html#requires_duplicate_detection ServicebusQueue#requires_duplicate_detection}
   */
-  readonly requiresDuplicateDetection?: boolean;
+  readonly requiresDuplicateDetection?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_queue.html#requires_session ServicebusQueue#requires_session}
   */
-  readonly requiresSession?: boolean;
+  readonly requiresSession?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_queue.html#resource_group_name ServicebusQueue#resource_group_name}
   */
@@ -120,6 +120,11 @@ function servicebusQueueTimeoutsToTerraform(struct?: ServicebusQueueTimeouts): a
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_queue.html azurerm_servicebus_queue}
 */
 export class ServicebusQueue extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_servicebus_queue";
 
   // ===========
   // INITIALIZER
@@ -185,11 +190,11 @@ export class ServicebusQueue extends cdktf.TerraformResource {
   }
 
   // dead_lettering_on_message_expiration - computed: false, optional: true, required: false
-  private _deadLetteringOnMessageExpiration?: boolean;
+  private _deadLetteringOnMessageExpiration?: boolean | cdktf.IResolvable;
   public get deadLetteringOnMessageExpiration() {
     return this.getBooleanAttribute('dead_lettering_on_message_expiration');
   }
-  public set deadLetteringOnMessageExpiration(value: boolean ) {
+  public set deadLetteringOnMessageExpiration(value: boolean | cdktf.IResolvable ) {
     this._deadLetteringOnMessageExpiration = value;
   }
   public resetDeadLetteringOnMessageExpiration() {
@@ -233,11 +238,11 @@ export class ServicebusQueue extends cdktf.TerraformResource {
   }
 
   // enable_batched_operations - computed: false, optional: true, required: false
-  private _enableBatchedOperations?: boolean;
+  private _enableBatchedOperations?: boolean | cdktf.IResolvable;
   public get enableBatchedOperations() {
     return this.getBooleanAttribute('enable_batched_operations');
   }
-  public set enableBatchedOperations(value: boolean ) {
+  public set enableBatchedOperations(value: boolean | cdktf.IResolvable ) {
     this._enableBatchedOperations = value;
   }
   public resetEnableBatchedOperations() {
@@ -249,11 +254,11 @@ export class ServicebusQueue extends cdktf.TerraformResource {
   }
 
   // enable_express - computed: false, optional: true, required: false
-  private _enableExpress?: boolean;
+  private _enableExpress?: boolean | cdktf.IResolvable;
   public get enableExpress() {
     return this.getBooleanAttribute('enable_express');
   }
-  public set enableExpress(value: boolean ) {
+  public set enableExpress(value: boolean | cdktf.IResolvable ) {
     this._enableExpress = value;
   }
   public resetEnableExpress() {
@@ -265,11 +270,11 @@ export class ServicebusQueue extends cdktf.TerraformResource {
   }
 
   // enable_partitioning - computed: false, optional: true, required: false
-  private _enablePartitioning?: boolean;
+  private _enablePartitioning?: boolean | cdktf.IResolvable;
   public get enablePartitioning() {
     return this.getBooleanAttribute('enable_partitioning');
   }
-  public set enablePartitioning(value: boolean ) {
+  public set enablePartitioning(value: boolean | cdktf.IResolvable ) {
     this._enablePartitioning = value;
   }
   public resetEnablePartitioning() {
@@ -392,11 +397,11 @@ export class ServicebusQueue extends cdktf.TerraformResource {
   }
 
   // requires_duplicate_detection - computed: false, optional: true, required: false
-  private _requiresDuplicateDetection?: boolean;
+  private _requiresDuplicateDetection?: boolean | cdktf.IResolvable;
   public get requiresDuplicateDetection() {
     return this.getBooleanAttribute('requires_duplicate_detection');
   }
-  public set requiresDuplicateDetection(value: boolean ) {
+  public set requiresDuplicateDetection(value: boolean | cdktf.IResolvable ) {
     this._requiresDuplicateDetection = value;
   }
   public resetRequiresDuplicateDetection() {
@@ -408,11 +413,11 @@ export class ServicebusQueue extends cdktf.TerraformResource {
   }
 
   // requires_session - computed: false, optional: true, required: false
-  private _requiresSession?: boolean;
+  private _requiresSession?: boolean | cdktf.IResolvable;
   public get requiresSession() {
     return this.getBooleanAttribute('requires_session');
   }
-  public set requiresSession(value: boolean ) {
+  public set requiresSession(value: boolean | cdktf.IResolvable ) {
     this._requiresSession = value;
   }
   public resetRequiresSession() {

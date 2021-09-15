@@ -65,6 +65,11 @@ function iothubEndpointServicebusTopicTimeoutsToTerraform(struct?: IothubEndpoin
 */
 export class IothubEndpointServicebusTopic extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_iothub_endpoint_servicebus_topic";
+
   // ===========
   // INITIALIZER
   // ===========

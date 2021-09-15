@@ -69,6 +69,11 @@ function logAnalyticsDatasourceWindowsEventTimeoutsToTerraform(struct?: LogAnaly
 */
 export class LogAnalyticsDatasourceWindowsEvent extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_log_analytics_datasource_windows_event";
+
   // ===========
   // INITIALIZER
   // ===========

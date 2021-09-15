@@ -124,6 +124,11 @@ function mediaStreamingLocatorTimeoutsToTerraform(struct?: MediaStreamingLocator
 */
 export class MediaStreamingLocator extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_media_streaming_locator";
+
   // ===========
   // INITIALIZER
   // ===========

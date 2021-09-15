@@ -59,6 +59,11 @@ function dataAzurermHdinsightClusterTimeoutsToTerraform(struct?: DataAzurermHdin
 */
 export class DataAzurermHdinsightCluster extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_hdinsight_cluster";
+
   // ===========
   // INITIALIZER
   // ===========

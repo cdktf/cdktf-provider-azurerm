@@ -69,6 +69,11 @@ function dataAzurermDatabricksWorkspacePrivateEndpointConnectionTimeoutsToTerraf
 */
 export class DataAzurermDatabricksWorkspacePrivateEndpointConnection extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_databricks_workspace_private_endpoint_connection";
+
   // ===========
   // INITIALIZER
   // ===========

@@ -12,6 +12,10 @@ export interface DataProtectionBackupInstancePostgresqlConfig extends cdktf.Terr
   */
   readonly backupPolicyId: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_instance_postgresql.html#database_credential_key_vault_secret_id DataProtectionBackupInstancePostgresql#database_credential_key_vault_secret_id}
+  */
+  readonly databaseCredentialKeyVaultSecretId?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_instance_postgresql.html#database_id DataProtectionBackupInstancePostgresql#database_id}
   */
   readonly databaseId: string;
@@ -69,6 +73,11 @@ function dataProtectionBackupInstancePostgresqlTimeoutsToTerraform(struct?: Data
 */
 export class DataProtectionBackupInstancePostgresql extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_data_protection_backup_instance_postgresql";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -92,6 +101,7 @@ export class DataProtectionBackupInstancePostgresql extends cdktf.TerraformResou
       lifecycle: config.lifecycle
     });
     this._backupPolicyId = config.backupPolicyId;
+    this._databaseCredentialKeyVaultSecretId = config.databaseCredentialKeyVaultSecretId;
     this._databaseId = config.databaseId;
     this._location = config.location;
     this._name = config.name;
@@ -114,6 +124,22 @@ export class DataProtectionBackupInstancePostgresql extends cdktf.TerraformResou
   // Temporarily expose input value. Use with caution.
   public get backupPolicyIdInput() {
     return this._backupPolicyId
+  }
+
+  // database_credential_key_vault_secret_id - computed: false, optional: true, required: false
+  private _databaseCredentialKeyVaultSecretId?: string;
+  public get databaseCredentialKeyVaultSecretId() {
+    return this.getStringAttribute('database_credential_key_vault_secret_id');
+  }
+  public set databaseCredentialKeyVaultSecretId(value: string ) {
+    this._databaseCredentialKeyVaultSecretId = value;
+  }
+  public resetDatabaseCredentialKeyVaultSecretId() {
+    this._databaseCredentialKeyVaultSecretId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get databaseCredentialKeyVaultSecretIdInput() {
+    return this._databaseCredentialKeyVaultSecretId
   }
 
   // database_id - computed: false, optional: false, required: true
@@ -196,6 +222,7 @@ export class DataProtectionBackupInstancePostgresql extends cdktf.TerraformResou
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       backup_policy_id: cdktf.stringToTerraform(this._backupPolicyId),
+      database_credential_key_vault_secret_id: cdktf.stringToTerraform(this._databaseCredentialKeyVaultSecretId),
       database_id: cdktf.stringToTerraform(this._databaseId),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),

@@ -10,11 +10,11 @@ export interface DatabricksWorkspaceConfig extends cdktf.TerraformMetaArguments 
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/databricks_workspace.html#customer_managed_key_enabled DatabricksWorkspace#customer_managed_key_enabled}
   */
-  readonly customerManagedKeyEnabled?: boolean;
+  readonly customerManagedKeyEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/databricks_workspace.html#infrastructure_encryption_enabled DatabricksWorkspace#infrastructure_encryption_enabled}
   */
-  readonly infrastructureEncryptionEnabled?: boolean;
+  readonly infrastructureEncryptionEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/databricks_workspace.html#load_balancer_backend_address_pool_id DatabricksWorkspace#load_balancer_backend_address_pool_id}
   */
@@ -42,7 +42,7 @@ export interface DatabricksWorkspaceConfig extends cdktf.TerraformMetaArguments 
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/databricks_workspace.html#public_network_access_enabled DatabricksWorkspace#public_network_access_enabled}
   */
-  readonly publicNetworkAccessEnabled?: boolean;
+  readonly publicNetworkAccessEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/databricks_workspace.html#resource_group_name DatabricksWorkspace#resource_group_name}
   */
@@ -54,7 +54,7 @@ export interface DatabricksWorkspaceConfig extends cdktf.TerraformMetaArguments 
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/databricks_workspace.html#tags DatabricksWorkspace#tags}
   */
-  readonly tags?: { [key: string]: string };
+  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * custom_parameters block
   * 
@@ -97,7 +97,7 @@ export interface DatabricksWorkspaceCustomParameters {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/databricks_workspace.html#no_public_ip DatabricksWorkspace#no_public_ip}
   */
-  readonly noPublicIp?: boolean;
+  readonly noPublicIp?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/databricks_workspace.html#private_subnet_name DatabricksWorkspace#private_subnet_name}
   */
@@ -189,6 +189,11 @@ function databricksWorkspaceTimeoutsToTerraform(struct?: DatabricksWorkspaceTime
 */
 export class DatabricksWorkspace extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_databricks_workspace";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -232,11 +237,11 @@ export class DatabricksWorkspace extends cdktf.TerraformResource {
   // ==========
 
   // customer_managed_key_enabled - computed: false, optional: true, required: false
-  private _customerManagedKeyEnabled?: boolean;
+  private _customerManagedKeyEnabled?: boolean | cdktf.IResolvable;
   public get customerManagedKeyEnabled() {
     return this.getBooleanAttribute('customer_managed_key_enabled');
   }
-  public set customerManagedKeyEnabled(value: boolean ) {
+  public set customerManagedKeyEnabled(value: boolean | cdktf.IResolvable ) {
     this._customerManagedKeyEnabled = value;
   }
   public resetCustomerManagedKeyEnabled() {
@@ -253,11 +258,11 @@ export class DatabricksWorkspace extends cdktf.TerraformResource {
   }
 
   // infrastructure_encryption_enabled - computed: false, optional: true, required: false
-  private _infrastructureEncryptionEnabled?: boolean;
+  private _infrastructureEncryptionEnabled?: boolean | cdktf.IResolvable;
   public get infrastructureEncryptionEnabled() {
     return this.getBooleanAttribute('infrastructure_encryption_enabled');
   }
-  public set infrastructureEncryptionEnabled(value: boolean ) {
+  public set infrastructureEncryptionEnabled(value: boolean | cdktf.IResolvable ) {
     this._infrastructureEncryptionEnabled = value;
   }
   public resetInfrastructureEncryptionEnabled() {
@@ -364,11 +369,11 @@ export class DatabricksWorkspace extends cdktf.TerraformResource {
   }
 
   // public_network_access_enabled - computed: false, optional: true, required: false
-  private _publicNetworkAccessEnabled?: boolean;
+  private _publicNetworkAccessEnabled?: boolean | cdktf.IResolvable;
   public get publicNetworkAccessEnabled() {
     return this.getBooleanAttribute('public_network_access_enabled');
   }
-  public set publicNetworkAccessEnabled(value: boolean ) {
+  public set publicNetworkAccessEnabled(value: boolean | cdktf.IResolvable ) {
     this._publicNetworkAccessEnabled = value;
   }
   public resetPublicNetworkAccessEnabled() {
@@ -411,11 +416,11 @@ export class DatabricksWorkspace extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string };
+  private _tags?: { [key: string]: string } | cdktf.IResolvable;
   public get tags() {
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._tags = value;
   }
   public resetTags() {

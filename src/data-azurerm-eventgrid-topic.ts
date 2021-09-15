@@ -18,7 +18,7 @@ export interface DataAzurermEventgridTopicConfig extends cdktf.TerraformMetaArgu
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/eventgrid_topic.html#tags DataAzurermEventgridTopic#tags}
   */
-  readonly tags?: { [key: string]: string };
+  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * timeouts block
   * 
@@ -45,6 +45,11 @@ function dataAzurermEventgridTopicTimeoutsToTerraform(struct?: DataAzurermEventg
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/eventgrid_topic.html azurerm_eventgrid_topic}
 */
 export class DataAzurermEventgridTopic extends cdktf.TerraformDataSource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_eventgrid_topic";
 
   // ===========
   // INITIALIZER
@@ -130,11 +135,11 @@ export class DataAzurermEventgridTopic extends cdktf.TerraformDataSource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string };
+  private _tags?: { [key: string]: string } | cdktf.IResolvable;
   public get tags() {
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._tags = value;
   }
   public resetTags() {

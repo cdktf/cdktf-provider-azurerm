@@ -14,23 +14,23 @@ export interface AppServiceConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#app_settings AppService#app_settings}
   */
-  readonly appSettings?: { [key: string]: string };
+  readonly appSettings?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#client_affinity_enabled AppService#client_affinity_enabled}
   */
-  readonly clientAffinityEnabled?: boolean;
+  readonly clientAffinityEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#client_cert_enabled AppService#client_cert_enabled}
   */
-  readonly clientCertEnabled?: boolean;
+  readonly clientCertEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#enabled AppService#enabled}
   */
-  readonly enabled?: boolean;
+  readonly enabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#https_only AppService#https_only}
   */
-  readonly httpsOnly?: boolean;
+  readonly httpsOnly?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#location AppService#location}
   */
@@ -46,7 +46,7 @@ export interface AppServiceConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#tags AppService#tags}
   */
-  readonly tags?: { [key: string]: string };
+  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * auth_settings block
   * 
@@ -233,7 +233,7 @@ export interface AppServiceAuthSettings {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#additional_login_params AppService#additional_login_params}
   */
-  readonly additionalLoginParams?: { [key: string]: string };
+  readonly additionalLoginParams?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#allowed_external_redirect_urls AppService#allowed_external_redirect_urls}
   */
@@ -245,7 +245,7 @@ export interface AppServiceAuthSettings {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#enabled AppService#enabled}
   */
-  readonly enabled: boolean;
+  readonly enabled: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#issuer AppService#issuer}
   */
@@ -261,7 +261,7 @@ export interface AppServiceAuthSettings {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#token_store_enabled AppService#token_store_enabled}
   */
-  readonly tokenStoreEnabled?: boolean;
+  readonly tokenStoreEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#unauthenticated_client_action AppService#unauthenticated_client_action}
   */
@@ -330,7 +330,7 @@ export interface AppServiceBackupSchedule {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#keep_at_least_one_backup AppService#keep_at_least_one_backup}
   */
-  readonly keepAtLeastOneBackup?: boolean;
+  readonly keepAtLeastOneBackup?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#retention_period_in_days AppService#retention_period_in_days}
   */
@@ -356,7 +356,7 @@ export interface AppServiceBackup {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#enabled AppService#enabled}
   */
-  readonly enabled?: boolean;
+  readonly enabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#name AppService#name}
   */
@@ -536,11 +536,11 @@ export interface AppServiceLogs {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#detailed_error_messages_enabled AppService#detailed_error_messages_enabled}
   */
-  readonly detailedErrorMessagesEnabled?: boolean;
+  readonly detailedErrorMessagesEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#failed_request_tracing_enabled AppService#failed_request_tracing_enabled}
   */
-  readonly failedRequestTracingEnabled?: boolean;
+  readonly failedRequestTracingEnabled?: boolean | cdktf.IResolvable;
   /**
   * application_logs block
   * 
@@ -719,7 +719,7 @@ export interface AppServiceSiteConfigCors {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#support_credentials AppService#support_credentials}
   */
-  readonly supportCredentials?: boolean;
+  readonly supportCredentials?: boolean | cdktf.IResolvable;
 }
 
 function appServiceSiteConfigCorsToTerraform(struct?: AppServiceSiteConfigCors): any {
@@ -734,7 +734,7 @@ export interface AppServiceSiteConfig {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#acr_use_managed_identity_credentials AppService#acr_use_managed_identity_credentials}
   */
-  readonly acrUseManagedIdentityCredentials?: boolean;
+  readonly acrUseManagedIdentityCredentials?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#acr_user_managed_identity_client_id AppService#acr_user_managed_identity_client_id}
   */
@@ -742,7 +742,7 @@ export interface AppServiceSiteConfig {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#always_on AppService#always_on}
   */
-  readonly alwaysOn?: boolean;
+  readonly alwaysOn?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#app_command_line AppService#app_command_line}
   */
@@ -770,7 +770,7 @@ export interface AppServiceSiteConfig {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#http2_enabled AppService#http2_enabled}
   */
-  readonly http2Enabled?: boolean;
+  readonly http2Enabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#ip_restriction AppService#ip_restriction}
   */
@@ -794,7 +794,7 @@ export interface AppServiceSiteConfig {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#local_mysql_enabled AppService#local_mysql_enabled}
   */
-  readonly localMysqlEnabled?: boolean;
+  readonly localMysqlEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#managed_pipeline_mode AppService#managed_pipeline_mode}
   */
@@ -818,7 +818,7 @@ export interface AppServiceSiteConfig {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#remote_debugging_enabled AppService#remote_debugging_enabled}
   */
-  readonly remoteDebuggingEnabled?: boolean;
+  readonly remoteDebuggingEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#remote_debugging_version AppService#remote_debugging_version}
   */
@@ -834,15 +834,19 @@ export interface AppServiceSiteConfig {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#scm_use_main_ip_restriction AppService#scm_use_main_ip_restriction}
   */
-  readonly scmUseMainIpRestriction?: boolean;
+  readonly scmUseMainIpRestriction?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#use_32_bit_worker_process AppService#use_32_bit_worker_process}
   */
-  readonly use32BitWorkerProcess?: boolean;
+  readonly use32BitWorkerProcess?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#vnet_route_all_enabled AppService#vnet_route_all_enabled}
+  */
+  readonly vnetRouteAllEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#websockets_enabled AppService#websockets_enabled}
   */
-  readonly websocketsEnabled?: boolean;
+  readonly websocketsEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#windows_fx_version AppService#windows_fx_version}
   */
@@ -885,6 +889,7 @@ function appServiceSiteConfigToTerraform(struct?: AppServiceSiteConfig): any {
     scm_type: cdktf.stringToTerraform(struct!.scmType),
     scm_use_main_ip_restriction: cdktf.booleanToTerraform(struct!.scmUseMainIpRestriction),
     use_32_bit_worker_process: cdktf.booleanToTerraform(struct!.use32BitWorkerProcess),
+    vnet_route_all_enabled: cdktf.booleanToTerraform(struct!.vnetRouteAllEnabled),
     websockets_enabled: cdktf.booleanToTerraform(struct!.websocketsEnabled),
     windows_fx_version: cdktf.stringToTerraform(struct!.windowsFxVersion),
     cors: cdktf.listMapper(appServiceSiteConfigCorsToTerraform)(struct!.cors),
@@ -899,7 +904,7 @@ export interface AppServiceSourceControl {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#manual_integration AppService#manual_integration}
   */
-  readonly manualIntegration?: boolean;
+  readonly manualIntegration?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#repo_url AppService#repo_url}
   */
@@ -907,11 +912,11 @@ export interface AppServiceSourceControl {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#rollback_enabled AppService#rollback_enabled}
   */
-  readonly rollbackEnabled?: boolean;
+  readonly rollbackEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#use_mercurial AppService#use_mercurial}
   */
-  readonly useMercurial?: boolean;
+  readonly useMercurial?: boolean | cdktf.IResolvable;
 }
 
 function appServiceSourceControlToTerraform(struct?: AppServiceSourceControl): any {
@@ -999,6 +1004,11 @@ function appServiceTimeoutsToTerraform(struct?: AppServiceTimeouts): any {
 */
 export class AppService extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_app_service";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -1060,11 +1070,11 @@ export class AppService extends cdktf.TerraformResource {
   }
 
   // app_settings - computed: true, optional: true, required: false
-  private _appSettings?: { [key: string]: string }
-  public get appSettings(): { [key: string]: string } {
+  private _appSettings?: { [key: string]: string } | cdktf.IResolvable
+  public get appSettings(): { [key: string]: string } | cdktf.IResolvable {
     return this.interpolationForAttribute('app_settings') as any; // Getting the computed value is not yet implemented
   }
-  public set appSettings(value: { [key: string]: string }) {
+  public set appSettings(value: { [key: string]: string } | cdktf.IResolvable) {
     this._appSettings = value;
   }
   public resetAppSettings() {
@@ -1076,11 +1086,11 @@ export class AppService extends cdktf.TerraformResource {
   }
 
   // client_affinity_enabled - computed: false, optional: true, required: false
-  private _clientAffinityEnabled?: boolean;
+  private _clientAffinityEnabled?: boolean | cdktf.IResolvable;
   public get clientAffinityEnabled() {
     return this.getBooleanAttribute('client_affinity_enabled');
   }
-  public set clientAffinityEnabled(value: boolean ) {
+  public set clientAffinityEnabled(value: boolean | cdktf.IResolvable ) {
     this._clientAffinityEnabled = value;
   }
   public resetClientAffinityEnabled() {
@@ -1092,11 +1102,11 @@ export class AppService extends cdktf.TerraformResource {
   }
 
   // client_cert_enabled - computed: false, optional: true, required: false
-  private _clientCertEnabled?: boolean;
+  private _clientCertEnabled?: boolean | cdktf.IResolvable;
   public get clientCertEnabled() {
     return this.getBooleanAttribute('client_cert_enabled');
   }
-  public set clientCertEnabled(value: boolean ) {
+  public set clientCertEnabled(value: boolean | cdktf.IResolvable ) {
     this._clientCertEnabled = value;
   }
   public resetClientCertEnabled() {
@@ -1118,11 +1128,11 @@ export class AppService extends cdktf.TerraformResource {
   }
 
   // enabled - computed: false, optional: true, required: false
-  private _enabled?: boolean;
+  private _enabled?: boolean | cdktf.IResolvable;
   public get enabled() {
     return this.getBooleanAttribute('enabled');
   }
-  public set enabled(value: boolean ) {
+  public set enabled(value: boolean | cdktf.IResolvable ) {
     this._enabled = value;
   }
   public resetEnabled() {
@@ -1134,11 +1144,11 @@ export class AppService extends cdktf.TerraformResource {
   }
 
   // https_only - computed: false, optional: true, required: false
-  private _httpsOnly?: boolean;
+  private _httpsOnly?: boolean | cdktf.IResolvable;
   public get httpsOnly() {
     return this.getBooleanAttribute('https_only');
   }
-  public set httpsOnly(value: boolean ) {
+  public set httpsOnly(value: boolean | cdktf.IResolvable ) {
     this._httpsOnly = value;
   }
   public resetHttpsOnly() {
@@ -1219,11 +1229,11 @@ export class AppService extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string };
+  private _tags?: { [key: string]: string } | cdktf.IResolvable;
   public get tags() {
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._tags = value;
   }
   public resetTags() {

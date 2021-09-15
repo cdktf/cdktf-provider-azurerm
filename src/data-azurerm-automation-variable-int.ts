@@ -46,6 +46,11 @@ function dataAzurermAutomationVariableIntTimeoutsToTerraform(struct?: DataAzurer
 */
 export class DataAzurermAutomationVariableInt extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_automation_variable_int";
+
   // ===========
   // INITIALIZER
   // ===========

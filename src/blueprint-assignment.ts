@@ -106,6 +106,11 @@ function blueprintAssignmentTimeoutsToTerraform(struct?: BlueprintAssignmentTime
 */
 export class BlueprintAssignment extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_blueprint_assignment";
+
   // ===========
   // INITIALIZER
   // ===========

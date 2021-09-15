@@ -14,15 +14,15 @@ export interface KubernetesClusterNodePoolConfig extends cdktf.TerraformMetaArgu
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster_node_pool.html#enable_auto_scaling KubernetesClusterNodePool#enable_auto_scaling}
   */
-  readonly enableAutoScaling?: boolean;
+  readonly enableAutoScaling?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster_node_pool.html#enable_host_encryption KubernetesClusterNodePool#enable_host_encryption}
   */
-  readonly enableHostEncryption?: boolean;
+  readonly enableHostEncryption?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster_node_pool.html#enable_node_public_ip KubernetesClusterNodePool#enable_node_public_ip}
   */
-  readonly enableNodePublicIp?: boolean;
+  readonly enableNodePublicIp?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster_node_pool.html#eviction_policy KubernetesClusterNodePool#eviction_policy}
   */
@@ -30,7 +30,7 @@ export interface KubernetesClusterNodePoolConfig extends cdktf.TerraformMetaArgu
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster_node_pool.html#fips_enabled KubernetesClusterNodePool#fips_enabled}
   */
-  readonly fipsEnabled?: boolean;
+  readonly fipsEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster_node_pool.html#kubelet_disk_type KubernetesClusterNodePool#kubelet_disk_type}
   */
@@ -66,7 +66,7 @@ export interface KubernetesClusterNodePoolConfig extends cdktf.TerraformMetaArgu
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster_node_pool.html#node_labels KubernetesClusterNodePool#node_labels}
   */
-  readonly nodeLabels?: { [key: string]: string };
+  readonly nodeLabels?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster_node_pool.html#node_public_ip_prefix_id KubernetesClusterNodePool#node_public_ip_prefix_id}
   */
@@ -88,9 +88,17 @@ export interface KubernetesClusterNodePoolConfig extends cdktf.TerraformMetaArgu
   */
   readonly osDiskType?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster_node_pool.html#os_sku KubernetesClusterNodePool#os_sku}
+  */
+  readonly osSku?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster_node_pool.html#os_type KubernetesClusterNodePool#os_type}
   */
   readonly osType?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster_node_pool.html#pod_subnet_id KubernetesClusterNodePool#pod_subnet_id}
+  */
+  readonly podSubnetId?: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster_node_pool.html#priority KubernetesClusterNodePool#priority}
   */
@@ -106,7 +114,11 @@ export interface KubernetesClusterNodePoolConfig extends cdktf.TerraformMetaArgu
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster_node_pool.html#tags KubernetesClusterNodePool#tags}
   */
-  readonly tags?: { [key: string]: string };
+  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster_node_pool.html#ultra_ssd_enabled KubernetesClusterNodePool#ultra_ssd_enabled}
+  */
+  readonly ultraSsdEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster_node_pool.html#vm_size KubernetesClusterNodePool#vm_size}
   */
@@ -156,7 +168,7 @@ export interface KubernetesClusterNodePoolKubeletConfig {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster_node_pool.html#cpu_cfs_quota_enabled KubernetesClusterNodePool#cpu_cfs_quota_enabled}
   */
-  readonly cpuCfsQuotaEnabled?: boolean;
+  readonly cpuCfsQuotaEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster_node_pool.html#cpu_cfs_quota_period KubernetesClusterNodePool#cpu_cfs_quota_period}
   */
@@ -295,7 +307,7 @@ export interface KubernetesClusterNodePoolLinuxOsConfigSysctlConfig {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster_node_pool.html#net_ipv4_tcp_tw_reuse KubernetesClusterNodePool#net_ipv4_tcp_tw_reuse}
   */
-  readonly netIpv4TcpTwReuse?: boolean;
+  readonly netIpv4TcpTwReuse?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster_node_pool.html#net_netfilter_nf_conntrack_buckets KubernetesClusterNodePool#net_netfilter_nf_conntrack_buckets}
   */
@@ -433,6 +445,11 @@ function kubernetesClusterNodePoolUpgradeSettingsToTerraform(struct?: Kubernetes
 */
 export class KubernetesClusterNodePool extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_kubernetes_cluster_node_pool";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -475,11 +492,14 @@ export class KubernetesClusterNodePool extends cdktf.TerraformResource {
     this._orchestratorVersion = config.orchestratorVersion;
     this._osDiskSizeGb = config.osDiskSizeGb;
     this._osDiskType = config.osDiskType;
+    this._osSku = config.osSku;
     this._osType = config.osType;
+    this._podSubnetId = config.podSubnetId;
     this._priority = config.priority;
     this._proximityPlacementGroupId = config.proximityPlacementGroupId;
     this._spotMaxPrice = config.spotMaxPrice;
     this._tags = config.tags;
+    this._ultraSsdEnabled = config.ultraSsdEnabled;
     this._vmSize = config.vmSize;
     this._vnetSubnetId = config.vnetSubnetId;
     this._kubeletConfig = config.kubeletConfig;
@@ -509,11 +529,11 @@ export class KubernetesClusterNodePool extends cdktf.TerraformResource {
   }
 
   // enable_auto_scaling - computed: false, optional: true, required: false
-  private _enableAutoScaling?: boolean;
+  private _enableAutoScaling?: boolean | cdktf.IResolvable;
   public get enableAutoScaling() {
     return this.getBooleanAttribute('enable_auto_scaling');
   }
-  public set enableAutoScaling(value: boolean ) {
+  public set enableAutoScaling(value: boolean | cdktf.IResolvable ) {
     this._enableAutoScaling = value;
   }
   public resetEnableAutoScaling() {
@@ -525,11 +545,11 @@ export class KubernetesClusterNodePool extends cdktf.TerraformResource {
   }
 
   // enable_host_encryption - computed: false, optional: true, required: false
-  private _enableHostEncryption?: boolean;
+  private _enableHostEncryption?: boolean | cdktf.IResolvable;
   public get enableHostEncryption() {
     return this.getBooleanAttribute('enable_host_encryption');
   }
-  public set enableHostEncryption(value: boolean ) {
+  public set enableHostEncryption(value: boolean | cdktf.IResolvable ) {
     this._enableHostEncryption = value;
   }
   public resetEnableHostEncryption() {
@@ -541,11 +561,11 @@ export class KubernetesClusterNodePool extends cdktf.TerraformResource {
   }
 
   // enable_node_public_ip - computed: false, optional: true, required: false
-  private _enableNodePublicIp?: boolean;
+  private _enableNodePublicIp?: boolean | cdktf.IResolvable;
   public get enableNodePublicIp() {
     return this.getBooleanAttribute('enable_node_public_ip');
   }
-  public set enableNodePublicIp(value: boolean ) {
+  public set enableNodePublicIp(value: boolean | cdktf.IResolvable ) {
     this._enableNodePublicIp = value;
   }
   public resetEnableNodePublicIp() {
@@ -573,11 +593,11 @@ export class KubernetesClusterNodePool extends cdktf.TerraformResource {
   }
 
   // fips_enabled - computed: false, optional: true, required: false
-  private _fipsEnabled?: boolean;
+  private _fipsEnabled?: boolean | cdktf.IResolvable;
   public get fipsEnabled() {
     return this.getBooleanAttribute('fips_enabled');
   }
-  public set fipsEnabled(value: boolean ) {
+  public set fipsEnabled(value: boolean | cdktf.IResolvable ) {
     this._fipsEnabled = value;
   }
   public resetFipsEnabled() {
@@ -715,12 +735,12 @@ export class KubernetesClusterNodePool extends cdktf.TerraformResource {
     return this._nodeCount
   }
 
-  // node_labels - computed: false, optional: true, required: false
-  private _nodeLabels?: { [key: string]: string };
-  public get nodeLabels() {
-    return this.interpolationForAttribute('node_labels') as any;
+  // node_labels - computed: true, optional: true, required: false
+  private _nodeLabels?: { [key: string]: string } | cdktf.IResolvable
+  public get nodeLabels(): { [key: string]: string } | cdktf.IResolvable {
+    return this.interpolationForAttribute('node_labels') as any; // Getting the computed value is not yet implemented
   }
-  public set nodeLabels(value: { [key: string]: string } ) {
+  public set nodeLabels(value: { [key: string]: string } | cdktf.IResolvable) {
     this._nodeLabels = value;
   }
   public resetNodeLabels() {
@@ -811,6 +831,22 @@ export class KubernetesClusterNodePool extends cdktf.TerraformResource {
     return this._osDiskType
   }
 
+  // os_sku - computed: false, optional: true, required: false
+  private _osSku?: string;
+  public get osSku() {
+    return this.getStringAttribute('os_sku');
+  }
+  public set osSku(value: string ) {
+    this._osSku = value;
+  }
+  public resetOsSku() {
+    this._osSku = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get osSkuInput() {
+    return this._osSku
+  }
+
   // os_type - computed: false, optional: true, required: false
   private _osType?: string;
   public get osType() {
@@ -825,6 +861,22 @@ export class KubernetesClusterNodePool extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get osTypeInput() {
     return this._osType
+  }
+
+  // pod_subnet_id - computed: false, optional: true, required: false
+  private _podSubnetId?: string;
+  public get podSubnetId() {
+    return this.getStringAttribute('pod_subnet_id');
+  }
+  public set podSubnetId(value: string ) {
+    this._podSubnetId = value;
+  }
+  public resetPodSubnetId() {
+    this._podSubnetId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get podSubnetIdInput() {
+    return this._podSubnetId
   }
 
   // priority - computed: false, optional: true, required: false
@@ -876,11 +928,11 @@ export class KubernetesClusterNodePool extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string };
+  private _tags?: { [key: string]: string } | cdktf.IResolvable;
   public get tags() {
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._tags = value;
   }
   public resetTags() {
@@ -889,6 +941,22 @@ export class KubernetesClusterNodePool extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get tagsInput() {
     return this._tags
+  }
+
+  // ultra_ssd_enabled - computed: false, optional: true, required: false
+  private _ultraSsdEnabled?: boolean | cdktf.IResolvable;
+  public get ultraSsdEnabled() {
+    return this.getBooleanAttribute('ultra_ssd_enabled');
+  }
+  public set ultraSsdEnabled(value: boolean | cdktf.IResolvable ) {
+    this._ultraSsdEnabled = value;
+  }
+  public resetUltraSsdEnabled() {
+    this._ultraSsdEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ultraSsdEnabledInput() {
+    return this._ultraSsdEnabled
   }
 
   // vm_size - computed: false, optional: false, required: true
@@ -1010,11 +1078,14 @@ export class KubernetesClusterNodePool extends cdktf.TerraformResource {
       orchestrator_version: cdktf.stringToTerraform(this._orchestratorVersion),
       os_disk_size_gb: cdktf.numberToTerraform(this._osDiskSizeGb),
       os_disk_type: cdktf.stringToTerraform(this._osDiskType),
+      os_sku: cdktf.stringToTerraform(this._osSku),
       os_type: cdktf.stringToTerraform(this._osType),
+      pod_subnet_id: cdktf.stringToTerraform(this._podSubnetId),
       priority: cdktf.stringToTerraform(this._priority),
       proximity_placement_group_id: cdktf.stringToTerraform(this._proximityPlacementGroupId),
       spot_max_price: cdktf.numberToTerraform(this._spotMaxPrice),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      ultra_ssd_enabled: cdktf.booleanToTerraform(this._ultraSsdEnabled),
       vm_size: cdktf.stringToTerraform(this._vmSize),
       vnet_subnet_id: cdktf.stringToTerraform(this._vnetSubnetId),
       kubelet_config: cdktf.listMapper(kubernetesClusterNodePoolKubeletConfigToTerraform)(this._kubeletConfig),

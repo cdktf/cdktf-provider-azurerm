@@ -57,6 +57,11 @@ function networkInterfaceSecurityGroupAssociationTimeoutsToTerraform(struct?: Ne
 */
 export class NetworkInterfaceSecurityGroupAssociation extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_network_interface_security_group_association";
+
   // ===========
   // INITIALIZER
   // ===========

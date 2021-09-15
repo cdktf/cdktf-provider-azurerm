@@ -46,6 +46,11 @@ function dataAzurermServicebusTopicTimeoutsToTerraform(struct?: DataAzurermServi
 */
 export class DataAzurermServicebusTopic extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_servicebus_topic";
+
   // ===========
   // INITIALIZER
   // ===========

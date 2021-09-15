@@ -42,6 +42,11 @@ function dataAzurermServicebusNamespaceTimeoutsToTerraform(struct?: DataAzurermS
 */
 export class DataAzurermServicebusNamespace extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_servicebus_namespace";
+
   // ===========
   // INITIALIZER
   // ===========

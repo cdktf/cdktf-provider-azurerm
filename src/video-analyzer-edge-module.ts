@@ -56,6 +56,11 @@ function videoAnalyzerEdgeModuleTimeoutsToTerraform(struct?: VideoAnalyzerEdgeMo
 */
 export class VideoAnalyzerEdgeModule extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_video_analyzer_edge_module";
+
   // ===========
   // INITIALIZER
   // ===========

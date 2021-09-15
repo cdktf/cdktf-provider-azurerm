@@ -221,7 +221,7 @@ export interface DataAzurermBatchPoolStartTask {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/batch_pool.html#environment DataAzurermBatchPool#environment}
   */
-  readonly environment?: { [key: string]: string };
+  readonly environment?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/batch_pool.html#max_task_retry_count DataAzurermBatchPool#max_task_retry_count}
   */
@@ -229,7 +229,7 @@ export interface DataAzurermBatchPoolStartTask {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/batch_pool.html#wait_for_success DataAzurermBatchPool#wait_for_success}
   */
-  readonly waitForSuccess?: boolean;
+  readonly waitForSuccess?: boolean | cdktf.IResolvable;
 }
 
 function dataAzurermBatchPoolStartTaskToTerraform(struct?: DataAzurermBatchPoolStartTask): any {
@@ -261,6 +261,11 @@ function dataAzurermBatchPoolTimeoutsToTerraform(struct?: DataAzurermBatchPoolTi
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/batch_pool.html azurerm_batch_pool}
 */
 export class DataAzurermBatchPool extends cdktf.TerraformDataSource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_batch_pool";
 
   // ===========
   // INITIALIZER

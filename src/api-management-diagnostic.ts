@@ -10,7 +10,7 @@ export interface ApiManagementDiagnosticConfig extends cdktf.TerraformMetaArgume
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_diagnostic.html#always_log_errors ApiManagementDiagnostic#always_log_errors}
   */
-  readonly alwaysLogErrors?: boolean;
+  readonly alwaysLogErrors?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_diagnostic.html#api_management_logger_id ApiManagementDiagnostic#api_management_logger_id}
   */
@@ -22,7 +22,7 @@ export interface ApiManagementDiagnosticConfig extends cdktf.TerraformMetaArgume
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_diagnostic.html#enabled ApiManagementDiagnostic#enabled}
   */
-  readonly enabled?: boolean;
+  readonly enabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_diagnostic.html#http_correlation_protocol ApiManagementDiagnostic#http_correlation_protocol}
   */
@@ -34,7 +34,7 @@ export interface ApiManagementDiagnosticConfig extends cdktf.TerraformMetaArgume
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_diagnostic.html#log_client_ip ApiManagementDiagnostic#log_client_ip}
   */
-  readonly logClientIp?: boolean;
+  readonly logClientIp?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_diagnostic.html#operation_name_format ApiManagementDiagnostic#operation_name_format}
   */
@@ -465,6 +465,11 @@ function apiManagementDiagnosticTimeoutsToTerraform(struct?: ApiManagementDiagno
 */
 export class ApiManagementDiagnostic extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_api_management_diagnostic";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -510,11 +515,11 @@ export class ApiManagementDiagnostic extends cdktf.TerraformResource {
   // ==========
 
   // always_log_errors - computed: true, optional: true, required: false
-  private _alwaysLogErrors?: boolean;
+  private _alwaysLogErrors?: boolean | cdktf.IResolvable;
   public get alwaysLogErrors() {
     return this.getBooleanAttribute('always_log_errors');
   }
-  public set alwaysLogErrors(value: boolean) {
+  public set alwaysLogErrors(value: boolean | cdktf.IResolvable) {
     this._alwaysLogErrors = value;
   }
   public resetAlwaysLogErrors() {
@@ -552,11 +557,11 @@ export class ApiManagementDiagnostic extends cdktf.TerraformResource {
   }
 
   // enabled - computed: false, optional: true, required: false
-  private _enabled?: boolean;
+  private _enabled?: boolean | cdktf.IResolvable;
   public get enabled() {
     return this.getBooleanAttribute('enabled');
   }
-  public set enabled(value: boolean ) {
+  public set enabled(value: boolean | cdktf.IResolvable ) {
     this._enabled = value;
   }
   public resetEnabled() {
@@ -602,11 +607,11 @@ export class ApiManagementDiagnostic extends cdktf.TerraformResource {
   }
 
   // log_client_ip - computed: true, optional: true, required: false
-  private _logClientIp?: boolean;
+  private _logClientIp?: boolean | cdktf.IResolvable;
   public get logClientIp() {
     return this.getBooleanAttribute('log_client_ip');
   }
-  public set logClientIp(value: boolean) {
+  public set logClientIp(value: boolean | cdktf.IResolvable) {
     this._logClientIp = value;
   }
   public resetLogClientIp() {

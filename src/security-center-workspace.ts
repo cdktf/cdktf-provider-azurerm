@@ -57,6 +57,11 @@ function securityCenterWorkspaceTimeoutsToTerraform(struct?: SecurityCenterWorks
 */
 export class SecurityCenterWorkspace extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_security_center_workspace";
+
   // ===========
   // INITIALIZER
   // ===========

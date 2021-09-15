@@ -73,6 +73,11 @@ function automationCredentialTimeoutsToTerraform(struct?: AutomationCredentialTi
 */
 export class AutomationCredential extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_automation_credential";
+
   // ===========
   // INITIALIZER
   // ===========

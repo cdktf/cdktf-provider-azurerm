@@ -8,6 +8,10 @@ import * as cdktf from 'cdktf';
 
 export interface AppServiceCertificateConfig extends cdktf.TerraformMetaArguments {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_certificate.html#app_service_plan_id AppServiceCertificate#app_service_plan_id}
+  */
+  readonly appServicePlanId?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_certificate.html#hosting_environment_profile_id AppServiceCertificate#hosting_environment_profile_id}
   */
   readonly hostingEnvironmentProfileId?: string;
@@ -38,7 +42,7 @@ export interface AppServiceCertificateConfig extends cdktf.TerraformMetaArgument
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_certificate.html#tags AppServiceCertificate#tags}
   */
-  readonly tags?: { [key: string]: string };
+  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * timeouts block
   * 
@@ -81,6 +85,11 @@ function appServiceCertificateTimeoutsToTerraform(struct?: AppServiceCertificate
 */
 export class AppServiceCertificate extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_app_service_certificate";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -103,6 +112,7 @@ export class AppServiceCertificate extends cdktf.TerraformResource {
       count: config.count,
       lifecycle: config.lifecycle
     });
+    this._appServicePlanId = config.appServicePlanId;
     this._hostingEnvironmentProfileId = config.hostingEnvironmentProfileId;
     this._keyVaultSecretId = config.keyVaultSecretId;
     this._location = config.location;
@@ -117,6 +127,22 @@ export class AppServiceCertificate extends cdktf.TerraformResource {
   // ==========
   // ATTRIBUTES
   // ==========
+
+  // app_service_plan_id - computed: false, optional: true, required: false
+  private _appServicePlanId?: string;
+  public get appServicePlanId() {
+    return this.getStringAttribute('app_service_plan_id');
+  }
+  public set appServicePlanId(value: string ) {
+    this._appServicePlanId = value;
+  }
+  public resetAppServicePlanId() {
+    this._appServicePlanId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get appServicePlanIdInput() {
+    return this._appServicePlanId
+  }
 
   // expiration_date - computed: true, optional: false, required: false
   public get expirationDate() {
@@ -133,12 +159,12 @@ export class AppServiceCertificate extends cdktf.TerraformResource {
     return this.getListAttribute('host_names');
   }
 
-  // hosting_environment_profile_id - computed: false, optional: true, required: false
+  // hosting_environment_profile_id - computed: true, optional: true, required: false
   private _hostingEnvironmentProfileId?: string;
   public get hostingEnvironmentProfileId() {
     return this.getStringAttribute('hosting_environment_profile_id');
   }
-  public set hostingEnvironmentProfileId(value: string ) {
+  public set hostingEnvironmentProfileId(value: string) {
     this._hostingEnvironmentProfileId = value;
   }
   public resetHostingEnvironmentProfileId() {
@@ -257,11 +283,11 @@ export class AppServiceCertificate extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string };
+  private _tags?: { [key: string]: string } | cdktf.IResolvable;
   public get tags() {
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._tags = value;
   }
   public resetTags() {
@@ -299,6 +325,7 @@ export class AppServiceCertificate extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      app_service_plan_id: cdktf.stringToTerraform(this._appServicePlanId),
       hosting_environment_profile_id: cdktf.stringToTerraform(this._hostingEnvironmentProfileId),
       key_vault_secret_id: cdktf.stringToTerraform(this._keyVaultSecretId),
       location: cdktf.stringToTerraform(this._location),

@@ -38,7 +38,7 @@ export interface MssqlServerConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server.html#public_network_access_enabled MssqlServer#public_network_access_enabled}
   */
-  readonly publicNetworkAccessEnabled?: boolean;
+  readonly publicNetworkAccessEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server.html#resource_group_name MssqlServer#resource_group_name}
   */
@@ -46,7 +46,7 @@ export interface MssqlServerConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server.html#tags MssqlServer#tags}
   */
-  readonly tags?: { [key: string]: string };
+  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server.html#version MssqlServer#version}
   */
@@ -74,7 +74,7 @@ export interface MssqlServerExtendedAuditingPolicy {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server.html#log_monitoring_enabled MssqlServer#log_monitoring_enabled}
   */
-  readonly logMonitoringEnabled?: boolean;
+  readonly logMonitoringEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server.html#retention_in_days MssqlServer#retention_in_days}
   */
@@ -86,7 +86,7 @@ export interface MssqlServerExtendedAuditingPolicy {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server.html#storage_account_access_key_is_secondary MssqlServer#storage_account_access_key_is_secondary}
   */
-  readonly storageAccountAccessKeyIsSecondary?: boolean;
+  readonly storageAccountAccessKeyIsSecondary?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server.html#storage_endpoint MssqlServer#storage_endpoint}
   */
@@ -176,6 +176,11 @@ function mssqlServerTimeoutsToTerraform(struct?: MssqlServerTimeouts): any {
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server.html azurerm_mssql_server}
 */
 export class MssqlServer extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_mssql_server";
 
   // ===========
   // INITIALIZER
@@ -330,11 +335,11 @@ export class MssqlServer extends cdktf.TerraformResource {
   }
 
   // public_network_access_enabled - computed: false, optional: true, required: false
-  private _publicNetworkAccessEnabled?: boolean;
+  private _publicNetworkAccessEnabled?: boolean | cdktf.IResolvable;
   public get publicNetworkAccessEnabled() {
     return this.getBooleanAttribute('public_network_access_enabled');
   }
-  public set publicNetworkAccessEnabled(value: boolean ) {
+  public set publicNetworkAccessEnabled(value: boolean | cdktf.IResolvable ) {
     this._publicNetworkAccessEnabled = value;
   }
   public resetPublicNetworkAccessEnabled() {
@@ -364,11 +369,11 @@ export class MssqlServer extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string };
+  private _tags?: { [key: string]: string } | cdktf.IResolvable;
   public get tags() {
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._tags = value;
   }
   public resetTags() {

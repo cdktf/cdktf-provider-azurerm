@@ -73,6 +73,11 @@ function apiManagementApiSchemaTimeoutsToTerraform(struct?: ApiManagementApiSche
 */
 export class ApiManagementApiSchema extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_api_management_api_schema";
+
   // ===========
   // INITIALIZER
   // ===========

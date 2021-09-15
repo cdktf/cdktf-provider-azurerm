@@ -30,7 +30,7 @@ export interface IntegrationServiceEnvironmentConfig extends cdktf.TerraformMeta
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/integration_service_environment.html#tags IntegrationServiceEnvironment#tags}
   */
-  readonly tags?: { [key: string]: string };
+  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/integration_service_environment.html#virtual_network_subnet_ids IntegrationServiceEnvironment#virtual_network_subnet_ids}
   */
@@ -76,6 +76,11 @@ function integrationServiceEnvironmentTimeoutsToTerraform(struct?: IntegrationSe
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/integration_service_environment.html azurerm_integration_service_environment}
 */
 export class IntegrationServiceEnvironment extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_integration_service_environment";
 
   // ===========
   // INITIALIZER
@@ -197,11 +202,11 @@ export class IntegrationServiceEnvironment extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string };
+  private _tags?: { [key: string]: string } | cdktf.IResolvable;
   public get tags() {
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._tags = value;
   }
   public resetTags() {

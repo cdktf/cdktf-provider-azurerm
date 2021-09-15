@@ -69,6 +69,11 @@ function storageAccountCustomerManagedKeyTimeoutsToTerraform(struct?: StorageAcc
 */
 export class StorageAccountCustomerManagedKey extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_storage_account_customer_managed_key";
+
   // ===========
   // INITIALIZER
   // ===========

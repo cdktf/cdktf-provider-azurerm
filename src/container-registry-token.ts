@@ -14,7 +14,7 @@ export interface ContainerRegistryTokenConfig extends cdktf.TerraformMetaArgumen
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry_token.html#enabled ContainerRegistryToken#enabled}
   */
-  readonly enabled?: boolean;
+  readonly enabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry_token.html#name ContainerRegistryToken#name}
   */
@@ -69,6 +69,11 @@ function containerRegistryTokenTimeoutsToTerraform(struct?: ContainerRegistryTok
 */
 export class ContainerRegistryToken extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_container_registry_token";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -117,11 +122,11 @@ export class ContainerRegistryToken extends cdktf.TerraformResource {
   }
 
   // enabled - computed: false, optional: true, required: false
-  private _enabled?: boolean;
+  private _enabled?: boolean | cdktf.IResolvable;
   public get enabled() {
     return this.getBooleanAttribute('enabled');
   }
-  public set enabled(value: boolean ) {
+  public set enabled(value: boolean | cdktf.IResolvable ) {
     this._enabled = value;
   }
   public resetEnabled() {

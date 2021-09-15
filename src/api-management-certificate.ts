@@ -77,6 +77,11 @@ function apiManagementCertificateTimeoutsToTerraform(struct?: ApiManagementCerti
 */
 export class ApiManagementCertificateA extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_api_management_certificate";
+
   // ===========
   // INITIALIZER
   // ===========

@@ -34,7 +34,7 @@ export interface HpcCacheConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hpc_cache.html#root_squash_enabled HpcCache#root_squash_enabled}
   */
-  readonly rootSquashEnabled?: boolean;
+  readonly rootSquashEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hpc_cache.html#sku_name HpcCache#sku_name}
   */
@@ -46,7 +46,7 @@ export interface HpcCacheConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hpc_cache.html#tags HpcCache#tags}
   */
-  readonly tags?: { [key: string]: string };
+  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * default_access_policy block
   * 
@@ -104,7 +104,7 @@ export interface HpcCacheDefaultAccessPolicyAccessRule {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hpc_cache.html#root_squash_enabled HpcCache#root_squash_enabled}
   */
-  readonly rootSquashEnabled?: boolean;
+  readonly rootSquashEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hpc_cache.html#scope HpcCache#scope}
   */
@@ -112,11 +112,11 @@ export interface HpcCacheDefaultAccessPolicyAccessRule {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hpc_cache.html#submount_access_enabled HpcCache#submount_access_enabled}
   */
-  readonly submountAccessEnabled?: boolean;
+  readonly submountAccessEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hpc_cache.html#suid_enabled HpcCache#suid_enabled}
   */
-  readonly suidEnabled?: boolean;
+  readonly suidEnabled?: boolean | cdktf.IResolvable;
 }
 
 function hpcCacheDefaultAccessPolicyAccessRuleToTerraform(struct?: HpcCacheDefaultAccessPolicyAccessRule): any {
@@ -243,11 +243,11 @@ export interface HpcCacheDirectoryLdap {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hpc_cache.html#download_certificate_automatically HpcCache#download_certificate_automatically}
   */
-  readonly downloadCertificateAutomatically?: boolean;
+  readonly downloadCertificateAutomatically?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hpc_cache.html#encrypted HpcCache#encrypted}
   */
-  readonly encrypted?: boolean;
+  readonly encrypted?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hpc_cache.html#server HpcCache#server}
   */
@@ -325,6 +325,11 @@ function hpcCacheTimeoutsToTerraform(struct?: HpcCacheTimeouts): any {
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/hpc_cache.html azurerm_hpc_cache}
 */
 export class HpcCache extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_hpc_cache";
 
   // ===========
   // INITIALIZER
@@ -465,11 +470,11 @@ export class HpcCache extends cdktf.TerraformResource {
   }
 
   // root_squash_enabled - computed: true, optional: true, required: false
-  private _rootSquashEnabled?: boolean;
+  private _rootSquashEnabled?: boolean | cdktf.IResolvable;
   public get rootSquashEnabled() {
     return this.getBooleanAttribute('root_squash_enabled');
   }
-  public set rootSquashEnabled(value: boolean) {
+  public set rootSquashEnabled(value: boolean | cdktf.IResolvable) {
     this._rootSquashEnabled = value;
   }
   public resetRootSquashEnabled() {
@@ -507,11 +512,11 @@ export class HpcCache extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string };
+  private _tags?: { [key: string]: string } | cdktf.IResolvable;
   public get tags() {
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._tags = value;
   }
   public resetTags() {

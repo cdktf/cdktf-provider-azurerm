@@ -72,7 +72,7 @@ export interface ServicebusSubscriptionRuleCorrelationFilter {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_subscription_rule.html#properties ServicebusSubscriptionRule#properties}
   */
-  readonly properties?: { [key: string]: string };
+  readonly properties?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_subscription_rule.html#reply_to ServicebusSubscriptionRule#reply_to}
   */
@@ -140,6 +140,11 @@ function servicebusSubscriptionRuleTimeoutsToTerraform(struct?: ServicebusSubscr
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_subscription_rule.html azurerm_servicebus_subscription_rule}
 */
 export class ServicebusSubscriptionRule extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_servicebus_subscription_rule";
 
   // ===========
   // INITIALIZER

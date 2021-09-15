@@ -14,7 +14,7 @@ export interface SpringCloudJavaDeploymentConfig extends cdktf.TerraformMetaArgu
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_java_deployment.html#environment_variables SpringCloudJavaDeployment#environment_variables}
   */
-  readonly environmentVariables?: { [key: string]: string };
+  readonly environmentVariables?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_java_deployment.html#instance_count SpringCloudJavaDeployment#instance_count}
   */
@@ -81,6 +81,11 @@ function springCloudJavaDeploymentTimeoutsToTerraform(struct?: SpringCloudJavaDe
 */
 export class SpringCloudJavaDeployment extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_spring_cloud_java_deployment";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -135,11 +140,11 @@ export class SpringCloudJavaDeployment extends cdktf.TerraformResource {
   }
 
   // environment_variables - computed: false, optional: true, required: false
-  private _environmentVariables?: { [key: string]: string };
+  private _environmentVariables?: { [key: string]: string } | cdktf.IResolvable;
   public get environmentVariables() {
     return this.interpolationForAttribute('environment_variables') as any;
   }
-  public set environmentVariables(value: { [key: string]: string } ) {
+  public set environmentVariables(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._environmentVariables = value;
   }
   public resetEnvironmentVariables() {

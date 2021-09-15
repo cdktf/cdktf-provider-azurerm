@@ -10,11 +10,11 @@ export interface ServicebusNamespaceAuthorizationRuleConfig extends cdktf.Terraf
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_namespace_authorization_rule.html#listen ServicebusNamespaceAuthorizationRule#listen}
   */
-  readonly listen?: boolean;
+  readonly listen?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_namespace_authorization_rule.html#manage ServicebusNamespaceAuthorizationRule#manage}
   */
-  readonly manage?: boolean;
+  readonly manage?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_namespace_authorization_rule.html#name ServicebusNamespaceAuthorizationRule#name}
   */
@@ -30,7 +30,7 @@ export interface ServicebusNamespaceAuthorizationRuleConfig extends cdktf.Terraf
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_namespace_authorization_rule.html#send ServicebusNamespaceAuthorizationRule#send}
   */
-  readonly send?: boolean;
+  readonly send?: boolean | cdktf.IResolvable;
   /**
   * timeouts block
   * 
@@ -73,6 +73,11 @@ function servicebusNamespaceAuthorizationRuleTimeoutsToTerraform(struct?: Servic
 */
 export class ServicebusNamespaceAuthorizationRule extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_servicebus_namespace_authorization_rule";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -114,11 +119,11 @@ export class ServicebusNamespaceAuthorizationRule extends cdktf.TerraformResourc
   }
 
   // listen - computed: false, optional: true, required: false
-  private _listen?: boolean;
+  private _listen?: boolean | cdktf.IResolvable;
   public get listen() {
     return this.getBooleanAttribute('listen');
   }
-  public set listen(value: boolean ) {
+  public set listen(value: boolean | cdktf.IResolvable ) {
     this._listen = value;
   }
   public resetListen() {
@@ -130,11 +135,11 @@ export class ServicebusNamespaceAuthorizationRule extends cdktf.TerraformResourc
   }
 
   // manage - computed: false, optional: true, required: false
-  private _manage?: boolean;
+  private _manage?: boolean | cdktf.IResolvable;
   public get manage() {
     return this.getBooleanAttribute('manage');
   }
-  public set manage(value: boolean ) {
+  public set manage(value: boolean | cdktf.IResolvable ) {
     this._manage = value;
   }
   public resetManage() {
@@ -176,6 +181,11 @@ export class ServicebusNamespaceAuthorizationRule extends cdktf.TerraformResourc
     return this.getStringAttribute('primary_connection_string');
   }
 
+  // primary_connection_string_alias - computed: true, optional: false, required: false
+  public get primaryConnectionStringAlias() {
+    return this.getStringAttribute('primary_connection_string_alias');
+  }
+
   // primary_key - computed: true, optional: false, required: false
   public get primaryKey() {
     return this.getStringAttribute('primary_key');
@@ -199,17 +209,22 @@ export class ServicebusNamespaceAuthorizationRule extends cdktf.TerraformResourc
     return this.getStringAttribute('secondary_connection_string');
   }
 
+  // secondary_connection_string_alias - computed: true, optional: false, required: false
+  public get secondaryConnectionStringAlias() {
+    return this.getStringAttribute('secondary_connection_string_alias');
+  }
+
   // secondary_key - computed: true, optional: false, required: false
   public get secondaryKey() {
     return this.getStringAttribute('secondary_key');
   }
 
   // send - computed: false, optional: true, required: false
-  private _send?: boolean;
+  private _send?: boolean | cdktf.IResolvable;
   public get send() {
     return this.getBooleanAttribute('send');
   }
-  public set send(value: boolean ) {
+  public set send(value: boolean | cdktf.IResolvable ) {
     this._send = value;
   }
   public resetSend() {

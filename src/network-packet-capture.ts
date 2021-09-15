@@ -142,6 +142,11 @@ function networkPacketCaptureTimeoutsToTerraform(struct?: NetworkPacketCaptureTi
 */
 export class NetworkPacketCapture extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_network_packet_capture";
+
   // ===========
   // INITIALIZER
   // ===========

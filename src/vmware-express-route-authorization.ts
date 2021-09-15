@@ -52,6 +52,11 @@ function vmwareExpressRouteAuthorizationTimeoutsToTerraform(struct?: VmwareExpre
 */
 export class VmwareExpressRouteAuthorization extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_vmware_express_route_authorization";
+
   // ===========
   // INITIALIZER
   // ===========

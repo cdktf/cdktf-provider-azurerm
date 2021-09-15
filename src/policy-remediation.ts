@@ -73,6 +73,11 @@ function policyRemediationTimeoutsToTerraform(struct?: PolicyRemediationTimeouts
 */
 export class PolicyRemediation extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_policy_remediation";
+
   // ===========
   // INITIALIZER
   // ===========

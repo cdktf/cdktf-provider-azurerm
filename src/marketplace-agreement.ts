@@ -61,6 +61,11 @@ function marketplaceAgreementTimeoutsToTerraform(struct?: MarketplaceAgreementTi
 */
 export class MarketplaceAgreement extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_marketplace_agreement";
+
   // ===========
   // INITIALIZER
   // ===========

@@ -22,7 +22,7 @@ export interface AutomationCertificateConfig extends cdktf.TerraformMetaArgument
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_certificate.html#exportable AutomationCertificate#exportable}
   */
-  readonly exportable?: boolean;
+  readonly exportable?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_certificate.html#name AutomationCertificate#name}
   */
@@ -72,6 +72,11 @@ function automationCertificateTimeoutsToTerraform(struct?: AutomationCertificate
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/automation_certificate.html azurerm_automation_certificate}
 */
 export class AutomationCertificate extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_automation_certificate";
 
   // ===========
   // INITIALIZER
@@ -151,11 +156,11 @@ export class AutomationCertificate extends cdktf.TerraformResource {
   }
 
   // exportable - computed: true, optional: true, required: false
-  private _exportable?: boolean;
+  private _exportable?: boolean | cdktf.IResolvable;
   public get exportable() {
     return this.getBooleanAttribute('exportable');
   }
-  public set exportable(value: boolean) {
+  public set exportable(value: boolean | cdktf.IResolvable) {
     this._exportable = value;
   }
   public resetExportable() {

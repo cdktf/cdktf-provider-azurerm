@@ -26,7 +26,7 @@ export interface AutomationDscConfigurationConfig extends cdktf.TerraformMetaArg
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_dsc_configuration.html#log_verbose AutomationDscConfiguration#log_verbose}
   */
-  readonly logVerbose?: boolean;
+  readonly logVerbose?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_dsc_configuration.html#name AutomationDscConfiguration#name}
   */
@@ -38,7 +38,7 @@ export interface AutomationDscConfigurationConfig extends cdktf.TerraformMetaArg
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_dsc_configuration.html#tags AutomationDscConfiguration#tags}
   */
-  readonly tags?: { [key: string]: string };
+  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * timeouts block
   * 
@@ -80,6 +80,11 @@ function automationDscConfigurationTimeoutsToTerraform(struct?: AutomationDscCon
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/automation_dsc_configuration.html azurerm_automation_dsc_configuration}
 */
 export class AutomationDscConfiguration extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_automation_dsc_configuration";
 
   // ===========
   // INITIALIZER
@@ -179,11 +184,11 @@ export class AutomationDscConfiguration extends cdktf.TerraformResource {
   }
 
   // log_verbose - computed: false, optional: true, required: false
-  private _logVerbose?: boolean;
+  private _logVerbose?: boolean | cdktf.IResolvable;
   public get logVerbose() {
     return this.getBooleanAttribute('log_verbose');
   }
-  public set logVerbose(value: boolean ) {
+  public set logVerbose(value: boolean | cdktf.IResolvable ) {
     this._logVerbose = value;
   }
   public resetLogVerbose() {
@@ -226,11 +231,11 @@ export class AutomationDscConfiguration extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string };
+  private _tags?: { [key: string]: string } | cdktf.IResolvable;
   public get tags() {
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._tags = value;
   }
   public resetTags() {

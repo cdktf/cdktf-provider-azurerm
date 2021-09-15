@@ -73,6 +73,11 @@ function springCloudAppMysqlAssociationTimeoutsToTerraform(struct?: SpringCloudA
 */
 export class SpringCloudAppMysqlAssociation extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_spring_cloud_app_mysql_association";
+
   // ===========
   // INITIALIZER
   // ===========

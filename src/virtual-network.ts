@@ -38,11 +38,11 @@ export interface VirtualNetworkConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_network.html#tags VirtualNetwork#tags}
   */
-  readonly tags?: { [key: string]: string };
+  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_network.html#vm_protection_enabled VirtualNetwork#vm_protection_enabled}
   */
-  readonly vmProtectionEnabled?: boolean;
+  readonly vmProtectionEnabled?: boolean | cdktf.IResolvable;
   /**
   * ddos_protection_plan block
   * 
@@ -89,7 +89,7 @@ export interface VirtualNetworkDdosProtectionPlan {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_network.html#enable VirtualNetwork#enable}
   */
-  readonly enable: boolean;
+  readonly enable: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_network.html#id VirtualNetwork#id}
   */
@@ -138,6 +138,11 @@ function virtualNetworkTimeoutsToTerraform(struct?: VirtualNetworkTimeouts): any
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_network.html azurerm_virtual_network}
 */
 export class VirtualNetwork extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_virtual_network";
 
   // ===========
   // INITIALIZER
@@ -289,11 +294,11 @@ export class VirtualNetwork extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string };
+  private _tags?: { [key: string]: string } | cdktf.IResolvable;
   public get tags() {
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._tags = value;
   }
   public resetTags() {
@@ -305,11 +310,11 @@ export class VirtualNetwork extends cdktf.TerraformResource {
   }
 
   // vm_protection_enabled - computed: false, optional: true, required: false
-  private _vmProtectionEnabled?: boolean;
+  private _vmProtectionEnabled?: boolean | cdktf.IResolvable;
   public get vmProtectionEnabled() {
     return this.getBooleanAttribute('vm_protection_enabled');
   }
-  public set vmProtectionEnabled(value: boolean ) {
+  public set vmProtectionEnabled(value: boolean | cdktf.IResolvable ) {
     this._vmProtectionEnabled = value;
   }
   public resetVmProtectionEnabled() {

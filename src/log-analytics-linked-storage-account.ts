@@ -65,6 +65,11 @@ function logAnalyticsLinkedStorageAccountTimeoutsToTerraform(struct?: LogAnalyti
 */
 export class LogAnalyticsLinkedStorageAccount extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_log_analytics_linked_storage_account";
+
   // ===========
   // INITIALIZER
   // ===========

@@ -18,7 +18,7 @@ export interface ManagementGroupPolicyAssignmentConfig extends cdktf.TerraformMe
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/management_group_policy_assignment.html#enforce ManagementGroupPolicyAssignment#enforce}
   */
-  readonly enforce?: boolean;
+  readonly enforce?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/management_group_policy_assignment.html#location ManagementGroupPolicyAssignment#location}
   */
@@ -109,6 +109,11 @@ function managementGroupPolicyAssignmentTimeoutsToTerraform(struct?: ManagementG
 */
 export class ManagementGroupPolicyAssignment extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_management_group_policy_assignment";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -182,11 +187,11 @@ export class ManagementGroupPolicyAssignment extends cdktf.TerraformResource {
   }
 
   // enforce - computed: false, optional: true, required: false
-  private _enforce?: boolean;
+  private _enforce?: boolean | cdktf.IResolvable;
   public get enforce() {
     return this.getBooleanAttribute('enforce');
   }
-  public set enforce(value: boolean ) {
+  public set enforce(value: boolean | cdktf.IResolvable ) {
     this._enforce = value;
   }
   public resetEnforce() {

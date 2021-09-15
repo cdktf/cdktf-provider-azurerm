@@ -18,7 +18,7 @@ export interface MariadbServerConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mariadb_server.html#auto_grow_enabled MariadbServer#auto_grow_enabled}
   */
-  readonly autoGrowEnabled?: boolean;
+  readonly autoGrowEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mariadb_server.html#backup_retention_days MariadbServer#backup_retention_days}
   */
@@ -34,7 +34,7 @@ export interface MariadbServerConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mariadb_server.html#geo_redundant_backup_enabled MariadbServer#geo_redundant_backup_enabled}
   */
-  readonly geoRedundantBackupEnabled?: boolean;
+  readonly geoRedundantBackupEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mariadb_server.html#location MariadbServer#location}
   */
@@ -46,7 +46,7 @@ export interface MariadbServerConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mariadb_server.html#public_network_access_enabled MariadbServer#public_network_access_enabled}
   */
-  readonly publicNetworkAccessEnabled?: boolean;
+  readonly publicNetworkAccessEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mariadb_server.html#resource_group_name MariadbServer#resource_group_name}
   */
@@ -66,7 +66,7 @@ export interface MariadbServerConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mariadb_server.html#ssl_enforcement_enabled MariadbServer#ssl_enforcement_enabled}
   */
-  readonly sslEnforcementEnabled?: boolean;
+  readonly sslEnforcementEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mariadb_server.html#storage_mb MariadbServer#storage_mb}
   */
@@ -74,7 +74,7 @@ export interface MariadbServerConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mariadb_server.html#tags MariadbServer#tags}
   */
-  readonly tags?: { [key: string]: string };
+  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mariadb_server.html#version MariadbServer#version}
   */
@@ -155,6 +155,11 @@ function mariadbServerTimeoutsToTerraform(struct?: MariadbServerTimeouts): any {
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/mariadb_server.html azurerm_mariadb_server}
 */
 export class MariadbServer extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_mariadb_server";
 
   // ===========
   // INITIALIZER
@@ -237,11 +242,11 @@ export class MariadbServer extends cdktf.TerraformResource {
   }
 
   // auto_grow_enabled - computed: true, optional: true, required: false
-  private _autoGrowEnabled?: boolean;
+  private _autoGrowEnabled?: boolean | cdktf.IResolvable;
   public get autoGrowEnabled() {
     return this.getBooleanAttribute('auto_grow_enabled');
   }
-  public set autoGrowEnabled(value: boolean) {
+  public set autoGrowEnabled(value: boolean | cdktf.IResolvable) {
     this._autoGrowEnabled = value;
   }
   public resetAutoGrowEnabled() {
@@ -306,11 +311,11 @@ export class MariadbServer extends cdktf.TerraformResource {
   }
 
   // geo_redundant_backup_enabled - computed: true, optional: true, required: false
-  private _geoRedundantBackupEnabled?: boolean;
+  private _geoRedundantBackupEnabled?: boolean | cdktf.IResolvable;
   public get geoRedundantBackupEnabled() {
     return this.getBooleanAttribute('geo_redundant_backup_enabled');
   }
-  public set geoRedundantBackupEnabled(value: boolean) {
+  public set geoRedundantBackupEnabled(value: boolean | cdktf.IResolvable) {
     this._geoRedundantBackupEnabled = value;
   }
   public resetGeoRedundantBackupEnabled() {
@@ -353,11 +358,11 @@ export class MariadbServer extends cdktf.TerraformResource {
   }
 
   // public_network_access_enabled - computed: false, optional: true, required: false
-  private _publicNetworkAccessEnabled?: boolean;
+  private _publicNetworkAccessEnabled?: boolean | cdktf.IResolvable;
   public get publicNetworkAccessEnabled() {
     return this.getBooleanAttribute('public_network_access_enabled');
   }
-  public set publicNetworkAccessEnabled(value: boolean ) {
+  public set publicNetworkAccessEnabled(value: boolean | cdktf.IResolvable ) {
     this._publicNetworkAccessEnabled = value;
   }
   public resetPublicNetworkAccessEnabled() {
@@ -427,11 +432,11 @@ export class MariadbServer extends cdktf.TerraformResource {
   }
 
   // ssl_enforcement_enabled - computed: false, optional: true, required: false
-  private _sslEnforcementEnabled?: boolean;
+  private _sslEnforcementEnabled?: boolean | cdktf.IResolvable;
   public get sslEnforcementEnabled() {
     return this.getBooleanAttribute('ssl_enforcement_enabled');
   }
-  public set sslEnforcementEnabled(value: boolean ) {
+  public set sslEnforcementEnabled(value: boolean | cdktf.IResolvable ) {
     this._sslEnforcementEnabled = value;
   }
   public resetSslEnforcementEnabled() {
@@ -459,11 +464,11 @@ export class MariadbServer extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string };
+  private _tags?: { [key: string]: string } | cdktf.IResolvable;
   public get tags() {
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._tags = value;
   }
   public resetTags() {

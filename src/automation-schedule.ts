@@ -118,6 +118,11 @@ function automationScheduleTimeoutsToTerraform(struct?: AutomationScheduleTimeou
 */
 export class AutomationSchedule extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_automation_schedule";
+
   // ===========
   // INITIALIZER
   // ===========

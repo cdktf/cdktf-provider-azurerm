@@ -10,7 +10,7 @@ export interface EventgridSystemTopicEventSubscriptionConfig extends cdktf.Terra
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_system_topic_event_subscription.html#advanced_filtering_on_arrays_enabled EventgridSystemTopicEventSubscription#advanced_filtering_on_arrays_enabled}
   */
-  readonly advancedFilteringOnArraysEnabled?: boolean;
+  readonly advancedFilteringOnArraysEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_system_topic_event_subscription.html#event_delivery_schema EventgridSystemTopicEventSubscription#event_delivery_schema}
   */
@@ -68,6 +68,18 @@ export interface EventgridSystemTopicEventSubscriptionConfig extends cdktf.Terra
   */
   readonly azureFunctionEndpoint?: EventgridSystemTopicEventSubscriptionAzureFunctionEndpoint[];
   /**
+  * dead_letter_identity block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_system_topic_event_subscription.html#dead_letter_identity EventgridSystemTopicEventSubscription#dead_letter_identity}
+  */
+  readonly deadLetterIdentity?: EventgridSystemTopicEventSubscriptionDeadLetterIdentity[];
+  /**
+  * delivery_identity block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_system_topic_event_subscription.html#delivery_identity EventgridSystemTopicEventSubscription#delivery_identity}
+  */
+  readonly deliveryIdentity?: EventgridSystemTopicEventSubscriptionDeliveryIdentity[];
+  /**
   * retry_policy block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_system_topic_event_subscription.html#retry_policy EventgridSystemTopicEventSubscription#retry_policy}
@@ -112,7 +124,7 @@ export interface EventgridSystemTopicEventSubscriptionAdvancedFilterBoolEquals {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_system_topic_event_subscription.html#value EventgridSystemTopicEventSubscription#value}
   */
-  readonly value: boolean;
+  readonly value: boolean | cdktf.IResolvable;
 }
 
 function eventgridSystemTopicEventSubscriptionAdvancedFilterBoolEqualsToTerraform(struct?: EventgridSystemTopicEventSubscriptionAdvancedFilterBoolEquals): any {
@@ -621,6 +633,34 @@ function eventgridSystemTopicEventSubscriptionAzureFunctionEndpointToTerraform(s
   }
 }
 
+export interface EventgridSystemTopicEventSubscriptionDeadLetterIdentity {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_system_topic_event_subscription.html#type EventgridSystemTopicEventSubscription#type}
+  */
+  readonly type: string;
+}
+
+function eventgridSystemTopicEventSubscriptionDeadLetterIdentityToTerraform(struct?: EventgridSystemTopicEventSubscriptionDeadLetterIdentity): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    type: cdktf.stringToTerraform(struct!.type),
+  }
+}
+
+export interface EventgridSystemTopicEventSubscriptionDeliveryIdentity {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_system_topic_event_subscription.html#type EventgridSystemTopicEventSubscription#type}
+  */
+  readonly type: string;
+}
+
+function eventgridSystemTopicEventSubscriptionDeliveryIdentityToTerraform(struct?: EventgridSystemTopicEventSubscriptionDeliveryIdentity): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    type: cdktf.stringToTerraform(struct!.type),
+  }
+}
+
 export interface EventgridSystemTopicEventSubscriptionRetryPolicy {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_system_topic_event_subscription.html#event_time_to_live EventgridSystemTopicEventSubscription#event_time_to_live}
@@ -682,7 +722,7 @@ export interface EventgridSystemTopicEventSubscriptionSubjectFilter {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_system_topic_event_subscription.html#case_sensitive EventgridSystemTopicEventSubscription#case_sensitive}
   */
-  readonly caseSensitive?: boolean;
+  readonly caseSensitive?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_system_topic_event_subscription.html#subject_begins_with EventgridSystemTopicEventSubscription#subject_begins_with}
   */
@@ -771,6 +811,11 @@ function eventgridSystemTopicEventSubscriptionWebhookEndpointToTerraform(struct?
 */
 export class EventgridSystemTopicEventSubscription extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_eventgrid_system_topic_event_subscription";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -807,6 +852,8 @@ export class EventgridSystemTopicEventSubscription extends cdktf.TerraformResour
     this._systemTopic = config.systemTopic;
     this._advancedFilter = config.advancedFilter;
     this._azureFunctionEndpoint = config.azureFunctionEndpoint;
+    this._deadLetterIdentity = config.deadLetterIdentity;
+    this._deliveryIdentity = config.deliveryIdentity;
     this._retryPolicy = config.retryPolicy;
     this._storageBlobDeadLetterDestination = config.storageBlobDeadLetterDestination;
     this._storageQueueEndpoint = config.storageQueueEndpoint;
@@ -820,11 +867,11 @@ export class EventgridSystemTopicEventSubscription extends cdktf.TerraformResour
   // ==========
 
   // advanced_filtering_on_arrays_enabled - computed: false, optional: true, required: false
-  private _advancedFilteringOnArraysEnabled?: boolean;
+  private _advancedFilteringOnArraysEnabled?: boolean | cdktf.IResolvable;
   public get advancedFilteringOnArraysEnabled() {
     return this.getBooleanAttribute('advanced_filtering_on_arrays_enabled');
   }
-  public set advancedFilteringOnArraysEnabled(value: boolean ) {
+  public set advancedFilteringOnArraysEnabled(value: boolean | cdktf.IResolvable ) {
     this._advancedFilteringOnArraysEnabled = value;
   }
   public resetAdvancedFilteringOnArraysEnabled() {
@@ -1039,6 +1086,38 @@ export class EventgridSystemTopicEventSubscription extends cdktf.TerraformResour
     return this._azureFunctionEndpoint
   }
 
+  // dead_letter_identity - computed: false, optional: true, required: false
+  private _deadLetterIdentity?: EventgridSystemTopicEventSubscriptionDeadLetterIdentity[];
+  public get deadLetterIdentity() {
+    return this.interpolationForAttribute('dead_letter_identity') as any;
+  }
+  public set deadLetterIdentity(value: EventgridSystemTopicEventSubscriptionDeadLetterIdentity[] ) {
+    this._deadLetterIdentity = value;
+  }
+  public resetDeadLetterIdentity() {
+    this._deadLetterIdentity = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deadLetterIdentityInput() {
+    return this._deadLetterIdentity
+  }
+
+  // delivery_identity - computed: false, optional: true, required: false
+  private _deliveryIdentity?: EventgridSystemTopicEventSubscriptionDeliveryIdentity[];
+  public get deliveryIdentity() {
+    return this.interpolationForAttribute('delivery_identity') as any;
+  }
+  public set deliveryIdentity(value: EventgridSystemTopicEventSubscriptionDeliveryIdentity[] ) {
+    this._deliveryIdentity = value;
+  }
+  public resetDeliveryIdentity() {
+    this._deliveryIdentity = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deliveryIdentityInput() {
+    return this._deliveryIdentity
+  }
+
   // retry_policy - computed: false, optional: true, required: false
   private _retryPolicy?: EventgridSystemTopicEventSubscriptionRetryPolicy[];
   public get retryPolicy() {
@@ -1155,6 +1234,8 @@ export class EventgridSystemTopicEventSubscription extends cdktf.TerraformResour
       system_topic: cdktf.stringToTerraform(this._systemTopic),
       advanced_filter: cdktf.listMapper(eventgridSystemTopicEventSubscriptionAdvancedFilterToTerraform)(this._advancedFilter),
       azure_function_endpoint: cdktf.listMapper(eventgridSystemTopicEventSubscriptionAzureFunctionEndpointToTerraform)(this._azureFunctionEndpoint),
+      dead_letter_identity: cdktf.listMapper(eventgridSystemTopicEventSubscriptionDeadLetterIdentityToTerraform)(this._deadLetterIdentity),
+      delivery_identity: cdktf.listMapper(eventgridSystemTopicEventSubscriptionDeliveryIdentityToTerraform)(this._deliveryIdentity),
       retry_policy: cdktf.listMapper(eventgridSystemTopicEventSubscriptionRetryPolicyToTerraform)(this._retryPolicy),
       storage_blob_dead_letter_destination: cdktf.listMapper(eventgridSystemTopicEventSubscriptionStorageBlobDeadLetterDestinationToTerraform)(this._storageBlobDeadLetterDestination),
       storage_queue_endpoint: cdktf.listMapper(eventgridSystemTopicEventSubscriptionStorageQueueEndpointToTerraform)(this._storageQueueEndpoint),

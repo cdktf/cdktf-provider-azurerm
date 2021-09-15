@@ -64,6 +64,11 @@ function dataAzurermPrivateEndpointConnectionTimeoutsToTerraform(struct?: DataAz
 */
 export class DataAzurermPrivateEndpointConnection extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_private_endpoint_connection";
+
   // ===========
   // INITIALIZER
   // ===========

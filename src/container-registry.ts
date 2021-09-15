@@ -10,7 +10,7 @@ export interface ContainerRegistryConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry.html#admin_enabled ContainerRegistry#admin_enabled}
   */
-  readonly adminEnabled?: boolean;
+  readonly adminEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry.html#encryption ContainerRegistry#encryption}
   */
@@ -38,11 +38,11 @@ export interface ContainerRegistryConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry.html#public_network_access_enabled ContainerRegistry#public_network_access_enabled}
   */
-  readonly publicNetworkAccessEnabled?: boolean;
+  readonly publicNetworkAccessEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry.html#quarantine_policy_enabled ContainerRegistry#quarantine_policy_enabled}
   */
-  readonly quarantinePolicyEnabled?: boolean;
+  readonly quarantinePolicyEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry.html#resource_group_name ContainerRegistry#resource_group_name}
   */
@@ -62,7 +62,7 @@ export interface ContainerRegistryConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry.html#tags ContainerRegistry#tags}
   */
-  readonly tags?: { [key: string]: string };
+  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry.html#trust_policy ContainerRegistry#trust_policy}
   */
@@ -70,7 +70,7 @@ export interface ContainerRegistryConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry.html#zone_redundancy_enabled ContainerRegistry#zone_redundancy_enabled}
   */
-  readonly zoneRedundancyEnabled?: boolean;
+  readonly zoneRedundancyEnabled?: boolean | cdktf.IResolvable;
   /**
   * identity block
   * 
@@ -88,7 +88,7 @@ export interface ContainerRegistryEncryption {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry.html#enabled ContainerRegistry#enabled}
   */
-  readonly enabled?: boolean;
+  readonly enabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry.html#identity_client_id ContainerRegistry#identity_client_id}
   */
@@ -116,11 +116,11 @@ export interface ContainerRegistryGeoreplications {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry.html#tags ContainerRegistry#tags}
   */
-  readonly tags?: { [key: string]: string };
+  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry.html#zone_redundancy_enabled ContainerRegistry#zone_redundancy_enabled}
   */
-  readonly zoneRedundancyEnabled?: boolean;
+  readonly zoneRedundancyEnabled?: boolean | cdktf.IResolvable;
 }
 
 function containerRegistryGeoreplicationsToTerraform(struct?: ContainerRegistryGeoreplications): any {
@@ -202,7 +202,7 @@ export interface ContainerRegistryRetentionPolicy {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry.html#enabled ContainerRegistry#enabled}
   */
-  readonly enabled?: boolean;
+  readonly enabled?: boolean | cdktf.IResolvable;
 }
 
 function containerRegistryRetentionPolicyToTerraform(struct?: ContainerRegistryRetentionPolicy): any {
@@ -217,7 +217,7 @@ export interface ContainerRegistryTrustPolicy {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry.html#enabled ContainerRegistry#enabled}
   */
-  readonly enabled?: boolean;
+  readonly enabled?: boolean | cdktf.IResolvable;
 }
 
 function containerRegistryTrustPolicyToTerraform(struct?: ContainerRegistryTrustPolicy): any {
@@ -281,6 +281,11 @@ function containerRegistryTimeoutsToTerraform(struct?: ContainerRegistryTimeouts
 */
 export class ContainerRegistry extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_container_registry";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -328,11 +333,11 @@ export class ContainerRegistry extends cdktf.TerraformResource {
   // ==========
 
   // admin_enabled - computed: false, optional: true, required: false
-  private _adminEnabled?: boolean;
+  private _adminEnabled?: boolean | cdktf.IResolvable;
   public get adminEnabled() {
     return this.getBooleanAttribute('admin_enabled');
   }
-  public set adminEnabled(value: boolean ) {
+  public set adminEnabled(value: boolean | cdktf.IResolvable ) {
     this._adminEnabled = value;
   }
   public resetAdminEnabled() {
@@ -454,11 +459,11 @@ export class ContainerRegistry extends cdktf.TerraformResource {
   }
 
   // public_network_access_enabled - computed: false, optional: true, required: false
-  private _publicNetworkAccessEnabled?: boolean;
+  private _publicNetworkAccessEnabled?: boolean | cdktf.IResolvable;
   public get publicNetworkAccessEnabled() {
     return this.getBooleanAttribute('public_network_access_enabled');
   }
-  public set publicNetworkAccessEnabled(value: boolean ) {
+  public set publicNetworkAccessEnabled(value: boolean | cdktf.IResolvable ) {
     this._publicNetworkAccessEnabled = value;
   }
   public resetPublicNetworkAccessEnabled() {
@@ -470,11 +475,11 @@ export class ContainerRegistry extends cdktf.TerraformResource {
   }
 
   // quarantine_policy_enabled - computed: false, optional: true, required: false
-  private _quarantinePolicyEnabled?: boolean;
+  private _quarantinePolicyEnabled?: boolean | cdktf.IResolvable;
   public get quarantinePolicyEnabled() {
     return this.getBooleanAttribute('quarantine_policy_enabled');
   }
-  public set quarantinePolicyEnabled(value: boolean ) {
+  public set quarantinePolicyEnabled(value: boolean | cdktf.IResolvable ) {
     this._quarantinePolicyEnabled = value;
   }
   public resetQuarantinePolicyEnabled() {
@@ -547,11 +552,11 @@ export class ContainerRegistry extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string };
+  private _tags?: { [key: string]: string } | cdktf.IResolvable;
   public get tags() {
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._tags = value;
   }
   public resetTags() {
@@ -579,11 +584,11 @@ export class ContainerRegistry extends cdktf.TerraformResource {
   }
 
   // zone_redundancy_enabled - computed: false, optional: true, required: false
-  private _zoneRedundancyEnabled?: boolean;
+  private _zoneRedundancyEnabled?: boolean | cdktf.IResolvable;
   public get zoneRedundancyEnabled() {
     return this.getBooleanAttribute('zone_redundancy_enabled');
   }
-  public set zoneRedundancyEnabled(value: boolean ) {
+  public set zoneRedundancyEnabled(value: boolean | cdktf.IResolvable ) {
     this._zoneRedundancyEnabled = value;
   }
   public resetZoneRedundancyEnabled() {

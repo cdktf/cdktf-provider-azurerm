@@ -76,6 +76,11 @@ function kustoDatabasePrincipalAssignmentTimeoutsToTerraform(struct?: KustoDatab
 */
 export class KustoDatabasePrincipalAssignment extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_kusto_database_principal_assignment";
+
   // ===========
   // INITIALIZER
   // ===========

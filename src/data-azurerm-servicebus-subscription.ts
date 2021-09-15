@@ -50,6 +50,11 @@ function dataAzurermServicebusSubscriptionTimeoutsToTerraform(struct?: DataAzure
 */
 export class DataAzurermServicebusSubscription extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_servicebus_subscription";
+
   // ===========
   // INITIALIZER
   // ===========

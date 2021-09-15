@@ -14,7 +14,7 @@ export interface DataAzurermPublicIpsConfig extends cdktf.TerraformMetaArguments
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/public_ips.html#attached DataAzurermPublicIps#attached}
   */
-  readonly attached?: boolean;
+  readonly attached?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/public_ips.html#name_prefix DataAzurermPublicIps#name_prefix}
   */
@@ -77,6 +77,11 @@ function dataAzurermPublicIpsTimeoutsToTerraform(struct?: DataAzurermPublicIpsTi
 */
 export class DataAzurermPublicIps extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_public_ips";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -127,11 +132,11 @@ export class DataAzurermPublicIps extends cdktf.TerraformDataSource {
   }
 
   // attached - computed: false, optional: true, required: false
-  private _attached?: boolean;
+  private _attached?: boolean | cdktf.IResolvable;
   public get attached() {
     return this.getBooleanAttribute('attached');
   }
-  public set attached(value: boolean ) {
+  public set attached(value: boolean | cdktf.IResolvable ) {
     this._attached = value;
   }
   public resetAttached() {

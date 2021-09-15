@@ -65,6 +65,11 @@ function iothubEndpointEventhubTimeoutsToTerraform(struct?: IothubEndpointEventh
 */
 export class IothubEndpointEventhub extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_iothub_endpoint_eventhub";
+
   // ===========
   // INITIALIZER
   // ===========

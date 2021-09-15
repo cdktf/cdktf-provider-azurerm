@@ -10,7 +10,7 @@ export interface VirtualMachineExtensionConfig extends cdktf.TerraformMetaArgume
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_extension.html#auto_upgrade_minor_version VirtualMachineExtension#auto_upgrade_minor_version}
   */
-  readonly autoUpgradeMinorVersion?: boolean;
+  readonly autoUpgradeMinorVersion?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_extension.html#name VirtualMachineExtension#name}
   */
@@ -30,7 +30,7 @@ export interface VirtualMachineExtensionConfig extends cdktf.TerraformMetaArgume
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_extension.html#tags VirtualMachineExtension#tags}
   */
-  readonly tags?: { [key: string]: string };
+  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_extension.html#type VirtualMachineExtension#type}
   */
@@ -85,6 +85,11 @@ function virtualMachineExtensionTimeoutsToTerraform(struct?: VirtualMachineExten
 */
 export class VirtualMachineExtension extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_virtual_machine_extension";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -124,11 +129,11 @@ export class VirtualMachineExtension extends cdktf.TerraformResource {
   // ==========
 
   // auto_upgrade_minor_version - computed: false, optional: true, required: false
-  private _autoUpgradeMinorVersion?: boolean;
+  private _autoUpgradeMinorVersion?: boolean | cdktf.IResolvable;
   public get autoUpgradeMinorVersion() {
     return this.getBooleanAttribute('auto_upgrade_minor_version');
   }
-  public set autoUpgradeMinorVersion(value: boolean ) {
+  public set autoUpgradeMinorVersion(value: boolean | cdktf.IResolvable ) {
     this._autoUpgradeMinorVersion = value;
   }
   public resetAutoUpgradeMinorVersion() {
@@ -203,11 +208,11 @@ export class VirtualMachineExtension extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string };
+  private _tags?: { [key: string]: string } | cdktf.IResolvable;
   public get tags() {
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._tags = value;
   }
   public resetTags() {

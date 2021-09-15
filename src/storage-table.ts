@@ -108,6 +108,11 @@ function storageTableTimeoutsToTerraform(struct?: StorageTableTimeouts): any {
 */
 export class StorageTable extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_storage_table";
+
   // ===========
   // INITIALIZER
   // ===========

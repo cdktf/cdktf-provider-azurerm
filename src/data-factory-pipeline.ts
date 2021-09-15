@@ -42,7 +42,7 @@ export interface DataFactoryPipelineConfig extends cdktf.TerraformMetaArguments 
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_pipeline.html#parameters DataFactoryPipeline#parameters}
   */
-  readonly parameters?: { [key: string]: string };
+  readonly parameters?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_pipeline.html#resource_group_name DataFactoryPipeline#resource_group_name}
   */
@@ -50,7 +50,7 @@ export interface DataFactoryPipelineConfig extends cdktf.TerraformMetaArguments 
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_pipeline.html#variables DataFactoryPipeline#variables}
   */
-  readonly variables?: { [key: string]: string };
+  readonly variables?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * timeouts block
   * 
@@ -92,6 +92,11 @@ function dataFactoryPipelineTimeoutsToTerraform(struct?: DataFactoryPipelineTime
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_pipeline.html azurerm_data_factory_pipeline}
 */
 export class DataFactoryPipeline extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_data_factory_pipeline";
 
   // ===========
   // INITIALIZER
@@ -261,11 +266,11 @@ export class DataFactoryPipeline extends cdktf.TerraformResource {
   }
 
   // parameters - computed: false, optional: true, required: false
-  private _parameters?: { [key: string]: string };
+  private _parameters?: { [key: string]: string } | cdktf.IResolvable;
   public get parameters() {
     return this.interpolationForAttribute('parameters') as any;
   }
-  public set parameters(value: { [key: string]: string } ) {
+  public set parameters(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._parameters = value;
   }
   public resetParameters() {
@@ -290,11 +295,11 @@ export class DataFactoryPipeline extends cdktf.TerraformResource {
   }
 
   // variables - computed: false, optional: true, required: false
-  private _variables?: { [key: string]: string };
+  private _variables?: { [key: string]: string } | cdktf.IResolvable;
   public get variables() {
     return this.interpolationForAttribute('variables') as any;
   }
-  public set variables(value: { [key: string]: string } ) {
+  public set variables(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._variables = value;
   }
   public resetVariables() {

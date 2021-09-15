@@ -10,7 +10,7 @@ export interface DataFactoryDatasetJsonConfig extends cdktf.TerraformMetaArgumen
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_json.html#additional_properties DataFactoryDatasetJson#additional_properties}
   */
-  readonly additionalProperties?: { [key: string]: string };
+  readonly additionalProperties?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_json.html#annotations DataFactoryDatasetJson#annotations}
   */
@@ -42,7 +42,7 @@ export interface DataFactoryDatasetJsonConfig extends cdktf.TerraformMetaArgumen
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_json.html#parameters DataFactoryDatasetJson#parameters}
   */
-  readonly parameters?: { [key: string]: string };
+  readonly parameters?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_json.html#resource_group_name DataFactoryDatasetJson#resource_group_name}
   */
@@ -78,6 +78,14 @@ export interface DataFactoryDatasetJsonAzureBlobStorageLocation {
   */
   readonly container: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_json.html#dynamic_filename_enabled DataFactoryDatasetJson#dynamic_filename_enabled}
+  */
+  readonly dynamicFilenameEnabled?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_json.html#dynamic_path_enabled DataFactoryDatasetJson#dynamic_path_enabled}
+  */
+  readonly dynamicPathEnabled?: boolean | cdktf.IResolvable;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_json.html#filename DataFactoryDatasetJson#filename}
   */
   readonly filename: string;
@@ -91,12 +99,22 @@ function dataFactoryDatasetJsonAzureBlobStorageLocationToTerraform(struct?: Data
   if (!cdktf.canInspect(struct)) { return struct; }
   return {
     container: cdktf.stringToTerraform(struct!.container),
+    dynamic_filename_enabled: cdktf.booleanToTerraform(struct!.dynamicFilenameEnabled),
+    dynamic_path_enabled: cdktf.booleanToTerraform(struct!.dynamicPathEnabled),
     filename: cdktf.stringToTerraform(struct!.filename),
     path: cdktf.stringToTerraform(struct!.path),
   }
 }
 
 export interface DataFactoryDatasetJsonHttpServerLocation {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_json.html#dynamic_filename_enabled DataFactoryDatasetJson#dynamic_filename_enabled}
+  */
+  readonly dynamicFilenameEnabled?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_json.html#dynamic_path_enabled DataFactoryDatasetJson#dynamic_path_enabled}
+  */
+  readonly dynamicPathEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_json.html#filename DataFactoryDatasetJson#filename}
   */
@@ -114,6 +132,8 @@ export interface DataFactoryDatasetJsonHttpServerLocation {
 function dataFactoryDatasetJsonHttpServerLocationToTerraform(struct?: DataFactoryDatasetJsonHttpServerLocation): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   return {
+    dynamic_filename_enabled: cdktf.booleanToTerraform(struct!.dynamicFilenameEnabled),
+    dynamic_path_enabled: cdktf.booleanToTerraform(struct!.dynamicPathEnabled),
     filename: cdktf.stringToTerraform(struct!.filename),
     path: cdktf.stringToTerraform(struct!.path),
     relative_url: cdktf.stringToTerraform(struct!.relativeUrl),
@@ -179,6 +199,11 @@ function dataFactoryDatasetJsonTimeoutsToTerraform(struct?: DataFactoryDatasetJs
 */
 export class DataFactoryDatasetJson extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_data_factory_dataset_json";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -222,11 +247,11 @@ export class DataFactoryDatasetJson extends cdktf.TerraformResource {
   // ==========
 
   // additional_properties - computed: false, optional: true, required: false
-  private _additionalProperties?: { [key: string]: string };
+  private _additionalProperties?: { [key: string]: string } | cdktf.IResolvable;
   public get additionalProperties() {
     return this.interpolationForAttribute('additional_properties') as any;
   }
-  public set additionalProperties(value: { [key: string]: string } ) {
+  public set additionalProperties(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._additionalProperties = value;
   }
   public resetAdditionalProperties() {
@@ -346,11 +371,11 @@ export class DataFactoryDatasetJson extends cdktf.TerraformResource {
   }
 
   // parameters - computed: false, optional: true, required: false
-  private _parameters?: { [key: string]: string };
+  private _parameters?: { [key: string]: string } | cdktf.IResolvable;
   public get parameters() {
     return this.interpolationForAttribute('parameters') as any;
   }
-  public set parameters(value: { [key: string]: string } ) {
+  public set parameters(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._parameters = value;
   }
   public resetParameters() {

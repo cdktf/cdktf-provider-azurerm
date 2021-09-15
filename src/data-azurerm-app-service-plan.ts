@@ -59,6 +59,11 @@ function dataAzurermAppServicePlanTimeoutsToTerraform(struct?: DataAzurermAppSer
 */
 export class DataAzurermAppServicePlan extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_app_service_plan";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -169,6 +174,11 @@ export class DataAzurermAppServicePlan extends cdktf.TerraformDataSource {
   // tags - computed: true, optional: false, required: false
   public tags(key: string): string {
     return new cdktf.StringMap(this, 'tags').lookup(key);
+  }
+
+  // zone_redundant - computed: true, optional: false, required: false
+  public get zoneRedundant() {
+    return this.getBooleanAttribute('zone_redundant');
   }
 
   // timeouts - computed: false, optional: true, required: false

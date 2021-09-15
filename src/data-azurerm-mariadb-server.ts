@@ -64,6 +64,11 @@ function dataAzurermMariadbServerTimeoutsToTerraform(struct?: DataAzurermMariadb
 */
 export class DataAzurermMariadbServer extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_mariadb_server";
+
   // ===========
   // INITIALIZER
   // ===========

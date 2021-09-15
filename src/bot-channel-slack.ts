@@ -77,6 +77,11 @@ function botChannelSlackTimeoutsToTerraform(struct?: BotChannelSlackTimeouts): a
 */
 export class BotChannelSlack extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_bot_channel_slack";
+
   // ===========
   // INITIALIZER
   // ===========

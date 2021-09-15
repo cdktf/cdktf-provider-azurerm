@@ -10,7 +10,7 @@ export interface VpnGatewayConnectionConfig extends cdktf.TerraformMetaArguments
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway_connection.html#internet_security_enabled VpnGatewayConnection#internet_security_enabled}
   */
-  readonly internetSecurityEnabled?: boolean;
+  readonly internetSecurityEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway_connection.html#name VpnGatewayConnection#name}
   */
@@ -147,11 +147,11 @@ export interface VpnGatewayConnectionVpnLink {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway_connection.html#bgp_enabled VpnGatewayConnection#bgp_enabled}
   */
-  readonly bgpEnabled?: boolean;
+  readonly bgpEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway_connection.html#local_azure_ip_address_enabled VpnGatewayConnection#local_azure_ip_address_enabled}
   */
-  readonly localAzureIpAddressEnabled?: boolean;
+  readonly localAzureIpAddressEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway_connection.html#name VpnGatewayConnection#name}
   */
@@ -159,7 +159,7 @@ export interface VpnGatewayConnectionVpnLink {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway_connection.html#policy_based_traffic_selector_enabled VpnGatewayConnection#policy_based_traffic_selector_enabled}
   */
-  readonly policyBasedTrafficSelectorEnabled?: boolean;
+  readonly policyBasedTrafficSelectorEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway_connection.html#protocol VpnGatewayConnection#protocol}
   */
@@ -167,7 +167,7 @@ export interface VpnGatewayConnectionVpnLink {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway_connection.html#ratelimit_enabled VpnGatewayConnection#ratelimit_enabled}
   */
-  readonly ratelimitEnabled?: boolean;
+  readonly ratelimitEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway_connection.html#route_weight VpnGatewayConnection#route_weight}
   */
@@ -211,6 +211,11 @@ function vpnGatewayConnectionVpnLinkToTerraform(struct?: VpnGatewayConnectionVpn
 */
 export class VpnGatewayConnection extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_vpn_gateway_connection";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -252,11 +257,11 @@ export class VpnGatewayConnection extends cdktf.TerraformResource {
   }
 
   // internet_security_enabled - computed: false, optional: true, required: false
-  private _internetSecurityEnabled?: boolean;
+  private _internetSecurityEnabled?: boolean | cdktf.IResolvable;
   public get internetSecurityEnabled() {
     return this.getBooleanAttribute('internet_security_enabled');
   }
-  public set internetSecurityEnabled(value: boolean ) {
+  public set internetSecurityEnabled(value: boolean | cdktf.IResolvable ) {
     this._internetSecurityEnabled = value;
   }
   public resetInternetSecurityEnabled() {

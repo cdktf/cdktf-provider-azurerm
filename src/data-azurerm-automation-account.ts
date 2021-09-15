@@ -42,6 +42,11 @@ function dataAzurermAutomationAccountTimeoutsToTerraform(struct?: DataAzurermAut
 */
 export class DataAzurermAutomationAccount extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_automation_account";
+
   // ===========
   // INITIALIZER
   // ===========

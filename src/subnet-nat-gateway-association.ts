@@ -57,6 +57,11 @@ function subnetNatGatewayAssociationTimeoutsToTerraform(struct?: SubnetNatGatewa
 */
 export class SubnetNatGatewayAssociation extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_subnet_nat_gateway_association";
+
   // ===========
   // INITIALIZER
   // ===========

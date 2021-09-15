@@ -65,6 +65,11 @@ function postgresqlConfigurationTimeoutsToTerraform(struct?: PostgresqlConfigura
 */
 export class PostgresqlConfiguration extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_postgresql_configuration";
+
   // ===========
   // INITIALIZER
   // ===========

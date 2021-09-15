@@ -22,15 +22,15 @@ export interface ServicebusTopicConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_topic.html#enable_batched_operations ServicebusTopic#enable_batched_operations}
   */
-  readonly enableBatchedOperations?: boolean;
+  readonly enableBatchedOperations?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_topic.html#enable_express ServicebusTopic#enable_express}
   */
-  readonly enableExpress?: boolean;
+  readonly enableExpress?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_topic.html#enable_partitioning ServicebusTopic#enable_partitioning}
   */
-  readonly enablePartitioning?: boolean;
+  readonly enablePartitioning?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_topic.html#max_size_in_megabytes ServicebusTopic#max_size_in_megabytes}
   */
@@ -46,7 +46,7 @@ export interface ServicebusTopicConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_topic.html#requires_duplicate_detection ServicebusTopic#requires_duplicate_detection}
   */
-  readonly requiresDuplicateDetection?: boolean;
+  readonly requiresDuplicateDetection?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_topic.html#resource_group_name ServicebusTopic#resource_group_name}
   */
@@ -58,7 +58,7 @@ export interface ServicebusTopicConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_topic.html#support_ordering ServicebusTopic#support_ordering}
   */
-  readonly supportOrdering?: boolean;
+  readonly supportOrdering?: boolean | cdktf.IResolvable;
   /**
   * timeouts block
   * 
@@ -100,6 +100,11 @@ function servicebusTopicTimeoutsToTerraform(struct?: ServicebusTopicTimeouts): a
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_topic.html azurerm_servicebus_topic}
 */
 export class ServicebusTopic extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_servicebus_topic";
 
   // ===========
   // INITIALIZER
@@ -192,11 +197,11 @@ export class ServicebusTopic extends cdktf.TerraformResource {
   }
 
   // enable_batched_operations - computed: false, optional: true, required: false
-  private _enableBatchedOperations?: boolean;
+  private _enableBatchedOperations?: boolean | cdktf.IResolvable;
   public get enableBatchedOperations() {
     return this.getBooleanAttribute('enable_batched_operations');
   }
-  public set enableBatchedOperations(value: boolean ) {
+  public set enableBatchedOperations(value: boolean | cdktf.IResolvable ) {
     this._enableBatchedOperations = value;
   }
   public resetEnableBatchedOperations() {
@@ -208,11 +213,11 @@ export class ServicebusTopic extends cdktf.TerraformResource {
   }
 
   // enable_express - computed: false, optional: true, required: false
-  private _enableExpress?: boolean;
+  private _enableExpress?: boolean | cdktf.IResolvable;
   public get enableExpress() {
     return this.getBooleanAttribute('enable_express');
   }
-  public set enableExpress(value: boolean ) {
+  public set enableExpress(value: boolean | cdktf.IResolvable ) {
     this._enableExpress = value;
   }
   public resetEnableExpress() {
@@ -224,11 +229,11 @@ export class ServicebusTopic extends cdktf.TerraformResource {
   }
 
   // enable_partitioning - computed: false, optional: true, required: false
-  private _enablePartitioning?: boolean;
+  private _enablePartitioning?: boolean | cdktf.IResolvable;
   public get enablePartitioning() {
     return this.getBooleanAttribute('enable_partitioning');
   }
-  public set enablePartitioning(value: boolean ) {
+  public set enablePartitioning(value: boolean | cdktf.IResolvable ) {
     this._enablePartitioning = value;
   }
   public resetEnablePartitioning() {
@@ -287,11 +292,11 @@ export class ServicebusTopic extends cdktf.TerraformResource {
   }
 
   // requires_duplicate_detection - computed: false, optional: true, required: false
-  private _requiresDuplicateDetection?: boolean;
+  private _requiresDuplicateDetection?: boolean | cdktf.IResolvable;
   public get requiresDuplicateDetection() {
     return this.getBooleanAttribute('requires_duplicate_detection');
   }
-  public set requiresDuplicateDetection(value: boolean ) {
+  public set requiresDuplicateDetection(value: boolean | cdktf.IResolvable ) {
     this._requiresDuplicateDetection = value;
   }
   public resetRequiresDuplicateDetection() {
@@ -332,11 +337,11 @@ export class ServicebusTopic extends cdktf.TerraformResource {
   }
 
   // support_ordering - computed: false, optional: true, required: false
-  private _supportOrdering?: boolean;
+  private _supportOrdering?: boolean | cdktf.IResolvable;
   public get supportOrdering() {
     return this.getBooleanAttribute('support_ordering');
   }
-  public set supportOrdering(value: boolean ) {
+  public set supportOrdering(value: boolean | cdktf.IResolvable ) {
     this._supportOrdering = value;
   }
   public resetSupportOrdering() {

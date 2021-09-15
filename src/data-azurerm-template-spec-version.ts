@@ -46,6 +46,11 @@ function dataAzurermTemplateSpecVersionTimeoutsToTerraform(struct?: DataAzurermT
 */
 export class DataAzurermTemplateSpecVersion extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_template_spec_version";
+
   // ===========
   // INITIALIZER
   // ===========

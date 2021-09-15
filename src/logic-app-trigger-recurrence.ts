@@ -103,6 +103,11 @@ function logicAppTriggerRecurrenceTimeoutsToTerraform(struct?: LogicAppTriggerRe
 */
 export class LogicAppTriggerRecurrence extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_logic_app_trigger_recurrence";
+
   // ===========
   // INITIALIZER
   // ===========

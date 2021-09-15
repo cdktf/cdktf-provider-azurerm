@@ -54,6 +54,11 @@ function dataAzurermNetappSnapshotTimeoutsToTerraform(struct?: DataAzurermNetapp
 */
 export class DataAzurermNetappSnapshot extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_netapp_snapshot";
+
   // ===========
   // INITIALIZER
   // ===========

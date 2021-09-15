@@ -26,7 +26,7 @@ export interface EventgridDomainConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_domain.html#public_network_access_enabled EventgridDomain#public_network_access_enabled}
   */
-  readonly publicNetworkAccessEnabled?: boolean;
+  readonly publicNetworkAccessEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_domain.html#resource_group_name EventgridDomain#resource_group_name}
   */
@@ -34,7 +34,13 @@ export interface EventgridDomainConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_domain.html#tags EventgridDomain#tags}
   */
-  readonly tags?: { [key: string]: string };
+  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
+  /**
+  * identity block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_domain.html#identity EventgridDomain#identity}
+  */
+  readonly identity?: EventgridDomainIdentity[];
   /**
   * input_mapping_default_values block
   * 
@@ -70,6 +76,25 @@ function eventgridDomainInboundIpRuleToTerraform(struct?: EventgridDomainInbound
   return {
     action: struct!.action === undefined ? null : cdktf.stringToTerraform(struct!.action),
     ip_mask: struct!.ipMask === undefined ? null : cdktf.stringToTerraform(struct!.ipMask),
+  }
+}
+
+export interface EventgridDomainIdentity {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_domain.html#identity_ids EventgridDomain#identity_ids}
+  */
+  readonly identityIds?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_domain.html#type EventgridDomain#type}
+  */
+  readonly type: string;
+}
+
+function eventgridDomainIdentityToTerraform(struct?: EventgridDomainIdentity): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    identity_ids: cdktf.listMapper(cdktf.stringToTerraform)(struct!.identityIds),
+    type: cdktf.stringToTerraform(struct!.type),
   }
 }
 
@@ -171,6 +196,11 @@ function eventgridDomainTimeoutsToTerraform(struct?: EventgridDomainTimeouts): a
 */
 export class EventgridDomain extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_eventgrid_domain";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -200,6 +230,7 @@ export class EventgridDomain extends cdktf.TerraformResource {
     this._publicNetworkAccessEnabled = config.publicNetworkAccessEnabled;
     this._resourceGroupName = config.resourceGroupName;
     this._tags = config.tags;
+    this._identity = config.identity;
     this._inputMappingDefaultValues = config.inputMappingDefaultValues;
     this._inputMappingFields = config.inputMappingFields;
     this._timeouts = config.timeouts;
@@ -283,11 +314,11 @@ export class EventgridDomain extends cdktf.TerraformResource {
   }
 
   // public_network_access_enabled - computed: false, optional: true, required: false
-  private _publicNetworkAccessEnabled?: boolean;
+  private _publicNetworkAccessEnabled?: boolean | cdktf.IResolvable;
   public get publicNetworkAccessEnabled() {
     return this.getBooleanAttribute('public_network_access_enabled');
   }
-  public set publicNetworkAccessEnabled(value: boolean ) {
+  public set publicNetworkAccessEnabled(value: boolean | cdktf.IResolvable ) {
     this._publicNetworkAccessEnabled = value;
   }
   public resetPublicNetworkAccessEnabled() {
@@ -317,11 +348,11 @@ export class EventgridDomain extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string };
+  private _tags?: { [key: string]: string } | cdktf.IResolvable;
   public get tags() {
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._tags = value;
   }
   public resetTags() {
@@ -330,6 +361,22 @@ export class EventgridDomain extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get tagsInput() {
     return this._tags
+  }
+
+  // identity - computed: false, optional: true, required: false
+  private _identity?: EventgridDomainIdentity[];
+  public get identity() {
+    return this.interpolationForAttribute('identity') as any;
+  }
+  public set identity(value: EventgridDomainIdentity[] ) {
+    this._identity = value;
+  }
+  public resetIdentity() {
+    this._identity = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get identityInput() {
+    return this._identity
   }
 
   // input_mapping_default_values - computed: false, optional: true, required: false
@@ -393,6 +440,7 @@ export class EventgridDomain extends cdktf.TerraformResource {
       public_network_access_enabled: cdktf.booleanToTerraform(this._publicNetworkAccessEnabled),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      identity: cdktf.listMapper(eventgridDomainIdentityToTerraform)(this._identity),
       input_mapping_default_values: cdktf.listMapper(eventgridDomainInputMappingDefaultValuesToTerraform)(this._inputMappingDefaultValues),
       input_mapping_fields: cdktf.listMapper(eventgridDomainInputMappingFieldsToTerraform)(this._inputMappingFields),
       timeouts: eventgridDomainTimeoutsToTerraform(this._timeouts),

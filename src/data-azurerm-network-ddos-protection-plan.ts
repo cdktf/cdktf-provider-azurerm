@@ -18,7 +18,7 @@ export interface DataAzurermNetworkDdosProtectionPlanConfig extends cdktf.Terraf
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/network_ddos_protection_plan.html#tags DataAzurermNetworkDdosProtectionPlan#tags}
   */
-  readonly tags?: { [key: string]: string };
+  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * timeouts block
   * 
@@ -45,6 +45,11 @@ function dataAzurermNetworkDdosProtectionPlanTimeoutsToTerraform(struct?: DataAz
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/network_ddos_protection_plan.html azurerm_network_ddos_protection_plan}
 */
 export class DataAzurermNetworkDdosProtectionPlan extends cdktf.TerraformDataSource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_network_ddos_protection_plan";
 
   // ===========
   // INITIALIZER
@@ -115,11 +120,11 @@ export class DataAzurermNetworkDdosProtectionPlan extends cdktf.TerraformDataSou
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string };
+  private _tags?: { [key: string]: string } | cdktf.IResolvable;
   public get tags() {
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._tags = value;
   }
   public resetTags() {

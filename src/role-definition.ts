@@ -104,6 +104,11 @@ function roleDefinitionTimeoutsToTerraform(struct?: RoleDefinitionTimeouts): any
 */
 export class RoleDefinition extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_role_definition";
+
   // ===========
   // INITIALIZER
   // ===========

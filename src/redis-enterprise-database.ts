@@ -97,6 +97,11 @@ function redisEnterpriseDatabaseTimeoutsToTerraform(struct?: RedisEnterpriseData
 */
 export class RedisEnterpriseDatabase extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_redis_enterprise_database";
+
   // ===========
   // INITIALIZER
   // ===========

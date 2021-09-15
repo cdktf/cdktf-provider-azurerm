@@ -56,6 +56,11 @@ function maintenanceAssignmentDedicatedHostTimeoutsToTerraform(struct?: Maintena
 */
 export class MaintenanceAssignmentDedicatedHost extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_maintenance_assignment_dedicated_host";
+
   // ===========
   // INITIALIZER
   // ===========

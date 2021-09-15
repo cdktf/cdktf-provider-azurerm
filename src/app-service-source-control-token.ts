@@ -61,6 +61,11 @@ function appServiceSourceControlTokenTimeoutsToTerraform(struct?: AppServiceSour
 */
 export class AppServiceSourceControlToken extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_app_service_source_control_token";
+
   // ===========
   // INITIALIZER
   // ===========

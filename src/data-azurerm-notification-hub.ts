@@ -80,6 +80,11 @@ function dataAzurermNotificationHubTimeoutsToTerraform(struct?: DataAzurermNotif
 */
 export class DataAzurermNotificationHub extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_notification_hub";
+
   // ===========
   // INITIALIZER
   // ===========

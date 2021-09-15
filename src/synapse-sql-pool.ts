@@ -18,7 +18,7 @@ export interface SynapseSqlPoolConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_sql_pool.html#data_encrypted SynapseSqlPool#data_encrypted}
   */
-  readonly dataEncrypted?: boolean;
+  readonly dataEncrypted?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_sql_pool.html#name SynapseSqlPool#name}
   */
@@ -38,7 +38,7 @@ export interface SynapseSqlPoolConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_sql_pool.html#tags SynapseSqlPool#tags}
   */
-  readonly tags?: { [key: string]: string };
+  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * restore block
   * 
@@ -105,6 +105,11 @@ function synapseSqlPoolTimeoutsToTerraform(struct?: SynapseSqlPoolTimeouts): any
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_sql_pool.html azurerm_synapse_sql_pool}
 */
 export class SynapseSqlPool extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_synapse_sql_pool";
 
   // ===========
   // INITIALIZER
@@ -177,11 +182,11 @@ export class SynapseSqlPool extends cdktf.TerraformResource {
   }
 
   // data_encrypted - computed: false, optional: true, required: false
-  private _dataEncrypted?: boolean;
+  private _dataEncrypted?: boolean | cdktf.IResolvable;
   public get dataEncrypted() {
     return this.getBooleanAttribute('data_encrypted');
   }
-  public set dataEncrypted(value: boolean ) {
+  public set dataEncrypted(value: boolean | cdktf.IResolvable ) {
     this._dataEncrypted = value;
   }
   public resetDataEncrypted() {
@@ -253,11 +258,11 @@ export class SynapseSqlPool extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string };
+  private _tags?: { [key: string]: string } | cdktf.IResolvable;
   public get tags() {
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._tags = value;
   }
   public resetTags() {

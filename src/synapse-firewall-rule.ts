@@ -65,6 +65,11 @@ function synapseFirewallRuleTimeoutsToTerraform(struct?: SynapseFirewallRuleTime
 */
 export class SynapseFirewallRule extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_synapse_firewall_rule";
+
   // ===========
   // INITIALIZER
   // ===========

@@ -14,7 +14,7 @@ export interface HdinsightInteractiveQueryClusterConfig extends cdktf.TerraformM
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_interactive_query_cluster.html#encryption_in_transit_enabled HdinsightInteractiveQueryCluster#encryption_in_transit_enabled}
   */
-  readonly encryptionInTransitEnabled?: boolean;
+  readonly encryptionInTransitEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_interactive_query_cluster.html#location HdinsightInteractiveQueryCluster#location}
   */
@@ -30,7 +30,7 @@ export interface HdinsightInteractiveQueryClusterConfig extends cdktf.TerraformM
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_interactive_query_cluster.html#tags HdinsightInteractiveQueryCluster#tags}
   */
-  readonly tags?: { [key: string]: string };
+  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_interactive_query_cluster.html#tier HdinsightInteractiveQueryCluster#tier}
   */
@@ -76,6 +76,12 @@ export interface HdinsightInteractiveQueryClusterConfig extends cdktf.TerraformM
   */
   readonly roles: HdinsightInteractiveQueryClusterRoles[];
   /**
+  * security_profile block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_interactive_query_cluster.html#security_profile HdinsightInteractiveQueryCluster#security_profile}
+  */
+  readonly securityProfile?: HdinsightInteractiveQueryClusterSecurityProfile[];
+  /**
   * storage_account block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_interactive_query_cluster.html#storage_account HdinsightInteractiveQueryCluster#storage_account}
@@ -112,7 +118,7 @@ export interface HdinsightInteractiveQueryClusterGateway {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_interactive_query_cluster.html#enabled HdinsightInteractiveQueryCluster#enabled}
   */
-  readonly enabled?: boolean;
+  readonly enabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_interactive_query_cluster.html#password HdinsightInteractiveQueryCluster#password}
   */
@@ -276,7 +282,7 @@ export interface HdinsightInteractiveQueryClusterNetwork {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_interactive_query_cluster.html#private_link_enabled HdinsightInteractiveQueryCluster#private_link_enabled}
   */
-  readonly privateLinkEnabled?: boolean;
+  readonly privateLinkEnabled?: boolean | cdktf.IResolvable;
 }
 
 function hdinsightInteractiveQueryClusterNetworkToTerraform(struct?: HdinsightInteractiveQueryClusterNetwork): any {
@@ -538,11 +544,55 @@ function hdinsightInteractiveQueryClusterRolesToTerraform(struct?: HdinsightInte
   }
 }
 
+export interface HdinsightInteractiveQueryClusterSecurityProfile {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_interactive_query_cluster.html#aadds_resource_id HdinsightInteractiveQueryCluster#aadds_resource_id}
+  */
+  readonly aaddsResourceId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_interactive_query_cluster.html#cluster_users_group_dns HdinsightInteractiveQueryCluster#cluster_users_group_dns}
+  */
+  readonly clusterUsersGroupDns?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_interactive_query_cluster.html#domain_name HdinsightInteractiveQueryCluster#domain_name}
+  */
+  readonly domainName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_interactive_query_cluster.html#domain_user_password HdinsightInteractiveQueryCluster#domain_user_password}
+  */
+  readonly domainUserPassword: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_interactive_query_cluster.html#domain_username HdinsightInteractiveQueryCluster#domain_username}
+  */
+  readonly domainUsername: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_interactive_query_cluster.html#ldaps_urls HdinsightInteractiveQueryCluster#ldaps_urls}
+  */
+  readonly ldapsUrls: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_interactive_query_cluster.html#msi_resource_id HdinsightInteractiveQueryCluster#msi_resource_id}
+  */
+  readonly msiResourceId: string;
+}
+
+function hdinsightInteractiveQueryClusterSecurityProfileToTerraform(struct?: HdinsightInteractiveQueryClusterSecurityProfile): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    aadds_resource_id: cdktf.stringToTerraform(struct!.aaddsResourceId),
+    cluster_users_group_dns: cdktf.listMapper(cdktf.stringToTerraform)(struct!.clusterUsersGroupDns),
+    domain_name: cdktf.stringToTerraform(struct!.domainName),
+    domain_user_password: cdktf.stringToTerraform(struct!.domainUserPassword),
+    domain_username: cdktf.stringToTerraform(struct!.domainUsername),
+    ldaps_urls: cdktf.listMapper(cdktf.stringToTerraform)(struct!.ldapsUrls),
+    msi_resource_id: cdktf.stringToTerraform(struct!.msiResourceId),
+  }
+}
+
 export interface HdinsightInteractiveQueryClusterStorageAccount {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_interactive_query_cluster.html#is_default HdinsightInteractiveQueryCluster#is_default}
   */
-  readonly isDefault: boolean;
+  readonly isDefault: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_interactive_query_cluster.html#storage_account_key HdinsightInteractiveQueryCluster#storage_account_key}
   */
@@ -570,7 +620,7 @@ export interface HdinsightInteractiveQueryClusterStorageAccountGen2 {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_interactive_query_cluster.html#is_default HdinsightInteractiveQueryCluster#is_default}
   */
-  readonly isDefault: boolean;
+  readonly isDefault: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_interactive_query_cluster.html#managed_identity_resource_id HdinsightInteractiveQueryCluster#managed_identity_resource_id}
   */
@@ -626,6 +676,11 @@ function hdinsightInteractiveQueryClusterTimeoutsToTerraform(struct?: HdinsightI
 */
 export class HdinsightInteractiveQueryCluster extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_hdinsight_interactive_query_cluster";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -662,6 +717,7 @@ export class HdinsightInteractiveQueryCluster extends cdktf.TerraformResource {
     this._monitor = config.monitor;
     this._network = config.network;
     this._roles = config.roles;
+    this._securityProfile = config.securityProfile;
     this._storageAccount = config.storageAccount;
     this._storageAccountGen2 = config.storageAccountGen2;
     this._timeouts = config.timeouts;
@@ -685,11 +741,11 @@ export class HdinsightInteractiveQueryCluster extends cdktf.TerraformResource {
   }
 
   // encryption_in_transit_enabled - computed: true, optional: true, required: false
-  private _encryptionInTransitEnabled?: boolean;
+  private _encryptionInTransitEnabled?: boolean | cdktf.IResolvable;
   public get encryptionInTransitEnabled() {
     return this.getBooleanAttribute('encryption_in_transit_enabled');
   }
-  public set encryptionInTransitEnabled(value: boolean) {
+  public set encryptionInTransitEnabled(value: boolean | cdktf.IResolvable) {
     this._encryptionInTransitEnabled = value;
   }
   public resetEncryptionInTransitEnabled() {
@@ -755,11 +811,11 @@ export class HdinsightInteractiveQueryCluster extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string };
+  private _tags?: { [key: string]: string } | cdktf.IResolvable;
   public get tags() {
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._tags = value;
   }
   public resetTags() {
@@ -886,6 +942,22 @@ export class HdinsightInteractiveQueryCluster extends cdktf.TerraformResource {
     return this._roles
   }
 
+  // security_profile - computed: false, optional: true, required: false
+  private _securityProfile?: HdinsightInteractiveQueryClusterSecurityProfile[];
+  public get securityProfile() {
+    return this.interpolationForAttribute('security_profile') as any;
+  }
+  public set securityProfile(value: HdinsightInteractiveQueryClusterSecurityProfile[] ) {
+    this._securityProfile = value;
+  }
+  public resetSecurityProfile() {
+    this._securityProfile = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get securityProfileInput() {
+    return this._securityProfile
+  }
+
   // storage_account - computed: false, optional: true, required: false
   private _storageAccount?: HdinsightInteractiveQueryClusterStorageAccount[];
   public get storageAccount() {
@@ -954,6 +1026,7 @@ export class HdinsightInteractiveQueryCluster extends cdktf.TerraformResource {
       monitor: cdktf.listMapper(hdinsightInteractiveQueryClusterMonitorToTerraform)(this._monitor),
       network: cdktf.listMapper(hdinsightInteractiveQueryClusterNetworkToTerraform)(this._network),
       roles: cdktf.listMapper(hdinsightInteractiveQueryClusterRolesToTerraform)(this._roles),
+      security_profile: cdktf.listMapper(hdinsightInteractiveQueryClusterSecurityProfileToTerraform)(this._securityProfile),
       storage_account: cdktf.listMapper(hdinsightInteractiveQueryClusterStorageAccountToTerraform)(this._storageAccount),
       storage_account_gen2: cdktf.listMapper(hdinsightInteractiveQueryClusterStorageAccountGen2ToTerraform)(this._storageAccountGen2),
       timeouts: hdinsightInteractiveQueryClusterTimeoutsToTerraform(this._timeouts),

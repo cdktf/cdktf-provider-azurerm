@@ -56,6 +56,11 @@ function appServiceCertificateBindingTimeoutsToTerraform(struct?: AppServiceCert
 */
 export class AppServiceCertificateBinding extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_app_service_certificate_binding";
+
   // ===========
   // INITIALIZER
   // ===========

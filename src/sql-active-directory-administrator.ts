@@ -69,6 +69,11 @@ function sqlActiveDirectoryAdministratorTimeoutsToTerraform(struct?: SqlActiveDi
 */
 export class SqlActiveDirectoryAdministrator extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_sql_active_directory_administrator";
+
   // ===========
   // INITIALIZER
   // ===========

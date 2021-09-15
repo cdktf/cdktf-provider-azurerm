@@ -10,11 +10,11 @@ export interface SecurityCenterContactConfig extends cdktf.TerraformMetaArgument
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_contact.html#alert_notifications SecurityCenterContact#alert_notifications}
   */
-  readonly alertNotifications: boolean;
+  readonly alertNotifications: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_contact.html#alerts_to_admins SecurityCenterContact#alerts_to_admins}
   */
-  readonly alertsToAdmins: boolean;
+  readonly alertsToAdmins: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_contact.html#email SecurityCenterContact#email}
   */
@@ -65,6 +65,11 @@ function securityCenterContactTimeoutsToTerraform(struct?: SecurityCenterContact
 */
 export class SecurityCenterContact extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_security_center_contact";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -99,11 +104,11 @@ export class SecurityCenterContact extends cdktf.TerraformResource {
   // ==========
 
   // alert_notifications - computed: false, optional: false, required: true
-  private _alertNotifications: boolean;
+  private _alertNotifications: boolean | cdktf.IResolvable;
   public get alertNotifications() {
     return this.getBooleanAttribute('alert_notifications');
   }
-  public set alertNotifications(value: boolean) {
+  public set alertNotifications(value: boolean | cdktf.IResolvable) {
     this._alertNotifications = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -112,11 +117,11 @@ export class SecurityCenterContact extends cdktf.TerraformResource {
   }
 
   // alerts_to_admins - computed: false, optional: false, required: true
-  private _alertsToAdmins: boolean;
+  private _alertsToAdmins: boolean | cdktf.IResolvable;
   public get alertsToAdmins() {
     return this.getBooleanAttribute('alerts_to_admins');
   }
-  public set alertsToAdmins(value: boolean) {
+  public set alertsToAdmins(value: boolean | cdktf.IResolvable) {
     this._alertsToAdmins = value;
   }
   // Temporarily expose input value. Use with caution.

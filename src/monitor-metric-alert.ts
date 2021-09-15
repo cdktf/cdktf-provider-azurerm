@@ -10,7 +10,7 @@ export interface MonitorMetricAlertConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_metric_alert.html#auto_mitigate MonitorMetricAlert#auto_mitigate}
   */
-  readonly autoMitigate?: boolean;
+  readonly autoMitigate?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_metric_alert.html#description MonitorMetricAlert#description}
   */
@@ -18,7 +18,7 @@ export interface MonitorMetricAlertConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_metric_alert.html#enabled MonitorMetricAlert#enabled}
   */
-  readonly enabled?: boolean;
+  readonly enabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_metric_alert.html#frequency MonitorMetricAlert#frequency}
   */
@@ -42,7 +42,7 @@ export interface MonitorMetricAlertConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_metric_alert.html#tags MonitorMetricAlert#tags}
   */
-  readonly tags?: { [key: string]: string };
+  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * The location of the target pluginsdk. Required when using subscription, resource group scope or multiple scopes.
   * 
@@ -98,7 +98,7 @@ export interface MonitorMetricAlertAction {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_metric_alert.html#webhook_properties MonitorMetricAlert#webhook_properties}
   */
-  readonly webhookProperties?: { [key: string]: string };
+  readonly webhookProperties?: { [key: string]: string } | cdktf.IResolvable;
 }
 
 function monitorMetricAlertActionToTerraform(struct?: MonitorMetricAlertAction): any {
@@ -177,7 +177,7 @@ export interface MonitorMetricAlertCriteria {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_metric_alert.html#skip_metric_validation MonitorMetricAlert#skip_metric_validation}
   */
-  readonly skipMetricValidation?: boolean;
+  readonly skipMetricValidation?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_metric_alert.html#threshold MonitorMetricAlert#threshold}
   */
@@ -263,7 +263,7 @@ export interface MonitorMetricAlertDynamicCriteria {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_metric_alert.html#skip_metric_validation MonitorMetricAlert#skip_metric_validation}
   */
-  readonly skipMetricValidation?: boolean;
+  readonly skipMetricValidation?: boolean | cdktf.IResolvable;
   /**
   * dimension block
   * 
@@ -323,6 +323,11 @@ function monitorMetricAlertTimeoutsToTerraform(struct?: MonitorMetricAlertTimeou
 */
 export class MonitorMetricAlert extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_monitor_metric_alert";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -369,11 +374,11 @@ export class MonitorMetricAlert extends cdktf.TerraformResource {
   // ==========
 
   // auto_mitigate - computed: false, optional: true, required: false
-  private _autoMitigate?: boolean;
+  private _autoMitigate?: boolean | cdktf.IResolvable;
   public get autoMitigate() {
     return this.getBooleanAttribute('auto_mitigate');
   }
-  public set autoMitigate(value: boolean ) {
+  public set autoMitigate(value: boolean | cdktf.IResolvable ) {
     this._autoMitigate = value;
   }
   public resetAutoMitigate() {
@@ -401,11 +406,11 @@ export class MonitorMetricAlert extends cdktf.TerraformResource {
   }
 
   // enabled - computed: false, optional: true, required: false
-  private _enabled?: boolean;
+  private _enabled?: boolean | cdktf.IResolvable;
   public get enabled() {
     return this.getBooleanAttribute('enabled');
   }
-  public set enabled(value: boolean ) {
+  public set enabled(value: boolean | cdktf.IResolvable ) {
     this._enabled = value;
   }
   public resetEnabled() {
@@ -493,11 +498,11 @@ export class MonitorMetricAlert extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string };
+  private _tags?: { [key: string]: string } | cdktf.IResolvable;
   public get tags() {
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._tags = value;
   }
   public resetTags() {

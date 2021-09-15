@@ -22,7 +22,7 @@ export interface DataAzurermImageConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/image.html#sort_descending DataAzurermImage#sort_descending}
   */
-  readonly sortDescending?: boolean;
+  readonly sortDescending?: boolean | cdktf.IResolvable;
   /**
   * timeouts block
   * 
@@ -108,6 +108,11 @@ function dataAzurermImageTimeoutsToTerraform(struct?: DataAzurermImageTimeouts):
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/image.html azurerm_image}
 */
 export class DataAzurermImage extends cdktf.TerraformDataSource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_image";
 
   // ===========
   // INITIALIZER
@@ -208,11 +213,11 @@ export class DataAzurermImage extends cdktf.TerraformDataSource {
   }
 
   // sort_descending - computed: false, optional: true, required: false
-  private _sortDescending?: boolean;
+  private _sortDescending?: boolean | cdktf.IResolvable;
   public get sortDescending() {
     return this.getBooleanAttribute('sort_descending');
   }
-  public set sortDescending(value: boolean ) {
+  public set sortDescending(value: boolean | cdktf.IResolvable ) {
     this._sortDescending = value;
   }
   public resetSortDescending() {

@@ -42,7 +42,7 @@ export interface IotTimeSeriesInsightsEventSourceIothubConfig extends cdktf.Terr
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_time_series_insights_event_source_iothub.html#tags IotTimeSeriesInsightsEventSourceIothub#tags}
   */
-  readonly tags?: { [key: string]: string };
+  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_time_series_insights_event_source_iothub.html#timestamp_property_name IotTimeSeriesInsightsEventSourceIothub#timestamp_property_name}
   */
@@ -88,6 +88,11 @@ function iotTimeSeriesInsightsEventSourceIothubTimeoutsToTerraform(struct?: IotT
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/iot_time_series_insights_event_source_iothub.html azurerm_iot_time_series_insights_event_source_iothub}
 */
 export class IotTimeSeriesInsightsEventSourceIothub extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_iot_time_series_insights_event_source_iothub";
 
   // ===========
   // INITIALIZER
@@ -238,11 +243,11 @@ export class IotTimeSeriesInsightsEventSourceIothub extends cdktf.TerraformResou
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string };
+  private _tags?: { [key: string]: string } | cdktf.IResolvable;
   public get tags() {
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._tags = value;
   }
   public resetTags() {

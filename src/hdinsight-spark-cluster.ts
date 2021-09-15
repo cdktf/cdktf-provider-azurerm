@@ -14,7 +14,7 @@ export interface HdinsightSparkClusterConfig extends cdktf.TerraformMetaArgument
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_spark_cluster.html#encryption_in_transit_enabled HdinsightSparkCluster#encryption_in_transit_enabled}
   */
-  readonly encryptionInTransitEnabled?: boolean;
+  readonly encryptionInTransitEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_spark_cluster.html#location HdinsightSparkCluster#location}
   */
@@ -30,7 +30,7 @@ export interface HdinsightSparkClusterConfig extends cdktf.TerraformMetaArgument
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_spark_cluster.html#tags HdinsightSparkCluster#tags}
   */
-  readonly tags?: { [key: string]: string };
+  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_spark_cluster.html#tier HdinsightSparkCluster#tier}
   */
@@ -76,6 +76,12 @@ export interface HdinsightSparkClusterConfig extends cdktf.TerraformMetaArgument
   */
   readonly roles: HdinsightSparkClusterRoles[];
   /**
+  * security_profile block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_spark_cluster.html#security_profile HdinsightSparkCluster#security_profile}
+  */
+  readonly securityProfile?: HdinsightSparkClusterSecurityProfile[];
+  /**
   * storage_account block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_spark_cluster.html#storage_account HdinsightSparkCluster#storage_account}
@@ -112,7 +118,7 @@ export interface HdinsightSparkClusterGateway {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_spark_cluster.html#enabled HdinsightSparkCluster#enabled}
   */
-  readonly enabled?: boolean;
+  readonly enabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_spark_cluster.html#password HdinsightSparkCluster#password}
   */
@@ -276,7 +282,7 @@ export interface HdinsightSparkClusterNetwork {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_spark_cluster.html#private_link_enabled HdinsightSparkCluster#private_link_enabled}
   */
-  readonly privateLinkEnabled?: boolean;
+  readonly privateLinkEnabled?: boolean | cdktf.IResolvable;
 }
 
 function hdinsightSparkClusterNetworkToTerraform(struct?: HdinsightSparkClusterNetwork): any {
@@ -538,11 +544,55 @@ function hdinsightSparkClusterRolesToTerraform(struct?: HdinsightSparkClusterRol
   }
 }
 
+export interface HdinsightSparkClusterSecurityProfile {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_spark_cluster.html#aadds_resource_id HdinsightSparkCluster#aadds_resource_id}
+  */
+  readonly aaddsResourceId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_spark_cluster.html#cluster_users_group_dns HdinsightSparkCluster#cluster_users_group_dns}
+  */
+  readonly clusterUsersGroupDns?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_spark_cluster.html#domain_name HdinsightSparkCluster#domain_name}
+  */
+  readonly domainName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_spark_cluster.html#domain_user_password HdinsightSparkCluster#domain_user_password}
+  */
+  readonly domainUserPassword: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_spark_cluster.html#domain_username HdinsightSparkCluster#domain_username}
+  */
+  readonly domainUsername: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_spark_cluster.html#ldaps_urls HdinsightSparkCluster#ldaps_urls}
+  */
+  readonly ldapsUrls: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_spark_cluster.html#msi_resource_id HdinsightSparkCluster#msi_resource_id}
+  */
+  readonly msiResourceId: string;
+}
+
+function hdinsightSparkClusterSecurityProfileToTerraform(struct?: HdinsightSparkClusterSecurityProfile): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    aadds_resource_id: cdktf.stringToTerraform(struct!.aaddsResourceId),
+    cluster_users_group_dns: cdktf.listMapper(cdktf.stringToTerraform)(struct!.clusterUsersGroupDns),
+    domain_name: cdktf.stringToTerraform(struct!.domainName),
+    domain_user_password: cdktf.stringToTerraform(struct!.domainUserPassword),
+    domain_username: cdktf.stringToTerraform(struct!.domainUsername),
+    ldaps_urls: cdktf.listMapper(cdktf.stringToTerraform)(struct!.ldapsUrls),
+    msi_resource_id: cdktf.stringToTerraform(struct!.msiResourceId),
+  }
+}
+
 export interface HdinsightSparkClusterStorageAccount {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_spark_cluster.html#is_default HdinsightSparkCluster#is_default}
   */
-  readonly isDefault: boolean;
+  readonly isDefault: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_spark_cluster.html#storage_account_key HdinsightSparkCluster#storage_account_key}
   */
@@ -570,7 +620,7 @@ export interface HdinsightSparkClusterStorageAccountGen2 {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_spark_cluster.html#is_default HdinsightSparkCluster#is_default}
   */
-  readonly isDefault: boolean;
+  readonly isDefault: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_spark_cluster.html#managed_identity_resource_id HdinsightSparkCluster#managed_identity_resource_id}
   */
@@ -626,6 +676,11 @@ function hdinsightSparkClusterTimeoutsToTerraform(struct?: HdinsightSparkCluster
 */
 export class HdinsightSparkCluster extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_hdinsight_spark_cluster";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -662,6 +717,7 @@ export class HdinsightSparkCluster extends cdktf.TerraformResource {
     this._monitor = config.monitor;
     this._network = config.network;
     this._roles = config.roles;
+    this._securityProfile = config.securityProfile;
     this._storageAccount = config.storageAccount;
     this._storageAccountGen2 = config.storageAccountGen2;
     this._timeouts = config.timeouts;
@@ -685,11 +741,11 @@ export class HdinsightSparkCluster extends cdktf.TerraformResource {
   }
 
   // encryption_in_transit_enabled - computed: true, optional: true, required: false
-  private _encryptionInTransitEnabled?: boolean;
+  private _encryptionInTransitEnabled?: boolean | cdktf.IResolvable;
   public get encryptionInTransitEnabled() {
     return this.getBooleanAttribute('encryption_in_transit_enabled');
   }
-  public set encryptionInTransitEnabled(value: boolean) {
+  public set encryptionInTransitEnabled(value: boolean | cdktf.IResolvable) {
     this._encryptionInTransitEnabled = value;
   }
   public resetEncryptionInTransitEnabled() {
@@ -755,11 +811,11 @@ export class HdinsightSparkCluster extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string };
+  private _tags?: { [key: string]: string } | cdktf.IResolvable;
   public get tags() {
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._tags = value;
   }
   public resetTags() {
@@ -886,6 +942,22 @@ export class HdinsightSparkCluster extends cdktf.TerraformResource {
     return this._roles
   }
 
+  // security_profile - computed: false, optional: true, required: false
+  private _securityProfile?: HdinsightSparkClusterSecurityProfile[];
+  public get securityProfile() {
+    return this.interpolationForAttribute('security_profile') as any;
+  }
+  public set securityProfile(value: HdinsightSparkClusterSecurityProfile[] ) {
+    this._securityProfile = value;
+  }
+  public resetSecurityProfile() {
+    this._securityProfile = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get securityProfileInput() {
+    return this._securityProfile
+  }
+
   // storage_account - computed: false, optional: true, required: false
   private _storageAccount?: HdinsightSparkClusterStorageAccount[];
   public get storageAccount() {
@@ -954,6 +1026,7 @@ export class HdinsightSparkCluster extends cdktf.TerraformResource {
       monitor: cdktf.listMapper(hdinsightSparkClusterMonitorToTerraform)(this._monitor),
       network: cdktf.listMapper(hdinsightSparkClusterNetworkToTerraform)(this._network),
       roles: cdktf.listMapper(hdinsightSparkClusterRolesToTerraform)(this._roles),
+      security_profile: cdktf.listMapper(hdinsightSparkClusterSecurityProfileToTerraform)(this._securityProfile),
       storage_account: cdktf.listMapper(hdinsightSparkClusterStorageAccountToTerraform)(this._storageAccount),
       storage_account_gen2: cdktf.listMapper(hdinsightSparkClusterStorageAccountGen2ToTerraform)(this._storageAccountGen2),
       timeouts: hdinsightSparkClusterTimeoutsToTerraform(this._timeouts),

@@ -53,6 +53,11 @@ function dataAzurermKubernetesClusterNodePoolTimeoutsToTerraform(struct?: DataAz
 */
 export class DataAzurermKubernetesClusterNodePool extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_kubernetes_cluster_node_pool";
+
   // ===========
   // INITIALIZER
   // ===========

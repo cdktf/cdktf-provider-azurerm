@@ -14,7 +14,7 @@ export interface MssqlServerSecurityAlertPolicyConfig extends cdktf.TerraformMet
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server_security_alert_policy.html#email_account_admins MssqlServerSecurityAlertPolicy#email_account_admins}
   */
-  readonly emailAccountAdmins?: boolean;
+  readonly emailAccountAdmins?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server_security_alert_policy.html#email_addresses MssqlServerSecurityAlertPolicy#email_addresses}
   */
@@ -85,6 +85,11 @@ function mssqlServerSecurityAlertPolicyTimeoutsToTerraform(struct?: MssqlServerS
 */
 export class MssqlServerSecurityAlertPolicy extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_mssql_server_security_alert_policy";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -140,11 +145,11 @@ export class MssqlServerSecurityAlertPolicy extends cdktf.TerraformResource {
   }
 
   // email_account_admins - computed: false, optional: true, required: false
-  private _emailAccountAdmins?: boolean;
+  private _emailAccountAdmins?: boolean | cdktf.IResolvable;
   public get emailAccountAdmins() {
     return this.getBooleanAttribute('email_account_admins');
   }
-  public set emailAccountAdmins(value: boolean ) {
+  public set emailAccountAdmins(value: boolean | cdktf.IResolvable ) {
     this._emailAccountAdmins = value;
   }
   public resetEmailAccountAdmins() {

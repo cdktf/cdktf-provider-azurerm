@@ -42,6 +42,11 @@ function dataAzurermApplicationInsightsTimeoutsToTerraform(struct?: DataAzurermA
 */
 export class DataAzurermApplicationInsights extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_application_insights";
+
   // ===========
   // INITIALIZER
   // ===========

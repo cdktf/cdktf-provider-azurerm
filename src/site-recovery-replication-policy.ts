@@ -69,6 +69,11 @@ function siteRecoveryReplicationPolicyTimeoutsToTerraform(struct?: SiteRecoveryR
 */
 export class SiteRecoveryReplicationPolicy extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_site_recovery_replication_policy";
+
   // ===========
   // INITIALIZER
   // ===========

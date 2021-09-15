@@ -22,7 +22,7 @@ export interface DnsARecordConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_a_record.html#tags DnsARecord#tags}
   */
-  readonly tags?: { [key: string]: string };
+  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_a_record.html#target_resource_id DnsARecord#target_resource_id}
   */
@@ -76,6 +76,11 @@ function dnsARecordTimeoutsToTerraform(struct?: DnsARecordTimeouts): any {
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/dns_a_record.html azurerm_dns_a_record}
 */
 export class DnsARecord extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_dns_a_record";
 
   // ===========
   // INITIALIZER
@@ -166,11 +171,11 @@ export class DnsARecord extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string };
+  private _tags?: { [key: string]: string } | cdktf.IResolvable;
   public get tags() {
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._tags = value;
   }
   public resetTags() {

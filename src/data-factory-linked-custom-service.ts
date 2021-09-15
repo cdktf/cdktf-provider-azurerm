@@ -10,7 +10,7 @@ export interface DataFactoryLinkedCustomServiceConfig extends cdktf.TerraformMet
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_custom_service.html#additional_properties DataFactoryLinkedCustomService#additional_properties}
   */
-  readonly additionalProperties?: { [key: string]: string };
+  readonly additionalProperties?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_custom_service.html#annotations DataFactoryLinkedCustomService#annotations}
   */
@@ -30,7 +30,7 @@ export interface DataFactoryLinkedCustomServiceConfig extends cdktf.TerraformMet
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_custom_service.html#parameters DataFactoryLinkedCustomService#parameters}
   */
-  readonly parameters?: { [key: string]: string };
+  readonly parameters?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_custom_service.html#type DataFactoryLinkedCustomService#type}
   */
@@ -60,7 +60,7 @@ export interface DataFactoryLinkedCustomServiceIntegrationRuntime {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_custom_service.html#parameters DataFactoryLinkedCustomService#parameters}
   */
-  readonly parameters?: { [key: string]: string };
+  readonly parameters?: { [key: string]: string } | cdktf.IResolvable;
 }
 
 function dataFactoryLinkedCustomServiceIntegrationRuntimeToTerraform(struct?: DataFactoryLinkedCustomServiceIntegrationRuntime): any {
@@ -106,6 +106,11 @@ function dataFactoryLinkedCustomServiceTimeoutsToTerraform(struct?: DataFactoryL
 */
 export class DataFactoryLinkedCustomService extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_data_factory_linked_custom_service";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -145,11 +150,11 @@ export class DataFactoryLinkedCustomService extends cdktf.TerraformResource {
   // ==========
 
   // additional_properties - computed: false, optional: true, required: false
-  private _additionalProperties?: { [key: string]: string };
+  private _additionalProperties?: { [key: string]: string } | cdktf.IResolvable;
   public get additionalProperties() {
     return this.interpolationForAttribute('additional_properties') as any;
   }
-  public set additionalProperties(value: { [key: string]: string } ) {
+  public set additionalProperties(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._additionalProperties = value;
   }
   public resetAdditionalProperties() {
@@ -224,11 +229,11 @@ export class DataFactoryLinkedCustomService extends cdktf.TerraformResource {
   }
 
   // parameters - computed: false, optional: true, required: false
-  private _parameters?: { [key: string]: string };
+  private _parameters?: { [key: string]: string } | cdktf.IResolvable;
   public get parameters() {
     return this.interpolationForAttribute('parameters') as any;
   }
-  public set parameters(value: { [key: string]: string } ) {
+  public set parameters(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._parameters = value;
   }
   public resetParameters() {

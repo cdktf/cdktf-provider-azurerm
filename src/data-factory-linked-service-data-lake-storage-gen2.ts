@@ -10,7 +10,7 @@ export interface DataFactoryLinkedServiceDataLakeStorageGen2Config extends cdktf
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_data_lake_storage_gen2.html#additional_properties DataFactoryLinkedServiceDataLakeStorageGen2#additional_properties}
   */
-  readonly additionalProperties?: { [key: string]: string };
+  readonly additionalProperties?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_data_lake_storage_gen2.html#annotations DataFactoryLinkedServiceDataLakeStorageGen2#annotations}
   */
@@ -34,7 +34,7 @@ export interface DataFactoryLinkedServiceDataLakeStorageGen2Config extends cdktf
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_data_lake_storage_gen2.html#parameters DataFactoryLinkedServiceDataLakeStorageGen2#parameters}
   */
-  readonly parameters?: { [key: string]: string };
+  readonly parameters?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_data_lake_storage_gen2.html#resource_group_name DataFactoryLinkedServiceDataLakeStorageGen2#resource_group_name}
   */
@@ -62,7 +62,7 @@ export interface DataFactoryLinkedServiceDataLakeStorageGen2Config extends cdktf
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_data_lake_storage_gen2.html#use_managed_identity DataFactoryLinkedServiceDataLakeStorageGen2#use_managed_identity}
   */
-  readonly useManagedIdentity?: boolean;
+  readonly useManagedIdentity?: boolean | cdktf.IResolvable;
   /**
   * timeouts block
   * 
@@ -104,6 +104,11 @@ function dataFactoryLinkedServiceDataLakeStorageGen2TimeoutsToTerraform(struct?:
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_data_lake_storage_gen2.html azurerm_data_factory_linked_service_data_lake_storage_gen2}
 */
 export class DataFactoryLinkedServiceDataLakeStorageGen2 extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_data_factory_linked_service_data_lake_storage_gen2";
 
   // ===========
   // INITIALIZER
@@ -149,11 +154,11 @@ export class DataFactoryLinkedServiceDataLakeStorageGen2 extends cdktf.Terraform
   // ==========
 
   // additional_properties - computed: false, optional: true, required: false
-  private _additionalProperties?: { [key: string]: string };
+  private _additionalProperties?: { [key: string]: string } | cdktf.IResolvable;
   public get additionalProperties() {
     return this.interpolationForAttribute('additional_properties') as any;
   }
-  public set additionalProperties(value: { [key: string]: string } ) {
+  public set additionalProperties(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._additionalProperties = value;
   }
   public resetAdditionalProperties() {
@@ -244,11 +249,11 @@ export class DataFactoryLinkedServiceDataLakeStorageGen2 extends cdktf.Terraform
   }
 
   // parameters - computed: false, optional: true, required: false
-  private _parameters?: { [key: string]: string };
+  private _parameters?: { [key: string]: string } | cdktf.IResolvable;
   public get parameters() {
     return this.interpolationForAttribute('parameters') as any;
   }
-  public set parameters(value: { [key: string]: string } ) {
+  public set parameters(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._parameters = value;
   }
   public resetParameters() {
@@ -350,11 +355,11 @@ export class DataFactoryLinkedServiceDataLakeStorageGen2 extends cdktf.Terraform
   }
 
   // use_managed_identity - computed: false, optional: true, required: false
-  private _useManagedIdentity?: boolean;
+  private _useManagedIdentity?: boolean | cdktf.IResolvable;
   public get useManagedIdentity() {
     return this.getBooleanAttribute('use_managed_identity');
   }
-  public set useManagedIdentity(value: boolean ) {
+  public set useManagedIdentity(value: boolean | cdktf.IResolvable ) {
     this._useManagedIdentity = value;
   }
   public resetUseManagedIdentity() {

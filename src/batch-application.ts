@@ -14,7 +14,7 @@ export interface BatchApplicationConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_application.html#allow_updates BatchApplication#allow_updates}
   */
-  readonly allowUpdates?: boolean;
+  readonly allowUpdates?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_application.html#default_version BatchApplication#default_version}
   */
@@ -73,6 +73,11 @@ function batchApplicationTimeoutsToTerraform(struct?: BatchApplicationTimeouts):
 */
 export class BatchApplication extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_batch_application";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -122,11 +127,11 @@ export class BatchApplication extends cdktf.TerraformResource {
   }
 
   // allow_updates - computed: false, optional: true, required: false
-  private _allowUpdates?: boolean;
+  private _allowUpdates?: boolean | cdktf.IResolvable;
   public get allowUpdates() {
     return this.getBooleanAttribute('allow_updates');
   }
-  public set allowUpdates(value: boolean ) {
+  public set allowUpdates(value: boolean | cdktf.IResolvable ) {
     this._allowUpdates = value;
   }
   public resetAllowUpdates() {

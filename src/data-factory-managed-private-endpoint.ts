@@ -60,6 +60,11 @@ function dataFactoryManagedPrivateEndpointTimeoutsToTerraform(struct?: DataFacto
 */
 export class DataFactoryManagedPrivateEndpoint extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_data_factory_managed_private_endpoint";
+
   // ===========
   // INITIALIZER
   // ===========

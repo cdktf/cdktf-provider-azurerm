@@ -10,11 +10,11 @@ export interface SentinelDataConnectorMicrosoftCloudAppSecurityConfig extends cd
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_data_connector_microsoft_cloud_app_security.html#alerts_enabled SentinelDataConnectorMicrosoftCloudAppSecurity#alerts_enabled}
   */
-  readonly alertsEnabled?: boolean;
+  readonly alertsEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_data_connector_microsoft_cloud_app_security.html#discovery_logs_enabled SentinelDataConnectorMicrosoftCloudAppSecurity#discovery_logs_enabled}
   */
-  readonly discoveryLogsEnabled?: boolean;
+  readonly discoveryLogsEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_data_connector_microsoft_cloud_app_security.html#log_analytics_workspace_id SentinelDataConnectorMicrosoftCloudAppSecurity#log_analytics_workspace_id}
   */
@@ -69,6 +69,11 @@ function sentinelDataConnectorMicrosoftCloudAppSecurityTimeoutsToTerraform(struc
 */
 export class SentinelDataConnectorMicrosoftCloudAppSecurity extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_sentinel_data_connector_microsoft_cloud_app_security";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -104,11 +109,11 @@ export class SentinelDataConnectorMicrosoftCloudAppSecurity extends cdktf.Terraf
   // ==========
 
   // alerts_enabled - computed: false, optional: true, required: false
-  private _alertsEnabled?: boolean;
+  private _alertsEnabled?: boolean | cdktf.IResolvable;
   public get alertsEnabled() {
     return this.getBooleanAttribute('alerts_enabled');
   }
-  public set alertsEnabled(value: boolean ) {
+  public set alertsEnabled(value: boolean | cdktf.IResolvable ) {
     this._alertsEnabled = value;
   }
   public resetAlertsEnabled() {
@@ -120,11 +125,11 @@ export class SentinelDataConnectorMicrosoftCloudAppSecurity extends cdktf.Terraf
   }
 
   // discovery_logs_enabled - computed: false, optional: true, required: false
-  private _discoveryLogsEnabled?: boolean;
+  private _discoveryLogsEnabled?: boolean | cdktf.IResolvable;
   public get discoveryLogsEnabled() {
     return this.getBooleanAttribute('discovery_logs_enabled');
   }
-  public set discoveryLogsEnabled(value: boolean ) {
+  public set discoveryLogsEnabled(value: boolean | cdktf.IResolvable ) {
     this._discoveryLogsEnabled = value;
   }
   public resetDiscoveryLogsEnabled() {

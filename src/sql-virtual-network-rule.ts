@@ -10,7 +10,7 @@ export interface SqlVirtualNetworkRuleConfig extends cdktf.TerraformMetaArgument
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_virtual_network_rule.html#ignore_missing_vnet_service_endpoint SqlVirtualNetworkRule#ignore_missing_vnet_service_endpoint}
   */
-  readonly ignoreMissingVnetServiceEndpoint?: boolean;
+  readonly ignoreMissingVnetServiceEndpoint?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_virtual_network_rule.html#name SqlVirtualNetworkRule#name}
   */
@@ -69,6 +69,11 @@ function sqlVirtualNetworkRuleTimeoutsToTerraform(struct?: SqlVirtualNetworkRule
 */
 export class SqlVirtualNetworkRule extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_sql_virtual_network_rule";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -109,11 +114,11 @@ export class SqlVirtualNetworkRule extends cdktf.TerraformResource {
   }
 
   // ignore_missing_vnet_service_endpoint - computed: false, optional: true, required: false
-  private _ignoreMissingVnetServiceEndpoint?: boolean;
+  private _ignoreMissingVnetServiceEndpoint?: boolean | cdktf.IResolvable;
   public get ignoreMissingVnetServiceEndpoint() {
     return this.getBooleanAttribute('ignore_missing_vnet_service_endpoint');
   }
-  public set ignoreMissingVnetServiceEndpoint(value: boolean ) {
+  public set ignoreMissingVnetServiceEndpoint(value: boolean | cdktf.IResolvable ) {
     this._ignoreMissingVnetServiceEndpoint = value;
   }
   public resetIgnoreMissingVnetServiceEndpoint() {

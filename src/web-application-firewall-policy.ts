@@ -22,7 +22,7 @@ export interface WebApplicationFirewallPolicyConfig extends cdktf.TerraformMetaA
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/web_application_firewall_policy.html#tags WebApplicationFirewallPolicy#tags}
   */
-  readonly tags?: { [key: string]: string };
+  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * custom_rules block
   * 
@@ -75,7 +75,7 @@ export interface WebApplicationFirewallPolicyCustomRulesMatchConditions {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/web_application_firewall_policy.html#negation_condition WebApplicationFirewallPolicy#negation_condition}
   */
-  readonly negationCondition?: boolean;
+  readonly negationCondition?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/web_application_firewall_policy.html#operator WebApplicationFirewallPolicy#operator}
   */
@@ -235,7 +235,7 @@ export interface WebApplicationFirewallPolicyPolicySettings {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/web_application_firewall_policy.html#enabled WebApplicationFirewallPolicy#enabled}
   */
-  readonly enabled?: boolean;
+  readonly enabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/web_application_firewall_policy.html#file_upload_limit_in_mb WebApplicationFirewallPolicy#file_upload_limit_in_mb}
   */
@@ -251,7 +251,7 @@ export interface WebApplicationFirewallPolicyPolicySettings {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/web_application_firewall_policy.html#request_body_check WebApplicationFirewallPolicy#request_body_check}
   */
-  readonly requestBodyCheck?: boolean;
+  readonly requestBodyCheck?: boolean | cdktf.IResolvable;
 }
 
 function webApplicationFirewallPolicyPolicySettingsToTerraform(struct?: WebApplicationFirewallPolicyPolicySettings): any {
@@ -299,6 +299,11 @@ function webApplicationFirewallPolicyTimeoutsToTerraform(struct?: WebApplication
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/web_application_firewall_policy.html azurerm_web_application_firewall_policy}
 */
 export class WebApplicationFirewallPolicy extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_web_application_firewall_policy";
 
   // ===========
   // INITIALIZER
@@ -391,11 +396,11 @@ export class WebApplicationFirewallPolicy extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string };
+  private _tags?: { [key: string]: string } | cdktf.IResolvable;
   public get tags() {
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._tags = value;
   }
   public resetTags() {

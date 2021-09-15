@@ -42,6 +42,11 @@ function dataAzurermLogicAppIntegrationAccountTimeoutsToTerraform(struct?: DataA
 */
 export class DataAzurermLogicAppIntegrationAccount extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_logic_app_integration_account";
+
   // ===========
   // INITIALIZER
   // ===========

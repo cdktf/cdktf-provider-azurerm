@@ -69,6 +69,11 @@ function logicAppTriggerHttpRequestTimeoutsToTerraform(struct?: LogicAppTriggerH
 */
 export class LogicAppTriggerHttpRequest extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_logic_app_trigger_http_request";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -102,6 +107,11 @@ export class LogicAppTriggerHttpRequest extends cdktf.TerraformResource {
   // ==========
   // ATTRIBUTES
   // ==========
+
+  // callback_url - computed: true, optional: false, required: false
+  public get callbackUrl() {
+    return this.getStringAttribute('callback_url');
+  }
 
   // id - computed: true, optional: true, required: false
   public get id() {

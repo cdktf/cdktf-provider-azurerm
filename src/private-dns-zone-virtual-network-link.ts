@@ -18,7 +18,7 @@ export interface PrivateDnsZoneVirtualNetworkLinkConfig extends cdktf.TerraformM
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/private_dns_zone_virtual_network_link.html#registration_enabled PrivateDnsZoneVirtualNetworkLink#registration_enabled}
   */
-  readonly registrationEnabled?: boolean;
+  readonly registrationEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/private_dns_zone_virtual_network_link.html#resource_group_name PrivateDnsZoneVirtualNetworkLink#resource_group_name}
   */
@@ -26,7 +26,7 @@ export interface PrivateDnsZoneVirtualNetworkLinkConfig extends cdktf.TerraformM
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/private_dns_zone_virtual_network_link.html#tags PrivateDnsZoneVirtualNetworkLink#tags}
   */
-  readonly tags?: { [key: string]: string };
+  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/private_dns_zone_virtual_network_link.html#virtual_network_id PrivateDnsZoneVirtualNetworkLink#virtual_network_id}
   */
@@ -72,6 +72,11 @@ function privateDnsZoneVirtualNetworkLinkTimeoutsToTerraform(struct?: PrivateDns
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/private_dns_zone_virtual_network_link.html azurerm_private_dns_zone_virtual_network_link}
 */
 export class PrivateDnsZoneVirtualNetworkLink extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_private_dns_zone_virtual_network_link";
 
   // ===========
   // INITIALIZER
@@ -140,11 +145,11 @@ export class PrivateDnsZoneVirtualNetworkLink extends cdktf.TerraformResource {
   }
 
   // registration_enabled - computed: false, optional: true, required: false
-  private _registrationEnabled?: boolean;
+  private _registrationEnabled?: boolean | cdktf.IResolvable;
   public get registrationEnabled() {
     return this.getBooleanAttribute('registration_enabled');
   }
-  public set registrationEnabled(value: boolean ) {
+  public set registrationEnabled(value: boolean | cdktf.IResolvable ) {
     this._registrationEnabled = value;
   }
   public resetRegistrationEnabled() {
@@ -169,11 +174,11 @@ export class PrivateDnsZoneVirtualNetworkLink extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string };
+  private _tags?: { [key: string]: string } | cdktf.IResolvable;
   public get tags() {
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._tags = value;
   }
   public resetTags() {

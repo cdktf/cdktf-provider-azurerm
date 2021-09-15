@@ -26,7 +26,7 @@ export interface LogAnalyticsClusterConfig extends cdktf.TerraformMetaArguments 
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_cluster.html#tags LogAnalyticsCluster#tags}
   */
-  readonly tags?: { [key: string]: string };
+  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * identity block
   * 
@@ -88,6 +88,11 @@ function logAnalyticsClusterTimeoutsToTerraform(struct?: LogAnalyticsClusterTime
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_cluster.html azurerm_log_analytics_cluster}
 */
 export class LogAnalyticsCluster extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_log_analytics_cluster";
 
   // ===========
   // INITIALIZER
@@ -190,11 +195,11 @@ export class LogAnalyticsCluster extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string };
+  private _tags?: { [key: string]: string } | cdktf.IResolvable;
   public get tags() {
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._tags = value;
   }
   public resetTags() {

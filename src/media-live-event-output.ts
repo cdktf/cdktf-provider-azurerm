@@ -81,6 +81,11 @@ function mediaLiveEventOutputTimeoutsToTerraform(struct?: MediaLiveEventOutputTi
 */
 export class MediaLiveEventOutput extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_media_live_event_output";
+
   // ===========
   // INITIALIZER
   // ===========

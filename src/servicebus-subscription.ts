@@ -14,11 +14,11 @@ export interface ServicebusSubscriptionConfig extends cdktf.TerraformMetaArgumen
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_subscription.html#dead_lettering_on_filter_evaluation_error ServicebusSubscription#dead_lettering_on_filter_evaluation_error}
   */
-  readonly deadLetteringOnFilterEvaluationError?: boolean;
+  readonly deadLetteringOnFilterEvaluationError?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_subscription.html#dead_lettering_on_message_expiration ServicebusSubscription#dead_lettering_on_message_expiration}
   */
-  readonly deadLetteringOnMessageExpiration?: boolean;
+  readonly deadLetteringOnMessageExpiration?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_subscription.html#default_message_ttl ServicebusSubscription#default_message_ttl}
   */
@@ -26,7 +26,7 @@ export interface ServicebusSubscriptionConfig extends cdktf.TerraformMetaArgumen
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_subscription.html#enable_batched_operations ServicebusSubscription#enable_batched_operations}
   */
-  readonly enableBatchedOperations?: boolean;
+  readonly enableBatchedOperations?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_subscription.html#forward_dead_lettered_messages_to ServicebusSubscription#forward_dead_lettered_messages_to}
   */
@@ -54,7 +54,7 @@ export interface ServicebusSubscriptionConfig extends cdktf.TerraformMetaArgumen
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_subscription.html#requires_session ServicebusSubscription#requires_session}
   */
-  readonly requiresSession?: boolean;
+  readonly requiresSession?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_subscription.html#resource_group_name ServicebusSubscription#resource_group_name}
   */
@@ -108,6 +108,11 @@ function servicebusSubscriptionTimeoutsToTerraform(struct?: ServicebusSubscripti
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_subscription.html azurerm_servicebus_subscription}
 */
 export class ServicebusSubscription extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_servicebus_subscription";
 
   // ===========
   // INITIALIZER
@@ -170,11 +175,11 @@ export class ServicebusSubscription extends cdktf.TerraformResource {
   }
 
   // dead_lettering_on_filter_evaluation_error - computed: false, optional: true, required: false
-  private _deadLetteringOnFilterEvaluationError?: boolean;
+  private _deadLetteringOnFilterEvaluationError?: boolean | cdktf.IResolvable;
   public get deadLetteringOnFilterEvaluationError() {
     return this.getBooleanAttribute('dead_lettering_on_filter_evaluation_error');
   }
-  public set deadLetteringOnFilterEvaluationError(value: boolean ) {
+  public set deadLetteringOnFilterEvaluationError(value: boolean | cdktf.IResolvable ) {
     this._deadLetteringOnFilterEvaluationError = value;
   }
   public resetDeadLetteringOnFilterEvaluationError() {
@@ -186,11 +191,11 @@ export class ServicebusSubscription extends cdktf.TerraformResource {
   }
 
   // dead_lettering_on_message_expiration - computed: false, optional: true, required: false
-  private _deadLetteringOnMessageExpiration?: boolean;
+  private _deadLetteringOnMessageExpiration?: boolean | cdktf.IResolvable;
   public get deadLetteringOnMessageExpiration() {
     return this.getBooleanAttribute('dead_lettering_on_message_expiration');
   }
-  public set deadLetteringOnMessageExpiration(value: boolean ) {
+  public set deadLetteringOnMessageExpiration(value: boolean | cdktf.IResolvable ) {
     this._deadLetteringOnMessageExpiration = value;
   }
   public resetDeadLetteringOnMessageExpiration() {
@@ -218,11 +223,11 @@ export class ServicebusSubscription extends cdktf.TerraformResource {
   }
 
   // enable_batched_operations - computed: false, optional: true, required: false
-  private _enableBatchedOperations?: boolean;
+  private _enableBatchedOperations?: boolean | cdktf.IResolvable;
   public get enableBatchedOperations() {
     return this.getBooleanAttribute('enable_batched_operations');
   }
-  public set enableBatchedOperations(value: boolean ) {
+  public set enableBatchedOperations(value: boolean | cdktf.IResolvable ) {
     this._enableBatchedOperations = value;
   }
   public resetEnableBatchedOperations() {
@@ -326,11 +331,11 @@ export class ServicebusSubscription extends cdktf.TerraformResource {
   }
 
   // requires_session - computed: false, optional: true, required: false
-  private _requiresSession?: boolean;
+  private _requiresSession?: boolean | cdktf.IResolvable;
   public get requiresSession() {
     return this.getBooleanAttribute('requires_session');
   }
-  public set requiresSession(value: boolean ) {
+  public set requiresSession(value: boolean | cdktf.IResolvable ) {
     this._requiresSession = value;
   }
   public resetRequiresSession() {

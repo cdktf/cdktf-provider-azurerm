@@ -61,6 +61,11 @@ function networkInterfaceApplicationGatewayBackendAddressPoolAssociationTimeouts
 */
 export class NetworkInterfaceApplicationGatewayBackendAddressPoolAssociation extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_network_interface_application_gateway_backend_address_pool_association";
+
   // ===========
   // INITIALIZER
   // ===========

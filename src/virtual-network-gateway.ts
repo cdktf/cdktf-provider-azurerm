@@ -10,7 +10,7 @@ export interface VirtualNetworkGatewayConfig extends cdktf.TerraformMetaArgument
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_network_gateway.html#active_active VirtualNetworkGateway#active_active}
   */
-  readonly activeActive?: boolean;
+  readonly activeActive?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_network_gateway.html#default_local_network_gateway_id VirtualNetworkGateway#default_local_network_gateway_id}
   */
@@ -18,7 +18,7 @@ export interface VirtualNetworkGatewayConfig extends cdktf.TerraformMetaArgument
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_network_gateway.html#enable_bgp VirtualNetworkGateway#enable_bgp}
   */
-  readonly enableBgp?: boolean;
+  readonly enableBgp?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_network_gateway.html#generation VirtualNetworkGateway#generation}
   */
@@ -34,7 +34,7 @@ export interface VirtualNetworkGatewayConfig extends cdktf.TerraformMetaArgument
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_network_gateway.html#private_ip_address_enabled VirtualNetworkGateway#private_ip_address_enabled}
   */
-  readonly privateIpAddressEnabled?: boolean;
+  readonly privateIpAddressEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_network_gateway.html#resource_group_name VirtualNetworkGateway#resource_group_name}
   */
@@ -46,7 +46,7 @@ export interface VirtualNetworkGatewayConfig extends cdktf.TerraformMetaArgument
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_network_gateway.html#tags VirtualNetworkGateway#tags}
   */
-  readonly tags?: { [key: string]: string };
+  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_network_gateway.html#type VirtualNetworkGateway#type}
   */
@@ -272,6 +272,10 @@ export interface VirtualNetworkGatewayVpnClientConfiguration {
   */
   readonly radiusServerSecret?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_network_gateway.html#vpn_auth_types VirtualNetworkGateway#vpn_auth_types}
+  */
+  readonly vpnAuthTypes?: string[];
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_network_gateway.html#vpn_client_protocols VirtualNetworkGateway#vpn_client_protocols}
   */
   readonly vpnClientProtocols?: string[];
@@ -298,6 +302,7 @@ function virtualNetworkGatewayVpnClientConfigurationToTerraform(struct?: Virtual
     address_space: cdktf.listMapper(cdktf.stringToTerraform)(struct!.addressSpace),
     radius_server_address: cdktf.stringToTerraform(struct!.radiusServerAddress),
     radius_server_secret: cdktf.stringToTerraform(struct!.radiusServerSecret),
+    vpn_auth_types: cdktf.listMapper(cdktf.stringToTerraform)(struct!.vpnAuthTypes),
     vpn_client_protocols: cdktf.listMapper(cdktf.stringToTerraform)(struct!.vpnClientProtocols),
     revoked_certificate: cdktf.listMapper(virtualNetworkGatewayVpnClientConfigurationRevokedCertificateToTerraform)(struct!.revokedCertificate),
     root_certificate: cdktf.listMapper(virtualNetworkGatewayVpnClientConfigurationRootCertificateToTerraform)(struct!.rootCertificate),
@@ -309,6 +314,11 @@ function virtualNetworkGatewayVpnClientConfigurationToTerraform(struct?: Virtual
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_network_gateway.html azurerm_virtual_network_gateway}
 */
 export class VirtualNetworkGateway extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_virtual_network_gateway";
 
   // ===========
   // INITIALIZER
@@ -356,11 +366,11 @@ export class VirtualNetworkGateway extends cdktf.TerraformResource {
   // ==========
 
   // active_active - computed: true, optional: true, required: false
-  private _activeActive?: boolean;
+  private _activeActive?: boolean | cdktf.IResolvable;
   public get activeActive() {
     return this.getBooleanAttribute('active_active');
   }
-  public set activeActive(value: boolean) {
+  public set activeActive(value: boolean | cdktf.IResolvable) {
     this._activeActive = value;
   }
   public resetActiveActive() {
@@ -388,11 +398,11 @@ export class VirtualNetworkGateway extends cdktf.TerraformResource {
   }
 
   // enable_bgp - computed: true, optional: true, required: false
-  private _enableBgp?: boolean;
+  private _enableBgp?: boolean | cdktf.IResolvable;
   public get enableBgp() {
     return this.getBooleanAttribute('enable_bgp');
   }
-  public set enableBgp(value: boolean) {
+  public set enableBgp(value: boolean | cdktf.IResolvable) {
     this._enableBgp = value;
   }
   public resetEnableBgp() {
@@ -451,11 +461,11 @@ export class VirtualNetworkGateway extends cdktf.TerraformResource {
   }
 
   // private_ip_address_enabled - computed: false, optional: true, required: false
-  private _privateIpAddressEnabled?: boolean;
+  private _privateIpAddressEnabled?: boolean | cdktf.IResolvable;
   public get privateIpAddressEnabled() {
     return this.getBooleanAttribute('private_ip_address_enabled');
   }
-  public set privateIpAddressEnabled(value: boolean ) {
+  public set privateIpAddressEnabled(value: boolean | cdktf.IResolvable ) {
     this._privateIpAddressEnabled = value;
   }
   public resetPrivateIpAddressEnabled() {
@@ -493,11 +503,11 @@ export class VirtualNetworkGateway extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string };
+  private _tags?: { [key: string]: string } | cdktf.IResolvable;
   public get tags() {
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._tags = value;
   }
   public resetTags() {

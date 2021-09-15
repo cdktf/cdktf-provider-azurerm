@@ -22,7 +22,7 @@ export interface BatchPoolConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool.html#metadata BatchPool#metadata}
   */
-  readonly metadata?: { [key: string]: string };
+  readonly metadata?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool.html#name BatchPool#name}
   */
@@ -38,7 +38,7 @@ export interface BatchPoolConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool.html#stop_pending_resize_operation BatchPool#stop_pending_resize_operation}
   */
-  readonly stopPendingResizeOperation?: boolean;
+  readonly stopPendingResizeOperation?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool.html#vm_size BatchPool#vm_size}
   */
@@ -390,7 +390,7 @@ export interface BatchPoolStartTask {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool.html#environment BatchPool#environment}
   */
-  readonly environment?: { [key: string]: string };
+  readonly environment?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool.html#max_task_retry_count BatchPool#max_task_retry_count}
   */
@@ -398,7 +398,7 @@ export interface BatchPoolStartTask {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool.html#wait_for_success BatchPool#wait_for_success}
   */
-  readonly waitForSuccess?: boolean;
+  readonly waitForSuccess?: boolean | cdktf.IResolvable;
   /**
   * resource_file block
   * 
@@ -493,6 +493,11 @@ function batchPoolTimeoutsToTerraform(struct?: BatchPoolTimeouts): any {
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool.html azurerm_batch_pool}
 */
 export class BatchPool extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_batch_pool";
 
   // ===========
   // INITIALIZER
@@ -590,11 +595,11 @@ export class BatchPool extends cdktf.TerraformResource {
   }
 
   // metadata - computed: false, optional: true, required: false
-  private _metadata?: { [key: string]: string };
+  private _metadata?: { [key: string]: string } | cdktf.IResolvable;
   public get metadata() {
     return this.interpolationForAttribute('metadata') as any;
   }
-  public set metadata(value: { [key: string]: string } ) {
+  public set metadata(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._metadata = value;
   }
   public resetMetadata() {
@@ -645,11 +650,11 @@ export class BatchPool extends cdktf.TerraformResource {
   }
 
   // stop_pending_resize_operation - computed: false, optional: true, required: false
-  private _stopPendingResizeOperation?: boolean;
+  private _stopPendingResizeOperation?: boolean | cdktf.IResolvable;
   public get stopPendingResizeOperation() {
     return this.getBooleanAttribute('stop_pending_resize_operation');
   }
-  public set stopPendingResizeOperation(value: boolean ) {
+  public set stopPendingResizeOperation(value: boolean | cdktf.IResolvable ) {
     this._stopPendingResizeOperation = value;
   }
   public resetStopPendingResizeOperation() {

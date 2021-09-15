@@ -10,7 +10,7 @@ export interface MonitorAutoscaleSettingConfig extends cdktf.TerraformMetaArgume
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_autoscale_setting.html#enabled MonitorAutoscaleSetting#enabled}
   */
-  readonly enabled?: boolean;
+  readonly enabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_autoscale_setting.html#location MonitorAutoscaleSetting#location}
   */
@@ -26,7 +26,7 @@ export interface MonitorAutoscaleSettingConfig extends cdktf.TerraformMetaArgume
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_autoscale_setting.html#tags MonitorAutoscaleSetting#tags}
   */
-  readonly tags?: { [key: string]: string };
+  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_autoscale_setting.html#target_resource_id MonitorAutoscaleSetting#target_resource_id}
   */
@@ -58,11 +58,11 @@ export interface MonitorAutoscaleSettingNotificationEmail {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_autoscale_setting.html#send_to_subscription_administrator MonitorAutoscaleSetting#send_to_subscription_administrator}
   */
-  readonly sendToSubscriptionAdministrator?: boolean;
+  readonly sendToSubscriptionAdministrator?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_autoscale_setting.html#send_to_subscription_co_administrator MonitorAutoscaleSetting#send_to_subscription_co_administrator}
   */
-  readonly sendToSubscriptionCoAdministrator?: boolean;
+  readonly sendToSubscriptionCoAdministrator?: boolean | cdktf.IResolvable;
 }
 
 function monitorAutoscaleSettingNotificationEmailToTerraform(struct?: MonitorAutoscaleSettingNotificationEmail): any {
@@ -78,7 +78,7 @@ export interface MonitorAutoscaleSettingNotificationWebhook {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_autoscale_setting.html#properties MonitorAutoscaleSetting#properties}
   */
-  readonly properties?: { [key: string]: string };
+  readonly properties?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_autoscale_setting.html#service_uri MonitorAutoscaleSetting#service_uri}
   */
@@ -219,6 +219,10 @@ function monitorAutoscaleSettingProfileRuleMetricTriggerDimensionsToTerraform(st
 
 export interface MonitorAutoscaleSettingProfileRuleMetricTrigger {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_autoscale_setting.html#divide_by_instance_count MonitorAutoscaleSetting#divide_by_instance_count}
+  */
+  readonly divideByInstanceCount?: boolean | cdktf.IResolvable;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_autoscale_setting.html#metric_name MonitorAutoscaleSetting#metric_name}
   */
   readonly metricName: string;
@@ -265,6 +269,7 @@ export interface MonitorAutoscaleSettingProfileRuleMetricTrigger {
 function monitorAutoscaleSettingProfileRuleMetricTriggerToTerraform(struct?: MonitorAutoscaleSettingProfileRuleMetricTrigger): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   return {
+    divide_by_instance_count: cdktf.booleanToTerraform(struct!.divideByInstanceCount),
     metric_name: cdktf.stringToTerraform(struct!.metricName),
     metric_namespace: cdktf.stringToTerraform(struct!.metricNamespace),
     metric_resource_id: cdktf.stringToTerraform(struct!.metricResourceId),
@@ -407,6 +412,11 @@ function monitorAutoscaleSettingTimeoutsToTerraform(struct?: MonitorAutoscaleSet
 */
 export class MonitorAutoscaleSetting extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_monitor_autoscale_setting";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -445,11 +455,11 @@ export class MonitorAutoscaleSetting extends cdktf.TerraformResource {
   // ==========
 
   // enabled - computed: false, optional: true, required: false
-  private _enabled?: boolean;
+  private _enabled?: boolean | cdktf.IResolvable;
   public get enabled() {
     return this.getBooleanAttribute('enabled');
   }
-  public set enabled(value: boolean ) {
+  public set enabled(value: boolean | cdktf.IResolvable ) {
     this._enabled = value;
   }
   public resetEnabled() {
@@ -505,11 +515,11 @@ export class MonitorAutoscaleSetting extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string };
+  private _tags?: { [key: string]: string } | cdktf.IResolvable;
   public get tags() {
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._tags = value;
   }
   public resetTags() {

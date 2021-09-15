@@ -10,11 +10,11 @@ export interface VirtualHubConnectionConfig extends cdktf.TerraformMetaArguments
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_hub_connection.html#hub_to_vitual_network_traffic_allowed VirtualHubConnection#hub_to_vitual_network_traffic_allowed}
   */
-  readonly hubToVitualNetworkTrafficAllowed?: boolean;
+  readonly hubToVitualNetworkTrafficAllowed?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_hub_connection.html#internet_security_enabled VirtualHubConnection#internet_security_enabled}
   */
-  readonly internetSecurityEnabled?: boolean;
+  readonly internetSecurityEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_hub_connection.html#name VirtualHubConnection#name}
   */
@@ -30,7 +30,7 @@ export interface VirtualHubConnectionConfig extends cdktf.TerraformMetaArguments
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_hub_connection.html#vitual_network_to_hub_gateways_traffic_allowed VirtualHubConnection#vitual_network_to_hub_gateways_traffic_allowed}
   */
-  readonly vitualNetworkToHubGatewaysTrafficAllowed?: boolean;
+  readonly vitualNetworkToHubGatewaysTrafficAllowed?: boolean | cdktf.IResolvable;
   /**
   * routing block
   * 
@@ -150,6 +150,11 @@ function virtualHubConnectionTimeoutsToTerraform(struct?: VirtualHubConnectionTi
 */
 export class VirtualHubConnection extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_virtual_hub_connection";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -187,11 +192,11 @@ export class VirtualHubConnection extends cdktf.TerraformResource {
   // ==========
 
   // hub_to_vitual_network_traffic_allowed - computed: false, optional: true, required: false
-  private _hubToVitualNetworkTrafficAllowed?: boolean;
+  private _hubToVitualNetworkTrafficAllowed?: boolean | cdktf.IResolvable;
   public get hubToVitualNetworkTrafficAllowed() {
     return this.getBooleanAttribute('hub_to_vitual_network_traffic_allowed');
   }
-  public set hubToVitualNetworkTrafficAllowed(value: boolean ) {
+  public set hubToVitualNetworkTrafficAllowed(value: boolean | cdktf.IResolvable ) {
     this._hubToVitualNetworkTrafficAllowed = value;
   }
   public resetHubToVitualNetworkTrafficAllowed() {
@@ -208,11 +213,11 @@ export class VirtualHubConnection extends cdktf.TerraformResource {
   }
 
   // internet_security_enabled - computed: false, optional: true, required: false
-  private _internetSecurityEnabled?: boolean;
+  private _internetSecurityEnabled?: boolean | cdktf.IResolvable;
   public get internetSecurityEnabled() {
     return this.getBooleanAttribute('internet_security_enabled');
   }
-  public set internetSecurityEnabled(value: boolean ) {
+  public set internetSecurityEnabled(value: boolean | cdktf.IResolvable ) {
     this._internetSecurityEnabled = value;
   }
   public resetInternetSecurityEnabled() {
@@ -263,11 +268,11 @@ export class VirtualHubConnection extends cdktf.TerraformResource {
   }
 
   // vitual_network_to_hub_gateways_traffic_allowed - computed: false, optional: true, required: false
-  private _vitualNetworkToHubGatewaysTrafficAllowed?: boolean;
+  private _vitualNetworkToHubGatewaysTrafficAllowed?: boolean | cdktf.IResolvable;
   public get vitualNetworkToHubGatewaysTrafficAllowed() {
     return this.getBooleanAttribute('vitual_network_to_hub_gateways_traffic_allowed');
   }
-  public set vitualNetworkToHubGatewaysTrafficAllowed(value: boolean ) {
+  public set vitualNetworkToHubGatewaysTrafficAllowed(value: boolean | cdktf.IResolvable ) {
     this._vitualNetworkToHubGatewaysTrafficAllowed = value;
   }
   public resetVitualNetworkToHubGatewaysTrafficAllowed() {

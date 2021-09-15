@@ -111,6 +111,11 @@ function streamAnalyticsStreamInputEventhubTimeoutsToTerraform(struct?: StreamAn
 */
 export class StreamAnalyticsStreamInputEventhub extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_stream_analytics_stream_input_eventhub";
+
   // ===========
   // INITIALIZER
   // ===========

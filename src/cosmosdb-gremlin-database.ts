@@ -85,6 +85,11 @@ function cosmosdbGremlinDatabaseTimeoutsToTerraform(struct?: CosmosdbGremlinData
 */
 export class CosmosdbGremlinDatabase extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_cosmosdb_gremlin_database";
+
   // ===========
   // INITIALIZER
   // ===========

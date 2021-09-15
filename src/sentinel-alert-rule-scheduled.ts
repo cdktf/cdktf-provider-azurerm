@@ -22,7 +22,7 @@ export interface SentinelAlertRuleScheduledConfig extends cdktf.TerraformMetaArg
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_alert_rule_scheduled.html#enabled SentinelAlertRuleScheduled#enabled}
   */
-  readonly enabled?: boolean;
+  readonly enabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_alert_rule_scheduled.html#log_analytics_workspace_id SentinelAlertRuleScheduled#log_analytics_workspace_id}
   */
@@ -54,7 +54,7 @@ export interface SentinelAlertRuleScheduledConfig extends cdktf.TerraformMetaArg
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_alert_rule_scheduled.html#suppression_enabled SentinelAlertRuleScheduled#suppression_enabled}
   */
-  readonly suppressionEnabled?: boolean;
+  readonly suppressionEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_alert_rule_scheduled.html#tactics SentinelAlertRuleScheduled#tactics}
   */
@@ -104,7 +104,7 @@ export interface SentinelAlertRuleScheduledIncidentConfigurationGrouping {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_alert_rule_scheduled.html#enabled SentinelAlertRuleScheduled#enabled}
   */
-  readonly enabled?: boolean;
+  readonly enabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_alert_rule_scheduled.html#entity_matching_method SentinelAlertRuleScheduled#entity_matching_method}
   */
@@ -120,7 +120,7 @@ export interface SentinelAlertRuleScheduledIncidentConfigurationGrouping {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_alert_rule_scheduled.html#reopen_closed_incidents SentinelAlertRuleScheduled#reopen_closed_incidents}
   */
-  readonly reopenClosedIncidents?: boolean;
+  readonly reopenClosedIncidents?: boolean | cdktf.IResolvable;
 }
 
 function sentinelAlertRuleScheduledIncidentConfigurationGroupingToTerraform(struct?: SentinelAlertRuleScheduledIncidentConfigurationGrouping): any {
@@ -138,7 +138,7 @@ export interface SentinelAlertRuleScheduledIncidentConfiguration {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_alert_rule_scheduled.html#create_incident SentinelAlertRuleScheduled#create_incident}
   */
-  readonly createIncident: boolean;
+  readonly createIncident: boolean | cdktf.IResolvable;
   /**
   * grouping block
   * 
@@ -189,6 +189,11 @@ function sentinelAlertRuleScheduledTimeoutsToTerraform(struct?: SentinelAlertRul
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_alert_rule_scheduled.html azurerm_sentinel_alert_rule_scheduled}
 */
 export class SentinelAlertRuleScheduled extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_sentinel_alert_rule_scheduled";
 
   // ===========
   // INITIALIZER
@@ -282,11 +287,11 @@ export class SentinelAlertRuleScheduled extends cdktf.TerraformResource {
   }
 
   // enabled - computed: false, optional: true, required: false
-  private _enabled?: boolean;
+  private _enabled?: boolean | cdktf.IResolvable;
   public get enabled() {
     return this.getBooleanAttribute('enabled');
   }
-  public set enabled(value: boolean ) {
+  public set enabled(value: boolean | cdktf.IResolvable ) {
     this._enabled = value;
   }
   public resetEnabled() {
@@ -403,11 +408,11 @@ export class SentinelAlertRuleScheduled extends cdktf.TerraformResource {
   }
 
   // suppression_enabled - computed: false, optional: true, required: false
-  private _suppressionEnabled?: boolean;
+  private _suppressionEnabled?: boolean | cdktf.IResolvable;
   public get suppressionEnabled() {
     return this.getBooleanAttribute('suppression_enabled');
   }
-  public set suppressionEnabled(value: boolean ) {
+  public set suppressionEnabled(value: boolean | cdktf.IResolvable ) {
     this._suppressionEnabled = value;
   }
   public resetSuppressionEnabled() {

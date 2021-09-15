@@ -79,6 +79,11 @@ function dataAzurermPrivateLinkServiceEndpointConnectionsTimeoutsToTerraform(str
 */
 export class DataAzurermPrivateLinkServiceEndpointConnections extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_private_link_service_endpoint_connections";
+
   // ===========
   // INITIALIZER
   // ===========

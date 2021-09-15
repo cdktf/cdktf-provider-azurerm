@@ -46,6 +46,11 @@ function dataAzurermDedicatedHostTimeoutsToTerraform(struct?: DataAzurermDedicat
 */
 export class DataAzurermDedicatedHost extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_dedicated_host";
+
   // ===========
   // INITIALIZER
   // ===========

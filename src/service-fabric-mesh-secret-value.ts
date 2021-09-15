@@ -22,7 +22,7 @@ export interface ServiceFabricMeshSecretValueConfig extends cdktf.TerraformMetaA
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_mesh_secret_value.html#tags ServiceFabricMeshSecretValue#tags}
   */
-  readonly tags?: { [key: string]: string };
+  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_mesh_secret_value.html#value ServiceFabricMeshSecretValue#value}
   */
@@ -68,6 +68,11 @@ function serviceFabricMeshSecretValueTimeoutsToTerraform(struct?: ServiceFabricM
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_mesh_secret_value.html azurerm_service_fabric_mesh_secret_value}
 */
 export class ServiceFabricMeshSecretValue extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_service_fabric_mesh_secret_value";
 
   // ===========
   // INITIALIZER
@@ -148,11 +153,11 @@ export class ServiceFabricMeshSecretValue extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string };
+  private _tags?: { [key: string]: string } | cdktf.IResolvable;
   public get tags() {
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._tags = value;
   }
   public resetTags() {

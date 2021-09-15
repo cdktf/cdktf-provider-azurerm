@@ -42,6 +42,11 @@ function dataAzurermLogicAppWorkflowTimeoutsToTerraform(struct?: DataAzurermLogi
 */
 export class DataAzurermLogicAppWorkflow extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_logic_app_workflow";
+
   // ===========
   // INITIALIZER
   // ===========

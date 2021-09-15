@@ -65,6 +65,11 @@ function mariadbConfigurationTimeoutsToTerraform(struct?: MariadbConfigurationTi
 */
 export class MariadbConfiguration extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_mariadb_configuration";
+
   // ===========
   // INITIALIZER
   // ===========

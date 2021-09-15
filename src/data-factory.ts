@@ -18,7 +18,7 @@ export interface DataFactoryConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory.html#managed_virtual_network_enabled DataFactory#managed_virtual_network_enabled}
   */
-  readonly managedVirtualNetworkEnabled?: boolean;
+  readonly managedVirtualNetworkEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory.html#name DataFactory#name}
   */
@@ -26,7 +26,7 @@ export interface DataFactoryConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory.html#public_network_enabled DataFactory#public_network_enabled}
   */
-  readonly publicNetworkEnabled?: boolean;
+  readonly publicNetworkEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory.html#resource_group_name DataFactory#resource_group_name}
   */
@@ -34,7 +34,7 @@ export interface DataFactoryConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory.html#tags DataFactory#tags}
   */
-  readonly tags?: { [key: string]: string };
+  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * github_configuration block
   * 
@@ -217,6 +217,11 @@ function dataFactoryVstsConfigurationToTerraform(struct?: DataFactoryVstsConfigu
 */
 export class DataFactory extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_data_factory";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -292,11 +297,11 @@ export class DataFactory extends cdktf.TerraformResource {
   }
 
   // managed_virtual_network_enabled - computed: false, optional: true, required: false
-  private _managedVirtualNetworkEnabled?: boolean;
+  private _managedVirtualNetworkEnabled?: boolean | cdktf.IResolvable;
   public get managedVirtualNetworkEnabled() {
     return this.getBooleanAttribute('managed_virtual_network_enabled');
   }
-  public set managedVirtualNetworkEnabled(value: boolean ) {
+  public set managedVirtualNetworkEnabled(value: boolean | cdktf.IResolvable ) {
     this._managedVirtualNetworkEnabled = value;
   }
   public resetManagedVirtualNetworkEnabled() {
@@ -321,11 +326,11 @@ export class DataFactory extends cdktf.TerraformResource {
   }
 
   // public_network_enabled - computed: false, optional: true, required: false
-  private _publicNetworkEnabled?: boolean;
+  private _publicNetworkEnabled?: boolean | cdktf.IResolvable;
   public get publicNetworkEnabled() {
     return this.getBooleanAttribute('public_network_enabled');
   }
-  public set publicNetworkEnabled(value: boolean ) {
+  public set publicNetworkEnabled(value: boolean | cdktf.IResolvable ) {
     this._publicNetworkEnabled = value;
   }
   public resetPublicNetworkEnabled() {
@@ -350,11 +355,11 @@ export class DataFactory extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string };
+  private _tags?: { [key: string]: string } | cdktf.IResolvable;
   public get tags() {
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._tags = value;
   }
   public resetTags() {

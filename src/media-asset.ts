@@ -77,6 +77,11 @@ function mediaAssetTimeoutsToTerraform(struct?: MediaAssetTimeouts): any {
 */
 export class MediaAsset extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_media_asset";
+
   // ===========
   // INITIALIZER
   // ===========

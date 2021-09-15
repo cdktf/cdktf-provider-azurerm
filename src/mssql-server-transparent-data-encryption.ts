@@ -57,6 +57,11 @@ function mssqlServerTransparentDataEncryptionTimeoutsToTerraform(struct?: MssqlS
 */
 export class MssqlServerTransparentDataEncryption extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_mssql_server_transparent_data_encryption";
+
   // ===========
   // INITIALIZER
   // ===========

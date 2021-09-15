@@ -42,6 +42,11 @@ function dataAzurermUserAssignedIdentityTimeoutsToTerraform(struct?: DataAzurerm
 */
 export class DataAzurermUserAssignedIdentity extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_user_assigned_identity";
+
   // ===========
   // INITIALIZER
   // ===========

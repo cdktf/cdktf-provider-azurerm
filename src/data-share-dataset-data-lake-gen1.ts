@@ -64,6 +64,11 @@ function dataShareDatasetDataLakeGen1TimeoutsToTerraform(struct?: DataShareDatas
 */
 export class DataShareDatasetDataLakeGen1 extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_data_share_dataset_data_lake_gen1";
+
   // ===========
   // INITIALIZER
   // ===========

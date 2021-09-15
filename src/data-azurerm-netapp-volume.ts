@@ -81,6 +81,11 @@ function dataAzurermNetappVolumeTimeoutsToTerraform(struct?: DataAzurermNetappVo
 */
 export class DataAzurermNetappVolume extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_netapp_volume";
+
   // ===========
   // INITIALIZER
   // ===========

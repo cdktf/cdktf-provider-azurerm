@@ -46,6 +46,11 @@ function dataAzurermContainerRegistryScopeMapTimeoutsToTerraform(struct?: DataAz
 */
 export class DataAzurermContainerRegistryScopeMap extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_container_registry_scope_map";
+
   // ===========
   // INITIALIZER
   // ===========

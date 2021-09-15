@@ -14,11 +14,11 @@ export interface LbNatRuleConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb_nat_rule.html#enable_floating_ip LbNatRule#enable_floating_ip}
   */
-  readonly enableFloatingIp?: boolean;
+  readonly enableFloatingIp?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb_nat_rule.html#enable_tcp_reset LbNatRule#enable_tcp_reset}
   */
-  readonly enableTcpReset?: boolean;
+  readonly enableTcpReset?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb_nat_rule.html#frontend_ip_configuration_name LbNatRule#frontend_ip_configuration_name}
   */
@@ -89,6 +89,11 @@ function lbNatRuleTimeoutsToTerraform(struct?: LbNatRuleTimeouts): any {
 */
 export class LbNatRule extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_lb_nat_rule";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -147,11 +152,11 @@ export class LbNatRule extends cdktf.TerraformResource {
   }
 
   // enable_floating_ip - computed: true, optional: true, required: false
-  private _enableFloatingIp?: boolean;
+  private _enableFloatingIp?: boolean | cdktf.IResolvable;
   public get enableFloatingIp() {
     return this.getBooleanAttribute('enable_floating_ip');
   }
-  public set enableFloatingIp(value: boolean) {
+  public set enableFloatingIp(value: boolean | cdktf.IResolvable) {
     this._enableFloatingIp = value;
   }
   public resetEnableFloatingIp() {
@@ -163,11 +168,11 @@ export class LbNatRule extends cdktf.TerraformResource {
   }
 
   // enable_tcp_reset - computed: false, optional: true, required: false
-  private _enableTcpReset?: boolean;
+  private _enableTcpReset?: boolean | cdktf.IResolvable;
   public get enableTcpReset() {
     return this.getBooleanAttribute('enable_tcp_reset');
   }
-  public set enableTcpReset(value: boolean ) {
+  public set enableTcpReset(value: boolean | cdktf.IResolvable ) {
     this._enableTcpReset = value;
   }
   public resetEnableTcpReset() {
