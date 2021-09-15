@@ -8,6 +8,10 @@ import * as cdktf from 'cdktf';
 
 export interface DataFactoryIntegrationRuntimeAzureConfig extends cdktf.TerraformMetaArguments {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_azure.html#cleanup_enabled DataFactoryIntegrationRuntimeAzure#cleanup_enabled}
+  */
+  readonly cleanupEnabled?: boolean | cdktf.IResolvable;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_azure.html#compute_type DataFactoryIntegrationRuntimeAzure#compute_type}
   */
   readonly computeType?: string;
@@ -42,7 +46,7 @@ export interface DataFactoryIntegrationRuntimeAzureConfig extends cdktf.Terrafor
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_azure.html#virtual_network_enabled DataFactoryIntegrationRuntimeAzure#virtual_network_enabled}
   */
-  readonly virtualNetworkEnabled?: boolean;
+  readonly virtualNetworkEnabled?: boolean | cdktf.IResolvable;
   /**
   * timeouts block
   * 
@@ -85,6 +89,11 @@ function dataFactoryIntegrationRuntimeAzureTimeoutsToTerraform(struct?: DataFact
 */
 export class DataFactoryIntegrationRuntimeAzure extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_data_factory_integration_runtime_azure";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -107,6 +116,7 @@ export class DataFactoryIntegrationRuntimeAzure extends cdktf.TerraformResource 
       count: config.count,
       lifecycle: config.lifecycle
     });
+    this._cleanupEnabled = config.cleanupEnabled;
     this._computeType = config.computeType;
     this._coreCount = config.coreCount;
     this._dataFactoryName = config.dataFactoryName;
@@ -122,6 +132,22 @@ export class DataFactoryIntegrationRuntimeAzure extends cdktf.TerraformResource 
   // ==========
   // ATTRIBUTES
   // ==========
+
+  // cleanup_enabled - computed: true, optional: true, required: false
+  private _cleanupEnabled?: boolean | cdktf.IResolvable;
+  public get cleanupEnabled() {
+    return this.getBooleanAttribute('cleanup_enabled');
+  }
+  public set cleanupEnabled(value: boolean | cdktf.IResolvable) {
+    this._cleanupEnabled = value;
+  }
+  public resetCleanupEnabled() {
+    this._cleanupEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get cleanupEnabledInput() {
+    return this._cleanupEnabled
+  }
 
   // compute_type - computed: false, optional: true, required: false
   private _computeType?: string;
@@ -245,11 +271,11 @@ export class DataFactoryIntegrationRuntimeAzure extends cdktf.TerraformResource 
   }
 
   // virtual_network_enabled - computed: false, optional: true, required: false
-  private _virtualNetworkEnabled?: boolean;
+  private _virtualNetworkEnabled?: boolean | cdktf.IResolvable;
   public get virtualNetworkEnabled() {
     return this.getBooleanAttribute('virtual_network_enabled');
   }
-  public set virtualNetworkEnabled(value: boolean ) {
+  public set virtualNetworkEnabled(value: boolean | cdktf.IResolvable ) {
     this._virtualNetworkEnabled = value;
   }
   public resetVirtualNetworkEnabled() {
@@ -282,6 +308,7 @@ export class DataFactoryIntegrationRuntimeAzure extends cdktf.TerraformResource 
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      cleanup_enabled: cdktf.booleanToTerraform(this._cleanupEnabled),
       compute_type: cdktf.stringToTerraform(this._computeType),
       core_count: cdktf.numberToTerraform(this._coreCount),
       data_factory_name: cdktf.stringToTerraform(this._dataFactoryName),

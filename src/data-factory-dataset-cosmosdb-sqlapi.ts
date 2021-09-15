@@ -10,7 +10,7 @@ export interface DataFactoryDatasetCosmosdbSqlapiConfig extends cdktf.TerraformM
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_cosmosdb_sqlapi.html#additional_properties DataFactoryDatasetCosmosdbSqlapi#additional_properties}
   */
-  readonly additionalProperties?: { [key: string]: string };
+  readonly additionalProperties?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_cosmosdb_sqlapi.html#annotations DataFactoryDatasetCosmosdbSqlapi#annotations}
   */
@@ -42,7 +42,7 @@ export interface DataFactoryDatasetCosmosdbSqlapiConfig extends cdktf.TerraformM
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_cosmosdb_sqlapi.html#parameters DataFactoryDatasetCosmosdbSqlapi#parameters}
   */
-  readonly parameters?: { [key: string]: string };
+  readonly parameters?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_cosmosdb_sqlapi.html#resource_group_name DataFactoryDatasetCosmosdbSqlapi#resource_group_name}
   */
@@ -119,6 +119,11 @@ function dataFactoryDatasetCosmosdbSqlapiTimeoutsToTerraform(struct?: DataFactor
 */
 export class DataFactoryDatasetCosmosdbSqlapi extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_data_factory_dataset_cosmosdb_sqlapi";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -160,11 +165,11 @@ export class DataFactoryDatasetCosmosdbSqlapi extends cdktf.TerraformResource {
   // ==========
 
   // additional_properties - computed: false, optional: true, required: false
-  private _additionalProperties?: { [key: string]: string };
+  private _additionalProperties?: { [key: string]: string } | cdktf.IResolvable;
   public get additionalProperties() {
     return this.interpolationForAttribute('additional_properties') as any;
   }
-  public set additionalProperties(value: { [key: string]: string } ) {
+  public set additionalProperties(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._additionalProperties = value;
   }
   public resetAdditionalProperties() {
@@ -284,11 +289,11 @@ export class DataFactoryDatasetCosmosdbSqlapi extends cdktf.TerraformResource {
   }
 
   // parameters - computed: false, optional: true, required: false
-  private _parameters?: { [key: string]: string };
+  private _parameters?: { [key: string]: string } | cdktf.IResolvable;
   public get parameters() {
     return this.interpolationForAttribute('parameters') as any;
   }
-  public set parameters(value: { [key: string]: string } ) {
+  public set parameters(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._parameters = value;
   }
   public resetParameters() {

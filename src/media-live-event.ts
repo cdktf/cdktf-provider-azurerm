@@ -10,7 +10,7 @@ export interface MediaLiveEventConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_live_event.html#auto_start_enabled MediaLiveEvent#auto_start_enabled}
   */
-  readonly autoStartEnabled?: boolean;
+  readonly autoStartEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_live_event.html#description MediaLiveEvent#description}
   */
@@ -38,7 +38,7 @@ export interface MediaLiveEventConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_live_event.html#tags MediaLiveEvent#tags}
   */
-  readonly tags?: { [key: string]: string };
+  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_live_event.html#transcription_languages MediaLiveEvent#transcription_languages}
   */
@@ -46,7 +46,7 @@ export interface MediaLiveEventConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_live_event.html#use_static_hostname MediaLiveEvent#use_static_hostname}
   */
-  readonly useStaticHostname?: boolean;
+  readonly useStaticHostname?: boolean | cdktf.IResolvable;
   /**
   * cross_site_access_policy block
   * 
@@ -271,6 +271,11 @@ function mediaLiveEventTimeoutsToTerraform(struct?: MediaLiveEventTimeouts): any
 */
 export class MediaLiveEvent extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_media_live_event";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -315,11 +320,11 @@ export class MediaLiveEvent extends cdktf.TerraformResource {
   // ==========
 
   // auto_start_enabled - computed: false, optional: true, required: false
-  private _autoStartEnabled?: boolean;
+  private _autoStartEnabled?: boolean | cdktf.IResolvable;
   public get autoStartEnabled() {
     return this.getBooleanAttribute('auto_start_enabled');
   }
-  public set autoStartEnabled(value: boolean ) {
+  public set autoStartEnabled(value: boolean | cdktf.IResolvable ) {
     this._autoStartEnabled = value;
   }
   public resetAutoStartEnabled() {
@@ -420,11 +425,11 @@ export class MediaLiveEvent extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string };
+  private _tags?: { [key: string]: string } | cdktf.IResolvable;
   public get tags() {
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._tags = value;
   }
   public resetTags() {
@@ -452,11 +457,11 @@ export class MediaLiveEvent extends cdktf.TerraformResource {
   }
 
   // use_static_hostname - computed: false, optional: true, required: false
-  private _useStaticHostname?: boolean;
+  private _useStaticHostname?: boolean | cdktf.IResolvable;
   public get useStaticHostname() {
     return this.getBooleanAttribute('use_static_hostname');
   }
-  public set useStaticHostname(value: boolean ) {
+  public set useStaticHostname(value: boolean | cdktf.IResolvable ) {
     this._useStaticHostname = value;
   }
   public resetUseStaticHostname() {

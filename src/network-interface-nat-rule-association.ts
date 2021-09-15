@@ -61,6 +61,11 @@ function networkInterfaceNatRuleAssociationTimeoutsToTerraform(struct?: NetworkI
 */
 export class NetworkInterfaceNatRuleAssociation extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_network_interface_nat_rule_association";
+
   // ===========
   // INITIALIZER
   // ===========

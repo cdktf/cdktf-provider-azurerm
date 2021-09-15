@@ -94,6 +94,11 @@ function botChannelFacebookTimeoutsToTerraform(struct?: BotChannelFacebookTimeou
 */
 export class BotChannelFacebook extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_bot_channel_facebook";
+
   // ===========
   // INITIALIZER
   // ===========

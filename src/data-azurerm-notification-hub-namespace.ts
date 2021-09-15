@@ -49,6 +49,11 @@ function dataAzurermNotificationHubNamespaceTimeoutsToTerraform(struct?: DataAzu
 */
 export class DataAzurermNotificationHubNamespace extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_notification_hub_namespace";
+
   // ===========
   // INITIALIZER
   // ===========

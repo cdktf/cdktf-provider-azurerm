@@ -46,7 +46,7 @@ export interface VirtualDesktopApplicationConfig extends cdktf.TerraformMetaArgu
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_desktop_application.html#show_in_portal VirtualDesktopApplication#show_in_portal}
   */
-  readonly showInPortal?: boolean;
+  readonly showInPortal?: boolean | cdktf.IResolvable;
   /**
   * timeouts block
   * 
@@ -88,6 +88,11 @@ function virtualDesktopApplicationTimeoutsToTerraform(struct?: VirtualDesktopApp
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_desktop_application.html azurerm_virtual_desktop_application}
 */
 export class VirtualDesktopApplication extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_virtual_desktop_application";
 
   // ===========
   // INITIALIZER
@@ -266,11 +271,11 @@ export class VirtualDesktopApplication extends cdktf.TerraformResource {
   }
 
   // show_in_portal - computed: false, optional: true, required: false
-  private _showInPortal?: boolean;
+  private _showInPortal?: boolean | cdktf.IResolvable;
   public get showInPortal() {
     return this.getBooleanAttribute('show_in_portal');
   }
-  public set showInPortal(value: boolean ) {
+  public set showInPortal(value: boolean | cdktf.IResolvable ) {
     this._showInPortal = value;
   }
   public resetShowInPortal() {

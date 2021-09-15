@@ -42,6 +42,11 @@ function dataAzurermNetworkWatcherTimeoutsToTerraform(struct?: DataAzurermNetwor
 */
 export class DataAzurermNetworkWatcher extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_network_watcher";
+
   // ===========
   // INITIALIZER
   // ===========

@@ -26,7 +26,7 @@ export interface DataLakeAnalyticsAccountConfig extends cdktf.TerraformMetaArgum
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_lake_analytics_account.html#tags DataLakeAnalyticsAccount#tags}
   */
-  readonly tags?: { [key: string]: string };
+  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_lake_analytics_account.html#tier DataLakeAnalyticsAccount#tier}
   */
@@ -72,6 +72,11 @@ function dataLakeAnalyticsAccountTimeoutsToTerraform(struct?: DataLakeAnalyticsA
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/data_lake_analytics_account.html azurerm_data_lake_analytics_account}
 */
 export class DataLakeAnalyticsAccount extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_data_lake_analytics_account";
 
   // ===========
   // INITIALIZER
@@ -166,11 +171,11 @@ export class DataLakeAnalyticsAccount extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string };
+  private _tags?: { [key: string]: string } | cdktf.IResolvable;
   public get tags() {
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._tags = value;
   }
   public resetTags() {

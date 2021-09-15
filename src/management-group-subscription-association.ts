@@ -52,6 +52,11 @@ function managementGroupSubscriptionAssociationTimeoutsToTerraform(struct?: Mana
 */
 export class ManagementGroupSubscriptionAssociation extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_management_group_subscription_association";
+
   // ===========
   // INITIALIZER
   // ===========

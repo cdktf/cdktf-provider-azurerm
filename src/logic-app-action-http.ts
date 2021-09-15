@@ -14,7 +14,7 @@ export interface LogicAppActionHttpConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_action_http.html#headers LogicAppActionHttp#headers}
   */
-  readonly headers?: { [key: string]: string };
+  readonly headers?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_action_http.html#logic_app_id LogicAppActionHttp#logic_app_id}
   */
@@ -98,6 +98,11 @@ function logicAppActionHttpTimeoutsToTerraform(struct?: LogicAppActionHttpTimeou
 */
 export class LogicAppActionHttp extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_logic_app_action_http";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -151,11 +156,11 @@ export class LogicAppActionHttp extends cdktf.TerraformResource {
   }
 
   // headers - computed: false, optional: true, required: false
-  private _headers?: { [key: string]: string };
+  private _headers?: { [key: string]: string } | cdktf.IResolvable;
   public get headers() {
     return this.interpolationForAttribute('headers') as any;
   }
-  public set headers(value: { [key: string]: string } ) {
+  public set headers(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._headers = value;
   }
   public resetHeaders() {

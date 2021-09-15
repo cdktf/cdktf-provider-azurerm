@@ -73,6 +73,11 @@ function applicationInsightsAnalyticsItemTimeoutsToTerraform(struct?: Applicatio
 */
 export class ApplicationInsightsAnalyticsItem extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_application_insights_analytics_item";
+
   // ===========
   // INITIALIZER
   // ===========

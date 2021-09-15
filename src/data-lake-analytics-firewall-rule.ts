@@ -69,6 +69,11 @@ function dataLakeAnalyticsFirewallRuleTimeoutsToTerraform(struct?: DataLakeAnaly
 */
 export class DataLakeAnalyticsFirewallRule extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_data_lake_analytics_firewall_rule";
+
   // ===========
   // INITIALIZER
   // ===========

@@ -42,6 +42,11 @@ function dataAzurermSentinelAlertRuleTimeoutsToTerraform(struct?: DataAzurermSen
 */
 export class DataAzurermSentinelAlertRule extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_sentinel_alert_rule";
+
   // ===========
   // INITIALIZER
   // ===========

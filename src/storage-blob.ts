@@ -22,7 +22,7 @@ export interface StorageBlobConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_blob.html#metadata StorageBlob#metadata}
   */
-  readonly metadata?: { [key: string]: string };
+  readonly metadata?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_blob.html#name StorageBlob#name}
   */
@@ -100,6 +100,11 @@ function storageBlobTimeoutsToTerraform(struct?: StorageBlobTimeouts): any {
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/storage_blob.html azurerm_storage_blob}
 */
 export class StorageBlob extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_storage_blob";
 
   // ===========
   // INITIALIZER
@@ -197,11 +202,11 @@ export class StorageBlob extends cdktf.TerraformResource {
   }
 
   // metadata - computed: true, optional: true, required: false
-  private _metadata?: { [key: string]: string }
-  public get metadata(): { [key: string]: string } {
+  private _metadata?: { [key: string]: string } | cdktf.IResolvable
+  public get metadata(): { [key: string]: string } | cdktf.IResolvable {
     return this.interpolationForAttribute('metadata') as any; // Getting the computed value is not yet implemented
   }
-  public set metadata(value: { [key: string]: string }) {
+  public set metadata(value: { [key: string]: string } | cdktf.IResolvable) {
     this._metadata = value;
   }
   public resetMetadata() {

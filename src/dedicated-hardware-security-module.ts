@@ -30,7 +30,7 @@ export interface DedicatedHardwareSecurityModuleConfig extends cdktf.TerraformMe
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dedicated_hardware_security_module.html#tags DedicatedHardwareSecurityModule#tags}
   */
-  readonly tags?: { [key: string]: string };
+  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dedicated_hardware_security_module.html#zones DedicatedHardwareSecurityModule#zones}
   */
@@ -101,6 +101,11 @@ function dedicatedHardwareSecurityModuleTimeoutsToTerraform(struct?: DedicatedHa
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/dedicated_hardware_security_module.html azurerm_dedicated_hardware_security_module}
 */
 export class DedicatedHardwareSecurityModule extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_dedicated_hardware_security_module";
 
   // ===========
   // INITIALIZER
@@ -213,11 +218,11 @@ export class DedicatedHardwareSecurityModule extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string };
+  private _tags?: { [key: string]: string } | cdktf.IResolvable;
   public get tags() {
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._tags = value;
   }
   public resetTags() {

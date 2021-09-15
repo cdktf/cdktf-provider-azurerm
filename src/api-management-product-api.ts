@@ -65,6 +65,11 @@ function apiManagementProductApiTimeoutsToTerraform(struct?: ApiManagementProduc
 */
 export class ApiManagementProductApi extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_api_management_product_api";
+
   // ===========
   // INITIALIZER
   // ===========

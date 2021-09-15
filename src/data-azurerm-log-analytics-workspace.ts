@@ -42,6 +42,11 @@ function dataAzurermLogAnalyticsWorkspaceTimeoutsToTerraform(struct?: DataAzurer
 */
 export class DataAzurermLogAnalyticsWorkspace extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_log_analytics_workspace";
+
   // ===========
   // INITIALIZER
   // ===========

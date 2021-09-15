@@ -42,6 +42,11 @@ function dataAzurermManagedApplicationDefinitionTimeoutsToTerraform(struct?: Dat
 */
 export class DataAzurermManagedApplicationDefinition extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_managed_application_definition";
+
   // ===========
   // INITIALIZER
   // ===========

@@ -46,6 +46,11 @@ function dataAzurermNetappPoolTimeoutsToTerraform(struct?: DataAzurermNetappPool
 */
 export class DataAzurermNetappPool extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_netapp_pool";
+
   // ===========
   // INITIALIZER
   // ===========

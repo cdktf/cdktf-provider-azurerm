@@ -26,19 +26,19 @@ export interface StorageAccountConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account.html#allow_blob_public_access StorageAccount#allow_blob_public_access}
   */
-  readonly allowBlobPublicAccess?: boolean;
+  readonly allowBlobPublicAccess?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account.html#enable_https_traffic_only StorageAccount#enable_https_traffic_only}
   */
-  readonly enableHttpsTrafficOnly?: boolean;
+  readonly enableHttpsTrafficOnly?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account.html#is_hns_enabled StorageAccount#is_hns_enabled}
   */
-  readonly isHnsEnabled?: boolean;
+  readonly isHnsEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account.html#large_file_share_enabled StorageAccount#large_file_share_enabled}
   */
-  readonly largeFileShareEnabled?: boolean;
+  readonly largeFileShareEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account.html#location StorageAccount#location}
   */
@@ -54,15 +54,19 @@ export interface StorageAccountConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account.html#nfsv3_enabled StorageAccount#nfsv3_enabled}
   */
-  readonly nfsv3Enabled?: boolean;
+  readonly nfsv3Enabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account.html#resource_group_name StorageAccount#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account.html#shared_access_key_enabled StorageAccount#shared_access_key_enabled}
+  */
+  readonly sharedAccessKeyEnabled?: boolean | cdktf.IResolvable;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account.html#tags StorageAccount#tags}
   */
-  readonly tags?: { [key: string]: string };
+  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * azure_files_authentication block
   * 
@@ -250,7 +254,7 @@ export interface StorageAccountBlobProperties {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account.html#change_feed_enabled StorageAccount#change_feed_enabled}
   */
-  readonly changeFeedEnabled?: boolean;
+  readonly changeFeedEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account.html#default_service_version StorageAccount#default_service_version}
   */
@@ -258,11 +262,11 @@ export interface StorageAccountBlobProperties {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account.html#last_access_time_enabled StorageAccount#last_access_time_enabled}
   */
-  readonly lastAccessTimeEnabled?: boolean;
+  readonly lastAccessTimeEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account.html#versioning_enabled StorageAccount#versioning_enabled}
   */
-  readonly versioningEnabled?: boolean;
+  readonly versioningEnabled?: boolean | cdktf.IResolvable;
   /**
   * container_delete_retention_policy block
   * 
@@ -304,7 +308,7 @@ export interface StorageAccountCustomDomain {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account.html#use_subdomain StorageAccount#use_subdomain}
   */
-  readonly useSubdomain?: boolean;
+  readonly useSubdomain?: boolean | cdktf.IResolvable;
 }
 
 function storageAccountCustomDomainToTerraform(struct?: StorageAccountCustomDomain): any {
@@ -427,11 +431,11 @@ export interface StorageAccountQueuePropertiesHourMetrics {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account.html#enabled StorageAccount#enabled}
   */
-  readonly enabled: boolean;
+  readonly enabled: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account.html#include_apis StorageAccount#include_apis}
   */
-  readonly includeApis?: boolean;
+  readonly includeApis?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account.html#retention_policy_days StorageAccount#retention_policy_days}
   */
@@ -456,11 +460,11 @@ export interface StorageAccountQueuePropertiesLogging {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account.html#delete StorageAccount#delete}
   */
-  readonly delete: boolean;
+  readonly delete: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account.html#read StorageAccount#read}
   */
-  readonly read: boolean;
+  readonly read: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account.html#retention_policy_days StorageAccount#retention_policy_days}
   */
@@ -472,7 +476,7 @@ export interface StorageAccountQueuePropertiesLogging {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account.html#write StorageAccount#write}
   */
-  readonly write: boolean;
+  readonly write: boolean | cdktf.IResolvable;
 }
 
 function storageAccountQueuePropertiesLoggingToTerraform(struct?: StorageAccountQueuePropertiesLogging): any {
@@ -490,11 +494,11 @@ export interface StorageAccountQueuePropertiesMinuteMetrics {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account.html#enabled StorageAccount#enabled}
   */
-  readonly enabled: boolean;
+  readonly enabled: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account.html#include_apis StorageAccount#include_apis}
   */
-  readonly includeApis?: boolean;
+  readonly includeApis?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account.html#retention_policy_days StorageAccount#retention_policy_days}
   */
@@ -560,11 +564,11 @@ export interface StorageAccountRouting {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account.html#publish_internet_endpoints StorageAccount#publish_internet_endpoints}
   */
-  readonly publishInternetEndpoints?: boolean;
+  readonly publishInternetEndpoints?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account.html#publish_microsoft_endpoints StorageAccount#publish_microsoft_endpoints}
   */
-  readonly publishMicrosoftEndpoints?: boolean;
+  readonly publishMicrosoftEndpoints?: boolean | cdktf.IResolvable;
 }
 
 function storageAccountRoutingToTerraform(struct?: StorageAccountRouting): any {
@@ -737,6 +741,11 @@ function storageAccountTimeoutsToTerraform(struct?: StorageAccountTimeouts): any
 */
 export class StorageAccount extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_storage_account";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -772,6 +781,7 @@ export class StorageAccount extends cdktf.TerraformResource {
     this._name = config.name;
     this._nfsv3Enabled = config.nfsv3Enabled;
     this._resourceGroupName = config.resourceGroupName;
+    this._sharedAccessKeyEnabled = config.sharedAccessKeyEnabled;
     this._tags = config.tags;
     this._azureFilesAuthentication = config.azureFilesAuthentication;
     this._blobProperties = config.blobProperties;
@@ -848,11 +858,11 @@ export class StorageAccount extends cdktf.TerraformResource {
   }
 
   // allow_blob_public_access - computed: false, optional: true, required: false
-  private _allowBlobPublicAccess?: boolean;
+  private _allowBlobPublicAccess?: boolean | cdktf.IResolvable;
   public get allowBlobPublicAccess() {
     return this.getBooleanAttribute('allow_blob_public_access');
   }
-  public set allowBlobPublicAccess(value: boolean ) {
+  public set allowBlobPublicAccess(value: boolean | cdktf.IResolvable ) {
     this._allowBlobPublicAccess = value;
   }
   public resetAllowBlobPublicAccess() {
@@ -864,11 +874,11 @@ export class StorageAccount extends cdktf.TerraformResource {
   }
 
   // enable_https_traffic_only - computed: false, optional: true, required: false
-  private _enableHttpsTrafficOnly?: boolean;
+  private _enableHttpsTrafficOnly?: boolean | cdktf.IResolvable;
   public get enableHttpsTrafficOnly() {
     return this.getBooleanAttribute('enable_https_traffic_only');
   }
-  public set enableHttpsTrafficOnly(value: boolean ) {
+  public set enableHttpsTrafficOnly(value: boolean | cdktf.IResolvable ) {
     this._enableHttpsTrafficOnly = value;
   }
   public resetEnableHttpsTrafficOnly() {
@@ -885,11 +895,11 @@ export class StorageAccount extends cdktf.TerraformResource {
   }
 
   // is_hns_enabled - computed: false, optional: true, required: false
-  private _isHnsEnabled?: boolean;
+  private _isHnsEnabled?: boolean | cdktf.IResolvable;
   public get isHnsEnabled() {
     return this.getBooleanAttribute('is_hns_enabled');
   }
-  public set isHnsEnabled(value: boolean ) {
+  public set isHnsEnabled(value: boolean | cdktf.IResolvable ) {
     this._isHnsEnabled = value;
   }
   public resetIsHnsEnabled() {
@@ -901,11 +911,11 @@ export class StorageAccount extends cdktf.TerraformResource {
   }
 
   // large_file_share_enabled - computed: true, optional: true, required: false
-  private _largeFileShareEnabled?: boolean;
+  private _largeFileShareEnabled?: boolean | cdktf.IResolvable;
   public get largeFileShareEnabled() {
     return this.getBooleanAttribute('large_file_share_enabled');
   }
-  public set largeFileShareEnabled(value: boolean) {
+  public set largeFileShareEnabled(value: boolean | cdktf.IResolvable) {
     this._largeFileShareEnabled = value;
   }
   public resetLargeFileShareEnabled() {
@@ -959,11 +969,11 @@ export class StorageAccount extends cdktf.TerraformResource {
   }
 
   // nfsv3_enabled - computed: false, optional: true, required: false
-  private _nfsv3Enabled?: boolean;
+  private _nfsv3Enabled?: boolean | cdktf.IResolvable;
   public get nfsv3Enabled() {
     return this.getBooleanAttribute('nfsv3_enabled');
   }
-  public set nfsv3Enabled(value: boolean ) {
+  public set nfsv3Enabled(value: boolean | cdktf.IResolvable ) {
     this._nfsv3Enabled = value;
   }
   public resetNfsv3Enabled() {
@@ -1147,12 +1157,28 @@ export class StorageAccount extends cdktf.TerraformResource {
     return this.getStringAttribute('secondary_web_host');
   }
 
+  // shared_access_key_enabled - computed: false, optional: true, required: false
+  private _sharedAccessKeyEnabled?: boolean | cdktf.IResolvable;
+  public get sharedAccessKeyEnabled() {
+    return this.getBooleanAttribute('shared_access_key_enabled');
+  }
+  public set sharedAccessKeyEnabled(value: boolean | cdktf.IResolvable ) {
+    this._sharedAccessKeyEnabled = value;
+  }
+  public resetSharedAccessKeyEnabled() {
+    this._sharedAccessKeyEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sharedAccessKeyEnabledInput() {
+    return this._sharedAccessKeyEnabled
+  }
+
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string };
+  private _tags?: { [key: string]: string } | cdktf.IResolvable;
   public get tags() {
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._tags = value;
   }
   public resetTags() {
@@ -1342,6 +1368,7 @@ export class StorageAccount extends cdktf.TerraformResource {
       name: cdktf.stringToTerraform(this._name),
       nfsv3_enabled: cdktf.booleanToTerraform(this._nfsv3Enabled),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      shared_access_key_enabled: cdktf.booleanToTerraform(this._sharedAccessKeyEnabled),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
       azure_files_authentication: cdktf.listMapper(storageAccountAzureFilesAuthenticationToTerraform)(this._azureFilesAuthentication),
       blob_properties: cdktf.listMapper(storageAccountBlobPropertiesToTerraform)(this._blobProperties),

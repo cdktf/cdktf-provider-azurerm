@@ -77,6 +77,11 @@ function botChannelDirectLineSpeechTimeoutsToTerraform(struct?: BotChannelDirect
 */
 export class BotChannelDirectLineSpeech extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_bot_channel_direct_line_speech";
+
   // ===========
   // INITIALIZER
   // ===========

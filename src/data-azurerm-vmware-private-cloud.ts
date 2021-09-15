@@ -81,6 +81,11 @@ function dataAzurermVmwarePrivateCloudTimeoutsToTerraform(struct?: DataAzurermVm
 */
 export class DataAzurermVmwarePrivateCloud extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_vmware_private_cloud";
+
   // ===========
   // INITIALIZER
   // ===========

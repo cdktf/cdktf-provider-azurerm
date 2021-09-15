@@ -69,6 +69,11 @@ function eventhubNamespaceDisasterRecoveryConfigTimeoutsToTerraform(struct?: Eve
 */
 export class EventhubNamespaceDisasterRecoveryConfig extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_eventhub_namespace_disaster_recovery_config";
+
   // ===========
   // INITIALIZER
   // ===========

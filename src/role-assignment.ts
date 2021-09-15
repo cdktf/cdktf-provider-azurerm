@@ -46,7 +46,7 @@ export interface RoleAssignmentConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/role_assignment.html#skip_service_principal_aad_check RoleAssignment#skip_service_principal_aad_check}
   */
-  readonly skipServicePrincipalAadCheck?: boolean;
+  readonly skipServicePrincipalAadCheck?: boolean | cdktf.IResolvable;
   /**
   * timeouts block
   * 
@@ -88,6 +88,11 @@ function roleAssignmentTimeoutsToTerraform(struct?: RoleAssignmentTimeouts): any
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/role_assignment.html azurerm_role_assignment}
 */
 export class RoleAssignment extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_role_assignment";
 
   // ===========
   // INITIALIZER
@@ -277,11 +282,11 @@ export class RoleAssignment extends cdktf.TerraformResource {
   }
 
   // skip_service_principal_aad_check - computed: true, optional: true, required: false
-  private _skipServicePrincipalAadCheck?: boolean;
+  private _skipServicePrincipalAadCheck?: boolean | cdktf.IResolvable;
   public get skipServicePrincipalAadCheck() {
     return this.getBooleanAttribute('skip_service_principal_aad_check');
   }
-  public set skipServicePrincipalAadCheck(value: boolean) {
+  public set skipServicePrincipalAadCheck(value: boolean | cdktf.IResolvable) {
     this._skipServicePrincipalAadCheck = value;
   }
   public resetSkipServicePrincipalAadCheck() {

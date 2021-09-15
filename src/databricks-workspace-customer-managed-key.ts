@@ -57,6 +57,11 @@ function databricksWorkspaceCustomerManagedKeyTimeoutsToTerraform(struct?: Datab
 */
 export class DatabricksWorkspaceCustomerManagedKey extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_databricks_workspace_customer_managed_key";
+
   // ===========
   // INITIALIZER
   // ===========

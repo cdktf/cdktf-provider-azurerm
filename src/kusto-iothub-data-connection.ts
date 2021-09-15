@@ -92,6 +92,11 @@ function kustoIothubDataConnectionTimeoutsToTerraform(struct?: KustoIothubDataCo
 */
 export class KustoIothubDataConnection extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_kusto_iothub_data_connection";
+
   // ===========
   // INITIALIZER
   // ===========

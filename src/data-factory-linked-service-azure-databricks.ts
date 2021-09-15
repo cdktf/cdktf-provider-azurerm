@@ -18,7 +18,7 @@ export interface DataFactoryLinkedServiceAzureDatabricksConfig extends cdktf.Ter
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_databricks.html#additional_properties DataFactoryLinkedServiceAzureDatabricks#additional_properties}
   */
-  readonly additionalProperties?: { [key: string]: string };
+  readonly additionalProperties?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_databricks.html#annotations DataFactoryLinkedServiceAzureDatabricks#annotations}
   */
@@ -50,7 +50,7 @@ export interface DataFactoryLinkedServiceAzureDatabricksConfig extends cdktf.Ter
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_databricks.html#parameters DataFactoryLinkedServiceAzureDatabricks#parameters}
   */
-  readonly parameters?: { [key: string]: string };
+  readonly parameters?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_databricks.html#resource_group_name DataFactoryLinkedServiceAzureDatabricks#resource_group_name}
   */
@@ -136,7 +136,7 @@ export interface DataFactoryLinkedServiceAzureDatabricksNewClusterConfig {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_databricks.html#custom_tags DataFactoryLinkedServiceAzureDatabricks#custom_tags}
   */
-  readonly customTags?: { [key: string]: string };
+  readonly customTags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_databricks.html#driver_node_type DataFactoryLinkedServiceAzureDatabricks#driver_node_type}
   */
@@ -164,11 +164,11 @@ export interface DataFactoryLinkedServiceAzureDatabricksNewClusterConfig {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_databricks.html#spark_config DataFactoryLinkedServiceAzureDatabricks#spark_config}
   */
-  readonly sparkConfig?: { [key: string]: string };
+  readonly sparkConfig?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_databricks.html#spark_environment_variables DataFactoryLinkedServiceAzureDatabricks#spark_environment_variables}
   */
-  readonly sparkEnvironmentVariables?: { [key: string]: string };
+  readonly sparkEnvironmentVariables?: { [key: string]: string } | cdktf.IResolvable;
 }
 
 function dataFactoryLinkedServiceAzureDatabricksNewClusterConfigToTerraform(struct?: DataFactoryLinkedServiceAzureDatabricksNewClusterConfig): any {
@@ -221,6 +221,11 @@ function dataFactoryLinkedServiceAzureDatabricksTimeoutsToTerraform(struct?: Dat
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_databricks.html azurerm_data_factory_linked_service_azure_databricks}
 */
 export class DataFactoryLinkedServiceAzureDatabricks extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_data_factory_linked_service_azure_databricks";
 
   // ===========
   // INITIALIZER
@@ -296,11 +301,11 @@ export class DataFactoryLinkedServiceAzureDatabricks extends cdktf.TerraformReso
   }
 
   // additional_properties - computed: false, optional: true, required: false
-  private _additionalProperties?: { [key: string]: string };
+  private _additionalProperties?: { [key: string]: string } | cdktf.IResolvable;
   public get additionalProperties() {
     return this.interpolationForAttribute('additional_properties') as any;
   }
-  public set additionalProperties(value: { [key: string]: string } ) {
+  public set additionalProperties(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._additionalProperties = value;
   }
   public resetAdditionalProperties() {
@@ -423,11 +428,11 @@ export class DataFactoryLinkedServiceAzureDatabricks extends cdktf.TerraformReso
   }
 
   // parameters - computed: false, optional: true, required: false
-  private _parameters?: { [key: string]: string };
+  private _parameters?: { [key: string]: string } | cdktf.IResolvable;
   public get parameters() {
     return this.interpolationForAttribute('parameters') as any;
   }
-  public set parameters(value: { [key: string]: string } ) {
+  public set parameters(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._parameters = value;
   }
   public resetParameters() {

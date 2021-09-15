@@ -10,15 +10,15 @@ export interface VirtualNetworkPeeringConfig extends cdktf.TerraformMetaArgument
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_network_peering.html#allow_forwarded_traffic VirtualNetworkPeering#allow_forwarded_traffic}
   */
-  readonly allowForwardedTraffic?: boolean;
+  readonly allowForwardedTraffic?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_network_peering.html#allow_gateway_transit VirtualNetworkPeering#allow_gateway_transit}
   */
-  readonly allowGatewayTransit?: boolean;
+  readonly allowGatewayTransit?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_network_peering.html#allow_virtual_network_access VirtualNetworkPeering#allow_virtual_network_access}
   */
-  readonly allowVirtualNetworkAccess?: boolean;
+  readonly allowVirtualNetworkAccess?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_network_peering.html#name VirtualNetworkPeering#name}
   */
@@ -34,7 +34,7 @@ export interface VirtualNetworkPeeringConfig extends cdktf.TerraformMetaArgument
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_network_peering.html#use_remote_gateways VirtualNetworkPeering#use_remote_gateways}
   */
-  readonly useRemoteGateways?: boolean;
+  readonly useRemoteGateways?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_network_peering.html#virtual_network_name VirtualNetworkPeering#virtual_network_name}
   */
@@ -81,6 +81,11 @@ function virtualNetworkPeeringTimeoutsToTerraform(struct?: VirtualNetworkPeering
 */
 export class VirtualNetworkPeering extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_virtual_network_peering";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -119,11 +124,11 @@ export class VirtualNetworkPeering extends cdktf.TerraformResource {
   // ==========
 
   // allow_forwarded_traffic - computed: true, optional: true, required: false
-  private _allowForwardedTraffic?: boolean;
+  private _allowForwardedTraffic?: boolean | cdktf.IResolvable;
   public get allowForwardedTraffic() {
     return this.getBooleanAttribute('allow_forwarded_traffic');
   }
-  public set allowForwardedTraffic(value: boolean) {
+  public set allowForwardedTraffic(value: boolean | cdktf.IResolvable) {
     this._allowForwardedTraffic = value;
   }
   public resetAllowForwardedTraffic() {
@@ -135,11 +140,11 @@ export class VirtualNetworkPeering extends cdktf.TerraformResource {
   }
 
   // allow_gateway_transit - computed: true, optional: true, required: false
-  private _allowGatewayTransit?: boolean;
+  private _allowGatewayTransit?: boolean | cdktf.IResolvable;
   public get allowGatewayTransit() {
     return this.getBooleanAttribute('allow_gateway_transit');
   }
-  public set allowGatewayTransit(value: boolean) {
+  public set allowGatewayTransit(value: boolean | cdktf.IResolvable) {
     this._allowGatewayTransit = value;
   }
   public resetAllowGatewayTransit() {
@@ -151,11 +156,11 @@ export class VirtualNetworkPeering extends cdktf.TerraformResource {
   }
 
   // allow_virtual_network_access - computed: false, optional: true, required: false
-  private _allowVirtualNetworkAccess?: boolean;
+  private _allowVirtualNetworkAccess?: boolean | cdktf.IResolvable;
   public get allowVirtualNetworkAccess() {
     return this.getBooleanAttribute('allow_virtual_network_access');
   }
-  public set allowVirtualNetworkAccess(value: boolean ) {
+  public set allowVirtualNetworkAccess(value: boolean | cdktf.IResolvable ) {
     this._allowVirtualNetworkAccess = value;
   }
   public resetAllowVirtualNetworkAccess() {
@@ -211,11 +216,11 @@ export class VirtualNetworkPeering extends cdktf.TerraformResource {
   }
 
   // use_remote_gateways - computed: true, optional: true, required: false
-  private _useRemoteGateways?: boolean;
+  private _useRemoteGateways?: boolean | cdktf.IResolvable;
   public get useRemoteGateways() {
     return this.getBooleanAttribute('use_remote_gateways');
   }
-  public set useRemoteGateways(value: boolean) {
+  public set useRemoteGateways(value: boolean | cdktf.IResolvable) {
     this._useRemoteGateways = value;
   }
   public resetUseRemoteGateways() {

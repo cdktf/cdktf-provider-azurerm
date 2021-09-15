@@ -65,6 +65,11 @@ function postgresqlFlexibleServerFirewallRuleTimeoutsToTerraform(struct?: Postgr
 */
 export class PostgresqlFlexibleServerFirewallRule extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_postgresql_flexible_server_firewall_rule";
+
   // ===========
   // INITIALIZER
   // ===========

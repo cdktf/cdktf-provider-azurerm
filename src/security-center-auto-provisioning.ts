@@ -53,6 +53,11 @@ function securityCenterAutoProvisioningTimeoutsToTerraform(struct?: SecurityCent
 */
 export class SecurityCenterAutoProvisioning extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_security_center_auto_provisioning";
+
   // ===========
   // INITIALIZER
   // ===========

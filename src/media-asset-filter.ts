@@ -46,7 +46,7 @@ export interface MediaAssetFilterPresentationTimeRange {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_asset_filter.html#force_end MediaAssetFilter#force_end}
   */
-  readonly forceEnd?: boolean;
+  readonly forceEnd?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_asset_filter.html#live_backoff_in_units MediaAssetFilter#live_backoff_in_units}
   */
@@ -151,6 +151,11 @@ function mediaAssetFilterTrackSelectionToTerraform(struct?: MediaAssetFilterTrac
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/media_asset_filter.html azurerm_media_asset_filter}
 */
 export class MediaAssetFilter extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_media_asset_filter";
 
   // ===========
   // INITIALIZER

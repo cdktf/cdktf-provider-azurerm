@@ -61,6 +61,11 @@ function activeDirectoryDomainServiceReplicaSetTimeoutsToTerraform(struct?: Acti
 */
 export class ActiveDirectoryDomainServiceReplicaSet extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_active_directory_domain_service_replica_set";
+
   // ===========
   // INITIALIZER
   // ===========

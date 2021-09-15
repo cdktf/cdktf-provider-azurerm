@@ -101,6 +101,11 @@ function virtualHubRouteTableTimeoutsToTerraform(struct?: VirtualHubRouteTableTi
 */
 export class VirtualHubRouteTable extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_virtual_hub_route_table";
+
   // ===========
   // INITIALIZER
   // ===========

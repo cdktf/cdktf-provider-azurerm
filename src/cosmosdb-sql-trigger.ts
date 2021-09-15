@@ -69,6 +69,11 @@ function cosmosdbSqlTriggerTimeoutsToTerraform(struct?: CosmosdbSqlTriggerTimeou
 */
 export class CosmosdbSqlTrigger extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_cosmosdb_sql_trigger";
+
   // ===========
   // INITIALIZER
   // ===========

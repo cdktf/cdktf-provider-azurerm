@@ -38,7 +38,7 @@ export interface ServiceFabricClusterConfig extends cdktf.TerraformMetaArguments
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_cluster.html#tags ServiceFabricCluster#tags}
   */
-  readonly tags?: { [key: string]: string };
+  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_cluster.html#upgrade_mode ServiceFabricCluster#upgrade_mode}
   */
@@ -216,7 +216,7 @@ export interface ServiceFabricClusterClientCertificateCommonName {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_cluster.html#is_admin ServiceFabricCluster#is_admin}
   */
-  readonly isAdmin: boolean;
+  readonly isAdmin: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_cluster.html#issuer_thumbprint ServiceFabricCluster#issuer_thumbprint}
   */
@@ -236,7 +236,7 @@ export interface ServiceFabricClusterClientCertificateThumbprint {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_cluster.html#is_admin ServiceFabricCluster#is_admin}
   */
-  readonly isAdmin: boolean;
+  readonly isAdmin: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_cluster.html#thumbprint ServiceFabricCluster#thumbprint}
   */
@@ -293,7 +293,7 @@ export interface ServiceFabricClusterFabricSettings {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_cluster.html#parameters ServiceFabricCluster#parameters}
   */
-  readonly parameters?: { [key: string]: string };
+  readonly parameters?: { [key: string]: string } | cdktf.IResolvable;
 }
 
 function serviceFabricClusterFabricSettingsToTerraform(struct?: ServiceFabricClusterFabricSettings): any {
@@ -346,7 +346,7 @@ export interface ServiceFabricClusterNodeType {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_cluster.html#capacities ServiceFabricCluster#capacities}
   */
-  readonly capacities?: { [key: string]: string };
+  readonly capacities?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_cluster.html#client_endpoint_port ServiceFabricCluster#client_endpoint_port}
   */
@@ -366,7 +366,7 @@ export interface ServiceFabricClusterNodeType {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_cluster.html#is_primary ServiceFabricCluster#is_primary}
   */
-  readonly isPrimary: boolean;
+  readonly isPrimary: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_cluster.html#name ServiceFabricCluster#name}
   */
@@ -374,7 +374,7 @@ export interface ServiceFabricClusterNodeType {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_cluster.html#placement_properties ServiceFabricCluster#placement_properties}
   */
-  readonly placementProperties?: { [key: string]: string };
+  readonly placementProperties?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_cluster.html#reverse_proxy_endpoint_port ServiceFabricCluster#reverse_proxy_endpoint_port}
   */
@@ -550,7 +550,7 @@ export interface ServiceFabricClusterUpgradePolicy {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_cluster.html#force_restart_enabled ServiceFabricCluster#force_restart_enabled}
   */
-  readonly forceRestartEnabled?: boolean;
+  readonly forceRestartEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_cluster.html#health_check_retry_timeout ServiceFabricCluster#health_check_retry_timeout}
   */
@@ -609,6 +609,11 @@ function serviceFabricClusterUpgradePolicyToTerraform(struct?: ServiceFabricClus
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_cluster.html azurerm_service_fabric_cluster}
 */
 export class ServiceFabricCluster extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_service_fabric_cluster";
 
   // ===========
   // INITIALIZER
@@ -768,11 +773,11 @@ export class ServiceFabricCluster extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string };
+  private _tags?: { [key: string]: string } | cdktf.IResolvable;
   public get tags() {
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._tags = value;
   }
   public resetTags() {

@@ -85,6 +85,11 @@ function dataFactoryIntegrationRuntimeSelfHostedTimeoutsToTerraform(struct?: Dat
 */
 export class DataFactoryIntegrationRuntimeSelfHosted extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_data_factory_integration_runtime_self_hosted";
+
   // ===========
   // INITIALIZER
   // ===========

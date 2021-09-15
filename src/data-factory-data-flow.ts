@@ -64,7 +64,7 @@ export interface DataFactoryDataFlowSinkDataset {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_data_flow.html#parameters DataFactoryDataFlow#parameters}
   */
-  readonly parameters?: { [key: string]: string };
+  readonly parameters?: { [key: string]: string } | cdktf.IResolvable;
 }
 
 function dataFactoryDataFlowSinkDatasetToTerraform(struct?: DataFactoryDataFlowSinkDataset): any {
@@ -83,7 +83,7 @@ export interface DataFactoryDataFlowSinkLinkedService {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_data_flow.html#parameters DataFactoryDataFlow#parameters}
   */
-  readonly parameters?: { [key: string]: string };
+  readonly parameters?: { [key: string]: string } | cdktf.IResolvable;
 }
 
 function dataFactoryDataFlowSinkLinkedServiceToTerraform(struct?: DataFactoryDataFlowSinkLinkedService): any {
@@ -102,7 +102,7 @@ export interface DataFactoryDataFlowSinkSchemaLinkedService {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_data_flow.html#parameters DataFactoryDataFlow#parameters}
   */
-  readonly parameters?: { [key: string]: string };
+  readonly parameters?: { [key: string]: string } | cdktf.IResolvable;
 }
 
 function dataFactoryDataFlowSinkSchemaLinkedServiceToTerraform(struct?: DataFactoryDataFlowSinkSchemaLinkedService): any {
@@ -161,7 +161,7 @@ export interface DataFactoryDataFlowSourceDataset {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_data_flow.html#parameters DataFactoryDataFlow#parameters}
   */
-  readonly parameters?: { [key: string]: string };
+  readonly parameters?: { [key: string]: string } | cdktf.IResolvable;
 }
 
 function dataFactoryDataFlowSourceDatasetToTerraform(struct?: DataFactoryDataFlowSourceDataset): any {
@@ -180,7 +180,7 @@ export interface DataFactoryDataFlowSourceLinkedService {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_data_flow.html#parameters DataFactoryDataFlow#parameters}
   */
-  readonly parameters?: { [key: string]: string };
+  readonly parameters?: { [key: string]: string } | cdktf.IResolvable;
 }
 
 function dataFactoryDataFlowSourceLinkedServiceToTerraform(struct?: DataFactoryDataFlowSourceLinkedService): any {
@@ -199,7 +199,7 @@ export interface DataFactoryDataFlowSourceSchemaLinkedService {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_data_flow.html#parameters DataFactoryDataFlow#parameters}
   */
-  readonly parameters?: { [key: string]: string };
+  readonly parameters?: { [key: string]: string } | cdktf.IResolvable;
 }
 
 function dataFactoryDataFlowSourceSchemaLinkedServiceToTerraform(struct?: DataFactoryDataFlowSourceSchemaLinkedService): any {
@@ -303,6 +303,11 @@ function dataFactoryDataFlowTransformationToTerraform(struct?: DataFactoryDataFl
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_data_flow.html azurerm_data_factory_data_flow}
 */
 export class DataFactoryDataFlow extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_data_factory_data_flow";
 
   // ===========
   // INITIALIZER

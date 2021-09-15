@@ -14,7 +14,7 @@ export interface ActiveDirectoryDomainServiceConfig extends cdktf.TerraformMetaA
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/active_directory_domain_service.html#filtered_sync_enabled ActiveDirectoryDomainService#filtered_sync_enabled}
   */
-  readonly filteredSyncEnabled?: boolean;
+  readonly filteredSyncEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/active_directory_domain_service.html#location ActiveDirectoryDomainService#location}
   */
@@ -34,7 +34,7 @@ export interface ActiveDirectoryDomainServiceConfig extends cdktf.TerraformMetaA
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/active_directory_domain_service.html#tags ActiveDirectoryDomainService#tags}
   */
-  readonly tags?: { [key: string]: string };
+  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * initial_replica_set block
   * 
@@ -88,11 +88,11 @@ export interface ActiveDirectoryDomainServiceNotifications {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/active_directory_domain_service.html#notify_dc_admins ActiveDirectoryDomainService#notify_dc_admins}
   */
-  readonly notifyDcAdmins?: boolean;
+  readonly notifyDcAdmins?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/active_directory_domain_service.html#notify_global_admins ActiveDirectoryDomainService#notify_global_admins}
   */
-  readonly notifyGlobalAdmins?: boolean;
+  readonly notifyGlobalAdmins?: boolean | cdktf.IResolvable;
 }
 
 function activeDirectoryDomainServiceNotificationsToTerraform(struct?: ActiveDirectoryDomainServiceNotifications): any {
@@ -108,11 +108,11 @@ export interface ActiveDirectoryDomainServiceSecureLdap {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/active_directory_domain_service.html#enabled ActiveDirectoryDomainService#enabled}
   */
-  readonly enabled: boolean;
+  readonly enabled: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/active_directory_domain_service.html#external_access_enabled ActiveDirectoryDomainService#external_access_enabled}
   */
-  readonly externalAccessEnabled?: boolean;
+  readonly externalAccessEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/active_directory_domain_service.html#pfx_certificate ActiveDirectoryDomainService#pfx_certificate}
   */
@@ -137,23 +137,23 @@ export interface ActiveDirectoryDomainServiceSecurity {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/active_directory_domain_service.html#ntlm_v1_enabled ActiveDirectoryDomainService#ntlm_v1_enabled}
   */
-  readonly ntlmV1Enabled?: boolean;
+  readonly ntlmV1Enabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/active_directory_domain_service.html#sync_kerberos_passwords ActiveDirectoryDomainService#sync_kerberos_passwords}
   */
-  readonly syncKerberosPasswords?: boolean;
+  readonly syncKerberosPasswords?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/active_directory_domain_service.html#sync_ntlm_passwords ActiveDirectoryDomainService#sync_ntlm_passwords}
   */
-  readonly syncNtlmPasswords?: boolean;
+  readonly syncNtlmPasswords?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/active_directory_domain_service.html#sync_on_prem_passwords ActiveDirectoryDomainService#sync_on_prem_passwords}
   */
-  readonly syncOnPremPasswords?: boolean;
+  readonly syncOnPremPasswords?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/active_directory_domain_service.html#tls_v1_enabled ActiveDirectoryDomainService#tls_v1_enabled}
   */
-  readonly tlsV1Enabled?: boolean;
+  readonly tlsV1Enabled?: boolean | cdktf.IResolvable;
 }
 
 function activeDirectoryDomainServiceSecurityToTerraform(struct?: ActiveDirectoryDomainServiceSecurity): any {
@@ -201,6 +201,11 @@ function activeDirectoryDomainServiceTimeoutsToTerraform(struct?: ActiveDirector
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/active_directory_domain_service.html azurerm_active_directory_domain_service}
 */
 export class ActiveDirectoryDomainService extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_active_directory_domain_service";
 
   // ===========
   // INITIALIZER
@@ -261,11 +266,11 @@ export class ActiveDirectoryDomainService extends cdktf.TerraformResource {
   }
 
   // filtered_sync_enabled - computed: false, optional: true, required: false
-  private _filteredSyncEnabled?: boolean;
+  private _filteredSyncEnabled?: boolean | cdktf.IResolvable;
   public get filteredSyncEnabled() {
     return this.getBooleanAttribute('filtered_sync_enabled');
   }
-  public set filteredSyncEnabled(value: boolean ) {
+  public set filteredSyncEnabled(value: boolean | cdktf.IResolvable ) {
     this._filteredSyncEnabled = value;
   }
   public resetFilteredSyncEnabled() {
@@ -320,6 +325,11 @@ export class ActiveDirectoryDomainService extends cdktf.TerraformResource {
     return this._resourceGroupName
   }
 
+  // resource_id - computed: true, optional: false, required: false
+  public get resourceId() {
+    return this.getStringAttribute('resource_id');
+  }
+
   // sku - computed: false, optional: false, required: true
   private _sku: string;
   public get sku() {
@@ -339,11 +349,11 @@ export class ActiveDirectoryDomainService extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string };
+  private _tags?: { [key: string]: string } | cdktf.IResolvable;
   public get tags() {
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._tags = value;
   }
   public resetTags() {

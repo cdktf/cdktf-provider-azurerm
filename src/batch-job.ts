@@ -14,7 +14,7 @@ export interface BatchJobConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_job.html#common_environment_properties BatchJob#common_environment_properties}
   */
-  readonly commonEnvironmentProperties?: { [key: string]: string };
+  readonly commonEnvironmentProperties?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_job.html#display_name BatchJob#display_name}
   */
@@ -73,6 +73,11 @@ function batchJobTimeoutsToTerraform(struct?: BatchJobTimeouts): any {
 */
 export class BatchJob extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_batch_job";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -122,11 +127,11 @@ export class BatchJob extends cdktf.TerraformResource {
   }
 
   // common_environment_properties - computed: false, optional: true, required: false
-  private _commonEnvironmentProperties?: { [key: string]: string };
+  private _commonEnvironmentProperties?: { [key: string]: string } | cdktf.IResolvable;
   public get commonEnvironmentProperties() {
     return this.interpolationForAttribute('common_environment_properties') as any;
   }
-  public set commonEnvironmentProperties(value: { [key: string]: string } ) {
+  public set commonEnvironmentProperties(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._commonEnvironmentProperties = value;
   }
   public resetCommonEnvironmentProperties() {

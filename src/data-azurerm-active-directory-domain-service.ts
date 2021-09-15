@@ -145,6 +145,11 @@ function dataAzurermActiveDirectoryDomainServiceTimeoutsToTerraform(struct?: Dat
 */
 export class DataAzurermActiveDirectoryDomainService extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_active_directory_domain_service";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -240,6 +245,11 @@ export class DataAzurermActiveDirectoryDomainService extends cdktf.TerraformData
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
     return this._resourceGroupName
+  }
+
+  // resource_id - computed: true, optional: false, required: false
+  public get resourceId() {
+    return this.getStringAttribute('resource_id');
   }
 
   // secure_ldap - computed: true, optional: false, required: false

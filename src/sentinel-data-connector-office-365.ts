@@ -10,7 +10,7 @@ export interface SentinelDataConnectorOffice365Config extends cdktf.TerraformMet
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_data_connector_office_365.html#exchange_enabled SentinelDataConnectorOffice365#exchange_enabled}
   */
-  readonly exchangeEnabled?: boolean;
+  readonly exchangeEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_data_connector_office_365.html#log_analytics_workspace_id SentinelDataConnectorOffice365#log_analytics_workspace_id}
   */
@@ -22,11 +22,11 @@ export interface SentinelDataConnectorOffice365Config extends cdktf.TerraformMet
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_data_connector_office_365.html#sharepoint_enabled SentinelDataConnectorOffice365#sharepoint_enabled}
   */
-  readonly sharepointEnabled?: boolean;
+  readonly sharepointEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_data_connector_office_365.html#teams_enabled SentinelDataConnectorOffice365#teams_enabled}
   */
-  readonly teamsEnabled?: boolean;
+  readonly teamsEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_data_connector_office_365.html#tenant_id SentinelDataConnectorOffice365#tenant_id}
   */
@@ -73,6 +73,11 @@ function sentinelDataConnectorOffice365TimeoutsToTerraform(struct?: SentinelData
 */
 export class SentinelDataConnectorOffice365 extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_sentinel_data_connector_office_365";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -109,11 +114,11 @@ export class SentinelDataConnectorOffice365 extends cdktf.TerraformResource {
   // ==========
 
   // exchange_enabled - computed: false, optional: true, required: false
-  private _exchangeEnabled?: boolean;
+  private _exchangeEnabled?: boolean | cdktf.IResolvable;
   public get exchangeEnabled() {
     return this.getBooleanAttribute('exchange_enabled');
   }
-  public set exchangeEnabled(value: boolean ) {
+  public set exchangeEnabled(value: boolean | cdktf.IResolvable ) {
     this._exchangeEnabled = value;
   }
   public resetExchangeEnabled() {
@@ -156,11 +161,11 @@ export class SentinelDataConnectorOffice365 extends cdktf.TerraformResource {
   }
 
   // sharepoint_enabled - computed: false, optional: true, required: false
-  private _sharepointEnabled?: boolean;
+  private _sharepointEnabled?: boolean | cdktf.IResolvable;
   public get sharepointEnabled() {
     return this.getBooleanAttribute('sharepoint_enabled');
   }
-  public set sharepointEnabled(value: boolean ) {
+  public set sharepointEnabled(value: boolean | cdktf.IResolvable ) {
     this._sharepointEnabled = value;
   }
   public resetSharepointEnabled() {
@@ -172,11 +177,11 @@ export class SentinelDataConnectorOffice365 extends cdktf.TerraformResource {
   }
 
   // teams_enabled - computed: false, optional: true, required: false
-  private _teamsEnabled?: boolean;
+  private _teamsEnabled?: boolean | cdktf.IResolvable;
   public get teamsEnabled() {
     return this.getBooleanAttribute('teams_enabled');
   }
-  public set teamsEnabled(value: boolean ) {
+  public set teamsEnabled(value: boolean | cdktf.IResolvable ) {
     this._teamsEnabled = value;
   }
   public resetTeamsEnabled() {

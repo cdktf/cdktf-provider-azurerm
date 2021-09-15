@@ -69,6 +69,11 @@ function kustoClusterCustomerManagedKeyTimeoutsToTerraform(struct?: KustoCluster
 */
 export class KustoClusterCustomerManagedKey extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_kusto_cluster_customer_managed_key";
+
   // ===========
   // INITIALIZER
   // ===========

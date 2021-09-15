@@ -10,7 +10,7 @@ export interface DataAzurermStorageContainerConfig extends cdktf.TerraformMetaAr
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_container.html#metadata DataAzurermStorageContainer#metadata}
   */
-  readonly metadata?: { [key: string]: string };
+  readonly metadata?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_container.html#name DataAzurermStorageContainer#name}
   */
@@ -45,6 +45,11 @@ function dataAzurermStorageContainerTimeoutsToTerraform(struct?: DataAzurermStor
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/storage_container.html azurerm_storage_container}
 */
 export class DataAzurermStorageContainer extends cdktf.TerraformDataSource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_storage_container";
 
   // ===========
   // INITIALIZER
@@ -99,11 +104,11 @@ export class DataAzurermStorageContainer extends cdktf.TerraformDataSource {
   }
 
   // metadata - computed: true, optional: true, required: false
-  private _metadata?: { [key: string]: string }
-  public get metadata(): { [key: string]: string } {
+  private _metadata?: { [key: string]: string } | cdktf.IResolvable
+  public get metadata(): { [key: string]: string } | cdktf.IResolvable {
     return this.interpolationForAttribute('metadata') as any; // Getting the computed value is not yet implemented
   }
-  public set metadata(value: { [key: string]: string }) {
+  public set metadata(value: { [key: string]: string } | cdktf.IResolvable) {
     this._metadata = value;
   }
   public resetMetadata() {

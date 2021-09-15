@@ -46,6 +46,11 @@ function dataAzurermMssqlElasticpoolTimeoutsToTerraform(struct?: DataAzurermMssq
 */
 export class DataAzurermMssqlElasticpool extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_mssql_elasticpool";
+
   // ===========
   // INITIALIZER
   // ===========

@@ -50,7 +50,7 @@ export interface ApiManagementApiConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api.html#soap_pass_through ApiManagementApi#soap_pass_through}
   */
-  readonly soapPassThrough?: boolean;
+  readonly soapPassThrough?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api.html#source_api_id ApiManagementApi#source_api_id}
   */
@@ -58,7 +58,7 @@ export interface ApiManagementApiConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api.html#subscription_required ApiManagementApi#subscription_required}
   */
-  readonly subscriptionRequired?: boolean;
+  readonly subscriptionRequired?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api.html#version ApiManagementApi#version}
   */
@@ -238,6 +238,11 @@ function apiManagementApiTimeoutsToTerraform(struct?: ApiManagementApiTimeouts):
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api.html azurerm_api_management_api}
 */
 export class ApiManagementApi extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_api_management_api";
 
   // ===========
   // INITIALIZER
@@ -452,11 +457,11 @@ export class ApiManagementApi extends cdktf.TerraformResource {
   }
 
   // soap_pass_through - computed: false, optional: true, required: false
-  private _soapPassThrough?: boolean;
+  private _soapPassThrough?: boolean | cdktf.IResolvable;
   public get soapPassThrough() {
     return this.getBooleanAttribute('soap_pass_through');
   }
-  public set soapPassThrough(value: boolean ) {
+  public set soapPassThrough(value: boolean | cdktf.IResolvable ) {
     this._soapPassThrough = value;
   }
   public resetSoapPassThrough() {
@@ -484,11 +489,11 @@ export class ApiManagementApi extends cdktf.TerraformResource {
   }
 
   // subscription_required - computed: false, optional: true, required: false
-  private _subscriptionRequired?: boolean;
+  private _subscriptionRequired?: boolean | cdktf.IResolvable;
   public get subscriptionRequired() {
     return this.getBooleanAttribute('subscription_required');
   }
-  public set subscriptionRequired(value: boolean ) {
+  public set subscriptionRequired(value: boolean | cdktf.IResolvable ) {
     this._subscriptionRequired = value;
   }
   public resetSubscriptionRequired() {

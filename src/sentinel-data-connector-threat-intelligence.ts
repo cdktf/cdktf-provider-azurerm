@@ -56,6 +56,11 @@ function sentinelDataConnectorThreatIntelligenceTimeoutsToTerraform(struct?: Sen
 */
 export class SentinelDataConnectorThreatIntelligence extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_sentinel_data_connector_threat_intelligence";
+
   // ===========
   // INITIALIZER
   // ===========

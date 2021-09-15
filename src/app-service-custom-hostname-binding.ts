@@ -69,6 +69,11 @@ function appServiceCustomHostnameBindingTimeoutsToTerraform(struct?: AppServiceC
 */
 export class AppServiceCustomHostnameBinding extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_app_service_custom_hostname_binding";
+
   // ===========
   // INITIALIZER
   // ===========

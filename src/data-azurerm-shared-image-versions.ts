@@ -22,7 +22,7 @@ export interface DataAzurermSharedImageVersionsConfig extends cdktf.TerraformMet
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/shared_image_versions.html#tags_filter DataAzurermSharedImageVersions#tags_filter}
   */
-  readonly tagsFilter?: { [key: string]: string };
+  readonly tagsFilter?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * timeouts block
   * 
@@ -98,6 +98,11 @@ function dataAzurermSharedImageVersionsTimeoutsToTerraform(struct?: DataAzurermS
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/shared_image_versions.html azurerm_shared_image_versions}
 */
 export class DataAzurermSharedImageVersions extends cdktf.TerraformDataSource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_shared_image_versions";
 
   // ===========
   // INITIALIZER
@@ -182,11 +187,11 @@ export class DataAzurermSharedImageVersions extends cdktf.TerraformDataSource {
   }
 
   // tags_filter - computed: false, optional: true, required: false
-  private _tagsFilter?: { [key: string]: string };
+  private _tagsFilter?: { [key: string]: string } | cdktf.IResolvable;
   public get tagsFilter() {
     return this.interpolationForAttribute('tags_filter') as any;
   }
-  public set tagsFilter(value: { [key: string]: string } ) {
+  public set tagsFilter(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._tagsFilter = value;
   }
   public resetTagsFilter() {

@@ -90,6 +90,11 @@ function dataAzurermCosmosdbAccountTimeoutsToTerraform(struct?: DataAzurermCosmo
 */
 export class DataAzurermCosmosdbAccount extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_cosmosdb_account";
+
   // ===========
   // INITIALIZER
   // ===========

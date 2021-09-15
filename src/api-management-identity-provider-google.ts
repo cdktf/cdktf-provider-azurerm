@@ -65,6 +65,11 @@ function apiManagementIdentityProviderGoogleTimeoutsToTerraform(struct?: ApiMana
 */
 export class ApiManagementIdentityProviderGoogle extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_api_management_identity_provider_google";
+
   // ===========
   // INITIALIZER
   // ===========

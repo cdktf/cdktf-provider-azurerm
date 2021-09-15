@@ -16,6 +16,10 @@ export interface StreamAnalyticsOutputEventhubConfig extends cdktf.TerraformMeta
   */
   readonly name: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_eventhub.html#property_columns StreamAnalyticsOutputEventhub#property_columns}
+  */
+  readonly propertyColumns?: string[];
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_eventhub.html#resource_group_name StreamAnalyticsOutputEventhub#resource_group_name}
   */
   readonly resourceGroupName: string;
@@ -112,6 +116,11 @@ function streamAnalyticsOutputEventhubTimeoutsToTerraform(struct?: StreamAnalyti
 */
 export class StreamAnalyticsOutputEventhub extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_stream_analytics_output_eventhub";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -136,6 +145,7 @@ export class StreamAnalyticsOutputEventhub extends cdktf.TerraformResource {
     });
     this._eventhubName = config.eventhubName;
     this._name = config.name;
+    this._propertyColumns = config.propertyColumns;
     this._resourceGroupName = config.resourceGroupName;
     this._servicebusNamespace = config.servicebusNamespace;
     this._sharedAccessPolicyKey = config.sharedAccessPolicyKey;
@@ -178,6 +188,22 @@ export class StreamAnalyticsOutputEventhub extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
     return this._name
+  }
+
+  // property_columns - computed: false, optional: true, required: false
+  private _propertyColumns?: string[];
+  public get propertyColumns() {
+    return this.getListAttribute('property_columns');
+  }
+  public set propertyColumns(value: string[] ) {
+    this._propertyColumns = value;
+  }
+  public resetPropertyColumns() {
+    this._propertyColumns = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get propertyColumnsInput() {
+    return this._propertyColumns
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -282,6 +308,7 @@ export class StreamAnalyticsOutputEventhub extends cdktf.TerraformResource {
     return {
       eventhub_name: cdktf.stringToTerraform(this._eventhubName),
       name: cdktf.stringToTerraform(this._name),
+      property_columns: cdktf.listMapper(cdktf.stringToTerraform)(this._propertyColumns),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       servicebus_namespace: cdktf.stringToTerraform(this._servicebusNamespace),
       shared_access_policy_key: cdktf.stringToTerraform(this._sharedAccessPolicyKey),

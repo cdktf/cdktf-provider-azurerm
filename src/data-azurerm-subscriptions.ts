@@ -89,6 +89,11 @@ function dataAzurermSubscriptionsTimeoutsToTerraform(struct?: DataAzurermSubscri
 */
 export class DataAzurermSubscriptions extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_subscriptions";
+
   // ===========
   // INITIALIZER
   // ===========

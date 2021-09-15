@@ -46,6 +46,11 @@ function dataAzurermApiManagementUserTimeoutsToTerraform(struct?: DataAzurermApi
 */
 export class DataAzurermApiManagementUser extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_api_management_user";
+
   // ===========
   // INITIALIZER
   // ===========

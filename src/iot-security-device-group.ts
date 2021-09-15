@@ -122,6 +122,11 @@ function iotSecurityDeviceGroupTimeoutsToTerraform(struct?: IotSecurityDeviceGro
 */
 export class IotSecurityDeviceGroup extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_iot_security_device_group";
+
   // ===========
   // INITIALIZER
   // ===========

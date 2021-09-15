@@ -60,6 +60,11 @@ function virtualHubBgpConnectionTimeoutsToTerraform(struct?: VirtualHubBgpConnec
 */
 export class VirtualHubBgpConnection extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_virtual_hub_bgp_connection";
+
   // ===========
   // INITIALIZER
   // ===========

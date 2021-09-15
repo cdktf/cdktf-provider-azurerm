@@ -62,7 +62,7 @@ export interface PostgresqlFlexibleServerConfig extends cdktf.TerraformMetaArgum
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_flexible_server.html#tags PostgresqlFlexibleServer#tags}
   */
-  readonly tags?: { [key: string]: string };
+  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_flexible_server.html#version PostgresqlFlexibleServer#version}
   */
@@ -167,6 +167,11 @@ function postgresqlFlexibleServerTimeoutsToTerraform(struct?: PostgresqlFlexible
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_flexible_server.html azurerm_postgresql_flexible_server}
 */
 export class PostgresqlFlexibleServer extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_postgresql_flexible_server";
 
   // ===========
   // INITIALIZER
@@ -435,11 +440,11 @@ export class PostgresqlFlexibleServer extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string };
+  private _tags?: { [key: string]: string } | cdktf.IResolvable;
   public get tags() {
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._tags = value;
   }
   public resetTags() {

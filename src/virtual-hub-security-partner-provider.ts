@@ -26,7 +26,7 @@ export interface VirtualHubSecurityPartnerProviderConfig extends cdktf.Terraform
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_hub_security_partner_provider.html#tags VirtualHubSecurityPartnerProvider#tags}
   */
-  readonly tags?: { [key: string]: string };
+  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_hub_security_partner_provider.html#virtual_hub_id VirtualHubSecurityPartnerProvider#virtual_hub_id}
   */
@@ -72,6 +72,11 @@ function virtualHubSecurityPartnerProviderTimeoutsToTerraform(struct?: VirtualHu
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_hub_security_partner_provider.html azurerm_virtual_hub_security_partner_provider}
 */
 export class VirtualHubSecurityPartnerProvider extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_virtual_hub_security_partner_provider";
 
   // ===========
   // INITIALIZER
@@ -166,11 +171,11 @@ export class VirtualHubSecurityPartnerProvider extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string };
+  private _tags?: { [key: string]: string } | cdktf.IResolvable;
   public get tags() {
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._tags = value;
   }
   public resetTags() {

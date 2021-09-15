@@ -42,6 +42,11 @@ function dataAzurermKeyVaultKeyTimeoutsToTerraform(struct?: DataAzurermKeyVaultK
 */
 export class DataAzurermKeyVaultKey extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_key_vault_key";
+
   // ===========
   // INITIALIZER
   // ===========

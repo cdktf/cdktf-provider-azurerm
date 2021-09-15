@@ -85,6 +85,11 @@ function iothubEndpointStorageContainerTimeoutsToTerraform(struct?: IothubEndpoi
 */
 export class IothubEndpointStorageContainer extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_iothub_endpoint_storage_container";
+
   // ===========
   // INITIALIZER
   // ===========

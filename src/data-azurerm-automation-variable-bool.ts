@@ -46,6 +46,11 @@ function dataAzurermAutomationVariableBoolTimeoutsToTerraform(struct?: DataAzure
 */
 export class DataAzurermAutomationVariableBool extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_automation_variable_bool";
+
   // ===========
   // INITIALIZER
   // ===========

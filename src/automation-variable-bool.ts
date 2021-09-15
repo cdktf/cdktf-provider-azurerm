@@ -18,7 +18,7 @@ export interface AutomationVariableBoolConfig extends cdktf.TerraformMetaArgumen
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_variable_bool.html#encrypted AutomationVariableBool#encrypted}
   */
-  readonly encrypted?: boolean;
+  readonly encrypted?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_variable_bool.html#name AutomationVariableBool#name}
   */
@@ -30,7 +30,7 @@ export interface AutomationVariableBoolConfig extends cdktf.TerraformMetaArgumen
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_variable_bool.html#value AutomationVariableBool#value}
   */
-  readonly value?: boolean;
+  readonly value?: boolean | cdktf.IResolvable;
   /**
   * timeouts block
   * 
@@ -72,6 +72,11 @@ function automationVariableBoolTimeoutsToTerraform(struct?: AutomationVariableBo
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/automation_variable_bool.html azurerm_automation_variable_bool}
 */
 export class AutomationVariableBool extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_automation_variable_bool";
 
   // ===========
   // INITIALIZER
@@ -138,11 +143,11 @@ export class AutomationVariableBool extends cdktf.TerraformResource {
   }
 
   // encrypted - computed: false, optional: true, required: false
-  private _encrypted?: boolean;
+  private _encrypted?: boolean | cdktf.IResolvable;
   public get encrypted() {
     return this.getBooleanAttribute('encrypted');
   }
-  public set encrypted(value: boolean ) {
+  public set encrypted(value: boolean | cdktf.IResolvable ) {
     this._encrypted = value;
   }
   public resetEncrypted() {
@@ -185,11 +190,11 @@ export class AutomationVariableBool extends cdktf.TerraformResource {
   }
 
   // value - computed: false, optional: true, required: false
-  private _value?: boolean;
+  private _value?: boolean | cdktf.IResolvable;
   public get value() {
     return this.getBooleanAttribute('value');
   }
-  public set value(value: boolean ) {
+  public set value(value: boolean | cdktf.IResolvable ) {
     this._value = value;
   }
   public resetValue() {

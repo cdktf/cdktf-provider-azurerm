@@ -22,7 +22,7 @@ export interface PrivateDnsCnameRecordConfig extends cdktf.TerraformMetaArgument
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/private_dns_cname_record.html#tags PrivateDnsCnameRecord#tags}
   */
-  readonly tags?: { [key: string]: string };
+  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/private_dns_cname_record.html#ttl PrivateDnsCnameRecord#ttl}
   */
@@ -72,6 +72,11 @@ function privateDnsCnameRecordTimeoutsToTerraform(struct?: PrivateDnsCnameRecord
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/private_dns_cname_record.html azurerm_private_dns_cname_record}
 */
 export class PrivateDnsCnameRecord extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_private_dns_cname_record";
 
   // ===========
   // INITIALIZER
@@ -158,11 +163,11 @@ export class PrivateDnsCnameRecord extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string };
+  private _tags?: { [key: string]: string } | cdktf.IResolvable;
   public get tags() {
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._tags = value;
   }
   public resetTags() {

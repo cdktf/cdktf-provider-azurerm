@@ -18,7 +18,7 @@ export interface AnalysisServicesServerConfig extends cdktf.TerraformMetaArgumen
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/analysis_services_server.html#enable_power_bi_service AnalysisServicesServer#enable_power_bi_service}
   */
-  readonly enablePowerBiService?: boolean;
+  readonly enablePowerBiService?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/analysis_services_server.html#location AnalysisServicesServer#location}
   */
@@ -42,7 +42,7 @@ export interface AnalysisServicesServerConfig extends cdktf.TerraformMetaArgumen
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/analysis_services_server.html#tags AnalysisServicesServer#tags}
   */
-  readonly tags?: { [key: string]: string };
+  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * ipv4_firewall_rule block
   * 
@@ -114,6 +114,11 @@ function analysisServicesServerTimeoutsToTerraform(struct?: AnalysisServicesServ
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/analysis_services_server.html azurerm_analysis_services_server}
 */
 export class AnalysisServicesServer extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_analysis_services_server";
 
   // ===========
   // INITIALIZER
@@ -187,11 +192,11 @@ export class AnalysisServicesServer extends cdktf.TerraformResource {
   }
 
   // enable_power_bi_service - computed: false, optional: true, required: false
-  private _enablePowerBiService?: boolean;
+  private _enablePowerBiService?: boolean | cdktf.IResolvable;
   public get enablePowerBiService() {
     return this.getBooleanAttribute('enable_power_bi_service');
   }
-  public set enablePowerBiService(value: boolean ) {
+  public set enablePowerBiService(value: boolean | cdktf.IResolvable ) {
     this._enablePowerBiService = value;
   }
   public resetEnablePowerBiService() {
@@ -281,11 +286,11 @@ export class AnalysisServicesServer extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string };
+  private _tags?: { [key: string]: string } | cdktf.IResolvable;
   public get tags() {
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._tags = value;
   }
   public resetTags() {

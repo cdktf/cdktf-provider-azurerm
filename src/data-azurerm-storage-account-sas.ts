@@ -18,7 +18,7 @@ export interface DataAzurermStorageAccountSasConfig extends cdktf.TerraformMetaA
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account_sas.html#https_only DataAzurermStorageAccountSas#https_only}
   */
-  readonly httpsOnly?: boolean;
+  readonly httpsOnly?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account_sas.html#ip_addresses DataAzurermStorageAccountSas#ip_addresses}
   */
@@ -60,35 +60,35 @@ export interface DataAzurermStorageAccountSasPermissions {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account_sas.html#add DataAzurermStorageAccountSas#add}
   */
-  readonly add: boolean;
+  readonly add: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account_sas.html#create DataAzurermStorageAccountSas#create}
   */
-  readonly create: boolean;
+  readonly create: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account_sas.html#delete DataAzurermStorageAccountSas#delete}
   */
-  readonly delete: boolean;
+  readonly delete: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account_sas.html#list DataAzurermStorageAccountSas#list}
   */
-  readonly list: boolean;
+  readonly list: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account_sas.html#process DataAzurermStorageAccountSas#process}
   */
-  readonly process: boolean;
+  readonly process: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account_sas.html#read DataAzurermStorageAccountSas#read}
   */
-  readonly read: boolean;
+  readonly read: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account_sas.html#update DataAzurermStorageAccountSas#update}
   */
-  readonly update: boolean;
+  readonly update: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account_sas.html#write DataAzurermStorageAccountSas#write}
   */
-  readonly write: boolean;
+  readonly write: boolean | cdktf.IResolvable;
 }
 
 function dataAzurermStorageAccountSasPermissionsToTerraform(struct?: DataAzurermStorageAccountSasPermissions): any {
@@ -109,15 +109,15 @@ export interface DataAzurermStorageAccountSasResourceTypes {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account_sas.html#container DataAzurermStorageAccountSas#container}
   */
-  readonly container: boolean;
+  readonly container: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account_sas.html#object DataAzurermStorageAccountSas#object}
   */
-  readonly object: boolean;
+  readonly object: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account_sas.html#service DataAzurermStorageAccountSas#service}
   */
-  readonly service: boolean;
+  readonly service: boolean | cdktf.IResolvable;
 }
 
 function dataAzurermStorageAccountSasResourceTypesToTerraform(struct?: DataAzurermStorageAccountSasResourceTypes): any {
@@ -133,19 +133,19 @@ export interface DataAzurermStorageAccountSasServices {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account_sas.html#blob DataAzurermStorageAccountSas#blob}
   */
-  readonly blob: boolean;
+  readonly blob: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account_sas.html#file DataAzurermStorageAccountSas#file}
   */
-  readonly file: boolean;
+  readonly file: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account_sas.html#queue DataAzurermStorageAccountSas#queue}
   */
-  readonly queue: boolean;
+  readonly queue: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account_sas.html#table DataAzurermStorageAccountSas#table}
   */
-  readonly table: boolean;
+  readonly table: boolean | cdktf.IResolvable;
 }
 
 function dataAzurermStorageAccountSasServicesToTerraform(struct?: DataAzurermStorageAccountSasServices): any {
@@ -177,6 +177,11 @@ function dataAzurermStorageAccountSasTimeoutsToTerraform(struct?: DataAzurermSto
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account_sas.html azurerm_storage_account_sas}
 */
 export class DataAzurermStorageAccountSas extends cdktf.TerraformDataSource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_storage_account_sas";
 
   // ===========
   // INITIALIZER
@@ -243,11 +248,11 @@ export class DataAzurermStorageAccountSas extends cdktf.TerraformDataSource {
   }
 
   // https_only - computed: false, optional: true, required: false
-  private _httpsOnly?: boolean;
+  private _httpsOnly?: boolean | cdktf.IResolvable;
   public get httpsOnly() {
     return this.getBooleanAttribute('https_only');
   }
-  public set httpsOnly(value: boolean ) {
+  public set httpsOnly(value: boolean | cdktf.IResolvable ) {
     this._httpsOnly = value;
   }
   public resetHttpsOnly() {

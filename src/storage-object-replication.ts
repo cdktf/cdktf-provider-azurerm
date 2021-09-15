@@ -92,6 +92,11 @@ function storageObjectReplicationTimeoutsToTerraform(struct?: StorageObjectRepli
 */
 export class StorageObjectReplication extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_storage_object_replication";
+
   // ===========
   // INITIALIZER
   // ===========

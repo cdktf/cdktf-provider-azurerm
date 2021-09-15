@@ -96,6 +96,11 @@ function dataAzurermMysqlServerTimeoutsToTerraform(struct?: DataAzurermMysqlServ
 */
 export class DataAzurermMysqlServer extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_mysql_server";
+
   // ===========
   // INITIALIZER
   // ===========

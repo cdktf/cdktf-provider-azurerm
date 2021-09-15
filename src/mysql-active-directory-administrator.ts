@@ -69,6 +69,11 @@ function mysqlActiveDirectoryAdministratorTimeoutsToTerraform(struct?: MysqlActi
 */
 export class MysqlActiveDirectoryAdministrator extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_mysql_active_directory_administrator";
+
   // ===========
   // INITIALIZER
   // ===========

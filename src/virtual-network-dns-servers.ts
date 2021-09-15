@@ -57,6 +57,11 @@ function virtualNetworkDnsServersTimeoutsToTerraform(struct?: VirtualNetworkDnsS
 */
 export class VirtualNetworkDnsServers extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_virtual_network_dns_servers";
+
   // ===========
   // INITIALIZER
   // ===========

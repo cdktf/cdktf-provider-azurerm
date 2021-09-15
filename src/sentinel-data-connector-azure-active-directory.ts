@@ -56,6 +56,11 @@ function sentinelDataConnectorAzureActiveDirectoryTimeoutsToTerraform(struct?: S
 */
 export class SentinelDataConnectorAzureActiveDirectory extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_sentinel_data_connector_azure_active_directory";
+
   // ===========
   // INITIALIZER
   // ===========

@@ -57,6 +57,11 @@ function subnetNetworkSecurityGroupAssociationTimeoutsToTerraform(struct?: Subne
 */
 export class SubnetNetworkSecurityGroupAssociation extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_subnet_network_security_group_association";
+
   // ===========
   // INITIALIZER
   // ===========

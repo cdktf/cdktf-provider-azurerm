@@ -14,7 +14,7 @@ export interface DataAzurermResourcesConfig extends cdktf.TerraformMetaArguments
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/resources.html#required_tags DataAzurermResources#required_tags}
   */
-  readonly requiredTags?: { [key: string]: string };
+  readonly requiredTags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/resources.html#resource_group_name DataAzurermResources#resource_group_name}
   */
@@ -77,6 +77,11 @@ function dataAzurermResourcesTimeoutsToTerraform(struct?: DataAzurermResourcesTi
 */
 export class DataAzurermResources extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_resources";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -132,11 +137,11 @@ export class DataAzurermResources extends cdktf.TerraformDataSource {
   }
 
   // required_tags - computed: false, optional: true, required: false
-  private _requiredTags?: { [key: string]: string };
+  private _requiredTags?: { [key: string]: string } | cdktf.IResolvable;
   public get requiredTags() {
     return this.interpolationForAttribute('required_tags') as any;
   }
-  public set requiredTags(value: { [key: string]: string } ) {
+  public set requiredTags(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._requiredTags = value;
   }
   public resetRequiredTags() {

@@ -52,6 +52,11 @@ function natGatewayPublicIpPrefixAssociationTimeoutsToTerraform(struct?: NatGate
 */
 export class NatGatewayPublicIpPrefixAssociation extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_nat_gateway_public_ip_prefix_association";
+
   // ===========
   // INITIALIZER
   // ===========

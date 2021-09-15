@@ -42,6 +42,11 @@ function dataAzurermFunctionAppHostKeysTimeoutsToTerraform(struct?: DataAzurermF
 */
 export class DataAzurermFunctionAppHostKeys extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_function_app_host_keys";
+
   // ===========
   // INITIALIZER
   // ===========

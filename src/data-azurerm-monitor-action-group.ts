@@ -274,6 +274,11 @@ function dataAzurermMonitorActionGroupTimeoutsToTerraform(struct?: DataAzurermMo
 */
 export class DataAzurermMonitorActionGroup extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_monitor_action_group";
+
   // ===========
   // INITIALIZER
   // ===========

@@ -42,6 +42,11 @@ function dataAzurermIpGroupTimeoutsToTerraform(struct?: DataAzurermIpGroupTimeou
 */
 export class DataAzurermIpGroup extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_ip_group";
+
   // ===========
   // INITIALIZER
   // ===========

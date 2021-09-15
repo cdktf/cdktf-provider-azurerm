@@ -14,19 +14,19 @@ export interface KeyVaultConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault.html#enable_rbac_authorization KeyVault#enable_rbac_authorization}
   */
-  readonly enableRbacAuthorization?: boolean;
+  readonly enableRbacAuthorization?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault.html#enabled_for_deployment KeyVault#enabled_for_deployment}
   */
-  readonly enabledForDeployment?: boolean;
+  readonly enabledForDeployment?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault.html#enabled_for_disk_encryption KeyVault#enabled_for_disk_encryption}
   */
-  readonly enabledForDiskEncryption?: boolean;
+  readonly enabledForDiskEncryption?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault.html#enabled_for_template_deployment KeyVault#enabled_for_template_deployment}
   */
-  readonly enabledForTemplateDeployment?: boolean;
+  readonly enabledForTemplateDeployment?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault.html#location KeyVault#location}
   */
@@ -38,7 +38,7 @@ export interface KeyVaultConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault.html#purge_protection_enabled KeyVault#purge_protection_enabled}
   */
-  readonly purgeProtectionEnabled?: boolean;
+  readonly purgeProtectionEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault.html#resource_group_name KeyVault#resource_group_name}
   */
@@ -50,7 +50,7 @@ export interface KeyVaultConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault.html#soft_delete_enabled KeyVault#soft_delete_enabled}
   */
-  readonly softDeleteEnabled?: boolean;
+  readonly softDeleteEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault.html#soft_delete_retention_days KeyVault#soft_delete_retention_days}
   */
@@ -58,7 +58,7 @@ export interface KeyVaultConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault.html#tags KeyVault#tags}
   */
-  readonly tags?: { [key: string]: string };
+  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault.html#tenant_id KeyVault#tenant_id}
   */
@@ -214,6 +214,11 @@ function keyVaultTimeoutsToTerraform(struct?: KeyVaultTimeouts): any {
 */
 export class KeyVault extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_key_vault";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -276,11 +281,11 @@ export class KeyVault extends cdktf.TerraformResource {
   }
 
   // enable_rbac_authorization - computed: false, optional: true, required: false
-  private _enableRbacAuthorization?: boolean;
+  private _enableRbacAuthorization?: boolean | cdktf.IResolvable;
   public get enableRbacAuthorization() {
     return this.getBooleanAttribute('enable_rbac_authorization');
   }
-  public set enableRbacAuthorization(value: boolean ) {
+  public set enableRbacAuthorization(value: boolean | cdktf.IResolvable ) {
     this._enableRbacAuthorization = value;
   }
   public resetEnableRbacAuthorization() {
@@ -292,11 +297,11 @@ export class KeyVault extends cdktf.TerraformResource {
   }
 
   // enabled_for_deployment - computed: false, optional: true, required: false
-  private _enabledForDeployment?: boolean;
+  private _enabledForDeployment?: boolean | cdktf.IResolvable;
   public get enabledForDeployment() {
     return this.getBooleanAttribute('enabled_for_deployment');
   }
-  public set enabledForDeployment(value: boolean ) {
+  public set enabledForDeployment(value: boolean | cdktf.IResolvable ) {
     this._enabledForDeployment = value;
   }
   public resetEnabledForDeployment() {
@@ -308,11 +313,11 @@ export class KeyVault extends cdktf.TerraformResource {
   }
 
   // enabled_for_disk_encryption - computed: false, optional: true, required: false
-  private _enabledForDiskEncryption?: boolean;
+  private _enabledForDiskEncryption?: boolean | cdktf.IResolvable;
   public get enabledForDiskEncryption() {
     return this.getBooleanAttribute('enabled_for_disk_encryption');
   }
-  public set enabledForDiskEncryption(value: boolean ) {
+  public set enabledForDiskEncryption(value: boolean | cdktf.IResolvable ) {
     this._enabledForDiskEncryption = value;
   }
   public resetEnabledForDiskEncryption() {
@@ -324,11 +329,11 @@ export class KeyVault extends cdktf.TerraformResource {
   }
 
   // enabled_for_template_deployment - computed: false, optional: true, required: false
-  private _enabledForTemplateDeployment?: boolean;
+  private _enabledForTemplateDeployment?: boolean | cdktf.IResolvable;
   public get enabledForTemplateDeployment() {
     return this.getBooleanAttribute('enabled_for_template_deployment');
   }
-  public set enabledForTemplateDeployment(value: boolean ) {
+  public set enabledForTemplateDeployment(value: boolean | cdktf.IResolvable ) {
     this._enabledForTemplateDeployment = value;
   }
   public resetEnabledForTemplateDeployment() {
@@ -371,11 +376,11 @@ export class KeyVault extends cdktf.TerraformResource {
   }
 
   // purge_protection_enabled - computed: false, optional: true, required: false
-  private _purgeProtectionEnabled?: boolean;
+  private _purgeProtectionEnabled?: boolean | cdktf.IResolvable;
   public get purgeProtectionEnabled() {
     return this.getBooleanAttribute('purge_protection_enabled');
   }
-  public set purgeProtectionEnabled(value: boolean ) {
+  public set purgeProtectionEnabled(value: boolean | cdktf.IResolvable ) {
     this._purgeProtectionEnabled = value;
   }
   public resetPurgeProtectionEnabled() {
@@ -413,11 +418,11 @@ export class KeyVault extends cdktf.TerraformResource {
   }
 
   // soft_delete_enabled - computed: true, optional: true, required: false
-  private _softDeleteEnabled?: boolean;
+  private _softDeleteEnabled?: boolean | cdktf.IResolvable;
   public get softDeleteEnabled() {
     return this.getBooleanAttribute('soft_delete_enabled');
   }
-  public set softDeleteEnabled(value: boolean) {
+  public set softDeleteEnabled(value: boolean | cdktf.IResolvable) {
     this._softDeleteEnabled = value;
   }
   public resetSoftDeleteEnabled() {
@@ -445,11 +450,11 @@ export class KeyVault extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string };
+  private _tags?: { [key: string]: string } | cdktf.IResolvable;
   public get tags() {
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._tags = value;
   }
   public resetTags() {

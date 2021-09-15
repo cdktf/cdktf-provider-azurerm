@@ -10,7 +10,7 @@ export interface VirtualMachineScaleSetExtensionAConfig extends cdktf.TerraformM
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set_extension.html#auto_upgrade_minor_version VirtualMachineScaleSetExtensionA#auto_upgrade_minor_version}
   */
-  readonly autoUpgradeMinorVersion?: boolean;
+  readonly autoUpgradeMinorVersion?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set_extension.html#force_update_tag VirtualMachineScaleSetExtensionA#force_update_tag}
   */
@@ -89,6 +89,11 @@ function virtualMachineScaleSetExtensionTimeoutsToTerraform(struct?: VirtualMach
 */
 export class VirtualMachineScaleSetExtensionA extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_virtual_machine_scale_set_extension";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -129,11 +134,11 @@ export class VirtualMachineScaleSetExtensionA extends cdktf.TerraformResource {
   // ==========
 
   // auto_upgrade_minor_version - computed: false, optional: true, required: false
-  private _autoUpgradeMinorVersion?: boolean;
+  private _autoUpgradeMinorVersion?: boolean | cdktf.IResolvable;
   public get autoUpgradeMinorVersion() {
     return this.getBooleanAttribute('auto_upgrade_minor_version');
   }
-  public set autoUpgradeMinorVersion(value: boolean ) {
+  public set autoUpgradeMinorVersion(value: boolean | cdktf.IResolvable ) {
     this._autoUpgradeMinorVersion = value;
   }
   public resetAutoUpgradeMinorVersion() {

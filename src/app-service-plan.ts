@@ -14,7 +14,7 @@ export interface AppServicePlanConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_plan.html#is_xenon AppServicePlan#is_xenon}
   */
-  readonly isXenon?: boolean;
+  readonly isXenon?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_plan.html#kind AppServicePlan#kind}
   */
@@ -34,11 +34,11 @@ export interface AppServicePlanConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_plan.html#per_site_scaling AppServicePlan#per_site_scaling}
   */
-  readonly perSiteScaling?: boolean;
+  readonly perSiteScaling?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_plan.html#reserved AppServicePlan#reserved}
   */
-  readonly reserved?: boolean;
+  readonly reserved?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_plan.html#resource_group_name AppServicePlan#resource_group_name}
   */
@@ -46,7 +46,11 @@ export interface AppServicePlanConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_plan.html#tags AppServicePlan#tags}
   */
-  readonly tags?: { [key: string]: string };
+  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_plan.html#zone_redundant AppServicePlan#zone_redundant}
+  */
+  readonly zoneRedundant?: boolean | cdktf.IResolvable;
   /**
   * sku block
   * 
@@ -119,6 +123,11 @@ function appServicePlanTimeoutsToTerraform(struct?: AppServicePlanTimeouts): any
 */
 export class AppServicePlan extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_app_service_plan";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -151,6 +160,7 @@ export class AppServicePlan extends cdktf.TerraformResource {
     this._reserved = config.reserved;
     this._resourceGroupName = config.resourceGroupName;
     this._tags = config.tags;
+    this._zoneRedundant = config.zoneRedundant;
     this._sku = config.sku;
     this._timeouts = config.timeouts;
   }
@@ -181,11 +191,11 @@ export class AppServicePlan extends cdktf.TerraformResource {
   }
 
   // is_xenon - computed: false, optional: true, required: false
-  private _isXenon?: boolean;
+  private _isXenon?: boolean | cdktf.IResolvable;
   public get isXenon() {
     return this.getBooleanAttribute('is_xenon');
   }
-  public set isXenon(value: boolean ) {
+  public set isXenon(value: boolean | cdktf.IResolvable ) {
     this._isXenon = value;
   }
   public resetIsXenon() {
@@ -260,11 +270,11 @@ export class AppServicePlan extends cdktf.TerraformResource {
   }
 
   // per_site_scaling - computed: false, optional: true, required: false
-  private _perSiteScaling?: boolean;
+  private _perSiteScaling?: boolean | cdktf.IResolvable;
   public get perSiteScaling() {
     return this.getBooleanAttribute('per_site_scaling');
   }
-  public set perSiteScaling(value: boolean ) {
+  public set perSiteScaling(value: boolean | cdktf.IResolvable ) {
     this._perSiteScaling = value;
   }
   public resetPerSiteScaling() {
@@ -276,11 +286,11 @@ export class AppServicePlan extends cdktf.TerraformResource {
   }
 
   // reserved - computed: false, optional: true, required: false
-  private _reserved?: boolean;
+  private _reserved?: boolean | cdktf.IResolvable;
   public get reserved() {
     return this.getBooleanAttribute('reserved');
   }
-  public set reserved(value: boolean ) {
+  public set reserved(value: boolean | cdktf.IResolvable ) {
     this._reserved = value;
   }
   public resetReserved() {
@@ -305,11 +315,11 @@ export class AppServicePlan extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string };
+  private _tags?: { [key: string]: string } | cdktf.IResolvable;
   public get tags() {
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._tags = value;
   }
   public resetTags() {
@@ -318,6 +328,22 @@ export class AppServicePlan extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get tagsInput() {
     return this._tags
+  }
+
+  // zone_redundant - computed: false, optional: true, required: false
+  private _zoneRedundant?: boolean | cdktf.IResolvable;
+  public get zoneRedundant() {
+    return this.getBooleanAttribute('zone_redundant');
+  }
+  public set zoneRedundant(value: boolean | cdktf.IResolvable ) {
+    this._zoneRedundant = value;
+  }
+  public resetZoneRedundant() {
+    this._zoneRedundant = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get zoneRedundantInput() {
+    return this._zoneRedundant
   }
 
   // sku - computed: false, optional: false, required: true
@@ -365,6 +391,7 @@ export class AppServicePlan extends cdktf.TerraformResource {
       reserved: cdktf.booleanToTerraform(this._reserved),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      zone_redundant: cdktf.booleanToTerraform(this._zoneRedundant),
       sku: cdktf.listMapper(appServicePlanSkuToTerraform)(this._sku),
       timeouts: appServicePlanTimeoutsToTerraform(this._timeouts),
     };

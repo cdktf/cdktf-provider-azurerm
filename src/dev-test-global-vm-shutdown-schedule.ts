@@ -14,7 +14,7 @@ export interface DevTestGlobalVmShutdownScheduleConfig extends cdktf.TerraformMe
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_global_vm_shutdown_schedule.html#enabled DevTestGlobalVmShutdownSchedule#enabled}
   */
-  readonly enabled?: boolean;
+  readonly enabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_global_vm_shutdown_schedule.html#location DevTestGlobalVmShutdownSchedule#location}
   */
@@ -22,7 +22,7 @@ export interface DevTestGlobalVmShutdownScheduleConfig extends cdktf.TerraformMe
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_global_vm_shutdown_schedule.html#tags DevTestGlobalVmShutdownSchedule#tags}
   */
-  readonly tags?: { [key: string]: string };
+  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_global_vm_shutdown_schedule.html#timezone DevTestGlobalVmShutdownSchedule#timezone}
   */
@@ -46,9 +46,13 @@ export interface DevTestGlobalVmShutdownScheduleConfig extends cdktf.TerraformMe
 }
 export interface DevTestGlobalVmShutdownScheduleNotificationSettings {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_global_vm_shutdown_schedule.html#email DevTestGlobalVmShutdownSchedule#email}
+  */
+  readonly email?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_global_vm_shutdown_schedule.html#enabled DevTestGlobalVmShutdownSchedule#enabled}
   */
-  readonly enabled: boolean;
+  readonly enabled: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_global_vm_shutdown_schedule.html#time_in_minutes DevTestGlobalVmShutdownSchedule#time_in_minutes}
   */
@@ -62,6 +66,7 @@ export interface DevTestGlobalVmShutdownScheduleNotificationSettings {
 function devTestGlobalVmShutdownScheduleNotificationSettingsToTerraform(struct?: DevTestGlobalVmShutdownScheduleNotificationSettings): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   return {
+    email: cdktf.stringToTerraform(struct!.email),
     enabled: cdktf.booleanToTerraform(struct!.enabled),
     time_in_minutes: cdktf.numberToTerraform(struct!.timeInMinutes),
     webhook_url: cdktf.stringToTerraform(struct!.webhookUrl),
@@ -102,6 +107,11 @@ function devTestGlobalVmShutdownScheduleTimeoutsToTerraform(struct?: DevTestGlob
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_global_vm_shutdown_schedule.html azurerm_dev_test_global_vm_shutdown_schedule}
 */
 export class DevTestGlobalVmShutdownSchedule extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_dev_test_global_vm_shutdown_schedule";
 
   // ===========
   // INITIALIZER
@@ -153,11 +163,11 @@ export class DevTestGlobalVmShutdownSchedule extends cdktf.TerraformResource {
   }
 
   // enabled - computed: false, optional: true, required: false
-  private _enabled?: boolean;
+  private _enabled?: boolean | cdktf.IResolvable;
   public get enabled() {
     return this.getBooleanAttribute('enabled');
   }
-  public set enabled(value: boolean ) {
+  public set enabled(value: boolean | cdktf.IResolvable ) {
     this._enabled = value;
   }
   public resetEnabled() {
@@ -187,11 +197,11 @@ export class DevTestGlobalVmShutdownSchedule extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string };
+  private _tags?: { [key: string]: string } | cdktf.IResolvable;
   public get tags() {
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._tags = value;
   }
   public resetTags() {

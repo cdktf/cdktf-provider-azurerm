@@ -18,7 +18,7 @@ export interface FrontdoorFirewallPolicyConfig extends cdktf.TerraformMetaArgume
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_firewall_policy.html#enabled FrontdoorFirewallPolicy#enabled}
   */
-  readonly enabled?: boolean;
+  readonly enabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_firewall_policy.html#mode FrontdoorFirewallPolicy#mode}
   */
@@ -38,7 +38,7 @@ export interface FrontdoorFirewallPolicyConfig extends cdktf.TerraformMetaArgume
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_firewall_policy.html#tags FrontdoorFirewallPolicy#tags}
   */
-  readonly tags?: { [key: string]: string };
+  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * custom_rule block
   * 
@@ -70,7 +70,7 @@ export interface FrontdoorFirewallPolicyCustomRuleMatchCondition {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_firewall_policy.html#negation_condition FrontdoorFirewallPolicy#negation_condition}
   */
-  readonly negationCondition?: boolean;
+  readonly negationCondition?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_firewall_policy.html#operator FrontdoorFirewallPolicy#operator}
   */
@@ -105,7 +105,7 @@ export interface FrontdoorFirewallPolicyCustomRule {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_firewall_policy.html#enabled FrontdoorFirewallPolicy#enabled}
   */
-  readonly enabled?: boolean;
+  readonly enabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_firewall_policy.html#name FrontdoorFirewallPolicy#name}
   */
@@ -228,7 +228,7 @@ export interface FrontdoorFirewallPolicyManagedRuleOverrideRule {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_firewall_policy.html#enabled FrontdoorFirewallPolicy#enabled}
   */
-  readonly enabled?: boolean;
+  readonly enabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_firewall_policy.html#rule_id FrontdoorFirewallPolicy#rule_id}
   */
@@ -347,6 +347,11 @@ function frontdoorFirewallPolicyTimeoutsToTerraform(struct?: FrontdoorFirewallPo
 */
 export class FrontdoorFirewallPolicy extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_frontdoor_firewall_policy";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -419,11 +424,11 @@ export class FrontdoorFirewallPolicy extends cdktf.TerraformResource {
   }
 
   // enabled - computed: false, optional: true, required: false
-  private _enabled?: boolean;
+  private _enabled?: boolean | cdktf.IResolvable;
   public get enabled() {
     return this.getBooleanAttribute('enabled');
   }
-  public set enabled(value: boolean ) {
+  public set enabled(value: boolean | cdktf.IResolvable ) {
     this._enabled = value;
   }
   public resetEnabled() {
@@ -508,11 +513,11 @@ export class FrontdoorFirewallPolicy extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string };
+  private _tags?: { [key: string]: string } | cdktf.IResolvable;
   public get tags() {
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._tags = value;
   }
   public resetTags() {

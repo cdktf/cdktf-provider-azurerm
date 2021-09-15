@@ -65,6 +65,11 @@ function botChannelWebChatTimeoutsToTerraform(struct?: BotChannelWebChatTimeouts
 */
 export class BotChannelWebChat extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_bot_channel_web_chat";
+
   // ===========
   // INITIALIZER
   // ===========

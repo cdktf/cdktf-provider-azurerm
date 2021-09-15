@@ -105,6 +105,11 @@ function streamAnalyticsFunctionJavascriptUdfTimeoutsToTerraform(struct?: Stream
 */
 export class StreamAnalyticsFunctionJavascriptUdf extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_stream_analytics_function_javascript_udf";
+
   // ===========
   // INITIALIZER
   // ===========

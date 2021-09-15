@@ -65,6 +65,11 @@ function vmwareClusterTimeoutsToTerraform(struct?: VmwareClusterTimeouts): any {
 */
 export class VmwareCluster extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_vmware_cluster";
+
   // ===========
   // INITIALIZER
   // ===========

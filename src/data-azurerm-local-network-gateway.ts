@@ -59,6 +59,11 @@ function dataAzurermLocalNetworkGatewayTimeoutsToTerraform(struct?: DataAzurermL
 */
 export class DataAzurermLocalNetworkGateway extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_local_network_gateway";
+
   // ===========
   // INITIALIZER
   // ===========

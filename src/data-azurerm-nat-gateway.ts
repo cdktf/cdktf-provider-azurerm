@@ -50,6 +50,11 @@ function dataAzurermNatGatewayTimeoutsToTerraform(struct?: DataAzurermNatGateway
 */
 export class DataAzurermNatGateway extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_nat_gateway";
+
   // ===========
   // INITIALIZER
   // ===========

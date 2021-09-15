@@ -56,6 +56,11 @@ function cosmosdbNotebookWorkspaceTimeoutsToTerraform(struct?: CosmosdbNotebookW
 */
 export class CosmosdbNotebookWorkspace extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_cosmosdb_notebook_workspace";
+
   // ===========
   // INITIALIZER
   // ===========

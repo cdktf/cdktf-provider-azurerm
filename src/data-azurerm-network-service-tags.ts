@@ -46,6 +46,11 @@ function dataAzurermNetworkServiceTagsTimeoutsToTerraform(struct?: DataAzurermNe
 */
 export class DataAzurermNetworkServiceTags extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_network_service_tags";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -86,6 +91,16 @@ export class DataAzurermNetworkServiceTags extends cdktf.TerraformDataSource {
   // id - computed: true, optional: true, required: false
   public get id() {
     return this.getStringAttribute('id');
+  }
+
+  // ipv4_cidrs - computed: true, optional: false, required: false
+  public get ipv4Cidrs() {
+    return this.getListAttribute('ipv4_cidrs');
+  }
+
+  // ipv6_cidrs - computed: true, optional: false, required: false
+  public get ipv6Cidrs() {
+    return this.getListAttribute('ipv6_cidrs');
   }
 
   // location - computed: false, optional: false, required: true

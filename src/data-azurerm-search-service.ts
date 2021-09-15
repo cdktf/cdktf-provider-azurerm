@@ -71,6 +71,11 @@ function dataAzurermSearchServiceTimeoutsToTerraform(struct?: DataAzurermSearchS
 */
 export class DataAzurermSearchService extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_search_service";
+
   // ===========
   // INITIALIZER
   // ===========

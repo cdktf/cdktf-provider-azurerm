@@ -89,6 +89,11 @@ function springCloudAppCosmosdbAssociationTimeoutsToTerraform(struct?: SpringClo
 */
 export class SpringCloudAppCosmosdbAssociation extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_spring_cloud_app_cosmosdb_association";
+
   // ===========
   // INITIALIZER
   // ===========

@@ -494,6 +494,11 @@ function dataAzurermKubernetesClusterTimeoutsToTerraform(struct?: DataAzurermKub
 */
 export class DataAzurermKubernetesCluster extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_kubernetes_cluster";
+
   // ===========
   // INITIALIZER
   // ===========

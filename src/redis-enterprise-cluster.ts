@@ -30,7 +30,7 @@ export interface RedisEnterpriseClusterConfig extends cdktf.TerraformMetaArgumen
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_enterprise_cluster.html#tags RedisEnterpriseCluster#tags}
   */
-  readonly tags?: { [key: string]: string };
+  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_enterprise_cluster.html#zones RedisEnterpriseCluster#zones}
   */
@@ -55,6 +55,10 @@ export interface RedisEnterpriseClusterTimeouts {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_enterprise_cluster.html#read RedisEnterpriseCluster#read}
   */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_enterprise_cluster.html#update RedisEnterpriseCluster#update}
+  */
+  readonly update?: string;
 }
 
 function redisEnterpriseClusterTimeoutsToTerraform(struct?: RedisEnterpriseClusterTimeouts): any {
@@ -63,6 +67,7 @@ function redisEnterpriseClusterTimeoutsToTerraform(struct?: RedisEnterpriseClust
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
     read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
   }
 }
 
@@ -71,6 +76,11 @@ function redisEnterpriseClusterTimeoutsToTerraform(struct?: RedisEnterpriseClust
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/redis_enterprise_cluster.html azurerm_redis_enterprise_cluster}
 */
 export class RedisEnterpriseCluster extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_redis_enterprise_cluster";
 
   // ===========
   // INITIALIZER
@@ -187,11 +197,11 @@ export class RedisEnterpriseCluster extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string };
+  private _tags?: { [key: string]: string } | cdktf.IResolvable;
   public get tags() {
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._tags = value;
   }
   public resetTags() {

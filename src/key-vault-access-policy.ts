@@ -81,6 +81,11 @@ function keyVaultAccessPolicyTimeoutsToTerraform(struct?: KeyVaultAccessPolicyTi
 */
 export class KeyVaultAccessPolicyA extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_key_vault_access_policy";
+
   // ===========
   // INITIALIZER
   // ===========

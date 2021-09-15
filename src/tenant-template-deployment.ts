@@ -26,7 +26,7 @@ export interface TenantTemplateDeploymentConfig extends cdktf.TerraformMetaArgum
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/tenant_template_deployment.html#tags TenantTemplateDeployment#tags}
   */
-  readonly tags?: { [key: string]: string };
+  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/tenant_template_deployment.html#template_content TenantTemplateDeployment#template_content}
   */
@@ -76,6 +76,11 @@ function tenantTemplateDeploymentTimeoutsToTerraform(struct?: TenantTemplateDepl
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/tenant_template_deployment.html azurerm_tenant_template_deployment}
 */
 export class TenantTemplateDeployment extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_tenant_template_deployment";
 
   // ===========
   // INITIALIZER
@@ -182,11 +187,11 @@ export class TenantTemplateDeployment extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string };
+  private _tags?: { [key: string]: string } | cdktf.IResolvable;
   public get tags() {
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._tags = value;
   }
   public resetTags() {

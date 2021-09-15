@@ -65,6 +65,11 @@ function springCloudCustomDomainTimeoutsToTerraform(struct?: SpringCloudCustomDo
 */
 export class SpringCloudCustomDomain extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_spring_cloud_custom_domain";
+
   // ===========
   // INITIALIZER
   // ===========

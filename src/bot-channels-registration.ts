@@ -42,7 +42,7 @@ export interface BotChannelsRegistrationConfig extends cdktf.TerraformMetaArgume
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channels_registration.html#isolated_network_enabled BotChannelsRegistration#isolated_network_enabled}
   */
-  readonly isolatedNetworkEnabled?: boolean;
+  readonly isolatedNetworkEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channels_registration.html#location BotChannelsRegistration#location}
   */
@@ -66,7 +66,7 @@ export interface BotChannelsRegistrationConfig extends cdktf.TerraformMetaArgume
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channels_registration.html#tags BotChannelsRegistration#tags}
   */
-  readonly tags?: { [key: string]: string };
+  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * timeouts block
   * 
@@ -108,6 +108,11 @@ function botChannelsRegistrationTimeoutsToTerraform(struct?: BotChannelsRegistra
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channels_registration.html azurerm_bot_channels_registration}
 */
 export class BotChannelsRegistration extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_bot_channels_registration";
 
   // ===========
   // INITIALIZER
@@ -287,11 +292,11 @@ export class BotChannelsRegistration extends cdktf.TerraformResource {
   }
 
   // isolated_network_enabled - computed: false, optional: true, required: false
-  private _isolatedNetworkEnabled?: boolean;
+  private _isolatedNetworkEnabled?: boolean | cdktf.IResolvable;
   public get isolatedNetworkEnabled() {
     return this.getBooleanAttribute('isolated_network_enabled');
   }
-  public set isolatedNetworkEnabled(value: boolean ) {
+  public set isolatedNetworkEnabled(value: boolean | cdktf.IResolvable ) {
     this._isolatedNetworkEnabled = value;
   }
   public resetIsolatedNetworkEnabled() {
@@ -368,11 +373,11 @@ export class BotChannelsRegistration extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string };
+  private _tags?: { [key: string]: string } | cdktf.IResolvable;
   public get tags() {
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._tags = value;
   }
   public resetTags() {

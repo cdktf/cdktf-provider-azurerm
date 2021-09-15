@@ -48,7 +48,7 @@ export interface MonitorLogProfileRetentionPolicy {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_log_profile.html#enabled MonitorLogProfile#enabled}
   */
-  readonly enabled: boolean;
+  readonly enabled: boolean | cdktf.IResolvable;
 }
 
 function monitorLogProfileRetentionPolicyToTerraform(struct?: MonitorLogProfileRetentionPolicy): any {
@@ -93,6 +93,11 @@ function monitorLogProfileTimeoutsToTerraform(struct?: MonitorLogProfileTimeouts
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_log_profile.html azurerm_monitor_log_profile}
 */
 export class MonitorLogProfile extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_monitor_log_profile";
 
   // ===========
   // INITIALIZER

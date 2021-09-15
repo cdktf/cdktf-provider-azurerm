@@ -69,6 +69,11 @@ function postgresqlActiveDirectoryAdministratorTimeoutsToTerraform(struct?: Post
 */
 export class PostgresqlActiveDirectoryAdministrator extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_postgresql_active_directory_administrator";
+
   // ===========
   // INITIALIZER
   // ===========

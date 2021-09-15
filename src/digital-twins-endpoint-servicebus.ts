@@ -69,6 +69,11 @@ function digitalTwinsEndpointServicebusTimeoutsToTerraform(struct?: DigitalTwins
 */
 export class DigitalTwinsEndpointServicebus extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_digital_twins_endpoint_servicebus";
+
   // ===========
   // INITIALIZER
   // ===========

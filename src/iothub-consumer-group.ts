@@ -65,6 +65,11 @@ function iothubConsumerGroupTimeoutsToTerraform(struct?: IothubConsumerGroupTime
 */
 export class IothubConsumerGroup extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_iothub_consumer_group";
+
   // ===========
   // INITIALIZER
   // ===========

@@ -26,7 +26,7 @@ export interface MachineLearningWorkspaceConfig extends cdktf.TerraformMetaArgum
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/machine_learning_workspace.html#high_business_impact MachineLearningWorkspace#high_business_impact}
   */
-  readonly highBusinessImpact?: boolean;
+  readonly highBusinessImpact?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/machine_learning_workspace.html#key_vault_id MachineLearningWorkspace#key_vault_id}
   */
@@ -54,7 +54,7 @@ export interface MachineLearningWorkspaceConfig extends cdktf.TerraformMetaArgum
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/machine_learning_workspace.html#tags MachineLearningWorkspace#tags}
   */
-  readonly tags?: { [key: string]: string };
+  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * identity block
   * 
@@ -116,6 +116,11 @@ function machineLearningWorkspaceTimeoutsToTerraform(struct?: MachineLearningWor
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/machine_learning_workspace.html azurerm_machine_learning_workspace}
 */
 export class MachineLearningWorkspace extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_machine_learning_workspace";
 
   // ===========
   // INITIALIZER
@@ -221,11 +226,11 @@ export class MachineLearningWorkspace extends cdktf.TerraformResource {
   }
 
   // high_business_impact - computed: false, optional: true, required: false
-  private _highBusinessImpact?: boolean;
+  private _highBusinessImpact?: boolean | cdktf.IResolvable;
   public get highBusinessImpact() {
     return this.getBooleanAttribute('high_business_impact');
   }
-  public set highBusinessImpact(value: boolean ) {
+  public set highBusinessImpact(value: boolean | cdktf.IResolvable ) {
     this._highBusinessImpact = value;
   }
   public resetHighBusinessImpact() {
@@ -323,11 +328,11 @@ export class MachineLearningWorkspace extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string };
+  private _tags?: { [key: string]: string } | cdktf.IResolvable;
   public get tags() {
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._tags = value;
   }
   public resetTags() {

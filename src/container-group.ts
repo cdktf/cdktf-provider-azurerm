@@ -46,7 +46,7 @@ export interface ContainerGroupConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_group.html#tags ContainerGroup#tags}
   */
-  readonly tags?: { [key: string]: string };
+  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * container block
   * 
@@ -309,7 +309,7 @@ export interface ContainerGroupContainerVolume {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_group.html#empty_dir ContainerGroup#empty_dir}
   */
-  readonly emptyDir?: boolean;
+  readonly emptyDir?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_group.html#mount_path ContainerGroup#mount_path}
   */
@@ -321,11 +321,11 @@ export interface ContainerGroupContainerVolume {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_group.html#read_only ContainerGroup#read_only}
   */
-  readonly readOnly?: boolean;
+  readonly readOnly?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_group.html#secret ContainerGroup#secret}
   */
-  readonly secret?: { [key: string]: string };
+  readonly secret?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_group.html#share_name ContainerGroup#share_name}
   */
@@ -373,7 +373,7 @@ export interface ContainerGroupContainer {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_group.html#environment_variables ContainerGroup#environment_variables}
   */
-  readonly environmentVariables?: { [key: string]: string };
+  readonly environmentVariables?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_group.html#image ContainerGroup#image}
   */
@@ -389,7 +389,7 @@ export interface ContainerGroupContainer {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_group.html#secure_environment_variables ContainerGroup#secure_environment_variables}
   */
-  readonly secureEnvironmentVariables?: { [key: string]: string };
+  readonly secureEnvironmentVariables?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * gpu block
   * 
@@ -448,7 +448,7 @@ export interface ContainerGroupDiagnosticsLogAnalytics {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_group.html#metadata ContainerGroup#metadata}
   */
-  readonly metadata?: { [key: string]: string };
+  readonly metadata?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_group.html#workspace_id ContainerGroup#workspace_id}
   */
@@ -586,6 +586,11 @@ function containerGroupTimeoutsToTerraform(struct?: ContainerGroupTimeouts): any
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/container_group.html azurerm_container_group}
 */
 export class ContainerGroup extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_container_group";
 
   // ===========
   // INITIALIZER
@@ -779,11 +784,11 @@ export class ContainerGroup extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string };
+  private _tags?: { [key: string]: string } | cdktf.IResolvable;
   public get tags() {
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._tags = value;
   }
   public resetTags() {

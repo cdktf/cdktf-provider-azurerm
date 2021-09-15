@@ -14,11 +14,11 @@ export interface VirtualMachineConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine.html#delete_data_disks_on_termination VirtualMachine#delete_data_disks_on_termination}
   */
-  readonly deleteDataDisksOnTermination?: boolean;
+  readonly deleteDataDisksOnTermination?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine.html#delete_os_disk_on_termination VirtualMachine#delete_os_disk_on_termination}
   */
-  readonly deleteOsDiskOnTermination?: boolean;
+  readonly deleteOsDiskOnTermination?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine.html#license_type VirtualMachine#license_type}
   */
@@ -50,7 +50,7 @@ export interface VirtualMachineConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine.html#tags VirtualMachine#tags}
   */
-  readonly tags?: { [key: string]: string };
+  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine.html#vm_size VirtualMachine#vm_size}
   */
@@ -136,7 +136,7 @@ export interface VirtualMachineAdditionalCapabilities {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine.html#ultra_ssd_enabled VirtualMachine#ultra_ssd_enabled}
   */
-  readonly ultraSsdEnabled: boolean;
+  readonly ultraSsdEnabled: boolean | cdktf.IResolvable;
 }
 
 function virtualMachineAdditionalCapabilitiesToTerraform(struct?: VirtualMachineAdditionalCapabilities): any {
@@ -150,7 +150,7 @@ export interface VirtualMachineBootDiagnostics {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine.html#enabled VirtualMachine#enabled}
   */
-  readonly enabled: boolean;
+  readonly enabled: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine.html#storage_uri VirtualMachine#storage_uri}
   */
@@ -236,7 +236,7 @@ export interface VirtualMachineOsProfileLinuxConfig {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine.html#disable_password_authentication VirtualMachine#disable_password_authentication}
   */
-  readonly disablePasswordAuthentication: boolean;
+  readonly disablePasswordAuthentication: boolean | cdktf.IResolvable;
   /**
   * ssh_keys block
   * 
@@ -345,11 +345,11 @@ export interface VirtualMachineOsProfileWindowsConfig {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine.html#enable_automatic_upgrades VirtualMachine#enable_automatic_upgrades}
   */
-  readonly enableAutomaticUpgrades?: boolean;
+  readonly enableAutomaticUpgrades?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine.html#provision_vm_agent VirtualMachine#provision_vm_agent}
   */
-  readonly provisionVmAgent?: boolean;
+  readonly provisionVmAgent?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine.html#timezone VirtualMachine#timezone}
   */
@@ -439,7 +439,7 @@ export interface VirtualMachineStorageDataDisk {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine.html#write_accelerator_enabled VirtualMachine#write_accelerator_enabled}
   */
-  readonly writeAcceleratorEnabled?: boolean;
+  readonly writeAcceleratorEnabled?: boolean | cdktf.IResolvable;
 }
 
 function virtualMachineStorageDataDiskToTerraform(struct?: VirtualMachineStorageDataDisk): any {
@@ -531,7 +531,7 @@ export interface VirtualMachineStorageOsDisk {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine.html#write_accelerator_enabled VirtualMachine#write_accelerator_enabled}
   */
-  readonly writeAcceleratorEnabled?: boolean;
+  readonly writeAcceleratorEnabled?: boolean | cdktf.IResolvable;
 }
 
 function virtualMachineStorageOsDiskToTerraform(struct?: VirtualMachineStorageOsDisk): any {
@@ -584,6 +584,11 @@ function virtualMachineTimeoutsToTerraform(struct?: VirtualMachineTimeouts): any
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine.html azurerm_virtual_machine}
 */
 export class VirtualMachine extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_virtual_machine";
 
   // ===========
   // INITIALIZER
@@ -655,11 +660,11 @@ export class VirtualMachine extends cdktf.TerraformResource {
   }
 
   // delete_data_disks_on_termination - computed: false, optional: true, required: false
-  private _deleteDataDisksOnTermination?: boolean;
+  private _deleteDataDisksOnTermination?: boolean | cdktf.IResolvable;
   public get deleteDataDisksOnTermination() {
     return this.getBooleanAttribute('delete_data_disks_on_termination');
   }
-  public set deleteDataDisksOnTermination(value: boolean ) {
+  public set deleteDataDisksOnTermination(value: boolean | cdktf.IResolvable ) {
     this._deleteDataDisksOnTermination = value;
   }
   public resetDeleteDataDisksOnTermination() {
@@ -671,11 +676,11 @@ export class VirtualMachine extends cdktf.TerraformResource {
   }
 
   // delete_os_disk_on_termination - computed: false, optional: true, required: false
-  private _deleteOsDiskOnTermination?: boolean;
+  private _deleteOsDiskOnTermination?: boolean | cdktf.IResolvable;
   public get deleteOsDiskOnTermination() {
     return this.getBooleanAttribute('delete_os_disk_on_termination');
   }
-  public set deleteOsDiskOnTermination(value: boolean ) {
+  public set deleteOsDiskOnTermination(value: boolean | cdktf.IResolvable ) {
     this._deleteOsDiskOnTermination = value;
   }
   public resetDeleteOsDiskOnTermination() {
@@ -792,11 +797,11 @@ export class VirtualMachine extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string };
+  private _tags?: { [key: string]: string } | cdktf.IResolvable;
   public get tags() {
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._tags = value;
   }
   public resetTags() {

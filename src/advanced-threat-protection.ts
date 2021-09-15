@@ -10,7 +10,7 @@ export interface AdvancedThreatProtectionConfig extends cdktf.TerraformMetaArgum
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/advanced_threat_protection.html#enabled AdvancedThreatProtection#enabled}
   */
-  readonly enabled: boolean;
+  readonly enabled: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/advanced_threat_protection.html#target_resource_id AdvancedThreatProtection#target_resource_id}
   */
@@ -57,6 +57,11 @@ function advancedThreatProtectionTimeoutsToTerraform(struct?: AdvancedThreatProt
 */
 export class AdvancedThreatProtection extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_advanced_threat_protection";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -89,11 +94,11 @@ export class AdvancedThreatProtection extends cdktf.TerraformResource {
   // ==========
 
   // enabled - computed: false, optional: false, required: true
-  private _enabled: boolean;
+  private _enabled: boolean | cdktf.IResolvable;
   public get enabled() {
     return this.getBooleanAttribute('enabled');
   }
-  public set enabled(value: boolean) {
+  public set enabled(value: boolean | cdktf.IResolvable) {
     this._enabled = value;
   }
   // Temporarily expose input value. Use with caution.

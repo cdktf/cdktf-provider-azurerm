@@ -22,7 +22,7 @@ export interface MssqlJobAgentConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_job_agent.html#tags MssqlJobAgent#tags}
   */
-  readonly tags?: { [key: string]: string };
+  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * timeouts block
   * 
@@ -64,6 +64,11 @@ function mssqlJobAgentTimeoutsToTerraform(struct?: MssqlJobAgentTimeouts): any {
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_job_agent.html azurerm_mssql_job_agent}
 */
 export class MssqlJobAgent extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_mssql_job_agent";
 
   // ===========
   // INITIALIZER
@@ -143,11 +148,11 @@ export class MssqlJobAgent extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string };
+  private _tags?: { [key: string]: string } | cdktf.IResolvable;
   public get tags() {
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._tags = value;
   }
   public resetTags() {

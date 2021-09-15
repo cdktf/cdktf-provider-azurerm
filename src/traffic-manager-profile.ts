@@ -26,7 +26,7 @@ export interface TrafficManagerProfileConfig extends cdktf.TerraformMetaArgument
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/traffic_manager_profile.html#tags TrafficManagerProfile#tags}
   */
-  readonly tags?: { [key: string]: string };
+  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/traffic_manager_profile.html#traffic_routing_method TrafficManagerProfile#traffic_routing_method}
   */
@@ -34,7 +34,7 @@ export interface TrafficManagerProfileConfig extends cdktf.TerraformMetaArgument
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/traffic_manager_profile.html#traffic_view_enabled TrafficManagerProfile#traffic_view_enabled}
   */
-  readonly trafficViewEnabled?: boolean;
+  readonly trafficViewEnabled?: boolean | cdktf.IResolvable;
   /**
   * dns_config block
   * 
@@ -178,6 +178,11 @@ function trafficManagerProfileTimeoutsToTerraform(struct?: TrafficManagerProfile
 */
 export class TrafficManagerProfile extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_traffic_manager_profile";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -285,11 +290,11 @@ export class TrafficManagerProfile extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string };
+  private _tags?: { [key: string]: string } | cdktf.IResolvable;
   public get tags() {
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._tags = value;
   }
   public resetTags() {
@@ -314,11 +319,11 @@ export class TrafficManagerProfile extends cdktf.TerraformResource {
   }
 
   // traffic_view_enabled - computed: false, optional: true, required: false
-  private _trafficViewEnabled?: boolean;
+  private _trafficViewEnabled?: boolean | cdktf.IResolvable;
   public get trafficViewEnabled() {
     return this.getBooleanAttribute('traffic_view_enabled');
   }
-  public set trafficViewEnabled(value: boolean ) {
+  public set trafficViewEnabled(value: boolean | cdktf.IResolvable ) {
     this._trafficViewEnabled = value;
   }
   public resetTrafficViewEnabled() {

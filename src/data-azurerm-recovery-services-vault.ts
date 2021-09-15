@@ -42,6 +42,11 @@ function dataAzurermRecoveryServicesVaultTimeoutsToTerraform(struct?: DataAzurer
 */
 export class DataAzurermRecoveryServicesVault extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_recovery_services_vault";
+
   // ===========
   // INITIALIZER
   // ===========

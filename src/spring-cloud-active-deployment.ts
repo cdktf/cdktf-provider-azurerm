@@ -57,6 +57,11 @@ function springCloudActiveDeploymentTimeoutsToTerraform(struct?: SpringCloudActi
 */
 export class SpringCloudActiveDeployment extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_spring_cloud_active_deployment";
+
   // ===========
   // INITIALIZER
   // ===========

@@ -46,6 +46,11 @@ function dataAzurermServicebusNamespaceDisasterRecoveryConfigTimeoutsToTerraform
 */
 export class DataAzurermServicebusNamespaceDisasterRecoveryConfig extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_servicebus_namespace_disaster_recovery_config";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -77,16 +82,6 @@ export class DataAzurermServicebusNamespaceDisasterRecoveryConfig extends cdktf.
   // ==========
   // ATTRIBUTES
   // ==========
-
-  // alias_primary_connection_string - computed: true, optional: false, required: false
-  public get aliasPrimaryConnectionString() {
-    return this.getStringAttribute('alias_primary_connection_string');
-  }
-
-  // alias_secondary_connection_string - computed: true, optional: false, required: false
-  public get aliasSecondaryConnectionString() {
-    return this.getStringAttribute('alias_secondary_connection_string');
-  }
 
   // default_primary_key - computed: true, optional: false, required: false
   public get defaultPrimaryKey() {
@@ -134,6 +129,11 @@ export class DataAzurermServicebusNamespaceDisasterRecoveryConfig extends cdktf.
     return this.getStringAttribute('partner_namespace_id');
   }
 
+  // primary_connection_string_alias - computed: true, optional: false, required: false
+  public get primaryConnectionStringAlias() {
+    return this.getStringAttribute('primary_connection_string_alias');
+  }
+
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName: string;
   public get resourceGroupName() {
@@ -145,6 +145,11 @@ export class DataAzurermServicebusNamespaceDisasterRecoveryConfig extends cdktf.
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
     return this._resourceGroupName
+  }
+
+  // secondary_connection_string_alias - computed: true, optional: false, required: false
+  public get secondaryConnectionStringAlias() {
+    return this.getStringAttribute('secondary_connection_string_alias');
   }
 
   // timeouts - computed: false, optional: true, required: false

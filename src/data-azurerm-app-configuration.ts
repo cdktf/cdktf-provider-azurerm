@@ -110,6 +110,11 @@ function dataAzurermAppConfigurationTimeoutsToTerraform(struct?: DataAzurermAppC
 */
 export class DataAzurermAppConfiguration extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_app_configuration";
+
   // ===========
   // INITIALIZER
   // ===========

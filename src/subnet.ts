@@ -18,11 +18,11 @@ export interface SubnetConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/subnet.html#enforce_private_link_endpoint_network_policies Subnet#enforce_private_link_endpoint_network_policies}
   */
-  readonly enforcePrivateLinkEndpointNetworkPolicies?: boolean;
+  readonly enforcePrivateLinkEndpointNetworkPolicies?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/subnet.html#enforce_private_link_service_network_policies Subnet#enforce_private_link_service_network_policies}
   */
-  readonly enforcePrivateLinkServiceNetworkPolicies?: boolean;
+  readonly enforcePrivateLinkServiceNetworkPolicies?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/subnet.html#name Subnet#name}
   */
@@ -131,6 +131,11 @@ function subnetTimeoutsToTerraform(struct?: SubnetTimeouts): any {
 */
 export class Subnet extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_subnet";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -203,11 +208,11 @@ export class Subnet extends cdktf.TerraformResource {
   }
 
   // enforce_private_link_endpoint_network_policies - computed: false, optional: true, required: false
-  private _enforcePrivateLinkEndpointNetworkPolicies?: boolean;
+  private _enforcePrivateLinkEndpointNetworkPolicies?: boolean | cdktf.IResolvable;
   public get enforcePrivateLinkEndpointNetworkPolicies() {
     return this.getBooleanAttribute('enforce_private_link_endpoint_network_policies');
   }
-  public set enforcePrivateLinkEndpointNetworkPolicies(value: boolean ) {
+  public set enforcePrivateLinkEndpointNetworkPolicies(value: boolean | cdktf.IResolvable ) {
     this._enforcePrivateLinkEndpointNetworkPolicies = value;
   }
   public resetEnforcePrivateLinkEndpointNetworkPolicies() {
@@ -219,11 +224,11 @@ export class Subnet extends cdktf.TerraformResource {
   }
 
   // enforce_private_link_service_network_policies - computed: false, optional: true, required: false
-  private _enforcePrivateLinkServiceNetworkPolicies?: boolean;
+  private _enforcePrivateLinkServiceNetworkPolicies?: boolean | cdktf.IResolvable;
   public get enforcePrivateLinkServiceNetworkPolicies() {
     return this.getBooleanAttribute('enforce_private_link_service_network_policies');
   }
-  public set enforcePrivateLinkServiceNetworkPolicies(value: boolean ) {
+  public set enforcePrivateLinkServiceNetworkPolicies(value: boolean | cdktf.IResolvable ) {
     this._enforcePrivateLinkServiceNetworkPolicies = value;
   }
   public resetEnforcePrivateLinkServiceNetworkPolicies() {

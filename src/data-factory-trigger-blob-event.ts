@@ -10,11 +10,11 @@ export interface DataFactoryTriggerBlobEventConfig extends cdktf.TerraformMetaAr
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_trigger_blob_event.html#activated DataFactoryTriggerBlobEvent#activated}
   */
-  readonly activated?: boolean;
+  readonly activated?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_trigger_blob_event.html#additional_properties DataFactoryTriggerBlobEvent#additional_properties}
   */
-  readonly additionalProperties?: { [key: string]: string };
+  readonly additionalProperties?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_trigger_blob_event.html#annotations DataFactoryTriggerBlobEvent#annotations}
   */
@@ -42,7 +42,7 @@ export interface DataFactoryTriggerBlobEventConfig extends cdktf.TerraformMetaAr
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_trigger_blob_event.html#ignore_empty_blobs DataFactoryTriggerBlobEvent#ignore_empty_blobs}
   */
-  readonly ignoreEmptyBlobs?: boolean;
+  readonly ignoreEmptyBlobs?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_trigger_blob_event.html#name DataFactoryTriggerBlobEvent#name}
   */
@@ -72,7 +72,7 @@ export interface DataFactoryTriggerBlobEventPipeline {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_trigger_blob_event.html#parameters DataFactoryTriggerBlobEvent#parameters}
   */
-  readonly parameters?: { [key: string]: string };
+  readonly parameters?: { [key: string]: string } | cdktf.IResolvable;
 }
 
 function dataFactoryTriggerBlobEventPipelineToTerraform(struct?: DataFactoryTriggerBlobEventPipeline): any {
@@ -118,6 +118,11 @@ function dataFactoryTriggerBlobEventTimeoutsToTerraform(struct?: DataFactoryTrig
 */
 export class DataFactoryTriggerBlobEvent extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_data_factory_trigger_blob_event";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -160,11 +165,11 @@ export class DataFactoryTriggerBlobEvent extends cdktf.TerraformResource {
   // ==========
 
   // activated - computed: false, optional: true, required: false
-  private _activated?: boolean;
+  private _activated?: boolean | cdktf.IResolvable;
   public get activated() {
     return this.getBooleanAttribute('activated');
   }
-  public set activated(value: boolean ) {
+  public set activated(value: boolean | cdktf.IResolvable ) {
     this._activated = value;
   }
   public resetActivated() {
@@ -176,11 +181,11 @@ export class DataFactoryTriggerBlobEvent extends cdktf.TerraformResource {
   }
 
   // additional_properties - computed: false, optional: true, required: false
-  private _additionalProperties?: { [key: string]: string };
+  private _additionalProperties?: { [key: string]: string } | cdktf.IResolvable;
   public get additionalProperties() {
     return this.interpolationForAttribute('additional_properties') as any;
   }
-  public set additionalProperties(value: { [key: string]: string } ) {
+  public set additionalProperties(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._additionalProperties = value;
   }
   public resetAdditionalProperties() {
@@ -287,11 +292,11 @@ export class DataFactoryTriggerBlobEvent extends cdktf.TerraformResource {
   }
 
   // ignore_empty_blobs - computed: false, optional: true, required: false
-  private _ignoreEmptyBlobs?: boolean;
+  private _ignoreEmptyBlobs?: boolean | cdktf.IResolvable;
   public get ignoreEmptyBlobs() {
     return this.getBooleanAttribute('ignore_empty_blobs');
   }
-  public set ignoreEmptyBlobs(value: boolean ) {
+  public set ignoreEmptyBlobs(value: boolean | cdktf.IResolvable ) {
     this._ignoreEmptyBlobs = value;
   }
   public resetIgnoreEmptyBlobs() {

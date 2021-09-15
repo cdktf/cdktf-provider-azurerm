@@ -14,7 +14,7 @@ export interface MonitorActivityLogAlertConfig extends cdktf.TerraformMetaArgume
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_activity_log_alert.html#enabled MonitorActivityLogAlert#enabled}
   */
-  readonly enabled?: boolean;
+  readonly enabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_activity_log_alert.html#name MonitorActivityLogAlert#name}
   */
@@ -30,7 +30,7 @@ export interface MonitorActivityLogAlertConfig extends cdktf.TerraformMetaArgume
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_activity_log_alert.html#tags MonitorActivityLogAlert#tags}
   */
-  readonly tags?: { [key: string]: string };
+  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * action block
   * 
@@ -58,7 +58,7 @@ export interface MonitorActivityLogAlertAction {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_activity_log_alert.html#webhook_properties MonitorActivityLogAlert#webhook_properties}
   */
-  readonly webhookProperties?: { [key: string]: string };
+  readonly webhookProperties?: { [key: string]: string } | cdktf.IResolvable;
 }
 
 function monitorActivityLogAlertActionToTerraform(struct?: MonitorActivityLogAlertAction): any {
@@ -209,6 +209,11 @@ function monitorActivityLogAlertTimeoutsToTerraform(struct?: MonitorActivityLogA
 */
 export class MonitorActivityLogAlert extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_monitor_activity_log_alert";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -263,11 +268,11 @@ export class MonitorActivityLogAlert extends cdktf.TerraformResource {
   }
 
   // enabled - computed: false, optional: true, required: false
-  private _enabled?: boolean;
+  private _enabled?: boolean | cdktf.IResolvable;
   public get enabled() {
     return this.getBooleanAttribute('enabled');
   }
-  public set enabled(value: boolean ) {
+  public set enabled(value: boolean | cdktf.IResolvable ) {
     this._enabled = value;
   }
   public resetEnabled() {
@@ -323,11 +328,11 @@ export class MonitorActivityLogAlert extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string };
+  private _tags?: { [key: string]: string } | cdktf.IResolvable;
   public get tags() {
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._tags = value;
   }
   public resetTags() {

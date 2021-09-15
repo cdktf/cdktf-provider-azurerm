@@ -161,7 +161,7 @@ export interface CosmosdbGremlinGraphIndexPolicy {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_gremlin_graph.html#automatic CosmosdbGremlinGraph#automatic}
   */
-  readonly automatic?: boolean;
+  readonly automatic?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_gremlin_graph.html#excluded_paths CosmosdbGremlinGraph#excluded_paths}
   */
@@ -248,6 +248,11 @@ function cosmosdbGremlinGraphUniqueKeyToTerraform(struct?: CosmosdbGremlinGraphU
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_gremlin_graph.html azurerm_cosmosdb_gremlin_graph}
 */
 export class CosmosdbGremlinGraph extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_cosmosdb_gremlin_graph";
 
   // ===========
   // INITIALIZER

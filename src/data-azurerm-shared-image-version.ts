@@ -67,6 +67,11 @@ function dataAzurermSharedImageVersionTimeoutsToTerraform(struct?: DataAzurermSh
 */
 export class DataAzurermSharedImageVersion extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_shared_image_version";
+
   // ===========
   // INITIALIZER
   // ===========

@@ -65,6 +65,11 @@ function botChannelAlexaTimeoutsToTerraform(struct?: BotChannelAlexaTimeouts): a
 */
 export class BotChannelAlexa extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_bot_channel_alexa";
+
   // ===========
   // INITIALIZER
   // ===========

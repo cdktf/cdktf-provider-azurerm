@@ -22,7 +22,7 @@ export interface CognitiveAccountConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cognitive_account.html#local_auth_enabled CognitiveAccount#local_auth_enabled}
   */
-  readonly localAuthEnabled?: boolean;
+  readonly localAuthEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cognitive_account.html#location CognitiveAccount#location}
   */
@@ -50,11 +50,11 @@ export interface CognitiveAccountConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cognitive_account.html#outbound_network_access_restrited CognitiveAccount#outbound_network_access_restrited}
   */
-  readonly outboundNetworkAccessRestrited?: boolean;
+  readonly outboundNetworkAccessRestrited?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cognitive_account.html#public_network_access_enabled CognitiveAccount#public_network_access_enabled}
   */
-  readonly publicNetworkAccessEnabled?: boolean;
+  readonly publicNetworkAccessEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cognitive_account.html#qna_runtime_endpoint CognitiveAccount#qna_runtime_endpoint}
   */
@@ -70,7 +70,7 @@ export interface CognitiveAccountConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cognitive_account.html#tags CognitiveAccount#tags}
   */
-  readonly tags?: { [key: string]: string };
+  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * identity block
   * 
@@ -119,7 +119,7 @@ export interface CognitiveAccountNetworkAclsVirtualNetworkRules {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cognitive_account.html#ignore_missing_vnet_service_endpoint CognitiveAccount#ignore_missing_vnet_service_endpoint}
   */
-  readonly ignoreMissingVnetServiceEndpoint?: boolean;
+  readonly ignoreMissingVnetServiceEndpoint?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cognitive_account.html#subnet_id CognitiveAccount#subnet_id}
   */
@@ -216,6 +216,11 @@ function cognitiveAccountTimeoutsToTerraform(struct?: CognitiveAccountTimeouts):
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/cognitive_account.html azurerm_cognitive_account}
 */
 export class CognitiveAccount extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_cognitive_account";
 
   // ===========
   // INITIALIZER
@@ -321,11 +326,11 @@ export class CognitiveAccount extends cdktf.TerraformResource {
   }
 
   // local_auth_enabled - computed: false, optional: true, required: false
-  private _localAuthEnabled?: boolean;
+  private _localAuthEnabled?: boolean | cdktf.IResolvable;
   public get localAuthEnabled() {
     return this.getBooleanAttribute('local_auth_enabled');
   }
-  public set localAuthEnabled(value: boolean ) {
+  public set localAuthEnabled(value: boolean | cdktf.IResolvable ) {
     this._localAuthEnabled = value;
   }
   public resetLocalAuthEnabled() {
@@ -427,11 +432,11 @@ export class CognitiveAccount extends cdktf.TerraformResource {
   }
 
   // outbound_network_access_restrited - computed: false, optional: true, required: false
-  private _outboundNetworkAccessRestrited?: boolean;
+  private _outboundNetworkAccessRestrited?: boolean | cdktf.IResolvable;
   public get outboundNetworkAccessRestrited() {
     return this.getBooleanAttribute('outbound_network_access_restrited');
   }
-  public set outboundNetworkAccessRestrited(value: boolean ) {
+  public set outboundNetworkAccessRestrited(value: boolean | cdktf.IResolvable ) {
     this._outboundNetworkAccessRestrited = value;
   }
   public resetOutboundNetworkAccessRestrited() {
@@ -448,11 +453,11 @@ export class CognitiveAccount extends cdktf.TerraformResource {
   }
 
   // public_network_access_enabled - computed: false, optional: true, required: false
-  private _publicNetworkAccessEnabled?: boolean;
+  private _publicNetworkAccessEnabled?: boolean | cdktf.IResolvable;
   public get publicNetworkAccessEnabled() {
     return this.getBooleanAttribute('public_network_access_enabled');
   }
-  public set publicNetworkAccessEnabled(value: boolean ) {
+  public set publicNetworkAccessEnabled(value: boolean | cdktf.IResolvable ) {
     this._publicNetworkAccessEnabled = value;
   }
   public resetPublicNetworkAccessEnabled() {
@@ -511,11 +516,11 @@ export class CognitiveAccount extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string };
+  private _tags?: { [key: string]: string } | cdktf.IResolvable;
   public get tags() {
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._tags = value;
   }
   public resetTags() {

@@ -38,11 +38,17 @@ export interface DataLakeStoreConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_lake_store.html#tags DataLakeStore#tags}
   */
-  readonly tags?: { [key: string]: string };
+  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_lake_store.html#tier DataLakeStore#tier}
   */
   readonly tier?: string;
+  /**
+  * identity block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_lake_store.html#identity DataLakeStore#identity}
+  */
+  readonly identity?: DataLakeStoreIdentity[];
   /**
   * timeouts block
   * 
@@ -50,6 +56,20 @@ export interface DataLakeStoreConfig extends cdktf.TerraformMetaArguments {
   */
   readonly timeouts?: DataLakeStoreTimeouts;
 }
+export interface DataLakeStoreIdentity {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_lake_store.html#type DataLakeStore#type}
+  */
+  readonly type: string;
+}
+
+function dataLakeStoreIdentityToTerraform(struct?: DataLakeStoreIdentity): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    type: cdktf.stringToTerraform(struct!.type),
+  }
+}
+
 export interface DataLakeStoreTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_lake_store.html#create DataLakeStore#create}
@@ -85,6 +105,11 @@ function dataLakeStoreTimeoutsToTerraform(struct?: DataLakeStoreTimeouts): any {
 */
 export class DataLakeStore extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_data_lake_store";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -116,6 +141,7 @@ export class DataLakeStore extends cdktf.TerraformResource {
     this._resourceGroupName = config.resourceGroupName;
     this._tags = config.tags;
     this._tier = config.tier;
+    this._identity = config.identity;
     this._timeouts = config.timeouts;
   }
 
@@ -237,11 +263,11 @@ export class DataLakeStore extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string };
+  private _tags?: { [key: string]: string } | cdktf.IResolvable;
   public get tags() {
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._tags = value;
   }
   public resetTags() {
@@ -266,6 +292,22 @@ export class DataLakeStore extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get tierInput() {
     return this._tier
+  }
+
+  // identity - computed: false, optional: true, required: false
+  private _identity?: DataLakeStoreIdentity[];
+  public get identity() {
+    return this.interpolationForAttribute('identity') as any;
+  }
+  public set identity(value: DataLakeStoreIdentity[] ) {
+    this._identity = value;
+  }
+  public resetIdentity() {
+    this._identity = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get identityInput() {
+    return this._identity
   }
 
   // timeouts - computed: false, optional: true, required: false
@@ -299,6 +341,7 @@ export class DataLakeStore extends cdktf.TerraformResource {
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
       tier: cdktf.stringToTerraform(this._tier),
+      identity: cdktf.listMapper(dataLakeStoreIdentityToTerraform)(this._identity),
       timeouts: dataLakeStoreTimeoutsToTerraform(this._timeouts),
     };
   }

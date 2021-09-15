@@ -77,6 +77,11 @@ function siteRecoveryProtectionContainerMappingTimeoutsToTerraform(struct?: Site
 */
 export class SiteRecoveryProtectionContainerMapping extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_site_recovery_protection_container_mapping";
+
   // ===========
   // INITIALIZER
   // ===========

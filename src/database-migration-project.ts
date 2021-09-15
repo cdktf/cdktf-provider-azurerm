@@ -30,7 +30,7 @@ export interface DatabaseMigrationProjectConfig extends cdktf.TerraformMetaArgum
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/database_migration_project.html#tags DatabaseMigrationProject#tags}
   */
-  readonly tags?: { [key: string]: string };
+  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/database_migration_project.html#target_platform DatabaseMigrationProject#target_platform}
   */
@@ -76,6 +76,11 @@ function databaseMigrationProjectTimeoutsToTerraform(struct?: DatabaseMigrationP
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/database_migration_project.html azurerm_database_migration_project}
 */
 export class DatabaseMigrationProject extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_database_migration_project";
 
   // ===========
   // INITIALIZER
@@ -184,11 +189,11 @@ export class DatabaseMigrationProject extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string };
+  private _tags?: { [key: string]: string } | cdktf.IResolvable;
   public get tags() {
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._tags = value;
   }
   public resetTags() {

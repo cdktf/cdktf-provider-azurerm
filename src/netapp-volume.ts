@@ -44,6 +44,10 @@ export interface NetappVolumeConfig extends cdktf.TerraformMetaArguments {
   */
   readonly serviceLevel: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/netapp_volume.html#snapshot_directory_visible NetappVolume#snapshot_directory_visible}
+  */
+  readonly snapshotDirectoryVisible?: boolean | cdktf.IResolvable;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/netapp_volume.html#storage_quota_in_gb NetappVolume#storage_quota_in_gb}
   */
   readonly storageQuotaInGb: number;
@@ -54,7 +58,7 @@ export interface NetappVolumeConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/netapp_volume.html#tags NetappVolume#tags}
   */
-  readonly tags?: { [key: string]: string };
+  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/netapp_volume.html#volume_path NetappVolume#volume_path}
   */
@@ -115,15 +119,15 @@ export interface NetappVolumeExportPolicyRule {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/netapp_volume.html#cifs_enabled NetappVolume#cifs_enabled}
   */
-  readonly cifsEnabled?: boolean;
+  readonly cifsEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/netapp_volume.html#nfsv3_enabled NetappVolume#nfsv3_enabled}
   */
-  readonly nfsv3Enabled?: boolean;
+  readonly nfsv3Enabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/netapp_volume.html#nfsv4_enabled NetappVolume#nfsv4_enabled}
   */
-  readonly nfsv4Enabled?: boolean;
+  readonly nfsv4Enabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/netapp_volume.html#protocols_enabled NetappVolume#protocols_enabled}
   */
@@ -131,7 +135,7 @@ export interface NetappVolumeExportPolicyRule {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/netapp_volume.html#root_access_enabled NetappVolume#root_access_enabled}
   */
-  readonly rootAccessEnabled?: boolean;
+  readonly rootAccessEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/netapp_volume.html#rule_index NetappVolume#rule_index}
   */
@@ -139,11 +143,11 @@ export interface NetappVolumeExportPolicyRule {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/netapp_volume.html#unix_read_only NetappVolume#unix_read_only}
   */
-  readonly unixReadOnly?: boolean;
+  readonly unixReadOnly?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/netapp_volume.html#unix_read_write NetappVolume#unix_read_write}
   */
-  readonly unixReadWrite?: boolean;
+  readonly unixReadWrite?: boolean | cdktf.IResolvable;
 }
 
 function netappVolumeExportPolicyRuleToTerraform(struct?: NetappVolumeExportPolicyRule): any {
@@ -196,6 +200,11 @@ function netappVolumeTimeoutsToTerraform(struct?: NetappVolumeTimeouts): any {
 */
 export class NetappVolume extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_netapp_volume";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -227,6 +236,7 @@ export class NetappVolume extends cdktf.TerraformResource {
     this._resourceGroupName = config.resourceGroupName;
     this._securityStyle = config.securityStyle;
     this._serviceLevel = config.serviceLevel;
+    this._snapshotDirectoryVisible = config.snapshotDirectoryVisible;
     this._storageQuotaInGb = config.storageQuotaInGb;
     this._subnetId = config.subnetId;
     this._tags = config.tags;
@@ -376,6 +386,22 @@ export class NetappVolume extends cdktf.TerraformResource {
     return this._serviceLevel
   }
 
+  // snapshot_directory_visible - computed: false, optional: true, required: false
+  private _snapshotDirectoryVisible?: boolean | cdktf.IResolvable;
+  public get snapshotDirectoryVisible() {
+    return this.getBooleanAttribute('snapshot_directory_visible');
+  }
+  public set snapshotDirectoryVisible(value: boolean | cdktf.IResolvable ) {
+    this._snapshotDirectoryVisible = value;
+  }
+  public resetSnapshotDirectoryVisible() {
+    this._snapshotDirectoryVisible = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get snapshotDirectoryVisibleInput() {
+    return this._snapshotDirectoryVisible
+  }
+
   // storage_quota_in_gb - computed: false, optional: false, required: true
   private _storageQuotaInGb: number;
   public get storageQuotaInGb() {
@@ -403,11 +429,11 @@ export class NetappVolume extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string };
+  private _tags?: { [key: string]: string } | cdktf.IResolvable;
   public get tags() {
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._tags = value;
   }
   public resetTags() {
@@ -494,6 +520,7 @@ export class NetappVolume extends cdktf.TerraformResource {
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       security_style: cdktf.stringToTerraform(this._securityStyle),
       service_level: cdktf.stringToTerraform(this._serviceLevel),
+      snapshot_directory_visible: cdktf.booleanToTerraform(this._snapshotDirectoryVisible),
       storage_quota_in_gb: cdktf.numberToTerraform(this._storageQuotaInGb),
       subnet_id: cdktf.stringToTerraform(this._subnetId),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),

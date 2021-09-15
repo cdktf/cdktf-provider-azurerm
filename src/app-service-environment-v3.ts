@@ -8,6 +8,18 @@ import * as cdktf from 'cdktf';
 
 export interface AppServiceEnvironmentV3Config extends cdktf.TerraformMetaArguments {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_environment_v3.html#allow_new_private_endpoint_connections AppServiceEnvironmentV3#allow_new_private_endpoint_connections}
+  */
+  readonly allowNewPrivateEndpointConnections?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_environment_v3.html#dedicated_host_count AppServiceEnvironmentV3#dedicated_host_count}
+  */
+  readonly dedicatedHostCount?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_environment_v3.html#internal_load_balancing_mode AppServiceEnvironmentV3#internal_load_balancing_mode}
+  */
+  readonly internalLoadBalancingMode?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_environment_v3.html#name AppServiceEnvironmentV3#name}
   */
   readonly name: string;
@@ -22,7 +34,11 @@ export interface AppServiceEnvironmentV3Config extends cdktf.TerraformMetaArgume
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_environment_v3.html#tags AppServiceEnvironmentV3#tags}
   */
-  readonly tags?: { [key: string]: string };
+  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_environment_v3.html#zone_redundant AppServiceEnvironmentV3#zone_redundant}
+  */
+  readonly zoneRedundant?: boolean | cdktf.IResolvable;
   /**
   * cluster_setting block
   * 
@@ -35,6 +51,23 @@ export interface AppServiceEnvironmentV3Config extends cdktf.TerraformMetaArgume
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_environment_v3.html#timeouts AppServiceEnvironmentV3#timeouts}
   */
   readonly timeouts?: AppServiceEnvironmentV3Timeouts;
+}
+export class AppServiceEnvironmentV3InboundNetworkDependencies extends cdktf.ComplexComputedList {
+
+  // description - computed: true, optional: false, required: false
+  public get description() {
+    return this.getStringAttribute('description');
+  }
+
+  // ip_addresses - computed: true, optional: false, required: false
+  public get ipAddresses() {
+    return this.getListAttribute('ip_addresses');
+  }
+
+  // ports - computed: true, optional: false, required: false
+  public get ports() {
+    return this.getListAttribute('ports');
+  }
 }
 export interface AppServiceEnvironmentV3ClusterSetting {
   /**
@@ -90,6 +123,11 @@ function appServiceEnvironmentV3TimeoutsToTerraform(struct?: AppServiceEnvironme
 */
 export class AppServiceEnvironmentV3 extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_app_service_environment_v3";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -112,10 +150,14 @@ export class AppServiceEnvironmentV3 extends cdktf.TerraformResource {
       count: config.count,
       lifecycle: config.lifecycle
     });
+    this._allowNewPrivateEndpointConnections = config.allowNewPrivateEndpointConnections;
+    this._dedicatedHostCount = config.dedicatedHostCount;
+    this._internalLoadBalancingMode = config.internalLoadBalancingMode;
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
     this._subnetId = config.subnetId;
     this._tags = config.tags;
+    this._zoneRedundant = config.zoneRedundant;
     this._clusterSetting = config.clusterSetting;
     this._timeouts = config.timeouts;
   }
@@ -124,9 +166,87 @@ export class AppServiceEnvironmentV3 extends cdktf.TerraformResource {
   // ATTRIBUTES
   // ==========
 
+  // allow_new_private_endpoint_connections - computed: false, optional: true, required: false
+  private _allowNewPrivateEndpointConnections?: boolean | cdktf.IResolvable;
+  public get allowNewPrivateEndpointConnections() {
+    return this.getBooleanAttribute('allow_new_private_endpoint_connections');
+  }
+  public set allowNewPrivateEndpointConnections(value: boolean | cdktf.IResolvable ) {
+    this._allowNewPrivateEndpointConnections = value;
+  }
+  public resetAllowNewPrivateEndpointConnections() {
+    this._allowNewPrivateEndpointConnections = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get allowNewPrivateEndpointConnectionsInput() {
+    return this._allowNewPrivateEndpointConnections
+  }
+
+  // dedicated_host_count - computed: false, optional: true, required: false
+  private _dedicatedHostCount?: number;
+  public get dedicatedHostCount() {
+    return this.getNumberAttribute('dedicated_host_count');
+  }
+  public set dedicatedHostCount(value: number ) {
+    this._dedicatedHostCount = value;
+  }
+  public resetDedicatedHostCount() {
+    this._dedicatedHostCount = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dedicatedHostCountInput() {
+    return this._dedicatedHostCount
+  }
+
+  // dns_suffix - computed: true, optional: false, required: false
+  public get dnsSuffix() {
+    return this.getStringAttribute('dns_suffix');
+  }
+
+  // external_inbound_ip_addresses - computed: true, optional: false, required: false
+  public get externalInboundIpAddresses() {
+    return this.getListAttribute('external_inbound_ip_addresses');
+  }
+
   // id - computed: true, optional: true, required: false
   public get id() {
     return this.getStringAttribute('id');
+  }
+
+  // inbound_network_dependencies - computed: true, optional: false, required: false
+  public inboundNetworkDependencies(index: string) {
+    return new AppServiceEnvironmentV3InboundNetworkDependencies(this, 'inbound_network_dependencies', index);
+  }
+
+  // internal_inbound_ip_addresses - computed: true, optional: false, required: false
+  public get internalInboundIpAddresses() {
+    return this.getListAttribute('internal_inbound_ip_addresses');
+  }
+
+  // internal_load_balancing_mode - computed: false, optional: true, required: false
+  private _internalLoadBalancingMode?: string;
+  public get internalLoadBalancingMode() {
+    return this.getStringAttribute('internal_load_balancing_mode');
+  }
+  public set internalLoadBalancingMode(value: string ) {
+    this._internalLoadBalancingMode = value;
+  }
+  public resetInternalLoadBalancingMode() {
+    this._internalLoadBalancingMode = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get internalLoadBalancingModeInput() {
+    return this._internalLoadBalancingMode
+  }
+
+  // ip_ssl_address_count - computed: true, optional: false, required: false
+  public get ipSslAddressCount() {
+    return this.getNumberAttribute('ip_ssl_address_count');
+  }
+
+  // linux_outbound_ip_addresses - computed: true, optional: false, required: false
+  public get linuxOutboundIpAddresses() {
+    return this.getListAttribute('linux_outbound_ip_addresses');
   }
 
   // location - computed: true, optional: false, required: false
@@ -179,11 +299,11 @@ export class AppServiceEnvironmentV3 extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string };
+  private _tags?: { [key: string]: string } | cdktf.IResolvable;
   public get tags() {
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._tags = value;
   }
   public resetTags() {
@@ -192,6 +312,27 @@ export class AppServiceEnvironmentV3 extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get tagsInput() {
     return this._tags
+  }
+
+  // windows_outbound_ip_addresses - computed: true, optional: false, required: false
+  public get windowsOutboundIpAddresses() {
+    return this.getListAttribute('windows_outbound_ip_addresses');
+  }
+
+  // zone_redundant - computed: false, optional: true, required: false
+  private _zoneRedundant?: boolean | cdktf.IResolvable;
+  public get zoneRedundant() {
+    return this.getBooleanAttribute('zone_redundant');
+  }
+  public set zoneRedundant(value: boolean | cdktf.IResolvable ) {
+    this._zoneRedundant = value;
+  }
+  public resetZoneRedundant() {
+    this._zoneRedundant = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get zoneRedundantInput() {
+    return this._zoneRedundant
   }
 
   // cluster_setting - computed: false, optional: true, required: false
@@ -232,10 +373,14 @@ export class AppServiceEnvironmentV3 extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      allow_new_private_endpoint_connections: cdktf.booleanToTerraform(this._allowNewPrivateEndpointConnections),
+      dedicated_host_count: cdktf.numberToTerraform(this._dedicatedHostCount),
+      internal_load_balancing_mode: cdktf.stringToTerraform(this._internalLoadBalancingMode),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       subnet_id: cdktf.stringToTerraform(this._subnetId),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      zone_redundant: cdktf.booleanToTerraform(this._zoneRedundant),
       cluster_setting: cdktf.listMapper(appServiceEnvironmentV3ClusterSettingToTerraform)(this._clusterSetting),
       timeouts: appServiceEnvironmentV3TimeoutsToTerraform(this._timeouts),
     };

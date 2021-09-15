@@ -84,6 +84,11 @@ function dataAzurermLbTimeoutsToTerraform(struct?: DataAzurermLbTimeouts): any {
 */
 export class DataAzurermLb extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_lb";
+
   // ===========
   // INITIALIZER
   // ===========

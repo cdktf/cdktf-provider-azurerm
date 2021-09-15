@@ -26,7 +26,7 @@ export interface LogicAppWorkflowConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_workflow.html#parameters LogicAppWorkflow#parameters}
   */
-  readonly parameters?: { [key: string]: string };
+  readonly parameters?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_workflow.html#resource_group_name LogicAppWorkflow#resource_group_name}
   */
@@ -34,11 +34,11 @@ export interface LogicAppWorkflowConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_workflow.html#tags LogicAppWorkflow#tags}
   */
-  readonly tags?: { [key: string]: string };
+  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_workflow.html#workflow_parameters LogicAppWorkflow#workflow_parameters}
   */
-  readonly workflowParameters?: { [key: string]: string };
+  readonly workflowParameters?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_workflow.html#workflow_schema LogicAppWorkflow#workflow_schema}
   */
@@ -88,6 +88,11 @@ function logicAppWorkflowTimeoutsToTerraform(struct?: LogicAppWorkflowTimeouts):
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_workflow.html azurerm_logic_app_workflow}
 */
 export class LogicAppWorkflow extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_logic_app_workflow";
 
   // ===========
   // INITIALIZER
@@ -207,11 +212,11 @@ export class LogicAppWorkflow extends cdktf.TerraformResource {
   }
 
   // parameters - computed: false, optional: true, required: false
-  private _parameters?: { [key: string]: string };
+  private _parameters?: { [key: string]: string } | cdktf.IResolvable;
   public get parameters() {
     return this.interpolationForAttribute('parameters') as any;
   }
-  public set parameters(value: { [key: string]: string } ) {
+  public set parameters(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._parameters = value;
   }
   public resetParameters() {
@@ -236,11 +241,11 @@ export class LogicAppWorkflow extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string };
+  private _tags?: { [key: string]: string } | cdktf.IResolvable;
   public get tags() {
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._tags = value;
   }
   public resetTags() {
@@ -262,11 +267,11 @@ export class LogicAppWorkflow extends cdktf.TerraformResource {
   }
 
   // workflow_parameters - computed: false, optional: true, required: false
-  private _workflowParameters?: { [key: string]: string };
+  private _workflowParameters?: { [key: string]: string } | cdktf.IResolvable;
   public get workflowParameters() {
     return this.interpolationForAttribute('workflow_parameters') as any;
   }
-  public set workflowParameters(value: { [key: string]: string } ) {
+  public set workflowParameters(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._workflowParameters = value;
   }
   public resetWorkflowParameters() {

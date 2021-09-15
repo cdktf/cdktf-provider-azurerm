@@ -14,15 +14,15 @@ export interface CdnEndpointConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#is_compression_enabled CdnEndpoint#is_compression_enabled}
   */
-  readonly isCompressionEnabled?: boolean;
+  readonly isCompressionEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#is_http_allowed CdnEndpoint#is_http_allowed}
   */
-  readonly isHttpAllowed?: boolean;
+  readonly isHttpAllowed?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#is_https_allowed CdnEndpoint#is_https_allowed}
   */
-  readonly isHttpsAllowed?: boolean;
+  readonly isHttpsAllowed?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#location CdnEndpoint#location}
   */
@@ -62,7 +62,7 @@ export interface CdnEndpointConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#tags CdnEndpoint#tags}
   */
-  readonly tags?: { [key: string]: string };
+  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * delivery_rule block
   * 
@@ -140,7 +140,7 @@ export interface CdnEndpointDeliveryRuleCookiesCondition {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#negate_condition CdnEndpoint#negate_condition}
   */
-  readonly negateCondition?: boolean;
+  readonly negateCondition?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#operator CdnEndpoint#operator}
   */
@@ -174,7 +174,7 @@ export interface CdnEndpointDeliveryRuleDeviceCondition {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#negate_condition CdnEndpoint#negate_condition}
   */
-  readonly negateCondition?: boolean;
+  readonly negateCondition?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#operator CdnEndpoint#operator}
   */
@@ -198,7 +198,7 @@ export interface CdnEndpointDeliveryRuleHttpVersionCondition {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#negate_condition CdnEndpoint#negate_condition}
   */
-  readonly negateCondition?: boolean;
+  readonly negateCondition?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#operator CdnEndpoint#operator}
   */
@@ -270,7 +270,7 @@ export interface CdnEndpointDeliveryRulePostArgCondition {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#negate_condition CdnEndpoint#negate_condition}
   */
-  readonly negateCondition?: boolean;
+  readonly negateCondition?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#operator CdnEndpoint#operator}
   */
@@ -304,7 +304,7 @@ export interface CdnEndpointDeliveryRuleQueryStringCondition {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#negate_condition CdnEndpoint#negate_condition}
   */
-  readonly negateCondition?: boolean;
+  readonly negateCondition?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#operator CdnEndpoint#operator}
   */
@@ -333,7 +333,7 @@ export interface CdnEndpointDeliveryRuleRemoteAddressCondition {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#negate_condition CdnEndpoint#negate_condition}
   */
-  readonly negateCondition?: boolean;
+  readonly negateCondition?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#operator CdnEndpoint#operator}
   */
@@ -357,7 +357,7 @@ export interface CdnEndpointDeliveryRuleRequestBodyCondition {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#negate_condition CdnEndpoint#negate_condition}
   */
-  readonly negateCondition?: boolean;
+  readonly negateCondition?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#operator CdnEndpoint#operator}
   */
@@ -386,7 +386,7 @@ export interface CdnEndpointDeliveryRuleRequestHeaderCondition {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#negate_condition CdnEndpoint#negate_condition}
   */
-  readonly negateCondition?: boolean;
+  readonly negateCondition?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#operator CdnEndpoint#operator}
   */
@@ -420,7 +420,7 @@ export interface CdnEndpointDeliveryRuleRequestMethodCondition {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#negate_condition CdnEndpoint#negate_condition}
   */
-  readonly negateCondition?: boolean;
+  readonly negateCondition?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#operator CdnEndpoint#operator}
   */
@@ -444,7 +444,7 @@ export interface CdnEndpointDeliveryRuleRequestSchemeCondition {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#negate_condition CdnEndpoint#negate_condition}
   */
-  readonly negateCondition?: boolean;
+  readonly negateCondition?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#operator CdnEndpoint#operator}
   */
@@ -468,7 +468,7 @@ export interface CdnEndpointDeliveryRuleRequestUriCondition {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#negate_condition CdnEndpoint#negate_condition}
   */
-  readonly negateCondition?: boolean;
+  readonly negateCondition?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#operator CdnEndpoint#operator}
   */
@@ -497,7 +497,7 @@ export interface CdnEndpointDeliveryRuleUrlFileExtensionCondition {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#negate_condition CdnEndpoint#negate_condition}
   */
-  readonly negateCondition?: boolean;
+  readonly negateCondition?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#operator CdnEndpoint#operator}
   */
@@ -526,7 +526,7 @@ export interface CdnEndpointDeliveryRuleUrlFileNameCondition {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#negate_condition CdnEndpoint#negate_condition}
   */
-  readonly negateCondition?: boolean;
+  readonly negateCondition?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#operator CdnEndpoint#operator}
   */
@@ -555,7 +555,7 @@ export interface CdnEndpointDeliveryRuleUrlPathCondition {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#negate_condition CdnEndpoint#negate_condition}
   */
-  readonly negateCondition?: boolean;
+  readonly negateCondition?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#operator CdnEndpoint#operator}
   */
@@ -623,7 +623,7 @@ export interface CdnEndpointDeliveryRuleUrlRewriteAction {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#preserve_unmatched_path CdnEndpoint#preserve_unmatched_path}
   */
-  readonly preserveUnmatchedPath?: boolean;
+  readonly preserveUnmatchedPath?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#source_pattern CdnEndpoint#source_pattern}
   */
@@ -955,7 +955,7 @@ export interface CdnEndpointGlobalDeliveryRuleUrlRewriteAction {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#preserve_unmatched_path CdnEndpoint#preserve_unmatched_path}
   */
-  readonly preserveUnmatchedPath?: boolean;
+  readonly preserveUnmatchedPath?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint.html#source_pattern CdnEndpoint#source_pattern}
   */
@@ -1086,6 +1086,11 @@ function cdnEndpointTimeoutsToTerraform(struct?: CdnEndpointTimeouts): any {
 */
 export class CdnEndpoint extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_cdn_endpoint";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -1160,11 +1165,11 @@ export class CdnEndpoint extends cdktf.TerraformResource {
   }
 
   // is_compression_enabled - computed: false, optional: true, required: false
-  private _isCompressionEnabled?: boolean;
+  private _isCompressionEnabled?: boolean | cdktf.IResolvable;
   public get isCompressionEnabled() {
     return this.getBooleanAttribute('is_compression_enabled');
   }
-  public set isCompressionEnabled(value: boolean ) {
+  public set isCompressionEnabled(value: boolean | cdktf.IResolvable ) {
     this._isCompressionEnabled = value;
   }
   public resetIsCompressionEnabled() {
@@ -1176,11 +1181,11 @@ export class CdnEndpoint extends cdktf.TerraformResource {
   }
 
   // is_http_allowed - computed: false, optional: true, required: false
-  private _isHttpAllowed?: boolean;
+  private _isHttpAllowed?: boolean | cdktf.IResolvable;
   public get isHttpAllowed() {
     return this.getBooleanAttribute('is_http_allowed');
   }
-  public set isHttpAllowed(value: boolean ) {
+  public set isHttpAllowed(value: boolean | cdktf.IResolvable ) {
     this._isHttpAllowed = value;
   }
   public resetIsHttpAllowed() {
@@ -1192,11 +1197,11 @@ export class CdnEndpoint extends cdktf.TerraformResource {
   }
 
   // is_https_allowed - computed: false, optional: true, required: false
-  private _isHttpsAllowed?: boolean;
+  private _isHttpsAllowed?: boolean | cdktf.IResolvable;
   public get isHttpsAllowed() {
     return this.getBooleanAttribute('is_https_allowed');
   }
-  public set isHttpsAllowed(value: boolean ) {
+  public set isHttpsAllowed(value: boolean | cdktf.IResolvable ) {
     this._isHttpsAllowed = value;
   }
   public resetIsHttpsAllowed() {
@@ -1340,11 +1345,11 @@ export class CdnEndpoint extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string };
+  private _tags?: { [key: string]: string } | cdktf.IResolvable;
   public get tags() {
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._tags = value;
   }
   public resetTags() {

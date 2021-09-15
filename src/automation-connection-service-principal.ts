@@ -81,6 +81,11 @@ function automationConnectionServicePrincipalTimeoutsToTerraform(struct?: Automa
 */
 export class AutomationConnectionServicePrincipal extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_automation_connection_service_principal";
+
   // ===========
   // INITIALIZER
   // ===========

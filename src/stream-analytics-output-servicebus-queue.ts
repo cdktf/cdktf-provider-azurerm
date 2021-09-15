@@ -112,6 +112,11 @@ function streamAnalyticsOutputServicebusQueueTimeoutsToTerraform(struct?: Stream
 */
 export class StreamAnalyticsOutputServicebusQueue extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_stream_analytics_output_servicebus_queue";
+
   // ===========
   // INITIALIZER
   // ===========

@@ -69,6 +69,11 @@ function redisLinkedServerTimeoutsToTerraform(struct?: RedisLinkedServerTimeouts
 */
 export class RedisLinkedServer extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_redis_linked_server";
+
   // ===========
   // INITIALIZER
   // ===========

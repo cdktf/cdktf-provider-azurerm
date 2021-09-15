@@ -61,6 +61,11 @@ function apiManagementApiReleaseTimeoutsToTerraform(struct?: ApiManagementApiRel
 */
 export class ApiManagementApiRelease extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_api_management_api_release";
+
   // ===========
   // INITIALIZER
   // ===========

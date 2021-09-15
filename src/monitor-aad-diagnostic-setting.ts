@@ -48,7 +48,7 @@ export interface MonitorAadDiagnosticSettingLogRetentionPolicy {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_aad_diagnostic_setting.html#enabled MonitorAadDiagnosticSetting#enabled}
   */
-  readonly enabled?: boolean;
+  readonly enabled?: boolean | cdktf.IResolvable;
 }
 
 function monitorAadDiagnosticSettingLogRetentionPolicyToTerraform(struct?: MonitorAadDiagnosticSettingLogRetentionPolicy): any {
@@ -67,7 +67,7 @@ export interface MonitorAadDiagnosticSettingLog {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_aad_diagnostic_setting.html#enabled MonitorAadDiagnosticSetting#enabled}
   */
-  readonly enabled?: boolean;
+  readonly enabled?: boolean | cdktf.IResolvable;
   /**
   * retention_policy block
   * 
@@ -119,6 +119,11 @@ function monitorAadDiagnosticSettingTimeoutsToTerraform(struct?: MonitorAadDiagn
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_aad_diagnostic_setting.html azurerm_monitor_aad_diagnostic_setting}
 */
 export class MonitorAadDiagnosticSetting extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_monitor_aad_diagnostic_setting";
 
   // ===========
   // INITIALIZER

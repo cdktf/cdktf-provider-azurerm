@@ -46,6 +46,11 @@ function dataAzurermLbRuleTimeoutsToTerraform(struct?: DataAzurermLbRuleTimeouts
 */
 export class DataAzurermLbRule extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_lb_rule";
+
   // ===========
   // INITIALIZER
   // ===========

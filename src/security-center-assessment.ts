@@ -10,7 +10,7 @@ export interface SecurityCenterAssessmentConfig extends cdktf.TerraformMetaArgum
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_assessment.html#additional_data SecurityCenterAssessment#additional_data}
   */
-  readonly additionalData?: { [key: string]: string };
+  readonly additionalData?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_assessment.html#assessment_policy_id SecurityCenterAssessment#assessment_policy_id}
   */
@@ -91,6 +91,11 @@ function securityCenterAssessmentTimeoutsToTerraform(struct?: SecurityCenterAsse
 */
 export class SecurityCenterAssessment extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_security_center_assessment";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -125,11 +130,11 @@ export class SecurityCenterAssessment extends cdktf.TerraformResource {
   // ==========
 
   // additional_data - computed: false, optional: true, required: false
-  private _additionalData?: { [key: string]: string };
+  private _additionalData?: { [key: string]: string } | cdktf.IResolvable;
   public get additionalData() {
     return this.interpolationForAttribute('additional_data') as any;
   }
-  public set additionalData(value: { [key: string]: string } ) {
+  public set additionalData(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._additionalData = value;
   }
   public resetAdditionalData() {

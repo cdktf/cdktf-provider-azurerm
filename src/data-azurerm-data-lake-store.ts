@@ -42,6 +42,11 @@ function dataAzurermDataLakeStoreTimeoutsToTerraform(struct?: DataAzurermDataLak
 */
 export class DataAzurermDataLakeStore extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_data_lake_store";
+
   // ===========
   // INITIALIZER
   // ===========

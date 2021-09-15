@@ -81,6 +81,11 @@ function lbProbeTimeoutsToTerraform(struct?: LbProbeTimeouts): any {
 */
 export class LbProbe extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_lb_probe";
+
   // ===========
   // INITIALIZER
   // ===========

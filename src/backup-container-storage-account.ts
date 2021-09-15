@@ -61,6 +61,11 @@ function backupContainerStorageAccountTimeoutsToTerraform(struct?: BackupContain
 */
 export class BackupContainerStorageAccount extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_backup_container_storage_account";
+
   // ===========
   // INITIALIZER
   // ===========

@@ -26,7 +26,7 @@ export interface DevspaceControllerConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/devspace_controller.html#tags DevspaceController#tags}
   */
-  readonly tags?: { [key: string]: string };
+  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/devspace_controller.html#target_container_host_credentials_base64 DevspaceController#target_container_host_credentials_base64}
   */
@@ -76,6 +76,11 @@ function devspaceControllerTimeoutsToTerraform(struct?: DevspaceControllerTimeou
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/devspace_controller.html azurerm_devspace_controller}
 */
 export class DevspaceController extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_devspace_controller";
 
   // ===========
   // INITIALIZER
@@ -181,11 +186,11 @@ export class DevspaceController extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string };
+  private _tags?: { [key: string]: string } | cdktf.IResolvable;
   public get tags() {
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._tags = value;
   }
   public resetTags() {

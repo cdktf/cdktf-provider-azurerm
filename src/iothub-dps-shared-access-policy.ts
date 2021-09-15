@@ -10,11 +10,11 @@ export interface IothubDpsSharedAccessPolicyConfig extends cdktf.TerraformMetaAr
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_dps_shared_access_policy.html#enrollment_read IothubDpsSharedAccessPolicy#enrollment_read}
   */
-  readonly enrollmentRead?: boolean;
+  readonly enrollmentRead?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_dps_shared_access_policy.html#enrollment_write IothubDpsSharedAccessPolicy#enrollment_write}
   */
-  readonly enrollmentWrite?: boolean;
+  readonly enrollmentWrite?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_dps_shared_access_policy.html#iothub_dps_name IothubDpsSharedAccessPolicy#iothub_dps_name}
   */
@@ -26,11 +26,11 @@ export interface IothubDpsSharedAccessPolicyConfig extends cdktf.TerraformMetaAr
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_dps_shared_access_policy.html#registration_read IothubDpsSharedAccessPolicy#registration_read}
   */
-  readonly registrationRead?: boolean;
+  readonly registrationRead?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_dps_shared_access_policy.html#registration_write IothubDpsSharedAccessPolicy#registration_write}
   */
-  readonly registrationWrite?: boolean;
+  readonly registrationWrite?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_dps_shared_access_policy.html#resource_group_name IothubDpsSharedAccessPolicy#resource_group_name}
   */
@@ -38,7 +38,7 @@ export interface IothubDpsSharedAccessPolicyConfig extends cdktf.TerraformMetaAr
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_dps_shared_access_policy.html#service_config IothubDpsSharedAccessPolicy#service_config}
   */
-  readonly serviceConfig?: boolean;
+  readonly serviceConfig?: boolean | cdktf.IResolvable;
   /**
   * timeouts block
   * 
@@ -81,6 +81,11 @@ function iothubDpsSharedAccessPolicyTimeoutsToTerraform(struct?: IothubDpsShared
 */
 export class IothubDpsSharedAccessPolicy extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_iothub_dps_shared_access_policy";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -119,11 +124,11 @@ export class IothubDpsSharedAccessPolicy extends cdktf.TerraformResource {
   // ==========
 
   // enrollment_read - computed: false, optional: true, required: false
-  private _enrollmentRead?: boolean;
+  private _enrollmentRead?: boolean | cdktf.IResolvable;
   public get enrollmentRead() {
     return this.getBooleanAttribute('enrollment_read');
   }
-  public set enrollmentRead(value: boolean ) {
+  public set enrollmentRead(value: boolean | cdktf.IResolvable ) {
     this._enrollmentRead = value;
   }
   public resetEnrollmentRead() {
@@ -135,11 +140,11 @@ export class IothubDpsSharedAccessPolicy extends cdktf.TerraformResource {
   }
 
   // enrollment_write - computed: false, optional: true, required: false
-  private _enrollmentWrite?: boolean;
+  private _enrollmentWrite?: boolean | cdktf.IResolvable;
   public get enrollmentWrite() {
     return this.getBooleanAttribute('enrollment_write');
   }
-  public set enrollmentWrite(value: boolean ) {
+  public set enrollmentWrite(value: boolean | cdktf.IResolvable ) {
     this._enrollmentWrite = value;
   }
   public resetEnrollmentWrite() {
@@ -192,11 +197,11 @@ export class IothubDpsSharedAccessPolicy extends cdktf.TerraformResource {
   }
 
   // registration_read - computed: false, optional: true, required: false
-  private _registrationRead?: boolean;
+  private _registrationRead?: boolean | cdktf.IResolvable;
   public get registrationRead() {
     return this.getBooleanAttribute('registration_read');
   }
-  public set registrationRead(value: boolean ) {
+  public set registrationRead(value: boolean | cdktf.IResolvable ) {
     this._registrationRead = value;
   }
   public resetRegistrationRead() {
@@ -208,11 +213,11 @@ export class IothubDpsSharedAccessPolicy extends cdktf.TerraformResource {
   }
 
   // registration_write - computed: false, optional: true, required: false
-  private _registrationWrite?: boolean;
+  private _registrationWrite?: boolean | cdktf.IResolvable;
   public get registrationWrite() {
     return this.getBooleanAttribute('registration_write');
   }
-  public set registrationWrite(value: boolean ) {
+  public set registrationWrite(value: boolean | cdktf.IResolvable ) {
     this._registrationWrite = value;
   }
   public resetRegistrationWrite() {
@@ -247,11 +252,11 @@ export class IothubDpsSharedAccessPolicy extends cdktf.TerraformResource {
   }
 
   // service_config - computed: false, optional: true, required: false
-  private _serviceConfig?: boolean;
+  private _serviceConfig?: boolean | cdktf.IResolvable;
   public get serviceConfig() {
     return this.getBooleanAttribute('service_config');
   }
-  public set serviceConfig(value: boolean ) {
+  public set serviceConfig(value: boolean | cdktf.IResolvable ) {
     this._serviceConfig = value;
   }
   public resetServiceConfig() {

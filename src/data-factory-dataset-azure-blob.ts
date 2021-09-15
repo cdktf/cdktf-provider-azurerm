@@ -10,7 +10,7 @@ export interface DataFactoryDatasetAzureBlobConfig extends cdktf.TerraformMetaAr
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_azure_blob.html#additional_properties DataFactoryDatasetAzureBlob#additional_properties}
   */
-  readonly additionalProperties?: { [key: string]: string };
+  readonly additionalProperties?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_azure_blob.html#annotations DataFactoryDatasetAzureBlob#annotations}
   */
@@ -26,11 +26,11 @@ export interface DataFactoryDatasetAzureBlobConfig extends cdktf.TerraformMetaAr
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_azure_blob.html#dynamic_filename_enabled DataFactoryDatasetAzureBlob#dynamic_filename_enabled}
   */
-  readonly dynamicFilenameEnabled?: boolean;
+  readonly dynamicFilenameEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_azure_blob.html#dynamic_path_enabled DataFactoryDatasetAzureBlob#dynamic_path_enabled}
   */
-  readonly dynamicPathEnabled?: boolean;
+  readonly dynamicPathEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_azure_blob.html#filename DataFactoryDatasetAzureBlob#filename}
   */
@@ -50,7 +50,7 @@ export interface DataFactoryDatasetAzureBlobConfig extends cdktf.TerraformMetaAr
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_azure_blob.html#parameters DataFactoryDatasetAzureBlob#parameters}
   */
-  readonly parameters?: { [key: string]: string };
+  readonly parameters?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_azure_blob.html#path DataFactoryDatasetAzureBlob#path}
   */
@@ -131,6 +131,11 @@ function dataFactoryDatasetAzureBlobTimeoutsToTerraform(struct?: DataFactoryData
 */
 export class DataFactoryDatasetAzureBlob extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_data_factory_dataset_azure_blob";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -175,11 +180,11 @@ export class DataFactoryDatasetAzureBlob extends cdktf.TerraformResource {
   // ==========
 
   // additional_properties - computed: false, optional: true, required: false
-  private _additionalProperties?: { [key: string]: string };
+  private _additionalProperties?: { [key: string]: string } | cdktf.IResolvable;
   public get additionalProperties() {
     return this.interpolationForAttribute('additional_properties') as any;
   }
-  public set additionalProperties(value: { [key: string]: string } ) {
+  public set additionalProperties(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._additionalProperties = value;
   }
   public resetAdditionalProperties() {
@@ -236,11 +241,11 @@ export class DataFactoryDatasetAzureBlob extends cdktf.TerraformResource {
   }
 
   // dynamic_filename_enabled - computed: false, optional: true, required: false
-  private _dynamicFilenameEnabled?: boolean;
+  private _dynamicFilenameEnabled?: boolean | cdktf.IResolvable;
   public get dynamicFilenameEnabled() {
     return this.getBooleanAttribute('dynamic_filename_enabled');
   }
-  public set dynamicFilenameEnabled(value: boolean ) {
+  public set dynamicFilenameEnabled(value: boolean | cdktf.IResolvable ) {
     this._dynamicFilenameEnabled = value;
   }
   public resetDynamicFilenameEnabled() {
@@ -252,11 +257,11 @@ export class DataFactoryDatasetAzureBlob extends cdktf.TerraformResource {
   }
 
   // dynamic_path_enabled - computed: false, optional: true, required: false
-  private _dynamicPathEnabled?: boolean;
+  private _dynamicPathEnabled?: boolean | cdktf.IResolvable;
   public get dynamicPathEnabled() {
     return this.getBooleanAttribute('dynamic_path_enabled');
   }
-  public set dynamicPathEnabled(value: boolean ) {
+  public set dynamicPathEnabled(value: boolean | cdktf.IResolvable ) {
     this._dynamicPathEnabled = value;
   }
   public resetDynamicPathEnabled() {
@@ -331,11 +336,11 @@ export class DataFactoryDatasetAzureBlob extends cdktf.TerraformResource {
   }
 
   // parameters - computed: false, optional: true, required: false
-  private _parameters?: { [key: string]: string };
+  private _parameters?: { [key: string]: string } | cdktf.IResolvable;
   public get parameters() {
     return this.interpolationForAttribute('parameters') as any;
   }
-  public set parameters(value: { [key: string]: string } ) {
+  public set parameters(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._parameters = value;
   }
   public resetParameters() {

@@ -97,6 +97,11 @@ function kustoEventhubDataConnectionTimeoutsToTerraform(struct?: KustoEventhubDa
 */
 export class KustoEventhubDataConnection extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_kusto_eventhub_data_connection";
+
   // ===========
   // INITIALIZER
   // ===========

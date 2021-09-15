@@ -213,7 +213,7 @@ export interface ConsumptionBudgetSubscriptionNotification {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/consumption_budget_subscription.html#enabled ConsumptionBudgetSubscription#enabled}
   */
-  readonly enabled?: boolean;
+  readonly enabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/consumption_budget_subscription.html#operator ConsumptionBudgetSubscription#operator}
   */
@@ -289,6 +289,11 @@ function consumptionBudgetSubscriptionTimeoutsToTerraform(struct?: ConsumptionBu
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/consumption_budget_subscription.html azurerm_consumption_budget_subscription}
 */
 export class ConsumptionBudgetSubscription extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_consumption_budget_subscription";
 
   // ===========
   // INITIALIZER

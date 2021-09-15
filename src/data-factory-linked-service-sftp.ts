@@ -10,7 +10,7 @@ export interface DataFactoryLinkedServiceSftpConfig extends cdktf.TerraformMetaA
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_sftp.html#additional_properties DataFactoryLinkedServiceSftp#additional_properties}
   */
-  readonly additionalProperties?: { [key: string]: string };
+  readonly additionalProperties?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_sftp.html#annotations DataFactoryLinkedServiceSftp#annotations}
   */
@@ -46,7 +46,7 @@ export interface DataFactoryLinkedServiceSftpConfig extends cdktf.TerraformMetaA
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_sftp.html#parameters DataFactoryLinkedServiceSftp#parameters}
   */
-  readonly parameters?: { [key: string]: string };
+  readonly parameters?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_sftp.html#password DataFactoryLinkedServiceSftp#password}
   */
@@ -62,7 +62,7 @@ export interface DataFactoryLinkedServiceSftpConfig extends cdktf.TerraformMetaA
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_sftp.html#skip_host_key_validation DataFactoryLinkedServiceSftp#skip_host_key_validation}
   */
-  readonly skipHostKeyValidation?: boolean;
+  readonly skipHostKeyValidation?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_sftp.html#username DataFactoryLinkedServiceSftp#username}
   */
@@ -109,6 +109,11 @@ function dataFactoryLinkedServiceSftpTimeoutsToTerraform(struct?: DataFactoryLin
 */
 export class DataFactoryLinkedServiceSftp extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_data_factory_linked_service_sftp";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -154,11 +159,11 @@ export class DataFactoryLinkedServiceSftp extends cdktf.TerraformResource {
   // ==========
 
   // additional_properties - computed: false, optional: true, required: false
-  private _additionalProperties?: { [key: string]: string };
+  private _additionalProperties?: { [key: string]: string } | cdktf.IResolvable;
   public get additionalProperties() {
     return this.interpolationForAttribute('additional_properties') as any;
   }
-  public set additionalProperties(value: { [key: string]: string } ) {
+  public set additionalProperties(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._additionalProperties = value;
   }
   public resetAdditionalProperties() {
@@ -291,11 +296,11 @@ export class DataFactoryLinkedServiceSftp extends cdktf.TerraformResource {
   }
 
   // parameters - computed: false, optional: true, required: false
-  private _parameters?: { [key: string]: string };
+  private _parameters?: { [key: string]: string } | cdktf.IResolvable;
   public get parameters() {
     return this.interpolationForAttribute('parameters') as any;
   }
-  public set parameters(value: { [key: string]: string } ) {
+  public set parameters(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._parameters = value;
   }
   public resetParameters() {
@@ -346,11 +351,11 @@ export class DataFactoryLinkedServiceSftp extends cdktf.TerraformResource {
   }
 
   // skip_host_key_validation - computed: false, optional: true, required: false
-  private _skipHostKeyValidation?: boolean;
+  private _skipHostKeyValidation?: boolean | cdktf.IResolvable;
   public get skipHostKeyValidation() {
     return this.getBooleanAttribute('skip_host_key_validation');
   }
-  public set skipHostKeyValidation(value: boolean ) {
+  public set skipHostKeyValidation(value: boolean | cdktf.IResolvable ) {
     this._skipHostKeyValidation = value;
   }
   public resetSkipHostKeyValidation() {

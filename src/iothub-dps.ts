@@ -26,7 +26,7 @@ export interface IothubDpsConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_dps.html#tags IothubDps#tags}
   */
-  readonly tags?: { [key: string]: string };
+  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * linked_hub block
   * 
@@ -54,7 +54,7 @@ export interface IothubDpsLinkedHub {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_dps.html#apply_allocation_policy IothubDps#apply_allocation_policy}
   */
-  readonly applyAllocationPolicy?: boolean;
+  readonly applyAllocationPolicy?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_dps.html#connection_string IothubDps#connection_string}
   */
@@ -128,6 +128,11 @@ function iothubDpsTimeoutsToTerraform(struct?: IothubDpsTimeouts): any {
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_dps.html azurerm_iothub_dps}
 */
 export class IothubDps extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_iothub_dps";
 
   // ===========
   // INITIALIZER
@@ -241,11 +246,11 @@ export class IothubDps extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string };
+  private _tags?: { [key: string]: string } | cdktf.IResolvable;
   public get tags() {
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._tags = value;
   }
   public resetTags() {

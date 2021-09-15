@@ -65,6 +65,11 @@ function managementLockTimeoutsToTerraform(struct?: ManagementLockTimeouts): any
 */
 export class ManagementLock extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_management_lock";
+
   // ===========
   // INITIALIZER
   // ===========

@@ -42,6 +42,11 @@ function dataAzurermNetappAccountTimeoutsToTerraform(struct?: DataAzurermNetappA
 */
 export class DataAzurermNetappAccount extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_netapp_account";
+
   // ===========
   // INITIALIZER
   // ===========

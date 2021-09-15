@@ -42,6 +42,11 @@ function dataAzurermBillingEnrollmentAccountScopeTimeoutsToTerraform(struct?: Da
 */
 export class DataAzurermBillingEnrollmentAccountScope extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_billing_enrollment_account_scope";
+
   // ===========
   // INITIALIZER
   // ===========

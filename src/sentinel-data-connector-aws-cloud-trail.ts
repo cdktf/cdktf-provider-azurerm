@@ -61,6 +61,11 @@ function sentinelDataConnectorAwsCloudTrailTimeoutsToTerraform(struct?: Sentinel
 */
 export class SentinelDataConnectorAwsCloudTrail extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_sentinel_data_connector_aws_cloud_trail";
+
   // ===========
   // INITIALIZER
   // ===========

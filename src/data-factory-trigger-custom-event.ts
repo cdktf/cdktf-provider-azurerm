@@ -10,11 +10,11 @@ export interface DataFactoryTriggerCustomEventConfig extends cdktf.TerraformMeta
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_trigger_custom_event.html#activated DataFactoryTriggerCustomEvent#activated}
   */
-  readonly activated?: boolean;
+  readonly activated?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_trigger_custom_event.html#additional_properties DataFactoryTriggerCustomEvent#additional_properties}
   */
-  readonly additionalProperties?: { [key: string]: string };
+  readonly additionalProperties?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_trigger_custom_event.html#annotations DataFactoryTriggerCustomEvent#annotations}
   */
@@ -68,7 +68,7 @@ export interface DataFactoryTriggerCustomEventPipeline {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_trigger_custom_event.html#parameters DataFactoryTriggerCustomEvent#parameters}
   */
-  readonly parameters?: { [key: string]: string };
+  readonly parameters?: { [key: string]: string } | cdktf.IResolvable;
 }
 
 function dataFactoryTriggerCustomEventPipelineToTerraform(struct?: DataFactoryTriggerCustomEventPipeline): any {
@@ -114,6 +114,11 @@ function dataFactoryTriggerCustomEventTimeoutsToTerraform(struct?: DataFactoryTr
 */
 export class DataFactoryTriggerCustomEvent extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_data_factory_trigger_custom_event";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -155,11 +160,11 @@ export class DataFactoryTriggerCustomEvent extends cdktf.TerraformResource {
   // ==========
 
   // activated - computed: false, optional: true, required: false
-  private _activated?: boolean;
+  private _activated?: boolean | cdktf.IResolvable;
   public get activated() {
     return this.getBooleanAttribute('activated');
   }
-  public set activated(value: boolean ) {
+  public set activated(value: boolean | cdktf.IResolvable ) {
     this._activated = value;
   }
   public resetActivated() {
@@ -171,11 +176,11 @@ export class DataFactoryTriggerCustomEvent extends cdktf.TerraformResource {
   }
 
   // additional_properties - computed: false, optional: true, required: false
-  private _additionalProperties?: { [key: string]: string };
+  private _additionalProperties?: { [key: string]: string } | cdktf.IResolvable;
   public get additionalProperties() {
     return this.interpolationForAttribute('additional_properties') as any;
   }
-  public set additionalProperties(value: { [key: string]: string } ) {
+  public set additionalProperties(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._additionalProperties = value;
   }
   public resetAdditionalProperties() {

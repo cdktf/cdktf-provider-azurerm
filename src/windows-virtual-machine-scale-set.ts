@@ -26,15 +26,15 @@ export interface WindowsVirtualMachineScaleSetConfig extends cdktf.TerraformMeta
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#do_not_run_extensions_on_overprovisioned_machines WindowsVirtualMachineScaleSet#do_not_run_extensions_on_overprovisioned_machines}
   */
-  readonly doNotRunExtensionsOnOverprovisionedMachines?: boolean;
+  readonly doNotRunExtensionsOnOverprovisionedMachines?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#enable_automatic_updates WindowsVirtualMachineScaleSet#enable_automatic_updates}
   */
-  readonly enableAutomaticUpdates?: boolean;
+  readonly enableAutomaticUpdates?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#encryption_at_host_enabled WindowsVirtualMachineScaleSet#encryption_at_host_enabled}
   */
-  readonly encryptionAtHostEnabled?: boolean;
+  readonly encryptionAtHostEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#eviction_policy WindowsVirtualMachineScaleSet#eviction_policy}
   */
@@ -70,7 +70,7 @@ export interface WindowsVirtualMachineScaleSetConfig extends cdktf.TerraformMeta
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#overprovision WindowsVirtualMachineScaleSet#overprovision}
   */
-  readonly overprovision?: boolean;
+  readonly overprovision?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#platform_fault_domain_count WindowsVirtualMachineScaleSet#platform_fault_domain_count}
   */
@@ -82,7 +82,7 @@ export interface WindowsVirtualMachineScaleSetConfig extends cdktf.TerraformMeta
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#provision_vm_agent WindowsVirtualMachineScaleSet#provision_vm_agent}
   */
-  readonly provisionVmAgent?: boolean;
+  readonly provisionVmAgent?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#proximity_placement_group_id WindowsVirtualMachineScaleSet#proximity_placement_group_id}
   */
@@ -98,7 +98,7 @@ export interface WindowsVirtualMachineScaleSetConfig extends cdktf.TerraformMeta
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#single_placement_group WindowsVirtualMachineScaleSet#single_placement_group}
   */
-  readonly singlePlacementGroup?: boolean;
+  readonly singlePlacementGroup?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#sku WindowsVirtualMachineScaleSet#sku}
   */
@@ -110,7 +110,7 @@ export interface WindowsVirtualMachineScaleSetConfig extends cdktf.TerraformMeta
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#tags WindowsVirtualMachineScaleSet#tags}
   */
-  readonly tags?: { [key: string]: string };
+  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#timezone WindowsVirtualMachineScaleSet#timezone}
   */
@@ -122,7 +122,7 @@ export interface WindowsVirtualMachineScaleSetConfig extends cdktf.TerraformMeta
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#zone_balance WindowsVirtualMachineScaleSet#zone_balance}
   */
-  readonly zoneBalance?: boolean;
+  readonly zoneBalance?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#zones WindowsVirtualMachineScaleSet#zones}
   */
@@ -234,7 +234,7 @@ export interface WindowsVirtualMachineScaleSetAdditionalCapabilities {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#ultra_ssd_enabled WindowsVirtualMachineScaleSet#ultra_ssd_enabled}
   */
-  readonly ultraSsdEnabled?: boolean;
+  readonly ultraSsdEnabled?: boolean | cdktf.IResolvable;
 }
 
 function windowsVirtualMachineScaleSetAdditionalCapabilitiesToTerraform(struct?: WindowsVirtualMachineScaleSetAdditionalCapabilities): any {
@@ -267,7 +267,7 @@ export interface WindowsVirtualMachineScaleSetAutomaticInstanceRepair {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#enabled WindowsVirtualMachineScaleSet#enabled}
   */
-  readonly enabled: boolean;
+  readonly enabled: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#grace_period WindowsVirtualMachineScaleSet#grace_period}
   */
@@ -286,11 +286,11 @@ export interface WindowsVirtualMachineScaleSetAutomaticOsUpgradePolicy {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#disable_automatic_rollback WindowsVirtualMachineScaleSet#disable_automatic_rollback}
   */
-  readonly disableAutomaticRollback: boolean;
+  readonly disableAutomaticRollback: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#enable_automatic_os_upgrade WindowsVirtualMachineScaleSet#enable_automatic_os_upgrade}
   */
-  readonly enableAutomaticOsUpgrade: boolean;
+  readonly enableAutomaticOsUpgrade: boolean | cdktf.IResolvable;
 }
 
 function windowsVirtualMachineScaleSetAutomaticOsUpgradePolicyToTerraform(struct?: WindowsVirtualMachineScaleSetAutomaticOsUpgradePolicy): any {
@@ -351,7 +351,7 @@ export interface WindowsVirtualMachineScaleSetDataDisk {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#write_accelerator_enabled WindowsVirtualMachineScaleSet#write_accelerator_enabled}
   */
-  readonly writeAcceleratorEnabled?: boolean;
+  readonly writeAcceleratorEnabled?: boolean | cdktf.IResolvable;
 }
 
 function windowsVirtualMachineScaleSetDataDiskToTerraform(struct?: WindowsVirtualMachineScaleSetDataDisk): any {
@@ -373,7 +373,7 @@ export interface WindowsVirtualMachineScaleSetExtension {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#auto_upgrade_minor_version WindowsVirtualMachineScaleSet#auto_upgrade_minor_version}
   */
-  readonly autoUpgradeMinorVersion?: boolean;
+  readonly autoUpgradeMinorVersion?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#force_update_tag WindowsVirtualMachineScaleSet#force_update_tag}
   */
@@ -521,7 +521,7 @@ export interface WindowsVirtualMachineScaleSetNetworkInterfaceIpConfiguration {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#primary WindowsVirtualMachineScaleSet#primary}
   */
-  readonly primary?: boolean;
+  readonly primary?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#subnet_id WindowsVirtualMachineScaleSet#subnet_id}
   */
@@ -561,11 +561,11 @@ export interface WindowsVirtualMachineScaleSetNetworkInterface {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#enable_accelerated_networking WindowsVirtualMachineScaleSet#enable_accelerated_networking}
   */
-  readonly enableAcceleratedNetworking?: boolean;
+  readonly enableAcceleratedNetworking?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#enable_ip_forwarding WindowsVirtualMachineScaleSet#enable_ip_forwarding}
   */
-  readonly enableIpForwarding?: boolean;
+  readonly enableIpForwarding?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#name WindowsVirtualMachineScaleSet#name}
   */
@@ -577,7 +577,7 @@ export interface WindowsVirtualMachineScaleSetNetworkInterface {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#primary WindowsVirtualMachineScaleSet#primary}
   */
-  readonly primary?: boolean;
+  readonly primary?: boolean | cdktf.IResolvable;
   /**
   * ip_configuration block
   * 
@@ -633,7 +633,7 @@ export interface WindowsVirtualMachineScaleSetOsDisk {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#write_accelerator_enabled WindowsVirtualMachineScaleSet#write_accelerator_enabled}
   */
-  readonly writeAcceleratorEnabled?: boolean;
+  readonly writeAcceleratorEnabled?: boolean | cdktf.IResolvable;
   /**
   * diff_disk_settings block
   * 
@@ -780,7 +780,7 @@ export interface WindowsVirtualMachineScaleSetTerminateNotification {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#enabled WindowsVirtualMachineScaleSet#enabled}
   */
-  readonly enabled: boolean;
+  readonly enabled: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#timeout WindowsVirtualMachineScaleSet#timeout}
   */
@@ -848,6 +848,11 @@ function windowsVirtualMachineScaleSetWinrmListenerToTerraform(struct?: WindowsV
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html azurerm_windows_virtual_machine_scale_set}
 */
 export class WindowsVirtualMachineScaleSet extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_windows_virtual_machine_scale_set";
 
   // ===========
   // INITIALIZER
@@ -983,11 +988,11 @@ export class WindowsVirtualMachineScaleSet extends cdktf.TerraformResource {
   }
 
   // do_not_run_extensions_on_overprovisioned_machines - computed: false, optional: true, required: false
-  private _doNotRunExtensionsOnOverprovisionedMachines?: boolean;
+  private _doNotRunExtensionsOnOverprovisionedMachines?: boolean | cdktf.IResolvable;
   public get doNotRunExtensionsOnOverprovisionedMachines() {
     return this.getBooleanAttribute('do_not_run_extensions_on_overprovisioned_machines');
   }
-  public set doNotRunExtensionsOnOverprovisionedMachines(value: boolean ) {
+  public set doNotRunExtensionsOnOverprovisionedMachines(value: boolean | cdktf.IResolvable ) {
     this._doNotRunExtensionsOnOverprovisionedMachines = value;
   }
   public resetDoNotRunExtensionsOnOverprovisionedMachines() {
@@ -999,11 +1004,11 @@ export class WindowsVirtualMachineScaleSet extends cdktf.TerraformResource {
   }
 
   // enable_automatic_updates - computed: false, optional: true, required: false
-  private _enableAutomaticUpdates?: boolean;
+  private _enableAutomaticUpdates?: boolean | cdktf.IResolvable;
   public get enableAutomaticUpdates() {
     return this.getBooleanAttribute('enable_automatic_updates');
   }
-  public set enableAutomaticUpdates(value: boolean ) {
+  public set enableAutomaticUpdates(value: boolean | cdktf.IResolvable ) {
     this._enableAutomaticUpdates = value;
   }
   public resetEnableAutomaticUpdates() {
@@ -1015,11 +1020,11 @@ export class WindowsVirtualMachineScaleSet extends cdktf.TerraformResource {
   }
 
   // encryption_at_host_enabled - computed: false, optional: true, required: false
-  private _encryptionAtHostEnabled?: boolean;
+  private _encryptionAtHostEnabled?: boolean | cdktf.IResolvable;
   public get encryptionAtHostEnabled() {
     return this.getBooleanAttribute('encryption_at_host_enabled');
   }
-  public set encryptionAtHostEnabled(value: boolean ) {
+  public set encryptionAtHostEnabled(value: boolean | cdktf.IResolvable ) {
     this._encryptionAtHostEnabled = value;
   }
   public resetEncryptionAtHostEnabled() {
@@ -1155,11 +1160,11 @@ export class WindowsVirtualMachineScaleSet extends cdktf.TerraformResource {
   }
 
   // overprovision - computed: false, optional: true, required: false
-  private _overprovision?: boolean;
+  private _overprovision?: boolean | cdktf.IResolvable;
   public get overprovision() {
     return this.getBooleanAttribute('overprovision');
   }
-  public set overprovision(value: boolean ) {
+  public set overprovision(value: boolean | cdktf.IResolvable ) {
     this._overprovision = value;
   }
   public resetOverprovision() {
@@ -1203,11 +1208,11 @@ export class WindowsVirtualMachineScaleSet extends cdktf.TerraformResource {
   }
 
   // provision_vm_agent - computed: false, optional: true, required: false
-  private _provisionVmAgent?: boolean;
+  private _provisionVmAgent?: boolean | cdktf.IResolvable;
   public get provisionVmAgent() {
     return this.getBooleanAttribute('provision_vm_agent');
   }
-  public set provisionVmAgent(value: boolean ) {
+  public set provisionVmAgent(value: boolean | cdktf.IResolvable ) {
     this._provisionVmAgent = value;
   }
   public resetProvisionVmAgent() {
@@ -1264,11 +1269,11 @@ export class WindowsVirtualMachineScaleSet extends cdktf.TerraformResource {
   }
 
   // single_placement_group - computed: false, optional: true, required: false
-  private _singlePlacementGroup?: boolean;
+  private _singlePlacementGroup?: boolean | cdktf.IResolvable;
   public get singlePlacementGroup() {
     return this.getBooleanAttribute('single_placement_group');
   }
-  public set singlePlacementGroup(value: boolean ) {
+  public set singlePlacementGroup(value: boolean | cdktf.IResolvable ) {
     this._singlePlacementGroup = value;
   }
   public resetSinglePlacementGroup() {
@@ -1309,11 +1314,11 @@ export class WindowsVirtualMachineScaleSet extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string };
+  private _tags?: { [key: string]: string } | cdktf.IResolvable;
   public get tags() {
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._tags = value;
   }
   public resetTags() {
@@ -1362,11 +1367,11 @@ export class WindowsVirtualMachineScaleSet extends cdktf.TerraformResource {
   }
 
   // zone_balance - computed: false, optional: true, required: false
-  private _zoneBalance?: boolean;
+  private _zoneBalance?: boolean | cdktf.IResolvable;
   public get zoneBalance() {
     return this.getBooleanAttribute('zone_balance');
   }
-  public set zoneBalance(value: boolean ) {
+  public set zoneBalance(value: boolean | cdktf.IResolvable ) {
     this._zoneBalance = value;
   }
   public resetZoneBalance() {

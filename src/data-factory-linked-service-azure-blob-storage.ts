@@ -10,7 +10,7 @@ export interface DataFactoryLinkedServiceAzureBlobStorageConfig extends cdktf.Te
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_blob_storage.html#additional_properties DataFactoryLinkedServiceAzureBlobStorage#additional_properties}
   */
-  readonly additionalProperties?: { [key: string]: string };
+  readonly additionalProperties?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_blob_storage.html#annotations DataFactoryLinkedServiceAzureBlobStorage#annotations}
   */
@@ -38,7 +38,7 @@ export interface DataFactoryLinkedServiceAzureBlobStorageConfig extends cdktf.Te
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_blob_storage.html#parameters DataFactoryLinkedServiceAzureBlobStorage#parameters}
   */
-  readonly parameters?: { [key: string]: string };
+  readonly parameters?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_blob_storage.html#resource_group_name DataFactoryLinkedServiceAzureBlobStorage#resource_group_name}
   */
@@ -66,7 +66,13 @@ export interface DataFactoryLinkedServiceAzureBlobStorageConfig extends cdktf.Te
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_blob_storage.html#use_managed_identity DataFactoryLinkedServiceAzureBlobStorage#use_managed_identity}
   */
-  readonly useManagedIdentity?: boolean;
+  readonly useManagedIdentity?: boolean | cdktf.IResolvable;
+  /**
+  * key_vault_sas_token block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_blob_storage.html#key_vault_sas_token DataFactoryLinkedServiceAzureBlobStorage#key_vault_sas_token}
+  */
+  readonly keyVaultSasToken?: DataFactoryLinkedServiceAzureBlobStorageKeyVaultSasToken[];
   /**
   * timeouts block
   * 
@@ -74,6 +80,25 @@ export interface DataFactoryLinkedServiceAzureBlobStorageConfig extends cdktf.Te
   */
   readonly timeouts?: DataFactoryLinkedServiceAzureBlobStorageTimeouts;
 }
+export interface DataFactoryLinkedServiceAzureBlobStorageKeyVaultSasToken {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_blob_storage.html#linked_service_name DataFactoryLinkedServiceAzureBlobStorage#linked_service_name}
+  */
+  readonly linkedServiceName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_blob_storage.html#secret_name DataFactoryLinkedServiceAzureBlobStorage#secret_name}
+  */
+  readonly secretName: string;
+}
+
+function dataFactoryLinkedServiceAzureBlobStorageKeyVaultSasTokenToTerraform(struct?: DataFactoryLinkedServiceAzureBlobStorageKeyVaultSasToken): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    linked_service_name: cdktf.stringToTerraform(struct!.linkedServiceName),
+    secret_name: cdktf.stringToTerraform(struct!.secretName),
+  }
+}
+
 export interface DataFactoryLinkedServiceAzureBlobStorageTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_blob_storage.html#create DataFactoryLinkedServiceAzureBlobStorage#create}
@@ -108,6 +133,11 @@ function dataFactoryLinkedServiceAzureBlobStorageTimeoutsToTerraform(struct?: Da
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_blob_storage.html azurerm_data_factory_linked_service_azure_blob_storage}
 */
 export class DataFactoryLinkedServiceAzureBlobStorage extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_data_factory_linked_service_azure_blob_storage";
 
   // ===========
   // INITIALIZER
@@ -146,6 +176,7 @@ export class DataFactoryLinkedServiceAzureBlobStorage extends cdktf.TerraformRes
     this._servicePrincipalKey = config.servicePrincipalKey;
     this._tenantId = config.tenantId;
     this._useManagedIdentity = config.useManagedIdentity;
+    this._keyVaultSasToken = config.keyVaultSasToken;
     this._timeouts = config.timeouts;
   }
 
@@ -154,11 +185,11 @@ export class DataFactoryLinkedServiceAzureBlobStorage extends cdktf.TerraformRes
   // ==========
 
   // additional_properties - computed: false, optional: true, required: false
-  private _additionalProperties?: { [key: string]: string };
+  private _additionalProperties?: { [key: string]: string } | cdktf.IResolvable;
   public get additionalProperties() {
     return this.interpolationForAttribute('additional_properties') as any;
   }
-  public set additionalProperties(value: { [key: string]: string } ) {
+  public set additionalProperties(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._additionalProperties = value;
   }
   public resetAdditionalProperties() {
@@ -265,11 +296,11 @@ export class DataFactoryLinkedServiceAzureBlobStorage extends cdktf.TerraformRes
   }
 
   // parameters - computed: false, optional: true, required: false
-  private _parameters?: { [key: string]: string };
+  private _parameters?: { [key: string]: string } | cdktf.IResolvable;
   public get parameters() {
     return this.interpolationForAttribute('parameters') as any;
   }
-  public set parameters(value: { [key: string]: string } ) {
+  public set parameters(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._parameters = value;
   }
   public resetParameters() {
@@ -374,11 +405,11 @@ export class DataFactoryLinkedServiceAzureBlobStorage extends cdktf.TerraformRes
   }
 
   // use_managed_identity - computed: false, optional: true, required: false
-  private _useManagedIdentity?: boolean;
+  private _useManagedIdentity?: boolean | cdktf.IResolvable;
   public get useManagedIdentity() {
     return this.getBooleanAttribute('use_managed_identity');
   }
-  public set useManagedIdentity(value: boolean ) {
+  public set useManagedIdentity(value: boolean | cdktf.IResolvable ) {
     this._useManagedIdentity = value;
   }
   public resetUseManagedIdentity() {
@@ -387,6 +418,22 @@ export class DataFactoryLinkedServiceAzureBlobStorage extends cdktf.TerraformRes
   // Temporarily expose input value. Use with caution.
   public get useManagedIdentityInput() {
     return this._useManagedIdentity
+  }
+
+  // key_vault_sas_token - computed: false, optional: true, required: false
+  private _keyVaultSasToken?: DataFactoryLinkedServiceAzureBlobStorageKeyVaultSasToken[];
+  public get keyVaultSasToken() {
+    return this.interpolationForAttribute('key_vault_sas_token') as any;
+  }
+  public set keyVaultSasToken(value: DataFactoryLinkedServiceAzureBlobStorageKeyVaultSasToken[] ) {
+    this._keyVaultSasToken = value;
+  }
+  public resetKeyVaultSasToken() {
+    this._keyVaultSasToken = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keyVaultSasTokenInput() {
+    return this._keyVaultSasToken
   }
 
   // timeouts - computed: false, optional: true, required: false
@@ -426,6 +473,7 @@ export class DataFactoryLinkedServiceAzureBlobStorage extends cdktf.TerraformRes
       service_principal_key: cdktf.stringToTerraform(this._servicePrincipalKey),
       tenant_id: cdktf.stringToTerraform(this._tenantId),
       use_managed_identity: cdktf.booleanToTerraform(this._useManagedIdentity),
+      key_vault_sas_token: cdktf.listMapper(dataFactoryLinkedServiceAzureBlobStorageKeyVaultSasTokenToTerraform)(this._keyVaultSasToken),
       timeouts: dataFactoryLinkedServiceAzureBlobStorageTimeoutsToTerraform(this._timeouts),
     };
   }

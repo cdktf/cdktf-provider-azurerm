@@ -10,7 +10,7 @@ export interface DedicatedHostConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dedicated_host.html#auto_replace_on_failure DedicatedHost#auto_replace_on_failure}
   */
-  readonly autoReplaceOnFailure?: boolean;
+  readonly autoReplaceOnFailure?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dedicated_host.html#dedicated_host_group_id DedicatedHost#dedicated_host_group_id}
   */
@@ -38,7 +38,7 @@ export interface DedicatedHostConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dedicated_host.html#tags DedicatedHost#tags}
   */
-  readonly tags?: { [key: string]: string };
+  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * timeouts block
   * 
@@ -81,6 +81,11 @@ function dedicatedHostTimeoutsToTerraform(struct?: DedicatedHostTimeouts): any {
 */
 export class DedicatedHost extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_dedicated_host";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -119,11 +124,11 @@ export class DedicatedHost extends cdktf.TerraformResource {
   // ==========
 
   // auto_replace_on_failure - computed: false, optional: true, required: false
-  private _autoReplaceOnFailure?: boolean;
+  private _autoReplaceOnFailure?: boolean | cdktf.IResolvable;
   public get autoReplaceOnFailure() {
     return this.getBooleanAttribute('auto_replace_on_failure');
   }
-  public set autoReplaceOnFailure(value: boolean ) {
+  public set autoReplaceOnFailure(value: boolean | cdktf.IResolvable ) {
     this._autoReplaceOnFailure = value;
   }
   public resetAutoReplaceOnFailure() {
@@ -221,11 +226,11 @@ export class DedicatedHost extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string };
+  private _tags?: { [key: string]: string } | cdktf.IResolvable;
   public get tags() {
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._tags = value;
   }
   public resetTags() {

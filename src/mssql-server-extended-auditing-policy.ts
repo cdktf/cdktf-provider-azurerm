@@ -10,7 +10,7 @@ export interface MssqlServerExtendedAuditingPolicyAConfig extends cdktf.Terrafor
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server_extended_auditing_policy.html#log_monitoring_enabled MssqlServerExtendedAuditingPolicyA#log_monitoring_enabled}
   */
-  readonly logMonitoringEnabled?: boolean;
+  readonly logMonitoringEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server_extended_auditing_policy.html#retention_in_days MssqlServerExtendedAuditingPolicyA#retention_in_days}
   */
@@ -26,7 +26,7 @@ export interface MssqlServerExtendedAuditingPolicyAConfig extends cdktf.Terrafor
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server_extended_auditing_policy.html#storage_account_access_key_is_secondary MssqlServerExtendedAuditingPolicyA#storage_account_access_key_is_secondary}
   */
-  readonly storageAccountAccessKeyIsSecondary?: boolean;
+  readonly storageAccountAccessKeyIsSecondary?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server_extended_auditing_policy.html#storage_endpoint MssqlServerExtendedAuditingPolicyA#storage_endpoint}
   */
@@ -73,6 +73,11 @@ function mssqlServerExtendedAuditingPolicyTimeoutsToTerraform(struct?: MssqlServ
 */
 export class MssqlServerExtendedAuditingPolicyA extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_mssql_server_extended_auditing_policy";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -114,11 +119,11 @@ export class MssqlServerExtendedAuditingPolicyA extends cdktf.TerraformResource 
   }
 
   // log_monitoring_enabled - computed: false, optional: true, required: false
-  private _logMonitoringEnabled?: boolean;
+  private _logMonitoringEnabled?: boolean | cdktf.IResolvable;
   public get logMonitoringEnabled() {
     return this.getBooleanAttribute('log_monitoring_enabled');
   }
-  public set logMonitoringEnabled(value: boolean ) {
+  public set logMonitoringEnabled(value: boolean | cdktf.IResolvable ) {
     this._logMonitoringEnabled = value;
   }
   public resetLogMonitoringEnabled() {
@@ -175,11 +180,11 @@ export class MssqlServerExtendedAuditingPolicyA extends cdktf.TerraformResource 
   }
 
   // storage_account_access_key_is_secondary - computed: false, optional: true, required: false
-  private _storageAccountAccessKeyIsSecondary?: boolean;
+  private _storageAccountAccessKeyIsSecondary?: boolean | cdktf.IResolvable;
   public get storageAccountAccessKeyIsSecondary() {
     return this.getBooleanAttribute('storage_account_access_key_is_secondary');
   }
-  public set storageAccountAccessKeyIsSecondary(value: boolean ) {
+  public set storageAccountAccessKeyIsSecondary(value: boolean | cdktf.IResolvable ) {
     this._storageAccountAccessKeyIsSecondary = value;
   }
   public resetStorageAccountAccessKeyIsSecondary() {

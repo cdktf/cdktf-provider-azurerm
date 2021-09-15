@@ -89,6 +89,11 @@ function policyDefinitionTimeoutsToTerraform(struct?: PolicyDefinitionTimeouts):
 */
 export class PolicyDefinition extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_policy_definition";
+
   // ===========
   // INITIALIZER
   // ===========

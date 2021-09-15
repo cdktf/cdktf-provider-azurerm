@@ -57,6 +57,11 @@ function securityCenterSubscriptionPricingTimeoutsToTerraform(struct?: SecurityC
 */
 export class SecurityCenterSubscriptionPricing extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_security_center_subscription_pricing";
+
   // ===========
   // INITIALIZER
   // ===========

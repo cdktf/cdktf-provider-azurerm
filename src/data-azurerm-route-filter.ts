@@ -64,6 +64,11 @@ function dataAzurermRouteFilterTimeoutsToTerraform(struct?: DataAzurermRouteFilt
 */
 export class DataAzurermRouteFilter extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_route_filter";
+
   // ===========
   // INITIALIZER
   // ===========

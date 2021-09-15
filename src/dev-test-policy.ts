@@ -38,7 +38,7 @@ export interface DevTestPolicyConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_policy.html#tags DevTestPolicy#tags}
   */
-  readonly tags?: { [key: string]: string };
+  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_policy.html#threshold DevTestPolicy#threshold}
   */
@@ -84,6 +84,11 @@ function devTestPolicyTimeoutsToTerraform(struct?: DevTestPolicyTimeouts): any {
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_policy.html azurerm_dev_test_policy}
 */
 export class DevTestPolicy extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_dev_test_policy";
 
   // ===========
   // INITIALIZER
@@ -226,11 +231,11 @@ export class DevTestPolicy extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string };
+  private _tags?: { [key: string]: string } | cdktf.IResolvable;
   public get tags() {
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._tags = value;
   }
   public resetTags() {

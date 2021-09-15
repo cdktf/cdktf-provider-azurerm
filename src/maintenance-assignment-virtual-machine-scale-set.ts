@@ -56,6 +56,11 @@ function maintenanceAssignmentVirtualMachineScaleSetTimeoutsToTerraform(struct?:
 */
 export class MaintenanceAssignmentVirtualMachineScaleSet extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_maintenance_assignment_virtual_machine_scale_set";
+
   // ===========
   // INITIALIZER
   // ===========

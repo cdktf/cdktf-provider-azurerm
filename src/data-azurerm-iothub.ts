@@ -18,7 +18,7 @@ export interface DataAzurermIothubConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/iothub.html#tags DataAzurermIothub#tags}
   */
-  readonly tags?: { [key: string]: string };
+  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * timeouts block
   * 
@@ -45,6 +45,11 @@ function dataAzurermIothubTimeoutsToTerraform(struct?: DataAzurermIothubTimeouts
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/iothub.html azurerm_iothub}
 */
 export class DataAzurermIothub extends cdktf.TerraformDataSource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_iothub";
 
   // ===========
   // INITIALIZER
@@ -78,6 +83,11 @@ export class DataAzurermIothub extends cdktf.TerraformDataSource {
   // ATTRIBUTES
   // ==========
 
+  // hostname - computed: true, optional: false, required: false
+  public get hostname() {
+    return this.getStringAttribute('hostname');
+  }
+
   // id - computed: true, optional: true, required: false
   public get id() {
     return this.getStringAttribute('id');
@@ -110,11 +120,11 @@ export class DataAzurermIothub extends cdktf.TerraformDataSource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string };
+  private _tags?: { [key: string]: string } | cdktf.IResolvable;
   public get tags() {
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._tags = value;
   }
   public resetTags() {

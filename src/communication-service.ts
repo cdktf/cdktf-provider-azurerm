@@ -22,7 +22,7 @@ export interface CommunicationServiceConfig extends cdktf.TerraformMetaArguments
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/communication_service.html#tags CommunicationService#tags}
   */
-  readonly tags?: { [key: string]: string };
+  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * timeouts block
   * 
@@ -64,6 +64,11 @@ function communicationServiceTimeoutsToTerraform(struct?: CommunicationServiceTi
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/communication_service.html azurerm_communication_service}
 */
 export class CommunicationService extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_communication_service";
 
   // ===========
   // INITIALIZER
@@ -146,11 +151,11 @@ export class CommunicationService extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string };
+  private _tags?: { [key: string]: string } | cdktf.IResolvable;
   public get tags() {
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._tags = value;
   }
   public resetTags() {

@@ -160,6 +160,11 @@ function trafficManagerEndpointTimeoutsToTerraform(struct?: TrafficManagerEndpoi
 */
 export class TrafficManagerEndpoint extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_traffic_manager_endpoint";
+
   // ===========
   // INITIALIZER
   // ===========

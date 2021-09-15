@@ -151,7 +151,7 @@ export interface DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupCommand
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_azure_ssis.html#parameters DataFactoryIntegrationRuntimeAzureSsis#parameters}
   */
-  readonly parameters?: { [key: string]: string };
+  readonly parameters?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_azure_ssis.html#secret_name DataFactoryIntegrationRuntimeAzureSsis#secret_name}
   */
@@ -211,7 +211,7 @@ export interface DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupCompone
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_azure_ssis.html#parameters DataFactoryIntegrationRuntimeAzureSsis#parameters}
   */
-  readonly parameters?: { [key: string]: string };
+  readonly parameters?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_azure_ssis.html#secret_name DataFactoryIntegrationRuntimeAzureSsis#secret_name}
   */
@@ -262,7 +262,7 @@ export interface DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetup {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_azure_ssis.html#environment DataFactoryIntegrationRuntimeAzureSsis#environment}
   */
-  readonly environment?: { [key: string]: string };
+  readonly environment?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_azure_ssis.html#powershell_version DataFactoryIntegrationRuntimeAzureSsis#powershell_version}
   */
@@ -369,19 +369,24 @@ export interface DataFactoryIntegrationRuntimeAzureSsisVnetIntegration {
   */
   readonly publicIps?: string[];
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_azure_ssis.html#subnet_id DataFactoryIntegrationRuntimeAzureSsis#subnet_id}
+  */
+  readonly subnetId?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_azure_ssis.html#subnet_name DataFactoryIntegrationRuntimeAzureSsis#subnet_name}
   */
-  readonly subnetName: string;
+  readonly subnetName?: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_azure_ssis.html#vnet_id DataFactoryIntegrationRuntimeAzureSsis#vnet_id}
   */
-  readonly vnetId: string;
+  readonly vnetId?: string;
 }
 
 function dataFactoryIntegrationRuntimeAzureSsisVnetIntegrationToTerraform(struct?: DataFactoryIntegrationRuntimeAzureSsisVnetIntegration): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   return {
     public_ips: cdktf.listMapper(cdktf.stringToTerraform)(struct!.publicIps),
+    subnet_id: cdktf.stringToTerraform(struct!.subnetId),
     subnet_name: cdktf.stringToTerraform(struct!.subnetName),
     vnet_id: cdktf.stringToTerraform(struct!.vnetId),
   }
@@ -392,6 +397,11 @@ function dataFactoryIntegrationRuntimeAzureSsisVnetIntegrationToTerraform(struct
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_azure_ssis.html azurerm_data_factory_integration_runtime_azure_ssis}
 */
 export class DataFactoryIntegrationRuntimeAzureSsis extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_data_factory_integration_runtime_azure_ssis";
 
   // ===========
   // INITIALIZER

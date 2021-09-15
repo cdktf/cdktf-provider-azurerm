@@ -65,6 +65,11 @@ function mysqlVirtualNetworkRuleTimeoutsToTerraform(struct?: MysqlVirtualNetwork
 */
 export class MysqlVirtualNetworkRule extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_mysql_virtual_network_rule";
+
   // ===========
   // INITIALIZER
   // ===========

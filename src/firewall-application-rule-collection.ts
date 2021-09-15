@@ -140,6 +140,11 @@ function firewallApplicationRuleCollectionTimeoutsToTerraform(struct?: FirewallA
 */
 export class FirewallApplicationRuleCollection extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_firewall_application_rule_collection";
+
   // ===========
   // INITIALIZER
   // ===========

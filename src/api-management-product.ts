@@ -14,7 +14,7 @@ export interface ApiManagementProductConfig extends cdktf.TerraformMetaArguments
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_product.html#approval_required ApiManagementProduct#approval_required}
   */
-  readonly approvalRequired?: boolean;
+  readonly approvalRequired?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_product.html#description ApiManagementProduct#description}
   */
@@ -30,7 +30,7 @@ export interface ApiManagementProductConfig extends cdktf.TerraformMetaArguments
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_product.html#published ApiManagementProduct#published}
   */
-  readonly published: boolean;
+  readonly published: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_product.html#resource_group_name ApiManagementProduct#resource_group_name}
   */
@@ -38,7 +38,7 @@ export interface ApiManagementProductConfig extends cdktf.TerraformMetaArguments
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_product.html#subscription_required ApiManagementProduct#subscription_required}
   */
-  readonly subscriptionRequired: boolean;
+  readonly subscriptionRequired: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_product.html#subscriptions_limit ApiManagementProduct#subscriptions_limit}
   */
@@ -88,6 +88,11 @@ function apiManagementProductTimeoutsToTerraform(struct?: ApiManagementProductTi
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_product.html azurerm_api_management_product}
 */
 export class ApiManagementProduct extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_api_management_product";
 
   // ===========
   // INITIALIZER
@@ -142,11 +147,11 @@ export class ApiManagementProduct extends cdktf.TerraformResource {
   }
 
   // approval_required - computed: false, optional: true, required: false
-  private _approvalRequired?: boolean;
+  private _approvalRequired?: boolean | cdktf.IResolvable;
   public get approvalRequired() {
     return this.getBooleanAttribute('approval_required');
   }
-  public set approvalRequired(value: boolean ) {
+  public set approvalRequired(value: boolean | cdktf.IResolvable ) {
     this._approvalRequired = value;
   }
   public resetApprovalRequired() {
@@ -205,11 +210,11 @@ export class ApiManagementProduct extends cdktf.TerraformResource {
   }
 
   // published - computed: false, optional: false, required: true
-  private _published: boolean;
+  private _published: boolean | cdktf.IResolvable;
   public get published() {
     return this.getBooleanAttribute('published');
   }
-  public set published(value: boolean) {
+  public set published(value: boolean | cdktf.IResolvable) {
     this._published = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -231,11 +236,11 @@ export class ApiManagementProduct extends cdktf.TerraformResource {
   }
 
   // subscription_required - computed: false, optional: false, required: true
-  private _subscriptionRequired: boolean;
+  private _subscriptionRequired: boolean | cdktf.IResolvable;
   public get subscriptionRequired() {
     return this.getBooleanAttribute('subscription_required');
   }
-  public set subscriptionRequired(value: boolean) {
+  public set subscriptionRequired(value: boolean | cdktf.IResolvable) {
     this._subscriptionRequired = value;
   }
   // Temporarily expose input value. Use with caution.

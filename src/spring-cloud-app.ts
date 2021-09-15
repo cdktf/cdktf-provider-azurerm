@@ -10,11 +10,11 @@ export interface SpringCloudAppConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_app.html#https_only SpringCloudApp#https_only}
   */
-  readonly httpsOnly?: boolean;
+  readonly httpsOnly?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_app.html#is_public SpringCloudApp#is_public}
   */
-  readonly isPublic?: boolean;
+  readonly isPublic?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_app.html#name SpringCloudApp#name}
   */
@@ -30,7 +30,7 @@ export interface SpringCloudAppConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_app.html#tls_enabled SpringCloudApp#tls_enabled}
   */
-  readonly tlsEnabled?: boolean;
+  readonly tlsEnabled?: boolean | cdktf.IResolvable;
   /**
   * identity block
   * 
@@ -118,6 +118,11 @@ function springCloudAppTimeoutsToTerraform(struct?: SpringCloudAppTimeouts): any
 */
 export class SpringCloudApp extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_spring_cloud_app";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -161,11 +166,11 @@ export class SpringCloudApp extends cdktf.TerraformResource {
   }
 
   // https_only - computed: false, optional: true, required: false
-  private _httpsOnly?: boolean;
+  private _httpsOnly?: boolean | cdktf.IResolvable;
   public get httpsOnly() {
     return this.getBooleanAttribute('https_only');
   }
-  public set httpsOnly(value: boolean ) {
+  public set httpsOnly(value: boolean | cdktf.IResolvable ) {
     this._httpsOnly = value;
   }
   public resetHttpsOnly() {
@@ -182,11 +187,11 @@ export class SpringCloudApp extends cdktf.TerraformResource {
   }
 
   // is_public - computed: false, optional: true, required: false
-  private _isPublic?: boolean;
+  private _isPublic?: boolean | cdktf.IResolvable;
   public get isPublic() {
     return this.getBooleanAttribute('is_public');
   }
-  public set isPublic(value: boolean ) {
+  public set isPublic(value: boolean | cdktf.IResolvable ) {
     this._isPublic = value;
   }
   public resetIsPublic() {
@@ -237,11 +242,11 @@ export class SpringCloudApp extends cdktf.TerraformResource {
   }
 
   // tls_enabled - computed: false, optional: true, required: false
-  private _tlsEnabled?: boolean;
+  private _tlsEnabled?: boolean | cdktf.IResolvable;
   public get tlsEnabled() {
     return this.getBooleanAttribute('tls_enabled');
   }
-  public set tlsEnabled(value: boolean ) {
+  public set tlsEnabled(value: boolean | cdktf.IResolvable ) {
     this._tlsEnabled = value;
   }
   public resetTlsEnabled() {

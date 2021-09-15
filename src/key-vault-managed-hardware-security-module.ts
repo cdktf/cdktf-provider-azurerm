@@ -22,7 +22,7 @@ export interface KeyVaultManagedHardwareSecurityModuleConfig extends cdktf.Terra
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_managed_hardware_security_module.html#purge_protection_enabled KeyVaultManagedHardwareSecurityModule#purge_protection_enabled}
   */
-  readonly purgeProtectionEnabled?: boolean;
+  readonly purgeProtectionEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_managed_hardware_security_module.html#resource_group_name KeyVaultManagedHardwareSecurityModule#resource_group_name}
   */
@@ -38,7 +38,7 @@ export interface KeyVaultManagedHardwareSecurityModuleConfig extends cdktf.Terra
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_managed_hardware_security_module.html#tags KeyVaultManagedHardwareSecurityModule#tags}
   */
-  readonly tags?: { [key: string]: string };
+  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_managed_hardware_security_module.html#tenant_id KeyVaultManagedHardwareSecurityModule#tenant_id}
   */
@@ -79,6 +79,11 @@ function keyVaultManagedHardwareSecurityModuleTimeoutsToTerraform(struct?: KeyVa
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_managed_hardware_security_module.html azurerm_key_vault_managed_hardware_security_module}
 */
 export class KeyVaultManagedHardwareSecurityModule extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_key_vault_managed_hardware_security_module";
 
   // ===========
   // INITIALIZER
@@ -168,11 +173,11 @@ export class KeyVaultManagedHardwareSecurityModule extends cdktf.TerraformResour
   }
 
   // purge_protection_enabled - computed: false, optional: true, required: false
-  private _purgeProtectionEnabled?: boolean;
+  private _purgeProtectionEnabled?: boolean | cdktf.IResolvable;
   public get purgeProtectionEnabled() {
     return this.getBooleanAttribute('purge_protection_enabled');
   }
-  public set purgeProtectionEnabled(value: boolean ) {
+  public set purgeProtectionEnabled(value: boolean | cdktf.IResolvable ) {
     this._purgeProtectionEnabled = value;
   }
   public resetPurgeProtectionEnabled() {
@@ -226,11 +231,11 @@ export class KeyVaultManagedHardwareSecurityModule extends cdktf.TerraformResour
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string };
+  private _tags?: { [key: string]: string } | cdktf.IResolvable;
   public get tags() {
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._tags = value;
   }
   public resetTags() {

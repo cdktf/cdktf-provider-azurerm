@@ -42,6 +42,11 @@ function dataAzurermCdnProfileTimeoutsToTerraform(struct?: DataAzurermCdnProfile
 */
 export class DataAzurermCdnProfile extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_cdn_profile";
+
   // ===========
   // INITIALIZER
   // ===========

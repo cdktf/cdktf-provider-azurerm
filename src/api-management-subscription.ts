@@ -10,7 +10,7 @@ export interface ApiManagementSubscriptionConfig extends cdktf.TerraformMetaArgu
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_subscription.html#allow_tracing ApiManagementSubscription#allow_tracing}
   */
-  readonly allowTracing?: boolean;
+  readonly allowTracing?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_subscription.html#api_id ApiManagementSubscription#api_id}
   */
@@ -93,6 +93,11 @@ function apiManagementSubscriptionTimeoutsToTerraform(struct?: ApiManagementSubs
 */
 export class ApiManagementSubscription extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_api_management_subscription";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -134,11 +139,11 @@ export class ApiManagementSubscription extends cdktf.TerraformResource {
   // ==========
 
   // allow_tracing - computed: false, optional: true, required: false
-  private _allowTracing?: boolean;
+  private _allowTracing?: boolean | cdktf.IResolvable;
   public get allowTracing() {
     return this.getBooleanAttribute('allow_tracing');
   }
-  public set allowTracing(value: boolean ) {
+  public set allowTracing(value: boolean | cdktf.IResolvable ) {
     this._allowTracing = value;
   }
   public resetAllowTracing() {

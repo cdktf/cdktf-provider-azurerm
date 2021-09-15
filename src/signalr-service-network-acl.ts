@@ -112,6 +112,11 @@ function signalrServiceNetworkAclTimeoutsToTerraform(struct?: SignalrServiceNetw
 */
 export class SignalrServiceNetworkAcl extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_signalr_service_network_acl";
+
   // ===========
   // INITIALIZER
   // ===========

@@ -18,7 +18,7 @@ export interface AutomationJobScheduleConfig extends cdktf.TerraformMetaArgument
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_job_schedule.html#parameters AutomationJobSchedule#parameters}
   */
-  readonly parameters?: { [key: string]: string };
+  readonly parameters?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_job_schedule.html#resource_group_name AutomationJobSchedule#resource_group_name}
   */
@@ -76,6 +76,11 @@ function automationJobScheduleTimeoutsToTerraform(struct?: AutomationJobSchedule
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/automation_job_schedule.html azurerm_automation_job_schedule}
 */
 export class AutomationJobSchedule extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_automation_job_schedule";
 
   // ===========
   // INITIALIZER
@@ -148,11 +153,11 @@ export class AutomationJobSchedule extends cdktf.TerraformResource {
   }
 
   // parameters - computed: false, optional: true, required: false
-  private _parameters?: { [key: string]: string };
+  private _parameters?: { [key: string]: string } | cdktf.IResolvable;
   public get parameters() {
     return this.interpolationForAttribute('parameters') as any;
   }
-  public set parameters(value: { [key: string]: string } ) {
+  public set parameters(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._parameters = value;
   }
   public resetParameters() {

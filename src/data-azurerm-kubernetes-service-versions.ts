@@ -10,7 +10,7 @@ export interface DataAzurermKubernetesServiceVersionsConfig extends cdktf.Terraf
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/kubernetes_service_versions.html#include_preview DataAzurermKubernetesServiceVersions#include_preview}
   */
-  readonly includePreview?: boolean;
+  readonly includePreview?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/kubernetes_service_versions.html#location DataAzurermKubernetesServiceVersions#location}
   */
@@ -45,6 +45,11 @@ function dataAzurermKubernetesServiceVersionsTimeoutsToTerraform(struct?: DataAz
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/kubernetes_service_versions.html azurerm_kubernetes_service_versions}
 */
 export class DataAzurermKubernetesServiceVersions extends cdktf.TerraformDataSource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_kubernetes_service_versions";
 
   // ===========
   // INITIALIZER
@@ -84,11 +89,11 @@ export class DataAzurermKubernetesServiceVersions extends cdktf.TerraformDataSou
   }
 
   // include_preview - computed: false, optional: true, required: false
-  private _includePreview?: boolean;
+  private _includePreview?: boolean | cdktf.IResolvable;
   public get includePreview() {
     return this.getBooleanAttribute('include_preview');
   }
-  public set includePreview(value: boolean ) {
+  public set includePreview(value: boolean | cdktf.IResolvable ) {
     this._includePreview = value;
   }
   public resetIncludePreview() {

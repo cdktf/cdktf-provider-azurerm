@@ -42,6 +42,11 @@ function dataAzurermContainerRegistryTimeoutsToTerraform(struct?: DataAzurermCon
 */
 export class DataAzurermContainerRegistry extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_container_registry";
+
   // ===========
   // INITIALIZER
   // ===========

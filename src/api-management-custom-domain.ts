@@ -68,7 +68,11 @@ export interface ApiManagementCustomDomainDeveloperPortal {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_custom_domain.html#negotiate_client_certificate ApiManagementCustomDomain#negotiate_client_certificate}
   */
-  readonly negotiateClientCertificate?: boolean;
+  readonly negotiateClientCertificate?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_custom_domain.html#ssl_keyvault_identity_client_id ApiManagementCustomDomain#ssl_keyvault_identity_client_id}
+  */
+  readonly sslKeyvaultIdentityClientId?: string;
 }
 
 function apiManagementCustomDomainDeveloperPortalToTerraform(struct?: ApiManagementCustomDomainDeveloperPortal): any {
@@ -79,6 +83,7 @@ function apiManagementCustomDomainDeveloperPortalToTerraform(struct?: ApiManagem
     host_name: cdktf.stringToTerraform(struct!.hostName),
     key_vault_id: cdktf.stringToTerraform(struct!.keyVaultId),
     negotiate_client_certificate: cdktf.booleanToTerraform(struct!.negotiateClientCertificate),
+    ssl_keyvault_identity_client_id: cdktf.stringToTerraform(struct!.sslKeyvaultIdentityClientId),
   }
 }
 
@@ -102,7 +107,11 @@ export interface ApiManagementCustomDomainManagement {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_custom_domain.html#negotiate_client_certificate ApiManagementCustomDomain#negotiate_client_certificate}
   */
-  readonly negotiateClientCertificate?: boolean;
+  readonly negotiateClientCertificate?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_custom_domain.html#ssl_keyvault_identity_client_id ApiManagementCustomDomain#ssl_keyvault_identity_client_id}
+  */
+  readonly sslKeyvaultIdentityClientId?: string;
 }
 
 function apiManagementCustomDomainManagementToTerraform(struct?: ApiManagementCustomDomainManagement): any {
@@ -113,6 +122,7 @@ function apiManagementCustomDomainManagementToTerraform(struct?: ApiManagementCu
     host_name: cdktf.stringToTerraform(struct!.hostName),
     key_vault_id: cdktf.stringToTerraform(struct!.keyVaultId),
     negotiate_client_certificate: cdktf.booleanToTerraform(struct!.negotiateClientCertificate),
+    ssl_keyvault_identity_client_id: cdktf.stringToTerraform(struct!.sslKeyvaultIdentityClientId),
   }
 }
 
@@ -136,7 +146,11 @@ export interface ApiManagementCustomDomainPortal {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_custom_domain.html#negotiate_client_certificate ApiManagementCustomDomain#negotiate_client_certificate}
   */
-  readonly negotiateClientCertificate?: boolean;
+  readonly negotiateClientCertificate?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_custom_domain.html#ssl_keyvault_identity_client_id ApiManagementCustomDomain#ssl_keyvault_identity_client_id}
+  */
+  readonly sslKeyvaultIdentityClientId?: string;
 }
 
 function apiManagementCustomDomainPortalToTerraform(struct?: ApiManagementCustomDomainPortal): any {
@@ -147,6 +161,7 @@ function apiManagementCustomDomainPortalToTerraform(struct?: ApiManagementCustom
     host_name: cdktf.stringToTerraform(struct!.hostName),
     key_vault_id: cdktf.stringToTerraform(struct!.keyVaultId),
     negotiate_client_certificate: cdktf.booleanToTerraform(struct!.negotiateClientCertificate),
+    ssl_keyvault_identity_client_id: cdktf.stringToTerraform(struct!.sslKeyvaultIdentityClientId),
   }
 }
 
@@ -162,7 +177,7 @@ export interface ApiManagementCustomDomainProxy {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_custom_domain.html#default_ssl_binding ApiManagementCustomDomain#default_ssl_binding}
   */
-  readonly defaultSslBinding?: boolean;
+  readonly defaultSslBinding?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_custom_domain.html#host_name ApiManagementCustomDomain#host_name}
   */
@@ -174,7 +189,11 @@ export interface ApiManagementCustomDomainProxy {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_custom_domain.html#negotiate_client_certificate ApiManagementCustomDomain#negotiate_client_certificate}
   */
-  readonly negotiateClientCertificate?: boolean;
+  readonly negotiateClientCertificate?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_custom_domain.html#ssl_keyvault_identity_client_id ApiManagementCustomDomain#ssl_keyvault_identity_client_id}
+  */
+  readonly sslKeyvaultIdentityClientId?: string;
 }
 
 function apiManagementCustomDomainProxyToTerraform(struct?: ApiManagementCustomDomainProxy): any {
@@ -186,6 +205,7 @@ function apiManagementCustomDomainProxyToTerraform(struct?: ApiManagementCustomD
     host_name: cdktf.stringToTerraform(struct!.hostName),
     key_vault_id: cdktf.stringToTerraform(struct!.keyVaultId),
     negotiate_client_certificate: cdktf.booleanToTerraform(struct!.negotiateClientCertificate),
+    ssl_keyvault_identity_client_id: cdktf.stringToTerraform(struct!.sslKeyvaultIdentityClientId),
   }
 }
 
@@ -209,7 +229,11 @@ export interface ApiManagementCustomDomainScm {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_custom_domain.html#negotiate_client_certificate ApiManagementCustomDomain#negotiate_client_certificate}
   */
-  readonly negotiateClientCertificate?: boolean;
+  readonly negotiateClientCertificate?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_custom_domain.html#ssl_keyvault_identity_client_id ApiManagementCustomDomain#ssl_keyvault_identity_client_id}
+  */
+  readonly sslKeyvaultIdentityClientId?: string;
 }
 
 function apiManagementCustomDomainScmToTerraform(struct?: ApiManagementCustomDomainScm): any {
@@ -220,6 +244,7 @@ function apiManagementCustomDomainScmToTerraform(struct?: ApiManagementCustomDom
     host_name: cdktf.stringToTerraform(struct!.hostName),
     key_vault_id: cdktf.stringToTerraform(struct!.keyVaultId),
     negotiate_client_certificate: cdktf.booleanToTerraform(struct!.negotiateClientCertificate),
+    ssl_keyvault_identity_client_id: cdktf.stringToTerraform(struct!.sslKeyvaultIdentityClientId),
   }
 }
 
@@ -257,6 +282,11 @@ function apiManagementCustomDomainTimeoutsToTerraform(struct?: ApiManagementCust
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_custom_domain.html azurerm_api_management_custom_domain}
 */
 export class ApiManagementCustomDomain extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_api_management_custom_domain";
 
   // ===========
   // INITIALIZER

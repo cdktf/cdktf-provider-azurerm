@@ -57,6 +57,11 @@ function logAnalyticsClusterCustomerManagedKeyTimeoutsToTerraform(struct?: LogAn
 */
 export class LogAnalyticsClusterCustomerManagedKey extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_log_analytics_cluster_customer_managed_key";
+
   // ===========
   // INITIALIZER
   // ===========

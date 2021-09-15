@@ -74,7 +74,7 @@ export interface ApiManagementAuthorizationServerConfig extends cdktf.TerraformM
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_authorization_server.html#support_state ApiManagementAuthorizationServer#support_state}
   */
-  readonly supportState?: boolean;
+  readonly supportState?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_authorization_server.html#token_endpoint ApiManagementAuthorizationServer#token_endpoint}
   */
@@ -145,6 +145,11 @@ function apiManagementAuthorizationServerTokenBodyParameterToTerraform(struct?: 
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_authorization_server.html azurerm_api_management_authorization_server}
 */
 export class ApiManagementAuthorizationServer extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_api_management_authorization_server";
 
   // ===========
   // INITIALIZER
@@ -429,11 +434,11 @@ export class ApiManagementAuthorizationServer extends cdktf.TerraformResource {
   }
 
   // support_state - computed: false, optional: true, required: false
-  private _supportState?: boolean;
+  private _supportState?: boolean | cdktf.IResolvable;
   public get supportState() {
     return this.getBooleanAttribute('support_state');
   }
-  public set supportState(value: boolean ) {
+  public set supportState(value: boolean | cdktf.IResolvable ) {
     this._supportState = value;
   }
   public resetSupportState() {

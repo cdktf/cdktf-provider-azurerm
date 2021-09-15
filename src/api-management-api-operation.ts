@@ -80,7 +80,7 @@ export interface ApiManagementApiOperationRequestHeader {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation.html#required ApiManagementApiOperation#required}
   */
-  readonly required: boolean;
+  readonly required: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation.html#type ApiManagementApiOperation#type}
   */
@@ -119,7 +119,7 @@ export interface ApiManagementApiOperationRequestQueryParameter {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation.html#required ApiManagementApiOperation#required}
   */
-  readonly required: boolean;
+  readonly required: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation.html#type ApiManagementApiOperation#type}
   */
@@ -158,7 +158,7 @@ export interface ApiManagementApiOperationRequestRepresentationFormParameter {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation.html#required ApiManagementApiOperation#required}
   */
-  readonly required: boolean;
+  readonly required: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation.html#type ApiManagementApiOperation#type}
   */
@@ -268,7 +268,7 @@ export interface ApiManagementApiOperationResponseHeader {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation.html#required ApiManagementApiOperation#required}
   */
-  readonly required: boolean;
+  readonly required: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation.html#type ApiManagementApiOperation#type}
   */
@@ -307,7 +307,7 @@ export interface ApiManagementApiOperationResponseRepresentationFormParameter {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation.html#required ApiManagementApiOperation#required}
   */
-  readonly required: boolean;
+  readonly required: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation.html#type ApiManagementApiOperation#type}
   */
@@ -415,7 +415,7 @@ export interface ApiManagementApiOperationTemplateParameter {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation.html#required ApiManagementApiOperation#required}
   */
-  readonly required: boolean;
+  readonly required: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation.html#type ApiManagementApiOperation#type}
   */
@@ -472,6 +472,11 @@ function apiManagementApiOperationTimeoutsToTerraform(struct?: ApiManagementApiO
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation.html azurerm_api_management_api_operation}
 */
 export class ApiManagementApiOperation extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_api_management_api_operation";
 
   // ===========
   // INITIALIZER

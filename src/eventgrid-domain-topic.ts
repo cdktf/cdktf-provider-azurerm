@@ -56,6 +56,11 @@ function eventgridDomainTopicTimeoutsToTerraform(struct?: EventgridDomainTopicTi
 */
 export class EventgridDomainTopic extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_eventgrid_domain_topic";
+
   // ===========
   // INITIALIZER
   // ===========

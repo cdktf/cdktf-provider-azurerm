@@ -10,7 +10,7 @@ export interface DataFactoryLinkedServicePostgresqlConfig extends cdktf.Terrafor
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_postgresql.html#additional_properties DataFactoryLinkedServicePostgresql#additional_properties}
   */
-  readonly additionalProperties?: { [key: string]: string };
+  readonly additionalProperties?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_postgresql.html#annotations DataFactoryLinkedServicePostgresql#annotations}
   */
@@ -38,7 +38,7 @@ export interface DataFactoryLinkedServicePostgresqlConfig extends cdktf.Terrafor
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_postgresql.html#parameters DataFactoryLinkedServicePostgresql#parameters}
   */
-  readonly parameters?: { [key: string]: string };
+  readonly parameters?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_postgresql.html#resource_group_name DataFactoryLinkedServicePostgresql#resource_group_name}
   */
@@ -85,6 +85,11 @@ function dataFactoryLinkedServicePostgresqlTimeoutsToTerraform(struct?: DataFact
 */
 export class DataFactoryLinkedServicePostgresql extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_data_factory_linked_service_postgresql";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -124,11 +129,11 @@ export class DataFactoryLinkedServicePostgresql extends cdktf.TerraformResource 
   // ==========
 
   // additional_properties - computed: false, optional: true, required: false
-  private _additionalProperties?: { [key: string]: string };
+  private _additionalProperties?: { [key: string]: string } | cdktf.IResolvable;
   public get additionalProperties() {
     return this.interpolationForAttribute('additional_properties') as any;
   }
-  public set additionalProperties(value: { [key: string]: string } ) {
+  public set additionalProperties(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._additionalProperties = value;
   }
   public resetAdditionalProperties() {
@@ -232,11 +237,11 @@ export class DataFactoryLinkedServicePostgresql extends cdktf.TerraformResource 
   }
 
   // parameters - computed: false, optional: true, required: false
-  private _parameters?: { [key: string]: string };
+  private _parameters?: { [key: string]: string } | cdktf.IResolvable;
   public get parameters() {
     return this.interpolationForAttribute('parameters') as any;
   }
-  public set parameters(value: { [key: string]: string } ) {
+  public set parameters(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._parameters = value;
   }
   public resetParameters() {

@@ -42,6 +42,11 @@ function dataAzurermDnsZoneTimeoutsToTerraform(struct?: DataAzurermDnsZoneTimeou
 */
 export class DataAzurermDnsZone extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_dns_zone";
+
   // ===========
   // INITIALIZER
   // ===========

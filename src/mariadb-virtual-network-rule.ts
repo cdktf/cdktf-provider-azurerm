@@ -65,6 +65,11 @@ function mariadbVirtualNetworkRuleTimeoutsToTerraform(struct?: MariadbVirtualNet
 */
 export class MariadbVirtualNetworkRule extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_mariadb_virtual_network_rule";
+
   // ===========
   // INITIALIZER
   // ===========

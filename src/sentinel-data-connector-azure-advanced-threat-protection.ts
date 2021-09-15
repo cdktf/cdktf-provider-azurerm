@@ -56,6 +56,11 @@ function sentinelDataConnectorAzureAdvancedThreatProtectionTimeoutsToTerraform(s
 */
 export class SentinelDataConnectorAzureAdvancedThreatProtection extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_sentinel_data_connector_azure_advanced_threat_protection";
+
   // ===========
   // INITIALIZER
   // ===========

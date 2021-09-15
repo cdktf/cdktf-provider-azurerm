@@ -14,7 +14,7 @@ export interface StorageDataLakeGen2FilesystemConfig extends cdktf.TerraformMeta
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_data_lake_gen2_filesystem.html#properties StorageDataLakeGen2Filesystem#properties}
   */
-  readonly properties?: { [key: string]: string };
+  readonly properties?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_data_lake_gen2_filesystem.html#storage_account_id StorageDataLakeGen2Filesystem#storage_account_id}
   */
@@ -96,6 +96,11 @@ function storageDataLakeGen2FilesystemTimeoutsToTerraform(struct?: StorageDataLa
 */
 export class StorageDataLakeGen2Filesystem extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_storage_data_lake_gen2_filesystem";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -148,11 +153,11 @@ export class StorageDataLakeGen2Filesystem extends cdktf.TerraformResource {
   }
 
   // properties - computed: false, optional: true, required: false
-  private _properties?: { [key: string]: string };
+  private _properties?: { [key: string]: string } | cdktf.IResolvable;
   public get properties() {
     return this.interpolationForAttribute('properties') as any;
   }
-  public set properties(value: { [key: string]: string } ) {
+  public set properties(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._properties = value;
   }
   public resetProperties() {

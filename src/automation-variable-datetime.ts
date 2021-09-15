@@ -18,7 +18,7 @@ export interface AutomationVariableDatetimeConfig extends cdktf.TerraformMetaArg
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_variable_datetime.html#encrypted AutomationVariableDatetime#encrypted}
   */
-  readonly encrypted?: boolean;
+  readonly encrypted?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_variable_datetime.html#name AutomationVariableDatetime#name}
   */
@@ -72,6 +72,11 @@ function automationVariableDatetimeTimeoutsToTerraform(struct?: AutomationVariab
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/automation_variable_datetime.html azurerm_automation_variable_datetime}
 */
 export class AutomationVariableDatetime extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_automation_variable_datetime";
 
   // ===========
   // INITIALIZER
@@ -138,11 +143,11 @@ export class AutomationVariableDatetime extends cdktf.TerraformResource {
   }
 
   // encrypted - computed: false, optional: true, required: false
-  private _encrypted?: boolean;
+  private _encrypted?: boolean | cdktf.IResolvable;
   public get encrypted() {
     return this.getBooleanAttribute('encrypted');
   }
-  public set encrypted(value: boolean ) {
+  public set encrypted(value: boolean | cdktf.IResolvable ) {
     this._encrypted = value;
   }
   public resetEncrypted() {

@@ -90,6 +90,11 @@ function dataAzurermHealthcareServiceTimeoutsToTerraform(struct?: DataAzurermHea
 */
 export class DataAzurermHealthcareService extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_healthcare_service";
+
   // ===========
   // INITIALIZER
   // ===========

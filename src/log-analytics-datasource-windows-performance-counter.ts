@@ -77,6 +77,11 @@ function logAnalyticsDatasourceWindowsPerformanceCounterTimeoutsToTerraform(stru
 */
 export class LogAnalyticsDatasourceWindowsPerformanceCounter extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_log_analytics_datasource_windows_performance_counter";
+
   // ===========
   // INITIALIZER
   // ===========

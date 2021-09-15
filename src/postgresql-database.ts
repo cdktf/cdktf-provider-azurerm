@@ -69,6 +69,11 @@ function postgresqlDatabaseTimeoutsToTerraform(struct?: PostgresqlDatabaseTimeou
 */
 export class PostgresqlDatabase extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_postgresql_database";
+
   // ===========
   // INITIALIZER
   // ===========

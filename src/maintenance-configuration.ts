@@ -18,7 +18,7 @@ export interface MaintenanceConfigurationConfig extends cdktf.TerraformMetaArgum
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/maintenance_configuration.html#properties MaintenanceConfiguration#properties}
   */
-  readonly properties?: { [key: string]: string };
+  readonly properties?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/maintenance_configuration.html#resource_group_name MaintenanceConfiguration#resource_group_name}
   */
@@ -30,7 +30,7 @@ export interface MaintenanceConfigurationConfig extends cdktf.TerraformMetaArgum
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/maintenance_configuration.html#tags MaintenanceConfiguration#tags}
   */
-  readonly tags?: { [key: string]: string };
+  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/maintenance_configuration.html#visibility MaintenanceConfiguration#visibility}
   */
@@ -117,6 +117,11 @@ function maintenanceConfigurationWindowToTerraform(struct?: MaintenanceConfigura
 */
 export class MaintenanceConfiguration extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_maintenance_configuration";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -186,11 +191,11 @@ export class MaintenanceConfiguration extends cdktf.TerraformResource {
   }
 
   // properties - computed: false, optional: true, required: false
-  private _properties?: { [key: string]: string };
+  private _properties?: { [key: string]: string } | cdktf.IResolvable;
   public get properties() {
     return this.interpolationForAttribute('properties') as any;
   }
-  public set properties(value: { [key: string]: string } ) {
+  public set properties(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._properties = value;
   }
   public resetProperties() {
@@ -231,11 +236,11 @@ export class MaintenanceConfiguration extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string };
+  private _tags?: { [key: string]: string } | cdktf.IResolvable;
   public get tags() {
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._tags = value;
   }
   public resetTags() {

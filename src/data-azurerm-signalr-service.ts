@@ -42,6 +42,11 @@ function dataAzurermSignalrServiceTimeoutsToTerraform(struct?: DataAzurermSignal
 */
 export class DataAzurermSignalrService extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_signalr_service";
+
   // ===========
   // INITIALIZER
   // ===========

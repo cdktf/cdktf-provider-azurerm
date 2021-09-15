@@ -40,7 +40,7 @@ export interface ServicebusNamespaceNetworkRuleSetNetworkRules {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_namespace_network_rule_set.html#ignore_missing_vnet_service_endpoint ServicebusNamespaceNetworkRuleSet#ignore_missing_vnet_service_endpoint}
   */
-  readonly ignoreMissingVnetServiceEndpoint?: boolean;
+  readonly ignoreMissingVnetServiceEndpoint?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_namespace_network_rule_set.html#subnet_id ServicebusNamespaceNetworkRuleSet#subnet_id}
   */
@@ -89,6 +89,11 @@ function servicebusNamespaceNetworkRuleSetTimeoutsToTerraform(struct?: Servicebu
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_namespace_network_rule_set.html azurerm_servicebus_namespace_network_rule_set}
 */
 export class ServicebusNamespaceNetworkRuleSet extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_servicebus_namespace_network_rule_set";
 
   // ===========
   // INITIALIZER

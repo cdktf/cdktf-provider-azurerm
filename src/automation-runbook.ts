@@ -30,11 +30,11 @@ export interface AutomationRunbookConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_runbook.html#log_progress AutomationRunbook#log_progress}
   */
-  readonly logProgress: boolean;
+  readonly logProgress: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_runbook.html#log_verbose AutomationRunbook#log_verbose}
   */
-  readonly logVerbose: boolean;
+  readonly logVerbose: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_runbook.html#name AutomationRunbook#name}
   */
@@ -50,7 +50,7 @@ export interface AutomationRunbookConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_runbook.html#tags AutomationRunbook#tags}
   */
-  readonly tags?: { [key: string]: string };
+  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * publish_content_link block
   * 
@@ -72,7 +72,7 @@ export interface AutomationRunbookJobSchedule {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_runbook.html#parameters AutomationRunbook#parameters}
   */
-  readonly parameters?: { [key: string]: string };
+  readonly parameters?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_runbook.html#run_on AutomationRunbook#run_on}
   */
@@ -172,6 +172,11 @@ function automationRunbookTimeoutsToTerraform(struct?: AutomationRunbookTimeouts
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/automation_runbook.html azurerm_automation_runbook}
 */
 export class AutomationRunbook extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_automation_runbook";
 
   // ===========
   // INITIALIZER
@@ -294,11 +299,11 @@ export class AutomationRunbook extends cdktf.TerraformResource {
   }
 
   // log_progress - computed: false, optional: false, required: true
-  private _logProgress: boolean;
+  private _logProgress: boolean | cdktf.IResolvable;
   public get logProgress() {
     return this.getBooleanAttribute('log_progress');
   }
-  public set logProgress(value: boolean) {
+  public set logProgress(value: boolean | cdktf.IResolvable) {
     this._logProgress = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -307,11 +312,11 @@ export class AutomationRunbook extends cdktf.TerraformResource {
   }
 
   // log_verbose - computed: false, optional: false, required: true
-  private _logVerbose: boolean;
+  private _logVerbose: boolean | cdktf.IResolvable;
   public get logVerbose() {
     return this.getBooleanAttribute('log_verbose');
   }
-  public set logVerbose(value: boolean) {
+  public set logVerbose(value: boolean | cdktf.IResolvable) {
     this._logVerbose = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -359,11 +364,11 @@ export class AutomationRunbook extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string };
+  private _tags?: { [key: string]: string } | cdktf.IResolvable;
   public get tags() {
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._tags = value;
   }
   public resetTags() {

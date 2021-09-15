@@ -8,6 +8,14 @@ import * as cdktf from 'cdktf';
 
 export interface StreamAnalyticsOutputBlobConfig extends cdktf.TerraformMetaArguments {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_blob.html#batch_max_wait_time StreamAnalyticsOutputBlob#batch_max_wait_time}
+  */
+  readonly batchMaxWaitTime?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_blob.html#batch_min_rows StreamAnalyticsOutputBlob#batch_min_rows}
+  */
+  readonly batchMinRows?: number;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_blob.html#date_format StreamAnalyticsOutputBlob#date_format}
   */
   readonly dateFormat: string;
@@ -120,6 +128,11 @@ function streamAnalyticsOutputBlobTimeoutsToTerraform(struct?: StreamAnalyticsOu
 */
 export class StreamAnalyticsOutputBlob extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_stream_analytics_output_blob";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -142,6 +155,8 @@ export class StreamAnalyticsOutputBlob extends cdktf.TerraformResource {
       count: config.count,
       lifecycle: config.lifecycle
     });
+    this._batchMaxWaitTime = config.batchMaxWaitTime;
+    this._batchMinRows = config.batchMinRows;
     this._dateFormat = config.dateFormat;
     this._name = config.name;
     this._pathPattern = config.pathPattern;
@@ -158,6 +173,38 @@ export class StreamAnalyticsOutputBlob extends cdktf.TerraformResource {
   // ==========
   // ATTRIBUTES
   // ==========
+
+  // batch_max_wait_time - computed: false, optional: true, required: false
+  private _batchMaxWaitTime?: string;
+  public get batchMaxWaitTime() {
+    return this.getStringAttribute('batch_max_wait_time');
+  }
+  public set batchMaxWaitTime(value: string ) {
+    this._batchMaxWaitTime = value;
+  }
+  public resetBatchMaxWaitTime() {
+    this._batchMaxWaitTime = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get batchMaxWaitTimeInput() {
+    return this._batchMaxWaitTime
+  }
+
+  // batch_min_rows - computed: false, optional: true, required: false
+  private _batchMinRows?: number;
+  public get batchMinRows() {
+    return this.getNumberAttribute('batch_min_rows');
+  }
+  public set batchMinRows(value: number ) {
+    this._batchMinRows = value;
+  }
+  public resetBatchMinRows() {
+    this._batchMinRows = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get batchMinRowsInput() {
+    return this._batchMinRows
+  }
 
   // date_format - computed: false, optional: false, required: true
   private _dateFormat: string;
@@ -316,6 +363,8 @@ export class StreamAnalyticsOutputBlob extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      batch_max_wait_time: cdktf.stringToTerraform(this._batchMaxWaitTime),
+      batch_min_rows: cdktf.numberToTerraform(this._batchMinRows),
       date_format: cdktf.stringToTerraform(this._dateFormat),
       name: cdktf.stringToTerraform(this._name),
       path_pattern: cdktf.stringToTerraform(this._pathPattern),

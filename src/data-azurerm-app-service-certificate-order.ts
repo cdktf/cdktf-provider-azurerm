@@ -64,6 +64,11 @@ function dataAzurermAppServiceCertificateOrderTimeoutsToTerraform(struct?: DataA
 */
 export class DataAzurermAppServiceCertificateOrder extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_app_service_certificate_order";
+
   // ===========
   // INITIALIZER
   // ===========

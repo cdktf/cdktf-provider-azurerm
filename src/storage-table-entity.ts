@@ -10,7 +10,7 @@ export interface StorageTableEntityConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_table_entity.html#entity StorageTableEntity#entity}
   */
-  readonly entity: { [key: string]: string };
+  readonly entity: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_table_entity.html#partition_key StorageTableEntity#partition_key}
   */
@@ -69,6 +69,11 @@ function storageTableEntityTimeoutsToTerraform(struct?: StorageTableEntityTimeou
 */
 export class StorageTableEntity extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_storage_table_entity";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -104,11 +109,11 @@ export class StorageTableEntity extends cdktf.TerraformResource {
   // ==========
 
   // entity - computed: false, optional: false, required: true
-  private _entity: { [key: string]: string };
+  private _entity: { [key: string]: string } | cdktf.IResolvable;
   public get entity() {
     return this.interpolationForAttribute('entity') as any;
   }
-  public set entity(value: { [key: string]: string }) {
+  public set entity(value: { [key: string]: string } | cdktf.IResolvable) {
     this._entity = value;
   }
   // Temporarily expose input value. Use with caution.

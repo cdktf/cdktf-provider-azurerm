@@ -77,7 +77,7 @@ export interface EventhubCaptureDescription {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub.html#enabled Eventhub#enabled}
   */
-  readonly enabled: boolean;
+  readonly enabled: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub.html#encoding Eventhub#encoding}
   */
@@ -93,7 +93,7 @@ export interface EventhubCaptureDescription {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub.html#skip_empty_archives Eventhub#skip_empty_archives}
   */
-  readonly skipEmptyArchives?: boolean;
+  readonly skipEmptyArchives?: boolean | cdktf.IResolvable;
   /**
   * destination block
   * 
@@ -148,6 +148,11 @@ function eventhubTimeoutsToTerraform(struct?: EventhubTimeouts): any {
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub.html azurerm_eventhub}
 */
 export class Eventhub extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_eventhub";
 
   // ===========
   // INITIALIZER

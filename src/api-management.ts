@@ -10,11 +10,11 @@ export interface ApiManagementConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management.html#client_certificate_enabled ApiManagement#client_certificate_enabled}
   */
-  readonly clientCertificateEnabled?: boolean;
+  readonly clientCertificateEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management.html#gateway_disabled ApiManagement#gateway_disabled}
   */
-  readonly gatewayDisabled?: boolean;
+  readonly gatewayDisabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management.html#location ApiManagement#location}
   */
@@ -54,7 +54,7 @@ export interface ApiManagementConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management.html#tags ApiManagement#tags}
   */
-  readonly tags?: { [key: string]: string };
+  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management.html#virtual_network_type ApiManagement#virtual_network_type}
   */
@@ -228,7 +228,11 @@ export interface ApiManagementHostnameConfigurationDeveloperPortal {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management.html#negotiate_client_certificate ApiManagement#negotiate_client_certificate}
   */
-  readonly negotiateClientCertificate?: boolean;
+  readonly negotiateClientCertificate?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management.html#ssl_keyvault_identity_client_id ApiManagement#ssl_keyvault_identity_client_id}
+  */
+  readonly sslKeyvaultIdentityClientId?: string;
 }
 
 function apiManagementHostnameConfigurationDeveloperPortalToTerraform(struct?: ApiManagementHostnameConfigurationDeveloperPortal): any {
@@ -239,6 +243,7 @@ function apiManagementHostnameConfigurationDeveloperPortalToTerraform(struct?: A
     host_name: cdktf.stringToTerraform(struct!.hostName),
     key_vault_id: cdktf.stringToTerraform(struct!.keyVaultId),
     negotiate_client_certificate: cdktf.booleanToTerraform(struct!.negotiateClientCertificate),
+    ssl_keyvault_identity_client_id: cdktf.stringToTerraform(struct!.sslKeyvaultIdentityClientId),
   }
 }
 
@@ -262,7 +267,11 @@ export interface ApiManagementHostnameConfigurationManagement {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management.html#negotiate_client_certificate ApiManagement#negotiate_client_certificate}
   */
-  readonly negotiateClientCertificate?: boolean;
+  readonly negotiateClientCertificate?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management.html#ssl_keyvault_identity_client_id ApiManagement#ssl_keyvault_identity_client_id}
+  */
+  readonly sslKeyvaultIdentityClientId?: string;
 }
 
 function apiManagementHostnameConfigurationManagementToTerraform(struct?: ApiManagementHostnameConfigurationManagement): any {
@@ -273,6 +282,7 @@ function apiManagementHostnameConfigurationManagementToTerraform(struct?: ApiMan
     host_name: cdktf.stringToTerraform(struct!.hostName),
     key_vault_id: cdktf.stringToTerraform(struct!.keyVaultId),
     negotiate_client_certificate: cdktf.booleanToTerraform(struct!.negotiateClientCertificate),
+    ssl_keyvault_identity_client_id: cdktf.stringToTerraform(struct!.sslKeyvaultIdentityClientId),
   }
 }
 
@@ -296,7 +306,11 @@ export interface ApiManagementHostnameConfigurationPortal {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management.html#negotiate_client_certificate ApiManagement#negotiate_client_certificate}
   */
-  readonly negotiateClientCertificate?: boolean;
+  readonly negotiateClientCertificate?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management.html#ssl_keyvault_identity_client_id ApiManagement#ssl_keyvault_identity_client_id}
+  */
+  readonly sslKeyvaultIdentityClientId?: string;
 }
 
 function apiManagementHostnameConfigurationPortalToTerraform(struct?: ApiManagementHostnameConfigurationPortal): any {
@@ -307,6 +321,7 @@ function apiManagementHostnameConfigurationPortalToTerraform(struct?: ApiManagem
     host_name: cdktf.stringToTerraform(struct!.hostName),
     key_vault_id: cdktf.stringToTerraform(struct!.keyVaultId),
     negotiate_client_certificate: cdktf.booleanToTerraform(struct!.negotiateClientCertificate),
+    ssl_keyvault_identity_client_id: cdktf.stringToTerraform(struct!.sslKeyvaultIdentityClientId),
   }
 }
 
@@ -322,7 +337,7 @@ export interface ApiManagementHostnameConfigurationProxy {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management.html#default_ssl_binding ApiManagement#default_ssl_binding}
   */
-  readonly defaultSslBinding?: boolean;
+  readonly defaultSslBinding?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management.html#host_name ApiManagement#host_name}
   */
@@ -334,7 +349,11 @@ export interface ApiManagementHostnameConfigurationProxy {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management.html#negotiate_client_certificate ApiManagement#negotiate_client_certificate}
   */
-  readonly negotiateClientCertificate?: boolean;
+  readonly negotiateClientCertificate?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management.html#ssl_keyvault_identity_client_id ApiManagement#ssl_keyvault_identity_client_id}
+  */
+  readonly sslKeyvaultIdentityClientId?: string;
 }
 
 function apiManagementHostnameConfigurationProxyToTerraform(struct?: ApiManagementHostnameConfigurationProxy): any {
@@ -346,6 +365,7 @@ function apiManagementHostnameConfigurationProxyToTerraform(struct?: ApiManageme
     host_name: cdktf.stringToTerraform(struct!.hostName),
     key_vault_id: cdktf.stringToTerraform(struct!.keyVaultId),
     negotiate_client_certificate: cdktf.booleanToTerraform(struct!.negotiateClientCertificate),
+    ssl_keyvault_identity_client_id: cdktf.stringToTerraform(struct!.sslKeyvaultIdentityClientId),
   }
 }
 
@@ -369,7 +389,11 @@ export interface ApiManagementHostnameConfigurationScm {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management.html#negotiate_client_certificate ApiManagement#negotiate_client_certificate}
   */
-  readonly negotiateClientCertificate?: boolean;
+  readonly negotiateClientCertificate?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management.html#ssl_keyvault_identity_client_id ApiManagement#ssl_keyvault_identity_client_id}
+  */
+  readonly sslKeyvaultIdentityClientId?: string;
 }
 
 function apiManagementHostnameConfigurationScmToTerraform(struct?: ApiManagementHostnameConfigurationScm): any {
@@ -380,6 +404,7 @@ function apiManagementHostnameConfigurationScmToTerraform(struct?: ApiManagement
     host_name: cdktf.stringToTerraform(struct!.hostName),
     key_vault_id: cdktf.stringToTerraform(struct!.keyVaultId),
     negotiate_client_certificate: cdktf.booleanToTerraform(struct!.negotiateClientCertificate),
+    ssl_keyvault_identity_client_id: cdktf.stringToTerraform(struct!.sslKeyvaultIdentityClientId),
   }
 }
 
@@ -450,7 +475,7 @@ export interface ApiManagementProtocols {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management.html#enable_http2 ApiManagement#enable_http2}
   */
-  readonly enableHttp2?: boolean;
+  readonly enableHttp2?: boolean | cdktf.IResolvable;
 }
 
 function apiManagementProtocolsToTerraform(struct?: ApiManagementProtocols): any {
@@ -464,71 +489,71 @@ export interface ApiManagementSecurity {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management.html#enable_backend_ssl30 ApiManagement#enable_backend_ssl30}
   */
-  readonly enableBackendSsl30?: boolean;
+  readonly enableBackendSsl30?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management.html#enable_backend_tls10 ApiManagement#enable_backend_tls10}
   */
-  readonly enableBackendTls10?: boolean;
+  readonly enableBackendTls10?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management.html#enable_backend_tls11 ApiManagement#enable_backend_tls11}
   */
-  readonly enableBackendTls11?: boolean;
+  readonly enableBackendTls11?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management.html#enable_frontend_ssl30 ApiManagement#enable_frontend_ssl30}
   */
-  readonly enableFrontendSsl30?: boolean;
+  readonly enableFrontendSsl30?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management.html#enable_frontend_tls10 ApiManagement#enable_frontend_tls10}
   */
-  readonly enableFrontendTls10?: boolean;
+  readonly enableFrontendTls10?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management.html#enable_frontend_tls11 ApiManagement#enable_frontend_tls11}
   */
-  readonly enableFrontendTls11?: boolean;
+  readonly enableFrontendTls11?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management.html#enable_triple_des_ciphers ApiManagement#enable_triple_des_ciphers}
   */
-  readonly enableTripleDesCiphers?: boolean;
+  readonly enableTripleDesCiphers?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management.html#tls_ecdhe_ecdsa_with_aes128_cbc_sha_ciphers_enabled ApiManagement#tls_ecdhe_ecdsa_with_aes128_cbc_sha_ciphers_enabled}
   */
-  readonly tlsEcdheEcdsaWithAes128CbcShaCiphersEnabled?: boolean;
+  readonly tlsEcdheEcdsaWithAes128CbcShaCiphersEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management.html#tls_ecdhe_ecdsa_with_aes256_cbc_sha_ciphers_enabled ApiManagement#tls_ecdhe_ecdsa_with_aes256_cbc_sha_ciphers_enabled}
   */
-  readonly tlsEcdheEcdsaWithAes256CbcShaCiphersEnabled?: boolean;
+  readonly tlsEcdheEcdsaWithAes256CbcShaCiphersEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management.html#tls_ecdhe_rsa_with_aes128_cbc_sha_ciphers_enabled ApiManagement#tls_ecdhe_rsa_with_aes128_cbc_sha_ciphers_enabled}
   */
-  readonly tlsEcdheRsaWithAes128CbcShaCiphersEnabled?: boolean;
+  readonly tlsEcdheRsaWithAes128CbcShaCiphersEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management.html#tls_ecdhe_rsa_with_aes256_cbc_sha_ciphers_enabled ApiManagement#tls_ecdhe_rsa_with_aes256_cbc_sha_ciphers_enabled}
   */
-  readonly tlsEcdheRsaWithAes256CbcShaCiphersEnabled?: boolean;
+  readonly tlsEcdheRsaWithAes256CbcShaCiphersEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management.html#tls_rsa_with_aes128_cbc_sha256_ciphers_enabled ApiManagement#tls_rsa_with_aes128_cbc_sha256_ciphers_enabled}
   */
-  readonly tlsRsaWithAes128CbcSha256CiphersEnabled?: boolean;
+  readonly tlsRsaWithAes128CbcSha256CiphersEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management.html#tls_rsa_with_aes128_cbc_sha_ciphers_enabled ApiManagement#tls_rsa_with_aes128_cbc_sha_ciphers_enabled}
   */
-  readonly tlsRsaWithAes128CbcShaCiphersEnabled?: boolean;
+  readonly tlsRsaWithAes128CbcShaCiphersEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management.html#tls_rsa_with_aes128_gcm_sha256_ciphers_enabled ApiManagement#tls_rsa_with_aes128_gcm_sha256_ciphers_enabled}
   */
-  readonly tlsRsaWithAes128GcmSha256CiphersEnabled?: boolean;
+  readonly tlsRsaWithAes128GcmSha256CiphersEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management.html#tls_rsa_with_aes256_cbc_sha256_ciphers_enabled ApiManagement#tls_rsa_with_aes256_cbc_sha256_ciphers_enabled}
   */
-  readonly tlsRsaWithAes256CbcSha256CiphersEnabled?: boolean;
+  readonly tlsRsaWithAes256CbcSha256CiphersEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management.html#tls_rsa_with_aes256_cbc_sha_ciphers_enabled ApiManagement#tls_rsa_with_aes256_cbc_sha_ciphers_enabled}
   */
-  readonly tlsRsaWithAes256CbcShaCiphersEnabled?: boolean;
+  readonly tlsRsaWithAes256CbcShaCiphersEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management.html#triple_des_ciphers_enabled ApiManagement#triple_des_ciphers_enabled}
   */
-  readonly tripleDesCiphersEnabled?: boolean;
+  readonly tripleDesCiphersEnabled?: boolean | cdktf.IResolvable;
 }
 
 function apiManagementSecurityToTerraform(struct?: ApiManagementSecurity): any {
@@ -558,7 +583,7 @@ export interface ApiManagementSignIn {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management.html#enabled ApiManagement#enabled}
   */
-  readonly enabled: boolean;
+  readonly enabled: boolean | cdktf.IResolvable;
 }
 
 function apiManagementSignInToTerraform(struct?: ApiManagementSignIn): any {
@@ -572,11 +597,11 @@ export interface ApiManagementSignUpTermsOfService {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management.html#consent_required ApiManagement#consent_required}
   */
-  readonly consentRequired: boolean;
+  readonly consentRequired: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management.html#enabled ApiManagement#enabled}
   */
-  readonly enabled: boolean;
+  readonly enabled: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management.html#text ApiManagement#text}
   */
@@ -596,7 +621,7 @@ export interface ApiManagementSignUp {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management.html#enabled ApiManagement#enabled}
   */
-  readonly enabled: boolean;
+  readonly enabled: boolean | cdktf.IResolvable;
   /**
   * terms_of_service block
   * 
@@ -617,7 +642,7 @@ export interface ApiManagementTenantAccess {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management.html#enabled ApiManagement#enabled}
   */
-  readonly enabled: boolean;
+  readonly enabled: boolean | cdktf.IResolvable;
 }
 
 function apiManagementTenantAccessToTerraform(struct?: ApiManagementTenantAccess): any {
@@ -676,6 +701,11 @@ function apiManagementVirtualNetworkConfigurationToTerraform(struct?: ApiManagem
 */
 export class ApiManagement extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_api_management";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -730,11 +760,11 @@ export class ApiManagement extends cdktf.TerraformResource {
   // ==========
 
   // client_certificate_enabled - computed: false, optional: true, required: false
-  private _clientCertificateEnabled?: boolean;
+  private _clientCertificateEnabled?: boolean | cdktf.IResolvable;
   public get clientCertificateEnabled() {
     return this.getBooleanAttribute('client_certificate_enabled');
   }
-  public set clientCertificateEnabled(value: boolean ) {
+  public set clientCertificateEnabled(value: boolean | cdktf.IResolvable ) {
     this._clientCertificateEnabled = value;
   }
   public resetClientCertificateEnabled() {
@@ -751,11 +781,11 @@ export class ApiManagement extends cdktf.TerraformResource {
   }
 
   // gateway_disabled - computed: false, optional: true, required: false
-  private _gatewayDisabled?: boolean;
+  private _gatewayDisabled?: boolean | cdktf.IResolvable;
   public get gatewayDisabled() {
     return this.getBooleanAttribute('gateway_disabled');
   }
-  public set gatewayDisabled(value: boolean ) {
+  public set gatewayDisabled(value: boolean | cdktf.IResolvable ) {
     this._gatewayDisabled = value;
   }
   public resetGatewayDisabled() {
@@ -933,11 +963,11 @@ export class ApiManagement extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string };
+  private _tags?: { [key: string]: string } | cdktf.IResolvable;
   public get tags() {
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._tags = value;
   }
   public resetTags() {

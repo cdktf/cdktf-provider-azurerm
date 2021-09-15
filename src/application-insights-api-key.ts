@@ -65,6 +65,11 @@ function applicationInsightsApiKeyTimeoutsToTerraform(struct?: ApplicationInsigh
 */
 export class ApplicationInsightsApiKey extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_application_insights_api_key";
+
   // ===========
   // INITIALIZER
   // ===========

@@ -18,7 +18,7 @@ export interface ApplicationInsightsSmartDetectionRuleConfig extends cdktf.Terra
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights_smart_detection_rule.html#enabled ApplicationInsightsSmartDetectionRule#enabled}
   */
-  readonly enabled?: boolean;
+  readonly enabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights_smart_detection_rule.html#name ApplicationInsightsSmartDetectionRule#name}
   */
@@ -26,7 +26,7 @@ export interface ApplicationInsightsSmartDetectionRuleConfig extends cdktf.Terra
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights_smart_detection_rule.html#send_emails_to_subscription_owners ApplicationInsightsSmartDetectionRule#send_emails_to_subscription_owners}
   */
-  readonly sendEmailsToSubscriptionOwners?: boolean;
+  readonly sendEmailsToSubscriptionOwners?: boolean | cdktf.IResolvable;
   /**
   * timeouts block
   * 
@@ -68,6 +68,11 @@ function applicationInsightsSmartDetectionRuleTimeoutsToTerraform(struct?: Appli
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights_smart_detection_rule.html azurerm_application_insights_smart_detection_rule}
 */
 export class ApplicationInsightsSmartDetectionRule extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_application_insights_smart_detection_rule";
 
   // ===========
   // INITIALIZER
@@ -133,11 +138,11 @@ export class ApplicationInsightsSmartDetectionRule extends cdktf.TerraformResour
   }
 
   // enabled - computed: false, optional: true, required: false
-  private _enabled?: boolean;
+  private _enabled?: boolean | cdktf.IResolvable;
   public get enabled() {
     return this.getBooleanAttribute('enabled');
   }
-  public set enabled(value: boolean ) {
+  public set enabled(value: boolean | cdktf.IResolvable ) {
     this._enabled = value;
   }
   public resetEnabled() {
@@ -167,11 +172,11 @@ export class ApplicationInsightsSmartDetectionRule extends cdktf.TerraformResour
   }
 
   // send_emails_to_subscription_owners - computed: false, optional: true, required: false
-  private _sendEmailsToSubscriptionOwners?: boolean;
+  private _sendEmailsToSubscriptionOwners?: boolean | cdktf.IResolvable;
   public get sendEmailsToSubscriptionOwners() {
     return this.getBooleanAttribute('send_emails_to_subscription_owners');
   }
-  public set sendEmailsToSubscriptionOwners(value: boolean ) {
+  public set sendEmailsToSubscriptionOwners(value: boolean | cdktf.IResolvable ) {
     this._sendEmailsToSubscriptionOwners = value;
   }
   public resetSendEmailsToSubscriptionOwners() {

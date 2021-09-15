@@ -71,6 +71,11 @@ function dataAzurermMonitorScheduledQueryRulesLogTimeoutsToTerraform(struct?: Da
 */
 export class DataAzurermMonitorScheduledQueryRulesLog extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_monitor_scheduled_query_rules_log";
+
   // ===========
   // INITIALIZER
   // ===========

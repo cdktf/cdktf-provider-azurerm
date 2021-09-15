@@ -18,7 +18,7 @@ export interface DnsZoneConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_zone.html#tags DnsZone#tags}
   */
-  readonly tags?: { [key: string]: string };
+  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * soa_record block
   * 
@@ -64,7 +64,7 @@ export interface DnsZoneSoaRecord {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_zone.html#tags DnsZone#tags}
   */
-  readonly tags?: { [key: string]: string };
+  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_zone.html#ttl DnsZone#ttl}
   */
@@ -120,6 +120,11 @@ function dnsZoneTimeoutsToTerraform(struct?: DnsZoneTimeouts): any {
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/dns_zone.html azurerm_dns_zone}
 */
 export class DnsZone extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_dns_zone";
 
   // ===========
   // INITIALIZER
@@ -201,11 +206,11 @@ export class DnsZone extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string };
+  private _tags?: { [key: string]: string } | cdktf.IResolvable;
   public get tags() {
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._tags = value;
   }
   public resetTags() {

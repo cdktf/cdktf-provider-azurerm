@@ -26,7 +26,7 @@ export interface HdinsightHadoopClusterConfig extends cdktf.TerraformMetaArgumen
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_hadoop_cluster.html#tags HdinsightHadoopCluster#tags}
   */
-  readonly tags?: { [key: string]: string };
+  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_hadoop_cluster.html#tier HdinsightHadoopCluster#tier}
   */
@@ -72,6 +72,12 @@ export interface HdinsightHadoopClusterConfig extends cdktf.TerraformMetaArgumen
   */
   readonly roles: HdinsightHadoopClusterRoles[];
   /**
+  * security_profile block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_hadoop_cluster.html#security_profile HdinsightHadoopCluster#security_profile}
+  */
+  readonly securityProfile?: HdinsightHadoopClusterSecurityProfile[];
+  /**
   * storage_account block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_hadoop_cluster.html#storage_account HdinsightHadoopCluster#storage_account}
@@ -108,7 +114,7 @@ export interface HdinsightHadoopClusterGateway {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_hadoop_cluster.html#enabled HdinsightHadoopCluster#enabled}
   */
-  readonly enabled?: boolean;
+  readonly enabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_hadoop_cluster.html#password HdinsightHadoopCluster#password}
   */
@@ -272,7 +278,7 @@ export interface HdinsightHadoopClusterNetwork {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_hadoop_cluster.html#private_link_enabled HdinsightHadoopCluster#private_link_enabled}
   */
-  readonly privateLinkEnabled?: boolean;
+  readonly privateLinkEnabled?: boolean | cdktf.IResolvable;
 }
 
 function hdinsightHadoopClusterNetworkToTerraform(struct?: HdinsightHadoopClusterNetwork): any {
@@ -586,11 +592,55 @@ function hdinsightHadoopClusterRolesToTerraform(struct?: HdinsightHadoopClusterR
   }
 }
 
+export interface HdinsightHadoopClusterSecurityProfile {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_hadoop_cluster.html#aadds_resource_id HdinsightHadoopCluster#aadds_resource_id}
+  */
+  readonly aaddsResourceId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_hadoop_cluster.html#cluster_users_group_dns HdinsightHadoopCluster#cluster_users_group_dns}
+  */
+  readonly clusterUsersGroupDns?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_hadoop_cluster.html#domain_name HdinsightHadoopCluster#domain_name}
+  */
+  readonly domainName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_hadoop_cluster.html#domain_user_password HdinsightHadoopCluster#domain_user_password}
+  */
+  readonly domainUserPassword: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_hadoop_cluster.html#domain_username HdinsightHadoopCluster#domain_username}
+  */
+  readonly domainUsername: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_hadoop_cluster.html#ldaps_urls HdinsightHadoopCluster#ldaps_urls}
+  */
+  readonly ldapsUrls: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_hadoop_cluster.html#msi_resource_id HdinsightHadoopCluster#msi_resource_id}
+  */
+  readonly msiResourceId: string;
+}
+
+function hdinsightHadoopClusterSecurityProfileToTerraform(struct?: HdinsightHadoopClusterSecurityProfile): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    aadds_resource_id: cdktf.stringToTerraform(struct!.aaddsResourceId),
+    cluster_users_group_dns: cdktf.listMapper(cdktf.stringToTerraform)(struct!.clusterUsersGroupDns),
+    domain_name: cdktf.stringToTerraform(struct!.domainName),
+    domain_user_password: cdktf.stringToTerraform(struct!.domainUserPassword),
+    domain_username: cdktf.stringToTerraform(struct!.domainUsername),
+    ldaps_urls: cdktf.listMapper(cdktf.stringToTerraform)(struct!.ldapsUrls),
+    msi_resource_id: cdktf.stringToTerraform(struct!.msiResourceId),
+  }
+}
+
 export interface HdinsightHadoopClusterStorageAccount {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_hadoop_cluster.html#is_default HdinsightHadoopCluster#is_default}
   */
-  readonly isDefault: boolean;
+  readonly isDefault: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_hadoop_cluster.html#storage_account_key HdinsightHadoopCluster#storage_account_key}
   */
@@ -618,7 +668,7 @@ export interface HdinsightHadoopClusterStorageAccountGen2 {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_hadoop_cluster.html#is_default HdinsightHadoopCluster#is_default}
   */
-  readonly isDefault: boolean;
+  readonly isDefault: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_hadoop_cluster.html#managed_identity_resource_id HdinsightHadoopCluster#managed_identity_resource_id}
   */
@@ -674,6 +724,11 @@ function hdinsightHadoopClusterTimeoutsToTerraform(struct?: HdinsightHadoopClust
 */
 export class HdinsightHadoopCluster extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_hdinsight_hadoop_cluster";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -709,6 +764,7 @@ export class HdinsightHadoopCluster extends cdktf.TerraformResource {
     this._monitor = config.monitor;
     this._network = config.network;
     this._roles = config.roles;
+    this._securityProfile = config.securityProfile;
     this._storageAccount = config.storageAccount;
     this._storageAccountGen2 = config.storageAccountGen2;
     this._timeouts = config.timeouts;
@@ -786,11 +842,11 @@ export class HdinsightHadoopCluster extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string };
+  private _tags?: { [key: string]: string } | cdktf.IResolvable;
   public get tags() {
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._tags = value;
   }
   public resetTags() {
@@ -917,6 +973,22 @@ export class HdinsightHadoopCluster extends cdktf.TerraformResource {
     return this._roles
   }
 
+  // security_profile - computed: false, optional: true, required: false
+  private _securityProfile?: HdinsightHadoopClusterSecurityProfile[];
+  public get securityProfile() {
+    return this.interpolationForAttribute('security_profile') as any;
+  }
+  public set securityProfile(value: HdinsightHadoopClusterSecurityProfile[] ) {
+    this._securityProfile = value;
+  }
+  public resetSecurityProfile() {
+    this._securityProfile = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get securityProfileInput() {
+    return this._securityProfile
+  }
+
   // storage_account - computed: false, optional: true, required: false
   private _storageAccount?: HdinsightHadoopClusterStorageAccount[];
   public get storageAccount() {
@@ -984,6 +1056,7 @@ export class HdinsightHadoopCluster extends cdktf.TerraformResource {
       monitor: cdktf.listMapper(hdinsightHadoopClusterMonitorToTerraform)(this._monitor),
       network: cdktf.listMapper(hdinsightHadoopClusterNetworkToTerraform)(this._network),
       roles: cdktf.listMapper(hdinsightHadoopClusterRolesToTerraform)(this._roles),
+      security_profile: cdktf.listMapper(hdinsightHadoopClusterSecurityProfileToTerraform)(this._securityProfile),
       storage_account: cdktf.listMapper(hdinsightHadoopClusterStorageAccountToTerraform)(this._storageAccount),
       storage_account_gen2: cdktf.listMapper(hdinsightHadoopClusterStorageAccountGen2ToTerraform)(this._storageAccountGen2),
       timeouts: hdinsightHadoopClusterTimeoutsToTerraform(this._timeouts),

@@ -10,7 +10,7 @@ export interface RouteTableConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/route_table.html#disable_bgp_route_propagation RouteTable#disable_bgp_route_propagation}
   */
-  readonly disableBgpRoutePropagation?: boolean;
+  readonly disableBgpRoutePropagation?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/route_table.html#location RouteTable#location}
   */
@@ -30,7 +30,7 @@ export interface RouteTableConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/route_table.html#tags RouteTable#tags}
   */
-  readonly tags?: { [key: string]: string };
+  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * timeouts block
   * 
@@ -102,6 +102,11 @@ function routeTableTimeoutsToTerraform(struct?: RouteTableTimeouts): any {
 */
 export class RouteTable extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_route_table";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -138,11 +143,11 @@ export class RouteTable extends cdktf.TerraformResource {
   // ==========
 
   // disable_bgp_route_propagation - computed: false, optional: true, required: false
-  private _disableBgpRoutePropagation?: boolean;
+  private _disableBgpRoutePropagation?: boolean | cdktf.IResolvable;
   public get disableBgpRoutePropagation() {
     return this.getBooleanAttribute('disable_bgp_route_propagation');
   }
-  public set disableBgpRoutePropagation(value: boolean ) {
+  public set disableBgpRoutePropagation(value: boolean | cdktf.IResolvable ) {
     this._disableBgpRoutePropagation = value;
   }
   public resetDisableBgpRoutePropagation() {
@@ -219,11 +224,11 @@ export class RouteTable extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string };
+  private _tags?: { [key: string]: string } | cdktf.IResolvable;
   public get tags() {
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._tags = value;
   }
   public resetTags() {

@@ -61,6 +61,11 @@ function apiManagementPolicyTimeoutsToTerraform(struct?: ApiManagementPolicyTime
 */
 export class ApiManagementPolicyA extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_api_management_policy";
+
   // ===========
   // INITIALIZER
   // ===========

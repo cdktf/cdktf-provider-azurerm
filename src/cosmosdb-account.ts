@@ -10,23 +10,23 @@ export interface CosmosdbAccountConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_account.html#access_key_metadata_writes_enabled CosmosdbAccount#access_key_metadata_writes_enabled}
   */
-  readonly accessKeyMetadataWritesEnabled?: boolean;
+  readonly accessKeyMetadataWritesEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_account.html#analytical_storage_enabled CosmosdbAccount#analytical_storage_enabled}
   */
-  readonly analyticalStorageEnabled?: boolean;
+  readonly analyticalStorageEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_account.html#enable_automatic_failover CosmosdbAccount#enable_automatic_failover}
   */
-  readonly enableAutomaticFailover?: boolean;
+  readonly enableAutomaticFailover?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_account.html#enable_free_tier CosmosdbAccount#enable_free_tier}
   */
-  readonly enableFreeTier?: boolean;
+  readonly enableFreeTier?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_account.html#enable_multiple_write_locations CosmosdbAccount#enable_multiple_write_locations}
   */
-  readonly enableMultipleWriteLocations?: boolean;
+  readonly enableMultipleWriteLocations?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_account.html#ip_range_filter CosmosdbAccount#ip_range_filter}
   */
@@ -34,7 +34,7 @@ export interface CosmosdbAccountConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_account.html#is_virtual_network_filter_enabled CosmosdbAccount#is_virtual_network_filter_enabled}
   */
-  readonly isVirtualNetworkFilterEnabled?: boolean;
+  readonly isVirtualNetworkFilterEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_account.html#key_vault_key_id CosmosdbAccount#key_vault_key_id}
   */
@@ -43,6 +43,10 @@ export interface CosmosdbAccountConfig extends cdktf.TerraformMetaArguments {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_account.html#kind CosmosdbAccount#kind}
   */
   readonly kind?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_account.html#local_authentication_disabled CosmosdbAccount#local_authentication_disabled}
+  */
+  readonly localAuthenticationDisabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_account.html#location CosmosdbAccount#location}
   */
@@ -58,7 +62,7 @@ export interface CosmosdbAccountConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_account.html#network_acl_bypass_for_azure_services CosmosdbAccount#network_acl_bypass_for_azure_services}
   */
-  readonly networkAclBypassForAzureServices?: boolean;
+  readonly networkAclBypassForAzureServices?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_account.html#network_acl_bypass_ids CosmosdbAccount#network_acl_bypass_ids}
   */
@@ -70,7 +74,7 @@ export interface CosmosdbAccountConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_account.html#public_network_access_enabled CosmosdbAccount#public_network_access_enabled}
   */
-  readonly publicNetworkAccessEnabled?: boolean;
+  readonly publicNetworkAccessEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_account.html#resource_group_name CosmosdbAccount#resource_group_name}
   */
@@ -78,7 +82,7 @@ export interface CosmosdbAccountConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_account.html#tags CosmosdbAccount#tags}
   */
-  readonly tags?: { [key: string]: string };
+  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * backup block
   * 
@@ -240,7 +244,7 @@ export interface CosmosdbAccountGeoLocation {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_account.html#zone_redundant CosmosdbAccount#zone_redundant}
   */
-  readonly zoneRedundant?: boolean;
+  readonly zoneRedundant?: boolean | cdktf.IResolvable;
 }
 
 function cosmosdbAccountGeoLocationToTerraform(struct?: CosmosdbAccountGeoLocation): any {
@@ -304,7 +308,7 @@ export interface CosmosdbAccountVirtualNetworkRule {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_account.html#ignore_missing_vnet_service_endpoint CosmosdbAccount#ignore_missing_vnet_service_endpoint}
   */
-  readonly ignoreMissingVnetServiceEndpoint?: boolean;
+  readonly ignoreMissingVnetServiceEndpoint?: boolean | cdktf.IResolvable;
 }
 
 function cosmosdbAccountVirtualNetworkRuleToTerraform(struct?: CosmosdbAccountVirtualNetworkRule): any {
@@ -320,6 +324,11 @@ function cosmosdbAccountVirtualNetworkRuleToTerraform(struct?: CosmosdbAccountVi
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_account.html azurerm_cosmosdb_account}
 */
 export class CosmosdbAccount extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_cosmosdb_account";
 
   // ===========
   // INITIALIZER
@@ -352,6 +361,7 @@ export class CosmosdbAccount extends cdktf.TerraformResource {
     this._isVirtualNetworkFilterEnabled = config.isVirtualNetworkFilterEnabled;
     this._keyVaultKeyId = config.keyVaultKeyId;
     this._kind = config.kind;
+    this._localAuthenticationDisabled = config.localAuthenticationDisabled;
     this._location = config.location;
     this._mongoServerVersion = config.mongoServerVersion;
     this._name = config.name;
@@ -376,11 +386,11 @@ export class CosmosdbAccount extends cdktf.TerraformResource {
   // ==========
 
   // access_key_metadata_writes_enabled - computed: false, optional: true, required: false
-  private _accessKeyMetadataWritesEnabled?: boolean;
+  private _accessKeyMetadataWritesEnabled?: boolean | cdktf.IResolvable;
   public get accessKeyMetadataWritesEnabled() {
     return this.getBooleanAttribute('access_key_metadata_writes_enabled');
   }
-  public set accessKeyMetadataWritesEnabled(value: boolean ) {
+  public set accessKeyMetadataWritesEnabled(value: boolean | cdktf.IResolvable ) {
     this._accessKeyMetadataWritesEnabled = value;
   }
   public resetAccessKeyMetadataWritesEnabled() {
@@ -392,11 +402,11 @@ export class CosmosdbAccount extends cdktf.TerraformResource {
   }
 
   // analytical_storage_enabled - computed: false, optional: true, required: false
-  private _analyticalStorageEnabled?: boolean;
+  private _analyticalStorageEnabled?: boolean | cdktf.IResolvable;
   public get analyticalStorageEnabled() {
     return this.getBooleanAttribute('analytical_storage_enabled');
   }
-  public set analyticalStorageEnabled(value: boolean ) {
+  public set analyticalStorageEnabled(value: boolean | cdktf.IResolvable ) {
     this._analyticalStorageEnabled = value;
   }
   public resetAnalyticalStorageEnabled() {
@@ -413,11 +423,11 @@ export class CosmosdbAccount extends cdktf.TerraformResource {
   }
 
   // enable_automatic_failover - computed: false, optional: true, required: false
-  private _enableAutomaticFailover?: boolean;
+  private _enableAutomaticFailover?: boolean | cdktf.IResolvable;
   public get enableAutomaticFailover() {
     return this.getBooleanAttribute('enable_automatic_failover');
   }
-  public set enableAutomaticFailover(value: boolean ) {
+  public set enableAutomaticFailover(value: boolean | cdktf.IResolvable ) {
     this._enableAutomaticFailover = value;
   }
   public resetEnableAutomaticFailover() {
@@ -429,11 +439,11 @@ export class CosmosdbAccount extends cdktf.TerraformResource {
   }
 
   // enable_free_tier - computed: false, optional: true, required: false
-  private _enableFreeTier?: boolean;
+  private _enableFreeTier?: boolean | cdktf.IResolvable;
   public get enableFreeTier() {
     return this.getBooleanAttribute('enable_free_tier');
   }
-  public set enableFreeTier(value: boolean ) {
+  public set enableFreeTier(value: boolean | cdktf.IResolvable ) {
     this._enableFreeTier = value;
   }
   public resetEnableFreeTier() {
@@ -445,11 +455,11 @@ export class CosmosdbAccount extends cdktf.TerraformResource {
   }
 
   // enable_multiple_write_locations - computed: false, optional: true, required: false
-  private _enableMultipleWriteLocations?: boolean;
+  private _enableMultipleWriteLocations?: boolean | cdktf.IResolvable;
   public get enableMultipleWriteLocations() {
     return this.getBooleanAttribute('enable_multiple_write_locations');
   }
-  public set enableMultipleWriteLocations(value: boolean ) {
+  public set enableMultipleWriteLocations(value: boolean | cdktf.IResolvable ) {
     this._enableMultipleWriteLocations = value;
   }
   public resetEnableMultipleWriteLocations() {
@@ -487,11 +497,11 @@ export class CosmosdbAccount extends cdktf.TerraformResource {
   }
 
   // is_virtual_network_filter_enabled - computed: false, optional: true, required: false
-  private _isVirtualNetworkFilterEnabled?: boolean;
+  private _isVirtualNetworkFilterEnabled?: boolean | cdktf.IResolvable;
   public get isVirtualNetworkFilterEnabled() {
     return this.getBooleanAttribute('is_virtual_network_filter_enabled');
   }
-  public set isVirtualNetworkFilterEnabled(value: boolean ) {
+  public set isVirtualNetworkFilterEnabled(value: boolean | cdktf.IResolvable ) {
     this._isVirtualNetworkFilterEnabled = value;
   }
   public resetIsVirtualNetworkFilterEnabled() {
@@ -532,6 +542,22 @@ export class CosmosdbAccount extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get kindInput() {
     return this._kind
+  }
+
+  // local_authentication_disabled - computed: false, optional: true, required: false
+  private _localAuthenticationDisabled?: boolean | cdktf.IResolvable;
+  public get localAuthenticationDisabled() {
+    return this.getBooleanAttribute('local_authentication_disabled');
+  }
+  public set localAuthenticationDisabled(value: boolean | cdktf.IResolvable ) {
+    this._localAuthenticationDisabled = value;
+  }
+  public resetLocalAuthenticationDisabled() {
+    this._localAuthenticationDisabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get localAuthenticationDisabledInput() {
+    return this._localAuthenticationDisabled
   }
 
   // location - computed: false, optional: false, required: true
@@ -577,11 +603,11 @@ export class CosmosdbAccount extends cdktf.TerraformResource {
   }
 
   // network_acl_bypass_for_azure_services - computed: false, optional: true, required: false
-  private _networkAclBypassForAzureServices?: boolean;
+  private _networkAclBypassForAzureServices?: boolean | cdktf.IResolvable;
   public get networkAclBypassForAzureServices() {
     return this.getBooleanAttribute('network_acl_bypass_for_azure_services');
   }
-  public set networkAclBypassForAzureServices(value: boolean ) {
+  public set networkAclBypassForAzureServices(value: boolean | cdktf.IResolvable ) {
     this._networkAclBypassForAzureServices = value;
   }
   public resetNetworkAclBypassForAzureServices() {
@@ -642,11 +668,11 @@ export class CosmosdbAccount extends cdktf.TerraformResource {
   }
 
   // public_network_access_enabled - computed: false, optional: true, required: false
-  private _publicNetworkAccessEnabled?: boolean;
+  private _publicNetworkAccessEnabled?: boolean | cdktf.IResolvable;
   public get publicNetworkAccessEnabled() {
     return this.getBooleanAttribute('public_network_access_enabled');
   }
-  public set publicNetworkAccessEnabled(value: boolean ) {
+  public set publicNetworkAccessEnabled(value: boolean | cdktf.IResolvable ) {
     this._publicNetworkAccessEnabled = value;
   }
   public resetPublicNetworkAccessEnabled() {
@@ -696,11 +722,11 @@ export class CosmosdbAccount extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string };
+  private _tags?: { [key: string]: string } | cdktf.IResolvable;
   public get tags() {
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._tags = value;
   }
   public resetTags() {
@@ -853,6 +879,7 @@ export class CosmosdbAccount extends cdktf.TerraformResource {
       is_virtual_network_filter_enabled: cdktf.booleanToTerraform(this._isVirtualNetworkFilterEnabled),
       key_vault_key_id: cdktf.stringToTerraform(this._keyVaultKeyId),
       kind: cdktf.stringToTerraform(this._kind),
+      local_authentication_disabled: cdktf.booleanToTerraform(this._localAuthenticationDisabled),
       location: cdktf.stringToTerraform(this._location),
       mongo_server_version: cdktf.stringToTerraform(this._mongoServerVersion),
       name: cdktf.stringToTerraform(this._name),

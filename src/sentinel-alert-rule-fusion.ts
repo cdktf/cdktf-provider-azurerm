@@ -14,7 +14,7 @@ export interface SentinelAlertRuleFusionConfig extends cdktf.TerraformMetaArgume
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_alert_rule_fusion.html#enabled SentinelAlertRuleFusion#enabled}
   */
-  readonly enabled?: boolean;
+  readonly enabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_alert_rule_fusion.html#log_analytics_workspace_id SentinelAlertRuleFusion#log_analytics_workspace_id}
   */
@@ -65,6 +65,11 @@ function sentinelAlertRuleFusionTimeoutsToTerraform(struct?: SentinelAlertRuleFu
 */
 export class SentinelAlertRuleFusion extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_sentinel_alert_rule_fusion";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -112,11 +117,11 @@ export class SentinelAlertRuleFusion extends cdktf.TerraformResource {
   }
 
   // enabled - computed: false, optional: true, required: false
-  private _enabled?: boolean;
+  private _enabled?: boolean | cdktf.IResolvable;
   public get enabled() {
     return this.getBooleanAttribute('enabled');
   }
-  public set enabled(value: boolean ) {
+  public set enabled(value: boolean | cdktf.IResolvable ) {
     this._enabled = value;
   }
   public resetEnabled() {

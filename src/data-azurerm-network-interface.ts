@@ -99,6 +99,11 @@ function dataAzurermNetworkInterfaceTimeoutsToTerraform(struct?: DataAzurermNetw
 */
 export class DataAzurermNetworkInterface extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_network_interface";
+
   // ===========
   // INITIALIZER
   // ===========

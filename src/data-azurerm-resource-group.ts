@@ -38,6 +38,11 @@ function dataAzurermResourceGroupTimeoutsToTerraform(struct?: DataAzurermResourc
 */
 export class DataAzurermResourceGroup extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_resource_group";
+
   // ===========
   // INITIALIZER
   // ===========

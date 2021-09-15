@@ -142,6 +142,11 @@ function packetCaptureTimeoutsToTerraform(struct?: PacketCaptureTimeouts): any {
 */
 export class PacketCapture extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_packet_capture";
+
   // ===========
   // INITIALIZER
   // ===========

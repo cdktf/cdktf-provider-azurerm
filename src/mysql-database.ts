@@ -69,6 +69,11 @@ function mysqlDatabaseTimeoutsToTerraform(struct?: MysqlDatabaseTimeouts): any {
 */
 export class MysqlDatabase extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_mysql_database";
+
   // ===========
   // INITIALIZER
   // ===========

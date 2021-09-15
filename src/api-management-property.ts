@@ -26,7 +26,7 @@ export interface ApiManagementPropertyConfig extends cdktf.TerraformMetaArgument
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_property.html#secret ApiManagementProperty#secret}
   */
-  readonly secret?: boolean;
+  readonly secret?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_property.html#tags ApiManagementProperty#tags}
   */
@@ -76,6 +76,11 @@ function apiManagementPropertyTimeoutsToTerraform(struct?: ApiManagementProperty
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_property.html azurerm_api_management_property}
 */
 export class ApiManagementProperty extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_api_management_property";
 
   // ===========
   // INITIALIZER
@@ -171,11 +176,11 @@ export class ApiManagementProperty extends cdktf.TerraformResource {
   }
 
   // secret - computed: false, optional: true, required: false
-  private _secret?: boolean;
+  private _secret?: boolean | cdktf.IResolvable;
   public get secret() {
     return this.getBooleanAttribute('secret');
   }
-  public set secret(value: boolean ) {
+  public set secret(value: boolean | cdktf.IResolvable ) {
     this._secret = value;
   }
   public resetSecret() {

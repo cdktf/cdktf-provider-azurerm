@@ -14,11 +14,11 @@ export interface LogAnalyticsWorkspaceConfig extends cdktf.TerraformMetaArgument
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_workspace.html#internet_ingestion_enabled LogAnalyticsWorkspace#internet_ingestion_enabled}
   */
-  readonly internetIngestionEnabled?: boolean;
+  readonly internetIngestionEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_workspace.html#internet_query_enabled LogAnalyticsWorkspace#internet_query_enabled}
   */
-  readonly internetQueryEnabled?: boolean;
+  readonly internetQueryEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_workspace.html#location LogAnalyticsWorkspace#location}
   */
@@ -46,7 +46,7 @@ export interface LogAnalyticsWorkspaceConfig extends cdktf.TerraformMetaArgument
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_workspace.html#tags LogAnalyticsWorkspace#tags}
   */
-  readonly tags?: { [key: string]: string };
+  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * timeouts block
   * 
@@ -88,6 +88,11 @@ function logAnalyticsWorkspaceTimeoutsToTerraform(struct?: LogAnalyticsWorkspace
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_workspace.html azurerm_log_analytics_workspace}
 */
 export class LogAnalyticsWorkspace extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_log_analytics_workspace";
 
   // ===========
   // INITIALIZER
@@ -150,11 +155,11 @@ export class LogAnalyticsWorkspace extends cdktf.TerraformResource {
   }
 
   // internet_ingestion_enabled - computed: false, optional: true, required: false
-  private _internetIngestionEnabled?: boolean;
+  private _internetIngestionEnabled?: boolean | cdktf.IResolvable;
   public get internetIngestionEnabled() {
     return this.getBooleanAttribute('internet_ingestion_enabled');
   }
-  public set internetIngestionEnabled(value: boolean ) {
+  public set internetIngestionEnabled(value: boolean | cdktf.IResolvable ) {
     this._internetIngestionEnabled = value;
   }
   public resetInternetIngestionEnabled() {
@@ -166,11 +171,11 @@ export class LogAnalyticsWorkspace extends cdktf.TerraformResource {
   }
 
   // internet_query_enabled - computed: false, optional: true, required: false
-  private _internetQueryEnabled?: boolean;
+  private _internetQueryEnabled?: boolean | cdktf.IResolvable;
   public get internetQueryEnabled() {
     return this.getBooleanAttribute('internet_query_enabled');
   }
-  public set internetQueryEnabled(value: boolean ) {
+  public set internetQueryEnabled(value: boolean | cdktf.IResolvable ) {
     this._internetQueryEnabled = value;
   }
   public resetInternetQueryEnabled() {
@@ -284,11 +289,11 @@ export class LogAnalyticsWorkspace extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string };
+  private _tags?: { [key: string]: string } | cdktf.IResolvable;
   public get tags() {
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._tags = value;
   }
   public resetTags() {

@@ -10,7 +10,7 @@ export interface VirtualMachineScaleSetConfig extends cdktf.TerraformMetaArgumen
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set.html#automatic_os_upgrade VirtualMachineScaleSet#automatic_os_upgrade}
   */
-  readonly automaticOsUpgrade?: boolean;
+  readonly automaticOsUpgrade?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set.html#eviction_policy VirtualMachineScaleSet#eviction_policy}
   */
@@ -34,7 +34,7 @@ export interface VirtualMachineScaleSetConfig extends cdktf.TerraformMetaArgumen
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set.html#overprovision VirtualMachineScaleSet#overprovision}
   */
-  readonly overprovision?: boolean;
+  readonly overprovision?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set.html#priority VirtualMachineScaleSet#priority}
   */
@@ -50,11 +50,11 @@ export interface VirtualMachineScaleSetConfig extends cdktf.TerraformMetaArgumen
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set.html#single_placement_group VirtualMachineScaleSet#single_placement_group}
   */
-  readonly singlePlacementGroup?: boolean;
+  readonly singlePlacementGroup?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set.html#tags VirtualMachineScaleSet#tags}
   */
-  readonly tags?: { [key: string]: string };
+  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set.html#upgrade_policy_mode VirtualMachineScaleSet#upgrade_policy_mode}
   */
@@ -158,7 +158,7 @@ export interface VirtualMachineScaleSetBootDiagnostics {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set.html#enabled VirtualMachineScaleSet#enabled}
   */
-  readonly enabled?: boolean;
+  readonly enabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set.html#storage_uri VirtualMachineScaleSet#storage_uri}
   */
@@ -177,7 +177,7 @@ export interface VirtualMachineScaleSetExtension {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set.html#auto_upgrade_minor_version VirtualMachineScaleSet#auto_upgrade_minor_version}
   */
-  readonly autoUpgradeMinorVersion?: boolean;
+  readonly autoUpgradeMinorVersion?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set.html#name VirtualMachineScaleSet#name}
   */
@@ -303,7 +303,7 @@ export interface VirtualMachineScaleSetNetworkProfileIpConfiguration {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set.html#primary VirtualMachineScaleSet#primary}
   */
-  readonly primary: boolean;
+  readonly primary: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set.html#subnet_id VirtualMachineScaleSet#subnet_id}
   */
@@ -334,11 +334,11 @@ export interface VirtualMachineScaleSetNetworkProfile {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set.html#accelerated_networking VirtualMachineScaleSet#accelerated_networking}
   */
-  readonly acceleratedNetworking?: boolean;
+  readonly acceleratedNetworking?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set.html#ip_forwarding VirtualMachineScaleSet#ip_forwarding}
   */
-  readonly ipForwarding?: boolean;
+  readonly ipForwarding?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set.html#name VirtualMachineScaleSet#name}
   */
@@ -350,7 +350,7 @@ export interface VirtualMachineScaleSetNetworkProfile {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set.html#primary VirtualMachineScaleSet#primary}
   */
-  readonly primary: boolean;
+  readonly primary: boolean | cdktf.IResolvable;
   /**
   * dns_settings block
   * 
@@ -430,7 +430,7 @@ export interface VirtualMachineScaleSetOsProfileLinuxConfig {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set.html#disable_password_authentication VirtualMachineScaleSet#disable_password_authentication}
   */
-  readonly disablePasswordAuthentication?: boolean;
+  readonly disablePasswordAuthentication?: boolean | cdktf.IResolvable;
   /**
   * ssh_keys block
   * 
@@ -539,11 +539,11 @@ export interface VirtualMachineScaleSetOsProfileWindowsConfig {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set.html#enable_automatic_upgrades VirtualMachineScaleSet#enable_automatic_upgrades}
   */
-  readonly enableAutomaticUpgrades?: boolean;
+  readonly enableAutomaticUpgrades?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set.html#provision_vm_agent VirtualMachineScaleSet#provision_vm_agent}
   */
-  readonly provisionVmAgent?: boolean;
+  readonly provisionVmAgent?: boolean | cdktf.IResolvable;
   /**
   * additional_unattend_config block
   * 
@@ -792,6 +792,11 @@ function virtualMachineScaleSetTimeoutsToTerraform(struct?: VirtualMachineScaleS
 */
 export class VirtualMachineScaleSet extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_virtual_machine_scale_set";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -850,11 +855,11 @@ export class VirtualMachineScaleSet extends cdktf.TerraformResource {
   // ==========
 
   // automatic_os_upgrade - computed: false, optional: true, required: false
-  private _automaticOsUpgrade?: boolean;
+  private _automaticOsUpgrade?: boolean | cdktf.IResolvable;
   public get automaticOsUpgrade() {
     return this.getBooleanAttribute('automatic_os_upgrade');
   }
-  public set automaticOsUpgrade(value: boolean ) {
+  public set automaticOsUpgrade(value: boolean | cdktf.IResolvable ) {
     this._automaticOsUpgrade = value;
   }
   public resetAutomaticOsUpgrade() {
@@ -945,11 +950,11 @@ export class VirtualMachineScaleSet extends cdktf.TerraformResource {
   }
 
   // overprovision - computed: false, optional: true, required: false
-  private _overprovision?: boolean;
+  private _overprovision?: boolean | cdktf.IResolvable;
   public get overprovision() {
     return this.getBooleanAttribute('overprovision');
   }
-  public set overprovision(value: boolean ) {
+  public set overprovision(value: boolean | cdktf.IResolvable ) {
     this._overprovision = value;
   }
   public resetOverprovision() {
@@ -1006,11 +1011,11 @@ export class VirtualMachineScaleSet extends cdktf.TerraformResource {
   }
 
   // single_placement_group - computed: false, optional: true, required: false
-  private _singlePlacementGroup?: boolean;
+  private _singlePlacementGroup?: boolean | cdktf.IResolvable;
   public get singlePlacementGroup() {
     return this.getBooleanAttribute('single_placement_group');
   }
-  public set singlePlacementGroup(value: boolean ) {
+  public set singlePlacementGroup(value: boolean | cdktf.IResolvable ) {
     this._singlePlacementGroup = value;
   }
   public resetSinglePlacementGroup() {
@@ -1022,11 +1027,11 @@ export class VirtualMachineScaleSet extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string };
+  private _tags?: { [key: string]: string } | cdktf.IResolvable;
   public get tags() {
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._tags = value;
   }
   public resetTags() {

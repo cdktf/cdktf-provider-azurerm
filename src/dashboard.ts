@@ -26,7 +26,7 @@ export interface DashboardConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dashboard.html#tags Dashboard#tags}
   */
-  readonly tags?: { [key: string]: string };
+  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * timeouts block
   * 
@@ -68,6 +68,11 @@ function dashboardTimeoutsToTerraform(struct?: DashboardTimeouts): any {
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/dashboard.html azurerm_dashboard}
 */
 export class Dashboard extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_dashboard";
 
   // ===========
   // INITIALIZER
@@ -164,11 +169,11 @@ export class Dashboard extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string };
+  private _tags?: { [key: string]: string } | cdktf.IResolvable;
   public get tags() {
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._tags = value;
   }
   public resetTags() {

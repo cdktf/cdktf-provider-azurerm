@@ -73,6 +73,11 @@ function hpcCacheBlobTargetTimeoutsToTerraform(struct?: HpcCacheBlobTargetTimeou
 */
 export class HpcCacheBlobTarget extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_hpc_cache_blob_target";
+
   // ===========
   // INITIALIZER
   // ===========

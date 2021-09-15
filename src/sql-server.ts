@@ -38,7 +38,7 @@ export interface SqlServerConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_server.html#tags SqlServer#tags}
   */
-  readonly tags?: { [key: string]: string };
+  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_server.html#version SqlServer#version}
   */
@@ -50,6 +50,12 @@ export interface SqlServerConfig extends cdktf.TerraformMetaArguments {
   */
   readonly identity?: SqlServerIdentity[];
   /**
+  * threat_detection_policy block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_server.html#threat_detection_policy SqlServer#threat_detection_policy}
+  */
+  readonly threatDetectionPolicy?: SqlServerThreatDetectionPolicy[];
+  /**
   * timeouts block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_server.html#timeouts SqlServer#timeouts}
@@ -60,7 +66,7 @@ export interface SqlServerExtendedAuditingPolicy {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_server.html#log_monitoring_enabled SqlServer#log_monitoring_enabled}
   */
-  readonly logMonitoringEnabled?: boolean;
+  readonly logMonitoringEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_server.html#retention_in_days SqlServer#retention_in_days}
   */
@@ -72,7 +78,7 @@ export interface SqlServerExtendedAuditingPolicy {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_server.html#storage_account_access_key_is_secondary SqlServer#storage_account_access_key_is_secondary}
   */
-  readonly storageAccountAccessKeyIsSecondary?: boolean;
+  readonly storageAccountAccessKeyIsSecondary?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_server.html#storage_endpoint SqlServer#storage_endpoint}
   */
@@ -101,6 +107,50 @@ function sqlServerIdentityToTerraform(struct?: SqlServerIdentity): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   return {
     type: cdktf.stringToTerraform(struct!.type),
+  }
+}
+
+export interface SqlServerThreatDetectionPolicy {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_server.html#disabled_alerts SqlServer#disabled_alerts}
+  */
+  readonly disabledAlerts?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_server.html#email_account_admins SqlServer#email_account_admins}
+  */
+  readonly emailAccountAdmins?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_server.html#email_addresses SqlServer#email_addresses}
+  */
+  readonly emailAddresses?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_server.html#retention_days SqlServer#retention_days}
+  */
+  readonly retentionDays?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_server.html#state SqlServer#state}
+  */
+  readonly state?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_server.html#storage_account_access_key SqlServer#storage_account_access_key}
+  */
+  readonly storageAccountAccessKey?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_server.html#storage_endpoint SqlServer#storage_endpoint}
+  */
+  readonly storageEndpoint?: string;
+}
+
+function sqlServerThreatDetectionPolicyToTerraform(struct?: SqlServerThreatDetectionPolicy): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    disabled_alerts: cdktf.listMapper(cdktf.stringToTerraform)(struct!.disabledAlerts),
+    email_account_admins: cdktf.booleanToTerraform(struct!.emailAccountAdmins),
+    email_addresses: cdktf.listMapper(cdktf.stringToTerraform)(struct!.emailAddresses),
+    retention_days: cdktf.numberToTerraform(struct!.retentionDays),
+    state: cdktf.stringToTerraform(struct!.state),
+    storage_account_access_key: cdktf.stringToTerraform(struct!.storageAccountAccessKey),
+    storage_endpoint: cdktf.stringToTerraform(struct!.storageEndpoint),
   }
 }
 
@@ -139,6 +189,11 @@ function sqlServerTimeoutsToTerraform(struct?: SqlServerTimeouts): any {
 */
 export class SqlServer extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_sql_server";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -171,6 +226,7 @@ export class SqlServer extends cdktf.TerraformResource {
     this._tags = config.tags;
     this._version = config.version;
     this._identity = config.identity;
+    this._threatDetectionPolicy = config.threatDetectionPolicy;
     this._timeouts = config.timeouts;
   }
 
@@ -286,11 +342,11 @@ export class SqlServer extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string };
+  private _tags?: { [key: string]: string } | cdktf.IResolvable;
   public get tags() {
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._tags = value;
   }
   public resetTags() {
@@ -330,6 +386,22 @@ export class SqlServer extends cdktf.TerraformResource {
     return this._identity
   }
 
+  // threat_detection_policy - computed: false, optional: true, required: false
+  private _threatDetectionPolicy?: SqlServerThreatDetectionPolicy[];
+  public get threatDetectionPolicy() {
+    return this.interpolationForAttribute('threat_detection_policy') as any;
+  }
+  public set threatDetectionPolicy(value: SqlServerThreatDetectionPolicy[] ) {
+    this._threatDetectionPolicy = value;
+  }
+  public resetThreatDetectionPolicy() {
+    this._threatDetectionPolicy = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get threatDetectionPolicyInput() {
+    return this._threatDetectionPolicy
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: SqlServerTimeouts;
   public get timeouts() {
@@ -362,6 +434,7 @@ export class SqlServer extends cdktf.TerraformResource {
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
       version: cdktf.stringToTerraform(this._version),
       identity: cdktf.listMapper(sqlServerIdentityToTerraform)(this._identity),
+      threat_detection_policy: cdktf.listMapper(sqlServerThreatDetectionPolicyToTerraform)(this._threatDetectionPolicy),
       timeouts: sqlServerTimeoutsToTerraform(this._timeouts),
     };
   }

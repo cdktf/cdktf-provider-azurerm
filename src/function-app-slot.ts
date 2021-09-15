@@ -14,11 +14,11 @@ export interface FunctionAppSlotConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app_slot.html#app_settings FunctionAppSlot#app_settings}
   */
-  readonly appSettings?: { [key: string]: string };
+  readonly appSettings?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app_slot.html#client_affinity_enabled FunctionAppSlot#client_affinity_enabled}
   */
-  readonly clientAffinityEnabled?: boolean;
+  readonly clientAffinityEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app_slot.html#daily_memory_time_quota FunctionAppSlot#daily_memory_time_quota}
   */
@@ -26,11 +26,11 @@ export interface FunctionAppSlotConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app_slot.html#enable_builtin_logging FunctionAppSlot#enable_builtin_logging}
   */
-  readonly enableBuiltinLogging?: boolean;
+  readonly enableBuiltinLogging?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app_slot.html#enabled FunctionAppSlot#enabled}
   */
-  readonly enabled?: boolean;
+  readonly enabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app_slot.html#function_app_name FunctionAppSlot#function_app_name}
   */
@@ -38,7 +38,7 @@ export interface FunctionAppSlotConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app_slot.html#https_only FunctionAppSlot#https_only}
   */
-  readonly httpsOnly?: boolean;
+  readonly httpsOnly?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app_slot.html#location FunctionAppSlot#location}
   */
@@ -66,7 +66,7 @@ export interface FunctionAppSlotConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app_slot.html#tags FunctionAppSlot#tags}
   */
-  readonly tags?: { [key: string]: string };
+  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app_slot.html#version FunctionAppSlot#version}
   */
@@ -233,7 +233,7 @@ export interface FunctionAppSlotAuthSettings {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app_slot.html#additional_login_params FunctionAppSlot#additional_login_params}
   */
-  readonly additionalLoginParams?: { [key: string]: string };
+  readonly additionalLoginParams?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app_slot.html#allowed_external_redirect_urls FunctionAppSlot#allowed_external_redirect_urls}
   */
@@ -245,7 +245,7 @@ export interface FunctionAppSlotAuthSettings {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app_slot.html#enabled FunctionAppSlot#enabled}
   */
-  readonly enabled: boolean;
+  readonly enabled: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app_slot.html#issuer FunctionAppSlot#issuer}
   */
@@ -261,7 +261,7 @@ export interface FunctionAppSlotAuthSettings {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app_slot.html#token_store_enabled FunctionAppSlot#token_store_enabled}
   */
-  readonly tokenStoreEnabled?: boolean;
+  readonly tokenStoreEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app_slot.html#unauthenticated_client_action FunctionAppSlot#unauthenticated_client_action}
   */
@@ -515,7 +515,7 @@ export interface FunctionAppSlotSiteConfigCors {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app_slot.html#support_credentials FunctionAppSlot#support_credentials}
   */
-  readonly supportCredentials?: boolean;
+  readonly supportCredentials?: boolean | cdktf.IResolvable;
 }
 
 function functionAppSlotSiteConfigCorsToTerraform(struct?: FunctionAppSlotSiteConfigCors): any {
@@ -530,7 +530,7 @@ export interface FunctionAppSlotSiteConfig {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app_slot.html#always_on FunctionAppSlot#always_on}
   */
-  readonly alwaysOn?: boolean;
+  readonly alwaysOn?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app_slot.html#app_scale_limit FunctionAppSlot#app_scale_limit}
   */
@@ -558,7 +558,7 @@ export interface FunctionAppSlotSiteConfig {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app_slot.html#http2_enabled FunctionAppSlot#http2_enabled}
   */
-  readonly http2Enabled?: boolean;
+  readonly http2Enabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app_slot.html#ip_restriction FunctionAppSlot#ip_restriction}
   */
@@ -582,7 +582,7 @@ export interface FunctionAppSlotSiteConfig {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app_slot.html#runtime_scale_monitoring_enabled FunctionAppSlot#runtime_scale_monitoring_enabled}
   */
-  readonly runtimeScaleMonitoringEnabled?: boolean;
+  readonly runtimeScaleMonitoringEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app_slot.html#scm_ip_restriction FunctionAppSlot#scm_ip_restriction}
   */
@@ -594,15 +594,15 @@ export interface FunctionAppSlotSiteConfig {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app_slot.html#scm_use_main_ip_restriction FunctionAppSlot#scm_use_main_ip_restriction}
   */
-  readonly scmUseMainIpRestriction?: boolean;
+  readonly scmUseMainIpRestriction?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app_slot.html#use_32_bit_worker_process FunctionAppSlot#use_32_bit_worker_process}
   */
-  readonly use32BitWorkerProcess?: boolean;
+  readonly use32BitWorkerProcess?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app_slot.html#websockets_enabled FunctionAppSlot#websockets_enabled}
   */
-  readonly websocketsEnabled?: boolean;
+  readonly websocketsEnabled?: boolean | cdktf.IResolvable;
   /**
   * cors block
   * 
@@ -672,6 +672,11 @@ function functionAppSlotTimeoutsToTerraform(struct?: FunctionAppSlotTimeouts): a
 */
 export class FunctionAppSlot extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_function_app_slot";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -735,11 +740,11 @@ export class FunctionAppSlot extends cdktf.TerraformResource {
   }
 
   // app_settings - computed: true, optional: true, required: false
-  private _appSettings?: { [key: string]: string }
-  public get appSettings(): { [key: string]: string } {
+  private _appSettings?: { [key: string]: string } | cdktf.IResolvable
+  public get appSettings(): { [key: string]: string } | cdktf.IResolvable {
     return this.interpolationForAttribute('app_settings') as any; // Getting the computed value is not yet implemented
   }
-  public set appSettings(value: { [key: string]: string }) {
+  public set appSettings(value: { [key: string]: string } | cdktf.IResolvable) {
     this._appSettings = value;
   }
   public resetAppSettings() {
@@ -751,11 +756,11 @@ export class FunctionAppSlot extends cdktf.TerraformResource {
   }
 
   // client_affinity_enabled - computed: true, optional: true, required: false
-  private _clientAffinityEnabled?: boolean;
+  private _clientAffinityEnabled?: boolean | cdktf.IResolvable;
   public get clientAffinityEnabled() {
     return this.getBooleanAttribute('client_affinity_enabled');
   }
-  public set clientAffinityEnabled(value: boolean) {
+  public set clientAffinityEnabled(value: boolean | cdktf.IResolvable) {
     this._clientAffinityEnabled = value;
   }
   public resetClientAffinityEnabled() {
@@ -788,11 +793,11 @@ export class FunctionAppSlot extends cdktf.TerraformResource {
   }
 
   // enable_builtin_logging - computed: false, optional: true, required: false
-  private _enableBuiltinLogging?: boolean;
+  private _enableBuiltinLogging?: boolean | cdktf.IResolvable;
   public get enableBuiltinLogging() {
     return this.getBooleanAttribute('enable_builtin_logging');
   }
-  public set enableBuiltinLogging(value: boolean ) {
+  public set enableBuiltinLogging(value: boolean | cdktf.IResolvable ) {
     this._enableBuiltinLogging = value;
   }
   public resetEnableBuiltinLogging() {
@@ -804,11 +809,11 @@ export class FunctionAppSlot extends cdktf.TerraformResource {
   }
 
   // enabled - computed: false, optional: true, required: false
-  private _enabled?: boolean;
+  private _enabled?: boolean | cdktf.IResolvable;
   public get enabled() {
     return this.getBooleanAttribute('enabled');
   }
-  public set enabled(value: boolean ) {
+  public set enabled(value: boolean | cdktf.IResolvable ) {
     this._enabled = value;
   }
   public resetEnabled() {
@@ -833,11 +838,11 @@ export class FunctionAppSlot extends cdktf.TerraformResource {
   }
 
   // https_only - computed: false, optional: true, required: false
-  private _httpsOnly?: boolean;
+  private _httpsOnly?: boolean | cdktf.IResolvable;
   public get httpsOnly() {
     return this.getBooleanAttribute('https_only');
   }
-  public set httpsOnly(value: boolean ) {
+  public set httpsOnly(value: boolean | cdktf.IResolvable ) {
     this._httpsOnly = value;
   }
   public resetHttpsOnly() {
@@ -955,11 +960,11 @@ export class FunctionAppSlot extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string };
+  private _tags?: { [key: string]: string } | cdktf.IResolvable;
   public get tags() {
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._tags = value;
   }
   public resetTags() {

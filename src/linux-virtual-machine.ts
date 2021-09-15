@@ -18,7 +18,7 @@ export interface LinuxVirtualMachineConfig extends cdktf.TerraformMetaArguments 
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_virtual_machine.html#allow_extension_operations LinuxVirtualMachine#allow_extension_operations}
   */
-  readonly allowExtensionOperations?: boolean;
+  readonly allowExtensionOperations?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_virtual_machine.html#availability_set_id LinuxVirtualMachine#availability_set_id}
   */
@@ -38,11 +38,11 @@ export interface LinuxVirtualMachineConfig extends cdktf.TerraformMetaArguments 
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_virtual_machine.html#disable_password_authentication LinuxVirtualMachine#disable_password_authentication}
   */
-  readonly disablePasswordAuthentication?: boolean;
+  readonly disablePasswordAuthentication?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_virtual_machine.html#encryption_at_host_enabled LinuxVirtualMachine#encryption_at_host_enabled}
   */
-  readonly encryptionAtHostEnabled?: boolean;
+  readonly encryptionAtHostEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_virtual_machine.html#eviction_policy LinuxVirtualMachine#eviction_policy}
   */
@@ -82,7 +82,7 @@ export interface LinuxVirtualMachineConfig extends cdktf.TerraformMetaArguments 
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_virtual_machine.html#provision_vm_agent LinuxVirtualMachine#provision_vm_agent}
   */
-  readonly provisionVmAgent?: boolean;
+  readonly provisionVmAgent?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_virtual_machine.html#proximity_placement_group_id LinuxVirtualMachine#proximity_placement_group_id}
   */
@@ -102,7 +102,7 @@ export interface LinuxVirtualMachineConfig extends cdktf.TerraformMetaArguments 
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_virtual_machine.html#tags LinuxVirtualMachine#tags}
   */
-  readonly tags?: { [key: string]: string };
+  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_virtual_machine.html#virtual_machine_scale_set_id LinuxVirtualMachine#virtual_machine_scale_set_id}
   */
@@ -170,7 +170,7 @@ export interface LinuxVirtualMachineAdditionalCapabilities {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_virtual_machine.html#ultra_ssd_enabled LinuxVirtualMachine#ultra_ssd_enabled}
   */
-  readonly ultraSsdEnabled?: boolean;
+  readonly ultraSsdEnabled?: boolean | cdktf.IResolvable;
 }
 
 function linuxVirtualMachineAdditionalCapabilitiesToTerraform(struct?: LinuxVirtualMachineAdditionalCapabilities): any {
@@ -270,7 +270,7 @@ export interface LinuxVirtualMachineOsDisk {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_virtual_machine.html#write_accelerator_enabled LinuxVirtualMachine#write_accelerator_enabled}
   */
-  readonly writeAcceleratorEnabled?: boolean;
+  readonly writeAcceleratorEnabled?: boolean | cdktf.IResolvable;
   /**
   * diff_disk_settings block
   * 
@@ -415,6 +415,11 @@ function linuxVirtualMachineTimeoutsToTerraform(struct?: LinuxVirtualMachineTime
 */
 export class LinuxVirtualMachine extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_linux_virtual_machine";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -508,11 +513,11 @@ export class LinuxVirtualMachine extends cdktf.TerraformResource {
   }
 
   // allow_extension_operations - computed: false, optional: true, required: false
-  private _allowExtensionOperations?: boolean;
+  private _allowExtensionOperations?: boolean | cdktf.IResolvable;
   public get allowExtensionOperations() {
     return this.getBooleanAttribute('allow_extension_operations');
   }
-  public set allowExtensionOperations(value: boolean ) {
+  public set allowExtensionOperations(value: boolean | cdktf.IResolvable ) {
     this._allowExtensionOperations = value;
   }
   public resetAllowExtensionOperations() {
@@ -588,11 +593,11 @@ export class LinuxVirtualMachine extends cdktf.TerraformResource {
   }
 
   // disable_password_authentication - computed: false, optional: true, required: false
-  private _disablePasswordAuthentication?: boolean;
+  private _disablePasswordAuthentication?: boolean | cdktf.IResolvable;
   public get disablePasswordAuthentication() {
     return this.getBooleanAttribute('disable_password_authentication');
   }
-  public set disablePasswordAuthentication(value: boolean ) {
+  public set disablePasswordAuthentication(value: boolean | cdktf.IResolvable ) {
     this._disablePasswordAuthentication = value;
   }
   public resetDisablePasswordAuthentication() {
@@ -604,11 +609,11 @@ export class LinuxVirtualMachine extends cdktf.TerraformResource {
   }
 
   // encryption_at_host_enabled - computed: false, optional: true, required: false
-  private _encryptionAtHostEnabled?: boolean;
+  private _encryptionAtHostEnabled?: boolean | cdktf.IResolvable;
   public get encryptionAtHostEnabled() {
     return this.getBooleanAttribute('encryption_at_host_enabled');
   }
-  public set encryptionAtHostEnabled(value: boolean ) {
+  public set encryptionAtHostEnabled(value: boolean | cdktf.IResolvable ) {
     this._encryptionAtHostEnabled = value;
   }
   public resetEncryptionAtHostEnabled() {
@@ -770,11 +775,11 @@ export class LinuxVirtualMachine extends cdktf.TerraformResource {
   }
 
   // provision_vm_agent - computed: false, optional: true, required: false
-  private _provisionVmAgent?: boolean;
+  private _provisionVmAgent?: boolean | cdktf.IResolvable;
   public get provisionVmAgent() {
     return this.getBooleanAttribute('provision_vm_agent');
   }
-  public set provisionVmAgent(value: boolean ) {
+  public set provisionVmAgent(value: boolean | cdktf.IResolvable ) {
     this._provisionVmAgent = value;
   }
   public resetProvisionVmAgent() {
@@ -854,11 +859,11 @@ export class LinuxVirtualMachine extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string };
+  private _tags?: { [key: string]: string } | cdktf.IResolvable;
   public get tags() {
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._tags = value;
   }
   public resetTags() {

@@ -108,6 +108,11 @@ function storageDataLakeGen2PathTimeoutsToTerraform(struct?: StorageDataLakeGen2
 */
 export class StorageDataLakeGen2Path extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_storage_data_lake_gen2_path";
+
   // ===========
   // INITIALIZER
   // ===========

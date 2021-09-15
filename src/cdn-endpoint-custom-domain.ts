@@ -56,6 +56,11 @@ function cdnEndpointCustomDomainTimeoutsToTerraform(struct?: CdnEndpointCustomDo
 */
 export class CdnEndpointCustomDomain extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_cdn_endpoint_custom_domain";
+
   // ===========
   // INITIALIZER
   // ===========

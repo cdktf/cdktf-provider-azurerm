@@ -189,6 +189,11 @@ function mediaTransformTimeoutsToTerraform(struct?: MediaTransformTimeouts): any
 */
 export class MediaTransform extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_media_transform";
+
   // ===========
   // INITIALIZER
   // ===========

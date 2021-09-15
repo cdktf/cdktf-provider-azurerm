@@ -10,7 +10,7 @@ export interface SharedImageVersionConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/shared_image_version.html#exclude_from_latest SharedImageVersion#exclude_from_latest}
   */
-  readonly excludeFromLatest?: boolean;
+  readonly excludeFromLatest?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/shared_image_version.html#gallery_name SharedImageVersion#gallery_name}
   */
@@ -42,7 +42,7 @@ export interface SharedImageVersionConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/shared_image_version.html#tags SharedImageVersion#tags}
   */
-  readonly tags?: { [key: string]: string };
+  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * target_region block
   * 
@@ -115,6 +115,11 @@ function sharedImageVersionTimeoutsToTerraform(struct?: SharedImageVersionTimeou
 */
 export class SharedImageVersion extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_shared_image_version";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -155,11 +160,11 @@ export class SharedImageVersion extends cdktf.TerraformResource {
   // ==========
 
   // exclude_from_latest - computed: false, optional: true, required: false
-  private _excludeFromLatest?: boolean;
+  private _excludeFromLatest?: boolean | cdktf.IResolvable;
   public get excludeFromLatest() {
     return this.getBooleanAttribute('exclude_from_latest');
   }
-  public set excludeFromLatest(value: boolean ) {
+  public set excludeFromLatest(value: boolean | cdktf.IResolvable ) {
     this._excludeFromLatest = value;
   }
   public resetExcludeFromLatest() {
@@ -273,11 +278,11 @@ export class SharedImageVersion extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string };
+  private _tags?: { [key: string]: string } | cdktf.IResolvable;
   public get tags() {
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._tags = value;
   }
   public resetTags() {

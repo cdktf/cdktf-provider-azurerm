@@ -60,6 +60,11 @@ function synapseRoleAssignmentTimeoutsToTerraform(struct?: SynapseRoleAssignment
 */
 export class SynapseRoleAssignment extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_synapse_role_assignment";
+
   // ===========
   // INITIALIZER
   // ===========

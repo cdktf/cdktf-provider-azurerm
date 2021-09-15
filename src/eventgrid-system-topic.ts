@@ -26,11 +26,17 @@ export interface EventgridSystemTopicConfig extends cdktf.TerraformMetaArguments
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_system_topic.html#tags EventgridSystemTopic#tags}
   */
-  readonly tags?: { [key: string]: string };
+  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_system_topic.html#topic_type EventgridSystemTopic#topic_type}
   */
   readonly topicType: string;
+  /**
+  * identity block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_system_topic.html#identity EventgridSystemTopic#identity}
+  */
+  readonly identity?: EventgridSystemTopicIdentity[];
   /**
   * timeouts block
   * 
@@ -38,6 +44,25 @@ export interface EventgridSystemTopicConfig extends cdktf.TerraformMetaArguments
   */
   readonly timeouts?: EventgridSystemTopicTimeouts;
 }
+export interface EventgridSystemTopicIdentity {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_system_topic.html#identity_ids EventgridSystemTopic#identity_ids}
+  */
+  readonly identityIds?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_system_topic.html#type EventgridSystemTopic#type}
+  */
+  readonly type: string;
+}
+
+function eventgridSystemTopicIdentityToTerraform(struct?: EventgridSystemTopicIdentity): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    identity_ids: cdktf.listMapper(cdktf.stringToTerraform)(struct!.identityIds),
+    type: cdktf.stringToTerraform(struct!.type),
+  }
+}
+
 export interface EventgridSystemTopicTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_system_topic.html#create EventgridSystemTopic#create}
@@ -73,6 +98,11 @@ function eventgridSystemTopicTimeoutsToTerraform(struct?: EventgridSystemTopicTi
 */
 export class EventgridSystemTopic extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_eventgrid_system_topic";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -101,6 +131,7 @@ export class EventgridSystemTopic extends cdktf.TerraformResource {
     this._sourceArmResourceId = config.sourceArmResourceId;
     this._tags = config.tags;
     this._topicType = config.topicType;
+    this._identity = config.identity;
     this._timeouts = config.timeouts;
   }
 
@@ -171,11 +202,11 @@ export class EventgridSystemTopic extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string };
+  private _tags?: { [key: string]: string } | cdktf.IResolvable;
   public get tags() {
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._tags = value;
   }
   public resetTags() {
@@ -197,6 +228,22 @@ export class EventgridSystemTopic extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get topicTypeInput() {
     return this._topicType
+  }
+
+  // identity - computed: false, optional: true, required: false
+  private _identity?: EventgridSystemTopicIdentity[];
+  public get identity() {
+    return this.interpolationForAttribute('identity') as any;
+  }
+  public set identity(value: EventgridSystemTopicIdentity[] ) {
+    this._identity = value;
+  }
+  public resetIdentity() {
+    this._identity = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get identityInput() {
+    return this._identity
   }
 
   // timeouts - computed: false, optional: true, required: false
@@ -227,6 +274,7 @@ export class EventgridSystemTopic extends cdktf.TerraformResource {
       source_arm_resource_id: cdktf.stringToTerraform(this._sourceArmResourceId),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
       topic_type: cdktf.stringToTerraform(this._topicType),
+      identity: cdktf.listMapper(eventgridSystemTopicIdentityToTerraform)(this._identity),
       timeouts: eventgridSystemTopicTimeoutsToTerraform(this._timeouts),
     };
   }

@@ -81,6 +81,11 @@ function lbNatPoolTimeoutsToTerraform(struct?: LbNatPoolTimeouts): any {
 */
 export class LbNatPool extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_lb_nat_pool";
+
   // ===========
   // INITIALIZER
   // ===========

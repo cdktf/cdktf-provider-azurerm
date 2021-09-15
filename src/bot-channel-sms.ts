@@ -73,6 +73,11 @@ function botChannelSmsTimeoutsToTerraform(struct?: BotChannelSmsTimeouts): any {
 */
 export class BotChannelSms extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_bot_channel_sms";
+
   // ===========
   // INITIALIZER
   // ===========

@@ -108,6 +108,11 @@ function keyVaultCertificateIssuerTimeoutsToTerraform(struct?: KeyVaultCertifica
 */
 export class KeyVaultCertificateIssuer extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_key_vault_certificate_issuer";
+
   // ===========
   // INITIALIZER
   // ===========

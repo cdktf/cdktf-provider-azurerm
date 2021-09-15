@@ -10,7 +10,7 @@ export interface CostManagementExportResourceGroupConfig extends cdktf.Terraform
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cost_management_export_resource_group.html#active CostManagementExportResourceGroup#active}
   */
-  readonly active?: boolean;
+  readonly active?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cost_management_export_resource_group.html#name CostManagementExportResourceGroup#name}
   */
@@ -128,6 +128,11 @@ function costManagementExportResourceGroupTimeoutsToTerraform(struct?: CostManag
 */
 export class CostManagementExportResourceGroup extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_cost_management_export_resource_group";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -166,11 +171,11 @@ export class CostManagementExportResourceGroup extends cdktf.TerraformResource {
   // ==========
 
   // active - computed: false, optional: true, required: false
-  private _active?: boolean;
+  private _active?: boolean | cdktf.IResolvable;
   public get active() {
     return this.getBooleanAttribute('active');
   }
-  public set active(value: boolean ) {
+  public set active(value: boolean | cdktf.IResolvable ) {
     this._active = value;
   }
   public resetActive() {

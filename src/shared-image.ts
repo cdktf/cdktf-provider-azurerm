@@ -50,11 +50,11 @@ export interface SharedImageConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/shared_image.html#specialized SharedImage#specialized}
   */
-  readonly specialized?: boolean;
+  readonly specialized?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/shared_image.html#tags SharedImage#tags}
   */
-  readonly tags?: { [key: string]: string };
+  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * identifier block
   * 
@@ -156,6 +156,11 @@ function sharedImageTimeoutsToTerraform(struct?: SharedImageTimeouts): any {
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/shared_image.html azurerm_shared_image}
 */
 export class SharedImage extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_shared_image";
 
   // ===========
   // INITIALIZER
@@ -351,11 +356,11 @@ export class SharedImage extends cdktf.TerraformResource {
   }
 
   // specialized - computed: false, optional: true, required: false
-  private _specialized?: boolean;
+  private _specialized?: boolean | cdktf.IResolvable;
   public get specialized() {
     return this.getBooleanAttribute('specialized');
   }
-  public set specialized(value: boolean ) {
+  public set specialized(value: boolean | cdktf.IResolvable ) {
     this._specialized = value;
   }
   public resetSpecialized() {
@@ -367,11 +372,11 @@ export class SharedImage extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string };
+  private _tags?: { [key: string]: string } | cdktf.IResolvable;
   public get tags() {
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._tags = value;
   }
   public resetTags() {

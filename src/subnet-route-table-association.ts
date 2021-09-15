@@ -57,6 +57,11 @@ function subnetRouteTableAssociationTimeoutsToTerraform(struct?: SubnetRouteTabl
 */
 export class SubnetRouteTableAssociation extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_subnet_route_table_association";
+
   // ===========
   // INITIALIZER
   // ===========

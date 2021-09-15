@@ -42,6 +42,11 @@ function dataAzurermBlueprintDefinitionTimeoutsToTerraform(struct?: DataAzurermB
 */
 export class DataAzurermBlueprintDefinition extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_blueprint_definition";
+
   // ===========
   // INITIALIZER
   // ===========

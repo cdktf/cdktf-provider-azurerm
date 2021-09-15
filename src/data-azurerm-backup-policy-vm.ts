@@ -46,6 +46,11 @@ function dataAzurermBackupPolicyVmTimeoutsToTerraform(struct?: DataAzurermBackup
 */
 export class DataAzurermBackupPolicyVm extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_backup_policy_vm";
+
   // ===========
   // INITIALIZER
   // ===========

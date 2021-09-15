@@ -69,6 +69,11 @@ function mariadbFirewallRuleTimeoutsToTerraform(struct?: MariadbFirewallRuleTime
 */
 export class MariadbFirewallRule extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_mariadb_firewall_rule";
+
   // ===========
   // INITIALIZER
   // ===========

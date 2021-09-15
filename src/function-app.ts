@@ -14,11 +14,11 @@ export interface FunctionAppConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app.html#app_settings FunctionApp#app_settings}
   */
-  readonly appSettings?: { [key: string]: string };
+  readonly appSettings?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app.html#client_affinity_enabled FunctionApp#client_affinity_enabled}
   */
-  readonly clientAffinityEnabled?: boolean;
+  readonly clientAffinityEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app.html#client_cert_mode FunctionApp#client_cert_mode}
   */
@@ -30,15 +30,15 @@ export interface FunctionAppConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app.html#enable_builtin_logging FunctionApp#enable_builtin_logging}
   */
-  readonly enableBuiltinLogging?: boolean;
+  readonly enableBuiltinLogging?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app.html#enabled FunctionApp#enabled}
   */
-  readonly enabled?: boolean;
+  readonly enabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app.html#https_only FunctionApp#https_only}
   */
-  readonly httpsOnly?: boolean;
+  readonly httpsOnly?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app.html#location FunctionApp#location}
   */
@@ -70,7 +70,7 @@ export interface FunctionAppConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app.html#tags FunctionApp#tags}
   */
-  readonly tags?: { [key: string]: string };
+  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app.html#version FunctionApp#version}
   */
@@ -243,7 +243,7 @@ export interface FunctionAppAuthSettings {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app.html#additional_login_params FunctionApp#additional_login_params}
   */
-  readonly additionalLoginParams?: { [key: string]: string };
+  readonly additionalLoginParams?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app.html#allowed_external_redirect_urls FunctionApp#allowed_external_redirect_urls}
   */
@@ -255,7 +255,7 @@ export interface FunctionAppAuthSettings {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app.html#enabled FunctionApp#enabled}
   */
-  readonly enabled: boolean;
+  readonly enabled: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app.html#issuer FunctionApp#issuer}
   */
@@ -271,7 +271,7 @@ export interface FunctionAppAuthSettings {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app.html#token_store_enabled FunctionApp#token_store_enabled}
   */
-  readonly tokenStoreEnabled?: boolean;
+  readonly tokenStoreEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app.html#unauthenticated_client_action FunctionApp#unauthenticated_client_action}
   */
@@ -525,7 +525,7 @@ export interface FunctionAppSiteConfigCors {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app.html#support_credentials FunctionApp#support_credentials}
   */
-  readonly supportCredentials?: boolean;
+  readonly supportCredentials?: boolean | cdktf.IResolvable;
 }
 
 function functionAppSiteConfigCorsToTerraform(struct?: FunctionAppSiteConfigCors): any {
@@ -540,7 +540,7 @@ export interface FunctionAppSiteConfig {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app.html#always_on FunctionApp#always_on}
   */
-  readonly alwaysOn?: boolean;
+  readonly alwaysOn?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app.html#app_scale_limit FunctionApp#app_scale_limit}
   */
@@ -568,7 +568,7 @@ export interface FunctionAppSiteConfig {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app.html#http2_enabled FunctionApp#http2_enabled}
   */
-  readonly http2Enabled?: boolean;
+  readonly http2Enabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app.html#ip_restriction FunctionApp#ip_restriction}
   */
@@ -592,7 +592,7 @@ export interface FunctionAppSiteConfig {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app.html#runtime_scale_monitoring_enabled FunctionApp#runtime_scale_monitoring_enabled}
   */
-  readonly runtimeScaleMonitoringEnabled?: boolean;
+  readonly runtimeScaleMonitoringEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app.html#scm_ip_restriction FunctionApp#scm_ip_restriction}
   */
@@ -604,15 +604,15 @@ export interface FunctionAppSiteConfig {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app.html#scm_use_main_ip_restriction FunctionApp#scm_use_main_ip_restriction}
   */
-  readonly scmUseMainIpRestriction?: boolean;
+  readonly scmUseMainIpRestriction?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app.html#use_32_bit_worker_process FunctionApp#use_32_bit_worker_process}
   */
-  readonly use32BitWorkerProcess?: boolean;
+  readonly use32BitWorkerProcess?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app.html#websockets_enabled FunctionApp#websockets_enabled}
   */
-  readonly websocketsEnabled?: boolean;
+  readonly websocketsEnabled?: boolean | cdktf.IResolvable;
   /**
   * cors block
   * 
@@ -655,7 +655,7 @@ export interface FunctionAppSourceControl {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app.html#manual_integration FunctionApp#manual_integration}
   */
-  readonly manualIntegration?: boolean;
+  readonly manualIntegration?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app.html#repo_url FunctionApp#repo_url}
   */
@@ -663,11 +663,11 @@ export interface FunctionAppSourceControl {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app.html#rollback_enabled FunctionApp#rollback_enabled}
   */
-  readonly rollbackEnabled?: boolean;
+  readonly rollbackEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app.html#use_mercurial FunctionApp#use_mercurial}
   */
-  readonly useMercurial?: boolean;
+  readonly useMercurial?: boolean | cdktf.IResolvable;
 }
 
 function functionAppSourceControlToTerraform(struct?: FunctionAppSourceControl): any {
@@ -715,6 +715,11 @@ function functionAppTimeoutsToTerraform(struct?: FunctionAppTimeouts): any {
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/function_app.html azurerm_function_app}
 */
 export class FunctionApp extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_function_app";
 
   // ===========
   // INITIALIZER
@@ -781,11 +786,11 @@ export class FunctionApp extends cdktf.TerraformResource {
   }
 
   // app_settings - computed: true, optional: true, required: false
-  private _appSettings?: { [key: string]: string }
-  public get appSettings(): { [key: string]: string } {
+  private _appSettings?: { [key: string]: string } | cdktf.IResolvable
+  public get appSettings(): { [key: string]: string } | cdktf.IResolvable {
     return this.interpolationForAttribute('app_settings') as any; // Getting the computed value is not yet implemented
   }
-  public set appSettings(value: { [key: string]: string }) {
+  public set appSettings(value: { [key: string]: string } | cdktf.IResolvable) {
     this._appSettings = value;
   }
   public resetAppSettings() {
@@ -797,11 +802,11 @@ export class FunctionApp extends cdktf.TerraformResource {
   }
 
   // client_affinity_enabled - computed: true, optional: true, required: false
-  private _clientAffinityEnabled?: boolean;
+  private _clientAffinityEnabled?: boolean | cdktf.IResolvable;
   public get clientAffinityEnabled() {
     return this.getBooleanAttribute('client_affinity_enabled');
   }
-  public set clientAffinityEnabled(value: boolean) {
+  public set clientAffinityEnabled(value: boolean | cdktf.IResolvable) {
     this._clientAffinityEnabled = value;
   }
   public resetClientAffinityEnabled() {
@@ -855,11 +860,11 @@ export class FunctionApp extends cdktf.TerraformResource {
   }
 
   // enable_builtin_logging - computed: false, optional: true, required: false
-  private _enableBuiltinLogging?: boolean;
+  private _enableBuiltinLogging?: boolean | cdktf.IResolvable;
   public get enableBuiltinLogging() {
     return this.getBooleanAttribute('enable_builtin_logging');
   }
-  public set enableBuiltinLogging(value: boolean ) {
+  public set enableBuiltinLogging(value: boolean | cdktf.IResolvable ) {
     this._enableBuiltinLogging = value;
   }
   public resetEnableBuiltinLogging() {
@@ -871,11 +876,11 @@ export class FunctionApp extends cdktf.TerraformResource {
   }
 
   // enabled - computed: false, optional: true, required: false
-  private _enabled?: boolean;
+  private _enabled?: boolean | cdktf.IResolvable;
   public get enabled() {
     return this.getBooleanAttribute('enabled');
   }
-  public set enabled(value: boolean ) {
+  public set enabled(value: boolean | cdktf.IResolvable ) {
     this._enabled = value;
   }
   public resetEnabled() {
@@ -887,11 +892,11 @@ export class FunctionApp extends cdktf.TerraformResource {
   }
 
   // https_only - computed: false, optional: true, required: false
-  private _httpsOnly?: boolean;
+  private _httpsOnly?: boolean | cdktf.IResolvable;
   public get httpsOnly() {
     return this.getBooleanAttribute('https_only');
   }
-  public set httpsOnly(value: boolean ) {
+  public set httpsOnly(value: boolean | cdktf.IResolvable ) {
     this._httpsOnly = value;
   }
   public resetHttpsOnly() {
@@ -1031,11 +1036,11 @@ export class FunctionApp extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string };
+  private _tags?: { [key: string]: string } | cdktf.IResolvable;
   public get tags() {
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._tags = value;
   }
   public resetTags() {

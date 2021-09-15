@@ -73,6 +73,11 @@ function kustoDatabaseTimeoutsToTerraform(struct?: KustoDatabaseTimeouts): any {
 */
 export class KustoDatabase extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_kusto_database";
+
   // ===========
   // INITIALIZER
   // ===========

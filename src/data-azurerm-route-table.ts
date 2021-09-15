@@ -64,6 +64,11 @@ function dataAzurermRouteTableTimeoutsToTerraform(struct?: DataAzurermRouteTable
 */
 export class DataAzurermRouteTable extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_route_table";
+
   // ===========
   // INITIALIZER
   // ===========

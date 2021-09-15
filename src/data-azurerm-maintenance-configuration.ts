@@ -69,6 +69,11 @@ function dataAzurermMaintenanceConfigurationTimeoutsToTerraform(struct?: DataAzu
 */
 export class DataAzurermMaintenanceConfiguration extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_maintenance_configuration";
+
   // ===========
   // INITIALIZER
   // ===========

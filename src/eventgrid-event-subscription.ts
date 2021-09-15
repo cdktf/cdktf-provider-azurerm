@@ -10,7 +10,7 @@ export interface EventgridEventSubscriptionConfig extends cdktf.TerraformMetaArg
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#advanced_filtering_on_arrays_enabled EventgridEventSubscription#advanced_filtering_on_arrays_enabled}
   */
-  readonly advancedFilteringOnArraysEnabled?: boolean;
+  readonly advancedFilteringOnArraysEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#event_delivery_schema EventgridEventSubscription#event_delivery_schema}
   */
@@ -68,6 +68,18 @@ export interface EventgridEventSubscriptionConfig extends cdktf.TerraformMetaArg
   */
   readonly azureFunctionEndpoint?: EventgridEventSubscriptionAzureFunctionEndpoint[];
   /**
+  * dead_letter_identity block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#dead_letter_identity EventgridEventSubscription#dead_letter_identity}
+  */
+  readonly deadLetterIdentity?: EventgridEventSubscriptionDeadLetterIdentity[];
+  /**
+  * delivery_identity block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#delivery_identity EventgridEventSubscription#delivery_identity}
+  */
+  readonly deliveryIdentity?: EventgridEventSubscriptionDeliveryIdentity[];
+  /**
   * eventhub_endpoint block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#eventhub_endpoint EventgridEventSubscription#eventhub_endpoint}
@@ -124,7 +136,7 @@ export interface EventgridEventSubscriptionAdvancedFilterBoolEquals {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#value EventgridEventSubscription#value}
   */
-  readonly value: boolean;
+  readonly value: boolean | cdktf.IResolvable;
 }
 
 function eventgridEventSubscriptionAdvancedFilterBoolEqualsToTerraform(struct?: EventgridEventSubscriptionAdvancedFilterBoolEquals): any {
@@ -633,6 +645,34 @@ function eventgridEventSubscriptionAzureFunctionEndpointToTerraform(struct?: Eve
   }
 }
 
+export interface EventgridEventSubscriptionDeadLetterIdentity {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#type EventgridEventSubscription#type}
+  */
+  readonly type: string;
+}
+
+function eventgridEventSubscriptionDeadLetterIdentityToTerraform(struct?: EventgridEventSubscriptionDeadLetterIdentity): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    type: cdktf.stringToTerraform(struct!.type),
+  }
+}
+
+export interface EventgridEventSubscriptionDeliveryIdentity {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#type EventgridEventSubscription#type}
+  */
+  readonly type: string;
+}
+
+function eventgridEventSubscriptionDeliveryIdentityToTerraform(struct?: EventgridEventSubscriptionDeliveryIdentity): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    type: cdktf.stringToTerraform(struct!.type),
+  }
+}
+
 export interface EventgridEventSubscriptionEventhubEndpoint {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#eventhub_id EventgridEventSubscription#eventhub_id}
@@ -722,7 +762,7 @@ export interface EventgridEventSubscriptionSubjectFilter {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#case_sensitive EventgridEventSubscription#case_sensitive}
   */
-  readonly caseSensitive?: boolean;
+  readonly caseSensitive?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#subject_begins_with EventgridEventSubscription#subject_begins_with}
   */
@@ -811,6 +851,11 @@ function eventgridEventSubscriptionWebhookEndpointToTerraform(struct?: Eventgrid
 */
 export class EventgridEventSubscription extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_eventgrid_event_subscription";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -847,6 +892,8 @@ export class EventgridEventSubscription extends cdktf.TerraformResource {
     this._topicName = config.topicName;
     this._advancedFilter = config.advancedFilter;
     this._azureFunctionEndpoint = config.azureFunctionEndpoint;
+    this._deadLetterIdentity = config.deadLetterIdentity;
+    this._deliveryIdentity = config.deliveryIdentity;
     this._eventhubEndpoint = config.eventhubEndpoint;
     this._hybridConnectionEndpoint = config.hybridConnectionEndpoint;
     this._retryPolicy = config.retryPolicy;
@@ -862,11 +909,11 @@ export class EventgridEventSubscription extends cdktf.TerraformResource {
   // ==========
 
   // advanced_filtering_on_arrays_enabled - computed: false, optional: true, required: false
-  private _advancedFilteringOnArraysEnabled?: boolean;
+  private _advancedFilteringOnArraysEnabled?: boolean | cdktf.IResolvable;
   public get advancedFilteringOnArraysEnabled() {
     return this.getBooleanAttribute('advanced_filtering_on_arrays_enabled');
   }
-  public set advancedFilteringOnArraysEnabled(value: boolean ) {
+  public set advancedFilteringOnArraysEnabled(value: boolean | cdktf.IResolvable ) {
     this._advancedFilteringOnArraysEnabled = value;
   }
   public resetAdvancedFilteringOnArraysEnabled() {
@@ -1084,6 +1131,38 @@ export class EventgridEventSubscription extends cdktf.TerraformResource {
     return this._azureFunctionEndpoint
   }
 
+  // dead_letter_identity - computed: false, optional: true, required: false
+  private _deadLetterIdentity?: EventgridEventSubscriptionDeadLetterIdentity[];
+  public get deadLetterIdentity() {
+    return this.interpolationForAttribute('dead_letter_identity') as any;
+  }
+  public set deadLetterIdentity(value: EventgridEventSubscriptionDeadLetterIdentity[] ) {
+    this._deadLetterIdentity = value;
+  }
+  public resetDeadLetterIdentity() {
+    this._deadLetterIdentity = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deadLetterIdentityInput() {
+    return this._deadLetterIdentity
+  }
+
+  // delivery_identity - computed: false, optional: true, required: false
+  private _deliveryIdentity?: EventgridEventSubscriptionDeliveryIdentity[];
+  public get deliveryIdentity() {
+    return this.interpolationForAttribute('delivery_identity') as any;
+  }
+  public set deliveryIdentity(value: EventgridEventSubscriptionDeliveryIdentity[] ) {
+    this._deliveryIdentity = value;
+  }
+  public resetDeliveryIdentity() {
+    this._deliveryIdentity = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deliveryIdentityInput() {
+    return this._deliveryIdentity
+  }
+
   // eventhub_endpoint - computed: false, optional: true, required: false
   private _eventhubEndpoint?: EventgridEventSubscriptionEventhubEndpoint[];
   public get eventhubEndpoint() {
@@ -1232,6 +1311,8 @@ export class EventgridEventSubscription extends cdktf.TerraformResource {
       topic_name: cdktf.stringToTerraform(this._topicName),
       advanced_filter: cdktf.listMapper(eventgridEventSubscriptionAdvancedFilterToTerraform)(this._advancedFilter),
       azure_function_endpoint: cdktf.listMapper(eventgridEventSubscriptionAzureFunctionEndpointToTerraform)(this._azureFunctionEndpoint),
+      dead_letter_identity: cdktf.listMapper(eventgridEventSubscriptionDeadLetterIdentityToTerraform)(this._deadLetterIdentity),
+      delivery_identity: cdktf.listMapper(eventgridEventSubscriptionDeliveryIdentityToTerraform)(this._deliveryIdentity),
       eventhub_endpoint: cdktf.listMapper(eventgridEventSubscriptionEventhubEndpointToTerraform)(this._eventhubEndpoint),
       hybrid_connection_endpoint: cdktf.listMapper(eventgridEventSubscriptionHybridConnectionEndpointToTerraform)(this._hybridConnectionEndpoint),
       retry_policy: cdktf.listMapper(eventgridEventSubscriptionRetryPolicyToTerraform)(this._retryPolicy),

@@ -69,6 +69,11 @@ function iothubEnrichmentTimeoutsToTerraform(struct?: IothubEnrichmentTimeouts):
 */
 export class IothubEnrichmentA extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_iothub_enrichment";
+
   // ===========
   // INITIALIZER
   // ===========

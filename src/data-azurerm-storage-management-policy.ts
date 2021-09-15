@@ -162,6 +162,11 @@ function dataAzurermStorageManagementPolicyTimeoutsToTerraform(struct?: DataAzur
 */
 export class DataAzurermStorageManagementPolicy extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_storage_management_policy";
+
   // ===========
   // INITIALIZER
   // ===========

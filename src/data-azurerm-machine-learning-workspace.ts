@@ -59,6 +59,11 @@ function dataAzurermMachineLearningWorkspaceTimeoutsToTerraform(struct?: DataAzu
 */
 export class DataAzurermMachineLearningWorkspace extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_machine_learning_workspace";
+
   // ===========
   // INITIALIZER
   // ===========

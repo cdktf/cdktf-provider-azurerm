@@ -65,6 +65,11 @@ function automationDscNodeconfigurationTimeoutsToTerraform(struct?: AutomationDs
 */
 export class AutomationDscNodeconfiguration extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_automation_dsc_nodeconfiguration";
+
   // ===========
   // INITIALIZER
   // ===========

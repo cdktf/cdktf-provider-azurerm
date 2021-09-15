@@ -73,6 +73,11 @@ function cosmosdbSqlStoredProcedureTimeoutsToTerraform(struct?: CosmosdbSqlStore
 */
 export class CosmosdbSqlStoredProcedure extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_cosmosdb_sql_stored_procedure";
+
   // ===========
   // INITIALIZER
   // ===========

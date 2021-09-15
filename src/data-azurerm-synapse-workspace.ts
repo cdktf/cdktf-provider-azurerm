@@ -59,6 +59,11 @@ function dataAzurermSynapseWorkspaceTimeoutsToTerraform(struct?: DataAzurermSyna
 */
 export class DataAzurermSynapseWorkspace extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_synapse_workspace";
+
   // ===========
   // INITIALIZER
   // ===========

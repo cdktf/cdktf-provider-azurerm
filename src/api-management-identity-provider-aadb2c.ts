@@ -93,6 +93,11 @@ function apiManagementIdentityProviderAadb2CTimeoutsToTerraform(struct?: ApiMana
 */
 export class ApiManagementIdentityProviderAadb2C extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_api_management_identity_provider_aadb2c";
+
   // ===========
   // INITIALIZER
   // ===========

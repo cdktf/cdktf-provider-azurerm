@@ -30,7 +30,7 @@ export interface VirtualMachineDataDiskAttachmentConfig extends cdktf.TerraformM
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_data_disk_attachment.html#write_accelerator_enabled VirtualMachineDataDiskAttachment#write_accelerator_enabled}
   */
-  readonly writeAcceleratorEnabled?: boolean;
+  readonly writeAcceleratorEnabled?: boolean | cdktf.IResolvable;
   /**
   * timeouts block
   * 
@@ -72,6 +72,11 @@ function virtualMachineDataDiskAttachmentTimeoutsToTerraform(struct?: VirtualMac
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_data_disk_attachment.html azurerm_virtual_machine_data_disk_attachment}
 */
 export class VirtualMachineDataDiskAttachment extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_virtual_machine_data_disk_attachment";
 
   // ===========
   // INITIALIZER
@@ -182,11 +187,11 @@ export class VirtualMachineDataDiskAttachment extends cdktf.TerraformResource {
   }
 
   // write_accelerator_enabled - computed: false, optional: true, required: false
-  private _writeAcceleratorEnabled?: boolean;
+  private _writeAcceleratorEnabled?: boolean | cdktf.IResolvable;
   public get writeAcceleratorEnabled() {
     return this.getBooleanAttribute('write_accelerator_enabled');
   }
-  public set writeAcceleratorEnabled(value: boolean ) {
+  public set writeAcceleratorEnabled(value: boolean | cdktf.IResolvable ) {
     this._writeAcceleratorEnabled = value;
   }
   public resetWriteAcceleratorEnabled() {

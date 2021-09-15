@@ -10,7 +10,7 @@ export interface PortalTenantConfigurationConfig extends cdktf.TerraformMetaArgu
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/portal_tenant_configuration.html#private_markdown_storage_enforced PortalTenantConfiguration#private_markdown_storage_enforced}
   */
-  readonly privateMarkdownStorageEnforced: boolean;
+  readonly privateMarkdownStorageEnforced: boolean | cdktf.IResolvable;
   /**
   * timeouts block
   * 
@@ -53,6 +53,11 @@ function portalTenantConfigurationTimeoutsToTerraform(struct?: PortalTenantConfi
 */
 export class PortalTenantConfiguration extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_portal_tenant_configuration";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -89,11 +94,11 @@ export class PortalTenantConfiguration extends cdktf.TerraformResource {
   }
 
   // private_markdown_storage_enforced - computed: false, optional: false, required: true
-  private _privateMarkdownStorageEnforced: boolean;
+  private _privateMarkdownStorageEnforced: boolean | cdktf.IResolvable;
   public get privateMarkdownStorageEnforced() {
     return this.getBooleanAttribute('private_markdown_storage_enforced');
   }
-  public set privateMarkdownStorageEnforced(value: boolean) {
+  public set privateMarkdownStorageEnforced(value: boolean | cdktf.IResolvable) {
     this._privateMarkdownStorageEnforced = value;
   }
   // Temporarily expose input value. Use with caution.

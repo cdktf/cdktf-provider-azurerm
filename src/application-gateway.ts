@@ -10,7 +10,7 @@ export interface ApplicationGatewayConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#enable_http2 ApplicationGateway#enable_http2}
   */
-  readonly enableHttp2?: boolean;
+  readonly enableHttp2?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#firewall_policy_id ApplicationGateway#firewall_policy_id}
   */
@@ -30,7 +30,7 @@ export interface ApplicationGatewayConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#tags ApplicationGateway#tags}
   */
-  readonly tags?: { [key: string]: string };
+  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#zones ApplicationGateway#zones}
   */
@@ -138,11 +138,23 @@ export interface ApplicationGatewayConfig extends cdktf.TerraformMetaArguments {
   */
   readonly sslPolicy?: ApplicationGatewaySslPolicy[];
   /**
+  * ssl_profile block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#ssl_profile ApplicationGateway#ssl_profile}
+  */
+  readonly sslProfile?: ApplicationGatewaySslProfile[];
+  /**
   * timeouts block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#timeouts ApplicationGateway#timeouts}
   */
   readonly timeouts?: ApplicationGatewayTimeouts;
+  /**
+  * trusted_client_certificate block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#trusted_client_certificate ApplicationGateway#trusted_client_certificate}
+  */
+  readonly trustedClientCertificate?: ApplicationGatewayTrustedClientCertificate[];
   /**
   * trusted_root_certificate block
   * 
@@ -246,7 +258,7 @@ export interface ApplicationGatewayBackendHttpSettingsConnectionDraining {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#enabled ApplicationGateway#enabled}
   */
-  readonly enabled: boolean;
+  readonly enabled: boolean | cdktf.IResolvable;
 }
 
 function applicationGatewayBackendHttpSettingsConnectionDrainingToTerraform(struct?: ApplicationGatewayBackendHttpSettingsConnectionDraining): any {
@@ -281,7 +293,7 @@ export interface ApplicationGatewayBackendHttpSettings {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#pick_host_name_from_backend_address ApplicationGateway#pick_host_name_from_backend_address}
   */
-  readonly pickHostNameFromBackendAddress?: boolean;
+  readonly pickHostNameFromBackendAddress?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#port ApplicationGateway#port}
   */
@@ -477,11 +489,15 @@ export interface ApplicationGatewayHttpListener {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#require_sni ApplicationGateway#require_sni}
   */
-  readonly requireSni?: boolean;
+  readonly requireSni?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#ssl_certificate_name ApplicationGateway#ssl_certificate_name}
   */
   readonly sslCertificateName?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#ssl_profile_name ApplicationGateway#ssl_profile_name}
+  */
+  readonly sslProfileName?: string;
   /**
   * custom_error_configuration block
   * 
@@ -502,6 +518,7 @@ function applicationGatewayHttpListenerToTerraform(struct?: ApplicationGatewayHt
     protocol: cdktf.stringToTerraform(struct!.protocol),
     require_sni: cdktf.booleanToTerraform(struct!.requireSni),
     ssl_certificate_name: cdktf.stringToTerraform(struct!.sslCertificateName),
+    ssl_profile_name: cdktf.stringToTerraform(struct!.sslProfileName),
     custom_error_configuration: cdktf.listMapper(applicationGatewayHttpListenerCustomErrorConfigurationToTerraform)(struct!.customErrorConfiguration),
   }
 }
@@ -568,7 +585,7 @@ export interface ApplicationGatewayProbe {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#pick_host_name_from_backend_http_settings ApplicationGateway#pick_host_name_from_backend_http_settings}
   */
-  readonly pickHostNameFromBackendHttpSettings?: boolean;
+  readonly pickHostNameFromBackendHttpSettings?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#port ApplicationGateway#port}
   */
@@ -614,11 +631,11 @@ export interface ApplicationGatewayRedirectConfiguration {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#include_path ApplicationGateway#include_path}
   */
-  readonly includePath?: boolean;
+  readonly includePath?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#include_query_string ApplicationGateway#include_query_string}
   */
-  readonly includeQueryString?: boolean;
+  readonly includeQueryString?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#name ApplicationGateway#name}
   */
@@ -702,11 +719,11 @@ export interface ApplicationGatewayRewriteRuleSetRewriteRuleCondition {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#ignore_case ApplicationGateway#ignore_case}
   */
-  readonly ignoreCase?: boolean;
+  readonly ignoreCase?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#negate ApplicationGateway#negate}
   */
-  readonly negate?: boolean;
+  readonly negate?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#pattern ApplicationGateway#pattern}
   */
@@ -777,7 +794,7 @@ export interface ApplicationGatewayRewriteRuleSetRewriteRuleUrl {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#reroute ApplicationGateway#reroute}
   */
-  readonly reroute?: boolean;
+  readonly reroute?: boolean | cdktf.IResolvable;
 }
 
 function applicationGatewayRewriteRuleSetRewriteRuleUrlToTerraform(struct?: ApplicationGatewayRewriteRuleSetRewriteRuleUrl): any {
@@ -944,6 +961,71 @@ function applicationGatewaySslPolicyToTerraform(struct?: ApplicationGatewaySslPo
   }
 }
 
+export interface ApplicationGatewaySslProfileSslPolicy {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#cipher_suites ApplicationGateway#cipher_suites}
+  */
+  readonly cipherSuites?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#disabled_protocols ApplicationGateway#disabled_protocols}
+  */
+  readonly disabledProtocols?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#min_protocol_version ApplicationGateway#min_protocol_version}
+  */
+  readonly minProtocolVersion?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#policy_name ApplicationGateway#policy_name}
+  */
+  readonly policyName?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#policy_type ApplicationGateway#policy_type}
+  */
+  readonly policyType?: string;
+}
+
+function applicationGatewaySslProfileSslPolicyToTerraform(struct?: ApplicationGatewaySslProfileSslPolicy): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    cipher_suites: cdktf.listMapper(cdktf.stringToTerraform)(struct!.cipherSuites),
+    disabled_protocols: cdktf.listMapper(cdktf.stringToTerraform)(struct!.disabledProtocols),
+    min_protocol_version: cdktf.stringToTerraform(struct!.minProtocolVersion),
+    policy_name: cdktf.stringToTerraform(struct!.policyName),
+    policy_type: cdktf.stringToTerraform(struct!.policyType),
+  }
+}
+
+export interface ApplicationGatewaySslProfile {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#name ApplicationGateway#name}
+  */
+  readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#trusted_client_certificate_names ApplicationGateway#trusted_client_certificate_names}
+  */
+  readonly trustedClientCertificateNames?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#verify_client_cert_issuer_dn ApplicationGateway#verify_client_cert_issuer_dn}
+  */
+  readonly verifyClientCertIssuerDn?: boolean | cdktf.IResolvable;
+  /**
+  * ssl_policy block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#ssl_policy ApplicationGateway#ssl_policy}
+  */
+  readonly sslPolicy?: ApplicationGatewaySslProfileSslPolicy[];
+}
+
+function applicationGatewaySslProfileToTerraform(struct?: ApplicationGatewaySslProfile): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    name: cdktf.stringToTerraform(struct!.name),
+    trusted_client_certificate_names: cdktf.listMapper(cdktf.stringToTerraform)(struct!.trustedClientCertificateNames),
+    verify_client_cert_issuer_dn: cdktf.booleanToTerraform(struct!.verifyClientCertIssuerDn),
+    ssl_policy: cdktf.listMapper(applicationGatewaySslProfileSslPolicyToTerraform)(struct!.sslPolicy),
+  }
+}
+
 export interface ApplicationGatewayTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#create ApplicationGateway#create}
@@ -970,6 +1052,25 @@ function applicationGatewayTimeoutsToTerraform(struct?: ApplicationGatewayTimeou
     delete: cdktf.stringToTerraform(struct!.delete),
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+export interface ApplicationGatewayTrustedClientCertificate {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#data ApplicationGateway#data}
+  */
+  readonly data: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#name ApplicationGateway#name}
+  */
+  readonly name: string;
+}
+
+function applicationGatewayTrustedClientCertificateToTerraform(struct?: ApplicationGatewayTrustedClientCertificate): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    data: cdktf.stringToTerraform(struct!.data),
+    name: cdktf.stringToTerraform(struct!.name),
   }
 }
 
@@ -1124,7 +1225,7 @@ export interface ApplicationGatewayWafConfiguration {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#enabled ApplicationGateway#enabled}
   */
-  readonly enabled: boolean;
+  readonly enabled: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#file_upload_limit_mb ApplicationGateway#file_upload_limit_mb}
   */
@@ -1140,7 +1241,7 @@ export interface ApplicationGatewayWafConfiguration {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#request_body_check ApplicationGateway#request_body_check}
   */
-  readonly requestBodyCheck?: boolean;
+  readonly requestBodyCheck?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#rule_set_type ApplicationGateway#rule_set_type}
   */
@@ -1183,6 +1284,11 @@ function applicationGatewayWafConfigurationToTerraform(struct?: ApplicationGatew
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html azurerm_application_gateway}
 */
 export class ApplicationGateway extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_application_gateway";
 
   // ===========
   // INITIALIZER
@@ -1230,7 +1336,9 @@ export class ApplicationGateway extends cdktf.TerraformResource {
     this._sku = config.sku;
     this._sslCertificate = config.sslCertificate;
     this._sslPolicy = config.sslPolicy;
+    this._sslProfile = config.sslProfile;
     this._timeouts = config.timeouts;
+    this._trustedClientCertificate = config.trustedClientCertificate;
     this._trustedRootCertificate = config.trustedRootCertificate;
     this._urlPathMap = config.urlPathMap;
     this._wafConfiguration = config.wafConfiguration;
@@ -1241,11 +1349,11 @@ export class ApplicationGateway extends cdktf.TerraformResource {
   // ==========
 
   // enable_http2 - computed: false, optional: true, required: false
-  private _enableHttp2?: boolean;
+  private _enableHttp2?: boolean | cdktf.IResolvable;
   public get enableHttp2() {
     return this.getBooleanAttribute('enable_http2');
   }
-  public set enableHttp2(value: boolean ) {
+  public set enableHttp2(value: boolean | cdktf.IResolvable ) {
     this._enableHttp2 = value;
   }
   public resetEnableHttp2() {
@@ -1317,11 +1425,11 @@ export class ApplicationGateway extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string };
+  private _tags?: { [key: string]: string } | cdktf.IResolvable;
   public get tags() {
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._tags = value;
   }
   public resetTags() {
@@ -1596,6 +1704,22 @@ export class ApplicationGateway extends cdktf.TerraformResource {
     return this._sslPolicy
   }
 
+  // ssl_profile - computed: false, optional: true, required: false
+  private _sslProfile?: ApplicationGatewaySslProfile[];
+  public get sslProfile() {
+    return this.interpolationForAttribute('ssl_profile') as any;
+  }
+  public set sslProfile(value: ApplicationGatewaySslProfile[] ) {
+    this._sslProfile = value;
+  }
+  public resetSslProfile() {
+    this._sslProfile = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sslProfileInput() {
+    return this._sslProfile
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: ApplicationGatewayTimeouts;
   public get timeouts() {
@@ -1610,6 +1734,22 @@ export class ApplicationGateway extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
     return this._timeouts
+  }
+
+  // trusted_client_certificate - computed: false, optional: true, required: false
+  private _trustedClientCertificate?: ApplicationGatewayTrustedClientCertificate[];
+  public get trustedClientCertificate() {
+    return this.interpolationForAttribute('trusted_client_certificate') as any;
+  }
+  public set trustedClientCertificate(value: ApplicationGatewayTrustedClientCertificate[] ) {
+    this._trustedClientCertificate = value;
+  }
+  public resetTrustedClientCertificate() {
+    this._trustedClientCertificate = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get trustedClientCertificateInput() {
+    return this._trustedClientCertificate
   }
 
   // trusted_root_certificate - computed: false, optional: true, required: false
@@ -1690,7 +1830,9 @@ export class ApplicationGateway extends cdktf.TerraformResource {
       sku: cdktf.listMapper(applicationGatewaySkuToTerraform)(this._sku),
       ssl_certificate: cdktf.listMapper(applicationGatewaySslCertificateToTerraform)(this._sslCertificate),
       ssl_policy: cdktf.listMapper(applicationGatewaySslPolicyToTerraform)(this._sslPolicy),
+      ssl_profile: cdktf.listMapper(applicationGatewaySslProfileToTerraform)(this._sslProfile),
       timeouts: applicationGatewayTimeoutsToTerraform(this._timeouts),
+      trusted_client_certificate: cdktf.listMapper(applicationGatewayTrustedClientCertificateToTerraform)(this._trustedClientCertificate),
       trusted_root_certificate: cdktf.listMapper(applicationGatewayTrustedRootCertificateToTerraform)(this._trustedRootCertificate),
       url_path_map: cdktf.listMapper(applicationGatewayUrlPathMapToTerraform)(this._urlPathMap),
       waf_configuration: cdktf.listMapper(applicationGatewayWafConfigurationToTerraform)(this._wafConfiguration),

@@ -140,6 +140,11 @@ function dataProtectionBackupPolicyPostgresqlTimeoutsToTerraform(struct?: DataPr
 */
 export class DataProtectionBackupPolicyPostgresql extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_data_protection_backup_policy_postgresql";
+
   // ===========
   // INITIALIZER
   // ===========

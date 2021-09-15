@@ -121,6 +121,11 @@ function networkSecurityRuleTimeoutsToTerraform(struct?: NetworkSecurityRuleTime
 */
 export class NetworkSecurityRule extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_network_security_rule";
+
   // ===========
   // INITIALIZER
   // ===========

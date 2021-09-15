@@ -26,7 +26,7 @@ export interface PrivateEndpointConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/private_endpoint.html#tags PrivateEndpoint#tags}
   */
-  readonly tags?: { [key: string]: string };
+  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * private_dns_zone_group block
   * 
@@ -130,7 +130,7 @@ export interface PrivateEndpointPrivateServiceConnection {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/private_endpoint.html#is_manual_connection PrivateEndpoint#is_manual_connection}
   */
-  readonly isManualConnection: boolean;
+  readonly isManualConnection: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/private_endpoint.html#name PrivateEndpoint#name}
   */
@@ -199,6 +199,11 @@ function privateEndpointTimeoutsToTerraform(struct?: PrivateEndpointTimeouts): a
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/private_endpoint.html azurerm_private_endpoint}
 */
 export class PrivateEndpoint extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_private_endpoint";
 
   // ===========
   // INITIALIZER
@@ -304,11 +309,11 @@ export class PrivateEndpoint extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string };
+  private _tags?: { [key: string]: string } | cdktf.IResolvable;
   public get tags() {
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._tags = value;
   }
   public resetTags() {

@@ -10,7 +10,7 @@ export interface DataFactoryDatasetDelimitedTextConfig extends cdktf.TerraformMe
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_delimited_text.html#additional_properties DataFactoryDatasetDelimitedText#additional_properties}
   */
-  readonly additionalProperties?: { [key: string]: string };
+  readonly additionalProperties?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_delimited_text.html#annotations DataFactoryDatasetDelimitedText#annotations}
   */
@@ -46,7 +46,7 @@ export interface DataFactoryDatasetDelimitedTextConfig extends cdktf.TerraformMe
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_delimited_text.html#first_row_as_header DataFactoryDatasetDelimitedText#first_row_as_header}
   */
-  readonly firstRowAsHeader?: boolean;
+  readonly firstRowAsHeader?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_delimited_text.html#folder DataFactoryDatasetDelimitedText#folder}
   */
@@ -66,7 +66,7 @@ export interface DataFactoryDatasetDelimitedTextConfig extends cdktf.TerraformMe
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_delimited_text.html#parameters DataFactoryDatasetDelimitedText#parameters}
   */
-  readonly parameters?: { [key: string]: string };
+  readonly parameters?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_delimited_text.html#quote_character DataFactoryDatasetDelimitedText#quote_character}
   */
@@ -140,6 +140,14 @@ export interface DataFactoryDatasetDelimitedTextAzureBlobStorageLocation {
   */
   readonly container: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_delimited_text.html#dynamic_filename_enabled DataFactoryDatasetDelimitedText#dynamic_filename_enabled}
+  */
+  readonly dynamicFilenameEnabled?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_delimited_text.html#dynamic_path_enabled DataFactoryDatasetDelimitedText#dynamic_path_enabled}
+  */
+  readonly dynamicPathEnabled?: boolean | cdktf.IResolvable;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_delimited_text.html#filename DataFactoryDatasetDelimitedText#filename}
   */
   readonly filename?: string;
@@ -153,12 +161,22 @@ function dataFactoryDatasetDelimitedTextAzureBlobStorageLocationToTerraform(stru
   if (!cdktf.canInspect(struct)) { return struct; }
   return {
     container: cdktf.stringToTerraform(struct!.container),
+    dynamic_filename_enabled: cdktf.booleanToTerraform(struct!.dynamicFilenameEnabled),
+    dynamic_path_enabled: cdktf.booleanToTerraform(struct!.dynamicPathEnabled),
     filename: cdktf.stringToTerraform(struct!.filename),
     path: cdktf.stringToTerraform(struct!.path),
   }
 }
 
 export interface DataFactoryDatasetDelimitedTextHttpServerLocation {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_delimited_text.html#dynamic_filename_enabled DataFactoryDatasetDelimitedText#dynamic_filename_enabled}
+  */
+  readonly dynamicFilenameEnabled?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_delimited_text.html#dynamic_path_enabled DataFactoryDatasetDelimitedText#dynamic_path_enabled}
+  */
+  readonly dynamicPathEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_delimited_text.html#filename DataFactoryDatasetDelimitedText#filename}
   */
@@ -176,6 +194,8 @@ export interface DataFactoryDatasetDelimitedTextHttpServerLocation {
 function dataFactoryDatasetDelimitedTextHttpServerLocationToTerraform(struct?: DataFactoryDatasetDelimitedTextHttpServerLocation): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   return {
+    dynamic_filename_enabled: cdktf.booleanToTerraform(struct!.dynamicFilenameEnabled),
+    dynamic_path_enabled: cdktf.booleanToTerraform(struct!.dynamicPathEnabled),
     filename: cdktf.stringToTerraform(struct!.filename),
     path: cdktf.stringToTerraform(struct!.path),
     relative_url: cdktf.stringToTerraform(struct!.relativeUrl),
@@ -241,6 +261,11 @@ function dataFactoryDatasetDelimitedTextTimeoutsToTerraform(struct?: DataFactory
 */
 export class DataFactoryDatasetDelimitedText extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_data_factory_dataset_delimited_text";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -293,11 +318,11 @@ export class DataFactoryDatasetDelimitedText extends cdktf.TerraformResource {
   // ==========
 
   // additional_properties - computed: false, optional: true, required: false
-  private _additionalProperties?: { [key: string]: string };
+  private _additionalProperties?: { [key: string]: string } | cdktf.IResolvable;
   public get additionalProperties() {
     return this.interpolationForAttribute('additional_properties') as any;
   }
-  public set additionalProperties(value: { [key: string]: string } ) {
+  public set additionalProperties(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._additionalProperties = value;
   }
   public resetAdditionalProperties() {
@@ -434,11 +459,11 @@ export class DataFactoryDatasetDelimitedText extends cdktf.TerraformResource {
   }
 
   // first_row_as_header - computed: false, optional: true, required: false
-  private _firstRowAsHeader?: boolean;
+  private _firstRowAsHeader?: boolean | cdktf.IResolvable;
   public get firstRowAsHeader() {
     return this.getBooleanAttribute('first_row_as_header');
   }
-  public set firstRowAsHeader(value: boolean ) {
+  public set firstRowAsHeader(value: boolean | cdktf.IResolvable ) {
     this._firstRowAsHeader = value;
   }
   public resetFirstRowAsHeader() {
@@ -513,11 +538,11 @@ export class DataFactoryDatasetDelimitedText extends cdktf.TerraformResource {
   }
 
   // parameters - computed: false, optional: true, required: false
-  private _parameters?: { [key: string]: string };
+  private _parameters?: { [key: string]: string } | cdktf.IResolvable;
   public get parameters() {
     return this.interpolationForAttribute('parameters') as any;
   }
-  public set parameters(value: { [key: string]: string } ) {
+  public set parameters(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._parameters = value;
   }
   public resetParameters() {

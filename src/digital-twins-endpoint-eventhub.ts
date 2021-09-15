@@ -69,6 +69,11 @@ function digitalTwinsEndpointEventhubTimeoutsToTerraform(struct?: DigitalTwinsEn
 */
 export class DigitalTwinsEndpointEventhub extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_digital_twins_endpoint_eventhub";
+
   // ===========
   // INITIALIZER
   // ===========

@@ -46,6 +46,11 @@ function dataAzurermBatchCertificateTimeoutsToTerraform(struct?: DataAzurermBatc
 */
 export class DataAzurermBatchCertificate extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_batch_certificate";
+
   // ===========
   // INITIALIZER
   // ===========

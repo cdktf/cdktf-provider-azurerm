@@ -116,7 +116,7 @@ export interface MediaContentKeyPolicyPolicyOptionPlayreadyConfigurationLicenseP
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_content_key_policy.html#digital_video_only_content_restriction MediaContentKeyPolicy#digital_video_only_content_restriction}
   */
-  readonly digitalVideoOnlyContentRestriction?: boolean;
+  readonly digitalVideoOnlyContentRestriction?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_content_key_policy.html#first_play_expiration MediaContentKeyPolicy#first_play_expiration}
   */
@@ -124,11 +124,11 @@ export interface MediaContentKeyPolicyPolicyOptionPlayreadyConfigurationLicenseP
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_content_key_policy.html#image_constraint_for_analog_component_video_restriction MediaContentKeyPolicy#image_constraint_for_analog_component_video_restriction}
   */
-  readonly imageConstraintForAnalogComponentVideoRestriction?: boolean;
+  readonly imageConstraintForAnalogComponentVideoRestriction?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_content_key_policy.html#image_constraint_for_analog_computer_monitor_restriction MediaContentKeyPolicy#image_constraint_for_analog_computer_monitor_restriction}
   */
-  readonly imageConstraintForAnalogComputerMonitorRestriction?: boolean;
+  readonly imageConstraintForAnalogComputerMonitorRestriction?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_content_key_policy.html#scms_restriction MediaContentKeyPolicy#scms_restriction}
   */
@@ -164,7 +164,7 @@ export interface MediaContentKeyPolicyPolicyOptionPlayreadyConfigurationLicense 
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_content_key_policy.html#allow_test_devices MediaContentKeyPolicy#allow_test_devices}
   */
-  readonly allowTestDevices?: boolean;
+  readonly allowTestDevices?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_content_key_policy.html#begin_date MediaContentKeyPolicy#begin_date}
   */
@@ -172,7 +172,7 @@ export interface MediaContentKeyPolicyPolicyOptionPlayreadyConfigurationLicense 
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_content_key_policy.html#content_key_location_from_header_enabled MediaContentKeyPolicy#content_key_location_from_header_enabled}
   */
-  readonly contentKeyLocationFromHeaderEnabled?: boolean;
+  readonly contentKeyLocationFromHeaderEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_content_key_policy.html#content_key_location_from_key_id MediaContentKeyPolicy#content_key_location_from_key_id}
   */
@@ -305,7 +305,7 @@ export interface MediaContentKeyPolicyPolicyOption {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_content_key_policy.html#clear_key_configuration_enabled MediaContentKeyPolicy#clear_key_configuration_enabled}
   */
-  readonly clearKeyConfigurationEnabled?: boolean;
+  readonly clearKeyConfigurationEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_content_key_policy.html#name MediaContentKeyPolicy#name}
   */
@@ -313,7 +313,7 @@ export interface MediaContentKeyPolicyPolicyOption {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_content_key_policy.html#open_restriction_enabled MediaContentKeyPolicy#open_restriction_enabled}
   */
-  readonly openRestrictionEnabled?: boolean;
+  readonly openRestrictionEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_content_key_policy.html#widevine_configuration_template MediaContentKeyPolicy#widevine_configuration_template}
   */
@@ -385,6 +385,11 @@ function mediaContentKeyPolicyTimeoutsToTerraform(struct?: MediaContentKeyPolicy
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/media_content_key_policy.html azurerm_media_content_key_policy}
 */
 export class MediaContentKeyPolicy extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_media_content_key_policy";
 
   // ===========
   // INITIALIZER

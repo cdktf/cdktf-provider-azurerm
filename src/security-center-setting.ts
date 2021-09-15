@@ -10,7 +10,7 @@ export interface SecurityCenterSettingConfig extends cdktf.TerraformMetaArgument
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_setting.html#enabled SecurityCenterSetting#enabled}
   */
-  readonly enabled: boolean;
+  readonly enabled: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_setting.html#setting_name SecurityCenterSetting#setting_name}
   */
@@ -57,6 +57,11 @@ function securityCenterSettingTimeoutsToTerraform(struct?: SecurityCenterSetting
 */
 export class SecurityCenterSetting extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_security_center_setting";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -89,11 +94,11 @@ export class SecurityCenterSetting extends cdktf.TerraformResource {
   // ==========
 
   // enabled - computed: false, optional: false, required: true
-  private _enabled: boolean;
+  private _enabled: boolean | cdktf.IResolvable;
   public get enabled() {
     return this.getBooleanAttribute('enabled');
   }
-  public set enabled(value: boolean) {
+  public set enabled(value: boolean | cdktf.IResolvable) {
     this._enabled = value;
   }
   // Temporarily expose input value. Use with caution.

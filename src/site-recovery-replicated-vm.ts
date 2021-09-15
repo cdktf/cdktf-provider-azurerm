@@ -173,6 +173,11 @@ function siteRecoveryReplicatedVmTimeoutsToTerraform(struct?: SiteRecoveryReplic
 */
 export class SiteRecoveryReplicatedVm extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_site_recovery_replicated_vm";
+
   // ===========
   // INITIALIZER
   // ===========

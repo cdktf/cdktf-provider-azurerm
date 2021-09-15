@@ -10,7 +10,7 @@ export interface AppServiceCertificateOrderConfig extends cdktf.TerraformMetaArg
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_certificate_order.html#auto_renew AppServiceCertificateOrder#auto_renew}
   */
-  readonly autoRenew?: boolean;
+  readonly autoRenew?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_certificate_order.html#csr AppServiceCertificateOrder#csr}
   */
@@ -42,7 +42,7 @@ export interface AppServiceCertificateOrderConfig extends cdktf.TerraformMetaArg
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_certificate_order.html#tags AppServiceCertificateOrder#tags}
   */
-  readonly tags?: { [key: string]: string };
+  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_certificate_order.html#validity_in_years AppServiceCertificateOrder#validity_in_years}
   */
@@ -111,6 +111,11 @@ function appServiceCertificateOrderTimeoutsToTerraform(struct?: AppServiceCertif
 */
 export class AppServiceCertificateOrder extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_app_service_certificate_order";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -156,11 +161,11 @@ export class AppServiceCertificateOrder extends cdktf.TerraformResource {
   }
 
   // auto_renew - computed: false, optional: true, required: false
-  private _autoRenew?: boolean;
+  private _autoRenew?: boolean | cdktf.IResolvable;
   public get autoRenew() {
     return this.getBooleanAttribute('auto_renew');
   }
-  public set autoRenew(value: boolean ) {
+  public set autoRenew(value: boolean | cdktf.IResolvable ) {
     this._autoRenew = value;
   }
   public resetAutoRenew() {
@@ -320,11 +325,11 @@ export class AppServiceCertificateOrder extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string };
+  private _tags?: { [key: string]: string } | cdktf.IResolvable;
   public get tags() {
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._tags = value;
   }
   public resetTags() {

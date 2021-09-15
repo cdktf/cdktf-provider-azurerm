@@ -71,6 +71,11 @@ function dataAzurermFirewallPolicyTimeoutsToTerraform(struct?: DataAzurermFirewa
 */
 export class DataAzurermFirewallPolicy extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_firewall_policy";
+
   // ===========
   // INITIALIZER
   // ===========

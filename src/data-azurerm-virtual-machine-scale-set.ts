@@ -182,6 +182,11 @@ function dataAzurermVirtualMachineScaleSetTimeoutsToTerraform(struct?: DataAzure
 */
 export class DataAzurermVirtualMachineScaleSet extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_virtual_machine_scale_set";
+
   // ===========
   // INITIALIZER
   // ===========

@@ -14,7 +14,7 @@ export interface HdinsightKafkaClusterConfig extends cdktf.TerraformMetaArgument
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_kafka_cluster.html#encryption_in_transit_enabled HdinsightKafkaCluster#encryption_in_transit_enabled}
   */
-  readonly encryptionInTransitEnabled?: boolean;
+  readonly encryptionInTransitEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_kafka_cluster.html#location HdinsightKafkaCluster#location}
   */
@@ -30,7 +30,7 @@ export interface HdinsightKafkaClusterConfig extends cdktf.TerraformMetaArgument
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_kafka_cluster.html#tags HdinsightKafkaCluster#tags}
   */
-  readonly tags?: { [key: string]: string };
+  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_kafka_cluster.html#tier HdinsightKafkaCluster#tier}
   */
@@ -76,6 +76,12 @@ export interface HdinsightKafkaClusterConfig extends cdktf.TerraformMetaArgument
   */
   readonly roles: HdinsightKafkaClusterRoles[];
   /**
+  * security_profile block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_kafka_cluster.html#security_profile HdinsightKafkaCluster#security_profile}
+  */
+  readonly securityProfile?: HdinsightKafkaClusterSecurityProfile[];
+  /**
   * storage_account block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_kafka_cluster.html#storage_account HdinsightKafkaCluster#storage_account}
@@ -112,7 +118,7 @@ export interface HdinsightKafkaClusterGateway {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_kafka_cluster.html#enabled HdinsightKafkaCluster#enabled}
   */
-  readonly enabled?: boolean;
+  readonly enabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_kafka_cluster.html#password HdinsightKafkaCluster#password}
   */
@@ -490,11 +496,55 @@ function hdinsightKafkaClusterRolesToTerraform(struct?: HdinsightKafkaClusterRol
   }
 }
 
+export interface HdinsightKafkaClusterSecurityProfile {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_kafka_cluster.html#aadds_resource_id HdinsightKafkaCluster#aadds_resource_id}
+  */
+  readonly aaddsResourceId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_kafka_cluster.html#cluster_users_group_dns HdinsightKafkaCluster#cluster_users_group_dns}
+  */
+  readonly clusterUsersGroupDns?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_kafka_cluster.html#domain_name HdinsightKafkaCluster#domain_name}
+  */
+  readonly domainName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_kafka_cluster.html#domain_user_password HdinsightKafkaCluster#domain_user_password}
+  */
+  readonly domainUserPassword: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_kafka_cluster.html#domain_username HdinsightKafkaCluster#domain_username}
+  */
+  readonly domainUsername: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_kafka_cluster.html#ldaps_urls HdinsightKafkaCluster#ldaps_urls}
+  */
+  readonly ldapsUrls: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_kafka_cluster.html#msi_resource_id HdinsightKafkaCluster#msi_resource_id}
+  */
+  readonly msiResourceId: string;
+}
+
+function hdinsightKafkaClusterSecurityProfileToTerraform(struct?: HdinsightKafkaClusterSecurityProfile): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    aadds_resource_id: cdktf.stringToTerraform(struct!.aaddsResourceId),
+    cluster_users_group_dns: cdktf.listMapper(cdktf.stringToTerraform)(struct!.clusterUsersGroupDns),
+    domain_name: cdktf.stringToTerraform(struct!.domainName),
+    domain_user_password: cdktf.stringToTerraform(struct!.domainUserPassword),
+    domain_username: cdktf.stringToTerraform(struct!.domainUsername),
+    ldaps_urls: cdktf.listMapper(cdktf.stringToTerraform)(struct!.ldapsUrls),
+    msi_resource_id: cdktf.stringToTerraform(struct!.msiResourceId),
+  }
+}
+
 export interface HdinsightKafkaClusterStorageAccount {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_kafka_cluster.html#is_default HdinsightKafkaCluster#is_default}
   */
-  readonly isDefault: boolean;
+  readonly isDefault: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_kafka_cluster.html#storage_account_key HdinsightKafkaCluster#storage_account_key}
   */
@@ -522,7 +572,7 @@ export interface HdinsightKafkaClusterStorageAccountGen2 {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_kafka_cluster.html#is_default HdinsightKafkaCluster#is_default}
   */
-  readonly isDefault: boolean;
+  readonly isDefault: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_kafka_cluster.html#managed_identity_resource_id HdinsightKafkaCluster#managed_identity_resource_id}
   */
@@ -578,6 +628,11 @@ function hdinsightKafkaClusterTimeoutsToTerraform(struct?: HdinsightKafkaCluster
 */
 export class HdinsightKafkaCluster extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_hdinsight_kafka_cluster";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -614,6 +669,7 @@ export class HdinsightKafkaCluster extends cdktf.TerraformResource {
     this._monitor = config.monitor;
     this._restProxy = config.restProxy;
     this._roles = config.roles;
+    this._securityProfile = config.securityProfile;
     this._storageAccount = config.storageAccount;
     this._storageAccountGen2 = config.storageAccountGen2;
     this._timeouts = config.timeouts;
@@ -637,11 +693,11 @@ export class HdinsightKafkaCluster extends cdktf.TerraformResource {
   }
 
   // encryption_in_transit_enabled - computed: false, optional: true, required: false
-  private _encryptionInTransitEnabled?: boolean;
+  private _encryptionInTransitEnabled?: boolean | cdktf.IResolvable;
   public get encryptionInTransitEnabled() {
     return this.getBooleanAttribute('encryption_in_transit_enabled');
   }
-  public set encryptionInTransitEnabled(value: boolean ) {
+  public set encryptionInTransitEnabled(value: boolean | cdktf.IResolvable ) {
     this._encryptionInTransitEnabled = value;
   }
   public resetEncryptionInTransitEnabled() {
@@ -712,11 +768,11 @@ export class HdinsightKafkaCluster extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string };
+  private _tags?: { [key: string]: string } | cdktf.IResolvable;
   public get tags() {
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._tags = value;
   }
   public resetTags() {
@@ -843,6 +899,22 @@ export class HdinsightKafkaCluster extends cdktf.TerraformResource {
     return this._roles
   }
 
+  // security_profile - computed: false, optional: true, required: false
+  private _securityProfile?: HdinsightKafkaClusterSecurityProfile[];
+  public get securityProfile() {
+    return this.interpolationForAttribute('security_profile') as any;
+  }
+  public set securityProfile(value: HdinsightKafkaClusterSecurityProfile[] ) {
+    this._securityProfile = value;
+  }
+  public resetSecurityProfile() {
+    this._securityProfile = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get securityProfileInput() {
+    return this._securityProfile
+  }
+
   // storage_account - computed: false, optional: true, required: false
   private _storageAccount?: HdinsightKafkaClusterStorageAccount[];
   public get storageAccount() {
@@ -911,6 +983,7 @@ export class HdinsightKafkaCluster extends cdktf.TerraformResource {
       monitor: cdktf.listMapper(hdinsightKafkaClusterMonitorToTerraform)(this._monitor),
       rest_proxy: cdktf.listMapper(hdinsightKafkaClusterRestProxyToTerraform)(this._restProxy),
       roles: cdktf.listMapper(hdinsightKafkaClusterRolesToTerraform)(this._roles),
+      security_profile: cdktf.listMapper(hdinsightKafkaClusterSecurityProfileToTerraform)(this._securityProfile),
       storage_account: cdktf.listMapper(hdinsightKafkaClusterStorageAccountToTerraform)(this._storageAccount),
       storage_account_gen2: cdktf.listMapper(hdinsightKafkaClusterStorageAccountGen2ToTerraform)(this._storageAccountGen2),
       timeouts: hdinsightKafkaClusterTimeoutsToTerraform(this._timeouts),

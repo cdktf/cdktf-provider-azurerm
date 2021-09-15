@@ -89,6 +89,11 @@ function dataAzurermAdvisorRecommendationsTimeoutsToTerraform(struct?: DataAzure
 */
 export class DataAzurermAdvisorRecommendations extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_advisor_recommendations";
+
   // ===========
   // INITIALIZER
   // ===========

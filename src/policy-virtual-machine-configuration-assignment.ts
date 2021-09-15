@@ -53,6 +53,18 @@ function policyVirtualMachineConfigurationAssignmentConfigurationParameterToTerr
 
 export interface PolicyVirtualMachineConfigurationAssignmentConfiguration {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/policy_virtual_machine_configuration_assignment.html#assignment_type PolicyVirtualMachineConfigurationAssignment#assignment_type}
+  */
+  readonly assignmentType?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/policy_virtual_machine_configuration_assignment.html#content_hash PolicyVirtualMachineConfigurationAssignment#content_hash}
+  */
+  readonly contentHash?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/policy_virtual_machine_configuration_assignment.html#content_uri PolicyVirtualMachineConfigurationAssignment#content_uri}
+  */
+  readonly contentUri?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/policy_virtual_machine_configuration_assignment.html#name PolicyVirtualMachineConfigurationAssignment#name}
   */
   readonly name: string;
@@ -71,6 +83,9 @@ export interface PolicyVirtualMachineConfigurationAssignmentConfiguration {
 function policyVirtualMachineConfigurationAssignmentConfigurationToTerraform(struct?: PolicyVirtualMachineConfigurationAssignmentConfiguration): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   return {
+    assignment_type: cdktf.stringToTerraform(struct!.assignmentType),
+    content_hash: cdktf.stringToTerraform(struct!.contentHash),
+    content_uri: cdktf.stringToTerraform(struct!.contentUri),
     name: cdktf.stringToTerraform(struct!.name),
     version: cdktf.stringToTerraform(struct!.version),
     parameter: cdktf.listMapper(policyVirtualMachineConfigurationAssignmentConfigurationParameterToTerraform)(struct!.parameter),
@@ -111,6 +126,11 @@ function policyVirtualMachineConfigurationAssignmentTimeoutsToTerraform(struct?:
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/policy_virtual_machine_configuration_assignment.html azurerm_policy_virtual_machine_configuration_assignment}
 */
 export class PolicyVirtualMachineConfigurationAssignment extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_policy_virtual_machine_configuration_assignment";
 
   // ===========
   // INITIALIZER

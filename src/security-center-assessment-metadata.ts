@@ -81,6 +81,11 @@ function securityCenterAssessmentMetadataTimeoutsToTerraform(struct?: SecurityCe
 */
 export class SecurityCenterAssessmentMetadata extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_security_center_assessment_metadata";
+
   // ===========
   // INITIALIZER
   // ===========

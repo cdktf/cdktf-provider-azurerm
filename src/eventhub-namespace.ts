@@ -10,7 +10,7 @@ export interface EventhubNamespaceConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_namespace.html#auto_inflate_enabled EventhubNamespace#auto_inflate_enabled}
   */
-  readonly autoInflateEnabled?: boolean;
+  readonly autoInflateEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_namespace.html#capacity EventhubNamespace#capacity}
   */
@@ -46,11 +46,11 @@ export interface EventhubNamespaceConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_namespace.html#tags EventhubNamespace#tags}
   */
-  readonly tags?: { [key: string]: string };
+  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_namespace.html#zone_redundant EventhubNamespace#zone_redundant}
   */
-  readonly zoneRedundant?: boolean;
+  readonly zoneRedundant?: boolean | cdktf.IResolvable;
   /**
   * identity block
   * 
@@ -87,7 +87,7 @@ export interface EventhubNamespaceNetworkRulesetsVirtualNetworkRule {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_namespace.html#ignore_missing_virtual_network_service_endpoint EventhubNamespace#ignore_missing_virtual_network_service_endpoint}
   */
-  readonly ignoreMissingVirtualNetworkServiceEndpoint?: boolean;
+  readonly ignoreMissingVirtualNetworkServiceEndpoint?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_namespace.html#subnet_id EventhubNamespace#subnet_id}
   */
@@ -114,7 +114,7 @@ export interface EventhubNamespaceNetworkRulesets {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_namespace.html#trusted_service_access_enabled EventhubNamespace#trusted_service_access_enabled}
   */
-  readonly trustedServiceAccessEnabled?: boolean;
+  readonly trustedServiceAccessEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_namespace.html#virtual_network_rule EventhubNamespace#virtual_network_rule}
   */
@@ -135,7 +135,7 @@ export interface EventhubNamespaceIdentity {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_namespace.html#type EventhubNamespace#type}
   */
-  readonly type: string;
+  readonly type?: string;
 }
 
 function eventhubNamespaceIdentityToTerraform(struct?: EventhubNamespaceIdentity): any {
@@ -180,6 +180,11 @@ function eventhubNamespaceTimeoutsToTerraform(struct?: EventhubNamespaceTimeouts
 */
 export class EventhubNamespace extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_eventhub_namespace";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -222,11 +227,11 @@ export class EventhubNamespace extends cdktf.TerraformResource {
   // ==========
 
   // auto_inflate_enabled - computed: false, optional: true, required: false
-  private _autoInflateEnabled?: boolean;
+  private _autoInflateEnabled?: boolean | cdktf.IResolvable;
   public get autoInflateEnabled() {
     return this.getBooleanAttribute('auto_inflate_enabled');
   }
-  public set autoInflateEnabled(value: boolean ) {
+  public set autoInflateEnabled(value: boolean | cdktf.IResolvable ) {
     this._autoInflateEnabled = value;
   }
   public resetAutoInflateEnabled() {
@@ -389,11 +394,11 @@ export class EventhubNamespace extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string };
+  private _tags?: { [key: string]: string } | cdktf.IResolvable;
   public get tags() {
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._tags = value;
   }
   public resetTags() {
@@ -405,11 +410,11 @@ export class EventhubNamespace extends cdktf.TerraformResource {
   }
 
   // zone_redundant - computed: false, optional: true, required: false
-  private _zoneRedundant?: boolean;
+  private _zoneRedundant?: boolean | cdktf.IResolvable;
   public get zoneRedundant() {
     return this.getBooleanAttribute('zone_redundant');
   }
-  public set zoneRedundant(value: boolean ) {
+  public set zoneRedundant(value: boolean | cdktf.IResolvable ) {
     this._zoneRedundant = value;
   }
   public resetZoneRedundant() {

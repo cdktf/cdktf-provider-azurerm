@@ -42,6 +42,11 @@ function dataAzurermDigitalTwinsInstanceTimeoutsToTerraform(struct?: DataAzurerm
 */
 export class DataAzurermDigitalTwinsInstance extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_digital_twins_instance";
+
   // ===========
   // INITIALIZER
   // ===========

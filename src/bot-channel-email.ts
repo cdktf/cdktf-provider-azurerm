@@ -69,6 +69,11 @@ function botChannelEmailTimeoutsToTerraform(struct?: BotChannelEmailTimeouts): a
 */
 export class BotChannelEmail extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_bot_channel_email";
+
   // ===========
   // INITIALIZER
   // ===========

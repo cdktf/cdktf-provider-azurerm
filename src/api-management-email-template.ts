@@ -69,6 +69,11 @@ function apiManagementEmailTemplateTimeoutsToTerraform(struct?: ApiManagementEma
 */
 export class ApiManagementEmailTemplate extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_api_management_email_template";
+
   // ===========
   // INITIALIZER
   // ===========

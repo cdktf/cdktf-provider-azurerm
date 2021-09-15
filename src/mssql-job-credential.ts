@@ -65,6 +65,11 @@ function mssqlJobCredentialTimeoutsToTerraform(struct?: MssqlJobCredentialTimeou
 */
 export class MssqlJobCredential extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_mssql_job_credential";
+
   // ===========
   // INITIALIZER
   // ===========

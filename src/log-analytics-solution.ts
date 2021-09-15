@@ -22,7 +22,7 @@ export interface LogAnalyticsSolutionConfig extends cdktf.TerraformMetaArguments
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_solution.html#tags LogAnalyticsSolution#tags}
   */
-  readonly tags?: { [key: string]: string };
+  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_solution.html#workspace_name LogAnalyticsSolution#workspace_name}
   */
@@ -102,6 +102,11 @@ function logAnalyticsSolutionTimeoutsToTerraform(struct?: LogAnalyticsSolutionTi
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_solution.html azurerm_log_analytics_solution}
 */
 export class LogAnalyticsSolution extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_log_analytics_solution";
 
   // ===========
   // INITIALIZER
@@ -184,11 +189,11 @@ export class LogAnalyticsSolution extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string };
+  private _tags?: { [key: string]: string } | cdktf.IResolvable;
   public get tags() {
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._tags = value;
   }
   public resetTags() {

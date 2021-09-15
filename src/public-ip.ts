@@ -26,7 +26,7 @@ export interface PublicIpConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/public_ip.html#ip_tags PublicIp#ip_tags}
   */
-  readonly ipTags?: { [key: string]: string };
+  readonly ipTags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/public_ip.html#ip_version PublicIp#ip_version}
   */
@@ -62,7 +62,7 @@ export interface PublicIpConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/public_ip.html#tags PublicIp#tags}
   */
-  readonly tags?: { [key: string]: string };
+  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/public_ip.html#zones PublicIp#zones}
   */
@@ -108,6 +108,11 @@ function publicIpTimeoutsToTerraform(struct?: PublicIpTimeouts): any {
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/public_ip.html azurerm_public_ip}
 */
 export class PublicIp extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_public_ip";
 
   // ===========
   // INITIALIZER
@@ -230,11 +235,11 @@ export class PublicIp extends cdktf.TerraformResource {
   }
 
   // ip_tags - computed: false, optional: true, required: false
-  private _ipTags?: { [key: string]: string };
+  private _ipTags?: { [key: string]: string } | cdktf.IResolvable;
   public get ipTags() {
     return this.interpolationForAttribute('ip_tags') as any;
   }
-  public set ipTags(value: { [key: string]: string } ) {
+  public set ipTags(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._ipTags = value;
   }
   public resetIpTags() {
@@ -365,11 +370,11 @@ export class PublicIp extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string };
+  private _tags?: { [key: string]: string } | cdktf.IResolvable;
   public get tags() {
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._tags = value;
   }
   public resetTags() {

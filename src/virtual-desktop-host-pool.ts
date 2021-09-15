@@ -52,11 +52,11 @@ export interface VirtualDesktopHostPoolConfig extends cdktf.TerraformMetaArgumen
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_desktop_host_pool.html#start_vm_on_connect VirtualDesktopHostPool#start_vm_on_connect}
   */
-  readonly startVmOnConnect?: boolean;
+  readonly startVmOnConnect?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_desktop_host_pool.html#tags VirtualDesktopHostPool#tags}
   */
-  readonly tags?: { [key: string]: string };
+  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_desktop_host_pool.html#type VirtualDesktopHostPool#type}
   */
@@ -64,7 +64,7 @@ export interface VirtualDesktopHostPoolConfig extends cdktf.TerraformMetaArgumen
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_desktop_host_pool.html#validate_environment VirtualDesktopHostPool#validate_environment}
   */
-  readonly validateEnvironment?: boolean;
+  readonly validateEnvironment?: boolean | cdktf.IResolvable;
   /**
   * registration_info block
   * 
@@ -126,6 +126,11 @@ function virtualDesktopHostPoolTimeoutsToTerraform(struct?: VirtualDesktopHostPo
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_desktop_host_pool.html azurerm_virtual_desktop_host_pool}
 */
 export class VirtualDesktopHostPool extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_virtual_desktop_host_pool";
 
   // ===========
   // INITIALIZER
@@ -325,11 +330,11 @@ export class VirtualDesktopHostPool extends cdktf.TerraformResource {
   }
 
   // start_vm_on_connect - computed: false, optional: true, required: false
-  private _startVmOnConnect?: boolean;
+  private _startVmOnConnect?: boolean | cdktf.IResolvable;
   public get startVmOnConnect() {
     return this.getBooleanAttribute('start_vm_on_connect');
   }
-  public set startVmOnConnect(value: boolean ) {
+  public set startVmOnConnect(value: boolean | cdktf.IResolvable ) {
     this._startVmOnConnect = value;
   }
   public resetStartVmOnConnect() {
@@ -341,11 +346,11 @@ export class VirtualDesktopHostPool extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string };
+  private _tags?: { [key: string]: string } | cdktf.IResolvable;
   public get tags() {
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._tags = value;
   }
   public resetTags() {
@@ -370,11 +375,11 @@ export class VirtualDesktopHostPool extends cdktf.TerraformResource {
   }
 
   // validate_environment - computed: false, optional: true, required: false
-  private _validateEnvironment?: boolean;
+  private _validateEnvironment?: boolean | cdktf.IResolvable;
   public get validateEnvironment() {
     return this.getBooleanAttribute('validate_environment');
   }
-  public set validateEnvironment(value: boolean ) {
+  public set validateEnvironment(value: boolean | cdktf.IResolvable ) {
     this._validateEnvironment = value;
   }
   public resetValidateEnvironment() {

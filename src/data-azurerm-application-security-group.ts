@@ -42,6 +42,11 @@ function dataAzurermApplicationSecurityGroupTimeoutsToTerraform(struct?: DataAzu
 */
 export class DataAzurermApplicationSecurityGroup extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_application_security_group";
+
   // ===========
   // INITIALIZER
   // ===========

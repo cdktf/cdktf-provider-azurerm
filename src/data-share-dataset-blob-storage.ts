@@ -94,6 +94,11 @@ function dataShareDatasetBlobStorageTimeoutsToTerraform(struct?: DataShareDatase
 */
 export class DataShareDatasetBlobStorage extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_data_share_dataset_blob_storage";
+
   // ===========
   // INITIALIZER
   // ===========

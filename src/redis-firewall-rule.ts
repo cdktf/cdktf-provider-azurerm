@@ -69,6 +69,11 @@ function redisFirewallRuleTimeoutsToTerraform(struct?: RedisFirewallRuleTimeouts
 */
 export class RedisFirewallRule extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_redis_firewall_rule";
+
   // ===========
   // INITIALIZER
   // ===========

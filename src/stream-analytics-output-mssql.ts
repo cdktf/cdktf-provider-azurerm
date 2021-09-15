@@ -81,6 +81,11 @@ function streamAnalyticsOutputMssqlTimeoutsToTerraform(struct?: StreamAnalyticsO
 */
 export class StreamAnalyticsOutputMssql extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_stream_analytics_output_mssql";
+
   // ===========
   // INITIALIZER
   // ===========

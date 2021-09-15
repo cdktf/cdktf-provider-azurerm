@@ -108,6 +108,11 @@ function dataAzurermExpressRouteCircuitTimeoutsToTerraform(struct?: DataAzurermE
 */
 export class DataAzurermExpressRouteCircuit extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_express_route_circuit";
+
   // ===========
   // INITIALIZER
   // ===========

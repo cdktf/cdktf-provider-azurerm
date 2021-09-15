@@ -18,7 +18,7 @@ export interface BotChannelMsTeamsConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_ms_teams.html#enable_calling BotChannelMsTeams#enable_calling}
   */
-  readonly enableCalling?: boolean;
+  readonly enableCalling?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_ms_teams.html#location BotChannelMsTeams#location}
   */
@@ -68,6 +68,11 @@ function botChannelMsTeamsTimeoutsToTerraform(struct?: BotChannelMsTeamsTimeouts
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_ms_teams.html azurerm_bot_channel_ms_teams}
 */
 export class BotChannelMsTeams extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_bot_channel_ms_teams";
 
   // ===========
   // INITIALIZER
@@ -133,11 +138,11 @@ export class BotChannelMsTeams extends cdktf.TerraformResource {
   }
 
   // enable_calling - computed: false, optional: true, required: false
-  private _enableCalling?: boolean;
+  private _enableCalling?: boolean | cdktf.IResolvable;
   public get enableCalling() {
     return this.getBooleanAttribute('enable_calling');
   }
-  public set enableCalling(value: boolean ) {
+  public set enableCalling(value: boolean | cdktf.IResolvable ) {
     this._enableCalling = value;
   }
   public resetEnableCalling() {

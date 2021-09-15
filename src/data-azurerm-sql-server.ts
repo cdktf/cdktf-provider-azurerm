@@ -59,6 +59,11 @@ function dataAzurermSqlServerTimeoutsToTerraform(struct?: DataAzurermSqlServerTi
 */
 export class DataAzurermSqlServer extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_sql_server";
+
   // ===========
   // INITIALIZER
   // ===========

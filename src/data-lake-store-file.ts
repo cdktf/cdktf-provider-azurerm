@@ -61,6 +61,11 @@ function dataLakeStoreFileTimeoutsToTerraform(struct?: DataLakeStoreFileTimeouts
 */
 export class DataLakeStoreFile extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_data_lake_store_file";
+
   // ===========
   // INITIALIZER
   // ===========

@@ -59,6 +59,11 @@ function dataAzurermStreamAnalyticsJobTimeoutsToTerraform(struct?: DataAzurermSt
 */
 export class DataAzurermStreamAnalyticsJob extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_stream_analytics_job";
+
   // ===========
   // INITIALIZER
   // ===========

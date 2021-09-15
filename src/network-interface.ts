@@ -14,11 +14,11 @@ export interface NetworkInterfaceConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_interface.html#enable_accelerated_networking NetworkInterface#enable_accelerated_networking}
   */
-  readonly enableAcceleratedNetworking?: boolean;
+  readonly enableAcceleratedNetworking?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_interface.html#enable_ip_forwarding NetworkInterface#enable_ip_forwarding}
   */
-  readonly enableIpForwarding?: boolean;
+  readonly enableIpForwarding?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_interface.html#internal_dns_name_label NetworkInterface#internal_dns_name_label}
   */
@@ -38,7 +38,7 @@ export interface NetworkInterfaceConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_interface.html#tags NetworkInterface#tags}
   */
-  readonly tags?: { [key: string]: string };
+  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * ip_configuration block
   * 
@@ -60,7 +60,7 @@ export interface NetworkInterfaceIpConfiguration {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_interface.html#primary NetworkInterface#primary}
   */
-  readonly primary?: boolean;
+  readonly primary?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_interface.html#private_ip_address NetworkInterface#private_ip_address}
   */
@@ -131,6 +131,11 @@ function networkInterfaceTimeoutsToTerraform(struct?: NetworkInterfaceTimeouts):
 */
 export class NetworkInterface extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_network_interface";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -191,11 +196,11 @@ export class NetworkInterface extends cdktf.TerraformResource {
   }
 
   // enable_accelerated_networking - computed: false, optional: true, required: false
-  private _enableAcceleratedNetworking?: boolean;
+  private _enableAcceleratedNetworking?: boolean | cdktf.IResolvable;
   public get enableAcceleratedNetworking() {
     return this.getBooleanAttribute('enable_accelerated_networking');
   }
-  public set enableAcceleratedNetworking(value: boolean ) {
+  public set enableAcceleratedNetworking(value: boolean | cdktf.IResolvable ) {
     this._enableAcceleratedNetworking = value;
   }
   public resetEnableAcceleratedNetworking() {
@@ -207,11 +212,11 @@ export class NetworkInterface extends cdktf.TerraformResource {
   }
 
   // enable_ip_forwarding - computed: false, optional: true, required: false
-  private _enableIpForwarding?: boolean;
+  private _enableIpForwarding?: boolean | cdktf.IResolvable;
   public get enableIpForwarding() {
     return this.getBooleanAttribute('enable_ip_forwarding');
   }
-  public set enableIpForwarding(value: boolean ) {
+  public set enableIpForwarding(value: boolean | cdktf.IResolvable ) {
     this._enableIpForwarding = value;
   }
   public resetEnableIpForwarding() {
@@ -303,11 +308,11 @@ export class NetworkInterface extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string };
+  private _tags?: { [key: string]: string } | cdktf.IResolvable;
   public get tags() {
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._tags = value;
   }
   public resetTags() {

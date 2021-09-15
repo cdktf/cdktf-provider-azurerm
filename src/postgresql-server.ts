@@ -18,7 +18,7 @@ export interface PostgresqlServerConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_server.html#auto_grow_enabled PostgresqlServer#auto_grow_enabled}
   */
-  readonly autoGrowEnabled?: boolean;
+  readonly autoGrowEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_server.html#backup_retention_days PostgresqlServer#backup_retention_days}
   */
@@ -34,11 +34,11 @@ export interface PostgresqlServerConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_server.html#geo_redundant_backup_enabled PostgresqlServer#geo_redundant_backup_enabled}
   */
-  readonly geoRedundantBackupEnabled?: boolean;
+  readonly geoRedundantBackupEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_server.html#infrastructure_encryption_enabled PostgresqlServer#infrastructure_encryption_enabled}
   */
-  readonly infrastructureEncryptionEnabled?: boolean;
+  readonly infrastructureEncryptionEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_server.html#location PostgresqlServer#location}
   */
@@ -50,7 +50,7 @@ export interface PostgresqlServerConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_server.html#public_network_access_enabled PostgresqlServer#public_network_access_enabled}
   */
-  readonly publicNetworkAccessEnabled?: boolean;
+  readonly publicNetworkAccessEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_server.html#resource_group_name PostgresqlServer#resource_group_name}
   */
@@ -70,7 +70,7 @@ export interface PostgresqlServerConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_server.html#ssl_enforcement_enabled PostgresqlServer#ssl_enforcement_enabled}
   */
-  readonly sslEnforcementEnabled?: boolean;
+  readonly sslEnforcementEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_server.html#ssl_minimal_tls_version_enforced PostgresqlServer#ssl_minimal_tls_version_enforced}
   */
@@ -82,7 +82,7 @@ export interface PostgresqlServerConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_server.html#tags PostgresqlServer#tags}
   */
-  readonly tags?: { [key: string]: string };
+  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_server.html#version PostgresqlServer#version}
   */
@@ -163,7 +163,7 @@ export interface PostgresqlServerThreatDetectionPolicy {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_server.html#email_account_admins PostgresqlServer#email_account_admins}
   */
-  readonly emailAccountAdmins?: boolean;
+  readonly emailAccountAdmins?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_server.html#email_addresses PostgresqlServer#email_addresses}
   */
@@ -171,7 +171,7 @@ export interface PostgresqlServerThreatDetectionPolicy {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_server.html#enabled PostgresqlServer#enabled}
   */
-  readonly enabled?: boolean;
+  readonly enabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_server.html#retention_days PostgresqlServer#retention_days}
   */
@@ -233,6 +233,11 @@ function postgresqlServerTimeoutsToTerraform(struct?: PostgresqlServerTimeouts):
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_server.html azurerm_postgresql_server}
 */
 export class PostgresqlServer extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_postgresql_server";
 
   // ===========
   // INITIALIZER
@@ -319,11 +324,11 @@ export class PostgresqlServer extends cdktf.TerraformResource {
   }
 
   // auto_grow_enabled - computed: true, optional: true, required: false
-  private _autoGrowEnabled?: boolean;
+  private _autoGrowEnabled?: boolean | cdktf.IResolvable;
   public get autoGrowEnabled() {
     return this.getBooleanAttribute('auto_grow_enabled');
   }
-  public set autoGrowEnabled(value: boolean) {
+  public set autoGrowEnabled(value: boolean | cdktf.IResolvable) {
     this._autoGrowEnabled = value;
   }
   public resetAutoGrowEnabled() {
@@ -388,11 +393,11 @@ export class PostgresqlServer extends cdktf.TerraformResource {
   }
 
   // geo_redundant_backup_enabled - computed: true, optional: true, required: false
-  private _geoRedundantBackupEnabled?: boolean;
+  private _geoRedundantBackupEnabled?: boolean | cdktf.IResolvable;
   public get geoRedundantBackupEnabled() {
     return this.getBooleanAttribute('geo_redundant_backup_enabled');
   }
-  public set geoRedundantBackupEnabled(value: boolean) {
+  public set geoRedundantBackupEnabled(value: boolean | cdktf.IResolvable) {
     this._geoRedundantBackupEnabled = value;
   }
   public resetGeoRedundantBackupEnabled() {
@@ -409,11 +414,11 @@ export class PostgresqlServer extends cdktf.TerraformResource {
   }
 
   // infrastructure_encryption_enabled - computed: false, optional: true, required: false
-  private _infrastructureEncryptionEnabled?: boolean;
+  private _infrastructureEncryptionEnabled?: boolean | cdktf.IResolvable;
   public get infrastructureEncryptionEnabled() {
     return this.getBooleanAttribute('infrastructure_encryption_enabled');
   }
-  public set infrastructureEncryptionEnabled(value: boolean ) {
+  public set infrastructureEncryptionEnabled(value: boolean | cdktf.IResolvable ) {
     this._infrastructureEncryptionEnabled = value;
   }
   public resetInfrastructureEncryptionEnabled() {
@@ -451,11 +456,11 @@ export class PostgresqlServer extends cdktf.TerraformResource {
   }
 
   // public_network_access_enabled - computed: false, optional: true, required: false
-  private _publicNetworkAccessEnabled?: boolean;
+  private _publicNetworkAccessEnabled?: boolean | cdktf.IResolvable;
   public get publicNetworkAccessEnabled() {
     return this.getBooleanAttribute('public_network_access_enabled');
   }
-  public set publicNetworkAccessEnabled(value: boolean ) {
+  public set publicNetworkAccessEnabled(value: boolean | cdktf.IResolvable ) {
     this._publicNetworkAccessEnabled = value;
   }
   public resetPublicNetworkAccessEnabled() {
@@ -525,11 +530,11 @@ export class PostgresqlServer extends cdktf.TerraformResource {
   }
 
   // ssl_enforcement_enabled - computed: false, optional: true, required: false
-  private _sslEnforcementEnabled?: boolean;
+  private _sslEnforcementEnabled?: boolean | cdktf.IResolvable;
   public get sslEnforcementEnabled() {
     return this.getBooleanAttribute('ssl_enforcement_enabled');
   }
-  public set sslEnforcementEnabled(value: boolean ) {
+  public set sslEnforcementEnabled(value: boolean | cdktf.IResolvable ) {
     this._sslEnforcementEnabled = value;
   }
   public resetSslEnforcementEnabled() {
@@ -573,11 +578,11 @@ export class PostgresqlServer extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string };
+  private _tags?: { [key: string]: string } | cdktf.IResolvable;
   public get tags() {
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._tags = value;
   }
   public resetTags() {

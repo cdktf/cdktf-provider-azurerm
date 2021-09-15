@@ -112,6 +112,11 @@ function streamAnalyticsOutputServicebusTopicTimeoutsToTerraform(struct?: Stream
 */
 export class StreamAnalyticsOutputServicebusTopic extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_stream_analytics_output_servicebus_topic";
+
   // ===========
   // INITIALIZER
   // ===========

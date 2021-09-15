@@ -46,6 +46,11 @@ function dataAzurermDatabaseMigrationProjectTimeoutsToTerraform(struct?: DataAzu
 */
 export class DataAzurermDatabaseMigrationProject extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_database_migration_project";
+
   // ===========
   // INITIALIZER
   // ===========

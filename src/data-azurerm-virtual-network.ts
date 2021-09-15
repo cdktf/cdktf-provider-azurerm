@@ -42,6 +42,11 @@ function dataAzurermVirtualNetworkTimeoutsToTerraform(struct?: DataAzurermVirtua
 */
 export class DataAzurermVirtualNetwork extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_virtual_network";
+
   // ===========
   // INITIALIZER
   // ===========

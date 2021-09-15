@@ -14,7 +14,7 @@ export interface ApiManagementLoggerConfig extends cdktf.TerraformMetaArguments 
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_logger.html#buffered ApiManagementLogger#buffered}
   */
-  readonly buffered?: boolean;
+  readonly buffered?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_logger.html#description ApiManagementLogger#description}
   */
@@ -118,6 +118,11 @@ function apiManagementLoggerTimeoutsToTerraform(struct?: ApiManagementLoggerTime
 */
 export class ApiManagementLogger extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_api_management_logger";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -169,11 +174,11 @@ export class ApiManagementLogger extends cdktf.TerraformResource {
   }
 
   // buffered - computed: false, optional: true, required: false
-  private _buffered?: boolean;
+  private _buffered?: boolean | cdktf.IResolvable;
   public get buffered() {
     return this.getBooleanAttribute('buffered');
   }
-  public set buffered(value: boolean ) {
+  public set buffered(value: boolean | cdktf.IResolvable ) {
     this._buffered = value;
   }
   public resetBuffered() {

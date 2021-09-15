@@ -26,7 +26,7 @@ export interface RouteFilterConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/route_filter.html#tags RouteFilter#tags}
   */
-  readonly tags?: { [key: string]: string };
+  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * timeouts block
   * 
@@ -97,6 +97,11 @@ function routeFilterTimeoutsToTerraform(struct?: RouteFilterTimeouts): any {
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/route_filter.html azurerm_route_filter}
 */
 export class RouteFilter extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_route_filter";
 
   // ===========
   // INITIALIZER
@@ -193,11 +198,11 @@ export class RouteFilter extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string };
+  private _tags?: { [key: string]: string } | cdktf.IResolvable;
   public get tags() {
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._tags = value;
   }
   public resetTags() {

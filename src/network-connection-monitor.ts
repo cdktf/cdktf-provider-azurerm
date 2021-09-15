@@ -10,7 +10,7 @@ export interface NetworkConnectionMonitorConfig extends cdktf.TerraformMetaArgum
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html#auto_start NetworkConnectionMonitor#auto_start}
   */
-  readonly autoStart?: boolean;
+  readonly autoStart?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html#interval_in_seconds NetworkConnectionMonitor#interval_in_seconds}
   */
@@ -38,7 +38,7 @@ export interface NetworkConnectionMonitorConfig extends cdktf.TerraformMetaArgum
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html#tags NetworkConnectionMonitor#tags}
   */
-  readonly tags?: { [key: string]: string };
+  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * destination block
   * 
@@ -250,7 +250,7 @@ export interface NetworkConnectionMonitorTestConfigurationHttpConfiguration {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html#prefer_https NetworkConnectionMonitor#prefer_https}
   */
-  readonly preferHttps?: boolean;
+  readonly preferHttps?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html#valid_status_code_ranges NetworkConnectionMonitor#valid_status_code_ranges}
   */
@@ -279,7 +279,7 @@ export interface NetworkConnectionMonitorTestConfigurationIcmpConfiguration {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html#trace_route_enabled NetworkConnectionMonitor#trace_route_enabled}
   */
-  readonly traceRouteEnabled?: boolean;
+  readonly traceRouteEnabled?: boolean | cdktf.IResolvable;
 }
 
 function networkConnectionMonitorTestConfigurationIcmpConfigurationToTerraform(struct?: NetworkConnectionMonitorTestConfigurationIcmpConfiguration): any {
@@ -316,7 +316,7 @@ export interface NetworkConnectionMonitorTestConfigurationTcpConfiguration {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html#trace_route_enabled NetworkConnectionMonitor#trace_route_enabled}
   */
-  readonly traceRouteEnabled?: boolean;
+  readonly traceRouteEnabled?: boolean | cdktf.IResolvable;
 }
 
 function networkConnectionMonitorTestConfigurationTcpConfigurationToTerraform(struct?: NetworkConnectionMonitorTestConfigurationTcpConfiguration): any {
@@ -392,7 +392,7 @@ export interface NetworkConnectionMonitorTestGroup {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html#enabled NetworkConnectionMonitor#enabled}
   */
-  readonly enabled?: boolean;
+  readonly enabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html#name NetworkConnectionMonitor#name}
   */
@@ -453,6 +453,11 @@ function networkConnectionMonitorTimeoutsToTerraform(struct?: NetworkConnectionM
 */
 export class NetworkConnectionMonitor extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_network_connection_monitor";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -496,11 +501,11 @@ export class NetworkConnectionMonitor extends cdktf.TerraformResource {
   // ==========
 
   // auto_start - computed: true, optional: true, required: false
-  private _autoStart?: boolean;
+  private _autoStart?: boolean | cdktf.IResolvable;
   public get autoStart() {
     return this.getBooleanAttribute('auto_start');
   }
-  public set autoStart(value: boolean) {
+  public set autoStart(value: boolean | cdktf.IResolvable) {
     this._autoStart = value;
   }
   public resetAutoStart() {
@@ -604,11 +609,11 @@ export class NetworkConnectionMonitor extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string };
+  private _tags?: { [key: string]: string } | cdktf.IResolvable;
   public get tags() {
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._tags = value;
   }
   public resetTags() {

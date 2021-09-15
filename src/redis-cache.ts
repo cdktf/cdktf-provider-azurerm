@@ -14,7 +14,7 @@ export interface RedisCacheConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_cache.html#enable_non_ssl_port RedisCache#enable_non_ssl_port}
   */
-  readonly enableNonSslPort?: boolean;
+  readonly enableNonSslPort?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_cache.html#family RedisCache#family}
   */
@@ -38,7 +38,7 @@ export interface RedisCacheConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_cache.html#public_network_access_enabled RedisCache#public_network_access_enabled}
   */
-  readonly publicNetworkAccessEnabled?: boolean;
+  readonly publicNetworkAccessEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_cache.html#redis_version RedisCache#redis_version}
   */
@@ -70,11 +70,11 @@ export interface RedisCacheConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_cache.html#tags RedisCache#tags}
   */
-  readonly tags?: { [key: string]: string };
+  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_cache.html#tenant_settings RedisCache#tenant_settings}
   */
-  readonly tenantSettings?: { [key: string]: string };
+  readonly tenantSettings?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_cache.html#zones RedisCache#zones}
   */
@@ -126,7 +126,7 @@ export interface RedisCacheRedisConfiguration {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_cache.html#aof_backup_enabled RedisCache#aof_backup_enabled}
   */
-  readonly aofBackupEnabled?: boolean;
+  readonly aofBackupEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_cache.html#aof_storage_connection_string_0 RedisCache#aof_storage_connection_string_0}
   */
@@ -138,7 +138,7 @@ export interface RedisCacheRedisConfiguration {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_cache.html#enable_authentication RedisCache#enable_authentication}
   */
-  readonly enableAuthentication?: boolean;
+  readonly enableAuthentication?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_cache.html#maxfragmentationmemory_reserved RedisCache#maxfragmentationmemory_reserved}
   */
@@ -162,7 +162,7 @@ export interface RedisCacheRedisConfiguration {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_cache.html#rdb_backup_enabled RedisCache#rdb_backup_enabled}
   */
-  readonly rdbBackupEnabled?: boolean;
+  readonly rdbBackupEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_cache.html#rdb_backup_frequency RedisCache#rdb_backup_frequency}
   */
@@ -231,6 +231,11 @@ function redisCacheTimeoutsToTerraform(struct?: RedisCacheTimeouts): any {
 */
 export class RedisCache extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_redis_cache";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -294,11 +299,11 @@ export class RedisCache extends cdktf.TerraformResource {
   }
 
   // enable_non_ssl_port - computed: false, optional: true, required: false
-  private _enableNonSslPort?: boolean;
+  private _enableNonSslPort?: boolean | cdktf.IResolvable;
   public get enableNonSslPort() {
     return this.getBooleanAttribute('enable_non_ssl_port');
   }
-  public set enableNonSslPort(value: boolean ) {
+  public set enableNonSslPort(value: boolean | cdktf.IResolvable ) {
     this._enableNonSslPort = value;
   }
   public resetEnableNonSslPort() {
@@ -406,11 +411,11 @@ export class RedisCache extends cdktf.TerraformResource {
   }
 
   // public_network_access_enabled - computed: false, optional: true, required: false
-  private _publicNetworkAccessEnabled?: boolean;
+  private _publicNetworkAccessEnabled?: boolean | cdktf.IResolvable;
   public get publicNetworkAccessEnabled() {
     return this.getBooleanAttribute('public_network_access_enabled');
   }
-  public set publicNetworkAccessEnabled(value: boolean ) {
+  public set publicNetworkAccessEnabled(value: boolean | cdktf.IResolvable ) {
     this._publicNetworkAccessEnabled = value;
   }
   public resetPublicNetworkAccessEnabled() {
@@ -543,11 +548,11 @@ export class RedisCache extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string };
+  private _tags?: { [key: string]: string } | cdktf.IResolvable;
   public get tags() {
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._tags = value;
   }
   public resetTags() {
@@ -559,11 +564,11 @@ export class RedisCache extends cdktf.TerraformResource {
   }
 
   // tenant_settings - computed: false, optional: true, required: false
-  private _tenantSettings?: { [key: string]: string };
+  private _tenantSettings?: { [key: string]: string } | cdktf.IResolvable;
   public get tenantSettings() {
     return this.interpolationForAttribute('tenant_settings') as any;
   }
-  public set tenantSettings(value: { [key: string]: string } ) {
+  public set tenantSettings(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._tenantSettings = value;
   }
   public resetTenantSettings() {

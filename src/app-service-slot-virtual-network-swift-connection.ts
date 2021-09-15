@@ -61,6 +61,11 @@ function appServiceSlotVirtualNetworkSwiftConnectionTimeoutsToTerraform(struct?:
 */
 export class AppServiceSlotVirtualNetworkSwiftConnection extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_app_service_slot_virtual_network_swift_connection";
+
   // ===========
   // INITIALIZER
   // ===========

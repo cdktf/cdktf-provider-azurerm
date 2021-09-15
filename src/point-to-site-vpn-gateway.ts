@@ -30,7 +30,7 @@ export interface PointToSiteVpnGatewayConfig extends cdktf.TerraformMetaArgument
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/point_to_site_vpn_gateway.html#tags PointToSiteVpnGateway#tags}
   */
-  readonly tags?: { [key: string]: string };
+  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/point_to_site_vpn_gateway.html#virtual_hub_id PointToSiteVpnGateway#virtual_hub_id}
   */
@@ -169,6 +169,11 @@ function pointToSiteVpnGatewayTimeoutsToTerraform(struct?: PointToSiteVpnGateway
 */
 export class PointToSiteVpnGateway extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_point_to_site_vpn_gateway";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -281,11 +286,11 @@ export class PointToSiteVpnGateway extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string };
+  private _tags?: { [key: string]: string } | cdktf.IResolvable;
   public get tags() {
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._tags = value;
   }
   public resetTags() {

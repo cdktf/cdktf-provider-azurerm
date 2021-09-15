@@ -42,6 +42,11 @@ function dataAzurermPrivateDnsZoneTimeoutsToTerraform(struct?: DataAzurermPrivat
 */
 export class DataAzurermPrivateDnsZone extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_private_dns_zone";
+
   // ===========
   // INITIALIZER
   // ===========

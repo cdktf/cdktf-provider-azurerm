@@ -46,7 +46,7 @@ export interface SqlElasticpoolConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_elasticpool.html#tags SqlElasticpool#tags}
   */
-  readonly tags?: { [key: string]: string };
+  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * timeouts block
   * 
@@ -88,6 +88,11 @@ function sqlElasticpoolTimeoutsToTerraform(struct?: SqlElasticpoolTimeouts): any
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/sql_elasticpool.html azurerm_sql_elasticpool}
 */
 export class SqlElasticpool extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_sql_elasticpool";
 
   // ===========
   // INITIALIZER
@@ -265,11 +270,11 @@ export class SqlElasticpool extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string };
+  private _tags?: { [key: string]: string } | cdktf.IResolvable;
   public get tags() {
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._tags = value;
   }
   public resetTags() {

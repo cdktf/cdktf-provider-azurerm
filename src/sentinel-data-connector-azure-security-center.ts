@@ -56,6 +56,11 @@ function sentinelDataConnectorAzureSecurityCenterTimeoutsToTerraform(struct?: Se
 */
 export class SentinelDataConnectorAzureSecurityCenter extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_sentinel_data_connector_azure_security_center";
+
   // ===========
   // INITIALIZER
   // ===========

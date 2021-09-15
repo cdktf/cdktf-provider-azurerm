@@ -22,7 +22,7 @@ export interface SynapsePrivateLinkHubConfig extends cdktf.TerraformMetaArgument
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_private_link_hub.html#tags SynapsePrivateLinkHub#tags}
   */
-  readonly tags?: { [key: string]: string };
+  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * timeouts block
   * 
@@ -64,6 +64,11 @@ function synapsePrivateLinkHubTimeoutsToTerraform(struct?: SynapsePrivateLinkHub
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_private_link_hub.html azurerm_synapse_private_link_hub}
 */
 export class SynapsePrivateLinkHub extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_synapse_private_link_hub";
 
   // ===========
   // INITIALIZER
@@ -143,11 +148,11 @@ export class SynapsePrivateLinkHub extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string };
+  private _tags?: { [key: string]: string } | cdktf.IResolvable;
   public get tags() {
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._tags = value;
   }
   public resetTags() {

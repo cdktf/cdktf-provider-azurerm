@@ -46,6 +46,11 @@ function dataAzurermBillingMcaAccountScopeTimeoutsToTerraform(struct?: DataAzure
 */
 export class DataAzurermBillingMcaAccountScope extends cdktf.TerraformDataSource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_billing_mca_account_scope";
+
   // ===========
   // INITIALIZER
   // ===========

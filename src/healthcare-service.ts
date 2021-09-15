@@ -34,7 +34,7 @@ export interface HealthcareServiceConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/healthcare_service.html#public_network_access_enabled HealthcareService#public_network_access_enabled}
   */
-  readonly publicNetworkAccessEnabled?: boolean;
+  readonly publicNetworkAccessEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/healthcare_service.html#resource_group_name HealthcareService#resource_group_name}
   */
@@ -42,7 +42,7 @@ export interface HealthcareServiceConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/healthcare_service.html#tags HealthcareService#tags}
   */
-  readonly tags?: { [key: string]: string };
+  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * authentication_configuration block
   * 
@@ -74,7 +74,7 @@ export interface HealthcareServiceAuthenticationConfiguration {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/healthcare_service.html#smart_proxy_enabled HealthcareService#smart_proxy_enabled}
   */
-  readonly smartProxyEnabled?: boolean;
+  readonly smartProxyEnabled?: boolean | cdktf.IResolvable;
 }
 
 function healthcareServiceAuthenticationConfigurationToTerraform(struct?: HealthcareServiceAuthenticationConfiguration): any {
@@ -90,7 +90,7 @@ export interface HealthcareServiceCorsConfiguration {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/healthcare_service.html#allow_credentials HealthcareService#allow_credentials}
   */
-  readonly allowCredentials?: boolean;
+  readonly allowCredentials?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/healthcare_service.html#allowed_headers HealthcareService#allowed_headers}
   */
@@ -154,6 +154,11 @@ function healthcareServiceTimeoutsToTerraform(struct?: HealthcareServiceTimeouts
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/healthcare_service.html azurerm_healthcare_service}
 */
 export class HealthcareService extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_healthcare_service";
 
   // ===========
   // INITIALIZER
@@ -291,11 +296,11 @@ export class HealthcareService extends cdktf.TerraformResource {
   }
 
   // public_network_access_enabled - computed: false, optional: true, required: false
-  private _publicNetworkAccessEnabled?: boolean;
+  private _publicNetworkAccessEnabled?: boolean | cdktf.IResolvable;
   public get publicNetworkAccessEnabled() {
     return this.getBooleanAttribute('public_network_access_enabled');
   }
-  public set publicNetworkAccessEnabled(value: boolean ) {
+  public set publicNetworkAccessEnabled(value: boolean | cdktf.IResolvable ) {
     this._publicNetworkAccessEnabled = value;
   }
   public resetPublicNetworkAccessEnabled() {
@@ -320,11 +325,11 @@ export class HealthcareService extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string };
+  private _tags?: { [key: string]: string } | cdktf.IResolvable;
   public get tags() {
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._tags = value;
   }
   public resetTags() {

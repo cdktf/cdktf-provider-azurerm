@@ -10,7 +10,7 @@ export interface DataFactoryLinkedServiceAzureFunctionConfig extends cdktf.Terra
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_function.html#additional_properties DataFactoryLinkedServiceAzureFunction#additional_properties}
   */
-  readonly additionalProperties?: { [key: string]: string };
+  readonly additionalProperties?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_function.html#annotations DataFactoryLinkedServiceAzureFunction#annotations}
   */
@@ -30,7 +30,7 @@ export interface DataFactoryLinkedServiceAzureFunctionConfig extends cdktf.Terra
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_function.html#key DataFactoryLinkedServiceAzureFunction#key}
   */
-  readonly key: string;
+  readonly key?: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_function.html#name DataFactoryLinkedServiceAzureFunction#name}
   */
@@ -38,7 +38,7 @@ export interface DataFactoryLinkedServiceAzureFunctionConfig extends cdktf.Terra
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_function.html#parameters DataFactoryLinkedServiceAzureFunction#parameters}
   */
-  readonly parameters?: { [key: string]: string };
+  readonly parameters?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_function.html#resource_group_name DataFactoryLinkedServiceAzureFunction#resource_group_name}
   */
@@ -48,12 +48,37 @@ export interface DataFactoryLinkedServiceAzureFunctionConfig extends cdktf.Terra
   */
   readonly url: string;
   /**
+  * key_vault_key block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_function.html#key_vault_key DataFactoryLinkedServiceAzureFunction#key_vault_key}
+  */
+  readonly keyVaultKey?: DataFactoryLinkedServiceAzureFunctionKeyVaultKey[];
+  /**
   * timeouts block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_function.html#timeouts DataFactoryLinkedServiceAzureFunction#timeouts}
   */
   readonly timeouts?: DataFactoryLinkedServiceAzureFunctionTimeouts;
 }
+export interface DataFactoryLinkedServiceAzureFunctionKeyVaultKey {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_function.html#linked_service_name DataFactoryLinkedServiceAzureFunction#linked_service_name}
+  */
+  readonly linkedServiceName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_function.html#secret_name DataFactoryLinkedServiceAzureFunction#secret_name}
+  */
+  readonly secretName: string;
+}
+
+function dataFactoryLinkedServiceAzureFunctionKeyVaultKeyToTerraform(struct?: DataFactoryLinkedServiceAzureFunctionKeyVaultKey): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    linked_service_name: cdktf.stringToTerraform(struct!.linkedServiceName),
+    secret_name: cdktf.stringToTerraform(struct!.secretName),
+  }
+}
+
 export interface DataFactoryLinkedServiceAzureFunctionTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_azure_function.html#create DataFactoryLinkedServiceAzureFunction#create}
@@ -89,6 +114,11 @@ function dataFactoryLinkedServiceAzureFunctionTimeoutsToTerraform(struct?: DataF
 */
 export class DataFactoryLinkedServiceAzureFunction extends cdktf.TerraformResource {
 
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_data_factory_linked_service_azure_function";
+
   // ===========
   // INITIALIZER
   // ===========
@@ -121,6 +151,7 @@ export class DataFactoryLinkedServiceAzureFunction extends cdktf.TerraformResour
     this._parameters = config.parameters;
     this._resourceGroupName = config.resourceGroupName;
     this._url = config.url;
+    this._keyVaultKey = config.keyVaultKey;
     this._timeouts = config.timeouts;
   }
 
@@ -129,11 +160,11 @@ export class DataFactoryLinkedServiceAzureFunction extends cdktf.TerraformResour
   // ==========
 
   // additional_properties - computed: false, optional: true, required: false
-  private _additionalProperties?: { [key: string]: string };
+  private _additionalProperties?: { [key: string]: string } | cdktf.IResolvable;
   public get additionalProperties() {
     return this.interpolationForAttribute('additional_properties') as any;
   }
-  public set additionalProperties(value: { [key: string]: string } ) {
+  public set additionalProperties(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._additionalProperties = value;
   }
   public resetAdditionalProperties() {
@@ -210,13 +241,16 @@ export class DataFactoryLinkedServiceAzureFunction extends cdktf.TerraformResour
     return this._integrationRuntimeName
   }
 
-  // key - computed: false, optional: false, required: true
-  private _key: string;
+  // key - computed: false, optional: true, required: false
+  private _key?: string;
   public get key() {
     return this.getStringAttribute('key');
   }
-  public set key(value: string) {
+  public set key(value: string ) {
     this._key = value;
+  }
+  public resetKey() {
+    this._key = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get keyInput() {
@@ -237,11 +271,11 @@ export class DataFactoryLinkedServiceAzureFunction extends cdktf.TerraformResour
   }
 
   // parameters - computed: false, optional: true, required: false
-  private _parameters?: { [key: string]: string };
+  private _parameters?: { [key: string]: string } | cdktf.IResolvable;
   public get parameters() {
     return this.interpolationForAttribute('parameters') as any;
   }
-  public set parameters(value: { [key: string]: string } ) {
+  public set parameters(value: { [key: string]: string } | cdktf.IResolvable ) {
     this._parameters = value;
   }
   public resetParameters() {
@@ -278,6 +312,22 @@ export class DataFactoryLinkedServiceAzureFunction extends cdktf.TerraformResour
     return this._url
   }
 
+  // key_vault_key - computed: false, optional: true, required: false
+  private _keyVaultKey?: DataFactoryLinkedServiceAzureFunctionKeyVaultKey[];
+  public get keyVaultKey() {
+    return this.interpolationForAttribute('key_vault_key') as any;
+  }
+  public set keyVaultKey(value: DataFactoryLinkedServiceAzureFunctionKeyVaultKey[] ) {
+    this._keyVaultKey = value;
+  }
+  public resetKeyVaultKey() {
+    this._keyVaultKey = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keyVaultKeyInput() {
+    return this._keyVaultKey
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: DataFactoryLinkedServiceAzureFunctionTimeouts;
   public get timeouts() {
@@ -310,6 +360,7 @@ export class DataFactoryLinkedServiceAzureFunction extends cdktf.TerraformResour
       parameters: cdktf.hashMapper(cdktf.anyToTerraform)(this._parameters),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       url: cdktf.stringToTerraform(this._url),
+      key_vault_key: cdktf.listMapper(dataFactoryLinkedServiceAzureFunctionKeyVaultKeyToTerraform)(this._keyVaultKey),
       timeouts: dataFactoryLinkedServiceAzureFunctionTimeoutsToTerraform(this._timeouts),
     };
   }
