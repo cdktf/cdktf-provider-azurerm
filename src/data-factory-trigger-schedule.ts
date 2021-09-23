@@ -8,6 +8,10 @@ import * as cdktf from 'cdktf';
 
 export interface DataFactoryTriggerScheduleConfig extends cdktf.TerraformMetaArguments {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_trigger_schedule.html#activated DataFactoryTriggerSchedule#activated}
+  */
+  readonly activated?: boolean | cdktf.IResolvable;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_trigger_schedule.html#annotations DataFactoryTriggerSchedule#annotations}
   */
   readonly annotations?: string[];
@@ -181,6 +185,7 @@ export class DataFactoryTriggerSchedule extends cdktf.TerraformResource {
       count: config.count,
       lifecycle: config.lifecycle
     });
+    this._activated = config.activated;
     this._annotations = config.annotations;
     this._dataFactoryName = config.dataFactoryName;
     this._description = config.description;
@@ -199,6 +204,22 @@ export class DataFactoryTriggerSchedule extends cdktf.TerraformResource {
   // ==========
   // ATTRIBUTES
   // ==========
+
+  // activated - computed: true, optional: true, required: false
+  private _activated?: boolean | cdktf.IResolvable;
+  public get activated() {
+    return this.getBooleanAttribute('activated');
+  }
+  public set activated(value: boolean | cdktf.IResolvable) {
+    this._activated = value;
+  }
+  public resetActivated() {
+    this._activated = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get activatedInput() {
+    return this._activated
+  }
 
   // annotations - computed: false, optional: true, required: false
   private _annotations?: string[];
@@ -407,6 +428,7 @@ export class DataFactoryTriggerSchedule extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      activated: cdktf.booleanToTerraform(this._activated),
       annotations: cdktf.listMapper(cdktf.stringToTerraform)(this._annotations),
       data_factory_name: cdktf.stringToTerraform(this._dataFactoryName),
       description: cdktf.stringToTerraform(this._description),

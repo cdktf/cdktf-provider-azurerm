@@ -333,9 +333,13 @@ function springCloudServiceTimeoutsToTerraform(struct?: SpringCloudServiceTimeou
 
 export interface SpringCloudServiceTrace {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_service.html#connection_string SpringCloudService#connection_string}
+  */
+  readonly connectionString?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_service.html#instrumentation_key SpringCloudService#instrumentation_key}
   */
-  readonly instrumentationKey: string;
+  readonly instrumentationKey?: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_service.html#sample_rate SpringCloudService#sample_rate}
   */
@@ -345,6 +349,7 @@ export interface SpringCloudServiceTrace {
 function springCloudServiceTraceToTerraform(struct?: SpringCloudServiceTrace): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   return {
+    connection_string: cdktf.stringToTerraform(struct!.connectionString),
     instrumentation_key: cdktf.stringToTerraform(struct!.instrumentationKey),
     sample_rate: cdktf.numberToTerraform(struct!.sampleRate),
   }

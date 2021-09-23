@@ -24,6 +24,10 @@ export interface MachineLearningComputeClusterConfig extends cdktf.TerraformMeta
   */
   readonly name: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/machine_learning_compute_cluster.html#ssh_public_access_enabled MachineLearningComputeCluster#ssh_public_access_enabled}
+  */
+  readonly sshPublicAccessEnabled?: boolean | cdktf.IResolvable;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/machine_learning_compute_cluster.html#subnet_resource_id MachineLearningComputeCluster#subnet_resource_id}
   */
   readonly subnetResourceId?: string;
@@ -44,13 +48,19 @@ export interface MachineLearningComputeClusterConfig extends cdktf.TerraformMeta
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/machine_learning_compute_cluster.html#identity MachineLearningComputeCluster#identity}
   */
-  readonly identity: MachineLearningComputeClusterIdentity[];
+  readonly identity?: MachineLearningComputeClusterIdentity[];
   /**
   * scale_settings block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/machine_learning_compute_cluster.html#scale_settings MachineLearningComputeCluster#scale_settings}
   */
   readonly scaleSettings: MachineLearningComputeClusterScaleSettings[];
+  /**
+  * ssh block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/machine_learning_compute_cluster.html#ssh MachineLearningComputeCluster#ssh}
+  */
+  readonly ssh?: MachineLearningComputeClusterSsh[];
   /**
   * timeouts block
   * 
@@ -60,6 +70,10 @@ export interface MachineLearningComputeClusterConfig extends cdktf.TerraformMeta
 }
 export interface MachineLearningComputeClusterIdentity {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/machine_learning_compute_cluster.html#identity_ids MachineLearningComputeCluster#identity_ids}
+  */
+  readonly identityIds?: string[];
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/machine_learning_compute_cluster.html#type MachineLearningComputeCluster#type}
   */
   readonly type: string;
@@ -68,6 +82,7 @@ export interface MachineLearningComputeClusterIdentity {
 function machineLearningComputeClusterIdentityToTerraform(struct?: MachineLearningComputeClusterIdentity): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   return {
+    identity_ids: cdktf.listMapper(cdktf.stringToTerraform)(struct!.identityIds),
     type: cdktf.stringToTerraform(struct!.type),
   }
 }
@@ -93,6 +108,30 @@ function machineLearningComputeClusterScaleSettingsToTerraform(struct?: MachineL
     max_node_count: cdktf.numberToTerraform(struct!.maxNodeCount),
     min_node_count: cdktf.numberToTerraform(struct!.minNodeCount),
     scale_down_nodes_after_idle_duration: cdktf.stringToTerraform(struct!.scaleDownNodesAfterIdleDuration),
+  }
+}
+
+export interface MachineLearningComputeClusterSsh {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/machine_learning_compute_cluster.html#admin_password MachineLearningComputeCluster#admin_password}
+  */
+  readonly adminPassword?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/machine_learning_compute_cluster.html#admin_username MachineLearningComputeCluster#admin_username}
+  */
+  readonly adminUsername: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/machine_learning_compute_cluster.html#key_value MachineLearningComputeCluster#key_value}
+  */
+  readonly keyValue?: string;
+}
+
+function machineLearningComputeClusterSshToTerraform(struct?: MachineLearningComputeClusterSsh): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    admin_password: cdktf.stringToTerraform(struct!.adminPassword),
+    admin_username: cdktf.stringToTerraform(struct!.adminUsername),
+    key_value: cdktf.stringToTerraform(struct!.keyValue),
   }
 }
 
@@ -157,12 +196,14 @@ export class MachineLearningComputeCluster extends cdktf.TerraformResource {
     this._location = config.location;
     this._machineLearningWorkspaceId = config.machineLearningWorkspaceId;
     this._name = config.name;
+    this._sshPublicAccessEnabled = config.sshPublicAccessEnabled;
     this._subnetResourceId = config.subnetResourceId;
     this._tags = config.tags;
     this._vmPriority = config.vmPriority;
     this._vmSize = config.vmSize;
     this._identity = config.identity;
     this._scaleSettings = config.scaleSettings;
+    this._ssh = config.ssh;
     this._timeouts = config.timeouts;
   }
 
@@ -230,6 +271,22 @@ export class MachineLearningComputeCluster extends cdktf.TerraformResource {
     return this._name
   }
 
+  // ssh_public_access_enabled - computed: true, optional: true, required: false
+  private _sshPublicAccessEnabled?: boolean | cdktf.IResolvable;
+  public get sshPublicAccessEnabled() {
+    return this.getBooleanAttribute('ssh_public_access_enabled');
+  }
+  public set sshPublicAccessEnabled(value: boolean | cdktf.IResolvable) {
+    this._sshPublicAccessEnabled = value;
+  }
+  public resetSshPublicAccessEnabled() {
+    this._sshPublicAccessEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sshPublicAccessEnabledInput() {
+    return this._sshPublicAccessEnabled
+  }
+
   // subnet_resource_id - computed: false, optional: true, required: false
   private _subnetResourceId?: string;
   public get subnetResourceId() {
@@ -288,13 +345,16 @@ export class MachineLearningComputeCluster extends cdktf.TerraformResource {
     return this._vmSize
   }
 
-  // identity - computed: false, optional: false, required: true
-  private _identity: MachineLearningComputeClusterIdentity[];
+  // identity - computed: false, optional: true, required: false
+  private _identity?: MachineLearningComputeClusterIdentity[];
   public get identity() {
     return this.interpolationForAttribute('identity') as any;
   }
-  public set identity(value: MachineLearningComputeClusterIdentity[]) {
+  public set identity(value: MachineLearningComputeClusterIdentity[] ) {
     this._identity = value;
+  }
+  public resetIdentity() {
+    this._identity = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get identityInput() {
@@ -312,6 +372,22 @@ export class MachineLearningComputeCluster extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get scaleSettingsInput() {
     return this._scaleSettings
+  }
+
+  // ssh - computed: false, optional: true, required: false
+  private _ssh?: MachineLearningComputeClusterSsh[];
+  public get ssh() {
+    return this.interpolationForAttribute('ssh') as any;
+  }
+  public set ssh(value: MachineLearningComputeClusterSsh[] ) {
+    this._ssh = value;
+  }
+  public resetSsh() {
+    this._ssh = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sshInput() {
+    return this._ssh
   }
 
   // timeouts - computed: false, optional: true, required: false
@@ -340,12 +416,14 @@ export class MachineLearningComputeCluster extends cdktf.TerraformResource {
       location: cdktf.stringToTerraform(this._location),
       machine_learning_workspace_id: cdktf.stringToTerraform(this._machineLearningWorkspaceId),
       name: cdktf.stringToTerraform(this._name),
+      ssh_public_access_enabled: cdktf.booleanToTerraform(this._sshPublicAccessEnabled),
       subnet_resource_id: cdktf.stringToTerraform(this._subnetResourceId),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
       vm_priority: cdktf.stringToTerraform(this._vmPriority),
       vm_size: cdktf.stringToTerraform(this._vmSize),
       identity: cdktf.listMapper(machineLearningComputeClusterIdentityToTerraform)(this._identity),
       scale_settings: cdktf.listMapper(machineLearningComputeClusterScaleSettingsToTerraform)(this._scaleSettings),
+      ssh: cdktf.listMapper(machineLearningComputeClusterSshToTerraform)(this._ssh),
       timeouts: machineLearningComputeClusterTimeoutsToTerraform(this._timeouts),
     };
   }

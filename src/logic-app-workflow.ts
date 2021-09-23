@@ -8,6 +8,10 @@ import * as cdktf from 'cdktf';
 
 export interface LogicAppWorkflowConfig extends cdktf.TerraformMetaArguments {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_workflow.html#enabled LogicAppWorkflow#enabled}
+  */
+  readonly enabled?: boolean | cdktf.IResolvable;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_workflow.html#integration_service_environment_id LogicAppWorkflow#integration_service_environment_id}
   */
   readonly integrationServiceEnvironmentId?: string;
@@ -48,12 +52,111 @@ export interface LogicAppWorkflowConfig extends cdktf.TerraformMetaArguments {
   */
   readonly workflowVersion?: string;
   /**
+  * access_control block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_workflow.html#access_control LogicAppWorkflow#access_control}
+  */
+  readonly accessControl?: LogicAppWorkflowAccessControl[];
+  /**
   * timeouts block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_workflow.html#timeouts LogicAppWorkflow#timeouts}
   */
   readonly timeouts?: LogicAppWorkflowTimeouts;
 }
+export interface LogicAppWorkflowAccessControlAction {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_workflow.html#allowed_caller_ip_address_range LogicAppWorkflow#allowed_caller_ip_address_range}
+  */
+  readonly allowedCallerIpAddressRange: string[];
+}
+
+function logicAppWorkflowAccessControlActionToTerraform(struct?: LogicAppWorkflowAccessControlAction): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    allowed_caller_ip_address_range: cdktf.listMapper(cdktf.stringToTerraform)(struct!.allowedCallerIpAddressRange),
+  }
+}
+
+export interface LogicAppWorkflowAccessControlContent {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_workflow.html#allowed_caller_ip_address_range LogicAppWorkflow#allowed_caller_ip_address_range}
+  */
+  readonly allowedCallerIpAddressRange: string[];
+}
+
+function logicAppWorkflowAccessControlContentToTerraform(struct?: LogicAppWorkflowAccessControlContent): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    allowed_caller_ip_address_range: cdktf.listMapper(cdktf.stringToTerraform)(struct!.allowedCallerIpAddressRange),
+  }
+}
+
+export interface LogicAppWorkflowAccessControlTrigger {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_workflow.html#allowed_caller_ip_address_range LogicAppWorkflow#allowed_caller_ip_address_range}
+  */
+  readonly allowedCallerIpAddressRange: string[];
+}
+
+function logicAppWorkflowAccessControlTriggerToTerraform(struct?: LogicAppWorkflowAccessControlTrigger): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    allowed_caller_ip_address_range: cdktf.listMapper(cdktf.stringToTerraform)(struct!.allowedCallerIpAddressRange),
+  }
+}
+
+export interface LogicAppWorkflowAccessControlWorkflowManagement {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_workflow.html#allowed_caller_ip_address_range LogicAppWorkflow#allowed_caller_ip_address_range}
+  */
+  readonly allowedCallerIpAddressRange: string[];
+}
+
+function logicAppWorkflowAccessControlWorkflowManagementToTerraform(struct?: LogicAppWorkflowAccessControlWorkflowManagement): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    allowed_caller_ip_address_range: cdktf.listMapper(cdktf.stringToTerraform)(struct!.allowedCallerIpAddressRange),
+  }
+}
+
+export interface LogicAppWorkflowAccessControl {
+  /**
+  * action block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_workflow.html#action LogicAppWorkflow#action}
+  */
+  readonly action?: LogicAppWorkflowAccessControlAction[];
+  /**
+  * content block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_workflow.html#content LogicAppWorkflow#content}
+  */
+  readonly content?: LogicAppWorkflowAccessControlContent[];
+  /**
+  * trigger block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_workflow.html#trigger LogicAppWorkflow#trigger}
+  */
+  readonly trigger?: LogicAppWorkflowAccessControlTrigger[];
+  /**
+  * workflow_management block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_workflow.html#workflow_management LogicAppWorkflow#workflow_management}
+  */
+  readonly workflowManagement?: LogicAppWorkflowAccessControlWorkflowManagement[];
+}
+
+function logicAppWorkflowAccessControlToTerraform(struct?: LogicAppWorkflowAccessControl): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    action: cdktf.listMapper(logicAppWorkflowAccessControlActionToTerraform)(struct!.action),
+    content: cdktf.listMapper(logicAppWorkflowAccessControlContentToTerraform)(struct!.content),
+    trigger: cdktf.listMapper(logicAppWorkflowAccessControlTriggerToTerraform)(struct!.trigger),
+    workflow_management: cdktf.listMapper(logicAppWorkflowAccessControlWorkflowManagementToTerraform)(struct!.workflowManagement),
+  }
+}
+
 export interface LogicAppWorkflowTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_workflow.html#create LogicAppWorkflow#create}
@@ -116,6 +219,7 @@ export class LogicAppWorkflow extends cdktf.TerraformResource {
       count: config.count,
       lifecycle: config.lifecycle
     });
+    this._enabled = config.enabled;
     this._integrationServiceEnvironmentId = config.integrationServiceEnvironmentId;
     this._location = config.location;
     this._logicAppIntegrationAccountId = config.logicAppIntegrationAccountId;
@@ -126,6 +230,7 @@ export class LogicAppWorkflow extends cdktf.TerraformResource {
     this._workflowParameters = config.workflowParameters;
     this._workflowSchema = config.workflowSchema;
     this._workflowVersion = config.workflowVersion;
+    this._accessControl = config.accessControl;
     this._timeouts = config.timeouts;
   }
 
@@ -146,6 +251,22 @@ export class LogicAppWorkflow extends cdktf.TerraformResource {
   // connector_outbound_ip_addresses - computed: true, optional: false, required: false
   public get connectorOutboundIpAddresses() {
     return this.getListAttribute('connector_outbound_ip_addresses');
+  }
+
+  // enabled - computed: false, optional: true, required: false
+  private _enabled?: boolean | cdktf.IResolvable;
+  public get enabled() {
+    return this.getBooleanAttribute('enabled');
+  }
+  public set enabled(value: boolean | cdktf.IResolvable ) {
+    this._enabled = value;
+  }
+  public resetEnabled() {
+    this._enabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enabledInput() {
+    return this._enabled
   }
 
   // id - computed: true, optional: true, required: false
@@ -314,6 +435,22 @@ export class LogicAppWorkflow extends cdktf.TerraformResource {
     return this._workflowVersion
   }
 
+  // access_control - computed: false, optional: true, required: false
+  private _accessControl?: LogicAppWorkflowAccessControl[];
+  public get accessControl() {
+    return this.interpolationForAttribute('access_control') as any;
+  }
+  public set accessControl(value: LogicAppWorkflowAccessControl[] ) {
+    this._accessControl = value;
+  }
+  public resetAccessControl() {
+    this._accessControl = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get accessControlInput() {
+    return this._accessControl
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: LogicAppWorkflowTimeouts;
   public get timeouts() {
@@ -336,6 +473,7 @@ export class LogicAppWorkflow extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      enabled: cdktf.booleanToTerraform(this._enabled),
       integration_service_environment_id: cdktf.stringToTerraform(this._integrationServiceEnvironmentId),
       location: cdktf.stringToTerraform(this._location),
       logic_app_integration_account_id: cdktf.stringToTerraform(this._logicAppIntegrationAccountId),
@@ -346,6 +484,7 @@ export class LogicAppWorkflow extends cdktf.TerraformResource {
       workflow_parameters: cdktf.hashMapper(cdktf.anyToTerraform)(this._workflowParameters),
       workflow_schema: cdktf.stringToTerraform(this._workflowSchema),
       workflow_version: cdktf.stringToTerraform(this._workflowVersion),
+      access_control: cdktf.listMapper(logicAppWorkflowAccessControlToTerraform)(this._accessControl),
       timeouts: logicAppWorkflowTimeoutsToTerraform(this._timeouts),
     };
   }

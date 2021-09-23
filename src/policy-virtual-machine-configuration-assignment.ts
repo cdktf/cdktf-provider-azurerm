@@ -67,7 +67,7 @@ export interface PolicyVirtualMachineConfigurationAssignmentConfiguration {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/policy_virtual_machine_configuration_assignment.html#name PolicyVirtualMachineConfigurationAssignment#name}
   */
-  readonly name: string;
+  readonly name?: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/policy_virtual_machine_configuration_assignment.html#version PolicyVirtualMachineConfigurationAssignment#version}
   */
