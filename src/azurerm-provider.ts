@@ -126,6 +126,20 @@ export interface AzurermProviderConfig {
   */
   readonly features: AzurermProviderFeatures[];
 }
+export interface AzurermProviderFeaturesApiManagement {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm#purge_soft_delete_on_destroy AzurermProvider#purge_soft_delete_on_destroy}
+  */
+  readonly purgeSoftDeleteOnDestroy?: boolean | cdktf.IResolvable;
+}
+
+function azurermProviderFeaturesApiManagementToTerraform(struct?: AzurermProviderFeaturesApiManagement): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    purge_soft_delete_on_destroy: cdktf.booleanToTerraform(struct!.purgeSoftDeleteOnDestroy),
+  }
+}
+
 export interface AzurermProviderFeaturesCognitiveAccount {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm#purge_soft_delete_on_destroy AzurermProvider#purge_soft_delete_on_destroy}
@@ -260,6 +274,12 @@ function azurermProviderFeaturesVirtualMachineScaleSetToTerraform(struct?: Azure
 
 export interface AzurermProviderFeatures {
   /**
+  * api_management block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm#api_management AzurermProvider#api_management}
+  */
+  readonly apiManagement?: AzurermProviderFeaturesApiManagement[];
+  /**
   * cognitive_account block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm#cognitive_account AzurermProvider#cognitive_account}
@@ -312,6 +332,7 @@ export interface AzurermProviderFeatures {
 function azurermProviderFeaturesToTerraform(struct?: AzurermProviderFeatures): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   return {
+    api_management: cdktf.listMapper(azurermProviderFeaturesApiManagementToTerraform)(struct!.apiManagement),
     cognitive_account: cdktf.listMapper(azurermProviderFeaturesCognitiveAccountToTerraform)(struct!.cognitiveAccount),
     key_vault: cdktf.listMapper(azurermProviderFeaturesKeyVaultToTerraform)(struct!.keyVault),
     log_analytics_workspace: cdktf.listMapper(azurermProviderFeaturesLogAnalyticsWorkspaceToTerraform)(struct!.logAnalyticsWorkspace),

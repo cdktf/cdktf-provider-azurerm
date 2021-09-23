@@ -36,6 +36,12 @@ export interface MachineLearningInferenceClusterConfig extends cdktf.TerraformMe
   */
   readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
+  * identity block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/machine_learning_inference_cluster.html#identity MachineLearningInferenceCluster#identity}
+  */
+  readonly identity?: MachineLearningInferenceClusterIdentity[];
+  /**
   * ssl block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/machine_learning_inference_cluster.html#ssl MachineLearningInferenceCluster#ssl}
@@ -48,6 +54,25 @@ export interface MachineLearningInferenceClusterConfig extends cdktf.TerraformMe
   */
   readonly timeouts?: MachineLearningInferenceClusterTimeouts;
 }
+export interface MachineLearningInferenceClusterIdentity {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/machine_learning_inference_cluster.html#identity_ids MachineLearningInferenceCluster#identity_ids}
+  */
+  readonly identityIds?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/machine_learning_inference_cluster.html#type MachineLearningInferenceCluster#type}
+  */
+  readonly type: string;
+}
+
+function machineLearningInferenceClusterIdentityToTerraform(struct?: MachineLearningInferenceClusterIdentity): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    identity_ids: cdktf.listMapper(cdktf.stringToTerraform)(struct!.identityIds),
+    type: cdktf.stringToTerraform(struct!.type),
+  }
+}
+
 export interface MachineLearningInferenceClusterSsl {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/machine_learning_inference_cluster.html#cert MachineLearningInferenceCluster#cert}
@@ -151,6 +176,7 @@ export class MachineLearningInferenceCluster extends cdktf.TerraformResource {
     this._machineLearningWorkspaceId = config.machineLearningWorkspaceId;
     this._name = config.name;
     this._tags = config.tags;
+    this._identity = config.identity;
     this._ssl = config.ssl;
     this._timeouts = config.timeouts;
   }
@@ -264,6 +290,22 @@ export class MachineLearningInferenceCluster extends cdktf.TerraformResource {
     return this._tags
   }
 
+  // identity - computed: false, optional: true, required: false
+  private _identity?: MachineLearningInferenceClusterIdentity[];
+  public get identity() {
+    return this.interpolationForAttribute('identity') as any;
+  }
+  public set identity(value: MachineLearningInferenceClusterIdentity[] ) {
+    this._identity = value;
+  }
+  public resetIdentity() {
+    this._identity = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get identityInput() {
+    return this._identity
+  }
+
   // ssl - computed: false, optional: true, required: false
   private _ssl?: MachineLearningInferenceClusterSsl[];
   public get ssl() {
@@ -309,6 +351,7 @@ export class MachineLearningInferenceCluster extends cdktf.TerraformResource {
       machine_learning_workspace_id: cdktf.stringToTerraform(this._machineLearningWorkspaceId),
       name: cdktf.stringToTerraform(this._name),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      identity: cdktf.listMapper(machineLearningInferenceClusterIdentityToTerraform)(this._identity),
       ssl: cdktf.listMapper(machineLearningInferenceClusterSslToTerraform)(this._ssl),
       timeouts: machineLearningInferenceClusterTimeoutsToTerraform(this._timeouts),
     };

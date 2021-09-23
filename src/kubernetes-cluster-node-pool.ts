@@ -831,12 +831,12 @@ export class KubernetesClusterNodePool extends cdktf.TerraformResource {
     return this._osDiskType
   }
 
-  // os_sku - computed: false, optional: true, required: false
+  // os_sku - computed: true, optional: true, required: false
   private _osSku?: string;
   public get osSku() {
     return this.getStringAttribute('os_sku');
   }
-  public set osSku(value: string ) {
+  public set osSku(value: string) {
     this._osSku = value;
   }
   public resetOsSku() {

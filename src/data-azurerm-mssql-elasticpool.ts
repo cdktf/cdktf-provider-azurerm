@@ -26,6 +26,28 @@ export interface DataAzurermMssqlElasticpoolConfig extends cdktf.TerraformMetaAr
   */
   readonly timeouts?: DataAzurermMssqlElasticpoolTimeouts;
 }
+export class DataAzurermMssqlElasticpoolSku extends cdktf.ComplexComputedList {
+
+  // capacity - computed: true, optional: false, required: false
+  public get capacity() {
+    return this.getNumberAttribute('capacity');
+  }
+
+  // family - computed: true, optional: false, required: false
+  public get family() {
+    return this.getStringAttribute('family');
+  }
+
+  // name - computed: true, optional: false, required: false
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+
+  // tier - computed: true, optional: false, required: false
+  public get tier() {
+    return this.getStringAttribute('tier');
+  }
+}
 export interface DataAzurermMssqlElasticpoolTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/mssql_elasticpool.html#read DataAzurermMssqlElasticpool#read}
@@ -155,6 +177,11 @@ export class DataAzurermMssqlElasticpool extends cdktf.TerraformDataSource {
   // Temporarily expose input value. Use with caution.
   public get serverNameInput() {
     return this._serverName
+  }
+
+  // sku - computed: true, optional: false, required: false
+  public sku(index: string) {
+    return new DataAzurermMssqlElasticpoolSku(this, 'sku', index);
   }
 
   // tags - computed: true, optional: false, required: false

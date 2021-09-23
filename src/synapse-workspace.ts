@@ -12,10 +12,6 @@ export interface SynapseWorkspaceConfig extends cdktf.TerraformMetaArguments {
   */
   readonly aadAdmin?: SynapseWorkspaceAadAdmin[];
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace.html#customer_managed_key_versionless_id SynapseWorkspace#customer_managed_key_versionless_id}
-  */
-  readonly customerManagedKeyVersionlessId?: string;
-  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace.html#data_exfiltration_protection_enabled SynapseWorkspace#data_exfiltration_protection_enabled}
   */
   readonly dataExfiltrationProtectionEnabled?: boolean | cdktf.IResolvable;
@@ -65,6 +61,12 @@ export interface SynapseWorkspaceConfig extends cdktf.TerraformMetaArguments {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace.html#azure_devops_repo SynapseWorkspace#azure_devops_repo}
   */
   readonly azureDevopsRepo?: SynapseWorkspaceAzureDevopsRepo[];
+  /**
+  * customer_managed_key block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace.html#customer_managed_key SynapseWorkspace#customer_managed_key}
+  */
+  readonly customerManagedKey?: SynapseWorkspaceCustomerManagedKey[];
   /**
   * github_repo block
   * 
@@ -155,6 +157,25 @@ function synapseWorkspaceAzureDevopsRepoToTerraform(struct?: SynapseWorkspaceAzu
     repository_name: cdktf.stringToTerraform(struct!.repositoryName),
     root_folder: cdktf.stringToTerraform(struct!.rootFolder),
     tenant_id: cdktf.stringToTerraform(struct!.tenantId),
+  }
+}
+
+export interface SynapseWorkspaceCustomerManagedKey {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace.html#key_name SynapseWorkspace#key_name}
+  */
+  readonly keyName?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace.html#key_versionless_id SynapseWorkspace#key_versionless_id}
+  */
+  readonly keyVersionlessId: string;
+}
+
+function synapseWorkspaceCustomerManagedKeyToTerraform(struct?: SynapseWorkspaceCustomerManagedKey): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    key_name: cdktf.stringToTerraform(struct!.keyName),
+    key_versionless_id: cdktf.stringToTerraform(struct!.keyVersionlessId),
   }
 }
 
@@ -255,7 +276,6 @@ export class SynapseWorkspace extends cdktf.TerraformResource {
       lifecycle: config.lifecycle
     });
     this._aadAdmin = config.aadAdmin;
-    this._customerManagedKeyVersionlessId = config.customerManagedKeyVersionlessId;
     this._dataExfiltrationProtectionEnabled = config.dataExfiltrationProtectionEnabled;
     this._location = config.location;
     this._managedResourceGroupName = config.managedResourceGroupName;
@@ -268,6 +288,7 @@ export class SynapseWorkspace extends cdktf.TerraformResource {
     this._storageDataLakeGen2FilesystemId = config.storageDataLakeGen2FilesystemId;
     this._tags = config.tags;
     this._azureDevopsRepo = config.azureDevopsRepo;
+    this._customerManagedKey = config.customerManagedKey;
     this._githubRepo = config.githubRepo;
     this._timeouts = config.timeouts;
   }
@@ -295,22 +316,6 @@ export class SynapseWorkspace extends cdktf.TerraformResource {
   // connectivity_endpoints - computed: true, optional: false, required: false
   public connectivityEndpoints(key: string): string {
     return new cdktf.StringMap(this, 'connectivity_endpoints').lookup(key);
-  }
-
-  // customer_managed_key_versionless_id - computed: false, optional: true, required: false
-  private _customerManagedKeyVersionlessId?: string;
-  public get customerManagedKeyVersionlessId() {
-    return this.getStringAttribute('customer_managed_key_versionless_id');
-  }
-  public set customerManagedKeyVersionlessId(value: string ) {
-    this._customerManagedKeyVersionlessId = value;
-  }
-  public resetCustomerManagedKeyVersionlessId() {
-    this._customerManagedKeyVersionlessId = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get customerManagedKeyVersionlessIdInput() {
-    return this._customerManagedKeyVersionlessId
   }
 
   // data_exfiltration_protection_enabled - computed: false, optional: true, required: false
@@ -497,6 +502,22 @@ export class SynapseWorkspace extends cdktf.TerraformResource {
     return this._azureDevopsRepo
   }
 
+  // customer_managed_key - computed: false, optional: true, required: false
+  private _customerManagedKey?: SynapseWorkspaceCustomerManagedKey[];
+  public get customerManagedKey() {
+    return this.interpolationForAttribute('customer_managed_key') as any;
+  }
+  public set customerManagedKey(value: SynapseWorkspaceCustomerManagedKey[] ) {
+    this._customerManagedKey = value;
+  }
+  public resetCustomerManagedKey() {
+    this._customerManagedKey = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get customerManagedKeyInput() {
+    return this._customerManagedKey
+  }
+
   // github_repo - computed: false, optional: true, required: false
   private _githubRepo?: SynapseWorkspaceGithubRepo[];
   public get githubRepo() {
@@ -536,7 +557,6 @@ export class SynapseWorkspace extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       aad_admin: cdktf.listMapper(synapseWorkspaceAadAdminToTerraform)(this._aadAdmin),
-      customer_managed_key_versionless_id: cdktf.stringToTerraform(this._customerManagedKeyVersionlessId),
       data_exfiltration_protection_enabled: cdktf.booleanToTerraform(this._dataExfiltrationProtectionEnabled),
       location: cdktf.stringToTerraform(this._location),
       managed_resource_group_name: cdktf.stringToTerraform(this._managedResourceGroupName),
@@ -549,6 +569,7 @@ export class SynapseWorkspace extends cdktf.TerraformResource {
       storage_data_lake_gen2_filesystem_id: cdktf.stringToTerraform(this._storageDataLakeGen2FilesystemId),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
       azure_devops_repo: cdktf.listMapper(synapseWorkspaceAzureDevopsRepoToTerraform)(this._azureDevopsRepo),
+      customer_managed_key: cdktf.listMapper(synapseWorkspaceCustomerManagedKeyToTerraform)(this._customerManagedKey),
       github_repo: cdktf.listMapper(synapseWorkspaceGithubRepoToTerraform)(this._githubRepo),
       timeouts: synapseWorkspaceTimeoutsToTerraform(this._timeouts),
     };

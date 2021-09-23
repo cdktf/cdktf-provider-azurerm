@@ -12,6 +12,10 @@ export interface MonitorScheduledQueryRulesAlertConfig extends cdktf.TerraformMe
   */
   readonly authorizedResourceIds?: string[];
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_scheduled_query_rules_alert.html#auto_mitigation_enabled MonitorScheduledQueryRulesAlert#auto_mitigation_enabled}
+  */
+  readonly autoMitigationEnabled?: boolean | cdktf.IResolvable;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_scheduled_query_rules_alert.html#data_source_id MonitorScheduledQueryRulesAlert#data_source_id}
   */
   readonly dataSourceId: string;
@@ -224,6 +228,7 @@ export class MonitorScheduledQueryRulesAlert extends cdktf.TerraformResource {
       lifecycle: config.lifecycle
     });
     this._authorizedResourceIds = config.authorizedResourceIds;
+    this._autoMitigationEnabled = config.autoMitigationEnabled;
     this._dataSourceId = config.dataSourceId;
     this._description = config.description;
     this._enabled = config.enabled;
@@ -260,6 +265,22 @@ export class MonitorScheduledQueryRulesAlert extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get authorizedResourceIdsInput() {
     return this._authorizedResourceIds
+  }
+
+  // auto_mitigation_enabled - computed: false, optional: true, required: false
+  private _autoMitigationEnabled?: boolean | cdktf.IResolvable;
+  public get autoMitigationEnabled() {
+    return this.getBooleanAttribute('auto_mitigation_enabled');
+  }
+  public set autoMitigationEnabled(value: boolean | cdktf.IResolvable ) {
+    this._autoMitigationEnabled = value;
+  }
+  public resetAutoMitigationEnabled() {
+    this._autoMitigationEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get autoMitigationEnabledInput() {
+    return this._autoMitigationEnabled
   }
 
   // data_source_id - computed: false, optional: false, required: true
@@ -503,6 +524,7 @@ export class MonitorScheduledQueryRulesAlert extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       authorized_resource_ids: cdktf.listMapper(cdktf.stringToTerraform)(this._authorizedResourceIds),
+      auto_mitigation_enabled: cdktf.booleanToTerraform(this._autoMitigationEnabled),
       data_source_id: cdktf.stringToTerraform(this._dataSourceId),
       description: cdktf.stringToTerraform(this._description),
       enabled: cdktf.booleanToTerraform(this._enabled),
