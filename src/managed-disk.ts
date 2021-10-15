@@ -40,6 +40,14 @@ export interface ManagedDiskConfig extends cdktf.TerraformMetaArguments {
   */
   readonly location: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/managed_disk.html#logical_sector_size ManagedDisk#logical_sector_size}
+  */
+  readonly logicalSectorSize?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/managed_disk.html#max_shares ManagedDisk#max_shares}
+  */
+  readonly maxShares?: number;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/managed_disk.html#name ManagedDisk#name}
   */
   readonly name: string;
@@ -232,6 +240,8 @@ export class ManagedDisk extends cdktf.TerraformResource {
     this._diskSizeGb = config.diskSizeGb;
     this._imageReferenceId = config.imageReferenceId;
     this._location = config.location;
+    this._logicalSectorSize = config.logicalSectorSize;
+    this._maxShares = config.maxShares;
     this._name = config.name;
     this._networkAccessPolicy = config.networkAccessPolicy;
     this._osType = config.osType;
@@ -376,6 +386,38 @@ export class ManagedDisk extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get locationInput() {
     return this._location
+  }
+
+  // logical_sector_size - computed: true, optional: true, required: false
+  private _logicalSectorSize?: number;
+  public get logicalSectorSize() {
+    return this.getNumberAttribute('logical_sector_size');
+  }
+  public set logicalSectorSize(value: number) {
+    this._logicalSectorSize = value;
+  }
+  public resetLogicalSectorSize() {
+    this._logicalSectorSize = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get logicalSectorSizeInput() {
+    return this._logicalSectorSize
+  }
+
+  // max_shares - computed: true, optional: true, required: false
+  private _maxShares?: number;
+  public get maxShares() {
+    return this.getNumberAttribute('max_shares');
+  }
+  public set maxShares(value: number) {
+    this._maxShares = value;
+  }
+  public resetMaxShares() {
+    this._maxShares = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get maxSharesInput() {
+    return this._maxShares
   }
 
   // name - computed: false, optional: false, required: true
@@ -591,6 +633,8 @@ export class ManagedDisk extends cdktf.TerraformResource {
       disk_size_gb: cdktf.numberToTerraform(this._diskSizeGb),
       image_reference_id: cdktf.stringToTerraform(this._imageReferenceId),
       location: cdktf.stringToTerraform(this._location),
+      logical_sector_size: cdktf.numberToTerraform(this._logicalSectorSize),
+      max_shares: cdktf.numberToTerraform(this._maxShares),
       name: cdktf.stringToTerraform(this._name),
       network_access_policy: cdktf.stringToTerraform(this._networkAccessPolicy),
       os_type: cdktf.stringToTerraform(this._osType),

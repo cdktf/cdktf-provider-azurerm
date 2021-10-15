@@ -310,6 +310,10 @@ function networkConnectionMonitorTestConfigurationSuccessThresholdToTerraform(st
 
 export interface NetworkConnectionMonitorTestConfigurationTcpConfiguration {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html#destination_port_behavior NetworkConnectionMonitor#destination_port_behavior}
+  */
+  readonly destinationPortBehavior?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html#port NetworkConnectionMonitor#port}
   */
   readonly port: number;
@@ -322,6 +326,7 @@ export interface NetworkConnectionMonitorTestConfigurationTcpConfiguration {
 function networkConnectionMonitorTestConfigurationTcpConfigurationToTerraform(struct?: NetworkConnectionMonitorTestConfigurationTcpConfiguration): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   return {
+    destination_port_behavior: cdktf.stringToTerraform(struct!.destinationPortBehavior),
     port: cdktf.numberToTerraform(struct!.port),
     trace_route_enabled: cdktf.booleanToTerraform(struct!.traceRouteEnabled),
   }

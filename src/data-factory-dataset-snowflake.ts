@@ -58,6 +58,12 @@ export interface DataFactoryDatasetSnowflakeConfig extends cdktf.TerraformMetaAr
   */
   readonly schemaColumn?: DataFactoryDatasetSnowflakeSchemaColumn[];
   /**
+  * structure_column block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_snowflake.html#structure_column DataFactoryDatasetSnowflake#structure_column}
+  */
+  readonly structureColumn?: DataFactoryDatasetSnowflakeStructureColumn[];
+  /**
   * timeouts block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_snowflake.html#timeouts DataFactoryDatasetSnowflake#timeouts}
@@ -65,6 +71,35 @@ export interface DataFactoryDatasetSnowflakeConfig extends cdktf.TerraformMetaAr
   readonly timeouts?: DataFactoryDatasetSnowflakeTimeouts;
 }
 export interface DataFactoryDatasetSnowflakeSchemaColumn {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_snowflake.html#name DataFactoryDatasetSnowflake#name}
+  */
+  readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_snowflake.html#precision DataFactoryDatasetSnowflake#precision}
+  */
+  readonly precision?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_snowflake.html#scale DataFactoryDatasetSnowflake#scale}
+  */
+  readonly scale?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_snowflake.html#type DataFactoryDatasetSnowflake#type}
+  */
+  readonly type?: string;
+}
+
+function dataFactoryDatasetSnowflakeSchemaColumnToTerraform(struct?: DataFactoryDatasetSnowflakeSchemaColumn): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    name: cdktf.stringToTerraform(struct!.name),
+    precision: cdktf.numberToTerraform(struct!.precision),
+    scale: cdktf.numberToTerraform(struct!.scale),
+    type: cdktf.stringToTerraform(struct!.type),
+  }
+}
+
+export interface DataFactoryDatasetSnowflakeStructureColumn {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_snowflake.html#description DataFactoryDatasetSnowflake#description}
   */
@@ -79,7 +114,7 @@ export interface DataFactoryDatasetSnowflakeSchemaColumn {
   readonly type?: string;
 }
 
-function dataFactoryDatasetSnowflakeSchemaColumnToTerraform(struct?: DataFactoryDatasetSnowflakeSchemaColumn): any {
+function dataFactoryDatasetSnowflakeStructureColumnToTerraform(struct?: DataFactoryDatasetSnowflakeStructureColumn): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   return {
     description: cdktf.stringToTerraform(struct!.description),
@@ -162,6 +197,7 @@ export class DataFactoryDatasetSnowflake extends cdktf.TerraformResource {
     this._schemaName = config.schemaName;
     this._tableName = config.tableName;
     this._schemaColumn = config.schemaColumn;
+    this._structureColumn = config.structureColumn;
     this._timeouts = config.timeouts;
   }
 
@@ -354,6 +390,22 @@ export class DataFactoryDatasetSnowflake extends cdktf.TerraformResource {
     return this._schemaColumn
   }
 
+  // structure_column - computed: false, optional: true, required: false
+  private _structureColumn?: DataFactoryDatasetSnowflakeStructureColumn[];
+  public get structureColumn() {
+    return this.interpolationForAttribute('structure_column') as any;
+  }
+  public set structureColumn(value: DataFactoryDatasetSnowflakeStructureColumn[] ) {
+    this._structureColumn = value;
+  }
+  public resetStructureColumn() {
+    this._structureColumn = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get structureColumnInput() {
+    return this._structureColumn
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: DataFactoryDatasetSnowflakeTimeouts;
   public get timeouts() {
@@ -388,6 +440,7 @@ export class DataFactoryDatasetSnowflake extends cdktf.TerraformResource {
       schema_name: cdktf.stringToTerraform(this._schemaName),
       table_name: cdktf.stringToTerraform(this._tableName),
       schema_column: cdktf.listMapper(dataFactoryDatasetSnowflakeSchemaColumnToTerraform)(this._schemaColumn),
+      structure_column: cdktf.listMapper(dataFactoryDatasetSnowflakeStructureColumnToTerraform)(this._structureColumn),
       timeouts: dataFactoryDatasetSnowflakeTimeoutsToTerraform(this._timeouts),
     };
   }

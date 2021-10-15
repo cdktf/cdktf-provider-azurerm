@@ -80,6 +80,12 @@ export interface EventgridEventSubscriptionConfig extends cdktf.TerraformMetaArg
   */
   readonly deliveryIdentity?: EventgridEventSubscriptionDeliveryIdentity[];
   /**
+  * delivery_property block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#delivery_property EventgridEventSubscription#delivery_property}
+  */
+  readonly deliveryProperty?: EventgridEventSubscriptionDeliveryProperty[];
+  /**
   * eventhub_endpoint block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#eventhub_endpoint EventgridEventSubscription#eventhub_endpoint}
@@ -673,6 +679,40 @@ function eventgridEventSubscriptionDeliveryIdentityToTerraform(struct?: Eventgri
   }
 }
 
+export interface EventgridEventSubscriptionDeliveryProperty {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#header_name EventgridEventSubscription#header_name}
+  */
+  readonly headerName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#secret EventgridEventSubscription#secret}
+  */
+  readonly secret?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#source_field EventgridEventSubscription#source_field}
+  */
+  readonly sourceField?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#type EventgridEventSubscription#type}
+  */
+  readonly type: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#value EventgridEventSubscription#value}
+  */
+  readonly value?: string;
+}
+
+function eventgridEventSubscriptionDeliveryPropertyToTerraform(struct?: EventgridEventSubscriptionDeliveryProperty): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    header_name: cdktf.stringToTerraform(struct!.headerName),
+    secret: cdktf.booleanToTerraform(struct!.secret),
+    source_field: cdktf.stringToTerraform(struct!.sourceField),
+    type: cdktf.stringToTerraform(struct!.type),
+    value: cdktf.stringToTerraform(struct!.value),
+  }
+}
+
 export interface EventgridEventSubscriptionEventhubEndpoint {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#eventhub_id EventgridEventSubscription#eventhub_id}
@@ -894,6 +934,7 @@ export class EventgridEventSubscription extends cdktf.TerraformResource {
     this._azureFunctionEndpoint = config.azureFunctionEndpoint;
     this._deadLetterIdentity = config.deadLetterIdentity;
     this._deliveryIdentity = config.deliveryIdentity;
+    this._deliveryProperty = config.deliveryProperty;
     this._eventhubEndpoint = config.eventhubEndpoint;
     this._hybridConnectionEndpoint = config.hybridConnectionEndpoint;
     this._retryPolicy = config.retryPolicy;
@@ -1163,6 +1204,22 @@ export class EventgridEventSubscription extends cdktf.TerraformResource {
     return this._deliveryIdentity
   }
 
+  // delivery_property - computed: false, optional: true, required: false
+  private _deliveryProperty?: EventgridEventSubscriptionDeliveryProperty[];
+  public get deliveryProperty() {
+    return this.interpolationForAttribute('delivery_property') as any;
+  }
+  public set deliveryProperty(value: EventgridEventSubscriptionDeliveryProperty[] ) {
+    this._deliveryProperty = value;
+  }
+  public resetDeliveryProperty() {
+    this._deliveryProperty = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deliveryPropertyInput() {
+    return this._deliveryProperty
+  }
+
   // eventhub_endpoint - computed: false, optional: true, required: false
   private _eventhubEndpoint?: EventgridEventSubscriptionEventhubEndpoint[];
   public get eventhubEndpoint() {
@@ -1313,6 +1370,7 @@ export class EventgridEventSubscription extends cdktf.TerraformResource {
       azure_function_endpoint: cdktf.listMapper(eventgridEventSubscriptionAzureFunctionEndpointToTerraform)(this._azureFunctionEndpoint),
       dead_letter_identity: cdktf.listMapper(eventgridEventSubscriptionDeadLetterIdentityToTerraform)(this._deadLetterIdentity),
       delivery_identity: cdktf.listMapper(eventgridEventSubscriptionDeliveryIdentityToTerraform)(this._deliveryIdentity),
+      delivery_property: cdktf.listMapper(eventgridEventSubscriptionDeliveryPropertyToTerraform)(this._deliveryProperty),
       eventhub_endpoint: cdktf.listMapper(eventgridEventSubscriptionEventhubEndpointToTerraform)(this._eventhubEndpoint),
       hybrid_connection_endpoint: cdktf.listMapper(eventgridEventSubscriptionHybridConnectionEndpointToTerraform)(this._hybridConnectionEndpoint),
       retry_policy: cdktf.listMapper(eventgridEventSubscriptionRetryPolicyToTerraform)(this._retryPolicy),

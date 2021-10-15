@@ -134,6 +134,11 @@ export class DataAzurermKeyVaultCertificateData extends cdktf.TerraformDataSourc
     return this._name
   }
 
+  // not_before - computed: true, optional: false, required: false
+  public get notBefore() {
+    return this.getStringAttribute('not_before');
+  }
+
   // pem - computed: true, optional: false, required: false
   public get pem() {
     return this.getStringAttribute('pem');

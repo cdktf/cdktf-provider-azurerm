@@ -28,6 +28,10 @@ export interface MachineLearningWorkspaceConfig extends cdktf.TerraformMetaArgum
   */
   readonly highBusinessImpact?: boolean | cdktf.IResolvable;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/machine_learning_workspace.html#image_build_compute_name MachineLearningWorkspace#image_build_compute_name}
+  */
+  readonly imageBuildComputeName?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/machine_learning_workspace.html#key_vault_id MachineLearningWorkspace#key_vault_id}
   */
   readonly keyVaultId: string;
@@ -39,6 +43,10 @@ export interface MachineLearningWorkspaceConfig extends cdktf.TerraformMetaArgum
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/machine_learning_workspace.html#name MachineLearningWorkspace#name}
   */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/machine_learning_workspace.html#public_network_access_enabled MachineLearningWorkspace#public_network_access_enabled}
+  */
+  readonly publicNetworkAccessEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/machine_learning_workspace.html#resource_group_name MachineLearningWorkspace#resource_group_name}
   */
@@ -149,9 +157,11 @@ export class MachineLearningWorkspace extends cdktf.TerraformResource {
     this._description = config.description;
     this._friendlyName = config.friendlyName;
     this._highBusinessImpact = config.highBusinessImpact;
+    this._imageBuildComputeName = config.imageBuildComputeName;
     this._keyVaultId = config.keyVaultId;
     this._location = config.location;
     this._name = config.name;
+    this._publicNetworkAccessEnabled = config.publicNetworkAccessEnabled;
     this._resourceGroupName = config.resourceGroupName;
     this._skuName = config.skuName;
     this._storageAccountId = config.storageAccountId;
@@ -209,6 +219,11 @@ export class MachineLearningWorkspace extends cdktf.TerraformResource {
     return this._description
   }
 
+  // discovery_url - computed: true, optional: false, required: false
+  public get discoveryUrl() {
+    return this.getStringAttribute('discovery_url');
+  }
+
   // friendly_name - computed: false, optional: true, required: false
   private _friendlyName?: string;
   public get friendlyName() {
@@ -244,6 +259,22 @@ export class MachineLearningWorkspace extends cdktf.TerraformResource {
   // id - computed: true, optional: true, required: false
   public get id() {
     return this.getStringAttribute('id');
+  }
+
+  // image_build_compute_name - computed: false, optional: true, required: false
+  private _imageBuildComputeName?: string;
+  public get imageBuildComputeName() {
+    return this.getStringAttribute('image_build_compute_name');
+  }
+  public set imageBuildComputeName(value: string ) {
+    this._imageBuildComputeName = value;
+  }
+  public resetImageBuildComputeName() {
+    this._imageBuildComputeName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get imageBuildComputeNameInput() {
+    return this._imageBuildComputeName
   }
 
   // key_vault_id - computed: false, optional: false, required: true
@@ -283,6 +314,22 @@ export class MachineLearningWorkspace extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
     return this._name
+  }
+
+  // public_network_access_enabled - computed: false, optional: true, required: false
+  private _publicNetworkAccessEnabled?: boolean | cdktf.IResolvable;
+  public get publicNetworkAccessEnabled() {
+    return this.getBooleanAttribute('public_network_access_enabled');
+  }
+  public set publicNetworkAccessEnabled(value: boolean | cdktf.IResolvable ) {
+    this._publicNetworkAccessEnabled = value;
+  }
+  public resetPublicNetworkAccessEnabled() {
+    this._publicNetworkAccessEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get publicNetworkAccessEnabledInput() {
+    return this._publicNetworkAccessEnabled
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -383,9 +430,11 @@ export class MachineLearningWorkspace extends cdktf.TerraformResource {
       description: cdktf.stringToTerraform(this._description),
       friendly_name: cdktf.stringToTerraform(this._friendlyName),
       high_business_impact: cdktf.booleanToTerraform(this._highBusinessImpact),
+      image_build_compute_name: cdktf.stringToTerraform(this._imageBuildComputeName),
       key_vault_id: cdktf.stringToTerraform(this._keyVaultId),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
+      public_network_access_enabled: cdktf.booleanToTerraform(this._publicNetworkAccessEnabled),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       sku_name: cdktf.stringToTerraform(this._skuName),
       storage_account_id: cdktf.stringToTerraform(this._storageAccountId),

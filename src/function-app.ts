@@ -610,6 +610,10 @@ export interface FunctionAppSiteConfig {
   */
   readonly use32BitWorkerProcess?: boolean | cdktf.IResolvable;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app.html#vnet_route_all_enabled FunctionApp#vnet_route_all_enabled}
+  */
+  readonly vnetRouteAllEnabled?: boolean | cdktf.IResolvable;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app.html#websockets_enabled FunctionApp#websockets_enabled}
   */
   readonly websocketsEnabled?: boolean | cdktf.IResolvable;
@@ -642,6 +646,7 @@ function functionAppSiteConfigToTerraform(struct?: FunctionAppSiteConfig): any {
     scm_type: cdktf.stringToTerraform(struct!.scmType),
     scm_use_main_ip_restriction: cdktf.booleanToTerraform(struct!.scmUseMainIpRestriction),
     use_32_bit_worker_process: cdktf.booleanToTerraform(struct!.use32BitWorkerProcess),
+    vnet_route_all_enabled: cdktf.booleanToTerraform(struct!.vnetRouteAllEnabled),
     websockets_enabled: cdktf.booleanToTerraform(struct!.websocketsEnabled),
     cors: cdktf.listMapper(functionAppSiteConfigCorsToTerraform)(struct!.cors),
   }

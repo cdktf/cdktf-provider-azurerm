@@ -22,6 +22,18 @@ export interface DataAzurermPrivateEndpointConnectionConfig extends cdktf.Terraf
   */
   readonly timeouts?: DataAzurermPrivateEndpointConnectionTimeouts;
 }
+export class DataAzurermPrivateEndpointConnectionNetworkInterface extends cdktf.ComplexComputedList {
+
+  // id - computed: true, optional: false, required: false
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+
+  // name - computed: true, optional: false, required: false
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+}
 export class DataAzurermPrivateEndpointConnectionPrivateServiceConnection extends cdktf.ComplexComputedList {
 
   // name - computed: true, optional: false, required: false
@@ -121,6 +133,11 @@ export class DataAzurermPrivateEndpointConnection extends cdktf.TerraformDataSou
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
     return this._name
+  }
+
+  // network_interface - computed: true, optional: false, required: false
+  public networkInterface(index: string) {
+    return new DataAzurermPrivateEndpointConnectionNetworkInterface(this, 'network_interface', index);
   }
 
   // private_service_connection - computed: true, optional: false, required: false

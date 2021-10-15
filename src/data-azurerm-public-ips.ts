@@ -16,6 +16,10 @@ export interface DataAzurermPublicIpsConfig extends cdktf.TerraformMetaArguments
   */
   readonly attached?: boolean | cdktf.IResolvable;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/public_ips.html#attachment_status DataAzurermPublicIps#attachment_status}
+  */
+  readonly attachmentStatus?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/public_ips.html#name_prefix DataAzurermPublicIps#name_prefix}
   */
   readonly namePrefix?: string;
@@ -106,6 +110,7 @@ export class DataAzurermPublicIps extends cdktf.TerraformDataSource {
     });
     this._allocationType = config.allocationType;
     this._attached = config.attached;
+    this._attachmentStatus = config.attachmentStatus;
     this._namePrefix = config.namePrefix;
     this._resourceGroupName = config.resourceGroupName;
     this._timeouts = config.timeouts;
@@ -145,6 +150,22 @@ export class DataAzurermPublicIps extends cdktf.TerraformDataSource {
   // Temporarily expose input value. Use with caution.
   public get attachedInput() {
     return this._attached
+  }
+
+  // attachment_status - computed: false, optional: true, required: false
+  private _attachmentStatus?: string;
+  public get attachmentStatus() {
+    return this.getStringAttribute('attachment_status');
+  }
+  public set attachmentStatus(value: string ) {
+    this._attachmentStatus = value;
+  }
+  public resetAttachmentStatus() {
+    this._attachmentStatus = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get attachmentStatusInput() {
+    return this._attachmentStatus
   }
 
   // id - computed: true, optional: true, required: false
@@ -210,6 +231,7 @@ export class DataAzurermPublicIps extends cdktf.TerraformDataSource {
     return {
       allocation_type: cdktf.stringToTerraform(this._allocationType),
       attached: cdktf.booleanToTerraform(this._attached),
+      attachment_status: cdktf.stringToTerraform(this._attachmentStatus),
       name_prefix: cdktf.stringToTerraform(this._namePrefix),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       timeouts: dataAzurermPublicIpsTimeoutsToTerraform(this._timeouts),
