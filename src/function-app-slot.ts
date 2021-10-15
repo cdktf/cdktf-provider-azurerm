@@ -600,6 +600,10 @@ export interface FunctionAppSlotSiteConfig {
   */
   readonly use32BitWorkerProcess?: boolean | cdktf.IResolvable;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app_slot.html#vnet_route_all_enabled FunctionAppSlot#vnet_route_all_enabled}
+  */
+  readonly vnetRouteAllEnabled?: boolean | cdktf.IResolvable;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app_slot.html#websockets_enabled FunctionAppSlot#websockets_enabled}
   */
   readonly websocketsEnabled?: boolean | cdktf.IResolvable;
@@ -632,6 +636,7 @@ function functionAppSlotSiteConfigToTerraform(struct?: FunctionAppSlotSiteConfig
     scm_type: cdktf.stringToTerraform(struct!.scmType),
     scm_use_main_ip_restriction: cdktf.booleanToTerraform(struct!.scmUseMainIpRestriction),
     use_32_bit_worker_process: cdktf.booleanToTerraform(struct!.use32BitWorkerProcess),
+    vnet_route_all_enabled: cdktf.booleanToTerraform(struct!.vnetRouteAllEnabled),
     websockets_enabled: cdktf.booleanToTerraform(struct!.websocketsEnabled),
     cors: cdktf.listMapper(functionAppSlotSiteConfigCorsToTerraform)(struct!.cors),
   }

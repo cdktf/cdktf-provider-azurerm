@@ -22,11 +22,15 @@ export interface StorageAccountNetworkRulesAConfig extends cdktf.TerraformMetaAr
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account_network_rules.html#resource_group_name StorageAccountNetworkRulesA#resource_group_name}
   */
-  readonly resourceGroupName: string;
+  readonly resourceGroupName?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account_network_rules.html#storage_account_id StorageAccountNetworkRulesA#storage_account_id}
+  */
+  readonly storageAccountId?: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account_network_rules.html#storage_account_name StorageAccountNetworkRulesA#storage_account_name}
   */
-  readonly storageAccountName: string;
+  readonly storageAccountName?: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account_network_rules.html#virtual_network_subnet_ids StorageAccountNetworkRulesA#virtual_network_subnet_ids}
   */
@@ -129,6 +133,7 @@ export class StorageAccountNetworkRulesA extends cdktf.TerraformResource {
     this._defaultAction = config.defaultAction;
     this._ipRules = config.ipRules;
     this._resourceGroupName = config.resourceGroupName;
+    this._storageAccountId = config.storageAccountId;
     this._storageAccountName = config.storageAccountName;
     this._virtualNetworkSubnetIds = config.virtualNetworkSubnetIds;
     this._privateLinkAccess = config.privateLinkAccess;
@@ -189,26 +194,48 @@ export class StorageAccountNetworkRulesA extends cdktf.TerraformResource {
     return this._ipRules
   }
 
-  // resource_group_name - computed: false, optional: false, required: true
-  private _resourceGroupName: string;
+  // resource_group_name - computed: true, optional: true, required: false
+  private _resourceGroupName?: string;
   public get resourceGroupName() {
     return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
   }
+  public resetResourceGroupName() {
+    this._resourceGroupName = undefined;
+  }
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
     return this._resourceGroupName
   }
 
-  // storage_account_name - computed: false, optional: false, required: true
-  private _storageAccountName: string;
+  // storage_account_id - computed: true, optional: true, required: false
+  private _storageAccountId?: string;
+  public get storageAccountId() {
+    return this.getStringAttribute('storage_account_id');
+  }
+  public set storageAccountId(value: string) {
+    this._storageAccountId = value;
+  }
+  public resetStorageAccountId() {
+    this._storageAccountId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get storageAccountIdInput() {
+    return this._storageAccountId
+  }
+
+  // storage_account_name - computed: true, optional: true, required: false
+  private _storageAccountName?: string;
   public get storageAccountName() {
     return this.getStringAttribute('storage_account_name');
   }
   public set storageAccountName(value: string) {
     this._storageAccountName = value;
+  }
+  public resetStorageAccountName() {
+    this._storageAccountName = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get storageAccountNameInput() {
@@ -273,6 +300,7 @@ export class StorageAccountNetworkRulesA extends cdktf.TerraformResource {
       default_action: cdktf.stringToTerraform(this._defaultAction),
       ip_rules: cdktf.listMapper(cdktf.stringToTerraform)(this._ipRules),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      storage_account_id: cdktf.stringToTerraform(this._storageAccountId),
       storage_account_name: cdktf.stringToTerraform(this._storageAccountName),
       virtual_network_subnet_ids: cdktf.listMapper(cdktf.stringToTerraform)(this._virtualNetworkSubnetIds),
       private_link_access: cdktf.listMapper(storageAccountNetworkRulesPrivateLinkAccessAToTerraform)(this._privateLinkAccess),

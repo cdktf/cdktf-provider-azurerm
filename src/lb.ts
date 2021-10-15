@@ -24,6 +24,10 @@ export interface LbConfig extends cdktf.TerraformMetaArguments {
   */
   readonly sku?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb.html#sku_tier Lb#sku_tier}
+  */
+  readonly skuTier?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb.html#tags Lb#tags}
   */
   readonly tags?: { [key: string]: string } | cdktf.IResolvable;
@@ -160,6 +164,7 @@ export class Lb extends cdktf.TerraformResource {
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
     this._sku = config.sku;
+    this._skuTier = config.skuTier;
     this._tags = config.tags;
     this._frontendIpConfiguration = config.frontendIpConfiguration;
     this._timeouts = config.timeouts;
@@ -239,6 +244,22 @@ export class Lb extends cdktf.TerraformResource {
     return this._sku
   }
 
+  // sku_tier - computed: false, optional: true, required: false
+  private _skuTier?: string;
+  public get skuTier() {
+    return this.getStringAttribute('sku_tier');
+  }
+  public set skuTier(value: string ) {
+    this._skuTier = value;
+  }
+  public resetSkuTier() {
+    this._skuTier = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get skuTierInput() {
+    return this._skuTier
+  }
+
   // tags - computed: false, optional: true, required: false
   private _tags?: { [key: string]: string } | cdktf.IResolvable;
   public get tags() {
@@ -297,6 +318,7 @@ export class Lb extends cdktf.TerraformResource {
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       sku: cdktf.stringToTerraform(this._sku),
+      sku_tier: cdktf.stringToTerraform(this._skuTier),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
       frontend_ip_configuration: cdktf.listMapper(lbFrontendIpConfigurationToTerraform)(this._frontendIpConfiguration),
       timeouts: lbTimeoutsToTerraform(this._timeouts),

@@ -36,12 +36,57 @@ export interface KustoAttachedDatabaseConfigurationConfig extends cdktf.Terrafor
   */
   readonly resourceGroupName: string;
   /**
+  * sharing block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_attached_database_configuration.html#sharing KustoAttachedDatabaseConfiguration#sharing}
+  */
+  readonly sharing?: KustoAttachedDatabaseConfigurationSharing[];
+  /**
   * timeouts block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_attached_database_configuration.html#timeouts KustoAttachedDatabaseConfiguration#timeouts}
   */
   readonly timeouts?: KustoAttachedDatabaseConfigurationTimeouts;
 }
+export interface KustoAttachedDatabaseConfigurationSharing {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_attached_database_configuration.html#external_tables_to_exclude KustoAttachedDatabaseConfiguration#external_tables_to_exclude}
+  */
+  readonly externalTablesToExclude?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_attached_database_configuration.html#external_tables_to_include KustoAttachedDatabaseConfiguration#external_tables_to_include}
+  */
+  readonly externalTablesToInclude?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_attached_database_configuration.html#materialized_views_to_exclude KustoAttachedDatabaseConfiguration#materialized_views_to_exclude}
+  */
+  readonly materializedViewsToExclude?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_attached_database_configuration.html#materialized_views_to_include KustoAttachedDatabaseConfiguration#materialized_views_to_include}
+  */
+  readonly materializedViewsToInclude?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_attached_database_configuration.html#tables_to_exclude KustoAttachedDatabaseConfiguration#tables_to_exclude}
+  */
+  readonly tablesToExclude?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_attached_database_configuration.html#tables_to_include KustoAttachedDatabaseConfiguration#tables_to_include}
+  */
+  readonly tablesToInclude?: string[];
+}
+
+function kustoAttachedDatabaseConfigurationSharingToTerraform(struct?: KustoAttachedDatabaseConfigurationSharing): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  return {
+    external_tables_to_exclude: cdktf.listMapper(cdktf.stringToTerraform)(struct!.externalTablesToExclude),
+    external_tables_to_include: cdktf.listMapper(cdktf.stringToTerraform)(struct!.externalTablesToInclude),
+    materialized_views_to_exclude: cdktf.listMapper(cdktf.stringToTerraform)(struct!.materializedViewsToExclude),
+    materialized_views_to_include: cdktf.listMapper(cdktf.stringToTerraform)(struct!.materializedViewsToInclude),
+    tables_to_exclude: cdktf.listMapper(cdktf.stringToTerraform)(struct!.tablesToExclude),
+    tables_to_include: cdktf.listMapper(cdktf.stringToTerraform)(struct!.tablesToInclude),
+  }
+}
+
 export interface KustoAttachedDatabaseConfigurationTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_attached_database_configuration.html#create KustoAttachedDatabaseConfiguration#create}
@@ -111,6 +156,7 @@ export class KustoAttachedDatabaseConfiguration extends cdktf.TerraformResource 
     this._location = config.location;
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
+    this._sharing = config.sharing;
     this._timeouts = config.timeouts;
   }
 
@@ -222,6 +268,22 @@ export class KustoAttachedDatabaseConfiguration extends cdktf.TerraformResource 
     return this._resourceGroupName
   }
 
+  // sharing - computed: false, optional: true, required: false
+  private _sharing?: KustoAttachedDatabaseConfigurationSharing[];
+  public get sharing() {
+    return this.interpolationForAttribute('sharing') as any;
+  }
+  public set sharing(value: KustoAttachedDatabaseConfigurationSharing[] ) {
+    this._sharing = value;
+  }
+  public resetSharing() {
+    this._sharing = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sharingInput() {
+    return this._sharing
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: KustoAttachedDatabaseConfigurationTimeouts;
   public get timeouts() {
@@ -251,6 +313,7 @@ export class KustoAttachedDatabaseConfiguration extends cdktf.TerraformResource 
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      sharing: cdktf.listMapper(kustoAttachedDatabaseConfigurationSharingToTerraform)(this._sharing),
       timeouts: kustoAttachedDatabaseConfigurationTimeoutsToTerraform(this._timeouts),
     };
   }

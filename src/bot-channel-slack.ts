@@ -32,6 +32,10 @@ export interface BotChannelSlackConfig extends cdktf.TerraformMetaArguments {
   */
   readonly resourceGroupName: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_slack.html#signing_secret BotChannelSlack#signing_secret}
+  */
+  readonly signingSecret?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_slack.html#verification_token BotChannelSlack#verification_token}
   */
   readonly verificationToken: string;
@@ -110,6 +114,7 @@ export class BotChannelSlack extends cdktf.TerraformResource {
     this._landingPageUrl = config.landingPageUrl;
     this._location = config.location;
     this._resourceGroupName = config.resourceGroupName;
+    this._signingSecret = config.signingSecret;
     this._verificationToken = config.verificationToken;
     this._timeouts = config.timeouts;
   }
@@ -204,6 +209,22 @@ export class BotChannelSlack extends cdktf.TerraformResource {
     return this._resourceGroupName
   }
 
+  // signing_secret - computed: false, optional: true, required: false
+  private _signingSecret?: string;
+  public get signingSecret() {
+    return this.getStringAttribute('signing_secret');
+  }
+  public set signingSecret(value: string ) {
+    this._signingSecret = value;
+  }
+  public resetSigningSecret() {
+    this._signingSecret = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get signingSecretInput() {
+    return this._signingSecret
+  }
+
   // verification_token - computed: false, optional: false, required: true
   private _verificationToken: string;
   public get verificationToken() {
@@ -245,6 +266,7 @@ export class BotChannelSlack extends cdktf.TerraformResource {
       landing_page_url: cdktf.stringToTerraform(this._landingPageUrl),
       location: cdktf.stringToTerraform(this._location),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      signing_secret: cdktf.stringToTerraform(this._signingSecret),
       verification_token: cdktf.stringToTerraform(this._verificationToken),
       timeouts: botChannelSlackTimeoutsToTerraform(this._timeouts),
     };

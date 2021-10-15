@@ -12,6 +12,10 @@ export interface ConsumptionBudgetResourceGroupConfig extends cdktf.TerraformMet
   */
   readonly amount: number;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/consumption_budget_resource_group.html#etag ConsumptionBudgetResourceGroup#etag}
+  */
+  readonly etag?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/consumption_budget_resource_group.html#name ConsumptionBudgetResourceGroup#name}
   */
   readonly name: string;
@@ -222,6 +226,10 @@ export interface ConsumptionBudgetResourceGroupNotification {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/consumption_budget_resource_group.html#threshold ConsumptionBudgetResourceGroup#threshold}
   */
   readonly threshold: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/consumption_budget_resource_group.html#threshold_type ConsumptionBudgetResourceGroup#threshold_type}
+  */
+  readonly thresholdType?: string;
 }
 
 function consumptionBudgetResourceGroupNotificationToTerraform(struct?: ConsumptionBudgetResourceGroupNotification): any {
@@ -233,6 +241,7 @@ function consumptionBudgetResourceGroupNotificationToTerraform(struct?: Consumpt
     enabled: cdktf.booleanToTerraform(struct!.enabled),
     operator: cdktf.stringToTerraform(struct!.operator),
     threshold: cdktf.numberToTerraform(struct!.threshold),
+    threshold_type: cdktf.stringToTerraform(struct!.thresholdType),
   }
 }
 
@@ -318,6 +327,7 @@ export class ConsumptionBudgetResourceGroup extends cdktf.TerraformResource {
       lifecycle: config.lifecycle
     });
     this._amount = config.amount;
+    this._etag = config.etag;
     this._name = config.name;
     this._resourceGroupId = config.resourceGroupId;
     this._timeGrain = config.timeGrain;
@@ -342,6 +352,22 @@ export class ConsumptionBudgetResourceGroup extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get amountInput() {
     return this._amount
+  }
+
+  // etag - computed: true, optional: true, required: false
+  private _etag?: string;
+  public get etag() {
+    return this.getStringAttribute('etag');
+  }
+  public set etag(value: string) {
+    this._etag = value;
+  }
+  public resetEtag() {
+    this._etag = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get etagInput() {
+    return this._etag
   }
 
   // id - computed: true, optional: true, required: false
@@ -456,6 +482,7 @@ export class ConsumptionBudgetResourceGroup extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       amount: cdktf.numberToTerraform(this._amount),
+      etag: cdktf.stringToTerraform(this._etag),
       name: cdktf.stringToTerraform(this._name),
       resource_group_id: cdktf.stringToTerraform(this._resourceGroupId),
       time_grain: cdktf.stringToTerraform(this._timeGrain),

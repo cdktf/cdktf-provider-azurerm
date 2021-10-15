@@ -16,6 +16,10 @@ export interface StreamAnalyticsOutputEventhubConfig extends cdktf.TerraformMeta
   */
   readonly name: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_eventhub.html#partition_key StreamAnalyticsOutputEventhub#partition_key}
+  */
+  readonly partitionKey?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_eventhub.html#property_columns StreamAnalyticsOutputEventhub#property_columns}
   */
   readonly propertyColumns?: string[];
@@ -145,6 +149,7 @@ export class StreamAnalyticsOutputEventhub extends cdktf.TerraformResource {
     });
     this._eventhubName = config.eventhubName;
     this._name = config.name;
+    this._partitionKey = config.partitionKey;
     this._propertyColumns = config.propertyColumns;
     this._resourceGroupName = config.resourceGroupName;
     this._servicebusNamespace = config.servicebusNamespace;
@@ -188,6 +193,22 @@ export class StreamAnalyticsOutputEventhub extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
     return this._name
+  }
+
+  // partition_key - computed: false, optional: true, required: false
+  private _partitionKey?: string;
+  public get partitionKey() {
+    return this.getStringAttribute('partition_key');
+  }
+  public set partitionKey(value: string ) {
+    this._partitionKey = value;
+  }
+  public resetPartitionKey() {
+    this._partitionKey = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get partitionKeyInput() {
+    return this._partitionKey
   }
 
   // property_columns - computed: false, optional: true, required: false
@@ -308,6 +329,7 @@ export class StreamAnalyticsOutputEventhub extends cdktf.TerraformResource {
     return {
       eventhub_name: cdktf.stringToTerraform(this._eventhubName),
       name: cdktf.stringToTerraform(this._name),
+      partition_key: cdktf.stringToTerraform(this._partitionKey),
       property_columns: cdktf.listMapper(cdktf.stringToTerraform)(this._propertyColumns),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       servicebus_namespace: cdktf.stringToTerraform(this._servicebusNamespace),

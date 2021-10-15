@@ -12,6 +12,10 @@ export interface ConsumptionBudgetSubscriptionConfig extends cdktf.TerraformMeta
   */
   readonly amount: number;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/consumption_budget_subscription.html#etag ConsumptionBudgetSubscription#etag}
+  */
+  readonly etag?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/consumption_budget_subscription.html#name ConsumptionBudgetSubscription#name}
   */
   readonly name: string;
@@ -222,6 +226,10 @@ export interface ConsumptionBudgetSubscriptionNotification {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/consumption_budget_subscription.html#threshold ConsumptionBudgetSubscription#threshold}
   */
   readonly threshold: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/consumption_budget_subscription.html#threshold_type ConsumptionBudgetSubscription#threshold_type}
+  */
+  readonly thresholdType?: string;
 }
 
 function consumptionBudgetSubscriptionNotificationToTerraform(struct?: ConsumptionBudgetSubscriptionNotification): any {
@@ -233,6 +241,7 @@ function consumptionBudgetSubscriptionNotificationToTerraform(struct?: Consumpti
     enabled: cdktf.booleanToTerraform(struct!.enabled),
     operator: cdktf.stringToTerraform(struct!.operator),
     threshold: cdktf.numberToTerraform(struct!.threshold),
+    threshold_type: cdktf.stringToTerraform(struct!.thresholdType),
   }
 }
 
@@ -318,6 +327,7 @@ export class ConsumptionBudgetSubscription extends cdktf.TerraformResource {
       lifecycle: config.lifecycle
     });
     this._amount = config.amount;
+    this._etag = config.etag;
     this._name = config.name;
     this._subscriptionId = config.subscriptionId;
     this._timeGrain = config.timeGrain;
@@ -342,6 +352,22 @@ export class ConsumptionBudgetSubscription extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get amountInput() {
     return this._amount
+  }
+
+  // etag - computed: true, optional: true, required: false
+  private _etag?: string;
+  public get etag() {
+    return this.getStringAttribute('etag');
+  }
+  public set etag(value: string) {
+    this._etag = value;
+  }
+  public resetEtag() {
+    this._etag = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get etagInput() {
+    return this._etag
   }
 
   // id - computed: true, optional: true, required: false
@@ -456,6 +482,7 @@ export class ConsumptionBudgetSubscription extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       amount: cdktf.numberToTerraform(this._amount),
+      etag: cdktf.stringToTerraform(this._etag),
       name: cdktf.stringToTerraform(this._name),
       subscription_id: cdktf.stringToTerraform(this._subscriptionId),
       time_grain: cdktf.stringToTerraform(this._timeGrain),

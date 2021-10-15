@@ -36,6 +36,10 @@ export interface ServiceFabricClusterConfig extends cdktf.TerraformMetaArguments
   */
   readonly resourceGroupName: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_cluster.html#service_fabric_zonal_upgrade_mode ServiceFabricCluster#service_fabric_zonal_upgrade_mode}
+  */
+  readonly serviceFabricZonalUpgradeMode?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_cluster.html#tags ServiceFabricCluster#tags}
   */
   readonly tags?: { [key: string]: string } | cdktf.IResolvable;
@@ -47,6 +51,10 @@ export interface ServiceFabricClusterConfig extends cdktf.TerraformMetaArguments
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_cluster.html#vm_image ServiceFabricCluster#vm_image}
   */
   readonly vmImage: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_cluster.html#vmss_zonal_upgrade_mode ServiceFabricCluster#vmss_zonal_upgrade_mode}
+  */
+  readonly vmssZonalUpgradeMode?: string;
   /**
   * azure_active_directory block
   * 
@@ -368,6 +376,14 @@ export interface ServiceFabricClusterNodeType {
   */
   readonly isPrimary: boolean | cdktf.IResolvable;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_cluster.html#is_stateless ServiceFabricCluster#is_stateless}
+  */
+  readonly isStateless?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_cluster.html#multiple_availability_zones ServiceFabricCluster#multiple_availability_zones}
+  */
+  readonly multipleAvailabilityZones?: boolean | cdktf.IResolvable;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_cluster.html#name ServiceFabricCluster#name}
   */
   readonly name: string;
@@ -402,6 +418,8 @@ function serviceFabricClusterNodeTypeToTerraform(struct?: ServiceFabricClusterNo
     http_endpoint_port: cdktf.numberToTerraform(struct!.httpEndpointPort),
     instance_count: cdktf.numberToTerraform(struct!.instanceCount),
     is_primary: cdktf.booleanToTerraform(struct!.isPrimary),
+    is_stateless: cdktf.booleanToTerraform(struct!.isStateless),
+    multiple_availability_zones: cdktf.booleanToTerraform(struct!.multipleAvailabilityZones),
     name: cdktf.stringToTerraform(struct!.name),
     placement_properties: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.placementProperties),
     reverse_proxy_endpoint_port: cdktf.numberToTerraform(struct!.reverseProxyEndpointPort),
@@ -644,9 +662,11 @@ export class ServiceFabricCluster extends cdktf.TerraformResource {
     this._name = config.name;
     this._reliabilityLevel = config.reliabilityLevel;
     this._resourceGroupName = config.resourceGroupName;
+    this._serviceFabricZonalUpgradeMode = config.serviceFabricZonalUpgradeMode;
     this._tags = config.tags;
     this._upgradeMode = config.upgradeMode;
     this._vmImage = config.vmImage;
+    this._vmssZonalUpgradeMode = config.vmssZonalUpgradeMode;
     this._azureActiveDirectory = config.azureActiveDirectory;
     this._certificate = config.certificate;
     this._certificateCommonNames = config.certificateCommonNames;
@@ -772,6 +792,22 @@ export class ServiceFabricCluster extends cdktf.TerraformResource {
     return this._resourceGroupName
   }
 
+  // service_fabric_zonal_upgrade_mode - computed: false, optional: true, required: false
+  private _serviceFabricZonalUpgradeMode?: string;
+  public get serviceFabricZonalUpgradeMode() {
+    return this.getStringAttribute('service_fabric_zonal_upgrade_mode');
+  }
+  public set serviceFabricZonalUpgradeMode(value: string ) {
+    this._serviceFabricZonalUpgradeMode = value;
+  }
+  public resetServiceFabricZonalUpgradeMode() {
+    this._serviceFabricZonalUpgradeMode = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get serviceFabricZonalUpgradeModeInput() {
+    return this._serviceFabricZonalUpgradeMode
+  }
+
   // tags - computed: false, optional: true, required: false
   private _tags?: { [key: string]: string } | cdktf.IResolvable;
   public get tags() {
@@ -812,6 +848,22 @@ export class ServiceFabricCluster extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get vmImageInput() {
     return this._vmImage
+  }
+
+  // vmss_zonal_upgrade_mode - computed: false, optional: true, required: false
+  private _vmssZonalUpgradeMode?: string;
+  public get vmssZonalUpgradeMode() {
+    return this.getStringAttribute('vmss_zonal_upgrade_mode');
+  }
+  public set vmssZonalUpgradeMode(value: string ) {
+    this._vmssZonalUpgradeMode = value;
+  }
+  public resetVmssZonalUpgradeMode() {
+    this._vmssZonalUpgradeMode = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get vmssZonalUpgradeModeInput() {
+    return this._vmssZonalUpgradeMode
   }
 
   // azure_active_directory - computed: false, optional: true, required: false
@@ -1016,9 +1068,11 @@ export class ServiceFabricCluster extends cdktf.TerraformResource {
       name: cdktf.stringToTerraform(this._name),
       reliability_level: cdktf.stringToTerraform(this._reliabilityLevel),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      service_fabric_zonal_upgrade_mode: cdktf.stringToTerraform(this._serviceFabricZonalUpgradeMode),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
       upgrade_mode: cdktf.stringToTerraform(this._upgradeMode),
       vm_image: cdktf.stringToTerraform(this._vmImage),
+      vmss_zonal_upgrade_mode: cdktf.stringToTerraform(this._vmssZonalUpgradeMode),
       azure_active_directory: cdktf.listMapper(serviceFabricClusterAzureActiveDirectoryToTerraform)(this._azureActiveDirectory),
       certificate: cdktf.listMapper(serviceFabricClusterCertificateToTerraform)(this._certificate),
       certificate_common_names: cdktf.listMapper(serviceFabricClusterCertificateCommonNamesToTerraform)(this._certificateCommonNames),

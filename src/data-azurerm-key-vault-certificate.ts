@@ -241,6 +241,11 @@ export class DataAzurermKeyVaultCertificate extends cdktf.TerraformDataSource {
     return new DataAzurermKeyVaultCertificateCertificatePolicy(this, 'certificate_policy', index);
   }
 
+  // expires - computed: true, optional: false, required: false
+  public get expires() {
+    return this.getStringAttribute('expires');
+  }
+
   // id - computed: true, optional: true, required: false
   public get id() {
     return this.getStringAttribute('id');
@@ -270,6 +275,11 @@ export class DataAzurermKeyVaultCertificate extends cdktf.TerraformDataSource {
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
     return this._name
+  }
+
+  // not_before - computed: true, optional: false, required: false
+  public get notBefore() {
+    return this.getStringAttribute('not_before');
   }
 
   // secret_id - computed: true, optional: false, required: false

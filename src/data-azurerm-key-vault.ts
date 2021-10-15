@@ -142,6 +142,11 @@ export class DataAzurermKeyVault extends cdktf.TerraformDataSource {
     return new DataAzurermKeyVaultAccessPolicy(this, 'access_policy', index);
   }
 
+  // enable_rbac_authorization - computed: true, optional: false, required: false
+  public get enableRbacAuthorization() {
+    return this.getBooleanAttribute('enable_rbac_authorization');
+  }
+
   // enabled_for_deployment - computed: true, optional: false, required: false
   public get enabledForDeployment() {
     return this.getBooleanAttribute('enabled_for_deployment');

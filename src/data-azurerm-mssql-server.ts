@@ -38,6 +38,11 @@ export class DataAzurermMssqlServerIdentity extends cdktf.ComplexComputedList {
   public get type() {
     return this.getStringAttribute('type');
   }
+
+  // user_assigned_identity_ids - computed: true, optional: false, required: false
+  public get userAssignedIdentityIds() {
+    return this.getListAttribute('user_assigned_identity_ids');
+  }
 }
 export interface DataAzurermMssqlServerTimeouts {
   /**

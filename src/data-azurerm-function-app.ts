@@ -287,6 +287,11 @@ export class DataAzurermFunctionAppSiteConfig extends cdktf.ComplexComputedList 
     return this.getBooleanAttribute('use_32_bit_worker_process');
   }
 
+  // vnet_route_all_enabled - computed: true, optional: false, required: false
+  public get vnetRouteAllEnabled() {
+    return this.getBooleanAttribute('vnet_route_all_enabled');
+  }
+
   // websockets_enabled - computed: true, optional: false, required: false
   public get websocketsEnabled() {
     return this.getBooleanAttribute('websockets_enabled');

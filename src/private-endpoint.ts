@@ -58,6 +58,18 @@ export class PrivateEndpointCustomDnsConfigs extends cdktf.ComplexComputedList {
     return this.getListAttribute('ip_addresses');
   }
 }
+export class PrivateEndpointNetworkInterface extends cdktf.ComplexComputedList {
+
+  // id - computed: true, optional: false, required: false
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+
+  // name - computed: true, optional: false, required: false
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+}
 export class PrivateEndpointPrivateDnsZoneConfigsRecordSets extends cdktf.ComplexComputedList {
 
   // fqdn - computed: true, optional: false, required: false
@@ -275,6 +287,11 @@ export class PrivateEndpoint extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
     return this._name
+  }
+
+  // network_interface - computed: true, optional: false, required: false
+  public networkInterface(index: string) {
+    return new PrivateEndpointNetworkInterface(this, 'network_interface', index);
   }
 
   // private_dns_zone_configs - computed: true, optional: false, required: false

@@ -36,6 +36,10 @@ export interface MssqlServerConfig extends cdktf.TerraformMetaArguments {
   */
   readonly name: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server.html#primary_user_assigned_identity_id MssqlServer#primary_user_assigned_identity_id}
+  */
+  readonly primaryUserAssignedIdentityId?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server.html#public_network_access_enabled MssqlServer#public_network_access_enabled}
   */
   readonly publicNetworkAccessEnabled?: boolean | cdktf.IResolvable;
@@ -133,12 +137,17 @@ export interface MssqlServerIdentity {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server.html#type MssqlServer#type}
   */
   readonly type: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server.html#user_assigned_identity_ids MssqlServer#user_assigned_identity_ids}
+  */
+  readonly userAssignedIdentityIds?: string[];
 }
 
 function mssqlServerIdentityToTerraform(struct?: MssqlServerIdentity): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   return {
     type: cdktf.stringToTerraform(struct!.type),
+    user_assigned_identity_ids: cdktf.listMapper(cdktf.stringToTerraform)(struct!.userAssignedIdentityIds),
   }
 }
 
@@ -211,6 +220,7 @@ export class MssqlServer extends cdktf.TerraformResource {
     this._location = config.location;
     this._minimumTlsVersion = config.minimumTlsVersion;
     this._name = config.name;
+    this._primaryUserAssignedIdentityId = config.primaryUserAssignedIdentityId;
     this._publicNetworkAccessEnabled = config.publicNetworkAccessEnabled;
     this._resourceGroupName = config.resourceGroupName;
     this._tags = config.tags;
@@ -332,6 +342,22 @@ export class MssqlServer extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
     return this._name
+  }
+
+  // primary_user_assigned_identity_id - computed: true, optional: true, required: false
+  private _primaryUserAssignedIdentityId?: string;
+  public get primaryUserAssignedIdentityId() {
+    return this.getStringAttribute('primary_user_assigned_identity_id');
+  }
+  public set primaryUserAssignedIdentityId(value: string) {
+    this._primaryUserAssignedIdentityId = value;
+  }
+  public resetPrimaryUserAssignedIdentityId() {
+    this._primaryUserAssignedIdentityId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get primaryUserAssignedIdentityIdInput() {
+    return this._primaryUserAssignedIdentityId
   }
 
   // public_network_access_enabled - computed: false, optional: true, required: false
@@ -458,6 +484,7 @@ export class MssqlServer extends cdktf.TerraformResource {
       location: cdktf.stringToTerraform(this._location),
       minimum_tls_version: cdktf.stringToTerraform(this._minimumTlsVersion),
       name: cdktf.stringToTerraform(this._name),
+      primary_user_assigned_identity_id: cdktf.stringToTerraform(this._primaryUserAssignedIdentityId),
       public_network_access_enabled: cdktf.booleanToTerraform(this._publicNetworkAccessEnabled),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),

@@ -36,6 +36,10 @@ export interface KustoEventhubDataConnectionConfig extends cdktf.TerraformMetaAr
   */
   readonly eventhubId: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_eventhub_data_connection.html#identity_id KustoEventhubDataConnection#identity_id}
+  */
+  readonly identityId?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_eventhub_data_connection.html#location KustoEventhubDataConnection#location}
   */
   readonly location: string;
@@ -131,6 +135,7 @@ export class KustoEventhubDataConnection extends cdktf.TerraformResource {
     this._databaseName = config.databaseName;
     this._eventSystemProperties = config.eventSystemProperties;
     this._eventhubId = config.eventhubId;
+    this._identityId = config.identityId;
     this._location = config.location;
     this._mappingRuleName = config.mappingRuleName;
     this._name = config.name;
@@ -248,6 +253,22 @@ export class KustoEventhubDataConnection extends cdktf.TerraformResource {
     return this.getStringAttribute('id');
   }
 
+  // identity_id - computed: false, optional: true, required: false
+  private _identityId?: string;
+  public get identityId() {
+    return this.getStringAttribute('identity_id');
+  }
+  public set identityId(value: string ) {
+    this._identityId = value;
+  }
+  public resetIdentityId() {
+    this._identityId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get identityIdInput() {
+    return this._identityId
+  }
+
   // location - computed: false, optional: false, required: true
   private _location: string;
   public get location() {
@@ -348,6 +369,7 @@ export class KustoEventhubDataConnection extends cdktf.TerraformResource {
       database_name: cdktf.stringToTerraform(this._databaseName),
       event_system_properties: cdktf.listMapper(cdktf.stringToTerraform)(this._eventSystemProperties),
       eventhub_id: cdktf.stringToTerraform(this._eventhubId),
+      identity_id: cdktf.stringToTerraform(this._identityId),
       location: cdktf.stringToTerraform(this._location),
       mapping_rule_name: cdktf.stringToTerraform(this._mappingRuleName),
       name: cdktf.stringToTerraform(this._name),
