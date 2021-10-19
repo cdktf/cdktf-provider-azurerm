@@ -25,13 +25,42 @@ export interface DataAzurermMonitorDiagnosticCategoriesTimeouts {
   readonly read?: string;
 }
 
-function dataAzurermMonitorDiagnosticCategoriesTimeoutsToTerraform(struct?: DataAzurermMonitorDiagnosticCategoriesTimeouts): any {
+function dataAzurermMonitorDiagnosticCategoriesTimeoutsToTerraform(struct?: DataAzurermMonitorDiagnosticCategoriesTimeoutsOutputReference | DataAzurermMonitorDiagnosticCategoriesTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     read: cdktf.stringToTerraform(struct!.read),
   }
 }
 
+export class DataAzurermMonitorDiagnosticCategoriesTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/monitor_diagnostic_categories.html azurerm_monitor_diagnostic_categories}
@@ -89,7 +118,7 @@ export class DataAzurermMonitorDiagnosticCategories extends cdktf.TerraformDataS
   }
 
   // resource_id - computed: false, optional: false, required: true
-  private _resourceId: string;
+  private _resourceId?: string; 
   public get resourceId() {
     return this.getStringAttribute('resource_id');
   }
@@ -102,11 +131,12 @@ export class DataAzurermMonitorDiagnosticCategories extends cdktf.TerraformDataS
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: DataAzurermMonitorDiagnosticCategoriesTimeouts;
+  private _timeouts?: DataAzurermMonitorDiagnosticCategoriesTimeouts | undefined; 
+  private __timeoutsOutput = new DataAzurermMonitorDiagnosticCategoriesTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: DataAzurermMonitorDiagnosticCategoriesTimeouts ) {
+  public putTimeouts(value: DataAzurermMonitorDiagnosticCategoriesTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {

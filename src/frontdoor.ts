@@ -136,6 +136,9 @@ export interface FrontdoorBackendPoolBackend {
 
 function frontdoorBackendPoolBackendToTerraform(struct?: FrontdoorBackendPoolBackend): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     address: cdktf.stringToTerraform(struct!.address),
     enabled: cdktf.booleanToTerraform(struct!.enabled),
@@ -170,6 +173,9 @@ export interface FrontdoorBackendPool {
 
 function frontdoorBackendPoolToTerraform(struct?: FrontdoorBackendPool): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     health_probe_name: cdktf.stringToTerraform(struct!.healthProbeName),
     load_balancing_name: cdktf.stringToTerraform(struct!.loadBalancingName),
@@ -207,6 +213,9 @@ export interface FrontdoorBackendPoolHealthProbe {
 
 function frontdoorBackendPoolHealthProbeToTerraform(struct?: FrontdoorBackendPoolHealthProbe): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     enabled: cdktf.booleanToTerraform(struct!.enabled),
     interval_in_seconds: cdktf.numberToTerraform(struct!.intervalInSeconds),
@@ -238,6 +247,9 @@ export interface FrontdoorBackendPoolLoadBalancing {
 
 function frontdoorBackendPoolLoadBalancingToTerraform(struct?: FrontdoorBackendPoolLoadBalancing): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     additional_latency_milliseconds: cdktf.numberToTerraform(struct!.additionalLatencyMilliseconds),
     name: cdktf.stringToTerraform(struct!.name),
@@ -271,6 +283,9 @@ export interface FrontdoorFrontendEndpoint {
 
 function frontdoorFrontendEndpointToTerraform(struct?: FrontdoorFrontendEndpoint): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     host_name: cdktf.stringToTerraform(struct!.hostName),
     name: cdktf.stringToTerraform(struct!.name),
@@ -315,8 +330,11 @@ export interface FrontdoorRoutingRuleForwardingConfiguration {
   readonly forwardingProtocol?: string;
 }
 
-function frontdoorRoutingRuleForwardingConfigurationToTerraform(struct?: FrontdoorRoutingRuleForwardingConfiguration): any {
+function frontdoorRoutingRuleForwardingConfigurationToTerraform(struct?: FrontdoorRoutingRuleForwardingConfigurationOutputReference | FrontdoorRoutingRuleForwardingConfiguration): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     backend_pool_name: cdktf.stringToTerraform(struct!.backendPoolName),
     cache_duration: cdktf.stringToTerraform(struct!.cacheDuration),
@@ -329,6 +347,141 @@ function frontdoorRoutingRuleForwardingConfigurationToTerraform(struct?: Frontdo
   }
 }
 
+export class FrontdoorRoutingRuleForwardingConfigurationOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // backend_pool_name - computed: false, optional: false, required: true
+  private _backendPoolName?: string; 
+  public get backendPoolName() {
+    return this.getStringAttribute('backend_pool_name');
+  }
+  public set backendPoolName(value: string) {
+    this._backendPoolName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get backendPoolNameInput() {
+    return this._backendPoolName
+  }
+
+  // cache_duration - computed: false, optional: true, required: false
+  private _cacheDuration?: string | undefined; 
+  public get cacheDuration() {
+    return this.getStringAttribute('cache_duration');
+  }
+  public set cacheDuration(value: string | undefined) {
+    this._cacheDuration = value;
+  }
+  public resetCacheDuration() {
+    this._cacheDuration = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get cacheDurationInput() {
+    return this._cacheDuration
+  }
+
+  // cache_enabled - computed: false, optional: true, required: false
+  private _cacheEnabled?: boolean | cdktf.IResolvable | undefined; 
+  public get cacheEnabled() {
+    return this.getBooleanAttribute('cache_enabled') as any;
+  }
+  public set cacheEnabled(value: boolean | cdktf.IResolvable | undefined) {
+    this._cacheEnabled = value;
+  }
+  public resetCacheEnabled() {
+    this._cacheEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get cacheEnabledInput() {
+    return this._cacheEnabled
+  }
+
+  // cache_query_parameter_strip_directive - computed: false, optional: true, required: false
+  private _cacheQueryParameterStripDirective?: string | undefined; 
+  public get cacheQueryParameterStripDirective() {
+    return this.getStringAttribute('cache_query_parameter_strip_directive');
+  }
+  public set cacheQueryParameterStripDirective(value: string | undefined) {
+    this._cacheQueryParameterStripDirective = value;
+  }
+  public resetCacheQueryParameterStripDirective() {
+    this._cacheQueryParameterStripDirective = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get cacheQueryParameterStripDirectiveInput() {
+    return this._cacheQueryParameterStripDirective
+  }
+
+  // cache_query_parameters - computed: false, optional: true, required: false
+  private _cacheQueryParameters?: string[] | undefined; 
+  public get cacheQueryParameters() {
+    return this.getListAttribute('cache_query_parameters');
+  }
+  public set cacheQueryParameters(value: string[] | undefined) {
+    this._cacheQueryParameters = value;
+  }
+  public resetCacheQueryParameters() {
+    this._cacheQueryParameters = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get cacheQueryParametersInput() {
+    return this._cacheQueryParameters
+  }
+
+  // cache_use_dynamic_compression - computed: false, optional: true, required: false
+  private _cacheUseDynamicCompression?: boolean | cdktf.IResolvable | undefined; 
+  public get cacheUseDynamicCompression() {
+    return this.getBooleanAttribute('cache_use_dynamic_compression') as any;
+  }
+  public set cacheUseDynamicCompression(value: boolean | cdktf.IResolvable | undefined) {
+    this._cacheUseDynamicCompression = value;
+  }
+  public resetCacheUseDynamicCompression() {
+    this._cacheUseDynamicCompression = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get cacheUseDynamicCompressionInput() {
+    return this._cacheUseDynamicCompression
+  }
+
+  // custom_forwarding_path - computed: false, optional: true, required: false
+  private _customForwardingPath?: string | undefined; 
+  public get customForwardingPath() {
+    return this.getStringAttribute('custom_forwarding_path');
+  }
+  public set customForwardingPath(value: string | undefined) {
+    this._customForwardingPath = value;
+  }
+  public resetCustomForwardingPath() {
+    this._customForwardingPath = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get customForwardingPathInput() {
+    return this._customForwardingPath
+  }
+
+  // forwarding_protocol - computed: false, optional: true, required: false
+  private _forwardingProtocol?: string | undefined; 
+  public get forwardingProtocol() {
+    return this.getStringAttribute('forwarding_protocol');
+  }
+  public set forwardingProtocol(value: string | undefined) {
+    this._forwardingProtocol = value;
+  }
+  public resetForwardingProtocol() {
+    this._forwardingProtocol = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get forwardingProtocolInput() {
+    return this._forwardingProtocol
+  }
+}
 export interface FrontdoorRoutingRuleRedirectConfiguration {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor.html#custom_fragment Frontdoor#custom_fragment}
@@ -356,8 +509,11 @@ export interface FrontdoorRoutingRuleRedirectConfiguration {
   readonly redirectType: string;
 }
 
-function frontdoorRoutingRuleRedirectConfigurationToTerraform(struct?: FrontdoorRoutingRuleRedirectConfiguration): any {
+function frontdoorRoutingRuleRedirectConfigurationToTerraform(struct?: FrontdoorRoutingRuleRedirectConfigurationOutputReference | FrontdoorRoutingRuleRedirectConfiguration): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     custom_fragment: cdktf.stringToTerraform(struct!.customFragment),
     custom_host: cdktf.stringToTerraform(struct!.customHost),
@@ -368,6 +524,106 @@ function frontdoorRoutingRuleRedirectConfigurationToTerraform(struct?: Frontdoor
   }
 }
 
+export class FrontdoorRoutingRuleRedirectConfigurationOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // custom_fragment - computed: false, optional: true, required: false
+  private _customFragment?: string | undefined; 
+  public get customFragment() {
+    return this.getStringAttribute('custom_fragment');
+  }
+  public set customFragment(value: string | undefined) {
+    this._customFragment = value;
+  }
+  public resetCustomFragment() {
+    this._customFragment = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get customFragmentInput() {
+    return this._customFragment
+  }
+
+  // custom_host - computed: false, optional: true, required: false
+  private _customHost?: string | undefined; 
+  public get customHost() {
+    return this.getStringAttribute('custom_host');
+  }
+  public set customHost(value: string | undefined) {
+    this._customHost = value;
+  }
+  public resetCustomHost() {
+    this._customHost = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get customHostInput() {
+    return this._customHost
+  }
+
+  // custom_path - computed: false, optional: true, required: false
+  private _customPath?: string | undefined; 
+  public get customPath() {
+    return this.getStringAttribute('custom_path');
+  }
+  public set customPath(value: string | undefined) {
+    this._customPath = value;
+  }
+  public resetCustomPath() {
+    this._customPath = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get customPathInput() {
+    return this._customPath
+  }
+
+  // custom_query_string - computed: false, optional: true, required: false
+  private _customQueryString?: string | undefined; 
+  public get customQueryString() {
+    return this.getStringAttribute('custom_query_string');
+  }
+  public set customQueryString(value: string | undefined) {
+    this._customQueryString = value;
+  }
+  public resetCustomQueryString() {
+    this._customQueryString = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get customQueryStringInput() {
+    return this._customQueryString
+  }
+
+  // redirect_protocol - computed: false, optional: false, required: true
+  private _redirectProtocol?: string; 
+  public get redirectProtocol() {
+    return this.getStringAttribute('redirect_protocol');
+  }
+  public set redirectProtocol(value: string) {
+    this._redirectProtocol = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get redirectProtocolInput() {
+    return this._redirectProtocol
+  }
+
+  // redirect_type - computed: false, optional: false, required: true
+  private _redirectType?: string; 
+  public get redirectType() {
+    return this.getStringAttribute('redirect_type');
+  }
+  public set redirectType(value: string) {
+    this._redirectType = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get redirectTypeInput() {
+    return this._redirectType
+  }
+}
 export interface FrontdoorRoutingRule {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor.html#accepted_protocols Frontdoor#accepted_protocols}
@@ -394,25 +650,28 @@ export interface FrontdoorRoutingRule {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor.html#forwarding_configuration Frontdoor#forwarding_configuration}
   */
-  readonly forwardingConfiguration?: FrontdoorRoutingRuleForwardingConfiguration[];
+  readonly forwardingConfiguration?: FrontdoorRoutingRuleForwardingConfiguration;
   /**
   * redirect_configuration block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor.html#redirect_configuration Frontdoor#redirect_configuration}
   */
-  readonly redirectConfiguration?: FrontdoorRoutingRuleRedirectConfiguration[];
+  readonly redirectConfiguration?: FrontdoorRoutingRuleRedirectConfiguration;
 }
 
 function frontdoorRoutingRuleToTerraform(struct?: FrontdoorRoutingRule): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     accepted_protocols: cdktf.listMapper(cdktf.stringToTerraform)(struct!.acceptedProtocols),
     enabled: cdktf.booleanToTerraform(struct!.enabled),
     frontend_endpoints: cdktf.listMapper(cdktf.stringToTerraform)(struct!.frontendEndpoints),
     name: cdktf.stringToTerraform(struct!.name),
     patterns_to_match: cdktf.listMapper(cdktf.stringToTerraform)(struct!.patternsToMatch),
-    forwarding_configuration: cdktf.listMapper(frontdoorRoutingRuleForwardingConfigurationToTerraform)(struct!.forwardingConfiguration),
-    redirect_configuration: cdktf.listMapper(frontdoorRoutingRuleRedirectConfigurationToTerraform)(struct!.redirectConfiguration),
+    forwarding_configuration: frontdoorRoutingRuleForwardingConfigurationToTerraform(struct!.forwardingConfiguration),
+    redirect_configuration: frontdoorRoutingRuleRedirectConfigurationToTerraform(struct!.redirectConfiguration),
   }
 }
 
@@ -435,8 +694,11 @@ export interface FrontdoorTimeouts {
   readonly update?: string;
 }
 
-function frontdoorTimeoutsToTerraform(struct?: FrontdoorTimeouts): any {
+function frontdoorTimeoutsToTerraform(struct?: FrontdoorTimeoutsOutputReference | FrontdoorTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -445,6 +707,80 @@ function frontdoorTimeoutsToTerraform(struct?: FrontdoorTimeouts): any {
   }
 }
 
+export class FrontdoorTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor.html azurerm_frontdoor}
@@ -514,11 +850,11 @@ export class Frontdoor extends cdktf.TerraformResource {
   }
 
   // backend_pools_send_receive_timeout_seconds - computed: false, optional: true, required: false
-  private _backendPoolsSendReceiveTimeoutSeconds?: number;
+  private _backendPoolsSendReceiveTimeoutSeconds?: number | undefined; 
   public get backendPoolsSendReceiveTimeoutSeconds() {
     return this.getNumberAttribute('backend_pools_send_receive_timeout_seconds');
   }
-  public set backendPoolsSendReceiveTimeoutSeconds(value: number ) {
+  public set backendPoolsSendReceiveTimeoutSeconds(value: number | undefined) {
     this._backendPoolsSendReceiveTimeoutSeconds = value;
   }
   public resetBackendPoolsSendReceiveTimeoutSeconds() {
@@ -535,9 +871,9 @@ export class Frontdoor extends cdktf.TerraformResource {
   }
 
   // enforce_backend_pools_certificate_name_check - computed: false, optional: false, required: true
-  private _enforceBackendPoolsCertificateNameCheck: boolean | cdktf.IResolvable;
+  private _enforceBackendPoolsCertificateNameCheck?: boolean | cdktf.IResolvable; 
   public get enforceBackendPoolsCertificateNameCheck() {
-    return this.getBooleanAttribute('enforce_backend_pools_certificate_name_check');
+    return this.getBooleanAttribute('enforce_backend_pools_certificate_name_check') as any;
   }
   public set enforceBackendPoolsCertificateNameCheck(value: boolean | cdktf.IResolvable) {
     this._enforceBackendPoolsCertificateNameCheck = value;
@@ -553,11 +889,11 @@ export class Frontdoor extends cdktf.TerraformResource {
   }
 
   // friendly_name - computed: false, optional: true, required: false
-  private _friendlyName?: string;
+  private _friendlyName?: string | undefined; 
   public get friendlyName() {
     return this.getStringAttribute('friendly_name');
   }
-  public set friendlyName(value: string ) {
+  public set friendlyName(value: string | undefined) {
     this._friendlyName = value;
   }
   public resetFriendlyName() {
@@ -584,11 +920,11 @@ export class Frontdoor extends cdktf.TerraformResource {
   }
 
   // load_balancer_enabled - computed: false, optional: true, required: false
-  private _loadBalancerEnabled?: boolean | cdktf.IResolvable;
+  private _loadBalancerEnabled?: boolean | cdktf.IResolvable | undefined; 
   public get loadBalancerEnabled() {
-    return this.getBooleanAttribute('load_balancer_enabled');
+    return this.getBooleanAttribute('load_balancer_enabled') as any;
   }
-  public set loadBalancerEnabled(value: boolean | cdktf.IResolvable ) {
+  public set loadBalancerEnabled(value: boolean | cdktf.IResolvable | undefined) {
     this._loadBalancerEnabled = value;
   }
   public resetLoadBalancerEnabled() {
@@ -600,11 +936,11 @@ export class Frontdoor extends cdktf.TerraformResource {
   }
 
   // location - computed: true, optional: true, required: false
-  private _location?: string;
+  private _location?: string | undefined; 
   public get location() {
     return this.getStringAttribute('location');
   }
-  public set location(value: string) {
+  public set location(value: string | undefined) {
     this._location = value;
   }
   public resetLocation() {
@@ -616,7 +952,7 @@ export class Frontdoor extends cdktf.TerraformResource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -629,7 +965,7 @@ export class Frontdoor extends cdktf.TerraformResource {
   }
 
   // resource_group_name - computed: false, optional: false, required: true
-  private _resourceGroupName: string;
+  private _resourceGroupName?: string; 
   public get resourceGroupName() {
     return this.getStringAttribute('resource_group_name');
   }
@@ -647,11 +983,12 @@ export class Frontdoor extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable;
+  private _tags?: { [key: string]: string } | cdktf.IResolvable | undefined; 
   public get tags() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
     this._tags = value;
   }
   public resetTags() {
@@ -663,8 +1000,9 @@ export class Frontdoor extends cdktf.TerraformResource {
   }
 
   // backend_pool - computed: false, optional: false, required: true
-  private _backendPool: FrontdoorBackendPool[];
+  private _backendPool?: FrontdoorBackendPool[]; 
   public get backendPool() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('backend_pool') as any;
   }
   public set backendPool(value: FrontdoorBackendPool[]) {
@@ -676,8 +1014,9 @@ export class Frontdoor extends cdktf.TerraformResource {
   }
 
   // backend_pool_health_probe - computed: false, optional: false, required: true
-  private _backendPoolHealthProbe: FrontdoorBackendPoolHealthProbe[];
+  private _backendPoolHealthProbe?: FrontdoorBackendPoolHealthProbe[]; 
   public get backendPoolHealthProbe() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('backend_pool_health_probe') as any;
   }
   public set backendPoolHealthProbe(value: FrontdoorBackendPoolHealthProbe[]) {
@@ -689,8 +1028,9 @@ export class Frontdoor extends cdktf.TerraformResource {
   }
 
   // backend_pool_load_balancing - computed: false, optional: false, required: true
-  private _backendPoolLoadBalancing: FrontdoorBackendPoolLoadBalancing[];
+  private _backendPoolLoadBalancing?: FrontdoorBackendPoolLoadBalancing[]; 
   public get backendPoolLoadBalancing() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('backend_pool_load_balancing') as any;
   }
   public set backendPoolLoadBalancing(value: FrontdoorBackendPoolLoadBalancing[]) {
@@ -702,8 +1042,9 @@ export class Frontdoor extends cdktf.TerraformResource {
   }
 
   // frontend_endpoint - computed: false, optional: false, required: true
-  private _frontendEndpoint: FrontdoorFrontendEndpoint[];
+  private _frontendEndpoint?: FrontdoorFrontendEndpoint[]; 
   public get frontendEndpoint() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('frontend_endpoint') as any;
   }
   public set frontendEndpoint(value: FrontdoorFrontendEndpoint[]) {
@@ -715,8 +1056,9 @@ export class Frontdoor extends cdktf.TerraformResource {
   }
 
   // routing_rule - computed: false, optional: false, required: true
-  private _routingRule: FrontdoorRoutingRule[];
+  private _routingRule?: FrontdoorRoutingRule[]; 
   public get routingRule() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('routing_rule') as any;
   }
   public set routingRule(value: FrontdoorRoutingRule[]) {
@@ -728,11 +1070,12 @@ export class Frontdoor extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: FrontdoorTimeouts;
+  private _timeouts?: FrontdoorTimeouts | undefined; 
+  private __timeoutsOutput = new FrontdoorTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: FrontdoorTimeouts ) {
+  public putTimeouts(value: FrontdoorTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {

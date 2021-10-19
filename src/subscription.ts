@@ -61,8 +61,11 @@ export interface SubscriptionTimeouts {
   readonly update?: string;
 }
 
-function subscriptionTimeoutsToTerraform(struct?: SubscriptionTimeouts): any {
+function subscriptionTimeoutsToTerraform(struct?: SubscriptionTimeoutsOutputReference | SubscriptionTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -71,6 +74,80 @@ function subscriptionTimeoutsToTerraform(struct?: SubscriptionTimeouts): any {
   }
 }
 
+export class SubscriptionTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/subscription.html azurerm_subscription}
@@ -117,11 +194,11 @@ export class Subscription extends cdktf.TerraformResource {
   // ==========
 
   // alias - computed: true, optional: true, required: false
-  private _alias?: string;
+  private _alias?: string | undefined; 
   public get alias() {
     return this.getStringAttribute('alias');
   }
-  public set alias(value: string) {
+  public set alias(value: string | undefined) {
     this._alias = value;
   }
   public resetAlias() {
@@ -133,11 +210,11 @@ export class Subscription extends cdktf.TerraformResource {
   }
 
   // billing_scope_id - computed: false, optional: true, required: false
-  private _billingScopeId?: string;
+  private _billingScopeId?: string | undefined; 
   public get billingScopeId() {
     return this.getStringAttribute('billing_scope_id');
   }
-  public set billingScopeId(value: string ) {
+  public set billingScopeId(value: string | undefined) {
     this._billingScopeId = value;
   }
   public resetBillingScopeId() {
@@ -154,11 +231,11 @@ export class Subscription extends cdktf.TerraformResource {
   }
 
   // subscription_id - computed: true, optional: true, required: false
-  private _subscriptionId?: string;
+  private _subscriptionId?: string | undefined; 
   public get subscriptionId() {
     return this.getStringAttribute('subscription_id');
   }
-  public set subscriptionId(value: string) {
+  public set subscriptionId(value: string | undefined) {
     this._subscriptionId = value;
   }
   public resetSubscriptionId() {
@@ -170,7 +247,7 @@ export class Subscription extends cdktf.TerraformResource {
   }
 
   // subscription_name - computed: false, optional: false, required: true
-  private _subscriptionName: string;
+  private _subscriptionName?: string; 
   public get subscriptionName() {
     return this.getStringAttribute('subscription_name');
   }
@@ -193,11 +270,11 @@ export class Subscription extends cdktf.TerraformResource {
   }
 
   // workload - computed: false, optional: true, required: false
-  private _workload?: string;
+  private _workload?: string | undefined; 
   public get workload() {
     return this.getStringAttribute('workload');
   }
-  public set workload(value: string ) {
+  public set workload(value: string | undefined) {
     this._workload = value;
   }
   public resetWorkload() {
@@ -209,11 +286,12 @@ export class Subscription extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: SubscriptionTimeouts;
+  private _timeouts?: SubscriptionTimeouts | undefined; 
+  private __timeoutsOutput = new SubscriptionTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: SubscriptionTimeouts ) {
+  public putTimeouts(value: SubscriptionTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {

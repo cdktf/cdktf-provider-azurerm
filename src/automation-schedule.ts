@@ -77,6 +77,9 @@ export interface AutomationScheduleMonthlyOccurrence {
 
 function automationScheduleMonthlyOccurrenceToTerraform(struct?: AutomationScheduleMonthlyOccurrence): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     day: cdktf.stringToTerraform(struct!.day),
     occurrence: cdktf.numberToTerraform(struct!.occurrence),
@@ -102,8 +105,11 @@ export interface AutomationScheduleTimeouts {
   readonly update?: string;
 }
 
-function automationScheduleTimeoutsToTerraform(struct?: AutomationScheduleTimeouts): any {
+function automationScheduleTimeoutsToTerraform(struct?: AutomationScheduleTimeoutsOutputReference | AutomationScheduleTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -112,6 +118,80 @@ function automationScheduleTimeoutsToTerraform(struct?: AutomationScheduleTimeou
   }
 }
 
+export class AutomationScheduleTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/automation_schedule.html azurerm_automation_schedule}
@@ -165,7 +245,7 @@ export class AutomationSchedule extends cdktf.TerraformResource {
   // ==========
 
   // automation_account_name - computed: false, optional: false, required: true
-  private _automationAccountName: string;
+  private _automationAccountName?: string; 
   public get automationAccountName() {
     return this.getStringAttribute('automation_account_name');
   }
@@ -178,11 +258,11 @@ export class AutomationSchedule extends cdktf.TerraformResource {
   }
 
   // description - computed: false, optional: true, required: false
-  private _description?: string;
+  private _description?: string | undefined; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string ) {
+  public set description(value: string | undefined) {
     this._description = value;
   }
   public resetDescription() {
@@ -194,11 +274,11 @@ export class AutomationSchedule extends cdktf.TerraformResource {
   }
 
   // expiry_time - computed: true, optional: true, required: false
-  private _expiryTime?: string;
+  private _expiryTime?: string | undefined; 
   public get expiryTime() {
     return this.getStringAttribute('expiry_time');
   }
-  public set expiryTime(value: string) {
+  public set expiryTime(value: string | undefined) {
     this._expiryTime = value;
   }
   public resetExpiryTime() {
@@ -210,7 +290,7 @@ export class AutomationSchedule extends cdktf.TerraformResource {
   }
 
   // frequency - computed: false, optional: false, required: true
-  private _frequency: string;
+  private _frequency?: string; 
   public get frequency() {
     return this.getStringAttribute('frequency');
   }
@@ -228,11 +308,11 @@ export class AutomationSchedule extends cdktf.TerraformResource {
   }
 
   // interval - computed: true, optional: true, required: false
-  private _interval?: number;
+  private _interval?: number | undefined; 
   public get interval() {
     return this.getNumberAttribute('interval');
   }
-  public set interval(value: number) {
+  public set interval(value: number | undefined) {
     this._interval = value;
   }
   public resetInterval() {
@@ -244,11 +324,12 @@ export class AutomationSchedule extends cdktf.TerraformResource {
   }
 
   // month_days - computed: false, optional: true, required: false
-  private _monthDays?: number[];
+  private _monthDays?: number[] | undefined; 
   public get monthDays() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('month_days') as any;
   }
-  public set monthDays(value: number[] ) {
+  public set monthDays(value: number[] | undefined) {
     this._monthDays = value;
   }
   public resetMonthDays() {
@@ -260,7 +341,7 @@ export class AutomationSchedule extends cdktf.TerraformResource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -273,7 +354,7 @@ export class AutomationSchedule extends cdktf.TerraformResource {
   }
 
   // resource_group_name - computed: false, optional: false, required: true
-  private _resourceGroupName: string;
+  private _resourceGroupName?: string; 
   public get resourceGroupName() {
     return this.getStringAttribute('resource_group_name');
   }
@@ -286,11 +367,11 @@ export class AutomationSchedule extends cdktf.TerraformResource {
   }
 
   // start_time - computed: true, optional: true, required: false
-  private _startTime?: string;
+  private _startTime?: string | undefined; 
   public get startTime() {
     return this.getStringAttribute('start_time');
   }
-  public set startTime(value: string) {
+  public set startTime(value: string | undefined) {
     this._startTime = value;
   }
   public resetStartTime() {
@@ -302,11 +383,11 @@ export class AutomationSchedule extends cdktf.TerraformResource {
   }
 
   // timezone - computed: false, optional: true, required: false
-  private _timezone?: string;
+  private _timezone?: string | undefined; 
   public get timezone() {
     return this.getStringAttribute('timezone');
   }
-  public set timezone(value: string ) {
+  public set timezone(value: string | undefined) {
     this._timezone = value;
   }
   public resetTimezone() {
@@ -318,11 +399,11 @@ export class AutomationSchedule extends cdktf.TerraformResource {
   }
 
   // week_days - computed: false, optional: true, required: false
-  private _weekDays?: string[];
+  private _weekDays?: string[] | undefined; 
   public get weekDays() {
     return this.getListAttribute('week_days');
   }
-  public set weekDays(value: string[] ) {
+  public set weekDays(value: string[] | undefined) {
     this._weekDays = value;
   }
   public resetWeekDays() {
@@ -334,11 +415,12 @@ export class AutomationSchedule extends cdktf.TerraformResource {
   }
 
   // monthly_occurrence - computed: false, optional: true, required: false
-  private _monthlyOccurrence?: AutomationScheduleMonthlyOccurrence[];
+  private _monthlyOccurrence?: AutomationScheduleMonthlyOccurrence[] | undefined; 
   public get monthlyOccurrence() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('monthly_occurrence') as any;
   }
-  public set monthlyOccurrence(value: AutomationScheduleMonthlyOccurrence[] ) {
+  public set monthlyOccurrence(value: AutomationScheduleMonthlyOccurrence[] | undefined) {
     this._monthlyOccurrence = value;
   }
   public resetMonthlyOccurrence() {
@@ -350,11 +432,12 @@ export class AutomationSchedule extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: AutomationScheduleTimeouts;
+  private _timeouts?: AutomationScheduleTimeouts | undefined; 
+  private __timeoutsOutput = new AutomationScheduleTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: AutomationScheduleTimeouts ) {
+  public putTimeouts(value: AutomationScheduleTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {

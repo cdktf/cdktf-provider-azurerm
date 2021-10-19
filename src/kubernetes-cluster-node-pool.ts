@@ -132,13 +132,13 @@ export interface KubernetesClusterNodePoolConfig extends cdktf.TerraformMetaArgu
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster_node_pool.html#kubelet_config KubernetesClusterNodePool#kubelet_config}
   */
-  readonly kubeletConfig?: KubernetesClusterNodePoolKubeletConfig[];
+  readonly kubeletConfig?: KubernetesClusterNodePoolKubeletConfig;
   /**
   * linux_os_config block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster_node_pool.html#linux_os_config KubernetesClusterNodePool#linux_os_config}
   */
-  readonly linuxOsConfig?: KubernetesClusterNodePoolLinuxOsConfig[];
+  readonly linuxOsConfig?: KubernetesClusterNodePoolLinuxOsConfig;
   /**
   * timeouts block
   * 
@@ -150,7 +150,7 @@ export interface KubernetesClusterNodePoolConfig extends cdktf.TerraformMetaArgu
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster_node_pool.html#upgrade_settings KubernetesClusterNodePool#upgrade_settings}
   */
-  readonly upgradeSettings?: KubernetesClusterNodePoolUpgradeSettings[];
+  readonly upgradeSettings?: KubernetesClusterNodePoolUpgradeSettings;
 }
 export interface KubernetesClusterNodePoolKubeletConfig {
   /**
@@ -195,8 +195,11 @@ export interface KubernetesClusterNodePoolKubeletConfig {
   readonly topologyManagerPolicy?: string;
 }
 
-function kubernetesClusterNodePoolKubeletConfigToTerraform(struct?: KubernetesClusterNodePoolKubeletConfig): any {
+function kubernetesClusterNodePoolKubeletConfigToTerraform(struct?: KubernetesClusterNodePoolKubeletConfigOutputReference | KubernetesClusterNodePoolKubeletConfig): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     allowed_unsafe_sysctls: cdktf.listMapper(cdktf.stringToTerraform)(struct!.allowedUnsafeSysctls),
     container_log_max_line: cdktf.numberToTerraform(struct!.containerLogMaxLine),
@@ -211,6 +214,176 @@ function kubernetesClusterNodePoolKubeletConfigToTerraform(struct?: KubernetesCl
   }
 }
 
+export class KubernetesClusterNodePoolKubeletConfigOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // allowed_unsafe_sysctls - computed: false, optional: true, required: false
+  private _allowedUnsafeSysctls?: string[] | undefined; 
+  public get allowedUnsafeSysctls() {
+    return this.getListAttribute('allowed_unsafe_sysctls');
+  }
+  public set allowedUnsafeSysctls(value: string[] | undefined) {
+    this._allowedUnsafeSysctls = value;
+  }
+  public resetAllowedUnsafeSysctls() {
+    this._allowedUnsafeSysctls = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get allowedUnsafeSysctlsInput() {
+    return this._allowedUnsafeSysctls
+  }
+
+  // container_log_max_line - computed: false, optional: true, required: false
+  private _containerLogMaxLine?: number | undefined; 
+  public get containerLogMaxLine() {
+    return this.getNumberAttribute('container_log_max_line');
+  }
+  public set containerLogMaxLine(value: number | undefined) {
+    this._containerLogMaxLine = value;
+  }
+  public resetContainerLogMaxLine() {
+    this._containerLogMaxLine = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get containerLogMaxLineInput() {
+    return this._containerLogMaxLine
+  }
+
+  // container_log_max_size_mb - computed: false, optional: true, required: false
+  private _containerLogMaxSizeMb?: number | undefined; 
+  public get containerLogMaxSizeMb() {
+    return this.getNumberAttribute('container_log_max_size_mb');
+  }
+  public set containerLogMaxSizeMb(value: number | undefined) {
+    this._containerLogMaxSizeMb = value;
+  }
+  public resetContainerLogMaxSizeMb() {
+    this._containerLogMaxSizeMb = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get containerLogMaxSizeMbInput() {
+    return this._containerLogMaxSizeMb
+  }
+
+  // cpu_cfs_quota_enabled - computed: false, optional: true, required: false
+  private _cpuCfsQuotaEnabled?: boolean | cdktf.IResolvable | undefined; 
+  public get cpuCfsQuotaEnabled() {
+    return this.getBooleanAttribute('cpu_cfs_quota_enabled') as any;
+  }
+  public set cpuCfsQuotaEnabled(value: boolean | cdktf.IResolvable | undefined) {
+    this._cpuCfsQuotaEnabled = value;
+  }
+  public resetCpuCfsQuotaEnabled() {
+    this._cpuCfsQuotaEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get cpuCfsQuotaEnabledInput() {
+    return this._cpuCfsQuotaEnabled
+  }
+
+  // cpu_cfs_quota_period - computed: false, optional: true, required: false
+  private _cpuCfsQuotaPeriod?: string | undefined; 
+  public get cpuCfsQuotaPeriod() {
+    return this.getStringAttribute('cpu_cfs_quota_period');
+  }
+  public set cpuCfsQuotaPeriod(value: string | undefined) {
+    this._cpuCfsQuotaPeriod = value;
+  }
+  public resetCpuCfsQuotaPeriod() {
+    this._cpuCfsQuotaPeriod = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get cpuCfsQuotaPeriodInput() {
+    return this._cpuCfsQuotaPeriod
+  }
+
+  // cpu_manager_policy - computed: false, optional: true, required: false
+  private _cpuManagerPolicy?: string | undefined; 
+  public get cpuManagerPolicy() {
+    return this.getStringAttribute('cpu_manager_policy');
+  }
+  public set cpuManagerPolicy(value: string | undefined) {
+    this._cpuManagerPolicy = value;
+  }
+  public resetCpuManagerPolicy() {
+    this._cpuManagerPolicy = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get cpuManagerPolicyInput() {
+    return this._cpuManagerPolicy
+  }
+
+  // image_gc_high_threshold - computed: false, optional: true, required: false
+  private _imageGcHighThreshold?: number | undefined; 
+  public get imageGcHighThreshold() {
+    return this.getNumberAttribute('image_gc_high_threshold');
+  }
+  public set imageGcHighThreshold(value: number | undefined) {
+    this._imageGcHighThreshold = value;
+  }
+  public resetImageGcHighThreshold() {
+    this._imageGcHighThreshold = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get imageGcHighThresholdInput() {
+    return this._imageGcHighThreshold
+  }
+
+  // image_gc_low_threshold - computed: false, optional: true, required: false
+  private _imageGcLowThreshold?: number | undefined; 
+  public get imageGcLowThreshold() {
+    return this.getNumberAttribute('image_gc_low_threshold');
+  }
+  public set imageGcLowThreshold(value: number | undefined) {
+    this._imageGcLowThreshold = value;
+  }
+  public resetImageGcLowThreshold() {
+    this._imageGcLowThreshold = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get imageGcLowThresholdInput() {
+    return this._imageGcLowThreshold
+  }
+
+  // pod_max_pid - computed: false, optional: true, required: false
+  private _podMaxPid?: number | undefined; 
+  public get podMaxPid() {
+    return this.getNumberAttribute('pod_max_pid');
+  }
+  public set podMaxPid(value: number | undefined) {
+    this._podMaxPid = value;
+  }
+  public resetPodMaxPid() {
+    this._podMaxPid = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get podMaxPidInput() {
+    return this._podMaxPid
+  }
+
+  // topology_manager_policy - computed: false, optional: true, required: false
+  private _topologyManagerPolicy?: string | undefined; 
+  public get topologyManagerPolicy() {
+    return this.getStringAttribute('topology_manager_policy');
+  }
+  public set topologyManagerPolicy(value: string | undefined) {
+    this._topologyManagerPolicy = value;
+  }
+  public resetTopologyManagerPolicy() {
+    this._topologyManagerPolicy = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get topologyManagerPolicyInput() {
+    return this._topologyManagerPolicy
+  }
+}
 export interface KubernetesClusterNodePoolLinuxOsConfigSysctlConfig {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster_node_pool.html#fs_aio_max_nr KubernetesClusterNodePool#fs_aio_max_nr}
@@ -330,8 +503,11 @@ export interface KubernetesClusterNodePoolLinuxOsConfigSysctlConfig {
   readonly vmVfsCachePressure?: number;
 }
 
-function kubernetesClusterNodePoolLinuxOsConfigSysctlConfigToTerraform(struct?: KubernetesClusterNodePoolLinuxOsConfigSysctlConfig): any {
+function kubernetesClusterNodePoolLinuxOsConfigSysctlConfigToTerraform(struct?: KubernetesClusterNodePoolLinuxOsConfigSysctlConfigOutputReference | KubernetesClusterNodePoolLinuxOsConfigSysctlConfig): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     fs_aio_max_nr: cdktf.numberToTerraform(struct!.fsAioMaxNr),
     fs_file_max: cdktf.numberToTerraform(struct!.fsFileMax),
@@ -365,6 +541,480 @@ function kubernetesClusterNodePoolLinuxOsConfigSysctlConfigToTerraform(struct?: 
   }
 }
 
+export class KubernetesClusterNodePoolLinuxOsConfigSysctlConfigOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // fs_aio_max_nr - computed: false, optional: true, required: false
+  private _fsAioMaxNr?: number | undefined; 
+  public get fsAioMaxNr() {
+    return this.getNumberAttribute('fs_aio_max_nr');
+  }
+  public set fsAioMaxNr(value: number | undefined) {
+    this._fsAioMaxNr = value;
+  }
+  public resetFsAioMaxNr() {
+    this._fsAioMaxNr = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get fsAioMaxNrInput() {
+    return this._fsAioMaxNr
+  }
+
+  // fs_file_max - computed: false, optional: true, required: false
+  private _fsFileMax?: number | undefined; 
+  public get fsFileMax() {
+    return this.getNumberAttribute('fs_file_max');
+  }
+  public set fsFileMax(value: number | undefined) {
+    this._fsFileMax = value;
+  }
+  public resetFsFileMax() {
+    this._fsFileMax = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get fsFileMaxInput() {
+    return this._fsFileMax
+  }
+
+  // fs_inotify_max_user_watches - computed: false, optional: true, required: false
+  private _fsInotifyMaxUserWatches?: number | undefined; 
+  public get fsInotifyMaxUserWatches() {
+    return this.getNumberAttribute('fs_inotify_max_user_watches');
+  }
+  public set fsInotifyMaxUserWatches(value: number | undefined) {
+    this._fsInotifyMaxUserWatches = value;
+  }
+  public resetFsInotifyMaxUserWatches() {
+    this._fsInotifyMaxUserWatches = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get fsInotifyMaxUserWatchesInput() {
+    return this._fsInotifyMaxUserWatches
+  }
+
+  // fs_nr_open - computed: false, optional: true, required: false
+  private _fsNrOpen?: number | undefined; 
+  public get fsNrOpen() {
+    return this.getNumberAttribute('fs_nr_open');
+  }
+  public set fsNrOpen(value: number | undefined) {
+    this._fsNrOpen = value;
+  }
+  public resetFsNrOpen() {
+    this._fsNrOpen = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get fsNrOpenInput() {
+    return this._fsNrOpen
+  }
+
+  // kernel_threads_max - computed: false, optional: true, required: false
+  private _kernelThreadsMax?: number | undefined; 
+  public get kernelThreadsMax() {
+    return this.getNumberAttribute('kernel_threads_max');
+  }
+  public set kernelThreadsMax(value: number | undefined) {
+    this._kernelThreadsMax = value;
+  }
+  public resetKernelThreadsMax() {
+    this._kernelThreadsMax = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get kernelThreadsMaxInput() {
+    return this._kernelThreadsMax
+  }
+
+  // net_core_netdev_max_backlog - computed: false, optional: true, required: false
+  private _netCoreNetdevMaxBacklog?: number | undefined; 
+  public get netCoreNetdevMaxBacklog() {
+    return this.getNumberAttribute('net_core_netdev_max_backlog');
+  }
+  public set netCoreNetdevMaxBacklog(value: number | undefined) {
+    this._netCoreNetdevMaxBacklog = value;
+  }
+  public resetNetCoreNetdevMaxBacklog() {
+    this._netCoreNetdevMaxBacklog = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get netCoreNetdevMaxBacklogInput() {
+    return this._netCoreNetdevMaxBacklog
+  }
+
+  // net_core_optmem_max - computed: false, optional: true, required: false
+  private _netCoreOptmemMax?: number | undefined; 
+  public get netCoreOptmemMax() {
+    return this.getNumberAttribute('net_core_optmem_max');
+  }
+  public set netCoreOptmemMax(value: number | undefined) {
+    this._netCoreOptmemMax = value;
+  }
+  public resetNetCoreOptmemMax() {
+    this._netCoreOptmemMax = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get netCoreOptmemMaxInput() {
+    return this._netCoreOptmemMax
+  }
+
+  // net_core_rmem_default - computed: false, optional: true, required: false
+  private _netCoreRmemDefault?: number | undefined; 
+  public get netCoreRmemDefault() {
+    return this.getNumberAttribute('net_core_rmem_default');
+  }
+  public set netCoreRmemDefault(value: number | undefined) {
+    this._netCoreRmemDefault = value;
+  }
+  public resetNetCoreRmemDefault() {
+    this._netCoreRmemDefault = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get netCoreRmemDefaultInput() {
+    return this._netCoreRmemDefault
+  }
+
+  // net_core_rmem_max - computed: false, optional: true, required: false
+  private _netCoreRmemMax?: number | undefined; 
+  public get netCoreRmemMax() {
+    return this.getNumberAttribute('net_core_rmem_max');
+  }
+  public set netCoreRmemMax(value: number | undefined) {
+    this._netCoreRmemMax = value;
+  }
+  public resetNetCoreRmemMax() {
+    this._netCoreRmemMax = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get netCoreRmemMaxInput() {
+    return this._netCoreRmemMax
+  }
+
+  // net_core_somaxconn - computed: false, optional: true, required: false
+  private _netCoreSomaxconn?: number | undefined; 
+  public get netCoreSomaxconn() {
+    return this.getNumberAttribute('net_core_somaxconn');
+  }
+  public set netCoreSomaxconn(value: number | undefined) {
+    this._netCoreSomaxconn = value;
+  }
+  public resetNetCoreSomaxconn() {
+    this._netCoreSomaxconn = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get netCoreSomaxconnInput() {
+    return this._netCoreSomaxconn
+  }
+
+  // net_core_wmem_default - computed: false, optional: true, required: false
+  private _netCoreWmemDefault?: number | undefined; 
+  public get netCoreWmemDefault() {
+    return this.getNumberAttribute('net_core_wmem_default');
+  }
+  public set netCoreWmemDefault(value: number | undefined) {
+    this._netCoreWmemDefault = value;
+  }
+  public resetNetCoreWmemDefault() {
+    this._netCoreWmemDefault = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get netCoreWmemDefaultInput() {
+    return this._netCoreWmemDefault
+  }
+
+  // net_core_wmem_max - computed: false, optional: true, required: false
+  private _netCoreWmemMax?: number | undefined; 
+  public get netCoreWmemMax() {
+    return this.getNumberAttribute('net_core_wmem_max');
+  }
+  public set netCoreWmemMax(value: number | undefined) {
+    this._netCoreWmemMax = value;
+  }
+  public resetNetCoreWmemMax() {
+    this._netCoreWmemMax = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get netCoreWmemMaxInput() {
+    return this._netCoreWmemMax
+  }
+
+  // net_ipv4_ip_local_port_range_max - computed: false, optional: true, required: false
+  private _netIpv4IpLocalPortRangeMax?: number | undefined; 
+  public get netIpv4IpLocalPortRangeMax() {
+    return this.getNumberAttribute('net_ipv4_ip_local_port_range_max');
+  }
+  public set netIpv4IpLocalPortRangeMax(value: number | undefined) {
+    this._netIpv4IpLocalPortRangeMax = value;
+  }
+  public resetNetIpv4IpLocalPortRangeMax() {
+    this._netIpv4IpLocalPortRangeMax = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get netIpv4IpLocalPortRangeMaxInput() {
+    return this._netIpv4IpLocalPortRangeMax
+  }
+
+  // net_ipv4_ip_local_port_range_min - computed: false, optional: true, required: false
+  private _netIpv4IpLocalPortRangeMin?: number | undefined; 
+  public get netIpv4IpLocalPortRangeMin() {
+    return this.getNumberAttribute('net_ipv4_ip_local_port_range_min');
+  }
+  public set netIpv4IpLocalPortRangeMin(value: number | undefined) {
+    this._netIpv4IpLocalPortRangeMin = value;
+  }
+  public resetNetIpv4IpLocalPortRangeMin() {
+    this._netIpv4IpLocalPortRangeMin = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get netIpv4IpLocalPortRangeMinInput() {
+    return this._netIpv4IpLocalPortRangeMin
+  }
+
+  // net_ipv4_neigh_default_gc_thresh1 - computed: false, optional: true, required: false
+  private _netIpv4NeighDefaultGcThresh1?: number | undefined; 
+  public get netIpv4NeighDefaultGcThresh1() {
+    return this.getNumberAttribute('net_ipv4_neigh_default_gc_thresh1');
+  }
+  public set netIpv4NeighDefaultGcThresh1(value: number | undefined) {
+    this._netIpv4NeighDefaultGcThresh1 = value;
+  }
+  public resetNetIpv4NeighDefaultGcThresh1() {
+    this._netIpv4NeighDefaultGcThresh1 = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get netIpv4NeighDefaultGcThresh1Input() {
+    return this._netIpv4NeighDefaultGcThresh1
+  }
+
+  // net_ipv4_neigh_default_gc_thresh2 - computed: false, optional: true, required: false
+  private _netIpv4NeighDefaultGcThresh2?: number | undefined; 
+  public get netIpv4NeighDefaultGcThresh2() {
+    return this.getNumberAttribute('net_ipv4_neigh_default_gc_thresh2');
+  }
+  public set netIpv4NeighDefaultGcThresh2(value: number | undefined) {
+    this._netIpv4NeighDefaultGcThresh2 = value;
+  }
+  public resetNetIpv4NeighDefaultGcThresh2() {
+    this._netIpv4NeighDefaultGcThresh2 = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get netIpv4NeighDefaultGcThresh2Input() {
+    return this._netIpv4NeighDefaultGcThresh2
+  }
+
+  // net_ipv4_neigh_default_gc_thresh3 - computed: false, optional: true, required: false
+  private _netIpv4NeighDefaultGcThresh3?: number | undefined; 
+  public get netIpv4NeighDefaultGcThresh3() {
+    return this.getNumberAttribute('net_ipv4_neigh_default_gc_thresh3');
+  }
+  public set netIpv4NeighDefaultGcThresh3(value: number | undefined) {
+    this._netIpv4NeighDefaultGcThresh3 = value;
+  }
+  public resetNetIpv4NeighDefaultGcThresh3() {
+    this._netIpv4NeighDefaultGcThresh3 = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get netIpv4NeighDefaultGcThresh3Input() {
+    return this._netIpv4NeighDefaultGcThresh3
+  }
+
+  // net_ipv4_tcp_fin_timeout - computed: false, optional: true, required: false
+  private _netIpv4TcpFinTimeout?: number | undefined; 
+  public get netIpv4TcpFinTimeout() {
+    return this.getNumberAttribute('net_ipv4_tcp_fin_timeout');
+  }
+  public set netIpv4TcpFinTimeout(value: number | undefined) {
+    this._netIpv4TcpFinTimeout = value;
+  }
+  public resetNetIpv4TcpFinTimeout() {
+    this._netIpv4TcpFinTimeout = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get netIpv4TcpFinTimeoutInput() {
+    return this._netIpv4TcpFinTimeout
+  }
+
+  // net_ipv4_tcp_keepalive_intvl - computed: false, optional: true, required: false
+  private _netIpv4TcpKeepaliveIntvl?: number | undefined; 
+  public get netIpv4TcpKeepaliveIntvl() {
+    return this.getNumberAttribute('net_ipv4_tcp_keepalive_intvl');
+  }
+  public set netIpv4TcpKeepaliveIntvl(value: number | undefined) {
+    this._netIpv4TcpKeepaliveIntvl = value;
+  }
+  public resetNetIpv4TcpKeepaliveIntvl() {
+    this._netIpv4TcpKeepaliveIntvl = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get netIpv4TcpKeepaliveIntvlInput() {
+    return this._netIpv4TcpKeepaliveIntvl
+  }
+
+  // net_ipv4_tcp_keepalive_probes - computed: false, optional: true, required: false
+  private _netIpv4TcpKeepaliveProbes?: number | undefined; 
+  public get netIpv4TcpKeepaliveProbes() {
+    return this.getNumberAttribute('net_ipv4_tcp_keepalive_probes');
+  }
+  public set netIpv4TcpKeepaliveProbes(value: number | undefined) {
+    this._netIpv4TcpKeepaliveProbes = value;
+  }
+  public resetNetIpv4TcpKeepaliveProbes() {
+    this._netIpv4TcpKeepaliveProbes = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get netIpv4TcpKeepaliveProbesInput() {
+    return this._netIpv4TcpKeepaliveProbes
+  }
+
+  // net_ipv4_tcp_keepalive_time - computed: false, optional: true, required: false
+  private _netIpv4TcpKeepaliveTime?: number | undefined; 
+  public get netIpv4TcpKeepaliveTime() {
+    return this.getNumberAttribute('net_ipv4_tcp_keepalive_time');
+  }
+  public set netIpv4TcpKeepaliveTime(value: number | undefined) {
+    this._netIpv4TcpKeepaliveTime = value;
+  }
+  public resetNetIpv4TcpKeepaliveTime() {
+    this._netIpv4TcpKeepaliveTime = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get netIpv4TcpKeepaliveTimeInput() {
+    return this._netIpv4TcpKeepaliveTime
+  }
+
+  // net_ipv4_tcp_max_syn_backlog - computed: false, optional: true, required: false
+  private _netIpv4TcpMaxSynBacklog?: number | undefined; 
+  public get netIpv4TcpMaxSynBacklog() {
+    return this.getNumberAttribute('net_ipv4_tcp_max_syn_backlog');
+  }
+  public set netIpv4TcpMaxSynBacklog(value: number | undefined) {
+    this._netIpv4TcpMaxSynBacklog = value;
+  }
+  public resetNetIpv4TcpMaxSynBacklog() {
+    this._netIpv4TcpMaxSynBacklog = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get netIpv4TcpMaxSynBacklogInput() {
+    return this._netIpv4TcpMaxSynBacklog
+  }
+
+  // net_ipv4_tcp_max_tw_buckets - computed: false, optional: true, required: false
+  private _netIpv4TcpMaxTwBuckets?: number | undefined; 
+  public get netIpv4TcpMaxTwBuckets() {
+    return this.getNumberAttribute('net_ipv4_tcp_max_tw_buckets');
+  }
+  public set netIpv4TcpMaxTwBuckets(value: number | undefined) {
+    this._netIpv4TcpMaxTwBuckets = value;
+  }
+  public resetNetIpv4TcpMaxTwBuckets() {
+    this._netIpv4TcpMaxTwBuckets = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get netIpv4TcpMaxTwBucketsInput() {
+    return this._netIpv4TcpMaxTwBuckets
+  }
+
+  // net_ipv4_tcp_tw_reuse - computed: false, optional: true, required: false
+  private _netIpv4TcpTwReuse?: boolean | cdktf.IResolvable | undefined; 
+  public get netIpv4TcpTwReuse() {
+    return this.getBooleanAttribute('net_ipv4_tcp_tw_reuse') as any;
+  }
+  public set netIpv4TcpTwReuse(value: boolean | cdktf.IResolvable | undefined) {
+    this._netIpv4TcpTwReuse = value;
+  }
+  public resetNetIpv4TcpTwReuse() {
+    this._netIpv4TcpTwReuse = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get netIpv4TcpTwReuseInput() {
+    return this._netIpv4TcpTwReuse
+  }
+
+  // net_netfilter_nf_conntrack_buckets - computed: false, optional: true, required: false
+  private _netNetfilterNfConntrackBuckets?: number | undefined; 
+  public get netNetfilterNfConntrackBuckets() {
+    return this.getNumberAttribute('net_netfilter_nf_conntrack_buckets');
+  }
+  public set netNetfilterNfConntrackBuckets(value: number | undefined) {
+    this._netNetfilterNfConntrackBuckets = value;
+  }
+  public resetNetNetfilterNfConntrackBuckets() {
+    this._netNetfilterNfConntrackBuckets = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get netNetfilterNfConntrackBucketsInput() {
+    return this._netNetfilterNfConntrackBuckets
+  }
+
+  // net_netfilter_nf_conntrack_max - computed: false, optional: true, required: false
+  private _netNetfilterNfConntrackMax?: number | undefined; 
+  public get netNetfilterNfConntrackMax() {
+    return this.getNumberAttribute('net_netfilter_nf_conntrack_max');
+  }
+  public set netNetfilterNfConntrackMax(value: number | undefined) {
+    this._netNetfilterNfConntrackMax = value;
+  }
+  public resetNetNetfilterNfConntrackMax() {
+    this._netNetfilterNfConntrackMax = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get netNetfilterNfConntrackMaxInput() {
+    return this._netNetfilterNfConntrackMax
+  }
+
+  // vm_max_map_count - computed: false, optional: true, required: false
+  private _vmMaxMapCount?: number | undefined; 
+  public get vmMaxMapCount() {
+    return this.getNumberAttribute('vm_max_map_count');
+  }
+  public set vmMaxMapCount(value: number | undefined) {
+    this._vmMaxMapCount = value;
+  }
+  public resetVmMaxMapCount() {
+    this._vmMaxMapCount = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get vmMaxMapCountInput() {
+    return this._vmMaxMapCount
+  }
+
+  // vm_swappiness - computed: false, optional: true, required: false
+  private _vmSwappiness?: number | undefined; 
+  public get vmSwappiness() {
+    return this.getNumberAttribute('vm_swappiness');
+  }
+  public set vmSwappiness(value: number | undefined) {
+    this._vmSwappiness = value;
+  }
+  public resetVmSwappiness() {
+    this._vmSwappiness = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get vmSwappinessInput() {
+    return this._vmSwappiness
+  }
+
+  // vm_vfs_cache_pressure - computed: false, optional: true, required: false
+  private _vmVfsCachePressure?: number | undefined; 
+  public get vmVfsCachePressure() {
+    return this.getNumberAttribute('vm_vfs_cache_pressure');
+  }
+  public set vmVfsCachePressure(value: number | undefined) {
+    this._vmVfsCachePressure = value;
+  }
+  public resetVmVfsCachePressure() {
+    this._vmVfsCachePressure = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get vmVfsCachePressureInput() {
+    return this._vmVfsCachePressure
+  }
+}
 export interface KubernetesClusterNodePoolLinuxOsConfig {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster_node_pool.html#swap_file_size_mb KubernetesClusterNodePool#swap_file_size_mb}
@@ -383,19 +1033,97 @@ export interface KubernetesClusterNodePoolLinuxOsConfig {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster_node_pool.html#sysctl_config KubernetesClusterNodePool#sysctl_config}
   */
-  readonly sysctlConfig?: KubernetesClusterNodePoolLinuxOsConfigSysctlConfig[];
+  readonly sysctlConfig?: KubernetesClusterNodePoolLinuxOsConfigSysctlConfig;
 }
 
-function kubernetesClusterNodePoolLinuxOsConfigToTerraform(struct?: KubernetesClusterNodePoolLinuxOsConfig): any {
+function kubernetesClusterNodePoolLinuxOsConfigToTerraform(struct?: KubernetesClusterNodePoolLinuxOsConfigOutputReference | KubernetesClusterNodePoolLinuxOsConfig): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     swap_file_size_mb: cdktf.numberToTerraform(struct!.swapFileSizeMb),
     transparent_huge_page_defrag: cdktf.stringToTerraform(struct!.transparentHugePageDefrag),
     transparent_huge_page_enabled: cdktf.stringToTerraform(struct!.transparentHugePageEnabled),
-    sysctl_config: cdktf.listMapper(kubernetesClusterNodePoolLinuxOsConfigSysctlConfigToTerraform)(struct!.sysctlConfig),
+    sysctl_config: kubernetesClusterNodePoolLinuxOsConfigSysctlConfigToTerraform(struct!.sysctlConfig),
   }
 }
 
+export class KubernetesClusterNodePoolLinuxOsConfigOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // swap_file_size_mb - computed: false, optional: true, required: false
+  private _swapFileSizeMb?: number | undefined; 
+  public get swapFileSizeMb() {
+    return this.getNumberAttribute('swap_file_size_mb');
+  }
+  public set swapFileSizeMb(value: number | undefined) {
+    this._swapFileSizeMb = value;
+  }
+  public resetSwapFileSizeMb() {
+    this._swapFileSizeMb = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get swapFileSizeMbInput() {
+    return this._swapFileSizeMb
+  }
+
+  // transparent_huge_page_defrag - computed: false, optional: true, required: false
+  private _transparentHugePageDefrag?: string | undefined; 
+  public get transparentHugePageDefrag() {
+    return this.getStringAttribute('transparent_huge_page_defrag');
+  }
+  public set transparentHugePageDefrag(value: string | undefined) {
+    this._transparentHugePageDefrag = value;
+  }
+  public resetTransparentHugePageDefrag() {
+    this._transparentHugePageDefrag = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get transparentHugePageDefragInput() {
+    return this._transparentHugePageDefrag
+  }
+
+  // transparent_huge_page_enabled - computed: false, optional: true, required: false
+  private _transparentHugePageEnabled?: string | undefined; 
+  public get transparentHugePageEnabled() {
+    return this.getStringAttribute('transparent_huge_page_enabled');
+  }
+  public set transparentHugePageEnabled(value: string | undefined) {
+    this._transparentHugePageEnabled = value;
+  }
+  public resetTransparentHugePageEnabled() {
+    this._transparentHugePageEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get transparentHugePageEnabledInput() {
+    return this._transparentHugePageEnabled
+  }
+
+  // sysctl_config - computed: false, optional: true, required: false
+  private _sysctlConfig?: KubernetesClusterNodePoolLinuxOsConfigSysctlConfig | undefined; 
+  private __sysctlConfigOutput = new KubernetesClusterNodePoolLinuxOsConfigSysctlConfigOutputReference(this as any, "sysctl_config", true);
+  public get sysctlConfig() {
+    return this.__sysctlConfigOutput;
+  }
+  public putSysctlConfig(value: KubernetesClusterNodePoolLinuxOsConfigSysctlConfig | undefined) {
+    this._sysctlConfig = value;
+  }
+  public resetSysctlConfig() {
+    this._sysctlConfig = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sysctlConfigInput() {
+    return this._sysctlConfig
+  }
+}
 export interface KubernetesClusterNodePoolTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster_node_pool.html#create KubernetesClusterNodePool#create}
@@ -415,8 +1143,11 @@ export interface KubernetesClusterNodePoolTimeouts {
   readonly update?: string;
 }
 
-function kubernetesClusterNodePoolTimeoutsToTerraform(struct?: KubernetesClusterNodePoolTimeouts): any {
+function kubernetesClusterNodePoolTimeoutsToTerraform(struct?: KubernetesClusterNodePoolTimeoutsOutputReference | KubernetesClusterNodePoolTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -425,6 +1156,80 @@ function kubernetesClusterNodePoolTimeoutsToTerraform(struct?: KubernetesCluster
   }
 }
 
+export class KubernetesClusterNodePoolTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 export interface KubernetesClusterNodePoolUpgradeSettings {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster_node_pool.html#max_surge KubernetesClusterNodePool#max_surge}
@@ -432,13 +1237,39 @@ export interface KubernetesClusterNodePoolUpgradeSettings {
   readonly maxSurge: string;
 }
 
-function kubernetesClusterNodePoolUpgradeSettingsToTerraform(struct?: KubernetesClusterNodePoolUpgradeSettings): any {
+function kubernetesClusterNodePoolUpgradeSettingsToTerraform(struct?: KubernetesClusterNodePoolUpgradeSettingsOutputReference | KubernetesClusterNodePoolUpgradeSettings): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     max_surge: cdktf.stringToTerraform(struct!.maxSurge),
   }
 }
 
+export class KubernetesClusterNodePoolUpgradeSettingsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // max_surge - computed: false, optional: false, required: true
+  private _maxSurge?: string; 
+  public get maxSurge() {
+    return this.getStringAttribute('max_surge');
+  }
+  public set maxSurge(value: string) {
+    this._maxSurge = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get maxSurgeInput() {
+    return this._maxSurge
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster_node_pool.html azurerm_kubernetes_cluster_node_pool}
@@ -513,11 +1344,11 @@ export class KubernetesClusterNodePool extends cdktf.TerraformResource {
   // ==========
 
   // availability_zones - computed: false, optional: true, required: false
-  private _availabilityZones?: string[];
+  private _availabilityZones?: string[] | undefined; 
   public get availabilityZones() {
     return this.getListAttribute('availability_zones');
   }
-  public set availabilityZones(value: string[] ) {
+  public set availabilityZones(value: string[] | undefined) {
     this._availabilityZones = value;
   }
   public resetAvailabilityZones() {
@@ -529,11 +1360,11 @@ export class KubernetesClusterNodePool extends cdktf.TerraformResource {
   }
 
   // enable_auto_scaling - computed: false, optional: true, required: false
-  private _enableAutoScaling?: boolean | cdktf.IResolvable;
+  private _enableAutoScaling?: boolean | cdktf.IResolvable | undefined; 
   public get enableAutoScaling() {
-    return this.getBooleanAttribute('enable_auto_scaling');
+    return this.getBooleanAttribute('enable_auto_scaling') as any;
   }
-  public set enableAutoScaling(value: boolean | cdktf.IResolvable ) {
+  public set enableAutoScaling(value: boolean | cdktf.IResolvable | undefined) {
     this._enableAutoScaling = value;
   }
   public resetEnableAutoScaling() {
@@ -545,11 +1376,11 @@ export class KubernetesClusterNodePool extends cdktf.TerraformResource {
   }
 
   // enable_host_encryption - computed: false, optional: true, required: false
-  private _enableHostEncryption?: boolean | cdktf.IResolvable;
+  private _enableHostEncryption?: boolean | cdktf.IResolvable | undefined; 
   public get enableHostEncryption() {
-    return this.getBooleanAttribute('enable_host_encryption');
+    return this.getBooleanAttribute('enable_host_encryption') as any;
   }
-  public set enableHostEncryption(value: boolean | cdktf.IResolvable ) {
+  public set enableHostEncryption(value: boolean | cdktf.IResolvable | undefined) {
     this._enableHostEncryption = value;
   }
   public resetEnableHostEncryption() {
@@ -561,11 +1392,11 @@ export class KubernetesClusterNodePool extends cdktf.TerraformResource {
   }
 
   // enable_node_public_ip - computed: false, optional: true, required: false
-  private _enableNodePublicIp?: boolean | cdktf.IResolvable;
+  private _enableNodePublicIp?: boolean | cdktf.IResolvable | undefined; 
   public get enableNodePublicIp() {
-    return this.getBooleanAttribute('enable_node_public_ip');
+    return this.getBooleanAttribute('enable_node_public_ip') as any;
   }
-  public set enableNodePublicIp(value: boolean | cdktf.IResolvable ) {
+  public set enableNodePublicIp(value: boolean | cdktf.IResolvable | undefined) {
     this._enableNodePublicIp = value;
   }
   public resetEnableNodePublicIp() {
@@ -577,11 +1408,11 @@ export class KubernetesClusterNodePool extends cdktf.TerraformResource {
   }
 
   // eviction_policy - computed: false, optional: true, required: false
-  private _evictionPolicy?: string;
+  private _evictionPolicy?: string | undefined; 
   public get evictionPolicy() {
     return this.getStringAttribute('eviction_policy');
   }
-  public set evictionPolicy(value: string ) {
+  public set evictionPolicy(value: string | undefined) {
     this._evictionPolicy = value;
   }
   public resetEvictionPolicy() {
@@ -593,11 +1424,11 @@ export class KubernetesClusterNodePool extends cdktf.TerraformResource {
   }
 
   // fips_enabled - computed: false, optional: true, required: false
-  private _fipsEnabled?: boolean | cdktf.IResolvable;
+  private _fipsEnabled?: boolean | cdktf.IResolvable | undefined; 
   public get fipsEnabled() {
-    return this.getBooleanAttribute('fips_enabled');
+    return this.getBooleanAttribute('fips_enabled') as any;
   }
-  public set fipsEnabled(value: boolean | cdktf.IResolvable ) {
+  public set fipsEnabled(value: boolean | cdktf.IResolvable | undefined) {
     this._fipsEnabled = value;
   }
   public resetFipsEnabled() {
@@ -614,11 +1445,11 @@ export class KubernetesClusterNodePool extends cdktf.TerraformResource {
   }
 
   // kubelet_disk_type - computed: true, optional: true, required: false
-  private _kubeletDiskType?: string;
+  private _kubeletDiskType?: string | undefined; 
   public get kubeletDiskType() {
     return this.getStringAttribute('kubelet_disk_type');
   }
-  public set kubeletDiskType(value: string) {
+  public set kubeletDiskType(value: string | undefined) {
     this._kubeletDiskType = value;
   }
   public resetKubeletDiskType() {
@@ -630,7 +1461,7 @@ export class KubernetesClusterNodePool extends cdktf.TerraformResource {
   }
 
   // kubernetes_cluster_id - computed: false, optional: false, required: true
-  private _kubernetesClusterId: string;
+  private _kubernetesClusterId?: string; 
   public get kubernetesClusterId() {
     return this.getStringAttribute('kubernetes_cluster_id');
   }
@@ -643,11 +1474,11 @@ export class KubernetesClusterNodePool extends cdktf.TerraformResource {
   }
 
   // max_count - computed: false, optional: true, required: false
-  private _maxCount?: number;
+  private _maxCount?: number | undefined; 
   public get maxCount() {
     return this.getNumberAttribute('max_count');
   }
-  public set maxCount(value: number ) {
+  public set maxCount(value: number | undefined) {
     this._maxCount = value;
   }
   public resetMaxCount() {
@@ -659,11 +1490,11 @@ export class KubernetesClusterNodePool extends cdktf.TerraformResource {
   }
 
   // max_pods - computed: true, optional: true, required: false
-  private _maxPods?: number;
+  private _maxPods?: number | undefined; 
   public get maxPods() {
     return this.getNumberAttribute('max_pods');
   }
-  public set maxPods(value: number) {
+  public set maxPods(value: number | undefined) {
     this._maxPods = value;
   }
   public resetMaxPods() {
@@ -675,11 +1506,11 @@ export class KubernetesClusterNodePool extends cdktf.TerraformResource {
   }
 
   // min_count - computed: false, optional: true, required: false
-  private _minCount?: number;
+  private _minCount?: number | undefined; 
   public get minCount() {
     return this.getNumberAttribute('min_count');
   }
-  public set minCount(value: number ) {
+  public set minCount(value: number | undefined) {
     this._minCount = value;
   }
   public resetMinCount() {
@@ -691,11 +1522,11 @@ export class KubernetesClusterNodePool extends cdktf.TerraformResource {
   }
 
   // mode - computed: false, optional: true, required: false
-  private _mode?: string;
+  private _mode?: string | undefined; 
   public get mode() {
     return this.getStringAttribute('mode');
   }
-  public set mode(value: string ) {
+  public set mode(value: string | undefined) {
     this._mode = value;
   }
   public resetMode() {
@@ -707,7 +1538,7 @@ export class KubernetesClusterNodePool extends cdktf.TerraformResource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -720,11 +1551,11 @@ export class KubernetesClusterNodePool extends cdktf.TerraformResource {
   }
 
   // node_count - computed: true, optional: true, required: false
-  private _nodeCount?: number;
+  private _nodeCount?: number | undefined; 
   public get nodeCount() {
     return this.getNumberAttribute('node_count');
   }
-  public set nodeCount(value: number) {
+  public set nodeCount(value: number | undefined) {
     this._nodeCount = value;
   }
   public resetNodeCount() {
@@ -736,11 +1567,12 @@ export class KubernetesClusterNodePool extends cdktf.TerraformResource {
   }
 
   // node_labels - computed: true, optional: true, required: false
-  private _nodeLabels?: { [key: string]: string } | cdktf.IResolvable
-  public get nodeLabels(): { [key: string]: string } | cdktf.IResolvable {
-    return this.interpolationForAttribute('node_labels') as any; // Getting the computed value is not yet implemented
+  private _nodeLabels?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  public get nodeLabels() {
+    // Getting the computed value is not yet implemented
+    return this.interpolationForAttribute('node_labels') as any;
   }
-  public set nodeLabels(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set nodeLabels(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
     this._nodeLabels = value;
   }
   public resetNodeLabels() {
@@ -752,11 +1584,11 @@ export class KubernetesClusterNodePool extends cdktf.TerraformResource {
   }
 
   // node_public_ip_prefix_id - computed: false, optional: true, required: false
-  private _nodePublicIpPrefixId?: string;
+  private _nodePublicIpPrefixId?: string | undefined; 
   public get nodePublicIpPrefixId() {
     return this.getStringAttribute('node_public_ip_prefix_id');
   }
-  public set nodePublicIpPrefixId(value: string ) {
+  public set nodePublicIpPrefixId(value: string | undefined) {
     this._nodePublicIpPrefixId = value;
   }
   public resetNodePublicIpPrefixId() {
@@ -768,11 +1600,11 @@ export class KubernetesClusterNodePool extends cdktf.TerraformResource {
   }
 
   // node_taints - computed: false, optional: true, required: false
-  private _nodeTaints?: string[];
+  private _nodeTaints?: string[] | undefined; 
   public get nodeTaints() {
     return this.getListAttribute('node_taints');
   }
-  public set nodeTaints(value: string[] ) {
+  public set nodeTaints(value: string[] | undefined) {
     this._nodeTaints = value;
   }
   public resetNodeTaints() {
@@ -784,11 +1616,11 @@ export class KubernetesClusterNodePool extends cdktf.TerraformResource {
   }
 
   // orchestrator_version - computed: true, optional: true, required: false
-  private _orchestratorVersion?: string;
+  private _orchestratorVersion?: string | undefined; 
   public get orchestratorVersion() {
     return this.getStringAttribute('orchestrator_version');
   }
-  public set orchestratorVersion(value: string) {
+  public set orchestratorVersion(value: string | undefined) {
     this._orchestratorVersion = value;
   }
   public resetOrchestratorVersion() {
@@ -800,11 +1632,11 @@ export class KubernetesClusterNodePool extends cdktf.TerraformResource {
   }
 
   // os_disk_size_gb - computed: true, optional: true, required: false
-  private _osDiskSizeGb?: number;
+  private _osDiskSizeGb?: number | undefined; 
   public get osDiskSizeGb() {
     return this.getNumberAttribute('os_disk_size_gb');
   }
-  public set osDiskSizeGb(value: number) {
+  public set osDiskSizeGb(value: number | undefined) {
     this._osDiskSizeGb = value;
   }
   public resetOsDiskSizeGb() {
@@ -816,11 +1648,11 @@ export class KubernetesClusterNodePool extends cdktf.TerraformResource {
   }
 
   // os_disk_type - computed: false, optional: true, required: false
-  private _osDiskType?: string;
+  private _osDiskType?: string | undefined; 
   public get osDiskType() {
     return this.getStringAttribute('os_disk_type');
   }
-  public set osDiskType(value: string ) {
+  public set osDiskType(value: string | undefined) {
     this._osDiskType = value;
   }
   public resetOsDiskType() {
@@ -832,11 +1664,11 @@ export class KubernetesClusterNodePool extends cdktf.TerraformResource {
   }
 
   // os_sku - computed: true, optional: true, required: false
-  private _osSku?: string;
+  private _osSku?: string | undefined; 
   public get osSku() {
     return this.getStringAttribute('os_sku');
   }
-  public set osSku(value: string) {
+  public set osSku(value: string | undefined) {
     this._osSku = value;
   }
   public resetOsSku() {
@@ -848,11 +1680,11 @@ export class KubernetesClusterNodePool extends cdktf.TerraformResource {
   }
 
   // os_type - computed: false, optional: true, required: false
-  private _osType?: string;
+  private _osType?: string | undefined; 
   public get osType() {
     return this.getStringAttribute('os_type');
   }
-  public set osType(value: string ) {
+  public set osType(value: string | undefined) {
     this._osType = value;
   }
   public resetOsType() {
@@ -864,11 +1696,11 @@ export class KubernetesClusterNodePool extends cdktf.TerraformResource {
   }
 
   // pod_subnet_id - computed: false, optional: true, required: false
-  private _podSubnetId?: string;
+  private _podSubnetId?: string | undefined; 
   public get podSubnetId() {
     return this.getStringAttribute('pod_subnet_id');
   }
-  public set podSubnetId(value: string ) {
+  public set podSubnetId(value: string | undefined) {
     this._podSubnetId = value;
   }
   public resetPodSubnetId() {
@@ -880,11 +1712,11 @@ export class KubernetesClusterNodePool extends cdktf.TerraformResource {
   }
 
   // priority - computed: false, optional: true, required: false
-  private _priority?: string;
+  private _priority?: string | undefined; 
   public get priority() {
     return this.getStringAttribute('priority');
   }
-  public set priority(value: string ) {
+  public set priority(value: string | undefined) {
     this._priority = value;
   }
   public resetPriority() {
@@ -896,11 +1728,11 @@ export class KubernetesClusterNodePool extends cdktf.TerraformResource {
   }
 
   // proximity_placement_group_id - computed: false, optional: true, required: false
-  private _proximityPlacementGroupId?: string;
+  private _proximityPlacementGroupId?: string | undefined; 
   public get proximityPlacementGroupId() {
     return this.getStringAttribute('proximity_placement_group_id');
   }
-  public set proximityPlacementGroupId(value: string ) {
+  public set proximityPlacementGroupId(value: string | undefined) {
     this._proximityPlacementGroupId = value;
   }
   public resetProximityPlacementGroupId() {
@@ -912,11 +1744,11 @@ export class KubernetesClusterNodePool extends cdktf.TerraformResource {
   }
 
   // spot_max_price - computed: false, optional: true, required: false
-  private _spotMaxPrice?: number;
+  private _spotMaxPrice?: number | undefined; 
   public get spotMaxPrice() {
     return this.getNumberAttribute('spot_max_price');
   }
-  public set spotMaxPrice(value: number ) {
+  public set spotMaxPrice(value: number | undefined) {
     this._spotMaxPrice = value;
   }
   public resetSpotMaxPrice() {
@@ -928,11 +1760,12 @@ export class KubernetesClusterNodePool extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable;
+  private _tags?: { [key: string]: string } | cdktf.IResolvable | undefined; 
   public get tags() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
     this._tags = value;
   }
   public resetTags() {
@@ -944,11 +1777,11 @@ export class KubernetesClusterNodePool extends cdktf.TerraformResource {
   }
 
   // ultra_ssd_enabled - computed: false, optional: true, required: false
-  private _ultraSsdEnabled?: boolean | cdktf.IResolvable;
+  private _ultraSsdEnabled?: boolean | cdktf.IResolvable | undefined; 
   public get ultraSsdEnabled() {
-    return this.getBooleanAttribute('ultra_ssd_enabled');
+    return this.getBooleanAttribute('ultra_ssd_enabled') as any;
   }
-  public set ultraSsdEnabled(value: boolean | cdktf.IResolvable ) {
+  public set ultraSsdEnabled(value: boolean | cdktf.IResolvable | undefined) {
     this._ultraSsdEnabled = value;
   }
   public resetUltraSsdEnabled() {
@@ -960,7 +1793,7 @@ export class KubernetesClusterNodePool extends cdktf.TerraformResource {
   }
 
   // vm_size - computed: false, optional: false, required: true
-  private _vmSize: string;
+  private _vmSize?: string; 
   public get vmSize() {
     return this.getStringAttribute('vm_size');
   }
@@ -973,11 +1806,11 @@ export class KubernetesClusterNodePool extends cdktf.TerraformResource {
   }
 
   // vnet_subnet_id - computed: false, optional: true, required: false
-  private _vnetSubnetId?: string;
+  private _vnetSubnetId?: string | undefined; 
   public get vnetSubnetId() {
     return this.getStringAttribute('vnet_subnet_id');
   }
-  public set vnetSubnetId(value: string ) {
+  public set vnetSubnetId(value: string | undefined) {
     this._vnetSubnetId = value;
   }
   public resetVnetSubnetId() {
@@ -989,11 +1822,12 @@ export class KubernetesClusterNodePool extends cdktf.TerraformResource {
   }
 
   // kubelet_config - computed: false, optional: true, required: false
-  private _kubeletConfig?: KubernetesClusterNodePoolKubeletConfig[];
+  private _kubeletConfig?: KubernetesClusterNodePoolKubeletConfig | undefined; 
+  private __kubeletConfigOutput = new KubernetesClusterNodePoolKubeletConfigOutputReference(this as any, "kubelet_config", true);
   public get kubeletConfig() {
-    return this.interpolationForAttribute('kubelet_config') as any;
+    return this.__kubeletConfigOutput;
   }
-  public set kubeletConfig(value: KubernetesClusterNodePoolKubeletConfig[] ) {
+  public putKubeletConfig(value: KubernetesClusterNodePoolKubeletConfig | undefined) {
     this._kubeletConfig = value;
   }
   public resetKubeletConfig() {
@@ -1005,11 +1839,12 @@ export class KubernetesClusterNodePool extends cdktf.TerraformResource {
   }
 
   // linux_os_config - computed: false, optional: true, required: false
-  private _linuxOsConfig?: KubernetesClusterNodePoolLinuxOsConfig[];
+  private _linuxOsConfig?: KubernetesClusterNodePoolLinuxOsConfig | undefined; 
+  private __linuxOsConfigOutput = new KubernetesClusterNodePoolLinuxOsConfigOutputReference(this as any, "linux_os_config", true);
   public get linuxOsConfig() {
-    return this.interpolationForAttribute('linux_os_config') as any;
+    return this.__linuxOsConfigOutput;
   }
-  public set linuxOsConfig(value: KubernetesClusterNodePoolLinuxOsConfig[] ) {
+  public putLinuxOsConfig(value: KubernetesClusterNodePoolLinuxOsConfig | undefined) {
     this._linuxOsConfig = value;
   }
   public resetLinuxOsConfig() {
@@ -1021,11 +1856,12 @@ export class KubernetesClusterNodePool extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: KubernetesClusterNodePoolTimeouts;
+  private _timeouts?: KubernetesClusterNodePoolTimeouts | undefined; 
+  private __timeoutsOutput = new KubernetesClusterNodePoolTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: KubernetesClusterNodePoolTimeouts ) {
+  public putTimeouts(value: KubernetesClusterNodePoolTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {
@@ -1037,11 +1873,12 @@ export class KubernetesClusterNodePool extends cdktf.TerraformResource {
   }
 
   // upgrade_settings - computed: false, optional: true, required: false
-  private _upgradeSettings?: KubernetesClusterNodePoolUpgradeSettings[];
+  private _upgradeSettings?: KubernetesClusterNodePoolUpgradeSettings | undefined; 
+  private __upgradeSettingsOutput = new KubernetesClusterNodePoolUpgradeSettingsOutputReference(this as any, "upgrade_settings", true);
   public get upgradeSettings() {
-    return this.interpolationForAttribute('upgrade_settings') as any;
+    return this.__upgradeSettingsOutput;
   }
-  public set upgradeSettings(value: KubernetesClusterNodePoolUpgradeSettings[] ) {
+  public putUpgradeSettings(value: KubernetesClusterNodePoolUpgradeSettings | undefined) {
     this._upgradeSettings = value;
   }
   public resetUpgradeSettings() {
@@ -1088,10 +1925,10 @@ export class KubernetesClusterNodePool extends cdktf.TerraformResource {
       ultra_ssd_enabled: cdktf.booleanToTerraform(this._ultraSsdEnabled),
       vm_size: cdktf.stringToTerraform(this._vmSize),
       vnet_subnet_id: cdktf.stringToTerraform(this._vnetSubnetId),
-      kubelet_config: cdktf.listMapper(kubernetesClusterNodePoolKubeletConfigToTerraform)(this._kubeletConfig),
-      linux_os_config: cdktf.listMapper(kubernetesClusterNodePoolLinuxOsConfigToTerraform)(this._linuxOsConfig),
+      kubelet_config: kubernetesClusterNodePoolKubeletConfigToTerraform(this._kubeletConfig),
+      linux_os_config: kubernetesClusterNodePoolLinuxOsConfigToTerraform(this._linuxOsConfig),
       timeouts: kubernetesClusterNodePoolTimeoutsToTerraform(this._timeouts),
-      upgrade_settings: cdktf.listMapper(kubernetesClusterNodePoolUpgradeSettingsToTerraform)(this._upgradeSettings),
+      upgrade_settings: kubernetesClusterNodePoolUpgradeSettingsToTerraform(this._upgradeSettings),
     };
   }
 }

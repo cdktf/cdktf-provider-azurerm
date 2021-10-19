@@ -57,8 +57,11 @@ export interface MssqlDatabaseExtendedAuditingPolicyTimeouts {
   readonly update?: string;
 }
 
-function mssqlDatabaseExtendedAuditingPolicyTimeoutsToTerraform(struct?: MssqlDatabaseExtendedAuditingPolicyTimeouts): any {
+function mssqlDatabaseExtendedAuditingPolicyTimeoutsToTerraform(struct?: MssqlDatabaseExtendedAuditingPolicyTimeoutsOutputReference | MssqlDatabaseExtendedAuditingPolicyTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -67,6 +70,80 @@ function mssqlDatabaseExtendedAuditingPolicyTimeoutsToTerraform(struct?: MssqlDa
   }
 }
 
+export class MssqlDatabaseExtendedAuditingPolicyTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_database_extended_auditing_policy.html azurerm_mssql_database_extended_auditing_policy}
@@ -114,7 +191,7 @@ export class MssqlDatabaseExtendedAuditingPolicyA extends cdktf.TerraformResourc
   // ==========
 
   // database_id - computed: false, optional: false, required: true
-  private _databaseId: string;
+  private _databaseId?: string; 
   public get databaseId() {
     return this.getStringAttribute('database_id');
   }
@@ -132,11 +209,11 @@ export class MssqlDatabaseExtendedAuditingPolicyA extends cdktf.TerraformResourc
   }
 
   // log_monitoring_enabled - computed: false, optional: true, required: false
-  private _logMonitoringEnabled?: boolean | cdktf.IResolvable;
+  private _logMonitoringEnabled?: boolean | cdktf.IResolvable | undefined; 
   public get logMonitoringEnabled() {
-    return this.getBooleanAttribute('log_monitoring_enabled');
+    return this.getBooleanAttribute('log_monitoring_enabled') as any;
   }
-  public set logMonitoringEnabled(value: boolean | cdktf.IResolvable ) {
+  public set logMonitoringEnabled(value: boolean | cdktf.IResolvable | undefined) {
     this._logMonitoringEnabled = value;
   }
   public resetLogMonitoringEnabled() {
@@ -148,11 +225,11 @@ export class MssqlDatabaseExtendedAuditingPolicyA extends cdktf.TerraformResourc
   }
 
   // retention_in_days - computed: false, optional: true, required: false
-  private _retentionInDays?: number;
+  private _retentionInDays?: number | undefined; 
   public get retentionInDays() {
     return this.getNumberAttribute('retention_in_days');
   }
-  public set retentionInDays(value: number ) {
+  public set retentionInDays(value: number | undefined) {
     this._retentionInDays = value;
   }
   public resetRetentionInDays() {
@@ -164,11 +241,11 @@ export class MssqlDatabaseExtendedAuditingPolicyA extends cdktf.TerraformResourc
   }
 
   // storage_account_access_key - computed: false, optional: true, required: false
-  private _storageAccountAccessKey?: string;
+  private _storageAccountAccessKey?: string | undefined; 
   public get storageAccountAccessKey() {
     return this.getStringAttribute('storage_account_access_key');
   }
-  public set storageAccountAccessKey(value: string ) {
+  public set storageAccountAccessKey(value: string | undefined) {
     this._storageAccountAccessKey = value;
   }
   public resetStorageAccountAccessKey() {
@@ -180,11 +257,11 @@ export class MssqlDatabaseExtendedAuditingPolicyA extends cdktf.TerraformResourc
   }
 
   // storage_account_access_key_is_secondary - computed: false, optional: true, required: false
-  private _storageAccountAccessKeyIsSecondary?: boolean | cdktf.IResolvable;
+  private _storageAccountAccessKeyIsSecondary?: boolean | cdktf.IResolvable | undefined; 
   public get storageAccountAccessKeyIsSecondary() {
-    return this.getBooleanAttribute('storage_account_access_key_is_secondary');
+    return this.getBooleanAttribute('storage_account_access_key_is_secondary') as any;
   }
-  public set storageAccountAccessKeyIsSecondary(value: boolean | cdktf.IResolvable ) {
+  public set storageAccountAccessKeyIsSecondary(value: boolean | cdktf.IResolvable | undefined) {
     this._storageAccountAccessKeyIsSecondary = value;
   }
   public resetStorageAccountAccessKeyIsSecondary() {
@@ -196,11 +273,11 @@ export class MssqlDatabaseExtendedAuditingPolicyA extends cdktf.TerraformResourc
   }
 
   // storage_endpoint - computed: false, optional: true, required: false
-  private _storageEndpoint?: string;
+  private _storageEndpoint?: string | undefined; 
   public get storageEndpoint() {
     return this.getStringAttribute('storage_endpoint');
   }
-  public set storageEndpoint(value: string ) {
+  public set storageEndpoint(value: string | undefined) {
     this._storageEndpoint = value;
   }
   public resetStorageEndpoint() {
@@ -212,11 +289,12 @@ export class MssqlDatabaseExtendedAuditingPolicyA extends cdktf.TerraformResourc
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: MssqlDatabaseExtendedAuditingPolicyTimeouts;
+  private _timeouts?: MssqlDatabaseExtendedAuditingPolicyTimeouts | undefined; 
+  private __timeoutsOutput = new MssqlDatabaseExtendedAuditingPolicyTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: MssqlDatabaseExtendedAuditingPolicyTimeouts ) {
+  public putTimeouts(value: MssqlDatabaseExtendedAuditingPolicyTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {

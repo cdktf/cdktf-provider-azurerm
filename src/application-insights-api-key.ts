@@ -49,8 +49,11 @@ export interface ApplicationInsightsApiKeyTimeouts {
   readonly update?: string;
 }
 
-function applicationInsightsApiKeyTimeoutsToTerraform(struct?: ApplicationInsightsApiKeyTimeouts): any {
+function applicationInsightsApiKeyTimeoutsToTerraform(struct?: ApplicationInsightsApiKeyTimeoutsOutputReference | ApplicationInsightsApiKeyTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -59,6 +62,80 @@ function applicationInsightsApiKeyTimeoutsToTerraform(struct?: ApplicationInsigh
   }
 }
 
+export class ApplicationInsightsApiKeyTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights_api_key.html azurerm_application_insights_api_key}
@@ -109,7 +186,7 @@ export class ApplicationInsightsApiKey extends cdktf.TerraformResource {
   }
 
   // application_insights_id - computed: false, optional: false, required: true
-  private _applicationInsightsId: string;
+  private _applicationInsightsId?: string; 
   public get applicationInsightsId() {
     return this.getStringAttribute('application_insights_id');
   }
@@ -127,7 +204,7 @@ export class ApplicationInsightsApiKey extends cdktf.TerraformResource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -140,11 +217,11 @@ export class ApplicationInsightsApiKey extends cdktf.TerraformResource {
   }
 
   // read_permissions - computed: false, optional: true, required: false
-  private _readPermissions?: string[];
+  private _readPermissions?: string[] | undefined; 
   public get readPermissions() {
     return this.getListAttribute('read_permissions');
   }
-  public set readPermissions(value: string[] ) {
+  public set readPermissions(value: string[] | undefined) {
     this._readPermissions = value;
   }
   public resetReadPermissions() {
@@ -156,11 +233,11 @@ export class ApplicationInsightsApiKey extends cdktf.TerraformResource {
   }
 
   // write_permissions - computed: false, optional: true, required: false
-  private _writePermissions?: string[];
+  private _writePermissions?: string[] | undefined; 
   public get writePermissions() {
     return this.getListAttribute('write_permissions');
   }
-  public set writePermissions(value: string[] ) {
+  public set writePermissions(value: string[] | undefined) {
     this._writePermissions = value;
   }
   public resetWritePermissions() {
@@ -172,11 +249,12 @@ export class ApplicationInsightsApiKey extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: ApplicationInsightsApiKeyTimeouts;
+  private _timeouts?: ApplicationInsightsApiKeyTimeouts | undefined; 
+  private __timeoutsOutput = new ApplicationInsightsApiKeyTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: ApplicationInsightsApiKeyTimeouts ) {
+  public putTimeouts(value: ApplicationInsightsApiKeyTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {

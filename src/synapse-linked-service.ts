@@ -44,7 +44,7 @@ export interface SynapseLinkedServiceConfig extends cdktf.TerraformMetaArguments
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_linked_service.html#integration_runtime SynapseLinkedService#integration_runtime}
   */
-  readonly integrationRuntime?: SynapseLinkedServiceIntegrationRuntime[];
+  readonly integrationRuntime?: SynapseLinkedServiceIntegrationRuntime;
   /**
   * timeouts block
   * 
@@ -63,14 +63,57 @@ export interface SynapseLinkedServiceIntegrationRuntime {
   readonly parameters?: { [key: string]: string } | cdktf.IResolvable;
 }
 
-function synapseLinkedServiceIntegrationRuntimeToTerraform(struct?: SynapseLinkedServiceIntegrationRuntime): any {
+function synapseLinkedServiceIntegrationRuntimeToTerraform(struct?: SynapseLinkedServiceIntegrationRuntimeOutputReference | SynapseLinkedServiceIntegrationRuntime): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     name: cdktf.stringToTerraform(struct!.name),
     parameters: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.parameters),
   }
 }
 
+export class SynapseLinkedServiceIntegrationRuntimeOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
+  }
+
+  // parameters - computed: false, optional: true, required: false
+  private _parameters?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  public get parameters() {
+    // Getting the computed value is not yet implemented
+    return this.interpolationForAttribute('parameters') as any;
+  }
+  public set parameters(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+    this._parameters = value;
+  }
+  public resetParameters() {
+    this._parameters = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get parametersInput() {
+    return this._parameters
+  }
+}
 export interface SynapseLinkedServiceTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_linked_service.html#create SynapseLinkedService#create}
@@ -90,8 +133,11 @@ export interface SynapseLinkedServiceTimeouts {
   readonly update?: string;
 }
 
-function synapseLinkedServiceTimeoutsToTerraform(struct?: SynapseLinkedServiceTimeouts): any {
+function synapseLinkedServiceTimeoutsToTerraform(struct?: SynapseLinkedServiceTimeoutsOutputReference | SynapseLinkedServiceTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -100,6 +146,80 @@ function synapseLinkedServiceTimeoutsToTerraform(struct?: SynapseLinkedServiceTi
   }
 }
 
+export class SynapseLinkedServiceTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_linked_service.html azurerm_synapse_linked_service}
@@ -150,11 +270,12 @@ export class SynapseLinkedService extends cdktf.TerraformResource {
   // ==========
 
   // additional_properties - computed: false, optional: true, required: false
-  private _additionalProperties?: { [key: string]: string } | cdktf.IResolvable;
+  private _additionalProperties?: { [key: string]: string } | cdktf.IResolvable | undefined; 
   public get additionalProperties() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('additional_properties') as any;
   }
-  public set additionalProperties(value: { [key: string]: string } | cdktf.IResolvable ) {
+  public set additionalProperties(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
     this._additionalProperties = value;
   }
   public resetAdditionalProperties() {
@@ -166,11 +287,11 @@ export class SynapseLinkedService extends cdktf.TerraformResource {
   }
 
   // annotations - computed: false, optional: true, required: false
-  private _annotations?: string[];
+  private _annotations?: string[] | undefined; 
   public get annotations() {
     return this.getListAttribute('annotations');
   }
-  public set annotations(value: string[] ) {
+  public set annotations(value: string[] | undefined) {
     this._annotations = value;
   }
   public resetAnnotations() {
@@ -182,11 +303,11 @@ export class SynapseLinkedService extends cdktf.TerraformResource {
   }
 
   // description - computed: false, optional: true, required: false
-  private _description?: string;
+  private _description?: string | undefined; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string ) {
+  public set description(value: string | undefined) {
     this._description = value;
   }
   public resetDescription() {
@@ -203,7 +324,7 @@ export class SynapseLinkedService extends cdktf.TerraformResource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -216,11 +337,12 @@ export class SynapseLinkedService extends cdktf.TerraformResource {
   }
 
   // parameters - computed: false, optional: true, required: false
-  private _parameters?: { [key: string]: string } | cdktf.IResolvable;
+  private _parameters?: { [key: string]: string } | cdktf.IResolvable | undefined; 
   public get parameters() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('parameters') as any;
   }
-  public set parameters(value: { [key: string]: string } | cdktf.IResolvable ) {
+  public set parameters(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
     this._parameters = value;
   }
   public resetParameters() {
@@ -232,7 +354,7 @@ export class SynapseLinkedService extends cdktf.TerraformResource {
   }
 
   // synapse_workspace_id - computed: false, optional: false, required: true
-  private _synapseWorkspaceId: string;
+  private _synapseWorkspaceId?: string; 
   public get synapseWorkspaceId() {
     return this.getStringAttribute('synapse_workspace_id');
   }
@@ -245,7 +367,7 @@ export class SynapseLinkedService extends cdktf.TerraformResource {
   }
 
   // type - computed: false, optional: false, required: true
-  private _type: string;
+  private _type?: string; 
   public get type() {
     return this.getStringAttribute('type');
   }
@@ -258,7 +380,7 @@ export class SynapseLinkedService extends cdktf.TerraformResource {
   }
 
   // type_properties_json - computed: false, optional: false, required: true
-  private _typePropertiesJson: string;
+  private _typePropertiesJson?: string; 
   public get typePropertiesJson() {
     return this.getStringAttribute('type_properties_json');
   }
@@ -271,11 +393,12 @@ export class SynapseLinkedService extends cdktf.TerraformResource {
   }
 
   // integration_runtime - computed: false, optional: true, required: false
-  private _integrationRuntime?: SynapseLinkedServiceIntegrationRuntime[];
+  private _integrationRuntime?: SynapseLinkedServiceIntegrationRuntime | undefined; 
+  private __integrationRuntimeOutput = new SynapseLinkedServiceIntegrationRuntimeOutputReference(this as any, "integration_runtime", true);
   public get integrationRuntime() {
-    return this.interpolationForAttribute('integration_runtime') as any;
+    return this.__integrationRuntimeOutput;
   }
-  public set integrationRuntime(value: SynapseLinkedServiceIntegrationRuntime[] ) {
+  public putIntegrationRuntime(value: SynapseLinkedServiceIntegrationRuntime | undefined) {
     this._integrationRuntime = value;
   }
   public resetIntegrationRuntime() {
@@ -287,11 +410,12 @@ export class SynapseLinkedService extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: SynapseLinkedServiceTimeouts;
+  private _timeouts?: SynapseLinkedServiceTimeouts | undefined; 
+  private __timeoutsOutput = new SynapseLinkedServiceTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: SynapseLinkedServiceTimeouts ) {
+  public putTimeouts(value: SynapseLinkedServiceTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {
@@ -316,7 +440,7 @@ export class SynapseLinkedService extends cdktf.TerraformResource {
       synapse_workspace_id: cdktf.stringToTerraform(this._synapseWorkspaceId),
       type: cdktf.stringToTerraform(this._type),
       type_properties_json: cdktf.stringToTerraform(this._typePropertiesJson),
-      integration_runtime: cdktf.listMapper(synapseLinkedServiceIntegrationRuntimeToTerraform)(this._integrationRuntime),
+      integration_runtime: synapseLinkedServiceIntegrationRuntimeToTerraform(this._integrationRuntime),
       timeouts: synapseLinkedServiceTimeoutsToTerraform(this._timeouts),
     };
   }

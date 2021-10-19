@@ -85,8 +85,11 @@ export interface DataFactoryLinkedServiceKustoTimeouts {
   readonly update?: string;
 }
 
-function dataFactoryLinkedServiceKustoTimeoutsToTerraform(struct?: DataFactoryLinkedServiceKustoTimeouts): any {
+function dataFactoryLinkedServiceKustoTimeoutsToTerraform(struct?: DataFactoryLinkedServiceKustoTimeoutsOutputReference | DataFactoryLinkedServiceKustoTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -95,6 +98,80 @@ function dataFactoryLinkedServiceKustoTimeoutsToTerraform(struct?: DataFactoryLi
   }
 }
 
+export class DataFactoryLinkedServiceKustoTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_kusto.html azurerm_data_factory_linked_service_kusto}
@@ -149,11 +226,12 @@ export class DataFactoryLinkedServiceKusto extends cdktf.TerraformResource {
   // ==========
 
   // additional_properties - computed: false, optional: true, required: false
-  private _additionalProperties?: { [key: string]: string } | cdktf.IResolvable;
+  private _additionalProperties?: { [key: string]: string } | cdktf.IResolvable | undefined; 
   public get additionalProperties() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('additional_properties') as any;
   }
-  public set additionalProperties(value: { [key: string]: string } | cdktf.IResolvable ) {
+  public set additionalProperties(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
     this._additionalProperties = value;
   }
   public resetAdditionalProperties() {
@@ -165,11 +243,11 @@ export class DataFactoryLinkedServiceKusto extends cdktf.TerraformResource {
   }
 
   // annotations - computed: false, optional: true, required: false
-  private _annotations?: string[];
+  private _annotations?: string[] | undefined; 
   public get annotations() {
     return this.getListAttribute('annotations');
   }
-  public set annotations(value: string[] ) {
+  public set annotations(value: string[] | undefined) {
     this._annotations = value;
   }
   public resetAnnotations() {
@@ -181,7 +259,7 @@ export class DataFactoryLinkedServiceKusto extends cdktf.TerraformResource {
   }
 
   // data_factory_id - computed: false, optional: false, required: true
-  private _dataFactoryId: string;
+  private _dataFactoryId?: string; 
   public get dataFactoryId() {
     return this.getStringAttribute('data_factory_id');
   }
@@ -194,11 +272,11 @@ export class DataFactoryLinkedServiceKusto extends cdktf.TerraformResource {
   }
 
   // description - computed: false, optional: true, required: false
-  private _description?: string;
+  private _description?: string | undefined; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string ) {
+  public set description(value: string | undefined) {
     this._description = value;
   }
   public resetDescription() {
@@ -215,11 +293,11 @@ export class DataFactoryLinkedServiceKusto extends cdktf.TerraformResource {
   }
 
   // integration_runtime_name - computed: false, optional: true, required: false
-  private _integrationRuntimeName?: string;
+  private _integrationRuntimeName?: string | undefined; 
   public get integrationRuntimeName() {
     return this.getStringAttribute('integration_runtime_name');
   }
-  public set integrationRuntimeName(value: string ) {
+  public set integrationRuntimeName(value: string | undefined) {
     this._integrationRuntimeName = value;
   }
   public resetIntegrationRuntimeName() {
@@ -231,7 +309,7 @@ export class DataFactoryLinkedServiceKusto extends cdktf.TerraformResource {
   }
 
   // kusto_database_name - computed: false, optional: false, required: true
-  private _kustoDatabaseName: string;
+  private _kustoDatabaseName?: string; 
   public get kustoDatabaseName() {
     return this.getStringAttribute('kusto_database_name');
   }
@@ -244,7 +322,7 @@ export class DataFactoryLinkedServiceKusto extends cdktf.TerraformResource {
   }
 
   // kusto_endpoint - computed: false, optional: false, required: true
-  private _kustoEndpoint: string;
+  private _kustoEndpoint?: string; 
   public get kustoEndpoint() {
     return this.getStringAttribute('kusto_endpoint');
   }
@@ -257,7 +335,7 @@ export class DataFactoryLinkedServiceKusto extends cdktf.TerraformResource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -270,11 +348,12 @@ export class DataFactoryLinkedServiceKusto extends cdktf.TerraformResource {
   }
 
   // parameters - computed: false, optional: true, required: false
-  private _parameters?: { [key: string]: string } | cdktf.IResolvable;
+  private _parameters?: { [key: string]: string } | cdktf.IResolvable | undefined; 
   public get parameters() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('parameters') as any;
   }
-  public set parameters(value: { [key: string]: string } | cdktf.IResolvable ) {
+  public set parameters(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
     this._parameters = value;
   }
   public resetParameters() {
@@ -286,11 +365,11 @@ export class DataFactoryLinkedServiceKusto extends cdktf.TerraformResource {
   }
 
   // service_principal_id - computed: false, optional: true, required: false
-  private _servicePrincipalId?: string;
+  private _servicePrincipalId?: string | undefined; 
   public get servicePrincipalId() {
     return this.getStringAttribute('service_principal_id');
   }
-  public set servicePrincipalId(value: string ) {
+  public set servicePrincipalId(value: string | undefined) {
     this._servicePrincipalId = value;
   }
   public resetServicePrincipalId() {
@@ -302,11 +381,11 @@ export class DataFactoryLinkedServiceKusto extends cdktf.TerraformResource {
   }
 
   // service_principal_key - computed: false, optional: true, required: false
-  private _servicePrincipalKey?: string;
+  private _servicePrincipalKey?: string | undefined; 
   public get servicePrincipalKey() {
     return this.getStringAttribute('service_principal_key');
   }
-  public set servicePrincipalKey(value: string ) {
+  public set servicePrincipalKey(value: string | undefined) {
     this._servicePrincipalKey = value;
   }
   public resetServicePrincipalKey() {
@@ -318,11 +397,11 @@ export class DataFactoryLinkedServiceKusto extends cdktf.TerraformResource {
   }
 
   // tenant - computed: false, optional: true, required: false
-  private _tenant?: string;
+  private _tenant?: string | undefined; 
   public get tenant() {
     return this.getStringAttribute('tenant');
   }
-  public set tenant(value: string ) {
+  public set tenant(value: string | undefined) {
     this._tenant = value;
   }
   public resetTenant() {
@@ -334,11 +413,11 @@ export class DataFactoryLinkedServiceKusto extends cdktf.TerraformResource {
   }
 
   // use_managed_identity - computed: false, optional: true, required: false
-  private _useManagedIdentity?: boolean | cdktf.IResolvable;
+  private _useManagedIdentity?: boolean | cdktf.IResolvable | undefined; 
   public get useManagedIdentity() {
-    return this.getBooleanAttribute('use_managed_identity');
+    return this.getBooleanAttribute('use_managed_identity') as any;
   }
-  public set useManagedIdentity(value: boolean | cdktf.IResolvable ) {
+  public set useManagedIdentity(value: boolean | cdktf.IResolvable | undefined) {
     this._useManagedIdentity = value;
   }
   public resetUseManagedIdentity() {
@@ -350,11 +429,12 @@ export class DataFactoryLinkedServiceKusto extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: DataFactoryLinkedServiceKustoTimeouts;
+  private _timeouts?: DataFactoryLinkedServiceKustoTimeouts | undefined; 
+  private __timeoutsOutput = new DataFactoryLinkedServiceKustoTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: DataFactoryLinkedServiceKustoTimeouts ) {
+  public putTimeouts(value: DataFactoryLinkedServiceKustoTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {

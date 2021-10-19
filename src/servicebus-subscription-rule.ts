@@ -44,7 +44,7 @@ export interface ServicebusSubscriptionRuleConfig extends cdktf.TerraformMetaArg
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_subscription_rule.html#correlation_filter ServicebusSubscriptionRule#correlation_filter}
   */
-  readonly correlationFilter?: ServicebusSubscriptionRuleCorrelationFilter[];
+  readonly correlationFilter?: ServicebusSubscriptionRuleCorrelationFilter;
   /**
   * timeouts block
   * 
@@ -91,8 +91,11 @@ export interface ServicebusSubscriptionRuleCorrelationFilter {
   readonly to?: string;
 }
 
-function servicebusSubscriptionRuleCorrelationFilterToTerraform(struct?: ServicebusSubscriptionRuleCorrelationFilter): any {
+function servicebusSubscriptionRuleCorrelationFilterToTerraform(struct?: ServicebusSubscriptionRuleCorrelationFilterOutputReference | ServicebusSubscriptionRuleCorrelationFilter): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     content_type: cdktf.stringToTerraform(struct!.contentType),
     correlation_id: cdktf.stringToTerraform(struct!.correlationId),
@@ -106,6 +109,161 @@ function servicebusSubscriptionRuleCorrelationFilterToTerraform(struct?: Service
   }
 }
 
+export class ServicebusSubscriptionRuleCorrelationFilterOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // content_type - computed: false, optional: true, required: false
+  private _contentType?: string | undefined; 
+  public get contentType() {
+    return this.getStringAttribute('content_type');
+  }
+  public set contentType(value: string | undefined) {
+    this._contentType = value;
+  }
+  public resetContentType() {
+    this._contentType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get contentTypeInput() {
+    return this._contentType
+  }
+
+  // correlation_id - computed: false, optional: true, required: false
+  private _correlationId?: string | undefined; 
+  public get correlationId() {
+    return this.getStringAttribute('correlation_id');
+  }
+  public set correlationId(value: string | undefined) {
+    this._correlationId = value;
+  }
+  public resetCorrelationId() {
+    this._correlationId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get correlationIdInput() {
+    return this._correlationId
+  }
+
+  // label - computed: false, optional: true, required: false
+  private _label?: string | undefined; 
+  public get label() {
+    return this.getStringAttribute('label');
+  }
+  public set label(value: string | undefined) {
+    this._label = value;
+  }
+  public resetLabel() {
+    this._label = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get labelInput() {
+    return this._label
+  }
+
+  // message_id - computed: false, optional: true, required: false
+  private _messageId?: string | undefined; 
+  public get messageId() {
+    return this.getStringAttribute('message_id');
+  }
+  public set messageId(value: string | undefined) {
+    this._messageId = value;
+  }
+  public resetMessageId() {
+    this._messageId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get messageIdInput() {
+    return this._messageId
+  }
+
+  // properties - computed: false, optional: true, required: false
+  private _properties?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  public get properties() {
+    // Getting the computed value is not yet implemented
+    return this.interpolationForAttribute('properties') as any;
+  }
+  public set properties(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+    this._properties = value;
+  }
+  public resetProperties() {
+    this._properties = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get propertiesInput() {
+    return this._properties
+  }
+
+  // reply_to - computed: false, optional: true, required: false
+  private _replyTo?: string | undefined; 
+  public get replyTo() {
+    return this.getStringAttribute('reply_to');
+  }
+  public set replyTo(value: string | undefined) {
+    this._replyTo = value;
+  }
+  public resetReplyTo() {
+    this._replyTo = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get replyToInput() {
+    return this._replyTo
+  }
+
+  // reply_to_session_id - computed: false, optional: true, required: false
+  private _replyToSessionId?: string | undefined; 
+  public get replyToSessionId() {
+    return this.getStringAttribute('reply_to_session_id');
+  }
+  public set replyToSessionId(value: string | undefined) {
+    this._replyToSessionId = value;
+  }
+  public resetReplyToSessionId() {
+    this._replyToSessionId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get replyToSessionIdInput() {
+    return this._replyToSessionId
+  }
+
+  // session_id - computed: false, optional: true, required: false
+  private _sessionId?: string | undefined; 
+  public get sessionId() {
+    return this.getStringAttribute('session_id');
+  }
+  public set sessionId(value: string | undefined) {
+    this._sessionId = value;
+  }
+  public resetSessionId() {
+    this._sessionId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sessionIdInput() {
+    return this._sessionId
+  }
+
+  // to - computed: false, optional: true, required: false
+  private _to?: string | undefined; 
+  public get to() {
+    return this.getStringAttribute('to');
+  }
+  public set to(value: string | undefined) {
+    this._to = value;
+  }
+  public resetTo() {
+    this._to = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get toInput() {
+    return this._to
+  }
+}
 export interface ServicebusSubscriptionRuleTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_subscription_rule.html#create ServicebusSubscriptionRule#create}
@@ -125,8 +283,11 @@ export interface ServicebusSubscriptionRuleTimeouts {
   readonly update?: string;
 }
 
-function servicebusSubscriptionRuleTimeoutsToTerraform(struct?: ServicebusSubscriptionRuleTimeouts): any {
+function servicebusSubscriptionRuleTimeoutsToTerraform(struct?: ServicebusSubscriptionRuleTimeoutsOutputReference | ServicebusSubscriptionRuleTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -135,6 +296,80 @@ function servicebusSubscriptionRuleTimeoutsToTerraform(struct?: ServicebusSubscr
   }
 }
 
+export class ServicebusSubscriptionRuleTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_subscription_rule.html azurerm_servicebus_subscription_rule}
@@ -185,11 +420,11 @@ export class ServicebusSubscriptionRule extends cdktf.TerraformResource {
   // ==========
 
   // action - computed: false, optional: true, required: false
-  private _action?: string;
+  private _action?: string | undefined; 
   public get action() {
     return this.getStringAttribute('action');
   }
-  public set action(value: string ) {
+  public set action(value: string | undefined) {
     this._action = value;
   }
   public resetAction() {
@@ -201,7 +436,7 @@ export class ServicebusSubscriptionRule extends cdktf.TerraformResource {
   }
 
   // filter_type - computed: false, optional: false, required: true
-  private _filterType: string;
+  private _filterType?: string; 
   public get filterType() {
     return this.getStringAttribute('filter_type');
   }
@@ -219,7 +454,7 @@ export class ServicebusSubscriptionRule extends cdktf.TerraformResource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -232,7 +467,7 @@ export class ServicebusSubscriptionRule extends cdktf.TerraformResource {
   }
 
   // namespace_name - computed: false, optional: false, required: true
-  private _namespaceName: string;
+  private _namespaceName?: string; 
   public get namespaceName() {
     return this.getStringAttribute('namespace_name');
   }
@@ -245,7 +480,7 @@ export class ServicebusSubscriptionRule extends cdktf.TerraformResource {
   }
 
   // resource_group_name - computed: false, optional: false, required: true
-  private _resourceGroupName: string;
+  private _resourceGroupName?: string; 
   public get resourceGroupName() {
     return this.getStringAttribute('resource_group_name');
   }
@@ -258,11 +493,11 @@ export class ServicebusSubscriptionRule extends cdktf.TerraformResource {
   }
 
   // sql_filter - computed: false, optional: true, required: false
-  private _sqlFilter?: string;
+  private _sqlFilter?: string | undefined; 
   public get sqlFilter() {
     return this.getStringAttribute('sql_filter');
   }
-  public set sqlFilter(value: string ) {
+  public set sqlFilter(value: string | undefined) {
     this._sqlFilter = value;
   }
   public resetSqlFilter() {
@@ -274,7 +509,7 @@ export class ServicebusSubscriptionRule extends cdktf.TerraformResource {
   }
 
   // subscription_name - computed: false, optional: false, required: true
-  private _subscriptionName: string;
+  private _subscriptionName?: string; 
   public get subscriptionName() {
     return this.getStringAttribute('subscription_name');
   }
@@ -287,7 +522,7 @@ export class ServicebusSubscriptionRule extends cdktf.TerraformResource {
   }
 
   // topic_name - computed: false, optional: false, required: true
-  private _topicName: string;
+  private _topicName?: string; 
   public get topicName() {
     return this.getStringAttribute('topic_name');
   }
@@ -300,11 +535,12 @@ export class ServicebusSubscriptionRule extends cdktf.TerraformResource {
   }
 
   // correlation_filter - computed: false, optional: true, required: false
-  private _correlationFilter?: ServicebusSubscriptionRuleCorrelationFilter[];
+  private _correlationFilter?: ServicebusSubscriptionRuleCorrelationFilter | undefined; 
+  private __correlationFilterOutput = new ServicebusSubscriptionRuleCorrelationFilterOutputReference(this as any, "correlation_filter", true);
   public get correlationFilter() {
-    return this.interpolationForAttribute('correlation_filter') as any;
+    return this.__correlationFilterOutput;
   }
-  public set correlationFilter(value: ServicebusSubscriptionRuleCorrelationFilter[] ) {
+  public putCorrelationFilter(value: ServicebusSubscriptionRuleCorrelationFilter | undefined) {
     this._correlationFilter = value;
   }
   public resetCorrelationFilter() {
@@ -316,11 +552,12 @@ export class ServicebusSubscriptionRule extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: ServicebusSubscriptionRuleTimeouts;
+  private _timeouts?: ServicebusSubscriptionRuleTimeouts | undefined; 
+  private __timeoutsOutput = new ServicebusSubscriptionRuleTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: ServicebusSubscriptionRuleTimeouts ) {
+  public putTimeouts(value: ServicebusSubscriptionRuleTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {
@@ -345,7 +582,7 @@ export class ServicebusSubscriptionRule extends cdktf.TerraformResource {
       sql_filter: cdktf.stringToTerraform(this._sqlFilter),
       subscription_name: cdktf.stringToTerraform(this._subscriptionName),
       topic_name: cdktf.stringToTerraform(this._topicName),
-      correlation_filter: cdktf.listMapper(servicebusSubscriptionRuleCorrelationFilterToTerraform)(this._correlationFilter),
+      correlation_filter: servicebusSubscriptionRuleCorrelationFilterToTerraform(this._correlationFilter),
       timeouts: servicebusSubscriptionRuleTimeoutsToTerraform(this._timeouts),
     };
   }

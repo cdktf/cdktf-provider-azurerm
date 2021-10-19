@@ -68,7 +68,7 @@ export interface MachineLearningWorkspaceConfig extends cdktf.TerraformMetaArgum
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/machine_learning_workspace.html#identity MachineLearningWorkspace#identity}
   */
-  readonly identity: MachineLearningWorkspaceIdentity[];
+  readonly identity: MachineLearningWorkspaceIdentity;
   /**
   * timeouts block
   * 
@@ -83,13 +83,39 @@ export interface MachineLearningWorkspaceIdentity {
   readonly type: string;
 }
 
-function machineLearningWorkspaceIdentityToTerraform(struct?: MachineLearningWorkspaceIdentity): any {
+function machineLearningWorkspaceIdentityToTerraform(struct?: MachineLearningWorkspaceIdentityOutputReference | MachineLearningWorkspaceIdentity): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     type: cdktf.stringToTerraform(struct!.type),
   }
 }
 
+export class MachineLearningWorkspaceIdentityOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // type - computed: false, optional: false, required: true
+  private _type?: string; 
+  public get type() {
+    return this.getStringAttribute('type');
+  }
+  public set type(value: string) {
+    this._type = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get typeInput() {
+    return this._type
+  }
+}
 export interface MachineLearningWorkspaceTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/machine_learning_workspace.html#create MachineLearningWorkspace#create}
@@ -109,8 +135,11 @@ export interface MachineLearningWorkspaceTimeouts {
   readonly update?: string;
 }
 
-function machineLearningWorkspaceTimeoutsToTerraform(struct?: MachineLearningWorkspaceTimeouts): any {
+function machineLearningWorkspaceTimeoutsToTerraform(struct?: MachineLearningWorkspaceTimeoutsOutputReference | MachineLearningWorkspaceTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -119,6 +148,80 @@ function machineLearningWorkspaceTimeoutsToTerraform(struct?: MachineLearningWor
   }
 }
 
+export class MachineLearningWorkspaceTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/machine_learning_workspace.html azurerm_machine_learning_workspace}
@@ -175,7 +278,7 @@ export class MachineLearningWorkspace extends cdktf.TerraformResource {
   // ==========
 
   // application_insights_id - computed: false, optional: false, required: true
-  private _applicationInsightsId: string;
+  private _applicationInsightsId?: string; 
   public get applicationInsightsId() {
     return this.getStringAttribute('application_insights_id');
   }
@@ -188,11 +291,11 @@ export class MachineLearningWorkspace extends cdktf.TerraformResource {
   }
 
   // container_registry_id - computed: false, optional: true, required: false
-  private _containerRegistryId?: string;
+  private _containerRegistryId?: string | undefined; 
   public get containerRegistryId() {
     return this.getStringAttribute('container_registry_id');
   }
-  public set containerRegistryId(value: string ) {
+  public set containerRegistryId(value: string | undefined) {
     this._containerRegistryId = value;
   }
   public resetContainerRegistryId() {
@@ -204,11 +307,11 @@ export class MachineLearningWorkspace extends cdktf.TerraformResource {
   }
 
   // description - computed: false, optional: true, required: false
-  private _description?: string;
+  private _description?: string | undefined; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string ) {
+  public set description(value: string | undefined) {
     this._description = value;
   }
   public resetDescription() {
@@ -225,11 +328,11 @@ export class MachineLearningWorkspace extends cdktf.TerraformResource {
   }
 
   // friendly_name - computed: false, optional: true, required: false
-  private _friendlyName?: string;
+  private _friendlyName?: string | undefined; 
   public get friendlyName() {
     return this.getStringAttribute('friendly_name');
   }
-  public set friendlyName(value: string ) {
+  public set friendlyName(value: string | undefined) {
     this._friendlyName = value;
   }
   public resetFriendlyName() {
@@ -241,11 +344,11 @@ export class MachineLearningWorkspace extends cdktf.TerraformResource {
   }
 
   // high_business_impact - computed: false, optional: true, required: false
-  private _highBusinessImpact?: boolean | cdktf.IResolvable;
+  private _highBusinessImpact?: boolean | cdktf.IResolvable | undefined; 
   public get highBusinessImpact() {
-    return this.getBooleanAttribute('high_business_impact');
+    return this.getBooleanAttribute('high_business_impact') as any;
   }
-  public set highBusinessImpact(value: boolean | cdktf.IResolvable ) {
+  public set highBusinessImpact(value: boolean | cdktf.IResolvable | undefined) {
     this._highBusinessImpact = value;
   }
   public resetHighBusinessImpact() {
@@ -262,11 +365,11 @@ export class MachineLearningWorkspace extends cdktf.TerraformResource {
   }
 
   // image_build_compute_name - computed: false, optional: true, required: false
-  private _imageBuildComputeName?: string;
+  private _imageBuildComputeName?: string | undefined; 
   public get imageBuildComputeName() {
     return this.getStringAttribute('image_build_compute_name');
   }
-  public set imageBuildComputeName(value: string ) {
+  public set imageBuildComputeName(value: string | undefined) {
     this._imageBuildComputeName = value;
   }
   public resetImageBuildComputeName() {
@@ -278,7 +381,7 @@ export class MachineLearningWorkspace extends cdktf.TerraformResource {
   }
 
   // key_vault_id - computed: false, optional: false, required: true
-  private _keyVaultId: string;
+  private _keyVaultId?: string; 
   public get keyVaultId() {
     return this.getStringAttribute('key_vault_id');
   }
@@ -291,7 +394,7 @@ export class MachineLearningWorkspace extends cdktf.TerraformResource {
   }
 
   // location - computed: false, optional: false, required: true
-  private _location: string;
+  private _location?: string; 
   public get location() {
     return this.getStringAttribute('location');
   }
@@ -304,7 +407,7 @@ export class MachineLearningWorkspace extends cdktf.TerraformResource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -317,11 +420,11 @@ export class MachineLearningWorkspace extends cdktf.TerraformResource {
   }
 
   // public_network_access_enabled - computed: false, optional: true, required: false
-  private _publicNetworkAccessEnabled?: boolean | cdktf.IResolvable;
+  private _publicNetworkAccessEnabled?: boolean | cdktf.IResolvable | undefined; 
   public get publicNetworkAccessEnabled() {
-    return this.getBooleanAttribute('public_network_access_enabled');
+    return this.getBooleanAttribute('public_network_access_enabled') as any;
   }
-  public set publicNetworkAccessEnabled(value: boolean | cdktf.IResolvable ) {
+  public set publicNetworkAccessEnabled(value: boolean | cdktf.IResolvable | undefined) {
     this._publicNetworkAccessEnabled = value;
   }
   public resetPublicNetworkAccessEnabled() {
@@ -333,7 +436,7 @@ export class MachineLearningWorkspace extends cdktf.TerraformResource {
   }
 
   // resource_group_name - computed: false, optional: false, required: true
-  private _resourceGroupName: string;
+  private _resourceGroupName?: string; 
   public get resourceGroupName() {
     return this.getStringAttribute('resource_group_name');
   }
@@ -346,11 +449,11 @@ export class MachineLearningWorkspace extends cdktf.TerraformResource {
   }
 
   // sku_name - computed: false, optional: true, required: false
-  private _skuName?: string;
+  private _skuName?: string | undefined; 
   public get skuName() {
     return this.getStringAttribute('sku_name');
   }
-  public set skuName(value: string ) {
+  public set skuName(value: string | undefined) {
     this._skuName = value;
   }
   public resetSkuName() {
@@ -362,7 +465,7 @@ export class MachineLearningWorkspace extends cdktf.TerraformResource {
   }
 
   // storage_account_id - computed: false, optional: false, required: true
-  private _storageAccountId: string;
+  private _storageAccountId?: string; 
   public get storageAccountId() {
     return this.getStringAttribute('storage_account_id');
   }
@@ -375,11 +478,12 @@ export class MachineLearningWorkspace extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable;
+  private _tags?: { [key: string]: string } | cdktf.IResolvable | undefined; 
   public get tags() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
     this._tags = value;
   }
   public resetTags() {
@@ -391,11 +495,12 @@ export class MachineLearningWorkspace extends cdktf.TerraformResource {
   }
 
   // identity - computed: false, optional: false, required: true
-  private _identity: MachineLearningWorkspaceIdentity[];
+  private _identity?: MachineLearningWorkspaceIdentity; 
+  private __identityOutput = new MachineLearningWorkspaceIdentityOutputReference(this as any, "identity", true);
   public get identity() {
-    return this.interpolationForAttribute('identity') as any;
+    return this.__identityOutput;
   }
-  public set identity(value: MachineLearningWorkspaceIdentity[]) {
+  public putIdentity(value: MachineLearningWorkspaceIdentity) {
     this._identity = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -404,11 +509,12 @@ export class MachineLearningWorkspace extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: MachineLearningWorkspaceTimeouts;
+  private _timeouts?: MachineLearningWorkspaceTimeouts | undefined; 
+  private __timeoutsOutput = new MachineLearningWorkspaceTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: MachineLearningWorkspaceTimeouts ) {
+  public putTimeouts(value: MachineLearningWorkspaceTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {
@@ -439,7 +545,7 @@ export class MachineLearningWorkspace extends cdktf.TerraformResource {
       sku_name: cdktf.stringToTerraform(this._skuName),
       storage_account_id: cdktf.stringToTerraform(this._storageAccountId),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
-      identity: cdktf.listMapper(machineLearningWorkspaceIdentityToTerraform)(this._identity),
+      identity: machineLearningWorkspaceIdentityToTerraform(this._identity),
       timeouts: machineLearningWorkspaceTimeoutsToTerraform(this._timeouts),
     };
   }

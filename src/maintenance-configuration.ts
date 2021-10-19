@@ -46,7 +46,7 @@ export interface MaintenanceConfigurationConfig extends cdktf.TerraformMetaArgum
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/maintenance_configuration.html#window MaintenanceConfiguration#window}
   */
-  readonly window?: MaintenanceConfigurationWindow[];
+  readonly window?: MaintenanceConfigurationWindow;
 }
 export interface MaintenanceConfigurationTimeouts {
   /**
@@ -67,8 +67,11 @@ export interface MaintenanceConfigurationTimeouts {
   readonly update?: string;
 }
 
-function maintenanceConfigurationTimeoutsToTerraform(struct?: MaintenanceConfigurationTimeouts): any {
+function maintenanceConfigurationTimeoutsToTerraform(struct?: MaintenanceConfigurationTimeoutsOutputReference | MaintenanceConfigurationTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -77,6 +80,80 @@ function maintenanceConfigurationTimeoutsToTerraform(struct?: MaintenanceConfigu
   }
 }
 
+export class MaintenanceConfigurationTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 export interface MaintenanceConfigurationWindow {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/maintenance_configuration.html#duration MaintenanceConfiguration#duration}
@@ -100,8 +177,11 @@ export interface MaintenanceConfigurationWindow {
   readonly timeZone: string;
 }
 
-function maintenanceConfigurationWindowToTerraform(struct?: MaintenanceConfigurationWindow): any {
+function maintenanceConfigurationWindowToTerraform(struct?: MaintenanceConfigurationWindowOutputReference | MaintenanceConfigurationWindow): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     duration: cdktf.stringToTerraform(struct!.duration),
     expiration_date_time: cdktf.stringToTerraform(struct!.expirationDateTime),
@@ -111,6 +191,90 @@ function maintenanceConfigurationWindowToTerraform(struct?: MaintenanceConfigura
   }
 }
 
+export class MaintenanceConfigurationWindowOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // duration - computed: false, optional: true, required: false
+  private _duration?: string | undefined; 
+  public get duration() {
+    return this.getStringAttribute('duration');
+  }
+  public set duration(value: string | undefined) {
+    this._duration = value;
+  }
+  public resetDuration() {
+    this._duration = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get durationInput() {
+    return this._duration
+  }
+
+  // expiration_date_time - computed: false, optional: true, required: false
+  private _expirationDateTime?: string | undefined; 
+  public get expirationDateTime() {
+    return this.getStringAttribute('expiration_date_time');
+  }
+  public set expirationDateTime(value: string | undefined) {
+    this._expirationDateTime = value;
+  }
+  public resetExpirationDateTime() {
+    this._expirationDateTime = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get expirationDateTimeInput() {
+    return this._expirationDateTime
+  }
+
+  // recur_every - computed: false, optional: true, required: false
+  private _recurEvery?: string | undefined; 
+  public get recurEvery() {
+    return this.getStringAttribute('recur_every');
+  }
+  public set recurEvery(value: string | undefined) {
+    this._recurEvery = value;
+  }
+  public resetRecurEvery() {
+    this._recurEvery = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get recurEveryInput() {
+    return this._recurEvery
+  }
+
+  // start_date_time - computed: false, optional: false, required: true
+  private _startDateTime?: string; 
+  public get startDateTime() {
+    return this.getStringAttribute('start_date_time');
+  }
+  public set startDateTime(value: string) {
+    this._startDateTime = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get startDateTimeInput() {
+    return this._startDateTime
+  }
+
+  // time_zone - computed: false, optional: false, required: true
+  private _timeZone?: string; 
+  public get timeZone() {
+    return this.getStringAttribute('time_zone');
+  }
+  public set timeZone(value: string) {
+    this._timeZone = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeZoneInput() {
+    return this._timeZone
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/maintenance_configuration.html azurerm_maintenance_configuration}
@@ -165,7 +329,7 @@ export class MaintenanceConfiguration extends cdktf.TerraformResource {
   }
 
   // location - computed: false, optional: false, required: true
-  private _location: string;
+  private _location?: string; 
   public get location() {
     return this.getStringAttribute('location');
   }
@@ -178,7 +342,7 @@ export class MaintenanceConfiguration extends cdktf.TerraformResource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -191,11 +355,12 @@ export class MaintenanceConfiguration extends cdktf.TerraformResource {
   }
 
   // properties - computed: false, optional: true, required: false
-  private _properties?: { [key: string]: string } | cdktf.IResolvable;
+  private _properties?: { [key: string]: string } | cdktf.IResolvable | undefined; 
   public get properties() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('properties') as any;
   }
-  public set properties(value: { [key: string]: string } | cdktf.IResolvable ) {
+  public set properties(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
     this._properties = value;
   }
   public resetProperties() {
@@ -207,7 +372,7 @@ export class MaintenanceConfiguration extends cdktf.TerraformResource {
   }
 
   // resource_group_name - computed: false, optional: false, required: true
-  private _resourceGroupName: string;
+  private _resourceGroupName?: string; 
   public get resourceGroupName() {
     return this.getStringAttribute('resource_group_name');
   }
@@ -220,11 +385,11 @@ export class MaintenanceConfiguration extends cdktf.TerraformResource {
   }
 
   // scope - computed: false, optional: true, required: false
-  private _scope?: string;
+  private _scope?: string | undefined; 
   public get scope() {
     return this.getStringAttribute('scope');
   }
-  public set scope(value: string ) {
+  public set scope(value: string | undefined) {
     this._scope = value;
   }
   public resetScope() {
@@ -236,11 +401,12 @@ export class MaintenanceConfiguration extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable;
+  private _tags?: { [key: string]: string } | cdktf.IResolvable | undefined; 
   public get tags() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
     this._tags = value;
   }
   public resetTags() {
@@ -252,11 +418,11 @@ export class MaintenanceConfiguration extends cdktf.TerraformResource {
   }
 
   // visibility - computed: false, optional: true, required: false
-  private _visibility?: string;
+  private _visibility?: string | undefined; 
   public get visibility() {
     return this.getStringAttribute('visibility');
   }
-  public set visibility(value: string ) {
+  public set visibility(value: string | undefined) {
     this._visibility = value;
   }
   public resetVisibility() {
@@ -268,11 +434,12 @@ export class MaintenanceConfiguration extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: MaintenanceConfigurationTimeouts;
+  private _timeouts?: MaintenanceConfigurationTimeouts | undefined; 
+  private __timeoutsOutput = new MaintenanceConfigurationTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: MaintenanceConfigurationTimeouts ) {
+  public putTimeouts(value: MaintenanceConfigurationTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {
@@ -284,11 +451,12 @@ export class MaintenanceConfiguration extends cdktf.TerraformResource {
   }
 
   // window - computed: false, optional: true, required: false
-  private _window?: MaintenanceConfigurationWindow[];
+  private _window?: MaintenanceConfigurationWindow | undefined; 
+  private __windowOutput = new MaintenanceConfigurationWindowOutputReference(this as any, "window", true);
   public get window() {
-    return this.interpolationForAttribute('window') as any;
+    return this.__windowOutput;
   }
-  public set window(value: MaintenanceConfigurationWindow[] ) {
+  public putWindow(value: MaintenanceConfigurationWindow | undefined) {
     this._window = value;
   }
   public resetWindow() {
@@ -313,7 +481,7 @@ export class MaintenanceConfiguration extends cdktf.TerraformResource {
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
       visibility: cdktf.stringToTerraform(this._visibility),
       timeouts: maintenanceConfigurationTimeoutsToTerraform(this._timeouts),
-      window: cdktf.listMapper(maintenanceConfigurationWindowToTerraform)(this._window),
+      window: maintenanceConfigurationWindowToTerraform(this._window),
     };
   }
 }

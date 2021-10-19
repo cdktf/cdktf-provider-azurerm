@@ -29,13 +29,42 @@ export interface DataAzurermKeyVaultManagedHardwareSecurityModuleTimeouts {
   readonly read?: string;
 }
 
-function dataAzurermKeyVaultManagedHardwareSecurityModuleTimeoutsToTerraform(struct?: DataAzurermKeyVaultManagedHardwareSecurityModuleTimeouts): any {
+function dataAzurermKeyVaultManagedHardwareSecurityModuleTimeoutsToTerraform(struct?: DataAzurermKeyVaultManagedHardwareSecurityModuleTimeoutsOutputReference | DataAzurermKeyVaultManagedHardwareSecurityModuleTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     read: cdktf.stringToTerraform(struct!.read),
   }
 }
 
+export class DataAzurermKeyVaultManagedHardwareSecurityModuleTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/key_vault_managed_hardware_security_module.html azurerm_key_vault_managed_hardware_security_module}
@@ -99,7 +128,7 @@ export class DataAzurermKeyVaultManagedHardwareSecurityModule extends cdktf.Terr
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -113,11 +142,11 @@ export class DataAzurermKeyVaultManagedHardwareSecurityModule extends cdktf.Terr
 
   // purge_protection_enabled - computed: true, optional: false, required: false
   public get purgeProtectionEnabled() {
-    return this.getBooleanAttribute('purge_protection_enabled');
+    return this.getBooleanAttribute('purge_protection_enabled') as any;
   }
 
   // resource_group_name - computed: false, optional: false, required: true
-  private _resourceGroupName: string;
+  private _resourceGroupName?: string; 
   public get resourceGroupName() {
     return this.getStringAttribute('resource_group_name');
   }
@@ -150,11 +179,12 @@ export class DataAzurermKeyVaultManagedHardwareSecurityModule extends cdktf.Terr
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: DataAzurermKeyVaultManagedHardwareSecurityModuleTimeouts;
+  private _timeouts?: DataAzurermKeyVaultManagedHardwareSecurityModuleTimeouts | undefined; 
+  private __timeoutsOutput = new DataAzurermKeyVaultManagedHardwareSecurityModuleTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: DataAzurermKeyVaultManagedHardwareSecurityModuleTimeouts ) {
+  public putTimeouts(value: DataAzurermKeyVaultManagedHardwareSecurityModuleTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {

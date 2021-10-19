@@ -40,13 +40,13 @@ export interface MachineLearningInferenceClusterConfig extends cdktf.TerraformMe
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/machine_learning_inference_cluster.html#identity MachineLearningInferenceCluster#identity}
   */
-  readonly identity?: MachineLearningInferenceClusterIdentity[];
+  readonly identity?: MachineLearningInferenceClusterIdentity;
   /**
   * ssl block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/machine_learning_inference_cluster.html#ssl MachineLearningInferenceCluster#ssl}
   */
-  readonly ssl?: MachineLearningInferenceClusterSsl[];
+  readonly ssl?: MachineLearningInferenceClusterSsl;
   /**
   * timeouts block
   * 
@@ -65,14 +65,56 @@ export interface MachineLearningInferenceClusterIdentity {
   readonly type: string;
 }
 
-function machineLearningInferenceClusterIdentityToTerraform(struct?: MachineLearningInferenceClusterIdentity): any {
+function machineLearningInferenceClusterIdentityToTerraform(struct?: MachineLearningInferenceClusterIdentityOutputReference | MachineLearningInferenceClusterIdentity): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     identity_ids: cdktf.listMapper(cdktf.stringToTerraform)(struct!.identityIds),
     type: cdktf.stringToTerraform(struct!.type),
   }
 }
 
+export class MachineLearningInferenceClusterIdentityOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // identity_ids - computed: false, optional: true, required: false
+  private _identityIds?: string[] | undefined; 
+  public get identityIds() {
+    return this.getListAttribute('identity_ids');
+  }
+  public set identityIds(value: string[] | undefined) {
+    this._identityIds = value;
+  }
+  public resetIdentityIds() {
+    this._identityIds = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get identityIdsInput() {
+    return this._identityIds
+  }
+
+  // type - computed: false, optional: false, required: true
+  private _type?: string; 
+  public get type() {
+    return this.getStringAttribute('type');
+  }
+  public set type(value: string) {
+    this._type = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get typeInput() {
+    return this._type
+  }
+}
 export interface MachineLearningInferenceClusterSsl {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/machine_learning_inference_cluster.html#cert MachineLearningInferenceCluster#cert}
@@ -96,8 +138,11 @@ export interface MachineLearningInferenceClusterSsl {
   readonly overwriteExistingDomain?: boolean | cdktf.IResolvable;
 }
 
-function machineLearningInferenceClusterSslToTerraform(struct?: MachineLearningInferenceClusterSsl): any {
+function machineLearningInferenceClusterSslToTerraform(struct?: MachineLearningInferenceClusterSslOutputReference | MachineLearningInferenceClusterSsl): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     cert: cdktf.stringToTerraform(struct!.cert),
     cname: cdktf.stringToTerraform(struct!.cname),
@@ -107,6 +152,96 @@ function machineLearningInferenceClusterSslToTerraform(struct?: MachineLearningI
   }
 }
 
+export class MachineLearningInferenceClusterSslOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // cert - computed: false, optional: true, required: false
+  private _cert?: string | undefined; 
+  public get cert() {
+    return this.getStringAttribute('cert');
+  }
+  public set cert(value: string | undefined) {
+    this._cert = value;
+  }
+  public resetCert() {
+    this._cert = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get certInput() {
+    return this._cert
+  }
+
+  // cname - computed: false, optional: true, required: false
+  private _cname?: string | undefined; 
+  public get cname() {
+    return this.getStringAttribute('cname');
+  }
+  public set cname(value: string | undefined) {
+    this._cname = value;
+  }
+  public resetCname() {
+    this._cname = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get cnameInput() {
+    return this._cname
+  }
+
+  // key - computed: false, optional: true, required: false
+  private _key?: string | undefined; 
+  public get key() {
+    return this.getStringAttribute('key');
+  }
+  public set key(value: string | undefined) {
+    this._key = value;
+  }
+  public resetKey() {
+    this._key = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keyInput() {
+    return this._key
+  }
+
+  // leaf_domain_label - computed: false, optional: true, required: false
+  private _leafDomainLabel?: string | undefined; 
+  public get leafDomainLabel() {
+    return this.getStringAttribute('leaf_domain_label');
+  }
+  public set leafDomainLabel(value: string | undefined) {
+    this._leafDomainLabel = value;
+  }
+  public resetLeafDomainLabel() {
+    this._leafDomainLabel = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get leafDomainLabelInput() {
+    return this._leafDomainLabel
+  }
+
+  // overwrite_existing_domain - computed: false, optional: true, required: false
+  private _overwriteExistingDomain?: boolean | cdktf.IResolvable | undefined; 
+  public get overwriteExistingDomain() {
+    return this.getBooleanAttribute('overwrite_existing_domain') as any;
+  }
+  public set overwriteExistingDomain(value: boolean | cdktf.IResolvable | undefined) {
+    this._overwriteExistingDomain = value;
+  }
+  public resetOverwriteExistingDomain() {
+    this._overwriteExistingDomain = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get overwriteExistingDomainInput() {
+    return this._overwriteExistingDomain
+  }
+}
 export interface MachineLearningInferenceClusterTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/machine_learning_inference_cluster.html#create MachineLearningInferenceCluster#create}
@@ -126,8 +261,11 @@ export interface MachineLearningInferenceClusterTimeouts {
   readonly update?: string;
 }
 
-function machineLearningInferenceClusterTimeoutsToTerraform(struct?: MachineLearningInferenceClusterTimeouts): any {
+function machineLearningInferenceClusterTimeoutsToTerraform(struct?: MachineLearningInferenceClusterTimeoutsOutputReference | MachineLearningInferenceClusterTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -136,6 +274,80 @@ function machineLearningInferenceClusterTimeoutsToTerraform(struct?: MachineLear
   }
 }
 
+export class MachineLearningInferenceClusterTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/machine_learning_inference_cluster.html azurerm_machine_learning_inference_cluster}
@@ -186,11 +398,11 @@ export class MachineLearningInferenceCluster extends cdktf.TerraformResource {
   // ==========
 
   // cluster_purpose - computed: false, optional: true, required: false
-  private _clusterPurpose?: string;
+  private _clusterPurpose?: string | undefined; 
   public get clusterPurpose() {
     return this.getStringAttribute('cluster_purpose');
   }
-  public set clusterPurpose(value: string ) {
+  public set clusterPurpose(value: string | undefined) {
     this._clusterPurpose = value;
   }
   public resetClusterPurpose() {
@@ -202,11 +414,11 @@ export class MachineLearningInferenceCluster extends cdktf.TerraformResource {
   }
 
   // description - computed: false, optional: true, required: false
-  private _description?: string;
+  private _description?: string | undefined; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string ) {
+  public set description(value: string | undefined) {
     this._description = value;
   }
   public resetDescription() {
@@ -223,7 +435,7 @@ export class MachineLearningInferenceCluster extends cdktf.TerraformResource {
   }
 
   // kubernetes_cluster_id - computed: false, optional: false, required: true
-  private _kubernetesClusterId: string;
+  private _kubernetesClusterId?: string; 
   public get kubernetesClusterId() {
     return this.getStringAttribute('kubernetes_cluster_id');
   }
@@ -236,7 +448,7 @@ export class MachineLearningInferenceCluster extends cdktf.TerraformResource {
   }
 
   // location - computed: false, optional: false, required: true
-  private _location: string;
+  private _location?: string; 
   public get location() {
     return this.getStringAttribute('location');
   }
@@ -249,7 +461,7 @@ export class MachineLearningInferenceCluster extends cdktf.TerraformResource {
   }
 
   // machine_learning_workspace_id - computed: false, optional: false, required: true
-  private _machineLearningWorkspaceId: string;
+  private _machineLearningWorkspaceId?: string; 
   public get machineLearningWorkspaceId() {
     return this.getStringAttribute('machine_learning_workspace_id');
   }
@@ -262,7 +474,7 @@ export class MachineLearningInferenceCluster extends cdktf.TerraformResource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -275,11 +487,12 @@ export class MachineLearningInferenceCluster extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable;
+  private _tags?: { [key: string]: string } | cdktf.IResolvable | undefined; 
   public get tags() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
     this._tags = value;
   }
   public resetTags() {
@@ -291,11 +504,12 @@ export class MachineLearningInferenceCluster extends cdktf.TerraformResource {
   }
 
   // identity - computed: false, optional: true, required: false
-  private _identity?: MachineLearningInferenceClusterIdentity[];
+  private _identity?: MachineLearningInferenceClusterIdentity | undefined; 
+  private __identityOutput = new MachineLearningInferenceClusterIdentityOutputReference(this as any, "identity", true);
   public get identity() {
-    return this.interpolationForAttribute('identity') as any;
+    return this.__identityOutput;
   }
-  public set identity(value: MachineLearningInferenceClusterIdentity[] ) {
+  public putIdentity(value: MachineLearningInferenceClusterIdentity | undefined) {
     this._identity = value;
   }
   public resetIdentity() {
@@ -307,11 +521,12 @@ export class MachineLearningInferenceCluster extends cdktf.TerraformResource {
   }
 
   // ssl - computed: false, optional: true, required: false
-  private _ssl?: MachineLearningInferenceClusterSsl[];
+  private _ssl?: MachineLearningInferenceClusterSsl | undefined; 
+  private __sslOutput = new MachineLearningInferenceClusterSslOutputReference(this as any, "ssl", true);
   public get ssl() {
-    return this.interpolationForAttribute('ssl') as any;
+    return this.__sslOutput;
   }
-  public set ssl(value: MachineLearningInferenceClusterSsl[] ) {
+  public putSsl(value: MachineLearningInferenceClusterSsl | undefined) {
     this._ssl = value;
   }
   public resetSsl() {
@@ -323,11 +538,12 @@ export class MachineLearningInferenceCluster extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: MachineLearningInferenceClusterTimeouts;
+  private _timeouts?: MachineLearningInferenceClusterTimeouts | undefined; 
+  private __timeoutsOutput = new MachineLearningInferenceClusterTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: MachineLearningInferenceClusterTimeouts ) {
+  public putTimeouts(value: MachineLearningInferenceClusterTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {
@@ -351,8 +567,8 @@ export class MachineLearningInferenceCluster extends cdktf.TerraformResource {
       machine_learning_workspace_id: cdktf.stringToTerraform(this._machineLearningWorkspaceId),
       name: cdktf.stringToTerraform(this._name),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
-      identity: cdktf.listMapper(machineLearningInferenceClusterIdentityToTerraform)(this._identity),
-      ssl: cdktf.listMapper(machineLearningInferenceClusterSslToTerraform)(this._ssl),
+      identity: machineLearningInferenceClusterIdentityToTerraform(this._identity),
+      ssl: machineLearningInferenceClusterSslToTerraform(this._ssl),
       timeouts: machineLearningInferenceClusterTimeoutsToTerraform(this._timeouts),
     };
   }

@@ -65,8 +65,11 @@ export interface LogAnalyticsSavedSearchTimeouts {
   readonly update?: string;
 }
 
-function logAnalyticsSavedSearchTimeoutsToTerraform(struct?: LogAnalyticsSavedSearchTimeouts): any {
+function logAnalyticsSavedSearchTimeoutsToTerraform(struct?: LogAnalyticsSavedSearchTimeoutsOutputReference | LogAnalyticsSavedSearchTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -75,6 +78,80 @@ function logAnalyticsSavedSearchTimeoutsToTerraform(struct?: LogAnalyticsSavedSe
   }
 }
 
+export class LogAnalyticsSavedSearchTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_saved_search.html azurerm_log_analytics_saved_search}
@@ -124,7 +201,7 @@ export class LogAnalyticsSavedSearch extends cdktf.TerraformResource {
   // ==========
 
   // category - computed: false, optional: false, required: true
-  private _category: string;
+  private _category?: string; 
   public get category() {
     return this.getStringAttribute('category');
   }
@@ -137,7 +214,7 @@ export class LogAnalyticsSavedSearch extends cdktf.TerraformResource {
   }
 
   // display_name - computed: false, optional: false, required: true
-  private _displayName: string;
+  private _displayName?: string; 
   public get displayName() {
     return this.getStringAttribute('display_name');
   }
@@ -150,11 +227,11 @@ export class LogAnalyticsSavedSearch extends cdktf.TerraformResource {
   }
 
   // function_alias - computed: false, optional: true, required: false
-  private _functionAlias?: string;
+  private _functionAlias?: string | undefined; 
   public get functionAlias() {
     return this.getStringAttribute('function_alias');
   }
-  public set functionAlias(value: string ) {
+  public set functionAlias(value: string | undefined) {
     this._functionAlias = value;
   }
   public resetFunctionAlias() {
@@ -166,11 +243,11 @@ export class LogAnalyticsSavedSearch extends cdktf.TerraformResource {
   }
 
   // function_parameters - computed: false, optional: true, required: false
-  private _functionParameters?: string[];
+  private _functionParameters?: string[] | undefined; 
   public get functionParameters() {
     return this.getListAttribute('function_parameters');
   }
-  public set functionParameters(value: string[] ) {
+  public set functionParameters(value: string[] | undefined) {
     this._functionParameters = value;
   }
   public resetFunctionParameters() {
@@ -187,7 +264,7 @@ export class LogAnalyticsSavedSearch extends cdktf.TerraformResource {
   }
 
   // log_analytics_workspace_id - computed: false, optional: false, required: true
-  private _logAnalyticsWorkspaceId: string;
+  private _logAnalyticsWorkspaceId?: string; 
   public get logAnalyticsWorkspaceId() {
     return this.getStringAttribute('log_analytics_workspace_id');
   }
@@ -200,7 +277,7 @@ export class LogAnalyticsSavedSearch extends cdktf.TerraformResource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -213,7 +290,7 @@ export class LogAnalyticsSavedSearch extends cdktf.TerraformResource {
   }
 
   // query - computed: false, optional: false, required: true
-  private _query: string;
+  private _query?: string; 
   public get query() {
     return this.getStringAttribute('query');
   }
@@ -226,11 +303,12 @@ export class LogAnalyticsSavedSearch extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable;
+  private _tags?: { [key: string]: string } | cdktf.IResolvable | undefined; 
   public get tags() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
     this._tags = value;
   }
   public resetTags() {
@@ -242,11 +320,12 @@ export class LogAnalyticsSavedSearch extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: LogAnalyticsSavedSearchTimeouts;
+  private _timeouts?: LogAnalyticsSavedSearchTimeouts | undefined; 
+  private __timeoutsOutput = new LogAnalyticsSavedSearchTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: LogAnalyticsSavedSearchTimeouts ) {
+  public putTimeouts(value: LogAnalyticsSavedSearchTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {

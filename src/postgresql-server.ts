@@ -92,19 +92,19 @@ export interface PostgresqlServerConfig extends cdktf.TerraformMetaArguments {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_server.html#identity PostgresqlServer#identity}
   */
-  readonly identity?: PostgresqlServerIdentity[];
+  readonly identity?: PostgresqlServerIdentity;
   /**
   * storage_profile block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_server.html#storage_profile PostgresqlServer#storage_profile}
   */
-  readonly storageProfile?: PostgresqlServerStorageProfile[];
+  readonly storageProfile?: PostgresqlServerStorageProfile;
   /**
   * threat_detection_policy block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_server.html#threat_detection_policy PostgresqlServer#threat_detection_policy}
   */
-  readonly threatDetectionPolicy?: PostgresqlServerThreatDetectionPolicy[];
+  readonly threatDetectionPolicy?: PostgresqlServerThreatDetectionPolicy;
   /**
   * timeouts block
   * 
@@ -119,13 +119,39 @@ export interface PostgresqlServerIdentity {
   readonly type: string;
 }
 
-function postgresqlServerIdentityToTerraform(struct?: PostgresqlServerIdentity): any {
+function postgresqlServerIdentityToTerraform(struct?: PostgresqlServerIdentityOutputReference | PostgresqlServerIdentity): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     type: cdktf.stringToTerraform(struct!.type),
   }
 }
 
+export class PostgresqlServerIdentityOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // type - computed: false, optional: false, required: true
+  private _type?: string; 
+  public get type() {
+    return this.getStringAttribute('type');
+  }
+  public set type(value: string) {
+    this._type = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get typeInput() {
+    return this._type
+  }
+}
 export interface PostgresqlServerStorageProfile {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_server.html#auto_grow PostgresqlServer#auto_grow}
@@ -145,8 +171,11 @@ export interface PostgresqlServerStorageProfile {
   readonly storageMb?: number;
 }
 
-function postgresqlServerStorageProfileToTerraform(struct?: PostgresqlServerStorageProfile): any {
+function postgresqlServerStorageProfileToTerraform(struct?: PostgresqlServerStorageProfileOutputReference | PostgresqlServerStorageProfile): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     auto_grow: cdktf.stringToTerraform(struct!.autoGrow),
     backup_retention_days: cdktf.numberToTerraform(struct!.backupRetentionDays),
@@ -155,6 +184,80 @@ function postgresqlServerStorageProfileToTerraform(struct?: PostgresqlServerStor
   }
 }
 
+export class PostgresqlServerStorageProfileOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // auto_grow - computed: true, optional: true, required: false
+  private _autoGrow?: string | undefined; 
+  public get autoGrow() {
+    return this.getStringAttribute('auto_grow');
+  }
+  public set autoGrow(value: string | undefined) {
+    this._autoGrow = value;
+  }
+  public resetAutoGrow() {
+    this._autoGrow = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get autoGrowInput() {
+    return this._autoGrow
+  }
+
+  // backup_retention_days - computed: false, optional: true, required: false
+  private _backupRetentionDays?: number | undefined; 
+  public get backupRetentionDays() {
+    return this.getNumberAttribute('backup_retention_days');
+  }
+  public set backupRetentionDays(value: number | undefined) {
+    this._backupRetentionDays = value;
+  }
+  public resetBackupRetentionDays() {
+    this._backupRetentionDays = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get backupRetentionDaysInput() {
+    return this._backupRetentionDays
+  }
+
+  // geo_redundant_backup - computed: true, optional: true, required: false
+  private _geoRedundantBackup?: string | undefined; 
+  public get geoRedundantBackup() {
+    return this.getStringAttribute('geo_redundant_backup');
+  }
+  public set geoRedundantBackup(value: string | undefined) {
+    this._geoRedundantBackup = value;
+  }
+  public resetGeoRedundantBackup() {
+    this._geoRedundantBackup = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get geoRedundantBackupInput() {
+    return this._geoRedundantBackup
+  }
+
+  // storage_mb - computed: false, optional: true, required: false
+  private _storageMb?: number | undefined; 
+  public get storageMb() {
+    return this.getNumberAttribute('storage_mb');
+  }
+  public set storageMb(value: number | undefined) {
+    this._storageMb = value;
+  }
+  public resetStorageMb() {
+    this._storageMb = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get storageMbInput() {
+    return this._storageMb
+  }
+}
 export interface PostgresqlServerThreatDetectionPolicy {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_server.html#disabled_alerts PostgresqlServer#disabled_alerts}
@@ -186,8 +289,11 @@ export interface PostgresqlServerThreatDetectionPolicy {
   readonly storageEndpoint?: string;
 }
 
-function postgresqlServerThreatDetectionPolicyToTerraform(struct?: PostgresqlServerThreatDetectionPolicy): any {
+function postgresqlServerThreatDetectionPolicyToTerraform(struct?: PostgresqlServerThreatDetectionPolicyOutputReference | PostgresqlServerThreatDetectionPolicy): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     disabled_alerts: cdktf.listMapper(cdktf.stringToTerraform)(struct!.disabledAlerts),
     email_account_admins: cdktf.booleanToTerraform(struct!.emailAccountAdmins),
@@ -199,6 +305,128 @@ function postgresqlServerThreatDetectionPolicyToTerraform(struct?: PostgresqlSer
   }
 }
 
+export class PostgresqlServerThreatDetectionPolicyOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // disabled_alerts - computed: false, optional: true, required: false
+  private _disabledAlerts?: string[] | undefined; 
+  public get disabledAlerts() {
+    return this.getListAttribute('disabled_alerts');
+  }
+  public set disabledAlerts(value: string[] | undefined) {
+    this._disabledAlerts = value;
+  }
+  public resetDisabledAlerts() {
+    this._disabledAlerts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get disabledAlertsInput() {
+    return this._disabledAlerts
+  }
+
+  // email_account_admins - computed: false, optional: true, required: false
+  private _emailAccountAdmins?: boolean | cdktf.IResolvable | undefined; 
+  public get emailAccountAdmins() {
+    return this.getBooleanAttribute('email_account_admins') as any;
+  }
+  public set emailAccountAdmins(value: boolean | cdktf.IResolvable | undefined) {
+    this._emailAccountAdmins = value;
+  }
+  public resetEmailAccountAdmins() {
+    this._emailAccountAdmins = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get emailAccountAdminsInput() {
+    return this._emailAccountAdmins
+  }
+
+  // email_addresses - computed: false, optional: true, required: false
+  private _emailAddresses?: string[] | undefined; 
+  public get emailAddresses() {
+    return this.getListAttribute('email_addresses');
+  }
+  public set emailAddresses(value: string[] | undefined) {
+    this._emailAddresses = value;
+  }
+  public resetEmailAddresses() {
+    this._emailAddresses = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get emailAddressesInput() {
+    return this._emailAddresses
+  }
+
+  // enabled - computed: false, optional: true, required: false
+  private _enabled?: boolean | cdktf.IResolvable | undefined; 
+  public get enabled() {
+    return this.getBooleanAttribute('enabled') as any;
+  }
+  public set enabled(value: boolean | cdktf.IResolvable | undefined) {
+    this._enabled = value;
+  }
+  public resetEnabled() {
+    this._enabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enabledInput() {
+    return this._enabled
+  }
+
+  // retention_days - computed: false, optional: true, required: false
+  private _retentionDays?: number | undefined; 
+  public get retentionDays() {
+    return this.getNumberAttribute('retention_days');
+  }
+  public set retentionDays(value: number | undefined) {
+    this._retentionDays = value;
+  }
+  public resetRetentionDays() {
+    this._retentionDays = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get retentionDaysInput() {
+    return this._retentionDays
+  }
+
+  // storage_account_access_key - computed: false, optional: true, required: false
+  private _storageAccountAccessKey?: string | undefined; 
+  public get storageAccountAccessKey() {
+    return this.getStringAttribute('storage_account_access_key');
+  }
+  public set storageAccountAccessKey(value: string | undefined) {
+    this._storageAccountAccessKey = value;
+  }
+  public resetStorageAccountAccessKey() {
+    this._storageAccountAccessKey = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get storageAccountAccessKeyInput() {
+    return this._storageAccountAccessKey
+  }
+
+  // storage_endpoint - computed: false, optional: true, required: false
+  private _storageEndpoint?: string | undefined; 
+  public get storageEndpoint() {
+    return this.getStringAttribute('storage_endpoint');
+  }
+  public set storageEndpoint(value: string | undefined) {
+    this._storageEndpoint = value;
+  }
+  public resetStorageEndpoint() {
+    this._storageEndpoint = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get storageEndpointInput() {
+    return this._storageEndpoint
+  }
+}
 export interface PostgresqlServerTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_server.html#create PostgresqlServer#create}
@@ -218,8 +446,11 @@ export interface PostgresqlServerTimeouts {
   readonly update?: string;
 }
 
-function postgresqlServerTimeoutsToTerraform(struct?: PostgresqlServerTimeouts): any {
+function postgresqlServerTimeoutsToTerraform(struct?: PostgresqlServerTimeoutsOutputReference | PostgresqlServerTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -228,6 +459,80 @@ function postgresqlServerTimeoutsToTerraform(struct?: PostgresqlServerTimeouts):
   }
 }
 
+export class PostgresqlServerTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_server.html azurerm_postgresql_server}
@@ -292,11 +597,11 @@ export class PostgresqlServer extends cdktf.TerraformResource {
   // ==========
 
   // administrator_login - computed: true, optional: true, required: false
-  private _administratorLogin?: string;
+  private _administratorLogin?: string | undefined; 
   public get administratorLogin() {
     return this.getStringAttribute('administrator_login');
   }
-  public set administratorLogin(value: string) {
+  public set administratorLogin(value: string | undefined) {
     this._administratorLogin = value;
   }
   public resetAdministratorLogin() {
@@ -308,11 +613,11 @@ export class PostgresqlServer extends cdktf.TerraformResource {
   }
 
   // administrator_login_password - computed: false, optional: true, required: false
-  private _administratorLoginPassword?: string;
+  private _administratorLoginPassword?: string | undefined; 
   public get administratorLoginPassword() {
     return this.getStringAttribute('administrator_login_password');
   }
-  public set administratorLoginPassword(value: string ) {
+  public set administratorLoginPassword(value: string | undefined) {
     this._administratorLoginPassword = value;
   }
   public resetAdministratorLoginPassword() {
@@ -324,11 +629,11 @@ export class PostgresqlServer extends cdktf.TerraformResource {
   }
 
   // auto_grow_enabled - computed: true, optional: true, required: false
-  private _autoGrowEnabled?: boolean | cdktf.IResolvable;
+  private _autoGrowEnabled?: boolean | cdktf.IResolvable | undefined; 
   public get autoGrowEnabled() {
-    return this.getBooleanAttribute('auto_grow_enabled');
+    return this.getBooleanAttribute('auto_grow_enabled') as any;
   }
-  public set autoGrowEnabled(value: boolean | cdktf.IResolvable) {
+  public set autoGrowEnabled(value: boolean | cdktf.IResolvable | undefined) {
     this._autoGrowEnabled = value;
   }
   public resetAutoGrowEnabled() {
@@ -340,11 +645,11 @@ export class PostgresqlServer extends cdktf.TerraformResource {
   }
 
   // backup_retention_days - computed: true, optional: true, required: false
-  private _backupRetentionDays?: number;
+  private _backupRetentionDays?: number | undefined; 
   public get backupRetentionDays() {
     return this.getNumberAttribute('backup_retention_days');
   }
-  public set backupRetentionDays(value: number) {
+  public set backupRetentionDays(value: number | undefined) {
     this._backupRetentionDays = value;
   }
   public resetBackupRetentionDays() {
@@ -356,11 +661,11 @@ export class PostgresqlServer extends cdktf.TerraformResource {
   }
 
   // create_mode - computed: false, optional: true, required: false
-  private _createMode?: string;
+  private _createMode?: string | undefined; 
   public get createMode() {
     return this.getStringAttribute('create_mode');
   }
-  public set createMode(value: string ) {
+  public set createMode(value: string | undefined) {
     this._createMode = value;
   }
   public resetCreateMode() {
@@ -372,11 +677,11 @@ export class PostgresqlServer extends cdktf.TerraformResource {
   }
 
   // creation_source_server_id - computed: false, optional: true, required: false
-  private _creationSourceServerId?: string;
+  private _creationSourceServerId?: string | undefined; 
   public get creationSourceServerId() {
     return this.getStringAttribute('creation_source_server_id');
   }
-  public set creationSourceServerId(value: string ) {
+  public set creationSourceServerId(value: string | undefined) {
     this._creationSourceServerId = value;
   }
   public resetCreationSourceServerId() {
@@ -393,11 +698,11 @@ export class PostgresqlServer extends cdktf.TerraformResource {
   }
 
   // geo_redundant_backup_enabled - computed: true, optional: true, required: false
-  private _geoRedundantBackupEnabled?: boolean | cdktf.IResolvable;
+  private _geoRedundantBackupEnabled?: boolean | cdktf.IResolvable | undefined; 
   public get geoRedundantBackupEnabled() {
-    return this.getBooleanAttribute('geo_redundant_backup_enabled');
+    return this.getBooleanAttribute('geo_redundant_backup_enabled') as any;
   }
-  public set geoRedundantBackupEnabled(value: boolean | cdktf.IResolvable) {
+  public set geoRedundantBackupEnabled(value: boolean | cdktf.IResolvable | undefined) {
     this._geoRedundantBackupEnabled = value;
   }
   public resetGeoRedundantBackupEnabled() {
@@ -414,11 +719,11 @@ export class PostgresqlServer extends cdktf.TerraformResource {
   }
 
   // infrastructure_encryption_enabled - computed: false, optional: true, required: false
-  private _infrastructureEncryptionEnabled?: boolean | cdktf.IResolvable;
+  private _infrastructureEncryptionEnabled?: boolean | cdktf.IResolvable | undefined; 
   public get infrastructureEncryptionEnabled() {
-    return this.getBooleanAttribute('infrastructure_encryption_enabled');
+    return this.getBooleanAttribute('infrastructure_encryption_enabled') as any;
   }
-  public set infrastructureEncryptionEnabled(value: boolean | cdktf.IResolvable ) {
+  public set infrastructureEncryptionEnabled(value: boolean | cdktf.IResolvable | undefined) {
     this._infrastructureEncryptionEnabled = value;
   }
   public resetInfrastructureEncryptionEnabled() {
@@ -430,7 +735,7 @@ export class PostgresqlServer extends cdktf.TerraformResource {
   }
 
   // location - computed: false, optional: false, required: true
-  private _location: string;
+  private _location?: string; 
   public get location() {
     return this.getStringAttribute('location');
   }
@@ -443,7 +748,7 @@ export class PostgresqlServer extends cdktf.TerraformResource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -456,11 +761,11 @@ export class PostgresqlServer extends cdktf.TerraformResource {
   }
 
   // public_network_access_enabled - computed: false, optional: true, required: false
-  private _publicNetworkAccessEnabled?: boolean | cdktf.IResolvable;
+  private _publicNetworkAccessEnabled?: boolean | cdktf.IResolvable | undefined; 
   public get publicNetworkAccessEnabled() {
-    return this.getBooleanAttribute('public_network_access_enabled');
+    return this.getBooleanAttribute('public_network_access_enabled') as any;
   }
-  public set publicNetworkAccessEnabled(value: boolean | cdktf.IResolvable ) {
+  public set publicNetworkAccessEnabled(value: boolean | cdktf.IResolvable | undefined) {
     this._publicNetworkAccessEnabled = value;
   }
   public resetPublicNetworkAccessEnabled() {
@@ -472,7 +777,7 @@ export class PostgresqlServer extends cdktf.TerraformResource {
   }
 
   // resource_group_name - computed: false, optional: false, required: true
-  private _resourceGroupName: string;
+  private _resourceGroupName?: string; 
   public get resourceGroupName() {
     return this.getStringAttribute('resource_group_name');
   }
@@ -485,11 +790,11 @@ export class PostgresqlServer extends cdktf.TerraformResource {
   }
 
   // restore_point_in_time - computed: false, optional: true, required: false
-  private _restorePointInTime?: string;
+  private _restorePointInTime?: string | undefined; 
   public get restorePointInTime() {
     return this.getStringAttribute('restore_point_in_time');
   }
-  public set restorePointInTime(value: string ) {
+  public set restorePointInTime(value: string | undefined) {
     this._restorePointInTime = value;
   }
   public resetRestorePointInTime() {
@@ -501,7 +806,7 @@ export class PostgresqlServer extends cdktf.TerraformResource {
   }
 
   // sku_name - computed: false, optional: false, required: true
-  private _skuName: string;
+  private _skuName?: string; 
   public get skuName() {
     return this.getStringAttribute('sku_name');
   }
@@ -514,11 +819,11 @@ export class PostgresqlServer extends cdktf.TerraformResource {
   }
 
   // ssl_enforcement - computed: true, optional: true, required: false
-  private _sslEnforcement?: string;
+  private _sslEnforcement?: string | undefined; 
   public get sslEnforcement() {
     return this.getStringAttribute('ssl_enforcement');
   }
-  public set sslEnforcement(value: string) {
+  public set sslEnforcement(value: string | undefined) {
     this._sslEnforcement = value;
   }
   public resetSslEnforcement() {
@@ -530,11 +835,11 @@ export class PostgresqlServer extends cdktf.TerraformResource {
   }
 
   // ssl_enforcement_enabled - computed: false, optional: true, required: false
-  private _sslEnforcementEnabled?: boolean | cdktf.IResolvable;
+  private _sslEnforcementEnabled?: boolean | cdktf.IResolvable | undefined; 
   public get sslEnforcementEnabled() {
-    return this.getBooleanAttribute('ssl_enforcement_enabled');
+    return this.getBooleanAttribute('ssl_enforcement_enabled') as any;
   }
-  public set sslEnforcementEnabled(value: boolean | cdktf.IResolvable ) {
+  public set sslEnforcementEnabled(value: boolean | cdktf.IResolvable | undefined) {
     this._sslEnforcementEnabled = value;
   }
   public resetSslEnforcementEnabled() {
@@ -546,11 +851,11 @@ export class PostgresqlServer extends cdktf.TerraformResource {
   }
 
   // ssl_minimal_tls_version_enforced - computed: false, optional: true, required: false
-  private _sslMinimalTlsVersionEnforced?: string;
+  private _sslMinimalTlsVersionEnforced?: string | undefined; 
   public get sslMinimalTlsVersionEnforced() {
     return this.getStringAttribute('ssl_minimal_tls_version_enforced');
   }
-  public set sslMinimalTlsVersionEnforced(value: string ) {
+  public set sslMinimalTlsVersionEnforced(value: string | undefined) {
     this._sslMinimalTlsVersionEnforced = value;
   }
   public resetSslMinimalTlsVersionEnforced() {
@@ -562,11 +867,11 @@ export class PostgresqlServer extends cdktf.TerraformResource {
   }
 
   // storage_mb - computed: true, optional: true, required: false
-  private _storageMb?: number;
+  private _storageMb?: number | undefined; 
   public get storageMb() {
     return this.getNumberAttribute('storage_mb');
   }
-  public set storageMb(value: number) {
+  public set storageMb(value: number | undefined) {
     this._storageMb = value;
   }
   public resetStorageMb() {
@@ -578,11 +883,12 @@ export class PostgresqlServer extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable;
+  private _tags?: { [key: string]: string } | cdktf.IResolvable | undefined; 
   public get tags() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
     this._tags = value;
   }
   public resetTags() {
@@ -594,7 +900,7 @@ export class PostgresqlServer extends cdktf.TerraformResource {
   }
 
   // version - computed: false, optional: false, required: true
-  private _version: string;
+  private _version?: string; 
   public get version() {
     return this.getStringAttribute('version');
   }
@@ -607,11 +913,12 @@ export class PostgresqlServer extends cdktf.TerraformResource {
   }
 
   // identity - computed: false, optional: true, required: false
-  private _identity?: PostgresqlServerIdentity[];
+  private _identity?: PostgresqlServerIdentity | undefined; 
+  private __identityOutput = new PostgresqlServerIdentityOutputReference(this as any, "identity", true);
   public get identity() {
-    return this.interpolationForAttribute('identity') as any;
+    return this.__identityOutput;
   }
-  public set identity(value: PostgresqlServerIdentity[] ) {
+  public putIdentity(value: PostgresqlServerIdentity | undefined) {
     this._identity = value;
   }
   public resetIdentity() {
@@ -623,11 +930,12 @@ export class PostgresqlServer extends cdktf.TerraformResource {
   }
 
   // storage_profile - computed: false, optional: true, required: false
-  private _storageProfile?: PostgresqlServerStorageProfile[];
+  private _storageProfile?: PostgresqlServerStorageProfile | undefined; 
+  private __storageProfileOutput = new PostgresqlServerStorageProfileOutputReference(this as any, "storage_profile", true);
   public get storageProfile() {
-    return this.interpolationForAttribute('storage_profile') as any;
+    return this.__storageProfileOutput;
   }
-  public set storageProfile(value: PostgresqlServerStorageProfile[] ) {
+  public putStorageProfile(value: PostgresqlServerStorageProfile | undefined) {
     this._storageProfile = value;
   }
   public resetStorageProfile() {
@@ -639,11 +947,12 @@ export class PostgresqlServer extends cdktf.TerraformResource {
   }
 
   // threat_detection_policy - computed: false, optional: true, required: false
-  private _threatDetectionPolicy?: PostgresqlServerThreatDetectionPolicy[];
+  private _threatDetectionPolicy?: PostgresqlServerThreatDetectionPolicy | undefined; 
+  private __threatDetectionPolicyOutput = new PostgresqlServerThreatDetectionPolicyOutputReference(this as any, "threat_detection_policy", true);
   public get threatDetectionPolicy() {
-    return this.interpolationForAttribute('threat_detection_policy') as any;
+    return this.__threatDetectionPolicyOutput;
   }
-  public set threatDetectionPolicy(value: PostgresqlServerThreatDetectionPolicy[] ) {
+  public putThreatDetectionPolicy(value: PostgresqlServerThreatDetectionPolicy | undefined) {
     this._threatDetectionPolicy = value;
   }
   public resetThreatDetectionPolicy() {
@@ -655,11 +964,12 @@ export class PostgresqlServer extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: PostgresqlServerTimeouts;
+  private _timeouts?: PostgresqlServerTimeouts | undefined; 
+  private __timeoutsOutput = new PostgresqlServerTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: PostgresqlServerTimeouts ) {
+  public putTimeouts(value: PostgresqlServerTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {
@@ -696,9 +1006,9 @@ export class PostgresqlServer extends cdktf.TerraformResource {
       storage_mb: cdktf.numberToTerraform(this._storageMb),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
       version: cdktf.stringToTerraform(this._version),
-      identity: cdktf.listMapper(postgresqlServerIdentityToTerraform)(this._identity),
-      storage_profile: cdktf.listMapper(postgresqlServerStorageProfileToTerraform)(this._storageProfile),
-      threat_detection_policy: cdktf.listMapper(postgresqlServerThreatDetectionPolicyToTerraform)(this._threatDetectionPolicy),
+      identity: postgresqlServerIdentityToTerraform(this._identity),
+      storage_profile: postgresqlServerStorageProfileToTerraform(this._storageProfile),
+      threat_detection_policy: postgresqlServerThreatDetectionPolicyToTerraform(this._threatDetectionPolicy),
       timeouts: postgresqlServerTimeoutsToTerraform(this._timeouts),
     };
   }

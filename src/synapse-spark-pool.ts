@@ -48,19 +48,19 @@ export interface SynapseSparkPoolConfig extends cdktf.TerraformMetaArguments {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_spark_pool.html#auto_pause SynapseSparkPool#auto_pause}
   */
-  readonly autoPause?: SynapseSparkPoolAutoPause[];
+  readonly autoPause?: SynapseSparkPoolAutoPause;
   /**
   * auto_scale block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_spark_pool.html#auto_scale SynapseSparkPool#auto_scale}
   */
-  readonly autoScale?: SynapseSparkPoolAutoScale[];
+  readonly autoScale?: SynapseSparkPoolAutoScale;
   /**
   * library_requirement block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_spark_pool.html#library_requirement SynapseSparkPool#library_requirement}
   */
-  readonly libraryRequirement?: SynapseSparkPoolLibraryRequirement[];
+  readonly libraryRequirement?: SynapseSparkPoolLibraryRequirement;
   /**
   * timeouts block
   * 
@@ -75,13 +75,39 @@ export interface SynapseSparkPoolAutoPause {
   readonly delayInMinutes: number;
 }
 
-function synapseSparkPoolAutoPauseToTerraform(struct?: SynapseSparkPoolAutoPause): any {
+function synapseSparkPoolAutoPauseToTerraform(struct?: SynapseSparkPoolAutoPauseOutputReference | SynapseSparkPoolAutoPause): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     delay_in_minutes: cdktf.numberToTerraform(struct!.delayInMinutes),
   }
 }
 
+export class SynapseSparkPoolAutoPauseOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // delay_in_minutes - computed: false, optional: false, required: true
+  private _delayInMinutes?: number; 
+  public get delayInMinutes() {
+    return this.getNumberAttribute('delay_in_minutes');
+  }
+  public set delayInMinutes(value: number) {
+    this._delayInMinutes = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get delayInMinutesInput() {
+    return this._delayInMinutes
+  }
+}
 export interface SynapseSparkPoolAutoScale {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_spark_pool.html#max_node_count SynapseSparkPool#max_node_count}
@@ -93,14 +119,53 @@ export interface SynapseSparkPoolAutoScale {
   readonly minNodeCount: number;
 }
 
-function synapseSparkPoolAutoScaleToTerraform(struct?: SynapseSparkPoolAutoScale): any {
+function synapseSparkPoolAutoScaleToTerraform(struct?: SynapseSparkPoolAutoScaleOutputReference | SynapseSparkPoolAutoScale): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     max_node_count: cdktf.numberToTerraform(struct!.maxNodeCount),
     min_node_count: cdktf.numberToTerraform(struct!.minNodeCount),
   }
 }
 
+export class SynapseSparkPoolAutoScaleOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // max_node_count - computed: false, optional: false, required: true
+  private _maxNodeCount?: number; 
+  public get maxNodeCount() {
+    return this.getNumberAttribute('max_node_count');
+  }
+  public set maxNodeCount(value: number) {
+    this._maxNodeCount = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get maxNodeCountInput() {
+    return this._maxNodeCount
+  }
+
+  // min_node_count - computed: false, optional: false, required: true
+  private _minNodeCount?: number; 
+  public get minNodeCount() {
+    return this.getNumberAttribute('min_node_count');
+  }
+  public set minNodeCount(value: number) {
+    this._minNodeCount = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get minNodeCountInput() {
+    return this._minNodeCount
+  }
+}
 export interface SynapseSparkPoolLibraryRequirement {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_spark_pool.html#content SynapseSparkPool#content}
@@ -112,14 +177,53 @@ export interface SynapseSparkPoolLibraryRequirement {
   readonly filename: string;
 }
 
-function synapseSparkPoolLibraryRequirementToTerraform(struct?: SynapseSparkPoolLibraryRequirement): any {
+function synapseSparkPoolLibraryRequirementToTerraform(struct?: SynapseSparkPoolLibraryRequirementOutputReference | SynapseSparkPoolLibraryRequirement): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     content: cdktf.stringToTerraform(struct!.content),
     filename: cdktf.stringToTerraform(struct!.filename),
   }
 }
 
+export class SynapseSparkPoolLibraryRequirementOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // content - computed: false, optional: false, required: true
+  private _content?: string; 
+  public get content() {
+    return this.getStringAttribute('content');
+  }
+  public set content(value: string) {
+    this._content = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get contentInput() {
+    return this._content
+  }
+
+  // filename - computed: false, optional: false, required: true
+  private _filename?: string; 
+  public get filename() {
+    return this.getStringAttribute('filename');
+  }
+  public set filename(value: string) {
+    this._filename = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get filenameInput() {
+    return this._filename
+  }
+}
 export interface SynapseSparkPoolTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_spark_pool.html#create SynapseSparkPool#create}
@@ -139,8 +243,11 @@ export interface SynapseSparkPoolTimeouts {
   readonly update?: string;
 }
 
-function synapseSparkPoolTimeoutsToTerraform(struct?: SynapseSparkPoolTimeouts): any {
+function synapseSparkPoolTimeoutsToTerraform(struct?: SynapseSparkPoolTimeoutsOutputReference | SynapseSparkPoolTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -149,6 +256,80 @@ function synapseSparkPoolTimeoutsToTerraform(struct?: SynapseSparkPoolTimeouts):
   }
 }
 
+export class SynapseSparkPoolTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_spark_pool.html azurerm_synapse_spark_pool}
@@ -207,7 +388,7 @@ export class SynapseSparkPool extends cdktf.TerraformResource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -220,11 +401,11 @@ export class SynapseSparkPool extends cdktf.TerraformResource {
   }
 
   // node_count - computed: false, optional: true, required: false
-  private _nodeCount?: number;
+  private _nodeCount?: number | undefined; 
   public get nodeCount() {
     return this.getNumberAttribute('node_count');
   }
-  public set nodeCount(value: number ) {
+  public set nodeCount(value: number | undefined) {
     this._nodeCount = value;
   }
   public resetNodeCount() {
@@ -236,7 +417,7 @@ export class SynapseSparkPool extends cdktf.TerraformResource {
   }
 
   // node_size - computed: false, optional: false, required: true
-  private _nodeSize: string;
+  private _nodeSize?: string; 
   public get nodeSize() {
     return this.getStringAttribute('node_size');
   }
@@ -249,7 +430,7 @@ export class SynapseSparkPool extends cdktf.TerraformResource {
   }
 
   // node_size_family - computed: false, optional: false, required: true
-  private _nodeSizeFamily: string;
+  private _nodeSizeFamily?: string; 
   public get nodeSizeFamily() {
     return this.getStringAttribute('node_size_family');
   }
@@ -262,11 +443,11 @@ export class SynapseSparkPool extends cdktf.TerraformResource {
   }
 
   // spark_events_folder - computed: false, optional: true, required: false
-  private _sparkEventsFolder?: string;
+  private _sparkEventsFolder?: string | undefined; 
   public get sparkEventsFolder() {
     return this.getStringAttribute('spark_events_folder');
   }
-  public set sparkEventsFolder(value: string ) {
+  public set sparkEventsFolder(value: string | undefined) {
     this._sparkEventsFolder = value;
   }
   public resetSparkEventsFolder() {
@@ -278,11 +459,11 @@ export class SynapseSparkPool extends cdktf.TerraformResource {
   }
 
   // spark_log_folder - computed: false, optional: true, required: false
-  private _sparkLogFolder?: string;
+  private _sparkLogFolder?: string | undefined; 
   public get sparkLogFolder() {
     return this.getStringAttribute('spark_log_folder');
   }
-  public set sparkLogFolder(value: string ) {
+  public set sparkLogFolder(value: string | undefined) {
     this._sparkLogFolder = value;
   }
   public resetSparkLogFolder() {
@@ -294,11 +475,11 @@ export class SynapseSparkPool extends cdktf.TerraformResource {
   }
 
   // spark_version - computed: false, optional: true, required: false
-  private _sparkVersion?: string;
+  private _sparkVersion?: string | undefined; 
   public get sparkVersion() {
     return this.getStringAttribute('spark_version');
   }
-  public set sparkVersion(value: string ) {
+  public set sparkVersion(value: string | undefined) {
     this._sparkVersion = value;
   }
   public resetSparkVersion() {
@@ -310,7 +491,7 @@ export class SynapseSparkPool extends cdktf.TerraformResource {
   }
 
   // synapse_workspace_id - computed: false, optional: false, required: true
-  private _synapseWorkspaceId: string;
+  private _synapseWorkspaceId?: string; 
   public get synapseWorkspaceId() {
     return this.getStringAttribute('synapse_workspace_id');
   }
@@ -323,11 +504,12 @@ export class SynapseSparkPool extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable;
+  private _tags?: { [key: string]: string } | cdktf.IResolvable | undefined; 
   public get tags() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
     this._tags = value;
   }
   public resetTags() {
@@ -339,11 +521,12 @@ export class SynapseSparkPool extends cdktf.TerraformResource {
   }
 
   // auto_pause - computed: false, optional: true, required: false
-  private _autoPause?: SynapseSparkPoolAutoPause[];
+  private _autoPause?: SynapseSparkPoolAutoPause | undefined; 
+  private __autoPauseOutput = new SynapseSparkPoolAutoPauseOutputReference(this as any, "auto_pause", true);
   public get autoPause() {
-    return this.interpolationForAttribute('auto_pause') as any;
+    return this.__autoPauseOutput;
   }
-  public set autoPause(value: SynapseSparkPoolAutoPause[] ) {
+  public putAutoPause(value: SynapseSparkPoolAutoPause | undefined) {
     this._autoPause = value;
   }
   public resetAutoPause() {
@@ -355,11 +538,12 @@ export class SynapseSparkPool extends cdktf.TerraformResource {
   }
 
   // auto_scale - computed: false, optional: true, required: false
-  private _autoScale?: SynapseSparkPoolAutoScale[];
+  private _autoScale?: SynapseSparkPoolAutoScale | undefined; 
+  private __autoScaleOutput = new SynapseSparkPoolAutoScaleOutputReference(this as any, "auto_scale", true);
   public get autoScale() {
-    return this.interpolationForAttribute('auto_scale') as any;
+    return this.__autoScaleOutput;
   }
-  public set autoScale(value: SynapseSparkPoolAutoScale[] ) {
+  public putAutoScale(value: SynapseSparkPoolAutoScale | undefined) {
     this._autoScale = value;
   }
   public resetAutoScale() {
@@ -371,11 +555,12 @@ export class SynapseSparkPool extends cdktf.TerraformResource {
   }
 
   // library_requirement - computed: false, optional: true, required: false
-  private _libraryRequirement?: SynapseSparkPoolLibraryRequirement[];
+  private _libraryRequirement?: SynapseSparkPoolLibraryRequirement | undefined; 
+  private __libraryRequirementOutput = new SynapseSparkPoolLibraryRequirementOutputReference(this as any, "library_requirement", true);
   public get libraryRequirement() {
-    return this.interpolationForAttribute('library_requirement') as any;
+    return this.__libraryRequirementOutput;
   }
-  public set libraryRequirement(value: SynapseSparkPoolLibraryRequirement[] ) {
+  public putLibraryRequirement(value: SynapseSparkPoolLibraryRequirement | undefined) {
     this._libraryRequirement = value;
   }
   public resetLibraryRequirement() {
@@ -387,11 +572,12 @@ export class SynapseSparkPool extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: SynapseSparkPoolTimeouts;
+  private _timeouts?: SynapseSparkPoolTimeouts | undefined; 
+  private __timeoutsOutput = new SynapseSparkPoolTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: SynapseSparkPoolTimeouts ) {
+  public putTimeouts(value: SynapseSparkPoolTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {
@@ -417,9 +603,9 @@ export class SynapseSparkPool extends cdktf.TerraformResource {
       spark_version: cdktf.stringToTerraform(this._sparkVersion),
       synapse_workspace_id: cdktf.stringToTerraform(this._synapseWorkspaceId),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
-      auto_pause: cdktf.listMapper(synapseSparkPoolAutoPauseToTerraform)(this._autoPause),
-      auto_scale: cdktf.listMapper(synapseSparkPoolAutoScaleToTerraform)(this._autoScale),
-      library_requirement: cdktf.listMapper(synapseSparkPoolLibraryRequirementToTerraform)(this._libraryRequirement),
+      auto_pause: synapseSparkPoolAutoPauseToTerraform(this._autoPause),
+      auto_scale: synapseSparkPoolAutoScaleToTerraform(this._autoScale),
+      library_requirement: synapseSparkPoolLibraryRequirementToTerraform(this._libraryRequirement),
       timeouts: synapseSparkPoolTimeoutsToTerraform(this._timeouts),
     };
   }

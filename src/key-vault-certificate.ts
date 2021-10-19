@@ -24,13 +24,13 @@ export interface KeyVaultCertificateConfig extends cdktf.TerraformMetaArguments 
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_certificate.html#certificate KeyVaultCertificate#certificate}
   */
-  readonly certificate?: KeyVaultCertificateCertificate[];
+  readonly certificate?: KeyVaultCertificateCertificate;
   /**
   * certificate_policy block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_certificate.html#certificate_policy KeyVaultCertificate#certificate_policy}
   */
-  readonly certificatePolicy: KeyVaultCertificateCertificatePolicy[];
+  readonly certificatePolicy: KeyVaultCertificateCertificatePolicy;
   /**
   * timeouts block
   * 
@@ -47,7 +47,7 @@ export class KeyVaultCertificateCertificateAttribute extends cdktf.ComplexComput
 
   // enabled - computed: true, optional: false, required: false
   public get enabled() {
-    return this.getBooleanAttribute('enabled');
+    return this.getBooleanAttribute('enabled') as any;
   }
 
   // expires - computed: true, optional: false, required: false
@@ -81,14 +81,56 @@ export interface KeyVaultCertificateCertificate {
   readonly password?: string;
 }
 
-function keyVaultCertificateCertificateToTerraform(struct?: KeyVaultCertificateCertificate): any {
+function keyVaultCertificateCertificateToTerraform(struct?: KeyVaultCertificateCertificateOutputReference | KeyVaultCertificateCertificate): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     contents: cdktf.stringToTerraform(struct!.contents),
     password: cdktf.stringToTerraform(struct!.password),
   }
 }
 
+export class KeyVaultCertificateCertificateOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // contents - computed: false, optional: false, required: true
+  private _contents?: string; 
+  public get contents() {
+    return this.getStringAttribute('contents');
+  }
+  public set contents(value: string) {
+    this._contents = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get contentsInput() {
+    return this._contents
+  }
+
+  // password - computed: false, optional: true, required: false
+  private _password?: string | undefined; 
+  public get password() {
+    return this.getStringAttribute('password');
+  }
+  public set password(value: string | undefined) {
+    this._password = value;
+  }
+  public resetPassword() {
+    this._password = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get passwordInput() {
+    return this._password
+  }
+}
 export interface KeyVaultCertificateCertificatePolicyIssuerParameters {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_certificate.html#name KeyVaultCertificate#name}
@@ -96,13 +138,39 @@ export interface KeyVaultCertificateCertificatePolicyIssuerParameters {
   readonly name: string;
 }
 
-function keyVaultCertificateCertificatePolicyIssuerParametersToTerraform(struct?: KeyVaultCertificateCertificatePolicyIssuerParameters): any {
+function keyVaultCertificateCertificatePolicyIssuerParametersToTerraform(struct?: KeyVaultCertificateCertificatePolicyIssuerParametersOutputReference | KeyVaultCertificateCertificatePolicyIssuerParameters): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     name: cdktf.stringToTerraform(struct!.name),
   }
 }
 
+export class KeyVaultCertificateCertificatePolicyIssuerParametersOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
+  }
+}
 export interface KeyVaultCertificateCertificatePolicyKeyProperties {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_certificate.html#curve KeyVaultCertificate#curve}
@@ -126,8 +194,11 @@ export interface KeyVaultCertificateCertificatePolicyKeyProperties {
   readonly reuseKey: boolean | cdktf.IResolvable;
 }
 
-function keyVaultCertificateCertificatePolicyKeyPropertiesToTerraform(struct?: KeyVaultCertificateCertificatePolicyKeyProperties): any {
+function keyVaultCertificateCertificatePolicyKeyPropertiesToTerraform(struct?: KeyVaultCertificateCertificatePolicyKeyPropertiesOutputReference | KeyVaultCertificateCertificatePolicyKeyProperties): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     curve: cdktf.stringToTerraform(struct!.curve),
     exportable: cdktf.booleanToTerraform(struct!.exportable),
@@ -137,6 +208,87 @@ function keyVaultCertificateCertificatePolicyKeyPropertiesToTerraform(struct?: K
   }
 }
 
+export class KeyVaultCertificateCertificatePolicyKeyPropertiesOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // curve - computed: true, optional: true, required: false
+  private _curve?: string | undefined; 
+  public get curve() {
+    return this.getStringAttribute('curve');
+  }
+  public set curve(value: string | undefined) {
+    this._curve = value;
+  }
+  public resetCurve() {
+    this._curve = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get curveInput() {
+    return this._curve
+  }
+
+  // exportable - computed: false, optional: false, required: true
+  private _exportable?: boolean | cdktf.IResolvable; 
+  public get exportable() {
+    return this.getBooleanAttribute('exportable') as any;
+  }
+  public set exportable(value: boolean | cdktf.IResolvable) {
+    this._exportable = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get exportableInput() {
+    return this._exportable
+  }
+
+  // key_size - computed: true, optional: true, required: false
+  private _keySize?: number | undefined; 
+  public get keySize() {
+    return this.getNumberAttribute('key_size');
+  }
+  public set keySize(value: number | undefined) {
+    this._keySize = value;
+  }
+  public resetKeySize() {
+    this._keySize = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keySizeInput() {
+    return this._keySize
+  }
+
+  // key_type - computed: false, optional: false, required: true
+  private _keyType?: string; 
+  public get keyType() {
+    return this.getStringAttribute('key_type');
+  }
+  public set keyType(value: string) {
+    this._keyType = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keyTypeInput() {
+    return this._keyType
+  }
+
+  // reuse_key - computed: false, optional: false, required: true
+  private _reuseKey?: boolean | cdktf.IResolvable; 
+  public get reuseKey() {
+    return this.getBooleanAttribute('reuse_key') as any;
+  }
+  public set reuseKey(value: boolean | cdktf.IResolvable) {
+    this._reuseKey = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get reuseKeyInput() {
+    return this._reuseKey
+  }
+}
 export interface KeyVaultCertificateCertificatePolicyLifetimeActionAction {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_certificate.html#action_type KeyVaultCertificate#action_type}
@@ -144,13 +296,39 @@ export interface KeyVaultCertificateCertificatePolicyLifetimeActionAction {
   readonly actionType: string;
 }
 
-function keyVaultCertificateCertificatePolicyLifetimeActionActionToTerraform(struct?: KeyVaultCertificateCertificatePolicyLifetimeActionAction): any {
+function keyVaultCertificateCertificatePolicyLifetimeActionActionToTerraform(struct?: KeyVaultCertificateCertificatePolicyLifetimeActionActionOutputReference | KeyVaultCertificateCertificatePolicyLifetimeActionAction): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     action_type: cdktf.stringToTerraform(struct!.actionType),
   }
 }
 
+export class KeyVaultCertificateCertificatePolicyLifetimeActionActionOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // action_type - computed: false, optional: false, required: true
+  private _actionType?: string; 
+  public get actionType() {
+    return this.getStringAttribute('action_type');
+  }
+  public set actionType(value: string) {
+    this._actionType = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get actionTypeInput() {
+    return this._actionType
+  }
+}
 export interface KeyVaultCertificateCertificatePolicyLifetimeActionTrigger {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_certificate.html#days_before_expiry KeyVaultCertificate#days_before_expiry}
@@ -162,34 +340,82 @@ export interface KeyVaultCertificateCertificatePolicyLifetimeActionTrigger {
   readonly lifetimePercentage?: number;
 }
 
-function keyVaultCertificateCertificatePolicyLifetimeActionTriggerToTerraform(struct?: KeyVaultCertificateCertificatePolicyLifetimeActionTrigger): any {
+function keyVaultCertificateCertificatePolicyLifetimeActionTriggerToTerraform(struct?: KeyVaultCertificateCertificatePolicyLifetimeActionTriggerOutputReference | KeyVaultCertificateCertificatePolicyLifetimeActionTrigger): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     days_before_expiry: cdktf.numberToTerraform(struct!.daysBeforeExpiry),
     lifetime_percentage: cdktf.numberToTerraform(struct!.lifetimePercentage),
   }
 }
 
+export class KeyVaultCertificateCertificatePolicyLifetimeActionTriggerOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // days_before_expiry - computed: false, optional: true, required: false
+  private _daysBeforeExpiry?: number | undefined; 
+  public get daysBeforeExpiry() {
+    return this.getNumberAttribute('days_before_expiry');
+  }
+  public set daysBeforeExpiry(value: number | undefined) {
+    this._daysBeforeExpiry = value;
+  }
+  public resetDaysBeforeExpiry() {
+    this._daysBeforeExpiry = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get daysBeforeExpiryInput() {
+    return this._daysBeforeExpiry
+  }
+
+  // lifetime_percentage - computed: false, optional: true, required: false
+  private _lifetimePercentage?: number | undefined; 
+  public get lifetimePercentage() {
+    return this.getNumberAttribute('lifetime_percentage');
+  }
+  public set lifetimePercentage(value: number | undefined) {
+    this._lifetimePercentage = value;
+  }
+  public resetLifetimePercentage() {
+    this._lifetimePercentage = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get lifetimePercentageInput() {
+    return this._lifetimePercentage
+  }
+}
 export interface KeyVaultCertificateCertificatePolicyLifetimeAction {
   /**
   * action block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_certificate.html#action KeyVaultCertificate#action}
   */
-  readonly action: KeyVaultCertificateCertificatePolicyLifetimeActionAction[];
+  readonly action: KeyVaultCertificateCertificatePolicyLifetimeActionAction;
   /**
   * trigger block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_certificate.html#trigger KeyVaultCertificate#trigger}
   */
-  readonly trigger: KeyVaultCertificateCertificatePolicyLifetimeActionTrigger[];
+  readonly trigger: KeyVaultCertificateCertificatePolicyLifetimeActionTrigger;
 }
 
 function keyVaultCertificateCertificatePolicyLifetimeActionToTerraform(struct?: KeyVaultCertificateCertificatePolicyLifetimeAction): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
-    action: cdktf.listMapper(keyVaultCertificateCertificatePolicyLifetimeActionActionToTerraform)(struct!.action),
-    trigger: cdktf.listMapper(keyVaultCertificateCertificatePolicyLifetimeActionTriggerToTerraform)(struct!.trigger),
+    action: keyVaultCertificateCertificatePolicyLifetimeActionActionToTerraform(struct!.action),
+    trigger: keyVaultCertificateCertificatePolicyLifetimeActionTriggerToTerraform(struct!.trigger),
   }
 }
 
@@ -200,13 +426,39 @@ export interface KeyVaultCertificateCertificatePolicySecretProperties {
   readonly contentType: string;
 }
 
-function keyVaultCertificateCertificatePolicySecretPropertiesToTerraform(struct?: KeyVaultCertificateCertificatePolicySecretProperties): any {
+function keyVaultCertificateCertificatePolicySecretPropertiesToTerraform(struct?: KeyVaultCertificateCertificatePolicySecretPropertiesOutputReference | KeyVaultCertificateCertificatePolicySecretProperties): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     content_type: cdktf.stringToTerraform(struct!.contentType),
   }
 }
 
+export class KeyVaultCertificateCertificatePolicySecretPropertiesOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // content_type - computed: false, optional: false, required: true
+  private _contentType?: string; 
+  public get contentType() {
+    return this.getStringAttribute('content_type');
+  }
+  public set contentType(value: string) {
+    this._contentType = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get contentTypeInput() {
+    return this._contentType
+  }
+}
 export interface KeyVaultCertificateCertificatePolicyX509CertificatePropertiesSubjectAlternativeNames {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_certificate.html#dns_names KeyVaultCertificate#dns_names}
@@ -222,8 +474,11 @@ export interface KeyVaultCertificateCertificatePolicyX509CertificatePropertiesSu
   readonly upns?: string[];
 }
 
-function keyVaultCertificateCertificatePolicyX509CertificatePropertiesSubjectAlternativeNamesToTerraform(struct?: KeyVaultCertificateCertificatePolicyX509CertificatePropertiesSubjectAlternativeNames): any {
+function keyVaultCertificateCertificatePolicyX509CertificatePropertiesSubjectAlternativeNamesToTerraform(struct?: KeyVaultCertificateCertificatePolicyX509CertificatePropertiesSubjectAlternativeNamesOutputReference | KeyVaultCertificateCertificatePolicyX509CertificatePropertiesSubjectAlternativeNames): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     dns_names: cdktf.listMapper(cdktf.stringToTerraform)(struct!.dnsNames),
     emails: cdktf.listMapper(cdktf.stringToTerraform)(struct!.emails),
@@ -231,6 +486,64 @@ function keyVaultCertificateCertificatePolicyX509CertificatePropertiesSubjectAlt
   }
 }
 
+export class KeyVaultCertificateCertificatePolicyX509CertificatePropertiesSubjectAlternativeNamesOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // dns_names - computed: false, optional: true, required: false
+  private _dnsNames?: string[] | undefined; 
+  public get dnsNames() {
+    return this.getListAttribute('dns_names');
+  }
+  public set dnsNames(value: string[] | undefined) {
+    this._dnsNames = value;
+  }
+  public resetDnsNames() {
+    this._dnsNames = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dnsNamesInput() {
+    return this._dnsNames
+  }
+
+  // emails - computed: false, optional: true, required: false
+  private _emails?: string[] | undefined; 
+  public get emails() {
+    return this.getListAttribute('emails');
+  }
+  public set emails(value: string[] | undefined) {
+    this._emails = value;
+  }
+  public resetEmails() {
+    this._emails = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get emailsInput() {
+    return this._emails
+  }
+
+  // upns - computed: false, optional: true, required: false
+  private _upns?: string[] | undefined; 
+  public get upns() {
+    return this.getListAttribute('upns');
+  }
+  public set upns(value: string[] | undefined) {
+    this._upns = value;
+  }
+  public resetUpns() {
+    this._upns = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get upnsInput() {
+    return this._upns
+  }
+}
 export interface KeyVaultCertificateCertificatePolicyX509CertificateProperties {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_certificate.html#extended_key_usage KeyVaultCertificate#extended_key_usage}
@@ -253,33 +566,118 @@ export interface KeyVaultCertificateCertificatePolicyX509CertificateProperties {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_certificate.html#subject_alternative_names KeyVaultCertificate#subject_alternative_names}
   */
-  readonly subjectAlternativeNames?: KeyVaultCertificateCertificatePolicyX509CertificatePropertiesSubjectAlternativeNames[];
+  readonly subjectAlternativeNames?: KeyVaultCertificateCertificatePolicyX509CertificatePropertiesSubjectAlternativeNames;
 }
 
-function keyVaultCertificateCertificatePolicyX509CertificatePropertiesToTerraform(struct?: KeyVaultCertificateCertificatePolicyX509CertificateProperties): any {
+function keyVaultCertificateCertificatePolicyX509CertificatePropertiesToTerraform(struct?: KeyVaultCertificateCertificatePolicyX509CertificatePropertiesOutputReference | KeyVaultCertificateCertificatePolicyX509CertificateProperties): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     extended_key_usage: cdktf.listMapper(cdktf.stringToTerraform)(struct!.extendedKeyUsage),
     key_usage: cdktf.listMapper(cdktf.stringToTerraform)(struct!.keyUsage),
     subject: cdktf.stringToTerraform(struct!.subject),
     validity_in_months: cdktf.numberToTerraform(struct!.validityInMonths),
-    subject_alternative_names: cdktf.listMapper(keyVaultCertificateCertificatePolicyX509CertificatePropertiesSubjectAlternativeNamesToTerraform)(struct!.subjectAlternativeNames),
+    subject_alternative_names: keyVaultCertificateCertificatePolicyX509CertificatePropertiesSubjectAlternativeNamesToTerraform(struct!.subjectAlternativeNames),
   }
 }
 
+export class KeyVaultCertificateCertificatePolicyX509CertificatePropertiesOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // extended_key_usage - computed: true, optional: true, required: false
+  private _extendedKeyUsage?: string[] | undefined; 
+  public get extendedKeyUsage() {
+    return this.getListAttribute('extended_key_usage');
+  }
+  public set extendedKeyUsage(value: string[] | undefined) {
+    this._extendedKeyUsage = value;
+  }
+  public resetExtendedKeyUsage() {
+    this._extendedKeyUsage = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get extendedKeyUsageInput() {
+    return this._extendedKeyUsage
+  }
+
+  // key_usage - computed: false, optional: false, required: true
+  private _keyUsage?: string[]; 
+  public get keyUsage() {
+    return this.getListAttribute('key_usage');
+  }
+  public set keyUsage(value: string[]) {
+    this._keyUsage = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keyUsageInput() {
+    return this._keyUsage
+  }
+
+  // subject - computed: false, optional: false, required: true
+  private _subject?: string; 
+  public get subject() {
+    return this.getStringAttribute('subject');
+  }
+  public set subject(value: string) {
+    this._subject = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get subjectInput() {
+    return this._subject
+  }
+
+  // validity_in_months - computed: false, optional: false, required: true
+  private _validityInMonths?: number; 
+  public get validityInMonths() {
+    return this.getNumberAttribute('validity_in_months');
+  }
+  public set validityInMonths(value: number) {
+    this._validityInMonths = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get validityInMonthsInput() {
+    return this._validityInMonths
+  }
+
+  // subject_alternative_names - computed: false, optional: true, required: false
+  private _subjectAlternativeNames?: KeyVaultCertificateCertificatePolicyX509CertificatePropertiesSubjectAlternativeNames | undefined; 
+  private __subjectAlternativeNamesOutput = new KeyVaultCertificateCertificatePolicyX509CertificatePropertiesSubjectAlternativeNamesOutputReference(this as any, "subject_alternative_names", true);
+  public get subjectAlternativeNames() {
+    return this.__subjectAlternativeNamesOutput;
+  }
+  public putSubjectAlternativeNames(value: KeyVaultCertificateCertificatePolicyX509CertificatePropertiesSubjectAlternativeNames | undefined) {
+    this._subjectAlternativeNames = value;
+  }
+  public resetSubjectAlternativeNames() {
+    this._subjectAlternativeNames = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get subjectAlternativeNamesInput() {
+    return this._subjectAlternativeNames
+  }
+}
 export interface KeyVaultCertificateCertificatePolicy {
   /**
   * issuer_parameters block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_certificate.html#issuer_parameters KeyVaultCertificate#issuer_parameters}
   */
-  readonly issuerParameters: KeyVaultCertificateCertificatePolicyIssuerParameters[];
+  readonly issuerParameters: KeyVaultCertificateCertificatePolicyIssuerParameters;
   /**
   * key_properties block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_certificate.html#key_properties KeyVaultCertificate#key_properties}
   */
-  readonly keyProperties: KeyVaultCertificateCertificatePolicyKeyProperties[];
+  readonly keyProperties: KeyVaultCertificateCertificatePolicyKeyProperties;
   /**
   * lifetime_action block
   * 
@@ -291,26 +689,115 @@ export interface KeyVaultCertificateCertificatePolicy {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_certificate.html#secret_properties KeyVaultCertificate#secret_properties}
   */
-  readonly secretProperties: KeyVaultCertificateCertificatePolicySecretProperties[];
+  readonly secretProperties: KeyVaultCertificateCertificatePolicySecretProperties;
   /**
   * x509_certificate_properties block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_certificate.html#x509_certificate_properties KeyVaultCertificate#x509_certificate_properties}
   */
-  readonly x509CertificateProperties?: KeyVaultCertificateCertificatePolicyX509CertificateProperties[];
+  readonly x509CertificateProperties?: KeyVaultCertificateCertificatePolicyX509CertificateProperties;
 }
 
-function keyVaultCertificateCertificatePolicyToTerraform(struct?: KeyVaultCertificateCertificatePolicy): any {
+function keyVaultCertificateCertificatePolicyToTerraform(struct?: KeyVaultCertificateCertificatePolicyOutputReference | KeyVaultCertificateCertificatePolicy): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
-    issuer_parameters: cdktf.listMapper(keyVaultCertificateCertificatePolicyIssuerParametersToTerraform)(struct!.issuerParameters),
-    key_properties: cdktf.listMapper(keyVaultCertificateCertificatePolicyKeyPropertiesToTerraform)(struct!.keyProperties),
+    issuer_parameters: keyVaultCertificateCertificatePolicyIssuerParametersToTerraform(struct!.issuerParameters),
+    key_properties: keyVaultCertificateCertificatePolicyKeyPropertiesToTerraform(struct!.keyProperties),
     lifetime_action: cdktf.listMapper(keyVaultCertificateCertificatePolicyLifetimeActionToTerraform)(struct!.lifetimeAction),
-    secret_properties: cdktf.listMapper(keyVaultCertificateCertificatePolicySecretPropertiesToTerraform)(struct!.secretProperties),
-    x509_certificate_properties: cdktf.listMapper(keyVaultCertificateCertificatePolicyX509CertificatePropertiesToTerraform)(struct!.x509CertificateProperties),
+    secret_properties: keyVaultCertificateCertificatePolicySecretPropertiesToTerraform(struct!.secretProperties),
+    x509_certificate_properties: keyVaultCertificateCertificatePolicyX509CertificatePropertiesToTerraform(struct!.x509CertificateProperties),
   }
 }
 
+export class KeyVaultCertificateCertificatePolicyOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // issuer_parameters - computed: false, optional: false, required: true
+  private _issuerParameters?: KeyVaultCertificateCertificatePolicyIssuerParameters; 
+  private __issuerParametersOutput = new KeyVaultCertificateCertificatePolicyIssuerParametersOutputReference(this as any, "issuer_parameters", true);
+  public get issuerParameters() {
+    return this.__issuerParametersOutput;
+  }
+  public putIssuerParameters(value: KeyVaultCertificateCertificatePolicyIssuerParameters) {
+    this._issuerParameters = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get issuerParametersInput() {
+    return this._issuerParameters
+  }
+
+  // key_properties - computed: false, optional: false, required: true
+  private _keyProperties?: KeyVaultCertificateCertificatePolicyKeyProperties; 
+  private __keyPropertiesOutput = new KeyVaultCertificateCertificatePolicyKeyPropertiesOutputReference(this as any, "key_properties", true);
+  public get keyProperties() {
+    return this.__keyPropertiesOutput;
+  }
+  public putKeyProperties(value: KeyVaultCertificateCertificatePolicyKeyProperties) {
+    this._keyProperties = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keyPropertiesInput() {
+    return this._keyProperties
+  }
+
+  // lifetime_action - computed: false, optional: true, required: false
+  private _lifetimeAction?: KeyVaultCertificateCertificatePolicyLifetimeAction[] | undefined; 
+  public get lifetimeAction() {
+    // Getting the computed value is not yet implemented
+    return this.interpolationForAttribute('lifetime_action') as any;
+  }
+  public set lifetimeAction(value: KeyVaultCertificateCertificatePolicyLifetimeAction[] | undefined) {
+    this._lifetimeAction = value;
+  }
+  public resetLifetimeAction() {
+    this._lifetimeAction = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get lifetimeActionInput() {
+    return this._lifetimeAction
+  }
+
+  // secret_properties - computed: false, optional: false, required: true
+  private _secretProperties?: KeyVaultCertificateCertificatePolicySecretProperties; 
+  private __secretPropertiesOutput = new KeyVaultCertificateCertificatePolicySecretPropertiesOutputReference(this as any, "secret_properties", true);
+  public get secretProperties() {
+    return this.__secretPropertiesOutput;
+  }
+  public putSecretProperties(value: KeyVaultCertificateCertificatePolicySecretProperties) {
+    this._secretProperties = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get secretPropertiesInput() {
+    return this._secretProperties
+  }
+
+  // x509_certificate_properties - computed: false, optional: true, required: false
+  private _x509CertificateProperties?: KeyVaultCertificateCertificatePolicyX509CertificateProperties | undefined; 
+  private __x509CertificatePropertiesOutput = new KeyVaultCertificateCertificatePolicyX509CertificatePropertiesOutputReference(this as any, "x509_certificate_properties", true);
+  public get x509CertificateProperties() {
+    return this.__x509CertificatePropertiesOutput;
+  }
+  public putX509CertificateProperties(value: KeyVaultCertificateCertificatePolicyX509CertificateProperties | undefined) {
+    this._x509CertificateProperties = value;
+  }
+  public resetX509CertificateProperties() {
+    this._x509CertificateProperties = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get x509CertificatePropertiesInput() {
+    return this._x509CertificateProperties
+  }
+}
 export interface KeyVaultCertificateTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_certificate.html#create KeyVaultCertificate#create}
@@ -326,8 +813,11 @@ export interface KeyVaultCertificateTimeouts {
   readonly read?: string;
 }
 
-function keyVaultCertificateTimeoutsToTerraform(struct?: KeyVaultCertificateTimeouts): any {
+function keyVaultCertificateTimeoutsToTerraform(struct?: KeyVaultCertificateTimeoutsOutputReference | KeyVaultCertificateTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -335,6 +825,64 @@ function keyVaultCertificateTimeoutsToTerraform(struct?: KeyVaultCertificateTime
   }
 }
 
+export class KeyVaultCertificateTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_certificate.html azurerm_key_vault_certificate}
@@ -401,7 +949,7 @@ export class KeyVaultCertificate extends cdktf.TerraformResource {
   }
 
   // key_vault_id - computed: false, optional: false, required: true
-  private _keyVaultId: string;
+  private _keyVaultId?: string; 
   public get keyVaultId() {
     return this.getStringAttribute('key_vault_id');
   }
@@ -414,7 +962,7 @@ export class KeyVaultCertificate extends cdktf.TerraformResource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -432,11 +980,12 @@ export class KeyVaultCertificate extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable;
+  private _tags?: { [key: string]: string } | cdktf.IResolvable | undefined; 
   public get tags() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
     this._tags = value;
   }
   public resetTags() {
@@ -458,11 +1007,12 @@ export class KeyVaultCertificate extends cdktf.TerraformResource {
   }
 
   // certificate - computed: false, optional: true, required: false
-  private _certificate?: KeyVaultCertificateCertificate[];
+  private _certificate?: KeyVaultCertificateCertificate | undefined; 
+  private __certificateOutput = new KeyVaultCertificateCertificateOutputReference(this as any, "certificate", true);
   public get certificate() {
-    return this.interpolationForAttribute('certificate') as any;
+    return this.__certificateOutput;
   }
-  public set certificate(value: KeyVaultCertificateCertificate[] ) {
+  public putCertificate(value: KeyVaultCertificateCertificate | undefined) {
     this._certificate = value;
   }
   public resetCertificate() {
@@ -474,11 +1024,12 @@ export class KeyVaultCertificate extends cdktf.TerraformResource {
   }
 
   // certificate_policy - computed: false, optional: false, required: true
-  private _certificatePolicy: KeyVaultCertificateCertificatePolicy[];
+  private _certificatePolicy?: KeyVaultCertificateCertificatePolicy; 
+  private __certificatePolicyOutput = new KeyVaultCertificateCertificatePolicyOutputReference(this as any, "certificate_policy", true);
   public get certificatePolicy() {
-    return this.interpolationForAttribute('certificate_policy') as any;
+    return this.__certificatePolicyOutput;
   }
-  public set certificatePolicy(value: KeyVaultCertificateCertificatePolicy[]) {
+  public putCertificatePolicy(value: KeyVaultCertificateCertificatePolicy) {
     this._certificatePolicy = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -487,11 +1038,12 @@ export class KeyVaultCertificate extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: KeyVaultCertificateTimeouts;
+  private _timeouts?: KeyVaultCertificateTimeouts | undefined; 
+  private __timeoutsOutput = new KeyVaultCertificateTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: KeyVaultCertificateTimeouts ) {
+  public putTimeouts(value: KeyVaultCertificateTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {
@@ -511,8 +1063,8 @@ export class KeyVaultCertificate extends cdktf.TerraformResource {
       key_vault_id: cdktf.stringToTerraform(this._keyVaultId),
       name: cdktf.stringToTerraform(this._name),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
-      certificate: cdktf.listMapper(keyVaultCertificateCertificateToTerraform)(this._certificate),
-      certificate_policy: cdktf.listMapper(keyVaultCertificateCertificatePolicyToTerraform)(this._certificatePolicy),
+      certificate: keyVaultCertificateCertificateToTerraform(this._certificate),
+      certificate_policy: keyVaultCertificateCertificatePolicyToTerraform(this._certificatePolicy),
       timeouts: keyVaultCertificateTimeoutsToTerraform(this._timeouts),
     };
   }

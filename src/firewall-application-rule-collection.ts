@@ -53,6 +53,9 @@ export interface FirewallApplicationRuleCollectionRuleProtocol {
 
 function firewallApplicationRuleCollectionRuleProtocolToTerraform(struct?: FirewallApplicationRuleCollectionRuleProtocol): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     port: cdktf.numberToTerraform(struct!.port),
     type: cdktf.stringToTerraform(struct!.type),
@@ -94,6 +97,9 @@ export interface FirewallApplicationRuleCollectionRule {
 
 function firewallApplicationRuleCollectionRuleToTerraform(struct?: FirewallApplicationRuleCollectionRule): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     description: cdktf.stringToTerraform(struct!.description),
     fqdn_tags: cdktf.listMapper(cdktf.stringToTerraform)(struct!.fqdnTags),
@@ -124,8 +130,11 @@ export interface FirewallApplicationRuleCollectionTimeouts {
   readonly update?: string;
 }
 
-function firewallApplicationRuleCollectionTimeoutsToTerraform(struct?: FirewallApplicationRuleCollectionTimeouts): any {
+function firewallApplicationRuleCollectionTimeoutsToTerraform(struct?: FirewallApplicationRuleCollectionTimeoutsOutputReference | FirewallApplicationRuleCollectionTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -134,6 +143,80 @@ function firewallApplicationRuleCollectionTimeoutsToTerraform(struct?: FirewallA
   }
 }
 
+export class FirewallApplicationRuleCollectionTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_application_rule_collection.html azurerm_firewall_application_rule_collection}
@@ -181,7 +264,7 @@ export class FirewallApplicationRuleCollection extends cdktf.TerraformResource {
   // ==========
 
   // action - computed: false, optional: false, required: true
-  private _action: string;
+  private _action?: string; 
   public get action() {
     return this.getStringAttribute('action');
   }
@@ -194,7 +277,7 @@ export class FirewallApplicationRuleCollection extends cdktf.TerraformResource {
   }
 
   // azure_firewall_name - computed: false, optional: false, required: true
-  private _azureFirewallName: string;
+  private _azureFirewallName?: string; 
   public get azureFirewallName() {
     return this.getStringAttribute('azure_firewall_name');
   }
@@ -212,7 +295,7 @@ export class FirewallApplicationRuleCollection extends cdktf.TerraformResource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -225,7 +308,7 @@ export class FirewallApplicationRuleCollection extends cdktf.TerraformResource {
   }
 
   // priority - computed: false, optional: false, required: true
-  private _priority: number;
+  private _priority?: number; 
   public get priority() {
     return this.getNumberAttribute('priority');
   }
@@ -238,7 +321,7 @@ export class FirewallApplicationRuleCollection extends cdktf.TerraformResource {
   }
 
   // resource_group_name - computed: false, optional: false, required: true
-  private _resourceGroupName: string;
+  private _resourceGroupName?: string; 
   public get resourceGroupName() {
     return this.getStringAttribute('resource_group_name');
   }
@@ -251,8 +334,9 @@ export class FirewallApplicationRuleCollection extends cdktf.TerraformResource {
   }
 
   // rule - computed: false, optional: false, required: true
-  private _rule: FirewallApplicationRuleCollectionRule[];
+  private _rule?: FirewallApplicationRuleCollectionRule[]; 
   public get rule() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('rule') as any;
   }
   public set rule(value: FirewallApplicationRuleCollectionRule[]) {
@@ -264,11 +348,12 @@ export class FirewallApplicationRuleCollection extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: FirewallApplicationRuleCollectionTimeouts;
+  private _timeouts?: FirewallApplicationRuleCollectionTimeouts | undefined; 
+  private __timeoutsOutput = new FirewallApplicationRuleCollectionTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: FirewallApplicationRuleCollectionTimeouts ) {
+  public putTimeouts(value: FirewallApplicationRuleCollectionTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {

@@ -53,8 +53,11 @@ export interface RelayHybridConnectionTimeouts {
   readonly update?: string;
 }
 
-function relayHybridConnectionTimeoutsToTerraform(struct?: RelayHybridConnectionTimeouts): any {
+function relayHybridConnectionTimeoutsToTerraform(struct?: RelayHybridConnectionTimeoutsOutputReference | RelayHybridConnectionTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -63,6 +66,80 @@ function relayHybridConnectionTimeoutsToTerraform(struct?: RelayHybridConnection
   }
 }
 
+export class RelayHybridConnectionTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/relay_hybrid_connection.html azurerm_relay_hybrid_connection}
@@ -114,7 +191,7 @@ export class RelayHybridConnection extends cdktf.TerraformResource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -127,7 +204,7 @@ export class RelayHybridConnection extends cdktf.TerraformResource {
   }
 
   // relay_namespace_name - computed: false, optional: false, required: true
-  private _relayNamespaceName: string;
+  private _relayNamespaceName?: string; 
   public get relayNamespaceName() {
     return this.getStringAttribute('relay_namespace_name');
   }
@@ -140,11 +217,11 @@ export class RelayHybridConnection extends cdktf.TerraformResource {
   }
 
   // requires_client_authorization - computed: false, optional: true, required: false
-  private _requiresClientAuthorization?: boolean | cdktf.IResolvable;
+  private _requiresClientAuthorization?: boolean | cdktf.IResolvable | undefined; 
   public get requiresClientAuthorization() {
-    return this.getBooleanAttribute('requires_client_authorization');
+    return this.getBooleanAttribute('requires_client_authorization') as any;
   }
-  public set requiresClientAuthorization(value: boolean | cdktf.IResolvable ) {
+  public set requiresClientAuthorization(value: boolean | cdktf.IResolvable | undefined) {
     this._requiresClientAuthorization = value;
   }
   public resetRequiresClientAuthorization() {
@@ -156,7 +233,7 @@ export class RelayHybridConnection extends cdktf.TerraformResource {
   }
 
   // resource_group_name - computed: false, optional: false, required: true
-  private _resourceGroupName: string;
+  private _resourceGroupName?: string; 
   public get resourceGroupName() {
     return this.getStringAttribute('resource_group_name');
   }
@@ -169,11 +246,11 @@ export class RelayHybridConnection extends cdktf.TerraformResource {
   }
 
   // user_metadata - computed: false, optional: true, required: false
-  private _userMetadata?: string;
+  private _userMetadata?: string | undefined; 
   public get userMetadata() {
     return this.getStringAttribute('user_metadata');
   }
-  public set userMetadata(value: string ) {
+  public set userMetadata(value: string | undefined) {
     this._userMetadata = value;
   }
   public resetUserMetadata() {
@@ -185,11 +262,12 @@ export class RelayHybridConnection extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: RelayHybridConnectionTimeouts;
+  private _timeouts?: RelayHybridConnectionTimeouts | undefined; 
+  private __timeoutsOutput = new RelayHybridConnectionTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: RelayHybridConnectionTimeouts ) {
+  public putTimeouts(value: RelayHybridConnectionTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {

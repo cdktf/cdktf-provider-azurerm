@@ -24,7 +24,7 @@ export interface AutomationModuleConfig extends cdktf.TerraformMetaArguments {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_module.html#module_link AutomationModule#module_link}
   */
-  readonly moduleLink: AutomationModuleModuleLink[];
+  readonly moduleLink: AutomationModuleModuleLink;
   /**
   * timeouts block
   * 
@@ -43,14 +43,53 @@ export interface AutomationModuleModuleLinkHash {
   readonly value: string;
 }
 
-function automationModuleModuleLinkHashToTerraform(struct?: AutomationModuleModuleLinkHash): any {
+function automationModuleModuleLinkHashToTerraform(struct?: AutomationModuleModuleLinkHashOutputReference | AutomationModuleModuleLinkHash): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     algorithm: cdktf.stringToTerraform(struct!.algorithm),
     value: cdktf.stringToTerraform(struct!.value),
   }
 }
 
+export class AutomationModuleModuleLinkHashOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // algorithm - computed: false, optional: false, required: true
+  private _algorithm?: string; 
+  public get algorithm() {
+    return this.getStringAttribute('algorithm');
+  }
+  public set algorithm(value: string) {
+    this._algorithm = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get algorithmInput() {
+    return this._algorithm
+  }
+
+  // value - computed: false, optional: false, required: true
+  private _value?: string; 
+  public get value() {
+    return this.getStringAttribute('value');
+  }
+  public set value(value: string) {
+    this._value = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get valueInput() {
+    return this._value
+  }
+}
 export interface AutomationModuleModuleLink {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_module.html#uri AutomationModule#uri}
@@ -61,17 +100,60 @@ export interface AutomationModuleModuleLink {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_module.html#hash AutomationModule#hash}
   */
-  readonly hash?: AutomationModuleModuleLinkHash[];
+  readonly hash?: AutomationModuleModuleLinkHash;
 }
 
-function automationModuleModuleLinkToTerraform(struct?: AutomationModuleModuleLink): any {
+function automationModuleModuleLinkToTerraform(struct?: AutomationModuleModuleLinkOutputReference | AutomationModuleModuleLink): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     uri: cdktf.stringToTerraform(struct!.uri),
-    hash: cdktf.listMapper(automationModuleModuleLinkHashToTerraform)(struct!.hash),
+    hash: automationModuleModuleLinkHashToTerraform(struct!.hash),
   }
 }
 
+export class AutomationModuleModuleLinkOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // uri - computed: false, optional: false, required: true
+  private _uri?: string; 
+  public get uri() {
+    return this.getStringAttribute('uri');
+  }
+  public set uri(value: string) {
+    this._uri = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get uriInput() {
+    return this._uri
+  }
+
+  // hash - computed: false, optional: true, required: false
+  private _hash?: AutomationModuleModuleLinkHash | undefined; 
+  private __hashOutput = new AutomationModuleModuleLinkHashOutputReference(this as any, "hash", true);
+  public get hash() {
+    return this.__hashOutput;
+  }
+  public putHash(value: AutomationModuleModuleLinkHash | undefined) {
+    this._hash = value;
+  }
+  public resetHash() {
+    this._hash = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get hashInput() {
+    return this._hash
+  }
+}
 export interface AutomationModuleTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_module.html#create AutomationModule#create}
@@ -91,8 +173,11 @@ export interface AutomationModuleTimeouts {
   readonly update?: string;
 }
 
-function automationModuleTimeoutsToTerraform(struct?: AutomationModuleTimeouts): any {
+function automationModuleTimeoutsToTerraform(struct?: AutomationModuleTimeoutsOutputReference | AutomationModuleTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -101,6 +186,80 @@ function automationModuleTimeoutsToTerraform(struct?: AutomationModuleTimeouts):
   }
 }
 
+export class AutomationModuleTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/automation_module.html azurerm_automation_module}
@@ -146,7 +305,7 @@ export class AutomationModule extends cdktf.TerraformResource {
   // ==========
 
   // automation_account_name - computed: false, optional: false, required: true
-  private _automationAccountName: string;
+  private _automationAccountName?: string; 
   public get automationAccountName() {
     return this.getStringAttribute('automation_account_name');
   }
@@ -164,7 +323,7 @@ export class AutomationModule extends cdktf.TerraformResource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -177,7 +336,7 @@ export class AutomationModule extends cdktf.TerraformResource {
   }
 
   // resource_group_name - computed: false, optional: false, required: true
-  private _resourceGroupName: string;
+  private _resourceGroupName?: string; 
   public get resourceGroupName() {
     return this.getStringAttribute('resource_group_name');
   }
@@ -190,11 +349,12 @@ export class AutomationModule extends cdktf.TerraformResource {
   }
 
   // module_link - computed: false, optional: false, required: true
-  private _moduleLink: AutomationModuleModuleLink[];
+  private _moduleLink?: AutomationModuleModuleLink; 
+  private __moduleLinkOutput = new AutomationModuleModuleLinkOutputReference(this as any, "module_link", true);
   public get moduleLink() {
-    return this.interpolationForAttribute('module_link') as any;
+    return this.__moduleLinkOutput;
   }
-  public set moduleLink(value: AutomationModuleModuleLink[]) {
+  public putModuleLink(value: AutomationModuleModuleLink) {
     this._moduleLink = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -203,11 +363,12 @@ export class AutomationModule extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: AutomationModuleTimeouts;
+  private _timeouts?: AutomationModuleTimeouts | undefined; 
+  private __timeoutsOutput = new AutomationModuleTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: AutomationModuleTimeouts ) {
+  public putTimeouts(value: AutomationModuleTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {
@@ -227,7 +388,7 @@ export class AutomationModule extends cdktf.TerraformResource {
       automation_account_name: cdktf.stringToTerraform(this._automationAccountName),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
-      module_link: cdktf.listMapper(automationModuleModuleLinkToTerraform)(this._moduleLink),
+      module_link: automationModuleModuleLinkToTerraform(this._moduleLink),
       timeouts: automationModuleTimeoutsToTerraform(this._timeouts),
     };
   }

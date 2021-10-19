@@ -48,7 +48,7 @@ export interface VmwarePrivateCloudConfig extends cdktf.TerraformMetaArguments {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vmware_private_cloud.html#management_cluster VmwarePrivateCloud#management_cluster}
   */
-  readonly managementCluster: VmwarePrivateCloudManagementCluster[];
+  readonly managementCluster: VmwarePrivateCloudManagementCluster;
   /**
   * timeouts block
   * 
@@ -85,13 +85,39 @@ export interface VmwarePrivateCloudManagementCluster {
   readonly size: number;
 }
 
-function vmwarePrivateCloudManagementClusterToTerraform(struct?: VmwarePrivateCloudManagementCluster): any {
+function vmwarePrivateCloudManagementClusterToTerraform(struct?: VmwarePrivateCloudManagementClusterOutputReference | VmwarePrivateCloudManagementCluster): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     size: cdktf.numberToTerraform(struct!.size),
   }
 }
 
+export class VmwarePrivateCloudManagementClusterOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // size - computed: false, optional: false, required: true
+  private _size?: number; 
+  public get size() {
+    return this.getNumberAttribute('size');
+  }
+  public set size(value: number) {
+    this._size = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sizeInput() {
+    return this._size
+  }
+}
 export interface VmwarePrivateCloudTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vmware_private_cloud.html#create VmwarePrivateCloud#create}
@@ -111,8 +137,11 @@ export interface VmwarePrivateCloudTimeouts {
   readonly update?: string;
 }
 
-function vmwarePrivateCloudTimeoutsToTerraform(struct?: VmwarePrivateCloudTimeouts): any {
+function vmwarePrivateCloudTimeoutsToTerraform(struct?: VmwarePrivateCloudTimeoutsOutputReference | VmwarePrivateCloudTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -121,6 +150,80 @@ function vmwarePrivateCloudTimeoutsToTerraform(struct?: VmwarePrivateCloudTimeou
   }
 }
 
+export class VmwarePrivateCloudTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/vmware_private_cloud.html azurerm_vmware_private_cloud}
@@ -187,11 +290,11 @@ export class VmwarePrivateCloud extends cdktf.TerraformResource {
   }
 
   // internet_connection_enabled - computed: false, optional: true, required: false
-  private _internetConnectionEnabled?: boolean | cdktf.IResolvable;
+  private _internetConnectionEnabled?: boolean | cdktf.IResolvable | undefined; 
   public get internetConnectionEnabled() {
-    return this.getBooleanAttribute('internet_connection_enabled');
+    return this.getBooleanAttribute('internet_connection_enabled') as any;
   }
-  public set internetConnectionEnabled(value: boolean | cdktf.IResolvable ) {
+  public set internetConnectionEnabled(value: boolean | cdktf.IResolvable | undefined) {
     this._internetConnectionEnabled = value;
   }
   public resetInternetConnectionEnabled() {
@@ -203,7 +306,7 @@ export class VmwarePrivateCloud extends cdktf.TerraformResource {
   }
 
   // location - computed: false, optional: false, required: true
-  private _location: string;
+  private _location?: string; 
   public get location() {
     return this.getStringAttribute('location');
   }
@@ -221,7 +324,7 @@ export class VmwarePrivateCloud extends cdktf.TerraformResource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -234,7 +337,7 @@ export class VmwarePrivateCloud extends cdktf.TerraformResource {
   }
 
   // network_subnet_cidr - computed: false, optional: false, required: true
-  private _networkSubnetCidr: string;
+  private _networkSubnetCidr?: string; 
   public get networkSubnetCidr() {
     return this.getStringAttribute('network_subnet_cidr');
   }
@@ -257,11 +360,11 @@ export class VmwarePrivateCloud extends cdktf.TerraformResource {
   }
 
   // nsxt_password - computed: false, optional: true, required: false
-  private _nsxtPassword?: string;
+  private _nsxtPassword?: string | undefined; 
   public get nsxtPassword() {
     return this.getStringAttribute('nsxt_password');
   }
-  public set nsxtPassword(value: string ) {
+  public set nsxtPassword(value: string | undefined) {
     this._nsxtPassword = value;
   }
   public resetNsxtPassword() {
@@ -278,7 +381,7 @@ export class VmwarePrivateCloud extends cdktf.TerraformResource {
   }
 
   // resource_group_name - computed: false, optional: false, required: true
-  private _resourceGroupName: string;
+  private _resourceGroupName?: string; 
   public get resourceGroupName() {
     return this.getStringAttribute('resource_group_name');
   }
@@ -291,7 +394,7 @@ export class VmwarePrivateCloud extends cdktf.TerraformResource {
   }
 
   // sku_name - computed: false, optional: false, required: true
-  private _skuName: string;
+  private _skuName?: string; 
   public get skuName() {
     return this.getStringAttribute('sku_name');
   }
@@ -304,11 +407,12 @@ export class VmwarePrivateCloud extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable;
+  private _tags?: { [key: string]: string } | cdktf.IResolvable | undefined; 
   public get tags() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
     this._tags = value;
   }
   public resetTags() {
@@ -325,11 +429,11 @@ export class VmwarePrivateCloud extends cdktf.TerraformResource {
   }
 
   // vcenter_password - computed: false, optional: true, required: false
-  private _vcenterPassword?: string;
+  private _vcenterPassword?: string | undefined; 
   public get vcenterPassword() {
     return this.getStringAttribute('vcenter_password');
   }
-  public set vcenterPassword(value: string ) {
+  public set vcenterPassword(value: string | undefined) {
     this._vcenterPassword = value;
   }
   public resetVcenterPassword() {
@@ -351,11 +455,12 @@ export class VmwarePrivateCloud extends cdktf.TerraformResource {
   }
 
   // management_cluster - computed: false, optional: false, required: true
-  private _managementCluster: VmwarePrivateCloudManagementCluster[];
+  private _managementCluster?: VmwarePrivateCloudManagementCluster; 
+  private __managementClusterOutput = new VmwarePrivateCloudManagementClusterOutputReference(this as any, "management_cluster", true);
   public get managementCluster() {
-    return this.interpolationForAttribute('management_cluster') as any;
+    return this.__managementClusterOutput;
   }
-  public set managementCluster(value: VmwarePrivateCloudManagementCluster[]) {
+  public putManagementCluster(value: VmwarePrivateCloudManagementCluster) {
     this._managementCluster = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -364,11 +469,12 @@ export class VmwarePrivateCloud extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: VmwarePrivateCloudTimeouts;
+  private _timeouts?: VmwarePrivateCloudTimeouts | undefined; 
+  private __timeoutsOutput = new VmwarePrivateCloudTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: VmwarePrivateCloudTimeouts ) {
+  public putTimeouts(value: VmwarePrivateCloudTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {
@@ -394,7 +500,7 @@ export class VmwarePrivateCloud extends cdktf.TerraformResource {
       sku_name: cdktf.stringToTerraform(this._skuName),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
       vcenter_password: cdktf.stringToTerraform(this._vcenterPassword),
-      management_cluster: cdktf.listMapper(vmwarePrivateCloudManagementClusterToTerraform)(this._managementCluster),
+      management_cluster: vmwarePrivateCloudManagementClusterToTerraform(this._managementCluster),
       timeouts: vmwarePrivateCloudTimeoutsToTerraform(this._timeouts),
     };
   }

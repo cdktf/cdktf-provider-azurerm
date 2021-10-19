@@ -61,8 +61,11 @@ export interface NotificationHubAuthorizationRuleTimeouts {
   readonly update?: string;
 }
 
-function notificationHubAuthorizationRuleTimeoutsToTerraform(struct?: NotificationHubAuthorizationRuleTimeouts): any {
+function notificationHubAuthorizationRuleTimeoutsToTerraform(struct?: NotificationHubAuthorizationRuleTimeoutsOutputReference | NotificationHubAuthorizationRuleTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -71,6 +74,80 @@ function notificationHubAuthorizationRuleTimeoutsToTerraform(struct?: Notificati
   }
 }
 
+export class NotificationHubAuthorizationRuleTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/notification_hub_authorization_rule.html azurerm_notification_hub_authorization_rule}
@@ -124,11 +201,11 @@ export class NotificationHubAuthorizationRule extends cdktf.TerraformResource {
   }
 
   // listen - computed: false, optional: true, required: false
-  private _listen?: boolean | cdktf.IResolvable;
+  private _listen?: boolean | cdktf.IResolvable | undefined; 
   public get listen() {
-    return this.getBooleanAttribute('listen');
+    return this.getBooleanAttribute('listen') as any;
   }
-  public set listen(value: boolean | cdktf.IResolvable ) {
+  public set listen(value: boolean | cdktf.IResolvable | undefined) {
     this._listen = value;
   }
   public resetListen() {
@@ -140,11 +217,11 @@ export class NotificationHubAuthorizationRule extends cdktf.TerraformResource {
   }
 
   // manage - computed: false, optional: true, required: false
-  private _manage?: boolean | cdktf.IResolvable;
+  private _manage?: boolean | cdktf.IResolvable | undefined; 
   public get manage() {
-    return this.getBooleanAttribute('manage');
+    return this.getBooleanAttribute('manage') as any;
   }
-  public set manage(value: boolean | cdktf.IResolvable ) {
+  public set manage(value: boolean | cdktf.IResolvable | undefined) {
     this._manage = value;
   }
   public resetManage() {
@@ -156,7 +233,7 @@ export class NotificationHubAuthorizationRule extends cdktf.TerraformResource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -169,7 +246,7 @@ export class NotificationHubAuthorizationRule extends cdktf.TerraformResource {
   }
 
   // namespace_name - computed: false, optional: false, required: true
-  private _namespaceName: string;
+  private _namespaceName?: string; 
   public get namespaceName() {
     return this.getStringAttribute('namespace_name');
   }
@@ -182,7 +259,7 @@ export class NotificationHubAuthorizationRule extends cdktf.TerraformResource {
   }
 
   // notification_hub_name - computed: false, optional: false, required: true
-  private _notificationHubName: string;
+  private _notificationHubName?: string; 
   public get notificationHubName() {
     return this.getStringAttribute('notification_hub_name');
   }
@@ -200,7 +277,7 @@ export class NotificationHubAuthorizationRule extends cdktf.TerraformResource {
   }
 
   // resource_group_name - computed: false, optional: false, required: true
-  private _resourceGroupName: string;
+  private _resourceGroupName?: string; 
   public get resourceGroupName() {
     return this.getStringAttribute('resource_group_name');
   }
@@ -218,11 +295,11 @@ export class NotificationHubAuthorizationRule extends cdktf.TerraformResource {
   }
 
   // send - computed: false, optional: true, required: false
-  private _send?: boolean | cdktf.IResolvable;
+  private _send?: boolean | cdktf.IResolvable | undefined; 
   public get send() {
-    return this.getBooleanAttribute('send');
+    return this.getBooleanAttribute('send') as any;
   }
-  public set send(value: boolean | cdktf.IResolvable ) {
+  public set send(value: boolean | cdktf.IResolvable | undefined) {
     this._send = value;
   }
   public resetSend() {
@@ -234,11 +311,12 @@ export class NotificationHubAuthorizationRule extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: NotificationHubAuthorizationRuleTimeouts;
+  private _timeouts?: NotificationHubAuthorizationRuleTimeouts | undefined; 
+  private __timeoutsOutput = new NotificationHubAuthorizationRuleTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: NotificationHubAuthorizationRuleTimeouts ) {
+  public putTimeouts(value: NotificationHubAuthorizationRuleTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {

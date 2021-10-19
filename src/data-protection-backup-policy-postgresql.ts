@@ -63,8 +63,11 @@ export interface DataProtectionBackupPolicyPostgresqlRetentionRuleCriteria {
   readonly weeksOfMonth?: string[];
 }
 
-function dataProtectionBackupPolicyPostgresqlRetentionRuleCriteriaToTerraform(struct?: DataProtectionBackupPolicyPostgresqlRetentionRuleCriteria): any {
+function dataProtectionBackupPolicyPostgresqlRetentionRuleCriteriaToTerraform(struct?: DataProtectionBackupPolicyPostgresqlRetentionRuleCriteriaOutputReference | DataProtectionBackupPolicyPostgresqlRetentionRuleCriteria): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     absolute_criteria: cdktf.stringToTerraform(struct!.absoluteCriteria),
     days_of_week: cdktf.listMapper(cdktf.stringToTerraform)(struct!.daysOfWeek),
@@ -74,6 +77,96 @@ function dataProtectionBackupPolicyPostgresqlRetentionRuleCriteriaToTerraform(st
   }
 }
 
+export class DataProtectionBackupPolicyPostgresqlRetentionRuleCriteriaOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // absolute_criteria - computed: false, optional: true, required: false
+  private _absoluteCriteria?: string | undefined; 
+  public get absoluteCriteria() {
+    return this.getStringAttribute('absolute_criteria');
+  }
+  public set absoluteCriteria(value: string | undefined) {
+    this._absoluteCriteria = value;
+  }
+  public resetAbsoluteCriteria() {
+    this._absoluteCriteria = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get absoluteCriteriaInput() {
+    return this._absoluteCriteria
+  }
+
+  // days_of_week - computed: false, optional: true, required: false
+  private _daysOfWeek?: string[] | undefined; 
+  public get daysOfWeek() {
+    return this.getListAttribute('days_of_week');
+  }
+  public set daysOfWeek(value: string[] | undefined) {
+    this._daysOfWeek = value;
+  }
+  public resetDaysOfWeek() {
+    this._daysOfWeek = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get daysOfWeekInput() {
+    return this._daysOfWeek
+  }
+
+  // months_of_year - computed: false, optional: true, required: false
+  private _monthsOfYear?: string[] | undefined; 
+  public get monthsOfYear() {
+    return this.getListAttribute('months_of_year');
+  }
+  public set monthsOfYear(value: string[] | undefined) {
+    this._monthsOfYear = value;
+  }
+  public resetMonthsOfYear() {
+    this._monthsOfYear = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get monthsOfYearInput() {
+    return this._monthsOfYear
+  }
+
+  // scheduled_backup_times - computed: false, optional: true, required: false
+  private _scheduledBackupTimes?: string[] | undefined; 
+  public get scheduledBackupTimes() {
+    return this.getListAttribute('scheduled_backup_times');
+  }
+  public set scheduledBackupTimes(value: string[] | undefined) {
+    this._scheduledBackupTimes = value;
+  }
+  public resetScheduledBackupTimes() {
+    this._scheduledBackupTimes = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get scheduledBackupTimesInput() {
+    return this._scheduledBackupTimes
+  }
+
+  // weeks_of_month - computed: false, optional: true, required: false
+  private _weeksOfMonth?: string[] | undefined; 
+  public get weeksOfMonth() {
+    return this.getListAttribute('weeks_of_month');
+  }
+  public set weeksOfMonth(value: string[] | undefined) {
+    this._weeksOfMonth = value;
+  }
+  public resetWeeksOfMonth() {
+    this._weeksOfMonth = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get weeksOfMonthInput() {
+    return this._weeksOfMonth
+  }
+}
 export interface DataProtectionBackupPolicyPostgresqlRetentionRule {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_policy_postgresql.html#duration DataProtectionBackupPolicyPostgresql#duration}
@@ -92,16 +185,19 @@ export interface DataProtectionBackupPolicyPostgresqlRetentionRule {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_policy_postgresql.html#criteria DataProtectionBackupPolicyPostgresql#criteria}
   */
-  readonly criteria: DataProtectionBackupPolicyPostgresqlRetentionRuleCriteria[];
+  readonly criteria: DataProtectionBackupPolicyPostgresqlRetentionRuleCriteria;
 }
 
 function dataProtectionBackupPolicyPostgresqlRetentionRuleToTerraform(struct?: DataProtectionBackupPolicyPostgresqlRetentionRule): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     duration: cdktf.stringToTerraform(struct!.duration),
     name: cdktf.stringToTerraform(struct!.name),
     priority: cdktf.numberToTerraform(struct!.priority),
-    criteria: cdktf.listMapper(dataProtectionBackupPolicyPostgresqlRetentionRuleCriteriaToTerraform)(struct!.criteria),
+    criteria: dataProtectionBackupPolicyPostgresqlRetentionRuleCriteriaToTerraform(struct!.criteria),
   }
 }
 
@@ -124,8 +220,11 @@ export interface DataProtectionBackupPolicyPostgresqlTimeouts {
   readonly update?: string;
 }
 
-function dataProtectionBackupPolicyPostgresqlTimeoutsToTerraform(struct?: DataProtectionBackupPolicyPostgresqlTimeouts): any {
+function dataProtectionBackupPolicyPostgresqlTimeoutsToTerraform(struct?: DataProtectionBackupPolicyPostgresqlTimeoutsOutputReference | DataProtectionBackupPolicyPostgresqlTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -134,6 +233,80 @@ function dataProtectionBackupPolicyPostgresqlTimeoutsToTerraform(struct?: DataPr
   }
 }
 
+export class DataProtectionBackupPolicyPostgresqlTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_policy_postgresql.html azurerm_data_protection_backup_policy_postgresql}
@@ -181,7 +354,7 @@ export class DataProtectionBackupPolicyPostgresql extends cdktf.TerraformResourc
   // ==========
 
   // backup_repeating_time_intervals - computed: false, optional: false, required: true
-  private _backupRepeatingTimeIntervals: string[];
+  private _backupRepeatingTimeIntervals?: string[]; 
   public get backupRepeatingTimeIntervals() {
     return this.getListAttribute('backup_repeating_time_intervals');
   }
@@ -194,7 +367,7 @@ export class DataProtectionBackupPolicyPostgresql extends cdktf.TerraformResourc
   }
 
   // default_retention_duration - computed: false, optional: false, required: true
-  private _defaultRetentionDuration: string;
+  private _defaultRetentionDuration?: string; 
   public get defaultRetentionDuration() {
     return this.getStringAttribute('default_retention_duration');
   }
@@ -212,7 +385,7 @@ export class DataProtectionBackupPolicyPostgresql extends cdktf.TerraformResourc
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -225,7 +398,7 @@ export class DataProtectionBackupPolicyPostgresql extends cdktf.TerraformResourc
   }
 
   // resource_group_name - computed: false, optional: false, required: true
-  private _resourceGroupName: string;
+  private _resourceGroupName?: string; 
   public get resourceGroupName() {
     return this.getStringAttribute('resource_group_name');
   }
@@ -238,7 +411,7 @@ export class DataProtectionBackupPolicyPostgresql extends cdktf.TerraformResourc
   }
 
   // vault_name - computed: false, optional: false, required: true
-  private _vaultName: string;
+  private _vaultName?: string; 
   public get vaultName() {
     return this.getStringAttribute('vault_name');
   }
@@ -251,11 +424,12 @@ export class DataProtectionBackupPolicyPostgresql extends cdktf.TerraformResourc
   }
 
   // retention_rule - computed: false, optional: true, required: false
-  private _retentionRule?: DataProtectionBackupPolicyPostgresqlRetentionRule[];
+  private _retentionRule?: DataProtectionBackupPolicyPostgresqlRetentionRule[] | undefined; 
   public get retentionRule() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('retention_rule') as any;
   }
-  public set retentionRule(value: DataProtectionBackupPolicyPostgresqlRetentionRule[] ) {
+  public set retentionRule(value: DataProtectionBackupPolicyPostgresqlRetentionRule[] | undefined) {
     this._retentionRule = value;
   }
   public resetRetentionRule() {
@@ -267,11 +441,12 @@ export class DataProtectionBackupPolicyPostgresql extends cdktf.TerraformResourc
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: DataProtectionBackupPolicyPostgresqlTimeouts;
+  private _timeouts?: DataProtectionBackupPolicyPostgresqlTimeouts | undefined; 
+  private __timeoutsOutput = new DataProtectionBackupPolicyPostgresqlTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: DataProtectionBackupPolicyPostgresqlTimeouts ) {
+  public putTimeouts(value: DataProtectionBackupPolicyPostgresqlTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {

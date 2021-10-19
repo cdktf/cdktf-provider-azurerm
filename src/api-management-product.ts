@@ -73,8 +73,11 @@ export interface ApiManagementProductTimeouts {
   readonly update?: string;
 }
 
-function apiManagementProductTimeoutsToTerraform(struct?: ApiManagementProductTimeouts): any {
+function apiManagementProductTimeoutsToTerraform(struct?: ApiManagementProductTimeoutsOutputReference | ApiManagementProductTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -83,6 +86,80 @@ function apiManagementProductTimeoutsToTerraform(struct?: ApiManagementProductTi
   }
 }
 
+export class ApiManagementProductTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_product.html azurerm_api_management_product}
@@ -134,7 +211,7 @@ export class ApiManagementProduct extends cdktf.TerraformResource {
   // ==========
 
   // api_management_name - computed: false, optional: false, required: true
-  private _apiManagementName: string;
+  private _apiManagementName?: string; 
   public get apiManagementName() {
     return this.getStringAttribute('api_management_name');
   }
@@ -147,11 +224,11 @@ export class ApiManagementProduct extends cdktf.TerraformResource {
   }
 
   // approval_required - computed: false, optional: true, required: false
-  private _approvalRequired?: boolean | cdktf.IResolvable;
+  private _approvalRequired?: boolean | cdktf.IResolvable | undefined; 
   public get approvalRequired() {
-    return this.getBooleanAttribute('approval_required');
+    return this.getBooleanAttribute('approval_required') as any;
   }
-  public set approvalRequired(value: boolean | cdktf.IResolvable ) {
+  public set approvalRequired(value: boolean | cdktf.IResolvable | undefined) {
     this._approvalRequired = value;
   }
   public resetApprovalRequired() {
@@ -163,11 +240,11 @@ export class ApiManagementProduct extends cdktf.TerraformResource {
   }
 
   // description - computed: false, optional: true, required: false
-  private _description?: string;
+  private _description?: string | undefined; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string ) {
+  public set description(value: string | undefined) {
     this._description = value;
   }
   public resetDescription() {
@@ -179,7 +256,7 @@ export class ApiManagementProduct extends cdktf.TerraformResource {
   }
 
   // display_name - computed: false, optional: false, required: true
-  private _displayName: string;
+  private _displayName?: string; 
   public get displayName() {
     return this.getStringAttribute('display_name');
   }
@@ -197,7 +274,7 @@ export class ApiManagementProduct extends cdktf.TerraformResource {
   }
 
   // product_id - computed: false, optional: false, required: true
-  private _productId: string;
+  private _productId?: string; 
   public get productId() {
     return this.getStringAttribute('product_id');
   }
@@ -210,9 +287,9 @@ export class ApiManagementProduct extends cdktf.TerraformResource {
   }
 
   // published - computed: false, optional: false, required: true
-  private _published: boolean | cdktf.IResolvable;
+  private _published?: boolean | cdktf.IResolvable; 
   public get published() {
-    return this.getBooleanAttribute('published');
+    return this.getBooleanAttribute('published') as any;
   }
   public set published(value: boolean | cdktf.IResolvable) {
     this._published = value;
@@ -223,7 +300,7 @@ export class ApiManagementProduct extends cdktf.TerraformResource {
   }
 
   // resource_group_name - computed: false, optional: false, required: true
-  private _resourceGroupName: string;
+  private _resourceGroupName?: string; 
   public get resourceGroupName() {
     return this.getStringAttribute('resource_group_name');
   }
@@ -236,9 +313,9 @@ export class ApiManagementProduct extends cdktf.TerraformResource {
   }
 
   // subscription_required - computed: false, optional: false, required: true
-  private _subscriptionRequired: boolean | cdktf.IResolvable;
+  private _subscriptionRequired?: boolean | cdktf.IResolvable; 
   public get subscriptionRequired() {
-    return this.getBooleanAttribute('subscription_required');
+    return this.getBooleanAttribute('subscription_required') as any;
   }
   public set subscriptionRequired(value: boolean | cdktf.IResolvable) {
     this._subscriptionRequired = value;
@@ -249,11 +326,11 @@ export class ApiManagementProduct extends cdktf.TerraformResource {
   }
 
   // subscriptions_limit - computed: false, optional: true, required: false
-  private _subscriptionsLimit?: number;
+  private _subscriptionsLimit?: number | undefined; 
   public get subscriptionsLimit() {
     return this.getNumberAttribute('subscriptions_limit');
   }
-  public set subscriptionsLimit(value: number ) {
+  public set subscriptionsLimit(value: number | undefined) {
     this._subscriptionsLimit = value;
   }
   public resetSubscriptionsLimit() {
@@ -265,11 +342,11 @@ export class ApiManagementProduct extends cdktf.TerraformResource {
   }
 
   // terms - computed: false, optional: true, required: false
-  private _terms?: string;
+  private _terms?: string | undefined; 
   public get terms() {
     return this.getStringAttribute('terms');
   }
-  public set terms(value: string ) {
+  public set terms(value: string | undefined) {
     this._terms = value;
   }
   public resetTerms() {
@@ -281,11 +358,12 @@ export class ApiManagementProduct extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: ApiManagementProductTimeouts;
+  private _timeouts?: ApiManagementProductTimeouts | undefined; 
+  private __timeoutsOutput = new ApiManagementProductTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: ApiManagementProductTimeouts ) {
+  public putTimeouts(value: ApiManagementProductTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {

@@ -33,13 +33,42 @@ export interface DataAzurermAutomationVariableBoolTimeouts {
   readonly read?: string;
 }
 
-function dataAzurermAutomationVariableBoolTimeoutsToTerraform(struct?: DataAzurermAutomationVariableBoolTimeouts): any {
+function dataAzurermAutomationVariableBoolTimeoutsToTerraform(struct?: DataAzurermAutomationVariableBoolTimeoutsOutputReference | DataAzurermAutomationVariableBoolTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     read: cdktf.stringToTerraform(struct!.read),
   }
 }
 
+export class DataAzurermAutomationVariableBoolTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/automation_variable_bool.html azurerm_automation_variable_bool}
@@ -84,7 +113,7 @@ export class DataAzurermAutomationVariableBool extends cdktf.TerraformDataSource
   // ==========
 
   // automation_account_name - computed: false, optional: false, required: true
-  private _automationAccountName: string;
+  private _automationAccountName?: string; 
   public get automationAccountName() {
     return this.getStringAttribute('automation_account_name');
   }
@@ -103,7 +132,7 @@ export class DataAzurermAutomationVariableBool extends cdktf.TerraformDataSource
 
   // encrypted - computed: true, optional: false, required: false
   public get encrypted() {
-    return this.getBooleanAttribute('encrypted');
+    return this.getBooleanAttribute('encrypted') as any;
   }
 
   // id - computed: true, optional: true, required: false
@@ -112,7 +141,7 @@ export class DataAzurermAutomationVariableBool extends cdktf.TerraformDataSource
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -125,7 +154,7 @@ export class DataAzurermAutomationVariableBool extends cdktf.TerraformDataSource
   }
 
   // resource_group_name - computed: false, optional: false, required: true
-  private _resourceGroupName: string;
+  private _resourceGroupName?: string; 
   public get resourceGroupName() {
     return this.getStringAttribute('resource_group_name');
   }
@@ -139,15 +168,16 @@ export class DataAzurermAutomationVariableBool extends cdktf.TerraformDataSource
 
   // value - computed: true, optional: false, required: false
   public get value() {
-    return this.getBooleanAttribute('value');
+    return this.getBooleanAttribute('value') as any;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: DataAzurermAutomationVariableBoolTimeouts;
+  private _timeouts?: DataAzurermAutomationVariableBoolTimeouts | undefined; 
+  private __timeoutsOutput = new DataAzurermAutomationVariableBoolTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: DataAzurermAutomationVariableBoolTimeouts ) {
+  public putTimeouts(value: DataAzurermAutomationVariableBoolTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {

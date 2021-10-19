@@ -48,13 +48,13 @@ export interface SqlServerConfig extends cdktf.TerraformMetaArguments {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_server.html#identity SqlServer#identity}
   */
-  readonly identity?: SqlServerIdentity[];
+  readonly identity?: SqlServerIdentity;
   /**
   * threat_detection_policy block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_server.html#threat_detection_policy SqlServer#threat_detection_policy}
   */
-  readonly threatDetectionPolicy?: SqlServerThreatDetectionPolicy[];
+  readonly threatDetectionPolicy?: SqlServerThreatDetectionPolicy;
   /**
   * timeouts block
   * 
@@ -87,6 +87,9 @@ export interface SqlServerExtendedAuditingPolicy {
 
 function sqlServerExtendedAuditingPolicyToTerraform(struct?: SqlServerExtendedAuditingPolicy): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     log_monitoring_enabled: cdktf.booleanToTerraform(struct!.logMonitoringEnabled),
     retention_in_days: cdktf.numberToTerraform(struct!.retentionInDays),
@@ -103,13 +106,39 @@ export interface SqlServerIdentity {
   readonly type: string;
 }
 
-function sqlServerIdentityToTerraform(struct?: SqlServerIdentity): any {
+function sqlServerIdentityToTerraform(struct?: SqlServerIdentityOutputReference | SqlServerIdentity): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     type: cdktf.stringToTerraform(struct!.type),
   }
 }
 
+export class SqlServerIdentityOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // type - computed: false, optional: false, required: true
+  private _type?: string; 
+  public get type() {
+    return this.getStringAttribute('type');
+  }
+  public set type(value: string) {
+    this._type = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get typeInput() {
+    return this._type
+  }
+}
 export interface SqlServerThreatDetectionPolicy {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_server.html#disabled_alerts SqlServer#disabled_alerts}
@@ -141,8 +170,11 @@ export interface SqlServerThreatDetectionPolicy {
   readonly storageEndpoint?: string;
 }
 
-function sqlServerThreatDetectionPolicyToTerraform(struct?: SqlServerThreatDetectionPolicy): any {
+function sqlServerThreatDetectionPolicyToTerraform(struct?: SqlServerThreatDetectionPolicyOutputReference | SqlServerThreatDetectionPolicy): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     disabled_alerts: cdktf.listMapper(cdktf.stringToTerraform)(struct!.disabledAlerts),
     email_account_admins: cdktf.booleanToTerraform(struct!.emailAccountAdmins),
@@ -154,6 +186,128 @@ function sqlServerThreatDetectionPolicyToTerraform(struct?: SqlServerThreatDetec
   }
 }
 
+export class SqlServerThreatDetectionPolicyOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // disabled_alerts - computed: false, optional: true, required: false
+  private _disabledAlerts?: string[] | undefined; 
+  public get disabledAlerts() {
+    return this.getListAttribute('disabled_alerts');
+  }
+  public set disabledAlerts(value: string[] | undefined) {
+    this._disabledAlerts = value;
+  }
+  public resetDisabledAlerts() {
+    this._disabledAlerts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get disabledAlertsInput() {
+    return this._disabledAlerts
+  }
+
+  // email_account_admins - computed: true, optional: true, required: false
+  private _emailAccountAdmins?: boolean | cdktf.IResolvable | undefined; 
+  public get emailAccountAdmins() {
+    return this.getBooleanAttribute('email_account_admins') as any;
+  }
+  public set emailAccountAdmins(value: boolean | cdktf.IResolvable | undefined) {
+    this._emailAccountAdmins = value;
+  }
+  public resetEmailAccountAdmins() {
+    this._emailAccountAdmins = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get emailAccountAdminsInput() {
+    return this._emailAccountAdmins
+  }
+
+  // email_addresses - computed: true, optional: true, required: false
+  private _emailAddresses?: string[] | undefined; 
+  public get emailAddresses() {
+    return this.getListAttribute('email_addresses');
+  }
+  public set emailAddresses(value: string[] | undefined) {
+    this._emailAddresses = value;
+  }
+  public resetEmailAddresses() {
+    this._emailAddresses = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get emailAddressesInput() {
+    return this._emailAddresses
+  }
+
+  // retention_days - computed: false, optional: true, required: false
+  private _retentionDays?: number | undefined; 
+  public get retentionDays() {
+    return this.getNumberAttribute('retention_days');
+  }
+  public set retentionDays(value: number | undefined) {
+    this._retentionDays = value;
+  }
+  public resetRetentionDays() {
+    this._retentionDays = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get retentionDaysInput() {
+    return this._retentionDays
+  }
+
+  // state - computed: false, optional: true, required: false
+  private _state?: string | undefined; 
+  public get state() {
+    return this.getStringAttribute('state');
+  }
+  public set state(value: string | undefined) {
+    this._state = value;
+  }
+  public resetState() {
+    this._state = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get stateInput() {
+    return this._state
+  }
+
+  // storage_account_access_key - computed: false, optional: true, required: false
+  private _storageAccountAccessKey?: string | undefined; 
+  public get storageAccountAccessKey() {
+    return this.getStringAttribute('storage_account_access_key');
+  }
+  public set storageAccountAccessKey(value: string | undefined) {
+    this._storageAccountAccessKey = value;
+  }
+  public resetStorageAccountAccessKey() {
+    this._storageAccountAccessKey = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get storageAccountAccessKeyInput() {
+    return this._storageAccountAccessKey
+  }
+
+  // storage_endpoint - computed: false, optional: true, required: false
+  private _storageEndpoint?: string | undefined; 
+  public get storageEndpoint() {
+    return this.getStringAttribute('storage_endpoint');
+  }
+  public set storageEndpoint(value: string | undefined) {
+    this._storageEndpoint = value;
+  }
+  public resetStorageEndpoint() {
+    this._storageEndpoint = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get storageEndpointInput() {
+    return this._storageEndpoint
+  }
+}
 export interface SqlServerTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_server.html#create SqlServer#create}
@@ -173,8 +327,11 @@ export interface SqlServerTimeouts {
   readonly update?: string;
 }
 
-function sqlServerTimeoutsToTerraform(struct?: SqlServerTimeouts): any {
+function sqlServerTimeoutsToTerraform(struct?: SqlServerTimeoutsOutputReference | SqlServerTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -183,6 +340,80 @@ function sqlServerTimeoutsToTerraform(struct?: SqlServerTimeouts): any {
   }
 }
 
+export class SqlServerTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/sql_server.html azurerm_sql_server}
@@ -235,7 +466,7 @@ export class SqlServer extends cdktf.TerraformResource {
   // ==========
 
   // administrator_login - computed: false, optional: false, required: true
-  private _administratorLogin: string;
+  private _administratorLogin?: string; 
   public get administratorLogin() {
     return this.getStringAttribute('administrator_login');
   }
@@ -248,7 +479,7 @@ export class SqlServer extends cdktf.TerraformResource {
   }
 
   // administrator_login_password - computed: false, optional: false, required: true
-  private _administratorLoginPassword: string;
+  private _administratorLoginPassword?: string; 
   public get administratorLoginPassword() {
     return this.getStringAttribute('administrator_login_password');
   }
@@ -261,11 +492,11 @@ export class SqlServer extends cdktf.TerraformResource {
   }
 
   // connection_policy - computed: false, optional: true, required: false
-  private _connectionPolicy?: string;
+  private _connectionPolicy?: string | undefined; 
   public get connectionPolicy() {
     return this.getStringAttribute('connection_policy');
   }
-  public set connectionPolicy(value: string ) {
+  public set connectionPolicy(value: string | undefined) {
     this._connectionPolicy = value;
   }
   public resetConnectionPolicy() {
@@ -277,11 +508,12 @@ export class SqlServer extends cdktf.TerraformResource {
   }
 
   // extended_auditing_policy - computed: true, optional: true, required: false
-  private _extendedAuditingPolicy?: SqlServerExtendedAuditingPolicy[]
-  public get extendedAuditingPolicy(): SqlServerExtendedAuditingPolicy[] {
-    return this.interpolationForAttribute('extended_auditing_policy') as any; // Getting the computed value is not yet implemented
+  private _extendedAuditingPolicy?: SqlServerExtendedAuditingPolicy[] | undefined; 
+  public get extendedAuditingPolicy() {
+    // Getting the computed value is not yet implemented
+    return this.interpolationForAttribute('extended_auditing_policy') as any;
   }
-  public set extendedAuditingPolicy(value: SqlServerExtendedAuditingPolicy[]) {
+  public set extendedAuditingPolicy(value: SqlServerExtendedAuditingPolicy[] | undefined) {
     this._extendedAuditingPolicy = value;
   }
   public resetExtendedAuditingPolicy() {
@@ -303,7 +535,7 @@ export class SqlServer extends cdktf.TerraformResource {
   }
 
   // location - computed: false, optional: false, required: true
-  private _location: string;
+  private _location?: string; 
   public get location() {
     return this.getStringAttribute('location');
   }
@@ -316,7 +548,7 @@ export class SqlServer extends cdktf.TerraformResource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -329,7 +561,7 @@ export class SqlServer extends cdktf.TerraformResource {
   }
 
   // resource_group_name - computed: false, optional: false, required: true
-  private _resourceGroupName: string;
+  private _resourceGroupName?: string; 
   public get resourceGroupName() {
     return this.getStringAttribute('resource_group_name');
   }
@@ -342,11 +574,12 @@ export class SqlServer extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable;
+  private _tags?: { [key: string]: string } | cdktf.IResolvable | undefined; 
   public get tags() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
     this._tags = value;
   }
   public resetTags() {
@@ -358,7 +591,7 @@ export class SqlServer extends cdktf.TerraformResource {
   }
 
   // version - computed: false, optional: false, required: true
-  private _version: string;
+  private _version?: string; 
   public get version() {
     return this.getStringAttribute('version');
   }
@@ -371,11 +604,12 @@ export class SqlServer extends cdktf.TerraformResource {
   }
 
   // identity - computed: false, optional: true, required: false
-  private _identity?: SqlServerIdentity[];
+  private _identity?: SqlServerIdentity | undefined; 
+  private __identityOutput = new SqlServerIdentityOutputReference(this as any, "identity", true);
   public get identity() {
-    return this.interpolationForAttribute('identity') as any;
+    return this.__identityOutput;
   }
-  public set identity(value: SqlServerIdentity[] ) {
+  public putIdentity(value: SqlServerIdentity | undefined) {
     this._identity = value;
   }
   public resetIdentity() {
@@ -387,11 +621,12 @@ export class SqlServer extends cdktf.TerraformResource {
   }
 
   // threat_detection_policy - computed: false, optional: true, required: false
-  private _threatDetectionPolicy?: SqlServerThreatDetectionPolicy[];
+  private _threatDetectionPolicy?: SqlServerThreatDetectionPolicy | undefined; 
+  private __threatDetectionPolicyOutput = new SqlServerThreatDetectionPolicyOutputReference(this as any, "threat_detection_policy", true);
   public get threatDetectionPolicy() {
-    return this.interpolationForAttribute('threat_detection_policy') as any;
+    return this.__threatDetectionPolicyOutput;
   }
-  public set threatDetectionPolicy(value: SqlServerThreatDetectionPolicy[] ) {
+  public putThreatDetectionPolicy(value: SqlServerThreatDetectionPolicy | undefined) {
     this._threatDetectionPolicy = value;
   }
   public resetThreatDetectionPolicy() {
@@ -403,11 +638,12 @@ export class SqlServer extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: SqlServerTimeouts;
+  private _timeouts?: SqlServerTimeouts | undefined; 
+  private __timeoutsOutput = new SqlServerTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: SqlServerTimeouts ) {
+  public putTimeouts(value: SqlServerTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {
@@ -433,8 +669,8 @@ export class SqlServer extends cdktf.TerraformResource {
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
       version: cdktf.stringToTerraform(this._version),
-      identity: cdktf.listMapper(sqlServerIdentityToTerraform)(this._identity),
-      threat_detection_policy: cdktf.listMapper(sqlServerThreatDetectionPolicyToTerraform)(this._threatDetectionPolicy),
+      identity: sqlServerIdentityToTerraform(this._identity),
+      threat_detection_policy: sqlServerThreatDetectionPolicyToTerraform(this._threatDetectionPolicy),
       timeouts: sqlServerTimeoutsToTerraform(this._timeouts),
     };
   }

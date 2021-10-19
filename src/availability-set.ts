@@ -65,8 +65,11 @@ export interface AvailabilitySetTimeouts {
   readonly update?: string;
 }
 
-function availabilitySetTimeoutsToTerraform(struct?: AvailabilitySetTimeouts): any {
+function availabilitySetTimeoutsToTerraform(struct?: AvailabilitySetTimeoutsOutputReference | AvailabilitySetTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -75,6 +78,80 @@ function availabilitySetTimeoutsToTerraform(struct?: AvailabilitySetTimeouts): a
   }
 }
 
+export class AvailabilitySetTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/availability_set.html azurerm_availability_set}
@@ -129,7 +206,7 @@ export class AvailabilitySet extends cdktf.TerraformResource {
   }
 
   // location - computed: false, optional: false, required: true
-  private _location: string;
+  private _location?: string; 
   public get location() {
     return this.getStringAttribute('location');
   }
@@ -142,11 +219,11 @@ export class AvailabilitySet extends cdktf.TerraformResource {
   }
 
   // managed - computed: false, optional: true, required: false
-  private _managed?: boolean | cdktf.IResolvable;
+  private _managed?: boolean | cdktf.IResolvable | undefined; 
   public get managed() {
-    return this.getBooleanAttribute('managed');
+    return this.getBooleanAttribute('managed') as any;
   }
-  public set managed(value: boolean | cdktf.IResolvable ) {
+  public set managed(value: boolean | cdktf.IResolvable | undefined) {
     this._managed = value;
   }
   public resetManaged() {
@@ -158,7 +235,7 @@ export class AvailabilitySet extends cdktf.TerraformResource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -171,11 +248,11 @@ export class AvailabilitySet extends cdktf.TerraformResource {
   }
 
   // platform_fault_domain_count - computed: false, optional: true, required: false
-  private _platformFaultDomainCount?: number;
+  private _platformFaultDomainCount?: number | undefined; 
   public get platformFaultDomainCount() {
     return this.getNumberAttribute('platform_fault_domain_count');
   }
-  public set platformFaultDomainCount(value: number ) {
+  public set platformFaultDomainCount(value: number | undefined) {
     this._platformFaultDomainCount = value;
   }
   public resetPlatformFaultDomainCount() {
@@ -187,11 +264,11 @@ export class AvailabilitySet extends cdktf.TerraformResource {
   }
 
   // platform_update_domain_count - computed: false, optional: true, required: false
-  private _platformUpdateDomainCount?: number;
+  private _platformUpdateDomainCount?: number | undefined; 
   public get platformUpdateDomainCount() {
     return this.getNumberAttribute('platform_update_domain_count');
   }
-  public set platformUpdateDomainCount(value: number ) {
+  public set platformUpdateDomainCount(value: number | undefined) {
     this._platformUpdateDomainCount = value;
   }
   public resetPlatformUpdateDomainCount() {
@@ -203,11 +280,11 @@ export class AvailabilitySet extends cdktf.TerraformResource {
   }
 
   // proximity_placement_group_id - computed: false, optional: true, required: false
-  private _proximityPlacementGroupId?: string;
+  private _proximityPlacementGroupId?: string | undefined; 
   public get proximityPlacementGroupId() {
     return this.getStringAttribute('proximity_placement_group_id');
   }
-  public set proximityPlacementGroupId(value: string ) {
+  public set proximityPlacementGroupId(value: string | undefined) {
     this._proximityPlacementGroupId = value;
   }
   public resetProximityPlacementGroupId() {
@@ -219,7 +296,7 @@ export class AvailabilitySet extends cdktf.TerraformResource {
   }
 
   // resource_group_name - computed: false, optional: false, required: true
-  private _resourceGroupName: string;
+  private _resourceGroupName?: string; 
   public get resourceGroupName() {
     return this.getStringAttribute('resource_group_name');
   }
@@ -232,11 +309,12 @@ export class AvailabilitySet extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable;
+  private _tags?: { [key: string]: string } | cdktf.IResolvable | undefined; 
   public get tags() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
     this._tags = value;
   }
   public resetTags() {
@@ -248,11 +326,12 @@ export class AvailabilitySet extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: AvailabilitySetTimeouts;
+  private _timeouts?: AvailabilitySetTimeouts | undefined; 
+  private __timeoutsOutput = new AvailabilitySetTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: AvailabilitySetTimeouts ) {
+  public putTimeouts(value: AvailabilitySetTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {

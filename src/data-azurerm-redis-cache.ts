@@ -47,7 +47,7 @@ export class DataAzurermRedisCacheRedisConfiguration extends cdktf.ComplexComput
 
   // aof_backup_enabled - computed: true, optional: false, required: false
   public get aofBackupEnabled() {
-    return this.getBooleanAttribute('aof_backup_enabled');
+    return this.getBooleanAttribute('aof_backup_enabled') as any;
   }
 
   // aof_storage_connection_string_0 - computed: true, optional: false, required: false
@@ -62,7 +62,7 @@ export class DataAzurermRedisCacheRedisConfiguration extends cdktf.ComplexComput
 
   // enable_authentication - computed: true, optional: false, required: false
   public get enableAuthentication() {
-    return this.getBooleanAttribute('enable_authentication');
+    return this.getBooleanAttribute('enable_authentication') as any;
   }
 
   // maxclients - computed: true, optional: false, required: false
@@ -97,7 +97,7 @@ export class DataAzurermRedisCacheRedisConfiguration extends cdktf.ComplexComput
 
   // rdb_backup_enabled - computed: true, optional: false, required: false
   public get rdbBackupEnabled() {
-    return this.getBooleanAttribute('rdb_backup_enabled');
+    return this.getBooleanAttribute('rdb_backup_enabled') as any;
   }
 
   // rdb_backup_frequency - computed: true, optional: false, required: false
@@ -122,13 +122,42 @@ export interface DataAzurermRedisCacheTimeouts {
   readonly read?: string;
 }
 
-function dataAzurermRedisCacheTimeoutsToTerraform(struct?: DataAzurermRedisCacheTimeouts): any {
+function dataAzurermRedisCacheTimeoutsToTerraform(struct?: DataAzurermRedisCacheTimeoutsOutputReference | DataAzurermRedisCacheTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     read: cdktf.stringToTerraform(struct!.read),
   }
 }
 
+export class DataAzurermRedisCacheTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/redis_cache.html azurerm_redis_cache}
@@ -179,7 +208,7 @@ export class DataAzurermRedisCache extends cdktf.TerraformDataSource {
 
   // enable_non_ssl_port - computed: true, optional: false, required: false
   public get enableNonSslPort() {
-    return this.getBooleanAttribute('enable_non_ssl_port');
+    return this.getBooleanAttribute('enable_non_ssl_port') as any;
   }
 
   // family - computed: true, optional: false, required: false
@@ -208,7 +237,7 @@ export class DataAzurermRedisCache extends cdktf.TerraformDataSource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -251,7 +280,7 @@ export class DataAzurermRedisCache extends cdktf.TerraformDataSource {
   }
 
   // resource_group_name - computed: false, optional: false, required: true
-  private _resourceGroupName: string;
+  private _resourceGroupName?: string; 
   public get resourceGroupName() {
     return this.getStringAttribute('resource_group_name');
   }
@@ -299,11 +328,11 @@ export class DataAzurermRedisCache extends cdktf.TerraformDataSource {
   }
 
   // zones - computed: true, optional: true, required: false
-  private _zones?: string[];
+  private _zones?: string[] | undefined; 
   public get zones() {
     return this.getListAttribute('zones');
   }
-  public set zones(value: string[]) {
+  public set zones(value: string[] | undefined) {
     this._zones = value;
   }
   public resetZones() {
@@ -315,11 +344,12 @@ export class DataAzurermRedisCache extends cdktf.TerraformDataSource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: DataAzurermRedisCacheTimeouts;
+  private _timeouts?: DataAzurermRedisCacheTimeouts | undefined; 
+  private __timeoutsOutput = new DataAzurermRedisCacheTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: DataAzurermRedisCacheTimeouts ) {
+  public putTimeouts(value: DataAzurermRedisCacheTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {

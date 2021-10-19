@@ -72,7 +72,7 @@ export interface DevTestLinuxVirtualMachineConfig extends cdktf.TerraformMetaArg
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_linux_virtual_machine.html#gallery_image_reference DevTestLinuxVirtualMachine#gallery_image_reference}
   */
-  readonly galleryImageReference: DevTestLinuxVirtualMachineGalleryImageReference[];
+  readonly galleryImageReference: DevTestLinuxVirtualMachineGalleryImageReference;
   /**
   * inbound_nat_rule block
   * 
@@ -105,8 +105,11 @@ export interface DevTestLinuxVirtualMachineGalleryImageReference {
   readonly version: string;
 }
 
-function devTestLinuxVirtualMachineGalleryImageReferenceToTerraform(struct?: DevTestLinuxVirtualMachineGalleryImageReference): any {
+function devTestLinuxVirtualMachineGalleryImageReferenceToTerraform(struct?: DevTestLinuxVirtualMachineGalleryImageReferenceOutputReference | DevTestLinuxVirtualMachineGalleryImageReference): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     offer: cdktf.stringToTerraform(struct!.offer),
     publisher: cdktf.stringToTerraform(struct!.publisher),
@@ -115,6 +118,68 @@ function devTestLinuxVirtualMachineGalleryImageReferenceToTerraform(struct?: Dev
   }
 }
 
+export class DevTestLinuxVirtualMachineGalleryImageReferenceOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // offer - computed: false, optional: false, required: true
+  private _offer?: string; 
+  public get offer() {
+    return this.getStringAttribute('offer');
+  }
+  public set offer(value: string) {
+    this._offer = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get offerInput() {
+    return this._offer
+  }
+
+  // publisher - computed: false, optional: false, required: true
+  private _publisher?: string; 
+  public get publisher() {
+    return this.getStringAttribute('publisher');
+  }
+  public set publisher(value: string) {
+    this._publisher = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get publisherInput() {
+    return this._publisher
+  }
+
+  // sku - computed: false, optional: false, required: true
+  private _sku?: string; 
+  public get sku() {
+    return this.getStringAttribute('sku');
+  }
+  public set sku(value: string) {
+    this._sku = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get skuInput() {
+    return this._sku
+  }
+
+  // version - computed: false, optional: false, required: true
+  private _version?: string; 
+  public get version() {
+    return this.getStringAttribute('version');
+  }
+  public set version(value: string) {
+    this._version = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get versionInput() {
+    return this._version
+  }
+}
 export interface DevTestLinuxVirtualMachineInboundNatRule {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_linux_virtual_machine.html#backend_port DevTestLinuxVirtualMachine#backend_port}
@@ -128,6 +193,9 @@ export interface DevTestLinuxVirtualMachineInboundNatRule {
 
 function devTestLinuxVirtualMachineInboundNatRuleToTerraform(struct?: DevTestLinuxVirtualMachineInboundNatRule): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     backend_port: cdktf.numberToTerraform(struct!.backendPort),
     protocol: cdktf.stringToTerraform(struct!.protocol),
@@ -153,8 +221,11 @@ export interface DevTestLinuxVirtualMachineTimeouts {
   readonly update?: string;
 }
 
-function devTestLinuxVirtualMachineTimeoutsToTerraform(struct?: DevTestLinuxVirtualMachineTimeouts): any {
+function devTestLinuxVirtualMachineTimeoutsToTerraform(struct?: DevTestLinuxVirtualMachineTimeoutsOutputReference | DevTestLinuxVirtualMachineTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -163,6 +234,80 @@ function devTestLinuxVirtualMachineTimeoutsToTerraform(struct?: DevTestLinuxVirt
   }
 }
 
+export class DevTestLinuxVirtualMachineTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_linux_virtual_machine.html azurerm_dev_test_linux_virtual_machine}
@@ -221,11 +366,11 @@ export class DevTestLinuxVirtualMachine extends cdktf.TerraformResource {
   // ==========
 
   // allow_claim - computed: false, optional: true, required: false
-  private _allowClaim?: boolean | cdktf.IResolvable;
+  private _allowClaim?: boolean | cdktf.IResolvable | undefined; 
   public get allowClaim() {
-    return this.getBooleanAttribute('allow_claim');
+    return this.getBooleanAttribute('allow_claim') as any;
   }
-  public set allowClaim(value: boolean | cdktf.IResolvable ) {
+  public set allowClaim(value: boolean | cdktf.IResolvable | undefined) {
     this._allowClaim = value;
   }
   public resetAllowClaim() {
@@ -237,11 +382,11 @@ export class DevTestLinuxVirtualMachine extends cdktf.TerraformResource {
   }
 
   // disallow_public_ip_address - computed: false, optional: true, required: false
-  private _disallowPublicIpAddress?: boolean | cdktf.IResolvable;
+  private _disallowPublicIpAddress?: boolean | cdktf.IResolvable | undefined; 
   public get disallowPublicIpAddress() {
-    return this.getBooleanAttribute('disallow_public_ip_address');
+    return this.getBooleanAttribute('disallow_public_ip_address') as any;
   }
-  public set disallowPublicIpAddress(value: boolean | cdktf.IResolvable ) {
+  public set disallowPublicIpAddress(value: boolean | cdktf.IResolvable | undefined) {
     this._disallowPublicIpAddress = value;
   }
   public resetDisallowPublicIpAddress() {
@@ -263,7 +408,7 @@ export class DevTestLinuxVirtualMachine extends cdktf.TerraformResource {
   }
 
   // lab_name - computed: false, optional: false, required: true
-  private _labName: string;
+  private _labName?: string; 
   public get labName() {
     return this.getStringAttribute('lab_name');
   }
@@ -276,7 +421,7 @@ export class DevTestLinuxVirtualMachine extends cdktf.TerraformResource {
   }
 
   // lab_subnet_name - computed: false, optional: false, required: true
-  private _labSubnetName: string;
+  private _labSubnetName?: string; 
   public get labSubnetName() {
     return this.getStringAttribute('lab_subnet_name');
   }
@@ -289,7 +434,7 @@ export class DevTestLinuxVirtualMachine extends cdktf.TerraformResource {
   }
 
   // lab_virtual_network_id - computed: false, optional: false, required: true
-  private _labVirtualNetworkId: string;
+  private _labVirtualNetworkId?: string; 
   public get labVirtualNetworkId() {
     return this.getStringAttribute('lab_virtual_network_id');
   }
@@ -302,7 +447,7 @@ export class DevTestLinuxVirtualMachine extends cdktf.TerraformResource {
   }
 
   // location - computed: false, optional: false, required: true
-  private _location: string;
+  private _location?: string; 
   public get location() {
     return this.getStringAttribute('location');
   }
@@ -315,7 +460,7 @@ export class DevTestLinuxVirtualMachine extends cdktf.TerraformResource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -328,11 +473,11 @@ export class DevTestLinuxVirtualMachine extends cdktf.TerraformResource {
   }
 
   // notes - computed: false, optional: true, required: false
-  private _notes?: string;
+  private _notes?: string | undefined; 
   public get notes() {
     return this.getStringAttribute('notes');
   }
-  public set notes(value: string ) {
+  public set notes(value: string | undefined) {
     this._notes = value;
   }
   public resetNotes() {
@@ -344,11 +489,11 @@ export class DevTestLinuxVirtualMachine extends cdktf.TerraformResource {
   }
 
   // password - computed: false, optional: true, required: false
-  private _password?: string;
+  private _password?: string | undefined; 
   public get password() {
     return this.getStringAttribute('password');
   }
-  public set password(value: string ) {
+  public set password(value: string | undefined) {
     this._password = value;
   }
   public resetPassword() {
@@ -360,7 +505,7 @@ export class DevTestLinuxVirtualMachine extends cdktf.TerraformResource {
   }
 
   // resource_group_name - computed: false, optional: false, required: true
-  private _resourceGroupName: string;
+  private _resourceGroupName?: string; 
   public get resourceGroupName() {
     return this.getStringAttribute('resource_group_name');
   }
@@ -373,7 +518,7 @@ export class DevTestLinuxVirtualMachine extends cdktf.TerraformResource {
   }
 
   // size - computed: false, optional: false, required: true
-  private _size: string;
+  private _size?: string; 
   public get size() {
     return this.getStringAttribute('size');
   }
@@ -386,11 +531,11 @@ export class DevTestLinuxVirtualMachine extends cdktf.TerraformResource {
   }
 
   // ssh_key - computed: false, optional: true, required: false
-  private _sshKey?: string;
+  private _sshKey?: string | undefined; 
   public get sshKey() {
     return this.getStringAttribute('ssh_key');
   }
-  public set sshKey(value: string ) {
+  public set sshKey(value: string | undefined) {
     this._sshKey = value;
   }
   public resetSshKey() {
@@ -402,7 +547,7 @@ export class DevTestLinuxVirtualMachine extends cdktf.TerraformResource {
   }
 
   // storage_type - computed: false, optional: false, required: true
-  private _storageType: string;
+  private _storageType?: string; 
   public get storageType() {
     return this.getStringAttribute('storage_type');
   }
@@ -415,11 +560,12 @@ export class DevTestLinuxVirtualMachine extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable;
+  private _tags?: { [key: string]: string } | cdktf.IResolvable | undefined; 
   public get tags() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
     this._tags = value;
   }
   public resetTags() {
@@ -436,7 +582,7 @@ export class DevTestLinuxVirtualMachine extends cdktf.TerraformResource {
   }
 
   // username - computed: false, optional: false, required: true
-  private _username: string;
+  private _username?: string; 
   public get username() {
     return this.getStringAttribute('username');
   }
@@ -449,11 +595,12 @@ export class DevTestLinuxVirtualMachine extends cdktf.TerraformResource {
   }
 
   // gallery_image_reference - computed: false, optional: false, required: true
-  private _galleryImageReference: DevTestLinuxVirtualMachineGalleryImageReference[];
+  private _galleryImageReference?: DevTestLinuxVirtualMachineGalleryImageReference; 
+  private __galleryImageReferenceOutput = new DevTestLinuxVirtualMachineGalleryImageReferenceOutputReference(this as any, "gallery_image_reference", true);
   public get galleryImageReference() {
-    return this.interpolationForAttribute('gallery_image_reference') as any;
+    return this.__galleryImageReferenceOutput;
   }
-  public set galleryImageReference(value: DevTestLinuxVirtualMachineGalleryImageReference[]) {
+  public putGalleryImageReference(value: DevTestLinuxVirtualMachineGalleryImageReference) {
     this._galleryImageReference = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -462,11 +609,12 @@ export class DevTestLinuxVirtualMachine extends cdktf.TerraformResource {
   }
 
   // inbound_nat_rule - computed: false, optional: true, required: false
-  private _inboundNatRule?: DevTestLinuxVirtualMachineInboundNatRule[];
+  private _inboundNatRule?: DevTestLinuxVirtualMachineInboundNatRule[] | undefined; 
   public get inboundNatRule() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('inbound_nat_rule') as any;
   }
-  public set inboundNatRule(value: DevTestLinuxVirtualMachineInboundNatRule[] ) {
+  public set inboundNatRule(value: DevTestLinuxVirtualMachineInboundNatRule[] | undefined) {
     this._inboundNatRule = value;
   }
   public resetInboundNatRule() {
@@ -478,11 +626,12 @@ export class DevTestLinuxVirtualMachine extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: DevTestLinuxVirtualMachineTimeouts;
+  private _timeouts?: DevTestLinuxVirtualMachineTimeouts | undefined; 
+  private __timeoutsOutput = new DevTestLinuxVirtualMachineTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: DevTestLinuxVirtualMachineTimeouts ) {
+  public putTimeouts(value: DevTestLinuxVirtualMachineTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {
@@ -514,7 +663,7 @@ export class DevTestLinuxVirtualMachine extends cdktf.TerraformResource {
       storage_type: cdktf.stringToTerraform(this._storageType),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
       username: cdktf.stringToTerraform(this._username),
-      gallery_image_reference: cdktf.listMapper(devTestLinuxVirtualMachineGalleryImageReferenceToTerraform)(this._galleryImageReference),
+      gallery_image_reference: devTestLinuxVirtualMachineGalleryImageReferenceToTerraform(this._galleryImageReference),
       inbound_nat_rule: cdktf.listMapper(devTestLinuxVirtualMachineInboundNatRuleToTerraform)(this._inboundNatRule),
       timeouts: devTestLinuxVirtualMachineTimeoutsToTerraform(this._timeouts),
     };

@@ -46,7 +46,7 @@ export interface NetworkPacketCaptureConfig extends cdktf.TerraformMetaArguments
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_packet_capture.html#storage_location NetworkPacketCapture#storage_location}
   */
-  readonly storageLocation: NetworkPacketCaptureStorageLocation[];
+  readonly storageLocation: NetworkPacketCaptureStorageLocation;
   /**
   * timeouts block
   * 
@@ -79,6 +79,9 @@ export interface NetworkPacketCaptureFilter {
 
 function networkPacketCaptureFilterToTerraform(struct?: NetworkPacketCaptureFilter): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     local_ip_address: cdktf.stringToTerraform(struct!.localIpAddress),
     local_port: cdktf.stringToTerraform(struct!.localPort),
@@ -99,14 +102,59 @@ export interface NetworkPacketCaptureStorageLocation {
   readonly storageAccountId?: string;
 }
 
-function networkPacketCaptureStorageLocationToTerraform(struct?: NetworkPacketCaptureStorageLocation): any {
+function networkPacketCaptureStorageLocationToTerraform(struct?: NetworkPacketCaptureStorageLocationOutputReference | NetworkPacketCaptureStorageLocation): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     file_path: cdktf.stringToTerraform(struct!.filePath),
     storage_account_id: cdktf.stringToTerraform(struct!.storageAccountId),
   }
 }
 
+export class NetworkPacketCaptureStorageLocationOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // file_path - computed: false, optional: true, required: false
+  private _filePath?: string | undefined; 
+  public get filePath() {
+    return this.getStringAttribute('file_path');
+  }
+  public set filePath(value: string | undefined) {
+    this._filePath = value;
+  }
+  public resetFilePath() {
+    this._filePath = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get filePathInput() {
+    return this._filePath
+  }
+
+  // storage_account_id - computed: false, optional: true, required: false
+  private _storageAccountId?: string | undefined; 
+  public get storageAccountId() {
+    return this.getStringAttribute('storage_account_id');
+  }
+  public set storageAccountId(value: string | undefined) {
+    this._storageAccountId = value;
+  }
+  public resetStorageAccountId() {
+    this._storageAccountId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get storageAccountIdInput() {
+    return this._storageAccountId
+  }
+}
 export interface NetworkPacketCaptureTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_packet_capture.html#create NetworkPacketCapture#create}
@@ -126,8 +174,11 @@ export interface NetworkPacketCaptureTimeouts {
   readonly update?: string;
 }
 
-function networkPacketCaptureTimeoutsToTerraform(struct?: NetworkPacketCaptureTimeouts): any {
+function networkPacketCaptureTimeoutsToTerraform(struct?: NetworkPacketCaptureTimeoutsOutputReference | NetworkPacketCaptureTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -136,6 +187,80 @@ function networkPacketCaptureTimeoutsToTerraform(struct?: NetworkPacketCaptureTi
   }
 }
 
+export class NetworkPacketCaptureTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/network_packet_capture.html azurerm_network_packet_capture}
@@ -191,11 +316,11 @@ export class NetworkPacketCapture extends cdktf.TerraformResource {
   }
 
   // maximum_bytes_per_packet - computed: false, optional: true, required: false
-  private _maximumBytesPerPacket?: number;
+  private _maximumBytesPerPacket?: number | undefined; 
   public get maximumBytesPerPacket() {
     return this.getNumberAttribute('maximum_bytes_per_packet');
   }
-  public set maximumBytesPerPacket(value: number ) {
+  public set maximumBytesPerPacket(value: number | undefined) {
     this._maximumBytesPerPacket = value;
   }
   public resetMaximumBytesPerPacket() {
@@ -207,11 +332,11 @@ export class NetworkPacketCapture extends cdktf.TerraformResource {
   }
 
   // maximum_bytes_per_session - computed: false, optional: true, required: false
-  private _maximumBytesPerSession?: number;
+  private _maximumBytesPerSession?: number | undefined; 
   public get maximumBytesPerSession() {
     return this.getNumberAttribute('maximum_bytes_per_session');
   }
-  public set maximumBytesPerSession(value: number ) {
+  public set maximumBytesPerSession(value: number | undefined) {
     this._maximumBytesPerSession = value;
   }
   public resetMaximumBytesPerSession() {
@@ -223,11 +348,11 @@ export class NetworkPacketCapture extends cdktf.TerraformResource {
   }
 
   // maximum_capture_duration - computed: false, optional: true, required: false
-  private _maximumCaptureDuration?: number;
+  private _maximumCaptureDuration?: number | undefined; 
   public get maximumCaptureDuration() {
     return this.getNumberAttribute('maximum_capture_duration');
   }
-  public set maximumCaptureDuration(value: number ) {
+  public set maximumCaptureDuration(value: number | undefined) {
     this._maximumCaptureDuration = value;
   }
   public resetMaximumCaptureDuration() {
@@ -239,7 +364,7 @@ export class NetworkPacketCapture extends cdktf.TerraformResource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -252,7 +377,7 @@ export class NetworkPacketCapture extends cdktf.TerraformResource {
   }
 
   // network_watcher_name - computed: false, optional: false, required: true
-  private _networkWatcherName: string;
+  private _networkWatcherName?: string; 
   public get networkWatcherName() {
     return this.getStringAttribute('network_watcher_name');
   }
@@ -265,7 +390,7 @@ export class NetworkPacketCapture extends cdktf.TerraformResource {
   }
 
   // resource_group_name - computed: false, optional: false, required: true
-  private _resourceGroupName: string;
+  private _resourceGroupName?: string; 
   public get resourceGroupName() {
     return this.getStringAttribute('resource_group_name');
   }
@@ -278,7 +403,7 @@ export class NetworkPacketCapture extends cdktf.TerraformResource {
   }
 
   // target_resource_id - computed: false, optional: false, required: true
-  private _targetResourceId: string;
+  private _targetResourceId?: string; 
   public get targetResourceId() {
     return this.getStringAttribute('target_resource_id');
   }
@@ -291,11 +416,12 @@ export class NetworkPacketCapture extends cdktf.TerraformResource {
   }
 
   // filter - computed: false, optional: true, required: false
-  private _filter?: NetworkPacketCaptureFilter[];
+  private _filter?: NetworkPacketCaptureFilter[] | undefined; 
   public get filter() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('filter') as any;
   }
-  public set filter(value: NetworkPacketCaptureFilter[] ) {
+  public set filter(value: NetworkPacketCaptureFilter[] | undefined) {
     this._filter = value;
   }
   public resetFilter() {
@@ -307,11 +433,12 @@ export class NetworkPacketCapture extends cdktf.TerraformResource {
   }
 
   // storage_location - computed: false, optional: false, required: true
-  private _storageLocation: NetworkPacketCaptureStorageLocation[];
+  private _storageLocation?: NetworkPacketCaptureStorageLocation; 
+  private __storageLocationOutput = new NetworkPacketCaptureStorageLocationOutputReference(this as any, "storage_location", true);
   public get storageLocation() {
-    return this.interpolationForAttribute('storage_location') as any;
+    return this.__storageLocationOutput;
   }
-  public set storageLocation(value: NetworkPacketCaptureStorageLocation[]) {
+  public putStorageLocation(value: NetworkPacketCaptureStorageLocation) {
     this._storageLocation = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -320,11 +447,12 @@ export class NetworkPacketCapture extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: NetworkPacketCaptureTimeouts;
+  private _timeouts?: NetworkPacketCaptureTimeouts | undefined; 
+  private __timeoutsOutput = new NetworkPacketCaptureTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: NetworkPacketCaptureTimeouts ) {
+  public putTimeouts(value: NetworkPacketCaptureTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {
@@ -349,7 +477,7 @@ export class NetworkPacketCapture extends cdktf.TerraformResource {
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       target_resource_id: cdktf.stringToTerraform(this._targetResourceId),
       filter: cdktf.listMapper(networkPacketCaptureFilterToTerraform)(this._filter),
-      storage_location: cdktf.listMapper(networkPacketCaptureStorageLocationToTerraform)(this._storageLocation),
+      storage_location: networkPacketCaptureStorageLocationToTerraform(this._storageLocation),
       timeouts: networkPacketCaptureTimeoutsToTerraform(this._timeouts),
     };
   }

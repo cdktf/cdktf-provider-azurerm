@@ -83,13 +83,42 @@ export interface DataAzurermVirtualNetworkGatewayConnectionTimeouts {
   readonly read?: string;
 }
 
-function dataAzurermVirtualNetworkGatewayConnectionTimeoutsToTerraform(struct?: DataAzurermVirtualNetworkGatewayConnectionTimeouts): any {
+function dataAzurermVirtualNetworkGatewayConnectionTimeoutsToTerraform(struct?: DataAzurermVirtualNetworkGatewayConnectionTimeoutsOutputReference | DataAzurermVirtualNetworkGatewayConnectionTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     read: cdktf.stringToTerraform(struct!.read),
   }
 }
 
+export class DataAzurermVirtualNetworkGatewayConnectionTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/virtual_network_gateway_connection.html azurerm_virtual_network_gateway_connection}
@@ -154,7 +183,7 @@ export class DataAzurermVirtualNetworkGatewayConnection extends cdktf.TerraformD
 
   // enable_bgp - computed: true, optional: false, required: false
   public get enableBgp() {
-    return this.getBooleanAttribute('enable_bgp');
+    return this.getBooleanAttribute('enable_bgp') as any;
   }
 
   // express_route_circuit_id - computed: true, optional: false, required: false
@@ -164,7 +193,7 @@ export class DataAzurermVirtualNetworkGatewayConnection extends cdktf.TerraformD
 
   // express_route_gateway_bypass - computed: true, optional: false, required: false
   public get expressRouteGatewayBypass() {
-    return this.getBooleanAttribute('express_route_gateway_bypass');
+    return this.getBooleanAttribute('express_route_gateway_bypass') as any;
   }
 
   // id - computed: true, optional: true, required: false
@@ -184,7 +213,7 @@ export class DataAzurermVirtualNetworkGatewayConnection extends cdktf.TerraformD
 
   // local_azure_ip_address_enabled - computed: true, optional: false, required: false
   public get localAzureIpAddressEnabled() {
-    return this.getBooleanAttribute('local_azure_ip_address_enabled');
+    return this.getBooleanAttribute('local_azure_ip_address_enabled') as any;
   }
 
   // local_network_gateway_id - computed: true, optional: false, required: false
@@ -198,7 +227,7 @@ export class DataAzurermVirtualNetworkGatewayConnection extends cdktf.TerraformD
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -216,7 +245,7 @@ export class DataAzurermVirtualNetworkGatewayConnection extends cdktf.TerraformD
   }
 
   // resource_group_name - computed: false, optional: false, required: true
-  private _resourceGroupName: string;
+  private _resourceGroupName?: string; 
   public get resourceGroupName() {
     return this.getStringAttribute('resource_group_name');
   }
@@ -260,7 +289,7 @@ export class DataAzurermVirtualNetworkGatewayConnection extends cdktf.TerraformD
 
   // use_policy_based_traffic_selectors - computed: true, optional: false, required: false
   public get usePolicyBasedTrafficSelectors() {
-    return this.getBooleanAttribute('use_policy_based_traffic_selectors');
+    return this.getBooleanAttribute('use_policy_based_traffic_selectors') as any;
   }
 
   // virtual_network_gateway_id - computed: true, optional: false, required: false
@@ -269,11 +298,12 @@ export class DataAzurermVirtualNetworkGatewayConnection extends cdktf.TerraformD
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: DataAzurermVirtualNetworkGatewayConnectionTimeouts;
+  private _timeouts?: DataAzurermVirtualNetworkGatewayConnectionTimeouts | undefined; 
+  private __timeoutsOutput = new DataAzurermVirtualNetworkGatewayConnectionTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: DataAzurermVirtualNetworkGatewayConnectionTimeouts ) {
+  public putTimeouts(value: DataAzurermVirtualNetworkGatewayConnectionTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {

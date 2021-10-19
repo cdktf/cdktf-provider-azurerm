@@ -56,13 +56,13 @@ export interface AppServiceConfig extends cdktf.TerraformMetaArguments {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#auth_settings AppService#auth_settings}
   */
-  readonly authSettings?: AppServiceAuthSettings[];
+  readonly authSettings?: AppServiceAuthSettings;
   /**
   * backup block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#backup AppService#backup}
   */
-  readonly backup?: AppServiceBackup[];
+  readonly backup?: AppServiceBackup;
   /**
   * connection_string block
   * 
@@ -74,25 +74,25 @@ export interface AppServiceConfig extends cdktf.TerraformMetaArguments {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#identity AppService#identity}
   */
-  readonly identity?: AppServiceIdentity[];
+  readonly identity?: AppServiceIdentity;
   /**
   * logs block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#logs AppService#logs}
   */
-  readonly logs?: AppServiceLogs[];
+  readonly logs?: AppServiceLogs;
   /**
   * site_config block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#site_config AppService#site_config}
   */
-  readonly siteConfig?: AppServiceSiteConfig[];
+  readonly siteConfig?: AppServiceSiteConfig;
   /**
   * source_control block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#source_control AppService#source_control}
   */
-  readonly sourceControl?: AppServiceSourceControl[];
+  readonly sourceControl?: AppServiceSourceControl;
   /**
   * storage_account block
   * 
@@ -133,8 +133,11 @@ export interface AppServiceAuthSettingsActiveDirectory {
   readonly clientSecret?: string;
 }
 
-function appServiceAuthSettingsActiveDirectoryToTerraform(struct?: AppServiceAuthSettingsActiveDirectory): any {
+function appServiceAuthSettingsActiveDirectoryToTerraform(struct?: AppServiceAuthSettingsActiveDirectoryOutputReference | AppServiceAuthSettingsActiveDirectory): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     allowed_audiences: cdktf.listMapper(cdktf.stringToTerraform)(struct!.allowedAudiences),
     client_id: cdktf.stringToTerraform(struct!.clientId),
@@ -142,6 +145,61 @@ function appServiceAuthSettingsActiveDirectoryToTerraform(struct?: AppServiceAut
   }
 }
 
+export class AppServiceAuthSettingsActiveDirectoryOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // allowed_audiences - computed: false, optional: true, required: false
+  private _allowedAudiences?: string[] | undefined; 
+  public get allowedAudiences() {
+    return this.getListAttribute('allowed_audiences');
+  }
+  public set allowedAudiences(value: string[] | undefined) {
+    this._allowedAudiences = value;
+  }
+  public resetAllowedAudiences() {
+    this._allowedAudiences = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get allowedAudiencesInput() {
+    return this._allowedAudiences
+  }
+
+  // client_id - computed: false, optional: false, required: true
+  private _clientId?: string; 
+  public get clientId() {
+    return this.getStringAttribute('client_id');
+  }
+  public set clientId(value: string) {
+    this._clientId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get clientIdInput() {
+    return this._clientId
+  }
+
+  // client_secret - computed: false, optional: true, required: false
+  private _clientSecret?: string | undefined; 
+  public get clientSecret() {
+    return this.getStringAttribute('client_secret');
+  }
+  public set clientSecret(value: string | undefined) {
+    this._clientSecret = value;
+  }
+  public resetClientSecret() {
+    this._clientSecret = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get clientSecretInput() {
+    return this._clientSecret
+  }
+}
 export interface AppServiceAuthSettingsFacebook {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#app_id AppService#app_id}
@@ -157,8 +215,11 @@ export interface AppServiceAuthSettingsFacebook {
   readonly oauthScopes?: string[];
 }
 
-function appServiceAuthSettingsFacebookToTerraform(struct?: AppServiceAuthSettingsFacebook): any {
+function appServiceAuthSettingsFacebookToTerraform(struct?: AppServiceAuthSettingsFacebookOutputReference | AppServiceAuthSettingsFacebook): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     app_id: cdktf.stringToTerraform(struct!.appId),
     app_secret: cdktf.stringToTerraform(struct!.appSecret),
@@ -166,6 +227,58 @@ function appServiceAuthSettingsFacebookToTerraform(struct?: AppServiceAuthSettin
   }
 }
 
+export class AppServiceAuthSettingsFacebookOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // app_id - computed: false, optional: false, required: true
+  private _appId?: string; 
+  public get appId() {
+    return this.getStringAttribute('app_id');
+  }
+  public set appId(value: string) {
+    this._appId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get appIdInput() {
+    return this._appId
+  }
+
+  // app_secret - computed: false, optional: false, required: true
+  private _appSecret?: string; 
+  public get appSecret() {
+    return this.getStringAttribute('app_secret');
+  }
+  public set appSecret(value: string) {
+    this._appSecret = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get appSecretInput() {
+    return this._appSecret
+  }
+
+  // oauth_scopes - computed: false, optional: true, required: false
+  private _oauthScopes?: string[] | undefined; 
+  public get oauthScopes() {
+    return this.getListAttribute('oauth_scopes');
+  }
+  public set oauthScopes(value: string[] | undefined) {
+    this._oauthScopes = value;
+  }
+  public resetOauthScopes() {
+    this._oauthScopes = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get oauthScopesInput() {
+    return this._oauthScopes
+  }
+}
 export interface AppServiceAuthSettingsGoogle {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#client_id AppService#client_id}
@@ -181,8 +294,11 @@ export interface AppServiceAuthSettingsGoogle {
   readonly oauthScopes?: string[];
 }
 
-function appServiceAuthSettingsGoogleToTerraform(struct?: AppServiceAuthSettingsGoogle): any {
+function appServiceAuthSettingsGoogleToTerraform(struct?: AppServiceAuthSettingsGoogleOutputReference | AppServiceAuthSettingsGoogle): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     client_id: cdktf.stringToTerraform(struct!.clientId),
     client_secret: cdktf.stringToTerraform(struct!.clientSecret),
@@ -190,6 +306,58 @@ function appServiceAuthSettingsGoogleToTerraform(struct?: AppServiceAuthSettings
   }
 }
 
+export class AppServiceAuthSettingsGoogleOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // client_id - computed: false, optional: false, required: true
+  private _clientId?: string; 
+  public get clientId() {
+    return this.getStringAttribute('client_id');
+  }
+  public set clientId(value: string) {
+    this._clientId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get clientIdInput() {
+    return this._clientId
+  }
+
+  // client_secret - computed: false, optional: false, required: true
+  private _clientSecret?: string; 
+  public get clientSecret() {
+    return this.getStringAttribute('client_secret');
+  }
+  public set clientSecret(value: string) {
+    this._clientSecret = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get clientSecretInput() {
+    return this._clientSecret
+  }
+
+  // oauth_scopes - computed: false, optional: true, required: false
+  private _oauthScopes?: string[] | undefined; 
+  public get oauthScopes() {
+    return this.getListAttribute('oauth_scopes');
+  }
+  public set oauthScopes(value: string[] | undefined) {
+    this._oauthScopes = value;
+  }
+  public resetOauthScopes() {
+    this._oauthScopes = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get oauthScopesInput() {
+    return this._oauthScopes
+  }
+}
 export interface AppServiceAuthSettingsMicrosoft {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#client_id AppService#client_id}
@@ -205,8 +373,11 @@ export interface AppServiceAuthSettingsMicrosoft {
   readonly oauthScopes?: string[];
 }
 
-function appServiceAuthSettingsMicrosoftToTerraform(struct?: AppServiceAuthSettingsMicrosoft): any {
+function appServiceAuthSettingsMicrosoftToTerraform(struct?: AppServiceAuthSettingsMicrosoftOutputReference | AppServiceAuthSettingsMicrosoft): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     client_id: cdktf.stringToTerraform(struct!.clientId),
     client_secret: cdktf.stringToTerraform(struct!.clientSecret),
@@ -214,6 +385,58 @@ function appServiceAuthSettingsMicrosoftToTerraform(struct?: AppServiceAuthSetti
   }
 }
 
+export class AppServiceAuthSettingsMicrosoftOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // client_id - computed: false, optional: false, required: true
+  private _clientId?: string; 
+  public get clientId() {
+    return this.getStringAttribute('client_id');
+  }
+  public set clientId(value: string) {
+    this._clientId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get clientIdInput() {
+    return this._clientId
+  }
+
+  // client_secret - computed: false, optional: false, required: true
+  private _clientSecret?: string; 
+  public get clientSecret() {
+    return this.getStringAttribute('client_secret');
+  }
+  public set clientSecret(value: string) {
+    this._clientSecret = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get clientSecretInput() {
+    return this._clientSecret
+  }
+
+  // oauth_scopes - computed: false, optional: true, required: false
+  private _oauthScopes?: string[] | undefined; 
+  public get oauthScopes() {
+    return this.getListAttribute('oauth_scopes');
+  }
+  public set oauthScopes(value: string[] | undefined) {
+    this._oauthScopes = value;
+  }
+  public resetOauthScopes() {
+    this._oauthScopes = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get oauthScopesInput() {
+    return this._oauthScopes
+  }
+}
 export interface AppServiceAuthSettingsTwitter {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#consumer_key AppService#consumer_key}
@@ -225,14 +448,53 @@ export interface AppServiceAuthSettingsTwitter {
   readonly consumerSecret: string;
 }
 
-function appServiceAuthSettingsTwitterToTerraform(struct?: AppServiceAuthSettingsTwitter): any {
+function appServiceAuthSettingsTwitterToTerraform(struct?: AppServiceAuthSettingsTwitterOutputReference | AppServiceAuthSettingsTwitter): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     consumer_key: cdktf.stringToTerraform(struct!.consumerKey),
     consumer_secret: cdktf.stringToTerraform(struct!.consumerSecret),
   }
 }
 
+export class AppServiceAuthSettingsTwitterOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // consumer_key - computed: false, optional: false, required: true
+  private _consumerKey?: string; 
+  public get consumerKey() {
+    return this.getStringAttribute('consumer_key');
+  }
+  public set consumerKey(value: string) {
+    this._consumerKey = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get consumerKeyInput() {
+    return this._consumerKey
+  }
+
+  // consumer_secret - computed: false, optional: false, required: true
+  private _consumerSecret?: string; 
+  public get consumerSecret() {
+    return this.getStringAttribute('consumer_secret');
+  }
+  public set consumerSecret(value: string) {
+    this._consumerSecret = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get consumerSecretInput() {
+    return this._consumerSecret
+  }
+}
 export interface AppServiceAuthSettings {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#additional_login_params AppService#additional_login_params}
@@ -275,35 +537,38 @@ export interface AppServiceAuthSettings {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#active_directory AppService#active_directory}
   */
-  readonly activeDirectory?: AppServiceAuthSettingsActiveDirectory[];
+  readonly activeDirectory?: AppServiceAuthSettingsActiveDirectory;
   /**
   * facebook block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#facebook AppService#facebook}
   */
-  readonly facebook?: AppServiceAuthSettingsFacebook[];
+  readonly facebook?: AppServiceAuthSettingsFacebook;
   /**
   * google block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#google AppService#google}
   */
-  readonly google?: AppServiceAuthSettingsGoogle[];
+  readonly google?: AppServiceAuthSettingsGoogle;
   /**
   * microsoft block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#microsoft AppService#microsoft}
   */
-  readonly microsoft?: AppServiceAuthSettingsMicrosoft[];
+  readonly microsoft?: AppServiceAuthSettingsMicrosoft;
   /**
   * twitter block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#twitter AppService#twitter}
   */
-  readonly twitter?: AppServiceAuthSettingsTwitter[];
+  readonly twitter?: AppServiceAuthSettingsTwitter;
 }
 
-function appServiceAuthSettingsToTerraform(struct?: AppServiceAuthSettings): any {
+function appServiceAuthSettingsToTerraform(struct?: AppServiceAuthSettingsOutputReference | AppServiceAuthSettings): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     additional_login_params: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.additionalLoginParams),
     allowed_external_redirect_urls: cdktf.listMapper(cdktf.stringToTerraform)(struct!.allowedExternalRedirectUrls),
@@ -314,14 +579,251 @@ function appServiceAuthSettingsToTerraform(struct?: AppServiceAuthSettings): any
     token_refresh_extension_hours: cdktf.numberToTerraform(struct!.tokenRefreshExtensionHours),
     token_store_enabled: cdktf.booleanToTerraform(struct!.tokenStoreEnabled),
     unauthenticated_client_action: cdktf.stringToTerraform(struct!.unauthenticatedClientAction),
-    active_directory: cdktf.listMapper(appServiceAuthSettingsActiveDirectoryToTerraform)(struct!.activeDirectory),
-    facebook: cdktf.listMapper(appServiceAuthSettingsFacebookToTerraform)(struct!.facebook),
-    google: cdktf.listMapper(appServiceAuthSettingsGoogleToTerraform)(struct!.google),
-    microsoft: cdktf.listMapper(appServiceAuthSettingsMicrosoftToTerraform)(struct!.microsoft),
-    twitter: cdktf.listMapper(appServiceAuthSettingsTwitterToTerraform)(struct!.twitter),
+    active_directory: appServiceAuthSettingsActiveDirectoryToTerraform(struct!.activeDirectory),
+    facebook: appServiceAuthSettingsFacebookToTerraform(struct!.facebook),
+    google: appServiceAuthSettingsGoogleToTerraform(struct!.google),
+    microsoft: appServiceAuthSettingsMicrosoftToTerraform(struct!.microsoft),
+    twitter: appServiceAuthSettingsTwitterToTerraform(struct!.twitter),
   }
 }
 
+export class AppServiceAuthSettingsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // additional_login_params - computed: false, optional: true, required: false
+  private _additionalLoginParams?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  public get additionalLoginParams() {
+    // Getting the computed value is not yet implemented
+    return this.interpolationForAttribute('additional_login_params') as any;
+  }
+  public set additionalLoginParams(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+    this._additionalLoginParams = value;
+  }
+  public resetAdditionalLoginParams() {
+    this._additionalLoginParams = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get additionalLoginParamsInput() {
+    return this._additionalLoginParams
+  }
+
+  // allowed_external_redirect_urls - computed: false, optional: true, required: false
+  private _allowedExternalRedirectUrls?: string[] | undefined; 
+  public get allowedExternalRedirectUrls() {
+    return this.getListAttribute('allowed_external_redirect_urls');
+  }
+  public set allowedExternalRedirectUrls(value: string[] | undefined) {
+    this._allowedExternalRedirectUrls = value;
+  }
+  public resetAllowedExternalRedirectUrls() {
+    this._allowedExternalRedirectUrls = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get allowedExternalRedirectUrlsInput() {
+    return this._allowedExternalRedirectUrls
+  }
+
+  // default_provider - computed: false, optional: true, required: false
+  private _defaultProvider?: string | undefined; 
+  public get defaultProvider() {
+    return this.getStringAttribute('default_provider');
+  }
+  public set defaultProvider(value: string | undefined) {
+    this._defaultProvider = value;
+  }
+  public resetDefaultProvider() {
+    this._defaultProvider = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get defaultProviderInput() {
+    return this._defaultProvider
+  }
+
+  // enabled - computed: false, optional: false, required: true
+  private _enabled?: boolean | cdktf.IResolvable; 
+  public get enabled() {
+    return this.getBooleanAttribute('enabled') as any;
+  }
+  public set enabled(value: boolean | cdktf.IResolvable) {
+    this._enabled = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enabledInput() {
+    return this._enabled
+  }
+
+  // issuer - computed: false, optional: true, required: false
+  private _issuer?: string | undefined; 
+  public get issuer() {
+    return this.getStringAttribute('issuer');
+  }
+  public set issuer(value: string | undefined) {
+    this._issuer = value;
+  }
+  public resetIssuer() {
+    this._issuer = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get issuerInput() {
+    return this._issuer
+  }
+
+  // runtime_version - computed: false, optional: true, required: false
+  private _runtimeVersion?: string | undefined; 
+  public get runtimeVersion() {
+    return this.getStringAttribute('runtime_version');
+  }
+  public set runtimeVersion(value: string | undefined) {
+    this._runtimeVersion = value;
+  }
+  public resetRuntimeVersion() {
+    this._runtimeVersion = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get runtimeVersionInput() {
+    return this._runtimeVersion
+  }
+
+  // token_refresh_extension_hours - computed: false, optional: true, required: false
+  private _tokenRefreshExtensionHours?: number | undefined; 
+  public get tokenRefreshExtensionHours() {
+    return this.getNumberAttribute('token_refresh_extension_hours');
+  }
+  public set tokenRefreshExtensionHours(value: number | undefined) {
+    this._tokenRefreshExtensionHours = value;
+  }
+  public resetTokenRefreshExtensionHours() {
+    this._tokenRefreshExtensionHours = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tokenRefreshExtensionHoursInput() {
+    return this._tokenRefreshExtensionHours
+  }
+
+  // token_store_enabled - computed: false, optional: true, required: false
+  private _tokenStoreEnabled?: boolean | cdktf.IResolvable | undefined; 
+  public get tokenStoreEnabled() {
+    return this.getBooleanAttribute('token_store_enabled') as any;
+  }
+  public set tokenStoreEnabled(value: boolean | cdktf.IResolvable | undefined) {
+    this._tokenStoreEnabled = value;
+  }
+  public resetTokenStoreEnabled() {
+    this._tokenStoreEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tokenStoreEnabledInput() {
+    return this._tokenStoreEnabled
+  }
+
+  // unauthenticated_client_action - computed: false, optional: true, required: false
+  private _unauthenticatedClientAction?: string | undefined; 
+  public get unauthenticatedClientAction() {
+    return this.getStringAttribute('unauthenticated_client_action');
+  }
+  public set unauthenticatedClientAction(value: string | undefined) {
+    this._unauthenticatedClientAction = value;
+  }
+  public resetUnauthenticatedClientAction() {
+    this._unauthenticatedClientAction = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get unauthenticatedClientActionInput() {
+    return this._unauthenticatedClientAction
+  }
+
+  // active_directory - computed: false, optional: true, required: false
+  private _activeDirectory?: AppServiceAuthSettingsActiveDirectory | undefined; 
+  private __activeDirectoryOutput = new AppServiceAuthSettingsActiveDirectoryOutputReference(this as any, "active_directory", true);
+  public get activeDirectory() {
+    return this.__activeDirectoryOutput;
+  }
+  public putActiveDirectory(value: AppServiceAuthSettingsActiveDirectory | undefined) {
+    this._activeDirectory = value;
+  }
+  public resetActiveDirectory() {
+    this._activeDirectory = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get activeDirectoryInput() {
+    return this._activeDirectory
+  }
+
+  // facebook - computed: false, optional: true, required: false
+  private _facebook?: AppServiceAuthSettingsFacebook | undefined; 
+  private __facebookOutput = new AppServiceAuthSettingsFacebookOutputReference(this as any, "facebook", true);
+  public get facebook() {
+    return this.__facebookOutput;
+  }
+  public putFacebook(value: AppServiceAuthSettingsFacebook | undefined) {
+    this._facebook = value;
+  }
+  public resetFacebook() {
+    this._facebook = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get facebookInput() {
+    return this._facebook
+  }
+
+  // google - computed: false, optional: true, required: false
+  private _google?: AppServiceAuthSettingsGoogle | undefined; 
+  private __googleOutput = new AppServiceAuthSettingsGoogleOutputReference(this as any, "google", true);
+  public get google() {
+    return this.__googleOutput;
+  }
+  public putGoogle(value: AppServiceAuthSettingsGoogle | undefined) {
+    this._google = value;
+  }
+  public resetGoogle() {
+    this._google = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get googleInput() {
+    return this._google
+  }
+
+  // microsoft - computed: false, optional: true, required: false
+  private _microsoft?: AppServiceAuthSettingsMicrosoft | undefined; 
+  private __microsoftOutput = new AppServiceAuthSettingsMicrosoftOutputReference(this as any, "microsoft", true);
+  public get microsoft() {
+    return this.__microsoftOutput;
+  }
+  public putMicrosoft(value: AppServiceAuthSettingsMicrosoft | undefined) {
+    this._microsoft = value;
+  }
+  public resetMicrosoft() {
+    this._microsoft = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get microsoftInput() {
+    return this._microsoft
+  }
+
+  // twitter - computed: false, optional: true, required: false
+  private _twitter?: AppServiceAuthSettingsTwitter | undefined; 
+  private __twitterOutput = new AppServiceAuthSettingsTwitterOutputReference(this as any, "twitter", true);
+  public get twitter() {
+    return this.__twitterOutput;
+  }
+  public putTwitter(value: AppServiceAuthSettingsTwitter | undefined) {
+    this._twitter = value;
+  }
+  public resetTwitter() {
+    this._twitter = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get twitterInput() {
+    return this._twitter
+  }
+}
 export interface AppServiceBackupSchedule {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#frequency_interval AppService#frequency_interval}
@@ -345,8 +847,11 @@ export interface AppServiceBackupSchedule {
   readonly startTime?: string;
 }
 
-function appServiceBackupScheduleToTerraform(struct?: AppServiceBackupSchedule): any {
+function appServiceBackupScheduleToTerraform(struct?: AppServiceBackupScheduleOutputReference | AppServiceBackupSchedule): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     frequency_interval: cdktf.numberToTerraform(struct!.frequencyInterval),
     frequency_unit: cdktf.stringToTerraform(struct!.frequencyUnit),
@@ -356,6 +861,90 @@ function appServiceBackupScheduleToTerraform(struct?: AppServiceBackupSchedule):
   }
 }
 
+export class AppServiceBackupScheduleOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // frequency_interval - computed: false, optional: false, required: true
+  private _frequencyInterval?: number; 
+  public get frequencyInterval() {
+    return this.getNumberAttribute('frequency_interval');
+  }
+  public set frequencyInterval(value: number) {
+    this._frequencyInterval = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get frequencyIntervalInput() {
+    return this._frequencyInterval
+  }
+
+  // frequency_unit - computed: false, optional: false, required: true
+  private _frequencyUnit?: string; 
+  public get frequencyUnit() {
+    return this.getStringAttribute('frequency_unit');
+  }
+  public set frequencyUnit(value: string) {
+    this._frequencyUnit = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get frequencyUnitInput() {
+    return this._frequencyUnit
+  }
+
+  // keep_at_least_one_backup - computed: false, optional: true, required: false
+  private _keepAtLeastOneBackup?: boolean | cdktf.IResolvable | undefined; 
+  public get keepAtLeastOneBackup() {
+    return this.getBooleanAttribute('keep_at_least_one_backup') as any;
+  }
+  public set keepAtLeastOneBackup(value: boolean | cdktf.IResolvable | undefined) {
+    this._keepAtLeastOneBackup = value;
+  }
+  public resetKeepAtLeastOneBackup() {
+    this._keepAtLeastOneBackup = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keepAtLeastOneBackupInput() {
+    return this._keepAtLeastOneBackup
+  }
+
+  // retention_period_in_days - computed: false, optional: true, required: false
+  private _retentionPeriodInDays?: number | undefined; 
+  public get retentionPeriodInDays() {
+    return this.getNumberAttribute('retention_period_in_days');
+  }
+  public set retentionPeriodInDays(value: number | undefined) {
+    this._retentionPeriodInDays = value;
+  }
+  public resetRetentionPeriodInDays() {
+    this._retentionPeriodInDays = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get retentionPeriodInDaysInput() {
+    return this._retentionPeriodInDays
+  }
+
+  // start_time - computed: false, optional: true, required: false
+  private _startTime?: string | undefined; 
+  public get startTime() {
+    return this.getStringAttribute('start_time');
+  }
+  public set startTime(value: string | undefined) {
+    this._startTime = value;
+  }
+  public resetStartTime() {
+    this._startTime = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get startTimeInput() {
+    return this._startTime
+  }
+}
 export interface AppServiceBackup {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#enabled AppService#enabled}
@@ -374,19 +963,88 @@ export interface AppServiceBackup {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#schedule AppService#schedule}
   */
-  readonly schedule: AppServiceBackupSchedule[];
+  readonly schedule: AppServiceBackupSchedule;
 }
 
-function appServiceBackupToTerraform(struct?: AppServiceBackup): any {
+function appServiceBackupToTerraform(struct?: AppServiceBackupOutputReference | AppServiceBackup): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     enabled: cdktf.booleanToTerraform(struct!.enabled),
     name: cdktf.stringToTerraform(struct!.name),
     storage_account_url: cdktf.stringToTerraform(struct!.storageAccountUrl),
-    schedule: cdktf.listMapper(appServiceBackupScheduleToTerraform)(struct!.schedule),
+    schedule: appServiceBackupScheduleToTerraform(struct!.schedule),
   }
 }
 
+export class AppServiceBackupOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // enabled - computed: false, optional: true, required: false
+  private _enabled?: boolean | cdktf.IResolvable | undefined; 
+  public get enabled() {
+    return this.getBooleanAttribute('enabled') as any;
+  }
+  public set enabled(value: boolean | cdktf.IResolvable | undefined) {
+    this._enabled = value;
+  }
+  public resetEnabled() {
+    this._enabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enabledInput() {
+    return this._enabled
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
+  }
+
+  // storage_account_url - computed: false, optional: false, required: true
+  private _storageAccountUrl?: string; 
+  public get storageAccountUrl() {
+    return this.getStringAttribute('storage_account_url');
+  }
+  public set storageAccountUrl(value: string) {
+    this._storageAccountUrl = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get storageAccountUrlInput() {
+    return this._storageAccountUrl
+  }
+
+  // schedule - computed: false, optional: false, required: true
+  private _schedule?: AppServiceBackupSchedule; 
+  private __scheduleOutput = new AppServiceBackupScheduleOutputReference(this as any, "schedule", true);
+  public get schedule() {
+    return this.__scheduleOutput;
+  }
+  public putSchedule(value: AppServiceBackupSchedule) {
+    this._schedule = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get scheduleInput() {
+    return this._schedule
+  }
+}
 export interface AppServiceConnectionString {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#name AppService#name}
@@ -404,6 +1062,9 @@ export interface AppServiceConnectionString {
 
 function appServiceConnectionStringToTerraform(struct?: AppServiceConnectionString): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     name: cdktf.stringToTerraform(struct!.name),
     type: cdktf.stringToTerraform(struct!.type),
@@ -422,14 +1083,56 @@ export interface AppServiceIdentity {
   readonly type: string;
 }
 
-function appServiceIdentityToTerraform(struct?: AppServiceIdentity): any {
+function appServiceIdentityToTerraform(struct?: AppServiceIdentityOutputReference | AppServiceIdentity): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     identity_ids: cdktf.listMapper(cdktf.stringToTerraform)(struct!.identityIds),
     type: cdktf.stringToTerraform(struct!.type),
   }
 }
 
+export class AppServiceIdentityOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // identity_ids - computed: false, optional: true, required: false
+  private _identityIds?: string[] | undefined; 
+  public get identityIds() {
+    return this.getListAttribute('identity_ids');
+  }
+  public set identityIds(value: string[] | undefined) {
+    this._identityIds = value;
+  }
+  public resetIdentityIds() {
+    this._identityIds = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get identityIdsInput() {
+    return this._identityIds
+  }
+
+  // type - computed: false, optional: false, required: true
+  private _type?: string; 
+  public get type() {
+    return this.getStringAttribute('type');
+  }
+  public set type(value: string) {
+    this._type = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get typeInput() {
+    return this._type
+  }
+}
 export interface AppServiceLogsApplicationLogsAzureBlobStorage {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#level AppService#level}
@@ -445,8 +1148,11 @@ export interface AppServiceLogsApplicationLogsAzureBlobStorage {
   readonly sasUrl: string;
 }
 
-function appServiceLogsApplicationLogsAzureBlobStorageToTerraform(struct?: AppServiceLogsApplicationLogsAzureBlobStorage): any {
+function appServiceLogsApplicationLogsAzureBlobStorageToTerraform(struct?: AppServiceLogsApplicationLogsAzureBlobStorageOutputReference | AppServiceLogsApplicationLogsAzureBlobStorage): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     level: cdktf.stringToTerraform(struct!.level),
     retention_in_days: cdktf.numberToTerraform(struct!.retentionInDays),
@@ -454,6 +1160,55 @@ function appServiceLogsApplicationLogsAzureBlobStorageToTerraform(struct?: AppSe
   }
 }
 
+export class AppServiceLogsApplicationLogsAzureBlobStorageOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // level - computed: false, optional: false, required: true
+  private _level?: string; 
+  public get level() {
+    return this.getStringAttribute('level');
+  }
+  public set level(value: string) {
+    this._level = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get levelInput() {
+    return this._level
+  }
+
+  // retention_in_days - computed: false, optional: false, required: true
+  private _retentionInDays?: number; 
+  public get retentionInDays() {
+    return this.getNumberAttribute('retention_in_days');
+  }
+  public set retentionInDays(value: number) {
+    this._retentionInDays = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get retentionInDaysInput() {
+    return this._retentionInDays
+  }
+
+  // sas_url - computed: false, optional: false, required: true
+  private _sasUrl?: string; 
+  public get sasUrl() {
+    return this.getStringAttribute('sas_url');
+  }
+  public set sasUrl(value: string) {
+    this._sasUrl = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sasUrlInput() {
+    return this._sasUrl
+  }
+}
 export interface AppServiceLogsApplicationLogs {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#file_system_level AppService#file_system_level}
@@ -464,17 +1219,63 @@ export interface AppServiceLogsApplicationLogs {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#azure_blob_storage AppService#azure_blob_storage}
   */
-  readonly azureBlobStorage?: AppServiceLogsApplicationLogsAzureBlobStorage[];
+  readonly azureBlobStorage?: AppServiceLogsApplicationLogsAzureBlobStorage;
 }
 
-function appServiceLogsApplicationLogsToTerraform(struct?: AppServiceLogsApplicationLogs): any {
+function appServiceLogsApplicationLogsToTerraform(struct?: AppServiceLogsApplicationLogsOutputReference | AppServiceLogsApplicationLogs): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     file_system_level: cdktf.stringToTerraform(struct!.fileSystemLevel),
-    azure_blob_storage: cdktf.listMapper(appServiceLogsApplicationLogsAzureBlobStorageToTerraform)(struct!.azureBlobStorage),
+    azure_blob_storage: appServiceLogsApplicationLogsAzureBlobStorageToTerraform(struct!.azureBlobStorage),
   }
 }
 
+export class AppServiceLogsApplicationLogsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // file_system_level - computed: false, optional: true, required: false
+  private _fileSystemLevel?: string | undefined; 
+  public get fileSystemLevel() {
+    return this.getStringAttribute('file_system_level');
+  }
+  public set fileSystemLevel(value: string | undefined) {
+    this._fileSystemLevel = value;
+  }
+  public resetFileSystemLevel() {
+    this._fileSystemLevel = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get fileSystemLevelInput() {
+    return this._fileSystemLevel
+  }
+
+  // azure_blob_storage - computed: false, optional: true, required: false
+  private _azureBlobStorage?: AppServiceLogsApplicationLogsAzureBlobStorage | undefined; 
+  private __azureBlobStorageOutput = new AppServiceLogsApplicationLogsAzureBlobStorageOutputReference(this as any, "azure_blob_storage", true);
+  public get azureBlobStorage() {
+    return this.__azureBlobStorageOutput;
+  }
+  public putAzureBlobStorage(value: AppServiceLogsApplicationLogsAzureBlobStorage | undefined) {
+    this._azureBlobStorage = value;
+  }
+  public resetAzureBlobStorage() {
+    this._azureBlobStorage = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get azureBlobStorageInput() {
+    return this._azureBlobStorage
+  }
+}
 export interface AppServiceLogsHttpLogsAzureBlobStorage {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#retention_in_days AppService#retention_in_days}
@@ -486,14 +1287,53 @@ export interface AppServiceLogsHttpLogsAzureBlobStorage {
   readonly sasUrl: string;
 }
 
-function appServiceLogsHttpLogsAzureBlobStorageToTerraform(struct?: AppServiceLogsHttpLogsAzureBlobStorage): any {
+function appServiceLogsHttpLogsAzureBlobStorageToTerraform(struct?: AppServiceLogsHttpLogsAzureBlobStorageOutputReference | AppServiceLogsHttpLogsAzureBlobStorage): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     retention_in_days: cdktf.numberToTerraform(struct!.retentionInDays),
     sas_url: cdktf.stringToTerraform(struct!.sasUrl),
   }
 }
 
+export class AppServiceLogsHttpLogsAzureBlobStorageOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // retention_in_days - computed: false, optional: false, required: true
+  private _retentionInDays?: number; 
+  public get retentionInDays() {
+    return this.getNumberAttribute('retention_in_days');
+  }
+  public set retentionInDays(value: number) {
+    this._retentionInDays = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get retentionInDaysInput() {
+    return this._retentionInDays
+  }
+
+  // sas_url - computed: false, optional: false, required: true
+  private _sasUrl?: string; 
+  public get sasUrl() {
+    return this.getStringAttribute('sas_url');
+  }
+  public set sasUrl(value: string) {
+    this._sasUrl = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sasUrlInput() {
+    return this._sasUrl
+  }
+}
 export interface AppServiceLogsHttpLogsFileSystem {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#retention_in_days AppService#retention_in_days}
@@ -505,37 +1345,123 @@ export interface AppServiceLogsHttpLogsFileSystem {
   readonly retentionInMb: number;
 }
 
-function appServiceLogsHttpLogsFileSystemToTerraform(struct?: AppServiceLogsHttpLogsFileSystem): any {
+function appServiceLogsHttpLogsFileSystemToTerraform(struct?: AppServiceLogsHttpLogsFileSystemOutputReference | AppServiceLogsHttpLogsFileSystem): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     retention_in_days: cdktf.numberToTerraform(struct!.retentionInDays),
     retention_in_mb: cdktf.numberToTerraform(struct!.retentionInMb),
   }
 }
 
+export class AppServiceLogsHttpLogsFileSystemOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // retention_in_days - computed: false, optional: false, required: true
+  private _retentionInDays?: number; 
+  public get retentionInDays() {
+    return this.getNumberAttribute('retention_in_days');
+  }
+  public set retentionInDays(value: number) {
+    this._retentionInDays = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get retentionInDaysInput() {
+    return this._retentionInDays
+  }
+
+  // retention_in_mb - computed: false, optional: false, required: true
+  private _retentionInMb?: number; 
+  public get retentionInMb() {
+    return this.getNumberAttribute('retention_in_mb');
+  }
+  public set retentionInMb(value: number) {
+    this._retentionInMb = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get retentionInMbInput() {
+    return this._retentionInMb
+  }
+}
 export interface AppServiceLogsHttpLogs {
   /**
   * azure_blob_storage block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#azure_blob_storage AppService#azure_blob_storage}
   */
-  readonly azureBlobStorage?: AppServiceLogsHttpLogsAzureBlobStorage[];
+  readonly azureBlobStorage?: AppServiceLogsHttpLogsAzureBlobStorage;
   /**
   * file_system block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#file_system AppService#file_system}
   */
-  readonly fileSystem?: AppServiceLogsHttpLogsFileSystem[];
+  readonly fileSystem?: AppServiceLogsHttpLogsFileSystem;
 }
 
-function appServiceLogsHttpLogsToTerraform(struct?: AppServiceLogsHttpLogs): any {
+function appServiceLogsHttpLogsToTerraform(struct?: AppServiceLogsHttpLogsOutputReference | AppServiceLogsHttpLogs): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
-    azure_blob_storage: cdktf.listMapper(appServiceLogsHttpLogsAzureBlobStorageToTerraform)(struct!.azureBlobStorage),
-    file_system: cdktf.listMapper(appServiceLogsHttpLogsFileSystemToTerraform)(struct!.fileSystem),
+    azure_blob_storage: appServiceLogsHttpLogsAzureBlobStorageToTerraform(struct!.azureBlobStorage),
+    file_system: appServiceLogsHttpLogsFileSystemToTerraform(struct!.fileSystem),
   }
 }
 
+export class AppServiceLogsHttpLogsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // azure_blob_storage - computed: false, optional: true, required: false
+  private _azureBlobStorage?: AppServiceLogsHttpLogsAzureBlobStorage | undefined; 
+  private __azureBlobStorageOutput = new AppServiceLogsHttpLogsAzureBlobStorageOutputReference(this as any, "azure_blob_storage", true);
+  public get azureBlobStorage() {
+    return this.__azureBlobStorageOutput;
+  }
+  public putAzureBlobStorage(value: AppServiceLogsHttpLogsAzureBlobStorage | undefined) {
+    this._azureBlobStorage = value;
+  }
+  public resetAzureBlobStorage() {
+    this._azureBlobStorage = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get azureBlobStorageInput() {
+    return this._azureBlobStorage
+  }
+
+  // file_system - computed: false, optional: true, required: false
+  private _fileSystem?: AppServiceLogsHttpLogsFileSystem | undefined; 
+  private __fileSystemOutput = new AppServiceLogsHttpLogsFileSystemOutputReference(this as any, "file_system", true);
+  public get fileSystem() {
+    return this.__fileSystemOutput;
+  }
+  public putFileSystem(value: AppServiceLogsHttpLogsFileSystem | undefined) {
+    this._fileSystem = value;
+  }
+  public resetFileSystem() {
+    this._fileSystem = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get fileSystemInput() {
+    return this._fileSystem
+  }
+}
 export interface AppServiceLogs {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#detailed_error_messages_enabled AppService#detailed_error_messages_enabled}
@@ -550,25 +1476,104 @@ export interface AppServiceLogs {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#application_logs AppService#application_logs}
   */
-  readonly applicationLogs?: AppServiceLogsApplicationLogs[];
+  readonly applicationLogs?: AppServiceLogsApplicationLogs;
   /**
   * http_logs block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#http_logs AppService#http_logs}
   */
-  readonly httpLogs?: AppServiceLogsHttpLogs[];
+  readonly httpLogs?: AppServiceLogsHttpLogs;
 }
 
-function appServiceLogsToTerraform(struct?: AppServiceLogs): any {
+function appServiceLogsToTerraform(struct?: AppServiceLogsOutputReference | AppServiceLogs): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     detailed_error_messages_enabled: cdktf.booleanToTerraform(struct!.detailedErrorMessagesEnabled),
     failed_request_tracing_enabled: cdktf.booleanToTerraform(struct!.failedRequestTracingEnabled),
-    application_logs: cdktf.listMapper(appServiceLogsApplicationLogsToTerraform)(struct!.applicationLogs),
-    http_logs: cdktf.listMapper(appServiceLogsHttpLogsToTerraform)(struct!.httpLogs),
+    application_logs: appServiceLogsApplicationLogsToTerraform(struct!.applicationLogs),
+    http_logs: appServiceLogsHttpLogsToTerraform(struct!.httpLogs),
   }
 }
 
+export class AppServiceLogsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // detailed_error_messages_enabled - computed: false, optional: true, required: false
+  private _detailedErrorMessagesEnabled?: boolean | cdktf.IResolvable | undefined; 
+  public get detailedErrorMessagesEnabled() {
+    return this.getBooleanAttribute('detailed_error_messages_enabled') as any;
+  }
+  public set detailedErrorMessagesEnabled(value: boolean | cdktf.IResolvable | undefined) {
+    this._detailedErrorMessagesEnabled = value;
+  }
+  public resetDetailedErrorMessagesEnabled() {
+    this._detailedErrorMessagesEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get detailedErrorMessagesEnabledInput() {
+    return this._detailedErrorMessagesEnabled
+  }
+
+  // failed_request_tracing_enabled - computed: false, optional: true, required: false
+  private _failedRequestTracingEnabled?: boolean | cdktf.IResolvable | undefined; 
+  public get failedRequestTracingEnabled() {
+    return this.getBooleanAttribute('failed_request_tracing_enabled') as any;
+  }
+  public set failedRequestTracingEnabled(value: boolean | cdktf.IResolvable | undefined) {
+    this._failedRequestTracingEnabled = value;
+  }
+  public resetFailedRequestTracingEnabled() {
+    this._failedRequestTracingEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get failedRequestTracingEnabledInput() {
+    return this._failedRequestTracingEnabled
+  }
+
+  // application_logs - computed: false, optional: true, required: false
+  private _applicationLogs?: AppServiceLogsApplicationLogs | undefined; 
+  private __applicationLogsOutput = new AppServiceLogsApplicationLogsOutputReference(this as any, "application_logs", true);
+  public get applicationLogs() {
+    return this.__applicationLogsOutput;
+  }
+  public putApplicationLogs(value: AppServiceLogsApplicationLogs | undefined) {
+    this._applicationLogs = value;
+  }
+  public resetApplicationLogs() {
+    this._applicationLogs = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get applicationLogsInput() {
+    return this._applicationLogs
+  }
+
+  // http_logs - computed: false, optional: true, required: false
+  private _httpLogs?: AppServiceLogsHttpLogs | undefined; 
+  private __httpLogsOutput = new AppServiceLogsHttpLogsOutputReference(this as any, "http_logs", true);
+  public get httpLogs() {
+    return this.__httpLogsOutput;
+  }
+  public putHttpLogs(value: AppServiceLogsHttpLogs | undefined) {
+    this._httpLogs = value;
+  }
+  public resetHttpLogs() {
+    this._httpLogs = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get httpLogsInput() {
+    return this._httpLogs
+  }
+}
 export interface AppServiceSiteConfigIpRestrictionHeaders {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#x_azure_fdid AppService#x_azure_fdid}
@@ -590,6 +1595,9 @@ export interface AppServiceSiteConfigIpRestrictionHeaders {
 
 function appServiceSiteConfigIpRestrictionHeadersToTerraform(struct?: AppServiceSiteConfigIpRestrictionHeaders): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     x_azure_fdid: cdktf.listMapper(cdktf.stringToTerraform)(struct!.xAzureFdid),
     x_fd_health_probe: cdktf.listMapper(cdktf.stringToTerraform)(struct!.xFdHealthProbe),
@@ -631,6 +1639,9 @@ export interface AppServiceSiteConfigIpRestriction {
 
 function appServiceSiteConfigIpRestrictionToTerraform(struct?: AppServiceSiteConfigIpRestriction): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     action: cdktf.stringToTerraform(struct!.action),
     headers: cdktf.listMapper(appServiceSiteConfigIpRestrictionHeadersToTerraform)(struct!.headers),
@@ -663,6 +1674,9 @@ export interface AppServiceSiteConfigScmIpRestrictionHeaders {
 
 function appServiceSiteConfigScmIpRestrictionHeadersToTerraform(struct?: AppServiceSiteConfigScmIpRestrictionHeaders): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     x_azure_fdid: cdktf.listMapper(cdktf.stringToTerraform)(struct!.xAzureFdid),
     x_fd_health_probe: cdktf.listMapper(cdktf.stringToTerraform)(struct!.xFdHealthProbe),
@@ -704,6 +1718,9 @@ export interface AppServiceSiteConfigScmIpRestriction {
 
 function appServiceSiteConfigScmIpRestrictionToTerraform(struct?: AppServiceSiteConfigScmIpRestriction): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     action: cdktf.stringToTerraform(struct!.action),
     headers: cdktf.listMapper(appServiceSiteConfigScmIpRestrictionHeadersToTerraform)(struct!.headers),
@@ -726,14 +1743,56 @@ export interface AppServiceSiteConfigCors {
   readonly supportCredentials?: boolean | cdktf.IResolvable;
 }
 
-function appServiceSiteConfigCorsToTerraform(struct?: AppServiceSiteConfigCors): any {
+function appServiceSiteConfigCorsToTerraform(struct?: AppServiceSiteConfigCorsOutputReference | AppServiceSiteConfigCors): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     allowed_origins: cdktf.listMapper(cdktf.stringToTerraform)(struct!.allowedOrigins),
     support_credentials: cdktf.booleanToTerraform(struct!.supportCredentials),
   }
 }
 
+export class AppServiceSiteConfigCorsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // allowed_origins - computed: false, optional: false, required: true
+  private _allowedOrigins?: string[]; 
+  public get allowedOrigins() {
+    return this.getListAttribute('allowed_origins');
+  }
+  public set allowedOrigins(value: string[]) {
+    this._allowedOrigins = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get allowedOriginsInput() {
+    return this._allowedOrigins
+  }
+
+  // support_credentials - computed: false, optional: true, required: false
+  private _supportCredentials?: boolean | cdktf.IResolvable | undefined; 
+  public get supportCredentials() {
+    return this.getBooleanAttribute('support_credentials') as any;
+  }
+  public set supportCredentials(value: boolean | cdktf.IResolvable | undefined) {
+    this._supportCredentials = value;
+  }
+  public resetSupportCredentials() {
+    this._supportCredentials = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get supportCredentialsInput() {
+    return this._supportCredentials
+  }
+}
 export interface AppServiceSiteConfig {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#acr_use_managed_identity_credentials AppService#acr_use_managed_identity_credentials}
@@ -860,11 +1919,14 @@ export interface AppServiceSiteConfig {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#cors AppService#cors}
   */
-  readonly cors?: AppServiceSiteConfigCors[];
+  readonly cors?: AppServiceSiteConfigCors;
 }
 
-function appServiceSiteConfigToTerraform(struct?: AppServiceSiteConfig): any {
+function appServiceSiteConfigToTerraform(struct?: AppServiceSiteConfigOutputReference | AppServiceSiteConfig): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     acr_use_managed_identity_credentials: cdktf.booleanToTerraform(struct!.acrUseManagedIdentityCredentials),
     acr_user_managed_identity_client_id: cdktf.stringToTerraform(struct!.acrUserManagedIdentityClientId),
@@ -896,10 +1958,519 @@ function appServiceSiteConfigToTerraform(struct?: AppServiceSiteConfig): any {
     vnet_route_all_enabled: cdktf.booleanToTerraform(struct!.vnetRouteAllEnabled),
     websockets_enabled: cdktf.booleanToTerraform(struct!.websocketsEnabled),
     windows_fx_version: cdktf.stringToTerraform(struct!.windowsFxVersion),
-    cors: cdktf.listMapper(appServiceSiteConfigCorsToTerraform)(struct!.cors),
+    cors: appServiceSiteConfigCorsToTerraform(struct!.cors),
   }
 }
 
+export class AppServiceSiteConfigOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // acr_use_managed_identity_credentials - computed: false, optional: true, required: false
+  private _acrUseManagedIdentityCredentials?: boolean | cdktf.IResolvable | undefined; 
+  public get acrUseManagedIdentityCredentials() {
+    return this.getBooleanAttribute('acr_use_managed_identity_credentials') as any;
+  }
+  public set acrUseManagedIdentityCredentials(value: boolean | cdktf.IResolvable | undefined) {
+    this._acrUseManagedIdentityCredentials = value;
+  }
+  public resetAcrUseManagedIdentityCredentials() {
+    this._acrUseManagedIdentityCredentials = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get acrUseManagedIdentityCredentialsInput() {
+    return this._acrUseManagedIdentityCredentials
+  }
+
+  // acr_user_managed_identity_client_id - computed: false, optional: true, required: false
+  private _acrUserManagedIdentityClientId?: string | undefined; 
+  public get acrUserManagedIdentityClientId() {
+    return this.getStringAttribute('acr_user_managed_identity_client_id');
+  }
+  public set acrUserManagedIdentityClientId(value: string | undefined) {
+    this._acrUserManagedIdentityClientId = value;
+  }
+  public resetAcrUserManagedIdentityClientId() {
+    this._acrUserManagedIdentityClientId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get acrUserManagedIdentityClientIdInput() {
+    return this._acrUserManagedIdentityClientId
+  }
+
+  // always_on - computed: false, optional: true, required: false
+  private _alwaysOn?: boolean | cdktf.IResolvable | undefined; 
+  public get alwaysOn() {
+    return this.getBooleanAttribute('always_on') as any;
+  }
+  public set alwaysOn(value: boolean | cdktf.IResolvable | undefined) {
+    this._alwaysOn = value;
+  }
+  public resetAlwaysOn() {
+    this._alwaysOn = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get alwaysOnInput() {
+    return this._alwaysOn
+  }
+
+  // app_command_line - computed: false, optional: true, required: false
+  private _appCommandLine?: string | undefined; 
+  public get appCommandLine() {
+    return this.getStringAttribute('app_command_line');
+  }
+  public set appCommandLine(value: string | undefined) {
+    this._appCommandLine = value;
+  }
+  public resetAppCommandLine() {
+    this._appCommandLine = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get appCommandLineInput() {
+    return this._appCommandLine
+  }
+
+  // auto_swap_slot_name - computed: false, optional: true, required: false
+  private _autoSwapSlotName?: string | undefined; 
+  public get autoSwapSlotName() {
+    return this.getStringAttribute('auto_swap_slot_name');
+  }
+  public set autoSwapSlotName(value: string | undefined) {
+    this._autoSwapSlotName = value;
+  }
+  public resetAutoSwapSlotName() {
+    this._autoSwapSlotName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get autoSwapSlotNameInput() {
+    return this._autoSwapSlotName
+  }
+
+  // default_documents - computed: false, optional: true, required: false
+  private _defaultDocuments?: string[] | undefined; 
+  public get defaultDocuments() {
+    return this.getListAttribute('default_documents');
+  }
+  public set defaultDocuments(value: string[] | undefined) {
+    this._defaultDocuments = value;
+  }
+  public resetDefaultDocuments() {
+    this._defaultDocuments = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get defaultDocumentsInput() {
+    return this._defaultDocuments
+  }
+
+  // dotnet_framework_version - computed: false, optional: true, required: false
+  private _dotnetFrameworkVersion?: string | undefined; 
+  public get dotnetFrameworkVersion() {
+    return this.getStringAttribute('dotnet_framework_version');
+  }
+  public set dotnetFrameworkVersion(value: string | undefined) {
+    this._dotnetFrameworkVersion = value;
+  }
+  public resetDotnetFrameworkVersion() {
+    this._dotnetFrameworkVersion = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dotnetFrameworkVersionInput() {
+    return this._dotnetFrameworkVersion
+  }
+
+  // ftps_state - computed: true, optional: true, required: false
+  private _ftpsState?: string | undefined; 
+  public get ftpsState() {
+    return this.getStringAttribute('ftps_state');
+  }
+  public set ftpsState(value: string | undefined) {
+    this._ftpsState = value;
+  }
+  public resetFtpsState() {
+    this._ftpsState = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ftpsStateInput() {
+    return this._ftpsState
+  }
+
+  // health_check_path - computed: false, optional: true, required: false
+  private _healthCheckPath?: string | undefined; 
+  public get healthCheckPath() {
+    return this.getStringAttribute('health_check_path');
+  }
+  public set healthCheckPath(value: string | undefined) {
+    this._healthCheckPath = value;
+  }
+  public resetHealthCheckPath() {
+    this._healthCheckPath = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get healthCheckPathInput() {
+    return this._healthCheckPath
+  }
+
+  // http2_enabled - computed: false, optional: true, required: false
+  private _http2Enabled?: boolean | cdktf.IResolvable | undefined; 
+  public get http2Enabled() {
+    return this.getBooleanAttribute('http2_enabled') as any;
+  }
+  public set http2Enabled(value: boolean | cdktf.IResolvable | undefined) {
+    this._http2Enabled = value;
+  }
+  public resetHttp2Enabled() {
+    this._http2Enabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get http2EnabledInput() {
+    return this._http2Enabled
+  }
+
+  // ip_restriction - computed: true, optional: true, required: false
+  private _ipRestriction?: AppServiceSiteConfigIpRestriction[] | undefined; 
+  public get ipRestriction() {
+    // Getting the computed value is not yet implemented
+    return this.interpolationForAttribute('ip_restriction') as any;
+  }
+  public set ipRestriction(value: AppServiceSiteConfigIpRestriction[] | undefined) {
+    this._ipRestriction = value;
+  }
+  public resetIpRestriction() {
+    this._ipRestriction = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ipRestrictionInput() {
+    return this._ipRestriction
+  }
+
+  // java_container - computed: false, optional: true, required: false
+  private _javaContainer?: string | undefined; 
+  public get javaContainer() {
+    return this.getStringAttribute('java_container');
+  }
+  public set javaContainer(value: string | undefined) {
+    this._javaContainer = value;
+  }
+  public resetJavaContainer() {
+    this._javaContainer = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get javaContainerInput() {
+    return this._javaContainer
+  }
+
+  // java_container_version - computed: false, optional: true, required: false
+  private _javaContainerVersion?: string | undefined; 
+  public get javaContainerVersion() {
+    return this.getStringAttribute('java_container_version');
+  }
+  public set javaContainerVersion(value: string | undefined) {
+    this._javaContainerVersion = value;
+  }
+  public resetJavaContainerVersion() {
+    this._javaContainerVersion = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get javaContainerVersionInput() {
+    return this._javaContainerVersion
+  }
+
+  // java_version - computed: false, optional: true, required: false
+  private _javaVersion?: string | undefined; 
+  public get javaVersion() {
+    return this.getStringAttribute('java_version');
+  }
+  public set javaVersion(value: string | undefined) {
+    this._javaVersion = value;
+  }
+  public resetJavaVersion() {
+    this._javaVersion = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get javaVersionInput() {
+    return this._javaVersion
+  }
+
+  // linux_fx_version - computed: true, optional: true, required: false
+  private _linuxFxVersion?: string | undefined; 
+  public get linuxFxVersion() {
+    return this.getStringAttribute('linux_fx_version');
+  }
+  public set linuxFxVersion(value: string | undefined) {
+    this._linuxFxVersion = value;
+  }
+  public resetLinuxFxVersion() {
+    this._linuxFxVersion = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get linuxFxVersionInput() {
+    return this._linuxFxVersion
+  }
+
+  // local_mysql_enabled - computed: true, optional: true, required: false
+  private _localMysqlEnabled?: boolean | cdktf.IResolvable | undefined; 
+  public get localMysqlEnabled() {
+    return this.getBooleanAttribute('local_mysql_enabled') as any;
+  }
+  public set localMysqlEnabled(value: boolean | cdktf.IResolvable | undefined) {
+    this._localMysqlEnabled = value;
+  }
+  public resetLocalMysqlEnabled() {
+    this._localMysqlEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get localMysqlEnabledInput() {
+    return this._localMysqlEnabled
+  }
+
+  // managed_pipeline_mode - computed: true, optional: true, required: false
+  private _managedPipelineMode?: string | undefined; 
+  public get managedPipelineMode() {
+    return this.getStringAttribute('managed_pipeline_mode');
+  }
+  public set managedPipelineMode(value: string | undefined) {
+    this._managedPipelineMode = value;
+  }
+  public resetManagedPipelineMode() {
+    this._managedPipelineMode = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get managedPipelineModeInput() {
+    return this._managedPipelineMode
+  }
+
+  // min_tls_version - computed: true, optional: true, required: false
+  private _minTlsVersion?: string | undefined; 
+  public get minTlsVersion() {
+    return this.getStringAttribute('min_tls_version');
+  }
+  public set minTlsVersion(value: string | undefined) {
+    this._minTlsVersion = value;
+  }
+  public resetMinTlsVersion() {
+    this._minTlsVersion = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get minTlsVersionInput() {
+    return this._minTlsVersion
+  }
+
+  // number_of_workers - computed: true, optional: true, required: false
+  private _numberOfWorkers?: number | undefined; 
+  public get numberOfWorkers() {
+    return this.getNumberAttribute('number_of_workers');
+  }
+  public set numberOfWorkers(value: number | undefined) {
+    this._numberOfWorkers = value;
+  }
+  public resetNumberOfWorkers() {
+    this._numberOfWorkers = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get numberOfWorkersInput() {
+    return this._numberOfWorkers
+  }
+
+  // php_version - computed: false, optional: true, required: false
+  private _phpVersion?: string | undefined; 
+  public get phpVersion() {
+    return this.getStringAttribute('php_version');
+  }
+  public set phpVersion(value: string | undefined) {
+    this._phpVersion = value;
+  }
+  public resetPhpVersion() {
+    this._phpVersion = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get phpVersionInput() {
+    return this._phpVersion
+  }
+
+  // python_version - computed: false, optional: true, required: false
+  private _pythonVersion?: string | undefined; 
+  public get pythonVersion() {
+    return this.getStringAttribute('python_version');
+  }
+  public set pythonVersion(value: string | undefined) {
+    this._pythonVersion = value;
+  }
+  public resetPythonVersion() {
+    this._pythonVersion = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get pythonVersionInput() {
+    return this._pythonVersion
+  }
+
+  // remote_debugging_enabled - computed: false, optional: true, required: false
+  private _remoteDebuggingEnabled?: boolean | cdktf.IResolvable | undefined; 
+  public get remoteDebuggingEnabled() {
+    return this.getBooleanAttribute('remote_debugging_enabled') as any;
+  }
+  public set remoteDebuggingEnabled(value: boolean | cdktf.IResolvable | undefined) {
+    this._remoteDebuggingEnabled = value;
+  }
+  public resetRemoteDebuggingEnabled() {
+    this._remoteDebuggingEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get remoteDebuggingEnabledInput() {
+    return this._remoteDebuggingEnabled
+  }
+
+  // remote_debugging_version - computed: true, optional: true, required: false
+  private _remoteDebuggingVersion?: string | undefined; 
+  public get remoteDebuggingVersion() {
+    return this.getStringAttribute('remote_debugging_version');
+  }
+  public set remoteDebuggingVersion(value: string | undefined) {
+    this._remoteDebuggingVersion = value;
+  }
+  public resetRemoteDebuggingVersion() {
+    this._remoteDebuggingVersion = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get remoteDebuggingVersionInput() {
+    return this._remoteDebuggingVersion
+  }
+
+  // scm_ip_restriction - computed: true, optional: true, required: false
+  private _scmIpRestriction?: AppServiceSiteConfigScmIpRestriction[] | undefined; 
+  public get scmIpRestriction() {
+    // Getting the computed value is not yet implemented
+    return this.interpolationForAttribute('scm_ip_restriction') as any;
+  }
+  public set scmIpRestriction(value: AppServiceSiteConfigScmIpRestriction[] | undefined) {
+    this._scmIpRestriction = value;
+  }
+  public resetScmIpRestriction() {
+    this._scmIpRestriction = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get scmIpRestrictionInput() {
+    return this._scmIpRestriction
+  }
+
+  // scm_type - computed: true, optional: true, required: false
+  private _scmType?: string | undefined; 
+  public get scmType() {
+    return this.getStringAttribute('scm_type');
+  }
+  public set scmType(value: string | undefined) {
+    this._scmType = value;
+  }
+  public resetScmType() {
+    this._scmType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get scmTypeInput() {
+    return this._scmType
+  }
+
+  // scm_use_main_ip_restriction - computed: false, optional: true, required: false
+  private _scmUseMainIpRestriction?: boolean | cdktf.IResolvable | undefined; 
+  public get scmUseMainIpRestriction() {
+    return this.getBooleanAttribute('scm_use_main_ip_restriction') as any;
+  }
+  public set scmUseMainIpRestriction(value: boolean | cdktf.IResolvable | undefined) {
+    this._scmUseMainIpRestriction = value;
+  }
+  public resetScmUseMainIpRestriction() {
+    this._scmUseMainIpRestriction = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get scmUseMainIpRestrictionInput() {
+    return this._scmUseMainIpRestriction
+  }
+
+  // use_32_bit_worker_process - computed: false, optional: true, required: false
+  private _use32BitWorkerProcess?: boolean | cdktf.IResolvable | undefined; 
+  public get use32BitWorkerProcess() {
+    return this.getBooleanAttribute('use_32_bit_worker_process') as any;
+  }
+  public set use32BitWorkerProcess(value: boolean | cdktf.IResolvable | undefined) {
+    this._use32BitWorkerProcess = value;
+  }
+  public resetUse32BitWorkerProcess() {
+    this._use32BitWorkerProcess = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get use32BitWorkerProcessInput() {
+    return this._use32BitWorkerProcess
+  }
+
+  // vnet_route_all_enabled - computed: true, optional: true, required: false
+  private _vnetRouteAllEnabled?: boolean | cdktf.IResolvable | undefined; 
+  public get vnetRouteAllEnabled() {
+    return this.getBooleanAttribute('vnet_route_all_enabled') as any;
+  }
+  public set vnetRouteAllEnabled(value: boolean | cdktf.IResolvable | undefined) {
+    this._vnetRouteAllEnabled = value;
+  }
+  public resetVnetRouteAllEnabled() {
+    this._vnetRouteAllEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get vnetRouteAllEnabledInput() {
+    return this._vnetRouteAllEnabled
+  }
+
+  // websockets_enabled - computed: true, optional: true, required: false
+  private _websocketsEnabled?: boolean | cdktf.IResolvable | undefined; 
+  public get websocketsEnabled() {
+    return this.getBooleanAttribute('websockets_enabled') as any;
+  }
+  public set websocketsEnabled(value: boolean | cdktf.IResolvable | undefined) {
+    this._websocketsEnabled = value;
+  }
+  public resetWebsocketsEnabled() {
+    this._websocketsEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get websocketsEnabledInput() {
+    return this._websocketsEnabled
+  }
+
+  // windows_fx_version - computed: true, optional: true, required: false
+  private _windowsFxVersion?: string | undefined; 
+  public get windowsFxVersion() {
+    return this.getStringAttribute('windows_fx_version');
+  }
+  public set windowsFxVersion(value: string | undefined) {
+    this._windowsFxVersion = value;
+  }
+  public resetWindowsFxVersion() {
+    this._windowsFxVersion = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get windowsFxVersionInput() {
+    return this._windowsFxVersion
+  }
+
+  // cors - computed: false, optional: true, required: false
+  private _cors?: AppServiceSiteConfigCors | undefined; 
+  private __corsOutput = new AppServiceSiteConfigCorsOutputReference(this as any, "cors", true);
+  public get cors() {
+    return this.__corsOutput;
+  }
+  public putCors(value: AppServiceSiteConfigCors | undefined) {
+    this._cors = value;
+  }
+  public resetCors() {
+    this._cors = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get corsInput() {
+    return this._cors
+  }
+}
 export interface AppServiceSourceControl {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#branch AppService#branch}
@@ -923,8 +2494,11 @@ export interface AppServiceSourceControl {
   readonly useMercurial?: boolean | cdktf.IResolvable;
 }
 
-function appServiceSourceControlToTerraform(struct?: AppServiceSourceControl): any {
+function appServiceSourceControlToTerraform(struct?: AppServiceSourceControlOutputReference | AppServiceSourceControl): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     branch: cdktf.stringToTerraform(struct!.branch),
     manual_integration: cdktf.booleanToTerraform(struct!.manualIntegration),
@@ -934,6 +2508,96 @@ function appServiceSourceControlToTerraform(struct?: AppServiceSourceControl): a
   }
 }
 
+export class AppServiceSourceControlOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // branch - computed: true, optional: true, required: false
+  private _branch?: string | undefined; 
+  public get branch() {
+    return this.getStringAttribute('branch');
+  }
+  public set branch(value: string | undefined) {
+    this._branch = value;
+  }
+  public resetBranch() {
+    this._branch = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get branchInput() {
+    return this._branch
+  }
+
+  // manual_integration - computed: true, optional: true, required: false
+  private _manualIntegration?: boolean | cdktf.IResolvable | undefined; 
+  public get manualIntegration() {
+    return this.getBooleanAttribute('manual_integration') as any;
+  }
+  public set manualIntegration(value: boolean | cdktf.IResolvable | undefined) {
+    this._manualIntegration = value;
+  }
+  public resetManualIntegration() {
+    this._manualIntegration = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get manualIntegrationInput() {
+    return this._manualIntegration
+  }
+
+  // repo_url - computed: true, optional: true, required: false
+  private _repoUrl?: string | undefined; 
+  public get repoUrl() {
+    return this.getStringAttribute('repo_url');
+  }
+  public set repoUrl(value: string | undefined) {
+    this._repoUrl = value;
+  }
+  public resetRepoUrl() {
+    this._repoUrl = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get repoUrlInput() {
+    return this._repoUrl
+  }
+
+  // rollback_enabled - computed: true, optional: true, required: false
+  private _rollbackEnabled?: boolean | cdktf.IResolvable | undefined; 
+  public get rollbackEnabled() {
+    return this.getBooleanAttribute('rollback_enabled') as any;
+  }
+  public set rollbackEnabled(value: boolean | cdktf.IResolvable | undefined) {
+    this._rollbackEnabled = value;
+  }
+  public resetRollbackEnabled() {
+    this._rollbackEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get rollbackEnabledInput() {
+    return this._rollbackEnabled
+  }
+
+  // use_mercurial - computed: true, optional: true, required: false
+  private _useMercurial?: boolean | cdktf.IResolvable | undefined; 
+  public get useMercurial() {
+    return this.getBooleanAttribute('use_mercurial') as any;
+  }
+  public set useMercurial(value: boolean | cdktf.IResolvable | undefined) {
+    this._useMercurial = value;
+  }
+  public resetUseMercurial() {
+    this._useMercurial = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get useMercurialInput() {
+    return this._useMercurial
+  }
+}
 export interface AppServiceStorageAccount {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#access_key AppService#access_key}
@@ -963,6 +2627,9 @@ export interface AppServiceStorageAccount {
 
 function appServiceStorageAccountToTerraform(struct?: AppServiceStorageAccount): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     access_key: cdktf.stringToTerraform(struct!.accessKey),
     account_name: cdktf.stringToTerraform(struct!.accountName),
@@ -992,8 +2659,11 @@ export interface AppServiceTimeouts {
   readonly update?: string;
 }
 
-function appServiceTimeoutsToTerraform(struct?: AppServiceTimeouts): any {
+function appServiceTimeoutsToTerraform(struct?: AppServiceTimeoutsOutputReference | AppServiceTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -1002,6 +2672,80 @@ function appServiceTimeoutsToTerraform(struct?: AppServiceTimeouts): any {
   }
 }
 
+export class AppServiceTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html azurerm_app_service}
@@ -1062,7 +2806,7 @@ export class AppService extends cdktf.TerraformResource {
   // ==========
 
   // app_service_plan_id - computed: false, optional: false, required: true
-  private _appServicePlanId: string;
+  private _appServicePlanId?: string; 
   public get appServicePlanId() {
     return this.getStringAttribute('app_service_plan_id');
   }
@@ -1075,11 +2819,12 @@ export class AppService extends cdktf.TerraformResource {
   }
 
   // app_settings - computed: true, optional: true, required: false
-  private _appSettings?: { [key: string]: string } | cdktf.IResolvable
-  public get appSettings(): { [key: string]: string } | cdktf.IResolvable {
-    return this.interpolationForAttribute('app_settings') as any; // Getting the computed value is not yet implemented
+  private _appSettings?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  public get appSettings() {
+    // Getting the computed value is not yet implemented
+    return this.interpolationForAttribute('app_settings') as any;
   }
-  public set appSettings(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set appSettings(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
     this._appSettings = value;
   }
   public resetAppSettings() {
@@ -1091,11 +2836,11 @@ export class AppService extends cdktf.TerraformResource {
   }
 
   // client_affinity_enabled - computed: false, optional: true, required: false
-  private _clientAffinityEnabled?: boolean | cdktf.IResolvable;
+  private _clientAffinityEnabled?: boolean | cdktf.IResolvable | undefined; 
   public get clientAffinityEnabled() {
-    return this.getBooleanAttribute('client_affinity_enabled');
+    return this.getBooleanAttribute('client_affinity_enabled') as any;
   }
-  public set clientAffinityEnabled(value: boolean | cdktf.IResolvable ) {
+  public set clientAffinityEnabled(value: boolean | cdktf.IResolvable | undefined) {
     this._clientAffinityEnabled = value;
   }
   public resetClientAffinityEnabled() {
@@ -1107,11 +2852,11 @@ export class AppService extends cdktf.TerraformResource {
   }
 
   // client_cert_enabled - computed: false, optional: true, required: false
-  private _clientCertEnabled?: boolean | cdktf.IResolvable;
+  private _clientCertEnabled?: boolean | cdktf.IResolvable | undefined; 
   public get clientCertEnabled() {
-    return this.getBooleanAttribute('client_cert_enabled');
+    return this.getBooleanAttribute('client_cert_enabled') as any;
   }
-  public set clientCertEnabled(value: boolean | cdktf.IResolvable ) {
+  public set clientCertEnabled(value: boolean | cdktf.IResolvable | undefined) {
     this._clientCertEnabled = value;
   }
   public resetClientCertEnabled() {
@@ -1133,11 +2878,11 @@ export class AppService extends cdktf.TerraformResource {
   }
 
   // enabled - computed: false, optional: true, required: false
-  private _enabled?: boolean | cdktf.IResolvable;
+  private _enabled?: boolean | cdktf.IResolvable | undefined; 
   public get enabled() {
-    return this.getBooleanAttribute('enabled');
+    return this.getBooleanAttribute('enabled') as any;
   }
-  public set enabled(value: boolean | cdktf.IResolvable ) {
+  public set enabled(value: boolean | cdktf.IResolvable | undefined) {
     this._enabled = value;
   }
   public resetEnabled() {
@@ -1149,11 +2894,11 @@ export class AppService extends cdktf.TerraformResource {
   }
 
   // https_only - computed: false, optional: true, required: false
-  private _httpsOnly?: boolean | cdktf.IResolvable;
+  private _httpsOnly?: boolean | cdktf.IResolvable | undefined; 
   public get httpsOnly() {
-    return this.getBooleanAttribute('https_only');
+    return this.getBooleanAttribute('https_only') as any;
   }
-  public set httpsOnly(value: boolean | cdktf.IResolvable ) {
+  public set httpsOnly(value: boolean | cdktf.IResolvable | undefined) {
     this._httpsOnly = value;
   }
   public resetHttpsOnly() {
@@ -1170,11 +2915,11 @@ export class AppService extends cdktf.TerraformResource {
   }
 
   // key_vault_reference_identity_id - computed: true, optional: true, required: false
-  private _keyVaultReferenceIdentityId?: string;
+  private _keyVaultReferenceIdentityId?: string | undefined; 
   public get keyVaultReferenceIdentityId() {
     return this.getStringAttribute('key_vault_reference_identity_id');
   }
-  public set keyVaultReferenceIdentityId(value: string) {
+  public set keyVaultReferenceIdentityId(value: string | undefined) {
     this._keyVaultReferenceIdentityId = value;
   }
   public resetKeyVaultReferenceIdentityId() {
@@ -1186,7 +2931,7 @@ export class AppService extends cdktf.TerraformResource {
   }
 
   // location - computed: false, optional: false, required: true
-  private _location: string;
+  private _location?: string; 
   public get location() {
     return this.getStringAttribute('location');
   }
@@ -1199,7 +2944,7 @@ export class AppService extends cdktf.TerraformResource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -1232,7 +2977,7 @@ export class AppService extends cdktf.TerraformResource {
   }
 
   // resource_group_name - computed: false, optional: false, required: true
-  private _resourceGroupName: string;
+  private _resourceGroupName?: string; 
   public get resourceGroupName() {
     return this.getStringAttribute('resource_group_name');
   }
@@ -1250,11 +2995,12 @@ export class AppService extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable;
+  private _tags?: { [key: string]: string } | cdktf.IResolvable | undefined; 
   public get tags() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
     this._tags = value;
   }
   public resetTags() {
@@ -1266,11 +3012,12 @@ export class AppService extends cdktf.TerraformResource {
   }
 
   // auth_settings - computed: false, optional: true, required: false
-  private _authSettings?: AppServiceAuthSettings[];
+  private _authSettings?: AppServiceAuthSettings | undefined; 
+  private __authSettingsOutput = new AppServiceAuthSettingsOutputReference(this as any, "auth_settings", true);
   public get authSettings() {
-    return this.interpolationForAttribute('auth_settings') as any;
+    return this.__authSettingsOutput;
   }
-  public set authSettings(value: AppServiceAuthSettings[] ) {
+  public putAuthSettings(value: AppServiceAuthSettings | undefined) {
     this._authSettings = value;
   }
   public resetAuthSettings() {
@@ -1282,11 +3029,12 @@ export class AppService extends cdktf.TerraformResource {
   }
 
   // backup - computed: false, optional: true, required: false
-  private _backup?: AppServiceBackup[];
+  private _backup?: AppServiceBackup | undefined; 
+  private __backupOutput = new AppServiceBackupOutputReference(this as any, "backup", true);
   public get backup() {
-    return this.interpolationForAttribute('backup') as any;
+    return this.__backupOutput;
   }
-  public set backup(value: AppServiceBackup[] ) {
+  public putBackup(value: AppServiceBackup | undefined) {
     this._backup = value;
   }
   public resetBackup() {
@@ -1298,11 +3046,12 @@ export class AppService extends cdktf.TerraformResource {
   }
 
   // connection_string - computed: false, optional: true, required: false
-  private _connectionString?: AppServiceConnectionString[];
+  private _connectionString?: AppServiceConnectionString[] | undefined; 
   public get connectionString() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('connection_string') as any;
   }
-  public set connectionString(value: AppServiceConnectionString[] ) {
+  public set connectionString(value: AppServiceConnectionString[] | undefined) {
     this._connectionString = value;
   }
   public resetConnectionString() {
@@ -1314,11 +3063,12 @@ export class AppService extends cdktf.TerraformResource {
   }
 
   // identity - computed: false, optional: true, required: false
-  private _identity?: AppServiceIdentity[];
+  private _identity?: AppServiceIdentity | undefined; 
+  private __identityOutput = new AppServiceIdentityOutputReference(this as any, "identity", true);
   public get identity() {
-    return this.interpolationForAttribute('identity') as any;
+    return this.__identityOutput;
   }
-  public set identity(value: AppServiceIdentity[] ) {
+  public putIdentity(value: AppServiceIdentity | undefined) {
     this._identity = value;
   }
   public resetIdentity() {
@@ -1330,11 +3080,12 @@ export class AppService extends cdktf.TerraformResource {
   }
 
   // logs - computed: false, optional: true, required: false
-  private _logs?: AppServiceLogs[];
+  private _logs?: AppServiceLogs | undefined; 
+  private __logsOutput = new AppServiceLogsOutputReference(this as any, "logs", true);
   public get logs() {
-    return this.interpolationForAttribute('logs') as any;
+    return this.__logsOutput;
   }
-  public set logs(value: AppServiceLogs[] ) {
+  public putLogs(value: AppServiceLogs | undefined) {
     this._logs = value;
   }
   public resetLogs() {
@@ -1346,11 +3097,12 @@ export class AppService extends cdktf.TerraformResource {
   }
 
   // site_config - computed: false, optional: true, required: false
-  private _siteConfig?: AppServiceSiteConfig[];
+  private _siteConfig?: AppServiceSiteConfig | undefined; 
+  private __siteConfigOutput = new AppServiceSiteConfigOutputReference(this as any, "site_config", true);
   public get siteConfig() {
-    return this.interpolationForAttribute('site_config') as any;
+    return this.__siteConfigOutput;
   }
-  public set siteConfig(value: AppServiceSiteConfig[] ) {
+  public putSiteConfig(value: AppServiceSiteConfig | undefined) {
     this._siteConfig = value;
   }
   public resetSiteConfig() {
@@ -1362,11 +3114,12 @@ export class AppService extends cdktf.TerraformResource {
   }
 
   // source_control - computed: false, optional: true, required: false
-  private _sourceControl?: AppServiceSourceControl[];
+  private _sourceControl?: AppServiceSourceControl | undefined; 
+  private __sourceControlOutput = new AppServiceSourceControlOutputReference(this as any, "source_control", true);
   public get sourceControl() {
-    return this.interpolationForAttribute('source_control') as any;
+    return this.__sourceControlOutput;
   }
-  public set sourceControl(value: AppServiceSourceControl[] ) {
+  public putSourceControl(value: AppServiceSourceControl | undefined) {
     this._sourceControl = value;
   }
   public resetSourceControl() {
@@ -1378,11 +3131,12 @@ export class AppService extends cdktf.TerraformResource {
   }
 
   // storage_account - computed: false, optional: true, required: false
-  private _storageAccount?: AppServiceStorageAccount[];
+  private _storageAccount?: AppServiceStorageAccount[] | undefined; 
   public get storageAccount() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('storage_account') as any;
   }
-  public set storageAccount(value: AppServiceStorageAccount[] ) {
+  public set storageAccount(value: AppServiceStorageAccount[] | undefined) {
     this._storageAccount = value;
   }
   public resetStorageAccount() {
@@ -1394,11 +3148,12 @@ export class AppService extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: AppServiceTimeouts;
+  private _timeouts?: AppServiceTimeouts | undefined; 
+  private __timeoutsOutput = new AppServiceTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: AppServiceTimeouts ) {
+  public putTimeouts(value: AppServiceTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {
@@ -1426,13 +3181,13 @@ export class AppService extends cdktf.TerraformResource {
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
-      auth_settings: cdktf.listMapper(appServiceAuthSettingsToTerraform)(this._authSettings),
-      backup: cdktf.listMapper(appServiceBackupToTerraform)(this._backup),
+      auth_settings: appServiceAuthSettingsToTerraform(this._authSettings),
+      backup: appServiceBackupToTerraform(this._backup),
       connection_string: cdktf.listMapper(appServiceConnectionStringToTerraform)(this._connectionString),
-      identity: cdktf.listMapper(appServiceIdentityToTerraform)(this._identity),
-      logs: cdktf.listMapper(appServiceLogsToTerraform)(this._logs),
-      site_config: cdktf.listMapper(appServiceSiteConfigToTerraform)(this._siteConfig),
-      source_control: cdktf.listMapper(appServiceSourceControlToTerraform)(this._sourceControl),
+      identity: appServiceIdentityToTerraform(this._identity),
+      logs: appServiceLogsToTerraform(this._logs),
+      site_config: appServiceSiteConfigToTerraform(this._siteConfig),
+      source_control: appServiceSourceControlToTerraform(this._sourceControl),
       storage_account: cdktf.listMapper(appServiceStorageAccountToTerraform)(this._storageAccount),
       timeouts: appServiceTimeoutsToTerraform(this._timeouts),
     };

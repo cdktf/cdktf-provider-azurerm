@@ -54,19 +54,19 @@ export interface VpnServerConfigurationConfig extends cdktf.TerraformMetaArgumen
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_server_configuration.html#ipsec_policy VpnServerConfiguration#ipsec_policy}
   */
-  readonly ipsecPolicy?: VpnServerConfigurationIpsecPolicy[];
+  readonly ipsecPolicy?: VpnServerConfigurationIpsecPolicy;
   /**
   * radius block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_server_configuration.html#radius VpnServerConfiguration#radius}
   */
-  readonly radius?: VpnServerConfigurationRadius[];
+  readonly radius?: VpnServerConfigurationRadius;
   /**
   * radius_server block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_server_configuration.html#radius_server VpnServerConfiguration#radius_server}
   */
-  readonly radiusServer?: VpnServerConfigurationRadiusServerA[];
+  readonly radiusServer?: VpnServerConfigurationRadiusServerA;
   /**
   * timeouts block
   * 
@@ -91,6 +91,9 @@ export interface VpnServerConfigurationAzureActiveDirectoryAuthentication {
 
 function vpnServerConfigurationAzureActiveDirectoryAuthenticationToTerraform(struct?: VpnServerConfigurationAzureActiveDirectoryAuthentication): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     audience: cdktf.stringToTerraform(struct!.audience),
     issuer: cdktf.stringToTerraform(struct!.issuer),
@@ -111,6 +114,9 @@ export interface VpnServerConfigurationClientRevokedCertificate {
 
 function vpnServerConfigurationClientRevokedCertificateToTerraform(struct?: VpnServerConfigurationClientRevokedCertificate): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     name: cdktf.stringToTerraform(struct!.name),
     thumbprint: cdktf.stringToTerraform(struct!.thumbprint),
@@ -130,6 +136,9 @@ export interface VpnServerConfigurationClientRootCertificate {
 
 function vpnServerConfigurationClientRootCertificateToTerraform(struct?: VpnServerConfigurationClientRootCertificate): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     name: cdktf.stringToTerraform(struct!.name),
     public_cert_data: cdktf.stringToTerraform(struct!.publicCertData),
@@ -171,8 +180,11 @@ export interface VpnServerConfigurationIpsecPolicy {
   readonly saLifetimeSeconds: number;
 }
 
-function vpnServerConfigurationIpsecPolicyToTerraform(struct?: VpnServerConfigurationIpsecPolicy): any {
+function vpnServerConfigurationIpsecPolicyToTerraform(struct?: VpnServerConfigurationIpsecPolicyOutputReference | VpnServerConfigurationIpsecPolicy): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     dh_group: cdktf.stringToTerraform(struct!.dhGroup),
     ike_encryption: cdktf.stringToTerraform(struct!.ikeEncryption),
@@ -185,6 +197,120 @@ function vpnServerConfigurationIpsecPolicyToTerraform(struct?: VpnServerConfigur
   }
 }
 
+export class VpnServerConfigurationIpsecPolicyOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // dh_group - computed: false, optional: false, required: true
+  private _dhGroup?: string; 
+  public get dhGroup() {
+    return this.getStringAttribute('dh_group');
+  }
+  public set dhGroup(value: string) {
+    this._dhGroup = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dhGroupInput() {
+    return this._dhGroup
+  }
+
+  // ike_encryption - computed: false, optional: false, required: true
+  private _ikeEncryption?: string; 
+  public get ikeEncryption() {
+    return this.getStringAttribute('ike_encryption');
+  }
+  public set ikeEncryption(value: string) {
+    this._ikeEncryption = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ikeEncryptionInput() {
+    return this._ikeEncryption
+  }
+
+  // ike_integrity - computed: false, optional: false, required: true
+  private _ikeIntegrity?: string; 
+  public get ikeIntegrity() {
+    return this.getStringAttribute('ike_integrity');
+  }
+  public set ikeIntegrity(value: string) {
+    this._ikeIntegrity = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ikeIntegrityInput() {
+    return this._ikeIntegrity
+  }
+
+  // ipsec_encryption - computed: false, optional: false, required: true
+  private _ipsecEncryption?: string; 
+  public get ipsecEncryption() {
+    return this.getStringAttribute('ipsec_encryption');
+  }
+  public set ipsecEncryption(value: string) {
+    this._ipsecEncryption = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ipsecEncryptionInput() {
+    return this._ipsecEncryption
+  }
+
+  // ipsec_integrity - computed: false, optional: false, required: true
+  private _ipsecIntegrity?: string; 
+  public get ipsecIntegrity() {
+    return this.getStringAttribute('ipsec_integrity');
+  }
+  public set ipsecIntegrity(value: string) {
+    this._ipsecIntegrity = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ipsecIntegrityInput() {
+    return this._ipsecIntegrity
+  }
+
+  // pfs_group - computed: false, optional: false, required: true
+  private _pfsGroup?: string; 
+  public get pfsGroup() {
+    return this.getStringAttribute('pfs_group');
+  }
+  public set pfsGroup(value: string) {
+    this._pfsGroup = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get pfsGroupInput() {
+    return this._pfsGroup
+  }
+
+  // sa_data_size_kilobytes - computed: false, optional: false, required: true
+  private _saDataSizeKilobytes?: number; 
+  public get saDataSizeKilobytes() {
+    return this.getNumberAttribute('sa_data_size_kilobytes');
+  }
+  public set saDataSizeKilobytes(value: number) {
+    this._saDataSizeKilobytes = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get saDataSizeKilobytesInput() {
+    return this._saDataSizeKilobytes
+  }
+
+  // sa_lifetime_seconds - computed: false, optional: false, required: true
+  private _saLifetimeSeconds?: number; 
+  public get saLifetimeSeconds() {
+    return this.getNumberAttribute('sa_lifetime_seconds');
+  }
+  public set saLifetimeSeconds(value: number) {
+    this._saLifetimeSeconds = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get saLifetimeSecondsInput() {
+    return this._saLifetimeSeconds
+  }
+}
 export interface VpnServerConfigurationRadiusClientRootCertificate {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_server_configuration.html#name VpnServerConfiguration#name}
@@ -198,6 +324,9 @@ export interface VpnServerConfigurationRadiusClientRootCertificate {
 
 function vpnServerConfigurationRadiusClientRootCertificateToTerraform(struct?: VpnServerConfigurationRadiusClientRootCertificate): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     name: cdktf.stringToTerraform(struct!.name),
     thumbprint: cdktf.stringToTerraform(struct!.thumbprint),
@@ -221,6 +350,9 @@ export interface VpnServerConfigurationRadiusServer {
 
 function vpnServerConfigurationRadiusServerToTerraform(struct?: VpnServerConfigurationRadiusServer): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     address: cdktf.stringToTerraform(struct!.address),
     score: cdktf.numberToTerraform(struct!.score),
@@ -241,6 +373,9 @@ export interface VpnServerConfigurationRadiusServerRootCertificate {
 
 function vpnServerConfigurationRadiusServerRootCertificateToTerraform(struct?: VpnServerConfigurationRadiusServerRootCertificate): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     name: cdktf.stringToTerraform(struct!.name),
     public_cert_data: cdktf.stringToTerraform(struct!.publicCertData),
@@ -268,8 +403,11 @@ export interface VpnServerConfigurationRadius {
   readonly serverRootCertificate: VpnServerConfigurationRadiusServerRootCertificate[];
 }
 
-function vpnServerConfigurationRadiusToTerraform(struct?: VpnServerConfigurationRadius): any {
+function vpnServerConfigurationRadiusToTerraform(struct?: VpnServerConfigurationRadiusOutputReference | VpnServerConfigurationRadius): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     client_root_certificate: cdktf.listMapper(vpnServerConfigurationRadiusClientRootCertificateToTerraform)(struct!.clientRootCertificate),
     server: cdktf.listMapper(vpnServerConfigurationRadiusServerToTerraform)(struct!.server),
@@ -277,6 +415,64 @@ function vpnServerConfigurationRadiusToTerraform(struct?: VpnServerConfiguration
   }
 }
 
+export class VpnServerConfigurationRadiusOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // client_root_certificate - computed: false, optional: true, required: false
+  private _clientRootCertificate?: VpnServerConfigurationRadiusClientRootCertificate[] | undefined; 
+  public get clientRootCertificate() {
+    // Getting the computed value is not yet implemented
+    return this.interpolationForAttribute('client_root_certificate') as any;
+  }
+  public set clientRootCertificate(value: VpnServerConfigurationRadiusClientRootCertificate[] | undefined) {
+    this._clientRootCertificate = value;
+  }
+  public resetClientRootCertificate() {
+    this._clientRootCertificate = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get clientRootCertificateInput() {
+    return this._clientRootCertificate
+  }
+
+  // server - computed: false, optional: true, required: false
+  private _server?: VpnServerConfigurationRadiusServer[] | undefined; 
+  public get server() {
+    // Getting the computed value is not yet implemented
+    return this.interpolationForAttribute('server') as any;
+  }
+  public set server(value: VpnServerConfigurationRadiusServer[] | undefined) {
+    this._server = value;
+  }
+  public resetServer() {
+    this._server = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get serverInput() {
+    return this._server
+  }
+
+  // server_root_certificate - computed: false, optional: false, required: true
+  private _serverRootCertificate?: VpnServerConfigurationRadiusServerRootCertificate[]; 
+  public get serverRootCertificate() {
+    // Getting the computed value is not yet implemented
+    return this.interpolationForAttribute('server_root_certificate') as any;
+  }
+  public set serverRootCertificate(value: VpnServerConfigurationRadiusServerRootCertificate[]) {
+    this._serverRootCertificate = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get serverRootCertificateInput() {
+    return this._serverRootCertificate
+  }
+}
 export interface VpnServerConfigurationRadiusServerClientRootCertificate {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_server_configuration.html#name VpnServerConfiguration#name}
@@ -290,6 +486,9 @@ export interface VpnServerConfigurationRadiusServerClientRootCertificate {
 
 function vpnServerConfigurationRadiusServerClientRootCertificateToTerraform(struct?: VpnServerConfigurationRadiusServerClientRootCertificate): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     name: cdktf.stringToTerraform(struct!.name),
     thumbprint: cdktf.stringToTerraform(struct!.thumbprint),
@@ -309,6 +508,9 @@ export interface VpnServerConfigurationRadiusServerServerRootCertificate {
 
 function vpnServerConfigurationRadiusServerServerRootCertificateToTerraform(struct?: VpnServerConfigurationRadiusServerServerRootCertificate): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     name: cdktf.stringToTerraform(struct!.name),
     public_cert_data: cdktf.stringToTerraform(struct!.publicCertData),
@@ -338,8 +540,11 @@ export interface VpnServerConfigurationRadiusServerA {
   readonly serverRootCertificate: VpnServerConfigurationRadiusServerServerRootCertificate[];
 }
 
-function vpnServerConfigurationRadiusServerAToTerraform(struct?: VpnServerConfigurationRadiusServerA): any {
+function vpnServerConfigurationRadiusServerAToTerraform(struct?: VpnServerConfigurationRadiusServerAOutputReference | VpnServerConfigurationRadiusServerA): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     address: cdktf.stringToTerraform(struct!.address),
     secret: cdktf.stringToTerraform(struct!.secret),
@@ -348,6 +553,73 @@ function vpnServerConfigurationRadiusServerAToTerraform(struct?: VpnServerConfig
   }
 }
 
+export class VpnServerConfigurationRadiusServerAOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // address - computed: false, optional: false, required: true
+  private _address?: string; 
+  public get address() {
+    return this.getStringAttribute('address');
+  }
+  public set address(value: string) {
+    this._address = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get addressInput() {
+    return this._address
+  }
+
+  // secret - computed: false, optional: false, required: true
+  private _secret?: string; 
+  public get secret() {
+    return this.getStringAttribute('secret');
+  }
+  public set secret(value: string) {
+    this._secret = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get secretInput() {
+    return this._secret
+  }
+
+  // client_root_certificate - computed: false, optional: true, required: false
+  private _clientRootCertificate?: VpnServerConfigurationRadiusServerClientRootCertificate[] | undefined; 
+  public get clientRootCertificate() {
+    // Getting the computed value is not yet implemented
+    return this.interpolationForAttribute('client_root_certificate') as any;
+  }
+  public set clientRootCertificate(value: VpnServerConfigurationRadiusServerClientRootCertificate[] | undefined) {
+    this._clientRootCertificate = value;
+  }
+  public resetClientRootCertificate() {
+    this._clientRootCertificate = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get clientRootCertificateInput() {
+    return this._clientRootCertificate
+  }
+
+  // server_root_certificate - computed: false, optional: false, required: true
+  private _serverRootCertificate?: VpnServerConfigurationRadiusServerServerRootCertificate[]; 
+  public get serverRootCertificate() {
+    // Getting the computed value is not yet implemented
+    return this.interpolationForAttribute('server_root_certificate') as any;
+  }
+  public set serverRootCertificate(value: VpnServerConfigurationRadiusServerServerRootCertificate[]) {
+    this._serverRootCertificate = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get serverRootCertificateInput() {
+    return this._serverRootCertificate
+  }
+}
 export interface VpnServerConfigurationTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_server_configuration.html#create VpnServerConfiguration#create}
@@ -367,8 +639,11 @@ export interface VpnServerConfigurationTimeouts {
   readonly update?: string;
 }
 
-function vpnServerConfigurationTimeoutsToTerraform(struct?: VpnServerConfigurationTimeouts): any {
+function vpnServerConfigurationTimeoutsToTerraform(struct?: VpnServerConfigurationTimeoutsOutputReference | VpnServerConfigurationTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -377,6 +652,80 @@ function vpnServerConfigurationTimeoutsToTerraform(struct?: VpnServerConfigurati
   }
 }
 
+export class VpnServerConfigurationTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_server_configuration.html azurerm_vpn_server_configuration}
@@ -435,7 +784,7 @@ export class VpnServerConfiguration extends cdktf.TerraformResource {
   }
 
   // location - computed: false, optional: false, required: true
-  private _location: string;
+  private _location?: string; 
   public get location() {
     return this.getStringAttribute('location');
   }
@@ -448,7 +797,7 @@ export class VpnServerConfiguration extends cdktf.TerraformResource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -461,7 +810,7 @@ export class VpnServerConfiguration extends cdktf.TerraformResource {
   }
 
   // resource_group_name - computed: false, optional: false, required: true
-  private _resourceGroupName: string;
+  private _resourceGroupName?: string; 
   public get resourceGroupName() {
     return this.getStringAttribute('resource_group_name');
   }
@@ -474,11 +823,12 @@ export class VpnServerConfiguration extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable;
+  private _tags?: { [key: string]: string } | cdktf.IResolvable | undefined; 
   public get tags() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
     this._tags = value;
   }
   public resetTags() {
@@ -490,7 +840,7 @@ export class VpnServerConfiguration extends cdktf.TerraformResource {
   }
 
   // vpn_authentication_types - computed: false, optional: false, required: true
-  private _vpnAuthenticationTypes: string[];
+  private _vpnAuthenticationTypes?: string[]; 
   public get vpnAuthenticationTypes() {
     return this.getListAttribute('vpn_authentication_types');
   }
@@ -503,11 +853,11 @@ export class VpnServerConfiguration extends cdktf.TerraformResource {
   }
 
   // vpn_protocols - computed: true, optional: true, required: false
-  private _vpnProtocols?: string[];
+  private _vpnProtocols?: string[] | undefined; 
   public get vpnProtocols() {
     return this.getListAttribute('vpn_protocols');
   }
-  public set vpnProtocols(value: string[]) {
+  public set vpnProtocols(value: string[] | undefined) {
     this._vpnProtocols = value;
   }
   public resetVpnProtocols() {
@@ -519,11 +869,12 @@ export class VpnServerConfiguration extends cdktf.TerraformResource {
   }
 
   // azure_active_directory_authentication - computed: false, optional: true, required: false
-  private _azureActiveDirectoryAuthentication?: VpnServerConfigurationAzureActiveDirectoryAuthentication[];
+  private _azureActiveDirectoryAuthentication?: VpnServerConfigurationAzureActiveDirectoryAuthentication[] | undefined; 
   public get azureActiveDirectoryAuthentication() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('azure_active_directory_authentication') as any;
   }
-  public set azureActiveDirectoryAuthentication(value: VpnServerConfigurationAzureActiveDirectoryAuthentication[] ) {
+  public set azureActiveDirectoryAuthentication(value: VpnServerConfigurationAzureActiveDirectoryAuthentication[] | undefined) {
     this._azureActiveDirectoryAuthentication = value;
   }
   public resetAzureActiveDirectoryAuthentication() {
@@ -535,11 +886,12 @@ export class VpnServerConfiguration extends cdktf.TerraformResource {
   }
 
   // client_revoked_certificate - computed: false, optional: true, required: false
-  private _clientRevokedCertificate?: VpnServerConfigurationClientRevokedCertificate[];
+  private _clientRevokedCertificate?: VpnServerConfigurationClientRevokedCertificate[] | undefined; 
   public get clientRevokedCertificate() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('client_revoked_certificate') as any;
   }
-  public set clientRevokedCertificate(value: VpnServerConfigurationClientRevokedCertificate[] ) {
+  public set clientRevokedCertificate(value: VpnServerConfigurationClientRevokedCertificate[] | undefined) {
     this._clientRevokedCertificate = value;
   }
   public resetClientRevokedCertificate() {
@@ -551,11 +903,12 @@ export class VpnServerConfiguration extends cdktf.TerraformResource {
   }
 
   // client_root_certificate - computed: false, optional: true, required: false
-  private _clientRootCertificate?: VpnServerConfigurationClientRootCertificate[];
+  private _clientRootCertificate?: VpnServerConfigurationClientRootCertificate[] | undefined; 
   public get clientRootCertificate() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('client_root_certificate') as any;
   }
-  public set clientRootCertificate(value: VpnServerConfigurationClientRootCertificate[] ) {
+  public set clientRootCertificate(value: VpnServerConfigurationClientRootCertificate[] | undefined) {
     this._clientRootCertificate = value;
   }
   public resetClientRootCertificate() {
@@ -567,11 +920,12 @@ export class VpnServerConfiguration extends cdktf.TerraformResource {
   }
 
   // ipsec_policy - computed: false, optional: true, required: false
-  private _ipsecPolicy?: VpnServerConfigurationIpsecPolicy[];
+  private _ipsecPolicy?: VpnServerConfigurationIpsecPolicy | undefined; 
+  private __ipsecPolicyOutput = new VpnServerConfigurationIpsecPolicyOutputReference(this as any, "ipsec_policy", true);
   public get ipsecPolicy() {
-    return this.interpolationForAttribute('ipsec_policy') as any;
+    return this.__ipsecPolicyOutput;
   }
-  public set ipsecPolicy(value: VpnServerConfigurationIpsecPolicy[] ) {
+  public putIpsecPolicy(value: VpnServerConfigurationIpsecPolicy | undefined) {
     this._ipsecPolicy = value;
   }
   public resetIpsecPolicy() {
@@ -583,11 +937,12 @@ export class VpnServerConfiguration extends cdktf.TerraformResource {
   }
 
   // radius - computed: false, optional: true, required: false
-  private _radius?: VpnServerConfigurationRadius[];
+  private _radius?: VpnServerConfigurationRadius | undefined; 
+  private __radiusOutput = new VpnServerConfigurationRadiusOutputReference(this as any, "radius", true);
   public get radius() {
-    return this.interpolationForAttribute('radius') as any;
+    return this.__radiusOutput;
   }
-  public set radius(value: VpnServerConfigurationRadius[] ) {
+  public putRadius(value: VpnServerConfigurationRadius | undefined) {
     this._radius = value;
   }
   public resetRadius() {
@@ -599,11 +954,12 @@ export class VpnServerConfiguration extends cdktf.TerraformResource {
   }
 
   // radius_server - computed: false, optional: true, required: false
-  private _radiusServer?: VpnServerConfigurationRadiusServerA[];
+  private _radiusServer?: VpnServerConfigurationRadiusServerA | undefined; 
+  private __radiusServerOutput = new VpnServerConfigurationRadiusServerAOutputReference(this as any, "radius_server", true);
   public get radiusServer() {
-    return this.interpolationForAttribute('radius_server') as any;
+    return this.__radiusServerOutput;
   }
-  public set radiusServer(value: VpnServerConfigurationRadiusServerA[] ) {
+  public putRadiusServer(value: VpnServerConfigurationRadiusServerA | undefined) {
     this._radiusServer = value;
   }
   public resetRadiusServer() {
@@ -615,11 +971,12 @@ export class VpnServerConfiguration extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: VpnServerConfigurationTimeouts;
+  private _timeouts?: VpnServerConfigurationTimeouts | undefined; 
+  private __timeoutsOutput = new VpnServerConfigurationTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: VpnServerConfigurationTimeouts ) {
+  public putTimeouts(value: VpnServerConfigurationTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {
@@ -645,9 +1002,9 @@ export class VpnServerConfiguration extends cdktf.TerraformResource {
       azure_active_directory_authentication: cdktf.listMapper(vpnServerConfigurationAzureActiveDirectoryAuthenticationToTerraform)(this._azureActiveDirectoryAuthentication),
       client_revoked_certificate: cdktf.listMapper(vpnServerConfigurationClientRevokedCertificateToTerraform)(this._clientRevokedCertificate),
       client_root_certificate: cdktf.listMapper(vpnServerConfigurationClientRootCertificateToTerraform)(this._clientRootCertificate),
-      ipsec_policy: cdktf.listMapper(vpnServerConfigurationIpsecPolicyToTerraform)(this._ipsecPolicy),
-      radius: cdktf.listMapper(vpnServerConfigurationRadiusToTerraform)(this._radius),
-      radius_server: cdktf.listMapper(vpnServerConfigurationRadiusServerAToTerraform)(this._radiusServer),
+      ipsec_policy: vpnServerConfigurationIpsecPolicyToTerraform(this._ipsecPolicy),
+      radius: vpnServerConfigurationRadiusToTerraform(this._radius),
+      radius_server: vpnServerConfigurationRadiusServerAToTerraform(this._radiusServer),
       timeouts: vpnServerConfigurationTimeoutsToTerraform(this._timeouts),
     };
   }

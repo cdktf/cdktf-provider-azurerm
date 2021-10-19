@@ -93,8 +93,11 @@ export interface ServicebusSubscriptionTimeouts {
   readonly update?: string;
 }
 
-function servicebusSubscriptionTimeoutsToTerraform(struct?: ServicebusSubscriptionTimeouts): any {
+function servicebusSubscriptionTimeoutsToTerraform(struct?: ServicebusSubscriptionTimeoutsOutputReference | ServicebusSubscriptionTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -103,6 +106,80 @@ function servicebusSubscriptionTimeoutsToTerraform(struct?: ServicebusSubscripti
   }
 }
 
+export class ServicebusSubscriptionTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_subscription.html azurerm_servicebus_subscription}
@@ -159,11 +236,11 @@ export class ServicebusSubscription extends cdktf.TerraformResource {
   // ==========
 
   // auto_delete_on_idle - computed: true, optional: true, required: false
-  private _autoDeleteOnIdle?: string;
+  private _autoDeleteOnIdle?: string | undefined; 
   public get autoDeleteOnIdle() {
     return this.getStringAttribute('auto_delete_on_idle');
   }
-  public set autoDeleteOnIdle(value: string) {
+  public set autoDeleteOnIdle(value: string | undefined) {
     this._autoDeleteOnIdle = value;
   }
   public resetAutoDeleteOnIdle() {
@@ -175,11 +252,11 @@ export class ServicebusSubscription extends cdktf.TerraformResource {
   }
 
   // dead_lettering_on_filter_evaluation_error - computed: false, optional: true, required: false
-  private _deadLetteringOnFilterEvaluationError?: boolean | cdktf.IResolvable;
+  private _deadLetteringOnFilterEvaluationError?: boolean | cdktf.IResolvable | undefined; 
   public get deadLetteringOnFilterEvaluationError() {
-    return this.getBooleanAttribute('dead_lettering_on_filter_evaluation_error');
+    return this.getBooleanAttribute('dead_lettering_on_filter_evaluation_error') as any;
   }
-  public set deadLetteringOnFilterEvaluationError(value: boolean | cdktf.IResolvable ) {
+  public set deadLetteringOnFilterEvaluationError(value: boolean | cdktf.IResolvable | undefined) {
     this._deadLetteringOnFilterEvaluationError = value;
   }
   public resetDeadLetteringOnFilterEvaluationError() {
@@ -191,11 +268,11 @@ export class ServicebusSubscription extends cdktf.TerraformResource {
   }
 
   // dead_lettering_on_message_expiration - computed: false, optional: true, required: false
-  private _deadLetteringOnMessageExpiration?: boolean | cdktf.IResolvable;
+  private _deadLetteringOnMessageExpiration?: boolean | cdktf.IResolvable | undefined; 
   public get deadLetteringOnMessageExpiration() {
-    return this.getBooleanAttribute('dead_lettering_on_message_expiration');
+    return this.getBooleanAttribute('dead_lettering_on_message_expiration') as any;
   }
-  public set deadLetteringOnMessageExpiration(value: boolean | cdktf.IResolvable ) {
+  public set deadLetteringOnMessageExpiration(value: boolean | cdktf.IResolvable | undefined) {
     this._deadLetteringOnMessageExpiration = value;
   }
   public resetDeadLetteringOnMessageExpiration() {
@@ -207,11 +284,11 @@ export class ServicebusSubscription extends cdktf.TerraformResource {
   }
 
   // default_message_ttl - computed: true, optional: true, required: false
-  private _defaultMessageTtl?: string;
+  private _defaultMessageTtl?: string | undefined; 
   public get defaultMessageTtl() {
     return this.getStringAttribute('default_message_ttl');
   }
-  public set defaultMessageTtl(value: string) {
+  public set defaultMessageTtl(value: string | undefined) {
     this._defaultMessageTtl = value;
   }
   public resetDefaultMessageTtl() {
@@ -223,11 +300,11 @@ export class ServicebusSubscription extends cdktf.TerraformResource {
   }
 
   // enable_batched_operations - computed: false, optional: true, required: false
-  private _enableBatchedOperations?: boolean | cdktf.IResolvable;
+  private _enableBatchedOperations?: boolean | cdktf.IResolvable | undefined; 
   public get enableBatchedOperations() {
-    return this.getBooleanAttribute('enable_batched_operations');
+    return this.getBooleanAttribute('enable_batched_operations') as any;
   }
-  public set enableBatchedOperations(value: boolean | cdktf.IResolvable ) {
+  public set enableBatchedOperations(value: boolean | cdktf.IResolvable | undefined) {
     this._enableBatchedOperations = value;
   }
   public resetEnableBatchedOperations() {
@@ -239,11 +316,11 @@ export class ServicebusSubscription extends cdktf.TerraformResource {
   }
 
   // forward_dead_lettered_messages_to - computed: false, optional: true, required: false
-  private _forwardDeadLetteredMessagesTo?: string;
+  private _forwardDeadLetteredMessagesTo?: string | undefined; 
   public get forwardDeadLetteredMessagesTo() {
     return this.getStringAttribute('forward_dead_lettered_messages_to');
   }
-  public set forwardDeadLetteredMessagesTo(value: string ) {
+  public set forwardDeadLetteredMessagesTo(value: string | undefined) {
     this._forwardDeadLetteredMessagesTo = value;
   }
   public resetForwardDeadLetteredMessagesTo() {
@@ -255,11 +332,11 @@ export class ServicebusSubscription extends cdktf.TerraformResource {
   }
 
   // forward_to - computed: false, optional: true, required: false
-  private _forwardTo?: string;
+  private _forwardTo?: string | undefined; 
   public get forwardTo() {
     return this.getStringAttribute('forward_to');
   }
-  public set forwardTo(value: string ) {
+  public set forwardTo(value: string | undefined) {
     this._forwardTo = value;
   }
   public resetForwardTo() {
@@ -276,11 +353,11 @@ export class ServicebusSubscription extends cdktf.TerraformResource {
   }
 
   // lock_duration - computed: true, optional: true, required: false
-  private _lockDuration?: string;
+  private _lockDuration?: string | undefined; 
   public get lockDuration() {
     return this.getStringAttribute('lock_duration');
   }
-  public set lockDuration(value: string) {
+  public set lockDuration(value: string | undefined) {
     this._lockDuration = value;
   }
   public resetLockDuration() {
@@ -292,7 +369,7 @@ export class ServicebusSubscription extends cdktf.TerraformResource {
   }
 
   // max_delivery_count - computed: false, optional: false, required: true
-  private _maxDeliveryCount: number;
+  private _maxDeliveryCount?: number; 
   public get maxDeliveryCount() {
     return this.getNumberAttribute('max_delivery_count');
   }
@@ -305,7 +382,7 @@ export class ServicebusSubscription extends cdktf.TerraformResource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -318,7 +395,7 @@ export class ServicebusSubscription extends cdktf.TerraformResource {
   }
 
   // namespace_name - computed: false, optional: false, required: true
-  private _namespaceName: string;
+  private _namespaceName?: string; 
   public get namespaceName() {
     return this.getStringAttribute('namespace_name');
   }
@@ -331,11 +408,11 @@ export class ServicebusSubscription extends cdktf.TerraformResource {
   }
 
   // requires_session - computed: false, optional: true, required: false
-  private _requiresSession?: boolean | cdktf.IResolvable;
+  private _requiresSession?: boolean | cdktf.IResolvable | undefined; 
   public get requiresSession() {
-    return this.getBooleanAttribute('requires_session');
+    return this.getBooleanAttribute('requires_session') as any;
   }
-  public set requiresSession(value: boolean | cdktf.IResolvable ) {
+  public set requiresSession(value: boolean | cdktf.IResolvable | undefined) {
     this._requiresSession = value;
   }
   public resetRequiresSession() {
@@ -347,7 +424,7 @@ export class ServicebusSubscription extends cdktf.TerraformResource {
   }
 
   // resource_group_name - computed: false, optional: false, required: true
-  private _resourceGroupName: string;
+  private _resourceGroupName?: string; 
   public get resourceGroupName() {
     return this.getStringAttribute('resource_group_name');
   }
@@ -360,11 +437,11 @@ export class ServicebusSubscription extends cdktf.TerraformResource {
   }
 
   // status - computed: false, optional: true, required: false
-  private _status?: string;
+  private _status?: string | undefined; 
   public get status() {
     return this.getStringAttribute('status');
   }
-  public set status(value: string ) {
+  public set status(value: string | undefined) {
     this._status = value;
   }
   public resetStatus() {
@@ -376,7 +453,7 @@ export class ServicebusSubscription extends cdktf.TerraformResource {
   }
 
   // topic_name - computed: false, optional: false, required: true
-  private _topicName: string;
+  private _topicName?: string; 
   public get topicName() {
     return this.getStringAttribute('topic_name');
   }
@@ -389,11 +466,12 @@ export class ServicebusSubscription extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: ServicebusSubscriptionTimeouts;
+  private _timeouts?: ServicebusSubscriptionTimeouts | undefined; 
+  private __timeoutsOutput = new ServicebusSubscriptionTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: ServicebusSubscriptionTimeouts ) {
+  public putTimeouts(value: ServicebusSubscriptionTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {

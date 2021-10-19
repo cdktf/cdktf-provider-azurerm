@@ -61,6 +61,9 @@ export interface RedisEnterpriseDatabaseModule {
 
 function redisEnterpriseDatabaseModuleToTerraform(struct?: RedisEnterpriseDatabaseModule): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     args: cdktf.stringToTerraform(struct!.args),
     name: cdktf.stringToTerraform(struct!.name),
@@ -82,8 +85,11 @@ export interface RedisEnterpriseDatabaseTimeouts {
   readonly read?: string;
 }
 
-function redisEnterpriseDatabaseTimeoutsToTerraform(struct?: RedisEnterpriseDatabaseTimeouts): any {
+function redisEnterpriseDatabaseTimeoutsToTerraform(struct?: RedisEnterpriseDatabaseTimeoutsOutputReference | RedisEnterpriseDatabaseTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -91,6 +97,64 @@ function redisEnterpriseDatabaseTimeoutsToTerraform(struct?: RedisEnterpriseData
   }
 }
 
+export class RedisEnterpriseDatabaseTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/redis_enterprise_database.html azurerm_redis_enterprise_database}
@@ -140,11 +204,11 @@ export class RedisEnterpriseDatabase extends cdktf.TerraformResource {
   // ==========
 
   // client_protocol - computed: false, optional: true, required: false
-  private _clientProtocol?: string;
+  private _clientProtocol?: string | undefined; 
   public get clientProtocol() {
     return this.getStringAttribute('client_protocol');
   }
-  public set clientProtocol(value: string ) {
+  public set clientProtocol(value: string | undefined) {
     this._clientProtocol = value;
   }
   public resetClientProtocol() {
@@ -156,7 +220,7 @@ export class RedisEnterpriseDatabase extends cdktf.TerraformResource {
   }
 
   // cluster_id - computed: false, optional: false, required: true
-  private _clusterId: string;
+  private _clusterId?: string; 
   public get clusterId() {
     return this.getStringAttribute('cluster_id');
   }
@@ -169,11 +233,11 @@ export class RedisEnterpriseDatabase extends cdktf.TerraformResource {
   }
 
   // clustering_policy - computed: false, optional: true, required: false
-  private _clusteringPolicy?: string;
+  private _clusteringPolicy?: string | undefined; 
   public get clusteringPolicy() {
     return this.getStringAttribute('clustering_policy');
   }
-  public set clusteringPolicy(value: string ) {
+  public set clusteringPolicy(value: string | undefined) {
     this._clusteringPolicy = value;
   }
   public resetClusteringPolicy() {
@@ -185,11 +249,11 @@ export class RedisEnterpriseDatabase extends cdktf.TerraformResource {
   }
 
   // eviction_policy - computed: false, optional: true, required: false
-  private _evictionPolicy?: string;
+  private _evictionPolicy?: string | undefined; 
   public get evictionPolicy() {
     return this.getStringAttribute('eviction_policy');
   }
-  public set evictionPolicy(value: string ) {
+  public set evictionPolicy(value: string | undefined) {
     this._evictionPolicy = value;
   }
   public resetEvictionPolicy() {
@@ -206,11 +270,11 @@ export class RedisEnterpriseDatabase extends cdktf.TerraformResource {
   }
 
   // name - computed: false, optional: true, required: false
-  private _name?: string;
+  private _name?: string | undefined; 
   public get name() {
     return this.getStringAttribute('name');
   }
-  public set name(value: string ) {
+  public set name(value: string | undefined) {
     this._name = value;
   }
   public resetName() {
@@ -222,11 +286,11 @@ export class RedisEnterpriseDatabase extends cdktf.TerraformResource {
   }
 
   // port - computed: false, optional: true, required: false
-  private _port?: number;
+  private _port?: number | undefined; 
   public get port() {
     return this.getNumberAttribute('port');
   }
-  public set port(value: number ) {
+  public set port(value: number | undefined) {
     this._port = value;
   }
   public resetPort() {
@@ -243,7 +307,7 @@ export class RedisEnterpriseDatabase extends cdktf.TerraformResource {
   }
 
   // resource_group_name - computed: false, optional: false, required: true
-  private _resourceGroupName: string;
+  private _resourceGroupName?: string; 
   public get resourceGroupName() {
     return this.getStringAttribute('resource_group_name');
   }
@@ -261,11 +325,12 @@ export class RedisEnterpriseDatabase extends cdktf.TerraformResource {
   }
 
   // module - computed: false, optional: true, required: false
-  private _module?: RedisEnterpriseDatabaseModule[];
+  private _module?: RedisEnterpriseDatabaseModule[] | undefined; 
   public get module() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('module') as any;
   }
-  public set module(value: RedisEnterpriseDatabaseModule[] ) {
+  public set module(value: RedisEnterpriseDatabaseModule[] | undefined) {
     this._module = value;
   }
   public resetModule() {
@@ -277,11 +342,12 @@ export class RedisEnterpriseDatabase extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: RedisEnterpriseDatabaseTimeouts;
+  private _timeouts?: RedisEnterpriseDatabaseTimeouts | undefined; 
+  private __timeoutsOutput = new RedisEnterpriseDatabaseTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: RedisEnterpriseDatabaseTimeouts ) {
+  public putTimeouts(value: RedisEnterpriseDatabaseTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {

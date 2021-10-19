@@ -65,8 +65,11 @@ export interface KeyVaultAccessPolicyTimeouts {
   readonly update?: string;
 }
 
-function keyVaultAccessPolicyTimeoutsToTerraform(struct?: KeyVaultAccessPolicyTimeouts): any {
+function keyVaultAccessPolicyTimeoutsToTerraform(struct?: KeyVaultAccessPolicyTimeoutsOutputReference | KeyVaultAccessPolicyTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -75,6 +78,80 @@ function keyVaultAccessPolicyTimeoutsToTerraform(struct?: KeyVaultAccessPolicyTi
   }
 }
 
+export class KeyVaultAccessPolicyTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_access_policy.html azurerm_key_vault_access_policy}
@@ -124,11 +201,11 @@ export class KeyVaultAccessPolicyA extends cdktf.TerraformResource {
   // ==========
 
   // application_id - computed: false, optional: true, required: false
-  private _applicationId?: string;
+  private _applicationId?: string | undefined; 
   public get applicationId() {
     return this.getStringAttribute('application_id');
   }
-  public set applicationId(value: string ) {
+  public set applicationId(value: string | undefined) {
     this._applicationId = value;
   }
   public resetApplicationId() {
@@ -140,11 +217,11 @@ export class KeyVaultAccessPolicyA extends cdktf.TerraformResource {
   }
 
   // certificate_permissions - computed: false, optional: true, required: false
-  private _certificatePermissions?: string[];
+  private _certificatePermissions?: string[] | undefined; 
   public get certificatePermissions() {
     return this.getListAttribute('certificate_permissions');
   }
-  public set certificatePermissions(value: string[] ) {
+  public set certificatePermissions(value: string[] | undefined) {
     this._certificatePermissions = value;
   }
   public resetCertificatePermissions() {
@@ -161,11 +238,11 @@ export class KeyVaultAccessPolicyA extends cdktf.TerraformResource {
   }
 
   // key_permissions - computed: false, optional: true, required: false
-  private _keyPermissions?: string[];
+  private _keyPermissions?: string[] | undefined; 
   public get keyPermissions() {
     return this.getListAttribute('key_permissions');
   }
-  public set keyPermissions(value: string[] ) {
+  public set keyPermissions(value: string[] | undefined) {
     this._keyPermissions = value;
   }
   public resetKeyPermissions() {
@@ -177,7 +254,7 @@ export class KeyVaultAccessPolicyA extends cdktf.TerraformResource {
   }
 
   // key_vault_id - computed: false, optional: false, required: true
-  private _keyVaultId: string;
+  private _keyVaultId?: string; 
   public get keyVaultId() {
     return this.getStringAttribute('key_vault_id');
   }
@@ -190,7 +267,7 @@ export class KeyVaultAccessPolicyA extends cdktf.TerraformResource {
   }
 
   // object_id - computed: false, optional: false, required: true
-  private _objectId: string;
+  private _objectId?: string; 
   public get objectId() {
     return this.getStringAttribute('object_id');
   }
@@ -203,11 +280,11 @@ export class KeyVaultAccessPolicyA extends cdktf.TerraformResource {
   }
 
   // secret_permissions - computed: false, optional: true, required: false
-  private _secretPermissions?: string[];
+  private _secretPermissions?: string[] | undefined; 
   public get secretPermissions() {
     return this.getListAttribute('secret_permissions');
   }
-  public set secretPermissions(value: string[] ) {
+  public set secretPermissions(value: string[] | undefined) {
     this._secretPermissions = value;
   }
   public resetSecretPermissions() {
@@ -219,11 +296,11 @@ export class KeyVaultAccessPolicyA extends cdktf.TerraformResource {
   }
 
   // storage_permissions - computed: false, optional: true, required: false
-  private _storagePermissions?: string[];
+  private _storagePermissions?: string[] | undefined; 
   public get storagePermissions() {
     return this.getListAttribute('storage_permissions');
   }
-  public set storagePermissions(value: string[] ) {
+  public set storagePermissions(value: string[] | undefined) {
     this._storagePermissions = value;
   }
   public resetStoragePermissions() {
@@ -235,7 +312,7 @@ export class KeyVaultAccessPolicyA extends cdktf.TerraformResource {
   }
 
   // tenant_id - computed: false, optional: false, required: true
-  private _tenantId: string;
+  private _tenantId?: string; 
   public get tenantId() {
     return this.getStringAttribute('tenant_id');
   }
@@ -248,11 +325,12 @@ export class KeyVaultAccessPolicyA extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: KeyVaultAccessPolicyTimeouts;
+  private _timeouts?: KeyVaultAccessPolicyTimeouts | undefined; 
+  private __timeoutsOutput = new KeyVaultAccessPolicyTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: KeyVaultAccessPolicyTimeouts ) {
+  public putTimeouts(value: KeyVaultAccessPolicyTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {

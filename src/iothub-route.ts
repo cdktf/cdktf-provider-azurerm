@@ -61,8 +61,11 @@ export interface IothubRouteTimeouts {
   readonly update?: string;
 }
 
-function iothubRouteTimeoutsToTerraform(struct?: IothubRouteTimeouts): any {
+function iothubRouteTimeoutsToTerraform(struct?: IothubRouteTimeoutsOutputReference | IothubRouteTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -71,6 +74,80 @@ function iothubRouteTimeoutsToTerraform(struct?: IothubRouteTimeouts): any {
   }
 }
 
+export class IothubRouteTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_route.html azurerm_iothub_route}
@@ -119,11 +196,11 @@ export class IothubRouteA extends cdktf.TerraformResource {
   // ==========
 
   // condition - computed: false, optional: true, required: false
-  private _condition?: string;
+  private _condition?: string | undefined; 
   public get condition() {
     return this.getStringAttribute('condition');
   }
-  public set condition(value: string ) {
+  public set condition(value: string | undefined) {
     this._condition = value;
   }
   public resetCondition() {
@@ -135,9 +212,9 @@ export class IothubRouteA extends cdktf.TerraformResource {
   }
 
   // enabled - computed: false, optional: false, required: true
-  private _enabled: boolean | cdktf.IResolvable;
+  private _enabled?: boolean | cdktf.IResolvable; 
   public get enabled() {
-    return this.getBooleanAttribute('enabled');
+    return this.getBooleanAttribute('enabled') as any;
   }
   public set enabled(value: boolean | cdktf.IResolvable) {
     this._enabled = value;
@@ -148,7 +225,7 @@ export class IothubRouteA extends cdktf.TerraformResource {
   }
 
   // endpoint_names - computed: false, optional: false, required: true
-  private _endpointNames: string[];
+  private _endpointNames?: string[]; 
   public get endpointNames() {
     return this.getListAttribute('endpoint_names');
   }
@@ -166,7 +243,7 @@ export class IothubRouteA extends cdktf.TerraformResource {
   }
 
   // iothub_name - computed: false, optional: false, required: true
-  private _iothubName: string;
+  private _iothubName?: string; 
   public get iothubName() {
     return this.getStringAttribute('iothub_name');
   }
@@ -179,7 +256,7 @@ export class IothubRouteA extends cdktf.TerraformResource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -192,7 +269,7 @@ export class IothubRouteA extends cdktf.TerraformResource {
   }
 
   // resource_group_name - computed: false, optional: false, required: true
-  private _resourceGroupName: string;
+  private _resourceGroupName?: string; 
   public get resourceGroupName() {
     return this.getStringAttribute('resource_group_name');
   }
@@ -205,7 +282,7 @@ export class IothubRouteA extends cdktf.TerraformResource {
   }
 
   // source - computed: false, optional: false, required: true
-  private _source: string;
+  private _source?: string; 
   public get source() {
     return this.getStringAttribute('source');
   }
@@ -218,11 +295,12 @@ export class IothubRouteA extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: IothubRouteTimeouts;
+  private _timeouts?: IothubRouteTimeouts | undefined; 
+  private __timeoutsOutput = new IothubRouteTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: IothubRouteTimeouts ) {
+  public putTimeouts(value: IothubRouteTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {

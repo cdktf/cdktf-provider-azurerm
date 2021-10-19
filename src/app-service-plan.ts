@@ -56,7 +56,7 @@ export interface AppServicePlanConfig extends cdktf.TerraformMetaArguments {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_plan.html#sku AppServicePlan#sku}
   */
-  readonly sku: AppServicePlanSku[];
+  readonly sku: AppServicePlanSku;
   /**
   * timeouts block
   * 
@@ -79,8 +79,11 @@ export interface AppServicePlanSku {
   readonly tier: string;
 }
 
-function appServicePlanSkuToTerraform(struct?: AppServicePlanSku): any {
+function appServicePlanSkuToTerraform(struct?: AppServicePlanSkuOutputReference | AppServicePlanSku): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     capacity: cdktf.numberToTerraform(struct!.capacity),
     size: cdktf.stringToTerraform(struct!.size),
@@ -88,6 +91,58 @@ function appServicePlanSkuToTerraform(struct?: AppServicePlanSku): any {
   }
 }
 
+export class AppServicePlanSkuOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // capacity - computed: true, optional: true, required: false
+  private _capacity?: number | undefined; 
+  public get capacity() {
+    return this.getNumberAttribute('capacity');
+  }
+  public set capacity(value: number | undefined) {
+    this._capacity = value;
+  }
+  public resetCapacity() {
+    this._capacity = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get capacityInput() {
+    return this._capacity
+  }
+
+  // size - computed: false, optional: false, required: true
+  private _size?: string; 
+  public get size() {
+    return this.getStringAttribute('size');
+  }
+  public set size(value: string) {
+    this._size = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sizeInput() {
+    return this._size
+  }
+
+  // tier - computed: false, optional: false, required: true
+  private _tier?: string; 
+  public get tier() {
+    return this.getStringAttribute('tier');
+  }
+  public set tier(value: string) {
+    this._tier = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tierInput() {
+    return this._tier
+  }
+}
 export interface AppServicePlanTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_plan.html#create AppServicePlan#create}
@@ -107,8 +162,11 @@ export interface AppServicePlanTimeouts {
   readonly update?: string;
 }
 
-function appServicePlanTimeoutsToTerraform(struct?: AppServicePlanTimeouts): any {
+function appServicePlanTimeoutsToTerraform(struct?: AppServicePlanTimeoutsOutputReference | AppServicePlanTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -117,6 +175,80 @@ function appServicePlanTimeoutsToTerraform(struct?: AppServicePlanTimeouts): any
   }
 }
 
+export class AppServicePlanTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_plan.html azurerm_app_service_plan}
@@ -170,11 +302,11 @@ export class AppServicePlan extends cdktf.TerraformResource {
   // ==========
 
   // app_service_environment_id - computed: false, optional: true, required: false
-  private _appServiceEnvironmentId?: string;
+  private _appServiceEnvironmentId?: string | undefined; 
   public get appServiceEnvironmentId() {
     return this.getStringAttribute('app_service_environment_id');
   }
-  public set appServiceEnvironmentId(value: string ) {
+  public set appServiceEnvironmentId(value: string | undefined) {
     this._appServiceEnvironmentId = value;
   }
   public resetAppServiceEnvironmentId() {
@@ -191,11 +323,11 @@ export class AppServicePlan extends cdktf.TerraformResource {
   }
 
   // is_xenon - computed: false, optional: true, required: false
-  private _isXenon?: boolean | cdktf.IResolvable;
+  private _isXenon?: boolean | cdktf.IResolvable | undefined; 
   public get isXenon() {
-    return this.getBooleanAttribute('is_xenon');
+    return this.getBooleanAttribute('is_xenon') as any;
   }
-  public set isXenon(value: boolean | cdktf.IResolvable ) {
+  public set isXenon(value: boolean | cdktf.IResolvable | undefined) {
     this._isXenon = value;
   }
   public resetIsXenon() {
@@ -207,11 +339,11 @@ export class AppServicePlan extends cdktf.TerraformResource {
   }
 
   // kind - computed: false, optional: true, required: false
-  private _kind?: string;
+  private _kind?: string | undefined; 
   public get kind() {
     return this.getStringAttribute('kind');
   }
-  public set kind(value: string ) {
+  public set kind(value: string | undefined) {
     this._kind = value;
   }
   public resetKind() {
@@ -223,7 +355,7 @@ export class AppServicePlan extends cdktf.TerraformResource {
   }
 
   // location - computed: false, optional: false, required: true
-  private _location: string;
+  private _location?: string; 
   public get location() {
     return this.getStringAttribute('location');
   }
@@ -236,11 +368,11 @@ export class AppServicePlan extends cdktf.TerraformResource {
   }
 
   // maximum_elastic_worker_count - computed: true, optional: true, required: false
-  private _maximumElasticWorkerCount?: number;
+  private _maximumElasticWorkerCount?: number | undefined; 
   public get maximumElasticWorkerCount() {
     return this.getNumberAttribute('maximum_elastic_worker_count');
   }
-  public set maximumElasticWorkerCount(value: number) {
+  public set maximumElasticWorkerCount(value: number | undefined) {
     this._maximumElasticWorkerCount = value;
   }
   public resetMaximumElasticWorkerCount() {
@@ -257,7 +389,7 @@ export class AppServicePlan extends cdktf.TerraformResource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -270,11 +402,11 @@ export class AppServicePlan extends cdktf.TerraformResource {
   }
 
   // per_site_scaling - computed: false, optional: true, required: false
-  private _perSiteScaling?: boolean | cdktf.IResolvable;
+  private _perSiteScaling?: boolean | cdktf.IResolvable | undefined; 
   public get perSiteScaling() {
-    return this.getBooleanAttribute('per_site_scaling');
+    return this.getBooleanAttribute('per_site_scaling') as any;
   }
-  public set perSiteScaling(value: boolean | cdktf.IResolvable ) {
+  public set perSiteScaling(value: boolean | cdktf.IResolvable | undefined) {
     this._perSiteScaling = value;
   }
   public resetPerSiteScaling() {
@@ -286,11 +418,11 @@ export class AppServicePlan extends cdktf.TerraformResource {
   }
 
   // reserved - computed: false, optional: true, required: false
-  private _reserved?: boolean | cdktf.IResolvable;
+  private _reserved?: boolean | cdktf.IResolvable | undefined; 
   public get reserved() {
-    return this.getBooleanAttribute('reserved');
+    return this.getBooleanAttribute('reserved') as any;
   }
-  public set reserved(value: boolean | cdktf.IResolvable ) {
+  public set reserved(value: boolean | cdktf.IResolvable | undefined) {
     this._reserved = value;
   }
   public resetReserved() {
@@ -302,7 +434,7 @@ export class AppServicePlan extends cdktf.TerraformResource {
   }
 
   // resource_group_name - computed: false, optional: false, required: true
-  private _resourceGroupName: string;
+  private _resourceGroupName?: string; 
   public get resourceGroupName() {
     return this.getStringAttribute('resource_group_name');
   }
@@ -315,11 +447,12 @@ export class AppServicePlan extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable;
+  private _tags?: { [key: string]: string } | cdktf.IResolvable | undefined; 
   public get tags() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
     this._tags = value;
   }
   public resetTags() {
@@ -331,11 +464,11 @@ export class AppServicePlan extends cdktf.TerraformResource {
   }
 
   // zone_redundant - computed: false, optional: true, required: false
-  private _zoneRedundant?: boolean | cdktf.IResolvable;
+  private _zoneRedundant?: boolean | cdktf.IResolvable | undefined; 
   public get zoneRedundant() {
-    return this.getBooleanAttribute('zone_redundant');
+    return this.getBooleanAttribute('zone_redundant') as any;
   }
-  public set zoneRedundant(value: boolean | cdktf.IResolvable ) {
+  public set zoneRedundant(value: boolean | cdktf.IResolvable | undefined) {
     this._zoneRedundant = value;
   }
   public resetZoneRedundant() {
@@ -347,11 +480,12 @@ export class AppServicePlan extends cdktf.TerraformResource {
   }
 
   // sku - computed: false, optional: false, required: true
-  private _sku: AppServicePlanSku[];
+  private _sku?: AppServicePlanSku; 
+  private __skuOutput = new AppServicePlanSkuOutputReference(this as any, "sku", true);
   public get sku() {
-    return this.interpolationForAttribute('sku') as any;
+    return this.__skuOutput;
   }
-  public set sku(value: AppServicePlanSku[]) {
+  public putSku(value: AppServicePlanSku) {
     this._sku = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -360,11 +494,12 @@ export class AppServicePlan extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: AppServicePlanTimeouts;
+  private _timeouts?: AppServicePlanTimeouts | undefined; 
+  private __timeoutsOutput = new AppServicePlanTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: AppServicePlanTimeouts ) {
+  public putTimeouts(value: AppServicePlanTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {
@@ -392,7 +527,7 @@ export class AppServicePlan extends cdktf.TerraformResource {
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
       zone_redundant: cdktf.booleanToTerraform(this._zoneRedundant),
-      sku: cdktf.listMapper(appServicePlanSkuToTerraform)(this._sku),
+      sku: appServicePlanSkuToTerraform(this._sku),
       timeouts: appServicePlanTimeoutsToTerraform(this._timeouts),
     };
   }

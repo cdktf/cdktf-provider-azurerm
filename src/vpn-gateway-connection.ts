@@ -55,6 +55,9 @@ export interface VpnGatewayConnectionRouting {
 
 function vpnGatewayConnectionRoutingToTerraform(struct?: VpnGatewayConnectionRouting): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     associated_route_table: cdktf.stringToTerraform(struct!.associatedRouteTable),
     propagated_route_tables: cdktf.listMapper(cdktf.stringToTerraform)(struct!.propagatedRouteTables),
@@ -80,8 +83,11 @@ export interface VpnGatewayConnectionTimeouts {
   readonly update?: string;
 }
 
-function vpnGatewayConnectionTimeoutsToTerraform(struct?: VpnGatewayConnectionTimeouts): any {
+function vpnGatewayConnectionTimeoutsToTerraform(struct?: VpnGatewayConnectionTimeoutsOutputReference | VpnGatewayConnectionTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -90,6 +96,80 @@ function vpnGatewayConnectionTimeoutsToTerraform(struct?: VpnGatewayConnectionTi
   }
 }
 
+export class VpnGatewayConnectionTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 export interface VpnGatewayConnectionVpnLinkIpsecPolicy {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway_connection.html#dh_group VpnGatewayConnection#dh_group}
@@ -127,6 +207,9 @@ export interface VpnGatewayConnectionVpnLinkIpsecPolicy {
 
 function vpnGatewayConnectionVpnLinkIpsecPolicyToTerraform(struct?: VpnGatewayConnectionVpnLinkIpsecPolicy): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     dh_group: cdktf.stringToTerraform(struct!.dhGroup),
     encryption_algorithm: cdktf.stringToTerraform(struct!.encryptionAlgorithm),
@@ -190,6 +273,9 @@ export interface VpnGatewayConnectionVpnLink {
 
 function vpnGatewayConnectionVpnLinkToTerraform(struct?: VpnGatewayConnectionVpnLink): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     bandwidth_mbps: cdktf.numberToTerraform(struct!.bandwidthMbps),
     bgp_enabled: cdktf.booleanToTerraform(struct!.bgpEnabled),
@@ -257,11 +343,11 @@ export class VpnGatewayConnection extends cdktf.TerraformResource {
   }
 
   // internet_security_enabled - computed: false, optional: true, required: false
-  private _internetSecurityEnabled?: boolean | cdktf.IResolvable;
+  private _internetSecurityEnabled?: boolean | cdktf.IResolvable | undefined; 
   public get internetSecurityEnabled() {
-    return this.getBooleanAttribute('internet_security_enabled');
+    return this.getBooleanAttribute('internet_security_enabled') as any;
   }
-  public set internetSecurityEnabled(value: boolean | cdktf.IResolvable ) {
+  public set internetSecurityEnabled(value: boolean | cdktf.IResolvable | undefined) {
     this._internetSecurityEnabled = value;
   }
   public resetInternetSecurityEnabled() {
@@ -273,7 +359,7 @@ export class VpnGatewayConnection extends cdktf.TerraformResource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -286,7 +372,7 @@ export class VpnGatewayConnection extends cdktf.TerraformResource {
   }
 
   // remote_vpn_site_id - computed: false, optional: false, required: true
-  private _remoteVpnSiteId: string;
+  private _remoteVpnSiteId?: string; 
   public get remoteVpnSiteId() {
     return this.getStringAttribute('remote_vpn_site_id');
   }
@@ -299,7 +385,7 @@ export class VpnGatewayConnection extends cdktf.TerraformResource {
   }
 
   // vpn_gateway_id - computed: false, optional: false, required: true
-  private _vpnGatewayId: string;
+  private _vpnGatewayId?: string; 
   public get vpnGatewayId() {
     return this.getStringAttribute('vpn_gateway_id');
   }
@@ -312,11 +398,12 @@ export class VpnGatewayConnection extends cdktf.TerraformResource {
   }
 
   // routing - computed: false, optional: true, required: false
-  private _routing?: VpnGatewayConnectionRouting[];
+  private _routing?: VpnGatewayConnectionRouting[] | undefined; 
   public get routing() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('routing') as any;
   }
-  public set routing(value: VpnGatewayConnectionRouting[] ) {
+  public set routing(value: VpnGatewayConnectionRouting[] | undefined) {
     this._routing = value;
   }
   public resetRouting() {
@@ -328,11 +415,12 @@ export class VpnGatewayConnection extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: VpnGatewayConnectionTimeouts;
+  private _timeouts?: VpnGatewayConnectionTimeouts | undefined; 
+  private __timeoutsOutput = new VpnGatewayConnectionTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: VpnGatewayConnectionTimeouts ) {
+  public putTimeouts(value: VpnGatewayConnectionTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {
@@ -344,8 +432,9 @@ export class VpnGatewayConnection extends cdktf.TerraformResource {
   }
 
   // vpn_link - computed: false, optional: false, required: true
-  private _vpnLink: VpnGatewayConnectionVpnLink[];
+  private _vpnLink?: VpnGatewayConnectionVpnLink[]; 
   public get vpnLink() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('vpn_link') as any;
   }
   public set vpnLink(value: VpnGatewayConnectionVpnLink[]) {

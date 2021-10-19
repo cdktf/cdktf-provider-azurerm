@@ -48,7 +48,7 @@ export class DataAzurermMysqlServerThreatDetectionPolicy extends cdktf.ComplexCo
 
   // email_account_admins - computed: true, optional: false, required: false
   public get emailAccountAdmins() {
-    return this.getBooleanAttribute('email_account_admins');
+    return this.getBooleanAttribute('email_account_admins') as any;
   }
 
   // email_addresses - computed: true, optional: false, required: false
@@ -58,7 +58,7 @@ export class DataAzurermMysqlServerThreatDetectionPolicy extends cdktf.ComplexCo
 
   // enabled - computed: true, optional: false, required: false
   public get enabled() {
-    return this.getBooleanAttribute('enabled');
+    return this.getBooleanAttribute('enabled') as any;
   }
 
   // retention_days - computed: true, optional: false, required: false
@@ -83,13 +83,42 @@ export interface DataAzurermMysqlServerTimeouts {
   readonly read?: string;
 }
 
-function dataAzurermMysqlServerTimeoutsToTerraform(struct?: DataAzurermMysqlServerTimeouts): any {
+function dataAzurermMysqlServerTimeoutsToTerraform(struct?: DataAzurermMysqlServerTimeoutsOutputReference | DataAzurermMysqlServerTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     read: cdktf.stringToTerraform(struct!.read),
   }
 }
 
+export class DataAzurermMysqlServerTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/mysql_server.html azurerm_mysql_server}
@@ -139,7 +168,7 @@ export class DataAzurermMysqlServer extends cdktf.TerraformDataSource {
 
   // auto_grow_enabled - computed: true, optional: false, required: false
   public get autoGrowEnabled() {
-    return this.getBooleanAttribute('auto_grow_enabled');
+    return this.getBooleanAttribute('auto_grow_enabled') as any;
   }
 
   // backup_retention_days - computed: true, optional: false, required: false
@@ -154,7 +183,7 @@ export class DataAzurermMysqlServer extends cdktf.TerraformDataSource {
 
   // geo_redundant_backup_enabled - computed: true, optional: false, required: false
   public get geoRedundantBackupEnabled() {
-    return this.getBooleanAttribute('geo_redundant_backup_enabled');
+    return this.getBooleanAttribute('geo_redundant_backup_enabled') as any;
   }
 
   // id - computed: true, optional: true, required: false
@@ -169,7 +198,7 @@ export class DataAzurermMysqlServer extends cdktf.TerraformDataSource {
 
   // infrastructure_encryption_enabled - computed: true, optional: false, required: false
   public get infrastructureEncryptionEnabled() {
-    return this.getBooleanAttribute('infrastructure_encryption_enabled');
+    return this.getBooleanAttribute('infrastructure_encryption_enabled') as any;
   }
 
   // location - computed: true, optional: false, required: false
@@ -178,7 +207,7 @@ export class DataAzurermMysqlServer extends cdktf.TerraformDataSource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -192,11 +221,11 @@ export class DataAzurermMysqlServer extends cdktf.TerraformDataSource {
 
   // public_network_access_enabled - computed: true, optional: false, required: false
   public get publicNetworkAccessEnabled() {
-    return this.getBooleanAttribute('public_network_access_enabled');
+    return this.getBooleanAttribute('public_network_access_enabled') as any;
   }
 
   // resource_group_name - computed: false, optional: false, required: true
-  private _resourceGroupName: string;
+  private _resourceGroupName?: string; 
   public get resourceGroupName() {
     return this.getStringAttribute('resource_group_name');
   }
@@ -220,7 +249,7 @@ export class DataAzurermMysqlServer extends cdktf.TerraformDataSource {
 
   // ssl_enforcement_enabled - computed: true, optional: false, required: false
   public get sslEnforcementEnabled() {
-    return this.getBooleanAttribute('ssl_enforcement_enabled');
+    return this.getBooleanAttribute('ssl_enforcement_enabled') as any;
   }
 
   // ssl_minimal_tls_version_enforced - computed: true, optional: false, required: false
@@ -249,11 +278,12 @@ export class DataAzurermMysqlServer extends cdktf.TerraformDataSource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: DataAzurermMysqlServerTimeouts;
+  private _timeouts?: DataAzurermMysqlServerTimeouts | undefined; 
+  private __timeoutsOutput = new DataAzurermMysqlServerTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: DataAzurermMysqlServerTimeouts ) {
+  public putTimeouts(value: DataAzurermMysqlServerTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {

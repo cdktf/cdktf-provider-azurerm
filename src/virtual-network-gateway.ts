@@ -60,13 +60,13 @@ export interface VirtualNetworkGatewayConfig extends cdktf.TerraformMetaArgument
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_network_gateway.html#bgp_settings VirtualNetworkGateway#bgp_settings}
   */
-  readonly bgpSettings?: VirtualNetworkGatewayBgpSettings[];
+  readonly bgpSettings?: VirtualNetworkGatewayBgpSettings;
   /**
   * custom_route block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_network_gateway.html#custom_route VirtualNetworkGateway#custom_route}
   */
-  readonly customRoute?: VirtualNetworkGatewayCustomRoute[];
+  readonly customRoute?: VirtualNetworkGatewayCustomRoute;
   /**
   * ip_configuration block
   * 
@@ -84,7 +84,7 @@ export interface VirtualNetworkGatewayConfig extends cdktf.TerraformMetaArgument
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_network_gateway.html#vpn_client_configuration VirtualNetworkGateway#vpn_client_configuration}
   */
-  readonly vpnClientConfiguration?: VirtualNetworkGatewayVpnClientConfiguration[];
+  readonly vpnClientConfiguration?: VirtualNetworkGatewayVpnClientConfiguration;
 }
 export interface VirtualNetworkGatewayBgpSettingsPeeringAddresses {
   /**
@@ -99,6 +99,9 @@ export interface VirtualNetworkGatewayBgpSettingsPeeringAddresses {
 
 function virtualNetworkGatewayBgpSettingsPeeringAddressesToTerraform(struct?: VirtualNetworkGatewayBgpSettingsPeeringAddresses): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     apipa_addresses: cdktf.listMapper(cdktf.stringToTerraform)(struct!.apipaAddresses),
     ip_configuration_name: cdktf.stringToTerraform(struct!.ipConfigurationName),
@@ -126,8 +129,11 @@ export interface VirtualNetworkGatewayBgpSettings {
   readonly peeringAddresses?: VirtualNetworkGatewayBgpSettingsPeeringAddresses[];
 }
 
-function virtualNetworkGatewayBgpSettingsToTerraform(struct?: VirtualNetworkGatewayBgpSettings): any {
+function virtualNetworkGatewayBgpSettingsToTerraform(struct?: VirtualNetworkGatewayBgpSettingsOutputReference | VirtualNetworkGatewayBgpSettings): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     asn: cdktf.numberToTerraform(struct!.asn),
     peer_weight: cdktf.numberToTerraform(struct!.peerWeight),
@@ -136,6 +142,81 @@ function virtualNetworkGatewayBgpSettingsToTerraform(struct?: VirtualNetworkGate
   }
 }
 
+export class VirtualNetworkGatewayBgpSettingsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // asn - computed: false, optional: true, required: false
+  private _asn?: number | undefined; 
+  public get asn() {
+    return this.getNumberAttribute('asn');
+  }
+  public set asn(value: number | undefined) {
+    this._asn = value;
+  }
+  public resetAsn() {
+    this._asn = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get asnInput() {
+    return this._asn
+  }
+
+  // peer_weight - computed: false, optional: true, required: false
+  private _peerWeight?: number | undefined; 
+  public get peerWeight() {
+    return this.getNumberAttribute('peer_weight');
+  }
+  public set peerWeight(value: number | undefined) {
+    this._peerWeight = value;
+  }
+  public resetPeerWeight() {
+    this._peerWeight = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get peerWeightInput() {
+    return this._peerWeight
+  }
+
+  // peering_address - computed: true, optional: true, required: false
+  private _peeringAddress?: string | undefined; 
+  public get peeringAddress() {
+    return this.getStringAttribute('peering_address');
+  }
+  public set peeringAddress(value: string | undefined) {
+    this._peeringAddress = value;
+  }
+  public resetPeeringAddress() {
+    this._peeringAddress = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get peeringAddressInput() {
+    return this._peeringAddress
+  }
+
+  // peering_addresses - computed: false, optional: true, required: false
+  private _peeringAddresses?: VirtualNetworkGatewayBgpSettingsPeeringAddresses[] | undefined; 
+  public get peeringAddresses() {
+    // Getting the computed value is not yet implemented
+    return this.interpolationForAttribute('peering_addresses') as any;
+  }
+  public set peeringAddresses(value: VirtualNetworkGatewayBgpSettingsPeeringAddresses[] | undefined) {
+    this._peeringAddresses = value;
+  }
+  public resetPeeringAddresses() {
+    this._peeringAddresses = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get peeringAddressesInput() {
+    return this._peeringAddresses
+  }
+}
 export interface VirtualNetworkGatewayCustomRoute {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_network_gateway.html#address_prefixes VirtualNetworkGateway#address_prefixes}
@@ -143,13 +224,42 @@ export interface VirtualNetworkGatewayCustomRoute {
   readonly addressPrefixes?: string[];
 }
 
-function virtualNetworkGatewayCustomRouteToTerraform(struct?: VirtualNetworkGatewayCustomRoute): any {
+function virtualNetworkGatewayCustomRouteToTerraform(struct?: VirtualNetworkGatewayCustomRouteOutputReference | VirtualNetworkGatewayCustomRoute): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     address_prefixes: cdktf.listMapper(cdktf.stringToTerraform)(struct!.addressPrefixes),
   }
 }
 
+export class VirtualNetworkGatewayCustomRouteOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // address_prefixes - computed: false, optional: true, required: false
+  private _addressPrefixes?: string[] | undefined; 
+  public get addressPrefixes() {
+    return this.getListAttribute('address_prefixes');
+  }
+  public set addressPrefixes(value: string[] | undefined) {
+    this._addressPrefixes = value;
+  }
+  public resetAddressPrefixes() {
+    this._addressPrefixes = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get addressPrefixesInput() {
+    return this._addressPrefixes
+  }
+}
 export interface VirtualNetworkGatewayIpConfiguration {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_network_gateway.html#name VirtualNetworkGateway#name}
@@ -171,6 +281,9 @@ export interface VirtualNetworkGatewayIpConfiguration {
 
 function virtualNetworkGatewayIpConfigurationToTerraform(struct?: VirtualNetworkGatewayIpConfiguration): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     name: cdktf.stringToTerraform(struct!.name),
     private_ip_address_allocation: cdktf.stringToTerraform(struct!.privateIpAddressAllocation),
@@ -198,8 +311,11 @@ export interface VirtualNetworkGatewayTimeouts {
   readonly update?: string;
 }
 
-function virtualNetworkGatewayTimeoutsToTerraform(struct?: VirtualNetworkGatewayTimeouts): any {
+function virtualNetworkGatewayTimeoutsToTerraform(struct?: VirtualNetworkGatewayTimeoutsOutputReference | VirtualNetworkGatewayTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -208,6 +324,80 @@ function virtualNetworkGatewayTimeoutsToTerraform(struct?: VirtualNetworkGateway
   }
 }
 
+export class VirtualNetworkGatewayTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 export interface VirtualNetworkGatewayVpnClientConfigurationRevokedCertificate {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_network_gateway.html#name VirtualNetworkGateway#name}
@@ -221,6 +411,9 @@ export interface VirtualNetworkGatewayVpnClientConfigurationRevokedCertificate {
 
 function virtualNetworkGatewayVpnClientConfigurationRevokedCertificateToTerraform(struct?: VirtualNetworkGatewayVpnClientConfigurationRevokedCertificate): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     name: cdktf.stringToTerraform(struct!.name),
     thumbprint: cdktf.stringToTerraform(struct!.thumbprint),
@@ -240,6 +433,9 @@ export interface VirtualNetworkGatewayVpnClientConfigurationRootCertificate {
 
 function virtualNetworkGatewayVpnClientConfigurationRootCertificateToTerraform(struct?: VirtualNetworkGatewayVpnClientConfigurationRootCertificate): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     name: cdktf.stringToTerraform(struct!.name),
     public_cert_data: cdktf.stringToTerraform(struct!.publicCertData),
@@ -293,8 +489,11 @@ export interface VirtualNetworkGatewayVpnClientConfiguration {
   readonly rootCertificate?: VirtualNetworkGatewayVpnClientConfigurationRootCertificate[];
 }
 
-function virtualNetworkGatewayVpnClientConfigurationToTerraform(struct?: VirtualNetworkGatewayVpnClientConfiguration): any {
+function virtualNetworkGatewayVpnClientConfigurationToTerraform(struct?: VirtualNetworkGatewayVpnClientConfigurationOutputReference | VirtualNetworkGatewayVpnClientConfiguration): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     aad_audience: cdktf.stringToTerraform(struct!.aadAudience),
     aad_issuer: cdktf.stringToTerraform(struct!.aadIssuer),
@@ -309,6 +508,175 @@ function virtualNetworkGatewayVpnClientConfigurationToTerraform(struct?: Virtual
   }
 }
 
+export class VirtualNetworkGatewayVpnClientConfigurationOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // aad_audience - computed: false, optional: true, required: false
+  private _aadAudience?: string | undefined; 
+  public get aadAudience() {
+    return this.getStringAttribute('aad_audience');
+  }
+  public set aadAudience(value: string | undefined) {
+    this._aadAudience = value;
+  }
+  public resetAadAudience() {
+    this._aadAudience = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get aadAudienceInput() {
+    return this._aadAudience
+  }
+
+  // aad_issuer - computed: false, optional: true, required: false
+  private _aadIssuer?: string | undefined; 
+  public get aadIssuer() {
+    return this.getStringAttribute('aad_issuer');
+  }
+  public set aadIssuer(value: string | undefined) {
+    this._aadIssuer = value;
+  }
+  public resetAadIssuer() {
+    this._aadIssuer = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get aadIssuerInput() {
+    return this._aadIssuer
+  }
+
+  // aad_tenant - computed: false, optional: true, required: false
+  private _aadTenant?: string | undefined; 
+  public get aadTenant() {
+    return this.getStringAttribute('aad_tenant');
+  }
+  public set aadTenant(value: string | undefined) {
+    this._aadTenant = value;
+  }
+  public resetAadTenant() {
+    this._aadTenant = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get aadTenantInput() {
+    return this._aadTenant
+  }
+
+  // address_space - computed: false, optional: false, required: true
+  private _addressSpace?: string[]; 
+  public get addressSpace() {
+    return this.getListAttribute('address_space');
+  }
+  public set addressSpace(value: string[]) {
+    this._addressSpace = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get addressSpaceInput() {
+    return this._addressSpace
+  }
+
+  // radius_server_address - computed: false, optional: true, required: false
+  private _radiusServerAddress?: string | undefined; 
+  public get radiusServerAddress() {
+    return this.getStringAttribute('radius_server_address');
+  }
+  public set radiusServerAddress(value: string | undefined) {
+    this._radiusServerAddress = value;
+  }
+  public resetRadiusServerAddress() {
+    this._radiusServerAddress = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get radiusServerAddressInput() {
+    return this._radiusServerAddress
+  }
+
+  // radius_server_secret - computed: false, optional: true, required: false
+  private _radiusServerSecret?: string | undefined; 
+  public get radiusServerSecret() {
+    return this.getStringAttribute('radius_server_secret');
+  }
+  public set radiusServerSecret(value: string | undefined) {
+    this._radiusServerSecret = value;
+  }
+  public resetRadiusServerSecret() {
+    this._radiusServerSecret = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get radiusServerSecretInput() {
+    return this._radiusServerSecret
+  }
+
+  // vpn_auth_types - computed: true, optional: true, required: false
+  private _vpnAuthTypes?: string[] | undefined; 
+  public get vpnAuthTypes() {
+    return this.getListAttribute('vpn_auth_types');
+  }
+  public set vpnAuthTypes(value: string[] | undefined) {
+    this._vpnAuthTypes = value;
+  }
+  public resetVpnAuthTypes() {
+    this._vpnAuthTypes = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get vpnAuthTypesInput() {
+    return this._vpnAuthTypes
+  }
+
+  // vpn_client_protocols - computed: true, optional: true, required: false
+  private _vpnClientProtocols?: string[] | undefined; 
+  public get vpnClientProtocols() {
+    return this.getListAttribute('vpn_client_protocols');
+  }
+  public set vpnClientProtocols(value: string[] | undefined) {
+    this._vpnClientProtocols = value;
+  }
+  public resetVpnClientProtocols() {
+    this._vpnClientProtocols = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get vpnClientProtocolsInput() {
+    return this._vpnClientProtocols
+  }
+
+  // revoked_certificate - computed: false, optional: true, required: false
+  private _revokedCertificate?: VirtualNetworkGatewayVpnClientConfigurationRevokedCertificate[] | undefined; 
+  public get revokedCertificate() {
+    // Getting the computed value is not yet implemented
+    return this.interpolationForAttribute('revoked_certificate') as any;
+  }
+  public set revokedCertificate(value: VirtualNetworkGatewayVpnClientConfigurationRevokedCertificate[] | undefined) {
+    this._revokedCertificate = value;
+  }
+  public resetRevokedCertificate() {
+    this._revokedCertificate = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get revokedCertificateInput() {
+    return this._revokedCertificate
+  }
+
+  // root_certificate - computed: false, optional: true, required: false
+  private _rootCertificate?: VirtualNetworkGatewayVpnClientConfigurationRootCertificate[] | undefined; 
+  public get rootCertificate() {
+    // Getting the computed value is not yet implemented
+    return this.interpolationForAttribute('root_certificate') as any;
+  }
+  public set rootCertificate(value: VirtualNetworkGatewayVpnClientConfigurationRootCertificate[] | undefined) {
+    this._rootCertificate = value;
+  }
+  public resetRootCertificate() {
+    this._rootCertificate = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get rootCertificateInput() {
+    return this._rootCertificate
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_network_gateway.html azurerm_virtual_network_gateway}
@@ -366,11 +734,11 @@ export class VirtualNetworkGateway extends cdktf.TerraformResource {
   // ==========
 
   // active_active - computed: true, optional: true, required: false
-  private _activeActive?: boolean | cdktf.IResolvable;
+  private _activeActive?: boolean | cdktf.IResolvable | undefined; 
   public get activeActive() {
-    return this.getBooleanAttribute('active_active');
+    return this.getBooleanAttribute('active_active') as any;
   }
-  public set activeActive(value: boolean | cdktf.IResolvable) {
+  public set activeActive(value: boolean | cdktf.IResolvable | undefined) {
     this._activeActive = value;
   }
   public resetActiveActive() {
@@ -382,11 +750,11 @@ export class VirtualNetworkGateway extends cdktf.TerraformResource {
   }
 
   // default_local_network_gateway_id - computed: false, optional: true, required: false
-  private _defaultLocalNetworkGatewayId?: string;
+  private _defaultLocalNetworkGatewayId?: string | undefined; 
   public get defaultLocalNetworkGatewayId() {
     return this.getStringAttribute('default_local_network_gateway_id');
   }
-  public set defaultLocalNetworkGatewayId(value: string ) {
+  public set defaultLocalNetworkGatewayId(value: string | undefined) {
     this._defaultLocalNetworkGatewayId = value;
   }
   public resetDefaultLocalNetworkGatewayId() {
@@ -398,11 +766,11 @@ export class VirtualNetworkGateway extends cdktf.TerraformResource {
   }
 
   // enable_bgp - computed: true, optional: true, required: false
-  private _enableBgp?: boolean | cdktf.IResolvable;
+  private _enableBgp?: boolean | cdktf.IResolvable | undefined; 
   public get enableBgp() {
-    return this.getBooleanAttribute('enable_bgp');
+    return this.getBooleanAttribute('enable_bgp') as any;
   }
-  public set enableBgp(value: boolean | cdktf.IResolvable) {
+  public set enableBgp(value: boolean | cdktf.IResolvable | undefined) {
     this._enableBgp = value;
   }
   public resetEnableBgp() {
@@ -414,11 +782,11 @@ export class VirtualNetworkGateway extends cdktf.TerraformResource {
   }
 
   // generation - computed: true, optional: true, required: false
-  private _generation?: string;
+  private _generation?: string | undefined; 
   public get generation() {
     return this.getStringAttribute('generation');
   }
-  public set generation(value: string) {
+  public set generation(value: string | undefined) {
     this._generation = value;
   }
   public resetGeneration() {
@@ -435,7 +803,7 @@ export class VirtualNetworkGateway extends cdktf.TerraformResource {
   }
 
   // location - computed: false, optional: false, required: true
-  private _location: string;
+  private _location?: string; 
   public get location() {
     return this.getStringAttribute('location');
   }
@@ -448,7 +816,7 @@ export class VirtualNetworkGateway extends cdktf.TerraformResource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -461,11 +829,11 @@ export class VirtualNetworkGateway extends cdktf.TerraformResource {
   }
 
   // private_ip_address_enabled - computed: false, optional: true, required: false
-  private _privateIpAddressEnabled?: boolean | cdktf.IResolvable;
+  private _privateIpAddressEnabled?: boolean | cdktf.IResolvable | undefined; 
   public get privateIpAddressEnabled() {
-    return this.getBooleanAttribute('private_ip_address_enabled');
+    return this.getBooleanAttribute('private_ip_address_enabled') as any;
   }
-  public set privateIpAddressEnabled(value: boolean | cdktf.IResolvable ) {
+  public set privateIpAddressEnabled(value: boolean | cdktf.IResolvable | undefined) {
     this._privateIpAddressEnabled = value;
   }
   public resetPrivateIpAddressEnabled() {
@@ -477,7 +845,7 @@ export class VirtualNetworkGateway extends cdktf.TerraformResource {
   }
 
   // resource_group_name - computed: false, optional: false, required: true
-  private _resourceGroupName: string;
+  private _resourceGroupName?: string; 
   public get resourceGroupName() {
     return this.getStringAttribute('resource_group_name');
   }
@@ -490,7 +858,7 @@ export class VirtualNetworkGateway extends cdktf.TerraformResource {
   }
 
   // sku - computed: false, optional: false, required: true
-  private _sku: string;
+  private _sku?: string; 
   public get sku() {
     return this.getStringAttribute('sku');
   }
@@ -503,11 +871,12 @@ export class VirtualNetworkGateway extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable;
+  private _tags?: { [key: string]: string } | cdktf.IResolvable | undefined; 
   public get tags() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
     this._tags = value;
   }
   public resetTags() {
@@ -519,7 +888,7 @@ export class VirtualNetworkGateway extends cdktf.TerraformResource {
   }
 
   // type - computed: false, optional: false, required: true
-  private _type: string;
+  private _type?: string; 
   public get type() {
     return this.getStringAttribute('type');
   }
@@ -532,11 +901,11 @@ export class VirtualNetworkGateway extends cdktf.TerraformResource {
   }
 
   // vpn_type - computed: false, optional: true, required: false
-  private _vpnType?: string;
+  private _vpnType?: string | undefined; 
   public get vpnType() {
     return this.getStringAttribute('vpn_type');
   }
-  public set vpnType(value: string ) {
+  public set vpnType(value: string | undefined) {
     this._vpnType = value;
   }
   public resetVpnType() {
@@ -548,11 +917,12 @@ export class VirtualNetworkGateway extends cdktf.TerraformResource {
   }
 
   // bgp_settings - computed: false, optional: true, required: false
-  private _bgpSettings?: VirtualNetworkGatewayBgpSettings[];
+  private _bgpSettings?: VirtualNetworkGatewayBgpSettings | undefined; 
+  private __bgpSettingsOutput = new VirtualNetworkGatewayBgpSettingsOutputReference(this as any, "bgp_settings", true);
   public get bgpSettings() {
-    return this.interpolationForAttribute('bgp_settings') as any;
+    return this.__bgpSettingsOutput;
   }
-  public set bgpSettings(value: VirtualNetworkGatewayBgpSettings[] ) {
+  public putBgpSettings(value: VirtualNetworkGatewayBgpSettings | undefined) {
     this._bgpSettings = value;
   }
   public resetBgpSettings() {
@@ -564,11 +934,12 @@ export class VirtualNetworkGateway extends cdktf.TerraformResource {
   }
 
   // custom_route - computed: false, optional: true, required: false
-  private _customRoute?: VirtualNetworkGatewayCustomRoute[];
+  private _customRoute?: VirtualNetworkGatewayCustomRoute | undefined; 
+  private __customRouteOutput = new VirtualNetworkGatewayCustomRouteOutputReference(this as any, "custom_route", true);
   public get customRoute() {
-    return this.interpolationForAttribute('custom_route') as any;
+    return this.__customRouteOutput;
   }
-  public set customRoute(value: VirtualNetworkGatewayCustomRoute[] ) {
+  public putCustomRoute(value: VirtualNetworkGatewayCustomRoute | undefined) {
     this._customRoute = value;
   }
   public resetCustomRoute() {
@@ -580,8 +951,9 @@ export class VirtualNetworkGateway extends cdktf.TerraformResource {
   }
 
   // ip_configuration - computed: false, optional: false, required: true
-  private _ipConfiguration: VirtualNetworkGatewayIpConfiguration[];
+  private _ipConfiguration?: VirtualNetworkGatewayIpConfiguration[]; 
   public get ipConfiguration() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('ip_configuration') as any;
   }
   public set ipConfiguration(value: VirtualNetworkGatewayIpConfiguration[]) {
@@ -593,11 +965,12 @@ export class VirtualNetworkGateway extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: VirtualNetworkGatewayTimeouts;
+  private _timeouts?: VirtualNetworkGatewayTimeouts | undefined; 
+  private __timeoutsOutput = new VirtualNetworkGatewayTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: VirtualNetworkGatewayTimeouts ) {
+  public putTimeouts(value: VirtualNetworkGatewayTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {
@@ -609,11 +982,12 @@ export class VirtualNetworkGateway extends cdktf.TerraformResource {
   }
 
   // vpn_client_configuration - computed: false, optional: true, required: false
-  private _vpnClientConfiguration?: VirtualNetworkGatewayVpnClientConfiguration[];
+  private _vpnClientConfiguration?: VirtualNetworkGatewayVpnClientConfiguration | undefined; 
+  private __vpnClientConfigurationOutput = new VirtualNetworkGatewayVpnClientConfigurationOutputReference(this as any, "vpn_client_configuration", true);
   public get vpnClientConfiguration() {
-    return this.interpolationForAttribute('vpn_client_configuration') as any;
+    return this.__vpnClientConfigurationOutput;
   }
-  public set vpnClientConfiguration(value: VirtualNetworkGatewayVpnClientConfiguration[] ) {
+  public putVpnClientConfiguration(value: VirtualNetworkGatewayVpnClientConfiguration | undefined) {
     this._vpnClientConfiguration = value;
   }
   public resetVpnClientConfiguration() {
@@ -642,11 +1016,11 @@ export class VirtualNetworkGateway extends cdktf.TerraformResource {
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
       type: cdktf.stringToTerraform(this._type),
       vpn_type: cdktf.stringToTerraform(this._vpnType),
-      bgp_settings: cdktf.listMapper(virtualNetworkGatewayBgpSettingsToTerraform)(this._bgpSettings),
-      custom_route: cdktf.listMapper(virtualNetworkGatewayCustomRouteToTerraform)(this._customRoute),
+      bgp_settings: virtualNetworkGatewayBgpSettingsToTerraform(this._bgpSettings),
+      custom_route: virtualNetworkGatewayCustomRouteToTerraform(this._customRoute),
       ip_configuration: cdktf.listMapper(virtualNetworkGatewayIpConfigurationToTerraform)(this._ipConfiguration),
       timeouts: virtualNetworkGatewayTimeoutsToTerraform(this._timeouts),
-      vpn_client_configuration: cdktf.listMapper(virtualNetworkGatewayVpnClientConfigurationToTerraform)(this._vpnClientConfiguration),
+      vpn_client_configuration: virtualNetworkGatewayVpnClientConfigurationToTerraform(this._vpnClientConfiguration),
     };
   }
 }

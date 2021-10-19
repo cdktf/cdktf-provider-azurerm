@@ -85,8 +85,11 @@ export interface KustoEventhubDataConnectionTimeouts {
   readonly update?: string;
 }
 
-function kustoEventhubDataConnectionTimeoutsToTerraform(struct?: KustoEventhubDataConnectionTimeouts): any {
+function kustoEventhubDataConnectionTimeoutsToTerraform(struct?: KustoEventhubDataConnectionTimeoutsOutputReference | KustoEventhubDataConnectionTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -95,6 +98,80 @@ function kustoEventhubDataConnectionTimeoutsToTerraform(struct?: KustoEventhubDa
   }
 }
 
+export class KustoEventhubDataConnectionTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_eventhub_data_connection.html azurerm_kusto_eventhub_data_connection}
@@ -149,7 +226,7 @@ export class KustoEventhubDataConnection extends cdktf.TerraformResource {
   // ==========
 
   // cluster_name - computed: false, optional: false, required: true
-  private _clusterName: string;
+  private _clusterName?: string; 
   public get clusterName() {
     return this.getStringAttribute('cluster_name');
   }
@@ -162,11 +239,11 @@ export class KustoEventhubDataConnection extends cdktf.TerraformResource {
   }
 
   // compression - computed: false, optional: true, required: false
-  private _compression?: string;
+  private _compression?: string | undefined; 
   public get compression() {
     return this.getStringAttribute('compression');
   }
-  public set compression(value: string ) {
+  public set compression(value: string | undefined) {
     this._compression = value;
   }
   public resetCompression() {
@@ -178,7 +255,7 @@ export class KustoEventhubDataConnection extends cdktf.TerraformResource {
   }
 
   // consumer_group - computed: false, optional: false, required: true
-  private _consumerGroup: string;
+  private _consumerGroup?: string; 
   public get consumerGroup() {
     return this.getStringAttribute('consumer_group');
   }
@@ -191,11 +268,11 @@ export class KustoEventhubDataConnection extends cdktf.TerraformResource {
   }
 
   // data_format - computed: false, optional: true, required: false
-  private _dataFormat?: string;
+  private _dataFormat?: string | undefined; 
   public get dataFormat() {
     return this.getStringAttribute('data_format');
   }
-  public set dataFormat(value: string ) {
+  public set dataFormat(value: string | undefined) {
     this._dataFormat = value;
   }
   public resetDataFormat() {
@@ -207,7 +284,7 @@ export class KustoEventhubDataConnection extends cdktf.TerraformResource {
   }
 
   // database_name - computed: false, optional: false, required: true
-  private _databaseName: string;
+  private _databaseName?: string; 
   public get databaseName() {
     return this.getStringAttribute('database_name');
   }
@@ -220,11 +297,11 @@ export class KustoEventhubDataConnection extends cdktf.TerraformResource {
   }
 
   // event_system_properties - computed: true, optional: true, required: false
-  private _eventSystemProperties?: string[];
+  private _eventSystemProperties?: string[] | undefined; 
   public get eventSystemProperties() {
     return this.getListAttribute('event_system_properties');
   }
-  public set eventSystemProperties(value: string[]) {
+  public set eventSystemProperties(value: string[] | undefined) {
     this._eventSystemProperties = value;
   }
   public resetEventSystemProperties() {
@@ -236,7 +313,7 @@ export class KustoEventhubDataConnection extends cdktf.TerraformResource {
   }
 
   // eventhub_id - computed: false, optional: false, required: true
-  private _eventhubId: string;
+  private _eventhubId?: string; 
   public get eventhubId() {
     return this.getStringAttribute('eventhub_id');
   }
@@ -254,11 +331,11 @@ export class KustoEventhubDataConnection extends cdktf.TerraformResource {
   }
 
   // identity_id - computed: false, optional: true, required: false
-  private _identityId?: string;
+  private _identityId?: string | undefined; 
   public get identityId() {
     return this.getStringAttribute('identity_id');
   }
-  public set identityId(value: string ) {
+  public set identityId(value: string | undefined) {
     this._identityId = value;
   }
   public resetIdentityId() {
@@ -270,7 +347,7 @@ export class KustoEventhubDataConnection extends cdktf.TerraformResource {
   }
 
   // location - computed: false, optional: false, required: true
-  private _location: string;
+  private _location?: string; 
   public get location() {
     return this.getStringAttribute('location');
   }
@@ -283,11 +360,11 @@ export class KustoEventhubDataConnection extends cdktf.TerraformResource {
   }
 
   // mapping_rule_name - computed: false, optional: true, required: false
-  private _mappingRuleName?: string;
+  private _mappingRuleName?: string | undefined; 
   public get mappingRuleName() {
     return this.getStringAttribute('mapping_rule_name');
   }
-  public set mappingRuleName(value: string ) {
+  public set mappingRuleName(value: string | undefined) {
     this._mappingRuleName = value;
   }
   public resetMappingRuleName() {
@@ -299,7 +376,7 @@ export class KustoEventhubDataConnection extends cdktf.TerraformResource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -312,7 +389,7 @@ export class KustoEventhubDataConnection extends cdktf.TerraformResource {
   }
 
   // resource_group_name - computed: false, optional: false, required: true
-  private _resourceGroupName: string;
+  private _resourceGroupName?: string; 
   public get resourceGroupName() {
     return this.getStringAttribute('resource_group_name');
   }
@@ -325,11 +402,11 @@ export class KustoEventhubDataConnection extends cdktf.TerraformResource {
   }
 
   // table_name - computed: false, optional: true, required: false
-  private _tableName?: string;
+  private _tableName?: string | undefined; 
   public get tableName() {
     return this.getStringAttribute('table_name');
   }
-  public set tableName(value: string ) {
+  public set tableName(value: string | undefined) {
     this._tableName = value;
   }
   public resetTableName() {
@@ -341,11 +418,12 @@ export class KustoEventhubDataConnection extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: KustoEventhubDataConnectionTimeouts;
+  private _timeouts?: KustoEventhubDataConnectionTimeouts | undefined; 
+  private __timeoutsOutput = new KustoEventhubDataConnectionTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: KustoEventhubDataConnectionTimeouts ) {
+  public putTimeouts(value: KustoEventhubDataConnectionTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {

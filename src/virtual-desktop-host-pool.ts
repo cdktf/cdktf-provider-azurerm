@@ -70,7 +70,7 @@ export interface VirtualDesktopHostPoolConfig extends cdktf.TerraformMetaArgumen
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_desktop_host_pool.html#registration_info VirtualDesktopHostPool#registration_info}
   */
-  readonly registrationInfo?: VirtualDesktopHostPoolRegistrationInfo[];
+  readonly registrationInfo?: VirtualDesktopHostPoolRegistrationInfo;
   /**
   * timeouts block
   * 
@@ -85,13 +85,39 @@ export interface VirtualDesktopHostPoolRegistrationInfo {
   readonly expirationDate: string;
 }
 
-function virtualDesktopHostPoolRegistrationInfoToTerraform(struct?: VirtualDesktopHostPoolRegistrationInfo): any {
+function virtualDesktopHostPoolRegistrationInfoToTerraform(struct?: VirtualDesktopHostPoolRegistrationInfoOutputReference | VirtualDesktopHostPoolRegistrationInfo): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     expiration_date: cdktf.stringToTerraform(struct!.expirationDate),
   }
 }
 
+export class VirtualDesktopHostPoolRegistrationInfoOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // expiration_date - computed: false, optional: false, required: true
+  private _expirationDate?: string; 
+  public get expirationDate() {
+    return this.getStringAttribute('expiration_date');
+  }
+  public set expirationDate(value: string) {
+    this._expirationDate = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get expirationDateInput() {
+    return this._expirationDate
+  }
+}
 export interface VirtualDesktopHostPoolTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_desktop_host_pool.html#create VirtualDesktopHostPool#create}
@@ -111,8 +137,11 @@ export interface VirtualDesktopHostPoolTimeouts {
   readonly update?: string;
 }
 
-function virtualDesktopHostPoolTimeoutsToTerraform(struct?: VirtualDesktopHostPoolTimeouts): any {
+function virtualDesktopHostPoolTimeoutsToTerraform(struct?: VirtualDesktopHostPoolTimeoutsOutputReference | VirtualDesktopHostPoolTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -121,6 +150,80 @@ function virtualDesktopHostPoolTimeoutsToTerraform(struct?: VirtualDesktopHostPo
   }
 }
 
+export class VirtualDesktopHostPoolTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_desktop_host_pool.html azurerm_virtual_desktop_host_pool}
@@ -177,11 +280,11 @@ export class VirtualDesktopHostPool extends cdktf.TerraformResource {
   // ==========
 
   // custom_rdp_properties - computed: false, optional: true, required: false
-  private _customRdpProperties?: string;
+  private _customRdpProperties?: string | undefined; 
   public get customRdpProperties() {
     return this.getStringAttribute('custom_rdp_properties');
   }
-  public set customRdpProperties(value: string ) {
+  public set customRdpProperties(value: string | undefined) {
     this._customRdpProperties = value;
   }
   public resetCustomRdpProperties() {
@@ -193,11 +296,11 @@ export class VirtualDesktopHostPool extends cdktf.TerraformResource {
   }
 
   // description - computed: false, optional: true, required: false
-  private _description?: string;
+  private _description?: string | undefined; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string ) {
+  public set description(value: string | undefined) {
     this._description = value;
   }
   public resetDescription() {
@@ -209,11 +312,11 @@ export class VirtualDesktopHostPool extends cdktf.TerraformResource {
   }
 
   // friendly_name - computed: false, optional: true, required: false
-  private _friendlyName?: string;
+  private _friendlyName?: string | undefined; 
   public get friendlyName() {
     return this.getStringAttribute('friendly_name');
   }
-  public set friendlyName(value: string ) {
+  public set friendlyName(value: string | undefined) {
     this._friendlyName = value;
   }
   public resetFriendlyName() {
@@ -230,7 +333,7 @@ export class VirtualDesktopHostPool extends cdktf.TerraformResource {
   }
 
   // load_balancer_type - computed: false, optional: false, required: true
-  private _loadBalancerType: string;
+  private _loadBalancerType?: string; 
   public get loadBalancerType() {
     return this.getStringAttribute('load_balancer_type');
   }
@@ -243,7 +346,7 @@ export class VirtualDesktopHostPool extends cdktf.TerraformResource {
   }
 
   // location - computed: false, optional: false, required: true
-  private _location: string;
+  private _location?: string; 
   public get location() {
     return this.getStringAttribute('location');
   }
@@ -256,11 +359,11 @@ export class VirtualDesktopHostPool extends cdktf.TerraformResource {
   }
 
   // maximum_sessions_allowed - computed: false, optional: true, required: false
-  private _maximumSessionsAllowed?: number;
+  private _maximumSessionsAllowed?: number | undefined; 
   public get maximumSessionsAllowed() {
     return this.getNumberAttribute('maximum_sessions_allowed');
   }
-  public set maximumSessionsAllowed(value: number ) {
+  public set maximumSessionsAllowed(value: number | undefined) {
     this._maximumSessionsAllowed = value;
   }
   public resetMaximumSessionsAllowed() {
@@ -272,7 +375,7 @@ export class VirtualDesktopHostPool extends cdktf.TerraformResource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -285,11 +388,11 @@ export class VirtualDesktopHostPool extends cdktf.TerraformResource {
   }
 
   // personal_desktop_assignment_type - computed: false, optional: true, required: false
-  private _personalDesktopAssignmentType?: string;
+  private _personalDesktopAssignmentType?: string | undefined; 
   public get personalDesktopAssignmentType() {
     return this.getStringAttribute('personal_desktop_assignment_type');
   }
-  public set personalDesktopAssignmentType(value: string ) {
+  public set personalDesktopAssignmentType(value: string | undefined) {
     this._personalDesktopAssignmentType = value;
   }
   public resetPersonalDesktopAssignmentType() {
@@ -301,11 +404,11 @@ export class VirtualDesktopHostPool extends cdktf.TerraformResource {
   }
 
   // preferred_app_group_type - computed: false, optional: true, required: false
-  private _preferredAppGroupType?: string;
+  private _preferredAppGroupType?: string | undefined; 
   public get preferredAppGroupType() {
     return this.getStringAttribute('preferred_app_group_type');
   }
-  public set preferredAppGroupType(value: string ) {
+  public set preferredAppGroupType(value: string | undefined) {
     this._preferredAppGroupType = value;
   }
   public resetPreferredAppGroupType() {
@@ -317,7 +420,7 @@ export class VirtualDesktopHostPool extends cdktf.TerraformResource {
   }
 
   // resource_group_name - computed: false, optional: false, required: true
-  private _resourceGroupName: string;
+  private _resourceGroupName?: string; 
   public get resourceGroupName() {
     return this.getStringAttribute('resource_group_name');
   }
@@ -330,11 +433,11 @@ export class VirtualDesktopHostPool extends cdktf.TerraformResource {
   }
 
   // start_vm_on_connect - computed: false, optional: true, required: false
-  private _startVmOnConnect?: boolean | cdktf.IResolvable;
+  private _startVmOnConnect?: boolean | cdktf.IResolvable | undefined; 
   public get startVmOnConnect() {
-    return this.getBooleanAttribute('start_vm_on_connect');
+    return this.getBooleanAttribute('start_vm_on_connect') as any;
   }
-  public set startVmOnConnect(value: boolean | cdktf.IResolvable ) {
+  public set startVmOnConnect(value: boolean | cdktf.IResolvable | undefined) {
     this._startVmOnConnect = value;
   }
   public resetStartVmOnConnect() {
@@ -346,11 +449,12 @@ export class VirtualDesktopHostPool extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable;
+  private _tags?: { [key: string]: string } | cdktf.IResolvable | undefined; 
   public get tags() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
     this._tags = value;
   }
   public resetTags() {
@@ -362,7 +466,7 @@ export class VirtualDesktopHostPool extends cdktf.TerraformResource {
   }
 
   // type - computed: false, optional: false, required: true
-  private _type: string;
+  private _type?: string; 
   public get type() {
     return this.getStringAttribute('type');
   }
@@ -375,11 +479,11 @@ export class VirtualDesktopHostPool extends cdktf.TerraformResource {
   }
 
   // validate_environment - computed: false, optional: true, required: false
-  private _validateEnvironment?: boolean | cdktf.IResolvable;
+  private _validateEnvironment?: boolean | cdktf.IResolvable | undefined; 
   public get validateEnvironment() {
-    return this.getBooleanAttribute('validate_environment');
+    return this.getBooleanAttribute('validate_environment') as any;
   }
-  public set validateEnvironment(value: boolean | cdktf.IResolvable ) {
+  public set validateEnvironment(value: boolean | cdktf.IResolvable | undefined) {
     this._validateEnvironment = value;
   }
   public resetValidateEnvironment() {
@@ -391,11 +495,12 @@ export class VirtualDesktopHostPool extends cdktf.TerraformResource {
   }
 
   // registration_info - computed: false, optional: true, required: false
-  private _registrationInfo?: VirtualDesktopHostPoolRegistrationInfo[];
+  private _registrationInfo?: VirtualDesktopHostPoolRegistrationInfo | undefined; 
+  private __registrationInfoOutput = new VirtualDesktopHostPoolRegistrationInfoOutputReference(this as any, "registration_info", true);
   public get registrationInfo() {
-    return this.interpolationForAttribute('registration_info') as any;
+    return this.__registrationInfoOutput;
   }
-  public set registrationInfo(value: VirtualDesktopHostPoolRegistrationInfo[] ) {
+  public putRegistrationInfo(value: VirtualDesktopHostPoolRegistrationInfo | undefined) {
     this._registrationInfo = value;
   }
   public resetRegistrationInfo() {
@@ -407,11 +512,12 @@ export class VirtualDesktopHostPool extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: VirtualDesktopHostPoolTimeouts;
+  private _timeouts?: VirtualDesktopHostPoolTimeouts | undefined; 
+  private __timeoutsOutput = new VirtualDesktopHostPoolTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: VirtualDesktopHostPoolTimeouts ) {
+  public putTimeouts(value: VirtualDesktopHostPoolTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {
@@ -442,7 +548,7 @@ export class VirtualDesktopHostPool extends cdktf.TerraformResource {
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
       type: cdktf.stringToTerraform(this._type),
       validate_environment: cdktf.booleanToTerraform(this._validateEnvironment),
-      registration_info: cdktf.listMapper(virtualDesktopHostPoolRegistrationInfoToTerraform)(this._registrationInfo),
+      registration_info: virtualDesktopHostPoolRegistrationInfoToTerraform(this._registrationInfo),
       timeouts: virtualDesktopHostPoolTimeoutsToTerraform(this._timeouts),
     };
   }

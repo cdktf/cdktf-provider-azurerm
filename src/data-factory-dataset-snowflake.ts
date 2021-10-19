@@ -91,6 +91,9 @@ export interface DataFactoryDatasetSnowflakeSchemaColumn {
 
 function dataFactoryDatasetSnowflakeSchemaColumnToTerraform(struct?: DataFactoryDatasetSnowflakeSchemaColumn): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     name: cdktf.stringToTerraform(struct!.name),
     precision: cdktf.numberToTerraform(struct!.precision),
@@ -116,6 +119,9 @@ export interface DataFactoryDatasetSnowflakeStructureColumn {
 
 function dataFactoryDatasetSnowflakeStructureColumnToTerraform(struct?: DataFactoryDatasetSnowflakeStructureColumn): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     description: cdktf.stringToTerraform(struct!.description),
     name: cdktf.stringToTerraform(struct!.name),
@@ -142,8 +148,11 @@ export interface DataFactoryDatasetSnowflakeTimeouts {
   readonly update?: string;
 }
 
-function dataFactoryDatasetSnowflakeTimeoutsToTerraform(struct?: DataFactoryDatasetSnowflakeTimeouts): any {
+function dataFactoryDatasetSnowflakeTimeoutsToTerraform(struct?: DataFactoryDatasetSnowflakeTimeoutsOutputReference | DataFactoryDatasetSnowflakeTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -152,6 +161,80 @@ function dataFactoryDatasetSnowflakeTimeoutsToTerraform(struct?: DataFactoryData
   }
 }
 
+export class DataFactoryDatasetSnowflakeTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_snowflake.html azurerm_data_factory_dataset_snowflake}
@@ -206,11 +289,12 @@ export class DataFactoryDatasetSnowflake extends cdktf.TerraformResource {
   // ==========
 
   // additional_properties - computed: false, optional: true, required: false
-  private _additionalProperties?: { [key: string]: string } | cdktf.IResolvable;
+  private _additionalProperties?: { [key: string]: string } | cdktf.IResolvable | undefined; 
   public get additionalProperties() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('additional_properties') as any;
   }
-  public set additionalProperties(value: { [key: string]: string } | cdktf.IResolvable ) {
+  public set additionalProperties(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
     this._additionalProperties = value;
   }
   public resetAdditionalProperties() {
@@ -222,11 +306,11 @@ export class DataFactoryDatasetSnowflake extends cdktf.TerraformResource {
   }
 
   // annotations - computed: false, optional: true, required: false
-  private _annotations?: string[];
+  private _annotations?: string[] | undefined; 
   public get annotations() {
     return this.getListAttribute('annotations');
   }
-  public set annotations(value: string[] ) {
+  public set annotations(value: string[] | undefined) {
     this._annotations = value;
   }
   public resetAnnotations() {
@@ -238,7 +322,7 @@ export class DataFactoryDatasetSnowflake extends cdktf.TerraformResource {
   }
 
   // data_factory_name - computed: false, optional: false, required: true
-  private _dataFactoryName: string;
+  private _dataFactoryName?: string; 
   public get dataFactoryName() {
     return this.getStringAttribute('data_factory_name');
   }
@@ -251,11 +335,11 @@ export class DataFactoryDatasetSnowflake extends cdktf.TerraformResource {
   }
 
   // description - computed: false, optional: true, required: false
-  private _description?: string;
+  private _description?: string | undefined; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string ) {
+  public set description(value: string | undefined) {
     this._description = value;
   }
   public resetDescription() {
@@ -267,11 +351,11 @@ export class DataFactoryDatasetSnowflake extends cdktf.TerraformResource {
   }
 
   // folder - computed: false, optional: true, required: false
-  private _folder?: string;
+  private _folder?: string | undefined; 
   public get folder() {
     return this.getStringAttribute('folder');
   }
-  public set folder(value: string ) {
+  public set folder(value: string | undefined) {
     this._folder = value;
   }
   public resetFolder() {
@@ -288,7 +372,7 @@ export class DataFactoryDatasetSnowflake extends cdktf.TerraformResource {
   }
 
   // linked_service_name - computed: false, optional: false, required: true
-  private _linkedServiceName: string;
+  private _linkedServiceName?: string; 
   public get linkedServiceName() {
     return this.getStringAttribute('linked_service_name');
   }
@@ -301,7 +385,7 @@ export class DataFactoryDatasetSnowflake extends cdktf.TerraformResource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -314,11 +398,12 @@ export class DataFactoryDatasetSnowflake extends cdktf.TerraformResource {
   }
 
   // parameters - computed: false, optional: true, required: false
-  private _parameters?: { [key: string]: string } | cdktf.IResolvable;
+  private _parameters?: { [key: string]: string } | cdktf.IResolvable | undefined; 
   public get parameters() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('parameters') as any;
   }
-  public set parameters(value: { [key: string]: string } | cdktf.IResolvable ) {
+  public set parameters(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
     this._parameters = value;
   }
   public resetParameters() {
@@ -330,7 +415,7 @@ export class DataFactoryDatasetSnowflake extends cdktf.TerraformResource {
   }
 
   // resource_group_name - computed: false, optional: false, required: true
-  private _resourceGroupName: string;
+  private _resourceGroupName?: string; 
   public get resourceGroupName() {
     return this.getStringAttribute('resource_group_name');
   }
@@ -343,11 +428,11 @@ export class DataFactoryDatasetSnowflake extends cdktf.TerraformResource {
   }
 
   // schema_name - computed: false, optional: true, required: false
-  private _schemaName?: string;
+  private _schemaName?: string | undefined; 
   public get schemaName() {
     return this.getStringAttribute('schema_name');
   }
-  public set schemaName(value: string ) {
+  public set schemaName(value: string | undefined) {
     this._schemaName = value;
   }
   public resetSchemaName() {
@@ -359,11 +444,11 @@ export class DataFactoryDatasetSnowflake extends cdktf.TerraformResource {
   }
 
   // table_name - computed: false, optional: true, required: false
-  private _tableName?: string;
+  private _tableName?: string | undefined; 
   public get tableName() {
     return this.getStringAttribute('table_name');
   }
-  public set tableName(value: string ) {
+  public set tableName(value: string | undefined) {
     this._tableName = value;
   }
   public resetTableName() {
@@ -375,11 +460,12 @@ export class DataFactoryDatasetSnowflake extends cdktf.TerraformResource {
   }
 
   // schema_column - computed: false, optional: true, required: false
-  private _schemaColumn?: DataFactoryDatasetSnowflakeSchemaColumn[];
+  private _schemaColumn?: DataFactoryDatasetSnowflakeSchemaColumn[] | undefined; 
   public get schemaColumn() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('schema_column') as any;
   }
-  public set schemaColumn(value: DataFactoryDatasetSnowflakeSchemaColumn[] ) {
+  public set schemaColumn(value: DataFactoryDatasetSnowflakeSchemaColumn[] | undefined) {
     this._schemaColumn = value;
   }
   public resetSchemaColumn() {
@@ -391,11 +477,12 @@ export class DataFactoryDatasetSnowflake extends cdktf.TerraformResource {
   }
 
   // structure_column - computed: false, optional: true, required: false
-  private _structureColumn?: DataFactoryDatasetSnowflakeStructureColumn[];
+  private _structureColumn?: DataFactoryDatasetSnowflakeStructureColumn[] | undefined; 
   public get structureColumn() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('structure_column') as any;
   }
-  public set structureColumn(value: DataFactoryDatasetSnowflakeStructureColumn[] ) {
+  public set structureColumn(value: DataFactoryDatasetSnowflakeStructureColumn[] | undefined) {
     this._structureColumn = value;
   }
   public resetStructureColumn() {
@@ -407,11 +494,12 @@ export class DataFactoryDatasetSnowflake extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: DataFactoryDatasetSnowflakeTimeouts;
+  private _timeouts?: DataFactoryDatasetSnowflakeTimeouts | undefined; 
+  private __timeoutsOutput = new DataFactoryDatasetSnowflakeTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: DataFactoryDatasetSnowflakeTimeouts ) {
+  public putTimeouts(value: DataFactoryDatasetSnowflakeTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {

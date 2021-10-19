@@ -82,6 +82,9 @@ export interface AppServiceEnvironmentV3ClusterSetting {
 
 function appServiceEnvironmentV3ClusterSettingToTerraform(struct?: AppServiceEnvironmentV3ClusterSetting): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     name: cdktf.stringToTerraform(struct!.name),
     value: cdktf.stringToTerraform(struct!.value),
@@ -107,8 +110,11 @@ export interface AppServiceEnvironmentV3Timeouts {
   readonly update?: string;
 }
 
-function appServiceEnvironmentV3TimeoutsToTerraform(struct?: AppServiceEnvironmentV3Timeouts): any {
+function appServiceEnvironmentV3TimeoutsToTerraform(struct?: AppServiceEnvironmentV3TimeoutsOutputReference | AppServiceEnvironmentV3Timeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -117,6 +123,80 @@ function appServiceEnvironmentV3TimeoutsToTerraform(struct?: AppServiceEnvironme
   }
 }
 
+export class AppServiceEnvironmentV3TimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_environment_v3.html azurerm_app_service_environment_v3}
@@ -167,11 +247,11 @@ export class AppServiceEnvironmentV3 extends cdktf.TerraformResource {
   // ==========
 
   // allow_new_private_endpoint_connections - computed: false, optional: true, required: false
-  private _allowNewPrivateEndpointConnections?: boolean | cdktf.IResolvable;
+  private _allowNewPrivateEndpointConnections?: boolean | cdktf.IResolvable | undefined; 
   public get allowNewPrivateEndpointConnections() {
-    return this.getBooleanAttribute('allow_new_private_endpoint_connections');
+    return this.getBooleanAttribute('allow_new_private_endpoint_connections') as any;
   }
-  public set allowNewPrivateEndpointConnections(value: boolean | cdktf.IResolvable ) {
+  public set allowNewPrivateEndpointConnections(value: boolean | cdktf.IResolvable | undefined) {
     this._allowNewPrivateEndpointConnections = value;
   }
   public resetAllowNewPrivateEndpointConnections() {
@@ -183,11 +263,11 @@ export class AppServiceEnvironmentV3 extends cdktf.TerraformResource {
   }
 
   // dedicated_host_count - computed: false, optional: true, required: false
-  private _dedicatedHostCount?: number;
+  private _dedicatedHostCount?: number | undefined; 
   public get dedicatedHostCount() {
     return this.getNumberAttribute('dedicated_host_count');
   }
-  public set dedicatedHostCount(value: number ) {
+  public set dedicatedHostCount(value: number | undefined) {
     this._dedicatedHostCount = value;
   }
   public resetDedicatedHostCount() {
@@ -224,11 +304,11 @@ export class AppServiceEnvironmentV3 extends cdktf.TerraformResource {
   }
 
   // internal_load_balancing_mode - computed: false, optional: true, required: false
-  private _internalLoadBalancingMode?: string;
+  private _internalLoadBalancingMode?: string | undefined; 
   public get internalLoadBalancingMode() {
     return this.getStringAttribute('internal_load_balancing_mode');
   }
-  public set internalLoadBalancingMode(value: string ) {
+  public set internalLoadBalancingMode(value: string | undefined) {
     this._internalLoadBalancingMode = value;
   }
   public resetInternalLoadBalancingMode() {
@@ -255,7 +335,7 @@ export class AppServiceEnvironmentV3 extends cdktf.TerraformResource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -273,7 +353,7 @@ export class AppServiceEnvironmentV3 extends cdktf.TerraformResource {
   }
 
   // resource_group_name - computed: false, optional: false, required: true
-  private _resourceGroupName: string;
+  private _resourceGroupName?: string; 
   public get resourceGroupName() {
     return this.getStringAttribute('resource_group_name');
   }
@@ -286,7 +366,7 @@ export class AppServiceEnvironmentV3 extends cdktf.TerraformResource {
   }
 
   // subnet_id - computed: false, optional: false, required: true
-  private _subnetId: string;
+  private _subnetId?: string; 
   public get subnetId() {
     return this.getStringAttribute('subnet_id');
   }
@@ -299,11 +379,12 @@ export class AppServiceEnvironmentV3 extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable;
+  private _tags?: { [key: string]: string } | cdktf.IResolvable | undefined; 
   public get tags() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
     this._tags = value;
   }
   public resetTags() {
@@ -320,11 +401,11 @@ export class AppServiceEnvironmentV3 extends cdktf.TerraformResource {
   }
 
   // zone_redundant - computed: false, optional: true, required: false
-  private _zoneRedundant?: boolean | cdktf.IResolvable;
+  private _zoneRedundant?: boolean | cdktf.IResolvable | undefined; 
   public get zoneRedundant() {
-    return this.getBooleanAttribute('zone_redundant');
+    return this.getBooleanAttribute('zone_redundant') as any;
   }
-  public set zoneRedundant(value: boolean | cdktf.IResolvable ) {
+  public set zoneRedundant(value: boolean | cdktf.IResolvable | undefined) {
     this._zoneRedundant = value;
   }
   public resetZoneRedundant() {
@@ -336,11 +417,12 @@ export class AppServiceEnvironmentV3 extends cdktf.TerraformResource {
   }
 
   // cluster_setting - computed: false, optional: true, required: false
-  private _clusterSetting?: AppServiceEnvironmentV3ClusterSetting[];
+  private _clusterSetting?: AppServiceEnvironmentV3ClusterSetting[] | undefined; 
   public get clusterSetting() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('cluster_setting') as any;
   }
-  public set clusterSetting(value: AppServiceEnvironmentV3ClusterSetting[] ) {
+  public set clusterSetting(value: AppServiceEnvironmentV3ClusterSetting[] | undefined) {
     this._clusterSetting = value;
   }
   public resetClusterSetting() {
@@ -352,11 +434,12 @@ export class AppServiceEnvironmentV3 extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: AppServiceEnvironmentV3Timeouts;
+  private _timeouts?: AppServiceEnvironmentV3Timeouts | undefined; 
+  private __timeoutsOutput = new AppServiceEnvironmentV3TimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: AppServiceEnvironmentV3Timeouts ) {
+  public putTimeouts(value: AppServiceEnvironmentV3Timeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {

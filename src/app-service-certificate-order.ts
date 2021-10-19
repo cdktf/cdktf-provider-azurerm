@@ -95,8 +95,11 @@ export interface AppServiceCertificateOrderTimeouts {
   readonly update?: string;
 }
 
-function appServiceCertificateOrderTimeoutsToTerraform(struct?: AppServiceCertificateOrderTimeouts): any {
+function appServiceCertificateOrderTimeoutsToTerraform(struct?: AppServiceCertificateOrderTimeoutsOutputReference | AppServiceCertificateOrderTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -105,6 +108,80 @@ function appServiceCertificateOrderTimeoutsToTerraform(struct?: AppServiceCertif
   }
 }
 
+export class AppServiceCertificateOrderTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_certificate_order.html azurerm_app_service_certificate_order}
@@ -161,11 +238,11 @@ export class AppServiceCertificateOrder extends cdktf.TerraformResource {
   }
 
   // auto_renew - computed: false, optional: true, required: false
-  private _autoRenew?: boolean | cdktf.IResolvable;
+  private _autoRenew?: boolean | cdktf.IResolvable | undefined; 
   public get autoRenew() {
-    return this.getBooleanAttribute('auto_renew');
+    return this.getBooleanAttribute('auto_renew') as any;
   }
-  public set autoRenew(value: boolean | cdktf.IResolvable ) {
+  public set autoRenew(value: boolean | cdktf.IResolvable | undefined) {
     this._autoRenew = value;
   }
   public resetAutoRenew() {
@@ -182,11 +259,11 @@ export class AppServiceCertificateOrder extends cdktf.TerraformResource {
   }
 
   // csr - computed: true, optional: true, required: false
-  private _csr?: string;
+  private _csr?: string | undefined; 
   public get csr() {
     return this.getStringAttribute('csr');
   }
-  public set csr(value: string) {
+  public set csr(value: string | undefined) {
     this._csr = value;
   }
   public resetCsr() {
@@ -198,11 +275,11 @@ export class AppServiceCertificateOrder extends cdktf.TerraformResource {
   }
 
   // distinguished_name - computed: true, optional: true, required: false
-  private _distinguishedName?: string;
+  private _distinguishedName?: string | undefined; 
   public get distinguishedName() {
     return this.getStringAttribute('distinguished_name');
   }
-  public set distinguishedName(value: string) {
+  public set distinguishedName(value: string | undefined) {
     this._distinguishedName = value;
   }
   public resetDistinguishedName() {
@@ -235,15 +312,15 @@ export class AppServiceCertificateOrder extends cdktf.TerraformResource {
 
   // is_private_key_external - computed: true, optional: false, required: false
   public get isPrivateKeyExternal() {
-    return this.getBooleanAttribute('is_private_key_external');
+    return this.getBooleanAttribute('is_private_key_external') as any;
   }
 
   // key_size - computed: false, optional: true, required: false
-  private _keySize?: number;
+  private _keySize?: number | undefined; 
   public get keySize() {
     return this.getNumberAttribute('key_size');
   }
-  public set keySize(value: number ) {
+  public set keySize(value: number | undefined) {
     this._keySize = value;
   }
   public resetKeySize() {
@@ -255,7 +332,7 @@ export class AppServiceCertificateOrder extends cdktf.TerraformResource {
   }
 
   // location - computed: false, optional: false, required: true
-  private _location: string;
+  private _location?: string; 
   public get location() {
     return this.getStringAttribute('location');
   }
@@ -268,7 +345,7 @@ export class AppServiceCertificateOrder extends cdktf.TerraformResource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -281,11 +358,11 @@ export class AppServiceCertificateOrder extends cdktf.TerraformResource {
   }
 
   // product_type - computed: false, optional: true, required: false
-  private _productType?: string;
+  private _productType?: string | undefined; 
   public get productType() {
     return this.getStringAttribute('product_type');
   }
-  public set productType(value: string ) {
+  public set productType(value: string | undefined) {
     this._productType = value;
   }
   public resetProductType() {
@@ -297,7 +374,7 @@ export class AppServiceCertificateOrder extends cdktf.TerraformResource {
   }
 
   // resource_group_name - computed: false, optional: false, required: true
-  private _resourceGroupName: string;
+  private _resourceGroupName?: string; 
   public get resourceGroupName() {
     return this.getStringAttribute('resource_group_name');
   }
@@ -325,11 +402,12 @@ export class AppServiceCertificateOrder extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable;
+  private _tags?: { [key: string]: string } | cdktf.IResolvable | undefined; 
   public get tags() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
     this._tags = value;
   }
   public resetTags() {
@@ -341,11 +419,11 @@ export class AppServiceCertificateOrder extends cdktf.TerraformResource {
   }
 
   // validity_in_years - computed: false, optional: true, required: false
-  private _validityInYears?: number;
+  private _validityInYears?: number | undefined; 
   public get validityInYears() {
     return this.getNumberAttribute('validity_in_years');
   }
-  public set validityInYears(value: number ) {
+  public set validityInYears(value: number | undefined) {
     this._validityInYears = value;
   }
   public resetValidityInYears() {
@@ -357,11 +435,12 @@ export class AppServiceCertificateOrder extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: AppServiceCertificateOrderTimeouts;
+  private _timeouts?: AppServiceCertificateOrderTimeouts | undefined; 
+  private __timeoutsOutput = new AppServiceCertificateOrderTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: AppServiceCertificateOrderTimeouts ) {
+  public putTimeouts(value: AppServiceCertificateOrderTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {

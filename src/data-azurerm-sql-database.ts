@@ -37,13 +37,42 @@ export interface DataAzurermSqlDatabaseTimeouts {
   readonly read?: string;
 }
 
-function dataAzurermSqlDatabaseTimeoutsToTerraform(struct?: DataAzurermSqlDatabaseTimeouts): any {
+function dataAzurermSqlDatabaseTimeoutsToTerraform(struct?: DataAzurermSqlDatabaseTimeoutsOutputReference | DataAzurermSqlDatabaseTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     read: cdktf.stringToTerraform(struct!.read),
   }
 }
 
+export class DataAzurermSqlDatabaseTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/sql_database.html azurerm_sql_database}
@@ -124,7 +153,7 @@ export class DataAzurermSqlDatabase extends cdktf.TerraformDataSource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -138,11 +167,11 @@ export class DataAzurermSqlDatabase extends cdktf.TerraformDataSource {
 
   // read_scale - computed: true, optional: false, required: false
   public get readScale() {
-    return this.getBooleanAttribute('read_scale');
+    return this.getBooleanAttribute('read_scale') as any;
   }
 
   // resource_group_name - computed: false, optional: false, required: true
-  private _resourceGroupName: string;
+  private _resourceGroupName?: string; 
   public get resourceGroupName() {
     return this.getStringAttribute('resource_group_name');
   }
@@ -155,7 +184,7 @@ export class DataAzurermSqlDatabase extends cdktf.TerraformDataSource {
   }
 
   // server_name - computed: false, optional: false, required: true
-  private _serverName: string;
+  private _serverName?: string; 
   public get serverName() {
     return this.getStringAttribute('server_name');
   }
@@ -168,11 +197,12 @@ export class DataAzurermSqlDatabase extends cdktf.TerraformDataSource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable;
+  private _tags?: { [key: string]: string } | cdktf.IResolvable | undefined; 
   public get tags() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
     this._tags = value;
   }
   public resetTags() {
@@ -184,11 +214,12 @@ export class DataAzurermSqlDatabase extends cdktf.TerraformDataSource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: DataAzurermSqlDatabaseTimeouts;
+  private _timeouts?: DataAzurermSqlDatabaseTimeouts | undefined; 
+  private __timeoutsOutput = new DataAzurermSqlDatabaseTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: DataAzurermSqlDatabaseTimeouts ) {
+  public putTimeouts(value: DataAzurermSqlDatabaseTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {

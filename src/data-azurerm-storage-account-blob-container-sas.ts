@@ -56,7 +56,7 @@ export interface DataAzurermStorageAccountBlobContainerSasConfig extends cdktf.T
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account_blob_container_sas.html#permissions DataAzurermStorageAccountBlobContainerSas#permissions}
   */
-  readonly permissions: DataAzurermStorageAccountBlobContainerSasPermissions[];
+  readonly permissions: DataAzurermStorageAccountBlobContainerSasPermissions;
   /**
   * timeouts block
   * 
@@ -91,8 +91,11 @@ export interface DataAzurermStorageAccountBlobContainerSasPermissions {
   readonly write: boolean | cdktf.IResolvable;
 }
 
-function dataAzurermStorageAccountBlobContainerSasPermissionsToTerraform(struct?: DataAzurermStorageAccountBlobContainerSasPermissions): any {
+function dataAzurermStorageAccountBlobContainerSasPermissionsToTerraform(struct?: DataAzurermStorageAccountBlobContainerSasPermissionsOutputReference | DataAzurermStorageAccountBlobContainerSasPermissions): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     add: cdktf.booleanToTerraform(struct!.add),
     create: cdktf.booleanToTerraform(struct!.create),
@@ -103,6 +106,94 @@ function dataAzurermStorageAccountBlobContainerSasPermissionsToTerraform(struct?
   }
 }
 
+export class DataAzurermStorageAccountBlobContainerSasPermissionsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // add - computed: false, optional: false, required: true
+  private _add?: boolean | cdktf.IResolvable; 
+  public get add() {
+    return this.getBooleanAttribute('add') as any;
+  }
+  public set add(value: boolean | cdktf.IResolvable) {
+    this._add = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get addInput() {
+    return this._add
+  }
+
+  // create - computed: false, optional: false, required: true
+  private _create?: boolean | cdktf.IResolvable; 
+  public get create() {
+    return this.getBooleanAttribute('create') as any;
+  }
+  public set create(value: boolean | cdktf.IResolvable) {
+    this._create = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: false, required: true
+  private _delete?: boolean | cdktf.IResolvable; 
+  public get delete() {
+    return this.getBooleanAttribute('delete') as any;
+  }
+  public set delete(value: boolean | cdktf.IResolvable) {
+    this._delete = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // list - computed: false, optional: false, required: true
+  private _list?: boolean | cdktf.IResolvable; 
+  public get list() {
+    return this.getBooleanAttribute('list') as any;
+  }
+  public set list(value: boolean | cdktf.IResolvable) {
+    this._list = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get listInput() {
+    return this._list
+  }
+
+  // read - computed: false, optional: false, required: true
+  private _read?: boolean | cdktf.IResolvable; 
+  public get read() {
+    return this.getBooleanAttribute('read') as any;
+  }
+  public set read(value: boolean | cdktf.IResolvable) {
+    this._read = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+
+  // write - computed: false, optional: false, required: true
+  private _write?: boolean | cdktf.IResolvable; 
+  public get write() {
+    return this.getBooleanAttribute('write') as any;
+  }
+  public set write(value: boolean | cdktf.IResolvable) {
+    this._write = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get writeInput() {
+    return this._write
+  }
+}
 export interface DataAzurermStorageAccountBlobContainerSasTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account_blob_container_sas.html#read DataAzurermStorageAccountBlobContainerSas#read}
@@ -110,13 +201,42 @@ export interface DataAzurermStorageAccountBlobContainerSasTimeouts {
   readonly read?: string;
 }
 
-function dataAzurermStorageAccountBlobContainerSasTimeoutsToTerraform(struct?: DataAzurermStorageAccountBlobContainerSasTimeouts): any {
+function dataAzurermStorageAccountBlobContainerSasTimeoutsToTerraform(struct?: DataAzurermStorageAccountBlobContainerSasTimeoutsOutputReference | DataAzurermStorageAccountBlobContainerSasTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     read: cdktf.stringToTerraform(struct!.read),
   }
 }
 
+export class DataAzurermStorageAccountBlobContainerSasTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account_blob_container_sas.html azurerm_storage_account_blob_container_sas}
@@ -170,11 +290,11 @@ export class DataAzurermStorageAccountBlobContainerSas extends cdktf.TerraformDa
   // ==========
 
   // cache_control - computed: false, optional: true, required: false
-  private _cacheControl?: string;
+  private _cacheControl?: string | undefined; 
   public get cacheControl() {
     return this.getStringAttribute('cache_control');
   }
-  public set cacheControl(value: string ) {
+  public set cacheControl(value: string | undefined) {
     this._cacheControl = value;
   }
   public resetCacheControl() {
@@ -186,7 +306,7 @@ export class DataAzurermStorageAccountBlobContainerSas extends cdktf.TerraformDa
   }
 
   // connection_string - computed: false, optional: false, required: true
-  private _connectionString: string;
+  private _connectionString?: string; 
   public get connectionString() {
     return this.getStringAttribute('connection_string');
   }
@@ -199,7 +319,7 @@ export class DataAzurermStorageAccountBlobContainerSas extends cdktf.TerraformDa
   }
 
   // container_name - computed: false, optional: false, required: true
-  private _containerName: string;
+  private _containerName?: string; 
   public get containerName() {
     return this.getStringAttribute('container_name');
   }
@@ -212,11 +332,11 @@ export class DataAzurermStorageAccountBlobContainerSas extends cdktf.TerraformDa
   }
 
   // content_disposition - computed: false, optional: true, required: false
-  private _contentDisposition?: string;
+  private _contentDisposition?: string | undefined; 
   public get contentDisposition() {
     return this.getStringAttribute('content_disposition');
   }
-  public set contentDisposition(value: string ) {
+  public set contentDisposition(value: string | undefined) {
     this._contentDisposition = value;
   }
   public resetContentDisposition() {
@@ -228,11 +348,11 @@ export class DataAzurermStorageAccountBlobContainerSas extends cdktf.TerraformDa
   }
 
   // content_encoding - computed: false, optional: true, required: false
-  private _contentEncoding?: string;
+  private _contentEncoding?: string | undefined; 
   public get contentEncoding() {
     return this.getStringAttribute('content_encoding');
   }
-  public set contentEncoding(value: string ) {
+  public set contentEncoding(value: string | undefined) {
     this._contentEncoding = value;
   }
   public resetContentEncoding() {
@@ -244,11 +364,11 @@ export class DataAzurermStorageAccountBlobContainerSas extends cdktf.TerraformDa
   }
 
   // content_language - computed: false, optional: true, required: false
-  private _contentLanguage?: string;
+  private _contentLanguage?: string | undefined; 
   public get contentLanguage() {
     return this.getStringAttribute('content_language');
   }
-  public set contentLanguage(value: string ) {
+  public set contentLanguage(value: string | undefined) {
     this._contentLanguage = value;
   }
   public resetContentLanguage() {
@@ -260,11 +380,11 @@ export class DataAzurermStorageAccountBlobContainerSas extends cdktf.TerraformDa
   }
 
   // content_type - computed: false, optional: true, required: false
-  private _contentType?: string;
+  private _contentType?: string | undefined; 
   public get contentType() {
     return this.getStringAttribute('content_type');
   }
-  public set contentType(value: string ) {
+  public set contentType(value: string | undefined) {
     this._contentType = value;
   }
   public resetContentType() {
@@ -276,7 +396,7 @@ export class DataAzurermStorageAccountBlobContainerSas extends cdktf.TerraformDa
   }
 
   // expiry - computed: false, optional: false, required: true
-  private _expiry: string;
+  private _expiry?: string; 
   public get expiry() {
     return this.getStringAttribute('expiry');
   }
@@ -289,11 +409,11 @@ export class DataAzurermStorageAccountBlobContainerSas extends cdktf.TerraformDa
   }
 
   // https_only - computed: false, optional: true, required: false
-  private _httpsOnly?: boolean | cdktf.IResolvable;
+  private _httpsOnly?: boolean | cdktf.IResolvable | undefined; 
   public get httpsOnly() {
-    return this.getBooleanAttribute('https_only');
+    return this.getBooleanAttribute('https_only') as any;
   }
-  public set httpsOnly(value: boolean | cdktf.IResolvable ) {
+  public set httpsOnly(value: boolean | cdktf.IResolvable | undefined) {
     this._httpsOnly = value;
   }
   public resetHttpsOnly() {
@@ -310,11 +430,11 @@ export class DataAzurermStorageAccountBlobContainerSas extends cdktf.TerraformDa
   }
 
   // ip_address - computed: false, optional: true, required: false
-  private _ipAddress?: string;
+  private _ipAddress?: string | undefined; 
   public get ipAddress() {
     return this.getStringAttribute('ip_address');
   }
-  public set ipAddress(value: string ) {
+  public set ipAddress(value: string | undefined) {
     this._ipAddress = value;
   }
   public resetIpAddress() {
@@ -331,7 +451,7 @@ export class DataAzurermStorageAccountBlobContainerSas extends cdktf.TerraformDa
   }
 
   // start - computed: false, optional: false, required: true
-  private _start: string;
+  private _start?: string; 
   public get start() {
     return this.getStringAttribute('start');
   }
@@ -344,11 +464,12 @@ export class DataAzurermStorageAccountBlobContainerSas extends cdktf.TerraformDa
   }
 
   // permissions - computed: false, optional: false, required: true
-  private _permissions: DataAzurermStorageAccountBlobContainerSasPermissions[];
+  private _permissions?: DataAzurermStorageAccountBlobContainerSasPermissions; 
+  private __permissionsOutput = new DataAzurermStorageAccountBlobContainerSasPermissionsOutputReference(this as any, "permissions", true);
   public get permissions() {
-    return this.interpolationForAttribute('permissions') as any;
+    return this.__permissionsOutput;
   }
-  public set permissions(value: DataAzurermStorageAccountBlobContainerSasPermissions[]) {
+  public putPermissions(value: DataAzurermStorageAccountBlobContainerSasPermissions) {
     this._permissions = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -357,11 +478,12 @@ export class DataAzurermStorageAccountBlobContainerSas extends cdktf.TerraformDa
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: DataAzurermStorageAccountBlobContainerSasTimeouts;
+  private _timeouts?: DataAzurermStorageAccountBlobContainerSasTimeouts | undefined; 
+  private __timeoutsOutput = new DataAzurermStorageAccountBlobContainerSasTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: DataAzurermStorageAccountBlobContainerSasTimeouts ) {
+  public putTimeouts(value: DataAzurermStorageAccountBlobContainerSasTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {
@@ -389,7 +511,7 @@ export class DataAzurermStorageAccountBlobContainerSas extends cdktf.TerraformDa
       https_only: cdktf.booleanToTerraform(this._httpsOnly),
       ip_address: cdktf.stringToTerraform(this._ipAddress),
       start: cdktf.stringToTerraform(this._start),
-      permissions: cdktf.listMapper(dataAzurermStorageAccountBlobContainerSasPermissionsToTerraform)(this._permissions),
+      permissions: dataAzurermStorageAccountBlobContainerSasPermissionsToTerraform(this._permissions),
       timeouts: dataAzurermStorageAccountBlobContainerSasTimeoutsToTerraform(this._timeouts),
     };
   }

@@ -73,8 +73,11 @@ export interface RoleAssignmentTimeouts {
   readonly update?: string;
 }
 
-function roleAssignmentTimeoutsToTerraform(struct?: RoleAssignmentTimeouts): any {
+function roleAssignmentTimeoutsToTerraform(struct?: RoleAssignmentTimeoutsOutputReference | RoleAssignmentTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -83,6 +86,80 @@ function roleAssignmentTimeoutsToTerraform(struct?: RoleAssignmentTimeouts): any
   }
 }
 
+export class RoleAssignmentTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/role_assignment.html azurerm_role_assignment}
@@ -134,11 +211,11 @@ export class RoleAssignment extends cdktf.TerraformResource {
   // ==========
 
   // condition - computed: false, optional: true, required: false
-  private _condition?: string;
+  private _condition?: string | undefined; 
   public get condition() {
     return this.getStringAttribute('condition');
   }
-  public set condition(value: string ) {
+  public set condition(value: string | undefined) {
     this._condition = value;
   }
   public resetCondition() {
@@ -150,11 +227,11 @@ export class RoleAssignment extends cdktf.TerraformResource {
   }
 
   // condition_version - computed: false, optional: true, required: false
-  private _conditionVersion?: string;
+  private _conditionVersion?: string | undefined; 
   public get conditionVersion() {
     return this.getStringAttribute('condition_version');
   }
-  public set conditionVersion(value: string ) {
+  public set conditionVersion(value: string | undefined) {
     this._conditionVersion = value;
   }
   public resetConditionVersion() {
@@ -166,11 +243,11 @@ export class RoleAssignment extends cdktf.TerraformResource {
   }
 
   // delegated_managed_identity_resource_id - computed: false, optional: true, required: false
-  private _delegatedManagedIdentityResourceId?: string;
+  private _delegatedManagedIdentityResourceId?: string | undefined; 
   public get delegatedManagedIdentityResourceId() {
     return this.getStringAttribute('delegated_managed_identity_resource_id');
   }
-  public set delegatedManagedIdentityResourceId(value: string ) {
+  public set delegatedManagedIdentityResourceId(value: string | undefined) {
     this._delegatedManagedIdentityResourceId = value;
   }
   public resetDelegatedManagedIdentityResourceId() {
@@ -182,11 +259,11 @@ export class RoleAssignment extends cdktf.TerraformResource {
   }
 
   // description - computed: false, optional: true, required: false
-  private _description?: string;
+  private _description?: string | undefined; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string ) {
+  public set description(value: string | undefined) {
     this._description = value;
   }
   public resetDescription() {
@@ -203,11 +280,11 @@ export class RoleAssignment extends cdktf.TerraformResource {
   }
 
   // name - computed: true, optional: true, required: false
-  private _name?: string;
+  private _name?: string | undefined; 
   public get name() {
     return this.getStringAttribute('name');
   }
-  public set name(value: string) {
+  public set name(value: string | undefined) {
     this._name = value;
   }
   public resetName() {
@@ -219,7 +296,7 @@ export class RoleAssignment extends cdktf.TerraformResource {
   }
 
   // principal_id - computed: false, optional: false, required: true
-  private _principalId: string;
+  private _principalId?: string; 
   public get principalId() {
     return this.getStringAttribute('principal_id');
   }
@@ -237,11 +314,11 @@ export class RoleAssignment extends cdktf.TerraformResource {
   }
 
   // role_definition_id - computed: true, optional: true, required: false
-  private _roleDefinitionId?: string;
+  private _roleDefinitionId?: string | undefined; 
   public get roleDefinitionId() {
     return this.getStringAttribute('role_definition_id');
   }
-  public set roleDefinitionId(value: string) {
+  public set roleDefinitionId(value: string | undefined) {
     this._roleDefinitionId = value;
   }
   public resetRoleDefinitionId() {
@@ -253,11 +330,11 @@ export class RoleAssignment extends cdktf.TerraformResource {
   }
 
   // role_definition_name - computed: true, optional: true, required: false
-  private _roleDefinitionName?: string;
+  private _roleDefinitionName?: string | undefined; 
   public get roleDefinitionName() {
     return this.getStringAttribute('role_definition_name');
   }
-  public set roleDefinitionName(value: string) {
+  public set roleDefinitionName(value: string | undefined) {
     this._roleDefinitionName = value;
   }
   public resetRoleDefinitionName() {
@@ -269,7 +346,7 @@ export class RoleAssignment extends cdktf.TerraformResource {
   }
 
   // scope - computed: false, optional: false, required: true
-  private _scope: string;
+  private _scope?: string; 
   public get scope() {
     return this.getStringAttribute('scope');
   }
@@ -282,11 +359,11 @@ export class RoleAssignment extends cdktf.TerraformResource {
   }
 
   // skip_service_principal_aad_check - computed: true, optional: true, required: false
-  private _skipServicePrincipalAadCheck?: boolean | cdktf.IResolvable;
+  private _skipServicePrincipalAadCheck?: boolean | cdktf.IResolvable | undefined; 
   public get skipServicePrincipalAadCheck() {
-    return this.getBooleanAttribute('skip_service_principal_aad_check');
+    return this.getBooleanAttribute('skip_service_principal_aad_check') as any;
   }
-  public set skipServicePrincipalAadCheck(value: boolean | cdktf.IResolvable) {
+  public set skipServicePrincipalAadCheck(value: boolean | cdktf.IResolvable | undefined) {
     this._skipServicePrincipalAadCheck = value;
   }
   public resetSkipServicePrincipalAadCheck() {
@@ -298,11 +375,12 @@ export class RoleAssignment extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: RoleAssignmentTimeouts;
+  private _timeouts?: RoleAssignmentTimeouts | undefined; 
+  private __timeoutsOutput = new RoleAssignmentTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: RoleAssignmentTimeouts ) {
+  public putTimeouts(value: RoleAssignmentTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {

@@ -32,13 +32,13 @@ export interface SpringCloudServiceConfig extends cdktf.TerraformMetaArguments {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_service.html#config_server_git_setting SpringCloudService#config_server_git_setting}
   */
-  readonly configServerGitSetting?: SpringCloudServiceConfigServerGitSetting[];
+  readonly configServerGitSetting?: SpringCloudServiceConfigServerGitSetting;
   /**
   * network block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_service.html#network SpringCloudService#network}
   */
-  readonly network?: SpringCloudServiceNetwork[];
+  readonly network?: SpringCloudServiceNetwork;
   /**
   * timeouts block
   * 
@@ -50,7 +50,7 @@ export interface SpringCloudServiceConfig extends cdktf.TerraformMetaArguments {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_service.html#trace SpringCloudService#trace}
   */
-  readonly trace?: SpringCloudServiceTrace[];
+  readonly trace?: SpringCloudServiceTrace;
 }
 export class SpringCloudServiceRequiredNetworkTrafficRules extends cdktf.ComplexComputedList {
 
@@ -90,14 +90,53 @@ export interface SpringCloudServiceConfigServerGitSettingHttpBasicAuth {
   readonly username: string;
 }
 
-function springCloudServiceConfigServerGitSettingHttpBasicAuthToTerraform(struct?: SpringCloudServiceConfigServerGitSettingHttpBasicAuth): any {
+function springCloudServiceConfigServerGitSettingHttpBasicAuthToTerraform(struct?: SpringCloudServiceConfigServerGitSettingHttpBasicAuthOutputReference | SpringCloudServiceConfigServerGitSettingHttpBasicAuth): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     password: cdktf.stringToTerraform(struct!.password),
     username: cdktf.stringToTerraform(struct!.username),
   }
 }
 
+export class SpringCloudServiceConfigServerGitSettingHttpBasicAuthOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // password - computed: false, optional: false, required: true
+  private _password?: string; 
+  public get password() {
+    return this.getStringAttribute('password');
+  }
+  public set password(value: string) {
+    this._password = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get passwordInput() {
+    return this._password
+  }
+
+  // username - computed: false, optional: false, required: true
+  private _username?: string; 
+  public get username() {
+    return this.getStringAttribute('username');
+  }
+  public set username(value: string) {
+    this._username = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get usernameInput() {
+    return this._username
+  }
+}
 export interface SpringCloudServiceConfigServerGitSettingRepositoryHttpBasicAuth {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_service.html#password SpringCloudService#password}
@@ -109,14 +148,53 @@ export interface SpringCloudServiceConfigServerGitSettingRepositoryHttpBasicAuth
   readonly username: string;
 }
 
-function springCloudServiceConfigServerGitSettingRepositoryHttpBasicAuthToTerraform(struct?: SpringCloudServiceConfigServerGitSettingRepositoryHttpBasicAuth): any {
+function springCloudServiceConfigServerGitSettingRepositoryHttpBasicAuthToTerraform(struct?: SpringCloudServiceConfigServerGitSettingRepositoryHttpBasicAuthOutputReference | SpringCloudServiceConfigServerGitSettingRepositoryHttpBasicAuth): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     password: cdktf.stringToTerraform(struct!.password),
     username: cdktf.stringToTerraform(struct!.username),
   }
 }
 
+export class SpringCloudServiceConfigServerGitSettingRepositoryHttpBasicAuthOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // password - computed: false, optional: false, required: true
+  private _password?: string; 
+  public get password() {
+    return this.getStringAttribute('password');
+  }
+  public set password(value: string) {
+    this._password = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get passwordInput() {
+    return this._password
+  }
+
+  // username - computed: false, optional: false, required: true
+  private _username?: string; 
+  public get username() {
+    return this.getStringAttribute('username');
+  }
+  public set username(value: string) {
+    this._username = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get usernameInput() {
+    return this._username
+  }
+}
 export interface SpringCloudServiceConfigServerGitSettingRepositorySshAuth {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_service.html#host_key SpringCloudService#host_key}
@@ -136,8 +214,11 @@ export interface SpringCloudServiceConfigServerGitSettingRepositorySshAuth {
   readonly strictHostKeyCheckingEnabled?: boolean | cdktf.IResolvable;
 }
 
-function springCloudServiceConfigServerGitSettingRepositorySshAuthToTerraform(struct?: SpringCloudServiceConfigServerGitSettingRepositorySshAuth): any {
+function springCloudServiceConfigServerGitSettingRepositorySshAuthToTerraform(struct?: SpringCloudServiceConfigServerGitSettingRepositorySshAuthOutputReference | SpringCloudServiceConfigServerGitSettingRepositorySshAuth): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     host_key: cdktf.stringToTerraform(struct!.hostKey),
     host_key_algorithm: cdktf.stringToTerraform(struct!.hostKeyAlgorithm),
@@ -146,6 +227,77 @@ function springCloudServiceConfigServerGitSettingRepositorySshAuthToTerraform(st
   }
 }
 
+export class SpringCloudServiceConfigServerGitSettingRepositorySshAuthOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // host_key - computed: false, optional: true, required: false
+  private _hostKey?: string | undefined; 
+  public get hostKey() {
+    return this.getStringAttribute('host_key');
+  }
+  public set hostKey(value: string | undefined) {
+    this._hostKey = value;
+  }
+  public resetHostKey() {
+    this._hostKey = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get hostKeyInput() {
+    return this._hostKey
+  }
+
+  // host_key_algorithm - computed: false, optional: true, required: false
+  private _hostKeyAlgorithm?: string | undefined; 
+  public get hostKeyAlgorithm() {
+    return this.getStringAttribute('host_key_algorithm');
+  }
+  public set hostKeyAlgorithm(value: string | undefined) {
+    this._hostKeyAlgorithm = value;
+  }
+  public resetHostKeyAlgorithm() {
+    this._hostKeyAlgorithm = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get hostKeyAlgorithmInput() {
+    return this._hostKeyAlgorithm
+  }
+
+  // private_key - computed: false, optional: false, required: true
+  private _privateKey?: string; 
+  public get privateKey() {
+    return this.getStringAttribute('private_key');
+  }
+  public set privateKey(value: string) {
+    this._privateKey = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get privateKeyInput() {
+    return this._privateKey
+  }
+
+  // strict_host_key_checking_enabled - computed: false, optional: true, required: false
+  private _strictHostKeyCheckingEnabled?: boolean | cdktf.IResolvable | undefined; 
+  public get strictHostKeyCheckingEnabled() {
+    return this.getBooleanAttribute('strict_host_key_checking_enabled') as any;
+  }
+  public set strictHostKeyCheckingEnabled(value: boolean | cdktf.IResolvable | undefined) {
+    this._strictHostKeyCheckingEnabled = value;
+  }
+  public resetStrictHostKeyCheckingEnabled() {
+    this._strictHostKeyCheckingEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get strictHostKeyCheckingEnabledInput() {
+    return this._strictHostKeyCheckingEnabled
+  }
+}
 export interface SpringCloudServiceConfigServerGitSettingRepository {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_service.html#label SpringCloudService#label}
@@ -172,25 +324,28 @@ export interface SpringCloudServiceConfigServerGitSettingRepository {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_service.html#http_basic_auth SpringCloudService#http_basic_auth}
   */
-  readonly httpBasicAuth?: SpringCloudServiceConfigServerGitSettingRepositoryHttpBasicAuth[];
+  readonly httpBasicAuth?: SpringCloudServiceConfigServerGitSettingRepositoryHttpBasicAuth;
   /**
   * ssh_auth block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_service.html#ssh_auth SpringCloudService#ssh_auth}
   */
-  readonly sshAuth?: SpringCloudServiceConfigServerGitSettingRepositorySshAuth[];
+  readonly sshAuth?: SpringCloudServiceConfigServerGitSettingRepositorySshAuth;
 }
 
 function springCloudServiceConfigServerGitSettingRepositoryToTerraform(struct?: SpringCloudServiceConfigServerGitSettingRepository): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     label: cdktf.stringToTerraform(struct!.label),
     name: cdktf.stringToTerraform(struct!.name),
     pattern: cdktf.listMapper(cdktf.stringToTerraform)(struct!.pattern),
     search_paths: cdktf.listMapper(cdktf.stringToTerraform)(struct!.searchPaths),
     uri: cdktf.stringToTerraform(struct!.uri),
-    http_basic_auth: cdktf.listMapper(springCloudServiceConfigServerGitSettingRepositoryHttpBasicAuthToTerraform)(struct!.httpBasicAuth),
-    ssh_auth: cdktf.listMapper(springCloudServiceConfigServerGitSettingRepositorySshAuthToTerraform)(struct!.sshAuth),
+    http_basic_auth: springCloudServiceConfigServerGitSettingRepositoryHttpBasicAuthToTerraform(struct!.httpBasicAuth),
+    ssh_auth: springCloudServiceConfigServerGitSettingRepositorySshAuthToTerraform(struct!.sshAuth),
   }
 }
 
@@ -213,8 +368,11 @@ export interface SpringCloudServiceConfigServerGitSettingSshAuth {
   readonly strictHostKeyCheckingEnabled?: boolean | cdktf.IResolvable;
 }
 
-function springCloudServiceConfigServerGitSettingSshAuthToTerraform(struct?: SpringCloudServiceConfigServerGitSettingSshAuth): any {
+function springCloudServiceConfigServerGitSettingSshAuthToTerraform(struct?: SpringCloudServiceConfigServerGitSettingSshAuthOutputReference | SpringCloudServiceConfigServerGitSettingSshAuth): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     host_key: cdktf.stringToTerraform(struct!.hostKey),
     host_key_algorithm: cdktf.stringToTerraform(struct!.hostKeyAlgorithm),
@@ -223,6 +381,77 @@ function springCloudServiceConfigServerGitSettingSshAuthToTerraform(struct?: Spr
   }
 }
 
+export class SpringCloudServiceConfigServerGitSettingSshAuthOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // host_key - computed: false, optional: true, required: false
+  private _hostKey?: string | undefined; 
+  public get hostKey() {
+    return this.getStringAttribute('host_key');
+  }
+  public set hostKey(value: string | undefined) {
+    this._hostKey = value;
+  }
+  public resetHostKey() {
+    this._hostKey = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get hostKeyInput() {
+    return this._hostKey
+  }
+
+  // host_key_algorithm - computed: false, optional: true, required: false
+  private _hostKeyAlgorithm?: string | undefined; 
+  public get hostKeyAlgorithm() {
+    return this.getStringAttribute('host_key_algorithm');
+  }
+  public set hostKeyAlgorithm(value: string | undefined) {
+    this._hostKeyAlgorithm = value;
+  }
+  public resetHostKeyAlgorithm() {
+    this._hostKeyAlgorithm = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get hostKeyAlgorithmInput() {
+    return this._hostKeyAlgorithm
+  }
+
+  // private_key - computed: false, optional: false, required: true
+  private _privateKey?: string; 
+  public get privateKey() {
+    return this.getStringAttribute('private_key');
+  }
+  public set privateKey(value: string) {
+    this._privateKey = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get privateKeyInput() {
+    return this._privateKey
+  }
+
+  // strict_host_key_checking_enabled - computed: false, optional: true, required: false
+  private _strictHostKeyCheckingEnabled?: boolean | cdktf.IResolvable | undefined; 
+  public get strictHostKeyCheckingEnabled() {
+    return this.getBooleanAttribute('strict_host_key_checking_enabled') as any;
+  }
+  public set strictHostKeyCheckingEnabled(value: boolean | cdktf.IResolvable | undefined) {
+    this._strictHostKeyCheckingEnabled = value;
+  }
+  public resetStrictHostKeyCheckingEnabled() {
+    this._strictHostKeyCheckingEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get strictHostKeyCheckingEnabledInput() {
+    return this._strictHostKeyCheckingEnabled
+  }
+}
 export interface SpringCloudServiceConfigServerGitSetting {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_service.html#label SpringCloudService#label}
@@ -241,7 +470,7 @@ export interface SpringCloudServiceConfigServerGitSetting {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_service.html#http_basic_auth SpringCloudService#http_basic_auth}
   */
-  readonly httpBasicAuth?: SpringCloudServiceConfigServerGitSettingHttpBasicAuth[];
+  readonly httpBasicAuth?: SpringCloudServiceConfigServerGitSettingHttpBasicAuth;
   /**
   * repository block
   * 
@@ -253,21 +482,130 @@ export interface SpringCloudServiceConfigServerGitSetting {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_service.html#ssh_auth SpringCloudService#ssh_auth}
   */
-  readonly sshAuth?: SpringCloudServiceConfigServerGitSettingSshAuth[];
+  readonly sshAuth?: SpringCloudServiceConfigServerGitSettingSshAuth;
 }
 
-function springCloudServiceConfigServerGitSettingToTerraform(struct?: SpringCloudServiceConfigServerGitSetting): any {
+function springCloudServiceConfigServerGitSettingToTerraform(struct?: SpringCloudServiceConfigServerGitSettingOutputReference | SpringCloudServiceConfigServerGitSetting): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     label: cdktf.stringToTerraform(struct!.label),
     search_paths: cdktf.listMapper(cdktf.stringToTerraform)(struct!.searchPaths),
     uri: cdktf.stringToTerraform(struct!.uri),
-    http_basic_auth: cdktf.listMapper(springCloudServiceConfigServerGitSettingHttpBasicAuthToTerraform)(struct!.httpBasicAuth),
+    http_basic_auth: springCloudServiceConfigServerGitSettingHttpBasicAuthToTerraform(struct!.httpBasicAuth),
     repository: cdktf.listMapper(springCloudServiceConfigServerGitSettingRepositoryToTerraform)(struct!.repository),
-    ssh_auth: cdktf.listMapper(springCloudServiceConfigServerGitSettingSshAuthToTerraform)(struct!.sshAuth),
+    ssh_auth: springCloudServiceConfigServerGitSettingSshAuthToTerraform(struct!.sshAuth),
   }
 }
 
+export class SpringCloudServiceConfigServerGitSettingOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // label - computed: false, optional: true, required: false
+  private _label?: string | undefined; 
+  public get label() {
+    return this.getStringAttribute('label');
+  }
+  public set label(value: string | undefined) {
+    this._label = value;
+  }
+  public resetLabel() {
+    this._label = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get labelInput() {
+    return this._label
+  }
+
+  // search_paths - computed: false, optional: true, required: false
+  private _searchPaths?: string[] | undefined; 
+  public get searchPaths() {
+    return this.getListAttribute('search_paths');
+  }
+  public set searchPaths(value: string[] | undefined) {
+    this._searchPaths = value;
+  }
+  public resetSearchPaths() {
+    this._searchPaths = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get searchPathsInput() {
+    return this._searchPaths
+  }
+
+  // uri - computed: false, optional: false, required: true
+  private _uri?: string; 
+  public get uri() {
+    return this.getStringAttribute('uri');
+  }
+  public set uri(value: string) {
+    this._uri = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get uriInput() {
+    return this._uri
+  }
+
+  // http_basic_auth - computed: false, optional: true, required: false
+  private _httpBasicAuth?: SpringCloudServiceConfigServerGitSettingHttpBasicAuth | undefined; 
+  private __httpBasicAuthOutput = new SpringCloudServiceConfigServerGitSettingHttpBasicAuthOutputReference(this as any, "http_basic_auth", true);
+  public get httpBasicAuth() {
+    return this.__httpBasicAuthOutput;
+  }
+  public putHttpBasicAuth(value: SpringCloudServiceConfigServerGitSettingHttpBasicAuth | undefined) {
+    this._httpBasicAuth = value;
+  }
+  public resetHttpBasicAuth() {
+    this._httpBasicAuth = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get httpBasicAuthInput() {
+    return this._httpBasicAuth
+  }
+
+  // repository - computed: false, optional: true, required: false
+  private _repository?: SpringCloudServiceConfigServerGitSettingRepository[] | undefined; 
+  public get repository() {
+    // Getting the computed value is not yet implemented
+    return this.interpolationForAttribute('repository') as any;
+  }
+  public set repository(value: SpringCloudServiceConfigServerGitSettingRepository[] | undefined) {
+    this._repository = value;
+  }
+  public resetRepository() {
+    this._repository = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get repositoryInput() {
+    return this._repository
+  }
+
+  // ssh_auth - computed: false, optional: true, required: false
+  private _sshAuth?: SpringCloudServiceConfigServerGitSettingSshAuth | undefined; 
+  private __sshAuthOutput = new SpringCloudServiceConfigServerGitSettingSshAuthOutputReference(this as any, "ssh_auth", true);
+  public get sshAuth() {
+    return this.__sshAuthOutput;
+  }
+  public putSshAuth(value: SpringCloudServiceConfigServerGitSettingSshAuth | undefined) {
+    this._sshAuth = value;
+  }
+  public resetSshAuth() {
+    this._sshAuth = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sshAuthInput() {
+    return this._sshAuth
+  }
+}
 export interface SpringCloudServiceNetwork {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_service.html#app_network_resource_group SpringCloudService#app_network_resource_group}
@@ -291,8 +629,11 @@ export interface SpringCloudServiceNetwork {
   readonly serviceRuntimeSubnetId: string;
 }
 
-function springCloudServiceNetworkToTerraform(struct?: SpringCloudServiceNetwork): any {
+function springCloudServiceNetworkToTerraform(struct?: SpringCloudServiceNetworkOutputReference | SpringCloudServiceNetwork): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     app_network_resource_group: cdktf.stringToTerraform(struct!.appNetworkResourceGroup),
     app_subnet_id: cdktf.stringToTerraform(struct!.appSubnetId),
@@ -302,6 +643,87 @@ function springCloudServiceNetworkToTerraform(struct?: SpringCloudServiceNetwork
   }
 }
 
+export class SpringCloudServiceNetworkOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // app_network_resource_group - computed: true, optional: true, required: false
+  private _appNetworkResourceGroup?: string | undefined; 
+  public get appNetworkResourceGroup() {
+    return this.getStringAttribute('app_network_resource_group');
+  }
+  public set appNetworkResourceGroup(value: string | undefined) {
+    this._appNetworkResourceGroup = value;
+  }
+  public resetAppNetworkResourceGroup() {
+    this._appNetworkResourceGroup = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get appNetworkResourceGroupInput() {
+    return this._appNetworkResourceGroup
+  }
+
+  // app_subnet_id - computed: false, optional: false, required: true
+  private _appSubnetId?: string; 
+  public get appSubnetId() {
+    return this.getStringAttribute('app_subnet_id');
+  }
+  public set appSubnetId(value: string) {
+    this._appSubnetId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get appSubnetIdInput() {
+    return this._appSubnetId
+  }
+
+  // cidr_ranges - computed: false, optional: false, required: true
+  private _cidrRanges?: string[]; 
+  public get cidrRanges() {
+    return this.getListAttribute('cidr_ranges');
+  }
+  public set cidrRanges(value: string[]) {
+    this._cidrRanges = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get cidrRangesInput() {
+    return this._cidrRanges
+  }
+
+  // service_runtime_network_resource_group - computed: true, optional: true, required: false
+  private _serviceRuntimeNetworkResourceGroup?: string | undefined; 
+  public get serviceRuntimeNetworkResourceGroup() {
+    return this.getStringAttribute('service_runtime_network_resource_group');
+  }
+  public set serviceRuntimeNetworkResourceGroup(value: string | undefined) {
+    this._serviceRuntimeNetworkResourceGroup = value;
+  }
+  public resetServiceRuntimeNetworkResourceGroup() {
+    this._serviceRuntimeNetworkResourceGroup = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get serviceRuntimeNetworkResourceGroupInput() {
+    return this._serviceRuntimeNetworkResourceGroup
+  }
+
+  // service_runtime_subnet_id - computed: false, optional: false, required: true
+  private _serviceRuntimeSubnetId?: string; 
+  public get serviceRuntimeSubnetId() {
+    return this.getStringAttribute('service_runtime_subnet_id');
+  }
+  public set serviceRuntimeSubnetId(value: string) {
+    this._serviceRuntimeSubnetId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get serviceRuntimeSubnetIdInput() {
+    return this._serviceRuntimeSubnetId
+  }
+}
 export interface SpringCloudServiceTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_service.html#create SpringCloudService#create}
@@ -321,8 +743,11 @@ export interface SpringCloudServiceTimeouts {
   readonly update?: string;
 }
 
-function springCloudServiceTimeoutsToTerraform(struct?: SpringCloudServiceTimeouts): any {
+function springCloudServiceTimeoutsToTerraform(struct?: SpringCloudServiceTimeoutsOutputReference | SpringCloudServiceTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -331,6 +756,80 @@ function springCloudServiceTimeoutsToTerraform(struct?: SpringCloudServiceTimeou
   }
 }
 
+export class SpringCloudServiceTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 export interface SpringCloudServiceTrace {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_service.html#connection_string SpringCloudService#connection_string}
@@ -346,8 +845,11 @@ export interface SpringCloudServiceTrace {
   readonly sampleRate?: number;
 }
 
-function springCloudServiceTraceToTerraform(struct?: SpringCloudServiceTrace): any {
+function springCloudServiceTraceToTerraform(struct?: SpringCloudServiceTraceOutputReference | SpringCloudServiceTrace): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     connection_string: cdktf.stringToTerraform(struct!.connectionString),
     instrumentation_key: cdktf.stringToTerraform(struct!.instrumentationKey),
@@ -355,6 +857,64 @@ function springCloudServiceTraceToTerraform(struct?: SpringCloudServiceTrace): a
   }
 }
 
+export class SpringCloudServiceTraceOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // connection_string - computed: false, optional: true, required: false
+  private _connectionString?: string | undefined; 
+  public get connectionString() {
+    return this.getStringAttribute('connection_string');
+  }
+  public set connectionString(value: string | undefined) {
+    this._connectionString = value;
+  }
+  public resetConnectionString() {
+    this._connectionString = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get connectionStringInput() {
+    return this._connectionString
+  }
+
+  // instrumentation_key - computed: false, optional: true, required: false
+  private _instrumentationKey?: string | undefined; 
+  public get instrumentationKey() {
+    return this.getStringAttribute('instrumentation_key');
+  }
+  public set instrumentationKey(value: string | undefined) {
+    this._instrumentationKey = value;
+  }
+  public resetInstrumentationKey() {
+    this._instrumentationKey = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get instrumentationKeyInput() {
+    return this._instrumentationKey
+  }
+
+  // sample_rate - computed: false, optional: true, required: false
+  private _sampleRate?: number | undefined; 
+  public get sampleRate() {
+    return this.getNumberAttribute('sample_rate');
+  }
+  public set sampleRate(value: number | undefined) {
+    this._sampleRate = value;
+  }
+  public resetSampleRate() {
+    this._sampleRate = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sampleRateInput() {
+    return this._sampleRate
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_service.html azurerm_spring_cloud_service}
@@ -409,7 +969,7 @@ export class SpringCloudService extends cdktf.TerraformResource {
   }
 
   // location - computed: false, optional: false, required: true
-  private _location: string;
+  private _location?: string; 
   public get location() {
     return this.getStringAttribute('location');
   }
@@ -422,7 +982,7 @@ export class SpringCloudService extends cdktf.TerraformResource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -445,7 +1005,7 @@ export class SpringCloudService extends cdktf.TerraformResource {
   }
 
   // resource_group_name - computed: false, optional: false, required: true
-  private _resourceGroupName: string;
+  private _resourceGroupName?: string; 
   public get resourceGroupName() {
     return this.getStringAttribute('resource_group_name');
   }
@@ -458,11 +1018,11 @@ export class SpringCloudService extends cdktf.TerraformResource {
   }
 
   // sku_name - computed: false, optional: true, required: false
-  private _skuName?: string;
+  private _skuName?: string | undefined; 
   public get skuName() {
     return this.getStringAttribute('sku_name');
   }
-  public set skuName(value: string ) {
+  public set skuName(value: string | undefined) {
     this._skuName = value;
   }
   public resetSkuName() {
@@ -474,11 +1034,12 @@ export class SpringCloudService extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable;
+  private _tags?: { [key: string]: string } | cdktf.IResolvable | undefined; 
   public get tags() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
     this._tags = value;
   }
   public resetTags() {
@@ -490,11 +1051,12 @@ export class SpringCloudService extends cdktf.TerraformResource {
   }
 
   // config_server_git_setting - computed: false, optional: true, required: false
-  private _configServerGitSetting?: SpringCloudServiceConfigServerGitSetting[];
+  private _configServerGitSetting?: SpringCloudServiceConfigServerGitSetting | undefined; 
+  private __configServerGitSettingOutput = new SpringCloudServiceConfigServerGitSettingOutputReference(this as any, "config_server_git_setting", true);
   public get configServerGitSetting() {
-    return this.interpolationForAttribute('config_server_git_setting') as any;
+    return this.__configServerGitSettingOutput;
   }
-  public set configServerGitSetting(value: SpringCloudServiceConfigServerGitSetting[] ) {
+  public putConfigServerGitSetting(value: SpringCloudServiceConfigServerGitSetting | undefined) {
     this._configServerGitSetting = value;
   }
   public resetConfigServerGitSetting() {
@@ -506,11 +1068,12 @@ export class SpringCloudService extends cdktf.TerraformResource {
   }
 
   // network - computed: false, optional: true, required: false
-  private _network?: SpringCloudServiceNetwork[];
+  private _network?: SpringCloudServiceNetwork | undefined; 
+  private __networkOutput = new SpringCloudServiceNetworkOutputReference(this as any, "network", true);
   public get network() {
-    return this.interpolationForAttribute('network') as any;
+    return this.__networkOutput;
   }
-  public set network(value: SpringCloudServiceNetwork[] ) {
+  public putNetwork(value: SpringCloudServiceNetwork | undefined) {
     this._network = value;
   }
   public resetNetwork() {
@@ -522,11 +1085,12 @@ export class SpringCloudService extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: SpringCloudServiceTimeouts;
+  private _timeouts?: SpringCloudServiceTimeouts | undefined; 
+  private __timeoutsOutput = new SpringCloudServiceTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: SpringCloudServiceTimeouts ) {
+  public putTimeouts(value: SpringCloudServiceTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {
@@ -538,11 +1102,12 @@ export class SpringCloudService extends cdktf.TerraformResource {
   }
 
   // trace - computed: false, optional: true, required: false
-  private _trace?: SpringCloudServiceTrace[];
+  private _trace?: SpringCloudServiceTrace | undefined; 
+  private __traceOutput = new SpringCloudServiceTraceOutputReference(this as any, "trace", true);
   public get trace() {
-    return this.interpolationForAttribute('trace') as any;
+    return this.__traceOutput;
   }
-  public set trace(value: SpringCloudServiceTrace[] ) {
+  public putTrace(value: SpringCloudServiceTrace | undefined) {
     this._trace = value;
   }
   public resetTrace() {
@@ -564,10 +1129,10 @@ export class SpringCloudService extends cdktf.TerraformResource {
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       sku_name: cdktf.stringToTerraform(this._skuName),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
-      config_server_git_setting: cdktf.listMapper(springCloudServiceConfigServerGitSettingToTerraform)(this._configServerGitSetting),
-      network: cdktf.listMapper(springCloudServiceNetworkToTerraform)(this._network),
+      config_server_git_setting: springCloudServiceConfigServerGitSettingToTerraform(this._configServerGitSetting),
+      network: springCloudServiceNetworkToTerraform(this._network),
       timeouts: springCloudServiceTimeoutsToTerraform(this._timeouts),
-      trace: cdktf.listMapper(springCloudServiceTraceToTerraform)(this._trace),
+      trace: springCloudServiceTraceToTerraform(this._trace),
     };
   }
 }

@@ -60,7 +60,7 @@ export interface DatabricksWorkspaceConfig extends cdktf.TerraformMetaArguments 
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/databricks_workspace.html#custom_parameters DatabricksWorkspace#custom_parameters}
   */
-  readonly customParameters?: DatabricksWorkspaceCustomParameters[];
+  readonly customParameters?: DatabricksWorkspaceCustomParameters;
   /**
   * timeouts block
   * 
@@ -136,8 +136,11 @@ export interface DatabricksWorkspaceCustomParameters {
   readonly vnetAddressPrefix?: string;
 }
 
-function databricksWorkspaceCustomParametersToTerraform(struct?: DatabricksWorkspaceCustomParameters): any {
+function databricksWorkspaceCustomParametersToTerraform(struct?: DatabricksWorkspaceCustomParametersOutputReference | DatabricksWorkspaceCustomParameters): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     machine_learning_workspace_id: cdktf.stringToTerraform(struct!.machineLearningWorkspaceId),
     nat_gateway_name: cdktf.stringToTerraform(struct!.natGatewayName),
@@ -154,6 +157,208 @@ function databricksWorkspaceCustomParametersToTerraform(struct?: DatabricksWorks
   }
 }
 
+export class DatabricksWorkspaceCustomParametersOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // machine_learning_workspace_id - computed: false, optional: true, required: false
+  private _machineLearningWorkspaceId?: string | undefined; 
+  public get machineLearningWorkspaceId() {
+    return this.getStringAttribute('machine_learning_workspace_id');
+  }
+  public set machineLearningWorkspaceId(value: string | undefined) {
+    this._machineLearningWorkspaceId = value;
+  }
+  public resetMachineLearningWorkspaceId() {
+    this._machineLearningWorkspaceId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get machineLearningWorkspaceIdInput() {
+    return this._machineLearningWorkspaceId
+  }
+
+  // nat_gateway_name - computed: true, optional: true, required: false
+  private _natGatewayName?: string | undefined; 
+  public get natGatewayName() {
+    return this.getStringAttribute('nat_gateway_name');
+  }
+  public set natGatewayName(value: string | undefined) {
+    this._natGatewayName = value;
+  }
+  public resetNatGatewayName() {
+    this._natGatewayName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get natGatewayNameInput() {
+    return this._natGatewayName
+  }
+
+  // no_public_ip - computed: true, optional: true, required: false
+  private _noPublicIp?: boolean | cdktf.IResolvable | undefined; 
+  public get noPublicIp() {
+    return this.getBooleanAttribute('no_public_ip') as any;
+  }
+  public set noPublicIp(value: boolean | cdktf.IResolvable | undefined) {
+    this._noPublicIp = value;
+  }
+  public resetNoPublicIp() {
+    this._noPublicIp = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get noPublicIpInput() {
+    return this._noPublicIp
+  }
+
+  // private_subnet_name - computed: false, optional: true, required: false
+  private _privateSubnetName?: string | undefined; 
+  public get privateSubnetName() {
+    return this.getStringAttribute('private_subnet_name');
+  }
+  public set privateSubnetName(value: string | undefined) {
+    this._privateSubnetName = value;
+  }
+  public resetPrivateSubnetName() {
+    this._privateSubnetName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get privateSubnetNameInput() {
+    return this._privateSubnetName
+  }
+
+  // private_subnet_network_security_group_association_id - computed: false, optional: true, required: false
+  private _privateSubnetNetworkSecurityGroupAssociationId?: string | undefined; 
+  public get privateSubnetNetworkSecurityGroupAssociationId() {
+    return this.getStringAttribute('private_subnet_network_security_group_association_id');
+  }
+  public set privateSubnetNetworkSecurityGroupAssociationId(value: string | undefined) {
+    this._privateSubnetNetworkSecurityGroupAssociationId = value;
+  }
+  public resetPrivateSubnetNetworkSecurityGroupAssociationId() {
+    this._privateSubnetNetworkSecurityGroupAssociationId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get privateSubnetNetworkSecurityGroupAssociationIdInput() {
+    return this._privateSubnetNetworkSecurityGroupAssociationId
+  }
+
+  // public_ip_name - computed: true, optional: true, required: false
+  private _publicIpName?: string | undefined; 
+  public get publicIpName() {
+    return this.getStringAttribute('public_ip_name');
+  }
+  public set publicIpName(value: string | undefined) {
+    this._publicIpName = value;
+  }
+  public resetPublicIpName() {
+    this._publicIpName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get publicIpNameInput() {
+    return this._publicIpName
+  }
+
+  // public_subnet_name - computed: false, optional: true, required: false
+  private _publicSubnetName?: string | undefined; 
+  public get publicSubnetName() {
+    return this.getStringAttribute('public_subnet_name');
+  }
+  public set publicSubnetName(value: string | undefined) {
+    this._publicSubnetName = value;
+  }
+  public resetPublicSubnetName() {
+    this._publicSubnetName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get publicSubnetNameInput() {
+    return this._publicSubnetName
+  }
+
+  // public_subnet_network_security_group_association_id - computed: false, optional: true, required: false
+  private _publicSubnetNetworkSecurityGroupAssociationId?: string | undefined; 
+  public get publicSubnetNetworkSecurityGroupAssociationId() {
+    return this.getStringAttribute('public_subnet_network_security_group_association_id');
+  }
+  public set publicSubnetNetworkSecurityGroupAssociationId(value: string | undefined) {
+    this._publicSubnetNetworkSecurityGroupAssociationId = value;
+  }
+  public resetPublicSubnetNetworkSecurityGroupAssociationId() {
+    this._publicSubnetNetworkSecurityGroupAssociationId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get publicSubnetNetworkSecurityGroupAssociationIdInput() {
+    return this._publicSubnetNetworkSecurityGroupAssociationId
+  }
+
+  // storage_account_name - computed: true, optional: true, required: false
+  private _storageAccountName?: string | undefined; 
+  public get storageAccountName() {
+    return this.getStringAttribute('storage_account_name');
+  }
+  public set storageAccountName(value: string | undefined) {
+    this._storageAccountName = value;
+  }
+  public resetStorageAccountName() {
+    this._storageAccountName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get storageAccountNameInput() {
+    return this._storageAccountName
+  }
+
+  // storage_account_sku_name - computed: true, optional: true, required: false
+  private _storageAccountSkuName?: string | undefined; 
+  public get storageAccountSkuName() {
+    return this.getStringAttribute('storage_account_sku_name');
+  }
+  public set storageAccountSkuName(value: string | undefined) {
+    this._storageAccountSkuName = value;
+  }
+  public resetStorageAccountSkuName() {
+    this._storageAccountSkuName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get storageAccountSkuNameInput() {
+    return this._storageAccountSkuName
+  }
+
+  // virtual_network_id - computed: false, optional: true, required: false
+  private _virtualNetworkId?: string | undefined; 
+  public get virtualNetworkId() {
+    return this.getStringAttribute('virtual_network_id');
+  }
+  public set virtualNetworkId(value: string | undefined) {
+    this._virtualNetworkId = value;
+  }
+  public resetVirtualNetworkId() {
+    this._virtualNetworkId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get virtualNetworkIdInput() {
+    return this._virtualNetworkId
+  }
+
+  // vnet_address_prefix - computed: true, optional: true, required: false
+  private _vnetAddressPrefix?: string | undefined; 
+  public get vnetAddressPrefix() {
+    return this.getStringAttribute('vnet_address_prefix');
+  }
+  public set vnetAddressPrefix(value: string | undefined) {
+    this._vnetAddressPrefix = value;
+  }
+  public resetVnetAddressPrefix() {
+    this._vnetAddressPrefix = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get vnetAddressPrefixInput() {
+    return this._vnetAddressPrefix
+  }
+}
 export interface DatabricksWorkspaceTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/databricks_workspace.html#create DatabricksWorkspace#create}
@@ -173,8 +378,11 @@ export interface DatabricksWorkspaceTimeouts {
   readonly update?: string;
 }
 
-function databricksWorkspaceTimeoutsToTerraform(struct?: DatabricksWorkspaceTimeouts): any {
+function databricksWorkspaceTimeoutsToTerraform(struct?: DatabricksWorkspaceTimeoutsOutputReference | DatabricksWorkspaceTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -183,6 +391,80 @@ function databricksWorkspaceTimeoutsToTerraform(struct?: DatabricksWorkspaceTime
   }
 }
 
+export class DatabricksWorkspaceTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/databricks_workspace.html azurerm_databricks_workspace}
@@ -237,11 +519,11 @@ export class DatabricksWorkspace extends cdktf.TerraformResource {
   // ==========
 
   // customer_managed_key_enabled - computed: false, optional: true, required: false
-  private _customerManagedKeyEnabled?: boolean | cdktf.IResolvable;
+  private _customerManagedKeyEnabled?: boolean | cdktf.IResolvable | undefined; 
   public get customerManagedKeyEnabled() {
-    return this.getBooleanAttribute('customer_managed_key_enabled');
+    return this.getBooleanAttribute('customer_managed_key_enabled') as any;
   }
-  public set customerManagedKeyEnabled(value: boolean | cdktf.IResolvable ) {
+  public set customerManagedKeyEnabled(value: boolean | cdktf.IResolvable | undefined) {
     this._customerManagedKeyEnabled = value;
   }
   public resetCustomerManagedKeyEnabled() {
@@ -258,11 +540,11 @@ export class DatabricksWorkspace extends cdktf.TerraformResource {
   }
 
   // infrastructure_encryption_enabled - computed: false, optional: true, required: false
-  private _infrastructureEncryptionEnabled?: boolean | cdktf.IResolvable;
+  private _infrastructureEncryptionEnabled?: boolean | cdktf.IResolvable | undefined; 
   public get infrastructureEncryptionEnabled() {
-    return this.getBooleanAttribute('infrastructure_encryption_enabled');
+    return this.getBooleanAttribute('infrastructure_encryption_enabled') as any;
   }
-  public set infrastructureEncryptionEnabled(value: boolean | cdktf.IResolvable ) {
+  public set infrastructureEncryptionEnabled(value: boolean | cdktf.IResolvable | undefined) {
     this._infrastructureEncryptionEnabled = value;
   }
   public resetInfrastructureEncryptionEnabled() {
@@ -274,11 +556,11 @@ export class DatabricksWorkspace extends cdktf.TerraformResource {
   }
 
   // load_balancer_backend_address_pool_id - computed: false, optional: true, required: false
-  private _loadBalancerBackendAddressPoolId?: string;
+  private _loadBalancerBackendAddressPoolId?: string | undefined; 
   public get loadBalancerBackendAddressPoolId() {
     return this.getStringAttribute('load_balancer_backend_address_pool_id');
   }
-  public set loadBalancerBackendAddressPoolId(value: string ) {
+  public set loadBalancerBackendAddressPoolId(value: string | undefined) {
     this._loadBalancerBackendAddressPoolId = value;
   }
   public resetLoadBalancerBackendAddressPoolId() {
@@ -290,7 +572,7 @@ export class DatabricksWorkspace extends cdktf.TerraformResource {
   }
 
   // location - computed: false, optional: false, required: true
-  private _location: string;
+  private _location?: string; 
   public get location() {
     return this.getStringAttribute('location');
   }
@@ -308,11 +590,11 @@ export class DatabricksWorkspace extends cdktf.TerraformResource {
   }
 
   // managed_resource_group_name - computed: true, optional: true, required: false
-  private _managedResourceGroupName?: string;
+  private _managedResourceGroupName?: string | undefined; 
   public get managedResourceGroupName() {
     return this.getStringAttribute('managed_resource_group_name');
   }
-  public set managedResourceGroupName(value: string) {
+  public set managedResourceGroupName(value: string | undefined) {
     this._managedResourceGroupName = value;
   }
   public resetManagedResourceGroupName() {
@@ -324,11 +606,11 @@ export class DatabricksWorkspace extends cdktf.TerraformResource {
   }
 
   // managed_services_cmk_key_vault_key_id - computed: false, optional: true, required: false
-  private _managedServicesCmkKeyVaultKeyId?: string;
+  private _managedServicesCmkKeyVaultKeyId?: string | undefined; 
   public get managedServicesCmkKeyVaultKeyId() {
     return this.getStringAttribute('managed_services_cmk_key_vault_key_id');
   }
-  public set managedServicesCmkKeyVaultKeyId(value: string ) {
+  public set managedServicesCmkKeyVaultKeyId(value: string | undefined) {
     this._managedServicesCmkKeyVaultKeyId = value;
   }
   public resetManagedServicesCmkKeyVaultKeyId() {
@@ -340,7 +622,7 @@ export class DatabricksWorkspace extends cdktf.TerraformResource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -353,11 +635,11 @@ export class DatabricksWorkspace extends cdktf.TerraformResource {
   }
 
   // network_security_group_rules_required - computed: true, optional: true, required: false
-  private _networkSecurityGroupRulesRequired?: string;
+  private _networkSecurityGroupRulesRequired?: string | undefined; 
   public get networkSecurityGroupRulesRequired() {
     return this.getStringAttribute('network_security_group_rules_required');
   }
-  public set networkSecurityGroupRulesRequired(value: string) {
+  public set networkSecurityGroupRulesRequired(value: string | undefined) {
     this._networkSecurityGroupRulesRequired = value;
   }
   public resetNetworkSecurityGroupRulesRequired() {
@@ -369,11 +651,11 @@ export class DatabricksWorkspace extends cdktf.TerraformResource {
   }
 
   // public_network_access_enabled - computed: false, optional: true, required: false
-  private _publicNetworkAccessEnabled?: boolean | cdktf.IResolvable;
+  private _publicNetworkAccessEnabled?: boolean | cdktf.IResolvable | undefined; 
   public get publicNetworkAccessEnabled() {
-    return this.getBooleanAttribute('public_network_access_enabled');
+    return this.getBooleanAttribute('public_network_access_enabled') as any;
   }
-  public set publicNetworkAccessEnabled(value: boolean | cdktf.IResolvable ) {
+  public set publicNetworkAccessEnabled(value: boolean | cdktf.IResolvable | undefined) {
     this._publicNetworkAccessEnabled = value;
   }
   public resetPublicNetworkAccessEnabled() {
@@ -385,7 +667,7 @@ export class DatabricksWorkspace extends cdktf.TerraformResource {
   }
 
   // resource_group_name - computed: false, optional: false, required: true
-  private _resourceGroupName: string;
+  private _resourceGroupName?: string; 
   public get resourceGroupName() {
     return this.getStringAttribute('resource_group_name');
   }
@@ -398,7 +680,7 @@ export class DatabricksWorkspace extends cdktf.TerraformResource {
   }
 
   // sku - computed: false, optional: false, required: true
-  private _sku: string;
+  private _sku?: string; 
   public get sku() {
     return this.getStringAttribute('sku');
   }
@@ -416,11 +698,12 @@ export class DatabricksWorkspace extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable;
+  private _tags?: { [key: string]: string } | cdktf.IResolvable | undefined; 
   public get tags() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
     this._tags = value;
   }
   public resetTags() {
@@ -442,11 +725,12 @@ export class DatabricksWorkspace extends cdktf.TerraformResource {
   }
 
   // custom_parameters - computed: false, optional: true, required: false
-  private _customParameters?: DatabricksWorkspaceCustomParameters[];
+  private _customParameters?: DatabricksWorkspaceCustomParameters | undefined; 
+  private __customParametersOutput = new DatabricksWorkspaceCustomParametersOutputReference(this as any, "custom_parameters", true);
   public get customParameters() {
-    return this.interpolationForAttribute('custom_parameters') as any;
+    return this.__customParametersOutput;
   }
-  public set customParameters(value: DatabricksWorkspaceCustomParameters[] ) {
+  public putCustomParameters(value: DatabricksWorkspaceCustomParameters | undefined) {
     this._customParameters = value;
   }
   public resetCustomParameters() {
@@ -458,11 +742,12 @@ export class DatabricksWorkspace extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: DatabricksWorkspaceTimeouts;
+  private _timeouts?: DatabricksWorkspaceTimeouts | undefined; 
+  private __timeoutsOutput = new DatabricksWorkspaceTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: DatabricksWorkspaceTimeouts ) {
+  public putTimeouts(value: DatabricksWorkspaceTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {
@@ -491,7 +776,7 @@ export class DatabricksWorkspace extends cdktf.TerraformResource {
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       sku: cdktf.stringToTerraform(this._sku),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
-      custom_parameters: cdktf.listMapper(databricksWorkspaceCustomParametersToTerraform)(this._customParameters),
+      custom_parameters: databricksWorkspaceCustomParametersToTerraform(this._customParameters),
       timeouts: databricksWorkspaceTimeoutsToTerraform(this._timeouts),
     };
   }

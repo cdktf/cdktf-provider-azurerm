@@ -48,13 +48,13 @@ export interface MssqlElasticpoolConfig extends cdktf.TerraformMetaArguments {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_elasticpool.html#per_database_settings MssqlElasticpool#per_database_settings}
   */
-  readonly perDatabaseSettings: MssqlElasticpoolPerDatabaseSettings[];
+  readonly perDatabaseSettings: MssqlElasticpoolPerDatabaseSettings;
   /**
   * sku block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_elasticpool.html#sku MssqlElasticpool#sku}
   */
-  readonly sku: MssqlElasticpoolSku[];
+  readonly sku: MssqlElasticpoolSku;
   /**
   * timeouts block
   * 
@@ -73,14 +73,53 @@ export interface MssqlElasticpoolPerDatabaseSettings {
   readonly minCapacity: number;
 }
 
-function mssqlElasticpoolPerDatabaseSettingsToTerraform(struct?: MssqlElasticpoolPerDatabaseSettings): any {
+function mssqlElasticpoolPerDatabaseSettingsToTerraform(struct?: MssqlElasticpoolPerDatabaseSettingsOutputReference | MssqlElasticpoolPerDatabaseSettings): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     max_capacity: cdktf.numberToTerraform(struct!.maxCapacity),
     min_capacity: cdktf.numberToTerraform(struct!.minCapacity),
   }
 }
 
+export class MssqlElasticpoolPerDatabaseSettingsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // max_capacity - computed: false, optional: false, required: true
+  private _maxCapacity?: number; 
+  public get maxCapacity() {
+    return this.getNumberAttribute('max_capacity');
+  }
+  public set maxCapacity(value: number) {
+    this._maxCapacity = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get maxCapacityInput() {
+    return this._maxCapacity
+  }
+
+  // min_capacity - computed: false, optional: false, required: true
+  private _minCapacity?: number; 
+  public get minCapacity() {
+    return this.getNumberAttribute('min_capacity');
+  }
+  public set minCapacity(value: number) {
+    this._minCapacity = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get minCapacityInput() {
+    return this._minCapacity
+  }
+}
 export interface MssqlElasticpoolSku {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_elasticpool.html#capacity MssqlElasticpool#capacity}
@@ -100,8 +139,11 @@ export interface MssqlElasticpoolSku {
   readonly tier: string;
 }
 
-function mssqlElasticpoolSkuToTerraform(struct?: MssqlElasticpoolSku): any {
+function mssqlElasticpoolSkuToTerraform(struct?: MssqlElasticpoolSkuOutputReference | MssqlElasticpoolSku): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     capacity: cdktf.numberToTerraform(struct!.capacity),
     family: cdktf.stringToTerraform(struct!.family),
@@ -110,6 +152,71 @@ function mssqlElasticpoolSkuToTerraform(struct?: MssqlElasticpoolSku): any {
   }
 }
 
+export class MssqlElasticpoolSkuOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // capacity - computed: false, optional: false, required: true
+  private _capacity?: number; 
+  public get capacity() {
+    return this.getNumberAttribute('capacity');
+  }
+  public set capacity(value: number) {
+    this._capacity = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get capacityInput() {
+    return this._capacity
+  }
+
+  // family - computed: false, optional: true, required: false
+  private _family?: string | undefined; 
+  public get family() {
+    return this.getStringAttribute('family');
+  }
+  public set family(value: string | undefined) {
+    this._family = value;
+  }
+  public resetFamily() {
+    this._family = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get familyInput() {
+    return this._family
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
+  }
+
+  // tier - computed: false, optional: false, required: true
+  private _tier?: string; 
+  public get tier() {
+    return this.getStringAttribute('tier');
+  }
+  public set tier(value: string) {
+    this._tier = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tierInput() {
+    return this._tier
+  }
+}
 export interface MssqlElasticpoolTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_elasticpool.html#create MssqlElasticpool#create}
@@ -129,8 +236,11 @@ export interface MssqlElasticpoolTimeouts {
   readonly update?: string;
 }
 
-function mssqlElasticpoolTimeoutsToTerraform(struct?: MssqlElasticpoolTimeouts): any {
+function mssqlElasticpoolTimeoutsToTerraform(struct?: MssqlElasticpoolTimeoutsOutputReference | MssqlElasticpoolTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -139,6 +249,80 @@ function mssqlElasticpoolTimeoutsToTerraform(struct?: MssqlElasticpoolTimeouts):
   }
 }
 
+export class MssqlElasticpoolTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_elasticpool.html azurerm_mssql_elasticpool}
@@ -196,11 +380,11 @@ export class MssqlElasticpool extends cdktf.TerraformResource {
   }
 
   // license_type - computed: true, optional: true, required: false
-  private _licenseType?: string;
+  private _licenseType?: string | undefined; 
   public get licenseType() {
     return this.getStringAttribute('license_type');
   }
-  public set licenseType(value: string) {
+  public set licenseType(value: string | undefined) {
     this._licenseType = value;
   }
   public resetLicenseType() {
@@ -212,7 +396,7 @@ export class MssqlElasticpool extends cdktf.TerraformResource {
   }
 
   // location - computed: false, optional: false, required: true
-  private _location: string;
+  private _location?: string; 
   public get location() {
     return this.getStringAttribute('location');
   }
@@ -225,11 +409,11 @@ export class MssqlElasticpool extends cdktf.TerraformResource {
   }
 
   // max_size_bytes - computed: true, optional: true, required: false
-  private _maxSizeBytes?: number;
+  private _maxSizeBytes?: number | undefined; 
   public get maxSizeBytes() {
     return this.getNumberAttribute('max_size_bytes');
   }
-  public set maxSizeBytes(value: number) {
+  public set maxSizeBytes(value: number | undefined) {
     this._maxSizeBytes = value;
   }
   public resetMaxSizeBytes() {
@@ -241,11 +425,11 @@ export class MssqlElasticpool extends cdktf.TerraformResource {
   }
 
   // max_size_gb - computed: true, optional: true, required: false
-  private _maxSizeGb?: number;
+  private _maxSizeGb?: number | undefined; 
   public get maxSizeGb() {
     return this.getNumberAttribute('max_size_gb');
   }
-  public set maxSizeGb(value: number) {
+  public set maxSizeGb(value: number | undefined) {
     this._maxSizeGb = value;
   }
   public resetMaxSizeGb() {
@@ -257,7 +441,7 @@ export class MssqlElasticpool extends cdktf.TerraformResource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -270,7 +454,7 @@ export class MssqlElasticpool extends cdktf.TerraformResource {
   }
 
   // resource_group_name - computed: false, optional: false, required: true
-  private _resourceGroupName: string;
+  private _resourceGroupName?: string; 
   public get resourceGroupName() {
     return this.getStringAttribute('resource_group_name');
   }
@@ -283,7 +467,7 @@ export class MssqlElasticpool extends cdktf.TerraformResource {
   }
 
   // server_name - computed: false, optional: false, required: true
-  private _serverName: string;
+  private _serverName?: string; 
   public get serverName() {
     return this.getStringAttribute('server_name');
   }
@@ -296,11 +480,12 @@ export class MssqlElasticpool extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable;
+  private _tags?: { [key: string]: string } | cdktf.IResolvable | undefined; 
   public get tags() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
     this._tags = value;
   }
   public resetTags() {
@@ -312,11 +497,11 @@ export class MssqlElasticpool extends cdktf.TerraformResource {
   }
 
   // zone_redundant - computed: false, optional: true, required: false
-  private _zoneRedundant?: boolean | cdktf.IResolvable;
+  private _zoneRedundant?: boolean | cdktf.IResolvable | undefined; 
   public get zoneRedundant() {
-    return this.getBooleanAttribute('zone_redundant');
+    return this.getBooleanAttribute('zone_redundant') as any;
   }
-  public set zoneRedundant(value: boolean | cdktf.IResolvable ) {
+  public set zoneRedundant(value: boolean | cdktf.IResolvable | undefined) {
     this._zoneRedundant = value;
   }
   public resetZoneRedundant() {
@@ -328,11 +513,12 @@ export class MssqlElasticpool extends cdktf.TerraformResource {
   }
 
   // per_database_settings - computed: false, optional: false, required: true
-  private _perDatabaseSettings: MssqlElasticpoolPerDatabaseSettings[];
+  private _perDatabaseSettings?: MssqlElasticpoolPerDatabaseSettings; 
+  private __perDatabaseSettingsOutput = new MssqlElasticpoolPerDatabaseSettingsOutputReference(this as any, "per_database_settings", true);
   public get perDatabaseSettings() {
-    return this.interpolationForAttribute('per_database_settings') as any;
+    return this.__perDatabaseSettingsOutput;
   }
-  public set perDatabaseSettings(value: MssqlElasticpoolPerDatabaseSettings[]) {
+  public putPerDatabaseSettings(value: MssqlElasticpoolPerDatabaseSettings) {
     this._perDatabaseSettings = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -341,11 +527,12 @@ export class MssqlElasticpool extends cdktf.TerraformResource {
   }
 
   // sku - computed: false, optional: false, required: true
-  private _sku: MssqlElasticpoolSku[];
+  private _sku?: MssqlElasticpoolSku; 
+  private __skuOutput = new MssqlElasticpoolSkuOutputReference(this as any, "sku", true);
   public get sku() {
-    return this.interpolationForAttribute('sku') as any;
+    return this.__skuOutput;
   }
-  public set sku(value: MssqlElasticpoolSku[]) {
+  public putSku(value: MssqlElasticpoolSku) {
     this._sku = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -354,11 +541,12 @@ export class MssqlElasticpool extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: MssqlElasticpoolTimeouts;
+  private _timeouts?: MssqlElasticpoolTimeouts | undefined; 
+  private __timeoutsOutput = new MssqlElasticpoolTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: MssqlElasticpoolTimeouts ) {
+  public putTimeouts(value: MssqlElasticpoolTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {
@@ -384,8 +572,8 @@ export class MssqlElasticpool extends cdktf.TerraformResource {
       server_name: cdktf.stringToTerraform(this._serverName),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
       zone_redundant: cdktf.booleanToTerraform(this._zoneRedundant),
-      per_database_settings: cdktf.listMapper(mssqlElasticpoolPerDatabaseSettingsToTerraform)(this._perDatabaseSettings),
-      sku: cdktf.listMapper(mssqlElasticpoolSkuToTerraform)(this._sku),
+      per_database_settings: mssqlElasticpoolPerDatabaseSettingsToTerraform(this._perDatabaseSettings),
+      sku: mssqlElasticpoolSkuToTerraform(this._sku),
       timeouts: mssqlElasticpoolTimeoutsToTerraform(this._timeouts),
     };
   }

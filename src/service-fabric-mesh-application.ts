@@ -47,14 +47,53 @@ export interface ServiceFabricMeshApplicationServiceCodePackageResourcesLimits {
   readonly memory: number;
 }
 
-function serviceFabricMeshApplicationServiceCodePackageResourcesLimitsToTerraform(struct?: ServiceFabricMeshApplicationServiceCodePackageResourcesLimits): any {
+function serviceFabricMeshApplicationServiceCodePackageResourcesLimitsToTerraform(struct?: ServiceFabricMeshApplicationServiceCodePackageResourcesLimitsOutputReference | ServiceFabricMeshApplicationServiceCodePackageResourcesLimits): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     cpu: cdktf.numberToTerraform(struct!.cpu),
     memory: cdktf.numberToTerraform(struct!.memory),
   }
 }
 
+export class ServiceFabricMeshApplicationServiceCodePackageResourcesLimitsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // cpu - computed: false, optional: false, required: true
+  private _cpu?: number; 
+  public get cpu() {
+    return this.getNumberAttribute('cpu');
+  }
+  public set cpu(value: number) {
+    this._cpu = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get cpuInput() {
+    return this._cpu
+  }
+
+  // memory - computed: false, optional: false, required: true
+  private _memory?: number; 
+  public get memory() {
+    return this.getNumberAttribute('memory');
+  }
+  public set memory(value: number) {
+    this._memory = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get memoryInput() {
+    return this._memory
+  }
+}
 export interface ServiceFabricMeshApplicationServiceCodePackageResourcesRequests {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_mesh_application.html#cpu ServiceFabricMeshApplication#cpu}
@@ -66,37 +105,120 @@ export interface ServiceFabricMeshApplicationServiceCodePackageResourcesRequests
   readonly memory: number;
 }
 
-function serviceFabricMeshApplicationServiceCodePackageResourcesRequestsToTerraform(struct?: ServiceFabricMeshApplicationServiceCodePackageResourcesRequests): any {
+function serviceFabricMeshApplicationServiceCodePackageResourcesRequestsToTerraform(struct?: ServiceFabricMeshApplicationServiceCodePackageResourcesRequestsOutputReference | ServiceFabricMeshApplicationServiceCodePackageResourcesRequests): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     cpu: cdktf.numberToTerraform(struct!.cpu),
     memory: cdktf.numberToTerraform(struct!.memory),
   }
 }
 
+export class ServiceFabricMeshApplicationServiceCodePackageResourcesRequestsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // cpu - computed: false, optional: false, required: true
+  private _cpu?: number; 
+  public get cpu() {
+    return this.getNumberAttribute('cpu');
+  }
+  public set cpu(value: number) {
+    this._cpu = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get cpuInput() {
+    return this._cpu
+  }
+
+  // memory - computed: false, optional: false, required: true
+  private _memory?: number; 
+  public get memory() {
+    return this.getNumberAttribute('memory');
+  }
+  public set memory(value: number) {
+    this._memory = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get memoryInput() {
+    return this._memory
+  }
+}
 export interface ServiceFabricMeshApplicationServiceCodePackageResources {
   /**
   * limits block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_mesh_application.html#limits ServiceFabricMeshApplication#limits}
   */
-  readonly limits?: ServiceFabricMeshApplicationServiceCodePackageResourcesLimits[];
+  readonly limits?: ServiceFabricMeshApplicationServiceCodePackageResourcesLimits;
   /**
   * requests block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_mesh_application.html#requests ServiceFabricMeshApplication#requests}
   */
-  readonly requests: ServiceFabricMeshApplicationServiceCodePackageResourcesRequests[];
+  readonly requests: ServiceFabricMeshApplicationServiceCodePackageResourcesRequests;
 }
 
-function serviceFabricMeshApplicationServiceCodePackageResourcesToTerraform(struct?: ServiceFabricMeshApplicationServiceCodePackageResources): any {
+function serviceFabricMeshApplicationServiceCodePackageResourcesToTerraform(struct?: ServiceFabricMeshApplicationServiceCodePackageResourcesOutputReference | ServiceFabricMeshApplicationServiceCodePackageResources): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
-    limits: cdktf.listMapper(serviceFabricMeshApplicationServiceCodePackageResourcesLimitsToTerraform)(struct!.limits),
-    requests: cdktf.listMapper(serviceFabricMeshApplicationServiceCodePackageResourcesRequestsToTerraform)(struct!.requests),
+    limits: serviceFabricMeshApplicationServiceCodePackageResourcesLimitsToTerraform(struct!.limits),
+    requests: serviceFabricMeshApplicationServiceCodePackageResourcesRequestsToTerraform(struct!.requests),
   }
 }
 
+export class ServiceFabricMeshApplicationServiceCodePackageResourcesOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // limits - computed: false, optional: true, required: false
+  private _limits?: ServiceFabricMeshApplicationServiceCodePackageResourcesLimits | undefined; 
+  private __limitsOutput = new ServiceFabricMeshApplicationServiceCodePackageResourcesLimitsOutputReference(this as any, "limits", true);
+  public get limits() {
+    return this.__limitsOutput;
+  }
+  public putLimits(value: ServiceFabricMeshApplicationServiceCodePackageResourcesLimits | undefined) {
+    this._limits = value;
+  }
+  public resetLimits() {
+    this._limits = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get limitsInput() {
+    return this._limits
+  }
+
+  // requests - computed: false, optional: false, required: true
+  private _requests?: ServiceFabricMeshApplicationServiceCodePackageResourcesRequests; 
+  private __requestsOutput = new ServiceFabricMeshApplicationServiceCodePackageResourcesRequestsOutputReference(this as any, "requests", true);
+  public get requests() {
+    return this.__requestsOutput;
+  }
+  public putRequests(value: ServiceFabricMeshApplicationServiceCodePackageResourcesRequests) {
+    this._requests = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get requestsInput() {
+    return this._requests
+  }
+}
 export interface ServiceFabricMeshApplicationServiceCodePackage {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_mesh_application.html#image_name ServiceFabricMeshApplication#image_name}
@@ -111,15 +233,18 @@ export interface ServiceFabricMeshApplicationServiceCodePackage {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_mesh_application.html#resources ServiceFabricMeshApplication#resources}
   */
-  readonly resources: ServiceFabricMeshApplicationServiceCodePackageResources[];
+  readonly resources: ServiceFabricMeshApplicationServiceCodePackageResources;
 }
 
 function serviceFabricMeshApplicationServiceCodePackageToTerraform(struct?: ServiceFabricMeshApplicationServiceCodePackage): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     image_name: cdktf.stringToTerraform(struct!.imageName),
     name: cdktf.stringToTerraform(struct!.name),
-    resources: cdktf.listMapper(serviceFabricMeshApplicationServiceCodePackageResourcesToTerraform)(struct!.resources),
+    resources: serviceFabricMeshApplicationServiceCodePackageResourcesToTerraform(struct!.resources),
   }
 }
 
@@ -142,6 +267,9 @@ export interface ServiceFabricMeshApplicationService {
 
 function serviceFabricMeshApplicationServiceToTerraform(struct?: ServiceFabricMeshApplicationService): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     name: cdktf.stringToTerraform(struct!.name),
     os_type: cdktf.stringToTerraform(struct!.osType),
@@ -168,8 +296,11 @@ export interface ServiceFabricMeshApplicationTimeouts {
   readonly update?: string;
 }
 
-function serviceFabricMeshApplicationTimeoutsToTerraform(struct?: ServiceFabricMeshApplicationTimeouts): any {
+function serviceFabricMeshApplicationTimeoutsToTerraform(struct?: ServiceFabricMeshApplicationTimeoutsOutputReference | ServiceFabricMeshApplicationTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -178,6 +309,80 @@ function serviceFabricMeshApplicationTimeoutsToTerraform(struct?: ServiceFabricM
   }
 }
 
+export class ServiceFabricMeshApplicationTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_mesh_application.html azurerm_service_fabric_mesh_application}
@@ -229,7 +434,7 @@ export class ServiceFabricMeshApplication extends cdktf.TerraformResource {
   }
 
   // location - computed: false, optional: false, required: true
-  private _location: string;
+  private _location?: string; 
   public get location() {
     return this.getStringAttribute('location');
   }
@@ -242,7 +447,7 @@ export class ServiceFabricMeshApplication extends cdktf.TerraformResource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -255,7 +460,7 @@ export class ServiceFabricMeshApplication extends cdktf.TerraformResource {
   }
 
   // resource_group_name - computed: false, optional: false, required: true
-  private _resourceGroupName: string;
+  private _resourceGroupName?: string; 
   public get resourceGroupName() {
     return this.getStringAttribute('resource_group_name');
   }
@@ -268,11 +473,12 @@ export class ServiceFabricMeshApplication extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable;
+  private _tags?: { [key: string]: string } | cdktf.IResolvable | undefined; 
   public get tags() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
     this._tags = value;
   }
   public resetTags() {
@@ -284,8 +490,9 @@ export class ServiceFabricMeshApplication extends cdktf.TerraformResource {
   }
 
   // service - computed: false, optional: false, required: true
-  private _service: ServiceFabricMeshApplicationService[];
+  private _service?: ServiceFabricMeshApplicationService[]; 
   public get service() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('service') as any;
   }
   public set service(value: ServiceFabricMeshApplicationService[]) {
@@ -297,11 +504,12 @@ export class ServiceFabricMeshApplication extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: ServiceFabricMeshApplicationTimeouts;
+  private _timeouts?: ServiceFabricMeshApplicationTimeouts | undefined; 
+  private __timeoutsOutput = new ServiceFabricMeshApplicationTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: ServiceFabricMeshApplicationTimeouts ) {
+  public putTimeouts(value: ServiceFabricMeshApplicationTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {

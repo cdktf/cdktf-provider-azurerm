@@ -32,7 +32,7 @@ export interface LogicAppIntegrationAccountCertificateConfig extends cdktf.Terra
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account_certificate.html#key_vault_key LogicAppIntegrationAccountCertificate#key_vault_key}
   */
-  readonly keyVaultKey?: LogicAppIntegrationAccountCertificateKeyVaultKey[];
+  readonly keyVaultKey?: LogicAppIntegrationAccountCertificateKeyVaultKey;
   /**
   * timeouts block
   * 
@@ -55,8 +55,11 @@ export interface LogicAppIntegrationAccountCertificateKeyVaultKey {
   readonly keyVersion?: string;
 }
 
-function logicAppIntegrationAccountCertificateKeyVaultKeyToTerraform(struct?: LogicAppIntegrationAccountCertificateKeyVaultKey): any {
+function logicAppIntegrationAccountCertificateKeyVaultKeyToTerraform(struct?: LogicAppIntegrationAccountCertificateKeyVaultKeyOutputReference | LogicAppIntegrationAccountCertificateKeyVaultKey): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     key_name: cdktf.stringToTerraform(struct!.keyName),
     key_vault_id: cdktf.stringToTerraform(struct!.keyVaultId),
@@ -64,6 +67,58 @@ function logicAppIntegrationAccountCertificateKeyVaultKeyToTerraform(struct?: Lo
   }
 }
 
+export class LogicAppIntegrationAccountCertificateKeyVaultKeyOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // key_name - computed: false, optional: false, required: true
+  private _keyName?: string; 
+  public get keyName() {
+    return this.getStringAttribute('key_name');
+  }
+  public set keyName(value: string) {
+    this._keyName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keyNameInput() {
+    return this._keyName
+  }
+
+  // key_vault_id - computed: false, optional: false, required: true
+  private _keyVaultId?: string; 
+  public get keyVaultId() {
+    return this.getStringAttribute('key_vault_id');
+  }
+  public set keyVaultId(value: string) {
+    this._keyVaultId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keyVaultIdInput() {
+    return this._keyVaultId
+  }
+
+  // key_version - computed: false, optional: true, required: false
+  private _keyVersion?: string | undefined; 
+  public get keyVersion() {
+    return this.getStringAttribute('key_version');
+  }
+  public set keyVersion(value: string | undefined) {
+    this._keyVersion = value;
+  }
+  public resetKeyVersion() {
+    this._keyVersion = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keyVersionInput() {
+    return this._keyVersion
+  }
+}
 export interface LogicAppIntegrationAccountCertificateTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account_certificate.html#create LogicAppIntegrationAccountCertificate#create}
@@ -83,8 +138,11 @@ export interface LogicAppIntegrationAccountCertificateTimeouts {
   readonly update?: string;
 }
 
-function logicAppIntegrationAccountCertificateTimeoutsToTerraform(struct?: LogicAppIntegrationAccountCertificateTimeouts): any {
+function logicAppIntegrationAccountCertificateTimeoutsToTerraform(struct?: LogicAppIntegrationAccountCertificateTimeoutsOutputReference | LogicAppIntegrationAccountCertificateTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -93,6 +151,80 @@ function logicAppIntegrationAccountCertificateTimeoutsToTerraform(struct?: Logic
   }
 }
 
+export class LogicAppIntegrationAccountCertificateTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account_certificate.html azurerm_logic_app_integration_account_certificate}
@@ -145,7 +277,7 @@ export class LogicAppIntegrationAccountCertificate extends cdktf.TerraformResour
   }
 
   // integration_account_name - computed: false, optional: false, required: true
-  private _integrationAccountName: string;
+  private _integrationAccountName?: string; 
   public get integrationAccountName() {
     return this.getStringAttribute('integration_account_name');
   }
@@ -158,11 +290,11 @@ export class LogicAppIntegrationAccountCertificate extends cdktf.TerraformResour
   }
 
   // metadata - computed: false, optional: true, required: false
-  private _metadata?: string;
+  private _metadata?: string | undefined; 
   public get metadata() {
     return this.getStringAttribute('metadata');
   }
-  public set metadata(value: string ) {
+  public set metadata(value: string | undefined) {
     this._metadata = value;
   }
   public resetMetadata() {
@@ -174,7 +306,7 @@ export class LogicAppIntegrationAccountCertificate extends cdktf.TerraformResour
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -187,11 +319,11 @@ export class LogicAppIntegrationAccountCertificate extends cdktf.TerraformResour
   }
 
   // public_certificate - computed: false, optional: true, required: false
-  private _publicCertificate?: string;
+  private _publicCertificate?: string | undefined; 
   public get publicCertificate() {
     return this.getStringAttribute('public_certificate');
   }
-  public set publicCertificate(value: string ) {
+  public set publicCertificate(value: string | undefined) {
     this._publicCertificate = value;
   }
   public resetPublicCertificate() {
@@ -203,7 +335,7 @@ export class LogicAppIntegrationAccountCertificate extends cdktf.TerraformResour
   }
 
   // resource_group_name - computed: false, optional: false, required: true
-  private _resourceGroupName: string;
+  private _resourceGroupName?: string; 
   public get resourceGroupName() {
     return this.getStringAttribute('resource_group_name');
   }
@@ -216,11 +348,12 @@ export class LogicAppIntegrationAccountCertificate extends cdktf.TerraformResour
   }
 
   // key_vault_key - computed: false, optional: true, required: false
-  private _keyVaultKey?: LogicAppIntegrationAccountCertificateKeyVaultKey[];
+  private _keyVaultKey?: LogicAppIntegrationAccountCertificateKeyVaultKey | undefined; 
+  private __keyVaultKeyOutput = new LogicAppIntegrationAccountCertificateKeyVaultKeyOutputReference(this as any, "key_vault_key", true);
   public get keyVaultKey() {
-    return this.interpolationForAttribute('key_vault_key') as any;
+    return this.__keyVaultKeyOutput;
   }
-  public set keyVaultKey(value: LogicAppIntegrationAccountCertificateKeyVaultKey[] ) {
+  public putKeyVaultKey(value: LogicAppIntegrationAccountCertificateKeyVaultKey | undefined) {
     this._keyVaultKey = value;
   }
   public resetKeyVaultKey() {
@@ -232,11 +365,12 @@ export class LogicAppIntegrationAccountCertificate extends cdktf.TerraformResour
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: LogicAppIntegrationAccountCertificateTimeouts;
+  private _timeouts?: LogicAppIntegrationAccountCertificateTimeouts | undefined; 
+  private __timeoutsOutput = new LogicAppIntegrationAccountCertificateTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: LogicAppIntegrationAccountCertificateTimeouts ) {
+  public putTimeouts(value: LogicAppIntegrationAccountCertificateTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {
@@ -258,7 +392,7 @@ export class LogicAppIntegrationAccountCertificate extends cdktf.TerraformResour
       name: cdktf.stringToTerraform(this._name),
       public_certificate: cdktf.stringToTerraform(this._publicCertificate),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
-      key_vault_key: cdktf.listMapper(logicAppIntegrationAccountCertificateKeyVaultKeyToTerraform)(this._keyVaultKey),
+      key_vault_key: logicAppIntegrationAccountCertificateKeyVaultKeyToTerraform(this._keyVaultKey),
       timeouts: logicAppIntegrationAccountCertificateTimeoutsToTerraform(this._timeouts),
     };
   }

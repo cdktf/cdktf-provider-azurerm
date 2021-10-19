@@ -49,13 +49,42 @@ export interface DataAzurermEventhubAuthorizationRuleTimeouts {
   readonly read?: string;
 }
 
-function dataAzurermEventhubAuthorizationRuleTimeoutsToTerraform(struct?: DataAzurermEventhubAuthorizationRuleTimeouts): any {
+function dataAzurermEventhubAuthorizationRuleTimeoutsToTerraform(struct?: DataAzurermEventhubAuthorizationRuleTimeoutsOutputReference | DataAzurermEventhubAuthorizationRuleTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     read: cdktf.stringToTerraform(struct!.read),
   }
 }
 
+export class DataAzurermEventhubAuthorizationRuleTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/eventhub_authorization_rule.html azurerm_eventhub_authorization_rule}
@@ -104,7 +133,7 @@ export class DataAzurermEventhubAuthorizationRule extends cdktf.TerraformDataSou
   // ==========
 
   // eventhub_name - computed: false, optional: false, required: true
-  private _eventhubName: string;
+  private _eventhubName?: string; 
   public get eventhubName() {
     return this.getStringAttribute('eventhub_name');
   }
@@ -122,11 +151,11 @@ export class DataAzurermEventhubAuthorizationRule extends cdktf.TerraformDataSou
   }
 
   // listen - computed: false, optional: true, required: false
-  private _listen?: boolean | cdktf.IResolvable;
+  private _listen?: boolean | cdktf.IResolvable | undefined; 
   public get listen() {
-    return this.getBooleanAttribute('listen');
+    return this.getBooleanAttribute('listen') as any;
   }
-  public set listen(value: boolean | cdktf.IResolvable ) {
+  public set listen(value: boolean | cdktf.IResolvable | undefined) {
     this._listen = value;
   }
   public resetListen() {
@@ -143,11 +172,11 @@ export class DataAzurermEventhubAuthorizationRule extends cdktf.TerraformDataSou
   }
 
   // manage - computed: false, optional: true, required: false
-  private _manage?: boolean | cdktf.IResolvable;
+  private _manage?: boolean | cdktf.IResolvable | undefined; 
   public get manage() {
-    return this.getBooleanAttribute('manage');
+    return this.getBooleanAttribute('manage') as any;
   }
-  public set manage(value: boolean | cdktf.IResolvable ) {
+  public set manage(value: boolean | cdktf.IResolvable | undefined) {
     this._manage = value;
   }
   public resetManage() {
@@ -159,7 +188,7 @@ export class DataAzurermEventhubAuthorizationRule extends cdktf.TerraformDataSou
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -172,7 +201,7 @@ export class DataAzurermEventhubAuthorizationRule extends cdktf.TerraformDataSou
   }
 
   // namespace_name - computed: false, optional: false, required: true
-  private _namespaceName: string;
+  private _namespaceName?: string; 
   public get namespaceName() {
     return this.getStringAttribute('namespace_name');
   }
@@ -200,7 +229,7 @@ export class DataAzurermEventhubAuthorizationRule extends cdktf.TerraformDataSou
   }
 
   // resource_group_name - computed: false, optional: false, required: true
-  private _resourceGroupName: string;
+  private _resourceGroupName?: string; 
   public get resourceGroupName() {
     return this.getStringAttribute('resource_group_name');
   }
@@ -228,11 +257,11 @@ export class DataAzurermEventhubAuthorizationRule extends cdktf.TerraformDataSou
   }
 
   // send - computed: false, optional: true, required: false
-  private _send?: boolean | cdktf.IResolvable;
+  private _send?: boolean | cdktf.IResolvable | undefined; 
   public get send() {
-    return this.getBooleanAttribute('send');
+    return this.getBooleanAttribute('send') as any;
   }
-  public set send(value: boolean | cdktf.IResolvable ) {
+  public set send(value: boolean | cdktf.IResolvable | undefined) {
     this._send = value;
   }
   public resetSend() {
@@ -244,11 +273,12 @@ export class DataAzurermEventhubAuthorizationRule extends cdktf.TerraformDataSou
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: DataAzurermEventhubAuthorizationRuleTimeouts;
+  private _timeouts?: DataAzurermEventhubAuthorizationRuleTimeouts | undefined; 
+  private __timeoutsOutput = new DataAzurermEventhubAuthorizationRuleTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: DataAzurermEventhubAuthorizationRuleTimeouts ) {
+  public putTimeouts(value: DataAzurermEventhubAuthorizationRuleTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {

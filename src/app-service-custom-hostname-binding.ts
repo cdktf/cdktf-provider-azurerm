@@ -53,8 +53,11 @@ export interface AppServiceCustomHostnameBindingTimeouts {
   readonly update?: string;
 }
 
-function appServiceCustomHostnameBindingTimeoutsToTerraform(struct?: AppServiceCustomHostnameBindingTimeouts): any {
+function appServiceCustomHostnameBindingTimeoutsToTerraform(struct?: AppServiceCustomHostnameBindingTimeoutsOutputReference | AppServiceCustomHostnameBindingTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -63,6 +66,80 @@ function appServiceCustomHostnameBindingTimeoutsToTerraform(struct?: AppServiceC
   }
 }
 
+export class AppServiceCustomHostnameBindingTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_custom_hostname_binding.html azurerm_app_service_custom_hostname_binding}
@@ -109,7 +186,7 @@ export class AppServiceCustomHostnameBinding extends cdktf.TerraformResource {
   // ==========
 
   // app_service_name - computed: false, optional: false, required: true
-  private _appServiceName: string;
+  private _appServiceName?: string; 
   public get appServiceName() {
     return this.getStringAttribute('app_service_name');
   }
@@ -122,7 +199,7 @@ export class AppServiceCustomHostnameBinding extends cdktf.TerraformResource {
   }
 
   // hostname - computed: false, optional: false, required: true
-  private _hostname: string;
+  private _hostname?: string; 
   public get hostname() {
     return this.getStringAttribute('hostname');
   }
@@ -140,7 +217,7 @@ export class AppServiceCustomHostnameBinding extends cdktf.TerraformResource {
   }
 
   // resource_group_name - computed: false, optional: false, required: true
-  private _resourceGroupName: string;
+  private _resourceGroupName?: string; 
   public get resourceGroupName() {
     return this.getStringAttribute('resource_group_name');
   }
@@ -153,11 +230,11 @@ export class AppServiceCustomHostnameBinding extends cdktf.TerraformResource {
   }
 
   // ssl_state - computed: true, optional: true, required: false
-  private _sslState?: string;
+  private _sslState?: string | undefined; 
   public get sslState() {
     return this.getStringAttribute('ssl_state');
   }
-  public set sslState(value: string) {
+  public set sslState(value: string | undefined) {
     this._sslState = value;
   }
   public resetSslState() {
@@ -169,11 +246,11 @@ export class AppServiceCustomHostnameBinding extends cdktf.TerraformResource {
   }
 
   // thumbprint - computed: true, optional: true, required: false
-  private _thumbprint?: string;
+  private _thumbprint?: string | undefined; 
   public get thumbprint() {
     return this.getStringAttribute('thumbprint');
   }
-  public set thumbprint(value: string) {
+  public set thumbprint(value: string | undefined) {
     this._thumbprint = value;
   }
   public resetThumbprint() {
@@ -190,11 +267,12 @@ export class AppServiceCustomHostnameBinding extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: AppServiceCustomHostnameBindingTimeouts;
+  private _timeouts?: AppServiceCustomHostnameBindingTimeouts | undefined; 
+  private __timeoutsOutput = new AppServiceCustomHostnameBindingTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: AppServiceCustomHostnameBindingTimeouts ) {
+  public putTimeouts(value: AppServiceCustomHostnameBindingTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {

@@ -65,8 +65,11 @@ export interface SpringCloudJavaDeploymentTimeouts {
   readonly update?: string;
 }
 
-function springCloudJavaDeploymentTimeoutsToTerraform(struct?: SpringCloudJavaDeploymentTimeouts): any {
+function springCloudJavaDeploymentTimeoutsToTerraform(struct?: SpringCloudJavaDeploymentTimeoutsOutputReference | SpringCloudJavaDeploymentTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -75,6 +78,80 @@ function springCloudJavaDeploymentTimeoutsToTerraform(struct?: SpringCloudJavaDe
   }
 }
 
+export class SpringCloudJavaDeploymentTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_java_deployment.html azurerm_spring_cloud_java_deployment}
@@ -124,11 +201,11 @@ export class SpringCloudJavaDeployment extends cdktf.TerraformResource {
   // ==========
 
   // cpu - computed: false, optional: true, required: false
-  private _cpu?: number;
+  private _cpu?: number | undefined; 
   public get cpu() {
     return this.getNumberAttribute('cpu');
   }
-  public set cpu(value: number ) {
+  public set cpu(value: number | undefined) {
     this._cpu = value;
   }
   public resetCpu() {
@@ -140,11 +217,12 @@ export class SpringCloudJavaDeployment extends cdktf.TerraformResource {
   }
 
   // environment_variables - computed: false, optional: true, required: false
-  private _environmentVariables?: { [key: string]: string } | cdktf.IResolvable;
+  private _environmentVariables?: { [key: string]: string } | cdktf.IResolvable | undefined; 
   public get environmentVariables() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('environment_variables') as any;
   }
-  public set environmentVariables(value: { [key: string]: string } | cdktf.IResolvable ) {
+  public set environmentVariables(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
     this._environmentVariables = value;
   }
   public resetEnvironmentVariables() {
@@ -161,11 +239,11 @@ export class SpringCloudJavaDeployment extends cdktf.TerraformResource {
   }
 
   // instance_count - computed: false, optional: true, required: false
-  private _instanceCount?: number;
+  private _instanceCount?: number | undefined; 
   public get instanceCount() {
     return this.getNumberAttribute('instance_count');
   }
-  public set instanceCount(value: number ) {
+  public set instanceCount(value: number | undefined) {
     this._instanceCount = value;
   }
   public resetInstanceCount() {
@@ -177,11 +255,11 @@ export class SpringCloudJavaDeployment extends cdktf.TerraformResource {
   }
 
   // jvm_options - computed: false, optional: true, required: false
-  private _jvmOptions?: string;
+  private _jvmOptions?: string | undefined; 
   public get jvmOptions() {
     return this.getStringAttribute('jvm_options');
   }
-  public set jvmOptions(value: string ) {
+  public set jvmOptions(value: string | undefined) {
     this._jvmOptions = value;
   }
   public resetJvmOptions() {
@@ -193,11 +271,11 @@ export class SpringCloudJavaDeployment extends cdktf.TerraformResource {
   }
 
   // memory_in_gb - computed: false, optional: true, required: false
-  private _memoryInGb?: number;
+  private _memoryInGb?: number | undefined; 
   public get memoryInGb() {
     return this.getNumberAttribute('memory_in_gb');
   }
-  public set memoryInGb(value: number ) {
+  public set memoryInGb(value: number | undefined) {
     this._memoryInGb = value;
   }
   public resetMemoryInGb() {
@@ -209,7 +287,7 @@ export class SpringCloudJavaDeployment extends cdktf.TerraformResource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -222,11 +300,11 @@ export class SpringCloudJavaDeployment extends cdktf.TerraformResource {
   }
 
   // runtime_version - computed: false, optional: true, required: false
-  private _runtimeVersion?: string;
+  private _runtimeVersion?: string | undefined; 
   public get runtimeVersion() {
     return this.getStringAttribute('runtime_version');
   }
-  public set runtimeVersion(value: string ) {
+  public set runtimeVersion(value: string | undefined) {
     this._runtimeVersion = value;
   }
   public resetRuntimeVersion() {
@@ -238,7 +316,7 @@ export class SpringCloudJavaDeployment extends cdktf.TerraformResource {
   }
 
   // spring_cloud_app_id - computed: false, optional: false, required: true
-  private _springCloudAppId: string;
+  private _springCloudAppId?: string; 
   public get springCloudAppId() {
     return this.getStringAttribute('spring_cloud_app_id');
   }
@@ -251,11 +329,12 @@ export class SpringCloudJavaDeployment extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: SpringCloudJavaDeploymentTimeouts;
+  private _timeouts?: SpringCloudJavaDeploymentTimeouts | undefined; 
+  private __timeoutsOutput = new SpringCloudJavaDeploymentTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: SpringCloudJavaDeploymentTimeouts ) {
+  public putTimeouts(value: SpringCloudJavaDeploymentTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {

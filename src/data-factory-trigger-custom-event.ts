@@ -73,6 +73,9 @@ export interface DataFactoryTriggerCustomEventPipeline {
 
 function dataFactoryTriggerCustomEventPipelineToTerraform(struct?: DataFactoryTriggerCustomEventPipeline): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     name: cdktf.stringToTerraform(struct!.name),
     parameters: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.parameters),
@@ -98,8 +101,11 @@ export interface DataFactoryTriggerCustomEventTimeouts {
   readonly update?: string;
 }
 
-function dataFactoryTriggerCustomEventTimeoutsToTerraform(struct?: DataFactoryTriggerCustomEventTimeouts): any {
+function dataFactoryTriggerCustomEventTimeoutsToTerraform(struct?: DataFactoryTriggerCustomEventTimeoutsOutputReference | DataFactoryTriggerCustomEventTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -108,6 +114,80 @@ function dataFactoryTriggerCustomEventTimeoutsToTerraform(struct?: DataFactoryTr
   }
 }
 
+export class DataFactoryTriggerCustomEventTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_trigger_custom_event.html azurerm_data_factory_trigger_custom_event}
@@ -160,11 +240,11 @@ export class DataFactoryTriggerCustomEvent extends cdktf.TerraformResource {
   // ==========
 
   // activated - computed: false, optional: true, required: false
-  private _activated?: boolean | cdktf.IResolvable;
+  private _activated?: boolean | cdktf.IResolvable | undefined; 
   public get activated() {
-    return this.getBooleanAttribute('activated');
+    return this.getBooleanAttribute('activated') as any;
   }
-  public set activated(value: boolean | cdktf.IResolvable ) {
+  public set activated(value: boolean | cdktf.IResolvable | undefined) {
     this._activated = value;
   }
   public resetActivated() {
@@ -176,11 +256,12 @@ export class DataFactoryTriggerCustomEvent extends cdktf.TerraformResource {
   }
 
   // additional_properties - computed: false, optional: true, required: false
-  private _additionalProperties?: { [key: string]: string } | cdktf.IResolvable;
+  private _additionalProperties?: { [key: string]: string } | cdktf.IResolvable | undefined; 
   public get additionalProperties() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('additional_properties') as any;
   }
-  public set additionalProperties(value: { [key: string]: string } | cdktf.IResolvable ) {
+  public set additionalProperties(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
     this._additionalProperties = value;
   }
   public resetAdditionalProperties() {
@@ -192,11 +273,11 @@ export class DataFactoryTriggerCustomEvent extends cdktf.TerraformResource {
   }
 
   // annotations - computed: false, optional: true, required: false
-  private _annotations?: string[];
+  private _annotations?: string[] | undefined; 
   public get annotations() {
     return this.getListAttribute('annotations');
   }
-  public set annotations(value: string[] ) {
+  public set annotations(value: string[] | undefined) {
     this._annotations = value;
   }
   public resetAnnotations() {
@@ -208,7 +289,7 @@ export class DataFactoryTriggerCustomEvent extends cdktf.TerraformResource {
   }
 
   // data_factory_id - computed: false, optional: false, required: true
-  private _dataFactoryId: string;
+  private _dataFactoryId?: string; 
   public get dataFactoryId() {
     return this.getStringAttribute('data_factory_id');
   }
@@ -221,11 +302,11 @@ export class DataFactoryTriggerCustomEvent extends cdktf.TerraformResource {
   }
 
   // description - computed: false, optional: true, required: false
-  private _description?: string;
+  private _description?: string | undefined; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string ) {
+  public set description(value: string | undefined) {
     this._description = value;
   }
   public resetDescription() {
@@ -237,7 +318,7 @@ export class DataFactoryTriggerCustomEvent extends cdktf.TerraformResource {
   }
 
   // eventgrid_topic_id - computed: false, optional: false, required: true
-  private _eventgridTopicId: string;
+  private _eventgridTopicId?: string; 
   public get eventgridTopicId() {
     return this.getStringAttribute('eventgrid_topic_id');
   }
@@ -250,7 +331,7 @@ export class DataFactoryTriggerCustomEvent extends cdktf.TerraformResource {
   }
 
   // events - computed: false, optional: false, required: true
-  private _events: string[];
+  private _events?: string[]; 
   public get events() {
     return this.getListAttribute('events');
   }
@@ -268,7 +349,7 @@ export class DataFactoryTriggerCustomEvent extends cdktf.TerraformResource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -281,11 +362,11 @@ export class DataFactoryTriggerCustomEvent extends cdktf.TerraformResource {
   }
 
   // subject_begins_with - computed: false, optional: true, required: false
-  private _subjectBeginsWith?: string;
+  private _subjectBeginsWith?: string | undefined; 
   public get subjectBeginsWith() {
     return this.getStringAttribute('subject_begins_with');
   }
-  public set subjectBeginsWith(value: string ) {
+  public set subjectBeginsWith(value: string | undefined) {
     this._subjectBeginsWith = value;
   }
   public resetSubjectBeginsWith() {
@@ -297,11 +378,11 @@ export class DataFactoryTriggerCustomEvent extends cdktf.TerraformResource {
   }
 
   // subject_ends_with - computed: false, optional: true, required: false
-  private _subjectEndsWith?: string;
+  private _subjectEndsWith?: string | undefined; 
   public get subjectEndsWith() {
     return this.getStringAttribute('subject_ends_with');
   }
-  public set subjectEndsWith(value: string ) {
+  public set subjectEndsWith(value: string | undefined) {
     this._subjectEndsWith = value;
   }
   public resetSubjectEndsWith() {
@@ -313,8 +394,9 @@ export class DataFactoryTriggerCustomEvent extends cdktf.TerraformResource {
   }
 
   // pipeline - computed: false, optional: false, required: true
-  private _pipeline: DataFactoryTriggerCustomEventPipeline[];
+  private _pipeline?: DataFactoryTriggerCustomEventPipeline[]; 
   public get pipeline() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('pipeline') as any;
   }
   public set pipeline(value: DataFactoryTriggerCustomEventPipeline[]) {
@@ -326,11 +408,12 @@ export class DataFactoryTriggerCustomEvent extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: DataFactoryTriggerCustomEventTimeouts;
+  private _timeouts?: DataFactoryTriggerCustomEventTimeouts | undefined; 
+  private __timeoutsOutput = new DataFactoryTriggerCustomEventTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: DataFactoryTriggerCustomEventTimeouts ) {
+  public putTimeouts(value: DataFactoryTriggerCustomEventTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {

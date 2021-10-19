@@ -40,13 +40,13 @@ export interface TrafficManagerProfileConfig extends cdktf.TerraformMetaArgument
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/traffic_manager_profile.html#dns_config TrafficManagerProfile#dns_config}
   */
-  readonly dnsConfig: TrafficManagerProfileDnsConfig[];
+  readonly dnsConfig: TrafficManagerProfileDnsConfig;
   /**
   * monitor_config block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/traffic_manager_profile.html#monitor_config TrafficManagerProfile#monitor_config}
   */
-  readonly monitorConfig: TrafficManagerProfileMonitorConfig[];
+  readonly monitorConfig: TrafficManagerProfileMonitorConfig;
   /**
   * timeouts block
   * 
@@ -65,14 +65,53 @@ export interface TrafficManagerProfileDnsConfig {
   readonly ttl: number;
 }
 
-function trafficManagerProfileDnsConfigToTerraform(struct?: TrafficManagerProfileDnsConfig): any {
+function trafficManagerProfileDnsConfigToTerraform(struct?: TrafficManagerProfileDnsConfigOutputReference | TrafficManagerProfileDnsConfig): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     relative_name: cdktf.stringToTerraform(struct!.relativeName),
     ttl: cdktf.numberToTerraform(struct!.ttl),
   }
 }
 
+export class TrafficManagerProfileDnsConfigOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // relative_name - computed: false, optional: false, required: true
+  private _relativeName?: string; 
+  public get relativeName() {
+    return this.getStringAttribute('relative_name');
+  }
+  public set relativeName(value: string) {
+    this._relativeName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get relativeNameInput() {
+    return this._relativeName
+  }
+
+  // ttl - computed: false, optional: false, required: true
+  private _ttl?: number; 
+  public get ttl() {
+    return this.getNumberAttribute('ttl');
+  }
+  public set ttl(value: number) {
+    this._ttl = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ttlInput() {
+    return this._ttl
+  }
+}
 export interface TrafficManagerProfileMonitorConfigCustomHeader {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/traffic_manager_profile.html#name TrafficManagerProfile#name}
@@ -86,6 +125,9 @@ export interface TrafficManagerProfileMonitorConfigCustomHeader {
 
 function trafficManagerProfileMonitorConfigCustomHeaderToTerraform(struct?: TrafficManagerProfileMonitorConfigCustomHeader): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     name: cdktf.stringToTerraform(struct!.name),
     value: cdktf.stringToTerraform(struct!.value),
@@ -129,8 +171,11 @@ export interface TrafficManagerProfileMonitorConfig {
   readonly customHeader?: TrafficManagerProfileMonitorConfigCustomHeader[];
 }
 
-function trafficManagerProfileMonitorConfigToTerraform(struct?: TrafficManagerProfileMonitorConfig): any {
+function trafficManagerProfileMonitorConfigToTerraform(struct?: TrafficManagerProfileMonitorConfigOutputReference | TrafficManagerProfileMonitorConfig): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     expected_status_code_ranges: cdktf.listMapper(cdktf.stringToTerraform)(struct!.expectedStatusCodeRanges),
     interval_in_seconds: cdktf.numberToTerraform(struct!.intervalInSeconds),
@@ -143,6 +188,139 @@ function trafficManagerProfileMonitorConfigToTerraform(struct?: TrafficManagerPr
   }
 }
 
+export class TrafficManagerProfileMonitorConfigOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // expected_status_code_ranges - computed: false, optional: true, required: false
+  private _expectedStatusCodeRanges?: string[] | undefined; 
+  public get expectedStatusCodeRanges() {
+    return this.getListAttribute('expected_status_code_ranges');
+  }
+  public set expectedStatusCodeRanges(value: string[] | undefined) {
+    this._expectedStatusCodeRanges = value;
+  }
+  public resetExpectedStatusCodeRanges() {
+    this._expectedStatusCodeRanges = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get expectedStatusCodeRangesInput() {
+    return this._expectedStatusCodeRanges
+  }
+
+  // interval_in_seconds - computed: false, optional: true, required: false
+  private _intervalInSeconds?: number | undefined; 
+  public get intervalInSeconds() {
+    return this.getNumberAttribute('interval_in_seconds');
+  }
+  public set intervalInSeconds(value: number | undefined) {
+    this._intervalInSeconds = value;
+  }
+  public resetIntervalInSeconds() {
+    this._intervalInSeconds = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get intervalInSecondsInput() {
+    return this._intervalInSeconds
+  }
+
+  // path - computed: false, optional: true, required: false
+  private _path?: string | undefined; 
+  public get path() {
+    return this.getStringAttribute('path');
+  }
+  public set path(value: string | undefined) {
+    this._path = value;
+  }
+  public resetPath() {
+    this._path = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get pathInput() {
+    return this._path
+  }
+
+  // port - computed: false, optional: false, required: true
+  private _port?: number; 
+  public get port() {
+    return this.getNumberAttribute('port');
+  }
+  public set port(value: number) {
+    this._port = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get portInput() {
+    return this._port
+  }
+
+  // protocol - computed: false, optional: false, required: true
+  private _protocol?: string; 
+  public get protocol() {
+    return this.getStringAttribute('protocol');
+  }
+  public set protocol(value: string) {
+    this._protocol = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get protocolInput() {
+    return this._protocol
+  }
+
+  // timeout_in_seconds - computed: false, optional: true, required: false
+  private _timeoutInSeconds?: number | undefined; 
+  public get timeoutInSeconds() {
+    return this.getNumberAttribute('timeout_in_seconds');
+  }
+  public set timeoutInSeconds(value: number | undefined) {
+    this._timeoutInSeconds = value;
+  }
+  public resetTimeoutInSeconds() {
+    this._timeoutInSeconds = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutInSecondsInput() {
+    return this._timeoutInSeconds
+  }
+
+  // tolerated_number_of_failures - computed: false, optional: true, required: false
+  private _toleratedNumberOfFailures?: number | undefined; 
+  public get toleratedNumberOfFailures() {
+    return this.getNumberAttribute('tolerated_number_of_failures');
+  }
+  public set toleratedNumberOfFailures(value: number | undefined) {
+    this._toleratedNumberOfFailures = value;
+  }
+  public resetToleratedNumberOfFailures() {
+    this._toleratedNumberOfFailures = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get toleratedNumberOfFailuresInput() {
+    return this._toleratedNumberOfFailures
+  }
+
+  // custom_header - computed: false, optional: true, required: false
+  private _customHeader?: TrafficManagerProfileMonitorConfigCustomHeader[] | undefined; 
+  public get customHeader() {
+    // Getting the computed value is not yet implemented
+    return this.interpolationForAttribute('custom_header') as any;
+  }
+  public set customHeader(value: TrafficManagerProfileMonitorConfigCustomHeader[] | undefined) {
+    this._customHeader = value;
+  }
+  public resetCustomHeader() {
+    this._customHeader = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get customHeaderInput() {
+    return this._customHeader
+  }
+}
 export interface TrafficManagerProfileTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/traffic_manager_profile.html#create TrafficManagerProfile#create}
@@ -162,8 +340,11 @@ export interface TrafficManagerProfileTimeouts {
   readonly update?: string;
 }
 
-function trafficManagerProfileTimeoutsToTerraform(struct?: TrafficManagerProfileTimeouts): any {
+function trafficManagerProfileTimeoutsToTerraform(struct?: TrafficManagerProfileTimeoutsOutputReference | TrafficManagerProfileTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -172,6 +353,80 @@ function trafficManagerProfileTimeoutsToTerraform(struct?: TrafficManagerProfile
   }
 }
 
+export class TrafficManagerProfileTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/traffic_manager_profile.html azurerm_traffic_manager_profile}
@@ -232,11 +487,11 @@ export class TrafficManagerProfile extends cdktf.TerraformResource {
   }
 
   // max_return - computed: false, optional: true, required: false
-  private _maxReturn?: number;
+  private _maxReturn?: number | undefined; 
   public get maxReturn() {
     return this.getNumberAttribute('max_return');
   }
-  public set maxReturn(value: number ) {
+  public set maxReturn(value: number | undefined) {
     this._maxReturn = value;
   }
   public resetMaxReturn() {
@@ -248,7 +503,7 @@ export class TrafficManagerProfile extends cdktf.TerraformResource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -261,11 +516,11 @@ export class TrafficManagerProfile extends cdktf.TerraformResource {
   }
 
   // profile_status - computed: true, optional: true, required: false
-  private _profileStatus?: string;
+  private _profileStatus?: string | undefined; 
   public get profileStatus() {
     return this.getStringAttribute('profile_status');
   }
-  public set profileStatus(value: string) {
+  public set profileStatus(value: string | undefined) {
     this._profileStatus = value;
   }
   public resetProfileStatus() {
@@ -277,7 +532,7 @@ export class TrafficManagerProfile extends cdktf.TerraformResource {
   }
 
   // resource_group_name - computed: false, optional: false, required: true
-  private _resourceGroupName: string;
+  private _resourceGroupName?: string; 
   public get resourceGroupName() {
     return this.getStringAttribute('resource_group_name');
   }
@@ -290,11 +545,12 @@ export class TrafficManagerProfile extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable;
+  private _tags?: { [key: string]: string } | cdktf.IResolvable | undefined; 
   public get tags() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
     this._tags = value;
   }
   public resetTags() {
@@ -306,7 +562,7 @@ export class TrafficManagerProfile extends cdktf.TerraformResource {
   }
 
   // traffic_routing_method - computed: false, optional: false, required: true
-  private _trafficRoutingMethod: string;
+  private _trafficRoutingMethod?: string; 
   public get trafficRoutingMethod() {
     return this.getStringAttribute('traffic_routing_method');
   }
@@ -319,11 +575,11 @@ export class TrafficManagerProfile extends cdktf.TerraformResource {
   }
 
   // traffic_view_enabled - computed: false, optional: true, required: false
-  private _trafficViewEnabled?: boolean | cdktf.IResolvable;
+  private _trafficViewEnabled?: boolean | cdktf.IResolvable | undefined; 
   public get trafficViewEnabled() {
-    return this.getBooleanAttribute('traffic_view_enabled');
+    return this.getBooleanAttribute('traffic_view_enabled') as any;
   }
-  public set trafficViewEnabled(value: boolean | cdktf.IResolvable ) {
+  public set trafficViewEnabled(value: boolean | cdktf.IResolvable | undefined) {
     this._trafficViewEnabled = value;
   }
   public resetTrafficViewEnabled() {
@@ -335,11 +591,12 @@ export class TrafficManagerProfile extends cdktf.TerraformResource {
   }
 
   // dns_config - computed: false, optional: false, required: true
-  private _dnsConfig: TrafficManagerProfileDnsConfig[];
+  private _dnsConfig?: TrafficManagerProfileDnsConfig; 
+  private __dnsConfigOutput = new TrafficManagerProfileDnsConfigOutputReference(this as any, "dns_config", true);
   public get dnsConfig() {
-    return this.interpolationForAttribute('dns_config') as any;
+    return this.__dnsConfigOutput;
   }
-  public set dnsConfig(value: TrafficManagerProfileDnsConfig[]) {
+  public putDnsConfig(value: TrafficManagerProfileDnsConfig) {
     this._dnsConfig = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -348,11 +605,12 @@ export class TrafficManagerProfile extends cdktf.TerraformResource {
   }
 
   // monitor_config - computed: false, optional: false, required: true
-  private _monitorConfig: TrafficManagerProfileMonitorConfig[];
+  private _monitorConfig?: TrafficManagerProfileMonitorConfig; 
+  private __monitorConfigOutput = new TrafficManagerProfileMonitorConfigOutputReference(this as any, "monitor_config", true);
   public get monitorConfig() {
-    return this.interpolationForAttribute('monitor_config') as any;
+    return this.__monitorConfigOutput;
   }
-  public set monitorConfig(value: TrafficManagerProfileMonitorConfig[]) {
+  public putMonitorConfig(value: TrafficManagerProfileMonitorConfig) {
     this._monitorConfig = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -361,11 +619,12 @@ export class TrafficManagerProfile extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: TrafficManagerProfileTimeouts;
+  private _timeouts?: TrafficManagerProfileTimeouts | undefined; 
+  private __timeoutsOutput = new TrafficManagerProfileTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: TrafficManagerProfileTimeouts ) {
+  public putTimeouts(value: TrafficManagerProfileTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {
@@ -389,8 +648,8 @@ export class TrafficManagerProfile extends cdktf.TerraformResource {
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
       traffic_routing_method: cdktf.stringToTerraform(this._trafficRoutingMethod),
       traffic_view_enabled: cdktf.booleanToTerraform(this._trafficViewEnabled),
-      dns_config: cdktf.listMapper(trafficManagerProfileDnsConfigToTerraform)(this._dnsConfig),
-      monitor_config: cdktf.listMapper(trafficManagerProfileMonitorConfigToTerraform)(this._monitorConfig),
+      dns_config: trafficManagerProfileDnsConfigToTerraform(this._dnsConfig),
+      monitor_config: trafficManagerProfileMonitorConfigToTerraform(this._monitorConfig),
       timeouts: trafficManagerProfileTimeoutsToTerraform(this._timeouts),
     };
   }

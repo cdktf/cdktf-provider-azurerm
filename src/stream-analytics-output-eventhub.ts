@@ -48,7 +48,7 @@ export interface StreamAnalyticsOutputEventhubConfig extends cdktf.TerraformMeta
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_eventhub.html#serialization StreamAnalyticsOutputEventhub#serialization}
   */
-  readonly serialization: StreamAnalyticsOutputEventhubSerialization[];
+  readonly serialization: StreamAnalyticsOutputEventhubSerialization;
   /**
   * timeouts block
   * 
@@ -75,8 +75,11 @@ export interface StreamAnalyticsOutputEventhubSerialization {
   readonly type: string;
 }
 
-function streamAnalyticsOutputEventhubSerializationToTerraform(struct?: StreamAnalyticsOutputEventhubSerialization): any {
+function streamAnalyticsOutputEventhubSerializationToTerraform(struct?: StreamAnalyticsOutputEventhubSerializationOutputReference | StreamAnalyticsOutputEventhubSerialization): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     encoding: cdktf.stringToTerraform(struct!.encoding),
     field_delimiter: cdktf.stringToTerraform(struct!.fieldDelimiter),
@@ -85,6 +88,77 @@ function streamAnalyticsOutputEventhubSerializationToTerraform(struct?: StreamAn
   }
 }
 
+export class StreamAnalyticsOutputEventhubSerializationOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // encoding - computed: false, optional: true, required: false
+  private _encoding?: string | undefined; 
+  public get encoding() {
+    return this.getStringAttribute('encoding');
+  }
+  public set encoding(value: string | undefined) {
+    this._encoding = value;
+  }
+  public resetEncoding() {
+    this._encoding = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get encodingInput() {
+    return this._encoding
+  }
+
+  // field_delimiter - computed: false, optional: true, required: false
+  private _fieldDelimiter?: string | undefined; 
+  public get fieldDelimiter() {
+    return this.getStringAttribute('field_delimiter');
+  }
+  public set fieldDelimiter(value: string | undefined) {
+    this._fieldDelimiter = value;
+  }
+  public resetFieldDelimiter() {
+    this._fieldDelimiter = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get fieldDelimiterInput() {
+    return this._fieldDelimiter
+  }
+
+  // format - computed: false, optional: true, required: false
+  private _format?: string | undefined; 
+  public get format() {
+    return this.getStringAttribute('format');
+  }
+  public set format(value: string | undefined) {
+    this._format = value;
+  }
+  public resetFormat() {
+    this._format = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get formatInput() {
+    return this._format
+  }
+
+  // type - computed: false, optional: false, required: true
+  private _type?: string; 
+  public get type() {
+    return this.getStringAttribute('type');
+  }
+  public set type(value: string) {
+    this._type = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get typeInput() {
+    return this._type
+  }
+}
 export interface StreamAnalyticsOutputEventhubTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_eventhub.html#create StreamAnalyticsOutputEventhub#create}
@@ -104,8 +178,11 @@ export interface StreamAnalyticsOutputEventhubTimeouts {
   readonly update?: string;
 }
 
-function streamAnalyticsOutputEventhubTimeoutsToTerraform(struct?: StreamAnalyticsOutputEventhubTimeouts): any {
+function streamAnalyticsOutputEventhubTimeoutsToTerraform(struct?: StreamAnalyticsOutputEventhubTimeoutsOutputReference | StreamAnalyticsOutputEventhubTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -114,6 +191,80 @@ function streamAnalyticsOutputEventhubTimeoutsToTerraform(struct?: StreamAnalyti
   }
 }
 
+export class StreamAnalyticsOutputEventhubTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_eventhub.html azurerm_stream_analytics_output_eventhub}
@@ -165,7 +316,7 @@ export class StreamAnalyticsOutputEventhub extends cdktf.TerraformResource {
   // ==========
 
   // eventhub_name - computed: false, optional: false, required: true
-  private _eventhubName: string;
+  private _eventhubName?: string; 
   public get eventhubName() {
     return this.getStringAttribute('eventhub_name');
   }
@@ -183,7 +334,7 @@ export class StreamAnalyticsOutputEventhub extends cdktf.TerraformResource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -196,11 +347,11 @@ export class StreamAnalyticsOutputEventhub extends cdktf.TerraformResource {
   }
 
   // partition_key - computed: false, optional: true, required: false
-  private _partitionKey?: string;
+  private _partitionKey?: string | undefined; 
   public get partitionKey() {
     return this.getStringAttribute('partition_key');
   }
-  public set partitionKey(value: string ) {
+  public set partitionKey(value: string | undefined) {
     this._partitionKey = value;
   }
   public resetPartitionKey() {
@@ -212,11 +363,11 @@ export class StreamAnalyticsOutputEventhub extends cdktf.TerraformResource {
   }
 
   // property_columns - computed: false, optional: true, required: false
-  private _propertyColumns?: string[];
+  private _propertyColumns?: string[] | undefined; 
   public get propertyColumns() {
     return this.getListAttribute('property_columns');
   }
-  public set propertyColumns(value: string[] ) {
+  public set propertyColumns(value: string[] | undefined) {
     this._propertyColumns = value;
   }
   public resetPropertyColumns() {
@@ -228,7 +379,7 @@ export class StreamAnalyticsOutputEventhub extends cdktf.TerraformResource {
   }
 
   // resource_group_name - computed: false, optional: false, required: true
-  private _resourceGroupName: string;
+  private _resourceGroupName?: string; 
   public get resourceGroupName() {
     return this.getStringAttribute('resource_group_name');
   }
@@ -241,7 +392,7 @@ export class StreamAnalyticsOutputEventhub extends cdktf.TerraformResource {
   }
 
   // servicebus_namespace - computed: false, optional: false, required: true
-  private _servicebusNamespace: string;
+  private _servicebusNamespace?: string; 
   public get servicebusNamespace() {
     return this.getStringAttribute('servicebus_namespace');
   }
@@ -254,7 +405,7 @@ export class StreamAnalyticsOutputEventhub extends cdktf.TerraformResource {
   }
 
   // shared_access_policy_key - computed: false, optional: false, required: true
-  private _sharedAccessPolicyKey: string;
+  private _sharedAccessPolicyKey?: string; 
   public get sharedAccessPolicyKey() {
     return this.getStringAttribute('shared_access_policy_key');
   }
@@ -267,7 +418,7 @@ export class StreamAnalyticsOutputEventhub extends cdktf.TerraformResource {
   }
 
   // shared_access_policy_name - computed: false, optional: false, required: true
-  private _sharedAccessPolicyName: string;
+  private _sharedAccessPolicyName?: string; 
   public get sharedAccessPolicyName() {
     return this.getStringAttribute('shared_access_policy_name');
   }
@@ -280,7 +431,7 @@ export class StreamAnalyticsOutputEventhub extends cdktf.TerraformResource {
   }
 
   // stream_analytics_job_name - computed: false, optional: false, required: true
-  private _streamAnalyticsJobName: string;
+  private _streamAnalyticsJobName?: string; 
   public get streamAnalyticsJobName() {
     return this.getStringAttribute('stream_analytics_job_name');
   }
@@ -293,11 +444,12 @@ export class StreamAnalyticsOutputEventhub extends cdktf.TerraformResource {
   }
 
   // serialization - computed: false, optional: false, required: true
-  private _serialization: StreamAnalyticsOutputEventhubSerialization[];
+  private _serialization?: StreamAnalyticsOutputEventhubSerialization; 
+  private __serializationOutput = new StreamAnalyticsOutputEventhubSerializationOutputReference(this as any, "serialization", true);
   public get serialization() {
-    return this.interpolationForAttribute('serialization') as any;
+    return this.__serializationOutput;
   }
-  public set serialization(value: StreamAnalyticsOutputEventhubSerialization[]) {
+  public putSerialization(value: StreamAnalyticsOutputEventhubSerialization) {
     this._serialization = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -306,11 +458,12 @@ export class StreamAnalyticsOutputEventhub extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: StreamAnalyticsOutputEventhubTimeouts;
+  private _timeouts?: StreamAnalyticsOutputEventhubTimeouts | undefined; 
+  private __timeoutsOutput = new StreamAnalyticsOutputEventhubTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: StreamAnalyticsOutputEventhubTimeouts ) {
+  public putTimeouts(value: StreamAnalyticsOutputEventhubTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {
@@ -336,7 +489,7 @@ export class StreamAnalyticsOutputEventhub extends cdktf.TerraformResource {
       shared_access_policy_key: cdktf.stringToTerraform(this._sharedAccessPolicyKey),
       shared_access_policy_name: cdktf.stringToTerraform(this._sharedAccessPolicyName),
       stream_analytics_job_name: cdktf.stringToTerraform(this._streamAnalyticsJobName),
-      serialization: cdktf.listMapper(streamAnalyticsOutputEventhubSerializationToTerraform)(this._serialization),
+      serialization: streamAnalyticsOutputEventhubSerializationToTerraform(this._serialization),
       timeouts: streamAnalyticsOutputEventhubTimeoutsToTerraform(this._timeouts),
     };
   }

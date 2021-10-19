@@ -40,7 +40,7 @@ export interface IotTimeSeriesInsightsGen2EnvironmentConfig extends cdktf.Terraf
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_time_series_insights_gen2_environment.html#storage IotTimeSeriesInsightsGen2Environment#storage}
   */
-  readonly storage: IotTimeSeriesInsightsGen2EnvironmentStorage[];
+  readonly storage: IotTimeSeriesInsightsGen2EnvironmentStorage;
   /**
   * timeouts block
   * 
@@ -59,14 +59,53 @@ export interface IotTimeSeriesInsightsGen2EnvironmentStorage {
   readonly name: string;
 }
 
-function iotTimeSeriesInsightsGen2EnvironmentStorageToTerraform(struct?: IotTimeSeriesInsightsGen2EnvironmentStorage): any {
+function iotTimeSeriesInsightsGen2EnvironmentStorageToTerraform(struct?: IotTimeSeriesInsightsGen2EnvironmentStorageOutputReference | IotTimeSeriesInsightsGen2EnvironmentStorage): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     key: cdktf.stringToTerraform(struct!.key),
     name: cdktf.stringToTerraform(struct!.name),
   }
 }
 
+export class IotTimeSeriesInsightsGen2EnvironmentStorageOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // key - computed: false, optional: false, required: true
+  private _key?: string; 
+  public get key() {
+    return this.getStringAttribute('key');
+  }
+  public set key(value: string) {
+    this._key = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keyInput() {
+    return this._key
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
+  }
+}
 export interface IotTimeSeriesInsightsGen2EnvironmentTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_time_series_insights_gen2_environment.html#create IotTimeSeriesInsightsGen2Environment#create}
@@ -86,8 +125,11 @@ export interface IotTimeSeriesInsightsGen2EnvironmentTimeouts {
   readonly update?: string;
 }
 
-function iotTimeSeriesInsightsGen2EnvironmentTimeoutsToTerraform(struct?: IotTimeSeriesInsightsGen2EnvironmentTimeouts): any {
+function iotTimeSeriesInsightsGen2EnvironmentTimeoutsToTerraform(struct?: IotTimeSeriesInsightsGen2EnvironmentTimeoutsOutputReference | IotTimeSeriesInsightsGen2EnvironmentTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -96,6 +138,80 @@ function iotTimeSeriesInsightsGen2EnvironmentTimeoutsToTerraform(struct?: IotTim
   }
 }
 
+export class IotTimeSeriesInsightsGen2EnvironmentTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/iot_time_series_insights_gen2_environment.html azurerm_iot_time_series_insights_gen2_environment}
@@ -155,7 +271,7 @@ export class IotTimeSeriesInsightsGen2Environment extends cdktf.TerraformResourc
   }
 
   // id_properties - computed: false, optional: false, required: true
-  private _idProperties: string[];
+  private _idProperties?: string[]; 
   public get idProperties() {
     return this.getListAttribute('id_properties');
   }
@@ -168,7 +284,7 @@ export class IotTimeSeriesInsightsGen2Environment extends cdktf.TerraformResourc
   }
 
   // location - computed: false, optional: false, required: true
-  private _location: string;
+  private _location?: string; 
   public get location() {
     return this.getStringAttribute('location');
   }
@@ -181,7 +297,7 @@ export class IotTimeSeriesInsightsGen2Environment extends cdktf.TerraformResourc
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -194,7 +310,7 @@ export class IotTimeSeriesInsightsGen2Environment extends cdktf.TerraformResourc
   }
 
   // resource_group_name - computed: false, optional: false, required: true
-  private _resourceGroupName: string;
+  private _resourceGroupName?: string; 
   public get resourceGroupName() {
     return this.getStringAttribute('resource_group_name');
   }
@@ -207,7 +323,7 @@ export class IotTimeSeriesInsightsGen2Environment extends cdktf.TerraformResourc
   }
 
   // sku_name - computed: false, optional: false, required: true
-  private _skuName: string;
+  private _skuName?: string; 
   public get skuName() {
     return this.getStringAttribute('sku_name');
   }
@@ -220,11 +336,12 @@ export class IotTimeSeriesInsightsGen2Environment extends cdktf.TerraformResourc
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable;
+  private _tags?: { [key: string]: string } | cdktf.IResolvable | undefined; 
   public get tags() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
     this._tags = value;
   }
   public resetTags() {
@@ -236,11 +353,11 @@ export class IotTimeSeriesInsightsGen2Environment extends cdktf.TerraformResourc
   }
 
   // warm_store_data_retention_time - computed: false, optional: true, required: false
-  private _warmStoreDataRetentionTime?: string;
+  private _warmStoreDataRetentionTime?: string | undefined; 
   public get warmStoreDataRetentionTime() {
     return this.getStringAttribute('warm_store_data_retention_time');
   }
-  public set warmStoreDataRetentionTime(value: string ) {
+  public set warmStoreDataRetentionTime(value: string | undefined) {
     this._warmStoreDataRetentionTime = value;
   }
   public resetWarmStoreDataRetentionTime() {
@@ -252,11 +369,12 @@ export class IotTimeSeriesInsightsGen2Environment extends cdktf.TerraformResourc
   }
 
   // storage - computed: false, optional: false, required: true
-  private _storage: IotTimeSeriesInsightsGen2EnvironmentStorage[];
+  private _storage?: IotTimeSeriesInsightsGen2EnvironmentStorage; 
+  private __storageOutput = new IotTimeSeriesInsightsGen2EnvironmentStorageOutputReference(this as any, "storage", true);
   public get storage() {
-    return this.interpolationForAttribute('storage') as any;
+    return this.__storageOutput;
   }
-  public set storage(value: IotTimeSeriesInsightsGen2EnvironmentStorage[]) {
+  public putStorage(value: IotTimeSeriesInsightsGen2EnvironmentStorage) {
     this._storage = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -265,11 +383,12 @@ export class IotTimeSeriesInsightsGen2Environment extends cdktf.TerraformResourc
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: IotTimeSeriesInsightsGen2EnvironmentTimeouts;
+  private _timeouts?: IotTimeSeriesInsightsGen2EnvironmentTimeouts | undefined; 
+  private __timeoutsOutput = new IotTimeSeriesInsightsGen2EnvironmentTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: IotTimeSeriesInsightsGen2EnvironmentTimeouts ) {
+  public putTimeouts(value: IotTimeSeriesInsightsGen2EnvironmentTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {
@@ -293,7 +412,7 @@ export class IotTimeSeriesInsightsGen2Environment extends cdktf.TerraformResourc
       sku_name: cdktf.stringToTerraform(this._skuName),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
       warm_store_data_retention_time: cdktf.stringToTerraform(this._warmStoreDataRetentionTime),
-      storage: cdktf.listMapper(iotTimeSeriesInsightsGen2EnvironmentStorageToTerraform)(this._storage),
+      storage: iotTimeSeriesInsightsGen2EnvironmentStorageToTerraform(this._storage),
       timeouts: iotTimeSeriesInsightsGen2EnvironmentTimeoutsToTerraform(this._timeouts),
     };
   }

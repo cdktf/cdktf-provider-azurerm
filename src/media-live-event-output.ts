@@ -65,8 +65,11 @@ export interface MediaLiveEventOutputTimeouts {
   readonly update?: string;
 }
 
-function mediaLiveEventOutputTimeoutsToTerraform(struct?: MediaLiveEventOutputTimeouts): any {
+function mediaLiveEventOutputTimeoutsToTerraform(struct?: MediaLiveEventOutputTimeoutsOutputReference | MediaLiveEventOutputTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -75,6 +78,80 @@ function mediaLiveEventOutputTimeoutsToTerraform(struct?: MediaLiveEventOutputTi
   }
 }
 
+export class MediaLiveEventOutputTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/media_live_event_output.html azurerm_media_live_event_output}
@@ -124,7 +201,7 @@ export class MediaLiveEventOutput extends cdktf.TerraformResource {
   // ==========
 
   // archive_window_duration - computed: false, optional: false, required: true
-  private _archiveWindowDuration: string;
+  private _archiveWindowDuration?: string; 
   public get archiveWindowDuration() {
     return this.getStringAttribute('archive_window_duration');
   }
@@ -137,7 +214,7 @@ export class MediaLiveEventOutput extends cdktf.TerraformResource {
   }
 
   // asset_name - computed: false, optional: false, required: true
-  private _assetName: string;
+  private _assetName?: string; 
   public get assetName() {
     return this.getStringAttribute('asset_name');
   }
@@ -150,11 +227,11 @@ export class MediaLiveEventOutput extends cdktf.TerraformResource {
   }
 
   // description - computed: false, optional: true, required: false
-  private _description?: string;
+  private _description?: string | undefined; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string ) {
+  public set description(value: string | undefined) {
     this._description = value;
   }
   public resetDescription() {
@@ -166,11 +243,11 @@ export class MediaLiveEventOutput extends cdktf.TerraformResource {
   }
 
   // hls_fragments_per_ts_segment - computed: false, optional: true, required: false
-  private _hlsFragmentsPerTsSegment?: number;
+  private _hlsFragmentsPerTsSegment?: number | undefined; 
   public get hlsFragmentsPerTsSegment() {
     return this.getNumberAttribute('hls_fragments_per_ts_segment');
   }
-  public set hlsFragmentsPerTsSegment(value: number ) {
+  public set hlsFragmentsPerTsSegment(value: number | undefined) {
     this._hlsFragmentsPerTsSegment = value;
   }
   public resetHlsFragmentsPerTsSegment() {
@@ -187,7 +264,7 @@ export class MediaLiveEventOutput extends cdktf.TerraformResource {
   }
 
   // live_event_id - computed: false, optional: false, required: true
-  private _liveEventId: string;
+  private _liveEventId?: string; 
   public get liveEventId() {
     return this.getStringAttribute('live_event_id');
   }
@@ -200,11 +277,11 @@ export class MediaLiveEventOutput extends cdktf.TerraformResource {
   }
 
   // manifest_name - computed: true, optional: true, required: false
-  private _manifestName?: string;
+  private _manifestName?: string | undefined; 
   public get manifestName() {
     return this.getStringAttribute('manifest_name');
   }
-  public set manifestName(value: string) {
+  public set manifestName(value: string | undefined) {
     this._manifestName = value;
   }
   public resetManifestName() {
@@ -216,7 +293,7 @@ export class MediaLiveEventOutput extends cdktf.TerraformResource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -229,11 +306,11 @@ export class MediaLiveEventOutput extends cdktf.TerraformResource {
   }
 
   // output_snap_time_in_seconds - computed: false, optional: true, required: false
-  private _outputSnapTimeInSeconds?: number;
+  private _outputSnapTimeInSeconds?: number | undefined; 
   public get outputSnapTimeInSeconds() {
     return this.getNumberAttribute('output_snap_time_in_seconds');
   }
-  public set outputSnapTimeInSeconds(value: number ) {
+  public set outputSnapTimeInSeconds(value: number | undefined) {
     this._outputSnapTimeInSeconds = value;
   }
   public resetOutputSnapTimeInSeconds() {
@@ -245,11 +322,12 @@ export class MediaLiveEventOutput extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: MediaLiveEventOutputTimeouts;
+  private _timeouts?: MediaLiveEventOutputTimeouts | undefined; 
+  private __timeoutsOutput = new MediaLiveEventOutputTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: MediaLiveEventOutputTimeouts ) {
+  public putTimeouts(value: MediaLiveEventOutputTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {

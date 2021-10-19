@@ -20,13 +20,13 @@ export interface DataboxEdgeOrderConfig extends cdktf.TerraformMetaArguments {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/databox_edge_order.html#contact DataboxEdgeOrder#contact}
   */
-  readonly contact: DataboxEdgeOrderContact[];
+  readonly contact: DataboxEdgeOrderContact;
   /**
   * shipment_address block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/databox_edge_order.html#shipment_address DataboxEdgeOrder#shipment_address}
   */
-  readonly shipmentAddress: DataboxEdgeOrderShipmentAddress[];
+  readonly shipmentAddress: DataboxEdgeOrderShipmentAddress;
   /**
   * timeouts block
   * 
@@ -60,6 +60,7 @@ export class DataboxEdgeOrderShipmentHistory extends cdktf.ComplexComputedList {
 
   // additional_details - computed: true, optional: false, required: false
   public get additionalDetails() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('additional_details') as any;
   }
 
@@ -99,6 +100,7 @@ export class DataboxEdgeOrderStatus extends cdktf.ComplexComputedList {
 
   // additional_details - computed: true, optional: false, required: false
   public get additionalDetails() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('additional_details') as any;
   }
 
@@ -136,8 +138,11 @@ export interface DataboxEdgeOrderContact {
   readonly phoneNumber: string;
 }
 
-function databoxEdgeOrderContactToTerraform(struct?: DataboxEdgeOrderContact): any {
+function databoxEdgeOrderContactToTerraform(struct?: DataboxEdgeOrderContactOutputReference | DataboxEdgeOrderContact): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     company_name: cdktf.stringToTerraform(struct!.companyName),
     emails: cdktf.listMapper(cdktf.stringToTerraform)(struct!.emails),
@@ -146,6 +151,68 @@ function databoxEdgeOrderContactToTerraform(struct?: DataboxEdgeOrderContact): a
   }
 }
 
+export class DataboxEdgeOrderContactOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // company_name - computed: false, optional: false, required: true
+  private _companyName?: string; 
+  public get companyName() {
+    return this.getStringAttribute('company_name');
+  }
+  public set companyName(value: string) {
+    this._companyName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get companyNameInput() {
+    return this._companyName
+  }
+
+  // emails - computed: false, optional: false, required: true
+  private _emails?: string[]; 
+  public get emails() {
+    return this.getListAttribute('emails');
+  }
+  public set emails(value: string[]) {
+    this._emails = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get emailsInput() {
+    return this._emails
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
+  }
+
+  // phone_number - computed: false, optional: false, required: true
+  private _phoneNumber?: string; 
+  public get phoneNumber() {
+    return this.getStringAttribute('phone_number');
+  }
+  public set phoneNumber(value: string) {
+    this._phoneNumber = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get phoneNumberInput() {
+    return this._phoneNumber
+  }
+}
 export interface DataboxEdgeOrderShipmentAddress {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/databox_edge_order.html#address DataboxEdgeOrder#address}
@@ -169,8 +236,11 @@ export interface DataboxEdgeOrderShipmentAddress {
   readonly state: string;
 }
 
-function databoxEdgeOrderShipmentAddressToTerraform(struct?: DataboxEdgeOrderShipmentAddress): any {
+function databoxEdgeOrderShipmentAddressToTerraform(struct?: DataboxEdgeOrderShipmentAddressOutputReference | DataboxEdgeOrderShipmentAddress): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     address: cdktf.listMapper(cdktf.stringToTerraform)(struct!.address),
     city: cdktf.stringToTerraform(struct!.city),
@@ -180,6 +250,81 @@ function databoxEdgeOrderShipmentAddressToTerraform(struct?: DataboxEdgeOrderShi
   }
 }
 
+export class DataboxEdgeOrderShipmentAddressOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // address - computed: false, optional: false, required: true
+  private _address?: string[]; 
+  public get address() {
+    return this.getListAttribute('address');
+  }
+  public set address(value: string[]) {
+    this._address = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get addressInput() {
+    return this._address
+  }
+
+  // city - computed: false, optional: false, required: true
+  private _city?: string; 
+  public get city() {
+    return this.getStringAttribute('city');
+  }
+  public set city(value: string) {
+    this._city = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get cityInput() {
+    return this._city
+  }
+
+  // country - computed: false, optional: false, required: true
+  private _country?: string; 
+  public get country() {
+    return this.getStringAttribute('country');
+  }
+  public set country(value: string) {
+    this._country = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get countryInput() {
+    return this._country
+  }
+
+  // postal_code - computed: false, optional: false, required: true
+  private _postalCode?: string; 
+  public get postalCode() {
+    return this.getStringAttribute('postal_code');
+  }
+  public set postalCode(value: string) {
+    this._postalCode = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get postalCodeInput() {
+    return this._postalCode
+  }
+
+  // state - computed: false, optional: false, required: true
+  private _state?: string; 
+  public get state() {
+    return this.getStringAttribute('state');
+  }
+  public set state(value: string) {
+    this._state = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get stateInput() {
+    return this._state
+  }
+}
 export interface DataboxEdgeOrderTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/databox_edge_order.html#create DataboxEdgeOrder#create}
@@ -199,8 +344,11 @@ export interface DataboxEdgeOrderTimeouts {
   readonly update?: string;
 }
 
-function databoxEdgeOrderTimeoutsToTerraform(struct?: DataboxEdgeOrderTimeouts): any {
+function databoxEdgeOrderTimeoutsToTerraform(struct?: DataboxEdgeOrderTimeoutsOutputReference | DataboxEdgeOrderTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -209,6 +357,80 @@ function databoxEdgeOrderTimeoutsToTerraform(struct?: DataboxEdgeOrderTimeouts):
   }
 }
 
+export class DataboxEdgeOrderTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/databox_edge_order.html azurerm_databox_edge_order}
@@ -254,7 +476,7 @@ export class DataboxEdgeOrder extends cdktf.TerraformResource {
   // ==========
 
   // device_name - computed: false, optional: false, required: true
-  private _deviceName: string;
+  private _deviceName?: string; 
   public get deviceName() {
     return this.getStringAttribute('device_name');
   }
@@ -277,7 +499,7 @@ export class DataboxEdgeOrder extends cdktf.TerraformResource {
   }
 
   // resource_group_name - computed: false, optional: false, required: true
-  private _resourceGroupName: string;
+  private _resourceGroupName?: string; 
   public get resourceGroupName() {
     return this.getStringAttribute('resource_group_name');
   }
@@ -315,11 +537,12 @@ export class DataboxEdgeOrder extends cdktf.TerraformResource {
   }
 
   // contact - computed: false, optional: false, required: true
-  private _contact: DataboxEdgeOrderContact[];
+  private _contact?: DataboxEdgeOrderContact; 
+  private __contactOutput = new DataboxEdgeOrderContactOutputReference(this as any, "contact", true);
   public get contact() {
-    return this.interpolationForAttribute('contact') as any;
+    return this.__contactOutput;
   }
-  public set contact(value: DataboxEdgeOrderContact[]) {
+  public putContact(value: DataboxEdgeOrderContact) {
     this._contact = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -328,11 +551,12 @@ export class DataboxEdgeOrder extends cdktf.TerraformResource {
   }
 
   // shipment_address - computed: false, optional: false, required: true
-  private _shipmentAddress: DataboxEdgeOrderShipmentAddress[];
+  private _shipmentAddress?: DataboxEdgeOrderShipmentAddress; 
+  private __shipmentAddressOutput = new DataboxEdgeOrderShipmentAddressOutputReference(this as any, "shipment_address", true);
   public get shipmentAddress() {
-    return this.interpolationForAttribute('shipment_address') as any;
+    return this.__shipmentAddressOutput;
   }
-  public set shipmentAddress(value: DataboxEdgeOrderShipmentAddress[]) {
+  public putShipmentAddress(value: DataboxEdgeOrderShipmentAddress) {
     this._shipmentAddress = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -341,11 +565,12 @@ export class DataboxEdgeOrder extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: DataboxEdgeOrderTimeouts;
+  private _timeouts?: DataboxEdgeOrderTimeouts | undefined; 
+  private __timeoutsOutput = new DataboxEdgeOrderTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: DataboxEdgeOrderTimeouts ) {
+  public putTimeouts(value: DataboxEdgeOrderTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {
@@ -364,8 +589,8 @@ export class DataboxEdgeOrder extends cdktf.TerraformResource {
     return {
       device_name: cdktf.stringToTerraform(this._deviceName),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
-      contact: cdktf.listMapper(databoxEdgeOrderContactToTerraform)(this._contact),
-      shipment_address: cdktf.listMapper(databoxEdgeOrderShipmentAddressToTerraform)(this._shipmentAddress),
+      contact: databoxEdgeOrderContactToTerraform(this._contact),
+      shipment_address: databoxEdgeOrderShipmentAddressToTerraform(this._shipmentAddress),
       timeouts: databoxEdgeOrderTimeoutsToTerraform(this._timeouts),
     };
   }

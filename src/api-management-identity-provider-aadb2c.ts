@@ -77,8 +77,11 @@ export interface ApiManagementIdentityProviderAadb2CTimeouts {
   readonly update?: string;
 }
 
-function apiManagementIdentityProviderAadb2CTimeoutsToTerraform(struct?: ApiManagementIdentityProviderAadb2CTimeouts): any {
+function apiManagementIdentityProviderAadb2CTimeoutsToTerraform(struct?: ApiManagementIdentityProviderAadb2CTimeoutsOutputReference | ApiManagementIdentityProviderAadb2CTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -87,6 +90,80 @@ function apiManagementIdentityProviderAadb2CTimeoutsToTerraform(struct?: ApiMana
   }
 }
 
+export class ApiManagementIdentityProviderAadb2CTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_identity_provider_aadb2c.html azurerm_api_management_identity_provider_aadb2c}
@@ -139,7 +216,7 @@ export class ApiManagementIdentityProviderAadb2C extends cdktf.TerraformResource
   // ==========
 
   // allowed_tenant - computed: false, optional: false, required: true
-  private _allowedTenant: string;
+  private _allowedTenant?: string; 
   public get allowedTenant() {
     return this.getStringAttribute('allowed_tenant');
   }
@@ -152,7 +229,7 @@ export class ApiManagementIdentityProviderAadb2C extends cdktf.TerraformResource
   }
 
   // api_management_name - computed: false, optional: false, required: true
-  private _apiManagementName: string;
+  private _apiManagementName?: string; 
   public get apiManagementName() {
     return this.getStringAttribute('api_management_name');
   }
@@ -165,7 +242,7 @@ export class ApiManagementIdentityProviderAadb2C extends cdktf.TerraformResource
   }
 
   // authority - computed: false, optional: false, required: true
-  private _authority: string;
+  private _authority?: string; 
   public get authority() {
     return this.getStringAttribute('authority');
   }
@@ -178,7 +255,7 @@ export class ApiManagementIdentityProviderAadb2C extends cdktf.TerraformResource
   }
 
   // client_id - computed: false, optional: false, required: true
-  private _clientId: string;
+  private _clientId?: string; 
   public get clientId() {
     return this.getStringAttribute('client_id');
   }
@@ -191,7 +268,7 @@ export class ApiManagementIdentityProviderAadb2C extends cdktf.TerraformResource
   }
 
   // client_secret - computed: false, optional: false, required: true
-  private _clientSecret: string;
+  private _clientSecret?: string; 
   public get clientSecret() {
     return this.getStringAttribute('client_secret');
   }
@@ -209,11 +286,11 @@ export class ApiManagementIdentityProviderAadb2C extends cdktf.TerraformResource
   }
 
   // password_reset_policy - computed: false, optional: true, required: false
-  private _passwordResetPolicy?: string;
+  private _passwordResetPolicy?: string | undefined; 
   public get passwordResetPolicy() {
     return this.getStringAttribute('password_reset_policy');
   }
-  public set passwordResetPolicy(value: string ) {
+  public set passwordResetPolicy(value: string | undefined) {
     this._passwordResetPolicy = value;
   }
   public resetPasswordResetPolicy() {
@@ -225,11 +302,11 @@ export class ApiManagementIdentityProviderAadb2C extends cdktf.TerraformResource
   }
 
   // profile_editing_policy - computed: false, optional: true, required: false
-  private _profileEditingPolicy?: string;
+  private _profileEditingPolicy?: string | undefined; 
   public get profileEditingPolicy() {
     return this.getStringAttribute('profile_editing_policy');
   }
-  public set profileEditingPolicy(value: string ) {
+  public set profileEditingPolicy(value: string | undefined) {
     this._profileEditingPolicy = value;
   }
   public resetProfileEditingPolicy() {
@@ -241,7 +318,7 @@ export class ApiManagementIdentityProviderAadb2C extends cdktf.TerraformResource
   }
 
   // resource_group_name - computed: false, optional: false, required: true
-  private _resourceGroupName: string;
+  private _resourceGroupName?: string; 
   public get resourceGroupName() {
     return this.getStringAttribute('resource_group_name');
   }
@@ -254,7 +331,7 @@ export class ApiManagementIdentityProviderAadb2C extends cdktf.TerraformResource
   }
 
   // signin_policy - computed: false, optional: false, required: true
-  private _signinPolicy: string;
+  private _signinPolicy?: string; 
   public get signinPolicy() {
     return this.getStringAttribute('signin_policy');
   }
@@ -267,7 +344,7 @@ export class ApiManagementIdentityProviderAadb2C extends cdktf.TerraformResource
   }
 
   // signin_tenant - computed: false, optional: false, required: true
-  private _signinTenant: string;
+  private _signinTenant?: string; 
   public get signinTenant() {
     return this.getStringAttribute('signin_tenant');
   }
@@ -280,7 +357,7 @@ export class ApiManagementIdentityProviderAadb2C extends cdktf.TerraformResource
   }
 
   // signup_policy - computed: false, optional: false, required: true
-  private _signupPolicy: string;
+  private _signupPolicy?: string; 
   public get signupPolicy() {
     return this.getStringAttribute('signup_policy');
   }
@@ -293,11 +370,12 @@ export class ApiManagementIdentityProviderAadb2C extends cdktf.TerraformResource
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: ApiManagementIdentityProviderAadb2CTimeouts;
+  private _timeouts?: ApiManagementIdentityProviderAadb2CTimeouts | undefined; 
+  private __timeoutsOutput = new ApiManagementIdentityProviderAadb2CTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: ApiManagementIdentityProviderAadb2CTimeouts ) {
+  public putTimeouts(value: ApiManagementIdentityProviderAadb2CTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {

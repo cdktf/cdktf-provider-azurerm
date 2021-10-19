@@ -60,7 +60,7 @@ export interface DataFactoryTriggerScheduleConfig extends cdktf.TerraformMetaArg
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_trigger_schedule.html#schedule DataFactoryTriggerSchedule#schedule}
   */
-  readonly schedule?: DataFactoryTriggerScheduleSchedule[];
+  readonly schedule?: DataFactoryTriggerScheduleSchedule;
   /**
   * timeouts block
   * 
@@ -81,6 +81,9 @@ export interface DataFactoryTriggerScheduleScheduleMonthly {
 
 function dataFactoryTriggerScheduleScheduleMonthlyToTerraform(struct?: DataFactoryTriggerScheduleScheduleMonthly): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     week: cdktf.numberToTerraform(struct!.week),
     weekday: cdktf.stringToTerraform(struct!.weekday),
@@ -112,8 +115,11 @@ export interface DataFactoryTriggerScheduleSchedule {
   readonly monthly?: DataFactoryTriggerScheduleScheduleMonthly[];
 }
 
-function dataFactoryTriggerScheduleScheduleToTerraform(struct?: DataFactoryTriggerScheduleSchedule): any {
+function dataFactoryTriggerScheduleScheduleToTerraform(struct?: DataFactoryTriggerScheduleScheduleOutputReference | DataFactoryTriggerScheduleSchedule): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     days_of_month: cdktf.listMapper(cdktf.numberToTerraform)(struct!.daysOfMonth),
     days_of_week: cdktf.listMapper(cdktf.stringToTerraform)(struct!.daysOfWeek),
@@ -123,6 +129,100 @@ function dataFactoryTriggerScheduleScheduleToTerraform(struct?: DataFactoryTrigg
   }
 }
 
+export class DataFactoryTriggerScheduleScheduleOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // days_of_month - computed: false, optional: true, required: false
+  private _daysOfMonth?: number[] | undefined; 
+  public get daysOfMonth() {
+    // Getting the computed value is not yet implemented
+    return this.interpolationForAttribute('days_of_month') as any;
+  }
+  public set daysOfMonth(value: number[] | undefined) {
+    this._daysOfMonth = value;
+  }
+  public resetDaysOfMonth() {
+    this._daysOfMonth = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get daysOfMonthInput() {
+    return this._daysOfMonth
+  }
+
+  // days_of_week - computed: false, optional: true, required: false
+  private _daysOfWeek?: string[] | undefined; 
+  public get daysOfWeek() {
+    return this.getListAttribute('days_of_week');
+  }
+  public set daysOfWeek(value: string[] | undefined) {
+    this._daysOfWeek = value;
+  }
+  public resetDaysOfWeek() {
+    this._daysOfWeek = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get daysOfWeekInput() {
+    return this._daysOfWeek
+  }
+
+  // hours - computed: false, optional: true, required: false
+  private _hours?: number[] | undefined; 
+  public get hours() {
+    // Getting the computed value is not yet implemented
+    return this.interpolationForAttribute('hours') as any;
+  }
+  public set hours(value: number[] | undefined) {
+    this._hours = value;
+  }
+  public resetHours() {
+    this._hours = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get hoursInput() {
+    return this._hours
+  }
+
+  // minutes - computed: false, optional: true, required: false
+  private _minutes?: number[] | undefined; 
+  public get minutes() {
+    // Getting the computed value is not yet implemented
+    return this.interpolationForAttribute('minutes') as any;
+  }
+  public set minutes(value: number[] | undefined) {
+    this._minutes = value;
+  }
+  public resetMinutes() {
+    this._minutes = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get minutesInput() {
+    return this._minutes
+  }
+
+  // monthly - computed: false, optional: true, required: false
+  private _monthly?: DataFactoryTriggerScheduleScheduleMonthly[] | undefined; 
+  public get monthly() {
+    // Getting the computed value is not yet implemented
+    return this.interpolationForAttribute('monthly') as any;
+  }
+  public set monthly(value: DataFactoryTriggerScheduleScheduleMonthly[] | undefined) {
+    this._monthly = value;
+  }
+  public resetMonthly() {
+    this._monthly = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get monthlyInput() {
+    return this._monthly
+  }
+}
 export interface DataFactoryTriggerScheduleTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_trigger_schedule.html#create DataFactoryTriggerSchedule#create}
@@ -142,8 +242,11 @@ export interface DataFactoryTriggerScheduleTimeouts {
   readonly update?: string;
 }
 
-function dataFactoryTriggerScheduleTimeoutsToTerraform(struct?: DataFactoryTriggerScheduleTimeouts): any {
+function dataFactoryTriggerScheduleTimeoutsToTerraform(struct?: DataFactoryTriggerScheduleTimeoutsOutputReference | DataFactoryTriggerScheduleTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -152,6 +255,80 @@ function dataFactoryTriggerScheduleTimeoutsToTerraform(struct?: DataFactoryTrigg
   }
 }
 
+export class DataFactoryTriggerScheduleTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_trigger_schedule.html azurerm_data_factory_trigger_schedule}
@@ -206,11 +383,11 @@ export class DataFactoryTriggerSchedule extends cdktf.TerraformResource {
   // ==========
 
   // activated - computed: true, optional: true, required: false
-  private _activated?: boolean | cdktf.IResolvable;
+  private _activated?: boolean | cdktf.IResolvable | undefined; 
   public get activated() {
-    return this.getBooleanAttribute('activated');
+    return this.getBooleanAttribute('activated') as any;
   }
-  public set activated(value: boolean | cdktf.IResolvable) {
+  public set activated(value: boolean | cdktf.IResolvable | undefined) {
     this._activated = value;
   }
   public resetActivated() {
@@ -222,11 +399,11 @@ export class DataFactoryTriggerSchedule extends cdktf.TerraformResource {
   }
 
   // annotations - computed: false, optional: true, required: false
-  private _annotations?: string[];
+  private _annotations?: string[] | undefined; 
   public get annotations() {
     return this.getListAttribute('annotations');
   }
-  public set annotations(value: string[] ) {
+  public set annotations(value: string[] | undefined) {
     this._annotations = value;
   }
   public resetAnnotations() {
@@ -238,7 +415,7 @@ export class DataFactoryTriggerSchedule extends cdktf.TerraformResource {
   }
 
   // data_factory_name - computed: false, optional: false, required: true
-  private _dataFactoryName: string;
+  private _dataFactoryName?: string; 
   public get dataFactoryName() {
     return this.getStringAttribute('data_factory_name');
   }
@@ -251,11 +428,11 @@ export class DataFactoryTriggerSchedule extends cdktf.TerraformResource {
   }
 
   // description - computed: false, optional: true, required: false
-  private _description?: string;
+  private _description?: string | undefined; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string ) {
+  public set description(value: string | undefined) {
     this._description = value;
   }
   public resetDescription() {
@@ -267,11 +444,11 @@ export class DataFactoryTriggerSchedule extends cdktf.TerraformResource {
   }
 
   // end_time - computed: false, optional: true, required: false
-  private _endTime?: string;
+  private _endTime?: string | undefined; 
   public get endTime() {
     return this.getStringAttribute('end_time');
   }
-  public set endTime(value: string ) {
+  public set endTime(value: string | undefined) {
     this._endTime = value;
   }
   public resetEndTime() {
@@ -283,11 +460,11 @@ export class DataFactoryTriggerSchedule extends cdktf.TerraformResource {
   }
 
   // frequency - computed: false, optional: true, required: false
-  private _frequency?: string;
+  private _frequency?: string | undefined; 
   public get frequency() {
     return this.getStringAttribute('frequency');
   }
-  public set frequency(value: string ) {
+  public set frequency(value: string | undefined) {
     this._frequency = value;
   }
   public resetFrequency() {
@@ -304,11 +481,11 @@ export class DataFactoryTriggerSchedule extends cdktf.TerraformResource {
   }
 
   // interval - computed: false, optional: true, required: false
-  private _interval?: number;
+  private _interval?: number | undefined; 
   public get interval() {
     return this.getNumberAttribute('interval');
   }
-  public set interval(value: number ) {
+  public set interval(value: number | undefined) {
     this._interval = value;
   }
   public resetInterval() {
@@ -320,7 +497,7 @@ export class DataFactoryTriggerSchedule extends cdktf.TerraformResource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -333,7 +510,7 @@ export class DataFactoryTriggerSchedule extends cdktf.TerraformResource {
   }
 
   // pipeline_name - computed: false, optional: false, required: true
-  private _pipelineName: string;
+  private _pipelineName?: string; 
   public get pipelineName() {
     return this.getStringAttribute('pipeline_name');
   }
@@ -346,11 +523,12 @@ export class DataFactoryTriggerSchedule extends cdktf.TerraformResource {
   }
 
   // pipeline_parameters - computed: false, optional: true, required: false
-  private _pipelineParameters?: { [key: string]: string } | cdktf.IResolvable;
+  private _pipelineParameters?: { [key: string]: string } | cdktf.IResolvable | undefined; 
   public get pipelineParameters() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('pipeline_parameters') as any;
   }
-  public set pipelineParameters(value: { [key: string]: string } | cdktf.IResolvable ) {
+  public set pipelineParameters(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
     this._pipelineParameters = value;
   }
   public resetPipelineParameters() {
@@ -362,7 +540,7 @@ export class DataFactoryTriggerSchedule extends cdktf.TerraformResource {
   }
 
   // resource_group_name - computed: false, optional: false, required: true
-  private _resourceGroupName: string;
+  private _resourceGroupName?: string; 
   public get resourceGroupName() {
     return this.getStringAttribute('resource_group_name');
   }
@@ -375,11 +553,11 @@ export class DataFactoryTriggerSchedule extends cdktf.TerraformResource {
   }
 
   // start_time - computed: true, optional: true, required: false
-  private _startTime?: string;
+  private _startTime?: string | undefined; 
   public get startTime() {
     return this.getStringAttribute('start_time');
   }
-  public set startTime(value: string) {
+  public set startTime(value: string | undefined) {
     this._startTime = value;
   }
   public resetStartTime() {
@@ -391,11 +569,12 @@ export class DataFactoryTriggerSchedule extends cdktf.TerraformResource {
   }
 
   // schedule - computed: false, optional: true, required: false
-  private _schedule?: DataFactoryTriggerScheduleSchedule[];
+  private _schedule?: DataFactoryTriggerScheduleSchedule | undefined; 
+  private __scheduleOutput = new DataFactoryTriggerScheduleScheduleOutputReference(this as any, "schedule", true);
   public get schedule() {
-    return this.interpolationForAttribute('schedule') as any;
+    return this.__scheduleOutput;
   }
-  public set schedule(value: DataFactoryTriggerScheduleSchedule[] ) {
+  public putSchedule(value: DataFactoryTriggerScheduleSchedule | undefined) {
     this._schedule = value;
   }
   public resetSchedule() {
@@ -407,11 +586,12 @@ export class DataFactoryTriggerSchedule extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: DataFactoryTriggerScheduleTimeouts;
+  private _timeouts?: DataFactoryTriggerScheduleTimeouts | undefined; 
+  private __timeoutsOutput = new DataFactoryTriggerScheduleTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: DataFactoryTriggerScheduleTimeouts ) {
+  public putTimeouts(value: DataFactoryTriggerScheduleTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {
@@ -440,7 +620,7 @@ export class DataFactoryTriggerSchedule extends cdktf.TerraformResource {
       pipeline_parameters: cdktf.hashMapper(cdktf.anyToTerraform)(this._pipelineParameters),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       start_time: cdktf.stringToTerraform(this._startTime),
-      schedule: cdktf.listMapper(dataFactoryTriggerScheduleScheduleToTerraform)(this._schedule),
+      schedule: dataFactoryTriggerScheduleScheduleToTerraform(this._schedule),
       timeouts: dataFactoryTriggerScheduleTimeoutsToTerraform(this._timeouts),
     };
   }

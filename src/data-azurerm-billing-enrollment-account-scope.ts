@@ -29,13 +29,42 @@ export interface DataAzurermBillingEnrollmentAccountScopeTimeouts {
   readonly read?: string;
 }
 
-function dataAzurermBillingEnrollmentAccountScopeTimeoutsToTerraform(struct?: DataAzurermBillingEnrollmentAccountScopeTimeouts): any {
+function dataAzurermBillingEnrollmentAccountScopeTimeoutsToTerraform(struct?: DataAzurermBillingEnrollmentAccountScopeTimeoutsOutputReference | DataAzurermBillingEnrollmentAccountScopeTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     read: cdktf.stringToTerraform(struct!.read),
   }
 }
 
+export class DataAzurermBillingEnrollmentAccountScopeTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/billing_enrollment_account_scope.html azurerm_billing_enrollment_account_scope}
@@ -79,7 +108,7 @@ export class DataAzurermBillingEnrollmentAccountScope extends cdktf.TerraformDat
   // ==========
 
   // billing_account_name - computed: false, optional: false, required: true
-  private _billingAccountName: string;
+  private _billingAccountName?: string; 
   public get billingAccountName() {
     return this.getStringAttribute('billing_account_name');
   }
@@ -92,7 +121,7 @@ export class DataAzurermBillingEnrollmentAccountScope extends cdktf.TerraformDat
   }
 
   // enrollment_account_name - computed: false, optional: false, required: true
-  private _enrollmentAccountName: string;
+  private _enrollmentAccountName?: string; 
   public get enrollmentAccountName() {
     return this.getStringAttribute('enrollment_account_name');
   }
@@ -110,11 +139,12 @@ export class DataAzurermBillingEnrollmentAccountScope extends cdktf.TerraformDat
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: DataAzurermBillingEnrollmentAccountScopeTimeouts;
+  private _timeouts?: DataAzurermBillingEnrollmentAccountScopeTimeouts | undefined; 
+  private __timeoutsOutput = new DataAzurermBillingEnrollmentAccountScopeTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: DataAzurermBillingEnrollmentAccountScopeTimeouts ) {
+  public putTimeouts(value: DataAzurermBillingEnrollmentAccountScopeTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {

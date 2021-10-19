@@ -33,13 +33,42 @@ export interface DataAzurermPolicyVirtualMachineConfigurationAssignmentTimeouts 
   readonly read?: string;
 }
 
-function dataAzurermPolicyVirtualMachineConfigurationAssignmentTimeoutsToTerraform(struct?: DataAzurermPolicyVirtualMachineConfigurationAssignmentTimeouts): any {
+function dataAzurermPolicyVirtualMachineConfigurationAssignmentTimeoutsToTerraform(struct?: DataAzurermPolicyVirtualMachineConfigurationAssignmentTimeoutsOutputReference | DataAzurermPolicyVirtualMachineConfigurationAssignmentTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     read: cdktf.stringToTerraform(struct!.read),
   }
 }
 
+export class DataAzurermPolicyVirtualMachineConfigurationAssignmentTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/policy_virtual_machine_configuration_assignment.html azurerm_policy_virtual_machine_configuration_assignment}
@@ -119,7 +148,7 @@ export class DataAzurermPolicyVirtualMachineConfigurationAssignment extends cdkt
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -132,7 +161,7 @@ export class DataAzurermPolicyVirtualMachineConfigurationAssignment extends cdkt
   }
 
   // resource_group_name - computed: false, optional: false, required: true
-  private _resourceGroupName: string;
+  private _resourceGroupName?: string; 
   public get resourceGroupName() {
     return this.getStringAttribute('resource_group_name');
   }
@@ -145,7 +174,7 @@ export class DataAzurermPolicyVirtualMachineConfigurationAssignment extends cdkt
   }
 
   // virtual_machine_name - computed: false, optional: false, required: true
-  private _virtualMachineName: string;
+  private _virtualMachineName?: string; 
   public get virtualMachineName() {
     return this.getStringAttribute('virtual_machine_name');
   }
@@ -158,11 +187,12 @@ export class DataAzurermPolicyVirtualMachineConfigurationAssignment extends cdkt
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: DataAzurermPolicyVirtualMachineConfigurationAssignmentTimeouts;
+  private _timeouts?: DataAzurermPolicyVirtualMachineConfigurationAssignmentTimeouts | undefined; 
+  private __timeoutsOutput = new DataAzurermPolicyVirtualMachineConfigurationAssignmentTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: DataAzurermPolicyVirtualMachineConfigurationAssignmentTimeouts ) {
+  public putTimeouts(value: DataAzurermPolicyVirtualMachineConfigurationAssignmentTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {

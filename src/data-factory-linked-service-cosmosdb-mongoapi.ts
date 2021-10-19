@@ -77,8 +77,11 @@ export interface DataFactoryLinkedServiceCosmosdbMongoapiTimeouts {
   readonly update?: string;
 }
 
-function dataFactoryLinkedServiceCosmosdbMongoapiTimeoutsToTerraform(struct?: DataFactoryLinkedServiceCosmosdbMongoapiTimeouts): any {
+function dataFactoryLinkedServiceCosmosdbMongoapiTimeoutsToTerraform(struct?: DataFactoryLinkedServiceCosmosdbMongoapiTimeoutsOutputReference | DataFactoryLinkedServiceCosmosdbMongoapiTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -87,6 +90,80 @@ function dataFactoryLinkedServiceCosmosdbMongoapiTimeoutsToTerraform(struct?: Da
   }
 }
 
+export class DataFactoryLinkedServiceCosmosdbMongoapiTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_cosmosdb_mongoapi.html azurerm_data_factory_linked_service_cosmosdb_mongoapi}
@@ -139,11 +216,12 @@ export class DataFactoryLinkedServiceCosmosdbMongoapi extends cdktf.TerraformRes
   // ==========
 
   // additional_properties - computed: false, optional: true, required: false
-  private _additionalProperties?: { [key: string]: string } | cdktf.IResolvable;
+  private _additionalProperties?: { [key: string]: string } | cdktf.IResolvable | undefined; 
   public get additionalProperties() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('additional_properties') as any;
   }
-  public set additionalProperties(value: { [key: string]: string } | cdktf.IResolvable ) {
+  public set additionalProperties(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
     this._additionalProperties = value;
   }
   public resetAdditionalProperties() {
@@ -155,11 +233,11 @@ export class DataFactoryLinkedServiceCosmosdbMongoapi extends cdktf.TerraformRes
   }
 
   // annotations - computed: false, optional: true, required: false
-  private _annotations?: string[];
+  private _annotations?: string[] | undefined; 
   public get annotations() {
     return this.getListAttribute('annotations');
   }
-  public set annotations(value: string[] ) {
+  public set annotations(value: string[] | undefined) {
     this._annotations = value;
   }
   public resetAnnotations() {
@@ -171,11 +249,11 @@ export class DataFactoryLinkedServiceCosmosdbMongoapi extends cdktf.TerraformRes
   }
 
   // connection_string - computed: false, optional: true, required: false
-  private _connectionString?: string;
+  private _connectionString?: string | undefined; 
   public get connectionString() {
     return this.getStringAttribute('connection_string');
   }
-  public set connectionString(value: string ) {
+  public set connectionString(value: string | undefined) {
     this._connectionString = value;
   }
   public resetConnectionString() {
@@ -187,7 +265,7 @@ export class DataFactoryLinkedServiceCosmosdbMongoapi extends cdktf.TerraformRes
   }
 
   // data_factory_name - computed: false, optional: false, required: true
-  private _dataFactoryName: string;
+  private _dataFactoryName?: string; 
   public get dataFactoryName() {
     return this.getStringAttribute('data_factory_name');
   }
@@ -200,11 +278,11 @@ export class DataFactoryLinkedServiceCosmosdbMongoapi extends cdktf.TerraformRes
   }
 
   // database - computed: false, optional: true, required: false
-  private _database?: string;
+  private _database?: string | undefined; 
   public get database() {
     return this.getStringAttribute('database');
   }
-  public set database(value: string ) {
+  public set database(value: string | undefined) {
     this._database = value;
   }
   public resetDatabase() {
@@ -216,11 +294,11 @@ export class DataFactoryLinkedServiceCosmosdbMongoapi extends cdktf.TerraformRes
   }
 
   // description - computed: false, optional: true, required: false
-  private _description?: string;
+  private _description?: string | undefined; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string ) {
+  public set description(value: string | undefined) {
     this._description = value;
   }
   public resetDescription() {
@@ -237,11 +315,11 @@ export class DataFactoryLinkedServiceCosmosdbMongoapi extends cdktf.TerraformRes
   }
 
   // integration_runtime_name - computed: false, optional: true, required: false
-  private _integrationRuntimeName?: string;
+  private _integrationRuntimeName?: string | undefined; 
   public get integrationRuntimeName() {
     return this.getStringAttribute('integration_runtime_name');
   }
-  public set integrationRuntimeName(value: string ) {
+  public set integrationRuntimeName(value: string | undefined) {
     this._integrationRuntimeName = value;
   }
   public resetIntegrationRuntimeName() {
@@ -253,7 +331,7 @@ export class DataFactoryLinkedServiceCosmosdbMongoapi extends cdktf.TerraformRes
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -266,11 +344,12 @@ export class DataFactoryLinkedServiceCosmosdbMongoapi extends cdktf.TerraformRes
   }
 
   // parameters - computed: false, optional: true, required: false
-  private _parameters?: { [key: string]: string } | cdktf.IResolvable;
+  private _parameters?: { [key: string]: string } | cdktf.IResolvable | undefined; 
   public get parameters() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('parameters') as any;
   }
-  public set parameters(value: { [key: string]: string } | cdktf.IResolvable ) {
+  public set parameters(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
     this._parameters = value;
   }
   public resetParameters() {
@@ -282,7 +361,7 @@ export class DataFactoryLinkedServiceCosmosdbMongoapi extends cdktf.TerraformRes
   }
 
   // resource_group_name - computed: false, optional: false, required: true
-  private _resourceGroupName: string;
+  private _resourceGroupName?: string; 
   public get resourceGroupName() {
     return this.getStringAttribute('resource_group_name');
   }
@@ -295,11 +374,11 @@ export class DataFactoryLinkedServiceCosmosdbMongoapi extends cdktf.TerraformRes
   }
 
   // server_version_is_32_or_higher - computed: false, optional: true, required: false
-  private _serverVersionIs32OrHigher?: boolean | cdktf.IResolvable;
+  private _serverVersionIs32OrHigher?: boolean | cdktf.IResolvable | undefined; 
   public get serverVersionIs32OrHigher() {
-    return this.getBooleanAttribute('server_version_is_32_or_higher');
+    return this.getBooleanAttribute('server_version_is_32_or_higher') as any;
   }
-  public set serverVersionIs32OrHigher(value: boolean | cdktf.IResolvable ) {
+  public set serverVersionIs32OrHigher(value: boolean | cdktf.IResolvable | undefined) {
     this._serverVersionIs32OrHigher = value;
   }
   public resetServerVersionIs32OrHigher() {
@@ -311,11 +390,12 @@ export class DataFactoryLinkedServiceCosmosdbMongoapi extends cdktf.TerraformRes
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: DataFactoryLinkedServiceCosmosdbMongoapiTimeouts;
+  private _timeouts?: DataFactoryLinkedServiceCosmosdbMongoapiTimeouts | undefined; 
+  private __timeoutsOutput = new DataFactoryLinkedServiceCosmosdbMongoapiTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: DataFactoryLinkedServiceCosmosdbMongoapiTimeouts ) {
+  public putTimeouts(value: DataFactoryLinkedServiceCosmosdbMongoapiTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {

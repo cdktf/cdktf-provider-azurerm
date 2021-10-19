@@ -58,7 +58,7 @@ export class DataAzurermApiManagementHostnameConfigurationDeveloperPortal extend
 
   // negotiate_client_certificate - computed: true, optional: false, required: false
   public get negotiateClientCertificate() {
-    return this.getBooleanAttribute('negotiate_client_certificate');
+    return this.getBooleanAttribute('negotiate_client_certificate') as any;
   }
 }
 export class DataAzurermApiManagementHostnameConfigurationManagement extends cdktf.ComplexComputedList {
@@ -75,7 +75,7 @@ export class DataAzurermApiManagementHostnameConfigurationManagement extends cdk
 
   // negotiate_client_certificate - computed: true, optional: false, required: false
   public get negotiateClientCertificate() {
-    return this.getBooleanAttribute('negotiate_client_certificate');
+    return this.getBooleanAttribute('negotiate_client_certificate') as any;
   }
 }
 export class DataAzurermApiManagementHostnameConfigurationPortal extends cdktf.ComplexComputedList {
@@ -92,14 +92,14 @@ export class DataAzurermApiManagementHostnameConfigurationPortal extends cdktf.C
 
   // negotiate_client_certificate - computed: true, optional: false, required: false
   public get negotiateClientCertificate() {
-    return this.getBooleanAttribute('negotiate_client_certificate');
+    return this.getBooleanAttribute('negotiate_client_certificate') as any;
   }
 }
 export class DataAzurermApiManagementHostnameConfigurationProxy extends cdktf.ComplexComputedList {
 
   // default_ssl_binding - computed: true, optional: false, required: false
   public get defaultSslBinding() {
-    return this.getBooleanAttribute('default_ssl_binding');
+    return this.getBooleanAttribute('default_ssl_binding') as any;
   }
 
   // host_name - computed: true, optional: false, required: false
@@ -114,7 +114,7 @@ export class DataAzurermApiManagementHostnameConfigurationProxy extends cdktf.Co
 
   // negotiate_client_certificate - computed: true, optional: false, required: false
   public get negotiateClientCertificate() {
-    return this.getBooleanAttribute('negotiate_client_certificate');
+    return this.getBooleanAttribute('negotiate_client_certificate') as any;
   }
 }
 export class DataAzurermApiManagementHostnameConfigurationScm extends cdktf.ComplexComputedList {
@@ -131,33 +131,38 @@ export class DataAzurermApiManagementHostnameConfigurationScm extends cdktf.Comp
 
   // negotiate_client_certificate - computed: true, optional: false, required: false
   public get negotiateClientCertificate() {
-    return this.getBooleanAttribute('negotiate_client_certificate');
+    return this.getBooleanAttribute('negotiate_client_certificate') as any;
   }
 }
 export class DataAzurermApiManagementHostnameConfiguration extends cdktf.ComplexComputedList {
 
   // developer_portal - computed: true, optional: false, required: false
   public get developerPortal() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('developer_portal') as any;
   }
 
   // management - computed: true, optional: false, required: false
   public get management() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('management') as any;
   }
 
   // portal - computed: true, optional: false, required: false
   public get portal() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('portal') as any;
   }
 
   // proxy - computed: true, optional: false, required: false
   public get proxy() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('proxy') as any;
   }
 
   // scm - computed: true, optional: false, required: false
   public get scm() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('scm') as any;
   }
 }
@@ -190,13 +195,42 @@ export interface DataAzurermApiManagementTimeouts {
   readonly read?: string;
 }
 
-function dataAzurermApiManagementTimeoutsToTerraform(struct?: DataAzurermApiManagementTimeouts): any {
+function dataAzurermApiManagementTimeoutsToTerraform(struct?: DataAzurermApiManagementTimeoutsOutputReference | DataAzurermApiManagementTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     read: cdktf.stringToTerraform(struct!.read),
   }
 }
 
+export class DataAzurermApiManagementTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/api_management.html azurerm_api_management}
@@ -285,7 +319,7 @@ export class DataAzurermApiManagement extends cdktf.TerraformDataSource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -328,7 +362,7 @@ export class DataAzurermApiManagement extends cdktf.TerraformDataSource {
   }
 
   // resource_group_name - computed: false, optional: false, required: true
-  private _resourceGroupName: string;
+  private _resourceGroupName?: string; 
   public get resourceGroupName() {
     return this.getStringAttribute('resource_group_name');
   }
@@ -356,11 +390,12 @@ export class DataAzurermApiManagement extends cdktf.TerraformDataSource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: DataAzurermApiManagementTimeouts;
+  private _timeouts?: DataAzurermApiManagementTimeouts | undefined; 
+  private __timeoutsOutput = new DataAzurermApiManagementTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: DataAzurermApiManagementTimeouts ) {
+  public putTimeouts(value: DataAzurermApiManagementTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {

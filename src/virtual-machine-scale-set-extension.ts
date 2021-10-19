@@ -73,8 +73,11 @@ export interface VirtualMachineScaleSetExtensionTimeouts {
   readonly update?: string;
 }
 
-function virtualMachineScaleSetExtensionTimeoutsToTerraform(struct?: VirtualMachineScaleSetExtensionTimeouts): any {
+function virtualMachineScaleSetExtensionTimeoutsToTerraform(struct?: VirtualMachineScaleSetExtensionTimeoutsOutputReference | VirtualMachineScaleSetExtensionTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -83,6 +86,80 @@ function virtualMachineScaleSetExtensionTimeoutsToTerraform(struct?: VirtualMach
   }
 }
 
+export class VirtualMachineScaleSetExtensionTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_scale_set_extension.html azurerm_virtual_machine_scale_set_extension}
@@ -134,11 +211,11 @@ export class VirtualMachineScaleSetExtensionA extends cdktf.TerraformResource {
   // ==========
 
   // auto_upgrade_minor_version - computed: false, optional: true, required: false
-  private _autoUpgradeMinorVersion?: boolean | cdktf.IResolvable;
+  private _autoUpgradeMinorVersion?: boolean | cdktf.IResolvable | undefined; 
   public get autoUpgradeMinorVersion() {
-    return this.getBooleanAttribute('auto_upgrade_minor_version');
+    return this.getBooleanAttribute('auto_upgrade_minor_version') as any;
   }
-  public set autoUpgradeMinorVersion(value: boolean | cdktf.IResolvable ) {
+  public set autoUpgradeMinorVersion(value: boolean | cdktf.IResolvable | undefined) {
     this._autoUpgradeMinorVersion = value;
   }
   public resetAutoUpgradeMinorVersion() {
@@ -150,11 +227,11 @@ export class VirtualMachineScaleSetExtensionA extends cdktf.TerraformResource {
   }
 
   // force_update_tag - computed: false, optional: true, required: false
-  private _forceUpdateTag?: string;
+  private _forceUpdateTag?: string | undefined; 
   public get forceUpdateTag() {
     return this.getStringAttribute('force_update_tag');
   }
-  public set forceUpdateTag(value: string ) {
+  public set forceUpdateTag(value: string | undefined) {
     this._forceUpdateTag = value;
   }
   public resetForceUpdateTag() {
@@ -171,7 +248,7 @@ export class VirtualMachineScaleSetExtensionA extends cdktf.TerraformResource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -184,11 +261,11 @@ export class VirtualMachineScaleSetExtensionA extends cdktf.TerraformResource {
   }
 
   // protected_settings - computed: false, optional: true, required: false
-  private _protectedSettings?: string;
+  private _protectedSettings?: string | undefined; 
   public get protectedSettings() {
     return this.getStringAttribute('protected_settings');
   }
-  public set protectedSettings(value: string ) {
+  public set protectedSettings(value: string | undefined) {
     this._protectedSettings = value;
   }
   public resetProtectedSettings() {
@@ -200,11 +277,11 @@ export class VirtualMachineScaleSetExtensionA extends cdktf.TerraformResource {
   }
 
   // provision_after_extensions - computed: false, optional: true, required: false
-  private _provisionAfterExtensions?: string[];
+  private _provisionAfterExtensions?: string[] | undefined; 
   public get provisionAfterExtensions() {
     return this.getListAttribute('provision_after_extensions');
   }
-  public set provisionAfterExtensions(value: string[] ) {
+  public set provisionAfterExtensions(value: string[] | undefined) {
     this._provisionAfterExtensions = value;
   }
   public resetProvisionAfterExtensions() {
@@ -216,7 +293,7 @@ export class VirtualMachineScaleSetExtensionA extends cdktf.TerraformResource {
   }
 
   // publisher - computed: false, optional: false, required: true
-  private _publisher: string;
+  private _publisher?: string; 
   public get publisher() {
     return this.getStringAttribute('publisher');
   }
@@ -229,11 +306,11 @@ export class VirtualMachineScaleSetExtensionA extends cdktf.TerraformResource {
   }
 
   // settings - computed: false, optional: true, required: false
-  private _settings?: string;
+  private _settings?: string | undefined; 
   public get settings() {
     return this.getStringAttribute('settings');
   }
-  public set settings(value: string ) {
+  public set settings(value: string | undefined) {
     this._settings = value;
   }
   public resetSettings() {
@@ -245,7 +322,7 @@ export class VirtualMachineScaleSetExtensionA extends cdktf.TerraformResource {
   }
 
   // type - computed: false, optional: false, required: true
-  private _type: string;
+  private _type?: string; 
   public get type() {
     return this.getStringAttribute('type');
   }
@@ -258,7 +335,7 @@ export class VirtualMachineScaleSetExtensionA extends cdktf.TerraformResource {
   }
 
   // type_handler_version - computed: false, optional: false, required: true
-  private _typeHandlerVersion: string;
+  private _typeHandlerVersion?: string; 
   public get typeHandlerVersion() {
     return this.getStringAttribute('type_handler_version');
   }
@@ -271,7 +348,7 @@ export class VirtualMachineScaleSetExtensionA extends cdktf.TerraformResource {
   }
 
   // virtual_machine_scale_set_id - computed: false, optional: false, required: true
-  private _virtualMachineScaleSetId: string;
+  private _virtualMachineScaleSetId?: string; 
   public get virtualMachineScaleSetId() {
     return this.getStringAttribute('virtual_machine_scale_set_id');
   }
@@ -284,11 +361,12 @@ export class VirtualMachineScaleSetExtensionA extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: VirtualMachineScaleSetExtensionTimeouts;
+  private _timeouts?: VirtualMachineScaleSetExtensionTimeouts | undefined; 
+  private __timeoutsOutput = new VirtualMachineScaleSetExtensionTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: VirtualMachineScaleSetExtensionTimeouts ) {
+  public putTimeouts(value: VirtualMachineScaleSetExtensionTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {

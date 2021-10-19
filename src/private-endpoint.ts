@@ -32,13 +32,13 @@ export interface PrivateEndpointConfig extends cdktf.TerraformMetaArguments {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/private_endpoint.html#private_dns_zone_group PrivateEndpoint#private_dns_zone_group}
   */
-  readonly privateDnsZoneGroup?: PrivateEndpointPrivateDnsZoneGroup[];
+  readonly privateDnsZoneGroup?: PrivateEndpointPrivateDnsZoneGroup;
   /**
   * private_service_connection block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/private_endpoint.html#private_service_connection PrivateEndpoint#private_service_connection}
   */
-  readonly privateServiceConnection: PrivateEndpointPrivateServiceConnection[];
+  readonly privateServiceConnection: PrivateEndpointPrivateServiceConnection;
   /**
   * timeouts block
   * 
@@ -116,6 +116,7 @@ export class PrivateEndpointPrivateDnsZoneConfigs extends cdktf.ComplexComputedL
 
   // record_sets - computed: true, optional: false, required: false
   public get recordSets() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('record_sets') as any;
   }
 }
@@ -130,14 +131,53 @@ export interface PrivateEndpointPrivateDnsZoneGroup {
   readonly privateDnsZoneIds: string[];
 }
 
-function privateEndpointPrivateDnsZoneGroupToTerraform(struct?: PrivateEndpointPrivateDnsZoneGroup): any {
+function privateEndpointPrivateDnsZoneGroupToTerraform(struct?: PrivateEndpointPrivateDnsZoneGroupOutputReference | PrivateEndpointPrivateDnsZoneGroup): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     name: cdktf.stringToTerraform(struct!.name),
     private_dns_zone_ids: cdktf.listMapper(cdktf.stringToTerraform)(struct!.privateDnsZoneIds),
   }
 }
 
+export class PrivateEndpointPrivateDnsZoneGroupOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
+  }
+
+  // private_dns_zone_ids - computed: false, optional: false, required: true
+  private _privateDnsZoneIds?: string[]; 
+  public get privateDnsZoneIds() {
+    return this.getListAttribute('private_dns_zone_ids');
+  }
+  public set privateDnsZoneIds(value: string[]) {
+    this._privateDnsZoneIds = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get privateDnsZoneIdsInput() {
+    return this._privateDnsZoneIds
+  }
+}
 export interface PrivateEndpointPrivateServiceConnection {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/private_endpoint.html#is_manual_connection PrivateEndpoint#is_manual_connection}
@@ -165,8 +205,11 @@ export interface PrivateEndpointPrivateServiceConnection {
   readonly subresourceNames?: string[];
 }
 
-function privateEndpointPrivateServiceConnectionToTerraform(struct?: PrivateEndpointPrivateServiceConnection): any {
+function privateEndpointPrivateServiceConnectionToTerraform(struct?: PrivateEndpointPrivateServiceConnectionOutputReference | PrivateEndpointPrivateServiceConnection): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     is_manual_connection: cdktf.booleanToTerraform(struct!.isManualConnection),
     name: cdktf.stringToTerraform(struct!.name),
@@ -177,6 +220,106 @@ function privateEndpointPrivateServiceConnectionToTerraform(struct?: PrivateEndp
   }
 }
 
+export class PrivateEndpointPrivateServiceConnectionOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // is_manual_connection - computed: false, optional: false, required: true
+  private _isManualConnection?: boolean | cdktf.IResolvable; 
+  public get isManualConnection() {
+    return this.getBooleanAttribute('is_manual_connection') as any;
+  }
+  public set isManualConnection(value: boolean | cdktf.IResolvable) {
+    this._isManualConnection = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get isManualConnectionInput() {
+    return this._isManualConnection
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
+  }
+
+  // private_connection_resource_alias - computed: false, optional: true, required: false
+  private _privateConnectionResourceAlias?: string | undefined; 
+  public get privateConnectionResourceAlias() {
+    return this.getStringAttribute('private_connection_resource_alias');
+  }
+  public set privateConnectionResourceAlias(value: string | undefined) {
+    this._privateConnectionResourceAlias = value;
+  }
+  public resetPrivateConnectionResourceAlias() {
+    this._privateConnectionResourceAlias = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get privateConnectionResourceAliasInput() {
+    return this._privateConnectionResourceAlias
+  }
+
+  // private_connection_resource_id - computed: false, optional: true, required: false
+  private _privateConnectionResourceId?: string | undefined; 
+  public get privateConnectionResourceId() {
+    return this.getStringAttribute('private_connection_resource_id');
+  }
+  public set privateConnectionResourceId(value: string | undefined) {
+    this._privateConnectionResourceId = value;
+  }
+  public resetPrivateConnectionResourceId() {
+    this._privateConnectionResourceId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get privateConnectionResourceIdInput() {
+    return this._privateConnectionResourceId
+  }
+
+  // request_message - computed: false, optional: true, required: false
+  private _requestMessage?: string | undefined; 
+  public get requestMessage() {
+    return this.getStringAttribute('request_message');
+  }
+  public set requestMessage(value: string | undefined) {
+    this._requestMessage = value;
+  }
+  public resetRequestMessage() {
+    this._requestMessage = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get requestMessageInput() {
+    return this._requestMessage
+  }
+
+  // subresource_names - computed: false, optional: true, required: false
+  private _subresourceNames?: string[] | undefined; 
+  public get subresourceNames() {
+    return this.getListAttribute('subresource_names');
+  }
+  public set subresourceNames(value: string[] | undefined) {
+    this._subresourceNames = value;
+  }
+  public resetSubresourceNames() {
+    this._subresourceNames = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get subresourceNamesInput() {
+    return this._subresourceNames
+  }
+}
 export interface PrivateEndpointTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/private_endpoint.html#create PrivateEndpoint#create}
@@ -196,8 +339,11 @@ export interface PrivateEndpointTimeouts {
   readonly update?: string;
 }
 
-function privateEndpointTimeoutsToTerraform(struct?: PrivateEndpointTimeouts): any {
+function privateEndpointTimeoutsToTerraform(struct?: PrivateEndpointTimeoutsOutputReference | PrivateEndpointTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -206,6 +352,80 @@ function privateEndpointTimeoutsToTerraform(struct?: PrivateEndpointTimeouts): a
   }
 }
 
+export class PrivateEndpointTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/private_endpoint.html azurerm_private_endpoint}
@@ -264,7 +484,7 @@ export class PrivateEndpoint extends cdktf.TerraformResource {
   }
 
   // location - computed: false, optional: false, required: true
-  private _location: string;
+  private _location?: string; 
   public get location() {
     return this.getStringAttribute('location');
   }
@@ -277,7 +497,7 @@ export class PrivateEndpoint extends cdktf.TerraformResource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -300,7 +520,7 @@ export class PrivateEndpoint extends cdktf.TerraformResource {
   }
 
   // resource_group_name - computed: false, optional: false, required: true
-  private _resourceGroupName: string;
+  private _resourceGroupName?: string; 
   public get resourceGroupName() {
     return this.getStringAttribute('resource_group_name');
   }
@@ -313,7 +533,7 @@ export class PrivateEndpoint extends cdktf.TerraformResource {
   }
 
   // subnet_id - computed: false, optional: false, required: true
-  private _subnetId: string;
+  private _subnetId?: string; 
   public get subnetId() {
     return this.getStringAttribute('subnet_id');
   }
@@ -326,11 +546,12 @@ export class PrivateEndpoint extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable;
+  private _tags?: { [key: string]: string } | cdktf.IResolvable | undefined; 
   public get tags() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
     this._tags = value;
   }
   public resetTags() {
@@ -342,11 +563,12 @@ export class PrivateEndpoint extends cdktf.TerraformResource {
   }
 
   // private_dns_zone_group - computed: false, optional: true, required: false
-  private _privateDnsZoneGroup?: PrivateEndpointPrivateDnsZoneGroup[];
+  private _privateDnsZoneGroup?: PrivateEndpointPrivateDnsZoneGroup | undefined; 
+  private __privateDnsZoneGroupOutput = new PrivateEndpointPrivateDnsZoneGroupOutputReference(this as any, "private_dns_zone_group", true);
   public get privateDnsZoneGroup() {
-    return this.interpolationForAttribute('private_dns_zone_group') as any;
+    return this.__privateDnsZoneGroupOutput;
   }
-  public set privateDnsZoneGroup(value: PrivateEndpointPrivateDnsZoneGroup[] ) {
+  public putPrivateDnsZoneGroup(value: PrivateEndpointPrivateDnsZoneGroup | undefined) {
     this._privateDnsZoneGroup = value;
   }
   public resetPrivateDnsZoneGroup() {
@@ -358,11 +580,12 @@ export class PrivateEndpoint extends cdktf.TerraformResource {
   }
 
   // private_service_connection - computed: false, optional: false, required: true
-  private _privateServiceConnection: PrivateEndpointPrivateServiceConnection[];
+  private _privateServiceConnection?: PrivateEndpointPrivateServiceConnection; 
+  private __privateServiceConnectionOutput = new PrivateEndpointPrivateServiceConnectionOutputReference(this as any, "private_service_connection", true);
   public get privateServiceConnection() {
-    return this.interpolationForAttribute('private_service_connection') as any;
+    return this.__privateServiceConnectionOutput;
   }
-  public set privateServiceConnection(value: PrivateEndpointPrivateServiceConnection[]) {
+  public putPrivateServiceConnection(value: PrivateEndpointPrivateServiceConnection) {
     this._privateServiceConnection = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -371,11 +594,12 @@ export class PrivateEndpoint extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: PrivateEndpointTimeouts;
+  private _timeouts?: PrivateEndpointTimeouts | undefined; 
+  private __timeoutsOutput = new PrivateEndpointTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: PrivateEndpointTimeouts ) {
+  public putTimeouts(value: PrivateEndpointTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {
@@ -397,8 +621,8 @@ export class PrivateEndpoint extends cdktf.TerraformResource {
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       subnet_id: cdktf.stringToTerraform(this._subnetId),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
-      private_dns_zone_group: cdktf.listMapper(privateEndpointPrivateDnsZoneGroupToTerraform)(this._privateDnsZoneGroup),
-      private_service_connection: cdktf.listMapper(privateEndpointPrivateServiceConnectionToTerraform)(this._privateServiceConnection),
+      private_dns_zone_group: privateEndpointPrivateDnsZoneGroupToTerraform(this._privateDnsZoneGroup),
+      private_service_connection: privateEndpointPrivateServiceConnectionToTerraform(this._privateServiceConnection),
       timeouts: privateEndpointTimeoutsToTerraform(this._timeouts),
     };
   }

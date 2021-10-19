@@ -32,7 +32,7 @@ export interface DataShareConfig extends cdktf.TerraformMetaArguments {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_share.html#snapshot_schedule DataShare#snapshot_schedule}
   */
-  readonly snapshotSchedule?: DataShareSnapshotSchedule[];
+  readonly snapshotSchedule?: DataShareSnapshotSchedule;
   /**
   * timeouts block
   * 
@@ -55,8 +55,11 @@ export interface DataShareSnapshotSchedule {
   readonly startTime: string;
 }
 
-function dataShareSnapshotScheduleToTerraform(struct?: DataShareSnapshotSchedule): any {
+function dataShareSnapshotScheduleToTerraform(struct?: DataShareSnapshotScheduleOutputReference | DataShareSnapshotSchedule): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     name: cdktf.stringToTerraform(struct!.name),
     recurrence: cdktf.stringToTerraform(struct!.recurrence),
@@ -64,6 +67,55 @@ function dataShareSnapshotScheduleToTerraform(struct?: DataShareSnapshotSchedule
   }
 }
 
+export class DataShareSnapshotScheduleOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
+  }
+
+  // recurrence - computed: false, optional: false, required: true
+  private _recurrence?: string; 
+  public get recurrence() {
+    return this.getStringAttribute('recurrence');
+  }
+  public set recurrence(value: string) {
+    this._recurrence = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get recurrenceInput() {
+    return this._recurrence
+  }
+
+  // start_time - computed: false, optional: false, required: true
+  private _startTime?: string; 
+  public get startTime() {
+    return this.getStringAttribute('start_time');
+  }
+  public set startTime(value: string) {
+    this._startTime = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get startTimeInput() {
+    return this._startTime
+  }
+}
 export interface DataShareTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_share.html#create DataShare#create}
@@ -83,8 +135,11 @@ export interface DataShareTimeouts {
   readonly update?: string;
 }
 
-function dataShareTimeoutsToTerraform(struct?: DataShareTimeouts): any {
+function dataShareTimeoutsToTerraform(struct?: DataShareTimeoutsOutputReference | DataShareTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -93,6 +148,80 @@ function dataShareTimeoutsToTerraform(struct?: DataShareTimeouts): any {
   }
 }
 
+export class DataShareTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/data_share.html azurerm_data_share}
@@ -140,7 +269,7 @@ export class DataShare extends cdktf.TerraformResource {
   // ==========
 
   // account_id - computed: false, optional: false, required: true
-  private _accountId: string;
+  private _accountId?: string; 
   public get accountId() {
     return this.getStringAttribute('account_id');
   }
@@ -153,11 +282,11 @@ export class DataShare extends cdktf.TerraformResource {
   }
 
   // description - computed: false, optional: true, required: false
-  private _description?: string;
+  private _description?: string | undefined; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string ) {
+  public set description(value: string | undefined) {
     this._description = value;
   }
   public resetDescription() {
@@ -174,7 +303,7 @@ export class DataShare extends cdktf.TerraformResource {
   }
 
   // kind - computed: false, optional: false, required: true
-  private _kind: string;
+  private _kind?: string; 
   public get kind() {
     return this.getStringAttribute('kind');
   }
@@ -187,7 +316,7 @@ export class DataShare extends cdktf.TerraformResource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -200,11 +329,11 @@ export class DataShare extends cdktf.TerraformResource {
   }
 
   // terms - computed: false, optional: true, required: false
-  private _terms?: string;
+  private _terms?: string | undefined; 
   public get terms() {
     return this.getStringAttribute('terms');
   }
-  public set terms(value: string ) {
+  public set terms(value: string | undefined) {
     this._terms = value;
   }
   public resetTerms() {
@@ -216,11 +345,12 @@ export class DataShare extends cdktf.TerraformResource {
   }
 
   // snapshot_schedule - computed: false, optional: true, required: false
-  private _snapshotSchedule?: DataShareSnapshotSchedule[];
+  private _snapshotSchedule?: DataShareSnapshotSchedule | undefined; 
+  private __snapshotScheduleOutput = new DataShareSnapshotScheduleOutputReference(this as any, "snapshot_schedule", true);
   public get snapshotSchedule() {
-    return this.interpolationForAttribute('snapshot_schedule') as any;
+    return this.__snapshotScheduleOutput;
   }
-  public set snapshotSchedule(value: DataShareSnapshotSchedule[] ) {
+  public putSnapshotSchedule(value: DataShareSnapshotSchedule | undefined) {
     this._snapshotSchedule = value;
   }
   public resetSnapshotSchedule() {
@@ -232,11 +362,12 @@ export class DataShare extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: DataShareTimeouts;
+  private _timeouts?: DataShareTimeouts | undefined; 
+  private __timeoutsOutput = new DataShareTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: DataShareTimeouts ) {
+  public putTimeouts(value: DataShareTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {
@@ -258,7 +389,7 @@ export class DataShare extends cdktf.TerraformResource {
       kind: cdktf.stringToTerraform(this._kind),
       name: cdktf.stringToTerraform(this._name),
       terms: cdktf.stringToTerraform(this._terms),
-      snapshot_schedule: cdktf.listMapper(dataShareSnapshotScheduleToTerraform)(this._snapshotSchedule),
+      snapshot_schedule: dataShareSnapshotScheduleToTerraform(this._snapshotSchedule),
       timeouts: dataShareTimeoutsToTerraform(this._timeouts),
     };
   }

@@ -73,8 +73,11 @@ export interface IotTimeSeriesInsightsEventSourceIothubTimeouts {
   readonly update?: string;
 }
 
-function iotTimeSeriesInsightsEventSourceIothubTimeoutsToTerraform(struct?: IotTimeSeriesInsightsEventSourceIothubTimeouts): any {
+function iotTimeSeriesInsightsEventSourceIothubTimeoutsToTerraform(struct?: IotTimeSeriesInsightsEventSourceIothubTimeoutsOutputReference | IotTimeSeriesInsightsEventSourceIothubTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -83,6 +86,80 @@ function iotTimeSeriesInsightsEventSourceIothubTimeoutsToTerraform(struct?: IotT
   }
 }
 
+export class IotTimeSeriesInsightsEventSourceIothubTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/iot_time_series_insights_event_source_iothub.html azurerm_iot_time_series_insights_event_source_iothub}
@@ -134,7 +211,7 @@ export class IotTimeSeriesInsightsEventSourceIothub extends cdktf.TerraformResou
   // ==========
 
   // consumer_group_name - computed: false, optional: false, required: true
-  private _consumerGroupName: string;
+  private _consumerGroupName?: string; 
   public get consumerGroupName() {
     return this.getStringAttribute('consumer_group_name');
   }
@@ -147,7 +224,7 @@ export class IotTimeSeriesInsightsEventSourceIothub extends cdktf.TerraformResou
   }
 
   // environment_id - computed: false, optional: false, required: true
-  private _environmentId: string;
+  private _environmentId?: string; 
   public get environmentId() {
     return this.getStringAttribute('environment_id');
   }
@@ -160,7 +237,7 @@ export class IotTimeSeriesInsightsEventSourceIothub extends cdktf.TerraformResou
   }
 
   // event_source_resource_id - computed: false, optional: false, required: true
-  private _eventSourceResourceId: string;
+  private _eventSourceResourceId?: string; 
   public get eventSourceResourceId() {
     return this.getStringAttribute('event_source_resource_id');
   }
@@ -178,7 +255,7 @@ export class IotTimeSeriesInsightsEventSourceIothub extends cdktf.TerraformResou
   }
 
   // iothub_name - computed: false, optional: false, required: true
-  private _iothubName: string;
+  private _iothubName?: string; 
   public get iothubName() {
     return this.getStringAttribute('iothub_name');
   }
@@ -191,7 +268,7 @@ export class IotTimeSeriesInsightsEventSourceIothub extends cdktf.TerraformResou
   }
 
   // location - computed: false, optional: false, required: true
-  private _location: string;
+  private _location?: string; 
   public get location() {
     return this.getStringAttribute('location');
   }
@@ -204,7 +281,7 @@ export class IotTimeSeriesInsightsEventSourceIothub extends cdktf.TerraformResou
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -217,7 +294,7 @@ export class IotTimeSeriesInsightsEventSourceIothub extends cdktf.TerraformResou
   }
 
   // shared_access_key - computed: false, optional: false, required: true
-  private _sharedAccessKey: string;
+  private _sharedAccessKey?: string; 
   public get sharedAccessKey() {
     return this.getStringAttribute('shared_access_key');
   }
@@ -230,7 +307,7 @@ export class IotTimeSeriesInsightsEventSourceIothub extends cdktf.TerraformResou
   }
 
   // shared_access_key_name - computed: false, optional: false, required: true
-  private _sharedAccessKeyName: string;
+  private _sharedAccessKeyName?: string; 
   public get sharedAccessKeyName() {
     return this.getStringAttribute('shared_access_key_name');
   }
@@ -243,11 +320,12 @@ export class IotTimeSeriesInsightsEventSourceIothub extends cdktf.TerraformResou
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable;
+  private _tags?: { [key: string]: string } | cdktf.IResolvable | undefined; 
   public get tags() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
     this._tags = value;
   }
   public resetTags() {
@@ -259,11 +337,11 @@ export class IotTimeSeriesInsightsEventSourceIothub extends cdktf.TerraformResou
   }
 
   // timestamp_property_name - computed: true, optional: true, required: false
-  private _timestampPropertyName?: string;
+  private _timestampPropertyName?: string | undefined; 
   public get timestampPropertyName() {
     return this.getStringAttribute('timestamp_property_name');
   }
-  public set timestampPropertyName(value: string) {
+  public set timestampPropertyName(value: string | undefined) {
     this._timestampPropertyName = value;
   }
   public resetTimestampPropertyName() {
@@ -275,11 +353,12 @@ export class IotTimeSeriesInsightsEventSourceIothub extends cdktf.TerraformResou
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: IotTimeSeriesInsightsEventSourceIothubTimeouts;
+  private _timeouts?: IotTimeSeriesInsightsEventSourceIothubTimeouts | undefined; 
+  private __timeoutsOutput = new IotTimeSeriesInsightsEventSourceIothubTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: IotTimeSeriesInsightsEventSourceIothubTimeouts ) {
+  public putTimeouts(value: IotTimeSeriesInsightsEventSourceIothubTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {

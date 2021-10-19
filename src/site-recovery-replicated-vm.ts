@@ -99,6 +99,9 @@ export interface SiteRecoveryReplicatedVmManagedDisk {
 
 function siteRecoveryReplicatedVmManagedDiskToTerraform(struct?: SiteRecoveryReplicatedVmManagedDisk): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     disk_id: struct!.diskId === undefined ? null : cdktf.stringToTerraform(struct!.diskId),
     staging_storage_account_id: struct!.stagingStorageAccountId === undefined ? null : cdktf.stringToTerraform(struct!.stagingStorageAccountId),
@@ -130,6 +133,9 @@ export interface SiteRecoveryReplicatedVmNetworkInterface {
 
 function siteRecoveryReplicatedVmNetworkInterfaceToTerraform(struct?: SiteRecoveryReplicatedVmNetworkInterface): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     recovery_public_ip_address_id: cdktf.stringToTerraform(struct!.recoveryPublicIpAddressId),
     source_network_interface_id: struct!.sourceNetworkInterfaceId === undefined ? null : cdktf.stringToTerraform(struct!.sourceNetworkInterfaceId),
@@ -157,8 +163,11 @@ export interface SiteRecoveryReplicatedVmTimeouts {
   readonly update?: string;
 }
 
-function siteRecoveryReplicatedVmTimeoutsToTerraform(struct?: SiteRecoveryReplicatedVmTimeouts): any {
+function siteRecoveryReplicatedVmTimeoutsToTerraform(struct?: SiteRecoveryReplicatedVmTimeoutsOutputReference | SiteRecoveryReplicatedVmTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -167,6 +176,80 @@ function siteRecoveryReplicatedVmTimeoutsToTerraform(struct?: SiteRecoveryReplic
   }
 }
 
+export class SiteRecoveryReplicatedVmTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/site_recovery_replicated_vm.html azurerm_site_recovery_replicated_vm}
@@ -227,11 +310,12 @@ export class SiteRecoveryReplicatedVm extends cdktf.TerraformResource {
   }
 
   // managed_disk - computed: false, optional: true, required: false
-  private _managedDisk?: SiteRecoveryReplicatedVmManagedDisk[];
+  private _managedDisk?: SiteRecoveryReplicatedVmManagedDisk[] | undefined; 
   public get managedDisk() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('managed_disk') as any;
   }
-  public set managedDisk(value: SiteRecoveryReplicatedVmManagedDisk[] ) {
+  public set managedDisk(value: SiteRecoveryReplicatedVmManagedDisk[] | undefined) {
     this._managedDisk = value;
   }
   public resetManagedDisk() {
@@ -243,7 +327,7 @@ export class SiteRecoveryReplicatedVm extends cdktf.TerraformResource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -256,11 +340,12 @@ export class SiteRecoveryReplicatedVm extends cdktf.TerraformResource {
   }
 
   // network_interface - computed: true, optional: true, required: false
-  private _networkInterface?: SiteRecoveryReplicatedVmNetworkInterface[]
-  public get networkInterface(): SiteRecoveryReplicatedVmNetworkInterface[] {
-    return this.interpolationForAttribute('network_interface') as any; // Getting the computed value is not yet implemented
+  private _networkInterface?: SiteRecoveryReplicatedVmNetworkInterface[] | undefined; 
+  public get networkInterface() {
+    // Getting the computed value is not yet implemented
+    return this.interpolationForAttribute('network_interface') as any;
   }
-  public set networkInterface(value: SiteRecoveryReplicatedVmNetworkInterface[]) {
+  public set networkInterface(value: SiteRecoveryReplicatedVmNetworkInterface[] | undefined) {
     this._networkInterface = value;
   }
   public resetNetworkInterface() {
@@ -272,7 +357,7 @@ export class SiteRecoveryReplicatedVm extends cdktf.TerraformResource {
   }
 
   // recovery_replication_policy_id - computed: false, optional: false, required: true
-  private _recoveryReplicationPolicyId: string;
+  private _recoveryReplicationPolicyId?: string; 
   public get recoveryReplicationPolicyId() {
     return this.getStringAttribute('recovery_replication_policy_id');
   }
@@ -285,7 +370,7 @@ export class SiteRecoveryReplicatedVm extends cdktf.TerraformResource {
   }
 
   // recovery_vault_name - computed: false, optional: false, required: true
-  private _recoveryVaultName: string;
+  private _recoveryVaultName?: string; 
   public get recoveryVaultName() {
     return this.getStringAttribute('recovery_vault_name');
   }
@@ -298,7 +383,7 @@ export class SiteRecoveryReplicatedVm extends cdktf.TerraformResource {
   }
 
   // resource_group_name - computed: false, optional: false, required: true
-  private _resourceGroupName: string;
+  private _resourceGroupName?: string; 
   public get resourceGroupName() {
     return this.getStringAttribute('resource_group_name');
   }
@@ -311,7 +396,7 @@ export class SiteRecoveryReplicatedVm extends cdktf.TerraformResource {
   }
 
   // source_recovery_fabric_name - computed: false, optional: false, required: true
-  private _sourceRecoveryFabricName: string;
+  private _sourceRecoveryFabricName?: string; 
   public get sourceRecoveryFabricName() {
     return this.getStringAttribute('source_recovery_fabric_name');
   }
@@ -324,7 +409,7 @@ export class SiteRecoveryReplicatedVm extends cdktf.TerraformResource {
   }
 
   // source_recovery_protection_container_name - computed: false, optional: false, required: true
-  private _sourceRecoveryProtectionContainerName: string;
+  private _sourceRecoveryProtectionContainerName?: string; 
   public get sourceRecoveryProtectionContainerName() {
     return this.getStringAttribute('source_recovery_protection_container_name');
   }
@@ -337,7 +422,7 @@ export class SiteRecoveryReplicatedVm extends cdktf.TerraformResource {
   }
 
   // source_vm_id - computed: false, optional: false, required: true
-  private _sourceVmId: string;
+  private _sourceVmId?: string; 
   public get sourceVmId() {
     return this.getStringAttribute('source_vm_id');
   }
@@ -350,11 +435,11 @@ export class SiteRecoveryReplicatedVm extends cdktf.TerraformResource {
   }
 
   // target_availability_set_id - computed: false, optional: true, required: false
-  private _targetAvailabilitySetId?: string;
+  private _targetAvailabilitySetId?: string | undefined; 
   public get targetAvailabilitySetId() {
     return this.getStringAttribute('target_availability_set_id');
   }
-  public set targetAvailabilitySetId(value: string ) {
+  public set targetAvailabilitySetId(value: string | undefined) {
     this._targetAvailabilitySetId = value;
   }
   public resetTargetAvailabilitySetId() {
@@ -366,11 +451,11 @@ export class SiteRecoveryReplicatedVm extends cdktf.TerraformResource {
   }
 
   // target_network_id - computed: true, optional: true, required: false
-  private _targetNetworkId?: string;
+  private _targetNetworkId?: string | undefined; 
   public get targetNetworkId() {
     return this.getStringAttribute('target_network_id');
   }
-  public set targetNetworkId(value: string) {
+  public set targetNetworkId(value: string | undefined) {
     this._targetNetworkId = value;
   }
   public resetTargetNetworkId() {
@@ -382,7 +467,7 @@ export class SiteRecoveryReplicatedVm extends cdktf.TerraformResource {
   }
 
   // target_recovery_fabric_id - computed: false, optional: false, required: true
-  private _targetRecoveryFabricId: string;
+  private _targetRecoveryFabricId?: string; 
   public get targetRecoveryFabricId() {
     return this.getStringAttribute('target_recovery_fabric_id');
   }
@@ -395,7 +480,7 @@ export class SiteRecoveryReplicatedVm extends cdktf.TerraformResource {
   }
 
   // target_recovery_protection_container_id - computed: false, optional: false, required: true
-  private _targetRecoveryProtectionContainerId: string;
+  private _targetRecoveryProtectionContainerId?: string; 
   public get targetRecoveryProtectionContainerId() {
     return this.getStringAttribute('target_recovery_protection_container_id');
   }
@@ -408,7 +493,7 @@ export class SiteRecoveryReplicatedVm extends cdktf.TerraformResource {
   }
 
   // target_resource_group_id - computed: false, optional: false, required: true
-  private _targetResourceGroupId: string;
+  private _targetResourceGroupId?: string; 
   public get targetResourceGroupId() {
     return this.getStringAttribute('target_resource_group_id');
   }
@@ -421,11 +506,12 @@ export class SiteRecoveryReplicatedVm extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: SiteRecoveryReplicatedVmTimeouts;
+  private _timeouts?: SiteRecoveryReplicatedVmTimeouts | undefined; 
+  private __timeoutsOutput = new SiteRecoveryReplicatedVmTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: SiteRecoveryReplicatedVmTimeouts ) {
+  public putTimeouts(value: SiteRecoveryReplicatedVmTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {

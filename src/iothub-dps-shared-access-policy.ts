@@ -65,8 +65,11 @@ export interface IothubDpsSharedAccessPolicyTimeouts {
   readonly update?: string;
 }
 
-function iothubDpsSharedAccessPolicyTimeoutsToTerraform(struct?: IothubDpsSharedAccessPolicyTimeouts): any {
+function iothubDpsSharedAccessPolicyTimeoutsToTerraform(struct?: IothubDpsSharedAccessPolicyTimeoutsOutputReference | IothubDpsSharedAccessPolicyTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -75,6 +78,80 @@ function iothubDpsSharedAccessPolicyTimeoutsToTerraform(struct?: IothubDpsShared
   }
 }
 
+export class IothubDpsSharedAccessPolicyTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_dps_shared_access_policy.html azurerm_iothub_dps_shared_access_policy}
@@ -124,11 +201,11 @@ export class IothubDpsSharedAccessPolicy extends cdktf.TerraformResource {
   // ==========
 
   // enrollment_read - computed: false, optional: true, required: false
-  private _enrollmentRead?: boolean | cdktf.IResolvable;
+  private _enrollmentRead?: boolean | cdktf.IResolvable | undefined; 
   public get enrollmentRead() {
-    return this.getBooleanAttribute('enrollment_read');
+    return this.getBooleanAttribute('enrollment_read') as any;
   }
-  public set enrollmentRead(value: boolean | cdktf.IResolvable ) {
+  public set enrollmentRead(value: boolean | cdktf.IResolvable | undefined) {
     this._enrollmentRead = value;
   }
   public resetEnrollmentRead() {
@@ -140,11 +217,11 @@ export class IothubDpsSharedAccessPolicy extends cdktf.TerraformResource {
   }
 
   // enrollment_write - computed: false, optional: true, required: false
-  private _enrollmentWrite?: boolean | cdktf.IResolvable;
+  private _enrollmentWrite?: boolean | cdktf.IResolvable | undefined; 
   public get enrollmentWrite() {
-    return this.getBooleanAttribute('enrollment_write');
+    return this.getBooleanAttribute('enrollment_write') as any;
   }
-  public set enrollmentWrite(value: boolean | cdktf.IResolvable ) {
+  public set enrollmentWrite(value: boolean | cdktf.IResolvable | undefined) {
     this._enrollmentWrite = value;
   }
   public resetEnrollmentWrite() {
@@ -161,7 +238,7 @@ export class IothubDpsSharedAccessPolicy extends cdktf.TerraformResource {
   }
 
   // iothub_dps_name - computed: false, optional: false, required: true
-  private _iothubDpsName: string;
+  private _iothubDpsName?: string; 
   public get iothubDpsName() {
     return this.getStringAttribute('iothub_dps_name');
   }
@@ -174,7 +251,7 @@ export class IothubDpsSharedAccessPolicy extends cdktf.TerraformResource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -197,11 +274,11 @@ export class IothubDpsSharedAccessPolicy extends cdktf.TerraformResource {
   }
 
   // registration_read - computed: false, optional: true, required: false
-  private _registrationRead?: boolean | cdktf.IResolvable;
+  private _registrationRead?: boolean | cdktf.IResolvable | undefined; 
   public get registrationRead() {
-    return this.getBooleanAttribute('registration_read');
+    return this.getBooleanAttribute('registration_read') as any;
   }
-  public set registrationRead(value: boolean | cdktf.IResolvable ) {
+  public set registrationRead(value: boolean | cdktf.IResolvable | undefined) {
     this._registrationRead = value;
   }
   public resetRegistrationRead() {
@@ -213,11 +290,11 @@ export class IothubDpsSharedAccessPolicy extends cdktf.TerraformResource {
   }
 
   // registration_write - computed: false, optional: true, required: false
-  private _registrationWrite?: boolean | cdktf.IResolvable;
+  private _registrationWrite?: boolean | cdktf.IResolvable | undefined; 
   public get registrationWrite() {
-    return this.getBooleanAttribute('registration_write');
+    return this.getBooleanAttribute('registration_write') as any;
   }
-  public set registrationWrite(value: boolean | cdktf.IResolvable ) {
+  public set registrationWrite(value: boolean | cdktf.IResolvable | undefined) {
     this._registrationWrite = value;
   }
   public resetRegistrationWrite() {
@@ -229,7 +306,7 @@ export class IothubDpsSharedAccessPolicy extends cdktf.TerraformResource {
   }
 
   // resource_group_name - computed: false, optional: false, required: true
-  private _resourceGroupName: string;
+  private _resourceGroupName?: string; 
   public get resourceGroupName() {
     return this.getStringAttribute('resource_group_name');
   }
@@ -252,11 +329,11 @@ export class IothubDpsSharedAccessPolicy extends cdktf.TerraformResource {
   }
 
   // service_config - computed: false, optional: true, required: false
-  private _serviceConfig?: boolean | cdktf.IResolvable;
+  private _serviceConfig?: boolean | cdktf.IResolvable | undefined; 
   public get serviceConfig() {
-    return this.getBooleanAttribute('service_config');
+    return this.getBooleanAttribute('service_config') as any;
   }
-  public set serviceConfig(value: boolean | cdktf.IResolvable ) {
+  public set serviceConfig(value: boolean | cdktf.IResolvable | undefined) {
     this._serviceConfig = value;
   }
   public resetServiceConfig() {
@@ -268,11 +345,12 @@ export class IothubDpsSharedAccessPolicy extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: IothubDpsSharedAccessPolicyTimeouts;
+  private _timeouts?: IothubDpsSharedAccessPolicyTimeouts | undefined; 
+  private __timeoutsOutput = new IothubDpsSharedAccessPolicyTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: IothubDpsSharedAccessPolicyTimeouts ) {
+  public putTimeouts(value: IothubDpsSharedAccessPolicyTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {

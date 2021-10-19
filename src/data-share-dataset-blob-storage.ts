@@ -32,7 +32,7 @@ export interface DataShareDatasetBlobStorageConfig extends cdktf.TerraformMetaAr
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_share_dataset_blob_storage.html#storage_account DataShareDatasetBlobStorage#storage_account}
   */
-  readonly storageAccount: DataShareDatasetBlobStorageStorageAccount[];
+  readonly storageAccount: DataShareDatasetBlobStorageStorageAccount;
   /**
   * timeouts block
   * 
@@ -55,8 +55,11 @@ export interface DataShareDatasetBlobStorageStorageAccount {
   readonly subscriptionId: string;
 }
 
-function dataShareDatasetBlobStorageStorageAccountToTerraform(struct?: DataShareDatasetBlobStorageStorageAccount): any {
+function dataShareDatasetBlobStorageStorageAccountToTerraform(struct?: DataShareDatasetBlobStorageStorageAccountOutputReference | DataShareDatasetBlobStorageStorageAccount): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     name: cdktf.stringToTerraform(struct!.name),
     resource_group_name: cdktf.stringToTerraform(struct!.resourceGroupName),
@@ -64,6 +67,55 @@ function dataShareDatasetBlobStorageStorageAccountToTerraform(struct?: DataShare
   }
 }
 
+export class DataShareDatasetBlobStorageStorageAccountOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
+  }
+
+  // resource_group_name - computed: false, optional: false, required: true
+  private _resourceGroupName?: string; 
+  public get resourceGroupName() {
+    return this.getStringAttribute('resource_group_name');
+  }
+  public set resourceGroupName(value: string) {
+    this._resourceGroupName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
+  }
+
+  // subscription_id - computed: false, optional: false, required: true
+  private _subscriptionId?: string; 
+  public get subscriptionId() {
+    return this.getStringAttribute('subscription_id');
+  }
+  public set subscriptionId(value: string) {
+    this._subscriptionId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get subscriptionIdInput() {
+    return this._subscriptionId
+  }
+}
 export interface DataShareDatasetBlobStorageTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_share_dataset_blob_storage.html#create DataShareDatasetBlobStorage#create}
@@ -79,8 +131,11 @@ export interface DataShareDatasetBlobStorageTimeouts {
   readonly read?: string;
 }
 
-function dataShareDatasetBlobStorageTimeoutsToTerraform(struct?: DataShareDatasetBlobStorageTimeouts): any {
+function dataShareDatasetBlobStorageTimeoutsToTerraform(struct?: DataShareDatasetBlobStorageTimeoutsOutputReference | DataShareDatasetBlobStorageTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -88,6 +143,64 @@ function dataShareDatasetBlobStorageTimeoutsToTerraform(struct?: DataShareDatase
   }
 }
 
+export class DataShareDatasetBlobStorageTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/data_share_dataset_blob_storage.html azurerm_data_share_dataset_blob_storage}
@@ -135,7 +248,7 @@ export class DataShareDatasetBlobStorage extends cdktf.TerraformResource {
   // ==========
 
   // container_name - computed: false, optional: false, required: true
-  private _containerName: string;
+  private _containerName?: string; 
   public get containerName() {
     return this.getStringAttribute('container_name');
   }
@@ -148,7 +261,7 @@ export class DataShareDatasetBlobStorage extends cdktf.TerraformResource {
   }
 
   // data_share_id - computed: false, optional: false, required: true
-  private _dataShareId: string;
+  private _dataShareId?: string; 
   public get dataShareId() {
     return this.getStringAttribute('data_share_id');
   }
@@ -166,11 +279,11 @@ export class DataShareDatasetBlobStorage extends cdktf.TerraformResource {
   }
 
   // file_path - computed: false, optional: true, required: false
-  private _filePath?: string;
+  private _filePath?: string | undefined; 
   public get filePath() {
     return this.getStringAttribute('file_path');
   }
-  public set filePath(value: string ) {
+  public set filePath(value: string | undefined) {
     this._filePath = value;
   }
   public resetFilePath() {
@@ -182,11 +295,11 @@ export class DataShareDatasetBlobStorage extends cdktf.TerraformResource {
   }
 
   // folder_path - computed: false, optional: true, required: false
-  private _folderPath?: string;
+  private _folderPath?: string | undefined; 
   public get folderPath() {
     return this.getStringAttribute('folder_path');
   }
-  public set folderPath(value: string ) {
+  public set folderPath(value: string | undefined) {
     this._folderPath = value;
   }
   public resetFolderPath() {
@@ -203,7 +316,7 @@ export class DataShareDatasetBlobStorage extends cdktf.TerraformResource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -216,11 +329,12 @@ export class DataShareDatasetBlobStorage extends cdktf.TerraformResource {
   }
 
   // storage_account - computed: false, optional: false, required: true
-  private _storageAccount: DataShareDatasetBlobStorageStorageAccount[];
+  private _storageAccount?: DataShareDatasetBlobStorageStorageAccount; 
+  private __storageAccountOutput = new DataShareDatasetBlobStorageStorageAccountOutputReference(this as any, "storage_account", true);
   public get storageAccount() {
-    return this.interpolationForAttribute('storage_account') as any;
+    return this.__storageAccountOutput;
   }
-  public set storageAccount(value: DataShareDatasetBlobStorageStorageAccount[]) {
+  public putStorageAccount(value: DataShareDatasetBlobStorageStorageAccount) {
     this._storageAccount = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -229,11 +343,12 @@ export class DataShareDatasetBlobStorage extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: DataShareDatasetBlobStorageTimeouts;
+  private _timeouts?: DataShareDatasetBlobStorageTimeouts | undefined; 
+  private __timeoutsOutput = new DataShareDatasetBlobStorageTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: DataShareDatasetBlobStorageTimeouts ) {
+  public putTimeouts(value: DataShareDatasetBlobStorageTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {
@@ -255,7 +370,7 @@ export class DataShareDatasetBlobStorage extends cdktf.TerraformResource {
       file_path: cdktf.stringToTerraform(this._filePath),
       folder_path: cdktf.stringToTerraform(this._folderPath),
       name: cdktf.stringToTerraform(this._name),
-      storage_account: cdktf.listMapper(dataShareDatasetBlobStorageStorageAccountToTerraform)(this._storageAccount),
+      storage_account: dataShareDatasetBlobStorageStorageAccountToTerraform(this._storageAccount),
       timeouts: dataShareDatasetBlobStorageTimeoutsToTerraform(this._timeouts),
     };
   }

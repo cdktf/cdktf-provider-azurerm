@@ -41,13 +41,42 @@ export interface DataAzurermAppServiceEnvironmentTimeouts {
   readonly read?: string;
 }
 
-function dataAzurermAppServiceEnvironmentTimeoutsToTerraform(struct?: DataAzurermAppServiceEnvironmentTimeouts): any {
+function dataAzurermAppServiceEnvironmentTimeoutsToTerraform(struct?: DataAzurermAppServiceEnvironmentTimeoutsOutputReference | DataAzurermAppServiceEnvironmentTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     read: cdktf.stringToTerraform(struct!.read),
   }
 }
 
+export class DataAzurermAppServiceEnvironmentTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/app_service_environment.html azurerm_app_service_environment}
@@ -116,7 +145,7 @@ export class DataAzurermAppServiceEnvironment extends cdktf.TerraformDataSource 
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -139,7 +168,7 @@ export class DataAzurermAppServiceEnvironment extends cdktf.TerraformDataSource 
   }
 
   // resource_group_name - computed: false, optional: false, required: true
-  private _resourceGroupName: string;
+  private _resourceGroupName?: string; 
   public get resourceGroupName() {
     return this.getStringAttribute('resource_group_name');
   }
@@ -162,11 +191,12 @@ export class DataAzurermAppServiceEnvironment extends cdktf.TerraformDataSource 
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: DataAzurermAppServiceEnvironmentTimeouts;
+  private _timeouts?: DataAzurermAppServiceEnvironmentTimeouts | undefined; 
+  private __timeoutsOutput = new DataAzurermAppServiceEnvironmentTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: DataAzurermAppServiceEnvironmentTimeouts ) {
+  public putTimeouts(value: DataAzurermAppServiceEnvironmentTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {

@@ -77,13 +77,42 @@ export interface DataAzurermCosmosdbAccountTimeouts {
   readonly read?: string;
 }
 
-function dataAzurermCosmosdbAccountTimeoutsToTerraform(struct?: DataAzurermCosmosdbAccountTimeouts): any {
+function dataAzurermCosmosdbAccountTimeoutsToTerraform(struct?: DataAzurermCosmosdbAccountTimeoutsOutputReference | DataAzurermCosmosdbAccountTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     read: cdktf.stringToTerraform(struct!.read),
   }
 }
 
+export class DataAzurermCosmosdbAccountTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/cosmosdb_account.html azurerm_cosmosdb_account}
@@ -138,17 +167,17 @@ export class DataAzurermCosmosdbAccount extends cdktf.TerraformDataSource {
 
   // enable_automatic_failover - computed: true, optional: false, required: false
   public get enableAutomaticFailover() {
-    return this.getBooleanAttribute('enable_automatic_failover');
+    return this.getBooleanAttribute('enable_automatic_failover') as any;
   }
 
   // enable_free_tier - computed: true, optional: false, required: false
   public get enableFreeTier() {
-    return this.getBooleanAttribute('enable_free_tier');
+    return this.getBooleanAttribute('enable_free_tier') as any;
   }
 
   // enable_multiple_write_locations - computed: true, optional: false, required: false
   public get enableMultipleWriteLocations() {
-    return this.getBooleanAttribute('enable_multiple_write_locations');
+    return this.getBooleanAttribute('enable_multiple_write_locations') as any;
   }
 
   // endpoint - computed: true, optional: false, required: false
@@ -173,7 +202,7 @@ export class DataAzurermCosmosdbAccount extends cdktf.TerraformDataSource {
 
   // is_virtual_network_filter_enabled - computed: true, optional: false, required: false
   public get isVirtualNetworkFilterEnabled() {
-    return this.getBooleanAttribute('is_virtual_network_filter_enabled');
+    return this.getBooleanAttribute('is_virtual_network_filter_enabled') as any;
   }
 
   // key_vault_key_id - computed: true, optional: false, required: false
@@ -192,7 +221,7 @@ export class DataAzurermCosmosdbAccount extends cdktf.TerraformDataSource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -235,7 +264,7 @@ export class DataAzurermCosmosdbAccount extends cdktf.TerraformDataSource {
   }
 
   // resource_group_name - computed: false, optional: false, required: true
-  private _resourceGroupName: string;
+  private _resourceGroupName?: string; 
   public get resourceGroupName() {
     return this.getStringAttribute('resource_group_name');
   }
@@ -283,11 +312,12 @@ export class DataAzurermCosmosdbAccount extends cdktf.TerraformDataSource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: DataAzurermCosmosdbAccountTimeouts;
+  private _timeouts?: DataAzurermCosmosdbAccountTimeouts | undefined; 
+  private __timeoutsOutput = new DataAzurermCosmosdbAccountTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: DataAzurermCosmosdbAccountTimeouts ) {
+  public putTimeouts(value: DataAzurermCosmosdbAccountTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {

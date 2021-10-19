@@ -74,7 +74,7 @@ export interface KeyVaultConfig extends cdktf.TerraformMetaArguments {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault.html#network_acls KeyVault#network_acls}
   */
-  readonly networkAcls?: KeyVaultNetworkAcls[];
+  readonly networkAcls?: KeyVaultNetworkAcls;
   /**
   * timeouts block
   * 
@@ -115,6 +115,9 @@ export interface KeyVaultAccessPolicy {
 
 function keyVaultAccessPolicyToTerraform(struct?: KeyVaultAccessPolicy): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     application_id: struct!.applicationId === undefined ? null : cdktf.stringToTerraform(struct!.applicationId),
     certificate_permissions: struct!.certificatePermissions === undefined ? null : cdktf.listMapper(cdktf.stringToTerraform)(struct!.certificatePermissions),
@@ -143,6 +146,9 @@ export interface KeyVaultContact {
 
 function keyVaultContactToTerraform(struct?: KeyVaultContact): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     email: cdktf.stringToTerraform(struct!.email),
     name: cdktf.stringToTerraform(struct!.name),
@@ -169,8 +175,11 @@ export interface KeyVaultNetworkAcls {
   readonly virtualNetworkSubnetIds?: string[];
 }
 
-function keyVaultNetworkAclsToTerraform(struct?: KeyVaultNetworkAcls): any {
+function keyVaultNetworkAclsToTerraform(struct?: KeyVaultNetworkAclsOutputReference | KeyVaultNetworkAcls): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     bypass: cdktf.stringToTerraform(struct!.bypass),
     default_action: cdktf.stringToTerraform(struct!.defaultAction),
@@ -179,6 +188,74 @@ function keyVaultNetworkAclsToTerraform(struct?: KeyVaultNetworkAcls): any {
   }
 }
 
+export class KeyVaultNetworkAclsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // bypass - computed: false, optional: false, required: true
+  private _bypass?: string; 
+  public get bypass() {
+    return this.getStringAttribute('bypass');
+  }
+  public set bypass(value: string) {
+    this._bypass = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get bypassInput() {
+    return this._bypass
+  }
+
+  // default_action - computed: false, optional: false, required: true
+  private _defaultAction?: string; 
+  public get defaultAction() {
+    return this.getStringAttribute('default_action');
+  }
+  public set defaultAction(value: string) {
+    this._defaultAction = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get defaultActionInput() {
+    return this._defaultAction
+  }
+
+  // ip_rules - computed: false, optional: true, required: false
+  private _ipRules?: string[] | undefined; 
+  public get ipRules() {
+    return this.getListAttribute('ip_rules');
+  }
+  public set ipRules(value: string[] | undefined) {
+    this._ipRules = value;
+  }
+  public resetIpRules() {
+    this._ipRules = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ipRulesInput() {
+    return this._ipRules
+  }
+
+  // virtual_network_subnet_ids - computed: false, optional: true, required: false
+  private _virtualNetworkSubnetIds?: string[] | undefined; 
+  public get virtualNetworkSubnetIds() {
+    return this.getListAttribute('virtual_network_subnet_ids');
+  }
+  public set virtualNetworkSubnetIds(value: string[] | undefined) {
+    this._virtualNetworkSubnetIds = value;
+  }
+  public resetVirtualNetworkSubnetIds() {
+    this._virtualNetworkSubnetIds = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get virtualNetworkSubnetIdsInput() {
+    return this._virtualNetworkSubnetIds
+  }
+}
 export interface KeyVaultTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault.html#create KeyVault#create}
@@ -198,8 +275,11 @@ export interface KeyVaultTimeouts {
   readonly update?: string;
 }
 
-function keyVaultTimeoutsToTerraform(struct?: KeyVaultTimeouts): any {
+function keyVaultTimeoutsToTerraform(struct?: KeyVaultTimeoutsOutputReference | KeyVaultTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -208,6 +288,80 @@ function keyVaultTimeoutsToTerraform(struct?: KeyVaultTimeouts): any {
   }
 }
 
+export class KeyVaultTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault.html azurerm_key_vault}
@@ -265,11 +419,12 @@ export class KeyVault extends cdktf.TerraformResource {
   // ==========
 
   // access_policy - computed: true, optional: true, required: false
-  private _accessPolicy?: KeyVaultAccessPolicy[]
-  public get accessPolicy(): KeyVaultAccessPolicy[] {
-    return this.interpolationForAttribute('access_policy') as any; // Getting the computed value is not yet implemented
+  private _accessPolicy?: KeyVaultAccessPolicy[] | undefined; 
+  public get accessPolicy() {
+    // Getting the computed value is not yet implemented
+    return this.interpolationForAttribute('access_policy') as any;
   }
-  public set accessPolicy(value: KeyVaultAccessPolicy[]) {
+  public set accessPolicy(value: KeyVaultAccessPolicy[] | undefined) {
     this._accessPolicy = value;
   }
   public resetAccessPolicy() {
@@ -281,11 +436,11 @@ export class KeyVault extends cdktf.TerraformResource {
   }
 
   // enable_rbac_authorization - computed: false, optional: true, required: false
-  private _enableRbacAuthorization?: boolean | cdktf.IResolvable;
+  private _enableRbacAuthorization?: boolean | cdktf.IResolvable | undefined; 
   public get enableRbacAuthorization() {
-    return this.getBooleanAttribute('enable_rbac_authorization');
+    return this.getBooleanAttribute('enable_rbac_authorization') as any;
   }
-  public set enableRbacAuthorization(value: boolean | cdktf.IResolvable ) {
+  public set enableRbacAuthorization(value: boolean | cdktf.IResolvable | undefined) {
     this._enableRbacAuthorization = value;
   }
   public resetEnableRbacAuthorization() {
@@ -297,11 +452,11 @@ export class KeyVault extends cdktf.TerraformResource {
   }
 
   // enabled_for_deployment - computed: false, optional: true, required: false
-  private _enabledForDeployment?: boolean | cdktf.IResolvable;
+  private _enabledForDeployment?: boolean | cdktf.IResolvable | undefined; 
   public get enabledForDeployment() {
-    return this.getBooleanAttribute('enabled_for_deployment');
+    return this.getBooleanAttribute('enabled_for_deployment') as any;
   }
-  public set enabledForDeployment(value: boolean | cdktf.IResolvable ) {
+  public set enabledForDeployment(value: boolean | cdktf.IResolvable | undefined) {
     this._enabledForDeployment = value;
   }
   public resetEnabledForDeployment() {
@@ -313,11 +468,11 @@ export class KeyVault extends cdktf.TerraformResource {
   }
 
   // enabled_for_disk_encryption - computed: false, optional: true, required: false
-  private _enabledForDiskEncryption?: boolean | cdktf.IResolvable;
+  private _enabledForDiskEncryption?: boolean | cdktf.IResolvable | undefined; 
   public get enabledForDiskEncryption() {
-    return this.getBooleanAttribute('enabled_for_disk_encryption');
+    return this.getBooleanAttribute('enabled_for_disk_encryption') as any;
   }
-  public set enabledForDiskEncryption(value: boolean | cdktf.IResolvable ) {
+  public set enabledForDiskEncryption(value: boolean | cdktf.IResolvable | undefined) {
     this._enabledForDiskEncryption = value;
   }
   public resetEnabledForDiskEncryption() {
@@ -329,11 +484,11 @@ export class KeyVault extends cdktf.TerraformResource {
   }
 
   // enabled_for_template_deployment - computed: false, optional: true, required: false
-  private _enabledForTemplateDeployment?: boolean | cdktf.IResolvable;
+  private _enabledForTemplateDeployment?: boolean | cdktf.IResolvable | undefined; 
   public get enabledForTemplateDeployment() {
-    return this.getBooleanAttribute('enabled_for_template_deployment');
+    return this.getBooleanAttribute('enabled_for_template_deployment') as any;
   }
-  public set enabledForTemplateDeployment(value: boolean | cdktf.IResolvable ) {
+  public set enabledForTemplateDeployment(value: boolean | cdktf.IResolvable | undefined) {
     this._enabledForTemplateDeployment = value;
   }
   public resetEnabledForTemplateDeployment() {
@@ -350,7 +505,7 @@ export class KeyVault extends cdktf.TerraformResource {
   }
 
   // location - computed: false, optional: false, required: true
-  private _location: string;
+  private _location?: string; 
   public get location() {
     return this.getStringAttribute('location');
   }
@@ -363,7 +518,7 @@ export class KeyVault extends cdktf.TerraformResource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -376,11 +531,11 @@ export class KeyVault extends cdktf.TerraformResource {
   }
 
   // purge_protection_enabled - computed: false, optional: true, required: false
-  private _purgeProtectionEnabled?: boolean | cdktf.IResolvable;
+  private _purgeProtectionEnabled?: boolean | cdktf.IResolvable | undefined; 
   public get purgeProtectionEnabled() {
-    return this.getBooleanAttribute('purge_protection_enabled');
+    return this.getBooleanAttribute('purge_protection_enabled') as any;
   }
-  public set purgeProtectionEnabled(value: boolean | cdktf.IResolvable ) {
+  public set purgeProtectionEnabled(value: boolean | cdktf.IResolvable | undefined) {
     this._purgeProtectionEnabled = value;
   }
   public resetPurgeProtectionEnabled() {
@@ -392,7 +547,7 @@ export class KeyVault extends cdktf.TerraformResource {
   }
 
   // resource_group_name - computed: false, optional: false, required: true
-  private _resourceGroupName: string;
+  private _resourceGroupName?: string; 
   public get resourceGroupName() {
     return this.getStringAttribute('resource_group_name');
   }
@@ -405,7 +560,7 @@ export class KeyVault extends cdktf.TerraformResource {
   }
 
   // sku_name - computed: false, optional: false, required: true
-  private _skuName: string;
+  private _skuName?: string; 
   public get skuName() {
     return this.getStringAttribute('sku_name');
   }
@@ -418,11 +573,11 @@ export class KeyVault extends cdktf.TerraformResource {
   }
 
   // soft_delete_enabled - computed: true, optional: true, required: false
-  private _softDeleteEnabled?: boolean | cdktf.IResolvable;
+  private _softDeleteEnabled?: boolean | cdktf.IResolvable | undefined; 
   public get softDeleteEnabled() {
-    return this.getBooleanAttribute('soft_delete_enabled');
+    return this.getBooleanAttribute('soft_delete_enabled') as any;
   }
-  public set softDeleteEnabled(value: boolean | cdktf.IResolvable) {
+  public set softDeleteEnabled(value: boolean | cdktf.IResolvable | undefined) {
     this._softDeleteEnabled = value;
   }
   public resetSoftDeleteEnabled() {
@@ -434,11 +589,11 @@ export class KeyVault extends cdktf.TerraformResource {
   }
 
   // soft_delete_retention_days - computed: false, optional: true, required: false
-  private _softDeleteRetentionDays?: number;
+  private _softDeleteRetentionDays?: number | undefined; 
   public get softDeleteRetentionDays() {
     return this.getNumberAttribute('soft_delete_retention_days');
   }
-  public set softDeleteRetentionDays(value: number ) {
+  public set softDeleteRetentionDays(value: number | undefined) {
     this._softDeleteRetentionDays = value;
   }
   public resetSoftDeleteRetentionDays() {
@@ -450,11 +605,12 @@ export class KeyVault extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable;
+  private _tags?: { [key: string]: string } | cdktf.IResolvable | undefined; 
   public get tags() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
     this._tags = value;
   }
   public resetTags() {
@@ -466,7 +622,7 @@ export class KeyVault extends cdktf.TerraformResource {
   }
 
   // tenant_id - computed: false, optional: false, required: true
-  private _tenantId: string;
+  private _tenantId?: string; 
   public get tenantId() {
     return this.getStringAttribute('tenant_id');
   }
@@ -484,11 +640,12 @@ export class KeyVault extends cdktf.TerraformResource {
   }
 
   // contact - computed: false, optional: true, required: false
-  private _contact?: KeyVaultContact[];
+  private _contact?: KeyVaultContact[] | undefined; 
   public get contact() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('contact') as any;
   }
-  public set contact(value: KeyVaultContact[] ) {
+  public set contact(value: KeyVaultContact[] | undefined) {
     this._contact = value;
   }
   public resetContact() {
@@ -500,11 +657,12 @@ export class KeyVault extends cdktf.TerraformResource {
   }
 
   // network_acls - computed: false, optional: true, required: false
-  private _networkAcls?: KeyVaultNetworkAcls[];
+  private _networkAcls?: KeyVaultNetworkAcls | undefined; 
+  private __networkAclsOutput = new KeyVaultNetworkAclsOutputReference(this as any, "network_acls", true);
   public get networkAcls() {
-    return this.interpolationForAttribute('network_acls') as any;
+    return this.__networkAclsOutput;
   }
-  public set networkAcls(value: KeyVaultNetworkAcls[] ) {
+  public putNetworkAcls(value: KeyVaultNetworkAcls | undefined) {
     this._networkAcls = value;
   }
   public resetNetworkAcls() {
@@ -516,11 +674,12 @@ export class KeyVault extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: KeyVaultTimeouts;
+  private _timeouts?: KeyVaultTimeouts | undefined; 
+  private __timeoutsOutput = new KeyVaultTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: KeyVaultTimeouts ) {
+  public putTimeouts(value: KeyVaultTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {
@@ -552,7 +711,7 @@ export class KeyVault extends cdktf.TerraformResource {
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
       tenant_id: cdktf.stringToTerraform(this._tenantId),
       contact: cdktf.listMapper(keyVaultContactToTerraform)(this._contact),
-      network_acls: cdktf.listMapper(keyVaultNetworkAclsToTerraform)(this._networkAcls),
+      network_acls: keyVaultNetworkAclsToTerraform(this._networkAcls),
       timeouts: keyVaultTimeoutsToTerraform(this._timeouts),
     };
   }

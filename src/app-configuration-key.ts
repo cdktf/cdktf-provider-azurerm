@@ -73,8 +73,11 @@ export interface AppConfigurationKeyTimeouts {
   readonly update?: string;
 }
 
-function appConfigurationKeyTimeoutsToTerraform(struct?: AppConfigurationKeyTimeouts): any {
+function appConfigurationKeyTimeoutsToTerraform(struct?: AppConfigurationKeyTimeoutsOutputReference | AppConfigurationKeyTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -83,6 +86,80 @@ function appConfigurationKeyTimeoutsToTerraform(struct?: AppConfigurationKeyTime
   }
 }
 
+export class AppConfigurationKeyTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/app_configuration_key.html azurerm_app_configuration_key}
@@ -134,7 +211,7 @@ export class AppConfigurationKey extends cdktf.TerraformResource {
   // ==========
 
   // configuration_store_id - computed: false, optional: false, required: true
-  private _configurationStoreId: string;
+  private _configurationStoreId?: string; 
   public get configurationStoreId() {
     return this.getStringAttribute('configuration_store_id');
   }
@@ -147,11 +224,11 @@ export class AppConfigurationKey extends cdktf.TerraformResource {
   }
 
   // content_type - computed: true, optional: true, required: false
-  private _contentType?: string;
+  private _contentType?: string | undefined; 
   public get contentType() {
     return this.getStringAttribute('content_type');
   }
-  public set contentType(value: string) {
+  public set contentType(value: string | undefined) {
     this._contentType = value;
   }
   public resetContentType() {
@@ -163,11 +240,11 @@ export class AppConfigurationKey extends cdktf.TerraformResource {
   }
 
   // etag - computed: true, optional: true, required: false
-  private _etag?: string;
+  private _etag?: string | undefined; 
   public get etag() {
     return this.getStringAttribute('etag');
   }
-  public set etag(value: string) {
+  public set etag(value: string | undefined) {
     this._etag = value;
   }
   public resetEtag() {
@@ -184,7 +261,7 @@ export class AppConfigurationKey extends cdktf.TerraformResource {
   }
 
   // key - computed: false, optional: false, required: true
-  private _key: string;
+  private _key?: string; 
   public get key() {
     return this.getStringAttribute('key');
   }
@@ -197,11 +274,11 @@ export class AppConfigurationKey extends cdktf.TerraformResource {
   }
 
   // label - computed: false, optional: true, required: false
-  private _label?: string;
+  private _label?: string | undefined; 
   public get label() {
     return this.getStringAttribute('label');
   }
-  public set label(value: string ) {
+  public set label(value: string | undefined) {
     this._label = value;
   }
   public resetLabel() {
@@ -213,11 +290,11 @@ export class AppConfigurationKey extends cdktf.TerraformResource {
   }
 
   // locked - computed: false, optional: true, required: false
-  private _locked?: boolean | cdktf.IResolvable;
+  private _locked?: boolean | cdktf.IResolvable | undefined; 
   public get locked() {
-    return this.getBooleanAttribute('locked');
+    return this.getBooleanAttribute('locked') as any;
   }
-  public set locked(value: boolean | cdktf.IResolvable ) {
+  public set locked(value: boolean | cdktf.IResolvable | undefined) {
     this._locked = value;
   }
   public resetLocked() {
@@ -229,11 +306,12 @@ export class AppConfigurationKey extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable;
+  private _tags?: { [key: string]: string } | cdktf.IResolvable | undefined; 
   public get tags() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
     this._tags = value;
   }
   public resetTags() {
@@ -245,11 +323,11 @@ export class AppConfigurationKey extends cdktf.TerraformResource {
   }
 
   // type - computed: false, optional: true, required: false
-  private _type?: string;
+  private _type?: string | undefined; 
   public get type() {
     return this.getStringAttribute('type');
   }
-  public set type(value: string ) {
+  public set type(value: string | undefined) {
     this._type = value;
   }
   public resetType() {
@@ -261,11 +339,11 @@ export class AppConfigurationKey extends cdktf.TerraformResource {
   }
 
   // value - computed: true, optional: true, required: false
-  private _value?: string;
+  private _value?: string | undefined; 
   public get value() {
     return this.getStringAttribute('value');
   }
-  public set value(value: string) {
+  public set value(value: string | undefined) {
     this._value = value;
   }
   public resetValue() {
@@ -277,11 +355,11 @@ export class AppConfigurationKey extends cdktf.TerraformResource {
   }
 
   // vault_key_reference - computed: false, optional: true, required: false
-  private _vaultKeyReference?: string;
+  private _vaultKeyReference?: string | undefined; 
   public get vaultKeyReference() {
     return this.getStringAttribute('vault_key_reference');
   }
-  public set vaultKeyReference(value: string ) {
+  public set vaultKeyReference(value: string | undefined) {
     this._vaultKeyReference = value;
   }
   public resetVaultKeyReference() {
@@ -293,11 +371,12 @@ export class AppConfigurationKey extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: AppConfigurationKeyTimeouts;
+  private _timeouts?: AppConfigurationKeyTimeouts | undefined; 
+  private __timeoutsOutput = new AppConfigurationKeyTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: AppConfigurationKeyTimeouts ) {
+  public putTimeouts(value: AppConfigurationKeyTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {

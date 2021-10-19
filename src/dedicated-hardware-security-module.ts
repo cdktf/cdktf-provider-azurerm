@@ -40,7 +40,7 @@ export interface DedicatedHardwareSecurityModuleConfig extends cdktf.TerraformMe
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dedicated_hardware_security_module.html#network_profile DedicatedHardwareSecurityModule#network_profile}
   */
-  readonly networkProfile: DedicatedHardwareSecurityModuleNetworkProfile[];
+  readonly networkProfile: DedicatedHardwareSecurityModuleNetworkProfile;
   /**
   * timeouts block
   * 
@@ -59,14 +59,53 @@ export interface DedicatedHardwareSecurityModuleNetworkProfile {
   readonly subnetId: string;
 }
 
-function dedicatedHardwareSecurityModuleNetworkProfileToTerraform(struct?: DedicatedHardwareSecurityModuleNetworkProfile): any {
+function dedicatedHardwareSecurityModuleNetworkProfileToTerraform(struct?: DedicatedHardwareSecurityModuleNetworkProfileOutputReference | DedicatedHardwareSecurityModuleNetworkProfile): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     network_interface_private_ip_addresses: cdktf.listMapper(cdktf.stringToTerraform)(struct!.networkInterfacePrivateIpAddresses),
     subnet_id: cdktf.stringToTerraform(struct!.subnetId),
   }
 }
 
+export class DedicatedHardwareSecurityModuleNetworkProfileOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // network_interface_private_ip_addresses - computed: false, optional: false, required: true
+  private _networkInterfacePrivateIpAddresses?: string[]; 
+  public get networkInterfacePrivateIpAddresses() {
+    return this.getListAttribute('network_interface_private_ip_addresses');
+  }
+  public set networkInterfacePrivateIpAddresses(value: string[]) {
+    this._networkInterfacePrivateIpAddresses = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get networkInterfacePrivateIpAddressesInput() {
+    return this._networkInterfacePrivateIpAddresses
+  }
+
+  // subnet_id - computed: false, optional: false, required: true
+  private _subnetId?: string; 
+  public get subnetId() {
+    return this.getStringAttribute('subnet_id');
+  }
+  public set subnetId(value: string) {
+    this._subnetId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get subnetIdInput() {
+    return this._subnetId
+  }
+}
 export interface DedicatedHardwareSecurityModuleTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dedicated_hardware_security_module.html#create DedicatedHardwareSecurityModule#create}
@@ -86,8 +125,11 @@ export interface DedicatedHardwareSecurityModuleTimeouts {
   readonly update?: string;
 }
 
-function dedicatedHardwareSecurityModuleTimeoutsToTerraform(struct?: DedicatedHardwareSecurityModuleTimeouts): any {
+function dedicatedHardwareSecurityModuleTimeoutsToTerraform(struct?: DedicatedHardwareSecurityModuleTimeoutsOutputReference | DedicatedHardwareSecurityModuleTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -96,6 +138,80 @@ function dedicatedHardwareSecurityModuleTimeoutsToTerraform(struct?: DedicatedHa
   }
 }
 
+export class DedicatedHardwareSecurityModuleTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/dedicated_hardware_security_module.html azurerm_dedicated_hardware_security_module}
@@ -150,7 +266,7 @@ export class DedicatedHardwareSecurityModule extends cdktf.TerraformResource {
   }
 
   // location - computed: false, optional: false, required: true
-  private _location: string;
+  private _location?: string; 
   public get location() {
     return this.getStringAttribute('location');
   }
@@ -163,7 +279,7 @@ export class DedicatedHardwareSecurityModule extends cdktf.TerraformResource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -176,7 +292,7 @@ export class DedicatedHardwareSecurityModule extends cdktf.TerraformResource {
   }
 
   // resource_group_name - computed: false, optional: false, required: true
-  private _resourceGroupName: string;
+  private _resourceGroupName?: string; 
   public get resourceGroupName() {
     return this.getStringAttribute('resource_group_name');
   }
@@ -189,7 +305,7 @@ export class DedicatedHardwareSecurityModule extends cdktf.TerraformResource {
   }
 
   // sku_name - computed: false, optional: false, required: true
-  private _skuName: string;
+  private _skuName?: string; 
   public get skuName() {
     return this.getStringAttribute('sku_name');
   }
@@ -202,11 +318,11 @@ export class DedicatedHardwareSecurityModule extends cdktf.TerraformResource {
   }
 
   // stamp_id - computed: false, optional: true, required: false
-  private _stampId?: string;
+  private _stampId?: string | undefined; 
   public get stampId() {
     return this.getStringAttribute('stamp_id');
   }
-  public set stampId(value: string ) {
+  public set stampId(value: string | undefined) {
     this._stampId = value;
   }
   public resetStampId() {
@@ -218,11 +334,12 @@ export class DedicatedHardwareSecurityModule extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable;
+  private _tags?: { [key: string]: string } | cdktf.IResolvable | undefined; 
   public get tags() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
     this._tags = value;
   }
   public resetTags() {
@@ -234,11 +351,11 @@ export class DedicatedHardwareSecurityModule extends cdktf.TerraformResource {
   }
 
   // zones - computed: false, optional: true, required: false
-  private _zones?: string[];
+  private _zones?: string[] | undefined; 
   public get zones() {
     return this.getListAttribute('zones');
   }
-  public set zones(value: string[] ) {
+  public set zones(value: string[] | undefined) {
     this._zones = value;
   }
   public resetZones() {
@@ -250,11 +367,12 @@ export class DedicatedHardwareSecurityModule extends cdktf.TerraformResource {
   }
 
   // network_profile - computed: false, optional: false, required: true
-  private _networkProfile: DedicatedHardwareSecurityModuleNetworkProfile[];
+  private _networkProfile?: DedicatedHardwareSecurityModuleNetworkProfile; 
+  private __networkProfileOutput = new DedicatedHardwareSecurityModuleNetworkProfileOutputReference(this as any, "network_profile", true);
   public get networkProfile() {
-    return this.interpolationForAttribute('network_profile') as any;
+    return this.__networkProfileOutput;
   }
-  public set networkProfile(value: DedicatedHardwareSecurityModuleNetworkProfile[]) {
+  public putNetworkProfile(value: DedicatedHardwareSecurityModuleNetworkProfile) {
     this._networkProfile = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -263,11 +381,12 @@ export class DedicatedHardwareSecurityModule extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: DedicatedHardwareSecurityModuleTimeouts;
+  private _timeouts?: DedicatedHardwareSecurityModuleTimeouts | undefined; 
+  private __timeoutsOutput = new DedicatedHardwareSecurityModuleTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: DedicatedHardwareSecurityModuleTimeouts ) {
+  public putTimeouts(value: DedicatedHardwareSecurityModuleTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {
@@ -291,7 +410,7 @@ export class DedicatedHardwareSecurityModule extends cdktf.TerraformResource {
       stamp_id: cdktf.stringToTerraform(this._stampId),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
       zones: cdktf.listMapper(cdktf.stringToTerraform)(this._zones),
-      network_profile: cdktf.listMapper(dedicatedHardwareSecurityModuleNetworkProfileToTerraform)(this._networkProfile),
+      network_profile: dedicatedHardwareSecurityModuleNetworkProfileToTerraform(this._networkProfile),
       timeouts: dedicatedHardwareSecurityModuleTimeoutsToTerraform(this._timeouts),
     };
   }

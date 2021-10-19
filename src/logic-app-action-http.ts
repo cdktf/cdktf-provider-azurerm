@@ -57,6 +57,9 @@ export interface LogicAppActionHttpRunAfter {
 
 function logicAppActionHttpRunAfterToTerraform(struct?: LogicAppActionHttpRunAfter): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     action_name: cdktf.stringToTerraform(struct!.actionName),
     action_result: cdktf.stringToTerraform(struct!.actionResult),
@@ -82,8 +85,11 @@ export interface LogicAppActionHttpTimeouts {
   readonly update?: string;
 }
 
-function logicAppActionHttpTimeoutsToTerraform(struct?: LogicAppActionHttpTimeouts): any {
+function logicAppActionHttpTimeoutsToTerraform(struct?: LogicAppActionHttpTimeoutsOutputReference | LogicAppActionHttpTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -92,6 +98,80 @@ function logicAppActionHttpTimeoutsToTerraform(struct?: LogicAppActionHttpTimeou
   }
 }
 
+export class LogicAppActionHttpTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_action_http.html azurerm_logic_app_action_http}
@@ -140,11 +220,11 @@ export class LogicAppActionHttp extends cdktf.TerraformResource {
   // ==========
 
   // body - computed: false, optional: true, required: false
-  private _body?: string;
+  private _body?: string | undefined; 
   public get body() {
     return this.getStringAttribute('body');
   }
-  public set body(value: string ) {
+  public set body(value: string | undefined) {
     this._body = value;
   }
   public resetBody() {
@@ -156,11 +236,12 @@ export class LogicAppActionHttp extends cdktf.TerraformResource {
   }
 
   // headers - computed: false, optional: true, required: false
-  private _headers?: { [key: string]: string } | cdktf.IResolvable;
+  private _headers?: { [key: string]: string } | cdktf.IResolvable | undefined; 
   public get headers() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('headers') as any;
   }
-  public set headers(value: { [key: string]: string } | cdktf.IResolvable ) {
+  public set headers(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
     this._headers = value;
   }
   public resetHeaders() {
@@ -177,7 +258,7 @@ export class LogicAppActionHttp extends cdktf.TerraformResource {
   }
 
   // logic_app_id - computed: false, optional: false, required: true
-  private _logicAppId: string;
+  private _logicAppId?: string; 
   public get logicAppId() {
     return this.getStringAttribute('logic_app_id');
   }
@@ -190,7 +271,7 @@ export class LogicAppActionHttp extends cdktf.TerraformResource {
   }
 
   // method - computed: false, optional: false, required: true
-  private _method: string;
+  private _method?: string; 
   public get method() {
     return this.getStringAttribute('method');
   }
@@ -203,7 +284,7 @@ export class LogicAppActionHttp extends cdktf.TerraformResource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -216,7 +297,7 @@ export class LogicAppActionHttp extends cdktf.TerraformResource {
   }
 
   // uri - computed: false, optional: false, required: true
-  private _uri: string;
+  private _uri?: string; 
   public get uri() {
     return this.getStringAttribute('uri');
   }
@@ -229,11 +310,12 @@ export class LogicAppActionHttp extends cdktf.TerraformResource {
   }
 
   // run_after - computed: false, optional: true, required: false
-  private _runAfter?: LogicAppActionHttpRunAfter[];
+  private _runAfter?: LogicAppActionHttpRunAfter[] | undefined; 
   public get runAfter() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('run_after') as any;
   }
-  public set runAfter(value: LogicAppActionHttpRunAfter[] ) {
+  public set runAfter(value: LogicAppActionHttpRunAfter[] | undefined) {
     this._runAfter = value;
   }
   public resetRunAfter() {
@@ -245,11 +327,12 @@ export class LogicAppActionHttp extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: LogicAppActionHttpTimeouts;
+  private _timeouts?: LogicAppActionHttpTimeouts | undefined; 
+  private __timeoutsOutput = new LogicAppActionHttpTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: LogicAppActionHttpTimeouts ) {
+  public putTimeouts(value: LogicAppActionHttpTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {

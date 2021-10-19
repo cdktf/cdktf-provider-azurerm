@@ -65,8 +65,11 @@ export interface KeyVaultManagedHardwareSecurityModuleTimeouts {
   readonly read?: string;
 }
 
-function keyVaultManagedHardwareSecurityModuleTimeoutsToTerraform(struct?: KeyVaultManagedHardwareSecurityModuleTimeouts): any {
+function keyVaultManagedHardwareSecurityModuleTimeoutsToTerraform(struct?: KeyVaultManagedHardwareSecurityModuleTimeoutsOutputReference | KeyVaultManagedHardwareSecurityModuleTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -74,6 +77,64 @@ function keyVaultManagedHardwareSecurityModuleTimeoutsToTerraform(struct?: KeyVa
   }
 }
 
+export class KeyVaultManagedHardwareSecurityModuleTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_managed_hardware_security_module.html azurerm_key_vault_managed_hardware_security_module}
@@ -124,7 +185,7 @@ export class KeyVaultManagedHardwareSecurityModule extends cdktf.TerraformResour
   // ==========
 
   // admin_object_ids - computed: false, optional: false, required: true
-  private _adminObjectIds: string[];
+  private _adminObjectIds?: string[]; 
   public get adminObjectIds() {
     return this.getListAttribute('admin_object_ids');
   }
@@ -147,7 +208,7 @@ export class KeyVaultManagedHardwareSecurityModule extends cdktf.TerraformResour
   }
 
   // location - computed: false, optional: false, required: true
-  private _location: string;
+  private _location?: string; 
   public get location() {
     return this.getStringAttribute('location');
   }
@@ -160,7 +221,7 @@ export class KeyVaultManagedHardwareSecurityModule extends cdktf.TerraformResour
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -173,11 +234,11 @@ export class KeyVaultManagedHardwareSecurityModule extends cdktf.TerraformResour
   }
 
   // purge_protection_enabled - computed: false, optional: true, required: false
-  private _purgeProtectionEnabled?: boolean | cdktf.IResolvable;
+  private _purgeProtectionEnabled?: boolean | cdktf.IResolvable | undefined; 
   public get purgeProtectionEnabled() {
-    return this.getBooleanAttribute('purge_protection_enabled');
+    return this.getBooleanAttribute('purge_protection_enabled') as any;
   }
-  public set purgeProtectionEnabled(value: boolean | cdktf.IResolvable ) {
+  public set purgeProtectionEnabled(value: boolean | cdktf.IResolvable | undefined) {
     this._purgeProtectionEnabled = value;
   }
   public resetPurgeProtectionEnabled() {
@@ -189,7 +250,7 @@ export class KeyVaultManagedHardwareSecurityModule extends cdktf.TerraformResour
   }
 
   // resource_group_name - computed: false, optional: false, required: true
-  private _resourceGroupName: string;
+  private _resourceGroupName?: string; 
   public get resourceGroupName() {
     return this.getStringAttribute('resource_group_name');
   }
@@ -202,7 +263,7 @@ export class KeyVaultManagedHardwareSecurityModule extends cdktf.TerraformResour
   }
 
   // sku_name - computed: false, optional: false, required: true
-  private _skuName: string;
+  private _skuName?: string; 
   public get skuName() {
     return this.getStringAttribute('sku_name');
   }
@@ -215,11 +276,11 @@ export class KeyVaultManagedHardwareSecurityModule extends cdktf.TerraformResour
   }
 
   // soft_delete_retention_days - computed: false, optional: true, required: false
-  private _softDeleteRetentionDays?: number;
+  private _softDeleteRetentionDays?: number | undefined; 
   public get softDeleteRetentionDays() {
     return this.getNumberAttribute('soft_delete_retention_days');
   }
-  public set softDeleteRetentionDays(value: number ) {
+  public set softDeleteRetentionDays(value: number | undefined) {
     this._softDeleteRetentionDays = value;
   }
   public resetSoftDeleteRetentionDays() {
@@ -231,11 +292,12 @@ export class KeyVaultManagedHardwareSecurityModule extends cdktf.TerraformResour
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable;
+  private _tags?: { [key: string]: string } | cdktf.IResolvable | undefined; 
   public get tags() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
     this._tags = value;
   }
   public resetTags() {
@@ -247,7 +309,7 @@ export class KeyVaultManagedHardwareSecurityModule extends cdktf.TerraformResour
   }
 
   // tenant_id - computed: false, optional: false, required: true
-  private _tenantId: string;
+  private _tenantId?: string; 
   public get tenantId() {
     return this.getStringAttribute('tenant_id');
   }
@@ -260,11 +322,12 @@ export class KeyVaultManagedHardwareSecurityModule extends cdktf.TerraformResour
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: KeyVaultManagedHardwareSecurityModuleTimeouts;
+  private _timeouts?: KeyVaultManagedHardwareSecurityModuleTimeouts | undefined; 
+  private __timeoutsOutput = new KeyVaultManagedHardwareSecurityModuleTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: KeyVaultManagedHardwareSecurityModuleTimeouts ) {
+  public putTimeouts(value: KeyVaultManagedHardwareSecurityModuleTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {
